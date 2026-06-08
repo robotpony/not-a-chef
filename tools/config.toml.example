@@ -1,0 +1,6 @@
+# Copy this file to tools/config.toml and set paths for your machine.
+# tools/config.toml is gitignored — do not commit it.
+
+[vault]
+recipes = "~/writing/development-notes/recipes"
+gdrive   = "~/writing/development-notes/gdrive/Alderson Family Recipes"

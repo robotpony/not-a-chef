@@ -1,0 +1,34 @@
+{{/*
+  Wiki link render hook.
+
+  migrate.py converts [[Recipe Name]] to [Recipe Name](Recipe Name) — a link
+  where the href is the recipe title (no scheme, no slash, no anchor).
+
+  This hook intercepts those links, looks up the target page by title, and
+  emits a proper Hugo URL. Standard http/https/relative links pass through.
+*/}}
+
+{{ $destination := .Destination }}
+{{ $text := .Text | safeHTML }}
+{{ $isWikiLink := and
+  (not (strings.HasPrefix $destination "http"))
+  (not (strings.HasPrefix $destination "/"))
+  (not (strings.HasPrefix $destination "#"))
+  (not (strings.HasPrefix $destination "mailto"))
+  (not (strings.HasPrefix $destination "./"))
+  (not (strings.HasPrefix $destination "../"))
+}}
+
+{{ if $isWikiLink }}
+  {{ $target := where site.RegularPages "Title" $destination | first }}
+  {{ if $target }}
+    <a href="{{ $target.RelPermalink }}">{{ $text }}</a>
+  {{ else }}
+    <span class="broken-link" title="Not found: {{ $destination }}">{{ $text }}</span>
+  {{ end }}
+{{ else }}
+  <a href="{{ $destination }}"
+    {{- with .Title }} title="{{ . }}"{{ end }}
+    {{- if strings.HasPrefix $destination "http" }} rel="noopener noreferrer" target="_blank"{{ end -}}
+  >{{ $text }}</a>
+{{ end }}

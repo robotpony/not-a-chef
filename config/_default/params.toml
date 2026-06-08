@@ -1,0 +1,64 @@
+colorScheme = "fire"
+defaultAppearance = "light"
+autoSwitchAppearance = true
+
+enableSearch = true
+enableCodeCopy = false
+mainSections = ["recipes"]
+
+[header]
+  layout = "fixed"
+
+[footer]
+  showMenu = true
+  showCopyright = true
+  showThemeAttribution = false
+  showAppearanceSwitcher = true
+  showScrollToTop = true
+
+[homepage]
+  layout = "background"
+  showRecent = true
+  showRecentItems = 6
+  showMoreLink = true
+  showMoreLinkDest = "recipes"
+  cardView = true
+  layoutBackgroundBlur = true
+
+[article]
+  showDate = false
+  showAuthor = false
+  showHero = false
+  showBreadcrumbs = true
+  showDraftLabel = true
+  showEdit = false
+  showHeadingAnchors = true
+  showPagination = true
+  showReadingTime = false
+  showTableOfContents = true
+  showRelatedContent = true
+  relatedContentLimit = 6
+  showTaxonomies = true
+  showWordCount = false
+  sharingLinks = []
+
+[list]
+  showHero = false
+  showBreadcrumbs = true
+  showSummary = true
+  showTableOfContents = false
+  showCards = true
+  groupByYear = false
+  cardView = true
+
+[taxonomy]
+  showTermCount = true
+  showHero = false
+  showBreadcrumbs = true
+  cardView = true
+
+[term]
+  showHero = false
+  showBreadcrumbs = true
+  groupByYear = false
+  cardView = true

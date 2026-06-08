@@ -1,0 +1,31 @@
+theme = "blowfish"
+baseURL = "/"
+defaultContentLanguage = "en"
+enableRobotsTXT = true
+summaryLength = 30
+buildDrafts = false
+buildFuture = false
+enableEmoji = true
+
+[pagination]
+  pagerSize = 12
+
+[taxonomies]
+  tag = "tags"
+  cuisine = "cuisine"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[related]
+  threshold = 50
+  toLower = true
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+  [[related.indices]]
+    name = "cuisine"
+    weight = 80
+  [[related.indices]]
+    name = "date"
+    weight = 10

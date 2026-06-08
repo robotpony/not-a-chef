@@ -6,16 +6,18 @@ Phased. Each phase ships something usable.
 
 Set up the site skeleton before any content migration.
 
-- [ ] Initialize Hugo site: `hugo new site .`
-- [ ] Add Blowfish as a git submodule: `themes/blowfish/`
-- [ ] Configure `hugo.toml`: site name, base URL, language, Blowfish settings
-- [ ] Create empty content sections: `content/recipes/`, `content/essays/`, `content/reference/`
-- [ ] Configure taxonomies: `tags`, `cuisine`
-- [ ] Add wiki link render hook: `layouts/_default/_markup/render-link.html`
-- [ ] Verify `hugo server` builds and serves an empty site
-- [ ] Add `.claude/commands/` with stub command files
+- [x] Initialize Hugo site: `hugo new site .`
+- [x] Add Blowfish as a git submodule: `themes/blowfish/`
+- [x] Configure `hugo.toml`: site name, base URL, language, Blowfish settings
+- [x] Create empty content sections: `content/recipes/`, `content/essays/`, `content/reference/`
+- [x] Configure taxonomies: `tags`, `cuisine`
+- [x] Add wiki link render hook: `layouts/_default/_markup/render-link.html`
+- [x] Verify `hugo build` succeeds (16 pages, 55ms)
+- [x] Add `.claude/commands/` with stub command files
 
-**Output:** A buildable Hugo site with no content. Blowfish homepage shows with placeholder text.
+**Note:** Hugo upgraded to 0.163.0 (Blowfish required 0.158+). Blowfish version warning is a false positive — build succeeds.
+
+**Output:** Buildable Hugo site with no content. ✓
 
 ## Phase 1: Personal recipe migration
 
