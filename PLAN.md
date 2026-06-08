@@ -23,17 +23,23 @@ Set up the site skeleton before any content migration.
 
 Migrate the 69 personal recipes from `development-notes/recipes/`.
 
-- [ ] Create `tools/config.toml.example` with vault path placeholders
-- [ ] Copy to `tools/config.toml` (gitignored) with local paths
-- [ ] Write `tools/migrate.py` with click CLI (config.toml + env var + --source flag resolution)
-- [ ] Test against a few sample recipes; verify output matches FORMAT.md
-- [ ] Run full migration: `python tools/migrate.py --source ~/writing/development-notes/recipes`
-- [ ] Verify Hugo builds with all recipes
-- [ ] Check wiki links resolve (pick 2-3 recipes with cross-references)
-- [ ] Write `.claude/commands/migrate.md`
-- [ ] Write `.claude/commands/lint.md`
+- [x] Create `tools/config.toml.example` with vault path placeholders
+- [x] Copy to `tools/config.toml` (gitignored) with local paths
+- [x] Write `tools/migrate.py` with click CLI (config.toml + env var + --source flag resolution)
+- [x] Test against a few sample recipes; verify output matches FORMAT.md
+- [x] Run full migration: 68 recipes migrated (65 personal + 3 from test run)
+- [x] Verify Hugo builds with all recipes (196 pages, 112ms)
+- [x] Wiki links: no cross-references in current vault recipes; render hook tested and ready
+- [x] Write `.claude/commands/migrate.md`
+- [x] Write `.claude/commands/lint.md`
 
-**Output:** Hugo site with 69 personal recipes. All published (no drafts). `/recipes/` listing and individual pages work.
+**Notes:**
+- `Food log.md` is skipped automatically (not a recipe)
+- Title-based slugs are used (not source filenames) — some recipes have longer slugs than their vault filenames
+- Tags flow-sequence format preserved: `[mains, weeknight]`
+- `cuisine: "#Indian"` normalized to `cuisine: Indian` automatically
+
+**Output:** Hugo site with 68 personal recipes, all published. ✓
 
 ## Phase 2: Family archive normalization
 
