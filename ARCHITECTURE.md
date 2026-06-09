@@ -72,7 +72,13 @@ Responsibilities:
 
 Outputs drafts, not published files. The operator reviews and sets `draft: false` when satisfied.
 
-**Duplicate detection.** Before writing, normalize.py builds a title index from existing `content/recipes/` files. If the incoming title matches an existing file, the output is still written as a draft but tagged `[duplicate]` in the report and a `_duplicate_of` comment is added to the frontmatter. This surfaces the conflict for manual resolution — merge, replace, or discard — rather than silently overwriting or skipping.
+**Duplicate detection.** Before writing, normalize.py builds a title index from existing `content/recipes/` files. If the incoming title matches an existing file, the output is still written as a draft but tagged `[duplicate]` in the report and a `_duplicate_of` YAML field is added to the frontmatter. This surfaces the conflict for manual resolution — merge, replace, or discard — rather than silently overwriting or skipping.
+
+```yaml
+_duplicate_of: content/recipes/chai.md
+```
+
+The underscore prefix follows the convention for private/meta fields; Hugo ignores fields it doesn't recognize.
 
 **Incremental sync.** Same semantics as migrate.py: re-running is safe. Files already in `content/` are skipped unless the source is newer or `--force` is passed.
 
@@ -89,7 +95,11 @@ Outputs drafts, not published files. The operator reviews and sets `draft: false
 | Mains/Casseroles | [mains, casseroles] |
 | Mains/Curries | [mains, curries] |
 | Mains/Dumplings | [mains, dumplings] |
-| Mains/Meat/* | [mains, {subfolder}] |
+| Mains/Mashes | [mains, mashes] |
+| Mains/Meat/Beef | [mains, beef] |
+| Mains/Meat/Burgers | [mains, burgers] |
+| Mains/Meat/Pork | [mains, pork] |
+| Mains/Meat/Poultry | [mains, poultry] |
 | Mains/Rice bowls | [mains, rice-bowls] |
 | Mains/Soups | [mains, soups] |
 | Mains/Stews | [mains, stews] |

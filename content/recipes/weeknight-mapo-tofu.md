@@ -1,6 +1,6 @@
 ---
 title: Weeknight Mapo Tofu
-tags: [weeknight, quick, chinese, japanese]
+tags: [mains, chinese, japanese, weeknight, quick]
 source: original
 date: 2026-01-10
 servings: 3–4

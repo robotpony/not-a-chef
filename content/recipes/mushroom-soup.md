@@ -1,6 +1,6 @@
 ---
 title: Mushroom Soup
-tags: [soups, french, vegetarian]
+tags: [mains, soups, french, vegetarian]
 source: original
 date: 2022-10-01
 servings: 4

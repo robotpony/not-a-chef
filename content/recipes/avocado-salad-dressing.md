@@ -1,6 +1,6 @@
 ---
 title: Avocado Salad Dressing
-tags: [vegetarian, quick]
+tags: [salads, quick, vegetarian]
 source: original
 date: 2026-03-24
 servings: 2–3 (makes ~135ml)

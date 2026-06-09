@@ -1,6 +1,6 @@
 ---
 title: Szechuan Quick Noodles
-tags: [pasta, chinese, weeknight, quick]
+tags: [mains, pasta, chinese, weeknight, quick]
 source: original
 date: 2024-04-01
 servings: 1

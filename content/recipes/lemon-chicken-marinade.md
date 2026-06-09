@@ -1,6 +1,6 @@
 ---
 title: Lemon Chicken Marinade
-tags: [mediterranean, make-ahead, quick]
+tags: [bases, mediterranean, make-ahead, quick]
 source: original
 date: 2026-05-24
 servings: 4 (marinade for ~700g chicken)

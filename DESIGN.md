@@ -215,4 +215,4 @@ Output:
 52 files checked: 2 written, 1 duplicate, 1 skipped, 2 meta skipped, 1 flagged
 ```
 
-Duplicate files are written as drafts with a `# duplicate_of: content/recipes/chai.md` comment at the top of the frontmatter block. Resolve manually: merge content, keep the personal version, or discard the gdrive version.
+Duplicate files are written as drafts with a `_duplicate_of: content/recipes/chai.md` field in the frontmatter. Resolve manually: merge content, keep the personal version, or discard the gdrive version.

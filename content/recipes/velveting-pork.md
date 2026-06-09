@@ -1,6 +1,6 @@
 ---
 title: Velveting (Pork)
-tags: [chinese, make-ahead, quick, weeknight]
+tags: [bases, chinese, make-ahead, quick, weeknight]
 source: original
 date: 2026-01-11
 servings: for 350g pork

@@ -8,6 +8,10 @@ A family cookbook built as a Hugo static site (Blowfish theme), edited in Obsidi
 
 See ARCHITECTURE.md for the data flow and component overview. See PLAN.md for the phased implementation plan.
 
+## Content formats
+
+See `FORMAT.md` for the recipe specification and `FORMAT-ESSAYS.md` for the essay specification.
+
 ## Recipe format
 
 See `FORMAT.md` for the full specification. Key points:
@@ -49,6 +53,17 @@ Project slash commands are in `.claude/commands/`. See DESIGN.md for description
 ## Hugo site
 
 Blowfish theme as a git submodule. Wiki links require a render hook in `layouts/_default/_markup/render-link.html`. See DESIGN.md for layout and taxonomy decisions.
+
+## Food essay types
+
+Essays in `content/essays/` include these formats specific to this project:
+
+- **Food memories**: Thematic vignettes from childhood or formative food experiences. Each should anchor a lesson or insight about cooking — not just nostalgia for its own sake.
+- **Cooking reflections**: Lessons learned from technique, ingredients, or failure. Engineering-minded; ratio-based thinking and post-mortems welcome.
+- **Technique essays**: Deep dives on a single method or principle (brining, emulsification, stock-making). Reference material dressed as prose.
+- **Planning essays**: Meal prep philosophy, "winning the fridge" thinking, systems for weeknight cooking.
+
+Voice for all food essays: engineering precision meets home cook practicality. Personal, honest about mistakes, practical takeaway at the end.
 
 ## Language
 

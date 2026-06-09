@@ -1,6 +1,6 @@
 ---
 title: Fruit Crisp (Individual)
-tags: [quick, vegetarian]
+tags: [desserts, quick, vegetarian]
 source: original
 date: 2026-04-17
 servings: 4 (200ml / 7 oz ramekins)

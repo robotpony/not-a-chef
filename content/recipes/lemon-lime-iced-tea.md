@@ -1,6 +1,6 @@
 ---
 title: Lemon-Lime Iced Tea
-tags: [quick, vegan, dairy-free]
+tags: [drinks, quick, vegan, dairy-free]
 source: original
 date: 2026-05-16
 servings: 1

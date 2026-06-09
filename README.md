@@ -2,7 +2,7 @@
 
 This is a cookbook project, to collect up recipes from my personal sources, a combination of markdown files in an Obsidian vault and a drive of Google docs.
 
-Souces:
+Sources:
 
 - local cache of google doc recipes: "development-notes/gdrive/Alderson Family Recipes"
 - local cache of obsidian recipes: `development-notes/recipes`

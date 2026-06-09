@@ -1,6 +1,6 @@
 ---
 title: Weeknight Ginger Beef
-tags: [weeknight, quick, dairy-free, chinese]
+tags: [mains, chinese, weeknight, quick, dairy-free]
 source: original
 date: 2026-01-10
 servings: 4

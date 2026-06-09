@@ -1,5 +1,3 @@
-# Libraries
-
 ## Hugo
 
 Static site generator. Builds the site from Markdown content and Go templates.

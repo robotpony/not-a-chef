@@ -45,13 +45,13 @@ Migrate the 69 personal recipes from `development-notes/recipes/`.
 
 Migrate the family archive from `development-notes/gdrive/Alderson Family Recipes/`.
 
-- [ ] Write `tools/normalize.py` with click CLI
-- [ ] Implement skip list for meta files (Recipe Template, How to add a recipe, About...)
-- [ ] Implement folder-to-tag mapping (see ARCHITECTURE.md)
-- [ ] Run `--dry-run` first; review what would be created
-- [ ] Run full normalization; review drafts
-- [ ] Promote drafts to published as they pass review
-- [ ] Write `.claude/commands/gdrive-migrate.md`
+- [x] Write `tools/normalize.py` with click CLI
+- [x] Implement skip list for meta files (Recipe Template, How to add a recipe, About...)
+- [x] Implement folder-to-tag mapping (see ARCHITECTURE.md)
+- [x] Run `--dry-run` first; review what would be created
+- [x] Run full normalization — 163 files written (140 new, 3 duplicates, 24 pre-run)
+- [ ] Review drafts; promote to published as they pass
+- [x] Write `.claude/commands/gdrive-migrate.md`
 
 **Conflict resolution:** Some personal and family archive recipes overlap (two Chai versions, etc.). Keep the personal recipe; normalize the family archive version as a draft and decide at review time whether to merge, replace, or discard.
 
@@ -62,12 +62,36 @@ Migrate the family archive from `development-notes/gdrive/Alderson Family Recipe
 Scaffold essays content type and migrate reference material.
 
 - [ ] Essays: add Hugo content type config, verify layout
-- [ ] Reference: normalize and migrate appendices from `gdrive/X. Appendices/`
+- [x] Reference: normalize and migrate appendices from `gdrive/X. Appendices/`
+- [x] CSV data: import planning/research CSVs to `content/reference/` as markdown tables
 - [ ] Update vault with any publishable essay drafts
 - [ ] Migrate essays manually from vault when ready
 - [ ] Write `.claude/commands/recipe-new.md`
 
 **Output:** All three content sections populated. Site is structurally complete.
+
+## Phase 3a: Binary recipe import (Recipes to process)
+
+Import ~80 unprocessed family recipes from `gdrive/X. Appendices/Recipes to process/`. These are `.doc`/`.docx`/`.pdf` files that cannot be read with standard tools.
+
+- [ ] Install pandoc (`brew install pandoc`) or confirm availability
+- [ ] Write `tools/import-legacy.py` — batch converts `.doc`/`.docx` to markdown, normalizes frontmatter, outputs to `content/recipes/` as `draft: true`
+- [ ] Handle `.pdf` separately (e.g., `not-afterthoughts-bake-mega-file.pdf`, 8 pages)
+- [ ] Review and promote drafts
+
+**Note:** `pandoc` is required. Run `brew install pandoc` before starting this phase.
+
+**Output:** Legacy recipe archive available for review and promotion.
+
+## Phase 3b: CSV rendering
+
+Add the ability to render structured CSV/table data in Hugo pages — for costing sheets, flour comparisons, and menu data already imported to `content/reference/`.
+
+- [ ] Evaluate options: Hugo shortcode, embedded markdown tables (current approach), or a lightweight JS table library
+- [ ] Implement chosen approach
+- [ ] Update CSV-sourced reference pages to use new rendering
+
+**Output:** Structured data pages are readable and browsable in the published site.
 
 ## Phase 4: Obsidian vault integration
 

@@ -1,6 +1,6 @@
 ---
 title: Fajita Chicken Bowl
-tags: [mexican, weeknight, make-ahead]
+tags: [mains, mexican, weeknight, make-ahead]
 source: original
 date: 2026-05-16
 servings: 4
