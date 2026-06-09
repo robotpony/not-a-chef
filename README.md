@@ -26,3 +26,7 @@ Sources:
 Hugo + Obsidian suggest Markdown + clear YAML front-matter.
 
 Style guide should be pulled + updated from the Obsidian source.
+
+## License
+
+Content (recipes, essays, reference pages) is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — share and adapt with attribution, same license. The source code (Hugo templates, migration tools) is MIT. See [LICENSE](LICENSE) for full terms.
