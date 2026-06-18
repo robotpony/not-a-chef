@@ -1,67 +1,70 @@
 ---
-title: Vegetarian lasagna
-tags: [mains, casseroles]
+title: Vegetarian Lasagna
+tags: [mains, casseroles, vegetarian, italian, make-ahead, family]
 source: family
+date: 2026-06-18
+servings: 8–10
+prep_time: 45 min
+cook_time: 60 min
+total_time: 1 hr 45 min
+cuisine: Italian
 draft: true
 ---
 
-(this is the chef john version)
+## Mechanic
 
+Eggs in the cheese filling bind the layers together so the lasagna cuts cleanly as a casserole. Draining the ricotta and cottage cheese if they're watery prevents the lasagna from going soupy. The 20-minute rest after baking is non-negotiable — the layers need time to set before cutting.
 
+## Marinara
 
-This is the classic lasagna recipe we made for the kids when they were growing up. It’s a vegetarian dish, but can be augmented by adding a [meaty base](https://docs.google.com/document/d/18B_6jJlS8MKhUsXeGs2gdse1qjwkUURhE54Xlw64Nuk/edit) to the sauce if desired. Our traditional version doesn’t use the cheese filling listed here (instead using the same ingredients added separately), but we’ve found that the eggs help bind the cheese layers together a bit more and make for an easier to cut as a casserole.
+Use 1 batch of [Simple Marinara](Simple Marinara).
 
-This recipe is based on a few standard sauces and ingredients:
+<!-- TODO: original also referenced an optional meaty base (Google Doc link — no longer accessible). For a meat version, add browned ground beef or Italian sausage to the marinara. -->
 
-- [1 batch of marinara sauce](https://docs.google.com/document/d/1B2m2IuK1HbhVH9rUMatSdMpUt4E9ambQw8JVE166kOc/edit#)
-- [1 batch of cheese filling](#id.4y2ig08is9jb)
-- [1 batch of savoury veg](#id.pb82l4bvuyrc)
-- [1 batch of garnish](#id.t7deglc6oy27)
-- 1 box of lasagna noodles (the standard type)
+## Savoury veg
 
-#### Cheese filling:
+- 2 tbsp olive oil
+- 4 cups mixed mushrooms, finely chopped
+- 1 onion, finely diced
+- 4 cloves garlic, minced
+- 1–2 carrots, finely diced or grated
+- 1 zucchini, finely diced
+
+Heat olive oil over medium-high. Add mushrooms with a pinch of salt and cook until they release their liquid and begin to brown. Add onion, garlic, and remaining vegetables and cook on medium-low until everything is soft and starting to caramelise. Deglaze the pan if needed. Stir in enough marinara to coat generously. Set aside.
+
+## Cheese filling
 
 - 2 eggs
-- 2 small containers of whole milk ricotta
-- 2 medium containers of dry cottage cheese
-- 1-2 cups of grated mozza (fresher is better)
+- 2 small containers (about 425g each) whole milk ricotta
+- 2 medium containers (about 500g each) dry cottage cheese
+- 1–2 cups grated mozzarella (fresher is better; mix in some cheddar)
+- 1 cup Parmesan, grated
+- ¼ cup fresh parsley, chopped
+- salt and pepper
 
-    - Can mix with other cheeses too (melty → better)
-    - We’ve always included some cheddar
+If the ricotta or cottage cheese are watery, drain in a fine-mesh strainer first. Beat eggs and mix in the cheeses and parsley. Season with salt and pepper. Set aside.
 
-- 1 cup parmigiano-reggiano cheese
-- Salt and pepper to taste
-- ¼ cup parsley
+## Garnish
 
-If the ricotta or cottage cheese are watery, drain in a fine mesh strainer.
+- 75g (¾ cup) Parmesan, grated
+- 100g (1 cup) mozzarella, diced or grated
+- ½ cup fresh parsley, finely chopped
 
-Beat eggs and mix in cheeses and parsley. Salt and pepper to taste and set aside.
+Toss together.
 
-#### Savoury veg ragu:
+## Assembly
 
-- 1-2 finely diced (or grated) carrots
-- 1 finely diced onion
-- 4 cups of finely chopped mushrooms (mixed)
-- 1 finely diced zucchini
-- 3 cloves of finely diced garlic
+- 1 box (375g) lasagna noodles, cooked to al dente and drained
 
-In olive oil, brown mushrooms and salt and cook until water evaporates. Add more oil with the onions and garlic, and stir into mushroom mixture. Soften, and add remaining veg. Cook on medium/low until browning and dry.
+Heat the oven to 175°C (350°F).
 
-Deglaze pan if needed, and add marinara.
+Spread ¼ of the marinara on the bottom of a large lasagna pan. Layer noodles, then cheese filling, then the veg mixture. Repeat three more times. Finish the top layer with the remaining marinara and the garnish.
 
-#### Garnish:
+Cover tightly with foil and bake 30 minutes. Remove foil and bake another 30 minutes until browned and bubbling.
 
-- ¾ cup parmigiano-reggiano cheese
-- 1 cup of diced or grated mozzarella
-- ½ cup of finely chopped parsley
+Rest 20 minutes before cutting.
 
-Roughly toss together until consistently mixed.
+## Notes
 
-### Directions:
-
-1. Prep base ingredients. Cook pasta, drain, and set aside.
-2. Preheat the oven at 175C/350F.
-3. Layer a lasagna pan with ¼ of the sauce, noodles, and cheese. Repeat this 4 times, topping the last layer with the last portion of sauce and the garnish.
-4. Bake for 30 minutes, covered with foil or a tight fitting oven safe lid. Remove foil or lid, base for 30 more minutes, or until browning and bubbly.
-5. LET SIT FOR 20 MINUTES. It’s too hot to eat anyways, and now is a good time to make a salad and some garlic bread.
-6. Slice and serve.
+- Make the components a day ahead — the lasagna is better assembled and baked the next day.
+- Leftovers keep refrigerated 4–5 days and freeze well.

@@ -1,29 +1,39 @@
 ---
-title: Fresh egg pasta
-tags: [breads]
+title: Fresh Egg Pasta
+tags: [pasta, bases, dairy-free, family]
 source: family
-draft: true
+date: 2026-06-18
+servings: 4
+prep_time: 20 min
+total_time: 50 min (plus 30 min rest)
+cuisine: Italian
+draft: false
 ---
 
-This is a fairly standard egg pasta recipe. I make it in a bowl instead of the counter, but you do you.
+## Mechanic
 
-## Ingredients:
+**250g flour to 2 whole eggs plus 4 yolks** is the ratio. Extra yolks rather than whole eggs make the pasta richer, more golden, and silkier in texture. The 30-minute rest after kneading relaxes the gluten so the dough sheets smoothly without springing back.
 
-- 250g (~2 cups) of AP flour (and additional flour for dusting)
-- 2 whole large eggs (110g)
-- 4 additional yolks (70g)
-- 10g (1 teaspoon) kosher salt
+## Ingredients
 
-## Method:
+- 250g (about 2 cups) AP flour, plus more for dusting
+- 2 large eggs (about 110g)
+- 4 egg yolks (about 70g)
+- 10g (1 tsp) salt
 
-1. Make a volcano shaped pile of flour on a clean counter. Add eggs to the centre and break yolks with a fork. Continue to whisk at the centre, pulling in flour until the liquids start to bind. Using a bench scraper, start to fold the remaining flour in until a shaggy ball forms.
-2. Kneed the shaggy ball of dough until it becomes smooth. This takes about 10 minutes (but up to 15 or 20, depending on how much force you put into it).
+## Method
 
-    1. Add more flour (a pinch at a time) if the dough remains sticky.
-    2. Add more water (a splash at a time) if the dough is feeling dry.
+Mound the flour on a counter or in a large bowl and make a well in the centre. Add the eggs, yolks, and salt. Beat the eggs gently with a fork, gradually pulling in flour from the inside wall of the well. Once the liquid is absorbed, bring the rest of the flour in with a bench scraper until a shaggy ball forms.
 
-3. Wrap and let dough rest for 30 minutes (or in the fridge overnight).
-4. Split the dough into 3-4 pieces. Using a rolling pin, flatten until it fits in your pasta sheeter. Follow your sheeter instructions, but generally you will reduce the roller distance, then fold the dough to make it more rectangular and start the sheeting process over (the goal is a uniform, rectangular long sheet). There are lots of Youtube videos that show this process, find one that matches your hardware.
-5. Shape into your pasta’s final form, dust with flour, and let rest. Cook for 2-3 minutes and serve with any amazing sauce.
+Knead until smooth and elastic, 10–15 minutes. The dough is ready when it springs back slowly when poked. Add flour a pinch at a time if sticky; a few drops of water if too dry.
 
-The dough and resulting noodles freeze pretty well (especially dumplings, raviolis, tortellinis, etc.).
+Wrap tightly and rest 30 minutes at room temperature, or overnight in the fridge.
+
+Divide into 3–4 pieces. Flatten each piece to fit your pasta sheeter and sheet to your desired thickness, folding and re-sheeting a few times for even texture. Cut or shape as needed, dust with flour, and let rest briefly before cooking.
+
+Cook in well-salted boiling water 2–3 minutes.
+
+## Notes
+
+- A bowl works as well as the counter method.
+- Shaped pasta (dumplings, ravioli, tortellini) freezes well: freeze on a tray first, then bag.

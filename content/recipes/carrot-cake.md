@@ -1,46 +1,54 @@
 ---
 title: Carrot Cake
-tags: [desserts]
+tags: [desserts, make-ahead, family]
 source: family
-draft: true
+date: 2026-06-18
+servings: 16 (three-layer cake)
+prep_time: 30 min
+cook_time: 60 min
+total_time: 90 min (plus overnight refrigeration before icing)
+cuisine: American
+draft: false
 ---
 
-Aka: Bruce’s Birthday Cake.  Originally from Afterthoughts Dessert Restaurant.
+## Mechanic
 
-Do not share outside our family!
+The high oil content — 480 ml to 360g of flour — makes this exceptionally moist and keeps it that way for days. Refrigerating the layers overnight before icing firms the crumb so they don't slide and the icing goes on cleanly.
 
-#### Ingredients:
+## Cake
 
-- 3 cups Sugar
-- 2 cups Oil (Canola)
-- 6 Eggs
-- 4 ½ cups Carrot, grated
-- 3 cups Flour
-- 1 ½ tbsp Cinnamon
-- 3 tsp Baking Soda
-- ¾ tsp Salt
-- 1 ½ tsp Vanilla
-- 1 cup Walnuts, chopped
+- 600g (3 cups) sugar
+- 480 ml (2 cups) canola oil
+- 6 eggs
+- 500g (4½ cups) carrot, finely grated
+- 360g (3 cups) AP flour
+- 1½ tbsp cinnamon
+- 3 tsp baking soda
+- ¾ tsp salt
+- 1½ tsp vanilla extract
+- 100g (1 cup) walnuts, roughly chopped
 
-#### Icing:
+Heat the oven to 150°C (300°F). Oil and flour three 23 cm (9-inch) round cake pans.
 
-- 11 oz Cream Cheese
-- ¾ cup Butter
-- 3 cups Icing Sugar
-- ½ tsp Vanilla
+Beat the sugar and oil together until combined. Add the eggs one at a time, beating after each. Mix in the carrots, vanilla, and walnuts.
 
-- 1 cup Walnuts, chopped to decorate and go around the cake
+In a separate bowl, whisk together the flour, cinnamon, baking soda, and salt. Fold the dry ingredients into the wet until just combined.
 
-### Directions:
+Divide the batter evenly between the three pans. Bake 60 minutes, or until a toothpick comes out clean. Cool in pans, then run a knife around the edge before inverting. Wrap layers in plastic wrap and refrigerate overnight before icing.
 
-1. Preheat the oven to 300 degrees F (150 C).  Oil and flour your cake pans.
-2. Mix together the Sugar and Oil with a paddle.
-3. Add one Egg at a time and blend in.
-4. Mix in your Carrots, Vanilla, and Walnuts.
-5. In another large bowl, mix together the dry ingredients and then add to the wet ingredients.  Blend well.
-6. Pour batter into prepared pans and bake for 60 minutes or until a toothpick comes out clean.
-7. Cool in pans.  Run a knife around the pans before invertering to remove.
-8. Wrap cakes in saran wrap and place in the refrigerator overnight before icing.
-9. For the icing, cream the Butter and Cream Cheese together.  Thoroughly whisk in the Icing Sugar and then mix in the Vanilla.
-10. Use the icing in between the cakes and to cover the cake.
-11. You can add icing Rosettes around the top of the cake.  Using the second portion of chopped walnuts, press them into the sides of the cake all around.
+## Icing
+
+- 310g (11 oz) cream cheese, at room temperature
+- 170g (¾ cup) unsalted butter, at room temperature
+- 360g (3 cups) icing sugar
+- ½ tsp vanilla extract
+- 100g (1 cup) walnuts, roughly chopped, for finishing
+
+Beat the cream cheese and butter together until smooth. Sift in the icing sugar and beat until fluffy. Mix in the vanilla.
+
+Spread icing between each layer and over the top and sides of the assembled cake. Press the chopped walnuts into the sides.
+
+## Notes
+
+- Bruce's Birthday Cake, originally from Afterthoughts Dessert Restaurant. This recipe stays in the family.
+- Keeps covered at room temperature 2 days, refrigerated up to a week.

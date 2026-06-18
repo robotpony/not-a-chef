@@ -31,6 +31,12 @@ Recipes are authored and maintained in the Obsidian vault at `development-notes/
 - Personal recipes: `~/writing/development-notes/recipes/` (69 files, active)
 - Family archive: `~/writing/development-notes/gdrive/Alderson Family Recipes/` (~170 markdown files converted from Google Drive)
 
+## Recipe index
+
+`public/recipes/index.json` — a machine-readable index of all published recipes, generated automatically by `hugo`. Read this file first when answering questions about the recipe collection (coverage gaps, overlap, missing metadata, quality). It contains per-recipe: title, slug, date, tags, cuisine, servings, source, prep/cook time, word count, and whether Mechanic/Variations/Notes sections are present.
+
+The index is current after any `hugo` build. If `public/` is stale, run `hugo --quiet` to regenerate.
+
 ## Migration tools
 
 `tools/migrate.py` — migrates personal recipes from the vault to `content/recipes/`. Normalizes frontmatter; does not touch body content.
