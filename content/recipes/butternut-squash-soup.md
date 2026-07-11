@@ -1,37 +1,48 @@
 ---
-title: Butternut squash soup
-tags: [mains, soups]
+title: Butternut Squash Soup
+tags: [mains, soups, vegetarian, gluten-free, make-ahead, family]
 source: family
-draft: true
+date: 2026-06-18
+servings: 4–6
+prep_time: 20 min
+cook_time: 1 hr 30 min
+total_time: 2 hr
+draft: false
 ---
 
-This is one of our favourite soups. It’s easy to make vegetarian and gluten free, but also takes on hearty meats and breads as needed. It’s based on a soup I’ve been making for years, with a number of improvements from [Chef John’s method](https://www.youtube.com/watch?v=AlRqh21CfHI).
+## Mechanic
 
-#### Ingredients:
+Roasting the squash and vegetables first concentrates their sugars and develops colour before anything goes in the pot. Straining the blended soup through a fine-mesh sieve at the end gives a silky texture you can't get any other way. Loosen with stock until it pours easily — it's not a pie filling.
 
-- 1 medium sized butternut squash, halved, seeds removed
+## Soup
+
+- 1 medium butternut squash, halved and seeds removed
 - 1 onion, roughly diced
-- 1 cup diced carrots or yam
-- 6 garlic cloves, smashed and peeled
-- 6 cups of stock (or stock and water), plus more if needed
-- Sage-infused brown butter (below)
-- 1 tablespoon olive oil
-- 2 teaspoons kosher salt, or to taste
-- 2 tablespoons maple syrup
-- 2 tablespoons of apple cider vinegar (or other vinegar, white wine, etc.)
+- 240 ml (1 cup) carrots or yam, diced
+- 6 cloves garlic, smashed and peeled
+- 1 tbsp olive oil
+- 1.5 L (6 cups) stock, plus more as needed
+- 2 tbsp maple syrup
+- 2 tbsp apple cider vinegar
+- 2 tsp salt, or to taste
 
-#### Brown butter:
+Heat the oven to 200°C (400°F). Toss the squash, onion, carrots, and garlic with olive oil and a generous pinch of salt. Roast on a baking sheet about 1 hour, until soft and browned.
 
-- 3 tablespoons unsalted butter
-- 6-8 large sage leaves (or a lot of tiny leaves like I used in the video)
+Transfer to a large pot and add stock. Simmer on low 30–60 minutes. Blend smooth with an immersion blender. Stir in the sage brown butter, maple syrup, and vinegar. Strain through a fine-mesh sieve and discard solids. Add stock to reach a pourable consistency. Taste and adjust salt, acid, and sweetness.
 
-This is a fairly typical soup build, and should only take 10-20 minutes of effort (and a few hours simmering and roasting.
+## Sage brown butter
 
-1. Wash, peel, and roast the veggies on a sheet pan at 200C/400F for about an hour, or until soft and browned.
-2. Transfer roasted veg to a large pot and add stock and/or water. Simmer on lowest simmer for 30 minutes - 1 hour.
-3. While simmering, make sage brown butter. Butter → pan → heat, sizzle, until it stops. Turn off heat and add sage (or thyme/rosemary).
-4. Blend soup with an immersion blender, with brown butter. Taste for seasoning and add vinegar, salt, and sugar to taste.
-5. Run soup through a fine mesh strainer and discard solids. Add stock/water to get to a soupy consistency if needed (as John says, “it’s not a pie filling”).
-6. Taste for seasoning one last time, and serve with crème fraiche, sour cream, or yoghurt and top with something green.
+- 3 tbsp unsalted butter
+- 6–8 large sage leaves
 
-This soup is great over roasted veggies (or with roasted veggies in it), and with fresh bread. Cheese bread or grilled cheese make this a hearty meal.
+Melt the butter in a small pan over medium heat. Cook until it stops foaming and smells nutty. Remove from heat and add the sage leaves. Let infuse while the soup simmers.
+
+## To serve
+
+With a spoon of crème fraîche or yogurt and something green. Good with fresh bread or grilled cheese alongside.
+
+## Notes
+
+- Keeps refrigerated 5 days. Freezes well.
+- Thyme or rosemary can replace the sage.
+- Vegan with neutral oil instead of butter.

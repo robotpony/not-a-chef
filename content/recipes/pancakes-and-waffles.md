@@ -1,28 +1,46 @@
 ---
-title: Pancakes and waffles
-tags: [mains, breakfast]
+title: Pancakes and Waffles
+tags: [breakfast, vegetarian, family]
 source: family
-draft: true
+date: 2026-06-18
+servings: 4 (about 12 pancakes)
+prep_time: 10 min
+cook_time: 20 min
+total_time: 30 min
+draft: false
 ---
 
-The one and only pancake and waffle recipe used in the Alderson home since the kids were young. The recipe originated with Ann’s biological dad Will Imanse.
+## Mechanic
 
-#### Ingredients:
+The baking powder goes in last, just before cooking. Stirring it in early lets the gas escape before the batter hits the pan. Adding it at the last moment gives you a lighter, fluffier result. Don't overmix once it's in.
+
+## Ingredients
 
 - 2 eggs
-- 2 ¼ cups milk
-- 2 tablespoons oil
+- 530 ml (2¼ cups) milk
+- 2 tbsp neutral oil
+- 240g (2 cups) AP flour
+- 50g (¼ cup) sugar
+- pinch of salt
+- 3 tsp baking powder, heaping
 
-- 2 cups flour
-- ¼ cup sugar
-- Pinch of salt
-- 3 teaspoons baking powder (heaping)
+## Method
 
-### Directions:
+Whisk together the eggs, milk, and oil. Add the flour, sugar, and salt and stir until just combined — a few lumps are fine.
 
-1. Combine all the ingredients, except for the baking powder; stir until just mixed.
-2. Heat your pan on the stove over medium low heat.
-3. Just as you are ready to start making your pancakes, gently stir in the baking powder until just mixed.
-4. Add a little bit of oil to your pan then add your dollops of pancake mix without overcrowding the pan.
-5. Once you begin to see cooked edges on the bottom of your pancake, they are ready to be flipped.  Don’t worry if your first batch does not turn out perfectly; it’s pretty normal for the first ones to be wonky.  
-6. You may place a pan in a low heated oven to keep your pancakes warm until they are all cooked and you are ready to sit down and eat!
+Heat a pan over medium-low and brush lightly with oil.
+
+Just before cooking, stir in the baking powder until just incorporated. Do not overmix.
+
+Ladle batter onto the pan without crowding. Cook until the edges look set and the bottom is golden, then flip. The first batch is almost always a throwaway — adjust heat as needed.
+
+Keep finished pancakes warm in a 90°C (200°F) oven until ready to serve.
+
+## To serve
+
+Maple syrup. Butter. Berries if you have them.
+
+## Notes
+
+- Same batter works in a waffle iron.
+- From Ann's dad, Will Imanse. The Alderson family's only pancake recipe.

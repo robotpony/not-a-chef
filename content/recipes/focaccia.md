@@ -1,39 +1,55 @@
 ---
 title: Focaccia
-tags: [breads]
+tags: [breads, italian, vegan, dairy-free, family]
 source: family
+date: 2026-06-18
+servings: 2–3 sheet pans
+prep_time: 20 min
+cook_time: 20–40 min
+total_time: 3 hr (including dough rise)
+cuisine: Italian
 draft: true
 ---
 
-Start with [Bruce’s pizza dough recipe](https://docs.google.com/document/d/194yQXvdGCRJQAQrzPeCZTp1TEBQM1_I_naACJj9DTbA/edit#).
+## Mechanic
 
-#### Toppings:
+Focaccia is pizza dough baked in an oiled pan rather than on a stone. The heavy oil in the pan fries the bottom crust as it bakes, giving it crunch. Deep dimples aren't decorative — they anchor toppings and prevent the dough from puffing unevenly. Rest the dough between spreading attempts; it will relax and spread to the corners without tearing.
 
-Many things make for great toppings:
+## Ingredients
 
-- Coarse salt
-- Olives
-- Garlic
-- Fresh, cherry tomatoes
-- Fresh herbs (or dried herbs in oil)
+- 1 batch [Pizza Dough](Pizza Dough) (1 kg dough, split into 2–3 portions)
+- neutral oil (not extra-virgin), generous amount for pans
+- coarse salt
 
-#### Brine topping:
+Toppings (choose any combination):
+- olives
+- garlic cloves, smashed
+- cherry tomatoes
+- fresh herbs (or dried herbs steeped in olive oil)
 
+Brine (optional — see Notes):
 - 1 tbsp salt
-- ½ cup water
-- ¼ cup olive oil
+- 120 ml (½ cup) water
+- 60 ml (¼ cup) olive oil
 
-### Method:
+## Method
 
-1. Make the basic 1kg pizza dough, splitting into 2-3 portions. Add to heavily oiled pans (a non-virgin olive oil works well) and let rise and come to room temperature.
-2. Chop toppings. If using herbs add to olive oil before topping the dough.
-3. Spread the dough to the corners of the pans. If the dough resists, let it rest between attempts. With sufficient resting, the dough will spread easily in the pan. Use fingers to make deep and large indents in the dough.
-4. Add toppings evenly. For larger toppings, press them into the dough to help them stick.
-5. Salt using a coarse salt.
-6. Preheat your oven to 220C/420F and bake for 20 minutes until browned.
+Add the dough portions to heavily oiled pans and let rise until puffy and nearly room temperature, 1–2 hours.
 
-    1. For thicker pans, drop temperature to 190C/375F and cook for up to 40 minutes.
+Prepare toppings. If using fresh herbs, steep them in olive oil for 10–15 minutes.
 
-7. Remove from the pan and let cool on a rack for at least 20 minutes.
+Press the dough toward the corners of the pan using your fingers. If it springs back, leave it to rest 10 minutes and try again — with enough rest it will spread without resistance. Once spread, use your fingers to press deep, generous dimples across the entire surface.
 
-I’ve seen some chefs use an oily brine, but I haven’t had good luck with this as it tends to wash away the herbs.
+Distribute toppings evenly over the dough. Press larger items (olives, tomatoes) gently into the dimples so they don't roll off. Finish with coarse salt.
+
+Heat the oven to 220°C (425°F).
+
+For thinner focaccia: bake 20 minutes until deep golden brown.
+For thicker focaccia: reduce to 190°C (375°F) and bake 35–40 minutes.
+
+Remove from the pan immediately and cool on a rack for at least 20 minutes before cutting.
+
+## Notes
+
+- The brine topping (salt + water + olive oil whisked together, drizzled over before baking) is traditional but tends to wash off herbs. Worth trying, but optional.
+- Leftovers keep well at room temperature 1 day. Reheat in a hot oven 5 minutes to refresh the crust.

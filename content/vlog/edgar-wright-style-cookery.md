@@ -1,6 +1,6 @@
-# Edgar Wright Techniques for Food Video
+# Food Video Filming Techniques
 
-A catalog of Wright's directorial and editorial methods, mapped to practical food video production. Each technique includes the original cinematic context, food application, a concrete example, and production cost rating.
+A catalog of directorial and editorial methods drawn from Edgar Wright and Wes Anderson, mapped to practical food video production. Each technique includes the cinematic source, food application, a concrete example, and production cost rating.
 
 ---
 
@@ -11,23 +11,30 @@ A catalog of Wright's directorial and editorial methods, mapped to practical foo
 - [Structural](#structural)
 - [Visual Comedy](#visual-comedy)
 - [Temporal](#temporal)
+- [Compositional](#compositional)
 
 ---
 
-Wright's style is structurally step-based, not emotion-based. He cuts on functional completion — the moment a step finishes its purpose — rather than on feeling or aesthetic peak. This makes his editing unusually compatible with cooking, which is already organized as discrete steps. Most food video overrides that structure with beauty shots; Wright would respect it.
+Two directors whose methods translate unusually well to food video, for opposite reasons.
 
-His rhythm is shared pulse, not sync. Cuts and music aren't chained to each other — they're both running against a common underlying grid established by sound design before the editing rhythm begins. The musicality comes from: confirming the interval three times before varying it, landing cuts slightly ahead of the beat, and treating held shots as long note values rather than pauses. Rhythm as expectation management, not strict meter.
+Wright works with momentum. He cuts on functional completion — the moment a step finishes its purpose — rather than on feeling or aesthetic peak. Cooking is already organized as discrete steps; Wright's editing respects that structure where most food video overrides it with beauty shots. His rhythm is shared pulse, not sync: cuts and music both run against a common underlying grid, with Foley treated as composition before the editing rhythm begins.
+
+Anderson works with stillness and geometry. His camera waits, centered, while the subject arrives in frame. The comedy and emotion come from the precision of the composition, not the energy of the edit. His colour discipline is total — every film establishes a palette in the first minute and holds it through production design, wardrobe, and grade. His structural move is the chapter card: typography as story beat, not transition.
+
+Used together: Anderson for the frame and the structure, Wright for the cuts between them.
+
+---
 
 ## Editorial
 
 ### Match Cut on Action
-**Production cost: High ★★★**
+**Director: Wright | Production cost: High ★★★**
 
-**Wright's technique**
+**Technique**
 Cut mid-action so two shots share a kinetic arc. The motion completes across the edit — the brain supplies the missing frames. Creates momentum without chaos. Requires pre-planned coverage and multiple takes of each gesture so you have a cut point at the right phase of motion.
 
 **Food application**
-Knife lifting from board → cut → knife landing in mise en place bowl. Cracking egg on rim → cut → yolk falling into pan. Whisk lifting from bowl → cut → same motion in a larger vessel. The motion must be genuinely continuous across two set-ups: requires pre-planned shot lists and multiple takes of each gesture.
+Knife lifting from board → cut → knife landing in mise en place bowl. Cracking egg on rim → cut → yolk falling into pan. Whisk lifting from bowl → cut → same motion in a larger vessel. The motion must be genuinely continuous across two set-ups.
 
 **Concrete example**
 - Shot A: CU knife leaving board on upswing
@@ -38,9 +45,9 @@ Knife lifting from board → cut → knife landing in mise en place bowl. Cracki
 ---
 
 ### Action Cut Compression
-**Production cost: Medium ★★**
+**Director: Wright | Production cost: Medium ★★**
 
-**Wright's technique**
+**Technique**
 Stack 4–6 quick cuts of the same class of action, each slightly advanced in state. Used in *Spaced* and *Hot Fuzz* to condense montages. Feels musical — a rhythm, not just a time-lapse.
 
 **Food application**
@@ -56,9 +63,9 @@ Mise en place assembly: each cut lands on the next ingredient hitting the board,
 ---
 
 ### Smash Cut to Consequence
-**Production cost: Low ★**
+**Director: Wright | Production cost: Low ★**
 
-**Wright's technique**
+**Technique**
 Jump from inciting moment directly to aftermath, skipping process. Then optionally cut back to explain. Subverts the "building tension" arc — we see the result before we understand how we got there. Used to comic effect in *Shaun of the Dead*.
 
 **Food application**
@@ -72,9 +79,9 @@ Open on finished plated dish (smash). Then cut back: "here is what I almost dest
 ---
 
 ### Motivated Whip Pan
-**Production cost: Medium ★★**
+**Director: Wright | Production cost: Medium ★★**
 
-**Wright's technique**
+**Technique**
 A whip pan only lands cleanly if something in the frame motivates it — a turning head, a thrown object, a door swinging. Unmotivated whips feel cheap. Wright always links the pan to a physical cause.
 
 **Food application**
@@ -88,13 +95,13 @@ Motivated by wrist flick when tossing pasta → whip → land in finished plated
 ## Sound Design
 
 ### Percussive Sound Design
-**Production cost: Medium ★★**
+**Director: Wright | Production cost: Medium ★★**
 
-**Wright's technique**
+**Technique**
 Sound effects timed to cuts like drum hits. Wright and supervising sound editor Julian Slater treat Foley as composition, not documentation. Every crash, bang, and pop is deliberate and metrically placed.
 
 **Food application**
-Knife on board = snare hit. Sizzle onset = hi-hat. Timer beep = cowbell accent. The edit rhythm and the sound rhythm reinforce each other. Cheapest Wright technique to implement — mostly a post-production choice, no extra camera work required.
+Knife on board = snare hit. Sizzle onset = hi-hat. Timer beep = cowbell accent. The edit rhythm and the sound rhythm reinforce each other. Mostly a post-production choice — no extra camera work required.
 
 **Concrete example**
 4-bar "beat" of chopping at 120bpm. Sizzle drop lands on beat 1 of bar 5. Viewer unconsciously syncs to it. Tone shifts from tutorial to music video without losing information.
@@ -102,10 +109,10 @@ Knife on board = snare hit. Sizzle onset = hi-hat. Timer beep = cowbell accent. 
 ---
 
 ### Sound Bridge Across Time
-**Production cost: Low ★**
+**Director: Wright | Production cost: Low ★**
 
-**Wright's technique**
-The next scene's signature sound bleeds in before the image arrives — orienting the viewer before the visual cut lands. Classic technique, but Wright uses it aggressively and deliberately.
+**Technique**
+The next scene's signature sound bleeds in before the image arrives — orienting the viewer before the visual cut lands. Wright uses it aggressively and deliberately.
 
 **Food application**
 Sizzle of the pan heard 2 seconds before cutting from the mise en place shot to the cooking shot. Or: timer going off heard while still on a beauty shot of the plated dish (non-linear). Tells the viewer where we are going before the image confirms it.
@@ -116,9 +123,9 @@ Still on hero shot of raw steak → faint sizzle fades in → cut to pan → siz
 ---
 
 ### Comic Sound Punctuation
-**Production cost: Low ★**
+**Director: Wright | Production cost: Low ★**
 
-**Wright's technique**
+**Technique**
 A comedic action gets a sound effect that's slightly too large for it — the comedy lives in the mismatch between the smallness of the act and the enormousness of the sound. Used constantly in *Hot Fuzz*.
 
 **Food application**
@@ -132,9 +139,9 @@ Chef carefully plates a single microgreen. Sound effect: thunderclap. Back to ch
 ## Structural
 
 ### Spatial Geography Montage
-**Production cost: High ★★★**
+**Director: Wright | Production cost: High ★★★**
 
-**Wright's technique**
+**Technique**
 *Hot Fuzz*'s first act is almost entirely geography — establishing the layout of Sanford so later action sequences feel spatially coherent. The viewer knows where things are, which makes movement through space meaningful.
 
 **Food application**
@@ -146,9 +153,9 @@ Establish: left side = prep, right side = fire. A crossing shot — reaching fro
 ---
 
 ### Recurring Motif Callback
-**Production cost: Low ★**
+**Director: Wright | Production cost: Low ★**
 
-**Wright's technique**
+**Technique**
 Wright plants a visual or behavioral motif early, then returns to it later in a different context. The callback pays off for observant viewers and creates a feeling of structural coherence — like the story planned itself.
 
 **Food application**
@@ -160,12 +167,32 @@ Chef burns the onions in the first 2 minutes. The exact same shot — burnt pan,
 
 ---
 
+### Title Cards and Chapter Typography
+**Director: Anderson | Production cost: Low ★**
+
+**Technique**
+Intertitles and chapter cards used as narrative structure, not transitions. *The French Dispatch* is organized entirely this way. Typography is chosen with the same intentionality as cinematography — font, weight, color, and position all carry meaning. The card is a story beat; it tells the viewer how to feel about what follows.
+
+**Food application**
+Replace voiceover narration for recipe structure with chapter cards:
+
+> Part I: The Bones
+> Part II: The Long Wait
+> Part III: The Reckoning
+
+Works especially well for multi-stage or multi-day recipes where the time jumps would otherwise require narration to navigate. Typography signals tone: elegant serif for classic technique, typewriter for rustic, sans-serif for modern.
+
+**Concrete example**
+Single white card, centered, on a muted background that matches the episode's colour palette. Text: "Part I: The Bones." Hold 2 seconds. Cut to overhead of raw stock ingredients. No voiceover. No music change. The card carries the whole transition.
+
+---
+
 ## Visual Comedy
 
 ### Hold on Reaction
-**Production cost: Low ★**
+**Director: Wright | Production cost: Low ★**
 
-**Wright's technique**
+**Technique**
 The joke isn't usually the action, it's the duration of the reaction. A look held one beat past comfortable. An object left on screen one frame after it should have been cut. Timing is everything — the comedy is purely editorial.
 
 **Food application**
@@ -177,9 +204,9 @@ Reaction shot begins at 1.5s. Normal editors cut at 2s. Wright cuts at 3.5s. Tha
 ---
 
 ### Deadpan Insert Shot
-**Production cost: Low ★**
+**Director: Wright | Production cost: Low ★**
 
-**Wright's technique**
+**Technique**
 Cut to an extreme close-up of something mundane with the same gravity as a plot-critical object. The humor comes from the mismatch between the shot's weight and its subject. Used throughout *Spaced*.
 
 **Food application**
@@ -191,9 +218,9 @@ ECU of a fish sauce bottle with dramatic lighting. Two second hold. Chef's hand 
 ---
 
 ### Parallel Action Rack
-**Production cost: Medium ★★**
+**Director: Wright | Production cost: Medium ★★**
 
-**Wright's technique**
+**Technique**
 Cross-cutting between two simultaneous things for comedic or rhythmic effect. Used to build absurd equivalence — this thing and that thing are happening at the same time, and the juxtaposition is the joke.
 
 **Food application**
@@ -204,12 +231,31 @@ Narration: "gently fold until just combined." Cut to: aggressive, chaotic foldin
 
 ---
 
+### Deadpan Blocking
+**Director: Anderson | Production cost: Low ★**
+
+**Technique**
+Anderson's actors are positioned like exhibits, often facing the camera directly. Movement is deliberate and choreographed rather than naturalistic. The artificiality is the style — it signals that this is a performance, not a document. The humor comes from the precision of the staging, not from anything said.
+
+**Food application**
+Host faces camera directly. States one fact. Does not look at the food they're describing. Turns 90 degrees. Performs the action. Turns back. Useful for instructional moments where Wright's kinetic energy would be wrong — slow, deliberate technique or ratio-based information.
+
+**Concrete example**
+- Host (facing camera): "The ratio is two to one."
+- Host turns 90 degrees to the stove.
+- Host performs the pour.
+- Host turns back to camera.
+- Host: "Never more."
+- Cut.
+
+---
+
 ## Temporal
 
 ### Step-Print Freeze
-**Production cost: Low ★**
+**Director: Wright | Production cost: Low ★**
 
-**Wright's technique**
+**Technique**
 A frame freeze in the middle of an action, often with graphic text appearing. The Cornetto freeze-frame endings. Used to punctuate moments of absurd consequence.
 
 **Food application**
@@ -221,9 +267,9 @@ Soufflé rising perfectly → freeze → "4 minutes and 23 seconds of smugness" 
 ---
 
 ### Non-Linear Reveal Structure
-**Production cost: Medium ★★**
+**Director: Wright | Production cost: Medium ★★**
 
-**Wright's technique**
+**Technique**
 *Baby Driver*'s opening isn't the beginning of the story. Wright often starts in medias res and lets the full picture assemble from fragments. The structure itself generates suspense.
 
 **Food application**
@@ -241,9 +287,9 @@ Episode structure:
 ---
 
 ### Expressive Time-Lapse Integration
-**Production cost: Medium ★★**
+**Director: Wright | Production cost: Medium ★★**
 
-**Wright's technique**
+**Technique**
 Time compression used not as neutral connective tissue but as an active narrative device — the speed change itself has emotional register. Fast compression = anxiety. Slow compression = anticipation.
 
 **Food application**
@@ -254,23 +300,128 @@ Aggressive quick-cut time-lapse of messy prep = chaos energy. Single slow near-r
 
 ---
 
+## Compositional
+
+### Symmetrical Framing
+**Director: Anderson | Production cost: Medium ★★**
+
+**Technique**
+The camera is almost always centered on the subject, frame divided into equal halves. This isn't neutral framing — it's a compositional commitment. Everything in the shot is placed relative to the center axis: symmetry signals control; any deviation from it signals disruption. The flatness (no dynamic angle, no Dutch tilt) reads as authorial confidence.
+
+**Food application**
+Overhead mise en place with ingredients arranged symmetrically around a central bowl or board. Two pans equidistant from center on the stove. A plated dish positioned exactly at frame center. Forces pre-planning of the physical set-up — the camera cannot fix asymmetric prep. Most food video uses overhead shots aesthetically; Anderson uses them architecturally.
+
+**Concrete example**
+- Top-down shot: knife centered vertically, vegetables in equal rows left and right
+- Camera does not move
+- The arrangement of the ingredients is the shot's entire content
+- No narration, no host hands, no movement — the composition does the work
+
+---
+
+### Lateral Tracking Shot
+**Director: Anderson | Production cost: Medium ★★**
+
+**Technique**
+The camera tracks left or right to reveal a pre-staged scene as if pulling back a curtain — a diorama opening. Used throughout *The Grand Budapest Hotel* and *The French Dispatch*. The track doesn't follow a character; it reveals a tableau the character is already part of.
+
+**Food application**
+Camera tracks along a counter to reveal each mise en place station in sequence — spices, then aromatics, then proteins — as if opening a display case. Each station is a held beat before the track resumes. Replaces ingredient introduction narration; the reveal is the introduction.
+
+**Concrete example**
+- Camera starts tight on empty cutting board
+- Tracks right: ingredients appear in sequence, already arranged
+- Camera stops centered on the full layout
+- Hold 2 seconds
+- Cut to first step
+
+---
+
+### Colour Palette as Episode Identity
+**Director: Anderson | Production cost: Low ★**
+
+**Technique**
+Each film has a signature palette established in the first 30 seconds and maintained through production design, wardrobe, and colour grading. *The Grand Budapest Hotel*: pink and purple. *Moonrise Kingdom*: earth tones. *The Life Aquatic*: aquamarine. The palette is not decoration — it's identity. Viewers recognize an Anderson film by colour before they recognize it by content.
+
+**Food application**
+Assign a palette to each recipe category or episode arc. Tomato-based dishes: terracotta and cream. Seafood: slate blue and white. Baking: warm amber and parchment. The colour consistency signals "this is one thing" without verbal cue. Post-production grading handles part of it; consistent props, boards, and backgrounds handle the rest.
+
+**Concrete example**
+Pasta episode: board, bowl, linen, walls all in cream, tan, or terracotta. A single green basil leaf is the only accent. The visual unity makes the food the obvious subject without any graphic design or motion work.
+
+---
+
 ## Strategic Notes
 
 ### Highest leverage / lowest production cost
-The sonic techniques — percussive sound design and sound bridges — require zero additional camera work. They're pure post-production choices that almost no food video creator treats with intentionality.
+The sonic techniques — percussive sound design and sound bridges — require zero additional camera work. Colour palette discipline and title cards are pure post-production and prop choices. Together these four techniques create both a rhythmic identity and a visual one without a second camera or a shot list.
 
 ### Most unexplored territory in food video
-The structural category: spatial geography montages and motif callbacks. These require planning the episode arc the way Wright plans a film's act structure — a fundamentally different creative mode than "follow me as I cook."
+Structural techniques from both directors: spatial geography montages and motif callbacks (Wright), and lateral tracking shots (Anderson). These require planning the episode arc before shooting — a fundamentally different creative mode than "follow me as I cook." The lateral track is particularly unused; a slider achieves it at a fraction of the cost of a dolly, and the effect is immediately distinctive.
 
 ### Production cost cliff
-Match cuts and motivated whip pans require pre-planned shot lists, dedicated coverage angles, and enough takes that you have cut points at the right phase of motion. Fiction-film production discipline applied to a food shoot.
+Match cuts, motivated whip pans (Wright), symmetrical framing, and lateral tracking (Anderson) all require committing to the shot before you shoot it. You cannot fix asymmetric staging or a missed cut point in post. These techniques demand fiction-film production discipline applied to a food shoot.
 
-### Recommended starting stack (low cost, high Wright signal)
-Three techniques achievable entirely in post, that together create a distinctly Wrightian rhythm:
+### Using both directors together
+Wright provides the kinetic energy; Anderson provides the geometry. A video that opens with Anderson's symmetrical overhead and chapter cards, then cuts to Wright-style action compression for the cooking sequence, then closes on an Anderson deadpan hold is using both grammars correctly — each where the other would be wrong.
+
+### Recommended starting stack (low cost, high signal)
+Five techniques achievable entirely in post or with minimal planning:
 
 1. **Smash cut to consequence** — reorder the narrative, open on the end state
 2. **Percussive sound design** — treat Foley as composition
 3. **Hold on reaction** — extend the uncomfortable beat by 1.5 seconds
+4. **Colour palette discipline** — assign a palette per episode category
+5. **Title cards** — replace voiceover narration for structural transitions
 
-No second camera required. No storyboard required. Pure editorial choices.
+No second camera required. No storyboard required. Pure editorial and production design choices.
 
+---
+
+## Glossary
+
+### Abbreviations
+
+**bpm** — beats per minute. Tempo measurement; 120bpm is standard dance tempo. Used here to describe edit rhythm.
+
+**CU** — close-up. A shot framing one object or body part tightly.
+
+**ECU** — extreme close-up. Tighter than a CU; fills the frame with a very small subject. A single caper in ECU.
+
+### Production Terms
+
+**Coverage** — the full set of shots filmed for a scene so editors have options. Match cuts require pre-planned coverage from multiple angles.
+
+**Foley** — sound effects recorded in post to replace or augment what the camera mic captured. Wright treats Foley as musical composition, not cleanup.
+
+**In medias res** — Latin: "into the middle of things." Narrative that begins mid-story rather than at the start.
+
+**Match cut** — an edit where two shots share a continuous motion across the cut, so the action appears uninterrupted.
+
+**Mise en place** — French culinary term for prepped, portioned, and arranged ingredients. Also refers to the staged shot of those ingredients before a cooking sequence.
+
+**Motivated** — a camera move triggered by something in the frame (a turning head, a thrown object). Unmotivated moves feel arbitrary.
+
+**Smash cut** — an abrupt cut with no transition, often from action directly to aftermath.
+
+**Step-print** — a film effect that repeats frames to create a stutter freeze or slow motion.
+
+**Whip pan** — a rapid horizontal pan that blurs the frame mid-movement, used as a transition between locations or time periods.
+
+### Films Referenced
+
+**Spaced** (1999–2001) — Wright's British sitcom. Established his editorial voice at low budget; directly applicable to solo food video.
+
+**Shaun of the Dead** (2004) — First Cornetto film. Smash cuts, match cuts, and comic sound punctuation throughout.
+
+**Hot Fuzz** (2007) — Second Cornetto film. Spatial geography montages and motif callbacks dominate the first act.
+
+**Baby Driver** (2017) — Every cut tied to a shared rhythmic grid; the clearest demonstration of sound design as structural editor.
+
+**The Grand Budapest Hotel** (2014) — Anderson's clearest use of lateral tracking shots and symmetrical framing as compositional grammar.
+
+**The French Dispatch** (2021) — Organized entirely around chapter cards and intertitles; the reference for typography as narrative structure.
+
+**Moonrise Kingdom** (2012) — Earth-tone palette discipline. Strong example of colour as episode identity.
+
+**The Life Aquatic with Steve Zissou** (2004) — Aquamarine palette; lateral tracking used to reveal the ship's interior as a diorama.

@@ -14,7 +14,8 @@ draft: false
 - 50g ripe avocado (about half)
 - 50g fresh lemon or lime juice
 - 25g extra virgin olive oil
-- 10g fresh ginger, grated
+- 25ml maple syrup
+- 25g fresh ginger, grated
 - big pinch dried thyme
 - ½ tsp garlic powder
 - salt and black pepper
