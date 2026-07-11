@@ -20,8 +20,9 @@
 }}
 
 {{ if $isWikiLink }}
-  {{ $target := where site.RegularPages "Title" $destination | first }}
-  {{ if $target }}
+  {{ $matches := where site.RegularPages "Title" $destination }}
+  {{ if gt (len $matches) 0 }}
+    {{ $target := index $matches 0 }}
     <a href="{{ $target.RelPermalink }}">{{ $text }}</a>
   {{ else }}
     <span class="broken-link" title="Not found: {{ $destination }}">{{ $text }}</span>

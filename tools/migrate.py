@@ -18,7 +18,7 @@ import yaml
 
 
 # Files that exist in the vault recipes dir but are not recipes
-SKIP_FILES = frozenset({"Food log.md"})
+SKIP_FILES = frozenset({"Food log.md", "Recipes to test.md"})
 
 # Output key order — Hugo-specific fields (draft, description, featured) trail vault fields
 FIELD_ORDER = [
@@ -120,12 +120,20 @@ def _serialize(post: frontmatter.Post) -> str:
 # ---------------------------------------------------------------------------
 
 def _build_title_index(dest_dir: Path) -> dict[str, Path]:
+    """Index dest files by title, for matching vault sources to existing files.
+
+    Excludes family-archive files (source: family) — those come from
+    normalize.py, not this vault, and must never be a migrate.py write target
+    even if a personal recipe happens to share the same title.
+    """
     index = {}
     for f in dest_dir.glob("*.md"):
         if f.name == "_index.md":
             continue
         try:
             post = frontmatter.load(str(f))
+            if post.get("source") == "family":
+                continue
             title = str(post.get("title", "")).strip()
             if title:
                 index[title.lower()] = f
@@ -245,17 +253,26 @@ def main(files, source, dest, force, dry_run, verbose):
         elif action in ("error", "warning"):
             click.echo(f"  ! {action}:   {src.name}  ({detail})", err=True)
 
-    # Warn about files in dest not touched (may have been removed from vault)
+    # Warn about files in dest not touched (may have been removed from vault).
+    # Skip family-archive files (source: family) — those come from normalize.py
+    # and were never sourced from this vault, so they're never "touched" here.
     if not files:
         for dest_file in sorted(dest_dir.glob("*.md")):
             if dest_file.name == "_index.md":
                 continue
-            if dest_file not in touched_dest:
-                click.echo(
-                    f"  ? removed: {dest_file.name}  (not in vault — delete manually if intended)",
-                    err=True,
-                )
-                counts["warning"] += 1
+            if dest_file in touched_dest:
+                continue
+            try:
+                post = frontmatter.load(str(dest_file))
+            except Exception:
+                continue
+            if post.get("source") == "family":
+                continue
+            click.echo(
+                f"  ? removed: {dest_file.name}  (not in vault — delete manually if intended)",
+                err=True,
+            )
+            counts["warning"] += 1
 
     # Summary line
     parts = []

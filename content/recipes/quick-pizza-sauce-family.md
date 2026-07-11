@@ -1,42 +1,66 @@
 ---
-title: Quick Pizza Sauce
-tags: [sauces, italian, quick, vegan, dairy-free]
-source: original
-date: 2024-07-01
-servings: 2–3 pizzas (makes ~250ml)
-prep_time: 5 min
-cook_time: 10 min
-total_time: 15 min
-cuisine: Italian
-draft: false
+# duplicate_of: content/recipes/quick-pizza-sauce.md
+title: Quick pizza sauce
+tags: [sauces]
+source: family
+draft: true
 ---
 
-## Mechanic
+Makes ~700ml
 
-Built on double-strength tomato paste rather than crushed tomatoes. The paste is already concentrated so the sauce is **ready in under 15 minutes** and has a deep tomato flavour without a long simmer. The splash of wine deglazes and adds acidity.
+This is a lazy pizza sauce recipe that uses only pantry ingredients. It should be slightly salty, with a garlic and herb background.
 
 ## Ingredients
 
-- 2 tbsp tomato paste (double-concentrated tube paste)
-- 3–4 tbsp water (adjust for consistency)
-- splash of red wine
-- 1 tsp extra-virgin olive oil
-- pinch dried oregano
-- pinch dried thyme
-- salt and black pepper
-- pinch of sugar (if needed)
+650ml
 
-## Method
+Strained tomatoes
 
-Heat olive oil in a small saucepan over medium. Add tomato paste and stir, cooking for 1–2 minutes until it darkens slightly and smells sweeter.
+One glass jar (680ml), less what doesn’t come out.
 
-Add wine and stir to deglaze. Add water and herbs; simmer 5 minutes. Taste and add a pinch of sugar if the sauce is sharp.
+20g
 
-## To serve
+Tomato paste
 
-Spread on pizza dough, flatbread, or as a dipping sauce. Can be made ahead and refrigerated for a week.
+Heaping tablespoon
 
-## Notes
+3g
 
-- A bit sweet, a bit thick as written — add more water if you want a looser sauce, or less sugar.
-- The double-paste concentrate is important; regular paste needs more reduction time.
+Olive oil
+
+7g
+
+Salt
+
+Just over 1%
+
+2g
+
+Sugar
+
+Sweet balsamic can work too, or maple syrup.
+
+2g
+
+Granulated garlic
+
+1g
+
+Black pepper
+
+1g
+
+MSG
+
+Optional, but tasty.
+
+1g
+
+Oregano (and thyme if you have it)
+
+## Basic method
+
+1. Mix ingredients and taste. May need more salt/garlic/sugar to taste, as tomato sauces vary quite widely.
+2. Refrigerate for up to a week (tastes better after a few hours).
+
+I use this sauce for pizza bagels/bread/dogs and quick pizzas. It’s bright and nostalgic (towards Orange Julius pizza dogs, or mall pizza).
