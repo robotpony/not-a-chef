@@ -17,7 +17,7 @@ draft: false
 - 25ml maple syrup
 - 25g fresh ginger, grated
 - big pinch dried thyme
-- ½ tsp garlic powder
+- ½ teaspoon garlic powder
 - salt and black pepper
 - 1g MSG
 - 15ml chicken stock, drippings, or water

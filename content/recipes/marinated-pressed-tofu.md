@@ -17,10 +17,10 @@ Freezing tofu expels water and restructures the interior into a sponge. **Freeze
 ## Ingredients
 
 - 400g firm tofu
-- 2 tbsp soy sauce
-- 1 tbsp rice wine (or rice wine vinegar)
-- 1 tsp sesame oil
-- 1 tsp fresh ginger, grated
+- 2 tablespoons soy sauce
+- 1 tablespoon rice wine (or rice wine vinegar)
+- 1 teaspoon sesame oil
+- 1 teaspoon fresh ginger, grated
 
 ## Method
 

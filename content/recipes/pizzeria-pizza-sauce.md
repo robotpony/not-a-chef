@@ -12,7 +12,7 @@ draft: false
 
 ## Mechanic
 
-Built on strained tomatoes rather than crushed, so the sauce is smooth without blending. **All quantities by weight** — this scales cleanly. The balsamic adds body and a mild acidity that a straight tomato sauce lacks.
+Built on strained tomatoes rather than crushed, so the sauce is smooth without blending. **All quantities by weight**: this scales cleanly. The balsamic adds body and a mild acidity that a straight tomato sauce lacks.
 
 ## Ingredients
 
@@ -20,7 +20,7 @@ Built on strained tomatoes rather than crushed, so the sauce is smooth without b
 - 25g tomato paste
 - 10g extra-virgin olive oil
 - 5g balsamic vinegar (medium quality)
-- 6g granulated garlic (1 tsp)
+- 6g granulated garlic (1 teaspoon)
 - 1g dried oregano
 - 1g ground black pepper
 - 1g MSG (optional)
@@ -40,4 +40,4 @@ Spread thin on pizza dough (about 100ml per medium pizza). Keeps refrigerated fo
 ## Notes
 
 - See also quick-pizza-sauce.md for a smaller-batch, paste-only version.
-- The sugar and salt are listed at 15g each but this is the upper end — start with 10g of each and taste up.
+- The sugar and salt are listed at 15g each but this is the upper end. Start with 10g of each and taste up.

@@ -20,13 +20,13 @@ A concentrated syrup of citrus oils, warm spices, and caramel notes that forms t
 - zest and juice of 1 lime
 - zest and juice of 2 oranges
 - 3 large cinnamon sticks (12 cm / 5 inches), broken into small pieces
-- 2 tbsp dried bitter orange peel
-- 2 tsp coriander seed
-- ¼ tsp freshly grated nutmeg
-- 1 tsp gum arabic (optional)
+- 2 tablespoons dried bitter orange peel
+- 2 teaspoons coriander seed
+- ¼ teaspoon freshly grated nutmeg
+- 1 teaspoon gum arabic (optional)
 - 900g (2 lbs) sugar
 - 60ml browning sauce (such as Kitchen Bouquet)
-- ½ tsp vanilla extract
+- ½ teaspoon vanilla extract
 - small amount of ascorbic acid or additional lemon juice (to taste)
 - 10ml neutral alcohol (or rely on vanilla's alcohol content)
 

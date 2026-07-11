@@ -13,9 +13,9 @@ draft: false
 
 - 150g (½ cup) hoisin sauce
 - 60g (¼ cup) peanut butter
-- 2 tbsp rice vinegar
+- 2 tablespoons rice vinegar
 - 2 cloves garlic, grated
-- 1 tbsp sambal oelek
+- 1 tablespoon sambal oelek
 - 60 ml (¼ cup) warm water
 
 ## Method

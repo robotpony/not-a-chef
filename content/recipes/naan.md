@@ -13,14 +13,14 @@ draft: false
 
 ## Mechanic
 
-Yogurt is the key acid and tenderizer — it produces the slight tang and soft interior that sets naan apart from other flatbreads. **Portioning into 100g balls and cold-proofing overnight** gives the dough time to develop flavour and makes the bread easier to roll and cook.
+Yogurt is the key acid and tenderizer: it produces the slight tang and soft interior that sets naan apart from other flatbreads. **Portioning into 100g balls and cold-proofing overnight** gives the dough time to develop flavour and makes the bread easier to roll and cook.
 
 ## Ingredients
 
 - 620g bread flour
-- 7g instant dry yeast (2 tsp)
-- 12g kosher salt (2½ tsp)
-- 22g sugar (~2 tbsp)
+- 7g instant dry yeast (2 teaspoons)
+- 12g kosher salt (2½ teaspoons)
+- 22g sugar (~2 tablespoons)
 - 400g full-fat yogurt or whole milk
 - 110g unsalted butter, melted
 

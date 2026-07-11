@@ -16,10 +16,10 @@ draft: false
 
 - 500g (2 cups) fresh or frozen berries or stone fruit
 - 50g granulated sugar (¼ cup)
-- 2 tsp cornstarch (use 1½ tbsp for a thicker filling)
-- 10ml lemon juice (2 tsp)
+- 2 teaspoons cornstarch (use 1½ tablespoons for a thicker filling)
+- 10ml lemon juice (2 teaspoons)
 - pinch of salt
-- ½ tsp vanilla extract (for stone fruit and berry combinations)
+- ½ teaspoon vanilla extract (for stone fruit and berry combinations)
 
 ### Topping
 
@@ -27,8 +27,8 @@ draft: false
 - 60g salted butter, melted (¼ cup)
 - 50g brown sugar (¼ cup)
 - 30g all-purpose flour (¼ cup)
-- 1 tsp vanilla extract
-- ½ tsp cinnamon
+- 1 teaspoon vanilla extract
+- ½ teaspoon cinnamon
 
 ## Method
 

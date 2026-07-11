@@ -11,7 +11,7 @@ draft: false
 
 ## Mechanic
 
-A fast fridge pickle built for **max contrast** over sweetness. No sugar, no turmeric, no brightening agents — just sharp acid and mustard seed. The ratio is roughly 1.2:1 water to vinegar, which is milder than a straight vinegar pickle.
+A fast fridge pickle built for **max contrast** over sweetness. No sugar, no turmeric, no brightening agents: just sharp acid and mustard seed. The ratio is roughly 1.2:1 water to vinegar, which is milder than a straight vinegar pickle.
 
 ## Ingredients
 
@@ -20,8 +20,8 @@ A fast fridge pickle built for **max contrast** over sweetness. No sugar, no tur
 - 250ml distilled white vinegar
 - 10–15g kosher salt
 - 2 cloves garlic, roughly sliced
-- 6g black peppercorns (2 tsp)
-- 6g whole yellow mustard seeds (2 tsp)
+- 6g black peppercorns (2 teaspoons)
+- 6g whole yellow mustard seeds (2 teaspoons)
 - 2 sprigs fresh dill
 
 ## Method

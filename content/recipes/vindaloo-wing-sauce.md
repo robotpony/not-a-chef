@@ -13,18 +13,18 @@ draft: false
 
 ## Ingredients
 
-- 3 tbsp fresh lime juice
-- 3 tbsp maple syrup
-- 2 tbsp soy sauce
-- 1½ tbsp vindaloo spice blend (see vindaloo-paste.md)
-- 1–2 tbsp extra-virgin olive oil
-- 2 tsp mild chili flakes (Korean gochugaru worked well)
-- 2 tsp garlic, minced or grated
-- 2 tsp onion, minced or grated
-- 2 tsp fresh ginger, minced or grated
-- 1 tsp cornstarch
-- ½ tsp granulated garlic
-- ½ tsp MSG
+- 3 tablespoons fresh lime juice
+- 3 tablespoons maple syrup
+- 2 tablespoons soy sauce
+- 1½ tablespoons vindaloo spice blend (see vindaloo-paste.md)
+- 1–2 tablespoons extra-virgin olive oil
+- 2 teaspoons mild chili flakes (Korean gochugaru worked well)
+- 2 teaspoons garlic, minced or grated
+- 2 teaspoons onion, minced or grated
+- 2 teaspoons fresh ginger, minced or grated
+- 1 teaspoon cornstarch
+- ½ teaspoon granulated garlic
+- ½ teaspoon MSG
 - salt
 - water, to thin
 

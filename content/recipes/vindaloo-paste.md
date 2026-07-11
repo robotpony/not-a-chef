@@ -12,21 +12,21 @@ draft: false
 
 ## Mechanic
 
-The fenugreek and dried chilies are what make this paste taste like vindaloo rather than a generic curry paste. **Toast all whole spices first** — the heat activates their oils and deepens every flavour in the final dish.
+The fenugreek and dried chilies are what make this paste taste like vindaloo rather than a generic curry paste. **Toast all whole spices first**: the heat activates their oils and deepens every flavour in the final dish.
 
 ## Ingredients
 
 - 50g fresh ginger (2 inches), roughly chopped
 - 3 cloves garlic, roughly chopped
 - 10 dried red chilies (adjust heat to taste)
-- 2 tsp coriander seeds
-- 1 tsp fenugreek seeds
-- 1 tsp cumin seeds
+- 2 teaspoons coriander seeds
+- 1 teaspoon fenugreek seeds
+- 1 teaspoon cumin seeds
 - 6 green cardamom pods
 - 6 whole cloves
 - 1 cinnamon stick
-- ¼ tsp black peppercorns
-- 3 tbsp lemon juice
+- ¼ teaspoon black peppercorns
+- 3 tablespoons lemon juice
 
 ## Method
 

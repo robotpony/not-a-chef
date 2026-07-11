@@ -13,31 +13,31 @@ draft: false
 
 ## Mechanic
 
-The vegetarian base replaces pancetta with deeply browned mushrooms, toasted bread, and smoked paprika. The bread is the surprising part — it toasts in the oil, adding a savoury nuttiness that disappears into the soup. Don't skip it.
+The vegetarian base replaces pancetta with deeply browned mushrooms, toasted bread, and smoked paprika. The bread is the surprising part: it toasts in the oil, adding a savoury nuttiness that disappears into the soup. Don't skip it.
 
 ## Base
 
-- 2 tbsp olive oil
-- 4 cups cremini or white mushrooms, diced
-- 1 cup bread, diced small (or ½ cup breadcrumbs)
-- 2 tsp smoked paprika
-- 1–2 tsp soy sauce or Bragg's aminos
-    - Or: 1 cup diced pancetta instead of all of the above
+- 2 tablespoons olive oil
+- 280 g cremini or white mushrooms, diced (about 4 cups)
+- 30 g bread, diced small (about 1 cup; or 60 g breadcrumbs)
+- 2 teaspoons smoked paprika
+- 1–2 teaspoons soy sauce or Bragg's aminos
+    - Or: 150 g diced pancetta instead of all of the above
 
 Heat olive oil in a large Dutch oven over medium. Add mushrooms and cook until they release their liquid and begin to brown, about 8 minutes. Add bread and toast until golden. Add paprika and soy sauce and stir to combine.
 
 ## Soup
 
 - 1 onion, diced
-- 1 cup celery, diced
+- 120 g celery, diced (about 1 cup)
 - 4 cloves garlic, minced
-- 1 tsp red pepper flakes
-- 1 tsp Italian seasoning
+- 1 teaspoon red pepper flakes
+- 1 teaspoon Italian seasoning
 - 1 L (4 cups) vegetable or chicken stock
 - 500 ml (2 cups) water
 - 1 large tin (825 ml) plum tomatoes, crushed by hand
 - 2 tins (540 ml each) mixed beans, drained and rinsed
-- 4 cups kale or other sturdy greens, roughly chopped
+- 270 g kale or other sturdy greens, roughly chopped (about 4 cups)
 - ⅔ cup small pasta (ditalini, orzo, or similar)
 - salt and black pepper
 - ¼ cup fresh flat-leaf parsley, chopped
@@ -54,4 +54,4 @@ Finished with a drizzle of good olive oil, Parmesan, and parsley.
 ## Notes
 
 - If freezing, cook pasta separately and add when reheating.
-- The bread in the base can be a stale heel — it disappears completely.
+- The bread in the base can be a stale heel. It disappears completely.

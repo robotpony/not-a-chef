@@ -12,7 +12,7 @@ draft: false
 
 ## Mechanic
 
-**Equal parts soy, honey, and hoisin** form the base; sake or rice vinegar cuts the sweetness. Fresh-grated aromatics (not jarred paste) give this its character — the shallot in particular rounds out the garlic and ginger.
+**Equal parts soy, honey, and hoisin** form the base; sake or rice vinegar cuts the sweetness. Fresh-grated aromatics (not jarred paste) give this its character: the shallot in particular rounds out the garlic and ginger.
 
 ## Ingredients
 
@@ -20,11 +20,11 @@ draft: false
 - 80ml honey or maple syrup (⅓ cup)
 - 80ml hoisin sauce (⅓ cup)
 - 60ml sake or rice wine vinegar (¼ cup)
-- 1 tbsp sesame oil
-- 1 small knob ginger, grated (about 2 tbsp)
+- 1 tablespoon sesame oil
+- 1 small knob ginger, grated (about 2 tablespoons)
 - 2 cloves garlic, grated
 - 1 small shallot, grated
-- 1 tbsp togarashi
+- 1 tablespoon togarashi
 
 ### To finish
 

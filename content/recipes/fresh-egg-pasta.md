@@ -19,7 +19,7 @@ draft: false
 - 250g (about 2 cups) AP flour, plus more for dusting
 - 2 large eggs (about 110g)
 - 4 egg yolks (about 70g)
-- 10g (1 tsp) salt
+- 10g (1 teaspoon) salt
 
 ## Method
 

@@ -12,7 +12,7 @@ draft: false
 
 ## Mechanic
 
-Roasting the squash and vegetables first concentrates their sugars and develops colour before anything goes in the pot. Straining the blended soup through a fine-mesh sieve at the end gives a silky texture you can't get any other way. Loosen with stock until it pours easily — it's not a pie filling.
+Roasting the squash and vegetables first concentrates their sugars and develops colour before anything goes in the pot. Straining the blended soup through a fine-mesh sieve at the end gives a silky texture you can't get any other way. Loosen with stock until it pours easily. It's not a pie filling.
 
 ## Soup
 
@@ -20,11 +20,11 @@ Roasting the squash and vegetables first concentrates their sugars and develops 
 - 1 onion, roughly diced
 - 240 ml (1 cup) carrots or yam, diced
 - 6 cloves garlic, smashed and peeled
-- 1 tbsp olive oil
+- 1 tablespoon olive oil
 - 1.5 L (6 cups) stock, plus more as needed
-- 2 tbsp maple syrup
-- 2 tbsp apple cider vinegar
-- 2 tsp salt, or to taste
+- 2 tablespoons maple syrup
+- 2 tablespoons apple cider vinegar
+- 2 teaspoons salt, or to taste
 
 Heat the oven to 200°C (400°F). Toss the squash, onion, carrots, and garlic with olive oil and a generous pinch of salt. Roast on a baking sheet about 1 hour, until soft and browned.
 
@@ -32,7 +32,7 @@ Transfer to a large pot and add stock. Simmer on low 30–60 minutes. Blend smoo
 
 ## Sage brown butter
 
-- 3 tbsp unsalted butter
+- 3 tablespoons unsalted butter
 - 6–8 large sage leaves
 
 Melt the butter in a small pan over medium heat. Cook until it stops foaming and smells nutty. Remove from heat and add the sage leaves. Let infuse while the soup simmers.

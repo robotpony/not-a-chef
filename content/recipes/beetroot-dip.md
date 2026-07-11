@@ -14,9 +14,9 @@ draft: false
 
 - 430g canned chickpeas, drained and rinsed
 - 140g cooked beets
-- 2 tsp dried or fresh oregano
-- 30g extra virgin olive oil (2 tbsp)
-- ½ tsp minced garlic
+- 2 teaspoons dried or fresh oregano
+- 30g extra virgin olive oil (2 tablespoons)
+- ½ teaspoon minced garlic
 - 1 medium lemon, zest finely grated and juiced
 - black pepper
 - salt

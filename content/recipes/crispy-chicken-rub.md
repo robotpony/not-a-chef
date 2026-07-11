@@ -11,20 +11,20 @@ draft: false
 
 ## Mechanic
 
-**Baking powder in a dry rub** raises the surface pH of the skin, which helps it brown and crisp faster. Use it sparingly — too much leaves a chalky flavour. Mushroom powder, if you have it, adds quiet umami that amplifies any pan sauce or gravy.
+**Baking powder in a dry rub** raises the surface pH of the skin, which helps it brown and crisp faster. Use it sparingly; too much leaves a chalky flavour. Mushroom powder, if you have it, adds quiet umami that amplifies any pan sauce or gravy.
 
 ## Ingredients
 
-- 15g kosher salt (1 tbsp)
-- 3g baking powder (1 tsp)
-- ½ tsp black pepper
-- ½ tsp ground coriander
-- ½ tsp MSG
-- 1 tsp mushroom powder (optional; use if serving with gravy)
+- 15g kosher salt (1 tablespoon)
+- 3g baking powder (1 teaspoon)
+- ½ teaspoon black pepper
+- ½ teaspoon ground coriander
+- ½ teaspoon MSG
+- 1 teaspoon mushroom powder (optional; use if serving with gravy)
 
 ## Method
 
-Combine all ingredients. Rub all over chicken, including under the skin where possible. Let rest uncovered in the fridge for at least 1 hour, ideally overnight — the salt draws out moisture, which then reabsorbs, and the skin dries out for better crisping.
+Combine all ingredients. Rub all over chicken, including under the skin where possible. Let rest uncovered in the fridge for at least 1 hour, ideally overnight. The salt draws out moisture, which then reabsorbs, and the skin dries out for better crisping.
 
 Coat skin lightly with neutral oil before roasting.
 

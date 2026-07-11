@@ -15,8 +15,8 @@ draft: false
 - 300g fresh strawberries (2 cups), chopped
 - 300g fresh rhubarb (2 cups), chopped
 - 65g brown sugar (⅓ cup)
-- ⅛ tsp salt
-- 15ml lemon juice (1 tbsp), from 1 medium lemon
+- ⅛ teaspoon salt
+- 15ml lemon juice (1 tablespoon), from 1 medium lemon
 
 ## Method
 

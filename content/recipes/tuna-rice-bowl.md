@@ -17,27 +17,27 @@ draft: false
 
 - 2 tuna steaks (~200g each), sliced about 2 cm thick
 - salt and black pepper
-- 1 tbsp sesame seeds
-- 1 tbsp neutral oil
+- 1 tablespoon sesame seeds
+- 1 tablespoon neutral oil
 
 ### Tuna sauce (for cubing and tossing)
 
-- 2 tbsp mayonnaise
-- 1 tbsp sriracha
-- 2 tsp soy sauce
-- ½ tsp rice wine vinegar
-- ½ tsp toasted sesame oil
+- 2 tablespoons mayonnaise
+- 1 tablespoon sriracha
+- 2 teaspoons soy sauce
+- ½ teaspoon rice wine vinegar
+- ½ teaspoon toasted sesame oil
 
 ### Bowl dressing
 
 - 60ml soy sauce (¼ cup)
 - 60ml rice vinegar (¼ cup)
 - 60ml water (¼ cup)
-- 12g sugar (2½ tsp)
+- 12g sugar (2½ teaspoons)
 - 1 scallion, thinly sliced
-- 2 tsp fresh ginger, minced
-- 7g toasted sesame oil (1½ tsp)
-- ½ tsp red pepper flakes
+- 2 teaspoons fresh ginger, minced
+- 7g toasted sesame oil (1½ teaspoons)
+- ½ teaspoon red pepper flakes
 
 ### Bowl
 

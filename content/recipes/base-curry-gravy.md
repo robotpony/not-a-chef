@@ -13,12 +13,12 @@ draft: true
 
 ## Mechanic
 
-This is a BIR (British Indian Restaurant) base gravy — a neutral, lightly spiced vegetable purée that acts as the liquid foundation for takeaway-style curries. Most BIR curries start by blooming aromatics and spices in oil, then adding this gravy to build the sauce. The gravy itself is deliberately mild; the individual dish recipes add heat and character on top.
+This is a BIR (British Indian Restaurant) base gravy: a neutral, lightly spiced vegetable purée that acts as the liquid foundation for takeaway-style curries. Most BIR curries start by blooming aromatics and spices in oil, then adding this gravy to build the sauce. The gravy itself is deliberately mild; the individual dish recipes add heat and character on top.
 
 ## Ingredients
 
 - 250 ml neutral oil (or oil reserved from frying [Onion Bhaji](Onion Bhaji))
-- 2 tbsp garlic-ginger paste <!-- TODO: gingergarlic-paste.md is in the orphan list — recover or use store-bought. The original offered the alternative: plain garlic/ginger paste + ¼ bunch cilantro stalks + 1 green chilli -->
+- 2 tablespoons garlic-ginger paste <!-- TODO: gingergarlic-paste.md is in the orphan list; recover or use store-bought. The original offered the alternative: plain garlic/ginger paste + ¼ bunch cilantro stalks + 1 green chilli -->
 - 1 tin (400g) plum tomatoes
 - 3 medium yellow onions, quartered
 - 1 green pepper and 1 red pepper, roughly chopped
@@ -29,13 +29,13 @@ This is a BIR (British Indian Restaurant) base gravy — a neutral, lightly spic
 - ¼ cup spiced tomato purée (or tomato paste)
 
 Spices:
-- 1 tsp turmeric
-- 1 tsp Madras curry powder or masala
-- 1 tsp hot paprika or ground Indian chilli
-- 1 tsp ground cumin
-- 1 tsp ground coriander
-- 1 tsp fenugreek powder
-- 1 tsp salt
+- 1 teaspoon turmeric
+- 1 teaspoon Madras curry powder or masala
+- 1 teaspoon hot paprika or ground Indian chilli
+- 1 teaspoon ground cumin
+- 1 teaspoon ground coriander
+- 1 teaspoon fenugreek powder
+- 1 teaspoon salt
 
 ## Method
 
@@ -45,7 +45,7 @@ Add water and all the vegetables. Bring to a simmer, cover, and cook on medium-l
 
 Add the garam masala water. Blend smooth with an immersion blender.
 
-Temper the cream by whisking in a few ladles of hot gravy, then stir back into the pot. Add water until the gravy coats the back of a spoon — not thick, not watery.
+Temper the cream by whisking in a few ladles of hot gravy, then stir back into the pot. Add water until the gravy coats the back of a spoon: not thick, not watery.
 
 ## To serve
 

@@ -21,8 +21,8 @@ This breaks English tea rules on purpose. Boiling the tea with spices for 5 minu
 - 3–4 whole cloves
 - 3–4 cardamom pods, lightly crushed
 - a few slices fresh ginger
-- 2 tsp loose-leaf black tea (Scottish breakfast or similar strong black)
-- 2 tsp sugar
+- 2 teaspoons loose-leaf black tea (Scottish breakfast or similar strong black)
+- 2 teaspoons sugar
 - 120ml whole milk or 60ml cream
 
 ## Method
@@ -31,7 +31,7 @@ Combine water, cloves, cardamom, and ginger in a small saucepan. Bring to a boil
 
 Add tea and simmer for 5 minutes.
 
-Add milk or cream. Bring to a boil — the moment it foams and rises, remove from heat and stir back down. Repeat three times. This is the "boil over" technique; watch it closely.
+Add milk or cream. Bring to a boil. The moment it foams and rises, remove from heat and stir back down. Repeat three times. This is the "boil over" technique; watch it closely.
 
 Strain and serve.
 

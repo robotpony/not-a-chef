@@ -12,7 +12,7 @@ draft: false
 
 ## Mechanic
 
-**Two separate formulas.** The brine is for whole breast fillets pounded thin — the vinegar tenderises and the salt firms the texture. The ground chicken seasoning follows a percentage formula per kilogram, which scales cleanly for larger batches.
+**Two separate formulas.** The brine is for whole breast fillets pounded thin: the vinegar tenderises and the salt firms the texture. The ground chicken seasoning follows a percentage formula per kilogram, which scales cleanly for larger batches.
 
 ## Ingredients
 
@@ -30,10 +30,10 @@ Per 1 litre water:
 - 25g kosher salt (2.5%)
 - 5g MSG (0.5%)
 - 10g sugar (1%)
-- 2 tsp dried sage
-- 1 tsp white pepper
-- 1 tsp garlic powder
-- 1 tsp onion powder
+- 2 teaspoons dried sage
+- 1 teaspoon white pepper
+- 1 teaspoon garlic powder
+- 1 teaspoon onion powder
 - 1 small shallot or ¼ onion, finely grated
 
 ## Method
@@ -54,6 +54,6 @@ In brioche buns with burger sauce and pickles, or alongside roasted veg as a sim
 
 ## Notes
 
-- The brine makes a noticeable difference in juiciness — don't skip it.
+- The brine makes a noticeable difference in juiciness. Don't skip it.
 - Ground chicken patties benefit from resting 5 minutes before serving.
 - Grated shallot adds moisture and flavour to ground patties; grated onion works in a pinch.

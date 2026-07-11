@@ -10,7 +10,7 @@ total_time: 50 min
 draft: false
 ---
 
-The beaten eggs and sugar are the only leavening — no flour, no baking powder. Beat until the mixture has tripled in volume and gone very pale; this is what lifts the cake. Ground almonds give it structure and a dense, fudgy crumb. **Don't overbake**: the skewer test fails here. You want the crust firm and the interior still moist.
+The beaten eggs and sugar are the only leavening: no flour, no baking powder. Beat until the mixture has tripled in volume and gone very pale; this is what lifts the cake. Ground almonds give it structure and a dense, fudgy crumb. **Don't overbake**: the skewer test fails here. You want the crust firm and the interior still moist.
 
 ## Ingredients
 
@@ -19,7 +19,7 @@ The beaten eggs and sugar are the only leavening — no flour, no baking powder.
 - 5 large eggs (or 6 medium)
 - 200g soft brown sugar
 - 120g ground almonds
-- 1 tsp vanilla extract
+- 1 teaspoon vanilla extract
 - Pinch of salt
 - Cocoa powder, for dusting
 

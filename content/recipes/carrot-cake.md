@@ -13,7 +13,7 @@ draft: false
 
 ## Mechanic
 
-The high oil content — 480 ml to 360g of flour — makes this exceptionally moist and keeps it that way for days. Refrigerating the layers overnight before icing firms the crumb so they don't slide and the icing goes on cleanly.
+The high oil content, 480 ml to 360g of flour, makes this exceptionally moist and keeps it that way for days. Refrigerating the layers overnight before icing firms the crumb so they don't slide and the icing goes on cleanly.
 
 ## Cake
 
@@ -22,10 +22,10 @@ The high oil content — 480 ml to 360g of flour — makes this exceptionally mo
 - 6 eggs
 - 500g (4½ cups) carrot, finely grated
 - 360g (3 cups) AP flour
-- 1½ tbsp cinnamon
-- 3 tsp baking soda
-- ¾ tsp salt
-- 1½ tsp vanilla extract
+- 1½ tablespoons cinnamon
+- 3 teaspoons baking soda
+- ¾ teaspoon salt
+- 1½ teaspoons vanilla extract
 - 100g (1 cup) walnuts, roughly chopped
 
 Heat the oven to 150°C (300°F). Oil and flour three 23 cm (9-inch) round cake pans.
@@ -41,7 +41,7 @@ Divide the batter evenly between the three pans. Bake 60 minutes, or until a too
 - 310g (11 oz) cream cheese, at room temperature
 - 170g (¾ cup) unsalted butter, at room temperature
 - 360g (3 cups) icing sugar
-- ½ tsp vanilla extract
+- ½ teaspoon vanilla extract
 - 100g (1 cup) walnuts, roughly chopped, for finishing
 
 Beat the cream cheese and butter together until smooth. Sift in the icing sugar and beat until fluffy. Mix in the vanilla.

@@ -13,18 +13,18 @@ draft: true
 
 ## Mechanic
 
-Eggs in the cheese filling bind the layers together so the lasagna cuts cleanly as a casserole. Draining the ricotta and cottage cheese if they're watery prevents the lasagna from going soupy. The 20-minute rest after baking is non-negotiable — the layers need time to set before cutting.
+Eggs in the cheese filling bind the layers together so the lasagna cuts cleanly as a casserole. Draining the ricotta and cottage cheese if they're watery prevents the lasagna from going soupy. The 20-minute rest after baking is non-negotiable: the layers need time to set before cutting.
 
 ## Marinara
 
 Use 1 batch of [Simple Marinara](Simple Marinara).
 
-<!-- TODO: original also referenced an optional meaty base (Google Doc link — no longer accessible). For a meat version, add browned ground beef or Italian sausage to the marinara. -->
+<!-- TODO: original also referenced an optional meaty base (Google Doc link, no longer accessible). For a meat version, add browned ground beef or Italian sausage to the marinara. -->
 
 ## Savoury veg
 
-- 2 tbsp olive oil
-- 4 cups mixed mushrooms, finely chopped
+- 2 tablespoons olive oil
+- 280 g mixed mushrooms, finely chopped (about 4 cups)
 - 1 onion, finely diced
 - 4 cloves garlic, minced
 - 1–2 carrots, finely diced or grated
@@ -37,8 +37,8 @@ Heat olive oil over medium-high. Add mushrooms with a pinch of salt and cook unt
 - 2 eggs
 - 2 small containers (about 425g each) whole milk ricotta
 - 2 medium containers (about 500g each) dry cottage cheese
-- 1–2 cups grated mozzarella (fresher is better; mix in some cheddar)
-- 1 cup Parmesan, grated
+- 110–220 g grated mozzarella (about 1–2 cups; fresher is better; mix in some cheddar)
+- 100 g Parmesan, grated (about 1 cup)
 - ¼ cup fresh parsley, chopped
 - salt and pepper
 
@@ -66,5 +66,5 @@ Rest 20 minutes before cutting.
 
 ## Notes
 
-- Make the components a day ahead — the lasagna is better assembled and baked the next day.
+- Make the components a day ahead: the lasagna is better assembled and baked the next day.
 - Leftovers keep refrigerated 4–5 days and freeze well.

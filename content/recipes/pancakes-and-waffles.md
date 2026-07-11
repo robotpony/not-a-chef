@@ -18,21 +18,21 @@ The baking powder goes in last, just before cooking. Stirring it in early lets t
 
 - 2 eggs
 - 530 ml (2¼ cups) milk
-- 2 tbsp neutral oil
+- 2 tablespoons neutral oil
 - 240g (2 cups) AP flour
 - 50g (¼ cup) sugar
 - pinch of salt
-- 3 tsp baking powder, heaping
+- 3 teaspoons baking powder, heaping
 
 ## Method
 
-Whisk together the eggs, milk, and oil. Add the flour, sugar, and salt and stir until just combined — a few lumps are fine.
+Whisk together the eggs, milk, and oil. Add the flour, sugar, and salt and stir until just combined: a few lumps are fine.
 
 Heat a pan over medium-low and brush lightly with oil.
 
 Just before cooking, stir in the baking powder until just incorporated. Do not overmix.
 
-Ladle batter onto the pan without crowding. Cook until the edges look set and the bottom is golden, then flip. The first batch is almost always a throwaway — adjust heat as needed.
+Ladle batter onto the pan without crowding. Cook until the edges look set and the bottom is golden, then flip. The first batch is almost always a throwaway. Adjust heat as needed.
 
 Keep finished pancakes warm in a 90°C (200°F) oven until ready to serve.
 

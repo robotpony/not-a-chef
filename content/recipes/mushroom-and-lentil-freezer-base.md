@@ -12,7 +12,7 @@ draft: false
 
 ## Mechanic
 
-This is a vegetarian analogue to the beef/mushroom/sofrito freezer base. The **mushrooms must go through three stages** (dry → wet → dry + browned) before adding anything else — rushing this step produces a flat, steamed flavour instead of a deep savoury one.
+This is a vegetarian analogue to the beef/mushroom/sofrito freezer base. The **mushrooms must go through three stages** (dry → wet → dry + browned) before adding anything else: rushing this step produces a flat, steamed flavour instead of a deep savoury one.
 
 ## Ingredients
 
@@ -21,13 +21,13 @@ This is a vegetarian analogue to the beef/mushroom/sofrito freezer base. The **m
 - 300g green or brown lentils (3 cups)
 - 500ml vegetable stock (2 cups)
 - 125ml dry sherry (½ cup)
-- 3 tbsp olive oil
+- 3 tablespoons olive oil
 - 2 bay leaves
 - 2 large sprigs fresh rosemary
-- 1 tbsp dried thyme
-- 2 tbsp sweet paprika
-- 2 tsp MSG
-- 3 tsp granulated garlic
+- 1 tablespoon dried thyme
+- 2 tablespoons sweet paprika
+- 2 teaspoons MSG
+- 3 teaspoons granulated garlic
 - salt and black pepper
 
 ## Method

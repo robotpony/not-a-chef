@@ -12,7 +12,7 @@ draft: false
 
 ## Mechanic
 
-Two methods for different results. **Velouté**: a roux-thickened cream soup, rich and smooth. **Potage**: a blended potato-thickened version finished with cashew cream — dairy-free and lighter but equally silky. The mushroom base is the same for both.
+Two methods for different results. **Velouté**: a roux-thickened cream soup, rich and smooth. **Potage**: a blended potato-thickened version finished with cashew cream, dairy-free and lighter but equally silky. The mushroom base is the same for both.
 
 ## Ingredients
 
@@ -21,16 +21,16 @@ Two methods for different results. **Velouté**: a roux-thickened cream soup, ri
 - 500g mixed mushrooms (cremini, shiitake, or whatever's available), sliced
 - 1 onion, diced
 - 3 cloves garlic, minced
-- 2 tbsp butter or olive oil
-- 1 tbsp fresh thyme leaves
-- 1 tbsp soy sauce
+- 2 tablespoons butter or olive oil
+- 1 tablespoon fresh thyme leaves
+- 1 tablespoon soy sauce
 - 250ml dry white wine or dry sherry
 - 750ml vegetable or chicken broth
 - salt and black pepper
 
 ### For velouté
 
-- 30g butter (2 tbsp)
+- 30g butter (2 tablespoons)
 - 30g flour (¼ cup)
 - 120ml cream (½ cup)
 
@@ -41,7 +41,7 @@ Two methods for different results. **Velouté**: a roux-thickened cream soup, ri
 
 ## Method
 
-**Mushroom base:** Melt butter or oil in a heavy pot over medium-high heat. Add mushrooms in a single layer — don't crowd. Cook without stirring until deeply browned, about 5 minutes. Stir and brown the other side.
+**Mushroom base:** Melt butter or oil in a heavy pot over medium-high heat. Add mushrooms in a single layer. Don't crowd. Cook without stirring until deeply browned, about 5 minutes. Stir and brown the other side.
 
 Add onion and cook until softened. Add garlic and thyme; cook 1 minute.
 

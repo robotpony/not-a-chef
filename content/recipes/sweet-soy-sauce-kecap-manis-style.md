@@ -13,7 +13,7 @@ draft: false
 
 ## Mechanic
 
-A **1:1.5 ratio** of soy sauce to brown sugar by volume. Heat is what makes this a glaze rather than just a sweetened soy — the sugar dissolves and begins to thicken as it reduces.
+A **1:1.5 ratio** of soy sauce to brown sugar by volume. Heat is what makes this a glaze rather than just a sweetened soy: the sugar dissolves and begins to thicken as it reduces.
 
 ## Ingredients
 
@@ -22,7 +22,7 @@ A **1:1.5 ratio** of soy sauce to brown sugar by volume. Heat is what makes this
 
 ## Method
 
-Combine soy sauce and brown sugar in a small saucepan. Heat over medium, stirring until the sugar fully dissolves. Simmer 2–3 minutes until slightly thickened. Cool — it thickens more as it cools.
+Combine soy sauce and brown sugar in a small saucepan. Heat over medium, stirring until the sugar fully dissolves. Simmer 2–3 minutes until slightly thickened. Cool. It thickens more as it cools.
 
 ## To serve
 

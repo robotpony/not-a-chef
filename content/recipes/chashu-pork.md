@@ -21,8 +21,8 @@ The **1:1:1 braise ratio** (water : soy : mirin) keeps the pork moist and season
 - 250ml water
 - 250ml soy sauce
 - 250ml mirin
-- 2 tbsp sugar
-- 2 tsp neutral oil
+- 2 tablespoons sugar
+- 2 teaspoons neutral oil
 - 2 large garlic cloves, crushed
 - 3 green onions, cut into 5 cm lengths
 - 5 cm piece fresh ginger, thinly sliced

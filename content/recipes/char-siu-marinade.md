@@ -12,7 +12,7 @@ draft: false
 
 ## Mechanic
 
-A **ratio-based marinade** where "1" equals ¼ cup (60ml). Doubling or tripling scales cleanly. The marinade finishes as a reduction glaze — simmer the remainder until thick and sticky while the meat rests.
+A **ratio-based marinade** where "1" equals ¼ cup (60ml). Doubling or tripling scales cleanly. The marinade finishes as a reduction glaze: simmer the remainder until thick and sticky while the meat rests.
 
 ## Ingredients (ratio: 1 = 60ml / ¼ cup)
 

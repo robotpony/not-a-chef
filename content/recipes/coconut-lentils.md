@@ -21,11 +21,11 @@ draft: false
 - 350ml vegetable broth
 - 1 onion, diced
 - 3 cloves garlic, minced
-- 1 tbsp ginger, grated
-- 2 tbsp coconut oil or neutral oil
-- 1 tbsp curry powder or garam masala
-- 1 tsp turmeric
-- 1 tsp cumin seeds
+- 1 tablespoon ginger, grated
+- 2 tablespoons coconut oil or neutral oil
+- 1 tablespoon curry powder or garam masala
+- 1 teaspoon turmeric
+- 1 teaspoon cumin seeds
 - salt
 
 ### To finish

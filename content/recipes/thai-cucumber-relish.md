@@ -14,11 +14,11 @@ draft: false
 
 - 1 cucumber, peeled, seeded, and cut into ½ cm dice
 - 60ml white vinegar (¼ cup)
-- 2 tbsp sugar
-- ¼ tsp red pepper flakes
+- 2 tablespoons sugar
+- ¼ teaspoon red pepper flakes
 - ¼ cup fresh mint leaves, coarsely chopped
 - 1 shallot, minced
-- 1 tbsp fish sauce
+- 1 tablespoon fish sauce
 
 ## Method
 

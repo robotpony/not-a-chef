@@ -18,7 +18,7 @@ The flavour comes from the **salt-to-sugar ratio of roughly 1:1.6 by weight** (2
 - 270g kosher salt
 - 360g brown sugar, packed (break up clumps before measuring)
 - 100g white sugar
-- 16g poultry seasoning (ground rosemary, sage, thyme, marjoram — any blend works)
+- 16g poultry seasoning (ground rosemary, sage, thyme, marjoram; any blend works)
 - 7g black pepper, ground
 - 7g white pepper, ground
 - 6g ground coriander
@@ -26,7 +26,7 @@ The flavour comes from the **salt-to-sugar ratio of roughly 1:1.6 by weight** (2
 
 ## Method
 
-Grind any spices that aren't already fairly fine. Break up brown sugar clumps with a fork. Combine all ingredients in a large sealable container. Seal and shake to combine, then stir with a spoon to catch anything settled at the bottom. Taste — it should be sweet, savoury, with lemon and smoky notes.
+Grind any spices that aren't already fairly fine. Break up brown sugar clumps with a fork. Combine all ingredients in a large sealable container. Seal and shake to combine, then stir with a spoon to catch anything settled at the bottom. Taste: it should be sweet, savoury, with lemon and smoky notes.
 
 ## To serve
 

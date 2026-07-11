@@ -41,5 +41,5 @@ draft: false
 
 ## Notes
 
-- The ketchup is not a mistake — it's a tomato-based umami hit that's common in Japanese-style yakisoba sauce.
+- The ketchup is not a mistake. It's a tomato-based umami hit that's common in Japanese-style yakisoba sauce.
 - Garlic and fresh ginger (added with the onion and carrot) make a noticeable improvement.

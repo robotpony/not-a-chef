@@ -20,12 +20,12 @@ Built from a batch of pre-cooked frozen beef mince, so the cooking time is mostl
 ### Filling
 
 - 500g cooked beef mince (frozen)
-- 1 tsp each: kosher salt, black pepper, ground coriander, dried rosemary or thyme
-- 1 tsp granulated garlic
-- 1 tsp MSG
-- 2 tbsp flour or cornstarch (adjust for thickness)
-- 1 tsp Better than Bouillon (beef or chicken)
-- 1 tsp browning sauce (to taste)
+- 1 teaspoon each: kosher salt, black pepper, ground coriander, dried rosemary or thyme
+- 1 teaspoon granulated garlic
+- 1 teaspoon MSG
+- 2 tablespoons flour or cornstarch (adjust for thickness)
+- 1 teaspoon Better than Bouillon (beef or chicken)
+- 1 teaspoon browning sauce (to taste)
 - 250ml beef or chicken stock, or water
 - 300g mixed frozen vegetables (peas, corn, carrots)
 
@@ -53,5 +53,5 @@ With a simple green salad. Better the next day.
 
 ## Notes
 
-- Browning sauce quantities need testing; start with 1 tsp and adjust. [draft]
+- Browning sauce quantities need testing; start with 1 teaspoon and adjust. [draft]
 - Steaming potatoes (vs. boiling) keeps them less waterlogged and produces a drier, better-textured mash.

@@ -18,12 +18,12 @@ The key step is **heating the coconut cream alone until it splits** (the fat sep
 ## Ingredients
 
 - 400ml tin coconut milk (use the cream + about 1/3 of the liquid in the first step; reserve the rest)
-- 2–3 tbsp Thai red curry paste
-- 1 tbsp tomato paste
+- 2–3 tablespoons Thai red curry paste
+- 1 tablespoon tomato paste
 - 1 onion or 2 shallots, diced
 - 250ml chicken or vegetable stock
 - 2 tins mixed additions: water chestnuts, mini corn, bamboo shoots (drained)
-- roasted veg (sweet potato, carrot, cauliflower — whatever you have)
+- roasted veg (sweet potato, carrot, cauliflower, whatever you have)
 - protein: tofu, cooked chicken, or shrimp added at the end
 - fish sauce, sugar or maple syrup, soy sauce or MSG, lime juice (for balancing)
 
@@ -41,7 +41,7 @@ Pour in remaining coconut milk and stock. Stir to combine and bring to a simmer.
 
 Add canned additions and roasted veg. Heat through, 5 minutes.
 
-Add protein near the end — it only needs warming if already cooked.
+Add protein near the end; it only needs warming if already cooked.
 
 Balance: taste and add fish sauce for salt/umami, sugar for sweetness, lime juice for brightness. Adjust gradually.
 
@@ -52,4 +52,4 @@ Over jasmine rice, topped with sliced chillies, fresh basil or cilantro, and a d
 ## Notes
 
 - Shrimp cooked separately with salt, pepper, and lime, then added, works very well.
-- The split coconut cream step is the technique — don't rush it or skip it.
+- The split coconut cream step is the technique. Don't rush it or skip it.

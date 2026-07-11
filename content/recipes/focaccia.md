@@ -13,7 +13,7 @@ draft: true
 
 ## Mechanic
 
-Focaccia is pizza dough baked in an oiled pan rather than on a stone. The heavy oil in the pan fries the bottom crust as it bakes, giving it crunch. Deep dimples aren't decorative — they anchor toppings and prevent the dough from puffing unevenly. Rest the dough between spreading attempts; it will relax and spread to the corners without tearing.
+Focaccia is pizza dough baked in an oiled pan rather than on a stone. The heavy oil in the pan fries the bottom crust as it bakes, giving it crunch. Deep dimples aren't decorative; they anchor toppings and prevent the dough from puffing unevenly. Rest the dough between spreading attempts; it will relax and spread to the corners without tearing.
 
 ## Ingredients
 
@@ -27,8 +27,8 @@ Toppings (choose any combination):
 - cherry tomatoes
 - fresh herbs (or dried herbs steeped in olive oil)
 
-Brine (optional — see Notes):
-- 1 tbsp salt
+Brine (optional, see Notes):
+- 1 tablespoon salt
 - 120 ml (½ cup) water
 - 60 ml (¼ cup) olive oil
 
@@ -38,7 +38,7 @@ Add the dough portions to heavily oiled pans and let rise until puffy and nearly
 
 Prepare toppings. If using fresh herbs, steep them in olive oil for 10–15 minutes.
 
-Press the dough toward the corners of the pan using your fingers. If it springs back, leave it to rest 10 minutes and try again — with enough rest it will spread without resistance. Once spread, use your fingers to press deep, generous dimples across the entire surface.
+Press the dough toward the corners of the pan using your fingers. If it springs back, leave it to rest 10 minutes and try again. With enough rest it will spread without resistance. Once spread, use your fingers to press deep, generous dimples across the entire surface.
 
 Distribute toppings evenly over the dough. Press larger items (olives, tomatoes) gently into the dimples so they don't roll off. Finish with coarse salt.
 

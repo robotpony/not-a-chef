@@ -13,15 +13,15 @@ draft: false
 
 ## Mechanic
 
-The miso paste acts as both marinade and glaze. White miso is sweeter and milder; red miso is deeper and saltier. **The marinade will start to firm up the fish** as the salt draws out moisture — this is not a problem and actually helps the glaze adhere. Pull at 50–53°C for medium.
+The miso paste acts as both marinade and glaze. White miso is sweeter and milder; red miso is deeper and saltier. **The marinade will start to firm up the fish** as the salt draws out moisture. This is not a problem and actually helps the glaze adhere. Pull at 50–53°C for medium.
 
 ## Ingredients
 
 - 60–120ml white or red miso (¼–½ cup)
 - 80ml sake (⅓ cup)
-- 2 tbsp soy sauce
+- 2 tablespoons soy sauce
 - 60ml brown sugar (¼ cup, packed)
-- 1–2 tbsp extra-virgin olive oil
+- 1–2 tablespoons extra-virgin olive oil
 - 4 salmon fillets (~150g each)
 
 ## Method
@@ -38,5 +38,5 @@ Over steamed rice or alongside simple roasted veg. Garnish with thinly sliced sc
 
 ## Notes
 
-- The sake can be reduced to 2 tbsp if you prefer a stronger miso flavour.
+- The sake can be reduced to 2 tablespoons if you prefer a stronger miso flavour.
 - Works equally well on black cod or halibut.

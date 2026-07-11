@@ -12,7 +12,7 @@ draft: false
 
 ## Ingredients
 
-- 3 tbsp olive oil
+- 3 tablespoons olive oil
 - 1 onion, diced
 - 3 cloves garlic, sliced
 - 780ml tinned whole tomatoes (2 × 400ml tins)

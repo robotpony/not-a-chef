@@ -13,9 +13,9 @@ draft: true
 
 ## Mechanic
 
-This recipe exists in three versions — choose the protein and build accordingly. The method is the same in all three: brown the beef, brown the mushrooms, deglaze, simmer, finish with sour cream. The sour cream must be tempered (hot liquid added gradually) or it will break.
+This recipe exists in three versions; choose the protein and build accordingly. The method is the same in all three: brown the beef, brown the mushrooms, deglaze, simmer, finish with sour cream. The sour cream must be tempered (hot liquid added gradually) or it will break.
 
-<!-- TODO: the original had a three-column comparison table (Nostalgic / Authentic / Fancy) that was mangled in migration. Ingredient quantities below are reconstructed from the surrounding text — verify against source. -->
+<!-- TODO: the original had a three-column comparison table (Nostalgic / Authentic / Fancy) that was mangled in migration. Ingredient quantities below are reconstructed from the surrounding text; verify against source. -->
 
 ## Nostalgic (hamburger helper style)
 
@@ -24,7 +24,7 @@ This recipe exists in three versions — choose the protein and build accordingl
 - 350g cremini mushrooms, sliced
 - 500 ml beef or chicken stock
 - 45g unsalted butter
-- 8g (2 tbsp) mild paprika
+- 8g (2 tablespoons) mild paprika
 - 500 ml sour cream
 - 455g (4 cups) wide egg noodles
 - salt and pepper
@@ -37,7 +37,7 @@ This recipe exists in three versions — choose the protein and build accordingl
 - 1 clove garlic, crushed
 - 500 ml homemade stock
 - 45g unsalted butter
-- 12g (2 tsp) Dijon mustard
+- 12g (2 teaspoons) Dijon mustard
 - 250 ml white wine or white wine vinegar
 - 250 ml sour cream or crème fraîche
 - 455g (4 cups) wide egg noodles

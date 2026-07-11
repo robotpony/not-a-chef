@@ -11,15 +11,15 @@ draft: false
 
 ## Ingredients
 
-- 1/2 cup mayonnaise
-- 3 tbsp ketchup
-- 1/2 tsp yellow mustard
-- 1 tbsp white vinegar
-- 2 tsp sweet pickle relish
-- 2 tsp sugar
-- 2 tsp finely minced white onion
-- 1/4 tsp paprika
-- 0.1 g MSG (about 1/32 tsp, a smidgen; 0.05% of total weight)
+- 120 ml mayonnaise (1/2 cup)
+- 3 tablespoons ketchup
+- 1/2 teaspoon yellow mustard
+- 1 tablespoon white vinegar
+- 2 teaspoons sweet pickle relish
+- 2 teaspoons sugar
+- 2 teaspoons finely minced white onion
+- 1/4 teaspoon paprika
+- 0.1 g MSG (about 1/32 teaspoon, a smidgen; 0.05% of total weight)
 - Salt and pepper, to taste
 
 ## Method

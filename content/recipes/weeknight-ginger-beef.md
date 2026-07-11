@@ -23,9 +23,9 @@ draft: false
 - 1 shallot, minced
 - 60ml soy sauce (¼ cup)
 - 2 limes, juiced
-- 2 tbsp sriracha
-- 1 tbsp fish sauce
-- 1 tbsp neutral oil
+- 2 tablespoons sriracha
+- 1 tablespoon fish sauce
+- 1 tablespoon neutral oil
 - kosher salt
 - 30g fresh cilantro, leaves and stems, thinly sliced
 - 2 carrots, julienned (optional)

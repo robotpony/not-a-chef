@@ -18,7 +18,7 @@ Mayo is the fat and emulsifier in one. It coats the meat evenly and holds the se
 - 50g mayonnaise
 - 4 cloves garlic (20g minced)
 - ~2g black pepper (20 cranks)
-- 2 tsp dried oregano
+- 2 teaspoons dried oregano
 - zest of 1 lemon (or a squeeze of lemon juice)
 - 6g kosher salt
 - 2g MSG

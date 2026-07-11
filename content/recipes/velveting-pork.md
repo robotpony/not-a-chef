@@ -12,22 +12,22 @@ draft: false
 
 ## Mechanic
 
-Baking soda raises the pH of the meat surface, which inhibits protein cross-linking and keeps the exterior tender and silky even at high wok heat. **Massage for 3 full minutes** before resting — contact time matters. Cornstarch forms a light coating that seals in moisture.
+Baking soda raises the pH of the meat surface, which inhibits protein cross-linking and keeps the exterior tender and silky even at high wok heat. **Massage for 3 full minutes** before resting: contact time matters. Cornstarch forms a light coating that seals in moisture.
 
 ## Ingredients
 
 - 350g pork (shoulder, tenderloin, or loin), thinly sliced
-- ½ tsp baking soda
-- 1½ tsp cornstarch
+- ½ teaspoon baking soda
+- 1½ teaspoons cornstarch
 - 5g water, if the mixture feels dry
 
 ### Optional flavouring
 
 - 7g Shaoxing wine
 - 7g oyster sauce
-- 1 tsp neutral oil
-- ¼ tsp sesame oil
-- ⅛ tsp white pepper
+- 1 teaspoon neutral oil
+- ¼ teaspoon sesame oil
+- ⅛ teaspoon white pepper
 
 ## Method
 

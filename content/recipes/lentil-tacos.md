@@ -12,7 +12,7 @@ draft: false
 
 ## Mechanic
 
-Lightly roasting the nuts before adding them preserves texture inside the filling. **Cook lentils to just al dente** — they will continue softening in the sauce and mushy lentils lose all structure.
+Lightly roasting the nuts before adding them preserves texture inside the filling. **Cook lentils to just al dente**: they will continue softening in the sauce and mushy lentils lose all structure.
 
 ## Ingredients
 
@@ -20,11 +20,11 @@ Lightly roasting the nuts before adding them preserves texture inside the fillin
 - 70g mixed nuts, roughly chopped (½ cup)
 - 1 small onion, diced (or 2 shallots)
 - 2–4 cloves garlic, finely diced
-- 100g finely diced peppers (jalapeño, anaheim, or bell — ½ cup)
+- 100g finely diced peppers (jalapeño, anaheim, or bell, ½ cup)
 - 100ml diced chipotle peppers in adobo (½ tin)
-- 1–2 tbsp dried chili mix (ancho, cayenne, cumin, smoked paprika)
-- 1 tbsp dried oregano
-- 1 tsp tomato paste
+- 1–2 tablespoons dried chili mix (ancho, cayenne, cumin, smoked paprika)
+- 1 tablespoon dried oregano
+- 1 teaspoon tomato paste
 - 500ml vegetable broth or water (2 cups)
 - juice of 1 lime
 - salt and black pepper

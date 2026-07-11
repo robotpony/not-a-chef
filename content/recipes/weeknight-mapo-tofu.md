@@ -13,32 +13,32 @@ draft: false
 
 ## Mechanic
 
-**Toast the whole Szechuan peppercorns first**, then grind with the chilis and paprika. Adding soy along the edge of a hot wok caramelizes it before it hits the meat. Add tofu last and stir minimally — it breaks up easily.
+**Toast the whole Szechuan peppercorns first**, then grind with the chilis and paprika. Adding soy along the edge of a hot wok caramelizes it before it hits the meat. Add tofu last and stir minimally; it breaks up easily.
 
 ## Ingredients
 
 ### Spice powder
 
-- 2–3 tbsp Szechuan peppercorns, whole
+- 2–3 tablespoons Szechuan peppercorns, whole
 - 4–5 dried red chilis, chopped
-- 1 tbsp sweet paprika
+- 1 tablespoon sweet paprika
 
 ### Base
 
-- 2 tbsp neutral oil
+- 2 tablespoons neutral oil
 - 1 cm piece fresh ginger, julienned
 - 2 cloves garlic, thinly sliced
 - 2 scallions, cut into ½ cm pieces (dark greens reserved for garnish)
-- 30ml sake (2 tbsp)
-- 30ml mirin (2 tbsp)
-- 15ml light soy sauce (1 tbsp)
+- 30ml sake (2 tablespoons)
+- 30ml mirin (2 tablespoons)
+- 15ml light soy sauce (1 tablespoon)
 
 ### Rest
 
 - 120g ground beef (precooked or fresh)
 - 60ml low-sodium chicken stock, dashi, or water
 - 680g medium-firm silken tofu, cut into 1.5 cm cubes
-- 1 tsp cornstarch + 1 tbsp cold water, combined into a slurry
+- 1 teaspoon cornstarch + 1 tablespoon cold water, combined into a slurry
 
 ## Method
 

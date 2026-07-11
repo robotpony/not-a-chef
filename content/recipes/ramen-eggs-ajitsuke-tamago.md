@@ -41,4 +41,4 @@ Halved over ramen, rice bowls, or sliced in salads.
 ## Notes
 
 - Eggs keep in marinade refrigerated for up to 5 days; flavour intensifies over time.
-- Save the marinade after use — it works 2–3 times before losing potency.
+- Save the marinade after use; it works 2–3 times before losing potency.

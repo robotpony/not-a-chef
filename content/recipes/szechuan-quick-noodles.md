@@ -14,12 +14,12 @@ draft: false
 ## Ingredients
 
 - 85g dried noodles (spaghetti or thin Asian noodles)
-- 1 tsp Szechuan peppercorns, toasted and ground
-- 2–3 tsp Korean chili flakes (gochugaru)
+- 1 teaspoon Szechuan peppercorns, toasted and ground
+- 2–3 teaspoons Korean chili flakes (gochugaru)
 - 125ml beef stock (beef base preferred)
-- 1 tbsp fresh ginger, minced
+- 1 tablespoon fresh ginger, minced
 - 100–200g cabbage, roughly sliced
-- 1 tbsp tomato paste
+- 1 tablespoon tomato paste
 - togarashi, to taste
 - soy sauce, sesame oil, rice wine, to taste
 

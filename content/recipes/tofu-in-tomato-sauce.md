@@ -11,7 +11,7 @@ cuisine: Vietnamese
 draft: false
 ---
 
-The mechanic here is **frying the tofu separately** before it meets the sauce. A golden crust holds shape during the braise and absorbs flavour without turning to mush. Lard rather than oil deepens the sauce noticeably — worth seeking out.
+The mechanic here is **frying the tofu separately** before it meets the sauce. A golden crust holds shape during the braise and absorbs flavour without turning to mush. Lard rather than oil deepens the sauce noticeably: worth seeking out.
 
 ## Ingredients
 
@@ -20,10 +20,10 @@ The mechanic here is **frying the tofu separately** before it meets the sauce. A
 - 2 shallots, sliced thin
 - 3 green onions, finely chopped
 - Neutral oil, enough to shallow-fry
-- 2 tbsp lard
-- 1 tsp seasoning powder
-- ½ tsp MSG
-- 1 tsp sugar
+- 2 tablespoons lard
+- 1 teaspoon seasoning powder
+- ½ teaspoon MSG
+- 1 teaspoon sugar
 - Salt or fish sauce, a pinch (to help tomatoes soften)
 - 120 ml (½ cup) water
 - Black pepper, to finish

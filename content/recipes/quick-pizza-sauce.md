@@ -17,10 +17,10 @@ Built on double-strength tomato paste rather than crushed tomatoes. The paste is
 
 ## Ingredients
 
-- 2 tbsp tomato paste (double-concentrated tube paste)
-- 3–4 tbsp water (adjust for consistency)
+- 2 tablespoons tomato paste (double-concentrated tube paste)
+- 3–4 tablespoons water (adjust for consistency)
 - splash of red wine
-- 1 tsp extra-virgin olive oil
+- 1 teaspoon extra-virgin olive oil
 - pinch dried oregano
 - pinch dried thyme
 - salt and black pepper
@@ -38,5 +38,5 @@ Spread on pizza dough, flatbread, or as a dipping sauce. Can be made ahead and r
 
 ## Notes
 
-- A bit sweet, a bit thick as written — add more water if you want a looser sauce, or less sugar.
+- A bit sweet, a bit thick as written. Add more water if you want a looser sauce, or less sugar.
 - The double-paste concentrate is important; regular paste needs more reduction time.

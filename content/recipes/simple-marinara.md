@@ -13,12 +13,12 @@ draft: false
 
 ## Mechanic
 
-Start in a pan that has already cooked meat or meatballs — the rendered fat and browned bits in the pan are the flavour base. The tomato paste goes in before the wine to caramelize briefly; the tin of crushed tomatoes finishes it.
+Start in a pan that has already cooked meat or meatballs: the rendered fat and browned bits in the pan are the flavour base. The tomato paste goes in before the wine to caramelize briefly; the tin of crushed tomatoes finishes it.
 
 ## Ingredients
 
-- pan drippings from cooked meatballs or browned meat (1–2 tbsp worth)
-- 2 tbsp tomato paste
+- pan drippings from cooked meatballs or browned meat (1–2 tablespoons worth)
+- 2 tablespoons tomato paste
 - splash of red wine
 - 400g tin whole or crushed tomatoes, mashed
 - pinch dried oregano

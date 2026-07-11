@@ -20,9 +20,9 @@ Built on a roughly **1:1 olive oil to lemon juice base**, with red wine vinegar 
 - 60ml fresh lemon juice
 - 15ml red wine vinegar
 - 1–2 cloves garlic, minced
-- ½ tsp dried oregano
-- ¼ tsp black pepper
-- ¼ tsp MSG
+- ½ teaspoon dried oregano
+- ¼ teaspoon black pepper
+- ¼ teaspoon MSG
 - salt to taste
 
 ## Method

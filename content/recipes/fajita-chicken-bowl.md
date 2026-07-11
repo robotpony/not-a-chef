@@ -25,21 +25,21 @@ The marinade leans on toasted cumin and a cinnamon-forward spice blend as much a
 - 10g dark brown sugar (or white sugar, maple syrup)
 - 30g fresh cilantro, stalks finely diced, leaves coarsely chopped
 - 3 cloves garlic, finely minced
-- 7g whole cumin (2½ tsp), toasted and ground
-- 1g black pepper (½ tsp), ground
-- ¼ stick cinnamon, ground (or ¼ tsp ground cinnamon)
-- 1–2 tsp dried Mexican oregano
+- 7g whole cumin (2½ teaspoons), toasted and ground
+- 1g black pepper (½ teaspoon), ground
+- ¼ stick cinnamon, ground (or ¼ teaspoon ground cinnamon)
+- 1–2 teaspoons dried Mexican oregano
 - pinch dried thyme
 - chili or sweet paprika to taste
-- 6g kosher salt (1 tsp)
-- 1g MSG (¼ tsp)
+- 6g kosher salt (1 teaspoon)
+- 1g MSG (¼ teaspoon)
 
 ### Bowl
 
 - 300g corn kernels (2 cups)
 - 2 bell peppers, sliced into strips
 - 1 large onion, sliced fajita-style
-- 2 cups slaw, as a base
+- 150 g slaw (about 2 cups), as a base
 - guacamole and salsa, to serve
 - tortillas (optional)
 

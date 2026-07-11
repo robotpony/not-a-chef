@@ -12,29 +12,29 @@ draft: false
 
 ## Mechanic
 
-Brown the beef in batches without crowding — you want a sear, not a steam. The fond that builds on the bottom of the pot is the stew's backbone; the wine deglaze lifts all of it. Making this as a minimal stew, without vegetables in the braise, means you can cook it longer without anything going mushy and serve it over whatever you have on hand.
+Brown the beef in batches without crowding; you want a sear, not a steam. The fond that builds on the bottom of the pot is the stew's backbone; the wine deglaze lifts all of it. Making this as a minimal stew, without vegetables in the braise, means you can cook it longer without anything going mushy and serve it over whatever you have on hand.
 
 ## Ingredients
 
 - 1–2 kg chuck roast, trimmed and cut into 4 cm cubes
 - ½ cup AP flour or other starch
-- 1–2 tbsp neutral oil, bacon fat, or shortening
+- 1–2 tablespoons neutral oil, bacon fat, or shortening
 - 2 large yellow onions, diced
 - 225g crimini mushrooms
 - 2 leeks, white and light green parts, diced
 - 2–3 cloves garlic, minced
-- 2 tbsp tomato paste
+- 2 tablespoons tomato paste
 - 240–480 ml (1–2 cups) bright, drinkable red wine
 - 1 L (4 cups) beef or chicken stock
-- 1 tbsp Worcestershire sauce
-- 1–2 tbsp herbes de Provence, in a cheesecloth bundle or tea infuser
+- 1 tablespoon Worcestershire sauce
+- 1–2 tablespoons herbes de Provence, in a cheesecloth bundle or tea infuser
 - salt and pepper
 
 Optional:
-- 1 tsp smoked paprika
-- 1 tsp Accent
-- 1–2 tbsp soy sauce
-- 2–3 tsp fish sauce
+- 1 teaspoon smoked paprika
+- 1 teaspoon Accent
+- 1–2 tablespoons soy sauce
+- 2–3 teaspoons fish sauce
 
 ## Method
 

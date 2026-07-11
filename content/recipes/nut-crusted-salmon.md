@@ -12,14 +12,14 @@ draft: false
 
 ## Mechanic
 
-The mayo-mustard glue does two things: it binds the crust to the fish and keeps the surface moist during baking. **Toast the nuts first** — this is what makes the crust taste like a crust rather than raw nut meal.
+The mayo-mustard glue does two things: it binds the crust to the fish and keeps the surface moist during baking. **Toast the nuts first**: this is what makes the crust taste like a crust rather than raw nut meal.
 
 ## Ingredients
 
 ### Glue
 
 - 60ml mayonnaise (¼ cup)
-- 40g whole grain mustard (2½ tbsp)
+- 40g whole grain mustard (2½ tablespoons)
 - 3 cloves garlic, minced or grated
 - salt and black pepper
 

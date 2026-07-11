@@ -11,7 +11,7 @@ cuisine: Hawaiian
 draft: false
 ---
 
-Kālua pig and cabbage is Hawaiʻi's ultimate comfort food — slow-cooked pork shoulder until it's fall-apart tender, then finished with wilted cabbage and a splash of soy sauce. Traditionally cooked in an imu (underground oven); this slow cooker version is a weeknight-friendly stand-in.
+Kālua pig and cabbage is Hawaiʻi's ultimate comfort food: slow-cooked pork shoulder until it's fall-apart tender, then finished with wilted cabbage and a splash of soy sauce. Traditionally cooked in an imu (underground oven); this slow cooker version is a weeknight-friendly stand-in.
 
 ## Ingredients
 
@@ -34,4 +34,4 @@ Kālua pig and cabbage is Hawaiʻi's ultimate comfort food — slow-cooked pork 
 ## Notes
 
 - Liquid smoke (a few drops rubbed into the pork with the salt) gets you closer to the traditional imu smoke flavour.
-- The drippings are key — don't drain them before adding the cabbage.
+- The drippings are key. Don't drain them before adding the cabbage.

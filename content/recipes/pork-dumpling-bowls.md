@@ -11,7 +11,7 @@ cuisine: Chinese
 draft: false
 ---
 
-All the flavour of pork dumplings — ground pork, shrimp, cabbage, and scallions — tossed with chewy wheat noodles instead of wrapped. Weeknight-friendly and highly rated.
+All the flavour of pork dumplings, ground pork, shrimp, cabbage, and scallions, tossed with chewy wheat noodles instead of wrapped. Weeknight-friendly and highly rated.
 
 ## Ingredients
 

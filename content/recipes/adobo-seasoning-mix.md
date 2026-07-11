@@ -12,14 +12,14 @@ draft: false
 
 ## Ingredients
 
-- 2 tbsp kosher salt
-- 1 tbsp sweet paprika
-- 2 tsp ground black pepper
-- 1½ tsp onion powder
-- 1½ tsp dried oregano
-- 1½ tsp ground cumin
-- 1 tsp garlic powder
-- 1 tsp chili powder
+- 2 tablespoons kosher salt
+- 1 tablespoon sweet paprika
+- 2 teaspoons ground black pepper
+- 1½ teaspoons onion powder
+- 1½ teaspoons dried oregano
+- 1½ teaspoons ground cumin
+- 1 teaspoon garlic powder
+- 1 teaspoon chili powder
 
 ## Method
 

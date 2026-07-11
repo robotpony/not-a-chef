@@ -24,10 +24,10 @@ The McDouble is built on two thin patties, a single slice of cheese between them
 
 ### Dressing (per burger)
 
-- 2 tsp ketchup
-- ½ tsp mustard (5:1 ketchup to mustard)
+- 2 teaspoons ketchup
+- ½ teaspoon mustard (5:1 ketchup to mustard)
 - 2 sour pickles, thinly sliced
-- 1 tsp dried minced onion (or fresh onion soaked in cold water and drained)
+- 1 teaspoon dried minced onion (or fresh onion soaked in cold water and drained)
 
 ### Build
 

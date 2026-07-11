@@ -16,9 +16,9 @@ draft: false
 - 30ml mayonnaise
 - 30ml fresh lime juice (~1 lime)
 - 1 clove garlic, minced
-- ½ tsp kosher salt (adjust to taste)
+- ½ teaspoon kosher salt (adjust to taste)
 - 30g fresh cilantro (½ cup loosely packed), finely chopped
-- ¼ tsp onion powder (or dehydrated or minced fresh onion)
+- ¼ teaspoon onion powder (or dehydrated or minced fresh onion)
 - 1–2g MSG
 
 ## Method

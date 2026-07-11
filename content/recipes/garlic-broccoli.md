@@ -15,18 +15,18 @@ draft: false
 
 - 400g broccoli (~4 cups), cut into florets
 - 5 cloves garlic, thinly sliced
-- 1 tbsp neutral oil
-- 1 tbsp Shaoxing wine
+- 1 tablespoon neutral oil
+- 1 tablespoon Shaoxing wine
 - 250ml chicken stock or dashi
-- ⅛ tsp white pepper
-- ½ tsp sesame oil
-- 1 tsp cornstarch + 1 tbsp cold water, combined into a slurry
+- ⅛ teaspoon white pepper
+- ½ teaspoon sesame oil
+- 1 teaspoon cornstarch + 1 tablespoon cold water, combined into a slurry
 
 ## Method
 
 Heat a wok over high until smoking. Add oil and garlic; stir-fry until fragrant and just starting to colour, about 30 seconds.
 
-Add broccoli and toss to coat. Add Shaoxing wine and stock — the pan will steam heavily. Cover briefly and steam 2 minutes until broccoli is bright green and tender-crisp.
+Add broccoli and toss to coat. Add Shaoxing wine and stock; the pan will steam heavily. Cover briefly and steam 2 minutes until broccoli is bright green and tender-crisp.
 
 Add white pepper. Pour in the cornstarch slurry around the edge; toss until the sauce clings, about 1 minute. Finish with sesame oil.
 

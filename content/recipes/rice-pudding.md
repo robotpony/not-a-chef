@@ -12,15 +12,15 @@ draft: false
 
 ## Mechanic
 
-Adding the **beaten egg early** lets it temper gradually as the mixture heats, producing a smooth, custardy texture rather than scrambled flecks. Target 60–70°C — above that and the egg curdles.
+Adding the **beaten egg early** lets it temper gradually as the mixture heats, producing a smooth, custardy texture rather than scrambled flecks. Target 60–70°C; above that and the egg curdles.
 
 ## Ingredients
 
 - 400g cooked rice (2 cups)
 - 500ml milk (or substitute: ⅛ cream + ⅞ oat milk)
 - 1 egg, beaten
-- 3¼ tbsp sugar
-- 1 tsp vanilla extract
+- 3¼ tablespoons sugar
+- 1 teaspoon vanilla extract
 - pinch of salt
 - 1 cinnamon stick
 
@@ -28,7 +28,7 @@ Adding the **beaten egg early** lets it temper gradually as the mixture heats, p
 
 Combine rice, milk, beaten egg, sugar, vanilla, salt, and cinnamon stick in a medium saucepan over medium-low heat.
 
-Stir occasionally and heat until thickened and creamy, about 20 minutes. Watch the temperature — pull from heat around 65–70°C.
+Stir occasionally and heat until thickened and creamy, about 20 minutes. Watch the temperature: pull from heat around 65–70°C.
 
 Remove the cinnamon stick. Serve warm or refrigerate and serve cold.
 

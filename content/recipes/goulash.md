@@ -13,18 +13,18 @@ draft: false
 
 ## Mechanic
 
-The **paprika load here is 4 tbsp per kg of meat**, not the 1 tbsp most North American recipes use. That's what makes this taste like goulash and not paprika stew. Caraway is more traditional than cumin; either works but they produce different results. Skipping the bacon is fine with fatty pork shoulder.
+The **paprika load here is 4 tablespoons per kg of meat**, not the 1 tablespoon most North American recipes use. That's what makes this taste like goulash and not paprika stew. Caraway is more traditional than cumin; either works but they produce different results. Skipping the bacon is fine with fatty pork shoulder.
 
 ## Ingredients
 
-- 3 tbsp fat (lard, fat cap, olive oil, or bacon fat)
+- 3 tablespoons fat (lard, fat cap, olive oil, or bacon fat)
 - 1 kg cubed stew meat (pork shoulder or beef chuck), lightly floured
 - 2 yellow onions, medium diced
 - 3 cloves garlic, finely minced
 - 1 red bell pepper, seeded and medium diced
 - 3 vine-ripe tomatoes, cored and medium diced (or 1 × 400g tin)
-- 1½ tsp caraway seeds (or ground cumin)
-- 4 tbsp sweet Hungarian paprika
+- 1½ teaspoons caraway seeds (or ground cumin)
+- 4 tablespoons sweet Hungarian paprika
 - 250ml red wine (1 cup)
 - 1 litre beef stock (4 cups)
 - 2 bay leaves

@@ -14,8 +14,8 @@ draft: false
 - 250g whole-milk ricotta (avoid brands with stabilizers)
 - 4 cloves garlic, finely minced
 - 1 shallot, finely minced
-- 2 tbsp extra-virgin olive oil
-- 2 tbsp heavy cream
+- 2 tablespoons extra-virgin olive oil
+- 2 tablespoons heavy cream
 - 1–2 egg yolks
 - pinch dried oregano
 - pinch dried thyme

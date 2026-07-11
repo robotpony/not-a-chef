@@ -11,7 +11,7 @@ cuisine: Chinese
 draft: false
 ---
 
-All the flavour of egg rolls without the wrapper — ground pork with cabbage, carrot, ginger, and sesame. Low-carb, quick, and highly riff-able.
+All the flavour of egg rolls without the wrapper: ground pork with cabbage, carrot, ginger, and sesame. Low-carb, quick, and highly riff-able.
 
 ## Ingredients
 
@@ -39,6 +39,6 @@ All the flavour of egg rolls without the wrapper — ground pork with cabbage, c
 ## Notes
 
 - A bag of coleslaw mix is a great shortcut in place of the cabbage and carrot.
-- If the pork releases a lot of fat, drain before adding the sesame oil — you'll get a proper stir-fry instead of a braise.
+- If the pork releases a lot of fat, drain before adding the sesame oil. You'll get a proper stir-fry instead of a braise.
 - Good base for additions: a splash of rice vinegar, fish sauce, or oyster sauce deepens the flavour.
 - Serve as-is for low-carb, or over rice or cauliflower rice.

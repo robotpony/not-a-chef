@@ -9,7 +9,7 @@ cuisine: American
 draft: false
 ---
 
-Soft, chewy hoagie rolls built for serious sandwiches. The diastatic malt powder is the key ingredient — it feeds the yeast and promotes browning. Steam in the oven gives them a proper crust.
+Soft, chewy hoagie rolls built for serious sandwiches. The diastatic malt powder is the key ingredient: it feeds the yeast and promotes browning. Steam in the oven gives them a proper crust.
 
 ## Ingredients
 
@@ -31,7 +31,7 @@ Soft, chewy hoagie rolls built for serious sandwiches. The diastatic malt powder
 
 1. **Activate yeast**: Warm milk to 40–43°C (105–110°F). Stir in yeast and diastatic malt powder. Let stand 3–5 minutes until foamy.
 2. **Mix dough**: Combine flour, honey, olive oil, and salt in a large bowl. Pour in the yeast mixture and mix with your hands until no dry flour remains, about 2 minutes. Cover and rest 15 minutes.
-3. **Knead**: Turn dough onto a clean surface and knead for 8–10 minutes until smooth and no longer sticky. Check gluten development with the windowpane test — stretch a small piece thin enough to see light through without tearing.
+3. **Knead**: Turn dough onto a clean surface and knead for 8–10 minutes until smooth and no longer sticky. Check gluten development with the windowpane test: stretch a small piece thin enough to see light through without tearing.
 4. **Bulk ferment**: Return dough to the bowl, cover, and let rise until doubled, 45–60 minutes.
 5. **Shape**: Punch down dough and divide into 4 equal pieces (~175 g each). Press each into a rectangle about 20 cm wide and 2.5 cm thick. Roll tightly from bottom to top, seal the seam, then roll out into a cylinder about 25 cm long. Place on cornmeal-dusted baking sheets, 2 per sheet.
 6. **Proof**: Cover loosely and let rise until 1.5–2× in size, 45–60 minutes.
@@ -41,5 +41,5 @@ Soft, chewy hoagie rolls built for serious sandwiches. The diastatic malt powder
 ## Notes
 
 - Diastatic malt powder is sold at baking specialty shops and online. It's not the same as malted milk powder.
-- Texture improves overnight — store in a sealed bag and make sandwiches the next day.
+- Texture improves overnight. Store in a sealed bag and make sandwiches the next day.
 - Optional toppings before baking: sesame seeds, dried herbs, or everything bagel seasoning.
