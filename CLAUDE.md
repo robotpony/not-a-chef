@@ -26,10 +26,9 @@ See `FORMAT.md` for the full specification. Key points:
 
 ## Content sources
 
-Recipes are authored and maintained in the Obsidian vault at `development-notes/`. This repo is the Hugo publishing layer, not the editing environment. The vault paths are:
+This repo is the source of truth for recipes. The family archive (Google Drive export, ~170 files) was fully migrated in and its source folder deleted; recipes that surface from it now get pulled in by hand as needed, not through a migration tool.
 
-- Personal recipes: `~/writing/development-notes/recipes/` (69 files, active)
-- Family archive: `~/writing/development-notes/gdrive/Alderson Family Recipes/` (~170 markdown files converted from Google Drive)
+New recipes are still drafted in the Obsidian vault at `~/writing/me/recipes/` before landing here; `/migrate` brings them across. Treat the vault as a staging ground for notes and in-progress thinking, not a second copy of the published content.
 
 ## Recipe index
 
@@ -41,16 +40,13 @@ The index is current after any `hugo` build. If `public/` is stale, run `hugo --
 
 `tools/migrate.py` — migrates personal recipes from the vault to `content/recipes/`. Normalizes frontmatter; does not touch body content.
 
-`tools/normalize.py` — migrates family archive files to `content/recipes/` or `content/reference/`. Strips gdrive frontmatter, infers tags from folder structure, outputs as `draft: true` for review.
-
-See DESIGN.md for the full CLI interface for both tools.
+See DESIGN.md for the full CLI interface.
 
 ## Claude Code commands
 
 Project slash commands are in `.claude/commands/`. See DESIGN.md for descriptions. Commands planned:
 
 - `/migrate` — run tools/migrate.py for personal recipes
-- `/gdrive-migrate` — run tools/normalize.py for family archive
 - `/recipe-new` — create a new recipe stub
 - `/lint` — validate recipe frontmatter
 - `/preview` — start Hugo dev server

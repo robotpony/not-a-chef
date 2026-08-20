@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/recipes/almond-chocolate-cake.md",
+                "file": "LIBRARIES.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "almond-chocolate-cake"
+              "title": "LIBRARIES"
             }
           }
         ]
@@ -183,8 +183,14 @@
       "bases:Create new base": false
     }
   },
-  "active": "214c0b2507dee0ba",
+  "active": "09608d0a03b9bec2",
   "lastOpenFiles": [
+    "FORMAT.md",
+    "DESIGN.md",
+    "CLAUDE.md",
+    "ARCHITECTURE.md",
+    "2026-07-15.md",
+    "content/recipes/almond-chocolate-cake.md",
     "public/cuisine/russian/index.xml",
     "public/index.json",
     "public/vlog/edgar-wright-style-cookery/index.html",
@@ -195,7 +201,6 @@
     "public/tags/vegetarian/page/1",
     "public/tags/vegetarian/page",
     "public/tags/vegetarian/index.html",
-    "public/vlog/page/1/index.html",
     "public/favicon-32x32.png",
     "public/android-chrome-512x512.png",
     "public/apple-touch-icon.png",
@@ -225,11 +230,6 @@
     "themes/blowfish/exampleSite/content/users/98-8f0822721042bca88707da31b1c241e3/index.es.md",
     "themes/blowfish/exampleSite/content/users/98-8f0822721042bca88707da31b1c241e3/index.de.md",
     "themes/blowfish/exampleSite/content/users/97-a8ae3ddde64e0cd053837877522e2373/index.zh-cn.md",
-    "themes/blowfish/exampleSite/content/users/97-a8ae3ddde64e0cd053837877522e2373/index.pt-pt.md",
-    "themes/blowfish/exampleSite/content/users/97-a8ae3ddde64e0cd053837877522e2373/index.pt-br.md",
-    "themes/blowfish/exampleSite/content/users/97-a8ae3ddde64e0cd053837877522e2373/index.md",
-    "themes/blowfish/exampleSite/content/users/97-a8ae3ddde64e0cd053837877522e2373/index.ja.md",
-    "themes/blowfish/exampleSite/content/users/97-a8ae3ddde64e0cd053837877522e2373/index.it.md",
-    "themes/blowfish/exampleSite/content/users/97-a8ae3ddde64e0cd053837877522e2373/index.fr.md"
+    "themes/blowfish/exampleSite/content/users/97-a8ae3ddde64e0cd053837877522e2373/index.pt-pt.md"
   ]
 }

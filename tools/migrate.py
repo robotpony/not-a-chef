@@ -122,9 +122,10 @@ def _serialize(post: frontmatter.Post) -> str:
 def _build_title_index(dest_dir: Path) -> dict[str, Path]:
     """Index dest files by title, for matching vault sources to existing files.
 
-    Excludes family-archive files (source: family) — those come from
-    normalize.py, not this vault, and must never be a migrate.py write target
-    even if a personal recipe happens to share the same title.
+    Excludes family-archive files (source: family) — those were migrated in
+    from the (now-deleted) gdrive archive, not this vault, and must never be
+    a migrate.py write target even if a personal recipe happens to share the
+    same title.
     """
     index = {}
     for f in dest_dir.glob("*.md"):
@@ -254,8 +255,9 @@ def main(files, source, dest, force, dry_run, verbose):
             click.echo(f"  ! {action}:   {src.name}  ({detail})", err=True)
 
     # Warn about files in dest not touched (may have been removed from vault).
-    # Skip family-archive files (source: family) — those come from normalize.py
-    # and were never sourced from this vault, so they're never "touched" here.
+    # Skip family-archive files (source: family) — those were migrated in from
+    # the (now-deleted) gdrive archive and were never sourced from this vault,
+    # so they're never "touched" here.
     if not files:
         for dest_file in sorted(dest_dir.glob("*.md")):
             if dest_file.name == "_index.md":

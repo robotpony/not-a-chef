@@ -2,35 +2,29 @@
 
 ## Overview
 
-Content flows from two sources in the Obsidian vault through Python migration tools into a Hugo static site. The migration tools are one-way: once content lands in `content/`, this repo owns it. The vault remains the authoring environment.
+This repo is the source of truth for recipes. New recipes are drafted in the Obsidian vault and pulled in one-way through a Python migration tool; once content lands in `content/`, this repo owns it. The family archive (Google Docs export) was fully migrated in and its local copy deleted, so it no longer feeds the build; anything still needed from it gets moved in by hand.
 
 ```
-Obsidian vault (development-notes/)
+Obsidian vault (~/writing/me/)
   │
-  ├── recipes/               (69 personal recipes, active)
-  │       │
-  │       └── migrate.py ──────────────────────────────→ content/recipes/
-  │
-  └── gdrive/Alderson Family Recipes/   (family archive, ~170 md files)
+  └── recipes/               (drafting/staging area)
           │
-          └── normalize.py ─────────────────→ content/recipes/
-                                              content/reference/
-                                              [skip: meta/template files]
-                                                       │
-                                              writing/essays/ ──(manual)──→ content/essays/
-                                                       │
-                                               Hugo + Blowfish build
-                                                       │
-                                               public/ (static HTML)
-                                                       │
-                                               self-hosted server (rsync/deploy script)
+          └── migrate.py ──────────────────────────────→ content/recipes/
+                                                                    │
+                                                writing/essays/ ──(manual)──→ content/essays/
+                                                                    │
+                                                            Hugo + Blowfish build
+                                                                    │
+                                                            public/ (static HTML)
+                                                                    │
+                                                            self-hosted server (rsync/deploy script)
 ```
 
 ## Components
 
 ### tools/migrate.py
 
-Migrates personal recipes from `development-notes/recipes/` to `content/recipes/`.
+Migrates personal recipes from `~/writing/me/recipes/` to `content/recipes/`.
 
 Responsibilities:
 - Parse YAML frontmatter and validate required fields (`title`, `tags`)
@@ -52,78 +46,21 @@ Does not rewrite body content. The body format from the vault is already correct
 
 A `--force` flag re-migrates all files regardless of mtime. Use this after changing the migration logic itself.
 
-### tools/normalize.py
-
-Normalizes and migrates family archive files from `development-notes/gdrive/Alderson Family Recipes/` into `content/`.
-
-The gdrive files have Google Docs provenance: only `gdrive_id`, `gdrive_path`, `google_document`, and `synced` in frontmatter; title buried in the body as a `# Heading`; inconsistent ingredient list style (`*` vs `-`); nested inline notes.
-
-Responsibilities:
-- **Skip** meta files: Recipe Template, How to add a recipe, About the Alderson Family book
-- **Route** by source folder: `X. Appendices/` → `content/reference/`; all others → `content/recipes/`
-- Strip gdrive frontmatter fields
-- Extract `title` from first `# Heading` in the body
-- Infer `tags` from folder path (see tag mapping below)
-- Set `source: family`
-- Normalize ingredient bullets (`*` → `-`)
-- Check for title conflicts with existing `content/recipes/` files; flag duplicates explicitly
-- Write to `content/{section}/{slug}.md` as a draft (`draft: true`) for review
-- Report: files normalized, skipped, flagged for manual review
-
-Outputs drafts, not published files. The operator reviews and sets `draft: false` when satisfied.
-
-**Duplicate detection.** Before writing, normalize.py builds a title index from existing `content/recipes/` files. If the incoming title matches an existing file, the output is still written as a draft but tagged `[duplicate]` in the report and a `_duplicate_of` YAML field is added to the frontmatter. This surfaces the conflict for manual resolution — merge, replace, or discard — rather than silently overwriting or skipping.
-
-```yaml
-_duplicate_of: content/recipes/chai.md
-```
-
-The underscore prefix follows the convention for private/meta fields; Hugo ignores fields it doesn't recognize.
-
-**Incremental sync.** Same semantics as migrate.py: re-running is safe. Files already in `content/` are skipped unless the source is newer or `--force` is passed.
-
-**Folder-to-tag mapping:**
-
-| gdrive folder | tags |
-|---|---|
-| Appetizers and sides | [appetizers, sides] |
-| Bases and flavour bombs | [bases] |
-| Breads and pastas | [breads] |
-| Desserts | [desserts] |
-| Drinks | [drinks] |
-| Mains/Breakfast | [mains, breakfast] |
-| Mains/Casseroles | [mains, casseroles] |
-| Mains/Curries | [mains, curries] |
-| Mains/Dumplings | [mains, dumplings] |
-| Mains/Mashes | [mains, mashes] |
-| Mains/Meat/Beef | [mains, beef] |
-| Mains/Meat/Burgers | [mains, burgers] |
-| Mains/Meat/Pork | [mains, pork] |
-| Mains/Meat/Poultry | [mains, poultry] |
-| Mains/Rice bowls | [mains, rice-bowls] |
-| Mains/Soups | [mains, soups] |
-| Mains/Stews | [mains, stews] |
-| Mains/Stir fries | [mains, stir-fries] |
-| Salads | [salads] |
-| Sauces, dips, and condiments | [sauces] |
-| X. Appendices | reference section |
-
 ### tools/config.toml
 
-Vault paths are machine-specific and must not be hardcoded or committed. Both tools read paths from a local config file.
+The vault path is machine-specific and must not be hardcoded or committed. `tools/migrate.py` reads it from a local config file.
 
 `tools/config.toml` (gitignored):
 ```toml
 [vault]
-recipes = "~/writing/development-notes/recipes"
-gdrive   = "~/writing/development-notes/gdrive/Alderson Family Recipes"
+recipes = "~/writing/me/recipes"
 ```
 
 `tools/config.toml.example` (committed) — the template new contributors copy.
 
-**Resolution order** for each path (first match wins):
+**Resolution order** (first match wins):
 1. CLI flag (`--source PATH`)
-2. Environment variable (`VAULT_RECIPES_PATH` or `VAULT_GDRIVE_PATH`)
+2. Environment variable (`VAULT_RECIPES_PATH`)
 3. `tools/config.toml`
 4. Error — the tool exits with a clear message rather than using a silent default
 
@@ -135,9 +72,9 @@ Standard Hugo site with Blowfish as the theme (git submodule). Three content sec
 
 | Section | Path | Source |
 |---|---|---|
-| Recipes | `content/recipes/` | migrate.py + normalize.py |
+| Recipes | `content/recipes/` | migrate.py |
 | Essays | `content/essays/` | manual migration from vault |
-| Reference | `content/reference/` | normalize.py (appendices) |
+| Reference | `content/reference/` | manual |
 
 Custom layouts needed:
 
@@ -152,8 +89,6 @@ Project-specific Claude Code slash commands. These are markdown files in `.claud
 **Copy-on-migrate, not live reference.** The Hugo content directory is not a symlink into the vault. This keeps the two repos independent: the vault can reorganize files without breaking the Hugo build, and the Hugo content can accumulate Hugo-specific metadata (SEO descriptions, featured images, custom slugs) without polluting Obsidian.
 
 **Wiki links resolved at build time, not migration time.** The `[[Recipe Name]]` syntax stays intact in migrated files. A Hugo render hook converts them during the build. This means migrated files remain Obsidian-compatible (usable as a portable corpus) and cross-references don't require knowing file paths.
-
-**Drafts for family archive.** normalize.py outputs `draft: true`. The family archive recipes have inconsistent quality and some may duplicate personal recipes (there are two Chai recipes). Review before publishing prevents low-quality content from going live.
 
 **Config over convention for vault paths.** Vault paths are machine-specific. A committed `config.toml.example` plus a gitignored `config.toml` keeps setup explicit without making the tools fragile on a different machine. The resolution order (CLI flag → env var → config file → error) supports both interactive use and CI/automation.
 

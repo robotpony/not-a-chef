@@ -21,7 +21,7 @@ Set up the site skeleton before any content migration.
 
 ## Phase 1: Personal recipe migration
 
-Migrate the 69 personal recipes from `development-notes/recipes/`.
+Migrate the 69 personal recipes from `development-notes/recipes/` (the vault has since moved to `~/writing/me/recipes/`).
 
 - [x] Create `tools/config.toml.example` with vault path placeholders
 - [x] Copy to `tools/config.toml` (gitignored) with local paths
@@ -50,12 +50,12 @@ Migrate the family archive from `development-notes/gdrive/Alderson Family Recipe
 - [x] Implement folder-to-tag mapping (see ARCHITECTURE.md)
 - [x] Run `--dry-run` first; review what would be created
 - [x] Run full normalization — 163 files written (140 new, 3 duplicates, 24 pre-run)
-- [ ] Review drafts; promote to published as they pass
+- [x] Review drafts; promote to published as they pass
 - [x] Write `.claude/commands/gdrive-migrate.md`
 
-**Conflict resolution:** Some personal and family archive recipes overlap (two Chai versions, etc.). Keep the personal recipe; normalize the family archive version as a draft and decide at review time whether to merge, replace, or discard.
+**Conflict resolution:** Some personal and family archive recipes overlap (two Chai versions, etc.). Kept the personal recipe; the family archive version was reviewed and merged, replaced, or discarded per file.
 
-**Output:** Family archive integrated as drafts. Published after per-file review. `/recipes/` listing is substantially complete.
+**Output:** Family archive fully migrated and reviewed. The `gdrive/` source folder has since been deleted; this repo is now the source of truth, and `tools/normalize.py` and `.claude/commands/gdrive-migrate.md` were removed as no longer applicable. Recipes turning up outside this repo get added by hand.
 
 ## Phase 3: Essays and reference pages
 
@@ -70,16 +70,16 @@ Scaffold essays content type and migrate reference material.
 
 **Output:** All three content sections populated. Site is structurally complete.
 
-## Phase 3a: Binary recipe import (Recipes to process)
+## Phase 3a: Binary recipe import (Recipes to process) — BLOCKED
 
-Import ~80 unprocessed family recipes from `gdrive/X. Appendices/Recipes to process/`. These are `.doc`/`.docx`/`.pdf` files that cannot be read with standard tools.
+Import ~80 unprocessed family recipes from `gdrive/X. Appendices/Recipes to process/`. These were `.doc`/`.docx`/`.pdf` files that cannot be read with standard tools.
+
+**Blocked:** the `gdrive/` folder has been deleted; this source no longer exists. If any of these unprocessed recipes are still wanted, they need to be pulled from the original Google Drive (or another backup) by hand, not through a batch import tool.
 
 - [ ] Install pandoc (`brew install pandoc`) or confirm availability
 - [ ] Write `tools/import-legacy.py` — batch converts `.doc`/`.docx` to markdown, normalizes frontmatter, outputs to `content/recipes/` as `draft: true`
 - [ ] Handle `.pdf` separately (e.g., `not-afterthoughts-bake-mega-file.pdf`, 8 pages)
 - [ ] Review and promote drafts
-
-**Note:** `pandoc` is required. Run `brew install pandoc` before starting this phase.
 
 **Output:** Legacy recipe archive available for review and promotion.
 
@@ -95,8 +95,8 @@ Add the ability to render structured CSV/table data in Hugo pages — for costin
 
 ## Phase 4: Obsidian vault integration
 
-- [ ] Install Obsidian vault at the path this project expects
-- [ ] Test migration tools against local vault (not just the cached gdrive copy)
+- [x] Vault confirmed at `~/writing/me/` (staging ground for notes and in-progress recipes)
+- [x] Migration tool tested against the live vault
 - [ ] Verify wiki links resolve in both Obsidian and Hugo
 - [ ] Establish review workflow: edit in Obsidian → run `/migrate` → check in Hugo
 

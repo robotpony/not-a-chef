@@ -2,5 +2,4 @@
 # tools/config.toml is gitignored — do not commit it.
 
 [vault]
-recipes = "~/writing/development-notes/recipes"
-gdrive   = "~/writing/development-notes/gdrive/Alderson Family Recipes"
+recipes = "~/writing/me/recipes"

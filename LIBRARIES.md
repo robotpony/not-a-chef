@@ -30,7 +30,7 @@ pip install python-frontmatter
 
 ### click
 
-CLI framework for migrate.py and normalize.py.
+CLI framework for migrate.py.
 
 ```
 pip install click

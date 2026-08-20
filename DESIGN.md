@@ -44,7 +44,7 @@ description: ""       # optional short blurb for SEO and cards
 featured: false       # pin to homepage card grid (optional)
 ```
 
-migrate.py adds `draft: false` on personal recipes (already reviewed). normalize.py adds `draft: true` on family archive files.
+migrate.py adds `draft: false` on personal recipes (already reviewed).
 
 ### Wiki link render hook
 
@@ -79,22 +79,10 @@ Migrates one or more personal recipes from the vault into `content/recipes/`.
 /migrate [filename or "all"]
 ```
 
-- Default (no args): migrates all new or changed files from `development-notes/recipes/`
+- Default (no args): migrates all new or changed files from `~/writing/me/recipes/`
 - With filename: migrates that specific recipe
 - Calls `tools/migrate.py`
 - Reports what was added, updated, or skipped
-
-### `/gdrive-migrate`
-
-Normalizes and migrates files from the family archive into `content/` as drafts.
-
-```
-/gdrive-migrate [filename or "all"]
-```
-
-- Calls `tools/normalize.py`
-- Outputs as `draft: true` for review
-- Reports files processed, skipped (meta/template files), and any flagged for manual cleanup
 
 ### `/recipe-new`
 
@@ -149,15 +137,14 @@ Builds the site and deploys to the self-hosted server.
 
 ### config.toml
 
-Copy `tools/config.toml.example` to `tools/config.toml` (gitignored) and set vault paths for your machine:
+Copy `tools/config.toml.example` to `tools/config.toml` (gitignored) and set the vault path for your machine:
 
 ```toml
 [vault]
-recipes = "~/writing/development-notes/recipes"
-gdrive   = "~/writing/development-notes/gdrive/Alderson Family Recipes"
+recipes = "~/writing/me/recipes"
 ```
 
-Path resolution order for both tools: `--source` flag → env var → `config.toml` → error.
+Path resolution order: `--source` flag → env var → `config.toml` → error.
 
 ### migrate.py
 
@@ -185,34 +172,3 @@ Output (human-readable):
 
 5 files checked: 1 new, 1 updated, 1 skipped, 1 error, 1 warning
 ```
-
-### normalize.py
-
-```
-python tools/normalize.py [options] [file]
-
-Options:
-  --source PATH    Override gdrive archive path (default: from config.toml or VAULT_GDRIVE_PATH)
-  --dest PATH      Override Hugo content path (default: ./content)
-  --force          Re-normalize all files, ignoring mtime
-  --dry-run        Show what would change, don't write files
-  --verbose        Show per-file details
-
-Arguments:
-  file             Single filename to normalize (default: all)
-```
-
-Output:
-```
-→ new:       recipes/bulgogi-beef.md        [draft]
-→ updated:   recipes/prosecco-sangria.md    [draft, vault newer]
-~ duplicate: recipes/chai-masala.md         [draft, duplicates content/recipes/chai.md]
-  skipped:   recipes/broccoli-salad.md      [unchanged]
-  skipped:   Recipe Template.md             [meta file]
-  skipped:   How to add a recipe.md         [meta file]
-! flagged:   some-recipe.md                 [no Ingredients section found]
-
-52 files checked: 2 written, 1 duplicate, 1 skipped, 2 meta skipped, 1 flagged
-```
-
-Duplicate files are written as drafts with a `_duplicate_of: content/recipes/chai.md` field in the frontmatter. Resolve manually: merge content, keep the personal version, or discard the gdrive version.
