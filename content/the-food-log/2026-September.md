@@ -1,0 +1,33 @@
+## Monday, September 14th
+
+The food log has moved!
+
+### Goulash from 1st principles
+
+Made this as a prep day hack. Turned out better than expected
+
+- 1 pork shoulder (trimmed into 2cm cubes)
+- 4 onions rough dice (white, purple, shallot, leak)
+- head of garlic, rough dice
+- 6-10 large cremini mushrooms, sliced
+- Salt, pepper, msg
+- 2 heaping tablespoons of sweet paprika
+- 1 large carrot sliced
+- 500ml chicken/beef stock
+- 1 teaspoon of crushed fennel or caraway
+- 1 large tin tomatoes (diced, or hand-crushed whole)
+- 30ml tomato paste
+- Browning sauce (15ml)
+- Worcestershire sauce (15ml)
+- Sherry (125ml), cider vinegar (50ml)
+
+
+Season the pork cubes with salt and pepper, and toss in oil. Broil on a pan until one side browns nicely. Remove and set aside, keeping the pan drippings.
+
+Add the mushrooms to a large pot with some neutral oil and add a 100ml of water. Cook until the water evaporates and the mushrooms brown. Add the onions and carrot, and cook down. Add the garlic and shallots (if using) and continue to cook. Add tomato paste, and cook until it starts to stick and the veg continues browning. Add the spices, heating them (but not burning).
+
+Deglaze with sherry and add  the stock stock. Add the tomatoes and crush if needed. Add the pork and pan drippings. Do not waste the pan drippings.
+
+Hold a bare simmer, stirring regularly. Cook until pork is fork-tender (2-5 hours).
+
+Add browning as needed. Balance with salt and cider vinegar.
