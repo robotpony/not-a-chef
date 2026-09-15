@@ -1,3 +1,5 @@
 {
-  "cssTheme": "Typomagical"
+  "cssTheme": "Typomagical",
+  "textFontFamily": "Lora",
+  "theme": "obsidian"
 }
