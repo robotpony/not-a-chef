@@ -3,3 +3,19 @@
 
 [vault]
 recipes = "~/writing/me/recipes"
+
+[deploy]
+# SSH destination for the built site. Recommended: add a Host alias to
+# ~/.ssh/config (with its own IdentityFile) and use the alias name here —
+# deploy.sh then doesn't need to know about keys or usernames at all.
+#
+#   # ~/.ssh/config
+#   Host not-a-chef
+#       HostName 203.0.113.10
+#       User deploy
+#       IdentityFile ~/.ssh/id_ed25519_not_a_chef
+#
+host = "not-a-chef"
+
+# Absolute path to the site root on the server.
+remote_path = "/var/www/not-a-chef"

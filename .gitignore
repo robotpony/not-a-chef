@@ -1,6 +1,7 @@
 /public/
 /resources/
 .hugo_build.lock
-tools/config.tomli
+tools/config.toml
 .obsidian/
+.DS_Store
 
