@@ -1,0 +1,1244 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Recipe Spec Sheet</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  :root{
+    --bg:#F3F3EC; --surface:#FBFBF6; --surface-2:#EAEBDF;
+    --ink:#23241E; --ink-muted:#63645A; --ink-faint:#93948A;
+    --border:#DCDCCE; --border-strong:#C7C8B4;
+    /* warped-orange → warped-red: primary, interactive */
+    --accent:#A67330; --accent-strong:#7C361D; --accent-soft:#F6EADA;
+    /* warped-yellow: secondary, descriptive (cuisine) */
+    --highlight:#997F29; --highlight-soft:#F6F1D5;
+    /* warped-blue: recedes to a single utility role — draft/unreviewed flag */
+    --flag:#3D638F; --flag-soft:#E1EAF4;
+    --focus:#A67330;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+      --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+      --border:#383A2C; --border-strong:#4A4C3A;
+      --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+      --highlight:#DDCC88; --highlight-soft:#342D19;
+      --flag:#97B8D8; --flag-soft:#1D2835;
+      --focus:#D3A569;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+    --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+    --border:#383A2C; --border-strong:#4A4C3A;
+    --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+    --highlight:#DDCC88; --highlight-soft:#342D19;
+    --flag:#97B8D8; --flag-soft:#1D2835;
+    --focus:#D3A569;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:'Lora',Georgia,'Times New Roman',serif;
+    font-size:16px; line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.font-ui{ font-family:'Libre Franklin',system-ui,-apple-system,'Segoe UI',sans-serif; }
+  .mono{ font-family:'IBM Plex Mono',ui-monospace,'SF Mono',Menlo,monospace; font-variant-numeric:tabular-nums; }
+  a{ color:inherit; }
+  button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
+  button:focus-visible, a:focus-visible, input:focus-visible{
+    outline:2px solid var(--focus); outline-offset:2px; border-radius:2px;
+  }
+  ul,ol{ margin:0; padding:0; list-style:none; }
+  p{ margin:0; }
+  @media (prefers-reduced-motion:no-preference){
+    .recipe-btn, .theme-toggle, .seg-btn, .ing{ transition:background-color .15s ease, color .15s ease, border-color .15s ease; }
+  }
+
+  /* ---- toolbar (review harness, not part of the page design) ---- */
+  .toolbar{
+    position:sticky; top:0; z-index:10;
+    background:var(--surface-2); border-bottom:1px solid var(--border-strong);
+  }
+  .toolbar-inner{
+    max-width:1100px; margin:0 auto; padding:14px 20px;
+    display:flex; align-items:center; gap:16px; flex-wrap:wrap;
+  }
+  .brand{ display:flex; flex-direction:column; gap:1px; margin-right:auto; }
+  .brand-name{ font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:1rem; letter-spacing:.01em; }
+  .brand-tag{ font-family:'Libre Franklin',sans-serif; font-size:.68rem; color:var(--ink-faint); }
+
+  .seg{ display:flex; gap:2px; background:var(--surface); border:1px solid var(--border-strong); border-radius:4px; padding:2px; }
+  .seg-btn{
+    font-family:'Libre Franklin',sans-serif; font-size:.75rem; font-weight:600;
+    padding:6px 11px; border-radius:3px; color:var(--ink-muted);
+  }
+  .seg-btn:hover{ color:var(--ink); }
+  .seg-btn[aria-pressed="true"]{ background:var(--accent); color:#fff; }
+
+  .switcher{ display:flex; gap:6px; flex-wrap:wrap; }
+  .recipe-btn{
+    font-family:'Libre Franklin',sans-serif; font-size:.78rem; font-weight:600;
+    padding:6px 10px; border:1px solid var(--border-strong); border-radius:3px;
+    color:var(--ink-muted); text-align:left; line-height:1.25;
+  }
+  .recipe-btn .cap{ display:block; font-weight:400; font-size:.66rem; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.04em; }
+  .recipe-btn:hover{ border-color:var(--accent); color:var(--ink); }
+  .recipe-btn[aria-pressed="true"]{
+    background:var(--accent); border-color:var(--accent); color:#fff;
+  }
+  .recipe-btn[aria-pressed="true"] .cap{ color:rgba(255,255,255,.75); }
+  .theme-toggle{
+    display:flex; align-items:center; gap:6px;
+    font-family:'Libre Franklin',sans-serif; font-size:.75rem; font-weight:600;
+    padding:7px 10px; border:1px solid var(--border-strong); border-radius:3px; color:var(--ink-muted);
+  }
+  .theme-toggle:hover{ border-color:var(--accent); color:var(--ink); }
+  .theme-toggle svg{ width:14px; height:14px; }
+
+  .blurb{
+    max-width:1100px; margin:0 auto; padding:12px 20px 0;
+    font-family:'Libre Franklin',sans-serif; font-size:.8rem; color:var(--ink-muted);
+  }
+  .blurb strong{ color:var(--ink); font-weight:600; }
+
+  /* ---- mobile frame (review harness) ---- */
+  body.mobile-frame{ background:var(--surface-2); }
+  .frame-caption{
+    display:none; max-width:390px; margin:18px auto 0; text-align:center;
+    font-family:'IBM Plex Mono',monospace; font-size:.7rem; color:var(--ink-faint);
+    letter-spacing:.03em;
+  }
+  body.mobile-frame .frame-caption{ display:block; }
+  body.mobile-frame .site-frame{
+    max-width:390px; margin:10px auto 60px; border:1px solid var(--border-strong); border-radius:22px;
+    overflow:hidden; box-shadow:0 12px 40px rgba(0,0,0,.18); background:var(--bg);
+  }
+  body.mobile-frame .site-frame .page,
+  body.mobile-frame .site-frame .listing{ padding-left:16px; padding-right:16px; }
+
+  /* ---- recipe page ---- */
+  .page{ max-width:920px; margin:0 auto; padding:28px 20px 90px; }
+  .recipe[hidden]{ display:none; }
+  #view-listing[hidden]{ display:none; }
+  #view-recipe[hidden]{ display:none; }
+
+  .draft-banner{
+    display:flex; align-items:baseline; gap:8px;
+    font-family:'Libre Franklin',sans-serif; font-size:.78rem; font-weight:600;
+    color:var(--flag); background:var(--flag-soft);
+    border:1px solid var(--flag); border-radius:3px;
+    padding:8px 12px; margin-bottom:22px;
+  }
+  .draft-banner .dot{ width:6px; height:6px; border-radius:50%; background:var(--flag); flex-shrink:0; }
+  .draft-banner .sub{ font-weight:400; color:var(--ink-muted); }
+
+  .rhead{ margin-bottom:26px; }
+  .rhead-top{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:8px; }
+  .cuisine-chip{
+    font-family:'Libre Franklin',sans-serif; font-size:.7rem; font-weight:600;
+    text-transform:uppercase; letter-spacing:.05em;
+    background:var(--highlight-soft); color:var(--highlight);
+    padding:3px 7px; border-radius:3px;
+  }
+  .tag{
+    font-family:'Libre Franklin',sans-serif; font-size:.7rem;
+    border:1px solid var(--border-strong); color:var(--ink-muted);
+    padding:3px 7px; border-radius:3px;
+  }
+  .tag-more{ color:var(--ink-faint); border-style:dashed; }
+  h1.rtitle{
+    font-family:'Libre Franklin',sans-serif;
+    font-size:2.15rem; font-weight:700; line-height:1.12; letter-spacing:-.01em;
+    text-wrap:balance; margin:0 0 14px;
+  }
+
+  .stat-rail{ display:flex; gap:26px; flex-wrap:wrap; padding-top:14px; border-top:1px solid var(--border); }
+  .stat{ display:flex; flex-direction:column; gap:3px; min-width:0; }
+  .stat-label{
+    font-family:'Libre Franklin',sans-serif; font-size:.66rem; font-weight:600;
+    text-transform:uppercase; letter-spacing:.07em; color:var(--ink-faint);
+  }
+  .stat-value{ font-family:'Libre Franklin',sans-serif; font-size:.85rem; color:var(--ink); max-width:22ch; }
+
+  .section{ margin-top:34px; }
+  .section-label{
+    display:block; font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:700;
+    text-transform:uppercase; letter-spacing:.08em; color:var(--ink-muted);
+    margin-bottom:10px;
+  }
+
+  .mechanic{
+    background:var(--surface); border-left:3px solid var(--accent);
+    border-radius:0 3px 3px 0; padding:14px 18px;
+  }
+  .mechanic p + p{ margin-top:.6em; }
+  .mechanic .section-label{ color:var(--accent-strong); }
+  .ratio{ color:var(--accent-strong); font-weight:600; }
+
+  .component{ margin-top:34px; padding-top:26px; border-top:1px solid var(--border); }
+  .component:first-of-type{ border-top:none; padding-top:0; }
+  .component-label{
+    font-family:'Libre Franklin',sans-serif;
+    font-size:1.2rem; font-weight:700; margin-bottom:14px; letter-spacing:-.005em;
+  }
+
+  .im-grid{ display:grid; grid-template-columns:minmax(200px,260px) 1fr; gap:32px; }
+  @media (max-width:680px){ .im-grid{ grid-template-columns:1fr; gap:22px; } }
+
+  .ingredients{ font-family:'Libre Franklin',sans-serif; }
+  .ingredients .subhead{
+    font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em;
+    color:var(--ink-faint); margin:14px 0 6px;
+  }
+  .ingredients .subhead:first-child{ margin-top:0; }
+  .ing{
+    display:flex; align-items:flex-start; gap:10px;
+    padding:7px 0; border-bottom:1px solid var(--border);
+    font-size:.88rem; cursor:pointer;
+  }
+  .ing:last-child{ border-bottom:none; }
+
+  /* custom flat ingredient check — no native checkbox chrome, no emoji */
+  .ing input[type="checkbox"]{
+    appearance:none; -webkit-appearance:none; margin:2px 0 0 0;
+    width:19px; height:19px; flex-shrink:0; cursor:pointer;
+    border:1.5px solid var(--border-strong); border-radius:4px;
+    background:var(--surface); position:relative;
+  }
+  .ing input[type="checkbox"]:hover{ border-color:var(--accent); }
+  .ing input[type="checkbox"]:checked{ background:var(--accent); border-color:var(--accent); }
+  .ing input[type="checkbox"]:checked::after{
+    content:''; position:absolute; left:6px; top:2px; width:5px; height:10px;
+    border:solid #fff; border-width:0 2px 2px 0; transform:rotate(38deg);
+  }
+  .ing:has(input:checked){ color:var(--ink-faint); text-decoration:line-through; text-decoration-color:var(--border-strong); }
+  .ing .qty{ color:var(--ink-muted); }
+  .ing:has(input:checked) .qty{ color:var(--ink-faint); }
+  .ing.sub{ padding-left:29px; font-size:.82rem; color:var(--ink-muted); }
+  .ing strong{ font-weight:600; }
+
+  .procedure p{ margin-bottom:1em; max-width:64ch; }
+  .procedure p:last-child{ margin-bottom:0; }
+  .procedure ol{ counter-reset:step; max-width:64ch; }
+  .procedure ol li{
+    counter-increment:step; position:relative; padding-left:34px; margin-bottom:14px;
+  }
+  .procedure ol li::before{
+    content:counter(step); position:absolute; left:0; top:.05em;
+    font-family:'IBM Plex Mono',monospace; font-size:.75rem; font-weight:600;
+    color:var(--accent-strong); background:var(--accent-soft);
+    width:22px; height:22px; border-radius:3px; display:flex; align-items:center; justify-content:center;
+  }
+  .procedure ol li:last-child{ margin-bottom:0; }
+
+  .prose{ max-width:64ch; }
+  .prose p + p{ margin-top:1em; }
+
+  .variation{ margin-bottom:22px; }
+  .variation:last-child{ margin-bottom:0; }
+  .variation h3{ font-family:'Libre Franklin',sans-serif; font-size:1rem; font-weight:600; margin-bottom:6px; }
+  .variation p{ max-width:64ch; }
+
+  .notes-list li{ display:flex; gap:8px; margin-bottom:8px; max-width:64ch; }
+  .notes-list li::before{ content:'—'; color:var(--ink-faint); flex-shrink:0; }
+  .notes-list li:last-child{ margin-bottom:0; }
+  .notes-sub{ margin-top:18px; }
+  .notes-sub h3{ font-family:'Libre Franklin',sans-serif; font-size:.85rem; font-weight:600; margin-bottom:6px; color:var(--ink-muted); }
+
+  .badge-tag{
+    font-family:'Libre Franklin',sans-serif; font-size:.68rem; font-weight:600;
+    color:var(--flag); background:var(--flag-soft); border-radius:2px;
+    padding:1px 5px; margin-left:2px; white-space:nowrap;
+  }
+
+  .wikilink{
+    color:var(--accent-strong); text-decoration:underline; text-decoration-style:dotted;
+    text-underline-offset:2px; font-weight:600;
+  }
+  .wikilink::after{ content:' \2192'; font-size:.85em; }
+
+  .extlink{
+    color:inherit; text-decoration:underline; text-decoration-color:var(--border-strong);
+    text-underline-offset:2px;
+  }
+  .extlink::after{ content:' \2197'; font-size:.75em; color:var(--ink-faint); }
+
+  .pfoot{
+    max-width:920px; margin:40px auto 0; padding:16px 20px 0; border-top:1px solid var(--border);
+    font-family:'Libre Franklin',sans-serif; font-size:.72rem; color:var(--ink-faint);
+  }
+
+  /* ---- listing page ---- */
+  .listing{ max-width:1100px; margin:0 auto; padding:28px 20px 90px; }
+  .listing-head{ margin-bottom:22px; }
+  h1.ltitle{
+    font-family:'Libre Franklin',sans-serif; font-size:1.9rem; font-weight:700;
+    letter-spacing:-.01em; margin:0 0 4px;
+  }
+  .listing-count{ font-family:'Libre Franklin',sans-serif; font-size:.8rem; color:var(--ink-muted); }
+  .listing-count strong{ color:var(--ink); font-weight:600; }
+
+  .search-row{ display:flex; gap:10px; margin:16px 0 14px; flex-wrap:wrap; }
+  .search-box{
+    flex:1; min-width:180px; display:flex; align-items:center; gap:8px;
+    background:var(--surface); border:1px solid var(--border-strong); border-radius:4px;
+    padding:9px 12px; font-family:'Libre Franklin',sans-serif; font-size:.85rem; color:var(--ink-faint);
+  }
+  .search-box svg{ width:15px; height:15px; flex-shrink:0; }
+
+  .filter-row{ display:flex; gap:6px; flex-wrap:wrap; margin-bottom:8px; }
+  .filter-group{ display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
+  .filter-group-label{
+    font-family:'Libre Franklin',sans-serif; font-size:.68rem; font-weight:700;
+    text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); margin-right:2px;
+  }
+  .filter-pill{
+    font-family:'Libre Franklin',sans-serif; font-size:.74rem; font-weight:500;
+    padding:5px 10px; border:1px solid var(--border-strong); border-radius:14px; color:var(--ink-muted);
+  }
+  .filter-pill:hover{ border-color:var(--accent); color:var(--ink); }
+  .filter-pill[aria-pressed="true"]{ background:var(--accent-soft); border-color:var(--accent); color:var(--accent-strong); font-weight:600; }
+
+  .rgrid{
+    display:grid; grid-template-columns:repeat(auto-fill, minmax(240px,1fr));
+    gap:16px; margin-top:22px;
+  }
+  .rcard{
+    background:var(--surface); border:1px solid var(--border); border-radius:6px;
+    padding:16px; display:flex; flex-direction:column; gap:10px; min-width:0;
+  }
+  .rcard-top{ display:flex; gap:5px; flex-wrap:wrap; }
+  .rcard-title{
+    font-family:'Libre Franklin',sans-serif; font-size:1.02rem; font-weight:700;
+    line-height:1.3; letter-spacing:-.005em; text-wrap:balance;
+  }
+  .rcard-meta{ display:flex; gap:16px; flex-wrap:wrap; padding-top:2px; }
+  .rcard-stat{ display:flex; flex-direction:column; gap:2px; min-width:0; max-width:12ch; }
+  .rcard-stat-label{
+    font-family:'Libre Franklin',sans-serif; font-size:.62rem; font-weight:600;
+    text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint);
+  }
+  .rcard-stat-value{
+    font-size:.78rem; color:var(--ink-muted);
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  }
+  .rcard-flags{
+    display:flex; gap:10px; padding-top:8px; margin-top:auto; border-top:1px solid var(--border);
+    font-family:'Libre Franklin',sans-serif; font-size:.68rem; font-weight:600;
+    color:var(--accent-strong); text-transform:uppercase; letter-spacing:.04em;
+  }
+  .rcard-flags span::before{ content:'· '; color:var(--border-strong); }
+  .rcard-flags span:first-child::before{ content:''; }
+
+  /* ---- site nav (the real site header, lives inside .site-frame) ---- */
+  .site-frame{ position:relative; }
+  .site-nav{ border-bottom:1px solid var(--border); background:var(--surface); font-family:'Libre Franklin',sans-serif; }
+  .site-nav-inner{ max-width:920px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; gap:22px; position:relative; }
+  .site-logo{ font-weight:700; font-size:1.05rem; letter-spacing:-.01em; margin-right:auto; text-decoration:none; white-space:nowrap; }
+  .site-nav-links{ display:flex; align-items:center; gap:2px; }
+
+  .nav-link, .nav-drop > summary{
+    font-size:.86rem; font-weight:600; color:var(--ink-muted); padding:8px 10px; border-radius:4px;
+    text-decoration:none; cursor:pointer; list-style:none; display:flex; align-items:center; gap:5px; white-space:nowrap;
+  }
+  .nav-link:hover, .nav-drop > summary:hover{ color:var(--ink); background:var(--surface-2); }
+  .nav-drop > summary::-webkit-details-marker{ display:none; }
+  .nav-drop > summary::after{ content:''; width:6px; height:6px; border:solid currentColor; border-width:0 1.5px 1.5px 0; transform:rotate(45deg); margin-top:-3px; opacity:.6; }
+  .nav-drop[open] > summary::after{ transform:rotate(-135deg); margin-top:2px; }
+  .nav-drop{ position:relative; }
+
+  .mega-panel{
+    position:absolute; top:calc(100% + 8px); left:0; z-index:20;
+    background:var(--surface); border:1px solid var(--border-strong); border-radius:8px;
+    box-shadow:0 14px 40px rgba(0,0,0,.16); padding:20px; display:flex; gap:32px; flex-wrap:wrap;
+    min-width:460px;
+  }
+  .mega-panel-simple{ min-width:230px; }
+  .mega-col{ display:flex; flex-direction:column; gap:1px; min-width:160px; }
+  .mega-col-label{
+    font-size:.65rem; font-weight:700; text-transform:uppercase; letter-spacing:.07em;
+    color:var(--ink-faint); margin-bottom:6px;
+  }
+  .mega-col a{
+    display:flex; justify-content:space-between; gap:14px; font-size:.85rem; color:var(--ink);
+    text-decoration:none; padding:5px 6px; border-radius:4px;
+  }
+  .mega-col a:hover{ background:var(--accent-soft); color:var(--accent-strong); }
+  .mega-col a .n{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--ink-faint); }
+  .mega-more{ margin-top:4px; font-weight:600 !important; color:var(--accent-strong) !important; }
+
+  .mega-filters{ flex:1; min-width:190px; border-left:1px solid var(--border); padding-left:26px; display:flex; flex-direction:column; gap:10px; }
+  .mega-chip-row{ display:flex; gap:6px; flex-wrap:wrap; }
+  .mega-chip{
+    font-size:.74rem; font-weight:500; padding:5px 10px; border:1px solid var(--border-strong); border-radius:14px;
+    color:var(--ink-muted); text-decoration:none;
+  }
+  .mega-chip:hover{ border-color:var(--accent); color:var(--ink); }
+  .mega-viewall{ font-size:.8rem; font-weight:600; color:var(--accent-strong); text-decoration:none; margin-top:auto; }
+
+  /* mobile drawer */
+  .mobile-drawer-toggle{ display:none; }
+  @media (max-width:680px){
+    .site-nav-links{ display:none; }
+    .mobile-drawer-toggle{ display:block; }
+  }
+  .mobile-drawer-toggle > summary{
+    list-style:none; cursor:pointer; width:34px; height:34px; display:flex; align-items:center; justify-content:center;
+    border:1px solid var(--border-strong); border-radius:5px; color:var(--ink);
+  }
+  .mobile-drawer-toggle > summary::-webkit-details-marker{ display:none; }
+  .mobile-drawer-toggle > summary svg{ width:17px; height:17px; }
+
+  .drawer-backdrop{ display:none; }
+  .mobile-drawer-toggle[open] .drawer-backdrop{ display:block; position:absolute; inset:0; background:rgba(0,0,0,.35); z-index:29; }
+  .drawer-panel{
+    position:absolute; top:0; left:0; bottom:0; width:82%; max-width:320px; z-index:30;
+    background:var(--bg); border-right:1px solid var(--border-strong);
+    padding:16px 16px 40px; overflow-y:auto; box-shadow:16px 0 40px rgba(0,0,0,.25);
+  }
+  .drawer-panel-head{ display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+  .drawer-close{
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    border:1px solid var(--border-strong); border-radius:5px; color:var(--ink-muted); cursor:pointer;
+  }
+  .drawer-close svg{ width:14px; height:14px; }
+  .drawer-link, .drawer-item > summary{
+    display:flex; justify-content:space-between; align-items:center;
+    font-size:.95rem; font-weight:600; color:var(--ink); text-decoration:none;
+    padding:12px 4px; border-bottom:1px solid var(--border); cursor:pointer; list-style:none;
+  }
+  .drawer-item > summary::-webkit-details-marker{ display:none; }
+  .drawer-item > summary::after{ content:'+'; color:var(--ink-faint); font-weight:400; }
+  .drawer-item[open] > summary::after{ content:'\2013'; }
+  .drawer-sub{ padding:2px 4px 14px 8px; display:flex; flex-direction:column; gap:0; }
+  .drawer-sub .mega-col-label{ margin:12px 0 4px; }
+  .drawer-sub .mega-col-label:first-child{ margin-top:6px; }
+  .drawer-sub a{ font-size:.87rem; padding:7px 4px; color:var(--ink); text-decoration:none; display:flex; justify-content:space-between; }
+  .drawer-sub .mega-chip-row{ padding:2px 4px 0; }
+
+  .nav-caveat{
+    font-family:'Libre Franklin',sans-serif; font-size:.68rem; color:var(--ink-faint);
+    padding:6px 20px; background:var(--surface-2); border-bottom:1px solid var(--border);
+  }
+  .nav-caveat strong{ color:var(--ink-muted); }
+</style>
+
+<div class="toolbar">
+  <div class="toolbar-inner">
+    <div class="brand">
+      <span class="brand-name">Not a Chef</span>
+      <span class="brand-tag">Your dad is not a chef (but he loves to kook for his family)</span>
+    </div>
+    <div class="seg" role="tablist" aria-label="View">
+      <button class="seg-btn" data-view="recipe" aria-pressed="true">Recipe</button>
+      <button class="seg-btn" data-view="listing" aria-pressed="false">Listing</button>
+    </div>
+    <div class="switcher" id="recipeSwitcher" role="tablist" aria-label="Prototype recipe">
+      <button class="recipe-btn" data-target="tomato-soup" aria-pressed="true">Tomato Soup<span class="cap">baseline</span></button>
+      <button class="recipe-btn" data-target="burger-sauce" aria-pressed="false">Burger Sauce<span class="cap">ratio</span></button>
+      <button class="recipe-btn" data-target="meatballs" aria-pressed="false">Meatballs<span class="cap">by weight</span></button>
+      <button class="recipe-btn" data-target="dal-tadka" aria-pressed="false">Dal Tadka<span class="cap">multi-part</span></button>
+      <button class="recipe-btn" data-target="pulled-pork" aria-pressed="false">Pulled Pork<span class="cap">draft + link</span></button>
+    </div>
+    <div class="seg" role="tablist" aria-label="Frame">
+      <button class="seg-btn" data-frame="desktop" aria-pressed="true">Desktop</button>
+      <button class="seg-btn" data-frame="mobile" aria-pressed="false">Mobile</button>
+    </div>
+    <button class="theme-toggle" id="themeToggle" type="button">
+      <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+      <span id="themeLabel">System</span>
+    </button>
+  </div>
+</div>
+<p class="blurb"><strong>Round four.</strong> Palette rebuilt from warpedvisions.org's actual accent hues (blue/green/yellow/orange/red at matched saturation), rebalanced so orange→red leads as the primary interactive colour and yellow sits second (cuisine chips). Blue recedes to a single utility role — the draft flag — and green is held in reserve, unused. See the <a class="wikilink" href="https://claude.ai/artifact/DQf8HNoHBrpsjk9NtHT3cc" target="_blank" rel="noopener">Style Guide</a> for the full breakdown.</p>
+<p class="frame-caption">375–390px viewport</p>
+
+<main>
+<div class="site-frame">
+
+<header class="site-nav">
+  <div class="site-nav-inner">
+    <a class="site-logo" href="#">not a chef.</a>
+
+    <nav class="site-nav-links" aria-label="Primary">
+      <details class="nav-drop" name="nav-menu">
+        <summary>Recipes</summary>
+        <div class="mega-panel">
+          <div class="mega-col">
+            <span class="mega-col-label">By course</span>
+            <a href="#">Mains <span class="n">26</span></a>
+            <a href="#">Bases &amp; marinades <span class="n">18</span></a>
+            <a href="#">Sauces <span class="n">16</span></a>
+            <a href="#">Soups &amp; stews <span class="n">6</span></a>
+            <a href="#">Desserts <span class="n">6</span></a>
+            <a href="#">Sides <span class="n">4</span></a>
+            <a href="#">Salads <span class="n">4</span></a>
+            <a href="#">Breads <span class="n">3</span></a>
+            <a href="#">Drinks <span class="n">3</span></a>
+            <a href="#">Breakfast <span class="n">2</span></a>
+          </div>
+          <div class="mega-col">
+            <span class="mega-col-label">By cuisine</span>
+            <a href="#">Chinese <span class="n">7</span></a>
+            <a href="#">Indian <span class="n">6</span></a>
+            <a href="#">Italian <span class="n">6</span></a>
+            <a href="#">Japanese <span class="n">5</span></a>
+            <a href="#">American <span class="n">4</span></a>
+            <a href="#">Mexican <span class="n">3</span></a>
+            <a href="#">Greek <span class="n">3</span></a>
+            <a href="#">Thai <span class="n">3</span></a>
+            <a class="mega-more" href="#">All 18 cuisines →</a>
+          </div>
+          <div class="mega-filters">
+            <span class="mega-col-label">Quick filters</span>
+            <div class="mega-chip-row">
+              <a class="mega-chip" href="#">Quick</a>
+              <a class="mega-chip" href="#">Make-ahead</a>
+              <a class="mega-chip" href="#">Dairy-free</a>
+              <a class="mega-chip" href="#">Vegetarian</a>
+              <a class="mega-chip" href="#">Weeknight</a>
+              <a class="mega-chip" href="#">Vegan</a>
+              <a class="mega-chip" href="#">Gluten-free</a>
+            </div>
+            <a class="mega-viewall" href="#">View all 83 recipes →</a>
+          </div>
+        </div>
+      </details>
+
+      <a class="nav-link" href="#">Essays</a>
+      <a class="nav-link" href="#">The Food Log</a>
+
+      <details class="nav-drop" name="nav-menu">
+        <summary>Reference</summary>
+        <div class="mega-panel mega-panel-simple">
+          <div class="mega-col">
+            <span class="mega-col-label">Guides</span>
+            <a href="#">101 Carbonaras</a>
+            <a href="#">Burger night costing (2022)</a>
+            <a href="#">Flour protein content comparison</a>
+            <a href="#">Food ratios for your own recipes</a>
+            <a href="#">Meal planning, Bruce's take</a>
+            <a href="#">Temperature &amp; doneness cheat sheet</a>
+            <a class="mega-more" href="#">All 19 reference guides →</a>
+          </div>
+        </div>
+      </details>
+
+      <a class="nav-link" href="#">Vlog</a>
+    </nav>
+
+    <details class="mobile-drawer-toggle">
+      <summary aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+      </summary>
+      <div class="drawer-backdrop"></div>
+      <nav class="drawer-panel" aria-label="Primary mobile">
+        <div class="drawer-panel-head">
+          <span class="site-logo">not a chef.</span>
+          <span class="drawer-close" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+          </span>
+        </div>
+
+        <details class="drawer-item" name="drawer-menu">
+          <summary>Recipes</summary>
+          <div class="drawer-sub">
+            <span class="mega-col-label">By course</span>
+            <a href="#">Mains <span class="n">26</span></a>
+            <a href="#">Bases &amp; marinades <span class="n">18</span></a>
+            <a href="#">Sauces <span class="n">16</span></a>
+            <a href="#">Soups &amp; stews <span class="n">6</span></a>
+            <a href="#">Desserts <span class="n">6</span></a>
+            <a href="#">Sides <span class="n">4</span></a>
+            <a href="#">Salads <span class="n">4</span></a>
+            <a href="#">Breads <span class="n">3</span></a>
+            <a href="#">Drinks <span class="n">3</span></a>
+            <a href="#">Breakfast <span class="n">2</span></a>
+            <span class="mega-col-label">By cuisine</span>
+            <a href="#">Chinese <span class="n">7</span></a>
+            <a href="#">Indian <span class="n">6</span></a>
+            <a href="#">Italian <span class="n">6</span></a>
+            <a href="#">Japanese <span class="n">5</span></a>
+            <a class="mega-more" href="#">All 18 cuisines →</a>
+            <span class="mega-col-label">Quick filters</span>
+            <div class="mega-chip-row">
+              <a class="mega-chip" href="#">Quick</a>
+              <a class="mega-chip" href="#">Make-ahead</a>
+              <a class="mega-chip" href="#">Dairy-free</a>
+              <a class="mega-chip" href="#">Vegetarian</a>
+              <a class="mega-chip" href="#">Weeknight</a>
+            </div>
+            <a class="mega-viewall" href="#" style="margin-top:12px;">View all 83 recipes →</a>
+          </div>
+        </details>
+
+        <a class="drawer-link" href="#">Essays</a>
+        <a class="drawer-link" href="#">The Food Log</a>
+
+        <details class="drawer-item" name="drawer-menu">
+          <summary>Reference</summary>
+          <div class="drawer-sub">
+            <a href="#">101 Carbonaras</a>
+            <a href="#">Burger night costing (2022)</a>
+            <a href="#">Flour protein content comparison</a>
+            <a href="#">Food ratios for your own recipes</a>
+            <a href="#">Meal planning, Bruce's take</a>
+            <a href="#">Temperature &amp; doneness cheat sheet</a>
+            <a class="mega-more" href="#">All 19 reference guides →</a>
+          </div>
+        </details>
+
+        <a class="drawer-link" href="#">Vlog</a>
+      </nav>
+    </details>
+  </div>
+</header>
+<p class="nav-caveat"><strong>Note:</strong> Recipes/Reference use real tag &amp; cuisine counts from index.json. The Food Log and Vlog are single-entry sections with no frontmatter yet, shown flat (no dropdown) until they grow. Reference itself only has tags on 5 of 19 files, so its menu is a flat shortlist rather than the course/cuisine split Recipes gets — tag the rest to unlock that.</p>
+
+<section id="view-recipe" class="page">
+
+  <!-- ============ 1. TOMATO SOUP — baseline ============ -->
+  <article class="recipe" id="tomato-soup">
+    <header class="rhead">
+      <div class="rhead-top">
+        <span class="tag">mains</span><span class="tag">soups</span><span class="tag">italian</span><span class="tag">weeknight</span><span class="tag">vegetarian</span>
+      </div>
+      <h1 class="rtitle">Tomato Soup</h1>
+      <div class="stat-rail">
+        <div class="stat"><span class="stat-label">Serves</span><span class="stat-value mono">4</span></div>
+        <div class="stat"><span class="stat-label">Prep</span><span class="stat-value mono">10 min</span></div>
+        <div class="stat"><span class="stat-label">Cook</span><span class="stat-value mono">25 min</span></div>
+        <div class="stat"><span class="stat-label">Total</span><span class="stat-value mono">35 min</span></div>
+      </div>
+    </header>
+
+    <section class="component">
+      <div class="im-grid">
+        <div class="ingredients">
+          <ul>
+            <li class="ing"><input type="checkbox" id="ts-1"><label for="ts-1"><span class="qty mono">3 tbsp</span> olive oil</label></li>
+            <li class="ing"><input type="checkbox" id="ts-2"><label for="ts-2"><span class="qty mono">1</span> onion, diced</label></li>
+            <li class="ing"><input type="checkbox" id="ts-3"><label for="ts-3"><span class="qty mono">3 cloves</span> garlic, sliced</label></li>
+            <li class="ing"><input type="checkbox" id="ts-4"><label for="ts-4"><span class="qty mono">780ml</span> tinned whole tomatoes (2 × 400ml tins)</label></li>
+            <li class="ing"><input type="checkbox" id="ts-5"><label for="ts-5"><span class="qty mono">250ml</span> chicken or vegetable broth (1 cup)</label></li>
+            <li class="ing"><input type="checkbox" id="ts-6"><label for="ts-6"><span class="qty mono">60ml</span> cream (¼ cup)</label></li>
+            <li class="ing"><input type="checkbox" id="ts-7"><label for="ts-7">salt and black pepper</label></li>
+          </ul>
+        </div>
+        <div class="procedure prose">
+          <p>Warm the olive oil in a heavy pot over medium heat. Add onion and cook until softened and translucent, about 8 minutes.</p>
+          <p>Add garlic and cook until fragrant, about 1 minute.</p>
+          <p>Add tomatoes (crush them by hand as they go in) and broth. Bring to a simmer and cook, uncovered, for 15 minutes.</p>
+          <p>Blend until smooth with an immersion blender or in batches in a stand blender.</p>
+          <p>Return to the pot over low heat. Stir in the cream and season with salt and pepper. Taste and adjust.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <span class="section-label">To serve</span>
+      <div class="prose"><p>With crusty bread or a grilled cheese. A drizzle of olive oil and cracked pepper on top.</p></div>
+    </section>
+
+    <section class="section">
+      <span class="section-label">Notes</span>
+      <ul class="notes-list">
+        <li>Tinned fire-roasted tomatoes add smokiness.</li>
+        <li>For a vegan version, omit cream or use coconut cream.</li>
+      </ul>
+    </section>
+  </article>
+
+  <!-- ============ 2. BRUCE'S BURGER SAUCE — ratio ============ -->
+  <article class="recipe" id="burger-sauce" hidden>
+    <header class="rhead">
+      <div class="rhead-top">
+        <span class="tag">sauces</span><span class="tag">quick</span><span class="tag">vegetarian</span>
+      </div>
+      <h1 class="rtitle">Bruce's Burger Sauce</h1>
+      <div class="stat-rail">
+        <div class="stat"><span class="stat-label">Serves</span><span class="stat-value mono">makes ~4 servings</span></div>
+        <div class="stat"><span class="stat-label">Prep</span><span class="stat-value mono">5 min</span></div>
+        <div class="stat"><span class="stat-label">Total</span><span class="stat-value mono">5 min</span></div>
+      </div>
+    </header>
+
+    <section class="section" style="margin-top:0;">
+      <span class="section-label">Mechanic</span>
+      <div class="mechanic">
+        <p>A <span class="ratio mono">1:1:1 ratio</span> by volume: mayo, diced burger pickles, mustard. Kewpie in place of or alongside regular mayo adds sweetness and acidity.</p>
+      </div>
+    </section>
+
+    <section class="component">
+      <div class="im-grid">
+        <div class="ingredients">
+          <ul>
+            <li class="ing"><input type="checkbox" id="bs-1"><label for="bs-1"><span class="qty mono">2 tbsp</span> mayonnaise or Kewpie mayo (or 1 tbsp each)</label></li>
+            <li class="ing"><input type="checkbox" id="bs-2"><label for="bs-2"><span class="qty mono">2 tbsp</span> diced burger pickles (bread and butter style)</label></li>
+            <li class="ing"><input type="checkbox" id="bs-3"><label for="bs-3"><span class="qty mono">2 tbsp</span> yellow or Dijon mustard</label></li>
+          </ul>
+        </div>
+        <div class="procedure prose">
+          <p>Stir together. Taste and adjust ratios.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <span class="section-label">To serve</span>
+      <div class="prose"><p>On Swiss, mozza-style, or deluxe burgers. Good as a spread on both bun halves.</p></div>
+    </section>
+
+    <section class="section">
+      <span class="section-label">Notes</span>
+      <ul class="notes-list">
+        <li>Developed for A&amp;W-style mozza burger. <span class="badge-tag">draft, still refining</span></li>
+        <li>The ratios are starting points; lean more mayo for a milder sauce, more pickle for brightness.</li>
+        <li>A small squeeze of ketchup or splash of pickle brine can soften the mustard edge.</li>
+      </ul>
+    </section>
+  </article>
+
+  <!-- ============ 3. MEATBALLS — by weight ============ -->
+  <article class="recipe" id="meatballs" hidden>
+    <div class="draft-banner"><span class="dot"></span>Draft <span class="sub">— not yet reviewed for publish</span></div>
+    <header class="rhead">
+      <div class="rhead-top">
+        <span class="tag">mains</span><span class="tag">bases</span><span class="tag">make-ahead</span><span class="tag">dairy-free</span><span class="tag">family</span>
+      </div>
+      <h1 class="rtitle">Meatballs</h1>
+      <div class="stat-rail">
+        <div class="stat"><span class="stat-label">Serves</span><span class="stat-value mono">makes ~1.7 kg (30–35 meatballs)</span></div>
+        <div class="stat"><span class="stat-label">Prep</span><span class="stat-value mono">30 min</span></div>
+        <div class="stat"><span class="stat-label">Cook</span><span class="stat-value mono">20 min</span></div>
+        <div class="stat"><span class="stat-label">Total</span><span class="stat-value mono">50 min</span></div>
+      </div>
+    </header>
+
+    <section class="section" style="margin-top:0;">
+      <span class="section-label">Mechanic</span>
+      <div class="mechanic">
+        <p>A meatball is a protein base, binders, moisteners (panade), and flavourings. The panade, breadcrumbs soaked in liquid, keeps the meatball from drying out. Grated onion (not diced) disappears into the mix and adds moisture. The percentages below are by weight, relative to <span class="ratio mono">1 kg</span> of ground meat, so the recipe scales to any quantity.</p>
+      </div>
+    </section>
+
+    <section class="component">
+      <div class="im-grid">
+        <div class="ingredients">
+          <span class="subhead">Based on 1 kg ground meat</span>
+          <ul>
+            <li class="ing"><input type="checkbox" id="mb-1"><label for="mb-1"><span class="qty mono">1000g</span> ground meat (100%)</label></li>
+            <li class="ing"><input type="checkbox" id="mb-2"><label for="mb-2"><span class="qty mono">180g</span> water or stock (18%)</label></li>
+            <li class="ing"><input type="checkbox" id="mb-3"><label for="mb-3"><span class="qty mono">180g</span> onion, grated (18%)</label></li>
+            <li class="ing"><input type="checkbox" id="mb-4"><label for="mb-4"><span class="qty mono">150g</span> breadcrumbs (15%)</label></li>
+            <li class="ing"><input type="checkbox" id="mb-5"><label for="mb-5"><span class="qty mono">70g</span> egg, beaten (7%), ~1½ large eggs</label></li>
+            <li class="ing"><input type="checkbox" id="mb-6"><label for="mb-6"><span class="qty mono">60g</span> Parmesan, grated (6%)</label></li>
+            <li class="ing"><input type="checkbox" id="mb-7"><label for="mb-7"><span class="qty mono">25g</span> garlic, minced (2.5%)</label></li>
+            <li class="ing"><input type="checkbox" id="mb-8"><label for="mb-8"><span class="qty mono">15g</span> fresh parsley, chopped (1.5%)</label></li>
+            <li class="ing"><input type="checkbox" id="mb-9"><label for="mb-9"><span class="qty mono">13g</span> salt (1.25%)</label></li>
+            <li class="ing"><input type="checkbox" id="mb-10"><label for="mb-10"><span class="qty mono">5g</span> MSG (0.5%)</label></li>
+            <li class="ing"><input type="checkbox" id="mb-11"><label for="mb-11"><span class="qty mono">5g</span> dried oregano or thyme (0.5%)</label></li>
+            <li class="ing"><input type="checkbox" id="mb-12"><label for="mb-12"><span class="qty mono">4g</span> black pepper (0.4%)</label></li>
+            <li class="ing"><input type="checkbox" id="mb-13"><label for="mb-13"><span class="qty mono">3g</span> ground fennel (0.25%)</label></li>
+            <li class="ing"><input type="checkbox" id="mb-14"><label for="mb-14"><span class="qty mono">3g</span> ground coriander (0.25%)</label></li>
+            <li class="ing"><input type="checkbox" id="mb-15"><label for="mb-15"><span class="qty mono">1g</span> white pepper (0.13%)</label></li>
+          </ul>
+        </div>
+        <div class="procedure prose">
+          <p>Combine breadcrumbs and liquid (water, stock, or a mix with cream, buttermilk, or sour cream). Let soak until absorbed.</p>
+          <p>Grind or measure spices and herbs. Add to the panade along with grated onion and garlic. Mix to combine.</p>
+          <p>Add ground meat and mix thoroughly, by hand or with a paddle attachment, until the mixture is homogenous and slightly sticky.</p>
+          <p>Portion into balls (about 50g each for a standard meatball). Place on a rack over a baking sheet.</p>
+          <p>Bake at 190–220°C (375–425°F) until browned and just cooked through, 15–20 minutes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <span class="section-label">Variations</span>
+      <div class="variation">
+        <h3>Asian style</h3>
+        <p>Replace some of the liquid with hoisin (3%), soy sauce (6.5%), and sesame oil (1%). Add ginger (1%). Reduce salt (soy takes its place). Skip the Parmesan. Scale back liquid slightly. The mixture should be a little firmer than the Italian version.</p>
+        <p>Glaze: 60&nbsp;ml hoisin, 30&nbsp;ml ketchup, 15&nbsp;ml honey or maple syrup, 30&nbsp;ml rice vinegar, 15&nbsp;ml soy sauce, 5&nbsp;ml sesame oil. Brush over meatballs in the last 5 minutes of baking. Finish with sesame seeds and sliced scallions.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <span class="section-label">Notes</span>
+      <ul class="notes-list">
+        <li>Freezes well after baking. Cool completely, freeze on a tray, then bag.</li>
+        <li>Can be added to any braise or sauce directly from frozen. Add 10 minutes to simmer time.</li>
+      </ul>
+    </section>
+  </article>
+
+  <!-- ============ 4. DAL TADKA — multi-part, richest ============ -->
+  <article class="recipe" id="dal-tadka" hidden>
+    <header class="rhead">
+      <div class="rhead-top">
+        <span class="cuisine-chip">Indian</span>
+        <span class="tag">soups</span><span class="tag">weeknight</span><span class="tag">vegetarian</span>
+      </div>
+      <h1 class="rtitle">Dal Tadka</h1>
+      <div class="stat-rail">
+        <div class="stat"><span class="stat-label">Serves</span><span class="stat-value mono">4</span></div>
+        <div class="stat"><span class="stat-label">Prep</span><span class="stat-value mono">10 min</span></div>
+        <div class="stat"><span class="stat-label">Cook</span><span class="stat-value mono">25 min</span></div>
+        <div class="stat"><span class="stat-label">Total</span><span class="stat-value mono">35 min</span></div>
+      </div>
+    </header>
+
+    <section class="section" style="margin-top:0;">
+      <span class="section-label">Mechanic</span>
+      <div class="mechanic">
+        <p>Red lentils cook fast and dissolve into a creamy base. The ratio matters: <span class="ratio mono">1 cup lentils to 4–5 cups water</span>. Less water (1:4) gives a thicker dal you can heap on rice; more (1:5) gives something looser.</p>
+        <p>The tadka is not garnish. Hot fat with spices poured over at the end is the flavour. Don't skip it.</p>
+      </div>
+    </section>
+
+    <section class="component">
+      <h2 class="component-label">Dal</h2>
+      <div class="im-grid">
+        <div class="ingredients">
+          <ul>
+            <li class="ing"><input type="checkbox" id="dt-1"><label for="dt-1"><span class="qty mono">200g</span> red lentils (masoor dal, ~1 cup), rinsed until water runs clear</label></li>
+            <li class="ing sub">add split peas for more texture (+10 min pressure cooking time)</li>
+            <li class="ing"><input type="checkbox" id="dt-2"><label for="dt-2"><span class="qty mono">1.2L</span> water (5 cups)</label></li>
+            <li class="ing"><input type="checkbox" id="dt-3"><label for="dt-3"><span class="qty mono">2</span> tomatoes, chopped</label></li>
+            <li class="ing"><input type="checkbox" id="dt-4"><label for="dt-4"><strong><span class="qty mono">1 tbsp</span> fresh ginger</strong>, grated or minced (or 1 tsp paste)</label></li>
+            <li class="ing"><input type="checkbox" id="dt-5"><label for="dt-5"><strong><span class="qty mono">1½ tsp</span> turmeric</strong></label></li>
+            <li class="ing"><input type="checkbox" id="dt-6"><label for="dt-6"><strong><span class="qty mono">¾ tsp</span> garam masala</strong></label></li>
+            <li class="ing"><input type="checkbox" id="dt-7"><label for="dt-7"><span class="qty mono">¼ tsp</span> cinnamon (optional, adds warmth)</label></li>
+            <li class="ing"><input type="checkbox" id="dt-8"><label for="dt-8"><span class="qty mono">3–4 cloves</span> garlic, minced</label></li>
+            <li class="ing"><input type="checkbox" id="dt-9"><label for="dt-9">salt to taste</label></li>
+          </ul>
+        </div>
+        <div class="procedure prose">
+          <p>Add everything to a pot. Bring to a rolling boil, then lower heat, cover, and simmer gently for 20 minutes. Stir and lightly mash. The lentils should dissolve into a smooth, creamy texture. Taste and adjust salt.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="component">
+      <h2 class="component-label">Tadka</h2>
+      <div class="im-grid">
+        <div class="ingredients">
+          <ul>
+            <li class="ing"><input type="checkbox" id="dt-10"><label for="dt-10"><span class="qty mono">2 tbsp</span> butter (or ghee; ghee is better)</label></li>
+            <li class="ing"><input type="checkbox" id="dt-11"><label for="dt-11"><span class="qty mono">1</span> small red onion, sliced</label></li>
+            <li class="ing"><input type="checkbox" id="dt-12"><label for="dt-12"><span class="qty mono">4–5 cloves</span> garlic, sliced thin</label></li>
+            <li class="ing"><input type="checkbox" id="dt-13"><label for="dt-13"><span class="qty mono">1 tsp</span> cumin seeds</label></li>
+            <li class="ing"><input type="checkbox" id="dt-14"><label for="dt-14"><span class="qty mono">2</span> whole cloves, optional</label></li>
+            <li class="ing"><input type="checkbox" id="dt-15"><label for="dt-15"><span class="qty mono">½ tsp</span> fenugreek seeds, optional</label></li>
+            <li class="ing"><input type="checkbox" id="dt-16"><label for="dt-16">a pinch of hing (asafoetida), optional</label></li>
+          </ul>
+        </div>
+        <div class="procedure prose">
+          <p>Melt the fat in a small pan over medium-high heat. Add the cumin seeds. When they sizzle, add the garlic, onion, and hing. Fry until golden and fragrant, about 3–4 minutes. Pour over the dal and cover for a minute to let it infuse.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <span class="section-label">To serve</span>
+      <div class="prose"><p>Warm basmati rice, plain raita, a crunchy salad (tomatoes, onion, cucumber, lime, salt), lime pickle on the side.</p></div>
+    </section>
+
+    <section class="section">
+      <span class="section-label">Variations</span>
+      <div class="variation">
+        <h3>Build a base first</h3>
+        <p>Cook diced onion in oil until golden, then add garlic, ginger, coriander, and turmeric before the lentils go in. The lentils absorb a more developed flavour. Finish with lemon juice and garam masala off heat. The tadka is simpler: ghee, cumin, hing, a dried red chile. Use 1:4 ratio for a thicker result. <a class="extlink" href="#">Vice</a></p>
+      </div>
+      <div class="variation">
+        <h3>Coconut cream dal</h3>
+        <p>Use yellow split peas instead of masoor (400g, no soak needed). Sauté a diced onion in oil until soft, add 2 tbsp ginger and 1 tsp crushed red chilli, then stir in the spices (2 tsp garam masala, 2 tsp turmeric, ½ tsp cinnamon, 1 tsp garlic powder, salt, pepper) for one minute. Add 1 tsp honey, a 400g can of crushed tomatoes, a 400ml can of coconut cream, and 3 cups water. Stir in the split peas and simmer covered for 80 minutes, stirring occasionally. No tadka. Richer and sweeter than the base recipe; pairs better with roti and mango chutney than rice. <a class="extlink" href="#">VJ Cooks</a></p>
+      </div>
+      <div class="variation">
+        <h3>Go deeper</h3>
+        <p>Use toor dal (yellow split pigeon peas) instead of masoor; nuttier, slower to cook (40 min simmered, or 8 min pressure cooker). Build the base separately with more spice: coriander seeds, cloves, Kashmiri chilli powder.</p>
+        <p>For smokiness, try the Dhungar technique: nestle a small metal bowl in the pot, drop in a lit piece of charcoal, add a splash of ghee, lid on for 5 minutes. <a class="extlink" href="#">Andy Cooks</a></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <span class="section-label">Notes</span>
+      <ul class="notes-list">
+        <li>Masoor (red lentils) need no soaking. Toor dal benefits from 30 minutes in water first.</li>
+        <li>Hing smells aggressive in the jar; it mellows completely in hot fat and adds a savoury depth.</li>
+        <li>After pouring the tadka, spoon a bit of dal into the pan, stir to pick up the remaining spiced fat, and return it to the pot.</li>
+        <li>Leftovers thicken considerably. Loosen with water when reheating.</li>
+      </ul>
+      <div class="notes-sub">
+        <h3>Spice levels across the three recipes</h3>
+        <div class="prose"><p>This recipe sits in the middle of the range. Vice adds ground coriander and a dried chile. Andy Cooks goes furthest: green chillies in the base, Kashmiri chilli powder in the tadka. VJ Cooks is the warmest and sweetest: cinnamon, honey, and coconut cream push it into a different register entirely. The garam masala and cinnamon in this recipe are borrowed from VJ; omit them for the simpler original version. The 1 tablespoon ginger is the floor across all four recipes for the flavour to register.</p></div>
+      </div>
+    </section>
+  </article>
+
+  <!-- ============ 5. PULLED PORK — wiki-link + draft ============ -->
+  <article class="recipe" id="pulled-pork" hidden>
+    <div class="draft-banner"><span class="dot"></span>Draft <span class="sub">— not yet reviewed for publish</span></div>
+    <header class="rhead">
+      <div class="rhead-top">
+        <span class="cuisine-chip">American</span>
+        <span class="tag">mains</span><span class="tag">pork</span><span class="tag">slow-cooker</span><span class="tag">make-ahead</span>
+      </div>
+      <h1 class="rtitle">Pulled Pork</h1>
+      <div class="stat-rail">
+        <div class="stat"><span class="stat-label">Serves</span><span class="stat-value mono">TBD</span></div>
+        <div class="stat"><span class="stat-label">Prep</span><span class="stat-value mono">15 min (plus 12–24 hr rub rest)</span></div>
+        <div class="stat"><span class="stat-label">Cook</span><span class="stat-value mono">1 hr</span></div>
+        <div class="stat"><span class="stat-label">Total</span><span class="stat-value mono">TBD</span></div>
+      </div>
+    </header>
+
+    <section class="section" style="margin-top:0;">
+      <span class="section-label">Mechanic</span>
+      <div class="mechanic">
+        <p>The pork braises in stock and aromatics only; the barbecue sauce is a separate reduction of vinegar, ketchup, and liquid smoke, not the strained braising liquid. Keeping them apart means the sauce flavour doesn't depend on how much fat and pork juice ends up in the pot.</p>
+      </div>
+    </section>
+
+    <section class="component">
+      <div class="im-grid">
+        <div class="ingredients">
+          <ul>
+            <li class="ing"><input type="checkbox" id="pp-1"><label for="pp-1"><a class="wikilink" href="#">Bruce's Poultry and Pork Spice Rub</a>, ½–¾ cup per shoulder, adapted with paprika, smoked paprika, ancho chili powder, and cumin</label></li>
+            <li class="ing"><input type="checkbox" id="pp-2"><label for="pp-2"><span class="qty mono">1–2</span> pork shoulders</label></li>
+            <li class="ing"><input type="checkbox" id="pp-3"><label for="pp-3"><span class="qty mono">1–2</span> onions, roughly chopped</label></li>
+            <li class="ing"><input type="checkbox" id="pp-4"><label for="pp-4"><span class="qty mono">1 head</span> garlic, peeled</label></li>
+            <li class="ing"><input type="checkbox" id="pp-5"><label for="pp-5"><span class="qty mono">125–250ml</span> chicken stock</label></li>
+            <li class="ing"><input type="checkbox" id="pp-6"><label for="pp-6"><span class="qty mono">125ml</span> cider vinegar</label></li>
+            <li class="ing"><input type="checkbox" id="pp-7"><label for="pp-7"><span class="qty mono">125ml</span> ketchup</label></li>
+            <li class="ing"><input type="checkbox" id="pp-8"><label for="pp-8"><span class="qty mono">½ tsp</span> liquid smoke</label></li>
+            <li class="ing"><input type="checkbox" id="pp-9"><label for="pp-9">brown sugar, to taste (sauce)</label></li>
+          </ul>
+        </div>
+        <div class="procedure">
+          <ol>
+            <li><strong>Rub:</strong> coat pork shoulders evenly with the adapted spice rub. Refrigerate 12–24 hours.</li>
+            <li><strong>Braise:</strong> combine chicken stock, onion, and garlic in the pressure cooker pot. Nestle in the rubbed pork.</li>
+            <li><strong>Cook:</strong> bring to high pressure, then cook 45–60 minutes. Release pressure naturally for 20 minutes. Avoid quick releasing here so the liquid doesn't get too cloudy.</li>
+            <li><strong>Sauce:</strong> as the pork depressurizes, simmer cider vinegar, ketchup, and liquid smoke in a saucepan until slightly thickened, 10 to 15 minutes. Season with salt, pepper, and brown sugar to taste.</li>
+            <li><strong>Finish:</strong> shred the pork, discarding fat. Skim fat from the braising liquid; stir a little into the sauce for extra flavour and body, or discard.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <span class="section-label">To serve</span>
+      <div class="prose"><p>Stir some sauce into the shredded pork, serve on buns with the rest on the side.</p></div>
+    </section>
+
+    <section class="section">
+      <span class="section-label">Notes</span>
+      <ul class="notes-list">
+        <li>A 6L pressure cooker holds 2 boneless shoulders (or 1 bone-in).</li>
+        <li>Untested as split-liquid version. Sauce yield and reduction time haven't been measured; update once tested. <span class="badge-tag">draft</span></li>
+      </ul>
+    </section>
+  </article>
+
+  <p class="pfoot">Prototype — structural pass, round two. Palette, homepage, and full site chrome still not designed.</p>
+</section>
+
+<section id="view-listing" class="listing" hidden>
+  <div class="listing-head">
+    <h1 class="ltitle">Recipes</h1>
+    <p class="listing-count"><strong>83</strong> recipes · showing 18 · sourced live from <span class="mono">public/recipes/index.json</span></p>
+  </div>
+
+  <div class="search-row">
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+      Search recipes…
+    </div>
+  </div>
+  <div class="filter-row">
+    <div class="filter-group">
+      <span class="filter-group-label">Cuisine</span>
+      <button class="filter-pill" aria-pressed="false">Indian</button>
+      <button class="filter-pill" aria-pressed="false">Italian</button>
+      <button class="filter-pill" aria-pressed="false">Mexican</button>
+      <button class="filter-pill" aria-pressed="false">Greek</button>
+      <button class="filter-pill" aria-pressed="false">Japanese</button>
+    </div>
+  </div>
+  <div class="filter-row">
+    <div class="filter-group">
+      <span class="filter-group-label">Tags</span>
+      <button class="filter-pill" aria-pressed="false">mains</button>
+      <button class="filter-pill" aria-pressed="false">sauces</button>
+      <button class="filter-pill" aria-pressed="false">bases</button>
+      <button class="filter-pill" aria-pressed="true">weeknight</button>
+      <button class="filter-pill" aria-pressed="false">make-ahead</button>
+      <button class="filter-pill" aria-pressed="false">quick</button>
+      <button class="filter-pill" aria-pressed="false">vegetarian</button>
+    </div>
+  </div>
+
+  <div class="rgrid">
+
+    <article class="rcard">
+      <div class="rcard-top"><span class="tag">sauces</span><span class="tag">quick</span><span class="tag">vegetarian</span></div>
+      <h3 class="rcard-title">Bruce's Burger Sauce</h3>
+      <div class="rcard-meta">
+        <div class="rcard-stat"><span class="rcard-stat-label">Prep</span><span class="rcard-stat-value mono">5 min</span></div>
+        <div class="rcard-stat"><span class="rcard-stat-label">Serves</span><span class="rcard-stat-value mono" title="makes ~4 servings">makes ~4 servings</span></div>
+      </div>
+      <div class="rcard-flags"><span>Mechanic</span></div>
+    </article>
+
+    <article class="rcard">
+      <div class="rcard-top"><span class="cuisine-chip">Indian</span><span class="tag">soups</span><span class="tag">indian</span><span class="tag">weeknight</span><span class="tag tag-more">+1</span></div>
+      <h3 class="rcard-title">Dal Tadka</h3>
+      <div class="rcard-meta">
+        <div class="rcard-stat"><span class="rcard-stat-label">Prep</span><span class="rcard-stat-value mono">10 min</span></div>
+        <div class="rcard-stat"><span class="rcard-stat-label">Cook</span><span class="rcard-stat-value mono">25 min</span></div>
+        <div class="rcard-stat"><span class="rcard-stat-label">Serves</span><span class="rcard-stat-value mono">4</span></div>
+      </div>
+      <div class="rcard-flags"><span>Mechanic</span><span>Variations</span></div>
+    </article>
+
+    <article class="rcard">
+      <div class="rcard-top"><span class="tag">mains</span><span class="tag">soups</span><span class="tag">italian</span><span class="tag tag-more">+2</span></div>
+      <h3 class="rcard-title">Tomato Soup</h3>
+      <div class="rcard-meta">
+        <div class="rcard-stat"><span class="rcard-stat-label">Prep</span><span class="rcard-stat-value mono">10 min</span></div>
+        <div class="rcard-stat"><span class="rcard-stat-label">Cook</span><span class="rcard-stat-value mono">25 min</span></div>
+        <div class="rcard-stat"><span class="rcard-stat-label">Serves</span><span class="rcard-stat-value mono">4</span></div>
+      </div>
+    </article>
+
+    <article class="rcard">
+      <div class="rcard-top"><span class="tag">salads</span><span class="tag">quick</span><span class="tag">vegan</span><span class="tag tag-more">+1</span></div>
+      <h3 class="rcard-title">Asian Slaw Dressing</h3>
+      <div class="rcard-meta">
+        <div class="rcard-stat"><span class="rcard-stat-label">Prep</span><span class="rcard-stat-value mono">5 min</span></div>
+        <div class="rcard-stat"><span class="rcard-stat-label">Serves</span><span class="rcard-stat-value mono" title="6–8 (makes ~200ml)">6–8 (makes ~200ml)</span></div>
+      </div>
+      <div class="rcard-flags"><span>Mechanic</span></div>
+    </article>
+
+    <article class="rcard">
+      <div class="rcard-top"><span class="cuisine-chip">Thai</span><span class="tag">mains</span><span class="tag">thai</span><span class="tag">quick</span></div>
+      <h3 class="rcard-title">Pad Kra Pao Moo Saap</h3>
+      <div class="rcard-meta">
+        <div class="rcard-stat"><span class="rcard-stat-label">Prep</span><span class="rcard-stat-value mono">10 min</span></div>
+        <div class="rcard-stat"><span class="rcard-stat-label">Cook</span><span class="rcard-stat-value mono">8 min</span></div>
+        <div class="rcard-stat"><span class="rcard-stat-label">Serves</span><span class="rcard-stat-value mono">2</span></div>
+      </div>
+    </article>
+
+    <article class="rcard">
+      <div class="rcard-top"><span class="cuisine-chip">American</span><span class="tag">salads</span><span class="tag">quick</span><span class="tag tag-more">+5</span></div>
+      <h3 class="rcard-title">Don's French Dressing</h3>
+      <div class="rcard-meta">
+        <div class="rcard-stat"><span class="rcard-stat-label">Prep</span><span class="rcard-stat-value mono">5 min</span></div>
+        <div class="rcard-stat"><span class="rcard-stat-label">Serves</span><span class="rcard-stat-value mono" title="makes ~240 ml (8 oz)">makes ~240 ml (8 oz)</span></div>
+      </div>
+      <div class="rcard-flags"><span>Mechanic</span></div>
+    </article>
+
+    <article class="rcard">
+      <div class="rcard-top"><span class="tag">sauces</span><span class="tag">quick</span><span class="tag">vegetarian</span></div>
+      <h3 class="rcard-title">Flatbread White Sauce</h3>
+      <div class="rcard-meta">
+        <div class="rcard-stat"><span class="rcard-stat-label">Prep</span><span class="rcard-stat-value mono">10 min</span></div>
+        <div class="rcard-stat"><span class="rcard-stat-label">Serves</span><span class="rcard-stat-value mono" title="for 2–3 flatbreads or pizzas">for 2–3 flatbreads…</span></div>
+      </div>
+    </article>
+
+    <article class="rcard">
+      <div class="rcard-top"><span class="cuisine-chip">Jamaican</span><span class="tag">bases</span><span class="tag">caribbean</span><span class="tag tag-more">+2</span></div>
+      <h3 class="rcard-title">Jerk Marinade</h3>
+      <div class="rcard-meta">
+        <div class="rcard-stat"><span class="rcard-stat-label">Prep</span><span class="rcard-stat-value mono">15 min</span></div>
+        <div class="rcard-stat"><span class="rcard-stat-label">Serves</span><span class="rcard-stat-value mono" title="enough for ~1 kg meat">enough for ~1 kg…</span></div>
+      </div>
+      <div class="rcard-flags"><span>Mechanic</span></div>
+    </article>
+
+    <article class="rcard">
+      <div class="rcard-top"><span class="cuisine-chip">Greek</span><span class="tag">bases</span><span class="tag">beef</span><span class="tag tag-more">+4</span></div>
+      <h3 class="rcard-title">Gyro Base</h3>
+      <div class="rcard-meta">
+        <div class="rcard-stat"><span class="rcard-stat-label">Prep</span><span class="rcard-stat-value mono" title="15 min (plus 4 hr chill, ideally overnight)">15 min + chill…</span></div>
+        <div class="rcard-stat"><span class="rcard-stat-label">Serves</span><span class="rcard-stat-value mono">8 (125g)</span></div>
+      </div>
+      <div class="rcard-flags"><span>Mechanic</span></div>
+    </article>
+
+    <article class="rcard">
+      <div class="rcard-top"><span class="cuisine-chip">Mexican</span><span class="tag">sauces</span><span class="tag">mexican</span><span class="tag tag-more">+3</span></div>
+      <h3 class="rcard-title">Lime Crema</h3>
+      <div class="rcard-meta">
+        <div class="rcard-stat"><span class="rcard-stat-label">Prep</span><span class="rcard-stat-value mono">10 min</span></div>
+        <div class="rcard-stat"><span class="rcard-stat-label">Serves</span><span class="rcard-stat-value mono" title="6 (makes ~250ml)">6 (~250ml)</span></div>
+      </div>
+    </article>
+
+    <article class="rcard">
+      <div class="rcard-top"><span class="tag">bases</span><span class="tag">mediterranean</span><span class="tag">quick</span></div>
+      <h3 class="rcard-title">Mayo Marinade (Chicken)</h3>
+      <div class="rcard-meta">
+        <div class="rcard-stat"><span class="rcard-stat-label">Prep</span><span class="rcard-stat-value mono">5 min</span></div>
+        <div class="rcard-stat"><span class="rcard-stat-label">Serves</span><span class="rcard-stat-value mono" title="for ~700g chicken">for ~700g chicken</span></div>
+      </div>
+      <div class="rcard-flags"><span>Mechanic</span></div>
+    </article>
+
+    <article class="rcard">
+      <div class="rcard-top"><span class="tag">breakfast</span><span class="tag">make-ahead</span><span class="tag">oats</span><span class="tag tag-more">+2</span></div>
+      <h3 class="rcard-title">Baked Oatmeal</h3>
+      <div class="rcard-meta">
+        <div class="rcard-stat"><span class="rcard-stat-label">Prep</span><span class="rcard-stat-value mono">10 min</span></div>
+        <div class="rcard-stat"><span class="rcard-stat-label">Cook</span><span class="rcard-stat-value mono">40 min</span></div>
+        <div class="rcard-stat"><span class="rcard-stat-label">Serves</span><span class="rcard-stat-value mono">6</span></div>
+      </div>
+      <div class="rcard-flags"><span>Mechanic</span><span>Variations</span></div>
+    </article>
+
+    <article class="rcard">
+      <div class="rcard-top"><span class="cuisine-chip">Greek</span><span class="tag">bases</span><span class="tag">mediterranean</span><span class="tag tag-more">+2</span></div>
+      <h3 class="rcard-title">Greek Marinade</h3>
+      <div class="rcard-meta">
+        <div class="rcard-stat"><span class="rcard-stat-label">Prep</span><span class="rcard-stat-value mono">5 min</span></div>
+        <div class="rcard-stat"><span class="rcard-stat-label">Serves</span><span class="rcard-stat-value mono" title="for ~600g protein">for ~600g protein</span></div>
+      </div>
+      <div class="rcard-flags"><span>Mechanic</span></div>
+    </article>
+
+    <article class="rcard">
+      <div class="rcard-top"><span class="cuisine-chip">Chinese</span><span class="tag">bases</span><span class="tag">chinese</span><span class="tag tag-more">+2</span></div>
+      <h3 class="rcard-title">Char Siu Marinade</h3>
+      <div class="rcard-meta">
+        <div class="rcard-stat"><span class="rcard-stat-label">Prep</span><span class="rcard-stat-value mono">10 min</span></div>
+        <div class="rcard-stat"><span class="rcard-stat-label">Serves</span><span class="rcard-stat-value mono" title="for ~600g chicken (8 small boneless thighs)">for ~600g chicken…</span></div>
+      </div>
+      <div class="rcard-flags"><span>Mechanic</span></div>
+    </article>
+
+    <article class="rcard">
+      <div class="rcard-top"><span class="cuisine-chip">Italian</span><span class="tag">sauces</span><span class="tag">italian</span><span class="tag tag-more">+3</span></div>
+      <h3 class="rcard-title">Quick Pizza Sauce</h3>
+      <div class="rcard-meta">
+        <div class="rcard-stat"><span class="rcard-stat-label">Prep</span><span class="rcard-stat-value mono">5 min</span></div>
+        <div class="rcard-stat"><span class="rcard-stat-label">Cook</span><span class="rcard-stat-value mono">10 min</span></div>
+        <div class="rcard-stat"><span class="rcard-stat-label">Serves</span><span class="rcard-stat-value mono" title="2–3 pizzas (makes ~250ml)">2–3 pizzas</span></div>
+      </div>
+      <div class="rcard-flags"><span>Mechanic</span></div>
+    </article>
+
+    <article class="rcard">
+      <div class="rcard-top"><span class="cuisine-chip">Indian</span><span class="tag">breads</span><span class="tag">indian</span></div>
+      <h3 class="rcard-title">Naan</h3>
+      <div class="rcard-meta">
+        <div class="rcard-stat"><span class="rcard-stat-label">Prep</span><span class="rcard-stat-value mono" title="30 min (plus overnight chill)">30 min + chill</span></div>
+        <div class="rcard-stat"><span class="rcard-stat-label">Cook</span><span class="rcard-stat-value mono">20 min</span></div>
+        <div class="rcard-stat"><span class="rcard-stat-label">Serves</span><span class="rcard-stat-value mono" title="11–12 pieces (100g each)">11–12 pieces</span></div>
+      </div>
+      <div class="rcard-flags"><span>Mechanic</span></div>
+    </article>
+
+    <article class="rcard">
+      <div class="rcard-top"><span class="tag">bases</span><span class="tag">weeknight</span><span class="tag">make-ahead</span></div>
+      <h3 class="rcard-title">Roast Poultry (Two-Temperature Method)</h3>
+      <div class="rcard-meta">
+        <div class="rcard-stat"><span class="rcard-stat-label">Prep</span><span class="rcard-stat-value mono" title="10 min (plus 40 min resting)">10 min + rest</span></div>
+        <div class="rcard-stat"><span class="rcard-stat-label">Cook</span><span class="rcard-stat-value mono" title="75–95 min (varies by bird)">75–95 min</span></div>
+        <div class="rcard-stat"><span class="rcard-stat-label">Serves</span><span class="rcard-stat-value mono" title="scales to bird size">scales to bird</span></div>
+      </div>
+      <div class="rcard-flags"><span>Mechanic</span></div>
+    </article>
+
+    <article class="rcard">
+      <div class="rcard-top"><span class="cuisine-chip">Japanese</span><span class="tag">bases</span><span class="tag">japanese</span><span class="tag">make-ahead</span></div>
+      <h3 class="rcard-title">Chashu Pork</h3>
+      <div class="rcard-meta">
+        <div class="rcard-stat"><span class="rcard-stat-label">Prep</span><span class="rcard-stat-value mono">15 min</span></div>
+        <div class="rcard-stat"><span class="rcard-stat-label">Cook</span><span class="rcard-stat-value mono">2 hr</span></div>
+        <div class="rcard-stat"><span class="rcard-stat-label">Serves</span><span class="rcard-stat-value mono" title="6–8 (as a topping or protein component)">6–8 (topping)</span></div>
+      </div>
+      <div class="rcard-flags"><span>Mechanic</span></div>
+    </article>
+
+  </div>
+</section>
+
+</div>
+</main>
+
+<script>
+(function(){
+  var viewBtns = document.querySelectorAll('.seg-btn[data-view]');
+  var recipeView = document.getElementById('view-recipe');
+  var listingView = document.getElementById('view-listing');
+  var recipeSwitcher = document.getElementById('recipeSwitcher');
+  viewBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var v = btn.getAttribute('data-view');
+      viewBtns.forEach(function(b){ b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
+      recipeView.hidden = (v !== 'recipe');
+      listingView.hidden = (v !== 'listing');
+      recipeSwitcher.style.display = (v === 'recipe') ? '' : 'none';
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  });
+
+  var buttons = document.querySelectorAll('.recipe-btn');
+  var recipes = document.querySelectorAll('.recipe');
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var target = btn.getAttribute('data-target');
+      buttons.forEach(function(b){ b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
+      recipes.forEach(function(r){ r.hidden = (r.id !== target); });
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  });
+
+  var frameBtns = document.querySelectorAll('.seg-btn[data-frame]');
+  frameBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var f = btn.getAttribute('data-frame');
+      frameBtns.forEach(function(b){ b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
+      document.body.classList.toggle('mobile-frame', f === 'mobile');
+    });
+  });
+
+  var drawerToggle = document.querySelector('.mobile-drawer-toggle');
+  var drawerBackdrop = document.querySelector('.drawer-backdrop');
+  var drawerClose = document.querySelector('.drawer-close');
+  [drawerBackdrop, drawerClose].forEach(function(el){
+    if(el){ el.addEventListener('click', function(){ drawerToggle.open = false; }); }
+  });
+
+  var root = document.documentElement;
+  var toggle = document.getElementById('themeToggle');
+  var label = document.getElementById('themeLabel');
+  var order = ['system','light','dark'];
+  var current = 'system';
+  try{
+    var saved = localStorage.getItem('recipe-proto-theme');
+    if(saved && order.indexOf(saved) !== -1) current = saved;
+  }catch(e){}
+  function apply(mode){
+    if(mode === 'system'){ root.removeAttribute('data-theme'); }
+    else{ root.setAttribute('data-theme', mode); }
+    label.textContent = mode.charAt(0).toUpperCase() + mode.slice(1);
+    try{ localStorage.setItem('recipe-proto-theme', mode); }catch(e){}
+  }
+  apply(current);
+  toggle.addEventListener('click', function(){
+    current = order[(order.indexOf(current) + 1) % order.length];
+    apply(current);
+  });
+})();
+</script>
+
+</body></html>

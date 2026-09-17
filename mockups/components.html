@@ -1,0 +1,1004 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Not a Chef Components</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  :root{
+    --bg:#F3F3EC; --surface:#FBFBF6; --surface-2:#EAEBDF;
+    --ink:#23241E; --ink-muted:#63645A; --ink-faint:#93948A;
+    --border:#DCDCCE; --border-strong:#C7C8B4;
+    --accent:#A67330; --accent-strong:#7C361D; --accent-soft:#F6EADA;
+    --highlight:#997F29; --highlight-soft:#F6F1D5;
+    --flag:#3D638F; --flag-soft:#E1EAF4;
+    --focus:#A67330;
+    --ok:#4B6B3D; --ok-soft:#E7EEE1;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+      --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+      --border:#383A2C; --border-strong:#4A4C3A;
+      --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+      --highlight:#DDCC88; --highlight-soft:#342D19;
+      --flag:#97B8D8; --flag-soft:#1D2835;
+      --focus:#D3A569;
+      --ok:#9EC28C; --ok-soft:#26301F;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+    --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+    --border:#383A2C; --border-strong:#4A4C3A;
+    --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+    --highlight:#DDCC88; --highlight-soft:#342D19;
+    --flag:#97B8D8; --flag-soft:#1D2835;
+    --focus:#D3A569;
+    --ok:#9EC28C; --ok-soft:#26301F;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:'Lora',Georgia,'Times New Roman',serif;
+    font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4,.font-ui{ font-family:'Libre Franklin',system-ui,-apple-system,'Segoe UI',sans-serif; }
+  .mono{ font-family:'IBM Plex Mono',ui-monospace,'SF Mono',Menlo,monospace; font-variant-numeric:tabular-nums; }
+  a{ color:inherit; }
+  button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
+  button:focus-visible, a:focus-visible{ outline:2px solid var(--focus); outline-offset:2px; border-radius:2px; }
+  ul,ol{ margin:0; padding:0; list-style:none; }
+  p{ margin:0; }
+  code{ font-family:'IBM Plex Mono',monospace; font-size:.85em; }
+
+  .topbar{ position:sticky; top:0; z-index:10; background:var(--surface); border-bottom:1px solid var(--border-strong); }
+  .topbar-inner{ max-width:1100px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+  .tb-title{ font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:.95rem; margin-right:auto; }
+  .tb-jump{ display:flex; gap:2px; flex-wrap:wrap; font-family:'Libre Franklin',sans-serif; }
+  .tb-jump a{ font-size:.72rem; font-weight:600; color:var(--ink-muted); text-decoration:none; padding:6px 8px; border-radius:4px; }
+  .tb-jump a:hover{ color:var(--ink); background:var(--surface-2); }
+  .theme-toggle{
+    display:flex; align-items:center; gap:6px; font-family:'Libre Franklin',sans-serif; font-size:.75rem; font-weight:600;
+    padding:7px 10px; border:1px solid var(--border-strong); border-radius:3px; color:var(--ink-muted);
+  }
+  .theme-toggle:hover{ border-color:var(--accent); color:var(--ink); }
+  .theme-toggle svg{ width:14px; height:14px; }
+
+  main{ max-width:1100px; margin:0 auto; padding:8px 20px 100px; }
+
+  .hero{ padding:36px 0 30px; border-bottom:1px solid var(--border); margin-bottom:40px; }
+  .hero-eyebrow{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--accent-strong); margin-bottom:10px; display:block; }
+  .hero h1{ font-size:2rem; font-weight:700; letter-spacing:-.01em; text-wrap:balance; margin-bottom:12px; }
+  .hero p{ max-width:70ch; color:var(--ink-muted); font-size:1.02rem; }
+  .hero p + p{ margin-top:10px; }
+  .hero code{ background:var(--surface-2); padding:1px 5px; border-radius:3px; }
+
+  .key-row{ display:flex; flex-wrap:wrap; gap:8px 18px; margin-top:18px; font-family:'Libre Franklin',sans-serif; font-size:.78rem; color:var(--ink-muted); }
+  .key-row span{ display:flex; align-items:center; gap:6px; }
+
+  section.block{ margin-bottom:54px; }
+  .block-head{ margin-bottom:20px; }
+  .block-num{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--ink-faint); display:block; margin-bottom:4px; }
+  h2.block-title{ font-size:1.35rem; font-weight:700; letter-spacing:-.005em; margin-bottom:8px; }
+  .block-dek{ color:var(--ink-muted); max-width:72ch; font-size:.92rem; }
+
+  /* ---- entry card: one component demo + label + status + note ---- */
+  .entries{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; align-items:stretch; }
+  .compare-row{ margin-top:8px; }
+  .compare-row .compare-label{ font-family:'Libre Franklin',sans-serif; font-size:.78rem; font-weight:700; color:var(--ink-muted); margin-bottom:10px; display:block; }
+  .compare-row .entries{ border:1px dashed var(--border-strong); border-radius:10px; padding:14px; background:var(--surface-2); }
+
+  .entry{ background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:16px; display:flex; flex-direction:column; gap:10px; }
+  .entry-head{ display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+  .entry-head h3{ font-family:'Libre Franklin',sans-serif; font-size:.88rem; font-weight:700; margin:0; }
+  .entry-where{ font-family:'IBM Plex Mono',monospace; font-size:.66rem; color:var(--ink-faint); }
+  .entry-demo{ padding-top:2px; min-height:20px; }
+  .entry-note{ font-family:'Libre Franklin',sans-serif; font-size:.78rem; color:var(--ink-muted); line-height:1.5; }
+
+  .badge{ font-family:'Libre Franklin',sans-serif; font-size:.62rem; font-weight:700; text-transform:uppercase; letter-spacing:.04em; padding:2px 7px; border-radius:10px; white-space:nowrap; }
+  .badge-canonical{ background:var(--ok-soft); color:var(--ok); }
+  .badge-candidate{ background:var(--highlight-soft); color:var(--highlight); }
+  .badge-doc{ background:var(--flag-soft); color:var(--flag); }
+  .badge-harness{ background:var(--surface-2); color:var(--ink-faint); border:1px solid var(--border-strong); }
+  .badge-discard{ background:var(--accent-soft); color:var(--accent-strong); }
+
+  /* ---- shared real components ---- */
+  .tag{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; border:1px solid var(--border-strong); color:var(--ink-muted); padding:3px 7px; border-radius:3px; display:inline-block; }
+  .tag-more{ color:var(--ink-faint); border-style:dashed; }
+  .cuisine-chip{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; font-weight:600; background:var(--highlight-soft); color:var(--highlight); padding:3px 7px; border-radius:3px; display:inline-block; }
+  .filter-pill{ font-family:'Libre Franklin',sans-serif; font-size:.74rem; font-weight:500; padding:5px 10px; border:1px solid var(--border-strong); border-radius:14px; color:var(--ink-muted); display:inline-block; }
+  .filter-pill.on{ background:var(--accent-soft); border-color:var(--accent); color:var(--accent-strong); font-weight:600; }
+  .badge-tag{ font-family:'Libre Franklin',sans-serif; font-size:.68rem; font-weight:600; color:var(--flag); background:var(--flag-soft); border-radius:2px; padding:1px 5px; }
+  .filter-group-label{ font-family:'Libre Franklin',sans-serif; font-size:.64rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); margin-right:4px; }
+
+  .ing-list{ display:flex; flex-direction:column; }
+  .ing{ display:flex; align-items:flex-start; gap:10px; padding:6px 0; border-bottom:1px solid var(--border); font-size:.96rem; font-family:'Lora',serif; }
+  .ing:last-child{ border-bottom:none; }
+  .ing input[type="checkbox"]{
+    appearance:none; -webkit-appearance:none; margin:2px 0 0 0; width:18px; height:18px; flex-shrink:0; cursor:pointer;
+    border:1.5px solid var(--border-strong); border-radius:4px; background:var(--surface); position:relative;
+  }
+  .ing input[type="checkbox"]:checked{ background:var(--accent); border-color:var(--accent); }
+  .ing input[type="checkbox"]:checked::after{ content:''; position:absolute; left:5px; top:3px; width:5px; height:9px; border:solid #fff; border-width:0 2px 2px 0; transform:rotate(45deg); }
+  .ing:has(input:checked){ color:var(--ink-faint); text-decoration:line-through; text-decoration-color:var(--border-strong); }
+  .ing .qty{ color:var(--ink-muted); }
+  .ing-sub{ padding-left:28px; font-size:.8rem; color:var(--ink-muted); font-family:'Lora',serif; padding-top:4px; }
+  .subhead{ font-family:'Libre Franklin',sans-serif; font-size:.64rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); display:block; margin:2px 0 4px; }
+
+  .mechanic{ background:var(--bg); border-left:3px solid var(--accent); border-radius:0 3px 3px 0; padding:10px 12px; font-family:'Lora',serif; font-size:.96rem; }
+  .mechanic .ratio{ color:var(--accent-strong); font-weight:600; font-family:'IBM Plex Mono',monospace; }
+
+  .proc-steps{ display:flex; flex-direction:column; gap:7px; }
+  .proc-step{ display:flex; gap:9px; align-items:flex-start; font-family:'Lora',serif; font-size:.96rem; }
+  .proc-step .n{ font-family:'IBM Plex Mono',monospace; font-size:.7rem; font-weight:600; color:var(--accent-strong); background:var(--accent-soft); width:20px; height:20px; border-radius:3px; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px; }
+  .prose-proc p{ font-family:'Lora',serif; font-size:.96rem; margin-bottom:.6em; }
+  .prose-proc p:last-child{ margin-bottom:0; }
+
+  .section-label{ display:block; font-family:'Libre Franklin',sans-serif; font-size:.66rem; font-weight:700; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-muted); margin-bottom:6px; }
+  .notes-list li{ display:flex; gap:7px; margin-bottom:6px; font-size:.94rem; font-family:'Lora',serif; }
+  .notes-list li::before{ content:'—'; color:var(--ink-faint); flex-shrink:0; }
+  .notes-sub h4{ font-family:'Libre Franklin',sans-serif; font-size:.78rem; font-weight:600; color:var(--ink-muted); margin-bottom:4px; }
+  .notes-sub p{ font-family:'Lora',serif; font-size:.92rem; color:var(--ink-muted); }
+  .variation h4{ font-family:'Libre Franklin',sans-serif; font-size:.85rem; font-weight:600; margin-bottom:4px; }
+  .variation p{ font-family:'Lora',serif; font-size:.94rem; }
+
+  .wikilink{ color:var(--accent-strong); text-decoration:underline; text-decoration-style:dotted; text-underline-offset:2px; font-weight:600; }
+  .wikilink::after{ content:' \2192'; font-size:.85em; }
+  .extlink{ color:inherit; text-decoration:underline; text-decoration-color:var(--border-strong); text-underline-offset:2px; }
+  .extlink::after{ content:' \2197'; font-size:.75em; color:var(--ink-faint); }
+
+  .im-grid-demo{ display:grid; grid-template-columns:1fr 1.4fr; gap:10px; }
+  .im-grid-demo .col{ border:1px dashed var(--border-strong); border-radius:4px; padding:8px; font-family:'Libre Franklin',sans-serif; font-size:.7rem; color:var(--ink-faint); text-align:center; }
+
+  .draft-banner{ display:flex; align-items:baseline; gap:8px; font-family:'Libre Franklin',sans-serif; font-size:.76rem; font-weight:600; color:var(--flag); background:var(--flag-soft); border:1px solid var(--flag); border-radius:3px; padding:7px 11px; }
+  .draft-banner .dot{ width:6px; height:6px; border-radius:50%; background:var(--flag); flex-shrink:0; }
+  .draft-banner .sub{ font-weight:400; color:var(--ink-muted); }
+
+  .rcard{ background:var(--bg); border:1px solid var(--border); border-radius:6px; padding:14px; display:flex; flex-direction:column; gap:8px; }
+  .rcard-top{ display:flex; gap:5px; flex-wrap:wrap; }
+  .rcard-title{ font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:.92rem; }
+  .rcard-meta{ display:flex; gap:14px; }
+  .rcard-stat-label{ font-family:'Libre Franklin',sans-serif; font-size:.6rem; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); display:block; }
+  .rcard-stat-value{ font-size:.76rem; }
+  .rcard-flags{ display:flex; gap:9px; padding-top:7px; border-top:1px solid var(--border); font-family:'Libre Franklin',sans-serif; font-size:.64rem; font-weight:600; color:var(--accent-strong); text-transform:uppercase; letter-spacing:.04em; }
+  .rcard-flags span::before{ content:'· '; color:var(--border-strong); }
+  .rcard-flags span:first-child::before{ content:''; }
+
+  /* discarded recipe card: left tab + date, no cuisine chip */
+  .rcard-alt{ background:var(--bg); border:1px solid var(--border); border-left:3px solid var(--tab, var(--highlight)); border-radius:2px; padding:14px; display:flex; flex-direction:column; gap:8px; }
+  .rcard-alt .top-row{ display:flex; justify-content:space-between; gap:8px; }
+  .rcard-alt .label{ font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:.68rem; text-transform:uppercase; letter-spacing:.04em; color:var(--tab, var(--highlight)); }
+  .rcard-alt .date{ font-family:'IBM Plex Mono',monospace; font-size:.66rem; color:var(--ink-faint); }
+  .rcard-alt h4{ font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:.92rem; margin:0; }
+  .rcard-alt .stats{ display:flex; gap:12px; font-family:'Libre Franklin',sans-serif; font-size:.72rem; color:var(--ink-muted); }
+  .rcard-alt .stats span{ display:flex; flex-direction:column; gap:2px; padding-left:9px; border-left:1px solid var(--border); }
+  .rcard-alt .stats span:first-child{ padding-left:0; border-left:none; }
+  .rcard-alt .stats b{ font-family:'IBM Plex Mono',monospace; color:var(--ink); font-weight:600; font-size:.78rem; }
+
+  /* discarded taxonomy-browse "cuisine chip" — naming collision with the real one above */
+  .cuisine-chip-alt{ display:inline-flex; align-items:center; gap:7px; border:1px solid var(--border); border-radius:3px; padding:7px 11px; background:var(--bg); font-family:'Libre Franklin',sans-serif; font-size:.82rem; }
+  .cuisine-chip-alt .dot{ width:7px; height:7px; border-radius:50%; background:var(--highlight); }
+  .cuisine-chip-alt .count{ font-family:'IBM Plex Mono',monospace; font-size:.7rem; color:var(--ink-faint); }
+
+  /* discarded filter chip with count */
+  .chip-alt{ display:inline-flex; align-items:center; gap:6px; border:1px solid var(--border-strong); border-radius:3px; background:var(--bg); padding:7px 11px; font-family:'Libre Franklin',sans-serif; font-size:.8rem; }
+  .chip-alt .count{ font-family:'IBM Plex Mono',monospace; font-size:.7rem; color:var(--ink-faint); }
+
+  .nav-preview{ border:1px solid var(--border); border-radius:6px; overflow:hidden; background:var(--surface); }
+  .nav-preview-bar{ display:flex; gap:16px; padding:9px 12px; border-bottom:1px solid var(--border); font-family:'Libre Franklin',sans-serif; }
+  .nav-preview-bar .item{ font-size:.82rem; font-weight:600; color:var(--ink-muted); display:flex; align-items:center; gap:5px; }
+  .nav-preview-bar .item.active{ color:var(--ink); }
+  .nav-preview-bar .item.active::after{ content:''; width:6px; height:6px; border:solid var(--ink); border-width:0 1.5px 1.5px 0; transform:rotate(-135deg); margin-top:3px; }
+  .nav-preview-panel{ padding:12px; display:flex; gap:22px; flex-wrap:wrap; font-family:'Libre Franklin',sans-serif; }
+  .nav-preview-col{ display:flex; flex-direction:column; gap:1px; min-width:120px; }
+  .nav-preview-col-label{ font-size:.62rem; font-weight:700; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-faint); margin-bottom:4px; }
+  .nav-preview-col a{ display:flex; justify-content:space-between; gap:12px; font-size:.8rem; color:var(--ink); text-decoration:none; padding:3px 5px; border-radius:4px; }
+  .nav-preview-col a .n{ font-family:'IBM Plex Mono',monospace; font-size:.68rem; color:var(--ink-faint); }
+  .nav-caption{ font-family:'Libre Franklin',sans-serif; font-size:.66rem; color:var(--ink-faint); padding:5px 12px; background:var(--surface-2); }
+  .mega-chip{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; padding:4px 9px; border:1px solid var(--border-strong); border-radius:14px; color:var(--ink-muted); display:inline-block; }
+  .mega-viewall{ font-family:'Libre Franklin',sans-serif; font-size:.76rem; font-weight:600; color:var(--accent-strong); }
+  .nav-caveat{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; color:var(--ink-faint); padding:8px 12px; background:var(--surface-2); border-radius:4px; }
+  .nav-caveat strong{ color:var(--ink-muted); }
+
+  .wordmark-alt{ display:flex; align-items:baseline; gap:7px; font-family:'Libre Franklin',sans-serif; }
+  .wordmark-alt .name{ font-size:1.02rem; font-weight:700; }
+  .wordmark-alt .name em{ color:var(--accent-strong); font-style:normal; }
+  .site-logo-demo{ font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:1.02rem; }
+
+  .icon-btn{ display:inline-flex; align-items:center; justify-content:center; width:32px; height:32px; border:1px solid var(--border-strong); border-radius:3px; background:var(--surface); color:var(--ink); }
+  .icon-btn svg{ width:15px; height:15px; }
+
+  .search-box{ display:flex; align-items:center; gap:8px; background:var(--surface); border:1px solid var(--border-strong); border-radius:4px; padding:9px 11px; font-family:'Libre Franklin',sans-serif; font-size:.82rem; color:var(--ink-faint); max-width:280px; }
+  .search-box svg{ width:14px; height:14px; flex-shrink:0; }
+  .search-box kbd{ font-family:'IBM Plex Mono',monospace; font-size:.68rem; border:1px solid var(--border-strong); border-radius:3px; padding:1px 5px; color:var(--ink-faint); margin-left:auto; }
+
+  .stat-rail{ display:flex; gap:20px; flex-wrap:wrap; }
+  .stat-label{ font-family:'Libre Franklin',sans-serif; font-size:.62rem; font-weight:600; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-faint); display:block; }
+  .stat-value{ font-family:'Libre Franklin',sans-serif; font-size:.8rem; color:var(--ink); }
+
+  .status-pill-demo{ display:inline-flex; align-items:center; gap:6px; font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:600; color:var(--flag); background:var(--flag-soft); border:1px solid var(--flag); padding:5px 10px; border-radius:3px; }
+  .status-pill-demo .dot{ width:6px; height:6px; border-radius:50%; background:var(--flag); }
+
+  .ledger-alt-wrap{ position:relative; padding:6px 6px 12px 0; max-width:260px; }
+  .ledger-alt-wrap::before, .ledger-alt-wrap::after{ content:''; position:absolute; inset:0; border:1px solid var(--border); border-radius:3px; background:var(--surface); }
+  .ledger-alt-wrap::before{ transform:rotate(-2.2deg) translate(3px,8px); }
+  .ledger-alt-wrap::after{ transform:rotate(1.6deg) translate(-2px,5px); }
+  .ledger-alt{ position:relative; z-index:1; background:var(--surface); border:1px solid var(--border); border-radius:3px; padding:14px 16px; }
+  .ledger-alt-grid{ display:grid; grid-template-columns:1fr 1fr; gap:10px 16px; margin-top:6px; }
+  .ledger-alt-num{ font-family:'IBM Plex Mono',monospace; font-size:1.3rem; font-weight:600; color:var(--accent-strong); line-height:1; }
+  .ledger-alt-label{ font-family:'Libre Franklin',sans-serif; font-size:.68rem; color:var(--ink-faint); margin-top:2px; }
+
+  .listing-head-demo h4{ font-family:'Libre Franklin',sans-serif; font-size:1.15rem; font-weight:700; margin-bottom:3px; }
+  .listing-head-demo p{ font-family:'Libre Franklin',sans-serif; font-size:.76rem; color:var(--ink-muted); }
+
+  .fmt-row{ display:flex; gap:12px; padding-block:8px; border-top:1px solid var(--border); }
+  .fmt-row:first-child{ border-top:none; }
+  .fmt-row .name{ font-family:'Libre Franklin',sans-serif; flex:0 0 110px; font-weight:600; font-size:.8rem; }
+  .fmt-row .desc{ font-family:'Lora',serif; font-size:.8rem; color:var(--ink-muted); }
+
+  .ref-row{ display:flex; justify-content:space-between; gap:10px; padding-block:7px; border-top:1px solid var(--border); font-family:'Libre Franklin',sans-serif; font-size:.82rem; }
+  .ref-row:first-child{ border-top:none; }
+  .ref-row .n{ font-family:'IBM Plex Mono',monospace; font-size:.68rem; color:var(--ink-faint); white-space:nowrap; }
+
+  .notice-alt{ background:var(--surface-2); border:1px solid var(--border); border-radius:4px; padding:9px 12px; font-family:'Libre Franklin',sans-serif; font-size:.78rem; color:var(--ink-muted); }
+  .notice-alt strong{ color:var(--ink); font-weight:600; }
+
+  .site-footer-demo{ border:1px solid var(--border); border-radius:6px; padding:16px; background:var(--surface-2); font-family:'Libre Franklin',sans-serif; }
+  .site-footer-demo .row{ display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  .site-footer-demo .brand-name{ font-weight:700; font-size:.88rem; }
+  .site-footer-demo .brand-blurb{ font-family:'Lora',serif; font-size:.76rem; color:var(--ink-muted); margin-top:4px; max-width:32ch; }
+  .site-footer-demo .cols{ display:flex; gap:20px; }
+  .site-footer-demo .col{ display:flex; flex-direction:column; gap:4px; }
+  .site-footer-demo .col-head{ font-size:.62rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); }
+  .site-footer-demo a{ font-size:.78rem; text-decoration:none; }
+  .site-footer-demo .meta{ margin-top:12px; padding-top:10px; border-top:1px solid var(--border); font-size:.7rem; color:var(--ink-faint); }
+
+  .footer-alt-demo{ border:1px solid var(--border); border-radius:6px; padding:16px; background:var(--surface-2); font-family:'Libre Franklin',sans-serif; }
+  .footer-alt-demo .brand{ font-weight:700; font-size:.88rem; }
+  .footer-alt-demo p{ font-family:'Lora',serif; font-size:.76rem; color:var(--ink-muted); margin-top:4px; max-width:32ch; }
+  .footer-alt-demo .links{ display:flex; gap:16px; margin-top:10px; }
+  .footer-alt-demo a{ font-size:.78rem; }
+
+  .note-card{ display:flex; gap:11px; padding:12px 14px; background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--flag); border-radius:0 6px 6px 0; }
+  .note-mark{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; font-weight:700; color:var(--flag); flex-shrink:0; }
+  .note-card p{ font-size:.86rem; color:var(--ink-muted); }
+  .note-card strong{ color:var(--ink); font-weight:600; }
+
+  /* ---- documentation-only mini demos, from style-guide.html ---- */
+  .mini-ing{ display:flex; align-items:flex-start; gap:9px; padding:6px 0; border-bottom:1px solid var(--border); font-size:.82rem; font-family:'Lora',serif; }
+  .mini-ing:last-child{ border-bottom:none; }
+  .mini-ing input[type="checkbox"]{ appearance:none; -webkit-appearance:none; margin:2px 0 0 0; width:17px; height:17px; flex-shrink:0; cursor:pointer; border:1.5px solid var(--border-strong); border-radius:4px; background:var(--surface); position:relative; }
+  .mini-ing input[type="checkbox"]:checked{ background:var(--accent); border-color:var(--accent); }
+  .mini-ing input[type="checkbox"]:checked::after{ content:''; position:absolute; left:4.5px; top:2.5px; width:5px; height:9px; border:solid #fff; border-width:0 2px 2px 0; transform:rotate(45deg); }
+  .mini-step{ display:flex; gap:9px; align-items:flex-start; font-family:'Lora',serif; font-size:.82rem; margin-bottom:6px; }
+  .mini-step .n{ font-family:'IBM Plex Mono',monospace; font-size:.68rem; font-weight:600; color:var(--accent-strong); background:var(--accent-soft); width:18px; height:18px; border-radius:3px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .mini-draft{ display:flex; align-items:baseline; gap:7px; font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:600; color:var(--flag); background:var(--flag-soft); border:1px solid var(--flag); border-radius:3px; padding:6px 9px; }
+  .mini-card{ background:var(--bg); border:1px solid var(--border); border-radius:6px; padding:10px; display:flex; flex-direction:column; gap:6px; max-width:180px; }
+  .mini-nav-item{ font-family:'Libre Franklin',sans-serif; font-size:.78rem; font-weight:600; color:var(--ink); padding:6px 9px; border-radius:4px; background:var(--bg); display:inline-flex; align-items:center; gap:5px; }
+  .mini-nav-item::after{ content:''; width:5px; height:5px; border:solid var(--ink-faint); border-width:0 1.5px 1.5px 0; transform:rotate(45deg); }
+  .swatch-row{ display:flex; gap:5px; }
+  .swatch-row .sw{ width:26px; height:26px; border-radius:4px; border:1px solid rgba(0,0,0,.08); }
+  .compare-mini{ display:grid; grid-template-columns:1fr 1fr; gap:10px; font-family:'Libre Franklin',sans-serif; font-size:.7rem; color:var(--ink-faint); }
+  .compare-mini .c{ border:1px solid var(--border); border-radius:4px; padding:8px; }
+  .type-spec-mini{ font-family:'Libre Franklin',sans-serif; font-size:.78rem; }
+  .type-spec-mini + .type-spec-mini{ margin-top:6px; }
+  .scale-mini{ display:flex; align-items:center; gap:10px; font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--ink-muted); padding:4px 0; }
+  .scale-mini .vis{ height:12px; background:var(--accent-soft); border:1px solid var(--accent); }
+
+  /* ---- review-harness-only mini demos ---- */
+  .toolbar-mini{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; font-family:'Libre Franklin',sans-serif; font-size:.72rem; }
+  .toolbar-mini .brand{ font-weight:700; }
+  .seg-mini{ display:flex; gap:2px; background:var(--surface); border:1px solid var(--border-strong); border-radius:4px; padding:2px; }
+  .seg-mini .b{ font-size:.7rem; font-weight:600; padding:4px 8px; border-radius:3px; color:var(--ink-muted); }
+  .seg-mini .b.on{ background:var(--accent); color:#fff; }
+  .switcher-mini{ display:flex; gap:4px; flex-wrap:wrap; }
+  .switcher-mini .b{ font-size:.7rem; font-weight:600; padding:4px 8px; border:1px solid var(--border-strong); border-radius:3px; color:var(--ink-muted); }
+  .switcher-mini .b.on{ background:var(--accent); color:#fff; border-color:var(--accent); }
+  .frame-mini{ width:120px; margin:0 auto; border:1px solid var(--border-strong); border-radius:10px; padding:6px; background:var(--bg); text-align:center; font-family:'IBM Plex Mono',monospace; font-size:.6rem; color:var(--ink-faint); }
+
+  .priority-list{ display:flex; flex-direction:column; gap:10px; margin-top:6px; }
+  .priority-item{ display:flex; gap:12px; padding:13px 15px; background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--accent); border-radius:0 6px 6px 0; }
+  .priority-num{ font-family:'IBM Plex Mono',monospace; font-size:.76rem; font-weight:700; color:var(--accent-strong); flex-shrink:0; }
+  .priority-item p{ font-size:.88rem; color:var(--ink-muted); }
+  .priority-item strong{ color:var(--ink); font-weight:600; }
+
+  footer.pfoot{ padding-top:24px; border-top:1px solid var(--border); font-family:'Libre Franklin',sans-serif; font-size:.8rem; color:var(--ink-faint); }
+  footer.pfoot ul{ margin-top:10px; display:flex; flex-direction:column; gap:6px; }
+  footer.pfoot li{ display:flex; gap:8px; }
+  footer.pfoot code{ color:var(--ink-muted); flex-shrink:0; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <span class="tb-title">Not a Chef — Components</span>
+    <nav class="tb-jump">
+      <a href="#nav">Nav</a>
+      <a href="#hero">Hero</a>
+      <a href="#recipe">Recipe</a>
+      <a href="#cards">Cards</a>
+      <a href="#teasers">Teasers</a>
+      <a href="#state">State</a>
+      <a href="#footer">Footer</a>
+      <a href="#doc">Doc-only</a>
+      <a href="#harness">Harness-only</a>
+      <a href="#priority">Priorities</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button">
+      <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+      <span id="themeLabel">System</span>
+    </button>
+  </div>
+</div>
+
+<main>
+  <div class="hero">
+    <span class="hero-eyebrow">Full visual mock of COMPONENTS.md</span>
+    <h1>Not a Chef — components</h1>
+    <p>Every row from <code>COMPONENTS.md</code>, rendered — nothing left to imagine from a table cell. Organized in the same order, with the same status labels. Where two files solved the same problem two different ways, both are shown side by side under one heading, not scattered across sections.</p>
+    <p>This is the review copy for the "filter for quality" pass. Fix <code>COMPONENTS.md</code> first if anything here is wrong — this page should never say something the doc doesn't.</p>
+    <p><strong>Resolved 2026-09-17</strong> — every duplicate and candidate below has a decision now; see the "What this means" section at the bottom, and <code>STYLE.md</code>'s Components section for the reasoning. This page still shows the mockup-round state (status badges as originally found), not the ratified result.</p>
+    <div class="key-row">
+      <span><span class="badge badge-canonical">✅ Canonical</span> ratified, in STYLE.md</span>
+      <span><span class="badge badge-candidate">🟡 Candidate</span> real, not yet promoted</span>
+      <span><span class="badge badge-doc">🔵 Doc-only</span> style-guide's own chrome</span>
+      <span><span class="badge badge-harness">⚪ Harness-only</span> review tooling, not site UI</span>
+      <span><span class="badge badge-discard">🔴 Discarded/duplicate</span> from landing-page-alt</span>
+    </div>
+  </div>
+
+  <!-- ============ NAVIGATION ============ -->
+  <section class="block" id="nav">
+    <div class="block-head">
+      <span class="block-num">01</span>
+      <h2 class="block-title">Navigation</h2>
+    </div>
+
+    <div class="entries">
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-canonical">✅</span><h3>Site nav + mega-menu</h3><span class="entry-where">recipe-spec-sheet, homepage</span></div>
+        <div class="entry-demo">
+          <div class="nav-preview">
+            <div class="nav-preview-bar"><span class="item active">Recipes</span><span class="item">Essays</span><span class="item">Reference</span></div>
+            <p class="nav-caption">Static preview — normally opens on click</p>
+            <div class="nav-preview-panel">
+              <div class="nav-preview-col"><span class="nav-preview-col-label">By course</span><a href="#">Mains <span class="n">26</span></a><a href="#">Sauces <span class="n">16</span></a></div>
+              <div class="nav-preview-col"><span class="nav-preview-col-label">By cuisine</span><a href="#">Chinese <span class="n">7</span></a><a href="#">Indian <span class="n">6</span></a></div>
+            </div>
+          </div>
+        </div>
+        <p class="entry-note">Caret only on items with a real dropdown (Recipes, Reference).</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-canonical">✅</span><h3>Mobile nav drawer</h3><span class="entry-where">recipe-spec-sheet, homepage</span></div>
+        <div class="entry-demo">
+          <div style="border:1px solid var(--border); border-radius:6px; padding:10px; max-width:220px; font-family:'Libre Franklin',sans-serif;">
+            <div style="font-weight:700; font-size:.85rem; margin-bottom:6px;">not a chef.</div>
+            <div style="font-size:.8rem; padding:7px 0; border-top:1px solid var(--border); display:flex; justify-content:space-between;">Recipes <span style="color:var(--ink-faint)">+</span></div>
+            <div style="font-size:.8rem; padding:7px 0; border-top:1px solid var(--border);">Essays</div>
+          </div>
+        </div>
+        <p class="entry-note"><code>&lt;details&gt;</code>-based, no JS needed beyond the backdrop click to close.</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-canonical">✅</span><h3>Browse list row</h3><span class="entry-where">nav (recipe-spec-sheet) · standalone (homepage)</span></div>
+        <div class="entry-demo nav-preview-col" style="min-width:0;">
+          <a href="#">Chinese <span class="n">7</span></a>
+          <a href="#">Indian <span class="n">6</span></a>
+          <a href="#">Italian <span class="n">6</span></a>
+        </div>
+        <p class="entry-note">Homepage extracted this out of the nav into a standalone <code>.browse-list</code> — now the reference form.</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-canonical">✅</span><h3>Quick-filter chip in nav</h3><span class="entry-where">recipe-spec-sheet, homepage</span></div>
+        <div class="entry-demo" style="display:flex; gap:6px; flex-wrap:wrap;">
+          <span class="mega-chip">Quick</span><span class="mega-chip">Weeknight</span><span class="mega-chip">Vegan</span>
+        </div>
+        <p class="entry-note">Pill, no count — inside the mega-panel's "Quick filters" column.</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-canonical">✅</span><h3>"View all" link</h3><span class="entry-where">recipe-spec-sheet, homepage</span></div>
+        <div class="entry-demo"><a class="mega-viewall" href="#">View all 83 recipes →</a></div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-candidate">🟡</span><h3>Inline nav caveat</h3><span class="entry-where">recipe-spec-sheet</span></div>
+        <div class="entry-demo nav-caveat"><strong>Note:</strong> Reference itself only has tags on 5 of 19 files, so its menu is a flat shortlist.</div>
+        <p class="entry-note">A one-line honesty note under the nav. Real, reusable pattern for admitting a section is thin — not yet promoted.</p>
+      </div>
+    </div>
+
+    <div class="compare-row">
+      <span class="compare-label">Brand wordmark — two treatments</span>
+      <div class="entries">
+        <div class="entry">
+          <div class="entry-head"><span class="badge badge-canonical">✅</span><h3>Site logo, plain</h3><span class="entry-where">recipe-spec-sheet, homepage</span></div>
+          <div class="entry-demo site-logo-demo">not a chef.</div>
+        </div>
+        <div class="entry">
+          <div class="entry-head"><span class="badge badge-discard">🔴</span><h3>Wordmark, accent letter</h3><span class="entry-where">landing-page-alt</span></div>
+          <div class="entry-demo wordmark-alt"><span class="name">Not <em>a</em> Chef</span></div>
+          <p class="entry-note">Colors one letter. Pick one treatment.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="compare-row">
+      <span class="compare-label">Where do search &amp; theme-toggle live — three answers</span>
+      <div class="entries">
+        <div class="entry">
+          <div class="entry-head"><span class="badge badge-discard">🔴</span><h3>Icon-only header buttons</h3><span class="entry-where">landing-page-alt</span></div>
+          <div class="entry-demo" style="display:flex; gap:8px;">
+            <span class="icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
+            <span class="icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2"/></svg></span>
+          </div>
+          <p class="entry-note">Search + theme, both in the header, icon-only.</p>
+        </div>
+        <div class="entry">
+          <div class="entry-head"><span class="badge badge-canonical">✅</span><h3>Hero search + footer toggle</h3><span class="entry-where">homepage</span></div>
+          <div class="entry-demo" style="display:flex; flex-direction:column; gap:8px;">
+            <div class="search-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Search 83 recipes…<kbd>/</kbd></div>
+            <div class="theme-toggle" style="align-self:flex-start;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/></svg>System</div>
+          </div>
+          <p class="entry-note">Search lives in the page body; theme toggle lives in the footer, labeled. Most Hugo-config-aware (<code>footer.showAppearanceSwitcher</code>) — should probably win.</p>
+        </div>
+        <div class="entry">
+          <div class="entry-head"><span class="badge badge-harness">⚪</span><h3>Toolbar-only (review harness)</h3><span class="entry-where">recipe-spec-sheet</span></div>
+          <div class="entry-demo theme-toggle" style="display:inline-flex;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/></svg>System</div>
+          <p class="entry-note">Only present in the mockup's own review chrome — not a real site answer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HERO / PAGE-OPENER ============ -->
+  <section class="block" id="hero">
+    <div class="block-head">
+      <span class="block-num">02</span>
+      <h2 class="block-title">Hero / page-opener</h2>
+    </div>
+
+    <div class="entries">
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-canonical">✅</span><h3>Hero (eyebrow + h1 + lede)</h3><span class="entry-where">style-guide, homepage</span></div>
+        <div class="entry-demo">
+          <span class="hero-eyebrow" style="margin-bottom:6px;">A family cookbook</span>
+          <div style="font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:1.3rem; letter-spacing:-.01em;">A cookbook that shows its work.</div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-doc">🔵</span><h3>Status pill</h3><span class="entry-where">style-guide</span></div>
+        <div class="entry-demo status-pill-demo"><span class="dot"></span>Decided this round</div>
+        <p class="entry-note">Same shape as the draft banner (dot + pill + flag color) — reused for "this doc's own status" rather than a recipe's.</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-canonical">✅</span><h3>Stat rail</h3><span class="entry-where">recipe header, homepage hero</span></div>
+        <div class="entry-demo stat-rail">
+          <div><span class="stat-label">Recipes</span><span class="stat-value mono">83</span></div>
+          <div><span class="stat-label">Cuisines</span><span class="stat-value mono">18</span></div>
+          <div><span class="stat-label">Tags</span><span class="stat-value mono">46</span></div>
+        </div>
+        <p class="entry-note">Same component renders "serves/prep/cook/total" on a recipe and "recipes/cuisines/tags" on the homepage.</p>
+      </div>
+    </div>
+
+    <div class="compare-row">
+      <span class="compare-label">"Archive by the numbers" — two treatments</span>
+      <div class="entries">
+        <div class="entry">
+          <div class="entry-head"><span class="badge badge-canonical">✅</span><h3>Stat rail (plain)</h3><span class="entry-where">homepage hero</span></div>
+          <div class="entry-demo stat-rail">
+            <div><span class="stat-label">Recipes</span><span class="stat-value mono">83</span></div>
+            <div><span class="stat-label">Cuisines</span><span class="stat-value mono">18</span></div>
+            <div><span class="stat-label">Tags</span><span class="stat-value mono">46</span></div>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-head"><span class="badge badge-discard">🔴</span><h3>Ledger stat panel</h3><span class="entry-where">landing-page-alt</span></div>
+          <div class="entry-demo">
+            <div class="ledger-alt-wrap">
+              <div class="ledger-alt">
+                <div style="font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:.85rem;">The archive, so far</div>
+                <div class="ledger-alt-grid">
+                  <div><div class="ledger-alt-num">83</div><div class="ledger-alt-label">recipes</div></div>
+                  <div><div class="ledger-alt-num">18</div><div class="ledger-alt-label">cuisines</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="entry-note">2×2 grid of big mono numbers, stacked-index-card shadow effect. More visually assertive — pick one, or decide these serve different contexts.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="compare-row">
+      <span class="compare-label">Search box — two implementations</span>
+      <div class="entries">
+        <div class="entry">
+          <div class="entry-head"><span class="badge badge-canonical">✅</span><h3>Real input (hero)</h3><span class="entry-where">homepage</span></div>
+          <div class="entry-demo search-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Search 83 recipes…<kbd>/</kbd></div>
+        </div>
+        <div class="entry">
+          <div class="entry-head"><span class="badge badge-canonical">✅</span><h3>Static display text (listing)</h3><span class="entry-where">recipe-spec-sheet</span></div>
+          <div class="entry-demo search-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Search recipes…</div>
+          <p class="entry-note">Non-functional in the mockup. Homepage's real-input version is the more complete reference.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RECIPE CONTENT ============ -->
+  <section class="block" id="recipe">
+    <div class="block-head">
+      <span class="block-num">03</span>
+      <h2 class="block-title">Recipe content</h2>
+      <p class="block-dek">All from <code>recipe-spec-sheet.html</code>. FORMAT.md's <code>## Mechanic</code>/<code>## Ingredients</code>/<code>## Method</code> headings resolve to these.</p>
+    </div>
+
+    <div class="entries">
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-canonical">✅</span><h3>Ingredient check</h3><span class="entry-where">recipe-spec-sheet, style-guide</span></div>
+        <div class="entry-demo ing-list">
+          <div class="ing"><input type="checkbox" checked><label><span class="qty mono">200g</span> red lentils</label></div>
+          <div class="ing"><input type="checkbox"><label><span class="qty mono">1.2L</span> water</label></div>
+        </div>
+        <p class="entry-note">Custom flat control, 19px target for wet or floury hands.</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-candidate">🟡</span><h3>Ingredient sub-head</h3><span class="entry-where">recipe-spec-sheet (Meatballs)</span></div>
+        <div class="entry-demo ing-list">
+          <span class="subhead">Based on 1 kg ground meat</span>
+          <div class="ing"><input type="checkbox"><label><span class="qty mono">1000g</span> ground meat (100%)</label></div>
+        </div>
+        <p class="entry-note">Groups a long ingredient list into named sections. Real, not yet in STYLE.md.</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-candidate">🟡</span><h3>Ingredient sub-note</h3><span class="entry-where">recipe-spec-sheet (Dal Tadka)</span></div>
+        <div class="entry-demo ing-list">
+          <div class="ing"><input type="checkbox"><label><span class="qty mono">200g</span> red lentils, rinsed</label></div>
+          <div class="ing-sub">add split peas for more texture (+10 min pressure cooking time)</div>
+        </div>
+        <p class="entry-note">A non-checkable tip nested under an ingredient. Not yet documented.</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-canonical">✅</span><h3>Mechanic callout</h3><span class="entry-where">recipe-spec-sheet, style-guide</span></div>
+        <div class="entry-demo mechanic">A <span class="ratio">1:1:1 ratio</span> by volume: mayo, pickle, mustard.</div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-candidate">🟡</span><h3>Procedure — prose (default)</h3><span class="entry-where">recipe-spec-sheet (4 of 5 recipes)</span></div>
+        <div class="entry-demo prose-proc">
+          <p>Warm the olive oil in a heavy pot over medium heat. Add onion and cook until softened, about 8 minutes.</p>
+          <p>Add tomatoes and broth, simmer 15 minutes, then blend smooth.</p>
+        </div>
+        <p class="entry-note">The <strong>default</strong> treatment — STYLE.md currently only documents the numbered variant, but this is more common.</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-canonical">✅</span><h3>Procedure — numbered step</h3><span class="entry-where">recipe-spec-sheet (Pulled Pork), style-guide</span></div>
+        <div class="entry-demo proc-steps">
+          <div class="proc-step"><span class="n">1</span><span>Bring to high pressure, cook 45–60 min.</span></div>
+          <div class="proc-step"><span class="n">2</span><span>Release pressure naturally for 20 min.</span></div>
+        </div>
+        <p class="entry-note">Reserved for order-dependent steps only.</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-canonical">✅</span><h3>Section shell + label</h3><span class="entry-where">recipe-spec-sheet</span></div>
+        <div class="entry-demo"><span class="section-label">To serve</span><p style="font-family:'Lora',serif; font-size:.96rem;">With crusty bread or a grilled cheese.</p></div>
+        <p class="entry-note">Generic wrapper, reused for To serve/Variations/Notes.</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-candidate">🟡</span><h3>Notes list</h3><span class="entry-where">recipe-spec-sheet</span></div>
+        <div class="entry-demo"><ul class="notes-list"><li>Tinned fire-roasted tomatoes add smokiness.</li><li>For a vegan version, omit cream.</li></ul></div>
+        <p class="entry-note">Dash bullet via <code>::before</code>, not separately named in STYLE.md.</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-candidate">🟡</span><h3>Notes sub-section</h3><span class="entry-where">recipe-spec-sheet (Dal Tadka)</span></div>
+        <div class="entry-demo notes-sub"><h4>Spice levels across the three recipes</h4><p>This recipe sits in the middle of the range…</p></div>
+        <p class="entry-note">A labeled sub-block nested one level deeper than a plain note.</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-candidate">🟡</span><h3>Variation block</h3><span class="entry-where">recipe-spec-sheet (Dal Tadka, 3×)</span></div>
+        <div class="entry-demo variation"><h4>Coconut cream dal</h4><p>Use yellow split peas instead of masoor, no soak needed…</p></div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-canonical">✅</span><h3>Draft banner</h3><span class="entry-where">recipe-spec-sheet, style-guide</span></div>
+        <div class="entry-demo draft-banner"><span class="dot"></span>Draft <span class="sub">— not yet reviewed</span></div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-canonical">✅</span><h3>Inline draft badge</h3><span class="entry-where">recipe-spec-sheet, style-guide</span></div>
+        <div class="entry-demo"><span class="badge-tag">draft, still refining</span></div>
+        <p class="entry-note">Smaller inline variant, inside a Notes bullet.</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-candidate">🟡</span><h3>Wikilink / external link</h3><span class="entry-where">recipe-spec-sheet (Pulled Pork)</span></div>
+        <div class="entry-demo" style="font-family:'Lora',serif; font-size:.96rem;">
+          <a class="wikilink" href="#">Bruce's Spice Rub</a> · <a class="extlink" href="#">Andy Cooks</a>
+        </div>
+        <p class="entry-note">Dotted+→ for internal, faint underline+↗ for external. Neither in STYLE.md.</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-canonical">✅</span><h3>Ingredients/procedure grid</h3><span class="entry-where">recipe-spec-sheet</span></div>
+        <div class="entry-demo im-grid-demo"><div class="col">ingredients</div><div class="col">procedure</div></div>
+        <p class="entry-note">The structural two-column grid every component section uses.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CARDS & LISTINGS ============ -->
+  <section class="block" id="cards">
+    <div class="block-head">
+      <span class="block-num">04</span>
+      <h2 class="block-title">Cards &amp; listings</h2>
+    </div>
+
+    <div class="compare-row">
+      <span class="compare-label">Recipe card — two full competing designs</span>
+      <div class="entries">
+        <div class="entry">
+          <div class="entry-head"><span class="badge badge-canonical">✅</span><h3>Canonical .rcard</h3><span class="entry-where">recipe-spec-sheet, homepage</span></div>
+          <div class="entry-demo">
+            <div class="rcard">
+              <div class="rcard-top"><span class="cuisine-chip">japanese</span><span class="tag">bases</span></div>
+              <div class="rcard-title">Chashu Pork</div>
+              <div class="rcard-meta"><div><span class="rcard-stat-label">Cook</span><span class="rcard-stat-value mono">2 hr</span></div><div><span class="rcard-stat-label">Serves</span><span class="rcard-stat-value mono">6–8</span></div></div>
+              <div class="rcard-flags"><span>Mechanic</span></div>
+            </div>
+          </div>
+          <p class="entry-note">Cuisine chip + tags, mono stat pairs, optional flags row.</p>
+        </div>
+        <div class="entry">
+          <div class="entry-head"><span class="badge badge-discard">🔴</span><h3>Alternate .rcard</h3><span class="entry-where">landing-page-alt</span></div>
+          <div class="entry-demo">
+            <div class="rcard-alt tab-greek" style="--tab:var(--highlight);">
+              <div class="top-row"><span class="label">Greek</span><span class="date">19 Jul 2026</span></div>
+              <h4>Gyro Base</h4>
+              <div class="stats"><span>Prep <b>15 min</b></span><span>Serves <b>8</b></span></div>
+            </div>
+          </div>
+          <p class="entry-note">Left-edge color tab, a date (canonical never shows one), no cuisine chip. The clearest head-to-head duplicate in the whole set.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="entries">
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-canonical">✅</span><h3>Tag</h3><span class="entry-where">everywhere</span></div>
+        <div class="entry-demo"><span class="tag">weeknight</span> <span class="tag">mains</span></div>
+      </div>
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-candidate">🟡</span><h3>Tag overflow badge</h3><span class="entry-where">recipe-spec-sheet, homepage</span></div>
+        <div class="entry-demo"><span class="tag">bases</span> <span class="tag">beef</span> <span class="tag tag-more">+4</span></div>
+        <p class="entry-note">Dashed border, "+n" when a card's tags are truncated.</p>
+      </div>
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-canonical">✅</span><h3>Filter pill</h3><span class="entry-where">recipe-spec-sheet, homepage</span></div>
+        <div class="entry-demo"><span class="filter-pill on">weeknight</span> <span class="filter-pill">quick</span></div>
+      </div>
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-canonical">✅</span><h3>Filter row, grouped</h3><span class="entry-where">recipe-spec-sheet (listing)</span></div>
+        <div class="entry-demo"><span class="filter-group-label">Cuisine</span><span class="filter-pill">Indian</span> <span class="filter-pill">Greek</span></div>
+      </div>
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-candidate">🟡</span><h3>Filter row, flat</h3><span class="entry-where">homepage</span></div>
+        <div class="entry-demo"><span class="filter-pill">Quick</span> <span class="filter-pill">Weeknight</span> <span class="filter-pill">Vegan</span></div>
+        <p class="entry-note">Same pills, no group-label wrapper — a legitimate simpler variant, not a conflict.</p>
+      </div>
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-candidate">🟡</span><h3>Listing page header</h3><span class="entry-where">recipe-spec-sheet</span></div>
+        <div class="entry-demo listing-head-demo"><h4>Recipes</h4><p><strong style="color:var(--ink)">83</strong> recipes · showing 18</p></div>
+        <p class="entry-note">Distinct from <code>.hero</code>/<code>.block-head</code> — a listing page's own header shape.</p>
+      </div>
+    </div>
+
+    <div class="compare-row">
+      <span class="compare-label">Cuisine chip — naming collision (same class, two different components)</span>
+      <div class="entries">
+        <div class="entry">
+          <div class="entry-head"><span class="badge badge-canonical">✅</span><h3>Per-recipe cuisine chip</h3><span class="entry-where">recipe-spec-sheet, homepage, style-guide</span></div>
+          <div class="entry-demo"><span class="cuisine-chip">indian</span></div>
+          <p class="entry-note">One per recipe, always the same yellow.</p>
+        </div>
+        <div class="entry">
+          <div class="entry-head"><span class="badge badge-discard">🔴</span><h3>Taxonomy-browse "cuisine chip"</h3><span class="entry-where">landing-page-alt</span></div>
+          <div class="entry-demo cuisine-chip-alt"><span class="dot"></span>Chinese <span class="count">7</span></div>
+          <p class="entry-note"><strong>Same class name, unrelated component.</strong> Homepage's <code>.browse-list</code> solves this without overloading the name — prefer that, rename or retire this one.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="compare-row">
+      <span class="compare-label">Filter chip with a count — enhancement candidate</span>
+      <div class="entries">
+        <div class="entry">
+          <div class="entry-head"><span class="badge badge-canonical">✅</span><h3>Filter pill (no count)</h3><span class="entry-where">recipe-spec-sheet, homepage</span></div>
+          <div class="entry-demo"><span class="filter-pill">Quick</span></div>
+        </div>
+        <div class="entry">
+          <div class="entry-head"><span class="badge badge-discard">🔴</span><h3>Chip with count</h3><span class="entry-where">landing-page-alt</span></div>
+          <div class="entry-demo chip-alt">Quick <span class="count">40</span></div>
+          <p class="entry-note">Neither STYLE.md nor the canonical pill supports counts today — worth considering for promotion rather than discarding outright.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ESSAYS / REFERENCE TEASERS ============ -->
+  <section class="block" id="teasers">
+    <div class="block-head">
+      <span class="block-num">05</span>
+      <h2 class="block-title">Essays / Reference teasers</h2>
+    </div>
+
+    <div class="compare-row">
+      <span class="compare-label">Essay format list — two layouts for the same four formats</span>
+      <div class="entries">
+        <div class="entry">
+          <div class="entry-head"><span class="badge badge-canonical">✅ promoted</span><h3>Component gallery card</h3><span class="entry-where">style-guide (own demos) → homepage (real content)</span></div>
+          <div class="entry-demo" style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+            <div class="mini-card"><span style="font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:.78rem;">Food memories</span><span style="font-family:'Lora',serif; font-size:.72rem; color:var(--ink-muted);">Thematic vignettes, each with a lesson.</span></div>
+            <div class="mini-card"><span style="font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:.78rem;">Cooking reflections</span><span style="font-family:'Lora',serif; font-size:.72rem; color:var(--ink-muted);">What a failure taught.</span></div>
+          </div>
+          <p class="entry-note">Started as doc chrome, then genuinely reused for real content — a doc-only pattern graduating to real use.</p>
+        </div>
+        <div class="entry">
+          <div class="entry-head"><span class="badge badge-discard">🔴</span><h3>Label/description row</h3><span class="entry-where">landing-page-alt</span></div>
+          <div class="entry-demo">
+            <div class="fmt-row"><span class="name">Food memories</span><span class="desc">Thematic vignettes, each with a lesson.</span></div>
+            <div class="fmt-row"><span class="name">Cooking reflections</span><span class="desc">What a failure taught.</span></div>
+          </div>
+          <p class="entry-note">Same content, competing layout — pick one.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="compare-row">
+      <span class="compare-label">Reference guide list — near-identical, lowest-priority duplicate</span>
+      <div class="entries">
+        <div class="entry">
+          <div class="entry-head"><span class="badge badge-canonical">✅</span><h3>Browse list, w/ type word</h3><span class="entry-where">homepage</span></div>
+          <div class="entry-demo browse-list-demo">
+            <div class="ref-row"><span>Food ratios for your own recipes</span><span class="n">guide</span></div>
+            <div class="ref-row"><span>Temperature &amp; doneness cheat sheet</span><span class="n">reference</span></div>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-head"><span class="badge badge-discard">🔴</span><h3>Alternate reference list</h3><span class="entry-where">landing-page-alt</span></div>
+          <div class="entry-demo">
+            <div class="ref-row"><span>Food ratios for creating your own recipes</span><span class="n">guide</span></div>
+            <div class="ref-row"><span>Sodium citrate ratios</span><span class="n">technique</span></div>
+          </div>
+          <p class="entry-note">Near-identical shape. Minor, should converge.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEEDBACK / STATE ============ -->
+  <section class="block" id="state">
+    <div class="block-head">
+      <span class="block-num">06</span>
+      <h2 class="block-title">Feedback / state</h2>
+    </div>
+
+    <div class="entries">
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-doc">🔵 candidate if promoted</span><h3>Open question card</h3><span class="entry-where">style-guide</span></div>
+        <div class="entry-demo note-card"><span class="note-mark">?</span><p>Green is tokenized but has no job — give it a role or leave it in reserve indefinitely?</p></div>
+        <p class="entry-note">Flag-blue-left-border, distinct from the Mechanic callout's accent-left-border. Could be promoted for real use (flagging thin content) — currently only used to talk about the guide itself.</p>
+      </div>
+    </div>
+
+    <div class="compare-row">
+      <span class="compare-label">"Here's what this page is" note — two shapes, one job</span>
+      <div class="entries">
+        <div class="entry">
+          <div class="entry-head"><span class="badge badge-candidate">🟡</span><h3>Inline nav caveat</h3><span class="entry-where">recipe-spec-sheet</span></div>
+          <div class="entry-demo nav-caveat"><strong>Note:</strong> The Food Log and Vlog are single-entry sections, shown flat until they grow.</div>
+        </div>
+        <div class="entry">
+          <div class="entry-head"><span class="badge badge-discard">🔴</span><h3>Full-width notice banner</h3><span class="entry-where">landing-page-alt</span></div>
+          <div class="entry-demo notice-alt"><strong>Design concept</strong> for the Not a Chef landing page.</div>
+          <p class="entry-note">Same job, page-top banner instead of an inline line. Pick one shape.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <section class="block" id="footer">
+    <div class="block-head">
+      <span class="block-num">07</span>
+      <h2 class="block-title">Footer</h2>
+    </div>
+
+    <div class="compare-row">
+      <span class="compare-label">Site footer — two shapes</span>
+      <div class="entries">
+        <div class="entry">
+          <div class="entry-head"><span class="badge badge-candidate">🟡</span><h3>Full site footer</h3><span class="entry-where">homepage</span></div>
+          <div class="entry-demo site-footer-demo">
+            <div class="row">
+              <div><div class="brand-name">not a chef.</div><div class="brand-blurb">A family cookbook, kept by the Aldersons.</div></div>
+              <div class="cols"><div class="col"><span class="col-head">Browse</span><a href="#">Recipes</a><a href="#">Essays</a></div></div>
+            </div>
+            <div class="meta">Tokens from mockups/style-guide.html</div>
+          </div>
+          <p class="entry-note">Built new since no real footer existed before this round — puts the theme toggle here, matching <code>footer.showAppearanceSwitcher = true</code> in the real Hugo config. Not yet folded into the style guide.</p>
+        </div>
+        <div class="entry">
+          <div class="entry-head"><span class="badge badge-discard">🔴</span><h3>Simple footer</h3><span class="entry-where">landing-page-alt</span></div>
+          <div class="entry-demo footer-alt-demo">
+            <div class="brand">Not a Chef</div>
+            <p>A family cookbook, kept by the Aldersons.</p>
+            <div class="links"><a href="#">Recipes</a><a href="#">Essays</a></div>
+          </div>
+          <p class="entry-note">No theme toggle, no meta line. Superseded by homepage's fuller version.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="compare-row">
+      <span class="compare-label">Theme toggle — two shapes</span>
+      <div class="entries">
+        <div class="entry">
+          <div class="entry-head"><span class="badge badge-canonical">✅</span><h3>Labeled pill</h3><span class="entry-where">style-guide, recipe-spec-sheet, homepage</span></div>
+          <div class="entry-demo theme-toggle" style="display:inline-flex;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/></svg>System</div>
+          <p class="entry-note">Cycles system → light → dark, shows current mode as text.</p>
+        </div>
+        <div class="entry">
+          <div class="entry-head"><span class="badge badge-discard">🔴</span><h3>Icon-only square</h3><span class="entry-where">landing-page-alt</span></div>
+          <div class="entry-demo icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DOCUMENTATION-ONLY CHROME ============ -->
+  <section class="block" id="doc">
+    <div class="block-head">
+      <span class="block-num">08</span>
+      <h2 class="block-title">Documentation-only chrome</h2>
+      <p class="block-dek">From <code>style-guide.html</code> itself — explains the system to a human reader, not meant for the real site.</p>
+    </div>
+
+    <div class="entries">
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-doc">🔵</span><h3>Doc top bar w/ jump links</h3></div>
+        <div class="entry-demo" style="font-family:'Libre Franklin',sans-serif; font-size:.76rem; display:flex; gap:10px; color:var(--ink-muted);"><span style="font-weight:700; color:var(--ink);">Style Guide</span><a href="#" style="text-decoration:none;">Color</a><a href="#" style="text-decoration:none;">Type</a></div>
+      </div>
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-doc">🔵</span><h3>Two-up comparison card</h3></div>
+        <div class="entry-demo compare-mini">
+          <div class="c"><div class="swatch-row"><span class="sw" style="background:#A67330"></span><span class="sw" style="background:#7C361D"></span></div>Not a Chef — now</div>
+          <div class="c"><div class="swatch-row"><span class="sw" style="background:#689fd6"></span><span class="sw" style="background:#68d6a1"></span></div>Warped Visions — source</div>
+        </div>
+        <p class="entry-note">Used once, comparing Not a Chef's palette against warpedvisions.org's.</p>
+      </div>
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-doc">🔵</span><h3>Color swatch grid</h3></div>
+        <div class="entry-demo" style="display:flex; gap:6px;"><span class="sw" style="width:30px;height:30px;border-radius:4px;background:#A67330;display:inline-block;"></span><span class="sw" style="width:30px;height:30px;border-radius:4px;background:#997F29;display:inline-block;"></span><span class="sw" style="width:30px;height:30px;border-radius:4px;background:#3D638F;display:inline-block;"></span></div>
+      </div>
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-doc">🔵</span><h3>Type specimen row</h3></div>
+        <div class="entry-demo">
+          <div class="type-spec-mini"><span style="color:var(--ink-faint); font-size:.66rem; text-transform:uppercase; letter-spacing:.06em;">Headings &amp; UI</span> — <strong>Libre Franklin</strong></div>
+          <div class="type-spec-mini"><span style="color:var(--ink-faint); font-size:.66rem; text-transform:uppercase; letter-spacing:.06em;">Body</span> — <span style="font-family:'Lora',serif;">Lora</span></div>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-doc">🔵</span><h3>Spacing scale row</h3></div>
+        <div class="entry-demo scale-mini">6px <div class="vis" style="width:6px;"></div> cards</div>
+      </div>
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-doc">🔵</span><h3>Miniature component demos</h3></div>
+        <div class="entry-demo">
+          <div class="mini-ing"><input type="checkbox" checked><label><span class="mono">200g</span> lentils</label></div>
+          <div class="mini-step" style="margin-top:6px;"><span class="n">1</span><span>Bring to pressure.</span></div>
+        </div>
+        <p class="entry-note">Small-scale previews built specifically for the style guide's own gallery — not separate components.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEW-HARNESS-ONLY CHROME ============ -->
+  <section class="block" id="harness">
+    <div class="block-head">
+      <span class="block-num">09</span>
+      <h2 class="block-title">Review-harness-only chrome</h2>
+      <p class="block-dek">From <code>recipe-spec-sheet.html</code> — its own tooling for switching between five example recipes and two frame widths. Explicitly not site UI.</p>
+    </div>
+
+    <div class="entries">
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-harness">⚪</span><h3>Toolbar w/ segmented controls</h3></div>
+        <div class="entry-demo toolbar-mini"><span class="brand">Not a Chef</span><div class="seg-mini"><span class="b on">Recipe</span><span class="b">Listing</span></div></div>
+      </div>
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-harness">⚪</span><h3>Recipe switcher</h3></div>
+        <div class="entry-demo switcher-mini"><span class="b on">Tomato Soup</span><span class="b">Burger Sauce</span><span class="b">Dal Tadka</span></div>
+      </div>
+      <div class="entry">
+        <div class="entry-head"><span class="badge badge-harness">⚪</span><h3>Mobile frame simulator</h3></div>
+        <div class="entry-demo frame-mini">375–390px viewport</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRIORITY LIST ============ -->
+  <section class="block" id="priority">
+    <div class="block-head">
+      <span class="block-num">10</span>
+      <h2 class="block-title">What this means for the quality pass</h2>
+      <p class="block-dek">From COMPONENTS.md's closing section, in priority order.</p>
+    </div>
+    <div class="priority-list">
+      <div class="priority-item"><span class="priority-num">1</span><p><strong>Recipe card</strong>: ✅ canonical <code>.rcard</code> kept — the alternate's per-cuisine tab color broke the "cuisine chip is always yellow" rule.</p></div>
+      <div class="priority-item"><span class="priority-num">2</span><p><strong>.cuisine-chip naming collision</strong>: ✅ <code>.browse-list</code> is the only taxonomy-browse pattern now; <code>.cuisine-chip</code> means only the per-recipe chip.</p></div>
+      <div class="priority-item"><span class="priority-num">3</span><p><strong>Archive stats display</strong>: ✅ plain stat rail kept — already proven in two contexts; ledger discarded.</p></div>
+      <div class="priority-item"><span class="priority-num">4</span><p><strong>Where search &amp; theme-toggle live</strong>: ✅ homepage's answer won — hero search, footer toggle.</p></div>
+      <div class="priority-item"><span class="priority-num">5</span><p><strong>Page-level note</strong>: ✅ inline caveat won, renamed <code>.section-caveat</code>.</p></div>
+      <div class="priority-item"><span class="priority-num">6</span><p><strong>Essay-format and reference-guide teasers</strong>: ✅ card grid and <code>.browse-list</code> won.</p></div>
+      <div class="priority-item"><span class="priority-num">7</span><p><strong>Promote the unnamed-but-real components</strong>: ✅ all promoted into <code>STYLE.md</code> and demonstrated in <code>style.html</code> §3.</p></div>
+    </div>
+  </section>
+
+  <footer class="pfoot">
+    Full mock of <code>COMPONENTS.md</code>. Where this lives:
+    <ul>
+      <li><code>COMPONENTS.md</code> — the source inventory (fix here first)</li>
+      <li><code>style.html</code> — the ratified subset, at real scale</li>
+      <li><code>archived/</code> — the four original mockups this was built from, kept for reference only</li>
+    </ul>
+  </footer>
+</main>
+
+<script>
+(function(){
+  var root = document.documentElement;
+  var toggle = document.getElementById('themeToggle');
+  var label = document.getElementById('themeLabel');
+  var order = ['system','light','dark'];
+  var current = 'system';
+  try{
+    var saved = localStorage.getItem('nac-components-theme');
+    if(saved && order.indexOf(saved) !== -1) current = saved;
+  }catch(e){}
+  function apply(mode){
+    if(mode === 'system'){ root.removeAttribute('data-theme'); }
+    else{ root.setAttribute('data-theme', mode); }
+    label.textContent = mode.charAt(0).toUpperCase() + mode.slice(1);
+    try{ localStorage.setItem('nac-components-theme', mode); }catch(e){}
+  }
+  apply(current);
+  toggle.addEventListener('click', function(){
+    current = order[(order.indexOf(current) + 1) % order.length];
+    apply(current);
+  });
+})();
+</script>
+
+</body>
+</html>

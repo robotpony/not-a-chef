@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Not a Chef Style Guide</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  :root{
+    --bg:#F3F3EC; --surface:#FBFBF6; --surface-2:#EAEBDF;
+    --ink:#23241E; --ink-muted:#63645A; --ink-faint:#93948A;
+    --border:#DCDCCE; --border-strong:#C7C8B4;
+    --accent:#A67330; --accent-strong:#7C361D; --accent-soft:#F6EADA;
+    --highlight:#997F29; --highlight-soft:#F6F1D5;
+    --flag:#3D638F; --flag-soft:#E1EAF4;
+    --focus:#A67330;
+    --wv-primary:#141414; --wv-secondary:#6c6c6c; --wv-tertiary:#d6d6d6; --wv-border:#eeeeee; --wv-theme:#ffffff;
+    --wv-blue:#689fd6; --wv-green:#68d6a1; --wv-yellow:#d6cb68; --wv-orange:#d6a668; --wv-red:#d68168;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+      --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+      --border:#383A2C; --border-strong:#4A4C3A;
+      --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+      --highlight:#DDCC88; --highlight-soft:#342D19;
+      --flag:#97B8D8; --flag-soft:#1D2835;
+      --focus:#D3A569;
+      --wv-primary:#f0f0f0; --wv-secondary:#9b9c9d; --wv-tertiary:#414244; --wv-border:#333333; --wv-theme:#1d1e20;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+    --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+    --border:#383A2C; --border-strong:#4A4C3A;
+    --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+    --highlight:#DDCC88; --highlight-soft:#342D19;
+    --flag:#97B8D8; --flag-soft:#1D2835;
+    --focus:#D3A569;
+    --wv-primary:#f0f0f0; --wv-secondary:#9b9c9d; --wv-tertiary:#414244; --wv-border:#333333; --wv-theme:#1d1e20;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:'Lora',Georgia,'Times New Roman',serif;
+    font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4,.font-ui{ font-family:'Libre Franklin',system-ui,-apple-system,'Segoe UI',sans-serif; }
+  .mono{ font-family:'IBM Plex Mono',ui-monospace,'SF Mono',Menlo,monospace; font-variant-numeric:tabular-nums; }
+  a{ color:inherit; }
+  button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
+  button:focus-visible, a:focus-visible{ outline:2px solid var(--focus); outline-offset:2px; border-radius:2px; }
+  ul,ol{ margin:0; padding:0; list-style:none; }
+  p{ margin:0; }
+  code{ font-family:'IBM Plex Mono',monospace; font-size:.85em; }
+
+  .topbar{
+    position:sticky; top:0; z-index:10; background:var(--surface); border-bottom:1px solid var(--border-strong);
+  }
+  .topbar-inner{
+    max-width:980px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; gap:18px; flex-wrap:wrap;
+  }
+  .tb-title{ font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:.95rem; margin-right:auto; }
+  .tb-jump{ display:flex; gap:2px; flex-wrap:wrap; font-family:'Libre Franklin',sans-serif; }
+  .tb-jump a{
+    font-size:.76rem; font-weight:600; color:var(--ink-muted); text-decoration:none; padding:6px 9px; border-radius:4px;
+  }
+  .tb-jump a:hover{ color:var(--ink); background:var(--surface-2); }
+  .theme-toggle{
+    display:flex; align-items:center; gap:6px; font-family:'Libre Franklin',sans-serif; font-size:.75rem; font-weight:600;
+    padding:7px 10px; border:1px solid var(--border-strong); border-radius:3px; color:var(--ink-muted);
+  }
+  .theme-toggle:hover{ border-color:var(--accent); color:var(--ink); }
+  .theme-toggle svg{ width:14px; height:14px; }
+
+  main{ max-width:980px; margin:0 auto; padding:8px 20px 100px; }
+
+  .hero{ padding:36px 0 30px; border-bottom:1px solid var(--border); margin-bottom:40px; }
+  .hero-eyebrow{
+    font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:700; text-transform:uppercase;
+    letter-spacing:.1em; color:var(--accent-strong); margin-bottom:10px; display:block;
+  }
+  .hero h1{ font-size:2rem; font-weight:700; letter-spacing:-.01em; text-wrap:balance; margin-bottom:12px; }
+  .hero p{ max-width:64ch; color:var(--ink-muted); font-size:1.02rem; }
+  .status-pill{
+    display:inline-flex; align-items:center; gap:6px; font-family:'Libre Franklin',sans-serif; font-size:.72rem;
+    font-weight:600; color:var(--flag); background:var(--flag-soft); border:1px solid var(--flag);
+    padding:5px 10px; border-radius:3px; margin-top:16px;
+  }
+  .status-pill .dot{ width:6px; height:6px; border-radius:50%; background:var(--flag); }
+
+  section.block{ margin-bottom:56px; }
+  .block-head{ margin-bottom:18px; }
+  .block-num{
+    font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--ink-faint); display:block; margin-bottom:4px;
+  }
+  h2.block-title{ font-size:1.4rem; font-weight:700; letter-spacing:-.005em; margin-bottom:8px; }
+  .block-dek{ color:var(--ink-muted); max-width:68ch; font-size:.95rem; }
+
+  /* ---- comparison strip ---- */
+  .compare{ display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:22px; }
+  @media (max-width:680px){ .compare{ grid-template-columns:1fr; } }
+  .compare-card{ background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:18px; }
+  .compare-card h3{ font-family:'Libre Franklin',sans-serif; font-size:.85rem; font-weight:700; margin-bottom:3px; }
+  .compare-card .url{ font-family:'IBM Plex Mono',monospace; font-size:.7rem; color:var(--ink-faint); margin-bottom:12px; display:block; }
+  .swatch-row{ display:flex; gap:6px; margin-bottom:10px; flex-wrap:wrap; }
+  .swatch-row .sw{ width:34px; height:34px; border-radius:5px; border:1px solid rgba(0,0,0,.08); flex-shrink:0; }
+  .compare-card p{ font-size:.83rem; color:var(--ink-muted); }
+
+  /* ---- swatch grid ---- */
+  .swatch-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:12px; margin-top:18px; }
+  .swatch{ border:1px solid var(--border); border-radius:6px; overflow:hidden; background:var(--surface); }
+  .swatch-fill{ height:52px; }
+  .swatch-label{ padding:8px 10px; }
+  .swatch-name{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; font-weight:600; display:block; }
+  .swatch-hex{ font-family:'IBM Plex Mono',monospace; font-size:.68rem; color:var(--ink-faint); }
+
+  /* ---- type specimens ---- */
+  .type-row{ display:flex; flex-direction:column; gap:26px; margin-top:20px; }
+  .type-spec{ display:grid; grid-template-columns:150px 1fr; gap:24px; align-items:start; border-top:1px solid var(--border); padding-top:20px; }
+  @media (max-width:680px){ .type-spec{ grid-template-columns:1fr; gap:8px; } }
+  .type-spec:first-child{ border-top:none; padding-top:0; }
+  .type-meta{ font-family:'Libre Franklin',sans-serif; }
+  .type-role{ font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); display:block; margin-bottom:4px; }
+  .type-face{ font-size:.85rem; font-weight:600; }
+  .type-detail{ font-size:.72rem; color:var(--ink-faint); font-family:'IBM Plex Mono',monospace; display:block; margin-top:4px; }
+  .type-sample-ui{ font-family:'Libre Franklin',sans-serif; }
+  .type-sample-mono{ font-family:'IBM Plex Mono',monospace; }
+
+  /* ---- component gallery ---- */
+  .comp-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin-top:20px; }
+  .comp-card{ background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:16px; display:flex; flex-direction:column; gap:10px; }
+  .comp-card-label{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); }
+  .comp-card-note{ font-family:'Libre Franklin',sans-serif; font-size:.78rem; color:var(--ink-muted); }
+  .comp-demo{ padding-top:2px; }
+
+  /* -- swiped-in mini components for the gallery -- */
+  .tag{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; border:1px solid var(--border-strong); color:var(--ink-muted); padding:3px 7px; border-radius:3px; display:inline-block; }
+  .cuisine-chip{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; font-weight:600; text-transform:uppercase; letter-spacing:.05em; background:var(--accent-soft); color:var(--accent-strong); padding:3px 7px; border-radius:3px; display:inline-block; }
+  .filter-pill{ font-family:'Libre Franklin',sans-serif; font-size:.74rem; font-weight:500; padding:5px 10px; border:1px solid var(--border-strong); border-radius:14px; color:var(--ink-muted); display:inline-block; }
+  .filter-pill.on{ background:var(--accent-soft); border-color:var(--accent); color:var(--accent-strong); font-weight:600; }
+  .badge-tag{ font-family:'Libre Franklin',sans-serif; font-size:.68rem; font-weight:600; color:var(--flag); background:var(--flag-soft); border-radius:2px; padding:1px 5px; }
+  .mini-ing{ display:flex; align-items:flex-start; gap:10px; padding:7px 0; border-bottom:1px solid var(--border); font-size:.88rem; font-family:'Lora',serif; }
+  .mini-ing:last-child{ border-bottom:none; }
+  .mini-ing input[type="checkbox"]{
+    appearance:none; -webkit-appearance:none; margin:2px 0 0 0; width:19px; height:19px; flex-shrink:0; cursor:pointer;
+    border:1.5px solid var(--border-strong); border-radius:4px; background:var(--surface); position:relative;
+  }
+  .mini-ing input[type="checkbox"]:checked{ background:var(--accent); border-color:var(--accent); }
+  .mini-ing input[type="checkbox"]:checked::after{ content:''; position:absolute; left:6px; top:2px; width:5px; height:10px; border:solid #fff; border-width:0 2px 2px 0; transform:rotate(38deg); }
+  .mini-ing:has(input:checked){ color:var(--ink-faint); text-decoration:line-through; text-decoration-color:var(--border-strong); }
+  .mini-mechanic{ background:var(--bg); border-left:3px solid var(--accent); border-radius:0 3px 3px 0; padding:12px 14px; font-family:'Lora',serif; font-size:.85rem; }
+  .mini-mechanic .ratio{ color:var(--accent-strong); font-weight:600; font-family:'IBM Plex Mono',monospace; }
+  .mini-step{ display:flex; gap:10px; align-items:flex-start; font-family:'Lora',serif; font-size:.85rem; margin-bottom:8px; }
+  .mini-step:last-child{ margin-bottom:0; }
+  .mini-step .n{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; font-weight:600; color:var(--accent-strong); background:var(--accent-soft); width:20px; height:20px; border-radius:3px; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px; }
+  .mini-draft{ display:flex; align-items:baseline; gap:8px; font-family:'Libre Franklin',sans-serif; font-size:.75rem; font-weight:600; color:var(--flag); background:var(--flag-soft); border:1px solid var(--flag); border-radius:3px; padding:7px 10px; }
+  .mini-draft .dot{ width:6px; height:6px; border-radius:50%; background:var(--flag); flex-shrink:0; }
+  .mini-card{ background:var(--bg); border:1px solid var(--border); border-radius:6px; padding:12px; display:flex; flex-direction:column; gap:8px; }
+  .mini-card-title{ font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:.9rem; }
+  .mini-stat-label{ font-family:'Libre Franklin',sans-serif; font-size:.6rem; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); }
+  .mini-nav-item{ font-family:'Libre Franklin',sans-serif; font-size:.82rem; font-weight:600; color:var(--ink); padding:7px 10px; border-radius:4px; background:var(--bg); display:inline-flex; align-items:center; gap:5px; }
+  .mini-nav-item::after{ content:''; width:5px; height:5px; border:solid var(--ink-faint); border-width:0 1.5px 1.5px 0; transform:rotate(45deg); }
+
+  /* ---- scale rows ---- */
+  .scale-row{ display:flex; align-items:center; gap:16px; padding:9px 0; border-bottom:1px solid var(--border); flex-wrap:wrap; }
+  .scale-row:last-child{ border-bottom:none; }
+  .scale-name{ font-family:'IBM Plex Mono',monospace; font-size:.78rem; width:110px; flex-shrink:0; color:var(--ink-muted); }
+  .scale-vis{ height:14px; background:var(--accent-soft); border:1px solid var(--accent); }
+  .scale-usage{ font-family:'Libre Franklin',sans-serif; font-size:.78rem; color:var(--ink-faint); }
+
+  /* ---- open questions ---- */
+  .qlist{ display:flex; flex-direction:column; gap:12px; margin-top:18px; }
+  .qitem{ display:flex; gap:12px; padding:14px 16px; background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--flag); border-radius:0 6px 6px 0; }
+  .qitem-mark{ font-family:'IBM Plex Mono',monospace; font-size:.75rem; font-weight:700; color:var(--flag); flex-shrink:0; }
+  .qitem p{ font-size:.9rem; }
+  .qitem strong{ font-weight:600; }
+
+  footer.pfoot{ padding-top:24px; border-top:1px solid var(--border); font-family:'Libre Franklin',sans-serif; font-size:.75rem; color:var(--ink-faint); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <span class="tb-title">Not a Chef — Style Guide</span>
+    <nav class="tb-jump">
+      <a href="#relationship">Relationship</a>
+      <a href="#color">Color</a>
+      <a href="#type">Type</a>
+      <a href="#components">Components</a>
+      <a href="#scale">Spacing</a>
+      <a href="#open">Open questions</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button">
+      <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+      <span id="themeLabel">System</span>
+    </button>
+  </div>
+</div>
+
+<main>
+  <div class="hero">
+    <span class="hero-eyebrow">Working document · v2</span>
+    <h1>What the mockups have settled so far</h1>
+    <p>This is a record, not a proposal: it codifies the tokens, type, and components already established across the recipe-page rounds and the nav mockup, so the next round has something fixed to build on instead of rediscovering it each time. Everything below is pulled from the live mockup's actual CSS — nothing here is aspirational.</p>
+    <span class="status-pill"><span class="dot"></span>Decided this round: Not a Chef formally adopts warpedvisions.org's accent family, rebalanced toward orange/red — see Color below</span>
+  </div>
+
+  <section class="block" id="relationship">
+    <div class="block-head">
+      <span class="block-num">01</span>
+      <h2 class="block-title">Relationship to warpedvisions.org</h2>
+      <p class="block-dek">Not a Chef is a Warped-branded site. Its accent palette is now derived directly from the blog's shipped CSS (<code>warped.css</code>'s five flourish-bar hues), not matched by eye — with the hierarchy rebalanced so this property leads with the warm end instead of the blog's blue.</p>
+    </div>
+    <div class="compare">
+      <div class="compare-card">
+        <h3>Not a Chef — now</h3>
+        <span class="url">this mockup, current tokens</span>
+        <div class="swatch-row">
+          <div class="sw" style="background:#A67330" title="accent (orange)"></div>
+          <div class="sw" style="background:#7C361D" title="accent-strong (red)"></div>
+          <div class="sw" style="background:#997F29" title="highlight (yellow)"></div>
+          <div class="sw" style="background:#3D638F" title="flag (blue)"></div>
+          <div class="sw" style="background:#23241E" title="ink"></div>
+        </div>
+        <p>Same five hues as the blog, same saturation and lightness formula — but re-ordered. Orange leads (interactive, checked ingredients, active nav), red is the emphasis variant (ratios, hovers, CTAs), yellow is secondary (cuisine chips). Blue is demoted to one utility role — the draft flag. Green is held in reserve, unused for now.</p>
+      </div>
+      <div class="compare-card">
+        <h3>Warped Visions — the source</h3>
+        <span class="url">warpedvisions.org — live CSS</span>
+        <div class="swatch-row">
+          <div class="sw" style="background:#689fd6" title="warped-blue"></div>
+          <div class="sw" style="background:#68d6a1" title="warped-green"></div>
+          <div class="sw" style="background:#d6cb68" title="warped-yellow"></div>
+          <div class="sw" style="background:#d6a668" title="warped-orange"></div>
+          <div class="sw" style="background:#d68168" title="warped-red"></div>
+        </div>
+        <p>Near-grayscale body (<code>#141414</code> on white) with color banished to one place: a 15px/5px flourish bar pinned to top and bottom, blue-led, running blue→green→yellow→orange→red. Not a Chef inherits the palette, not the layout — see below for where the two now differ.</p>
+      </div>
+    </div>
+    <div class="compare" style="margin-top:14px;">
+      <div class="compare-card" style="grid-column:1/-1;">
+        <h3>How the hierarchy was rebuilt</h3>
+        <p style="margin-top:6px;">All five warped hues share one saturation/lightness formula (57%/62%) — only the hue rotates: red 14°, orange 34°, yellow 54°, green 151°, blue 210°. Not a Chef's tokens are built at those exact hues, re-lightened per role (a darker value reads as text, a pale tint as a fill), and led by orange→red rather than blue. <strong style="color:var(--ink)">Body copy staying in Lora on both sites</strong> was already true before this change and still holds — that throughline is untouched by the palette swap.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="color">
+    <div class="block-head">
+      <span class="block-num">02</span>
+      <h2 class="block-title">Color tokens</h2>
+      <p class="block-dek">Named CSS custom properties, light values shown. Every token has a dark-mode pair already defined — toggle the switch above to check both against these swatches.</p>
+    </div>
+
+    <p class="comp-card-note" style="margin:2px 0 14px; font-weight:600; color:var(--ink);">Neutrals — unchanged</p>
+    <div class="swatch-grid">
+      <div class="swatch"><div class="swatch-fill" style="background:#F3F3EC"></div><div class="swatch-label"><span class="swatch-name">--bg</span><span class="swatch-hex">#F3F3EC</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#FBFBF6"></div><div class="swatch-label"><span class="swatch-name">--surface</span><span class="swatch-hex">#FBFBF6</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#EAEBDF"></div><div class="swatch-label"><span class="swatch-name">--surface-2</span><span class="swatch-hex">#EAEBDF</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#23241E"></div><div class="swatch-label"><span class="swatch-name" style="color:#fff">--ink</span><span class="swatch-hex" style="color:#aaa">#23241E</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#63645A"></div><div class="swatch-label"><span class="swatch-name" style="color:#fff">--ink-muted</span><span class="swatch-hex" style="color:#ccc">#63645A</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#93948A"></div><div class="swatch-label"><span class="swatch-name">--ink-faint</span><span class="swatch-hex">#93948A</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#DCDCCE"></div><div class="swatch-label"><span class="swatch-name">--border</span><span class="swatch-hex">#DCDCCE</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#C7C8B4"></div><div class="swatch-label"><span class="swatch-name">--border-strong</span><span class="swatch-hex">#C7C8B4</span></div></div>
+    </div>
+
+    <p class="comp-card-note" style="margin:22px 0 14px; font-weight:600; color:var(--ink);">1 · Primary — orange→red (warped-orange / warped-red, hue 34°→14°)</p>
+    <div class="swatch-grid">
+      <div class="swatch"><div class="swatch-fill" style="background:#A67330"></div><div class="swatch-label"><span class="swatch-name" style="color:#fff">--accent</span><span class="swatch-hex" style="color:#f3e2cd">#A67330</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#7C361D"></div><div class="swatch-label"><span class="swatch-name" style="color:#fff">--accent-strong</span><span class="swatch-hex" style="color:#eec9b8">#7C361D</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#F6EADA"></div><div class="swatch-label"><span class="swatch-name">--accent-soft</span><span class="swatch-hex">#F6EADA</span></div></div>
+    </div>
+
+    <p class="comp-card-note" style="margin:22px 0 14px; font-weight:600; color:var(--ink);">2 · Secondary — yellow (warped-yellow, hue 54°)</p>
+    <div class="swatch-grid">
+      <div class="swatch"><div class="swatch-fill" style="background:#997F29"></div><div class="swatch-label"><span class="swatch-name" style="color:#fff">--highlight</span><span class="swatch-hex" style="color:#efe6c4">#997F29</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#F6F1D5"></div><div class="swatch-label"><span class="swatch-name">--highlight-soft</span><span class="swatch-hex">#F6F1D5</span></div></div>
+    </div>
+
+    <p class="comp-card-note" style="margin:22px 0 14px; font-weight:600; color:var(--ink);">3 · Utility, reserved — blue (warped-blue, hue 210°) · green unused</p>
+    <div class="swatch-grid">
+      <div class="swatch"><div class="swatch-fill" style="background:#3D638F"></div><div class="swatch-label"><span class="swatch-name" style="color:#fff">--flag</span><span class="swatch-hex" style="color:#c7d8e8">#3D638F</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#E1EAF4"></div><div class="swatch-label"><span class="swatch-name">--flag-soft</span><span class="swatch-hex">#E1EAF4</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#68d6a1"></div><div class="swatch-label"><span class="swatch-name">warped-green</span><span class="swatch-hex">not tokenized</span></div></div>
+    </div>
+
+    <p class="comp-card-note" style="margin-top:16px;">Ranked, not flat: <strong style="color:var(--ink)">accent</strong> (orange/red) means "interactive, or teaches you something" — active nav, checked ingredient, Mechanic rail, ratios. <strong style="color:var(--ink)">highlight</strong> (yellow) is descriptive, not interactive — cuisine chips only, so it never competes with the accent for attention. <strong style="color:var(--ink)">flag</strong> (blue) means "unreviewed" — draft banner and inline draft badges; blue reads as "cool, pending" against the warm accent's "hot, active." Green stays out of the UI entirely for now — lowest in the new hierarchy, kept only as a documented option.</p>
+  </section>
+
+  <section class="block" id="type">
+    <div class="block-head">
+      <span class="block-num">03</span>
+      <h2 class="block-title">Type system</h2>
+      <p class="block-dek">Three faces, three jobs. No face does more than one job.</p>
+    </div>
+    <div class="type-row">
+      <div class="type-spec">
+        <div class="type-meta">
+          <span class="type-role">Headings &amp; UI</span>
+          <span class="type-face">Libre Franklin</span>
+          <span class="type-detail">weights 400–700</span>
+        </div>
+        <div class="type-sample-ui">
+          <div style="font-weight:700; font-size:1.4rem; letter-spacing:-.01em; margin-bottom:8px;">Dal Tadka</div>
+          <div style="font-weight:600; font-size:.78rem; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-muted);">Section label · stat label · nav</div>
+        </div>
+      </div>
+      <div class="type-spec">
+        <div class="type-meta">
+          <span class="type-role">Body &amp; lists</span>
+          <span class="type-face">Lora</span>
+          <span class="type-detail">shared with warpedvisions.org</span>
+        </div>
+        <div class="type-sample-ui" style="font-family:'Lora',serif; font-size:1rem;">
+          Red lentils cook fast and dissolve into a creamy base. The ratio matters: 1 cup lentils to 4–5 cups water. The tadka is not garnish — it's the flavour. Don't skip it.
+        </div>
+      </div>
+      <div class="type-spec">
+        <div class="type-meta">
+          <span class="type-role">Quantities &amp; data</span>
+          <span class="type-face">IBM Plex Mono</span>
+          <span class="type-detail">tabular-nums, always</span>
+        </div>
+        <div class="type-sample-mono">
+          200g red lentils · 1.2L water · 25 min cook · 1:4–5 ratio
+        </div>
+      </div>
+    </div>
+    <p class="comp-card-note" style="margin-top:22px;">The mono face is load-bearing, not decorative: every quantity, time, and ratio in a recipe is set in it so numbers align visually while scanning an ingredient list mid-cook — the eye can jump straight to the digits without re-parsing prose each time.</p>
+  </section>
+
+  <section class="block" id="components">
+    <div class="block-head">
+      <span class="block-num">04</span>
+      <h2 class="block-title">Components</h2>
+      <p class="block-dek">Pulled live from the recipe mockup and nav mockup. Each one exists because of the two working principles: recipes teach, and cooking is chaotic.</p>
+    </div>
+    <div class="comp-grid">
+
+      <div class="comp-card">
+        <span class="comp-card-label">Ingredient check</span>
+        <div class="comp-demo">
+          <ul style="display:flex;flex-direction:column;">
+            <li class="mini-ing"><input type="checkbox" id="sg-1" checked><label for="sg-1"><span class="mono">200g</span> red lentils</label></li>
+            <li class="mini-ing"><input type="checkbox" id="sg-2"><label for="sg-2"><span class="mono">1.2L</span> water</label></li>
+          </ul>
+        </div>
+        <p class="comp-card-note">Custom flat control, not native chrome, not emoji — 19px target for wet or floury hands mid-cook.</p>
+      </div>
+
+      <div class="comp-card">
+        <span class="comp-card-label">Mechanic callout</span>
+        <div class="comp-demo mini-mechanic">A <span class="ratio">1:1:1 ratio</span> by volume: mayo, pickle, mustard.</div>
+        <p class="comp-card-note">The "context for learning" principle made visible — a recipe with a Mechanic section is teaching a technique, not just listing steps.</p>
+      </div>
+
+      <div class="comp-card">
+        <span class="comp-card-label">Numbered procedure step</span>
+        <div class="comp-demo">
+          <div class="mini-step"><span class="n">1</span><span>Bring to high pressure, cook 45–60 minutes.</span></div>
+          <div class="mini-step"><span class="n">2</span><span>Release pressure naturally for 20 minutes.</span></div>
+        </div>
+        <p class="comp-card-note">Reserved for procedures where order and re-entry matter (pressure cooker steps); prose paragraphs are used when steps flow into each other.</p>
+      </div>
+
+      <div class="comp-card">
+        <span class="comp-card-label">Tag &amp; cuisine chip</span>
+        <div class="comp-demo" style="display:flex;gap:6px;flex-wrap:wrap;">
+          <span class="cuisine-chip">Indian</span><span class="tag">soups</span><span class="tag">weeknight</span><span class="tag">vegetarian</span>
+        </div>
+        <p class="comp-card-note">Cuisine is filled in yellow (worth a glance, not a click), tags stay neutral outlines — a deliberate hierarchy that also keeps the taxonomy chip out of the primary orange/red's way.</p>
+      </div>
+
+      <div class="comp-card">
+        <span class="comp-card-label">Filter pill</span>
+        <div class="comp-demo" style="display:flex;gap:6px;flex-wrap:wrap;">
+          <span class="filter-pill on">weeknight</span><span class="filter-pill">quick</span><span class="filter-pill">vegan</span>
+        </div>
+        <p class="comp-card-note">Listing page filters — pill shape distinguishes "click to narrow" from the chip's "this is a fact about the recipe."</p>
+      </div>
+
+      <div class="comp-card">
+        <span class="comp-card-label">Draft state</span>
+        <div class="comp-demo" style="display:flex;flex-direction:column;gap:8px;">
+          <div class="mini-draft"><span class="dot"></span>Draft — not yet reviewed for publish</div>
+          <span class="badge-tag">draft, still refining</span>
+        </div>
+        <p class="comp-card-note">Blue, not red — unreviewed isn't an error state, it's a normal part of a family recipe's life. Cool and receding on purpose, against a warm accent that means "active."</p>
+      </div>
+
+      <div class="comp-card">
+        <span class="comp-card-label">Recipe card</span>
+        <div class="comp-demo mini-card">
+          <div style="display:flex;gap:5px;"><span class="cuisine-chip">Japanese</span><span class="tag">bases</span></div>
+          <span class="mini-card-title">Chashu Pork</span>
+          <div style="display:flex;gap:14px;">
+            <div><span class="mini-stat-label">Cook</span><div class="mono" style="font-size:.78rem;">2 hr</div></div>
+            <div><span class="mini-stat-label">Serves</span><div class="mono" style="font-size:.78rem;">6–8</div></div>
+          </div>
+        </div>
+        <p class="comp-card-note">Listing-page unit — title, taxonomy, and just enough of the stat rail to decide whether to click in.</p>
+      </div>
+
+      <div class="comp-card">
+        <span class="comp-card-label">Nav item with menu</span>
+        <div class="comp-demo"><span class="mini-nav-item">Recipes</span></div>
+        <p class="comp-card-note">Caret only appears on items with a real mega-menu (Recipes, Reference) — Essays/Food Log/Vlog stay plain links until they have enough content to categorize.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="block" id="scale">
+    <div class="block-head">
+      <span class="block-num">05</span>
+      <h2 class="block-title">Spacing &amp; radius</h2>
+      <p class="block-dek">Not a formal 4px/8px grid — values as they've actually accumulated across two rounds. Worth tightening into a real scale before this goes further (see Open questions).</p>
+    </div>
+    <div class="scale-row"><span class="scale-name">3px</span><div class="scale-vis" style="width:3px;"></div><span class="scale-usage">tag / stat-step radius</span></div>
+    <div class="scale-row"><span class="scale-name">4–5px</span><div class="scale-vis" style="width:5px;"></div><span class="scale-usage">checkbox, nav summary, filter chip base</span></div>
+    <div class="scale-row"><span class="scale-name">6px</span><div class="scale-vis" style="width:6px;"></div><span class="scale-usage">recipe card, component card radius</span></div>
+    <div class="scale-row"><span class="scale-name">8px</span><div class="scale-vis" style="width:8px;"></div><span class="scale-usage">mega-menu panel radius</span></div>
+    <div class="scale-row"><span class="scale-name">14px</span><div class="scale-vis" style="width:14px;"></div><span class="scale-usage">filter pill (full pill shape)</span></div>
+    <div class="scale-row"><span class="scale-name">6 / 8 / 10px</span><div class="scale-vis" style="width:10px;"></div><span class="scale-usage">tight gaps — chip rows, stat pairs</span></div>
+    <div class="scale-row"><span class="scale-name">16 / 20 / 22px</span><div class="scale-vis" style="width:22px;"></div><span class="scale-usage">card padding, grid gaps</span></div>
+    <div class="scale-row"><span class="scale-name">26 / 32px</span><div class="scale-vis" style="width:32px;"></div><span class="scale-usage">ingredients/procedure column gap, section spacing</span></div>
+    <div class="scale-row"><span class="scale-name">680px</span><div class="scale-vis" style="width:60px;"></div><span class="scale-usage">only breakpoint so far — nav drawer, ingredient grid collapse to 1 column</span></div>
+  </section>
+
+  <section class="block" id="open">
+    <div class="block-head">
+      <span class="block-num">06</span>
+      <h2 class="block-title">Open questions for next round</h2>
+      <p class="block-dek">Things flagged across the last three passes that a style guide shouldn't quietly resolve on its own.</p>
+    </div>
+    <div class="qlist">
+      <div class="qitem"><span class="qitem-mark">?</span><p><strong>Borrow the Warped flourish bar itself?</strong> Palette is settled now, but the actual top/bottom multicolor strip is a separate, still-open question — a thin version coded by course or cuisine could be a strong signature mark, or the two properties could share the palette but not the layout device.</p></div>
+      <div class="qitem"><span class="qitem-mark">?</span><p><strong>Green is tokenized but has no job.</strong> It's the one warped hue not in use anywhere — worth deciding if it stays in reserve indefinitely or gets a real (minor) role, e.g. a vegetarian/vegan indicator.</p></div>
+      <div class="qitem"><span class="qitem-mark">?</span><p><strong>Reference has no real tag coverage</strong> (5 of 19 files). Its nav dropdown is a flat shortlist because there's nothing to group by yet — either tag the rest to match the Recipes treatment, or design Reference's nav around its actual shape (flat, chronological, whatever it is).</p></div>
+      <div class="qitem"><span class="qitem-mark">?</span><p><strong>The Food Log and Vlog aren't real sections yet</strong> — one file each, no frontmatter, no <code>_index.md</code>. They're in the nav because the folders exist, not because they're ready. Worth deciding if they launch, stay hidden, or get folded into Essays until there's more there.</p></div>
+      <div class="qitem"><span class="qitem-mark">?</span><p><strong>Spacing isn't on a real scale.</strong> Section 05 is descriptive, not prescriptive — it's what's accumulated, not a system. Worth collapsing to a proper 4/8px-based scale before more components get built against ad hoc values.</p></div>
+      <div class="qitem"><span class="qitem-mark">?</span><p><strong>Homepage, individual essay/reference layouts, and the light/dark screenshot pass</strong> haven't been touched yet — this guide only covers what the recipe and nav mockups have exercised so far.</p></div>
+    </div>
+  </section>
+
+  <footer class="pfoot">Not a Chef Style Guide · v2 · derived from the Recipe Spec Sheet and nav mockups, cross-checked against warpedvisions.org's live stylesheet · a working record, updated as the mocks move.</footer>
+</main>
+
+<script>
+(function(){
+  var root = document.documentElement;
+  var toggle = document.getElementById('themeToggle');
+  var label = document.getElementById('themeLabel');
+  var order = ['system','light','dark'];
+  var current = 'system';
+  try{
+    var saved = localStorage.getItem('nac-style-guide-theme');
+    if(saved && order.indexOf(saved) !== -1) current = saved;
+  }catch(e){}
+  function apply(mode){
+    if(mode === 'system'){ root.removeAttribute('data-theme'); }
+    else{ root.setAttribute('data-theme', mode); }
+    label.textContent = mode.charAt(0).toUpperCase() + mode.slice(1);
+    try{ localStorage.setItem('nac-style-guide-theme', mode); }catch(e){}
+  }
+  apply(current);
+  toggle.addEventListener('click', function(){
+    current = order[(order.indexOf(current) + 1) % order.length];
+    apply(current);
+  });
+})();
+</script>
+
+</body>
+</html>

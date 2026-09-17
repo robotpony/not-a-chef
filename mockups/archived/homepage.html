@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Not a Chef Homepage</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  /* ---- tokens: copied verbatim from mockups/style-guide.html — do not fork these values, edit the guide first ---- */
+  :root{
+    --bg:#F3F3EC; --surface:#FBFBF6; --surface-2:#EAEBDF;
+    --ink:#23241E; --ink-muted:#63645A; --ink-faint:#93948A;
+    --border:#DCDCCE; --border-strong:#C7C8B4;
+    --accent:#A67330; --accent-strong:#7C361D; --accent-soft:#F6EADA;
+    --highlight:#997F29; --highlight-soft:#F6F1D5;
+    --flag:#3D638F; --flag-soft:#E1EAF4;
+    --focus:#A67330;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+      --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+      --border:#383A2C; --border-strong:#4A4C3A;
+      --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+      --highlight:#DDCC88; --highlight-soft:#342D19;
+      --flag:#97B8D8; --flag-soft:#1D2835;
+      --focus:#D3A569;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+    --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+    --border:#383A2C; --border-strong:#4A4C3A;
+    --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+    --highlight:#DDCC88; --highlight-soft:#342D19;
+    --flag:#97B8D8; --flag-soft:#1D2835;
+    --focus:#D3A569;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:'Lora',Georgia,'Times New Roman',serif;
+    font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4,.font-ui{ font-family:'Libre Franklin',system-ui,-apple-system,'Segoe UI',sans-serif; }
+  .mono{ font-family:'IBM Plex Mono',ui-monospace,'SF Mono',Menlo,monospace; font-variant-numeric:tabular-nums; }
+  a{ color:inherit; }
+  button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
+  button:focus-visible, a:focus-visible, input:focus-visible{ outline:2px solid var(--focus); outline-offset:2px; border-radius:2px; }
+  ul,ol{ margin:0; padding:0; list-style:none; }
+  p{ margin:0; }
+  @media (prefers-reduced-motion:no-preference){
+    .nav-link, .nav-drop > summary, .theme-toggle, .filter-pill, .rcard, .browse-list a, .mega-chip{
+      transition:background-color .15s ease, color .15s ease, border-color .15s ease;
+    }
+  }
+  @media (prefers-reduced-motion: reduce){
+    *, *::before, *::after{ transition:none !important; animation:none !important; }
+  }
+
+  /* ============ site nav — copied verbatim from mockups/recipe-spec-sheet.html ============ */
+  .site-nav{ border-bottom:1px solid var(--border); background:var(--surface); font-family:'Libre Franklin',sans-serif; }
+  .site-nav-inner{ max-width:1100px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; gap:22px; position:relative; }
+  .site-logo{ font-weight:700; font-size:1.05rem; letter-spacing:-.01em; margin-right:auto; text-decoration:none; white-space:nowrap; }
+  .site-nav-links{ display:flex; align-items:center; gap:2px; }
+
+  .nav-link, .nav-drop > summary{
+    font-size:.86rem; font-weight:600; color:var(--ink-muted); padding:8px 10px; border-radius:4px;
+    text-decoration:none; cursor:pointer; list-style:none; display:flex; align-items:center; gap:5px; white-space:nowrap;
+  }
+  .nav-link:hover, .nav-drop > summary:hover{ color:var(--ink); background:var(--surface-2); }
+  .nav-drop > summary::-webkit-details-marker{ display:none; }
+  .nav-drop > summary::after{ content:''; width:6px; height:6px; border:solid currentColor; border-width:0 1.5px 1.5px 0; transform:rotate(45deg); margin-top:-3px; opacity:.6; }
+  .nav-drop[open] > summary::after{ transform:rotate(-135deg); margin-top:2px; }
+  .nav-drop{ position:relative; }
+
+  .mega-panel{
+    position:absolute; top:calc(100% + 8px); left:0; z-index:20;
+    background:var(--surface); border:1px solid var(--border-strong); border-radius:8px;
+    box-shadow:0 14px 40px rgba(0,0,0,.16); padding:20px; display:flex; gap:32px; flex-wrap:wrap;
+    min-width:460px;
+  }
+  .mega-panel-simple{ min-width:230px; }
+  .mega-col{ display:flex; flex-direction:column; gap:1px; min-width:160px; }
+  .mega-col-label{
+    font-size:.65rem; font-weight:700; text-transform:uppercase; letter-spacing:.07em;
+    color:var(--ink-faint); margin-bottom:6px;
+  }
+  .mega-col a{
+    display:flex; justify-content:space-between; gap:14px; font-size:.85rem; color:var(--ink);
+    text-decoration:none; padding:5px 6px; border-radius:4px;
+  }
+  .mega-col a:hover{ background:var(--accent-soft); color:var(--accent-strong); }
+  .mega-col a .n{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--ink-faint); }
+  .mega-more{ margin-top:4px; font-weight:600 !important; color:var(--accent-strong) !important; }
+
+  .mega-filters{ flex:1; min-width:190px; border-left:1px solid var(--border); padding-left:26px; display:flex; flex-direction:column; gap:10px; }
+  .mega-chip-row{ display:flex; gap:6px; flex-wrap:wrap; }
+  .mega-chip{
+    font-size:.74rem; font-weight:500; padding:5px 10px; border:1px solid var(--border-strong); border-radius:14px;
+    color:var(--ink-muted); text-decoration:none;
+  }
+  .mega-chip:hover{ border-color:var(--accent); color:var(--ink); }
+  .mega-viewall{ font-size:.8rem; font-weight:600; color:var(--accent-strong); text-decoration:none; margin-top:auto; }
+
+  .mobile-drawer-toggle{ display:none; }
+  @media (max-width:680px){
+    .site-nav-links{ display:none; }
+    .mobile-drawer-toggle{ display:block; }
+  }
+  .mobile-drawer-toggle > summary{
+    list-style:none; cursor:pointer; width:34px; height:34px; display:flex; align-items:center; justify-content:center;
+    border:1px solid var(--border-strong); border-radius:5px; color:var(--ink);
+  }
+  .mobile-drawer-toggle > summary::-webkit-details-marker{ display:none; }
+  .mobile-drawer-toggle > summary svg{ width:17px; height:17px; }
+
+  .drawer-backdrop{ display:none; }
+  .mobile-drawer-toggle[open] .drawer-backdrop{ display:block; position:absolute; inset:0; background:rgba(0,0,0,.35); z-index:29; }
+  .drawer-panel{
+    position:absolute; top:0; left:0; bottom:0; width:82%; max-width:320px; z-index:30;
+    background:var(--bg); border-right:1px solid var(--border-strong);
+    padding:16px 16px 40px; overflow-y:auto; box-shadow:16px 0 40px rgba(0,0,0,.25);
+  }
+  .drawer-panel-head{ display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+  .drawer-close{
+    width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    border:1px solid var(--border-strong); border-radius:5px; color:var(--ink-muted); cursor:pointer;
+  }
+  .drawer-close svg{ width:14px; height:14px; }
+  .drawer-link, .drawer-item > summary{
+    display:flex; justify-content:space-between; align-items:center;
+    font-size:.95rem; font-weight:600; color:var(--ink); text-decoration:none;
+    padding:12px 4px; border-bottom:1px solid var(--border); cursor:pointer; list-style:none;
+  }
+  .drawer-item > summary::-webkit-details-marker{ display:none; }
+  .drawer-item > summary::after{ content:'+'; color:var(--ink-faint); font-weight:400; }
+  .drawer-item[open] > summary::after{ content:'\2013'; }
+  .drawer-sub{ padding:2px 4px 14px 8px; display:flex; flex-direction:column; gap:0; }
+  .drawer-sub .mega-col-label{ margin:12px 0 4px; }
+  .drawer-sub .mega-col-label:first-child{ margin-top:6px; }
+  .drawer-sub a{ font-size:.87rem; padding:7px 4px; color:var(--ink); text-decoration:none; display:flex; justify-content:space-between; }
+  .drawer-sub .mega-chip-row{ padding:2px 4px 0; }
+
+  /* ============ hero — pattern from mockups/style-guide.html's own hero, sized up for a homepage ============ */
+  .hero{ max-width:1100px; margin:0 auto; padding:48px 20px 40px; border-bottom:1px solid var(--border); }
+  .hero-eyebrow{
+    font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:700; text-transform:uppercase;
+    letter-spacing:.1em; color:var(--accent-strong); margin-bottom:12px; display:block;
+  }
+  .hero h1{ font-size:clamp(2.1rem, 4.2vw, 2.9rem); font-weight:700; letter-spacing:-.015em; line-height:1.08; text-wrap:balance; margin-bottom:16px; max-width:16ch; }
+  .hero p.lede{ max-width:56ch; color:var(--ink-muted); font-size:1.08rem; line-height:1.6; margin-bottom:28px; }
+
+  .search-row{ display:flex; gap:10px; margin:0 0 26px; flex-wrap:wrap; max-width:460px; }
+  .search-box{
+    flex:1; min-width:180px; display:flex; align-items:center; gap:8px;
+    background:var(--surface); border:1px solid var(--border-strong); border-radius:4px;
+    padding:10px 12px; font-family:'Libre Franklin',sans-serif; font-size:.85rem; color:var(--ink-faint);
+  }
+  .search-box svg{ width:15px; height:15px; flex-shrink:0; }
+  .search-box input{ border:none; background:none; outline:none; font:inherit; color:var(--ink); width:100%; }
+  .search-box input::placeholder{ color:var(--ink-faint); }
+  .search-box kbd{ font-family:'IBM Plex Mono',monospace; font-size:.7rem; border:1px solid var(--border-strong); border-radius:3px; padding:2px 5px; color:var(--ink-faint); }
+
+  .stat-rail{ display:flex; gap:26px; flex-wrap:wrap; padding-top:18px; border-top:1px solid var(--border); }
+  .stat{ display:flex; flex-direction:column; gap:3px; min-width:0; }
+  .stat-label{ font-family:'Libre Franklin',sans-serif; font-size:.66rem; font-weight:600; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-faint); }
+  .stat-value{ font-family:'Libre Franklin',sans-serif; font-size:.85rem; color:var(--ink); max-width:22ch; }
+
+  /* ============ section shell — block-num/title/dek pattern from mockups/style-guide.html ============ */
+  .home-section{ max-width:1100px; margin:0 auto; padding:40px 20px; border-bottom:1px solid var(--border); }
+  .home-section:last-of-type{ border-bottom:none; }
+  .block-head{ margin-bottom:20px; display:flex; justify-content:space-between; align-items:flex-end; gap:16px; flex-wrap:wrap; }
+  .block-num{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--ink-faint); display:block; margin-bottom:4px; }
+  h2.block-title{ font-size:1.35rem; font-weight:700; letter-spacing:-.005em; margin-bottom:6px; text-wrap:balance; }
+  .block-dek{ color:var(--ink-muted); max-width:60ch; font-size:.92rem; }
+
+  /* ============ filter pills — copied verbatim from the listing page ============ */
+  .filter-row{ display:flex; gap:6px; flex-wrap:wrap; }
+  .filter-pill{
+    font-family:'Libre Franklin',sans-serif; font-size:.78rem; font-weight:500;
+    padding:6px 12px; border:1px solid var(--border-strong); border-radius:14px; color:var(--ink-muted);
+  }
+  .filter-pill:hover{ border-color:var(--accent); color:var(--ink); }
+
+  /* ============ recipe cards — copied verbatim from the listing page ============ */
+  .rgrid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(240px,1fr)); gap:16px; margin-top:4px; }
+  .rcard{
+    background:var(--surface); border:1px solid var(--border); border-radius:6px;
+    padding:16px; display:flex; flex-direction:column; gap:10px; min-width:0;
+  }
+  .rcard:hover{ border-color:var(--accent); }
+  .rcard-top{ display:flex; gap:5px; flex-wrap:wrap; }
+  .rcard-title{ font-family:'Libre Franklin',sans-serif; font-size:1.02rem; font-weight:700; line-height:1.3; letter-spacing:-.005em; text-wrap:balance; }
+  .rcard-meta{ display:flex; gap:16px; flex-wrap:wrap; padding-top:2px; }
+  .rcard-stat{ display:flex; flex-direction:column; gap:2px; min-width:0; max-width:12ch; }
+  .rcard-stat-label{ font-family:'Libre Franklin',sans-serif; font-size:.62rem; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); }
+  .rcard-stat-value{ font-size:.78rem; color:var(--ink-muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .rcard-flags{
+    display:flex; gap:10px; padding-top:8px; margin-top:auto; border-top:1px solid var(--border);
+    font-family:'Libre Franklin',sans-serif; font-size:.68rem; font-weight:600;
+    color:var(--accent-strong); text-transform:uppercase; letter-spacing:.04em;
+  }
+  .rcard-flags span::before{ content:'· '; color:var(--border-strong); }
+  .rcard-flags span:first-child::before{ content:''; }
+
+  .tag{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; border:1px solid var(--border-strong); color:var(--ink-muted); padding:3px 7px; border-radius:3px; }
+  .tag-more{ color:var(--ink-faint); border-style:dashed; }
+  .cuisine-chip{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; font-weight:600; text-transform:uppercase; letter-spacing:.05em; background:var(--highlight-soft); color:var(--highlight); padding:3px 7px; border-radius:3px; }
+
+  /* ============ browse lists — same visual language as .mega-col a, reused outside the nav ============ */
+  .browse-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(190px,1fr)); gap:4px 28px; }
+  .browse-list{ display:flex; flex-direction:column; gap:1px; }
+  .browse-list a{ display:flex; justify-content:space-between; gap:14px; font-family:'Libre Franklin',sans-serif; font-size:.88rem; color:var(--ink); text-decoration:none; padding:6px 8px; border-radius:4px; }
+  .browse-list a:hover{ background:var(--accent-soft); color:var(--accent-strong); }
+  .browse-list a .n{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--ink-faint); flex-shrink:0; }
+  .browse-more{ font-weight:600; color:var(--accent-strong); }
+
+  /* ============ component cards — copied from mockups/style-guide.html's gallery pattern ============ */
+  .comp-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin-top:4px; }
+  .comp-card{ background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:16px; display:flex; flex-direction:column; gap:8px; }
+  .comp-card-label{ font-family:'Libre Franklin',sans-serif; font-size:.92rem; font-weight:700; }
+  .comp-card-note{ font-family:'Lora',serif; font-size:.88rem; color:var(--ink-muted); line-height:1.55; }
+
+  .split{ display:grid; grid-template-columns:1.1fr .9fr; gap:40px; }
+  @media (max-width:820px){ .split{ grid-template-columns:1fr; } }
+
+  /* ============ footer — new, follows the Hugo config: appearance switcher lives in the footer ============ */
+  .site-footer{ border-top:1px solid var(--border); background:var(--surface-2); }
+  .site-footer-inner{ max-width:1100px; margin:0 auto; padding:28px 20px 36px; }
+  .foot-row{ display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap; margin-bottom:20px; }
+  .foot-brand{ font-family:'Libre Franklin',sans-serif; }
+  .foot-brand .name{ font-weight:700; font-size:.95rem; }
+  .foot-brand p{ font-size:.82rem; color:var(--ink-muted); margin-top:6px; max-width:38ch; font-family:'Lora',serif; }
+  .foot-links{ display:flex; gap:36px; flex-wrap:wrap; font-family:'Libre Franklin',sans-serif; }
+  .foot-links .heading{ font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); margin-bottom:8px; }
+  .foot-links a{ display:block; font-size:.85rem; color:var(--ink-muted); text-decoration:none; padding:3px 0; }
+  .foot-links a:hover{ color:var(--accent-strong); }
+  .theme-toggle{
+    display:flex; align-items:center; gap:6px; font-family:'Libre Franklin',sans-serif; font-size:.75rem; font-weight:600;
+    padding:7px 10px; border:1px solid var(--border-strong); border-radius:3px; color:var(--ink-muted);
+  }
+  .theme-toggle:hover{ border-color:var(--accent); color:var(--ink); }
+  .theme-toggle svg{ width:14px; height:14px; }
+  .foot-meta{ padding-top:16px; border-top:1px solid var(--border); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; font-family:'Libre Franklin',sans-serif; font-size:.74rem; color:var(--ink-faint); }
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="site-nav-inner">
+    <a class="site-logo" href="#">not a chef.</a>
+
+    <nav class="site-nav-links" aria-label="Primary">
+      <details class="nav-drop" name="nav-menu">
+        <summary>Recipes</summary>
+        <div class="mega-panel">
+          <div class="mega-col">
+            <span class="mega-col-label">By course</span>
+            <a href="#">Mains <span class="n">26</span></a>
+            <a href="#">Bases &amp; marinades <span class="n">18</span></a>
+            <a href="#">Sauces <span class="n">16</span></a>
+            <a href="#">Soups &amp; stews <span class="n">6</span></a>
+            <a href="#">Desserts <span class="n">6</span></a>
+            <a href="#">Sides <span class="n">4</span></a>
+            <a href="#">Salads <span class="n">4</span></a>
+            <a href="#">Breads <span class="n">3</span></a>
+            <a href="#">Drinks <span class="n">3</span></a>
+            <a href="#">Breakfast <span class="n">2</span></a>
+          </div>
+          <div class="mega-col">
+            <span class="mega-col-label">By cuisine</span>
+            <a href="#">Chinese <span class="n">7</span></a>
+            <a href="#">Indian <span class="n">6</span></a>
+            <a href="#">Italian <span class="n">6</span></a>
+            <a href="#">Japanese <span class="n">5</span></a>
+            <a href="#">American <span class="n">4</span></a>
+            <a href="#">Mexican <span class="n">3</span></a>
+            <a href="#">Greek <span class="n">3</span></a>
+            <a href="#">Thai <span class="n">3</span></a>
+            <a class="mega-more" href="#">All 18 cuisines →</a>
+          </div>
+          <div class="mega-filters">
+            <span class="mega-col-label">Quick filters</span>
+            <div class="mega-chip-row">
+              <a class="mega-chip" href="#">Quick</a>
+              <a class="mega-chip" href="#">Make-ahead</a>
+              <a class="mega-chip" href="#">Dairy-free</a>
+              <a class="mega-chip" href="#">Vegetarian</a>
+              <a class="mega-chip" href="#">Weeknight</a>
+              <a class="mega-chip" href="#">Vegan</a>
+              <a class="mega-chip" href="#">Gluten-free</a>
+            </div>
+            <a class="mega-viewall" href="#">View all 83 recipes →</a>
+          </div>
+        </div>
+      </details>
+
+      <a class="nav-link" href="#">Essays</a>
+      <a class="nav-link" href="#">The Food Log</a>
+
+      <details class="nav-drop" name="nav-menu">
+        <summary>Reference</summary>
+        <div class="mega-panel mega-panel-simple">
+          <div class="mega-col">
+            <span class="mega-col-label">Guides</span>
+            <a href="#">101 Carbonaras</a>
+            <a href="#">Burger night costing (2022)</a>
+            <a href="#">Flour protein content comparison</a>
+            <a href="#">Food ratios for your own recipes</a>
+            <a href="#">Meal planning, Bruce's take</a>
+            <a href="#">Temperature &amp; doneness cheat sheet</a>
+            <a class="mega-more" href="#">All 19 reference guides →</a>
+          </div>
+        </div>
+      </details>
+
+      <a class="nav-link" href="#">Vlog</a>
+    </nav>
+
+    <details class="mobile-drawer-toggle">
+      <summary aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+      </summary>
+      <div class="drawer-backdrop"></div>
+      <nav class="drawer-panel" aria-label="Primary mobile">
+        <div class="drawer-panel-head">
+          <span class="site-logo">not a chef.</span>
+          <span class="drawer-close" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+          </span>
+        </div>
+
+        <details class="drawer-item" name="drawer-menu">
+          <summary>Recipes</summary>
+          <div class="drawer-sub">
+            <span class="mega-col-label">By course</span>
+            <a href="#">Mains <span class="n">26</span></a>
+            <a href="#">Bases &amp; marinades <span class="n">18</span></a>
+            <a href="#">Sauces <span class="n">16</span></a>
+            <span class="mega-col-label">By cuisine</span>
+            <a href="#">Chinese <span class="n">7</span></a>
+            <a href="#">Indian <span class="n">6</span></a>
+            <a class="mega-more" href="#">All 18 cuisines →</a>
+            <span class="mega-col-label">Quick filters</span>
+            <div class="mega-chip-row">
+              <a class="mega-chip" href="#">Quick</a>
+              <a class="mega-chip" href="#">Weeknight</a>
+              <a class="mega-chip" href="#">Vegan</a>
+            </div>
+            <a class="mega-viewall" href="#" style="margin-top:12px;">View all 83 recipes →</a>
+          </div>
+        </details>
+
+        <a class="drawer-link" href="#">Essays</a>
+        <a class="drawer-link" href="#">The Food Log</a>
+
+        <details class="drawer-item" name="drawer-menu">
+          <summary>Reference</summary>
+          <div class="drawer-sub">
+            <a href="#">101 Carbonaras</a>
+            <a href="#">Temperature &amp; doneness cheat sheet</a>
+            <a class="mega-more" href="#">All 19 reference guides →</a>
+          </div>
+        </details>
+
+        <a class="drawer-link" href="#">Vlog</a>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <span class="hero-eyebrow">Recipes, essays and reference</span>
+    <h1>A cookbook that shows its work.</h1>
+    <p class="lede">Eighty-three family recipes, indexed by what actually works: ratios, timings, substitutions, and the fixes for when a first attempt didn't.</p>
+
+    <div class="search-row">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+        <label for="site-search" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Search recipes, tags and cuisines</label>
+        <input id="site-search" type="text" placeholder="Search 83 recipes, tags, cuisines…">
+        <kbd>/</kbd>
+      </div>
+    </div>
+
+    <div class="stat-rail">
+      <div class="stat"><span class="stat-label">Recipes</span><span class="stat-value mono">83</span></div>
+      <div class="stat"><span class="stat-label">Cuisines</span><span class="stat-value mono">18</span></div>
+      <div class="stat"><span class="stat-label">Tags</span><span class="stat-value mono">46</span></div>
+      <div class="stat"><span class="stat-label">Reference guides</span><span class="stat-value mono">19</span></div>
+    </div>
+  </section>
+
+  <section class="home-section" id="tonight">
+    <div class="block-head">
+      <div>
+        <span class="block-num">01</span>
+        <h2 class="block-title">What's for dinner tonight?</h2>
+        <p class="block-dek">Filters drawn from the tags actually used across the collection — the same ones on the Recipes listing page.</p>
+      </div>
+    </div>
+    <div class="filter-row">
+      <button class="filter-pill" type="button">Quick</button>
+      <button class="filter-pill" type="button">Weeknight</button>
+      <button class="filter-pill" type="button">Make-ahead</button>
+      <button class="filter-pill" type="button">Dairy-free</button>
+      <button class="filter-pill" type="button">Vegetarian</button>
+      <button class="filter-pill" type="button">Vegan</button>
+      <button class="filter-pill" type="button">Gluten-free</button>
+    </div>
+  </section>
+
+  <section class="home-section" id="recent">
+    <div class="block-head">
+      <div>
+        <span class="block-num">02</span>
+        <h2 class="block-title">Recently added</h2>
+        <p class="block-dek">The six most recent entries in the index, most recent first.</p>
+      </div>
+      <a class="mega-viewall" href="#">View all 83 recipes →</a>
+    </div>
+
+    <div class="rgrid">
+      <article class="rcard">
+        <div class="rcard-top"><span class="cuisine-chip">Greek</span><span class="tag">bases</span><span class="tag">beef</span><span class="tag tag-more">+4</span></div>
+        <h3 class="rcard-title">Gyro Base</h3>
+        <div class="rcard-meta">
+          <div class="rcard-stat"><span class="rcard-stat-label">Prep</span><span class="rcard-stat-value mono" title="15 min (plus 4 hr chill, ideally overnight)">15 min + chill…</span></div>
+          <div class="rcard-stat"><span class="rcard-stat-label">Serves</span><span class="rcard-stat-value mono">8 (125g)</span></div>
+        </div>
+        <div class="rcard-flags"><span>Mechanic</span></div>
+      </article>
+
+      <article class="rcard">
+        <div class="rcard-top"><span class="cuisine-chip">Greek</span><span class="tag">mains</span><span class="tag">beef</span><span class="tag tag-more">+2</span></div>
+        <h3 class="rcard-title">Gyro Dogs</h3>
+        <div class="rcard-meta">
+          <div class="rcard-stat"><span class="rcard-stat-label">Prep</span><span class="rcard-stat-value mono" title="30 min (plus 4 hr chill, ideally overnight)">30 min + chill…</span></div>
+          <div class="rcard-stat"><span class="rcard-stat-label">Cook</span><span class="rcard-stat-value mono">10 min</span></div>
+          <div class="rcard-stat"><span class="rcard-stat-label">Serves</span><span class="rcard-stat-value mono">8</span></div>
+        </div>
+        <div class="rcard-flags"><span>Mechanic</span></div>
+      </article>
+
+      <article class="rcard">
+        <div class="rcard-top"><span class="cuisine-chip">Thai</span><span class="tag">mains</span><span class="tag">thai</span><span class="tag">quick</span></div>
+        <h3 class="rcard-title">Pad Kra Pao Moo Saap</h3>
+        <div class="rcard-meta">
+          <div class="rcard-stat"><span class="rcard-stat-label">Prep</span><span class="rcard-stat-value mono">10 min</span></div>
+          <div class="rcard-stat"><span class="rcard-stat-label">Cook</span><span class="rcard-stat-value mono">8 min</span></div>
+          <div class="rcard-stat"><span class="rcard-stat-label">Serves</span><span class="rcard-stat-value mono">2</span></div>
+        </div>
+      </article>
+
+      <article class="rcard">
+        <div class="rcard-top"><span class="tag">sauces</span><span class="tag">american</span><span class="tag">quick</span><span class="tag tag-more">+1</span></div>
+        <h3 class="rcard-title">In-N-Out Burger Spread</h3>
+        <div class="rcard-meta">
+          <div class="rcard-stat"><span class="rcard-stat-label">Prep</span><span class="rcard-stat-value mono">10 min</span></div>
+          <div class="rcard-stat"><span class="rcard-stat-label">Makes</span><span class="rcard-stat-value mono" title="makes ~1 cup (250 ml)">makes ~1 cup (250 ml)</span></div>
+        </div>
+      </article>
+
+      <article class="rcard">
+        <div class="rcard-top"><span class="tag">mains</span><span class="tag">make-ahead</span><span class="tag">dairy-free</span><span class="tag tag-more">+1</span></div>
+        <h3 class="rcard-title">Beef Stew</h3>
+        <div class="rcard-meta">
+          <div class="rcard-stat"><span class="rcard-stat-label">Prep</span><span class="rcard-stat-value mono">30 min</span></div>
+          <div class="rcard-stat"><span class="rcard-stat-label">Cook</span><span class="rcard-stat-value mono" title="2–3 hr (or 30 min pressure)">2–3 hr (or 30…)</span></div>
+          <div class="rcard-stat"><span class="rcard-stat-label">Serves</span><span class="rcard-stat-value mono">4–6</span></div>
+        </div>
+        <div class="rcard-flags"><span>Mechanic</span></div>
+      </article>
+
+      <article class="rcard">
+        <div class="rcard-top"><span class="tag">mains</span><span class="tag">soups</span><span class="tag">vegetarian</span><span class="tag tag-more">+3</span></div>
+        <h3 class="rcard-title">Butternut Squash Soup</h3>
+        <div class="rcard-meta">
+          <div class="rcard-stat"><span class="rcard-stat-label">Prep</span><span class="rcard-stat-value mono">20 min</span></div>
+          <div class="rcard-stat"><span class="rcard-stat-label">Cook</span><span class="rcard-stat-value mono">1 hr 30 min</span></div>
+          <div class="rcard-stat"><span class="rcard-stat-label">Serves</span><span class="rcard-stat-value mono">4–6</span></div>
+        </div>
+        <div class="rcard-flags"><span>Mechanic</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="home-section" id="cuisine">
+    <div class="block-head">
+      <div>
+        <span class="block-num">03</span>
+        <h2 class="block-title">By cuisine</h2>
+        <p class="block-dek">Eighteen cuisines are represented so far, led by the weeknight regulars.</p>
+      </div>
+    </div>
+    <div class="browse-grid">
+      <div class="browse-list">
+        <a href="#">Chinese <span class="n">7</span></a>
+        <a href="#">Indian <span class="n">6</span></a>
+        <a href="#">Italian <span class="n">6</span></a>
+      </div>
+      <div class="browse-list">
+        <a href="#">Japanese <span class="n">5</span></a>
+        <a href="#">American <span class="n">4</span></a>
+        <a href="#">Mexican <span class="n">3</span></a>
+      </div>
+      <div class="browse-list">
+        <a href="#">Greek <span class="n">3</span></a>
+        <a href="#">Thai <span class="n">3</span></a>
+        <a href="#" class="browse-more">All 18 cuisines →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section split" id="essays-reference">
+    <div>
+      <div class="block-head">
+        <div>
+          <span class="block-num">04</span>
+          <h2 class="block-title">Essays</h2>
+          <p class="block-dek">No essays published yet. Four formats are planned, each anchored to a lesson rather than nostalgia for its own sake.</p>
+        </div>
+      </div>
+      <div class="comp-grid">
+        <div class="comp-card">
+          <span class="comp-card-label">Food memories</span>
+          <p class="comp-card-note">Thematic vignettes from childhood or formative meals, each carrying a lesson about cooking.</p>
+        </div>
+        <div class="comp-card">
+          <span class="comp-card-label">Cooking reflections</span>
+          <p class="comp-card-note">What technique, ingredients, or a specific failure taught. Ratio-based thinking, post-mortems welcome.</p>
+        </div>
+        <div class="comp-card">
+          <span class="comp-card-label">Technique essays</span>
+          <p class="comp-card-note">A single method or principle in depth: brining, emulsification, stock. Reference material dressed as prose.</p>
+        </div>
+        <div class="comp-card">
+          <span class="comp-card-label">Planning essays</span>
+          <p class="comp-card-note">Meal-prep philosophy and systems for getting a weeknight dinner on the table.</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="block-head">
+        <div>
+          <span class="block-num">05</span>
+          <h2 class="block-title">Reference</h2>
+          <p class="block-dek">Nineteen guides, meant to be looked up mid-cook, not read start to finish.</p>
+        </div>
+      </div>
+      <div class="browse-list">
+        <a href="#">Food ratios for your own recipes <span class="n">guide</span></a>
+        <a href="#">Temperature &amp; doneness cheat sheet <span class="n">reference</span></a>
+        <a href="#">Flour protein content comparison <span class="n">reference</span></a>
+        <a href="#">101 Carbonaras <span class="n">technique</span></a>
+        <a href="#">Burger night costing (2022) <span class="n">reference</span></a>
+        <a href="#" class="browse-more">All 19 reference guides →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div class="foot-row">
+      <div class="foot-brand">
+        <div class="name">not a chef.</div>
+        <p>A family cookbook, kept and maintained by the Aldersons. Recipes, essays, and reference notes from an ordinary home kitchen.</p>
+      </div>
+      <div class="foot-links">
+        <div>
+          <div class="heading">Browse</div>
+          <a href="#">Recipes</a>
+          <a href="#">Essays</a>
+          <a href="#">Reference</a>
+        </div>
+        <div>
+          <div class="heading">Index</div>
+          <a href="#">Tags</a>
+          <a href="#">Cuisines</a>
+        </div>
+      </div>
+      <button class="theme-toggle" id="themeToggle" type="button">
+        <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+        <span id="themeLabel">System</span>
+      </button>
+    </div>
+    <div class="foot-meta">
+      <span>This is a design mockup, not the live site.</span>
+      <span>Tokens and components from <span class="mono">mockups/style-guide.html</span></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var drawerToggle = document.querySelector('.mobile-drawer-toggle');
+  var drawerBackdrop = document.querySelector('.drawer-backdrop');
+  var drawerClose = document.querySelector('.drawer-close');
+  [drawerBackdrop, drawerClose].forEach(function(el){
+    if(el){ el.addEventListener('click', function(){ drawerToggle.open = false; }); }
+  });
+
+  var root = document.documentElement;
+  var toggle = document.getElementById('themeToggle');
+  var label = document.getElementById('themeLabel');
+  var order = ['system','light','dark'];
+  var current = 'system';
+  try{
+    var saved = localStorage.getItem('nac-homepage-theme');
+    if(saved && order.indexOf(saved) !== -1) current = saved;
+  }catch(e){}
+  function apply(mode){
+    if(mode === 'system'){ root.removeAttribute('data-theme'); }
+    else{ root.setAttribute('data-theme', mode); }
+    label.textContent = mode.charAt(0).toUpperCase() + mode.slice(1);
+    try{ localStorage.setItem('nac-homepage-theme', mode); }catch(e){}
+  }
+  apply(current);
+  toggle.addEventListener('click', function(){
+    current = order[(order.indexOf(current) + 1) % order.length];
+    apply(current);
+  });
+})();
+</script>
+
+</body>
+</html>
