@@ -1,0 +1,147 @@
+{{ define "main" }}
+{{/*
+  Custom homepage — none of Blowfish's built-in layouts (hero/profile/page/
+  card/background) match mockups/archived/homepage.html's structure (see
+  DESIGN.md, PLAN.md Phase 6.3). Ported section by section, with real Hugo
+  data replacing the mockup's hand-copied numbers: .Site.RegularPages for
+  "recently added" and counts, .Site.Taxonomies for cuisine/tag browsing.
+
+  Essays and Reference currently have zero published pages (no essays exist
+  yet; all 19 reference drafts are unreviewed — see PLAN.md Phase 2/8) — the
+  Reference section falls back to a `.section-caveat` note rather than an
+  empty grid, matching the ratified pattern for an under-built section.
+*/}}
+{{ $recipes := where site.RegularPages "Section" "recipes" }}
+{{ $reference := where site.RegularPages "Section" "reference" }}
+{{ $cuisines := site.Taxonomies.cuisine.ByCount }}
+{{ $tags := site.Taxonomies.tags.ByCount }}
+{{ $recent := first 6 $recipes.ByDate.Reverse }}
+
+<section class="hero">
+  <span class="hero-eyebrow">Recipes, essays and reference</span>
+  <h1>A cookbook that shows its work.</h1>
+  <p class="lede">{{ len $recipes }} family recipes, indexed by what actually works: ratios, timings, substitutions, and the fixes for when a first attempt didn't.</p>
+
+  <div class="search-row">
+    <button id="search-button" type="button" class="search-box">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+      Search {{ len $recipes }} recipes, tags, cuisines&hellip;
+      <kbd>/</kbd>
+    </button>
+  </div>
+
+  <div class="stat-rail">
+    <div class="stat"><span class="stat-label">Recipes</span><span class="stat-value mono">{{ len $recipes }}</span></div>
+    <div class="stat"><span class="stat-label">Cuisines</span><span class="stat-value mono">{{ len $cuisines }}</span></div>
+    <div class="stat"><span class="stat-label">Tags</span><span class="stat-value mono">{{ len $tags }}</span></div>
+    <div class="stat"><span class="stat-label">Reference guides</span><span class="stat-value mono">{{ len $reference }}</span></div>
+  </div>
+</section>
+
+<section class="home-section" id="tonight">
+  <div class="block-head">
+    <div>
+      <span class="block-num">01</span>
+      <h2 class="block-title">What's for dinner tonight?</h2>
+      <p class="block-dek">Filters drawn from the tags actually used across the collection.</p>
+    </div>
+  </div>
+  <div class="filter-row">
+    {{ range first 7 $tags }}
+      <a class="filter-pill" href="{{ printf "tags/%s/" (.Name | urlize) | relURL }}">{{ .Name }}</a>
+    {{ end }}
+  </div>
+</section>
+
+<section class="home-section" id="recent">
+  <div class="block-head">
+    <div>
+      <span class="block-num">02</span>
+      <h2 class="block-title">Recently added</h2>
+      <p class="block-dek">The six most recent entries in the index, most recent first.</p>
+    </div>
+    <a class="mega-viewall" href="{{ "recipes" | relURL }}">View all {{ len $recipes }} recipes &rarr;</a>
+  </div>
+  <div class="rgrid">
+    {{ range $recent }}
+      {{ partial "recipe-card.html" . }}
+    {{ end }}
+  </div>
+</section>
+
+<section class="home-section" id="cuisine">
+  <div class="block-head">
+    <div>
+      <span class="block-num">03</span>
+      <h2 class="block-title">By cuisine</h2>
+      <p class="block-dek">{{ len $cuisines }} cuisines are represented so far, led by the weeknight regulars.</p>
+    </div>
+  </div>
+  <div class="browse-grid">
+    {{ range first 9 $cuisines }}
+      <div class="browse-list"><a href="{{ printf "cuisine/%s/" (.Name | urlize) | relURL }}">{{ .Name }} <span class="n">{{ .Count }}</span></a></div>
+    {{ end }}
+  </div>
+  {{ if gt (len $cuisines) 9 }}
+    <p style="margin-top:8px;"><a class="browse-more" href="{{ "cuisine" | relURL }}">All {{ len $cuisines }} cuisines &rarr;</a></p>
+  {{ end }}
+</section>
+
+<section class="home-section split" id="essays-reference">
+  <div>
+    <div class="block-head">
+      <div>
+        <span class="block-num">04</span>
+        <h2 class="block-title">Essays</h2>
+        <p class="block-dek">No essays published yet. Four formats are planned, each anchored to a lesson rather than nostalgia for its own sake.</p>
+      </div>
+    </div>
+    <div class="comp-grid">
+      <div class="comp-card">
+        <span class="comp-card-label">Food memories</span>
+        <p class="comp-card-note">Thematic vignettes from childhood or formative meals, each carrying a lesson about cooking.</p>
+      </div>
+      <div class="comp-card">
+        <span class="comp-card-label">Cooking reflections</span>
+        <p class="comp-card-note">What technique, ingredients, or a specific failure taught. Ratio-based thinking, post-mortems welcome.</p>
+      </div>
+      <div class="comp-card">
+        <span class="comp-card-label">Technique essays</span>
+        <p class="comp-card-note">A single method or principle in depth: brining, emulsification, stock. Reference material dressed as prose.</p>
+      </div>
+      <div class="comp-card">
+        <span class="comp-card-label">Planning essays</span>
+        <p class="comp-card-note">Meal-prep philosophy and systems for getting a weeknight dinner on the table.</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="block-head">
+      <div>
+        <span class="block-num">05</span>
+        <h2 class="block-title">Reference</h2>
+        <p class="block-dek">
+          {{ if $reference }}
+            {{ len $reference }} guides, meant to be looked up mid-cook, not read start to finish.
+          {{ else }}
+            Meant to be looked up mid-cook, not read start to finish — not published yet.
+          {{ end }}
+        </p>
+      </div>
+    </div>
+    {{ if $reference }}
+      <div class="browse-list">
+        {{ range first 5 $reference.ByTitle }}
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ end }}
+      </div>
+      {{ if gt (len $reference) 5 }}
+        <p style="margin-top:8px;"><a class="browse-more" href="{{ "reference" | relURL }}">All {{ len $reference }} reference guides &rarr;</a></p>
+      {{ end }}
+    {{ else }}
+      <div class="section-caveat">Reference guides exist as drafts from the family archive but haven't been reviewed for publish yet (see PLAN.md's draft-review backlog).</div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

@@ -104,10 +104,10 @@ Add the ability to render structured CSV/table data in Hugo pages — for costin
 
 ## Phase 5: Self-hosted deployment
 
-- [ ] Decide on host and server setup
-- [ ] Write `tools/deploy.sh` using rsync or similar
-- [ ] Add `make deploy` target
-- [x] Write `.claude/commands/publish.md` (falls back gracefully — builds and stops with a reminder if `tools/deploy.sh` doesn't exist yet)
+- [x] Decide on host and server setup (VPS; SSH access via `~/.ssh/config` alias, configured locally in `tools/config.toml`, gitignored)
+- [x] Write `tools/deploy.sh` using rsync or similar
+- [x] Add `make deploy` target
+- [x] Write `.claude/commands/publish.md` (runs `make build` then `make deploy`; errors clearly if `tools/config.toml` isn't set up)
 - [ ] Test full deploy: build → transfer → verify live site
 - [ ] Set up automated builds (cron or webhook) if desired
 
@@ -115,16 +115,113 @@ Add the ability to render structured CSV/table data in Hugo pages — for costin
 
 ## Phase 6: Theme customization
 
-Tune the existing Blowfish theme rather than replace it. Recipes are the primary content type; the theme should read well as a cookbook, not a generic blog.
+The design exploration this phase used to describe is done — `mockups/STYLE.md`/`style.html` and `mockups/COMPONENTS.md`/`components.html` (distilled from `mockups/archived/style-guide.html`, `recipe-spec-sheet.html`, and `homepage.html`) already settle the palette, type system, and every component. This phase is now about **translating those static mockups into working Hugo/Blowfish templates**, not designing from scratch.
 
-- [ ] Define a colour palette (light and dark) that fits a food/cookbook site, not Blowfish's default scheme
-- [ ] Choose a typeface pairing: one for headings/UI, one for recipe body text (ingredients and method need to be easy to scan, not just readable)
-- [ ] Design the recipe card component used on the `/recipes/` grid: title, cuisine, tags, prep time, optional featured image
-- [ ] Style ingredient lists and method prose so they're visually distinct from each other at a glance
-- [ ] Verify dark mode across all three content types, not just the homepage
-- [ ] Decide whether `featured: false` (already in the frontmatter schema, see DESIGN.md) is worth wiring up to an actual homepage card grid, or drop it
+Two facts from inspecting `themes/blowfish/` directly change how this has to be built (found 2026-09-17, not assumed):
 
-**Output:** A site that looks like a cookbook, in both light and dark mode.
+- **Blowfish's color scheme system doesn't match our token model.** A scheme file (`assets/css/schemes/*.css`, e.g. `fire.css`, the one currently active in `params.toml`) defines full Tailwind-style 50–900 shade ramps for `neutral`/`primary`/`secondary` as RGB triplets, consumed by Tailwind Typography's `.prose` classes throughout the theme. Our style guide defines ~15 semantic tokens with only light/dark pairs, no intermediate shades. A custom scheme means generating real 9-step ramps anchored on our hex values, not just dropping our tokens in.
+- **Nothing is actually wired up yet.** `layouts/` in this repo only has the wiki-link render hook and the `index.json` generator — recipes, essays, and reference all currently fall back to Blowfish's generic `_default/single.html`/`list.html` (plain Tailwind prose). None of the mockup's components (ingredient check, Mechanic callout, stat rail, recipe card, mega-menu, etc.) exist as Hugo templates. None of Blowfish's 5 built-in homepage layouts (`hero`/`profile`/`page`/`card`/`background`) matches `homepage.html`'s structure either — that one needs a full custom `layouts/index.html`.
+
+### 6.0 — Resolve what COMPONENTS.md left open
+
+`mockups/COMPONENTS.md`'s closing section lists concrete unresolved duplicates (two competing recipe-card designs, a `.cuisine-chip` naming collision, two "archive stats" treatments, three different answers for where search/theme-toggle live, two page-note shapes, essay/reference teaser layouts that haven't converged). **Do this pass before writing templates** — building a Hugo partial for a recipe card is wasted work if it's the design that gets cut. This can be the "polish and filter for quality" pass already flagged as pending.
+
+- [x] Work through COMPONENTS.md's numbered list, pick one option for each, note the decision back in `STYLE.md`/`style-guide.html` (done 2026-09-17 — see `STYLE.md`'s "Decisions" subsection)
+- [x] Fold the "candidate" components (ingredient sub-head/sub-note, notes-sub, variation block, wikilink/extlink, listing-page header, site footer, prose-as-default procedure) into `STYLE.md`'s ratified component list (done 2026-09-17, demonstrated in `style.html` §3)
+
+### 6.1 — Blowfish scheme + global chrome ✅ done 2026-09-17
+
+- [x] Generate a custom `assets/css/schemes/not-a-chef.css`: 50–900 ramps for `neutral` and `primary`, computed (not eyeballed) from every real light/dark token in `STYLE.md` via HSL bucketing/interpolation — see the file's own header comment for the method. `--highlight`/`--flag` stay bespoke, non-Tailwind CSS custom properties (decision recorded in `STYLE.md`); a `secondary` ramp is still generated from `--highlight` since Tailwind's color system expects the key to exist, but nothing of ours reads it.
+- [x] Set `colorScheme = "not-a-chef"` in `config/_default/params.toml`
+- [x] Override `layouts/partials/head.html` to load the three fonts (Google Fonts `<link>`, since Blowfish has no font-customization hook)
+- [x] Bridge our semantic tokens (`--bg`/`--ink`/`--accent`/etc., verbatim from `STYLE.md`, light default + `.dark` override) into `assets/css/custom.css` — Blowfish's own markup never reads them, but this is what lets Phase 6.2's component CSS (`.rcard`, `.ing`, `.mechanic`, ported straight from the mockups) work unmodified against real templates instead of being rewritten against Tailwind's ramp. Verified: `.dark{--bg:#1B1C16;...}` present in the built CSS bundle, targeting Blowfish's real `.dark`-class mechanism.
+- [x] Override `layouts/partials/footer.html` with the mockup's `.site-footer` shape (brand blurb, Browse/Index link columns, theme toggle) — verified in the built HTML.
+- [x] Found and fixed a real Blowfish quirk: `footer.showAppearanceSwitcher` doesn't control the footer at all — it puts an icon-only toggle in the *header* nav (`desktop-menu.html`/`mobile-menu.html`). Set to `false` (documented inline in `params.toml`) since our toggle now lives in the footer, reusing the theme's own `#appearance-switcher` id/JS so no script changes were needed.
+- [x] `hugo --quiet` builds clean; confirmed in the rendered output: fonts linked, footer renders with the toggle, header no longer has the icon toggle (`appearance-switcher` appears exactly once, in the footer), dark-mode CSS block present in the compiled bundle.
+- **Not verified**: no Chrome extension was connected this session, so the actual rendered look — Blowfish's own chrome (nav, buttons, prose) against the new scheme, and the dark-mode toggle actually working in a browser — hasn't been eyeballed yet. Do that before calling 6.1 fully sound; Tailwind's neutral/primary ramps are a real color-math translation of the tokens, not a guaranteed pixel match to the mockups.
+
+### 6.2 — Recipe content: the harder, more custom half
+
+FORMAT.md's markdown structure (`## Mechanic`, `## Ingredients`, `## Method`, component headings) needs to render as the mockup's actual components, not generic Tailwind prose. Two ways to get there, worth deciding explicitly rather than drifting into one:
+
+- **(a) Markdown render hooks** (`layouts/_default/_markup/render-heading.html`, extending the existing `render-link.html` pattern) that detect known section headings and wrap their content in the right component markup/classes
+- **(b) A custom single-recipe layout** (`layouts/recipes/single.html`) that reads frontmatter directly (servings/prep_time/cook_time → stat rail) and leaves body content to simpler, more generic styling
+
+Recommend (a) for anything that needs real interactivity or specific markup the raw list/paragraph can't produce (ingredient checkboxes, Mechanic's left-border box, numbered-step badges), and (b) for the frontmatter-driven pieces (stat rail, taxonomy chips) that don't touch body content at all.
+
+- [ ] `layouts/recipes/single.html`: title, taxonomy row (cuisine chip + tags), stat rail from frontmatter
+- [ ] Render hook or shortcode for the Mechanic callout
+- [ ] Ingredient list styling (checkbox component) — decide once whether this needs real interactivity (state that persists, e.g. via `localStorage`) or is presentational only
+- [ ] Numbered-step vs. prose procedure — both need to work, since FORMAT.md allows either
+- [ ] Notes list, notes sub-section, variation blocks, wikilink/extlink styles
+- [ ] `layouts/recipes/list.html`: the recipe card grid, using whichever card design won in 6.0
+- [ ] Same pass for `layouts/essays/` and `layouts/reference/` once there's real content to verify against (essays has none yet — Phase 3)
+
+### 6.3 — Homepage ✅ done 2026-09-17
+
+- [x] `layouts/index.html`, built from `mockups/archived/homepage.html`'s structure with real Hugo data throughout — `where site.RegularPages "Section" "recipes"`/`"reference"` for counts and "recently added" (`.ByDate.Reverse`, first 6), `.Site.Taxonomies.cuisine`/`.tags` (`.ByCount.Reverse`) for browse sections. No number in the template is hand-written. New `layouts/partials/recipe-card.html` (the ratified `.rcard`) is shared with the mega-menu/nav work below and will be reused by the recipes list page in 6.2.
+- [x] Mega-menu: built in a full override of `layouts/partials/header/basic.html` (Blowfish's own nav/dropdown system doesn't support mega-panels at all, so this replaces rather than extends it — `config/_default/params.toml`'s `header.layout` changed to `"basic"` so it renders unwrapped, not inside the fixed/blurred chrome the other header layouts add). One real difference from the mockup: there's no `course` taxonomy configured (only `tag` and `cuisine`, see `hugo.toml`), so the "By course" column was dropped rather than faked — "By cuisine" + "Quick filters" (top real tags) instead.
+- [x] Dropped the `featured` frontmatter field (was never used by any recipe) rather than wiring it up — see `DESIGN.md`. "Recently added" is plain real-date sorting.
+- Also needed and built along the way: `config/_default/menus.en.toml` deleted (its `[[main]]`/`[[footer]]` menus became dead config once the nav and footer overrides stopped reading `.Site.Menus` — everything they need is either hardcoded structure or real taxonomy/section data now). The homepage hero's search button reuses Blowfish's real `#search-button`/Fuse.js search (and `/` shortcut) rather than being a fake input.
+- **Real gap surfaced, not hidden**: Reference has 19 draft files but 0 published, and Essays has 0 files at all — confirmed both in a real `hugo --quiet` build (reference guides stat = 0, `.section-caveat` shown) and a `--buildDrafts` build (stat = 19, real titles/links appear in both the nav mega-panel and the homepage split section). This is accurate, not a bug — see Phase 2/8's draft-review backlog.
+- **Now visually verified in a browser (2026-09-17)** — see the fixes below, found this way.
+
+### Bugs found and fixed by an actual browser check (2026-09-17)
+
+The "not yet visually verified" caveat above was real: three genuine bugs only showed up once someone looked at the rendered page, not from `hugo --quiet` building clean.
+
+1. **Stat rail had no layout at all** — `.stat-rail`/`.stat`/`.stat-label`/`.stat-value` were added to the *mockup* (`mockups/style.html`) during 6.1 but never ported into the real site's `assets/css/custom.css`, so the hero and any future stat rail rendered as unstyled stacked text. Fixed by adding the missing rule block to `custom.css`.
+2. **Cuisine/tag "top" lists were backwards** — `site.Taxonomies.cuisine.ByCount.Reverse` was used on the assumption `.ByCount` returns ascending order; it doesn't, it's already descending in this Hugo version, so `.Reverse` produced the *least*-common cuisines/tags first (a mega-menu showing eight cuisines all with count 1). Fixed in both `layouts/index.html` and `layouts/partials/header/basic.html` by dropping `.Reverse`.
+3. **Dark-mode theme toggle collapsed to nothing in dark mode** — the footer button used Tailwind utility classes `hidden`/`dark:inline` for its icon/label swap. Blowfish's CSS is a static precompiled bundle (no build step runs here — see `custom.css`'s own header comment) containing only the exact `dark:` variants Blowfish's own templates use; `dark:hidden` exists (Blowfish's header icon toggle uses it) but `dark:inline` was never generated anywhere, so it silently did nothing and the button showed no icon or text at all once `.dark` was active. Fixed by switching to plain custom classes (`.tt-light`/`.tt-dark`) styled directly in `custom.css`, which doesn't depend on Tailwind's static class set. **Lesson for any future markup here: don't reach for a `dark:*` Tailwind utility unless it's grep-able in `themes/blowfish/assets/css/compiled/main.css` first** — if it's not already used somewhere in the shipped theme, it doesn't exist.
+
+Also found and worth knowing: **the long-running `hugo server -D` dev process can go stale** after enough live-reload cycles across template/config edits in one session (one point in this session showed 83 recipes/0 reference guides — the *published-only* counts — despite `-D` being on, until the server was killed and restarted, after which it correctly showed 230/19). If preview numbers look wrong mid-session, restart the server before assuming the template is broken.
+
+### A second, real browser session (Chrome, 2026-09-17) — four more bugs
+
+Testing in an actual Chrome window (not just fetch/grep) surfaced four more real bugs the first pass missed, three of them only visible by physically opening the mobile drawer and looking at the footer at a narrow width:
+
+1. **Mobile drawer collapsed to a sliver.** `.drawer-panel`/`.drawer-backdrop` used `position: absolute`, which anchors to `.site-nav-inner` (`position: relative`) — a box only as tall as the nav bar, not the viewport. `top:0; bottom:0` on that short box collapsed both to the nav bar's own height, clipping every drawer link. Fixed by switching both to `position: fixed` (`assets/css/custom.css`).
+2. **Drawer's X button and backdrop click did nothing.** `<details>` alone has no way to close itself except re-clicking the `<summary>` — the mockup this was ported from had a small inline `<script>` wiring backdrop/close-button clicks to `drawerToggle.open = false`, which never got carried over when the nav was rebuilt as a Hugo partial. Added it back (`layouts/partials/header/basic.html`); also changed the close control from a non-interactive `<span aria-hidden="true">` to a real `<button>` so it's keyboard/screen-reader reachable too.
+3. **Footer theme-toggle button stretched into a tall, narrow pill instead of staying compact** — `.foot-row`'s flex row had no `align-items`, so it defaulted to `stretch`; on any line where the toggle shared space with the taller `.foot-links` column (which happens at both narrow width, where brand/links/toggle wrap, and was likely subtle at desktop width too), the toggle stretched to match. Fixed with `align-items: flex-start` on `.foot-row`.
+4. **The dev-server draft staleness (noted above) is worse than "eventually goes stale" — it's "every single rebuild loses `-D`."** Confirmed repeatedly: a completely fresh `hugo server -D` start always shows the correct 230 recipes/19 reference guides; the *very first* live-reload rebuild after *any* file edit (CSS-only edits included) reliably drops back to published-only counts (83/0) even with `--disableFastRender`. **This only affects the live preview process** — a one-shot `hugo --quiet`/`hugo --minify` build (what an actual deploy uses) is unaffected, since each such run starts fresh. Practical rule: after editing anything while `hugo server -D` is running, kill and restart it before trusting what it shows — don't rely on live-reload for draft-inclusive preview in this Hugo version (v0.166, flagged as untested against this Blowfish version at startup — possibly related).
+
+`tools/preview.sh` was updated to open in Chrome specifically (`open -a "Google Chrome"`) rather than the system default browser, since that's what the Claude-in-Chrome extension used to test this site can see.
+
+### The real problem, found by comparing side by side against the mockup (2026-09-17)
+
+The user pushed back hard on the work above ("fonts are incorrect, colours, layouts don't match... maybe 50% there") — correctly. The checks up to this point were all *piecemeal*: grepping for a class name, reading one computed style at a time. None of it was an actual side-by-side comparison against the real mockup. Doing that (serving `mockups/` over `python3 -m http.server` and opening both it and `localhost:1313` in Chrome at the same viewport) found the actual root cause in about five minutes:
+
+**The entire site's page background was plain white, everywhere, in both light and dark mode — never the warm cream `--bg` token.** Blowfish's `<body>` tag (`themes/blowfish/layouts/_default/baseof.html`) is hardcoded to Tailwind's `bg-neutral` class (no numeric suffix). `bg-neutral` resolves to `--color-neutral`, which every scheme file — including the one generated for this project — hardcodes to pure white as a matter of Blowfish convention (confirmed identical across all the theme's shipped schemes). None of the `assets/css/schemes/not-a-chef.css` ramp work in 6.1 ever touched this, because `bg-neutral` never reads the ramp at all. The same bug hit the search modal (`#search-modal` also used bare `bg-neutral`). Every other color check that passed (accent color, card borders, chip colors) was real, but they were all sitting on the wrong canvas — which is exactly the kind of thing that reads as "colors don't match" without any single element being obviously broken in isolation.
+
+Fixed both with direct overrides in `assets/css/custom.css` (`body { background-color: var(--bg) }`, `#search-modal { background-color: var(--surface) }`), verified with exact computed-style comparison against the mockup (`rgb(243, 243, 236)` / `#F3F3EC` matches exactly in both) and a screenshot comparison at matching viewports.
+
+**Also found and fixed in this pass**: a recipe page's `## Mechanic`/`## Ingredients` headings were rendering in Lora (serif) instead of Libre Franklin — the blanket `.prose { font-family: Lora }` rule from 6.1 caught headings too, when STYLE.md's split is by role (headings vs. body text) not by container. Fixed with `.prose :where(h1,h2,h3,h4,h5,h6) { font-family: 'Libre Franklin' }`.
+
+**Lesson, stated plainly**: checking that a CSS rule exists in the bundle, or that one element's computed style matches one token, is not the same as verifying the page matches the design. The only check that actually caught the body-background bug was opening the real mockup HTML next to the real site in the same browser and comparing them directly — do that first on any future visual-parity claim, not last.
+
+### Header/footer weren't full-bleed (2026-09-17, user-reported)
+
+The user caught this by eye at desktop width: the header and footer bars didn't span edge to edge — they had visible margins on both sides instead of their background reaching the browser window's edges. Real cause: `layouts/partials/header/basic.html` and `footer.html` render as direct children of Blowfish's `<body>`, which is hardcoded (`themes/blowfish/layouts/_default/baseof.html`) to `max-w-7xl` plus responsive padding up to 128px per side at wide viewports — that's Blowfish's own layout, untouched by anything in Phase 6 so far. `.site-nav`/`.site-footer` inherited that inset instead of reaching the real viewport edges. Only visible on a wide window — every screenshot up to this point in the session had been at a narrow (~430–500px) width, where 128px of padding doesn't apply and the bug is much less obvious (Blowfish's own responsive padding starts at just 24px there).
+
+Fixed without touching `<body>` (which not-yet-customized pages like the recipe single/list, essays, and reference pages still rely on for their own layout) — a standard full-bleed breakout on `.site-nav`/`.site-footer` in `assets/css/custom.css`:
+```css
+.site-nav, .site-footer {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+```
+This cancels out body's padding/max-width/centering exactly regardless of viewport width (verified algebraically and by checking `getBoundingClientRect()` at 1320px: nav now spans -4px to 1316px, i.e. the full window width, the ~4px either side being the well-known/accepted vw-vs-scrollbar rounding this technique has). The inner `.site-nav-inner`/`.site-footer-inner` (`max-width:1100px; margin:0 auto`) still center correctly inside the now full-width bar, matching the mockup exactly. Confirmed the mega-menu dropdown (positioned relative to the nav item, not the bar) was unaffected.
+
+**Another point for the "check at more than one viewport" list**: this session's whole visual-audit pass (the one that found the body-background bug) was done at a narrow width by habit, left over from testing the mobile drawer. A real design-parity check needs at least one desktop-width pass too — bugs don't scale evenly across breakpoints.
+
+### 6.4 — Verify
+
+- [ ] Build incrementally (nav → recipe single → recipe listing → homepage → footer), `hugo --quiet` + visual check after each section, not one big-bang build
+- [ ] Dark mode check across all three content types once 6.1's `.dark`-class targeting is confirmed working
+- [ ] Cross-check `public/recipes/index.json` numbers against what the mega-menu/homepage actually render, to catch any live-data wiring bugs
+
+**Output:** The mockups become the actual site. A cookbook, not a generic blog, in both light and dark mode, with the recipe index as the live source of truth rather than a number copied into a mockup by hand.
 
 ## Phase 7: UX improvements
 
@@ -147,7 +244,7 @@ Four areas, roughly in priority order. Some of this depends on Phase 6 landing f
 - [ ] Resolve CSV/table rendering (Phase 3b) as part of this pass, not separately
 
 **Navigation and homepage**
-- [ ] Design the homepage `background` layout: hero image, tagline, links into Recipes and Essays (per DESIGN.md's original intent, not yet built)
+- [ ] Verify the built homepage (Phase 6.3) reads well against real content, not just the mockup's hand-picked six recipes — iterate on layout/copy once it's live
 - [ ] Verify the footer taxonomy links (Tags, Cuisines) work end to end
 - [ ] Cross-link essays and reference pages to related recipes where it makes sense
 

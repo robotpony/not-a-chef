@@ -1,0 +1,140 @@
+{{/*
+  Override of themes/blowfish/layouts/partials/header/basic.html.
+
+  Full replacement, not an extension: our nav (site-nav, mega-menu, mobile
+  drawer) is fully specified in mockups/archived/homepage.html and doesn't
+  reuse Blowfish's menu/dropdown system. config/_default/params.toml sets
+  header.layout = "basic" so this renders unwrapped (no fixed/blurred
+  chrome — see that file's comment).
+
+  Mega-menu columns pull from real Site.Taxonomies, not hand-written counts
+  (PLAN.md 6.3) — there's no "course" taxonomy configured (only tag and
+  cuisine, see config/_default/hugo.toml), so unlike the mockup this only
+  has a By cuisine column, plus quick filters from the most-used tags.
+*/}}
+{{ $recipesSection := where site.RegularPages "Section" "recipes" }}
+{{ $referenceSection := where site.RegularPages "Section" "reference" }}
+{{ $cuisines := site.Taxonomies.cuisine.ByCount }}
+{{ $tags := site.Taxonomies.tags.ByCount }}
+
+<header class="site-nav">
+  <div class="site-nav-inner">
+    <a class="site-logo" href="{{ "" | relLangURL }}">not a chef.</a>
+
+    <nav class="site-nav-links" aria-label="Primary">
+      <details class="nav-drop" name="nav-menu">
+        <summary>Recipes</summary>
+        <div class="mega-panel">
+          <div class="mega-col">
+            <span class="mega-col-label">By cuisine</span>
+            {{ range first 8 $cuisines }}
+              <a href="{{ printf "cuisine/%s/" (.Name | urlize) | relURL }}">{{ .Name }} <span class="n">{{ .Count }}</span></a>
+            {{ end }}
+            {{ if gt (len $cuisines) 8 }}
+              <a class="mega-more" href="{{ "cuisine" | relURL }}">All {{ len $cuisines }} cuisines &rarr;</a>
+            {{ end }}
+          </div>
+          <div class="mega-filters">
+            <span class="mega-col-label">Quick filters</span>
+            <div class="mega-chip-row">
+              {{ range first 7 $tags }}
+                <a class="mega-chip" href="{{ printf "tags/%s/" (.Name | urlize) | relURL }}">{{ .Name }}</a>
+              {{ end }}
+            </div>
+            <a class="mega-viewall" href="{{ "recipes" | relURL }}">View all {{ len $recipesSection }} recipes &rarr;</a>
+          </div>
+        </div>
+      </details>
+
+      <a class="nav-link" href="{{ "essays" | relURL }}">Essays</a>
+      <a class="nav-link" href="{{ "the-food-log" | relURL }}">The Food Log</a>
+
+      <details class="nav-drop" name="nav-menu">
+        <summary>Reference</summary>
+        <div class="mega-panel mega-panel-simple">
+          <div class="mega-col">
+            <span class="mega-col-label">Guides</span>
+            {{ if $referenceSection }}
+              {{ range first 6 $referenceSection.ByTitle }}
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              {{ end }}
+              {{ if gt (len $referenceSection) 6 }}
+                <a class="mega-more" href="{{ "reference" | relURL }}">All {{ len $referenceSection }} reference guides &rarr;</a>
+              {{ end }}
+            {{ else }}
+              <div class="section-caveat">Reference guides aren't published yet.</div>
+            {{ end }}
+          </div>
+        </div>
+      </details>
+
+      <a class="nav-link" href="{{ "vlog" | relURL }}">Vlog</a>
+    </nav>
+
+    <details class="mobile-drawer-toggle">
+      <summary aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+      </summary>
+      <div class="drawer-backdrop"></div>
+      <nav class="drawer-panel" aria-label="Primary mobile">
+        <div class="drawer-panel-head">
+          <span class="site-logo">not a chef.</span>
+          <button type="button" class="drawer-close" aria-label="Close menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+          </button>
+        </div>
+
+        <details class="drawer-item" name="drawer-menu">
+          <summary>Recipes</summary>
+          <div class="drawer-sub">
+            <span class="mega-col-label">By cuisine</span>
+            {{ range first 5 $cuisines }}
+              <a href="{{ printf "cuisine/%s/" (.Name | urlize) | relURL }}">{{ .Name }} <span class="n">{{ .Count }}</span></a>
+            {{ end }}
+            <a class="mega-more" href="{{ "cuisine" | relURL }}">All {{ len $cuisines }} cuisines &rarr;</a>
+            <span class="mega-col-label">Quick filters</span>
+            <div class="mega-chip-row">
+              {{ range first 4 $tags }}
+                <a class="mega-chip" href="{{ printf "tags/%s/" (.Name | urlize) | relURL }}">{{ .Name }}</a>
+              {{ end }}
+            </div>
+            <a class="mega-viewall" href="{{ "recipes" | relURL }}" style="margin-top:12px;">View all {{ len $recipesSection }} recipes &rarr;</a>
+          </div>
+        </details>
+
+        <a class="drawer-link" href="{{ "essays" | relURL }}">Essays</a>
+        <a class="drawer-link" href="{{ "the-food-log" | relURL }}">The Food Log</a>
+
+        <details class="drawer-item" name="drawer-menu">
+          <summary>Reference</summary>
+          <div class="drawer-sub">
+            {{ if $referenceSection }}
+              {{ range first 5 $referenceSection.ByTitle }}
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              {{ end }}
+              <a class="mega-more" href="{{ "reference" | relURL }}">All {{ len $referenceSection }} reference guides &rarr;</a>
+            {{ else }}
+              <span style="padding:7px 4px; color:var(--ink-faint); font-size:.87rem;">Not published yet.</span>
+            {{ end }}
+          </div>
+        </details>
+
+        <a class="drawer-link" href="{{ "vlog" | relURL }}">Vlog</a>
+      </nav>
+    </details>
+  </div>
+</header>
+<script>
+(function(){
+  // <details> alone has no way to close on backdrop/X click — confirmed by
+  // actually opening the drawer in a browser, where clicking either did
+  // nothing. Ported from mockups/archived/homepage.html's own script,
+  // which had exactly this for the same reason.
+  var drawerToggle = document.querySelector('.mobile-drawer-toggle');
+  var drawerBackdrop = document.querySelector('.drawer-backdrop');
+  var drawerClose = document.querySelector('.drawer-close');
+  [drawerBackdrop, drawerClose].forEach(function(el){
+    if(el){ el.addEventListener('click', function(){ drawerToggle.open = false; }); }
+  });
+})();
+</script>

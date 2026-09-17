@@ -1,0 +1,65 @@
+/* Not a Chef scheme
+ *
+ * Generated 2026-09-17 from mockups/STYLE.md's real light/dark token pairs,
+ * not invented from scratch. Each ramp step is either a direct token
+ * (see the comment) or a linear HSL interpolation between two token
+ * anchors — never a value picked by eye.
+ *
+ * Because Blowfish templates pick which ramp step to use per mode (e.g.
+ * `text-neutral-800 dark:text-neutral-100`) rather than swapping the whole
+ * ramp, one ramp has to serve both themes: our light-mode tokens anchor the
+ * low-numbered (light) end, our dark-mode tokens anchor the high-numbered
+ * (dark) end. A light-mode background (e.g. --surface #FBFBF6) and a
+ * dark-mode foreground (e.g. --ink dark #ECEEE2) are both near-white, so
+ * they land at neighbouring low steps; a light-mode foreground (--ink
+ * #23241E) and a dark-mode background (--bg dark #1B1C16) are both
+ * near-black and land at neighbouring high steps. See STYLE.md for what
+ * each source token means.
+ *
+ * `secondary` (the yellow family, from --highlight) is generated for
+ * Tailwind/Blowfish's color system to have a complete ramp, but per
+ * STYLE.md, --highlight and --flag stay as bespoke, narrow-role CSS custom
+ * properties in our own component CSS (cuisine chip, draft banner) rather
+ * than being restyled onto this ramp — don't reach for `secondary-*`
+ * classes in new templates for those roles.
+ */
+:root {
+  --color-neutral: 255, 255, 255;
+
+  /* Neutral — warm olive-grey, from --bg/--surface/--ink (light + dark) */
+  --color-neutral-50: 247, 247, 241;   /* between --surface and --bg (light) */
+  --color-neutral-100: 235, 237, 224;  /* --ink (dark) / --surface-2 (light) */
+  --color-neutral-200: 219, 220, 206;  /* --border (light) */
+  --color-neutral-300: 184, 186, 166;  /* --border-strong (light) / --ink-muted (dark) */
+  --color-neutral-400: 147, 148, 138;  /* --ink-faint (light) */
+  --color-neutral-500: 108, 109, 98;   /* --ink-faint (dark) / --ink-muted (light) */
+  --color-neutral-600: 65, 67, 51;     /* --border-strong / --border (dark) */
+  --color-neutral-700: 35, 36, 30;     /* --ink (light) */
+  --color-neutral-800: 30, 31, 24;     /* --surface / --bg (dark) */
+  --color-neutral-900: 23, 24, 15;     /* --surface-2 (dark) */
+
+  /* Primary — orange→red, from --accent/--accent-strong (light + dark) */
+  --color-primary-50: 246, 234, 218;   /* --accent-soft (light) */
+  --color-primary-100: 237, 207, 183;  /* interpolated */
+  --color-primary-200: 228, 173, 149;  /* --accent-strong (dark) */
+  --color-primary-300: 220, 167, 127;  /* interpolated */
+  --color-primary-400: 211, 165, 105;  /* --accent (dark) */
+  --color-primary-500: 200, 141, 65;   /* interpolated */
+  --color-primary-600: 166, 115, 48;   /* --accent (light) */
+  --color-primary-700: 124, 54, 29;    /* --accent-strong (light) */
+  --color-primary-800: 87, 49, 30;     /* interpolated */
+  --color-primary-900: 55, 38, 27;     /* --accent-soft (dark) */
+
+  /* Secondary — yellow, from --highlight (light + dark). See note above:
+     our own components don't use this ramp, kept only for Tailwind. */
+  --color-secondary-50: 246, 241, 213;  /* --highlight-soft (light) */
+  --color-secondary-100: 235, 224, 173; /* interpolated */
+  --color-secondary-200: 221, 204, 136; /* --highlight (dark) */
+  --color-secondary-300: 212, 190, 104; /* interpolated */
+  --color-secondary-400: 204, 175, 71;  /* interpolated */
+  --color-secondary-500: 184, 154, 50;  /* interpolated */
+  --color-secondary-600: 153, 127, 41;  /* --highlight (light) */
+  --color-secondary-700: 116, 98, 39;   /* interpolated */
+  --color-secondary-800: 83, 70, 33;    /* interpolated */
+  --color-secondary-900: 52, 45, 25;    /* --highlight-soft (dark) */
+}

@@ -1,0 +1,36 @@
+{{/*
+  Recipe card (.rcard) — ratified in mockups/STYLE.md over the alternate
+  tabbed/dated card (see COMPONENTS.md's Decisions). Takes a recipe Page as
+  context. Shared by the homepage "recently added" grid and (eventually)
+  the recipes list page — see PLAN.md Phase 6.2.
+*/}}
+{{ $tagLimit := 3 }}
+{{ $tags := .Params.tags }}
+<a class="rcard" href="{{ .RelPermalink }}">
+  <div class="rcard-top">
+    {{ with .Params.cuisine }}<span class="cuisine-chip">{{ . }}</span>{{ end }}
+    {{ range first $tagLimit $tags }}<span class="tag">{{ . }}</span>{{ end }}
+    {{ if gt (len $tags) $tagLimit }}<span class="tag tag-more">+{{ sub (len $tags) $tagLimit }}</span>{{ end }}
+  </div>
+  <h3 class="rcard-title">{{ .Title }}</h3>
+  <div class="rcard-meta">
+    {{ with .Params.prep_time }}
+      <div class="rcard-stat"><span class="rcard-stat-label">Prep</span><span class="rcard-stat-value mono" title="{{ . }}">{{ . }}</span></div>
+    {{ end }}
+    {{ with .Params.cook_time }}
+      <div class="rcard-stat"><span class="rcard-stat-label">Cook</span><span class="rcard-stat-value mono" title="{{ . }}">{{ . }}</span></div>
+    {{ end }}
+    {{ with .Params.servings }}
+      <div class="rcard-stat"><span class="rcard-stat-label">Serves</span><span class="rcard-stat-value mono" title="{{ . }}">{{ . }}</span></div>
+    {{ end }}
+  </div>
+  {{ $raw := .RawContent }}
+  {{ $hasMechanic := strings.Contains $raw "## Mechanic" }}
+  {{ $hasVariations := strings.Contains $raw "## Variations" }}
+  {{ if or $hasMechanic $hasVariations }}
+    <div class="rcard-flags">
+      {{ if $hasMechanic }}<span>Mechanic</span>{{ end }}
+      {{ if $hasVariations }}<span>Variations</span>{{ end }}
+    </div>
+  {{ end }}
+</a>

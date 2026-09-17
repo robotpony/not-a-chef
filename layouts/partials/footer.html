@@ -1,0 +1,74 @@
+{{/*
+  Override of themes/blowfish/layouts/partials/footer.html.
+
+  The default footer is a thin menu+copyright row with no brand or taxonomy
+  links; mockups/archived/homepage.html's `.site-footer` (brand blurb, link
+  columns, labeled theme toggle) is the ratified shape — see
+  mockups/STYLE.md's Components/Decisions sections.
+
+  The theme toggle reuses Blowfish's own `#appearance-switcher` id and
+  js/appearance.js click handler (see that file) rather than adding new JS —
+  only the markup/placement changes. Blowfish's `footer.showAppearanceSwitcher`
+  param actually controls an icon-only toggle in the header nav, not the
+  footer (confirmed by reading desktop-menu.html/mobile-menu.html) — that's
+  disabled in params.toml in favour of this one.
+
+  Light/dark swap uses `.tt-light`/`.tt-dark` (assets/css/custom.css), not
+  Tailwind's `dark:` utilities: Blowfish's compiled CSS only contains the
+  exact `dark:` variants ITS OWN templates use (no build step runs here to
+  generate more, per custom.css's own header comment) — `dark:hidden` exists
+  because Blowfish's header icon toggle uses it, but `dark:inline` does not
+  and silently renders as always-hidden. Found by clicking this button in a
+  browser and watching it collapse to nothing in dark mode.
+*/}}
+<footer id="site-footer" class="site-footer print:hidden">
+  <div class="site-footer-inner">
+    <div class="foot-row">
+      <div class="foot-brand">
+        <div class="name">not a chef.</div>
+        <p>A family cookbook, kept and maintained by the Aldersons. Recipes, essays, and reference notes from an ordinary home kitchen.</p>
+      </div>
+      <div class="foot-links">
+        <div>
+          <div class="heading">Browse</div>
+          <a href="{{ "recipes" | relURL }}">Recipes</a>
+          <a href="{{ "essays" | relURL }}">Essays</a>
+          <a href="{{ "reference" | relURL }}">Reference</a>
+        </div>
+        <div>
+          <div class="heading">Index</div>
+          <a href="{{ "tags" | relURL }}">Tags</a>
+          <a href="{{ "cuisine" | relURL }}">Cuisines</a>
+        </div>
+      </div>
+      <button id="appearance-switcher" aria-label="Dark mode switcher" type="button" class="theme-toggle">
+        <span class="tt-light">{{ partial "icon.html" "moon" }}</span>
+        <span class="tt-dark">{{ partial "icon.html" "sun" }}</span>
+        <span class="tt-light">Light</span>
+        <span class="tt-dark">Dark</span>
+      </button>
+    </div>
+    <div class="foot-meta">
+      {{ with replace .Site.Params.copyright "{ year }" now.Year }}
+        <span>{{ . | markdownify }}</span>
+      {{ else }}
+        <span>&copy; {{ now.Format "2006" }} {{ .Site.Params.Author.name | default "the Aldersons" | markdownify }}</span>
+      {{ end }}
+      {{ if .Site.Params.footer.showThemeAttribution | default false }}
+        <span>{{ i18n "footer.powered_by" (dict "Hugo" "Hugo" "Theme" "Blowfish") }}</span>
+      {{ end }}
+    </div>
+  </div>
+  {{ if not .Site.Params.disableImageZoom | default true }}
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  {{ end }}
+  {{ if templates.Exists "partials/extend-footer.html" }}
+    {{ partialCached "extend-footer.html" . }}
+  {{ end }}
+</footer>

@@ -1,4 +1,4 @@
-colorScheme = "fire"
+colorScheme = "not-a-chef"
 defaultAppearance = "light"
 autoSwitchAppearance = true
 
@@ -7,13 +7,21 @@ enableCodeCopy = false
 mainSections = ["recipes"]
 
 [header]
-  layout = "fixed"
+  # "basic" resolves straight to header/basic.html with no wrapper — our
+  # override of that partial is a normal static nav bar (mockups/STYLE.md),
+  # not the floating/blurred chrome the other header/*.html layouts add.
+  layout = "basic"
 
 [footer]
   showMenu = true
   showCopyright = true
   showThemeAttribution = false
-  showAppearanceSwitcher = true
+  # NB: despite the [footer] section, this actually controls an icon-only
+  # toggle in the *header* nav (see themes/blowfish/layouts/partials/header/
+  # components/{desktop,mobile}-menu.html) — Blowfish's footer.html never
+  # reads it. Disabled: our theme toggle lives in the footer instead
+  # (layouts/partials/footer.html), per mockups/STYLE.md's Decisions.
+  showAppearanceSwitcher = false
   showScrollToTop = true
 
 [homepage]

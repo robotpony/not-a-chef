@@ -22,11 +22,7 @@ Three sections, each with a list view and individual pages.
 
 ### Blowfish layout choices
 
-Homepage: `background` layout — full-screen food image with title and tagline, links to Recipes and Essays. Establishes tone before the browser reaches the listing pages.
-
-Recipe listing: `list` layout with card grid. Each card shows title, tags, and (if set) a featured image.
-
-Individual recipe and essay: default `article` layout. Wide readable column, table of contents for longer pages.
+Superseded by the mockups — see `mockups/STYLE.md`/`mockups/style.html`, `mockups/COMPONENTS.md`/`mockups/components.html`, and `mockups/archived/homepage.html`, and PLAN.md Phase 6 for the build plan. None of Blowfish's built-in homepage layouts (`hero`/`profile`/`page`/`card`/`background`) match the settled design: no hero photography anywhere in the system (it's typography- and data-driven), so the homepage needs a custom `layouts/index.html` rather than the `background` layout this section used to specify. Recipe listing and individual pages likewise need custom templates (`layouts/recipes/list.html`, `layouts/recipes/single.html`) — Blowfish's default `list`/`article` layouts don't have the recipe card, ingredient-check, Mechanic callout, or stat-rail components at all.
 
 **Blowfish settings to enable:**
 - Search (Fuse.js) — on
@@ -41,8 +37,9 @@ Hugo needs a few fields not in the recipe vault format:
 ```yaml
 draft: false          # set to true during review; false = published
 description: ""       # optional short blurb for SEO and cards
-featured: false       # pin to homepage card grid (optional)
 ```
+
+(`featured` was considered — pin a recipe to the homepage card grid — but dropped 2026-09-17 building Phase 6.3: no recipe uses it, and "recently added" is real date-sorted data already. Add it back only if a real need shows up.)
 
 migrate.py adds `draft: false` on personal recipes (already reviewed).
 
