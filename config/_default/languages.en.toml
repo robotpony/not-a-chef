@@ -1,11 +1,11 @@
 locale = "en"
 label = "English"
 weight = 1
-title = "Not a Chef"
+title = "Your dad is not a chef"
 
 [params]
   displayName = "English"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"
-  description = "A family cookbook."
+  description = "Your dad is not a chef, an Alderson family cookbook."

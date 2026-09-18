@@ -1,4 +1,4 @@
-# Not a chef (a cookbook for my family)
+# Your dad is not a chef (an Alderson family cookbook)
 
 This is a cookbook project, collecting recipes from my personal sources: originally a combination of markdown files in an Obsidian vault and a drive of Google docs.
 

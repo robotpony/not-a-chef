@@ -2,6 +2,23 @@
 
 A style guide for "Your dad is not a chef".
 
+## Messaging
+
+Name and tagline, standardized 2026-09-18:
+
+- **Name**: "Your dad is not a chef"
+- **Tagline**: "an Alderson family cookbook"
+- **Combined line** (meta description, About page, anywhere the two read as one sentence): "Your dad is not a chef, an Alderson family cookbook."
+
+Canonical copy — the full story behind the name — lives in `content/about.md`;
+that page is the source of truth. Everywhere else (site title, homepage
+hero, footer blurb, README) should read as a consistent restatement of the
+name/tagline above, not invent new phrasing.
+
+The nav logo and footer brand name stay the short lowercase form
+("not a chef.") for space — that's a deliberate exception, not a drift from
+the standard.
+
 ## Color tokens
 
 CSS custom properties, defined on `:root`. Every token has a dark-mode pair
