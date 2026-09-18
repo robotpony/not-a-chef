@@ -2,6 +2,8 @@
 
 Standard Markdown with YAML frontmatter. Files use the `.md` extension. Recipes should read naturally as plain text, render in Obsidian and Hugo, and be parseable by automated tools.
 
+See `SPEC.md` for the normative version of this document — exact frontmatter types, the full ingredient line grammar, and validation rules a linter checks against. This file stays the readable guide; `SPEC.md` wins on any disagreement.
+
 ## Frontmatter
 
 Required fields: `title`, `tags`. Everything else is optional but encouraged.
@@ -113,6 +115,23 @@ Melt ghee over medium-high. Add cumin seeds. When they sizzle, add onion and gar
 Fry until golden, about 3–4 minutes. Pour over the dal.
 ```
 
+To group ingredients within a single component's list (dry vs. wet, for a
+recipe that doesn't otherwise split into components), use a `####` label
+directly above each run of list items. This is a label, not a new
+component — it carries no separate method:
+
+```markdown
+## Ingredients
+
+#### Dry
+- 300g flour
+- 10g baking powder
+
+#### Wet
+- 2 eggs
+- 240ml buttermilk
+```
+
 ## Optional sections
 
 **To serve** — one line or a few words. What it goes with.
@@ -132,13 +151,31 @@ Warm basmati rice, plain raita, lime pickle.
 Use yellow split peas instead of masoor ...
 ```
 
-**Notes** — tips, substitutions, storage, test results. Bullet list.
+**Notes** — tips, storage, test results. Bullet list.
 
 ```markdown
 ## Notes
 
 - Masoor (red lentils) needs no soaking. Toor dal benefits from 30 minutes.
 - Leftovers thicken considerably. Loosen with water when reheating.
+```
+
+**Equipment** — freeform bullet list of anything beyond standard kitchen kit.
+
+```markdown
+## Equipment
+
+- 6-quart Dutch oven
+- Instant-read thermometer
+```
+
+**Substitutions** — structured, one swap per line, separated by an arrow (`→`). See `SPEC.md` §5 for the exact grammar; this is what lets a swap be handled programmatically instead of buried in prose.
+
+```markdown
+## Substitutions
+
+- Butternut squash → sweet potato or pumpkin, same prep
+- Fish sauce → soy sauce, for a vegetarian version
 ```
 
 **Tables** — use for timing or ratio reference when there are multiple variables.
@@ -177,6 +214,7 @@ Kebab-case. One recipe per file. Match the title: `dal-tadka.md` for "Dal Tadka"
 - Units: standard cooking units in full or abbreviated form. Metric preferred with imperial in parentheses where helpful.
 - Noise word "of" between unit and name is fine: "½ teaspoon of salt"
 - Preparation notes after a comma: "3 apples, peeled and sliced"
+- Optional ingredients: end the line with `(optional)`, after any preparation note: "1 jalapeño, halved (optional)". This exact marker is machine-detectable — see `SPEC.md` §3.
 
 ## Language
 

@@ -258,8 +258,8 @@ Four areas, roughly in priority order. Some of this depends on Phase 6 landing f
 - [ ] Add sort or filter controls to the recipe listing (by cuisine, prep time, tag) if Blowfish supports it natively; otherwise scope a shortcode
 
 **Single recipe readability**
-- [ ] Print-friendly view: ingredients and method only, no nav chrome, works from a browser print dialog
-- [ ] Servings scaling (multiply ingredient quantities on the page) — flag as a stretch goal; likely needs client-side JS and may not be worth the complexity for a family site
+- [ ] Print-friendly view: ingredients and method only, no nav chrome, works from a browser print dialog — implementation now owned by Phase 9's `warped-food.js`, not scoped separately here
+- [ ] Servings scaling (multiply ingredient quantities on the page) — implementation now owned by Phase 9's `warped-food.js`, not scoped separately here
 - [ ] Mobile layout check for the "phone propped up while cooking" case: large touch targets, no accidental nav taps
 - [ ] Confirm wiki-link cross-references (e.g. `[[Pizza Sauce]]` as an ingredient) are visually clear as links, not just plain text
 
@@ -294,6 +294,51 @@ This is Phase 5, unchanged. Listed here again only because it's part of "publish
 
 **Output:** Deploy is a single command. The 144-draft backlog has a workflow instead of being 144 individual manual edits.
 
+## Phase 9: Recipe format specification & warped-food.js
+
+Two tracks under one banner: formalizing the recipe format as a testable spec, and a vanilla-JS enhancement layer for recipe pages modeled on `warped.js` (`~/projects/sites/warped.js/warped.js`, the site-JS for warpedvisions.org) but not sharing a file with it — see the standing decision below.
+
+**Architecture decision: three layers, not one.** Working through the full feature wishlist (see below) surfaced that not everything belongs in client JS. Every feature is placed in exactly one of: **source** (hand-authored Markdown/YAML, unchanged), **build-time enrichment** (Hugo computes static JSON from source + `data/` files at `hugo build` time — no server, no database, same mechanism `layouts/recipes/list.json.json` already uses for `public/recipes/index.json`), or **client-time** (`warped-food.js`, reading the rendered page and the build-time JSON). Full mapping in `SPEC.md` §7.
+
+**Explicitly deferred, not designed around a guess:** saved recipes, personal notes, ratings, and reader-side change-tracking. Any version of these worth having needs state shared across family members' devices, which needs a backend — that breaks the "no CMS, static site" decision already on record in `ARCHITECTURE.md`. A local-only (`localStorage`) fallback was considered and also deferred rather than shipped as a lesser version. Author-side change tracking already exists today for free: git history on `content/recipes/`. Revisit once the rest of this phase is real and the itch is still there. See `SPEC.md` §10.
+
+**Recipe format specification**
+
+FORMAT.md is prose guidance, and `/lint` (Phase 0/DESIGN.md) only checks a handful of frontmatter basics. Neither is precise enough to test a recipe file for structural conformance the way the `recipe-writing` skill checks voice and style. This track writes that missing layer.
+
+- [x] Write `SPEC.md`: a normative version of FORMAT.md using RFC 2119 language (MUST/SHOULD/MAY) — frontmatter schema, the ingredient line grammar (extended with an `(optional)` marker), a new `####` convention for grouping ingredients within one component, two new optional body sections (`## Equipment`, `## Substitutions`), and the two new `data/` files the format now depends on (`ingredient_prices.yaml`, `departments.yaml`). Versioned `0.1.0` (draft), not `1.0.0` — FORMAT.md updated to point to it and stays the human-readable companion, not a competing source of truth
+- [ ] Prototype ingredient-name canonicalization (matching `"450g butternut squash, peeled and diced"` → `butternut squash`) against a real slice of `content/recipes/` before committing further to `data/departments.yaml`'s shape — `SPEC.md` §6 flags this as the fragile part of the whole spec, worth de-risking early
+- [ ] Write a validator (`tools/validate_recipe.py` or an extension of `/lint`) that checks a recipe file against `SPEC.md` mechanically: frontmatter types, ingredient-line parse success rate, `## Substitutions` grammar, `####` ingredient-group placement
+- [ ] Run the validator against all published recipes as a baseline; file discrepancies as spec bugs (the recipe is fine but the spec doesn't describe it) or content bugs (the recipe doesn't conform) rather than assuming the recipe is wrong
+- [ ] Wire the validator into `/lint` so structural conformance and the existing frontmatter checks run together, one command
+
+**Build-time enrichment (Hugo)**
+
+New layouts/partials, not part of `warped-food.js`:
+
+- [ ] Extend `layouts/recipes/list.json.json` (or add a sibling output) with parsed ingredients per recipe — the shared input every client-time ingredient feature below reads
+- [ ] `data/ingredient_prices.yaml` (ingredient → approximate unit price, hand-maintained, carries an `updated:` date) joined at build time into a per-recipe cost estimate — approximate by design, not a grocery total (`SPEC.md` §6)
+- [ ] `data/departments.yaml` (canonical grocery department order, outside-in, + ingredient → department mapping) — shared by the shopping-list and pantry-tool features below
+- [ ] A schema.org `Recipe` JSON-LD partial in `<head>`, built from frontmatter + `## Equipment` — this is the "auto-SEO structured schema" ask; it's a Hugo template concern, not a `warped-food.js` feature
+- [ ] Verify Hugo's native related-content feature (keyed on `tags`/`cuisine`) produces reasonable suggestions before considering a manual `related:` frontmatter override
+
+**`warped-food.js`**
+
+A single dependency-free JS file, `static/js/warped-food.js`, loaded on recipe pages only. Follows `warped.js`'s shape (a different file, not a shared one — see the architecture note above): one IIFE-scoped namespace object, a `window.WarpedFoodConfig` override merged over sane defaults, a debug flag gated `_d()` logger, a DOM-element cache populated once, event delegation instead of per-element listeners, and every public method wrapped so a failure in one feature can't break the others or block page render.
+
+- [ ] Scaffold the file: namespace object, config merge, cache init, debug logging, auto-init on `DOMContentLoaded` — structurally mirror `warped.js`, not its branding/rainbow-link content
+- [ ] Ingredient helpers: portion scaling and measure conversion (needs a small unit-conversion factor table, scoped when this is built — `SPEC.md` §10), both reading the shared ingredient grammar in `SPEC.md` §3; optional-ingredient toggle using the `(optional)` marker
+- [ ] Print view: a toggle that condenses the page into ingredients + method only, tuned for a browser print dialog (absorbs the Phase 7 print-friendly-view goal)
+- [ ] Cook mode: larger text, no accidental nav taps, keep-awake if the Wake Lock API is available — UI-only, no data dependency
+- [ ] Substitutions: parse `## Substitutions` into an interactive ingredient-swap control on top of the section's static rendering (progressive enhancement per `SPEC.md` §5)
+- [ ] Shopping list: assemble a department-ordered list (outside-in) across a reader's selected recipes, reading `data/departments.yaml`'s build-time output
+- [ ] Win-the-fridge / pantry tool: given on-hand ingredient names, surface matching recipes, reading the same canonicalized ingredient vocabulary as the shopping list
+- [ ] Ingredient/step check-off: tap an ingredient or method sentence to strike it, state kept in `localStorage` per recipe slug so it survives a reload mid-cook
+- [ ] Wiki-link styling for in-recipe cross-references (`[[Pizza Sauce]]` as an ingredient): visually distinguish these from a plain external link, using this site's actual STYLE.md tokens rather than `warped.js`'s rainbow-hue technique
+- [ ] Verify degrade-safe: JS disabled or failing shouldn't remove content, only the enhancement — recipe still fully readable and printable via browser defaults
+
+**Output:** A recipe file can be checked for structural conformance the same way `/lint` already checks frontmatter, recipe pages carry build-time SEO/cost/related data with no JS required to see it, and `warped-food.js` layers cooking-time interactivity on top without a framework or build step.
+
 ---
 
 ## Dependencies
@@ -308,7 +353,8 @@ Phase 0 → Phase 1 → Phase 2
 
 Phase 0 is a blocker for everything. Phase 1 and Phase 3 can overlap once Phase 0 is done. Phase 4 (Obsidian install) can start as soon as Phase 1 is complete enough to test against.
 
-Phases 6, 7, and 8 sit outside this chain:
+Phases 6, 7, 8, and 9 sit outside this chain:
 
 - **Phase 6** (theme) and **Phase 7** (UX) only need Phase 1's published recipes to preview against. Neither depends on Phase 2's draft backlog or on Phase 5. Do Phase 6 before Phase 7: card and typography decisions there affect the layout work in Phase 7.
 - **Phase 8** is two independent tracks. The deploy track duplicates Phase 5, do that work once, not twice. The draft-review-tooling track depends only on Phase 2 already being underway (it is) and can start any time.
+- **Phase 9** is also two independent tracks. The spec/validator track only needs Phase 1's corpus to test against and can start any time after that. The `warped-food.js` track should follow Phase 6, since its wiki-link styling pulls from STYLE.md's settled tokens rather than inventing its own; it absorbs the two client-side stretch goals originally sketched in Phase 7, so do it instead of those, not in addition to them.
