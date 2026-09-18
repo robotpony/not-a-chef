@@ -1,10 +1,9 @@
 ---
 title: Tips and tricks for cooking on the road
-source: family
+date: 2026-06-08
 draft: true
+tags: [cooking-reflection, travel]
 ---
-
-Tips and tricks for cooking on the road
 
 I occasionally cook on the road while staying in corporate apartments. These kitchens are functional, but often lack basic ingredients that you don’t want to buy and leave on the road.
 
@@ -18,7 +17,6 @@ This might not work as well with ground chicken or turkey, as they tend not to h
 
 Q. How do you cook other foods without oil?
 
-  
 Salad dressing or water can help.
 
 Q. How do you cook without salt and pepper (or other seasoning)?

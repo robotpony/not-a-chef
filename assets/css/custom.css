@@ -88,6 +88,53 @@
 body {
   background-color: var(--bg);
   color: var(--ink);
+  /* Blowfish's own `max-w-7xl` + responsive padding (up to 128px per side
+   * at wide viewports) squeezes every non-chrome section (.hero,
+   * .home-section, and every still-default page — recipe/essay/reference
+   * singles, taxonomy listings) narrower than its own intended max-width,
+   * since that padding applies on top of each section's own 1100px cap +
+   * 20px gutter. The nav/footer full-bleed fix only freed the chrome from
+   * this, leaving the actual content squeezed underneath it — this is the
+   * other half of that same fix. Every section already carries its own
+   * max-width/padding, so this isn't removing a gutter, just an outer one
+   * that was silently double-applying on top of it. */
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+  /* Unitless, not Tailwind's `leading-7` (a fixed 28px) — see STYLE.md's
+   * "Line-height" rule. A fixed length inherits as-is regardless of a
+   * descendant's own font-size, which is exactly what made small UI text
+   * that didn't set its own line-height (the footer paragraph, footer nav
+   * links) render disproportionately loose. `.prose` sets its own explicit
+   * proportional values already (~1.75 for body copy, ~1.375 for list
+   * items) and is unaffected by this. */
+  line-height: 1.6;
+}
+
+/* Blowfish's default single/list templates (recipe/essay/reference pages —
+ * still unbuilt, Phase 6.2) have no centering or side gutter of their own;
+ * they were relying entirely on body's now-removed padding for that, and
+ * without it their content bled to the true viewport edges. <main> (from
+ * baseof.html, wraps every page's content — ours and Blowfish's defaults
+ * alike) is the one element common to both, so centering it at the same
+ * 1100px column keeps the homepage's already-precise nav/hero alignment
+ * intact (each of those already carries its own 20px padding) while giving
+ * still-default pages *a* gutter again, even without their own padding yet.
+ * Their content sits flush against this column's edges rather than getting
+ * its own 20px inset — a known, minor gap versus the custom sections',
+ * consistent with those templates not being rebuilt yet. */
+main {
+  /* <body> is `display:flex;flex-direction:column` (Blowfish's own layout)
+   * and <main> is a flex item — `margin:0 auto` alone on a flex item with
+   * no explicit width doesn't stretch-then-center the way it does on a
+   * normal block; it makes the item shrink-to-fit its content instead,
+   * silently ignoring max-width entirely (measured: 646px, matching
+   * article's own max-w-prose, not the 1100px this rule asked for). The
+   * explicit width:100% forces it to take the full cross-axis size first,
+   * so max-width has something to actually cap. */
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 /* Same bare `bg-neutral` (always-white) issue as <body>, on the search
@@ -106,6 +153,21 @@ body {
 }
 .prose :where(h1, h2, h3, h4, h5, h6) {
   font-family: 'Libre Franklin', sans-serif;
+}
+
+/* A markdown "loose list" (blank lines between items in the source) wraps
+ * each item's text in its own <p>, which then carries that paragraph's
+ * ~20px margin-bottom on top of the <li>'s own margin — list items ended up
+ * spaced far apart than in-paragraph line spacing regardless of how tight
+ * Tailwind Typography's own li margin is. Neutralize it so list rhythm
+ * doesn't depend on whether a given list happened to be written loose or
+ * tight in markdown. Found on a reference page's "Notes:" list. */
+.prose li > p {
+  margin: 0;
+}
+.prose li {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
 }
 
 .mono {
@@ -135,9 +197,9 @@ body {
 .foot-brand { font-family: 'Libre Franklin', sans-serif; }
 .foot-brand .name { font-weight: 700; font-size: .95rem; }
 .foot-brand p { font-size: .82rem; color: var(--ink-muted); margin-top: 6px; max-width: 38ch; font-family: 'Lora', serif; }
-.foot-links { display: flex; gap: 36px; flex-wrap: wrap; font-family: 'Libre Franklin', sans-serif; }
-.foot-links .heading { font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-faint); margin-bottom: 8px; }
-.foot-links a { display: block; font-size: .85rem; color: var(--ink-muted); text-decoration: none; padding: 3px 0; }
+.foot-links { display: flex; gap: 40px; flex-wrap: wrap; font-family: 'Libre Franklin', sans-serif; }
+.foot-links .heading { font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-faint); margin-bottom: 10px; }
+.foot-links a { display: block; font-size: .85rem; line-height: 1.5; color: var(--ink-muted); text-decoration: none; padding: 5px 0; }
 .foot-links a:hover { color: var(--accent-strong); }
 .foot-meta { padding-top: 16px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-family: 'Libre Franklin', sans-serif; font-size: .74rem; color: var(--ink-faint); }
 
@@ -302,3 +364,59 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
 
 .section-caveat { font-family: 'Libre Franklin', sans-serif; font-size: .78rem; color: var(--ink-faint); padding: 8px 12px; background: var(--surface-2); border-radius: 4px; }
 .section-caveat strong { color: var(--ink-muted); }
+
+/* Article prev/next (recipe, essay, reference single pages) — no mockup
+ * ever covered this, since those pages are still Blowfish's default layout
+ * (PLAN.md Phase 6.2). Restyled to match the rest of the system rather than
+ * leave Blowfish's bare, unpadded default in an otherwise designed page. */
+/* Three separate, uncoordinated margins were stacking before the divider —
+ * Blowfish's own `mb-20` (80px) on .article-content, its own `pt-8` (32px)
+ * on the <footer> wrapping this, plus this component's own margin-top —
+ * for 152px of dead space (measured via getBoundingClientRect, not
+ * eyeballed), while nothing at all separated this from the site footer
+ * after it (measured gap: exactly 0px). Zeroing the two Blowfish sources
+ * so this component's own margin is the single, deliberate source of the
+ * gap on both sides, matching `.home-section`'s 40px rhythm. */
+.article-content { margin-bottom: 0; }
+footer.pt-8.max-w-prose { padding-top: 0; }
+
+.article-pagination {
+  display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+  margin-top: 40px; margin-bottom: 40px; padding-top: 28px; border-top: 1px solid var(--border);
+  font-family: 'Libre Franklin', sans-serif;
+}
+.article-pagination-link {
+  display: flex; flex-direction: column; gap: 4px; max-width: 320px;
+  text-decoration: none; color: var(--ink);
+}
+.article-pagination-next { text-align: right; margin-left: auto; }
+.article-pagination-label {
+  font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
+  color: var(--accent-strong);
+}
+.article-pagination-title {
+  font-size: .92rem; font-weight: 600; line-height: 1.4;
+}
+.article-pagination-link:hover .article-pagination-title { color: var(--accent-strong); }
+
+/* List-page pagination (recipes/reference/essays listings, page 1/2/3…) —
+ * same story as article-pagination above: no mockup ever covered it, and
+ * Blowfish's default is bare utility classes with no padding or border.
+ * Pill treatment matches .filter-pill; owns its own margin-top/bottom
+ * rather than relying on Blowfish's `mt-8` plus whatever the footer adds. */
+.list-pagination {
+  display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap;
+  list-style: none; margin: 40px 0; padding: 0;
+  font-family: 'Libre Franklin', sans-serif;
+}
+.list-pagination-link {
+  display: flex; align-items: center; justify-content: center;
+  min-width: 34px; height: 34px; padding: 0 10px; box-sizing: border-box;
+  border: 1px solid var(--border-strong); border-radius: 14px;
+  color: var(--ink-muted); font-size: .85rem; text-decoration: none;
+}
+.list-pagination-link:hover { border-color: var(--accent); color: var(--ink); }
+.list-pagination-current {
+  background: var(--accent-soft); border-color: var(--accent); color: var(--accent-strong); font-weight: 600;
+}
+.list-pagination-ellipsis { color: var(--ink-faint); padding: 0 4px; }

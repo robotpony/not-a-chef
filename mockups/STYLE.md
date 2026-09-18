@@ -93,6 +93,36 @@ Google Fonts import line (put this at the top of any new mockup's `<style>`):
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 ```
 
+### Line-height
+
+Always set line-height as a **unitless multiplier** (`line-height: 1.6`), never a
+fixed length (`28px`, `1.75rem`). A unitless value is inherited as a number
+and recalculated against each descendant's own font-size; a fixed length is
+inherited as-is regardless of size, so any small text that doesn't set its
+own line-height ends up disproportionately loose (13px text at a 28px line
+height reads nothing like 16px text at that same 28px — one is book-normal,
+the other looks like double-spacing). This is exactly the bug that hit the
+real site's footer: `body{ line-height:1.6 }` here in the mockups was never
+carried into the Hugo build, so anything that fell back to Tailwind's fixed
+`leading-7` (28px) — the footer's brand paragraph, its Browse/Index links —
+read at a completely different rhythm than the rest of the page.
+
+- **Base**: `1.6`, on `body`/`html` (16px root) — this is where everything
+  not otherwise specified inherits from.
+- **Headings**: tighter, `1.05`–`1.3` depending on size — large display type
+  needs less line-height, not the body ratio.
+- **Small UI captions** (card notes, stat labels, footer copy): `1.5`–`1.6`.
+- **List items**: should read like consecutive lines of the surrounding
+  prose, not get extra rhythm of their own — don't let a list item's own
+  margin plus its wrapped-paragraph's margin (a markdown "loose list" wraps
+  each item's text in a `<p>`) stack on top of each other. If a component
+  ever looks like it has "too much space" between short repeated lines
+  (list items, nav links, footer columns), check for exactly this
+  double-accounting before reaching for a layout fix.
+- **Never eyeball one element in isolation** — check that its line-height
+  ratio (line-height ÷ font-size) matches the role it's playing (body copy
+  vs. heading vs. caption), not just that it "looks fine" at its own size.
+
 ## Components
 
 Defined and demonstrated at real scale in `style.html` §3 (and originally in

@@ -1,14 +1,11 @@
 ---
-title: 101 carbonaras
-source: family
+title: How to find great recipes
+date: 2026-06-08
 draft: true
+tags: [technique, recipes]
 ---
 
-How to find great recipes
-
-You have probably noticed that most recipes are hot garbage. I’m not just talking about those recipes that contain more story than method, or recipes that underestimate cooking times, temperatures, and ingredients, or even how most recipes are so poorly formatted that they’re difficult to read. I’m talking more about recipes that have no clear idea about what they are or why. And failing any semblance of self-awareness, most recipes fail to teach you much about the how either.
-
-
+You have probably noticed that most recipes are hot garbage. I’m not just talking about those recipes that contain more story than method, or recipes that underestimate cooking times, temperatures, and ingredients, or even how most recipes are so poorly formatted that they’re difficult to read. I’m talking more about recipes that have no clear idea about what they are or why. And failing any semblance of self-awareness, most recipes fail to teach you much about the how either.
 
 For example, It’s okay that there are all sorts of paths to make something like carbonara. Where most recipes fail is in not knowing where they sit on the scale of zero to carbonara, and which techniques are needed for each variation. Traditional carbonara gets its creaminess from the starches in the pasta water, the aged cheese, and eggs. It’s okay to make an approximation or another version of carbonara with heavy cream or creamed cashews too, but it’s a different dish, and a recipe should be able to talk about the reasons for the approach..
 
@@ -22,7 +19,7 @@ If you’re making a vegan version of carbonara, for example, you’ll need to k
 
 Or if you’re making a simple North American style carbonara, you will need to know how to work with cream in a sauce, and that bacon as a substitute can be pretty salty.
 
-Various styles of a carbonara style of dish can be fantastic, but the sequence of ingredients and techniques is both subtly and not-so-subtly different than a more authentic or simplified version. Your expectations on the results can also differ with a bit of understanding about the what and why. A better understanding of a recipe makes it easier to understand if you’ll like it, and more importantly, how you can adapt or improve it.
+Various styles of a carbonara style of dish can be fantastic, but the sequence of ingredients and techniques is both subtly and not-so-subtly different than a more authentic or simplified version. Your expectations on the results can also differ with a bit of understanding about the what and why. A better understanding of a recipe makes it easier to understand if you’ll like it, and more importantly, how you can adapt or improve it.
 
 Many years ago I remember my frustration when I was trying to recreate a jerk marinade. A friend regularly made a recipe handed down to him for generations; it was the perfect balance of savoury, sweet, and spicy. Combined with a long, slow cook time, it resulted in the most fantastic chicken I’ve had. I tested dozens of recipes, dozens of times in those early years of cooking. And while the chicken I made was mostly delicious and edible, it fell short of the ideal I had in mind.
 
@@ -30,7 +27,7 @@ As I’ve learned more about cookery, I realized that you can take a recipe like
 
 It’s surprising how good some of the alternative approaches to a food can be, even when they’re not traditional. I’ve tasted great jerk marinades that use the traditional scotch bonnet peppers (which are a bit sweet, and very hot), but I’ve also tasted great marinades that used ground cayenne or other peppers instead. Using something like cayenne vastly simplifies your prep (and it’s easier to get and store), making it appealing to restaurants and home cooks too.
 
-# The hunt is on
+## The hunt is on
 
 When I am researching a recipe I read (and watch) hundreds of recipes. I ask myself a bunch of questions when reviewing a recipe, things like:
 

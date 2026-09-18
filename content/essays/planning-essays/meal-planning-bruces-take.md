@@ -1,7 +1,8 @@
 ---
 title: Meal planning, Bruce's take
-source: family
+date: 2026-06-08
 draft: true
+tags: [planning, meal-prep]
 ---
 
 (Rambly + In progress)

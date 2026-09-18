@@ -1,7 +1,8 @@
 ---
 title: Why ingredients matter in soup stock
-source: family
+date: 2026-06-08
 draft: true
+tags: [technique, stock]
 ---
 
 A lot of the principles in cookery are obvious in hindsight. Like: what can you put in stock? Assuming you want your stock to taste good, you put in things that taste good and are safe to eat. It’s important to remember that stock is really just a savoury tea, and the process itself needs to be matched with ingredients that extract well.
@@ -12,7 +13,7 @@ While the premise is simple there is a lot of well meaning, but ultimately bad a
 
 Of the various ingredients, there are some you should generally or always avoid when making stock:
 
-1. Cruciferous vegetables (brassicas like broccoli, cabbage, kale) will tend to impart bitter flavours due to the [sulphur-like](https://en.wikipedia.org/wiki/Phenylthiocarbamide) compounds in them.
+1. Cruciferous vegetables (brassicas like broccoli, cabbage, kale) will tend to impart bitter flavours due to the [sulphur-like](https://en.wikipedia.org/wiki/Phenylthiocarbamide) compounds in them.
 2. Mouldy or rotten vegetables will tend to impart bitter flavours and may contain toxins that do not break down even with long simmers.
 3. Starchy vegetables will tend to produce cloudy stock and may not affect the flavour much.
 4. Many vegetable peels can be bitter and may contain pesticide used in commercial farming. Be sure to wash or soak vegetables before peeling, and taste peels before adding to a stock.
@@ -23,37 +24,13 @@ There are exceptions to these rules. Generally, and with care and balance, some 
 
 ### Examples:
 
-Ingredient
-
-Flavour
-
-Safety
-
-Carrot peels
-
-Can be bitter, taste before using.
-
-Wash aggressively before peeling to remove dirt and pesticide residue.
-
-Carrot tops
-
-Can be bitter in larger carrots.
-
-Wash aggressively and peel. May contain dirt, pesticides, or mould.
-
-Carrot greens
-
-Use sparingly, and taste for bitterness.
-
-Wash before using.
-
-Pygostyle (or pope’s nose)
-
-Can be bitter when roasted (as it contains the uropygial gland that produces oil for preening).
-
-Organ meat
-
-Can be better or gamey in stock.
+| Ingredient | Flavour | Safety |
+|---|---|---|
+| Carrot peels | Can be bitter, taste before using. | Wash aggressively before peeling to remove dirt and pesticide residue. |
+| Carrot tops | Can be bitter in larger carrots. | Wash aggressively and peel. May contain dirt, pesticides, or mould. |
+| Carrot greens | Use sparingly, and taste for bitterness. | Wash before using. |
+| Pygostyle (or pope’s nose) | Can be bitter when roasted (as it contains the uropygial gland that produces oil for preening). | |
+| Organ meat | Can be better or gamey in stock. | |
 
 ## Ingredients to use sparingly
 
