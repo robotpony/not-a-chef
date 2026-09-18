@@ -346,6 +346,12 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
 .tag { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; border: 1px solid var(--border-strong); color: var(--ink-muted); padding: 3px 7px; border-radius: 3px; display: inline-block; }
 .tag-more { color: var(--ink-faint); border-style: dashed; }
 .cuisine-chip { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; background: var(--highlight-soft); color: var(--highlight); padding: 3px 7px; border-radius: 3px; display: inline-block; }
+.draft-badge { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; font-weight: 600; border: 1px solid var(--flag); color: var(--flag); background: var(--flag-soft); padding: 3px 7px; border-radius: 3px; display: inline-block; }
+
+/* Label above the desktop sticky recipe/essay TOC (layouts/partials/toc.html
+ * override) — matches .mega-col-label's small-caps treatment, the site's
+ * existing pattern for an unobtrusive section label. */
+.toc-jump-label { font-size: .65rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-faint); padding-top: 6px; margin-bottom: -2px; }
 
 .browse-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px,1fr)); gap: 4px 28px; }
 .browse-list { display: flex; flex-direction: column; gap: 1px; }
