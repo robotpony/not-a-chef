@@ -2,7 +2,7 @@
 title: Simple chunky salad dressing
 tags: [salads]
 source: family
-draft: true
+draft: false
 ---
 
 This is a fridge-magnet recipe that is perfect to mop up old herbs and sour cream. We often have it over a chunky combination of sliced cabbage, broccoli, carrots, and celery.

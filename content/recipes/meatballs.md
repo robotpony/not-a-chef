@@ -7,7 +7,7 @@ servings: makes ~1.7 kg (about 30–35 meatballs)
 prep_time: 30 min
 cook_time: 20 min
 total_time: 50 min
-draft: true
+draft: false
 ---
 
 ## Mechanic

@@ -2,7 +2,7 @@
 title: Basic tare (for ramen) and pork braising liquid
 tags: [bases]
 source: family
-draft: true
+draft: false
 ---
 
 (needs some improvement)

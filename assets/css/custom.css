@@ -151,6 +151,22 @@ main {
   padding-right: 20px;
 }
 
+/* Same gap, same fix, different templates: Blowfish's default list.html
+ * (section lists like /the-food-log/) and term.html (/tags/x/, /cuisine/x/)
+ * render a bare <header> as a direct child of <main> instead of wrapping it
+ * in an <article> the way single.html does — so #single_header's rule above
+ * never reaches them. Confirmed on /the-food-log/: "The-Food-Logs" and its
+ * card sat at x=82 while the nav wordmark sat at x=120. Our own terms.html
+ * override (/tags/, /cuisine/) has the identical bare-header shape and the
+ * same gap, so it's included too. `main >` scopes this to that direct-child
+ * pattern only — single.html's header is nested inside <article> and stays
+ * on the rule above. */
+main > header,
+main > header + section {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 /* Same bare `bg-neutral` (always-white) issue as <body>, on the search
  * modal panel (themes/blowfish/layouts/partials/search.html) — found by
  * actually opening search, not just checking the hero's decorative button. */
@@ -430,13 +446,20 @@ footer.pt-8.max-w-prose { padding-top: 0; }
  * h2: 1em, h3: 0.6em, h4: 0.5em — so top is set to 1.5× that, in the same
  * em unit so the ratio holds regardless of the heading's own font-size).
  * h4 already landed on 1.5:1 by coincidence in the first pass; h2 and h3
- * didn't and are corrected here. Bottom margins remain untouched — only
- * the gap *above* a heading was ever reported as a problem. See
- * mockups/STYLE.md's "Prose vertical rhythm" section for the measured
- * before/after. */
+ * didn't and are corrected here. See mockups/STYLE.md's "Prose vertical
+ * rhythm" section for the measured before/after. */
 .prose h2 { margin-top: 1.5em; }
 .prose h3 { margin-top: 0.9em; }
 .prose h4 { margin-top: 0.75em; }
+
+/* Heading bottom-margins, cut 25% below Tailwind Typography's defaults
+ * (h2 1em→0.75em, h3 0.6em→0.45em, h4 0.5em→0.375em). The top-margin pass
+ * above widened the gap *before* a heading to separate it from the prior
+ * section; this tightens the gap *after* it, so a heading reads as bound
+ * to the content it titles rather than floating between two sections. */
+.prose h2 { margin-bottom: 0.75em; }
+.prose h3 { margin-bottom: 0.45em; }
+.prose h4 { margin-bottom: 0.375em; }
 
 .article-pagination {
   display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap;

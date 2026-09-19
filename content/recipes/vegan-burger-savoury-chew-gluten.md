@@ -2,10 +2,8 @@
 title: Vegan burger (savoury, chew, gluten)
 tags: [mains, burgers]
 source: family
-draft: true
+draft: false
 ---
-
-([Based on](https://www.youtube.com/watch?v=qyaQ-wfojbM))
 
 #### Ingredients:
 

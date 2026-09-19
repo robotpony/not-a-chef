@@ -2,7 +2,7 @@
 title: Baked Mac & Cheese
 tags: [mains, casseroles]
 source: family
-draft: true
+draft: false
 ---
 
 This is a classic baked Mac & Cheese recipe. You can sub in pretty much any combo of cheese, though there are a few that are better than others: cheddar, jack, and something like Gruyère/Edam are a great base, or you can lean towards a creamier sauce with provolone, smoked Gouda, and anything like Edam. I’ve seen people use cream cheese, but it wouldn’t add much flavour (and provolone/mozzarella would get a similar effect while also adding some needed funk and flavour).

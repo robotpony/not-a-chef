@@ -2,7 +2,7 @@
 title: Marshmallow Squares
 tags: [desserts]
 source: family
-draft: true
+draft: false
 ---
 
 Classic Recipe!  Ann never had these growing up, but a friend posted a few pictures of making these during the 2020 holiday season.  I asked for the recipe she used (from Food.com) and turns out, Bruce used to have these as a childhood treat.  They turned out well and brought back nostalgic memories and will continue to be a holiday treat.

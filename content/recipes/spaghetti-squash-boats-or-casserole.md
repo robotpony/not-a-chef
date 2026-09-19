@@ -2,7 +2,7 @@
 title: Spaghetti Squash Boats (or Casserole)
 tags: [mains, casseroles]
 source: family
-draft: true
+draft: false
 ---
 
 Both Grandma Rempel and my sister, Teresa, eat Spaghetti Squash Boats (Grandma) or Spaghetti Squash Casserole (Teresa) on a weekly basis! So we wanted to give it a try. The concepts are pretty much the same and both have room for variations.

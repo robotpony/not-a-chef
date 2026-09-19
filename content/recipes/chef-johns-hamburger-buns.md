@@ -2,7 +2,7 @@
 title: Chef John’s Hamburger Buns
 tags: [breads]
 source: family
-draft: true
+draft: false
 ---
 
 Based on a recipe from [Fooooood Wishes Dot Com](https://www.allrecipes.com/recipe/233652/homemade-hamburger-buns/). If you didn’t sing that in your head, go find John’s videos on YouTube and watch them until you do.

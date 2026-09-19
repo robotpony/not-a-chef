@@ -2,7 +2,7 @@
 title: Easy Szechuan noodles
 tags: [mains, stir-fries]
 source: family
-draft: true
+draft: false
 ---
 
 This is a quick hacky noodle dish that uses the 1-pan method and a precooked protein base ([beef base](https://docs.google.com/document/d/18B_6jJlS8MKhUsXeGs2gdse1qjwkUURhE54Xlw64Nuk/edit#heading=h.3fsk0afek31n), for example). This makes a great work from home lunch as it takes less than 20 minutes including cleanup.

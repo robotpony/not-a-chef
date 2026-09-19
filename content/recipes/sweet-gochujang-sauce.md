@@ -2,7 +2,7 @@
 title: Sweet gochujang sauce
 tags: [sauces]
 source: family
-draft: true
+draft: false
 ---
 
 This is a vibrant, and tasty sauce for wings, chicken sandwiches, noodles, and tofu. It’s savoury, sweet, and mildly spicy (according to our family).

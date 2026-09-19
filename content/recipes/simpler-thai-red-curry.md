@@ -2,7 +2,7 @@
 title: Simpler Thai red curry
 tags: [mains, curries]
 source: family
-draft: true
+draft: false
 ---
 
 This is a simpler version of my Thai curry recipe that works especially well with vegetarian ingredients. It’s a bit closer to an authentic curry, except that we skip the shrimp paste and use a commercial curry paste rather than making it from scratch.

@@ -2,7 +2,7 @@
 title: Fruit compote
 tags: [sauces]
 source: family
-draft: true
+draft: false
 ---
 
 Every Christmas day we make a huge breakfast spread. One of our staples is waffles and fruit compote, a fruit in sugar syrup. There are many variations for compote, but the key for us is to pair spices with fruits in a way that works, with choices ranging from orange zest, cinnamon, nutmeg, vanilla, and so on.

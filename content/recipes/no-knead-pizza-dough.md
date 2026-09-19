@@ -2,7 +2,7 @@
 title: No knead pizza dough
 tags: [breads]
 source: family
-draft: true
+draft: false
 ---
 
 Adapted from my traditional and very knead-y pizza dough, which we discovered by accident that one time when we somehow left it in a cupboard for a few days. It turns out [we weren’t the first ones to discover this](https://www.seriouseats.com/recipes/2012/03/jim-laheys-no-knead-pizza-dough-recipe.html), and it’s a fantastic way of making doughs in general.

@@ -8,7 +8,7 @@ prep_time: 20 min
 cook_time: 30–60 min
 total_time: 1 hr
 cuisine: Russian
-draft: true
+draft: false
 ---
 
 ## Mechanic

@@ -2,7 +2,7 @@
 title: Hoagie style French rolls
 tags: [breads]
 source: family
-draft: true
+draft: false
 ---
 
 A hoagie roll is a sort of baguette used in sub style sandwiches. This roll could swap in for beef dips, subs, poboys, or even hamburger buns (halved). They have some body and structure, are a tiny bit chewy, and have some crust. They hold up well to robust sandwiches, and crunch when you take a bite.

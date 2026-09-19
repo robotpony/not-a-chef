@@ -2,7 +2,7 @@
 title: Korma/Qorma
 tags: [mains, curries]
 source: family
-draft: true
+draft: false
 ---
 
 This is a simple korma recipe, which is combined with a base gravy and other ingredients to make various braised dishes.

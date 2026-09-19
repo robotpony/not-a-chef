@@ -2,7 +2,7 @@
 title: Shredded taco chicken
 tags: [bases]
 source: family
-draft: true
+draft: false
 ---
 
 This is a quick shredded chicken for tacos, salads, or rice bowls.

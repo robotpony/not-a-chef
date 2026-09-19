@@ -3,7 +3,7 @@
 title: Bruce’s poultry and pork spice rub
 tags: [bases]
 source: family
-draft: true
+draft: false
 ---
 
 Makes ~5 cups of spice, and works well on pork and chicken.  It's sweet, savoury, and has lemon and smoky notes.

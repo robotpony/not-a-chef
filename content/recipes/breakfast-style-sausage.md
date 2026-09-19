@@ -2,148 +2,47 @@
 title: Breakfast style sausage
 tags: [bases]
 source: family
-draft: true
+draft: false
 ---
 
-This is a quick breakfast sausage. It does not require casings (unless you have the equipment and time).
+This is a quick breakfast sausage. It does not require casings, unless you have the equipment and time.
 
-#### Spice mix:
+## Mechanic
 
-I aim for 1-2% salt per kg of protein, and spices are proportional to the salt. See [the scaling worksheet](https://docs.google.com/spreadsheets/d/1D9Ls2SRHtvSBeVAVhLJZC5CSqrhxuTvu3vb2kW5LvrU/edit?gid=2146379760#gid=2146379760) to calculate %s automatically.
+Salt runs **1–2% of the ground meat's weight**, and every other spice scales proportionally from there. See [the scaling worksheet](https://docs.google.com/spreadsheets/d/1D9Ls2SRHtvSBeVAVhLJZC5CSqrhxuTvu3vb2kW5LvrU/edit?gid=2146379760#gid=2146379760) to calculate percentages automatically for a different batch size.
 
-Ingredient
+## Ingredients
 
-%
+- 1–2 kg ground pork shoulder (80/20 or 70/30); pork belly also works
 
-1149.0
+#### Spice mix (% of meat weight)
 
-g
+| Ingredient | % | Per 1 kg meat |
+|---|---|---|
+| Water | 7.5% | 75 g |
+| Milk powder (optional) | 2.0% | 20 g |
+| Salt | 1.6% | 16 g |
+| Sugar | 0.8% | 7.5 g |
+| Brown sugar | 0.6% | 6.3 g |
+| MSG | 0.5% | 5 g |
+| Black pepper | 0.4% | 4 g |
+| Sage | 0.3% | 3 g |
+| Thyme | 0.3% | 3 g |
+| Garlic | 0.3% | 3 g |
+| Coriander | 0.3% | 3 g |
+| Fennel | 0.2% | 2 g |
+| White pepper | 0.1% | 1.3 g |
 
-Ground meat
+## Method
 
-1000.0
+Toast then grind the fennel and peppercorns in a mortar and pestle or spice grinder. Add the remaining spices and mash together until smooth; a few drops of cold water help.
 
-g
+In a large mixing bowl, combine the pork, spice mix, and half the water. Mash together with a pastry blender or a mixer fitted with the paddle attachment. Knead by hand 3–4 times, adding the remaining water slowly, aiming for less than 50% firm — don't overmix, but work it more than just folding in.
 
-100.0%
+Fry 1–2 tbsp of the mixture and taste for seasoning.
 
-Water
+Refrigerate for an hour and up to overnight.
 
-75.0
+Form into sausage shapes or patties. For sausages, roll in parchment paper and refrigerate to set.
 
-g
-
-7.5%
-
-Milk powder (optional)
-
-20.0
-
-g
-
-2.0%
-
-Salt
-
-16.0
-
-g
-
-1.6%
-
-Sugar
-
-7.5
-
-g
-
-0.8%
-
-Brown sugar
-
-6.3
-
-g
-
-0.6%
-
-MSG
-
-5.0
-
-g
-
-0.5%
-
-Black pepper
-
-4.0
-
-g
-
-0.4%
-
-Sage
-
-3.0
-
-g
-
-0.3%
-
-Thyme
-
-3.0
-
-g
-
-0.3%
-
-Garlic
-
-3.0
-
-g
-
-0.3%
-
-Coriander
-
-3.0
-
-g
-
-0.3%
-
-Fennel
-
-2.0
-
-g
-
-0.2%
-
-White pepper
-
-1.3
-
-g
-
-0.1%
-
-I usually use 1-2kg ground pork shoulder (80/20 or 70/30)
-
-- (belly can work as well)
-
-### Directions:
-
-1. Toast and then grind fennel and peppercorns in a medium sized mortar and pestle or spice grinder. Add remaining spices and mash together until smooth (a few drops of cold water can  help).
-2. In a large mixing bowl, combine proteins, spices, and half the water. Mash together with a pastry blender (or mixer with paddle attachment). Knead together with your hands 3-4 times, and add remaining water slowly.
-
-    1. Aiming for < 50% firm (so don’t overmix, but more than just folding-in)
-
-3. Fry up 1-2 tbsp of mixture and taste for seasoning.
-4. Refrigerate for an hour and up to overnight.
-5. Form into sausage shapes or patties as desired. For sausages, you can roll wrapped in parchment paper and refrigerate to set.
-6. Bake in the oven at 200C (400F) for 15-25 minutes (remove wrap), until lightly browned. Or, pan-fry until browned and heated through.  
-    (or until 68C/155F internal, will reach 75C/165F when resting)
+Bake at 200°C (400°F) for 15–25 minutes, unwrapped, until lightly browned, or pan-fry until browned and heated through. Target 68°C (155°F) internal; it will carry over to 75°C (165°F) while resting.

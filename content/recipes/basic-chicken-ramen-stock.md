@@ -2,7 +2,7 @@
 title: Basic chicken ramen stock
 tags: [bases]
 source: family
-draft: true
+draft: false
 ---
 
 This is the basic chicken ramen stock I use for my lunch ramen (when working). It’s a hybrid of a French and Chintan style stock with ingredients readily available.

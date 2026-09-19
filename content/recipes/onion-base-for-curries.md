@@ -2,7 +2,7 @@
 title: Onion base for curries
 tags: [bases]
 source: family
-draft: true
+draft: false
 ---
 
 Many curries have a chunky onion base (like Balti). We use this when riffing on curries, as it’s an easy build, freezes well, and adds a bunch of flavour to any gravy-like dish.

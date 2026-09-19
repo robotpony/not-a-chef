@@ -2,7 +2,7 @@
 title: Corn Salsa
 tags: [sauces]
 source: family
-draft: true
+draft: false
 ---
 
 We were at the Rempel’s for dinner - Mexican, and Grandma made this delicious corn salsa that I could not get enough of. Grandma shared the recipe that she used with me; it was from www.recipetineats.com

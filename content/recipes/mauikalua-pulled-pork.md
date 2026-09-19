@@ -2,7 +2,7 @@
 title: Maui/Kalua pulled pork
 tags: [mains, pork]
 source: family
-draft: true
+draft: false
 ---
 
 This is a Hawaiian style pulled pork that does not need a BBQ or fire pit, based on various recipes from local Maui residents[\[1\]](#ftnt1). The pork itself is simply seasoned, braised, and pulled, paired with a sweet and acidic sauce.

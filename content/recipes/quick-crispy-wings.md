@@ -2,7 +2,7 @@
 title: Quick crispy wings
 tags: [mains, poultry]
 source: family
-draft: true
+draft: false
 ---
 
 I like to save wings from the whole chickens that I roast for weekly dinners by stashing them in the freezer until I have enough for a wing day. In 3-4 weeks I’ll have 5 birds worth of wings, which when split at the elbow makes for 20 winglets. This is enough for 2-3 people, assuming you serve it with some veg.

@@ -2,7 +2,7 @@
 title: Grandma’s Yukkie Salad
 tags: [desserts]
 source: family
-draft: true
+draft: false
 ---
 
 A classic ambrosia style salad from the Rempel family.

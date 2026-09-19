@@ -2,7 +2,7 @@
 title: Chocolate chip cookie for one
 tags: [desserts]
 source: family
-draft: true
+draft: false
 ---
 
 , VEGAN, GLUTEN FREE

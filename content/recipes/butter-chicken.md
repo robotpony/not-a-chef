@@ -8,7 +8,7 @@ prep_time: 15 min
 cook_time: 20 min
 total_time: 35 min
 cuisine: Indian
-draft: true
+draft: false
 ---
 
 ## Mechanic

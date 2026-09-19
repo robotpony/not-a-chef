@@ -2,7 +2,7 @@
 title: Simple green goddess dressing
 tags: [salads]
 source: family
-draft: true
+draft: false
 ---
 
 I saw a simpler version of green goddess dressing on a wedge salad in Atlanta. It was bright, garlic forward, and herbal (but not emulsified). This is my version of it.

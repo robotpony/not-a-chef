@@ -2,7 +2,7 @@
 title: Simple shrimp marinade
 tags: [bases]
 source: family
-draft: true
+draft: false
 ---
 
 #### Ingredients:

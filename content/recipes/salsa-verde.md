@@ -2,7 +2,7 @@
 title: Salsa Verde
 tags: [sauces]
 source: family
-draft: true
+draft: false
 ---
 
 A classic fresh tomatillo salsa. It’s fresh, tart, and great on chips or tacos.

@@ -2,7 +2,7 @@
 title: Sheet pan fast food style gyros
 tags: [bases]
 source: family
-draft: true
+draft: false
 ---
 
 I’ve seen gyros done many ways, including [whole cuts marinated and spit-roasted](https://www.thespruceeats.com/how-greek-gyro-is-made-4121890), minced, and cased + mince. This recipe is closer to a food cart style gyro, based on a mix of minced meats and some filler to achieve a classic fast food texture.

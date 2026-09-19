@@ -2,7 +2,7 @@
 title: Prosecco Sangria
 tags: [drinks]
 source: family
-draft: true
+draft: false
 ---
 
 The first best Sangria I’ve ever had was made by my Auntie Diane when Jay and I had visited Calgary during a Junior Roller Derby trip and we were staying with the Pattersons.  This is the way my Auntie Di made it and it’s still one of the recipes I like best.

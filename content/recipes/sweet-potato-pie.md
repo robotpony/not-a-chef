@@ -2,7 +2,7 @@
 title: Sweet Potato Pie
 tags: [desserts]
 source: family
-draft: true
+draft: false
 ---
 
 We watched Alton Brown make this on Food TV then had to try it for ourselves and LOVED it!

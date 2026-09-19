@@ -2,7 +2,7 @@
 title: Rich veg/mushroom stock
 tags: [bases]
 source: family
-draft: true
+draft: false
 ---
 
 This is a rich vegetable stock, a perfect replacement for beef stock in soups and stews. It’s simplified with a French profile, but can easily be adapted to PhØ, Ramen, or any cuisine with a few add-ins. This recipe blends the method from [Bon Appétit’s Andy](https://www.youtube.com/watch?v=QKgYRtHwJ28&t=1s) with [Cooking With Glen’s](https://www.youtube.com/watch?v=Ox1w_PyKJ6w&vl=en) (AKA, Canada’s Alton Brown), which rely on thinly sliced veg roasted for hours to deliver a deeply flavoured and coloured stock.

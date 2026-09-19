@@ -2,7 +2,7 @@
 title: Pan fried chicken burger
 tags: [mains, burgers]
 source: family
-draft: true
+draft: false
 ---
 
 This is a sort of copy-cat recipe of the BK classic chicken sandwich, which is a lightly breaded, pepper-forward, minced patty made from mostly white meat. I like them with fresh onion, mustard, lettuce, pickles, tomatoes, and mayonnaise. The goal is something with a few layers of crunch, some bite, and a good kick of savoury fatty goodness.

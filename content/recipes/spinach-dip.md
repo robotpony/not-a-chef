@@ -2,7 +2,7 @@
 title: Spinach Dip
 tags: [sauces]
 source: family
-draft: true
+draft: false
 ---
 
 Auntie Betty-Lou used to make this Spinach Dip and it is now Ann’s favourite version to make and is always a hit no matter where we take and serve it!  We make this for most holidays or family gatherings.

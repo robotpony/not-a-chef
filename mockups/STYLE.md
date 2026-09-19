@@ -234,9 +234,22 @@ cut):
 
 Not touched, kept for a later pass: `h3`/`h4` line-height (still Tailwind's
 own `1.6`/`1.5`, not the site's `1.5` body value — same number for `h4` by
-coincidence, not by design); heading *bottom* margins; whether list-heavy
-recipe/essay/reference *listing* pages (not single pages) have the same
-20px gutter gap `#single_header` just got fixed for.
+coincidence, not by design); whether list-heavy recipe/essay/reference
+*listing* pages (not single pages) have the same 20px gutter gap
+`#single_header` just got fixed for.
+
+**Fixed — heading bottom-margins cut 25%, widening the top:bottom ratio to
+`2:1`.** The `1.5:1` pass above only ever addressed the gap *above* a
+heading; the principle behind it — a heading should read as bound to the
+content it introduces, not floating between two sections — argues for
+shrinking the gap *below* it too, not just growing the gap above. Cut each
+level's own (previously untouched) Tailwind bottom-margin by 25%: `h2`
+`1em → 0.75em`, `h3` `0.6em → 0.45em`, `h4` `0.5em → 0.375em`. Top margins
+are unchanged, so the top:bottom ratio moves from `1.5:1` to `2:1` at every
+level (`h2`: 36px:18px, `h3`: 18px:9px, `h4`: 12px:6px). Applies to all
+single-page prose (`.prose h2/h3/h4` in `assets/css/custom.css`) — recipes,
+essays, and reference alike, since none of them have a section-scoping hook
+yet to diverge from each other.
 
 ## Components
 

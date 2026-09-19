@@ -2,7 +2,7 @@
 title: Base gravy for takeaway style Indian curries
 tags: [bases]
 source: family
-draft: true
+draft: false
 ---
 
 This is a base gravy for making takeaway style Indian curries. It can be used in several dishes.

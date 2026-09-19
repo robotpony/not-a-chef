@@ -2,7 +2,7 @@
 title: Tofu “pepperoni”
 tags: [sauces]
 source: family
-draft: true
+draft: false
 ---
 
 This vegetarian pepperoni substitute is great for pizzas, calzones, and rice dishes. It has a texture like cheese, with a nice, peppery flavour profile. It browns nicely, so be sure to put it on top of your cheese when using it for pizza!

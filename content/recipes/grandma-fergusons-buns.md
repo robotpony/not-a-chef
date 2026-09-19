@@ -2,7 +2,7 @@
 title: Grandma Ferguson’s Buns
 tags: [breads]
 source: family
-draft: true
+draft: false
 ---
 
 Makes one pan of buns (6-12, depending on the size)

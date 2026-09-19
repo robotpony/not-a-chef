@@ -2,7 +2,7 @@
 title: Simple, sweet pickled veg
 tags: [sauces]
 source: family
-draft: true
+draft: false
 ---
 
 This is a quick, refrigerator sweet pickle, perfect for beets, cabbage, and other hearty veg.

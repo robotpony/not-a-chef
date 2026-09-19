@@ -2,7 +2,7 @@
 title: Spinach mushroom flatbread
 tags: [appetizers, sides]
 source: family
-draft: true
+draft: false
 ---
 
 This is a quick flatbread, similar to the Trader Joe’s mushroom and truffle flatbread (but without the truffle oil).

@@ -2,7 +2,7 @@
 title: Butter Tarts
 tags: [desserts]
 source: family
-draft: true
+draft: false
 ---
 
 Grandma Rempel (Ann’s Mom) always used to make Butter Tarts and Coconut Jam Tarts and this was her recipe.  Back in the day, the tart was homemade, but as convenience became more convenient, the tarts went to the store bought type.

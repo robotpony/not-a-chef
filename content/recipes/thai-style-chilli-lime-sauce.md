@@ -2,12 +2,8 @@
 title: Thai style chilli lime sauce
 tags: [sauces]
 source: family
-draft: true
+draft: false
 ---
-
-February 2024
-
-
 
 This is a vibrant, and tasty sauce for wings, chicken sandwiches, noodles, and tofu. It’s savoury, sweet, and very midly spicy (according to our family). Makes about 500ml of sauce or marinade[\[1\]](#ftnt1).
 

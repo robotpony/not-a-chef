@@ -2,7 +2,7 @@
 title: Vodka cream sauce
 tags: [sauces]
 source: family
-draft: true
+draft: false
 ---
 
 This was one of the first fancy recipes we made when the kids were young. It was the beginning of our shared journey into cooking new foods. I haven’t made this in ages now, so I have no idea if it’s any good. But … memories ...   

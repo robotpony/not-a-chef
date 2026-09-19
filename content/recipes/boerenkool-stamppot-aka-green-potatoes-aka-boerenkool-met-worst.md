@@ -2,7 +2,7 @@
 title: Boerenkool stamppot (AKA green potatoes, AKA Boerenkool Met Worst)
 tags: [mains, mashes]
 source: family
-draft: true
+draft: false
 ---
 
 This is a rustic farmer mash, a family recipe from one of the Dutch branches of our tribe. Roughly translated, it’s farmers cabbage hodgepodge, and is a combination of potatoes, cruciferous vegetables (in our version, kale), and dairy. It is commonly served with sausage, often a medium grind rookworst.

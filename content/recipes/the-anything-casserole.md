@@ -2,7 +2,7 @@
 title: The anything casserole
 tags: [mains, casseroles]
 source: family
-draft: true
+draft: false
 ---
 
 You can make pretty much any leftovers into a casserole. This works especially well with large holiday dinner leftovers.

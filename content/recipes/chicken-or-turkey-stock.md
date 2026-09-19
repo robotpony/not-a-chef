@@ -2,7 +2,7 @@
 title: Chicken or turkey stock
 tags: [bases]
 source: family
-draft: true
+draft: false
 ---
 
 This is a rich chicken or turkey stock that uses bones leftover when buying and breaking down whole birds. Great for soup, sauces, and consummé.

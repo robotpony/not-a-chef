@@ -2,7 +2,7 @@
 title: Minestrone soup
 tags: [mains, soups]
 source: family
-draft: true
+draft: false
 ---
 
 This is a  hearty vegetable soup. It’s commonly started with pancetta, which can be replaced with browned diced mushrooms and smoked paprika. This recipe is adapted from [Chef John’s Minestrone soup recipe](https://www.allrecipes.com/recipe/223044/chef-johns-minestrone-soup/).

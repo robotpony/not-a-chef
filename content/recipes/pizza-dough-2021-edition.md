@@ -2,7 +2,7 @@
 title: Pizza dough 2021 edition
 tags: [breads]
 source: family
-draft: true
+draft: false
 ---
 
 Makes ~3 medium pizzas.

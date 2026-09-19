@@ -2,7 +2,7 @@
 title: Lazy pizza dough (2022)
 tags: [breads]
 source: family
-draft: true
+draft: false
 ---
 
 Makes ~3 medium pizzas.

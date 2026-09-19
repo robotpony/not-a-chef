@@ -2,7 +2,7 @@
 title: White Rock Cheesecake Varieties
 tags: [desserts]
 source: family
-draft: true
+draft: false
 ---
 
 Aka: Unbaked Cheesecake or Vancouver Cheesecake.  Originally from Afterthoughts Dessert Restaurant back from Ann’s working days.

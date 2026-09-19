@@ -2,7 +2,7 @@
 title: Bruce’s Thai red/green curry
 tags: [mains, curries]
 source: family
-draft: true
+draft: false
 ---
 
 These are rough approximations for the Thai red and green curries I’ve been making for many years now. These are not super authentic, but are based in reality from some recon a friend did at a local Thai restaurant back in the 90s.

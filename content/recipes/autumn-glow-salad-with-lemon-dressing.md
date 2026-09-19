@@ -2,7 +2,7 @@
 title: Autumn Glow Salad with Lemon Dressing
 tags: [salads]
 source: family
-draft: true
+draft: false
 ---
 
 Prep: 15 minutes / Cook time: 1 hour / Yield: 6 as a meal, 8 - 10 as a side

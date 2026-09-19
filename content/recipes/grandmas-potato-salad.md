@@ -2,7 +2,7 @@
 title: Grandma’s potato salad
 tags: [salads]
 source: family
-draft: true
+draft: false
 ---
 
 Our family tater salad recipe. I mean, it’s not a salad per se, but it’s a classic. Add fried chicken and it’s a picnic!

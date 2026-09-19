@@ -2,7 +2,7 @@
 title: Farmer Soup
 tags: [mains, soups]
 source: family
-draft: true
+draft: false
 ---
 
 This is a work in progress recipe to replicate Farmer Soup (from the ABC Family restaurants). This needs to use farmer sausage from Rempel Meats in Abbotsford, or a large hand-made, smoked farmer sausage.

@@ -2,7 +2,7 @@
 title: Vaguely Asian slaw dressing
 tags: [salads]
 source: family
-draft: true
+draft: false
 ---
 
 This is a great base dressing for an Asian style slaw or chunky salad. You can add chilis for kick, or ginger/garlic depth.

@@ -2,7 +2,7 @@
 title: Bruce’s quick fried black beans
 tags: [sauces]
 source: family
-draft: true
+draft: false
 ---
 
 Fried black beans are a perfect base for nachos, quick burritos, beans and rice, and other quick food hacks.

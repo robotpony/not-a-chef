@@ -2,10 +2,10 @@
 title: Paska buns
 tags: [breads]
 source: family
-draft: true
+draft: false
 ---
 
-This recipe has not yet been tried.  When Ann was growing up, her Great Oma Hamm (Oma Rille’s mom) would make Paska bread for Easter.  When Great Oma passed away, her recipes disappeared with her as she never wrote anything down.  She had her recipes memorized and the measurements were done with her hands.  I miss the family traditions of holiday baking and am hoping this recipe brings back some nostalgia.
+When Ann was growing up, her Great Oma Hamm (Oma Rille’s mom) would make Paska bread for Easter.  When Great Oma passed away, her recipes disappeared with her as she never wrote anything down.  She had her recipes memorized and the measurements were done with her hands.  I miss the family traditions of holiday baking and am hoping this recipe brings back some nostalgia.
 
 #### For the Buns:
 

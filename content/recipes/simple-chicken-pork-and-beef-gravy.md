@@ -2,7 +2,7 @@
 title: Simple chicken, pork, and beef gravy
 tags: [bases]
 source: family
-draft: true
+draft: false
 ---
 
 Gravy is a simple sauce of meat drippings and a roux (equal parts fat and flour), about 1:5 roux:liquid (e.g., 50mg roux to 250mg liquid).

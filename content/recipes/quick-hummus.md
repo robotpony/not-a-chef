@@ -2,7 +2,7 @@
 title: Quick hummus
 tags: [sauces]
 source: family
-draft: true
+draft: false
 ---
 
 A great snack or condiment, based on restaurant style hummus. Makes about 750ml (3 small grocery store sized containers).

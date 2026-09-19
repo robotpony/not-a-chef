@@ -3,7 +3,7 @@
 title: Cottage Pie
 tags: [mains, casseroles]
 source: family
-draft: true
+draft: false
 ---
 
 This is Bruce’s lazy cottage pie. Cottage pie is a Shepherd's pie, but with less Shepherd; a casserole layered with beef, vegetables, gravy, and covered in mashed potatoes. This is a quick recipe we make when we have leftover mashed potatoes, using our prepped softened ground beef and frozen vegetables.

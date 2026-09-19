@@ -2,7 +2,7 @@
 title: Gina’s Tomato Salsa
 tags: [sauces]
 source: family
-draft: true
+draft: false
 ---
 
 Something similar to our favourite Nanaimo Mexican hut’s fresh salsa. This is a fairly liquidy salsa, great as a starter for a dinner party (or snack). Lasts up to a few weeks in the fridge.

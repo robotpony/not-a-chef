@@ -2,7 +2,7 @@
 title: Ginger/garlic paste
 tags: [bases]
 source: family
-draft: true
+draft: false
 ---
 
 This paste is a common base component of many dishes in southeast Asia, including Indian takeaway style cookery. Use a spoon of this in soups, gravies, and on meats.

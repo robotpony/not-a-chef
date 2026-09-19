@@ -1,3 +1,21 @@
+## Friday, September 18th
+
+#### Food ideas
+
+- [butternut squash curry](https://www.goodhousekeeping.com/food-recipes/a38375880/butternut-squash-curry-recipe/) #todo
+- [beef thai curry](https://www.goodhousekeeping.com/food-recipes/a38867914/instant-pot-beef-curry-recipe/) → chicken thighs #todo 
+- [Japanese curry](https://www.justonecookbook.com/pressure-cooker-japanese-curry/) #todo 
+- [One pot meals](https://www.budgetbytes.com/category/recipes/one-pot/)
+- [Chinese sausage rice](https://omnivorescookbook.com/instant-pot-chinese-sausage-rice/?utm_source=Pinterest&utm_medium=organic)
+- [Enchilada pie](https://www.goodhousekeeping.com/food-recipes/a43480219/enchilada-pie-recipe/)
+- [Chicken curry](https://www.goodhousekeeping.com/food-recipes/a7386/chicken-curry/) (simplified recipe, but likely good weeknight meal)
+- [Chicken pho](https://www.goodhousekeeping.com/food-recipes/a29760153/instant-pot-chicken-pho-recipe/)
+
+Do a deep dive on [mennonitegirlscancook](http://www.mennonitegirlscancook.ca/) and [the woks of life](https://thewoksoflife.com/)
+
+Example recipe sites (above, and ...):
+- [dollar recipes](https://dollarrecipeclub.com/recipes/broccoli-cheddar-chicken-casserole/)
+
 ## Monday, September 14th
 
 The food log has moved!

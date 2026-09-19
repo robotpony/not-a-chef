@@ -2,7 +2,7 @@
 title: Indian takeout tomato purée
 tags: [bases]
 source: family
-draft: true
+draft: false
 ---
 
 Making Indian style dishes quickly is much easier with a few base ingredients that you prepare ahead of time. This takeout style tomato purée adds depth and body to many types of curries.

@@ -2,7 +2,7 @@
 title: German Platz
 tags: [desserts]
 source: family
-draft: true
+draft: false
 ---
 
 A neighbour of Bruce’s  used to make this fruity coffee cake weekly. They had a huge boxy house with two kitchens, where the second kitchen was for making desserts and canning. I always thought having a kitchen for large batch cooking was a fantastic idea.

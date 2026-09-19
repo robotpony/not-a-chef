@@ -2,7 +2,7 @@
 title: Creamy roasted red pepper soup
 tags: [mains, soups]
 source: family
-draft: true
+draft: false
 ---
 
 We had half a kilo of baby red peppers left over after a social event, so I tried a simple roasted red pepper soup. This is roughly based on [Chef John’s](https://www.allrecipes.com/recipe/17550/red-pepper-soup/) take, but with the ingredients that I tend to have on hand.

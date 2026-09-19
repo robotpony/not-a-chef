@@ -2,7 +2,7 @@
 title: Satay marinade
 tags: [bases]
 source: family
-draft: true
+draft: false
 ---
 
 This is a simplified satay marinade, great for chicken, tofu, pork, and beef. This is based loosely on [Chef John’s Penang Pork Satay](https://www.allrecipes.com/recipe/275397/penang-pork-satay/).

@@ -2,7 +2,7 @@
 title: Al pastor marinade (pantry hack)
 tags: [bases]
 source: family
-draft: true
+draft: false
 ---
 
 I don’t always have easy access to dried chilis. I do have reasonable access to ground dried and fresh chilis, so this is a pantry version that captures the basic intent of a Mexican chilli paste turned into a marinade. This recipe is loosely based on one from [BA](https://www.bonappetit.com/recipe/tacos-al-pastor-2), [Chef John](https://www.allrecipes.com/recipe/274229/pineapple-pulled-pork-al-pastor/) and [Serious Eats](https://www.seriouseats.com/tacos-al-pastor-recipe), but simplified for what I normally keep on hand.

@@ -2,7 +2,7 @@
 title: Double Chocolate Banana Bread
 tags: [desserts]
 source: family
-draft: true
+draft: false
 ---
 
 The recipe was found on the internet when a craving for Banana Bread hit.  Looking at different recipes, this one stood out as it was done by Smitten Kitchen, which was a great name.  It has been reliable, is pretty easy, and definitely filled the craving.

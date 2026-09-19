@@ -3,64 +3,34 @@
 title: Quick pizza sauce
 tags: [sauces]
 source: family
-draft: true
+servings: ~700ml
+draft: false
 ---
-
-Makes ~700ml
 
 This is a lazy pizza sauce recipe that uses only pantry ingredients. It should be slightly salty, with a garlic and herb background.
 
 ## Ingredients
 
-650ml
+- 650 ml strained tomatoes (one 680 ml glass jar, less what doesn't come out)
+- 20 g tomato paste (heaping tablespoon)
+- 3 g olive oil
+- 7 g salt, just over 1%
+- 2 g sugar, or sweet balsamic vinegar or maple syrup
+- 2 g granulated garlic
+- 1 g black pepper
+- 1 g MSG (optional)
+- 1 g oregano (and thyme if you have it)
 
-Strained tomatoes
+## Method
 
-One glass jar (680ml), less what doesn’t come out.
+Mix the ingredients and taste. Tomato sauces vary widely, so add more salt, garlic, or sugar to taste as needed.
 
-20g
+Refrigerate for up to a week; it tastes better after a few hours.
 
-Tomato paste
+## To serve
 
-Heaping tablespoon
+Pizza bagels, pizza bread, pizza dogs, or quick pizzas.
 
-3g
+## Notes
 
-Olive oil
-
-7g
-
-Salt
-
-Just over 1%
-
-2g
-
-Sugar
-
-Sweet balsamic can work too, or maple syrup.
-
-2g
-
-Granulated garlic
-
-1g
-
-Black pepper
-
-1g
-
-MSG
-
-Optional, but tasty.
-
-1g
-
-Oregano (and thyme if you have it)
-
-## Basic method
-
-1. Mix ingredients and taste. May need more salt/garlic/sugar to taste, as tomato sauces vary quite widely.
-2. Refrigerate for up to a week (tastes better after a few hours).
-
-I use this sauce for pizza bagels/bread/dogs and quick pizzas. It’s bright and nostalgic (towards Orange Julius pizza dogs, or mall pizza).
+- Bright and sweet-leaning, closer to mall-food-court pizza than a slow-simmered sauce.

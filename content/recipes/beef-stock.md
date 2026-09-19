@@ -2,7 +2,7 @@
 title: Beef stock
 tags: [bases]
 source: family
-draft: true
+draft: false
 ---
 
 This is a rich stock that uses bones leftover when buying and breaking down whole birds.

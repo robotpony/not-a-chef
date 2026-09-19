@@ -2,7 +2,7 @@
 title: Pulled BBQ style chicken
 tags: [mains, pork]
 source: family
-draft: true
+draft: false
 ---
 
 This is a simple pulled or shredded BBQ style chicken that can be made without a smoker or BBQ. This is a braised dish that can be made on the stovetop, in the oven, in a crock pot, or in a pressure cooker. I prefer making it in the oven, in covered hotel pans.

@@ -2,7 +2,7 @@
 title: Neapolitan Strips
 tags: [desserts]
 source: family
-draft: true
+draft: false
 ---
 
 Ann made this recipe with an elementary school friend, Shannon Donselaar.  This was our favorite treat.

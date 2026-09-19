@@ -2,7 +2,7 @@
 title: Potato, leek, and mushroom soup
 tags: [mains, soups]
 source: family
-draft: true
+draft: false
 ---
 
 For the 2021 Christmas season, we made a variety of soups. This one was one of them, and it combines two of our favourite soups into one: potato-leek, and mushroom-cream. It’s based roughly on [Serious Eat’s](https://www.seriouseats.com/best-potato-leek-soup-recipe) and [John’s](https://www.allrecipes.com/recipe/256108/potato-leek-soup-vichyssoise/) take on the dish.

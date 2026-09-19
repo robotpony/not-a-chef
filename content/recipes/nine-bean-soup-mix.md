@@ -2,7 +2,7 @@
 title: Nine bean soup mix
 tags: [mains, soups]
 source: family
-draft: true
+draft: false
 ---
 
 I found this recipe in our old recipe book with the following: All proceeds to charitable projects CHAPTER BF, PEO SISTERHOOD, ABBOTSFORD, BC.

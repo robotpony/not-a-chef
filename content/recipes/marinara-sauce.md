@@ -2,7 +2,7 @@
 title: Marinara sauce
 tags: [sauces]
 source: family
-draft: true
+draft: false
 ---
 
 A basic marinara sauce can be used directly or as a base to other sauces. This recipe is based on [Chef John’s](https://www.allrecipes.com/recipe/235565/chef-johns-tomato-sauce/) and others I have seen. It’s thicker and richer than a [pizza sauce](https://docs.google.com/document/d/1S5WIHwjKUhwJk81cAxMp_hggQVWdj2ytANTs367LQxM/edit), and can be adapted as a base for savoury sauces (meat or mushroom), or into other recipes (like pastas, soups, and stews).

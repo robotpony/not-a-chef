@@ -2,7 +2,7 @@
 title: Hot Ranch Spinach and Artichoke Dip
 tags: [sauces]
 source: family
-draft: true
+draft: false
 ---
 
 From a grocery store card.

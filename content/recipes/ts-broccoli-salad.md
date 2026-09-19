@@ -2,7 +2,7 @@
 title: T’s Broccoli Salad
 tags: [salads]
 source: family
-draft: true
+draft: false
 ---
 
 What’s to say? This is a broccoli salad that has bacon. If you don’t want bacon, try some smoked tempeh or roasted sweet potatoes with smoked paprika. It’s a sweet and savoury salad that is more filling than most.

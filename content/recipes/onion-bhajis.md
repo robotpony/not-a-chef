@@ -2,7 +2,7 @@
 title: Onion Bhajis
 tags: [appetizers, sides]
 source: family
-draft: true
+draft: false
 ---
 
 These fritters are both a tasty appetizer and a way to season oil for curries.

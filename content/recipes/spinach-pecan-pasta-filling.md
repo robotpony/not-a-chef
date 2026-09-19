@@ -2,7 +2,7 @@
 title: Spinach pecan pasta filling
 tags: [breads]
 source: family
-draft: true
+draft: false
 ---
 
 This is a great filling for vegetarian pasta like ravioli, tortellini, or sauced pastas like lasagne or ragu. Makes enough filling for around 50 small stuffed pastas (10g each).

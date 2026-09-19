@@ -2,7 +2,7 @@
 title: Canadian chili
 tags: [mains, stews]
 source: family
-draft: true
+draft: false
 ---
 
 The chili I grew up with is not the chili of the south. It’s a beany, tomato vegetable stew with a hint of beef. It’s a recipe that easily becomes vegetarian by just skipping the beef, but here I’ll outline how to make it even more savoury by adding layers of mushrooms. If you want a beefy version, just include some minced or ground beast in one of the mushroom stages.

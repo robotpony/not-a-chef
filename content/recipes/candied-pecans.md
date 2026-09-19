@@ -2,7 +2,7 @@
 title: Candied Pecans
 tags: [desserts]
 source: family
-draft: true
+draft: false
 ---
 
 A sweet little treat!  It’s a great snack to put out for a get-together or as a pre-treat.

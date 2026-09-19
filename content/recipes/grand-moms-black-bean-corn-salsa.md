@@ -2,7 +2,7 @@
 title: (Grand) Mom’s Black Bean & Corn Salsa
 tags: [sauces]
 source: family
-draft: true
+draft: false
 ---
 
 Classic beany dip for nachos … also required for most family gatherings.

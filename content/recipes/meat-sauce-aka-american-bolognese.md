@@ -2,7 +2,7 @@
 title: Meat sauce (AKA American bolognese)
 tags: [sauces]
 source: family
-draft: true
+draft: false
 ---
 
 I make this meat sauce a few times a month, from the pantry and my regular freezer prep. It’s based on fairly standard meat sauce recipes.

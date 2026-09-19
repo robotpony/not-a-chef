@@ -2,7 +2,7 @@
 title: Baguettes
 tags: [breads]
 source: family
-draft: true
+draft: false
 ---
 
 This is more of a method than a specific recipe, and the dough can be used for several similar types of breads (including focaccia, buns, and loaves) by varying the rise and oven time. The baguette method uses a narrow shape and steam to form a fantastic crust. This recipe and method is based on [Ethan Chlebowski’s excellent tutorial video](https://www.ethanchlebowski.com/cooking-techniques-recipes/sandwich-baguettes). Also see [Paul Holywood’s recipe](https://www.paulhollywood.com/post/baguettes).

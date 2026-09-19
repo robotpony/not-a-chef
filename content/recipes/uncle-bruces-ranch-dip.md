@@ -2,7 +2,7 @@
 title: Uncle Bruce's Ranch Dip
 tags: [sauces]
 source: family
-draft: true
+draft: false
 ---
 
 Growing up we ate a lot of post-war style food, including the famous Uncle Dan’s powdered ranch dip. I’m far too principled and lazy to buy powdered mix, so I came up with my own approximation. Two things make this dip stand out: MSG and an overnight stint in the fridge. Don’t skimp on either.

@@ -2,7 +2,7 @@
 title: Bulgogi beef
 tags: [mains, beef]
 source: family
-draft: true
+draft: false
 ---
 
 This is a sweet, barbecued Korean beef dish that is typically made with boneless short rib or rib eye. It can also be made with ground beef or pork for a faster weeknight meal.

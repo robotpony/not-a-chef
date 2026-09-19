@@ -2,57 +2,34 @@
 title: Basic beans and lentils
 tags: [mains, stews]
 source: family
-draft: true
+draft: false
 ---
 
-There are a number of ways to cook dried beans and other legumes. Soaking is not required for any method (nor does it reduce gassiness), but can shorten cooking times.
+## Mechanic
 
-### Cooking times:
+The **water-to-legume ratio** and cook time depend on the legume: lentils and split peas use less water and cook fast, while beans need more water and much longer. Soaking is optional — it shortens cooking time but doesn't reduce gassiness.
 
-Type
+## Ingredients
 
-H2O
+- Dried beans, lentils, or split peas
+- Water, 3:1 (lentils, split peas) or 4:1 (beans)
+- 1 tsp salt per cup of legumes
 
-Pressure cooker
+## Method
 
-Stove top
+Rinse the legumes thoroughly and pick out any stones or debris. Soak if desired, see the timing table below.
 
-Medium beans
+Add the legumes to water at the ratio above, then add the salt. Cook using the pressure cooker or stove-top times below.
 
-4:1
+## Timing
 
-17-21 minutes, high pressure, slow release
+| Type | Water ratio | Pressure cooker | Stove top |
+|---|---|---|---|
+| Medium beans | 4:1 | 17–21 min, high pressure, slow release | 60–90 min, simmered |
+| Large beans | 4:1 | 20–25 min, high pressure, slow release | 60–120 min, simmered |
+| Lentils | 3:1 | 3–5 min, high pressure, slow release | 15–20 min, simmered |
+| Split peas | 3:1 | 5–7 min, high pressure, slow release | 25–35 min, simmered |
 
-60-90 minutes, simmered
+## Notes
 
-Large beans
-
-4:1
-
-20-25 minutes, high pressure, slow release
-
-60-120 minutes, simmered
-
-Lentils
-
-3:1
-
-3-5 minutes, high pressure, slow release
-
-15-20 minutes, simmered
-
-Split peas
-
-3:1
-
-5-7 minutes, high pressure, slow release
-
-25-35 minutes, simmered
-
-It isn’t recommended to cook beans (especially kidney beans) in a slow cooker unless you par-boil them for 10-15 minutes to destroy the naturally occurring phytohaemagglutinin.
-
-### Method:
-
-1. Rinse thoroughly and pick out any stones or other debris.
-2. Optionally, soak (see chart for timings).
-3. Add legumes to water, 3:1 (for smaller legumes) or 4:1 (larger beans). Add 1 tsp of salt per 1 cup of legumes.
+- Avoid cooking beans, especially kidney beans, in a slow cooker unless you par-boil them 10–15 minutes first to destroy naturally occurring phytohaemagglutinin.

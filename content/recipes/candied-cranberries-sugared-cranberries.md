@@ -2,7 +2,7 @@
 title: Candied Cranberries (Sugared Cranberries)
 tags: [appetizers, sides]
 source: family
-draft: true
+draft: false
 ---
 
 I had attended a Roller Derby event that had a potluck and someone brought Candied Cranberries. They were surprisingly really good - tart and sweet, look like they are frosted in snow, and make a cool popping sound when you bite into them just right! Great for on a charcuterie board, a dessert topping, or just in a dish to add colour to a table or buffet. A teammate, Lashes, found the recipe on Instagram (@ourbestbites) and forwarded it to me, as we both enjoyed them at the event.

@@ -8,7 +8,7 @@ prep_time: 15 min (plus 12–24 hr rub rest)
 cook_time: 1 hr
 total_time: TBD
 cuisine: American
-draft: true
+draft: false
 ---
 
 ## Mechanic

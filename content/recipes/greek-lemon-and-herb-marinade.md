@@ -2,7 +2,7 @@
 title: Greek lemon and herb marinade
 tags: [bases]
 source: family
-draft: true
+draft: false
 ---
 
 This marinade is great for rice, tofu, chicken, shrimp, and fish. It’s a bright, herbal blend that balances acid, salt, and sweet. In a pinch it can be used for plating and on salads (where it’s even better blended).

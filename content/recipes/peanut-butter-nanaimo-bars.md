@@ -2,7 +2,7 @@
 title: Peanut Butter Nanaimo Bars
 tags: [desserts]
 source: family
-draft: true
+draft: false
 ---
 
 Recipe is from FoodTV

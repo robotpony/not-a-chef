@@ -2,7 +2,7 @@
 title: Lemongrass marinade
 tags: [bases]
 source: family
-draft: true
+draft: false
 ---
 
 A Canadian take on a classic Vietnamese marinade. Great on pork, chicken, beef, and tofu.

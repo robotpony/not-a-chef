@@ -2,7 +2,7 @@
 title: Ultimate every-bun recipe
 tags: [breads]
 source: family
-draft: true
+draft: false
 ---
 
 This is a pretty-much-any bun recipe based on [Weissman’s famous multipurpose dough](https://www.joshuaweissman.com/post/greatest-dinner-rolls). It’s soft, and works for burger, dinner, hot dog buns, and likely other softish buns.

@@ -2,7 +2,7 @@
 title: Hot Crab & Artichoke Dip
 tags: [sauces]
 source: family
-draft: true
+draft: false
 ---
 
 A dip for crabby people.  Recipe provided by Breanna Kliewer (co-worker from Discover Software)

@@ -2,7 +2,7 @@
 title: Classic pizza sauce
 tags: [sauces]
 source: family
-draft: true
+draft: false
 ---
 
 There are a few ways to make pizza sauce, depending on how lazy you are. One of our favourite  sauces is cooked down from good tomatoes for a moderate amount of time, and my fastest sauce comes from a tin of crushed tomatoes or sauce (thickened with paste). For pizza sauce, better tomatoes make a difference, as cheaper ones are less sweet and flavourful.

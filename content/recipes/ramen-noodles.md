@@ -2,7 +2,7 @@
 title: Ramen noodles
 tags: [breads]
 source: family
-draft: true
+draft: false
 ---
 
 This is a simple chewy noodle recipe perfect for ramen, based on the [Serious Eats base recipe](https://www.seriouseats.com/homemade-ramen-noodles) with some tweaks from [Ramen Lord’s book](https://docs.google.com/document/d/1qLPoLxek3WLQJDtU6i3300_0nNioqeYXi7vESrtNvjQ/edit). These noodles will start out very shaggy, but will come together after resting.

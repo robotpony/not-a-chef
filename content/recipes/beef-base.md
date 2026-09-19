@@ -2,7 +2,7 @@
 title: Beef base
 tags: [bases]
 source: family
-draft: true
+draft: false
 ---
 
 This is a beef base for several dishes we eat regularly. It’s great on tacos, salads, in soups, casseroles, and in other sauces like meat sauce, bolognese, and so on.

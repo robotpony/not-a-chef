@@ -1,8 +1,8 @@
 ---
-title: Lentil Stew[\[a\]](#cmnt1)
+title: Lentil Stew
 tags: [mains, curries]
 source: family
-draft: true
+draft: false
 ---
 
 This stew is based on a package we bought from a farmers market years ago (as Jamaican Me Hungry Lentil Stew). It’s a great stew on its own, or over roasted veg.

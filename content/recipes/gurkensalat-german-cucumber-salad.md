@@ -2,7 +2,7 @@
 title: Gurkensalat (German Cucumber Salad)
 tags: [salads]
 source: family
-draft: true
+draft: false
 ---
 
 My Mom (Joanne Rempel) made this salad a lot in my youth and it holds nostalgic memories! I had not had it in years and in my early 40’s had a strong craving for it. I found a recipe online and made it for something different. It took me back to my childhood and I still enjoy it as much as I did as a kid!

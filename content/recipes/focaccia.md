@@ -8,7 +8,7 @@ prep_time: 20 min
 cook_time: 20–40 min
 total_time: 3 hr (including dough rise)
 cuisine: Italian
-draft: true
+draft: false
 ---
 
 ## Mechanic

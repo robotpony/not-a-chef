@@ -2,7 +2,7 @@
 title: Simple rice bowls
 tags: [mains, rice-bowls]
 source: family
-draft: true
+draft: false
 ---
 
 Rice bowls are a simple combination of rice, veg, protein, and sauces. You can put pretty much any combination of foods in a rice bowl, and the goal is a balance of crunch and savoury. These bowls are about 650-800 kcals per portion.

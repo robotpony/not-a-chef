@@ -2,7 +2,7 @@
 title: Panago style jalapeño cheese dip
 tags: [sauces]
 source: family
-draft: true
+draft: false
 ---
 
 There’s this Canadian franchise that makes a very classic style of pizza; thick crust, tonnes of sauce and toppings, everything that isn’t a NY style pizza. They make a jalapeño dip that I miss when we order from somewhere else. This is my attempt at recreating it.

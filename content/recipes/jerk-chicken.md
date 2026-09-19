@@ -2,7 +2,7 @@
 title: Jerk Chicken
 tags: [mains, poultry]
 source: family
-draft: true
+draft: false
 ---
 
 This recipe is based on something I found in a magazine in the 90s, recently updated with Chef [John’s simplified version](https://www.allrecipes.com/recipe/236503/jerk-chicken-wings/) and the [Serious Eats method](https://www.seriouseats.com/recipes/2013/08/jerk-chicken.html). I knew a guy who made the best Jerk Chicken I’ve ever had, but he wouldn’t share his recipe. This is about as close as I could get to that now fading memory.

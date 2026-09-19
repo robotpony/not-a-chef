@@ -2,7 +2,7 @@
 title: Beetroot and chickpea hummus
 tags: [sauces]
 source: family
-draft: true
+draft: false
 ---
 
 A great snack when you’re beet. Makes a bright red, earthy hummus. and makes about 750ml (3ish ~200ml grocery store sized hummus containers).
