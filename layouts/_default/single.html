@@ -104,12 +104,19 @@
             </strong>
           {{ end }}
         </div>
-        {{ if (.Params.showAuthorBottom | default (site.Params.article.showAuthorBottom | default false)) }}
-          {{ template "SingleAuthor" . }}
+        {{/* For recipes these render below the whole two-column section
+          instead (see the max-w-prose block after `</section>`) — kept out
+          of this flex item so the recipe sidebar, a sibling of this div,
+          lands right after Method on mobile via plain DOM order rather
+          than after sharing links and a grid of unrelated recipe cards. */}}
+        {{ if ne .Section "recipes" }}
+          {{ if (.Params.showAuthorBottom | default (site.Params.article.showAuthorBottom | default false)) }}
+            {{ template "SingleAuthor" . }}
+          {{ end }}
+          {{ partial "series/series-closed.html" . }}
+          {{ partial "sharing-links.html" . }}
+          {{ partial "related.html" . }}
         {{ end }}
-        {{ partial "series/series-closed.html" . }}
-        {{ partial "sharing-links.html" . }}
-        {{ partial "related.html" . }}
       </div>
 
       {{/* Sidebar prototype (recipe-sidebar-prototype branch): recipes get
@@ -181,6 +188,22 @@
         </div>
       {{ end }}
     </section>
+
+    {{/* Sharing links, related recipes, and (if configured) the bottom
+      author block, for recipes only — pulled out of the two-column flex
+      section above so they can't land between Method and the sidebar's
+      mobile position. max-w-prose matches the header/footer's width so
+      this reads as a continuation of the same column. */}}
+    {{ if eq .Section "recipes" }}
+      <div class="max-w-prose">
+        {{ if (.Params.showAuthorBottom | default (site.Params.article.showAuthorBottom | default false)) }}
+          {{ template "SingleAuthor" . }}
+        {{ end }}
+        {{ partial "series/series-closed.html" . }}
+        {{ partial "sharing-links.html" . }}
+        {{ partial "related.html" . }}
+      </div>
+    {{ end }}
 
     {{/* Footer */}}
     <footer class="pt-8 max-w-prose print:hidden">
