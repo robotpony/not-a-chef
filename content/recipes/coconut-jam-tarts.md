@@ -5,15 +5,12 @@ source: family
 draft: false
 ---
 
-Grandma Rempel (Ann’s Mom) always used to make Butter Tarts and Coconut Jam Tarts and this was her recipe.  Back in the day, the tart was homemade, but as convenience became more convenient, the tarts went to the store bought type.
+This is a family recipe from the 1950s.
 
-#### Crust/Pastry:
+> Grandma Rempel (Ann’s Mom) always used to make Butter Tarts and Coconut Jam Tarts and this was her recipe.  Back in the day, the tart was homemade, but as convenience became more convenient, the tarts went to the store bought type.
 
-- 1 cup Flour
-- ½ cup Shortening
-- 1 tsp Baking Powder
 
-#### Ingredients:
+## Ingredients:
 
 - 2 Eggs
 - 1/2 cup Sugar
@@ -22,7 +19,13 @@ Grandma Rempel (Ann’s Mom) always used to make Butter Tarts and Coconut Jam Ta
 - 1 cup Coconut, shredded
 - ¼ cup Raspberry Jam
 
-### Directions:
+### Crust/Pastry:
+
+- 1 cup Flour
+- ½ cup Shortening
+- 1 tsp Baking Powder
+
+## Directions:
 
 Recipe makes 12 Tarts.
 

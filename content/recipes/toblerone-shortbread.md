@@ -5,17 +5,18 @@ source: family
 draft: false
 ---
 
-Now an Alderson Family Christmas tradition!  Ann & Bruce first had these cookies made by a coworker while both working at Discover Software, Linda.  We loved them and have been making them every holiday season since.
+One of our favourite family Christmas traditions! 
+
+> Ann & Bruce first had these cookies made by a coworker while both working at Discover Software, Linda.  We loved them and have been making them every holiday season since.
 
 #### Ingredients:
 
-- 1 lb Butter (softened)
-- 1 cup Icing Sugar
-
-- ½ cup Corn Starch
-- 3 cups Flour
-- 2 tsp Vanilla
-- Chopped up Toblerone (original); if it’s a small bar, chop triangles in half and if it’s a large bar, chop triangles into thirds
+- 1 lb butter (softened)
+- 1 cup icing sugar
+- ½ cup corn starch
+- 3 cups flour
+- 2 tsp vanilla
+- chopped up Toblerone (original); if it’s a small bar, chop triangles in half and if it’s a large bar, chop triangles into thirds
 
     - Makes about 2 dozen cookies (one small Toblerone = 24 pieces)
 

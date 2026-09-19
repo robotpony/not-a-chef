@@ -1,6 +1,6 @@
 # Essay Format
 
-Standard Markdown with YAML frontmatter. Essays live in `content/essays/`. Unlike recipes, they are finished prose pieces — not outlines or notes.
+Standard Markdown with YAML frontmatter. Essays live in `content/essays/`. Unlike recipes, they are finished prose pieces, not outlines or notes.
 
 For voice, tone, and post-type guidance, see `~/.claude/rules/blog-writing-rules.md`.
 
@@ -34,9 +34,9 @@ No required sections. Essays are free-form prose.
 
 Typical structure (varies by post type):
 
-1. Opening — a specific observation, scenario, or image that grounds the piece
-2. Body — the argument, narrative, or exploration; one idea per section
-3. Close — a landing point; actionable, reflective, or a restatement of the opening with new weight
+1. Opening: a specific observation, scenario, or image that grounds the piece
+2. Body: the argument, narrative, or exploration; one idea per section
+3. Close: a landing point; actionable, reflective, or a restatement of the opening with new weight
 
 Use `##` headings only when sections are long enough that a reader needs navigation. Short pieces (under 1000 words) rarely need headers. When in doubt, omit them.
 
@@ -67,7 +67,7 @@ Essays are outlined in the vault at `writing/essays/` before being drafted for p
 - ...
 ```
 
-`Topics and ideas.md` in that folder is an authoring scratch file, not content — skip it on migration.
+`Topics and ideas.md` in that folder is an authoring scratch file, not content, skip it on migration.
 
 When migrating an essay from the vault, the outline is the source material. The published file in `content/essays/` should be finished prose, not the outline itself. Migration is manual.
 
@@ -80,4 +80,4 @@ When migrating an essay from the vault, the outline is the source material. The 
 3. `draft` is a boolean if present
 4. `tags` is a list of plain strings (no `#` prefix) if present
 
-No structural body checks — essay format is free-form.
+No structural body checks: essay format is free-form.

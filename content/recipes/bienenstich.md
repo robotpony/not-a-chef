@@ -5,7 +5,11 @@ source: family
 draft: false
 ---
 
-This is a Rille Family Recipe!  Oma Rille’s sister, Erika, used to make this cake for each family gathering and it was always a family favourite.  It was almost not a Rille Family gathering without Bienenstich.  I had asked my Great Auntie Erika for this recipe a few times and she replied that she thought she had already given it to me.  Then one day, I received a letter from Great Auntie Erika; she had written out the recipe and on the bottom of the recipe had written, “Good Luck, Happy Baking, Enjoy. Auntie Erika.  Love you.  Tell me how you made out.”  Auntie Erika passed away before I ever had a chance to make the recipe and let her know who delicious it was!  Now I try to make Bienenstich for Rille Family gatherings or events.  I’m going to write out the recipe in the format of Auntie Erika’s letter. Quick ingredient list is condensed at the bottom of the page.
+This is one of our cherished family recipes. It's a light, sweet dessert, that serves well with coffee or tea.
+
+
+> This is a Rille Family Recipe!  Oma Rille’s sister, Erika, used to make this cake for each family gathering and it was always a family favourite.  It was almost not a Rille Family gathering without Bienenstich.  I had asked my Great Auntie Erika for this recipe a few times and she replied that she thought she had already given it to me.  Then one day, I received a letter from Great Auntie Erika; she had written out the recipe and on the bottom of the recipe had written, “Good Luck, Happy Baking, Enjoy. Auntie Erika.  Love you.  Tell me how you made out.”  Auntie Erika passed away before I ever had a chance to make the recipe and let her know who delicious it was!  Now I try to make Bienenstich for Rille Family gatherings or events.  I’m going to write out the recipe in the format of Auntie Erika’s letter. Quick ingredient list is condensed at the bottom of the page.
+
 
 #### Beat:
 

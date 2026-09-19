@@ -5,7 +5,9 @@ source: family
 draft: false
 ---
 
-Ann made this recipe with an elementary school friend, Shannon Donselaar.  This was our favorite treat.
+This is a recipe from our childhood.
+
+> Ann made this recipe with an elementary school friend, Shannon Donselaar.  This was our favorite treat.
 
 #### Ingredients:
 

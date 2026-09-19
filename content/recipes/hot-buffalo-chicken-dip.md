@@ -1,13 +1,13 @@
 ---
-title: Hot Buffalo Chicken Dip
+title: Hot Buffalo chicken dip
 tags: [appetizers, sides]
 source: family
 draft: false
 ---
 
-In 2023, Ann stayed in Calgary to house/dog sit for cousin Rachael, and during that trip, also had a visit with Auntie Diane who always spoils me when I’m visiting. She made this dip and I insisted on the recipe which she forwarded from Pinterest. It took over a year for me to finally make it, for Jay & Taylor’s Back Home Wedding Celebration, and it was a huge success which means it gets added to our family recipes!
+This is a classic chicken dip
 
-Original credit: [www.cafedelites.com](http://www.cafedelites.com).
+> In 2023, Ann stayed in Calgary to house/dog sit for cousin Rachael, and during that trip, also had a visit with Auntie Diane who always spoils me when I’m visiting. She made this dip and I insisted on the recipe which she forwarded from Pinterest. It took over a year for me to finally make it, for Jay & Taylor’s Back Home Wedding Celebration, and it was a huge success which means it gets added to our family recipes!
 
 ## Ingredients:
 

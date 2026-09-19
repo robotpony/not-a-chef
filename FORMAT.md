@@ -22,18 +22,18 @@ cuisine: Indian
 ---
 ```
 
-| Field | Type | Notes |
-|---|---|---|
-| `title` | string | Recipe name. Must be unique in the collection. |
-| `tags` | string[] | Plain strings, no `#` prefix. Category and descriptive tags. |
-| `source` | string | `original`, `family`, a URL, or a book title. |
-| `author` | string | Only when different from the collection author. |
-| `date` | string | ISO 8601 (YYYY-MM-DD). Date added or last modified. |
-| `servings` | string or number | Descriptive strings are fine: "4–6", "1 loaf", "scales to bird size". |
-| `prep_time` | string | Parenthetical notes are fine: "20 min (plus 24–48 hr cold ferment)". |
-| `cook_time` | string | Active cooking time. |
-| `total_time` | string | Total elapsed time if different from prep + cook. |
-| `cuisine` | string | Region or cuisine (e.g., "Indian", "Italian"). |
+| Field        | Type             | Notes                                                                 |
+| ------------ | ---------------- | --------------------------------------------------------------------- |
+| `title`      | string           | Recipe name. Must be unique in the collection.                        |
+| `tags`       | string[]         | Plain strings, no `#` prefix. Category and descriptive tags.          |
+| `source`     | string           | `original`, `family`, a URL, or a book title.                         |
+| `author`     | string           | Only when different from the collection author.                       |
+| `date`       | string           | ISO 8601 (YYYY-MM-DD). Date added or last modified.                   |
+| `servings`   | string or number | Descriptive strings are fine: "4–6", "1 loaf", "scales to bird size". |
+| `prep_time`  | string           | Parenthetical notes are fine: "20 min (plus 24–48 hr cold ferment)".  |
+| `cook_time`  | string           | Active cooking time.                                                  |
+| `total_time` | string           | Total elapsed time if different from prep + cook.                     |
+| `cuisine`    | string           | Region or cuisine (e.g., "Indian", "Italian").                        |
 
 The schema is open. Unknown fields are preserved and ignored by tools. Don't add `difficulty`, `diet`, or `license` unless there's a reason.
 
@@ -115,10 +115,7 @@ Melt ghee over medium-high. Add cumin seeds. When they sizzle, add onion and gar
 Fry until golden, about 3–4 minutes. Pour over the dal.
 ```
 
-To group ingredients within a single component's list (dry vs. wet, for a
-recipe that doesn't otherwise split into components), use a `####` label
-directly above each run of list items. This is a label, not a new
-component — it carries no separate method:
+To group ingredients within a single component's list (dry vs. wet, for a recipe that doesn't otherwise split into components), use a `####` label directly above each run of list items. This is a label, not a new component — it carries no separate method:
 
 ```markdown
 ## Ingredients
@@ -134,7 +131,7 @@ component — it carries no separate method:
 
 ## Optional sections
 
-**To serve** — one line or a few words. What it goes with.
+**To serve**: one line or a few words. What it goes with.
 
 ```markdown
 ## To serve
@@ -142,7 +139,7 @@ component — it carries no separate method:
 Warm basmati rice, plain raita, lime pickle.
 ```
 
-**Variations** — only for meaningfully different methods or outcomes. Prose, one paragraph per variation. Include the source link when adapted.
+**Variations**: only for meaningfully different methods or outcomes. Prose, one paragraph per variation. Include the source link when adapted.
 
 ```markdown
 ## Variations
@@ -151,7 +148,7 @@ Warm basmati rice, plain raita, lime pickle.
 Use yellow split peas instead of masoor ...
 ```
 
-**Notes** — tips, storage, test results. Bullet list.
+**Notes**: tips, storage, test results. Bullet list.
 
 ```markdown
 ## Notes
@@ -160,7 +157,7 @@ Use yellow split peas instead of masoor ...
 - Leftovers thicken considerably. Loosen with water when reheating.
 ```
 
-**Equipment** — freeform bullet list of anything beyond standard kitchen kit.
+**Equipment**: freeform bullet list of anything beyond standard kitchen kit.
 
 ```markdown
 ## Equipment
@@ -169,7 +166,7 @@ Use yellow split peas instead of masoor ...
 - Instant-read thermometer
 ```
 
-**Substitutions** — structured, one swap per line, separated by an arrow (`→`). See `SPEC.md` §5 for the exact grammar; this is what lets a swap be handled programmatically instead of buried in prose.
+**Substitutions**: structured, one swap per line, separated by an arrow (`→`). See `SPEC.md` §5 for the exact grammar; this is what lets a swap be handled programmatically instead of buried in prose.
 
 ```markdown
 ## Substitutions
@@ -178,7 +175,7 @@ Use yellow split peas instead of masoor ...
 - Fish sauce → soy sauce, for a vegetarian version
 ```
 
-**Tables** — use for timing or ratio reference when there are multiple variables.
+**Tables**: use for timing or ratio reference when there are multiple variables.
 
 ```markdown
 ## Timing
@@ -202,7 +199,7 @@ Wiki links resolve by matching `title` in frontmatter. They work natively in Obs
 
 ## File naming
 
-Kebab-case. One recipe per file. Match the title: `dal-tadka.md` for "Dal Tadka".
+Kebab-case. One recipe per file. Match the title: `dal-tadka.md` for "Dal Tadka". Special characters should be replaced by their equivalent or removed, e.g., 
 
 ## Ingredient line format
 

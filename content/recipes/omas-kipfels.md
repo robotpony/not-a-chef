@@ -5,7 +5,9 @@ source: family
 draft: false
 ---
 
-A [Kipfel](https://en.wikipedia.org/wiki/Kifli) is traditionally a crescent shaped yeast bread, one of the oldest styles of pastries. Ann and the kids visited Oma to make these for a school project that Jayda was doing on family heritage, measuring everything from memory. This is an approximation of her method.
+A [Kipfel](https://en.wikipedia.org/wiki/Kifli) is traditionally a crescent shaped yeast bread, one of the oldest styles of pastries. 
+
+> Ann and the kids visited Oma to make these for a school project that Jayda was doing on family heritage, measuring everything from memory. This is an approximation of her method.
 
 #### Ingredients:
 

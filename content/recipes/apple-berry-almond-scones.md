@@ -5,7 +5,7 @@ source: family
 draft: false
 ---
 
-First made by Bruce for Ann on Mother’s Day 💜
+We first made this on Mother’s Day 💜, many years ago.
 
 #### Ingredients:
 

@@ -5,7 +5,7 @@ source: family
 draft: false
 ---
 
-Grandpa Rempel had a Welsh background.  This recipe was given by his family, yet it has been Grandman Rempel and Ann who continue to make this recipe.  They are great on their own, topped with Cream Cheese Icing, or warmed and served with butter.  Gluten-free flour can be substituted for the All-Purpose flour and they still taste the same!
+> Grandpa Rempel had a Welsh background.  This recipe was given by his family, yet it has been Grandman Rempel and Ann who continue to make this recipe.  They are great on their own, topped with Cream Cheese Icing, or warmed and served with butter.  Gluten-free flour can be substituted for the All-Purpose flour and they still taste the same!
 
 #### Ingredients:
 

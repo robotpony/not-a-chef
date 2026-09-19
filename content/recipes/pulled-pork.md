@@ -17,9 +17,9 @@ The pork braises in stock and aromatics only; the barbecue sauce is a separate r
 
 ## Ingredients
 
-- [[Bruce's Poultry and Pork Spice Rub]], ½–¾ cup per shoulder, adapted with paprika, smoked paprika, ancho chili powder, and cumin
-- 1–2 pork shoulders
-- 1–2 onions, roughly chopped
+- ½ cup spice rub per shoulder, adapted with paprika, smoked paprika, ancho chili powder, and cumin (I use [[Bruce's Poultry and Pork Spice Rub]])
+- 1 pork shoulders
+- 2 onions, roughly chopped
 - 1 head garlic, peeled
 - 125–250 ml chicken stock
 - 125 ml cider vinegar

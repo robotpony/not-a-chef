@@ -4,17 +4,14 @@ tags: [desserts]
 source: family
 draft: false
 ---
-
-One day, Dad and I had a craving for Crème Brûlée and not having anywhere to go to have it, we decided to make it at home. I found a recipe online and it’s worked great for us each time; including birthday parties and friends over for dinner. 
-
+We had a craving for crème brûlée on day, and not having anywhere to go to have it we decided to make it at home. 
 ## Ingredients
 
 - 2 ¼ cups (560 ml) 35% cream
-- 1 vanilla bean or 1 tsp Pure Vanilla Extract
+- 1 vanilla bean or 1 tsp pure vanilla extract
 - 5 egg yolks
 - ¼ cup (60 ml) sugar
 - ¼ cup (60 ml) additional sugar
-
 ## Directions
 
 1. Preheat the oven to 170 ºC (325 ºF).

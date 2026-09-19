@@ -5,16 +5,14 @@ source: family
 draft: false
 ---
 
-Aka: Unbaked Cheesecake or Vancouver Cheesecake.  Originally from Afterthoughts Dessert Restaurant back from Ann’s working days.
+Aka: Unbaked Cheesecake or Vancouver Cheesecake.  
 
-Do not share outside of our family!
+> Originally from Afterthoughts Dessert Restaurant back from Ann’s working days. Do not share outside of our family!
 
 #### Crust:
 
 - Graham Crumbs (the amount depends on the size of your cheesecake pan)
-
     - Option: a combination of ½ Graham Crumbs and ½ Chocolate/Oreo Crumbs)
-
 - ¼ cup Butter, melted
 - Sprinkle of Cinnamon
 
@@ -43,18 +41,11 @@ Do not share outside of our family!
 #### Varieties:
 
 - Cherry: Use 1 can Cherry Pie filling
-
     - Fill the pan just over half with cheesecake mixture and form a shallow well within an 1 inch of edges all around the pan.  Add Cherry Pie Filling and reserve a portion of just the cherry jelly (no pieces) for the topping.  Fill the pan with remaining cheesecake mixture.  Once the top has been smoothed, add a circle of the cherry pie filling (no pieces) to the top of the cheesecake.   Drizzle sides with Chocolate ganache and top with whipping cream rosettes.
-
 - Tirmasu: Require 2 shots of espresso, cocoa and icing sugar, and bake a White Cake.  Wrapped baked and cooled cake in saran wrap; place in the refrigerator overnight, and before adding to the cheesecake, trim all the edges.
-
     - Replace the Lemon Juice and Vanilla in the cheesecake recipe with 1 shot of espresso.
     - Fill the pan just over half with cheesecake mixture and form a shallow well within an 1 inch of edges all around the pan.  Add trimmed white cake to the cheesecake well.  Drizzle with white cake with 1 shot of espresso.  Fill the pan with remaining cheesecake mixture.  Once the top has been smoothed, dust with a 50/50 mixture of cocoa and icing sugar.
-
 - Whistler: Require baked Chocolate Cake, Chocolate Sauce and Ganache.  Wrapped baked and cooled cake in saran wrap; place in refrigerator overnight, and before adding to cheesecake, cut cake into cubes.
-
     - Gently fold half of the chocolate cake into the cheesecake mixture (do not over mix).  Use the remaining chocolate cake to form a mound on the top of the cheesecake.  First drizzle chocolate sauce over the chocolate cake mound and follow with ganache.
-
 - Strawberry/Fresh Berry: Require fresh washed, then dried berries.
-
     - If using Blueberries, Raspberries, and/or Blackberries, gently fold into cheesecake mixture.  If using or adding Strawberries, save a little cheesecake mixture to cover the top.  Push Strawberries into the cheesecake mixture once into the pan.  Then top with remaining mixture and smooth the top.  Drizzle sides with Chocolate ganache and top with whipping cream rosettes and fresh fruit.
