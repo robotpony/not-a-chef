@@ -112,7 +112,7 @@ Google Fonts import line (put this at the top of any new mockup's `<style>`):
 
 ### Line-height
 
-Always set line-height as a **unitless multiplier** (`line-height: 1.6`), never a
+Always set line-height as a **unitless multiplier** (`line-height: 1.5`), never a
 fixed length (`28px`, `1.75rem`). A unitless value is inherited as a number
 and recalculated against each descendant's own font-size; a fixed length is
 inherited as-is regardless of size, so any small text that doesn't set its
@@ -124,10 +124,17 @@ carried into the Hugo build, so anything that fell back to Tailwind's fixed
 `leading-7` (28px) — the footer's brand paragraph, its Browse/Index links —
 read at a completely different rhythm than the rest of the page.
 
-- **Base**: `1.6`, on `body`/`html` (16px root) — this is where everything
-  not otherwise specified inherits from.
+- **Base**: `1.5`, on `body`/`html` (16px root — 24px lines) — this is where
+  everything not otherwise specified inherits from, **and** the value
+  `.prose` (recipe/essay body copy, and by inheritance its list items)
+  overrides Tailwind Typography's own `1.75` default down to, so body text,
+  list items, and card text all read at the same rhythm. Tuned down from
+  `1.6` on 2026-09-18 — see "Prose vertical rhythm" below.
 - **Headings**: tighter, `1.05`–`1.3` depending on size — large display type
-  needs less line-height, not the body ratio.
+  needs less line-height, not the body ratio. Not yet true for every
+  heading level in the actual build (`h3`/`h4` still carry Tailwind
+  Typography's own `1.6`/`1.5`) — noted, not fixed, since it wasn't part
+  of the reported problem.
 - **Small UI captions** (card notes, stat labels, footer copy): `1.5`–`1.6`.
 - **List items**: should read like consecutive lines of the surrounding
   prose, not get extra rhythm of their own — don't let a list item's own
@@ -140,97 +147,96 @@ read at a completely different rhythm than the rest of the page.
   ratio (line-height ÷ font-size) matches the role it's playing (body copy
   vs. heading vs. caption), not just that it "looks fine" at its own size.
 
-### Prose vertical rhythm — findings, 2026-09-18 (open question)
+### Prose vertical rhythm — decisions, 2026-09-18
 
-A recipe page (`gyro-dogs`) was measured directly in the browser (computed
-styles + actual rendered gaps, not just reading the CSS) after a report
-that paragraph spacing looked like "2–3em above, 2–2.5em below" and list
-items were "still too loose." Four separate things came out of that, and
-they're not all the same problem:
+A recipe page (`gyro-dogs`, then `pressure-cooker-japanese-curry`) was
+measured directly in the browser (computed styles + actual rendered gaps,
+not just reading the CSS) across two passes: an initial audit, then a
+follow-up with a screenshot pinpointing two specific problems and a
+concrete instruction (line-height to `1.5`, heading top-margin cut by at
+least 50%). Both passes' findings, and what actually got changed:
 
-**Confirmed bug — the first heading on every page carries an unwanted top
-margin.** Tailwind Typography's `.prose` ships a rule that zeroes margin on
-`.prose`'s own first and last child, specifically so the block right after
-a heading (or the very start/end of an article) doesn't carry redundant
-space. It never fires here: `.prose` is on the outer flex `<section>`
-(`themes/blowfish/layouts/_default/single.html`), but the actual heading
-is three levels down (`section.prose > div.min-w-0 > div.article-content >
-h2`) — not `.prose`'s direct child, so the rule's selector never matches.
-Measured effect: the opening `## Mechanic` heading renders with its full
-`margin-top: 48px` intact, pushing the whole content column down that much
-further than intended relative to the title block above it and the TOC
-beside it. This reads as "the title doesn't line up with the content" —
-worth confirming that's what was meant (see questions below) — and has a
-well-defined fix: mirror the same zero-margin rule onto the element that's
-actually `.article-content`'s first/last child, rather than relying on
-Tailwind's version of it.
+**Fixed — horizontal misalignment.** The annotated screenshot showed the
+recipe title sitting left of the nav wordmark, not under it. Measured
+cause: `.site-nav-inner` (and every other section — `.hero`,
+`.home-section`, `.site-footer-inner`) carries its own 20px side padding
+on top of `<main>`'s 1100px column; the single-page template
+(`#single_header` + its content) never got the matching padding, so its
+content sat flush against `<main>`'s bare edge — 20px left of where every
+other section's content actually starts. This had already been flagged as
+"a known, minor gap" in a comment (now removed) when `<main>`'s own
+centering was fixed; it turned out not to be minor. Fixed by giving
+`#single_header` and its sibling content `section` the same 20px padding
+(`assets/css/custom.css`, the `#single_header, #single_header + section`
+rule). Verified: nav wordmark and article `h1` both now measure `left: 90`.
 
-**Not a bug — paragraph-to-paragraph and list-item margins already
-collapse correctly.** Measured `P → P` gap: 20px (`1.25em` of the 16px
+**Fixed — the first heading on every page carried an unwanted top
+margin.** Tailwind Typography's `.prose` ships a rule zeroing margin on
+`.prose`'s own first/last child, so the block right after an opening
+heading doesn't carry redundant space. It never fired here: `.prose` is on
+the outer flex `<section>`, three wrapper divs above the actual heading,
+so the rule's selector never matched — the opening `## Mechanic` heading
+rendered with its full `margin-top: 48px` intact. Fixed by re-targeting
+the same rule at `.article-content`, which actually is the heading's
+direct parent (`.article-content > :first-child` / `:last-child`).
+Verified: the first heading's `margin-top` now computes to `0px`; the gap
+from the tags row to it is governed by the header's own spacing, not the
+heading's.
+
+**Fixed — heading top:bottom margin ratio set to `1.5:1`.** Confirmed by
+measurement that the original gap was real, not a misreading: `h2`'s
+`margin-top: 2em` is relative to its *own* 24px font-size (48px rendered,
+3em of the 16px base); `h3`'s `1.6em` of its own 20px renders as 32px.
+Tailwind's default is tuned for long-form prose where headings are rare;
+this format's multi-component recipes (`## ComponentName` per component,
+see `FORMAT.md`) put an `h2` or `h3` every few lines, so a gap that reads
+as normal in an essay repeats constantly here. First pass cut top-margins
+a flat 50% (`h2` and `h3` both landed at a 1:1 top:bottom ratio); a live
+check of the rendered result called for slightly more space above than
+below, specifically **1.5× the heading's own (untouched) bottom margin**,
+not a flat cut — `h2`: `2em → 1.5em` (bottom stays `1em`, so 36px:24px),
+`h3`: `1.6em → 0.9em` (bottom stays `0.6em`, so 18px:12px), `h4`:
+`0.75em`, unchanged — it already landed on `1.5:1` in the first pass by
+coincidence. `assets/css/custom.css`'s `.prose h2/h3/h4` rules. Verified
+in-browser: `marginTop / marginBottom` computes to exactly `1.5` for both
+`h2` and `h3`.
+
+**Fixed — body, list, and card line-height tuned to `1.5`.**
+`body { line-height }` (the base every card and non-prose element
+inherits) moved from `1.6` to `1.5`. `.prose` (recipe/essay body copy —
+`<li>` has no line-height of its own, so this tightens list items too,
+without a separate rule) moved from Tailwind Typography's default `1.75`
+to `1.5`. Headings keep their own per-level values, on purpose — a
+different rhythm than body text (see "Line-height" above; `h3`/`h4` still
+carry Tailwind's own `1.6`/`1.5` there, unrelated to this and not yet
+reconciled). Verified: both `<p>` and `<li>` compute `line-height: 24px`
+(`1.5 × 16px`) in the built page.
+
+**Confirmed not a bug — paragraph-to-paragraph and list-item *margins*
+were never stacking.** Measured `P → P` gap: 20px (`1.25em` of the 16px
 base), exactly `max(20, 20)`, not `20 + 20`. Measured `li → li` gap: 4px,
 exactly `max(4, 4)` — the existing `.prose li { margin: 0.25em }` override
-(added previously, see the list comment just above) is working as
-intended. Nothing here is stacking; margins are colliding and collapsing
-per normal CSS behaviour.
+was already working as intended. The perceived list-item looseness was
+line-height (previous section), not margin.
 
-**Real, but different from what it looks like — heading top-margins are
-large by design, and this content is heading-dense.** `h2`'s `margin-top`
-is `2em`, but that `2em` is relative to `h2`'s *own* font-size (24px), so
-it renders as 48px (3em of the 16px base) — same idea for `h3`
-(`margin-top: 1.6em` of its own 20px = 32px, 2em of base). That's Tailwind
-Typography's default, tuned for long-form prose where headings are rare.
-This format's multi-component recipes (`## ComponentName` per component,
-see `FORMAT.md`) put an `h2` or `h3` every few lines, so a gap that would
-read as normal in an essay repeats constantly here and the *whole page*
-reads loose — even though no individual number is a bug. This is the
-`P → H2` / `UL → H3` 32–48px gaps in the measurements below, not the
-`(non-)bug` above.
+Measured, `pressure-cooker-japanese-curry` / `gyro-dogs`, desktop viewport,
+before → after (after = final `1.5:1` pass, not the intermediate flat-50%
+cut):
 
-**Real, and undiagnosed by margin — list items are loose because of
-line-height, not spacing.** `.prose li` inherits the same `line-height:
-1.75` (28px) as body paragraphs, unmodified by the existing
-`margin: 0.25em` override — a single-line ingredient's actual vertical
-footprint is ~28px of line-height plus ~4px of (collapsed) margin, so
-tightening margin further has little room left to work with. The
-"List items" rule already written above ("should read like consecutive
-lines of the surrounding prose, not get extra rhythm of their own") calls
-for this but nothing sets it yet.
-
-Measured, `gyro-dogs`, desktop viewport, default (non-first) transitions:
-
-| Transition | Gap | As multiple of 16px base |
+| Transition | Before | After |
 |---|---|---|
-| `p → p` | 20px | 1.25em |
-| `h2 → p` (heading's own bottom margin) | 24px | 1.5em |
-| `p → h2` / `ul → h2` | 48px | 3em |
-| `h2 → h3` | 24px | 1.5em |
-| `h3 → ul` | 12px | 0.75em |
-| `ul → h3` | 32px | 2em |
-| `li → li` | 4px | 0.25em |
+| tags row → first `h2` (`.article-content`'s real first child, `margin-top: 0` regardless of the ratio above) | 48px | 24px |
+| `p → h2` (non-first), `margin-top`:`margin-bottom` ratio | 48px:24px (2:1) | 36px:24px (1.5:1) |
+| `h3` `margin-top`:`margin-bottom` ratio | 32px:12px (2.67:1) | 18px:12px (1.5:1) |
+| `li` line-height | 28px | 24px |
+| `p` line-height | 28px | 24px |
+| nav wordmark vs. article `h1`, left edge | 90px vs. 70px | 90px vs. 90px |
 
-**Open questions before touching any of this:**
-
-1. Does "title doesn't line up with the content" mean the confirmed
-   first-child-margin bug above (opening heading sits ~48px lower than it
-   should, relative to the title block/TOC) — or something else, like
-   horizontal alignment (measured identical, both at x=70px) or the TOC's
-   sticky top offset?
-2. For the heading-density problem: keep Tailwind's per-role scaling (h2
-   gets more space than h3, proportional to its own size) and just pull
-   the whole scale in tighter — or replace it with one flat rhythm
-   regardless of heading level, closer to the "1.5 above, 1 below"
-   suggestion? A flat rule is simpler to hold in your head; a scaled one
-   keeps bigger headings reading as bigger breaks.
-3. If flat: 1.5 above / 1 below *of what* — the 16px base (as sketched
-   above), or the element's own font-size (Tailwind's current approach,
-   which is why h2's "2em" is a different absolute number than h3's
-   "1.6em")?
-4. List-item line-height: tighten `.prose li` to something in the
-   "1.05–1.3" heading range this doc already documents, or a distinct
-   third value in between that reads as tight-but-not-heading-tight?
-   Ingredient lines run long enough to sometimes wrap two lines — worth
-   picking a number and actually checking a wrapped line still reads
-   comfortably, not just a single short line.
+Not touched, kept for a later pass: `h3`/`h4` line-height (still Tailwind's
+own `1.6`/`1.5`, not the site's `1.5` body value — same number for `h4` by
+coincidence, not by design); heading *bottom* margins; whether list-heavy
+recipe/essay/reference *listing* pages (not single pages) have the same
+20px gutter gap `#single_header` just got fixed for.
 
 ## Components
 

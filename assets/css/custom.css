@@ -105,10 +105,12 @@ body {
    * "Line-height" rule. A fixed length inherits as-is regardless of a
    * descendant's own font-size, which is exactly what made small UI text
    * that didn't set its own line-height (the footer paragraph, footer nav
-   * links) render disproportionately loose. `.prose` sets its own explicit
-   * proportional values already (~1.75 for body copy, ~1.375 for list
-   * items) and is unaffected by this. */
-  line-height: 1.6;
+   * links) render disproportionately loose. `.prose` overrides this with
+   * its own value below (also 1.5, tuned 2026-09-18) rather than
+   * inheriting it, so this is body copy outside `.prose` — cards, nav,
+   * footer — and anything that hasn't set a role-specific value of its
+   * own (a title, a caption) already. */
+  line-height: 1.5;
 }
 
 /* Blowfish's default single/list templates (recipe/essay/reference pages —
@@ -118,11 +120,7 @@ body {
  * baseof.html, wraps every page's content — ours and Blowfish's defaults
  * alike) is the one element common to both, so centering it at the same
  * 1100px column keeps the homepage's already-precise nav/hero alignment
- * intact (each of those already carries its own 20px padding) while giving
- * still-default pages *a* gutter again, even without their own padding yet.
- * Their content sits flush against this column's edges rather than getting
- * its own 20px inset — a known, minor gap versus the custom sections',
- * consistent with those templates not being rebuilt yet. */
+ * intact (each of those already carries its own 20px padding). */
 main {
   /* <body> is `display:flex;flex-direction:column` (Blowfish's own layout)
    * and <main> is a flex item — `margin:0 auto` alone on a flex item with
@@ -135,6 +133,22 @@ main {
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
+}
+
+/* The gap the comment above used to call "known, minor" turned out not to
+ * be minor: nav/footer/hero/home-section all carry their own 20px side
+ * padding on top of <main>'s 1100px column, but the single-page template
+ * (recipe/essay/reference) had none, so its title/content sat flush
+ * against that column's edge — 20px left of where the nav wordmark and
+ * every other section's content actually starts. Confirmed by measuring
+ * both in the browser: .site-nav-inner's padding put "not a chef." at
+ * x=90, while #single_header's h1 sat at x=70. Giving the single template
+ * its own matching 20px gutter, the same way every other section already
+ * does, instead of leaving it to inherit <main>'s bare edge. */
+#single_header,
+#single_header + section {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* Same bare `bg-neutral` (always-white) issue as <body>, on the search
@@ -150,6 +164,14 @@ main {
  * checking a recipe page's "Mechanic" h2, which had silently gone serif. */
 .prose {
   font-family: 'Lora', serif;
+  /* Tailwind Typography's own default is 1.75 — tuned down to match the
+   * site's 1.5 body/list/card rhythm (2026-09-18). This is the one place
+   * that value actually lives: `<li>` has no line-height of its own, so
+   * tightening it here tightens list items too, without needing a
+   * separate `.prose li` rule. Headings aren't touched — they keep
+   * Tailwind's own tighter per-level values (STYLE.md's "Headings:
+   * 1.05–1.3" guidance), which is a different rhythm on purpose. */
+  line-height: 1.5;
 }
 .prose :where(h1, h2, h3, h4, h5, h6) {
   font-family: 'Libre Franklin', sans-serif;
@@ -385,6 +407,36 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
  * gap on both sides, matching `.home-section`'s 40px rhythm. */
 .article-content { margin-bottom: 0; }
 footer.pt-8.max-w-prose { padding-top: 0; }
+
+/* Tailwind Typography ships a rule zeroing margin on `.prose`'s own first
+ * and last child, so the block right after an opening heading (or the
+ * very start/end of an article) doesn't carry redundant space. It never
+ * fires here: `.prose` is on the outer flex <section>
+ * (themes/blowfish/layouts/_default/single.html), three wrapper divs
+ * above the actual content, so `.prose`'s real first/last child is never
+ * a heading or paragraph. Confirmed via measurement: the opening heading
+ * on every single page rendered with its full margin-top intact (48px on
+ * an h2), pushing the whole content column down that much further than
+ * intended relative to the title above it and the TOC beside it.
+ * Re-targeting the same rule at .article-content, which actually is the
+ * direct parent of the rendered content, restores the intended behaviour. */
+.article-content > :first-child { margin-top: 0; }
+.article-content > :last-child { margin-bottom: 0; }
+
+/* Heading top-margins (2026-09-18, revised same day after a live check).
+ * First cut was a flat 50% off Tailwind Typography's defaults; seeing it
+ * rendered, the actual target is a 1.5:1 ratio of top:bottom margin per
+ * heading level (each level's own bottom margin is untouched Tailwind —
+ * h2: 1em, h3: 0.6em, h4: 0.5em — so top is set to 1.5× that, in the same
+ * em unit so the ratio holds regardless of the heading's own font-size).
+ * h4 already landed on 1.5:1 by coincidence in the first pass; h2 and h3
+ * didn't and are corrected here. Bottom margins remain untouched — only
+ * the gap *above* a heading was ever reported as a problem. See
+ * mockups/STYLE.md's "Prose vertical rhythm" section for the measured
+ * before/after. */
+.prose h2 { margin-top: 1.5em; }
+.prose h3 { margin-top: 0.9em; }
+.prose h4 { margin-top: 0.75em; }
 
 .article-pagination {
   display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap;
