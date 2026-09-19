@@ -208,6 +208,136 @@ main > header + section {
   margin-bottom: 0.25em;
 }
 
+/* Wikilink/extlink, from mockups/style.html §3. Unlayered here beats
+ * Tailwind Typography's layered `.prose a { color: var(--tw-prose-links) }`
+ * regardless of specificity (same mechanism as the token bridge above), so
+ * these colors win without needing a `.prose` prefix. */
+.wikilink {
+  color: var(--accent-strong);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+.wikilink::after {
+  content: ' \2192';
+  font-size: .85em;
+}
+.extlink {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--border-strong);
+  text-underline-offset: 2px;
+}
+.extlink::after {
+  content: ' \2197';
+  font-size: .75em;
+  color: var(--ink-faint);
+}
+/* Not in any mockup — this project's own addition for a wiki link that
+ * doesn't resolve to a real page (title typo, not-yet-written recipe).
+ * Reuses the existing flag tokens (draft-banner/badge-tag) since it's the
+ * same "needs attention" meaning, not a new color decision. */
+.broken-link {
+  color: var(--flag);
+  background: var(--flag-soft);
+  border-radius: 2px;
+  padding: 0 3px;
+  text-decoration: underline wavy var(--flag);
+  text-underline-offset: 2px;
+  cursor: help;
+}
+
+/* Ingredient list (check), sub-head, and sub-note, from mockups/style.html
+ * §3. Applied client-side by assets/js/ingredients.js, not by Hugo — see
+ * render-heading.html and PLAN.md 6.2b for why (no list render hook
+ * exists). Real markup is <ul class="ing-list"><li class="ing"> (the
+ * mockup used bare <div>s since it had no real markdown to render), so
+ * these target real list elements instead of the mockup's divs. */
+.ing-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0;
+}
+/* li.ing (not bare .ing) so this ties .prose li's specificity (element +
+ * class) instead of losing to it — the plain 0.25em list-item margin would
+ * otherwise stack with this row's own padding. */
+li.ing {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: .98rem;
+  font-family: 'Lora', serif;
+  margin: 0;
+}
+.ing:last-child {
+  border-bottom: none;
+}
+.ing input[type="checkbox"] {
+  appearance: none;
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  border: 1px solid var(--border-strong);
+  border-radius: 3px;
+  background: var(--bg);
+  position: relative;
+  cursor: pointer;
+}
+.ing input[type="checkbox"]:checked {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.ing input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  left: 5.5px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.ing:has(input:checked) {
+  color: var(--ink-faint);
+  text-decoration: line-through;
+  text-decoration-color: var(--border-strong);
+}
+.ing label {
+  cursor: pointer;
+}
+.ing .qty {
+  color: var(--ink-muted);
+}
+/* Sub-note: a tab-indented sub-item under an ingredient (FORMAT.md's
+ * "add split peas for more texture" example) — non-checkable, indented,
+ * no checkbox at all (enhanceSubRow never adds one). */
+.ing.sub {
+  padding-left: 29px;
+  font-size: .88rem;
+  color: var(--ink-muted);
+}
+/* Ingredient sub-head: a "#### Dry" / "#### Wet" label inside an
+ * Ingredients section (FORMAT.md's grouping convention). Compound selector
+ * (element + class) so this beats Tailwind Typography's own h3/h4 rules —
+ * those are written with :where() specifically to make them easy to
+ * override, but only if the overriding selector is at least as specific. */
+h3.ing-subhead,
+h4.ing-subhead {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--ink-faint);
+  margin: 14px 0 6px;
+}
+
 .mono {
   font-family: 'IBM Plex Mono', ui-monospace, monospace;
   font-variant-numeric: tabular-nums;

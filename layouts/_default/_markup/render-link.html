@@ -20,16 +20,28 @@
 }}
 
 {{ if $isWikiLink }}
-  {{ $matches := where site.RegularPages "Title" $destination }}
+  {{/* Normalize curly vs. straight apostrophes before matching — real
+    content already disagrees (content/recipes/chef-johns-hamburger-buns.md's
+    title uses a curly ', a wiki link to it was typed with a straight ').
+    where's exact-match can't do this, so match by hand instead. */}}
+  {{ $normDest := replace (replace $destination "’" "'") "‘" "'" }}
+  {{ $matches := slice }}
+  {{ range site.RegularPages }}
+    {{ $normTitle := replace (replace .Title "’" "'") "‘" "'" }}
+    {{ if eq $normTitle $normDest }}
+      {{ $matches = $matches | append . }}
+    {{ end }}
+  {{ end }}
   {{ if gt (len $matches) 0 }}
     {{ $target := index $matches 0 }}
-    <a href="{{ $target.RelPermalink }}">{{ $text }}</a>
+    <a href="{{ $target.RelPermalink }}" class="wikilink">{{ $text }}</a>
   {{ else }}
     <span class="broken-link" title="Not found: {{ $destination }}">{{ $text }}</span>
   {{ end }}
 {{ else }}
+  {{ $isExternal := strings.HasPrefix $destination "http" }}
   <a href="{{ $destination }}"
     {{- with .Title }} title="{{ . }}"{{ end }}
-    {{- if strings.HasPrefix $destination "http" }} rel="noopener noreferrer" target="_blank"{{ end -}}
+    {{- if $isExternal }} class="extlink" rel="noopener noreferrer" target="_blank"{{ end -}}
   >{{ $text }}</a>
 {{ end }}

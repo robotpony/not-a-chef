@@ -1,0 +1,52 @@
+{{/*
+  Full override of themes/blowfish/layouts/_default/_markup/render-heading.html.
+
+  FORMAT.md's headings are freeform by design ("Ingredients", "What you
+  need", a component's own name like "Tadka" all precede an ingredient
+  list) — confirmed against the real 230-recipe corpus, which also uses
+  "Ingredients:", "Directions:", one-off component names, and non-recipe
+  h3s far messier than FORMAT.md's clean examples. Rather than trying to
+  positively recognize "this is an ingredients heading", this flags h2
+  sections NEGATIVELY: ingredient by default, unless the heading matches a
+  known non-ingredient optional section name. False positives (styling a
+  stray non-ingredient bullet list as checkable) are harmless; false
+  negatives would silently drop real ingredient styling.
+
+  Only recipes get this treatment — `.Page.Section` gated below — so a
+  random "##" heading in an essay doesn't get flagged as an ingredient
+  section.
+
+  This only marks headings (data-ing-heading / .ing-subhead classes); it
+  doesn't touch the following <ul>/<li> markup at all, because Hugo has no
+  render hook for lists — Goldmark renders those as plain <ul><li> same as
+  ever. assets/js/ingredients.js walks the DOM client-side from each marked
+  heading to the next h2, and turns the <ul> it finds into the real
+  checkbox/qty component. See PLAN.md 6.2b for why: a template-level
+  wrapping div can't be safely closed (heading hooks render one self-
+  contained tag at a time, with no "end of section" hook to close it), so
+  the div-wrapping approach that would otherwise be the more obvious fix
+  isn't used.
+*/}}
+{{ $anchor := anchorize .Anchor }}
+{{ $isRecipe := eq .Page.Section "recipes" }}
+
+{{ $nonIngredientHeadings := slice "method" "directions" "steps" "notes" "to serve" "variations" "timing" "equipment" "substitutions" "mechanic" }}
+{{ $normalized := .Text | plainify | strings.TrimSuffix ":" | strings.TrimSpace | lower }}
+{{ $isIngredientHeading := and $isRecipe (eq .Level 2) (not (in $nonIngredientHeadings $normalized)) }}
+
+{{ if and $isRecipe (eq .Level 2) }}
+  {{ .Page.Scratch.Set "ingSection" $isIngredientHeading }}
+{{ end }}
+{{ $inIngredientSection := and $isRecipe (in (slice 3 4) .Level) (.Page.Scratch.Get "ingSection") }}
+
+<h{{ .Level }} class="relative group{{ if $inIngredientSection }} ing-subhead{{ end }}"
+  {{- if and $isRecipe (eq .Level 2) }} data-ing-heading="{{ $isIngredientHeading }}"{{ end -}}
+>{{ .Text | safeHTML }}
+    <div id="{{ $anchor }}" class="anchor"></div>
+    {{ if .Page.Params.showHeadingAnchors | default (.Page.Site.Params.article.showHeadingAnchors | default true) }}
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#{{ $anchor }}" aria-label="{{ i18n "article.anchor_label" }}">#</a>
+    </span>
+    {{ end }}
+</h{{ .Level }}>
