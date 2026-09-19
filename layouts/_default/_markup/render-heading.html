@@ -7,10 +7,11 @@
   "Ingredients:", "Directions:", one-off component names, and non-recipe
   h3s far messier than FORMAT.md's clean examples. Rather than trying to
   positively recognize "this is an ingredients heading", this flags h2
-  sections NEGATIVELY: ingredient by default, unless the heading matches a
-  known non-ingredient optional section name. False positives (styling a
-  stray non-ingredient bullet list as checkable) are harmless; false
-  negatives would silently drop real ingredient styling.
+  sections NEGATIVELY: ingredient by default, unless the heading contains a
+  known non-ingredient word (checked per-word, not as a whole-phrase match —
+  see the comment further down). False positives (styling a stray
+  non-ingredient bullet list as checkable) are harmless; false negatives
+  would silently drop real ingredient styling.
 
   Only recipes get this treatment — `.Page.Section` gated below — so a
   random "##" heading in an essay doesn't get flagged as an ingredient
@@ -32,7 +33,17 @@
 {{ $anchor := anchorize .Anchor }}
 {{ $isRecipe := eq .Page.Section "recipes" }}
 
-{{ $nonIngredientHeadings := slice "method" "directions" "steps" "notes" "to serve" "variations" "timing" "equipment" "substitutions" "mechanic" }}
+{{/* Word-level, not full-phrase: "Timing examples", "Basic method", and
+     "General rules" all need to fall out of the ingredient default the same
+     way a bare "Timing" or "Method" does, without enumerating every prefix/
+     suffix combination a recipe might phrase a section with. Checked against
+     the real 230-recipe corpus (component/variant names like "Soup", "Base
+     stock", "Toppings", "Teriyaki chicken/fish/tofu") to confirm none of
+     these words collide with a real ingredient-bearing heading there — a
+     word this generic-sounding but actually used as a component name (e.g.
+     a future "## Combo A") would still misfire, so keep new additions to
+     words that read as meta/reference language, not food. */}}
+{{ $nonIngredientKeywords := slice "method" "directions" "steps" "notes" "serve" "variations" "timing" "example" "examples" "rules" "equipment" "substitutions" "mechanic" }}
 {{ $methodHeadings := slice "method" "directions" "steps" }}
 {{/* Sidebar-prototype only (recipe-sidebar-prototype branch): these three
      optional top-level sections get pulled out of the reading flow and
@@ -45,7 +56,11 @@
      prose section — components are always one level deeper. */}}
 {{ $sidebarHeadingKeys := dict "mechanic" "mechanic" "to serve" "to-serve" "notes" "notes" }}
 {{ $normalized := .Text | plainify | strings.TrimSuffix ":" | strings.TrimSpace | lower }}
-{{ $isIngredientHeading := and $isRecipe (eq .Level 2) (not (in $nonIngredientHeadings $normalized)) }}
+{{ $hasNonIngredientWord := false }}
+{{ range split $normalized " " }}
+  {{ if in $nonIngredientKeywords . }}{{ $hasNonIngredientWord = true }}{{ end }}
+{{ end }}
+{{ $isIngredientHeading := and $isRecipe (eq .Level 2) (not $hasNonIngredientWord) }}
 {{ $isMethodHeading := and $isRecipe (eq .Level 2) (in $methodHeadings $normalized) }}
 {{ $sidebarHeading := "" }}
 {{ if and $isRecipe (eq .Level 2) }}
