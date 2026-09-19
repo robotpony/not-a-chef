@@ -755,4 +755,126 @@ footer.pt-8.max-w-prose { padding-top: 0; }
 .list-pagination-current {
   background: var(--accent-soft); border-color: var(--accent); color: var(--accent-strong); font-weight: 600;
 }
+
+/* Recipe sidebar prototype (recipe-sidebar-prototype branch) — replaces the
+ * generic jump-to TOC on recipe pages (layouts/_default/single.html).
+ * Mechanic / scale+units / To serve / Notes are relocated here client-side
+ * by assets/js/ingredients.js (moveSidebarSections); slots start `hidden`
+ * in markup and are only revealed once populated. Not yet in
+ * mockups/STYLE.md — this is exploratory, see that file before promoting
+ * any of it to the ratified component list. */
+/* Mobile: the sidebar starts collapsed behind `.recipe-sidebar-toggle`
+ * (a real button, not a native <details> — see single.html's comment for
+ * why); assets/js/ingredients.js's initSidebarToggle flips
+ * `.recipe-sidebar-wrap.is-open` and the button's aria-expanded together.
+ * Desktop: always visible regardless of that state — the media query
+ * below wins over the base mobile-collapsed rule by appearing later in
+ * the cascade, same pattern as `.recipe-sidebar-section[hidden]` needing
+ * no lg: override since it's only ever toggled at all on mobile. */
+.recipe-sidebar-toggle {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .95rem;
+  font-weight: 700;
+  text-align: left;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+  background: var(--surface-2);
+  border: none;
+  border-radius: 6px;
+  color: var(--ink);
+}
+/* Scoped to a max-width media query (mutual exclusion with the lg:
+ * breakpoint below) rather than left as a plain rule beaten back by
+ * specificity at desktop — a plain `.recipe-sidebar-wrap #recipe-sidebar`
+ * desktop override would need to out-specificity this selector's
+ * `:not(.is-open)`, and silently wouldn't (same class of bug the
+ * abandoned <details> CSS override hit above). */
+@media (max-width: 1023.98px) {
+  .recipe-sidebar-wrap:not(.is-open) #recipe-sidebar { display: none; }
+}
+@media (min-width: 1024px) {
+  .recipe-sidebar-toggle { display: none; }
+}
+
+.recipe-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.recipe-sidebar-section[hidden] { display: none; }
+/* Headings arrive already wrapped by render-heading.html (h2, relative
+ * group, anchor markup and all) — restyled smaller for the narrower
+ * sidebar column rather than inheriting .prose h2's article-width sizing. */
+.recipe-sidebar-section h2 {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--ink-faint);
+  margin: 0 0 10px;
+  padding: 0;
+}
+.recipe-sidebar-section h2 .anchor,
+.recipe-sidebar-section h2 a[href^="#"] { display: none; }
+.recipe-sidebar-section > p,
+.recipe-sidebar-section > ul {
+  font-family: 'Lora', serif;
+  font-size: .92rem;
+  line-height: 1.5;
+  margin: 0;
+}
+.recipe-sidebar-section > p + p { margin-top: .75em; }
+
+/* Mechanic callout (mockups/STYLE.md's "Mechanic callout"), ported
+ * verbatim from mockups/style.html rather than redesigned for this
+ * narrower context — accent-left-bordered box reads fine at sidebar width. */
+.recipe-sidebar-section .mechanic {
+  background: var(--bg);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 3px 3px 0;
+  padding: 12px 14px;
+  font-family: 'Lora', serif;
+  font-size: .92rem;
+}
+.recipe-sidebar-section .mechanic .ratio {
+  color: var(--accent-strong);
+  font-weight: 600;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Notes list (mockups/STYLE.md's "Notes list") — em-dash bullets instead
+ * of a native marker, ported verbatim from mockups/style.html. */
+.recipe-sidebar-section .notes-list {
+  list-style: none;
+  padding: 0;
+}
+.recipe-sidebar-section .notes-list li {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.recipe-sidebar-section .notes-list li::before {
+  content: '—';
+  color: var(--ink-faint);
+  flex-shrink: 0;
+}
+.recipe-sidebar-section .notes-list li:last-child { margin-bottom: 0; }
+
+/* Units/scale controls, sidebar mount (assets/js/ingredients.js's
+ * mountInlineControls) — reuses the popup panel's .ing-config-group/
+ * .ing-btn/.ing-scale-slider language (custom.css above) but laid out
+ * plainly, no disclosure chrome, per the "not a popup, just the controls"
+ * brief this branch started from. */
+.recipe-sidebar-section--units {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 14px;
+  background: var(--surface-2);
+  border-radius: 6px;
+}
 .list-pagination-ellipsis { color: var(--ink-faint); padding: 0 4px; }

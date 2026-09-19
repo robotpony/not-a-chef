@@ -684,26 +684,12 @@
     return (Number.isInteger(n) ? String(n) : n.toFixed(1)) + '×';
   }
 
-  // One menu governs the whole page: a multi-component recipe (e.g.
-  // dal-tadka's "## Dal" / "## Tadka") has several ingredient headings,
-  // but scaling/units is a whole-recipe operation, so this is injected
-  // once, on the first one, and re-renders every .qty/.temp under `root`
-  // (ingredient-list AND Directions/Method prose alike). Always builds and
-  // runs its state/apply pipeline, even when the caller chooses not to
-  // attach the returned menu element to the page (no ingredient heading to
-  // anchor it to) — Method-only content still needs its spans rendered.
-  function buildConfigMenu(root, pageKey) {
-    var details = document.createElement('details');
-    details.className = 'ing-config';
-
-    var summary = document.createElement('summary');
-    summary.className = 'ing-config-btn';
-    summary.setAttribute('aria-label', 'Ingredient options: scale recipe or change units');
-    summary.innerHTML = GEAR_ICON;
-    details.appendChild(summary);
-
-    var panel = document.createElement('div');
-    panel.className = 'ing-config-panel';
+  // Builds one set of scale-slider + units-buttons controls (no chrome
+  // around them) — the raw material shared by both mount styles below.
+  // Returns the fragment to insert plus the live elements a controller
+  // needs to drive (see attachSurface).
+  function buildControlSurface() {
+    var frag = document.createDocumentFragment();
 
     var scaleGroup = document.createElement('div');
     scaleGroup.className = 'ing-config-group';
@@ -716,7 +702,6 @@
     scaleSliderRow.className = 'ing-scale-slider';
     var scaleSlider = document.createElement('input');
     scaleSlider.type = 'range';
-    scaleSlider.id = 'ing-scale-slider';
     scaleSlider.min = String(SCALE_MIN);
     scaleSlider.max = String(SCALE_MAX);
     scaleSlider.step = String(SCALE_STEP);
@@ -725,7 +710,7 @@
     scaleSliderRow.appendChild(scaleSlider);
     scaleSliderRow.appendChild(scaleValue);
     scaleGroup.appendChild(scaleSliderRow);
-    panel.appendChild(scaleGroup);
+    frag.appendChild(scaleGroup);
 
     var unitsGroup = document.createElement('div');
     unitsGroup.className = 'ing-config-group ing-config-group--units';
@@ -743,10 +728,20 @@
       return btn;
     });
     unitsGroup.appendChild(unitsRow);
-    panel.appendChild(unitsGroup);
+    frag.appendChild(unitsGroup);
 
-    details.appendChild(panel);
+    return { frag: frag, scaleSlider: scaleSlider, scaleValue: scaleValue, unitButtons: unitButtons };
+  }
 
+  // Owns the scale/units state for the whole page (a multi-component
+  // recipe, e.g. dal-tadka's "## Dal" / "## Tadka", has several ingredient
+  // headings, but scaling/units is a whole-recipe operation) and re-renders
+  // every .qty/.temp in the document on change. Prototype note (see
+  // moveSidebarSections): built to drive TWO simultaneous control
+  // surfaces — the original gear-icon popup next to Ingredients, and the
+  // new inline sidebar controls — so both stay in sync off one shared
+  // state while this branch decides which one to keep.
+  function createScaleUnitsController(pageKey) {
     // Units are a general taste, kept site-wide (like the theme toggle);
     // scale is specific to this recipe's yield, kept per-page.
     var scaleKey = 'ing:scale:' + pageKey;
@@ -766,47 +761,137 @@
     }
 
     var state = { scale: readScale(), units: readUnits() };
+    var surfaces = [];
 
     function syncControls() {
-      scaleSlider.value = String(state.scale);
-      scaleValue.textContent = formatScaleValue(state.scale);
-      unitButtons.forEach(function (btn) {
-        btn.classList.toggle('active', btn.dataset.units === state.units);
+      surfaces.forEach(function (s) {
+        s.scaleSlider.value = String(state.scale);
+        s.scaleValue.textContent = formatScaleValue(state.scale);
+        s.unitButtons.forEach(function (btn) {
+          btn.classList.toggle('active', btn.dataset.units === state.units);
+        });
       });
     }
 
     function apply() {
-      root.querySelectorAll('.qty').forEach(function (qty) {
+      document.querySelectorAll('.qty').forEach(function (qty) {
         renderQty(qty, state.scale, state.units);
       });
-      root.querySelectorAll('.temp').forEach(function (temp) {
+      document.querySelectorAll('.temp').forEach(function (temp) {
         renderTemp(temp, state.units);
       });
       syncControls();
     }
 
-    scaleSlider.addEventListener('input', function () {
-      state.scale = parseFloat(scaleSlider.value);
-      try { localStorage.setItem(scaleKey, String(state.scale)); } catch (e) {}
-      apply();
-    });
-    unitButtons.forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        state.units = btn.dataset.units;
-        try { localStorage.setItem(unitsKey, state.units); } catch (e) {}
+    function attachSurface(surface) {
+      surfaces.push(surface);
+      surface.scaleSlider.addEventListener('input', function () {
+        state.scale = parseFloat(surface.scaleSlider.value);
+        try { localStorage.setItem(scaleKey, String(state.scale)); } catch (e) {}
         apply();
       });
+      surface.unitButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          state.units = btn.dataset.units;
+          try { localStorage.setItem(unitsKey, state.units); } catch (e) {}
+          apply();
+        });
+      });
+    }
+
+    return { attachSurface: attachSurface, apply: apply };
+  }
+
+  // Mount style 1: the original gear-icon disclosure, anchored next to the
+  // first Ingredients heading.
+  function buildPopupMenu(controller) {
+    var details = document.createElement('details');
+    details.className = 'ing-config';
+
+    var summary = document.createElement('summary');
+    summary.className = 'ing-config-btn';
+    summary.setAttribute('aria-label', 'Ingredient options: scale recipe or change units');
+    summary.innerHTML = GEAR_ICON;
+    details.appendChild(summary);
+
+    var panel = document.createElement('div');
+    panel.className = 'ing-config-panel';
+    var surface = buildControlSurface();
+    panel.appendChild(surface.frag);
+    details.appendChild(panel);
+
+    controller.attachSurface(surface);
+    return details;
+  }
+
+  // Mount style 2: plain controls with no disclosure chrome, for the
+  // sidebar's `[data-sidebar-slot="units"]` hook (single.html).
+  function mountInlineControls(container, controller) {
+    var surface = buildControlSurface();
+    container.appendChild(surface.frag);
+    controller.attachSurface(surface);
+  }
+
+  // --- Sidebar relocation (prototype) -----------------------------------
+  //
+  // Mechanic / To serve / Notes are simple optional top-level sections
+  // (FORMAT.md) — render-heading.html flags each one's H2 with
+  // data-sidebar-heading so this can walk forward to the next H2 (same
+  // "walk from a marked heading" approach as the ingredient/method walks
+  // above, for the same reason: Hugo's heading-only render hook has no
+  // "end of section" hook to close a template-level wrapper around). The
+  // matched heading + everything after it up to the next H2 is moved
+  // (not copied) into the matching slot single.html already laid out;
+  // slots with nothing to show stay hidden.
+  function moveSidebarSections(article, sidebar) {
+    if (!sidebar) return;
+    var slots = {};
+    sidebar.querySelectorAll('[data-sidebar-slot]').forEach(function (el) {
+      slots[el.dataset.sidebarSlot] = el;
     });
 
-    apply();
+    article.querySelectorAll('h2[data-sidebar-heading]').forEach(function (h2) {
+      var slot = slots[h2.dataset.sidebarHeading];
+      if (!slot) return;
+      var nodes = [h2];
+      var el = h2.nextElementSibling;
+      while (el && el.tagName !== 'H2') {
+        nodes.push(el);
+        el = el.nextElementSibling;
+      }
+      nodes.forEach(function (node) { slot.appendChild(node); });
+    });
 
-    return details;
+    // Notes renders as a plain <ul> today — give it the em-dash-bullet
+    // list style now that it lives in the sidebar rather than the prose
+    // flow (mockups/STYLE.md's "Notes list" component).
+    var notesList = slots.notes && slots.notes.querySelector('ul');
+    if (notesList) notesList.classList.add('notes-list');
+
+    // Mechanic's prose becomes the accent-bordered callout box
+    // (mockups/STYLE.md's "Mechanic callout") now that it's off on its
+    // own in the sidebar instead of opening the article body.
+    if (slots.mechanic && slots.mechanic.children.length > 1) {
+      var box = document.createElement('div');
+      box.className = 'mechanic';
+      var heading = slots.mechanic.firstElementChild;
+      while (heading.nextSibling) box.appendChild(heading.nextSibling);
+      slots.mechanic.appendChild(box);
+    }
+
+    Object.keys(slots).forEach(function (key) {
+      var slot = slots[key];
+      if (key !== 'units' && slot.hasChildNodes()) slot.hidden = false;
+    });
   }
 
   function init() {
     var root = document.querySelector('.article-content[data-page-key]');
     if (!root) return;
     var pageKey = root.dataset.pageKey;
+
+    var sidebar = document.getElementById('recipe-sidebar');
+    moveSidebarSections(root, sidebar);
 
     var headings = root.querySelectorAll('h2[data-ing-heading="true"]');
     headings.forEach(function (h2) {
@@ -846,10 +931,36 @@
 
     // Always run the scale/units pipeline (a Method section needs its
     // quantities/temperatures rendered even on the rare recipe with no
-    // Ingredients heading to anchor the menu to); only attach the menu
-    // itself when there's an ingredient heading to put it next to.
-    var menu = buildConfigMenu(root, pageKey);
-    if (headings.length) headings[0].appendChild(menu);
+    // Ingredients heading to anchor a surface to); only mount a given
+    // surface where it has somewhere to go.
+    var controller = createScaleUnitsController(pageKey);
+    if (headings.length) {
+      headings[0].appendChild(buildPopupMenu(controller));
+    }
+    var unitsSlot = sidebar && sidebar.querySelector('[data-sidebar-slot="units"]');
+    if (unitsSlot) {
+      mountInlineControls(unitsSlot, controller);
+      unitsSlot.hidden = false;
+    }
+    controller.apply();
+
+    initSidebarToggle();
+  }
+
+  // Mobile-only collapse for the recipe sidebar (single.html's
+  // .recipe-sidebar-wrap / .recipe-sidebar-toggle) — see that file's
+  // comment for why this is a plain button + class toggle rather than
+  // <details>. No-ops (and stays hidden via the lg: media query in
+  // custom.css) above the lg breakpoint, where the button is display:none
+  // and the sidebar is always shown regardless of `.is-open`.
+  function initSidebarToggle() {
+    var toggle = document.querySelector('.recipe-sidebar-toggle');
+    var wrap = document.querySelector('.recipe-sidebar-wrap');
+    if (!toggle || !wrap) return;
+    toggle.addEventListener('click', function () {
+      var open = wrap.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
   }
 
   if (document.readyState === 'loading') {

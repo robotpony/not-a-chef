@@ -34,9 +34,23 @@
 
 {{ $nonIngredientHeadings := slice "method" "directions" "steps" "notes" "to serve" "variations" "timing" "equipment" "substitutions" "mechanic" }}
 {{ $methodHeadings := slice "method" "directions" "steps" }}
+{{/* Sidebar-prototype only (recipe-sidebar-prototype branch): these three
+     optional top-level sections get pulled out of the reading flow and
+     into the recipe sidebar by assets/js/ingredients.js, which walks
+     forward from each marked heading to the next H2 the same way the
+     ingredient/method walks already do (see that file's
+     moveSidebarSections). Gated on .Level 2 so a multi-component recipe's
+     own "### To serve" component (ingredients for garnishes, nested under
+     "## Ingredients") is never mistaken for the top-level "## To serve"
+     prose section — components are always one level deeper. */}}
+{{ $sidebarHeadingKeys := dict "mechanic" "mechanic" "to serve" "to-serve" "notes" "notes" }}
 {{ $normalized := .Text | plainify | strings.TrimSuffix ":" | strings.TrimSpace | lower }}
 {{ $isIngredientHeading := and $isRecipe (eq .Level 2) (not (in $nonIngredientHeadings $normalized)) }}
 {{ $isMethodHeading := and $isRecipe (eq .Level 2) (in $methodHeadings $normalized) }}
+{{ $sidebarHeading := "" }}
+{{ if and $isRecipe (eq .Level 2) }}
+  {{ with index $sidebarHeadingKeys $normalized }}{{ $sidebarHeading = . }}{{ end }}
+{{ end }}
 
 {{ if and $isRecipe (eq .Level 2) }}
   {{ .Page.Scratch.Set "ingSection" $isIngredientHeading }}
@@ -44,7 +58,7 @@
 {{ $inIngredientSection := and $isRecipe (in (slice 3 4) .Level) (.Page.Scratch.Get "ingSection") }}
 
 <h{{ .Level }} class="relative group{{ if $inIngredientSection }} ing-subhead{{ end }}"
-  {{- if and $isRecipe (eq .Level 2) }} data-ing-heading="{{ $isIngredientHeading }}" data-method-heading="{{ $isMethodHeading }}"{{ end -}}
+  {{- if and $isRecipe (eq .Level 2) }} data-ing-heading="{{ $isIngredientHeading }}" data-method-heading="{{ $isMethodHeading }}"{{ if $sidebarHeading }} data-sidebar-heading="{{ $sidebarHeading }}"{{ end }}{{ end -}}
 >{{ .Text | safeHTML }}
     <div id="{{ $anchor }}" class="anchor"></div>
     {{ if .Page.Params.showHeadingAnchors | default (.Page.Site.Params.article.showHeadingAnchors | default true) }}

@@ -48,7 +48,10 @@
       {{ $enableToc = .Params.showTableOfContents | default $enableToc }}
       {{ $showToc := and $enableToc (in .TableOfContents "<ul") }}
       {{ $topClass := cond (hasPrefix site.Params.header.layout "fixed") "lg:top-[140px]" "lg:top-10" }}
-      {{ if $showToc }}
+      {{/* Not shown for recipes (see the sidebar block below instead, after
+        the main content column) — recipes get a dedicated sidebar in place
+        of this generic jump-to TOC. */}}
+      {{ if and $showToc (ne .Section "recipes") }}
         <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
           <div class="toc ps-5 print:hidden lg:sticky {{ $topClass }}">
             {{ partial "toc.html" . }}
@@ -108,6 +111,45 @@
         {{ partial "sharing-links.html" . }}
         {{ partial "related.html" . }}
       </div>
+
+      {{/* Sidebar prototype (recipe-sidebar-prototype branch): recipes get
+        a dedicated sidebar instead of the generic jump-to TOC above —
+        Mechanic, scale/units controls, To serve, and Notes are relocated
+        here client-side by assets/js/ingredients.js
+        (moveSidebarSections), driven by the data-sidebar-heading markers
+        render-heading.html sets. Slots start empty/hidden in markup; JS
+        fills whichever apply to this recipe and un-hides them. Placed
+        after the main content column (rather than reordered with a
+        Tailwind `order-*` utility, as the TOC above does) so it lands on
+        the right on desktop and below the recipe on mobile using plain
+        DOM order — Blowfish's precompiled CSS never uses a bare
+        `order-last` itself, only `lg:order-last`, so that utility class
+        doesn't exist in the shipped stylesheet and silently no-ops.
+
+        On mobile this collapses behind a toggle button (same "minimize,
+        don't hamburger" idea as toc.html's mobile accordion — a hamburger
+        icon reads as site nav elsewhere on this site, not a per-article
+        panel). A plain button + class toggle rather than `<details>`:
+        tried `<details>` first, but Chrome renders its closed content via
+        an internal `::details-content` box, not a plain child `display`
+        rule — author CSS can force `display:block` on the light-DOM
+        children (as confirmed in devtools) and Chrome still lays the
+        closed instance out at ~0 width, so there's no reliable pure-CSS
+        way to keep one `<details>` open at `lg:` regardless of its
+        `open` attribute. assets/js/ingredients.js's initSidebarToggle
+        drives the button. See PLAN.md/STYLE.md before promoting this out
+        of prototype. */}}
+      {{ if eq .Section "recipes" }}
+        <div class="recipe-sidebar-wrap lg:ms-auto px-0 lg:ps-8 lg:max-w-2xs">
+          <button type="button" class="recipe-sidebar-toggle lg:hidden" aria-expanded="false" aria-controls="recipe-sidebar">Recipe notes</button>
+          <div class="recipe-sidebar print:hidden lg:sticky {{ $topClass }}" id="recipe-sidebar">
+            <div class="recipe-sidebar-section" data-sidebar-slot="mechanic" hidden></div>
+            <div class="recipe-sidebar-section recipe-sidebar-section--units" data-sidebar-slot="units" hidden></div>
+            <div class="recipe-sidebar-section" data-sidebar-slot="to-serve" hidden></div>
+            <div class="recipe-sidebar-section" data-sidebar-slot="notes" hidden></div>
+          </div>
+        </div>
+      {{ end }}
     </section>
 
     {{/* Footer */}}
