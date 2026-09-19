@@ -1,5 +1,6 @@
 ---
 title: Jerk marinade (adapted from Serious Eats)
+tags: [reference, marinades, jamaican]
 source: family
 draft: true
 ---

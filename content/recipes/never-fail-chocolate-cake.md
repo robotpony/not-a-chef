@@ -48,7 +48,7 @@ Frosted as a layer cake, or dusted with cocoa and eaten with whipped cream.
 
 ## Variations
 
-**Buttermilk**: Replace the whole milk with 120ml buttermilk (1:1 swap) and reduce baking soda to 1 1/4 teaspoons. Adds tang and tightens the crumb slightly. If you want the full buttermilk effect, replace both the milk and the coffee with 360ml buttermilk total and reduce baking soda to 1 teaspoon.
+**Buttermilk**: Replace the whole milk with 120ml buttermilk (1:1 swap) and reduce baking soda to 1 1/4 teaspoons. Adds tang and tightens the crumb slightly. If you want the full buttermilk effect, replace both the milk and the coffee with 360ml buttermilk total and reduce baking soda to 1 teaspoon. No buttermilk on hand? Sour ½ cup evaporated milk (or 1 cup whole milk) and ½ cup water with 1 tablespoon vinegar or lemon juice.
 
 **9×13 pan**: Pour all batter into a single 9×13 pan. Bake 34–38 minutes.
 

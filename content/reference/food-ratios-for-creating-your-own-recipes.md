@@ -1,5 +1,6 @@
 ---
 title: Food ratios for creating your own recipes
+tags: [reference, ratios, technique]
 source: family
 draft: true
 ---

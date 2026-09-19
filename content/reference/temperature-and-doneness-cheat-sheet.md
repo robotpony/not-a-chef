@@ -1,5 +1,6 @@
 ---
-title: Temperature and doneness cheet sheet
+title: Temperature and doneness cheat sheet
+tags: [reference, temperature, doneness]
 source: family
 draft: true
 ---

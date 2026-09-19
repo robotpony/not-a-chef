@@ -36,6 +36,11 @@ Add wine and stir to deglaze. Add water and herbs; simmer 5 minutes. Taste and a
 
 Spread on pizza dough, flatbread, or as a dipping sauce. Can be made ahead and refrigerated for a week.
 
+## Variations
+
+### Canned tomato style
+The family original uses strained tomatoes instead of paste: 650ml strained tomatoes (one 680ml jar), 20g tomato paste, 3g olive oil, 7g salt, 2g sugar (or sweet balsamic or maple syrup), 2g granulated garlic, 1g black pepper, 1g MSG (optional), 1g oregano (and thyme if on hand). No cooking — mix and taste, adjusting salt, garlic, or sugar. Refrigerate a few hours before using; it tastes better after resting. Makes ~700ml, closer to mall-food-court pizza than a slow-simmered sauce.
+
 ## Notes
 
 - A bit sweet, a bit thick as written. Add more water if you want a looser sauce, or less sugar.

@@ -55,3 +55,5 @@ With a simple green salad. Better the next day.
 
 - Browning sauce quantities need testing; start with 1 teaspoon and adjust. [draft]
 - Steaming potatoes (vs. boiling) keeps them less waterlogged and produces a drier, better-textured mash.
+- The original family version ("Bruce's lazy cottage pie") built on a pre-prepped [softened ground beef mix](https://docs.google.com/document/d/18B_6jJlS8MKhUsXeGs2gdse1qjwkUURhE54Xlw64Nuk/edit#heading=h.3fsk0afek31n) (beef, mushrooms, onions, garlic) instead of plain mince — worth keeping on hand for weeknight versions.
+- Freezes well. Reheat from frozen either fully defrosted or more gently for longer.

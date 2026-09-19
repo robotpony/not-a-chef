@@ -1,5 +1,6 @@
 ---
 title: The Alderson’s epic 12 days of pizza
+tags: [reference, menus, events, pizza]
 source: family
 draft: true
 ---

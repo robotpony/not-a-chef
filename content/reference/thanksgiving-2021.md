@@ -1,5 +1,6 @@
 ---
 title: Thanksgiving 2021
+tags: [reference, menus, events]
 source: family
 draft: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: Growing sprouts
+tags: [reference, sprouts, growing]
 source: family
 draft: true
 ---
