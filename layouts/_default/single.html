@@ -157,6 +157,19 @@
           Ingredients on mobile, where Mechanic used to sit, while leaving
           its DOM position (after the main content column) and therefore
           its desktop placement untouched. */}}
+        {{/* lg:max-w-2xs's actual width (18rem) is overridden 15% wider in
+          custom.css (.recipe-sidebar-wrap @ min-width:1024px) — this
+          sidebar carries more (meta rail, Mechanic callout, To serve,
+          Notes) than a plain jump-to TOC, so it doesn't share the TOC's
+          width. The utility class stays on the element (it's bundled with
+          the order/ms-auto/ps-8 pieces here) — Blowfish's CSS is a
+          precompiled bundle checked in as-is (themes/blowfish/assets/css/
+          compiled/), not regenerated from our templates' class names at
+          Hugo build time, so a bracketed arbitrary-value class like
+          max-w-[20.7rem] silently no-ops here the same way bare
+          "order-last" does elsewhere in this file — only classes already
+          in that bundle take effect; anything new has to be a real
+          custom.css rule. */}}
         <div class="recipe-sidebar-wrap order-first lg:order-last lg:ms-auto px-0 lg:ps-8 lg:max-w-2xs">
           <button type="button" class="recipe-sidebar-toggle lg:hidden" aria-expanded="false" aria-controls="recipe-sidebar">
             <span>Recipe notes</span>

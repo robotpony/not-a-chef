@@ -905,11 +905,31 @@
     });
   }
 
+  // --- Family history blockquotes (intro section only) -------------------
+  //
+  // A blockquote in a recipe's intro (the prose before the first H2 —
+  // Ingredients, or a multi-component recipe's first "## ComponentName")
+  // carries family-history/provenance text migrated from the source
+  // archive, e.g. content/recipes/bienenstich.md. That's not meant to
+  // publish to anonymous visitors — sign-in is a future feature, so for
+  // now these are just hidden client-side rather than left server-rendered
+  // for anyone to read in the page source. `.hidden`, not a CSS class,
+  // matches how the sidebar slots above are hidden/shown.
+  function hideFamilyHistory(article) {
+    var el = article.firstElementChild;
+    while (el && el.tagName !== 'H2') {
+      if (el.tagName === 'BLOCKQUOTE') el.hidden = true;
+      el = el.nextElementSibling;
+    }
+  }
+
   function init() {
     var root = document.querySelector('.article-content[data-page-key]');
     if (!root) return;
     var pageKey = root.dataset.pageKey;
     ENABLE_KELVIN = root.dataset.enableKelvin === 'true';
+
+    hideFamilyHistory(root);
 
     var sidebar = document.getElementById('recipe-sidebar');
     moveSidebarSections(root, sidebar);

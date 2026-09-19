@@ -820,6 +820,12 @@ footer.pt-8.max-w-prose { padding-top: 0; }
 }
 @media (min-width: 1024px) {
   .recipe-sidebar-toggle { display: none; }
+  /* 15% wider than the lg:max-w-2xs utility class already on
+   * .recipe-sidebar-wrap (single.html) — 18rem * 1.15 = 20.7rem. This
+   * sidebar carries more (meta rail, Mechanic callout, To serve, Notes)
+   * than a plain jump-to TOC, so it doesn't share the TOC's narrower
+   * lg:max-w-2xs width. */
+  .recipe-sidebar-wrap { max-width: 20.7rem; }
 }
 
 .recipe-sidebar {
