@@ -315,13 +315,13 @@ li.ing {
  * unit-bearing quantities and temperatures it finds in Directions/Method
  * prose the same way. The subtle accent wash marks these as the numbers
  * the units toggle actually acts on — same --accent the toggle's active
- * state already uses (.ing-btn.active below), just at 50% opacity rather
+ * state already uses (.ing-btn.active below), just at 25% opacity rather
  * than the fixed --accent-soft tint, so it reads as a highlight rather
  * than a filled chip. */
 .qty,
 .temp {
   color: var(--ink-muted);
-  background: color-mix(in srgb, var(--accent) 50%, transparent);
+  background: color-mix(in srgb, var(--accent) 25%, transparent);
   border-radius: 3px;
   padding: 0 3px;
 }
