@@ -392,35 +392,38 @@ h2:has(> .ing-config) {
 .ing-config-label { font-size: .65rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-faint); }
 .ing-config-row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
 
-.ing-pill {
-  font-family: 'IBM Plex Mono', monospace;
+/* Unit options are real buttons (square-ish 5px radius, the "checkbox,
+ * buttons, chip base" bucket in STYLE.md's spacing guide), not the 14px
+ * pill shape .filter-pill uses — deliberately distinct from a filter, this
+ * is a settings choice. Active state still borrows .filter-pill's
+ * accent-soft-fill language, just with the squared-off shape. */
+.ing-btn {
+  font-family: 'Libre Franklin', sans-serif;
   font-size: .78rem;
-  font-weight: 500;
-  padding: 5px 10px;
+  font-weight: 600;
+  padding: 7px 12px;
   border: 1px solid var(--border-strong);
-  border-radius: 14px;
-  background: transparent;
+  border-radius: 5px;
+  background: var(--surface);
   color: var(--ink-muted);
   cursor: pointer;
 }
-.ing-pill:hover { border-color: var(--accent); color: var(--ink); }
-.ing-pill.active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-strong); }
-/* Units pills read as UI labels, not data, so they use the UI face
- * instead of the mono face the scale multipliers use. */
-.ing-config-group--units .ing-pill { font-family: 'Libre Franklin', sans-serif; }
+.ing-btn:hover { border-color: var(--accent); color: var(--ink); }
+.ing-btn.active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-strong); }
 
-.ing-scale-custom { display: flex; align-items: center; gap: 6px; font-size: .8rem; color: var(--ink-muted); }
-.ing-scale-custom input {
-  width: 52px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: .8rem;
-  padding: 5px 6px;
-  border: 1px solid var(--border-strong);
-  border-radius: 4px;
-  background: var(--bg);
-  color: var(--ink);
+.ing-scale-slider { display: flex; align-items: center; gap: 10px; }
+.ing-scale-slider input[type="range"] {
+  flex: 1;
+  accent-color: var(--accent);
+  cursor: pointer;
 }
-.ing-scale-custom input:focus { outline: none; border-color: var(--accent); }
+.ing-scale-value {
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--accent-strong);
+  min-width: 34px;
+  text-align: right;
+}
 
 .mono {
   font-family: 'IBM Plex Mono', ui-monospace, monospace;

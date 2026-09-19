@@ -231,7 +231,7 @@
   }
 
   // Re-renders one qty span for a given scale factor + unit system
-  // ('original' | 'metric' | 'imperial'). At the default 1x/original state
+  // ('original' | 'metric' | 'imperial' | 'kelvin'). At the default 1x/original state
   // it just restores the untouched source text, so a page nobody has
   // touched the config menu on looks exactly as before this feature.
   function renderQty(qty, scale, unitSystem) {
@@ -245,22 +245,56 @@
     var unitKey = qty.dataset.qtyUnit || '';
     var rawUnit = qty.dataset.qtyUnitRaw || '';
 
-    function transform(raw) {
+    // Picks the natural size for a metric value at its own (unrounded)
+    // magnitude — scaling up crosses the 1000 line for real ("1000g" reads
+    // as "1kg", "1500g" as "1.5kg"), whether or not the units toggle is
+    // actively converting between systems.
+    function renormalizeMetric(value, key) {
+      var info = UNIT_INFO[key];
+      var base = value * info.base;
+      if (info.family === 'mass') {
+        return base >= 1000 ? { value: base / 1000, unit: 'kg' } : { value: base, unit: 'g' };
+      }
+      return base >= 1000 ? { value: base / 1000, unit: 'l' } : { value: base, unit: 'ml' };
+    }
+
+    function relabelNative(key, value) {
+      if (isMetricUnit(key)) {
+        var r = renormalizeMetric(value, key);
+        return { value: r.value, unit: r.unit, label: unitLabel(r.unit, r.value) };
+      }
+      return { value: value, unit: key, label: unitLabel(key, value) };
+    }
+
+    // `forceUnit`, when given, expresses the result directly in that unit
+    // instead of picking one — used to keep both ends of a range in the
+    // same unit (never "800–1.2 kg").
+    function transform(raw, forceUnit) {
       var value = raw * scale;
       var label = '';
       var finalUnit = unitKey || null;
       if (unitKey) {
-        if (unitSystem !== 'original') {
+        if (forceUnit) {
+          value = (value * UNIT_INFO[unitKey].base) / UNIT_INFO[forceUnit].base;
+          finalUnit = forceUnit;
+          label = unitLabel(forceUnit, value);
+        } else if (unitSystem === 'metric' || unitSystem === 'imperial') {
           var converted = convert(value, unitKey, unitSystem);
           if (converted) {
             value = converted.value;
             finalUnit = converted.unit;
             label = unitLabel(converted.unit, value);
           } else {
-            label = unitLabel(unitKey, value);
+            var native = relabelNative(unitKey, value);
+            value = native.value; finalUnit = native.unit; label = native.label;
           }
         } else {
-          label = unitLabel(unitKey, value);
+          // 'original' or 'kelvin' — Kelvin has no applicable ingredient
+          // unit (nothing in an ingredient list is a temperature), so it's
+          // inert here: scaled and relabelled like 'original', not
+          // converted between systems.
+          var native2 = relabelNative(unitKey, value);
+          value = native2.value; finalUnit = native2.unit; label = native2.label;
         }
       } else if (rawUnit) {
         // A count unit not in UNIT_ALIASES (cloves, cans, pinches, ...) —
@@ -270,7 +304,7 @@
         // file already has for a "harmless fallback, not a broken layout."
         label = rawUnit;
       }
-      return { value: value, label: label, metric: isMetricUnit(finalUnit) };
+      return { value: value, label: label, unit: finalUnit, metric: isMetricUnit(finalUnit) };
     }
 
     if (kind === 'single') {
@@ -278,8 +312,8 @@
       var fmt = r.metric ? formatDecimal : formatFraction;
       qty.textContent = fmt(r.value) + (r.label ? ' ' + r.label : '');
     } else {
-      var lo = transform(parseFloat(qty.dataset.qtyLo));
       var hi = transform(parseFloat(qty.dataset.qtyHi));
+      var lo = transform(parseFloat(qty.dataset.qtyLo), hi.unit);
       var fmt2 = hi.metric ? formatDecimal : formatFraction;
       qty.textContent = fmt2(lo.value) + '–' + fmt2(hi.value) + (hi.label ? ' ' + hi.label : '');
     }
@@ -343,20 +377,26 @@
 
   // --- Config menu: scale recipe / change units ------------------------
 
-  var SCALE_PRESETS = [0.5, 1, 2, 3];
+  var SCALE_MIN = 1;
+  var SCALE_MAX = 5;
+  var SCALE_STEP = 0.5;
   var GEAR_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" ' +
     'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
     '<circle cx="12" cy="12" r="3"></circle>' +
     '<path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1.03 1.56V21a2 2 0 1 1-4 0v-.09A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.56-1.03H3a2 2 0 1 1 0-4h.09A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1.03-1.56V3a2 2 0 1 1 4 0v.09A1.7 1.7 0 0 0 15 4.6a1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9a1.7 1.7 0 0 0 1.56 1.03H21a2 2 0 1 1 0 4h-.09A1.7 1.7 0 0 0 19.4 15z"></path>' +
     '</svg>';
 
-  function buildPill(text, dataAttr, dataValue) {
+  function buildUnitButton(text, value) {
     var btn = document.createElement('button');
     btn.type = 'button';
-    btn.className = 'ing-pill';
+    btn.className = 'ing-btn';
     btn.textContent = text;
-    btn.dataset[dataAttr] = dataValue;
+    btn.dataset.units = value;
     return btn;
+  }
+
+  function formatScaleValue(n) {
+    return (Number.isInteger(n) ? String(n) : n.toFixed(1)) + '×';
   }
 
   // One menu governs the whole page: a multi-component recipe (e.g.
@@ -383,29 +423,19 @@
     scaleLabel.textContent = 'Scale recipe';
     scaleGroup.appendChild(scaleLabel);
 
-    var scaleRow = document.createElement('div');
-    scaleRow.className = 'ing-config-row';
-    var scalePills = SCALE_PRESETS.map(function (n) {
-      var btn = buildPill((n === 0.5 ? '½' : n) + '×', 'scale', String(n));
-      scaleRow.appendChild(btn);
-      return btn;
-    });
-    scaleGroup.appendChild(scaleRow);
-
-    var customWrap = document.createElement('div');
-    customWrap.className = 'ing-scale-custom';
-    var customLabel = document.createElement('label');
-    customLabel.textContent = 'Custom:';
-    customLabel.setAttribute('for', 'ing-scale-custom');
-    var customInput = document.createElement('input');
-    customInput.type = 'number';
-    customInput.id = 'ing-scale-custom';
-    customInput.min = '0.1';
-    customInput.step = '0.1';
-    customInput.placeholder = '×';
-    customWrap.appendChild(customLabel);
-    customWrap.appendChild(customInput);
-    scaleGroup.appendChild(customWrap);
+    var scaleSliderRow = document.createElement('div');
+    scaleSliderRow.className = 'ing-scale-slider';
+    var scaleSlider = document.createElement('input');
+    scaleSlider.type = 'range';
+    scaleSlider.id = 'ing-scale-slider';
+    scaleSlider.min = String(SCALE_MIN);
+    scaleSlider.max = String(SCALE_MAX);
+    scaleSlider.step = String(SCALE_STEP);
+    var scaleValue = document.createElement('span');
+    scaleValue.className = 'ing-scale-value mono';
+    scaleSliderRow.appendChild(scaleSlider);
+    scaleSliderRow.appendChild(scaleValue);
+    scaleGroup.appendChild(scaleSliderRow);
     panel.appendChild(scaleGroup);
 
     var unitsGroup = document.createElement('div');
@@ -416,8 +446,10 @@
     unitsGroup.appendChild(unitsLabel);
     var unitsRow = document.createElement('div');
     unitsRow.className = 'ing-config-row';
-    var unitPills = [['original', 'As written'], ['metric', 'Metric'], ['imperial', 'Imperial']].map(function (pair) {
-      var btn = buildPill(pair[1], 'units', pair[0]);
+    var unitButtons = [
+      ['original', 'As written'], ['metric', 'Metric'], ['imperial', 'Imperial'], ['kelvin', 'Kelvin']
+    ].map(function (pair) {
+      var btn = buildUnitButton(pair[1], pair[0]);
       unitsRow.appendChild(btn);
       return btn;
     });
@@ -434,26 +466,24 @@
     function readScale() {
       try {
         var v = parseFloat(localStorage.getItem(scaleKey));
-        return v > 0 ? v : 1;
-      } catch (e) { return 1; }
+        return Math.min(SCALE_MAX, Math.max(SCALE_MIN, v || SCALE_MIN));
+      } catch (e) { return SCALE_MIN; }
     }
     function readUnits() {
       try {
         var v = localStorage.getItem(unitsKey);
-        return (v === 'metric' || v === 'imperial') ? v : 'original';
+        return (v === 'metric' || v === 'imperial' || v === 'kelvin') ? v : 'original';
       } catch (e) { return 'original'; }
     }
 
     var state = { scale: readScale(), units: readUnits() };
 
     function syncControls() {
-      scalePills.forEach(function (btn) {
-        btn.classList.toggle('active', parseFloat(btn.dataset.scale) === state.scale);
-      });
-      unitPills.forEach(function (btn) {
+      scaleSlider.value = String(state.scale);
+      scaleValue.textContent = formatScaleValue(state.scale);
+      unitButtons.forEach(function (btn) {
         btn.classList.toggle('active', btn.dataset.units === state.units);
       });
-      customInput.value = SCALE_PRESETS.indexOf(state.scale) === -1 ? state.scale : '';
     }
 
     function apply() {
@@ -463,30 +493,17 @@
       syncControls();
     }
 
-    scalePills.forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        state.scale = parseFloat(btn.dataset.scale);
-        try { localStorage.setItem(scaleKey, String(state.scale)); } catch (e) {}
-        apply();
-      });
+    scaleSlider.addEventListener('input', function () {
+      state.scale = parseFloat(scaleSlider.value);
+      try { localStorage.setItem(scaleKey, String(state.scale)); } catch (e) {}
+      apply();
     });
-    unitPills.forEach(function (btn) {
+    unitButtons.forEach(function (btn) {
       btn.addEventListener('click', function () {
         state.units = btn.dataset.units;
         try { localStorage.setItem(unitsKey, state.units); } catch (e) {}
         apply();
       });
-    });
-    function applyCustomScale() {
-      var v = parseFloat(customInput.value);
-      if (!(v > 0)) return;
-      state.scale = v;
-      try { localStorage.setItem(scaleKey, String(state.scale)); } catch (e) {}
-      apply();
-    }
-    customInput.addEventListener('change', applyCustomScale);
-    customInput.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter') applyCustomScale();
     });
 
     syncControls();
