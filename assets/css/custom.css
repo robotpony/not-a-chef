@@ -758,9 +758,11 @@ footer.pt-8.max-w-prose { padding-top: 0; }
 
 /* Recipe sidebar prototype (recipe-sidebar-prototype branch) — replaces the
  * generic jump-to TOC on recipe pages (layouts/_default/single.html).
- * Mechanic / scale+units / To serve / Notes are relocated here client-side
- * by assets/js/ingredients.js (moveSidebarSections); slots start `hidden`
- * in markup and are only revealed once populated. Not yet in
+ * Mechanic / To serve / Notes are relocated here client-side by
+ * assets/js/ingredients.js (moveSidebarSections); slots start `hidden`
+ * in markup and are only revealed once populated. Scale/Units stay with
+ * the ingredient list instead (the popup gear, unchanged) — tried Units
+ * alone here for a round, cut once Scale left. Not yet in
  * mockups/STYLE.md — this is exploratory, see that file before promoting
  * any of it to the ratified component list. */
 /* Mobile: the sidebar starts collapsed behind `.recipe-sidebar-toggle`
@@ -864,26 +866,6 @@ footer.pt-8.max-w-prose { padding-top: 0; }
   flex-shrink: 0;
 }
 .recipe-sidebar-section .notes-list li:last-child { margin-bottom: 0; }
-
-/* Units control, sidebar mount (assets/js/ingredients.js's
- * mountInlineControls, buildUnitsControl) — reuses the popup panel's
- * .ing-config-group/.ing-btn language (custom.css above) but laid out
- * plainly, no disclosure chrome, per the "not a popup, just the controls"
- * brief this branch started from. Scale stays out of the sidebar
- * entirely — it's anchored to the ingredient list instead (buildPopupMenu)
- * — so there's no .ing-scale-slider here to restyle. Tighter gap/padding
- * than the popup panel gets, matching the sidebar's own compact rhythm. */
-.recipe-sidebar-section--units {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 10px 12px;
-  background: var(--surface-2);
-  border-radius: 6px;
-}
-.recipe-sidebar-section--units .ing-config-group { gap: 5px; }
-.recipe-sidebar-section--units .ing-config-row { gap: 5px; }
-.recipe-sidebar-section--units .ing-btn { padding: 5px 9px; font-size: .74rem; }
 
 /* Meta rail (mockups/STYLE.md's "Stat rail" component, adapted): recipe
  * facts that exist in frontmatter but otherwise never render anywhere on

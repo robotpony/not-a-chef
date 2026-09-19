@@ -689,12 +689,13 @@
     return (Number.isInteger(n) ? String(n) : n.toFixed(1)) + '×';
   }
 
-  // Scale and units are built separately (rather than one combined
-  // surface) so a mount can take just one of them — the sidebar only gets
-  // Units (see mountInlineControls); Scale stays with the ingredient list,
-  // where changing "how much of this" is anchored to the thing it changes.
-  function buildScaleControl() {
+  // Scale and units both live with the ingredient list now (buildPopupMenu
+  // below) — the sidebar tried Units on its own for a round, but with
+  // Scale already gone it didn't earn a separate box, so it left too. One
+  // combined surface again, same as before that split existed.
+  function buildControlSurface() {
     var frag = document.createDocumentFragment();
+
     var scaleGroup = document.createElement('div');
     scaleGroup.className = 'ing-config-group';
     var scaleLabel = document.createElement('div');
@@ -716,11 +717,6 @@
     scaleGroup.appendChild(scaleSliderRow);
     frag.appendChild(scaleGroup);
 
-    return { frag: frag, scaleSlider: scaleSlider, scaleValue: scaleValue };
-  }
-
-  function buildUnitsControl() {
-    var frag = document.createDocumentFragment();
     var unitsGroup = document.createElement('div');
     unitsGroup.className = 'ing-config-group ing-config-group--units';
     var unitsLabel = document.createElement('div');
@@ -741,17 +737,18 @@
     unitsGroup.appendChild(unitsRow);
     frag.appendChild(unitsGroup);
 
-    return { frag: frag, unitButtons: unitButtons };
+    return { frag: frag, scaleSlider: scaleSlider, scaleValue: scaleValue, unitButtons: unitButtons };
   }
 
   // Owns the scale/units state for the whole page (a multi-component
   // recipe, e.g. dal-tadka's "## Dal" / "## Tadka", has several ingredient
-  // headings, but scaling/units is a whole-recipe operation) and re-renders
-  // every .qty/.temp in the document on change. Prototype note (see
-  // moveSidebarSections): built to drive TWO simultaneous control
-  // surfaces — the original gear-icon popup next to Ingredients, and the
-  // new inline sidebar controls — so both stay in sync off one shared
-  // state while this branch decides which one to keep.
+  // headings, but scaling/units is a whole-recipe operation) and
+  // re-renders every .qty/.temp in the document on change. One control
+  // surface (buildPopupMenu, next to the first Ingredients heading) —
+  // an earlier round of this branch also mounted a second, chrome-free
+  // surface in the sidebar, which is why this is still a small
+  // attach/apply object rather than a single closure; see PLAN.md/
+  // STYLE.md history if that ever needs resurrecting.
   function createScaleUnitsController(pageKey) {
     // Units are a general taste, kept site-wide (like the theme toggle);
     // scale is specific to this recipe's yield, kept per-page.
@@ -773,17 +770,14 @@
     }
 
     var state = { scale: readScale(), units: readUnits() };
-    var surfaces = [];
+    var surface = null;
 
     function syncControls() {
-      surfaces.forEach(function (s) {
-        if (s.scaleSlider) {
-          s.scaleSlider.value = String(state.scale);
-          s.scaleValue.textContent = formatScaleValue(state.scale);
-        }
-        s.unitButtons.forEach(function (btn) {
-          btn.classList.toggle('active', btn.dataset.units === state.units);
-        });
+      if (!surface) return;
+      surface.scaleSlider.value = String(state.scale);
+      surface.scaleValue.textContent = formatScaleValue(state.scale);
+      surface.unitButtons.forEach(function (btn) {
+        btn.classList.toggle('active', btn.dataset.units === state.units);
       });
     }
 
@@ -817,15 +811,13 @@
       syncControls();
     }
 
-    function attachSurface(surface) {
-      surfaces.push(surface);
-      if (surface.scaleSlider) {
-        surface.scaleSlider.addEventListener('input', function () {
-          state.scale = parseFloat(surface.scaleSlider.value);
-          try { localStorage.setItem(scaleKey, String(state.scale)); } catch (e) {}
-          apply();
-        });
-      }
+    function attachSurface(s) {
+      surface = s;
+      surface.scaleSlider.addEventListener('input', function () {
+        state.scale = parseFloat(surface.scaleSlider.value);
+        try { localStorage.setItem(scaleKey, String(state.scale)); } catch (e) {}
+        apply();
+      });
       surface.unitButtons.forEach(function (btn) {
         btn.addEventListener('click', function () {
           state.units = btn.dataset.units;
@@ -838,8 +830,8 @@
     return { attachSurface: attachSurface, apply: apply };
   }
 
-  // Mount style 1: the original gear-icon disclosure, anchored next to the
-  // first Ingredients heading.
+  // The gear-icon disclosure, anchored next to the first Ingredients
+  // heading — the only place Scale/Units live (see createScaleUnitsController).
   function buildPopupMenu(controller) {
     var details = document.createElement('details');
     details.className = 'ing-config';
@@ -852,23 +844,12 @@
 
     var panel = document.createElement('div');
     panel.className = 'ing-config-panel';
-    var scale = buildScaleControl();
-    var units = buildUnitsControl();
-    panel.appendChild(scale.frag);
-    panel.appendChild(units.frag);
+    var surface = buildControlSurface();
+    panel.appendChild(surface.frag);
     details.appendChild(panel);
 
-    controller.attachSurface({ scaleSlider: scale.scaleSlider, scaleValue: scale.scaleValue, unitButtons: units.unitButtons });
+    controller.attachSurface(surface);
     return details;
-  }
-
-  // Mount style 2: plain controls with no disclosure chrome, for the
-  // sidebar's `[data-sidebar-slot="units"]` hook (single.html). Units
-  // only — Scale stays with the ingredient list (buildPopupMenu above).
-  function mountInlineControls(container, controller) {
-    var units = buildUnitsControl();
-    container.appendChild(units.frag);
-    controller.attachSurface({ unitButtons: units.unitButtons });
   }
 
   // --- Sidebar relocation (prototype) -----------------------------------
@@ -920,7 +901,7 @@
 
     Object.keys(slots).forEach(function (key) {
       var slot = slots[key];
-      if (key !== 'units' && slot.hasChildNodes()) slot.hidden = false;
+      if (slot.hasChildNodes()) slot.hidden = false;
     });
   }
 
@@ -971,16 +952,11 @@
 
     // Always run the scale/units pipeline (a Method section needs its
     // quantities/temperatures rendered even on the rare recipe with no
-    // Ingredients heading to anchor a surface to); only mount a given
-    // surface where it has somewhere to go.
+    // Ingredients heading to anchor the popup to); the popup itself only
+    // mounts when there's a heading to attach it to.
     var controller = createScaleUnitsController(pageKey);
     if (headings.length) {
       headings[0].appendChild(buildPopupMenu(controller));
-    }
-    var unitsSlot = sidebar && sidebar.querySelector('[data-sidebar-slot="units"]');
-    if (unitsSlot) {
-      mountInlineControls(unitsSlot, controller);
-      unitsSlot.hidden = false;
     }
     controller.apply();
 

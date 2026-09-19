@@ -114,12 +114,15 @@
 
       {{/* Sidebar prototype (recipe-sidebar-prototype branch): recipes get
         a dedicated sidebar instead of the generic jump-to TOC above —
-        Mechanic, scale/units controls, To serve, and Notes are relocated
-        here client-side by assets/js/ingredients.js
-        (moveSidebarSections), driven by the data-sidebar-heading markers
-        render-heading.html sets. Slots start empty/hidden in markup; JS
-        fills whichever apply to this recipe and un-hides them. Placed
-        after the main content column (rather than reordered with a
+        Mechanic, To serve, and Notes are relocated here client-side by
+        assets/js/ingredients.js (moveSidebarSections), driven by the
+        data-sidebar-heading markers render-heading.html sets. Scale and
+        Units both stay with the ingredient list (buildPopupMenu in
+        ingredients.js) rather than living here — tried Units-only in the
+        sidebar first, but it didn't earn its own box once Scale left.
+        Slots start empty/hidden in markup; JS fills whichever apply to
+        this recipe and un-hides them. Placed after the main content
+        column (rather than reordered with a
         Tailwind `order-*` utility, as the TOC above does) so it lands on
         the right on desktop and below the recipe on mobile using plain
         DOM order — Blowfish's precompiled CSS never uses a bare
@@ -172,7 +175,6 @@
               </div>
             {{ end }}
             <div class="recipe-sidebar-section" data-sidebar-slot="mechanic" hidden></div>
-            <div class="recipe-sidebar-section recipe-sidebar-section--units" data-sidebar-slot="units" hidden></div>
             <div class="recipe-sidebar-section" data-sidebar-slot="to-serve" hidden></div>
             <div class="recipe-sidebar-section" data-sidebar-slot="notes" hidden></div>
           </div>
