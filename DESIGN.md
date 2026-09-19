@@ -169,3 +169,20 @@ Output (human-readable):
 
 5 files checked: 1 new, 1 updated, 1 skipped, 1 error, 1 warning
 ```
+
+---
+
+## Frontmatter tool CLI
+
+`tools/frontmatter.py` — no third-party dependencies (stdlib only). Reviews frontmatter across `content/recipes/`, `content/essays/`, and `content/reference/`, and provides get/set/unset for scripted edits (e.g. by Claude, across many files at once). It parses the constrained YAML subset this vault actually uses (flat scalars, flow lists, occasional block lists, folded long values) — not general YAML — so it never needs `pyyaml` installed.
+
+```
+python tools/frontmatter.py check [paths...] [--json]
+python tools/frontmatter.py get <file> [field] [--json]
+python tools/frontmatter.py set <file> <field> <value> [--type str|int|bool|list]
+python tools/frontmatter.py unset <file> <field>
+```
+
+`check` validates required fields (`title`+`tags` for recipes, `title`+`date` for essays, `title` for reference), warns on missing recommended fields (`source`/`date`/`draft` for recipes, `tags`/`draft` for essays, `source`/`tags`/`draft` for reference), checks `tags`/`date`/`draft` types, and flags duplicate recipe titles. Exits non-zero only on errors (missing required fields, bad types) — missing recommended fields are warnings and don't fail the run. `_index.md` and dotfiles (scratch notes like `.ideas.md`) are skipped.
+
+`set` preserves the rest of the file untouched (comments, field order, other values) and inserts new fields in `FIELD_ORDER` position when the key doesn't already exist.
