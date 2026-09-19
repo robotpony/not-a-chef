@@ -7,7 +7,7 @@ draft: false
 
 This was one of the first fancy recipes we made when the kids were young. It was the beginning of our shared journey into cooking new foods. I haven’t made this in ages now, so I have no idea if it’s any good. But … memories ...   
 
-#### Ingredients:
+## Ingredients:
 
 - 2 cloves of garlic, minced
 - 2 shallots, minced
@@ -21,12 +21,12 @@ This was one of the first fancy recipes we made when the kids were young. It wa
 - Olive oil
 - Butter
 
-#### Optional ingredients:
+### Optional ingredients:
 
 - ½ cup Parmesan similar
 - French bread (which you can make into garlic bread if you’re smart)
 
-#### Optional proteins:
+### Optional proteins:
 
 - 2 handfuls of  medium size, cleaned, peeled, and deveined shrimp, or
 - 1-2 cups of uncooked sausage (something nice), or
@@ -43,6 +43,3 @@ This was one of the first fancy recipes we made when the kids were young. It wa
 7. Combine pasta with simmering sauce, stirring until combined. Remove from heat and add optional protein, cheese, ¾ of the basil, and pasta water until smooth.
 8. Serve, garnishing with remaining basil.
 
-## Variations
-
-Some recipes have variations, like turning pizza dough into foccia. You can add such instructions at the end, or just remove this section.

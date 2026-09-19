@@ -49,11 +49,7 @@ Add soy sauce and wine. Scrape up the brown bits and cook until the wine reduces
 
 Add broth and simmer for 15 minutes.
 
----
-
 **Velouté:** In a separate small pan, melt butter over medium heat. Whisk in flour and cook, stirring, for 2 minutes. Whisk this roux into the simmering soup. Cook until thickened, 5 minutes. Stir in cream. Blend partially (leave some texture) or fully. Season and serve.
-
----
 
 **Potage:** Add the diced potato to the broth with the mushrooms. Simmer until potato is fully soft, about 20 minutes total. Blend fully. Stir in cashew cream. Season and serve.
 

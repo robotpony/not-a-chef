@@ -1,5 +1,5 @@
 ---
-title: Roast Poultry (Two-Temperature Method)
+title: Roast Poultry
 tags: [bases, weeknight, make-ahead]
 source: original
 date: 2025-05-31

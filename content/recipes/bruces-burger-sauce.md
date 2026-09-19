@@ -9,6 +9,8 @@ total_time: 5 min
 draft: false
 ---
 
+This is a simple, classic burger sauce. 
+
 ## Mechanic
 
 A **1:1:1 ratio** by volume: mayo, diced burger pickles, mustard. Kewpie in place of or alongside regular mayo adds sweetness and acidity.
@@ -18,6 +20,7 @@ A **1:1:1 ratio** by volume: mayo, diced burger pickles, mustard. Kewpie in plac
 - 2 tablespoons mayonnaise or Kewpie mayo (or 1 tablespoon each)
 - 2 tablespoons diced burger pickles (bread and butter style)
 - 2 tablespoons yellow or Dijon mustard
+- 1/2 teaspoon sweet or smoked paprika
 
 ## Method
 
@@ -29,6 +32,6 @@ On Swiss, mozza-style, or deluxe burgers. Good as a spread on both bun halves.
 
 ## Notes
 
-- Developed for A&W-style mozza burger. [draft, still refining]
+- Developed for A&W-style mozza burger. 
 - The ratios are starting points; lean more mayo for a milder sauce, more pickle for brightness.
 - A small squeeze of ketchup or splash of pickle brine can soften the mustard edge.

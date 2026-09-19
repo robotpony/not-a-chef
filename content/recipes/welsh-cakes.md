@@ -5,9 +5,11 @@ source: family
 draft: false
 ---
 
+This is a classic family recipe for a Welsh flat bread. They are dense, sweet, and filling.
+
 > Grandpa Rempel had a Welsh background.  This recipe was given by his family, yet it has been Grandman Rempel and Ann who continue to make this recipe.  They are great on their own, topped with Cream Cheese Icing, or warmed and served with butter.  Gluten-free flour can be substituted for the All-Purpose flour and they still taste the same!
 
-#### Ingredients:
+## Ingredients:
 
 - 3 cups Flour
 - 1 ½ tsp Baking Powder
@@ -20,7 +22,7 @@ draft: false
 - 6 tbsp Milk
 - 2 Eggs, beaten
 
-### Directions:
+## Method:
 
 1. Sift together the Flour, Baking Powder, Baking Soda, Salt, and Nutmeg.
 2. Add in the Sugar.

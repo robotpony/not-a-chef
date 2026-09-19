@@ -1,11 +1,11 @@
 ---
-title: Vegan burger (savoury, chew, gluten)
+title: Vegan burger 
 tags: [mains, burgers]
 source: family
 draft: false
 ---
 
-#### Ingredients:
+## Ingredients:
 
 - 1 cup walnuts, diced (and/or cashews)
 - 1 cup black beans, diced or mashed
@@ -25,9 +25,7 @@ draft: false
 - Olive oil
 - Salt and pepper
 
-### Directions:
-
-TODO, but basically:
+## Directions:
 
 1. Fry mushrooms, onions, and nuts until browning. Add garlic
 2. Fry onions and garlic until softened, add tomato paste.

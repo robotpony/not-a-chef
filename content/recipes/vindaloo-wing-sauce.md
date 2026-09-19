@@ -16,7 +16,7 @@ draft: false
 - 3 tablespoons fresh lime juice
 - 3 tablespoons maple syrup
 - 2 tablespoons soy sauce
-- 1½ tablespoons vindaloo spice blend (see vindaloo-paste.md)
+- 1½ tablespoons vindaloo spice blend (see [[Vindaloo Paste]] recipe)
 - 1–2 tablespoons extra-virgin olive oil
 - 2 teaspoons mild chili flakes (Korean gochugaru worked well)
 - 2 teaspoons garlic, minced or grated

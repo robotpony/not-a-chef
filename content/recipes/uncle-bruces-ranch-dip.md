@@ -7,7 +7,7 @@ draft: false
 
 Growing up we ate a lot of post-war style food, including the famous Uncle Dan’s powdered ranch dip. I’m far too principled and lazy to buy powdered mix, so I came up with my own approximation. Two things make this dip stand out: MSG and an overnight stint in the fridge. Don’t skimp on either.
 
-#### Ingredients:
+## Ingredients:
 
 - 200g (1 cup) sour cream
 - 200g (1 cup) Hellman’s mayonnaise
@@ -16,6 +16,8 @@ Growing up we ate a lot of post-war style food, including the famous Uncle Dan�
 - 1g (½ teaspoon) MSG
 - 2g (1 teaspoon) roasted / granulated garlic
 - 2g (2 teaspoons) salt
+
+## Method
 
 1. Combine the ingredients in a suitable and sealable container. Add salt to taste.
 2. Stow in the refrigerator for at least 6 hours, but 24 is better.

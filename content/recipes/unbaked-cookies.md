@@ -5,9 +5,11 @@ source: family
 draft: false
 ---
 
+These are a classic cookie from our childhood. 
+
 > These cookies Grandma Rempel (Ann’s Mom) use to make all the time!  These were such a treat for me and Teresa.  So easy to make and so nostalgic.
 
-#### Ingredients:
+## Ingredients:
 
 - 2 cups Sugar
 - ½ cup Butter
@@ -17,11 +19,11 @@ draft: false
 - 3 cups Rolled Oats
 - 1 tsp Vanilla
 
-#### Variations:
+## Variations:
 
 - Use part Rolled Oats and part Cheerios or Puffed Wheat
 
-### Directions:
+## Directions:
 
 1. Place Sugar, Butter, and Milk into a saucepan and bring to a boil.
 2. Remove from heat and add Cocoa, Coconut, Oats, and Vanilla.

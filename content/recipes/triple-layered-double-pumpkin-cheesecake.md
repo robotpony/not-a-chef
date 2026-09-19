@@ -7,16 +7,8 @@ draft: false
 
 Not sure where this recipe came from but it looks Yummy!
 
-#### Crust:
 
-- Graham Crumbs (the amount depends on the size of your cheesecake pan)
-
-    - Option: a combination of ½ Graham Crumbs and ½ Chocolate/Oreo Crumbs)
-
-- ¼ cup Butter, melted
-- Sprinkle of Cinnamon
-
-#### Ingredients:
+## Ingredients:
 
 - 1000ml Cream Cheese (2 blocks)
 - 4 Eggs
@@ -28,7 +20,15 @@ Not sure where this recipe came from but it looks Yummy!
 - 3 tbsp Sugar
 - 2 envelopes of Knox Gelatine
 
-### Directions:
+
+### Crust:
+
+- Graham Crumbs (the amount depends on the size of your cheesecake pan)
+    - Option: a combination of ½ Graham Crumbs and ½ Chocolate/Oreo Crumbs)
+- ¼ cup Butter, melted
+- Sprinkle of Cinnamon
+
+## Directions:
 
 1. Preheat the Oven to 300 degrees F (150 C).
 2. Prepare your crusts: pour the Graham Crumbs (or Graham and Oreo Crumbs combo) directly into your pans until it’s about an inch up.  Sprinkle in a little bit of Cinnamon (can be omitted if Cinnamon will not compliment your cheesecake flavours) and with your fingers, mix into the crumbs and then form a little well in the middle of the pan.  Pour the melted Butter into the well and with your fingers, mix the butter into the crumbs.  If too wet, add more crumbs; if too dry, add more butter.  Once you have the right consistency, press the crumbs into the bottom of the pan to form the crust.  Ensure the edges are also pressed down.

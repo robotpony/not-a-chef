@@ -32,5 +32,6 @@ Roast at 205–230°C (400–450°F) until breasts reach 65°C internal and dark
 
 ## Notes
 
-- 230°C gives maximum browning; use it only if your oven runs accurately at that temp.
-- For a whole bird, see roast-poultry.md for the two-temperature timing method.
+230°C gives maximum browning; use it only if your oven runs accurately at that temp.
+
+For a whole bird, see [[Roast Poultry]] for the two-temperature timing method.

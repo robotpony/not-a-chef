@@ -9,11 +9,13 @@ total_time: 15 min (plus mixing into ground pork)
 draft: false
 ---
 
+These make great patties, sausages, or crumble. I use this sausage in pastas, on breakfast sandwhiches, and in stir fries.
+
 ## Mechanic
 
 A **percentage-based spice formula**: scale every ingredient against the total weight of ground pork. This makes it trivially scalable and lets you dial individual spices. Milk powder improves binding, moisture, and subtle dairy richness. Lean toward sage; the formula is sage-forward by design.
 
-## Ingredients (as % of pork weight)
+## Ingredients
 
 | Ingredient | % | Example: 1 kg pork |
 |---|---|---|

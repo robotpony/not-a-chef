@@ -219,6 +219,12 @@ Canadian English. British spellings (colour, favour, behaviour, flavour, grey) w
 
 Imperative, present tense in method steps: "Add the lentils" not "You should add the lentils." No passive voice.
 
+## Typography and layout conventions
+
+Prefer sentence case for titles. Capitalize proper nouns. 
+
+Avoid em-dashes. 
+
 ## Why these choices
 
 **Plain text ingredients, not structured syntax.** A recipe should look natural in any text editor. The cost is a more complex parser, but ingredient grammar is well-bounded and handles the vast majority of real recipes.
