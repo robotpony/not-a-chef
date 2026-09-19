@@ -635,7 +635,6 @@
 
   function enhanceSubRow(li) {
     li.classList.add('ing', 'sub');
-    li.insertBefore(document.createTextNode('— '), li.firstChild);
   }
 
   function enhanceList(ul, pageKey) {

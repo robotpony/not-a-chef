@@ -326,11 +326,16 @@ li.ing {
   padding: 0 3px;
 }
 /* Sub-note: a tab-indented sub-item under an ingredient (FORMAT.md's
- * "add split peas for more texture" example) — non-checkable, indented,
- * no checkbox at all (enhanceSubRow never adds one). */
+ * "add split peas for more texture" example) — non-checkable, no checkbox
+ * at all (enhanceSubRow never adds one) and no list marker (list-style:
+ * none comes from .ing-list; these are real <li> siblings of it, not a
+ * nested <ul>). Left edge matches the parent row's label text — checkbox
+ * width (19px) + .ing's gap (10px) — so it reads as a continuation of the
+ * ingredient above rather than its own bullet. */
 .ing.sub {
   padding-left: 29px;
   font-size: .88rem;
+  font-style: italic;
   color: var(--ink-muted);
 }
 /* Ingredient sub-head: a "#### Dry" / "#### Wet" label inside an
