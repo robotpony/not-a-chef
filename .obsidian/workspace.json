@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/the-food-log/2026-September.md",
+                "file": "content/recipes/dal-tadka.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-September"
+              "title": "dal-tadka"
             }
           }
         ]
@@ -198,6 +198,9 @@
   },
   "active": "8ccdedcb85efff90",
   "lastOpenFiles": [
+    "public/css/main.bundle.min.4dba742d31c498f299a853ecf03a90d3962ed4c25406ef40578a06d106f5f1a6840ce0e8a75b114549ec7b2b7f677e6c94c231b399824e91c5fa8a2765845a6c.css",
+    "public/js/ingredients.min.8f59888517e37c9bba080851f4f802f5dc7849100821750a1d8380d6f2abd15c.js",
+    "content/the-food-log/2026-September.md",
     "public/css/main.bundle.min.32d709507b24a5f3d2254979ea47fcd7925213e61e4a3db2ed4f1c3ecd0786115ea3b5d24acd44b6d5341dc54122c860a7193ab9dd4aa14422e71e7d034f515d.css",
     "public/scratch-test/page/1/index.html",
     "public/scratch-test/page/1",
@@ -208,15 +211,12 @@
     "content/scratch-test/_index.md",
     "content/scratch-test",
     "layouts/_default/_markup/render-passthrough.html",
-    "public/css/main.bundle.min.6b010a2576f42337b3dde1922a6a4a028113a957ebdd7fbf11d7f669c88fb9bb95db30bbe6ed53947bfc0384747f68df328f8227611acb37a0c412323b159222.css",
-    "public/css/main.bundle.min.012c38d086ac04edbbb5b97d5b8b1852f55c69a5ab02355908a447ac49942063a23d24728c5006aa1afc5be4981d6fa1226d2adc233f16283cf8f161da259bfe.css",
     "content/about.md",
     "SPEC.md",
     "content/recipes/pressure-cooker-japanese-curry.md",
     "content/recipes/instant-pot-chicken-thigh-curry.md",
     "content/recipes/butternut-squash-curry.md",
     "2026-09-14.md",
-    "content/the-food-log/2026-September.md",
     "content/Untitled.md",
     "content/recipes/avocado-salad-dressing.md",
     "Untitled.md",

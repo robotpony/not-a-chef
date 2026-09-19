@@ -10,24 +10,20 @@ total_time: 35 min
 cuisine: Indian
 draft: false
 ---
-
 ## Mechanic
 
-Red lentils cook fast and dissolve into a creamy base. The ratio matters: **1 cup lentils to 4–5 cups water**. Less water (1:4) gives a thicker dal you can heap on rice; more (1:5) gives something looser.
+Red lentils cook fast and dissolve into a creamy base. The ratio matters: 1 cup lentils to 4–5 cups water. Less water (1:4) gives a thicker dal you can heap on rice; more (1:5) gives something looser.
 
 The tadka is not garnish. Hot fat with spices poured over at the end is the flavour. Don't skip it.
-
----
-
 ## Dal
 
 - 200 g red lentils (masoor dal, about 1 cup), rinsed until water runs clear
 	- add split peas for more texture (+10 minutes pressure cooking time)
 - 1.2 L water (5 cups)
 - 2 tomatoes, chopped
-- **1 tablespoon fresh ginger**, grated or minced (or 1 teaspoon paste as a fallback)
-- **1½ teaspoons turmeric**
-- **¾ teaspoon garam masala**
+- 1 tablespoon fresh ginger, grated or minced (or 1 teaspoon paste as a fallback)
+- 1½ teaspoons turmeric
+- ¾ teaspoon garam masala
 - ¼ teaspoon cinnamon (optional, adds warmth)
 - 3–4 garlic cloves, minced
 - Salt to taste
