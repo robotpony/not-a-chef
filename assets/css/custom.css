@@ -311,7 +311,11 @@ li.ing {
 .ing label {
   cursor: pointer;
 }
-.ing .qty {
+/* .qty also appears outside .ing rows — assets/js/ingredients.js wraps
+ * unit-bearing quantities and temperatures it finds in Directions/Method
+ * prose the same way. */
+.qty,
+.temp {
   color: var(--ink-muted);
 }
 /* Sub-note: a tab-indented sub-item under an ingredient (FORMAT.md's

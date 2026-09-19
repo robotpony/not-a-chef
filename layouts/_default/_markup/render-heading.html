@@ -16,12 +16,14 @@
   random "##" heading in an essay doesn't get flagged as an ingredient
   section.
 
-  This only marks headings (data-ing-heading / .ing-subhead classes); it
-  doesn't touch the following <ul>/<li> markup at all, because Hugo has no
-  render hook for lists — Goldmark renders those as plain <ul><li> same as
-  ever. assets/js/ingredients.js walks the DOM client-side from each marked
-  heading to the next h2, and turns the <ul> it finds into the real
-  checkbox/qty component. See PLAN.md 6.2b for why: a template-level
+  This only marks headings (data-ing-heading / data-method-heading /
+  .ing-subhead classes); it doesn't touch the following <ul>/<li>/<p> markup
+  at all, because Hugo has no render hook for lists or paragraphs — Goldmark
+  renders those as plain <ul><li>/<p> same as ever. assets/js/ingredients.js
+  walks the DOM client-side from each marked heading to the next h2, and
+  turns the <ul> it finds into the real checkbox/qty component (under an
+  ingredients heading) or scans the prose for inline quantities/temperatures
+  (under a method heading). See PLAN.md 6.2b for why: a template-level
   wrapping div can't be safely closed (heading hooks render one self-
   contained tag at a time, with no "end of section" hook to close it), so
   the div-wrapping approach that would otherwise be the more obvious fix
@@ -31,8 +33,10 @@
 {{ $isRecipe := eq .Page.Section "recipes" }}
 
 {{ $nonIngredientHeadings := slice "method" "directions" "steps" "notes" "to serve" "variations" "timing" "equipment" "substitutions" "mechanic" }}
+{{ $methodHeadings := slice "method" "directions" "steps" }}
 {{ $normalized := .Text | plainify | strings.TrimSuffix ":" | strings.TrimSpace | lower }}
 {{ $isIngredientHeading := and $isRecipe (eq .Level 2) (not (in $nonIngredientHeadings $normalized)) }}
+{{ $isMethodHeading := and $isRecipe (eq .Level 2) (in $methodHeadings $normalized) }}
 
 {{ if and $isRecipe (eq .Level 2) }}
   {{ .Page.Scratch.Set "ingSection" $isIngredientHeading }}
@@ -40,7 +44,7 @@
 {{ $inIngredientSection := and $isRecipe (in (slice 3 4) .Level) (.Page.Scratch.Get "ingSection") }}
 
 <h{{ .Level }} class="relative group{{ if $inIngredientSection }} ing-subhead{{ end }}"
-  {{- if and $isRecipe (eq .Level 2) }} data-ing-heading="{{ $isIngredientHeading }}"{{ end -}}
+  {{- if and $isRecipe (eq .Level 2) }} data-ing-heading="{{ $isIngredientHeading }}" data-method-heading="{{ $isMethodHeading }}"{{ end -}}
 >{{ .Text | safeHTML }}
     <div id="{{ $anchor }}" class="anchor"></div>
     {{ if .Page.Params.showHeadingAnchors | default (.Page.Site.Params.article.showHeadingAnchors | default true) }}

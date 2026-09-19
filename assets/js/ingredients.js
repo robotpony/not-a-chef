@@ -10,25 +10,31 @@
 // per-browser via localStorage. See PLAN.md 6.2b.
 //
 // It also injects a config menu (next to the first Ingredients heading)
-// that scales quantities and converts them between metric/imperial. See
-// PLAN.md's "Ingredient helpers" line under Phase 9 — this is a scoped-down
-// first cut of that, living here rather than a separate warped-food.js
-// since it only touches the same qty spans this file already owns.
+// that scales quantities and converts them between metric/imperial/Kelvin.
+// The same engine drives two surfaces: the ingredient list (<ul>/<li>,
+// walked from an "ing" heading) and inline quantities/temperatures inside
+// Directions/Method prose (walked from a "method" heading, marked
+// data-method-heading="true" by the same render hook). See PLAN.md's
+// "Ingredient helpers" line under Phase 9.
 
 (function () {
   // Best-effort leading-quantity matcher, built from real recipes in this
   // vault (not every case in FORMAT.md's grammar — "a pinch of", "to
   // taste" etc. have no leading number and are left unstyled, which is a
   // harmless fallback, not a broken layout).
+  //
+  // A mixed number's fraction is usually glued to the whole number ("1½",
+  // FORMAT.md's own style), but real files sometimes type it with a space
+  // ("2 ¼") — the \s? here tolerates that. The unit's leading \s* (not \s?)
+  // similarly tolerates a stray double space before the unit word, seen in
+  // some migrated recipes.
   var QTY_RE = new RegExp(
     '^\\s*(' +
-      // "1½" (glued mixed number, FORMAT.md's own example style) as well
-      // as "1 1/2", "1.5", and "2–3"/"2-3" ranges.
-      '\\d+[¼½¾⅓⅔⅛⅜⅝⅞⅙⅚]?(?:\\.\\d+)?(?:\\s?/\\s?\\d+)?(?:[\\s\\-–—]\\d+[¼½¾⅓⅔⅛⅜⅝⅞⅙⅚]?(?:\\.\\d+)?(?:\\s?/\\s?\\d+)?)?' +
+      '\\d+\\s?[¼½¾⅓⅔⅛⅜⅝⅞⅙⅚]?(?:\\.\\d+)?(?:\\s?/\\s?\\d+)?(?:[\\s\\-–—]\\d+\\s?[¼½¾⅓⅔⅛⅜⅝⅞⅙⅚]?(?:\\.\\d+)?(?:\\s?/\\s?\\d+)?)?' +
       '|[¼½¾⅓⅔⅛⅜⅝⅞⅙⅚]' +
         '(?:[\\s\\-–—][¼½¾⅓⅔⅛⅜⅝⅞⅙⅚\\d]+)?' +
     ')' +
-    '(\\s?(?:g|kg|mg|ml|mL|L|l|cups?|tsps?|tbsps?|teaspoons?|tablespoons?|oz|ounces?|lbs?|pounds?|' +
+    '(\\s*(?:g|kg|mg|ml|mL|L|l|cups?|tsps?|tbsps?|teaspoons?|tablespoons?|oz|ounces?|lbs?|pounds?|' +
       'cloves?|heads?|cans?|packages?|slices?|pinch(?:es)?|dash(?:es)?|sprigs?|bunch(?:es)?|stalks?|sheets?)\\b)?' +
     '\\.?\\s+',
     'i'
@@ -52,7 +58,7 @@
     if (tok.length === 1 && UNICODE_FRAC.hasOwnProperty(tok)) return UNICODE_FRAC[tok];
     var slash = tok.match(/^(\d+(?:\.\d+)?)\s*\/\s*(\d+(?:\.\d+)?)$/);
     if (slash) return parseFloat(slash[1]) / parseFloat(slash[2]);
-    var m = tok.match(/^(\d+(?:\.\d+)?)([¼½¾⅓⅔⅛⅜⅝⅞⅙⅚])?$/);
+    var m = tok.match(/^(\d+(?:\.\d+)?)\s?([¼½¾⅓⅔⅛⅜⅝⅞⅙⅚])?$/);
     if (m) {
       var n = parseFloat(m[1]);
       if (m[2]) n += UNICODE_FRAC[m[2]];
@@ -63,10 +69,11 @@
 
   // The regex above treats a plain space and a hyphen/en-dash the same way
   // (it has to, to match both "1 1/2" and "2-3" with one pattern) — so
-  // disambiguating a mixed number from a range happens here instead: if
-  // the second half is itself a "n/d" fraction, it's read as the fractional
-  // part of a mixed number (added to the first half); otherwise the two
-  // halves are a range's endpoints.
+  // disambiguating a mixed number from a range happens here instead: if the
+  // second half is itself a "n/d" fraction, or a single unicode fraction
+  // character ("2 ¼"), it's read as the fractional part of a mixed number
+  // (added to the first half); otherwise the two halves are a range's
+  // endpoints.
   function parseQtyToken(raw) {
     raw = raw.trim();
     var sep = raw.match(/^(.+?)[\s\-–—]+(.+)$/);
@@ -74,7 +81,8 @@
       var a = parseSimpleNumber(sep[1]);
       var b = sep[2];
       if (a != null) {
-        if (b.indexOf('/') !== -1) {
+        var isFracContinuation = b.indexOf('/') !== -1 || (b.length === 1 && UNICODE_FRAC.hasOwnProperty(b));
+        if (isFracContinuation) {
           var frac = parseSimpleNumber(b);
           if (frac != null) return { kind: 'single', value: a + frac };
         } else {
@@ -129,18 +137,26 @@
     oz: ['oz', 'oz'], lb: ['lb', 'lb']
   };
 
+  // "1 cup" and "¼ cup" are both singular — only a value genuinely over 1
+  // pluralizes ("1½ cups").
   function unitLabel(key, value) {
     var pair = UNIT_LABELS[key];
     if (!pair) return '';
-    return Math.abs(value - 1) < 1e-9 ? pair[0] : pair[1];
+    return value < 1 + 1e-9 ? pair[0] : pair[1];
   }
 
   function isMetricUnit(key) {
     return key === 'g' || key === 'kg' || key === 'mg' || key === 'ml' || key === 'l';
   }
 
+  // A pinch-sized quantity ("⅛ tsp" = 0.625 mL) shouldn't round down to
+  // "0" — the guard keeps any genuinely nonzero input from collapsing to a
+  // zero result, and the extra sub-5 step below is fine enough that the
+  // guard is mostly just a backstop.
   function roundToNearest(n, step) {
-    return Math.round(n / step) * step;
+    var r = Math.round(n / step) * step;
+    if (r === 0 && n > 0) r = step;
+    return r;
   }
 
   // Converts a value in `fromKey`'s unit to the best-fitting unit in
@@ -153,7 +169,7 @@
     if (info.family === 'mass') {
       if (targetSystem === 'metric') {
         if (base >= 1000) return { value: base / 1000, unit: 'kg' };
-        return { value: roundToNearest(base, base < 20 ? 1 : 5), unit: 'g' };
+        return { value: roundToNearest(base, base < 5 ? 0.5 : base < 20 ? 1 : 5), unit: 'g' };
       }
       var lb = base / UNIT_INFO.lb.base;
       if (lb >= 1) return { value: lb, unit: 'lb' };
@@ -161,7 +177,7 @@
     }
     if (targetSystem === 'metric') {
       if (base >= 1000) return { value: base / 1000, unit: 'l' };
-      return { value: roundToNearest(base, base < 50 ? 5 : 25), unit: 'ml' };
+      return { value: roundToNearest(base, base < 5 ? 0.5 : base < 50 ? 5 : 25), unit: 'ml' };
     }
     if (base >= 180) return { value: base / UNIT_INFO.cup.base, unit: 'cup' };
     if (base >= 15) return { value: base / UNIT_INFO.tbsp.base, unit: 'tbsp' };
@@ -195,6 +211,74 @@
     return String(parseFloat(value.toFixed(2)));
   }
 
+  // --- Canonical number+unit spacing --------------------------------------
+  //
+  // The vault's source recipes are inconsistent about this ("50ml" vs
+  // "50 ml" — FORMAT.md's own examples disagree with each other too), so
+  // rather than echo whichever style a given file happened to use, every
+  // rendered quantity — including the untouched "as written" default —
+  // goes through one canonical rule. Only a JS-level constant for now, not
+  // a UI setting; flip it to 'spaced' to try the alternative.
+  //
+  // Only applies to symbol-style units (g, kg, mg, ml, l, oz, lb) — spelled-
+  // out word units (tsp, tbsp, cup) always keep a space regardless of this
+  // setting ("2 tbsp", never "2tbsp"), same as any other carried-over word
+  // (cloves, cans, ...): gluing a number straight to a whole word reads
+  // wrong in a way gluing it to a unit symbol doesn't.
+  var UNIT_SPACING = 'glued'; // 'glued' ("50ml") | 'spaced' ("50 ml")
+  var SYMBOL_UNITS = { g: true, kg: true, mg: true, ml: true, l: true, oz: true, lb: true };
+
+  function spaceUnit(numText, label) {
+    if (!label) return numText;
+    return numText + (UNIT_SPACING === 'spaced' ? ' ' : '') + label;
+  }
+
+  function joinValueLabel(numText, label, unitKey) {
+    if (!label) return numText;
+    return SYMBOL_UNITS[unitKey] ? spaceUnit(numText, label) : numText + ' ' + label;
+  }
+
+  // --- Bracketed alt-unit parsing (ingredient lines + prose) --------------
+  //
+  // "2 ¼ cups (560 ml) 35% cream" carries two numbers for one quantity: the
+  // one as originally typed, and a parenthetical in the other system.
+  // Rather than leaving the parenthetical as inert text, it's captured as a
+  // linked alt value so the units toggle can promote whichever side matches
+  // the requested system and demote the other into parentheses — reusing
+  // the literal (value, unit) pair as written, never recomputed/rounded
+  // from the other. Only single values are supported (not ranges) —
+  // bracketed alt units on a ranged quantity don't appear in this vault.
+  var ALT_BRACKET_RE = /^\s*\(([^()]+)\)/;
+  var SINGLE_QTY_INNER_RE = new RegExp(
+    '^\\s*(\\d+\\s?[¼½¾⅓⅔⅛⅜⅝⅞⅙⅚]?(?:\\.\\d+)?(?:\\s?/\\s?\\d+)?|[¼½¾⅓⅔⅛⅜⅝⅞⅙⅚])' +
+    '\\s*(g|kg|mg|ml|mL|L|l|cups?|tsps?|tbsps?|teaspoons?|tablespoons?|oz|ounces?|lbs?|pounds?)\\b'
+  );
+
+  // Given the text immediately following a matched primary quantity, checks
+  // for "(<number> <recognized unit>)" in the OTHER unit system and, if
+  // found, returns { value, unit, consumedLength } (consumedLength covers
+  // the whole "(...)" plus any run of trailing whitespace, so the caller
+  // can drop it from the surrounding text) — otherwise null.
+  function matchAltBracket(text, primaryUnitKey) {
+    var outer = text.match(ALT_BRACKET_RE);
+    if (!outer) return null;
+    var inner = outer[1].match(SINGLE_QTY_INNER_RE);
+    if (!inner) return null;
+    var value = parseSimpleNumber(inner[1].replace(/\s+/g, ''));
+    var unit = normalizeUnit(inner[2]);
+    if (value == null || !unit) return null;
+    if (isMetricUnit(unit) === isMetricUnit(primaryUnitKey)) return null; // same system, not a real alt
+    return { value: value, unit: unit, consumedLength: outer[0].length };
+  }
+
+  function matchAltTempBracket(text) {
+    var outer = text.match(ALT_BRACKET_RE);
+    if (!outer) return null;
+    var inner = outer[1].match(/^\s*(\d+(?:\.\d+)?)\s?[°º]\s?([CFKcfk])/);
+    if (!inner) return null;
+    return { value: parseFloat(inner[1]), unit: inner[2].toLowerCase(), consumedLength: outer[0].length };
+  }
+
   function wrapQty(li) {
     var node = firstTextNode(li);
     if (!node) return;
@@ -204,9 +288,9 @@
     qty.className = 'qty mono';
     var text = m[0].replace(/\s+$/, '');
     qty.textContent = text;
-    qty.dataset.qtyOriginal = text;
 
     var parsed = parseQtyToken(m[1]);
+    var unitKey = null;
     if (parsed) {
       qty.dataset.qtyKind = parsed.kind;
       if (parsed.kind === 'single') {
@@ -215,35 +299,47 @@
         qty.dataset.qtyLo = String(parsed.lo);
         qty.dataset.qtyHi = String(parsed.hi);
       }
-      var unitKey = normalizeUnit(m[2]);
+      unitKey = normalizeUnit(m[2]);
       if (unitKey) qty.dataset.qtyUnit = unitKey;
       if (m[2]) qty.dataset.qtyUnitRaw = m[2].trim();
     }
 
-    // m[0]'s trailing whitespace is consumed by the match (so the qty span
-    // itself doesn't end in a space) but a real space still has to survive
-    // between the span and the rest of the text — otherwise "200g" and
-    // "red lentils" render jammed together as "200gred lentils".
-    var rest = document.createTextNode(' ' + node.textContent.slice(m[0].length));
+    var restText = node.textContent.slice(m[0].length);
+
+    // A bracketed alt-unit right after a single-valued, unit-bearing
+    // quantity is captured as a linked alt rather than left as static text.
+    if (parsed && parsed.kind === 'single' && unitKey) {
+      var alt = matchAltBracket(restText, unitKey);
+      if (alt) {
+        qty.dataset.qtyAltValue = String(alt.value);
+        qty.dataset.qtyAltUnit = alt.unit;
+        restText = restText.slice(alt.consumedLength);
+      }
+    }
+
+    // A real space still has to survive between the span and the rest of
+    // the text — otherwise "200g" and "red lentils" render jammed together
+    // as "200gred lentils". Always exactly one space, regardless of how
+    // much whitespace (if any) separated the bracket from what follows it.
+    var rest = document.createTextNode(' ' + restText.replace(/^\s+/, ''));
     node.parentNode.insertBefore(qty, node);
     node.parentNode.insertBefore(rest, node);
     node.parentNode.removeChild(node);
   }
 
   // Re-renders one qty span for a given scale factor + unit system
-  // ('original' | 'metric' | 'imperial' | 'kelvin'). At the default 1x/original state
-  // it just restores the untouched source text, so a page nobody has
-  // touched the config menu on looks exactly as before this feature.
+  // ('original' | 'metric' | 'imperial' | 'kelvin'). Always reformats to
+  // the canonical spacing/number style, even at 1x/original — the source
+  // recipes' own "as written" spacing is inconsistent, so the default view
+  // is a cleaned-up rendering rather than a verbatim echo.
   function renderQty(qty, scale, unitSystem) {
     var kind = qty.dataset.qtyKind;
     if (!kind) return;
-    if (scale === 1 && unitSystem === 'original') {
-      qty.textContent = qty.dataset.qtyOriginal;
-      return;
-    }
 
     var unitKey = qty.dataset.qtyUnit || '';
     var rawUnit = qty.dataset.qtyUnitRaw || '';
+    var altUnit = qty.dataset.qtyAltUnit || '';
+    var altValue = qty.dataset.qtyAltValue !== undefined ? parseFloat(qty.dataset.qtyAltValue) : null;
 
     // Picks the natural size for a metric value at its own (unrounded)
     // magnitude — scaling up crosses the 1000 line for real ("1000g" reads
@@ -266,6 +362,14 @@
       return { value: value, unit: key, label: unitLabel(key, value) };
     }
 
+    // Scales a recognized-unit value and relabels it in its own unit
+    // (never cross-system converted) — used for both sides of an alt pair,
+    // which are each already in the system they'll be shown as.
+    function nativeUnit(key, rawValue) {
+      var r = relabelNative(key, rawValue * scale);
+      return { value: r.value, unit: r.unit, label: r.label, metric: isMetricUnit(r.unit) };
+    }
+
     // `forceUnit`, when given, expresses the result directly in that unit
     // instead of picking one — used to keep both ends of a range in the
     // same unit (never "800–1.2 kg").
@@ -281,9 +385,7 @@
         } else if (unitSystem === 'metric' || unitSystem === 'imperial') {
           var converted = convert(value, unitKey, unitSystem);
           if (converted) {
-            value = converted.value;
-            finalUnit = converted.unit;
-            label = unitLabel(converted.unit, value);
+            value = converted.value; finalUnit = converted.unit; label = unitLabel(converted.unit, value);
           } else {
             var native = relabelNative(unitKey, value);
             value = native.value; finalUnit = native.unit; label = native.label;
@@ -307,16 +409,185 @@
       return { value: value, label: label, unit: finalUnit, metric: isMetricUnit(finalUnit) };
     }
 
-    if (kind === 'single') {
-      var r = transform(parseFloat(qty.dataset.qtyValue));
+    // Single-valued quantities with a linked alt-unit bracket: pick
+    // whichever side (primary or alt) matches the requested system as the
+    // main figure, demoting the other into parentheses.
+    function transformWithAlt(raw) {
+      var altMatchesTarget = (unitSystem === 'metric' || unitSystem === 'imperial') &&
+        isMetricUnit(altUnit) === (unitSystem === 'metric');
+      if (altMatchesTarget) {
+        return { main: nativeUnit(altUnit, altValue), bracket: nativeUnit(unitKey, raw) };
+      }
+      return { main: nativeUnit(unitKey, raw), bracket: nativeUnit(altUnit, altValue) };
+    }
+
+    function render(r) {
       var fmt = r.metric ? formatDecimal : formatFraction;
-      qty.textContent = fmt(r.value) + (r.label ? ' ' + r.label : '');
+      return joinValueLabel(fmt(r.value), r.label, r.unit);
+    }
+
+    if (kind === 'single') {
+      if (altUnit) {
+        var res = transformWithAlt(parseFloat(qty.dataset.qtyValue));
+        qty.textContent = render(res.main) + ' (' + render(res.bracket) + ')';
+      } else {
+        qty.textContent = render(transform(parseFloat(qty.dataset.qtyValue)));
+      }
     } else {
       var hi = transform(parseFloat(qty.dataset.qtyHi));
       var lo = transform(parseFloat(qty.dataset.qtyLo), hi.unit);
       var fmt2 = hi.metric ? formatDecimal : formatFraction;
-      qty.textContent = fmt2(lo.value) + '–' + fmt2(hi.value) + (hi.label ? ' ' + hi.label : '');
+      qty.textContent = fmt2(lo.value) + '–' + joinValueLabel(fmt2(hi.value), hi.label, hi.unit);
     }
+  }
+
+  // --- Temperature parsing/conversion (Directions/Method prose) ----------
+  //
+  // Nothing in an ingredient list is a temperature, so this only ever
+  // shows up in prose. Unlike ingredient units, C/F stay glued to the
+  // degree sign regardless of UNIT_SPACING (matches every existing recipe:
+  // "180°C", never "180 °C") — Kelvin gets a space before its symbol
+  // instead, per SI convention for a named unit ("300 K", not "300K").
+
+  function toCelsius(value, unit) {
+    if (unit === 'c') return value;
+    if (unit === 'f') return (value - 32) * 5 / 9;
+    return value - 273.15; // k
+  }
+  function fromCelsius(c, unit) {
+    if (unit === 'c') return c;
+    if (unit === 'f') return c * 9 / 5 + 32;
+    return c + 273.15; // k
+  }
+  function formatTemp(value, unit) {
+    var rounded = Math.round(value);
+    return unit === 'k' ? rounded + ' K' : rounded + '°' + unit.toUpperCase();
+  }
+
+  function renderTemp(el, unitSystem) {
+    var value = parseFloat(el.dataset.tempValue);
+    var unit = el.dataset.tempUnit;
+    var altUnit = el.dataset.tempAltUnit || '';
+    var altValue = el.dataset.tempAltValue !== undefined ? parseFloat(el.dataset.tempAltValue) : null;
+
+    var targetUnit = unitSystem === 'metric' ? 'c' : unitSystem === 'imperial' ? 'f' : unitSystem === 'kelvin' ? 'k' : unit;
+
+    if (targetUnit === unit) {
+      el.textContent = formatTemp(value, unit) + (altUnit ? ' (' + formatTemp(altValue, altUnit) + ')' : '');
+      return;
+    }
+    if (altUnit && targetUnit === altUnit) {
+      el.textContent = formatTemp(altValue, altUnit) + ' (' + formatTemp(value, unit) + ')';
+      return;
+    }
+    // Target system has no literal value in the source (always true for
+    // Kelvin) — compute it, keeping the original value as a reference.
+    var computed = fromCelsius(toCelsius(value, unit), targetUnit);
+    el.textContent = formatTemp(computed, targetUnit) + ' (' + formatTemp(value, unit) + ')';
+  }
+
+  // --- Directions/Method prose: inline quantity + temperature detection --
+  //
+  // Method text isn't a <ul> of parsed ingredient lines — it's paragraphs
+  // (or a numbered list) of prose — so quantities and temperatures have to
+  // be found anywhere in the running text, not just at the start of a
+  // line. Only a mention with a RECOGNIZED unit (g/ml/tbsp/...) is scaled
+  // and converted; bare numbers — cook times, day counts, step repetitions
+  // — don't carry a unit from this table, so they never match and are
+  // never touched. Ranges aren't supported in prose (single values only) —
+  // method text doesn't write ranges the way ingredient lines do.
+
+  var PROSE_UNIT_WORDS = 'g|kg|mg|ml|mL|L|l|cups?|tsps?|tbsps?|teaspoons?|tablespoons?|oz|ounces?|lbs?|pounds?';
+  var PROSE_TOKEN_RE = new RegExp(
+    '(\\d+(?:\\.\\d+)?)\\s?[°º]\\s?([CFKcfk])\\b' +
+    '|' +
+    '(\\d+\\s?[¼½¾⅓⅔⅛⅜⅝⅞⅙⅚]?(?:\\.\\d+)?(?:\\s?/\\s?\\d+)?|[¼½¾⅓⅔⅛⅜⅝⅞⅙⅚])\\s?(' + PROSE_UNIT_WORDS + ')\\b',
+    'g'
+  );
+
+  function buildProseQtySpan(rawText, numToken, unitWord) {
+    var parsed = parseQtyToken(numToken);
+    if (!parsed || parsed.kind !== 'single') return null;
+    var unitKey = normalizeUnit(unitWord);
+    if (!unitKey) return null;
+    var span = document.createElement('span');
+    span.className = 'qty mono';
+    span.textContent = rawText;
+    span.dataset.qtyKind = 'single';
+    span.dataset.qtyValue = String(parsed.value);
+    span.dataset.qtyUnit = unitKey;
+    return span;
+  }
+
+  function buildTempSpan(rawText, numToken) {
+    var value = parseFloat(numToken);
+    if (isNaN(value)) return null;
+    var span = document.createElement('span');
+    span.className = 'temp mono';
+    span.textContent = rawText;
+    return span;
+  }
+
+  function enhanceProseText(root) {
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (node) {
+        var p = node.parentNode;
+        if (p && (p.classList.contains('qty') || p.classList.contains('temp'))) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var nodes = [];
+    var n;
+    while ((n = walker.nextNode())) nodes.push(n);
+
+    nodes.forEach(function (node) {
+      var text = node.textContent;
+      PROSE_TOKEN_RE.lastIndex = 0;
+      if (!PROSE_TOKEN_RE.test(text)) return;
+      PROSE_TOKEN_RE.lastIndex = 0;
+
+      var frag = document.createDocumentFragment();
+      var pos = 0;
+      var m = PROSE_TOKEN_RE.exec(text);
+      while (m) {
+        var span = null;
+        var matchEnd = PROSE_TOKEN_RE.lastIndex;
+        if (m[1] !== undefined) {
+          span = buildTempSpan(m[0], m[1]);
+          if (span) {
+            span.dataset.tempValue = String(parseFloat(m[1]));
+            span.dataset.tempUnit = m[2].toLowerCase();
+            var altT = matchAltTempBracket(text.slice(matchEnd));
+            if (altT) {
+              span.dataset.tempAltValue = String(altT.value);
+              span.dataset.tempAltUnit = altT.unit;
+              matchEnd += altT.consumedLength;
+            }
+          }
+        } else {
+          span = buildProseQtySpan(m[0], m[3], m[4]);
+          if (span) {
+            var altQ = matchAltBracket(text.slice(matchEnd), span.dataset.qtyUnit);
+            if (altQ) {
+              span.dataset.qtyAltValue = String(altQ.value);
+              span.dataset.qtyAltUnit = altQ.unit;
+              matchEnd += altQ.consumedLength;
+            }
+          }
+        }
+
+        if (span) {
+          frag.appendChild(document.createTextNode(text.slice(pos, m.index)));
+          frag.appendChild(span);
+          pos = matchEnd;
+        }
+        PROSE_TOKEN_RE.lastIndex = Math.max(matchEnd, PROSE_TOKEN_RE.lastIndex);
+        m = PROSE_TOKEN_RE.exec(text);
+      }
+      if (pos === 0) return; // nothing actually wrapped
+      frag.appendChild(document.createTextNode(text.slice(pos)));
+      node.parentNode.replaceChild(frag, node);
+    });
   }
 
   // --- Checkbox rows --------------------------------------------------
@@ -402,7 +673,11 @@
   // One menu governs the whole page: a multi-component recipe (e.g.
   // dal-tadka's "## Dal" / "## Tadka") has several ingredient headings,
   // but scaling/units is a whole-recipe operation, so this is injected
-  // once, on the first one, and re-renders every .qty under `root`.
+  // once, on the first one, and re-renders every .qty/.temp under `root`
+  // (ingredient-list AND Directions/Method prose alike). Always builds and
+  // runs its state/apply pipeline, even when the caller chooses not to
+  // attach the returned menu element to the page (no ingredient heading to
+  // anchor it to) — Method-only content still needs its spans rendered.
   function buildConfigMenu(root, pageKey) {
     var details = document.createElement('details');
     details.className = 'ing-config';
@@ -490,6 +765,9 @@
       root.querySelectorAll('.qty').forEach(function (qty) {
         renderQty(qty, state.scale, state.units);
       });
+      root.querySelectorAll('.temp').forEach(function (temp) {
+        renderTemp(temp, state.units);
+      });
       syncControls();
     }
 
@@ -506,8 +784,7 @@
       });
     });
 
-    syncControls();
-    if (state.scale !== 1 || state.units !== 'original') apply();
+    apply();
 
     return details;
   }
@@ -526,9 +803,29 @@
       }
     });
 
-    if (headings.length) {
-      headings[0].appendChild(buildConfigMenu(root, pageKey));
-    }
+    // Unlike the ingredient walk above, this doesn't stop only at the next
+    // H2 — FORMAT.md's own optional sections ("## Variations", "## Notes")
+    // are meant to be H2 siblings, but real recipes sometimes use a lower
+    // heading level for them (H3 "### Variations"), and Method has no
+    // documented convention for sub-headings the way an ingredient
+    // component grouping does. So any heading at all ends the section here
+    // — converting units into a stray "Variations" paragraph would be a
+    // real content bug, not just a harmless stray style.
+    var methodHeadings = root.querySelectorAll('h2[data-method-heading="true"]');
+    methodHeadings.forEach(function (h2) {
+      var el = h2.nextElementSibling;
+      while (el && !/^H[1-6]$/.test(el.tagName)) {
+        enhanceProseText(el);
+        el = el.nextElementSibling;
+      }
+    });
+
+    // Always run the scale/units pipeline (a Method section needs its
+    // quantities/temperatures rendered even on the rare recipe with no
+    // Ingredients heading to anchor the menu to); only attach the menu
+    // itself when there's an ingredient heading to put it next to.
+    var menu = buildConfigMenu(root, pageKey);
+    if (headings.length) headings[0].appendChild(menu);
   }
 
   if (document.readyState === 'loading') {
