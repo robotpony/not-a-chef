@@ -774,7 +774,10 @@ footer.pt-8.max-w-prose { padding-top: 0; }
  * the cascade, same pattern as `.recipe-sidebar-section[hidden]` needing
  * no lg: override since it's only ever toggled at all on mobile. */
 .recipe-sidebar-toggle {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
   width: 100%;
   cursor: pointer;
   font-family: 'Libre Franklin', sans-serif;
@@ -782,11 +785,25 @@ footer.pt-8.max-w-prose { padding-top: 0; }
   font-weight: 700;
   text-align: left;
   padding: 10px 14px;
-  margin-bottom: 14px;
+  margin: 20px 0;
   background: var(--surface-2);
   border: none;
   border-radius: 6px;
   color: var(--ink);
+}
+/* Chevron reuses Blowfish's own accordion/dropdown affordance (see
+ * icon.html "chevron-down", also used by the nav mega-menu) rather than
+ * inventing a new expand indicator — rotates open on aria-expanded since
+ * this is a plain button, not a <details> summary with a native [open]. */
+.recipe-sidebar-toggle .icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--ink-faint);
+  transition: transform 150ms ease-in-out;
+}
+.recipe-sidebar-toggle[aria-expanded="true"] .icon {
+  transform: rotate(180deg);
 }
 /* Scoped to a max-width media query (mutual exclusion with the lg:
  * breakpoint below) rather than left as a plain rule beaten back by
@@ -796,6 +813,10 @@ footer.pt-8.max-w-prose { padding-top: 0; }
  * abandoned <details> CSS override hit above). */
 @media (max-width: 1023.98px) {
   .recipe-sidebar-wrap:not(.is-open) #recipe-sidebar { display: none; }
+  /* Matches the toggle's own margin so the open panel doesn't run straight
+   * into Ingredients below it. Desktop doesn't need this — the sidebar
+   * sits beside the recipe there, not stacked above it. */
+  .recipe-sidebar { margin-bottom: 20px; }
 }
 @media (min-width: 1024px) {
   .recipe-sidebar-toggle { display: none; }

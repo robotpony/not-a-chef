@@ -150,8 +150,18 @@
         drives the button. See PLAN.md/STYLE.md before promoting this out
         of prototype. */}}
       {{ if eq .Section "recipes" }}
-        <div class="recipe-sidebar-wrap lg:ms-auto px-0 lg:ps-8 lg:max-w-2xs">
-          <button type="button" class="recipe-sidebar-toggle lg:hidden" aria-expanded="false" aria-controls="recipe-sidebar">Recipe notes</button>
+        {{/* order-first/lg:order-last: same trick as the TOC block above
+          (bare `order-last` doesn't exist in Blowfish's compiled CSS, see
+          the comment there — `order-first` and `lg:order-last` both do,
+          since the TOC already relies on them) — moves this above
+          Ingredients on mobile, where Mechanic used to sit, while leaving
+          its DOM position (after the main content column) and therefore
+          its desktop placement untouched. */}}
+        <div class="recipe-sidebar-wrap order-first lg:order-last lg:ms-auto px-0 lg:ps-8 lg:max-w-2xs">
+          <button type="button" class="recipe-sidebar-toggle lg:hidden" aria-expanded="false" aria-controls="recipe-sidebar">
+            <span>Recipe notes</span>
+            {{ partial "icon.html" "chevron-down" }}
+          </button>
           <div class="recipe-sidebar print:hidden lg:sticky {{ $topClass }}" id="recipe-sidebar">
             {{/* Meta rail: frontmatter facts that never render anywhere else
               on a recipe page (article.showDate/showAuthor/showReadingTime
