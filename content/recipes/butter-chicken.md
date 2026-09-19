@@ -17,7 +17,7 @@ This is a BIR-style (British Indian Restaurant) butter chicken, built on a pre-m
 
 ## Ingredients
 
-- 500 ml [Base Curry Gravy](Base Curry Gravy) <!-- TODO: base curry gravy recipe not yet in vault; was linked to Google Doc -->
+- 500 ml [[Base Curry Gravy]]
 - 4 tablespoons almond powder
 - 4 tablespoons yogurt or cream
 - 2 tablespoons oil (onion oil preferred)

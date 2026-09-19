@@ -45,4 +45,4 @@ Chill for at least 4 hours, preferably overnight, before cooking. If freezing ra
 
 - MSG and salt work together here; ¾ tsp MSG per kg is enough to round out the umami without needing more salt.
 - Cayenne stays subtle at this stage; add more heat at the cooking or glazing step if you want it.
-- Not published as a standalone dish. Shape and finish per the specific recipe, e.g. [Gyro Dogs](Gyro Dogs).
+- Not published as a standalone dish. Shape and finish per the specific recipe, e.g. [[Gyro Dogs]].

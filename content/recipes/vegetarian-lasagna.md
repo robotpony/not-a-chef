@@ -17,7 +17,7 @@ Eggs in the cheese filling bind the layers together so the lasagna cuts cleanly 
 
 ## Marinara
 
-Use 1 batch of [Simple Marinara](Simple Marinara).
+Use 1 batch of [[Simple Marinara]].
 
 <!-- TODO: original also referenced an optional meaty base (Google Doc link, no longer accessible). For a meat version, add browned ground beef or Italian sausage to the marinara. -->
 

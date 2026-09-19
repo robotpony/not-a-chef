@@ -17,7 +17,7 @@ Focaccia is pizza dough baked in an oiled pan rather than on a stone. The heavy 
 
 ## Ingredients
 
-- 1 batch [Pizza Dough](Pizza Dough) (1 kg dough, split into 2–3 portions)
+- 1 batch [[Pizza Dough]] (1 kg dough, split into 2–3 portions)
 - neutral oil (not extra-virgin), generous amount for pans
 - coarse salt
 

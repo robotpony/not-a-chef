@@ -17,7 +17,7 @@ This is a BIR (British Indian Restaurant) base gravy: a neutral, lightly spiced 
 
 ## Ingredients
 
-- 250 ml neutral oil (or oil reserved from frying [Onion Bhaji](Onion Bhaji))
+- 250 ml neutral oil (or oil reserved from frying [[Onion Bhaji]])
 - 2 tablespoons garlic-ginger paste <!-- TODO: gingergarlic-paste.md is in the orphan list; recover or use store-bought. The original offered the alternative: plain garlic/ginger paste + ¼ bunch cilantro stalks + 1 green chilli -->
 - 1 tin (400g) plum tomatoes
 - 3 medium yellow onions, quartered
@@ -49,7 +49,7 @@ Temper the cream by whisking in a few ladles of hot gravy, then stir back into t
 
 ## To serve
 
-Use as the liquid base in [Butter Chicken](Butter Chicken) and other BIR-style curries.
+Use as the liquid base in [[Butter Chicken]] and other BIR-style curries.
 
 ## Notes
 
