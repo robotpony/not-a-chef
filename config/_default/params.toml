@@ -50,6 +50,13 @@ mainSections = ["recipes"]
   showWordCount = false
   sharingLinks = []
 
+[recipe]
+  # Kelvin is a real option in the units-conversion engine
+  # (assets/js/ingredients.js) but it's more of a joke than something
+  # anyone cooking from this site actually wants — off by default, and a
+  # config flag (not a code change) if that ever stops being true.
+  enableKelvin = false
+
 [list]
   showHero = false
   showBreadcrumbs = true

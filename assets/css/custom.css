@@ -802,7 +802,7 @@ footer.pt-8.max-w-prose { padding-top: 0; }
 .recipe-sidebar {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 18px;
 }
 .recipe-sidebar-section[hidden] { display: none; }
 /* Headings arrive already wrapped by render-heading.html (h2, relative
@@ -810,12 +810,12 @@ footer.pt-8.max-w-prose { padding-top: 0; }
  * sidebar column rather than inheriting .prose h2's article-width sizing. */
 .recipe-sidebar-section h2 {
   font-family: 'Libre Franklin', sans-serif;
-  font-size: .78rem;
+  font-size: .72rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .07em;
   color: var(--ink-faint);
-  margin: 0 0 10px;
+  margin: 0 0 6px;
   padding: 0;
 }
 .recipe-sidebar-section h2 .anchor,
@@ -823,26 +823,27 @@ footer.pt-8.max-w-prose { padding-top: 0; }
 .recipe-sidebar-section > p,
 .recipe-sidebar-section > ul {
   font-family: 'Lora', serif;
-  font-size: .92rem;
-  line-height: 1.5;
+  font-size: .85rem;
+  line-height: 1.4;
   margin: 0;
 }
-.recipe-sidebar-section > p + p { margin-top: .75em; }
+.recipe-sidebar-section > p + p { margin-top: .6em; }
 
-/* Mechanic callout (mockups/STYLE.md's "Mechanic callout"), ported
- * verbatim from mockups/style.html rather than redesigned for this
- * narrower context — accent-left-bordered box reads fine at sidebar width. */
+/* Mechanic: italic, slightly smaller than the sidebar's own body copy —
+ * deliberately NOT the accent-bordered callout box mockups/STYLE.md
+ * describes (that box reads as a blockquote at this narrow width; plain
+ * italic sits better among the sidebar's other compact sections). A
+ * narrower-context variant, not yet reconciled back into STYLE.md. */
 .recipe-sidebar-section .mechanic {
-  background: var(--bg);
-  border-left: 3px solid var(--accent);
-  border-radius: 0 3px 3px 0;
-  padding: 12px 14px;
   font-family: 'Lora', serif;
-  font-size: .92rem;
+  font-style: italic;
+  font-size: .82rem;
+  color: var(--ink-muted);
 }
 .recipe-sidebar-section .mechanic .ratio {
   color: var(--accent-strong);
   font-weight: 600;
+  font-style: normal;
   font-family: 'IBM Plex Mono', monospace;
 }
 
@@ -854,8 +855,8 @@ footer.pt-8.max-w-prose { padding-top: 0; }
 }
 .recipe-sidebar-section .notes-list li {
   display: flex;
-  gap: 8px;
-  margin-bottom: 8px;
+  gap: 6px;
+  margin-bottom: 6px;
 }
 .recipe-sidebar-section .notes-list li::before {
   content: '—';
@@ -864,17 +865,61 @@ footer.pt-8.max-w-prose { padding-top: 0; }
 }
 .recipe-sidebar-section .notes-list li:last-child { margin-bottom: 0; }
 
-/* Units/scale controls, sidebar mount (assets/js/ingredients.js's
- * mountInlineControls) — reuses the popup panel's .ing-config-group/
- * .ing-btn/.ing-scale-slider language (custom.css above) but laid out
+/* Units control, sidebar mount (assets/js/ingredients.js's
+ * mountInlineControls, buildUnitsControl) — reuses the popup panel's
+ * .ing-config-group/.ing-btn language (custom.css above) but laid out
  * plainly, no disclosure chrome, per the "not a popup, just the controls"
- * brief this branch started from. */
+ * brief this branch started from. Scale stays out of the sidebar
+ * entirely — it's anchored to the ingredient list instead (buildPopupMenu)
+ * — so there's no .ing-scale-slider here to restyle. Tighter gap/padding
+ * than the popup panel gets, matching the sidebar's own compact rhythm. */
 .recipe-sidebar-section--units {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 14px;
+  gap: 10px;
+  padding: 10px 12px;
   background: var(--surface-2);
   border-radius: 6px;
+}
+.recipe-sidebar-section--units .ing-config-group { gap: 5px; }
+.recipe-sidebar-section--units .ing-config-row { gap: 5px; }
+.recipe-sidebar-section--units .ing-btn { padding: 5px 9px; font-size: .74rem; }
+
+/* Meta rail (mockups/STYLE.md's "Stat rail" component, adapted): recipe
+ * facts that exist in frontmatter but otherwise never render anywhere on
+ * the page itself (article.showDate/showAuthor/showReadingTime are all
+ * off site-wide, config/_default/params.toml) — servings, prep/cook/total
+ * time, date, and (when a recipe sets it) author. Stacked rows rather
+ * than stat-rail's own flex-wrap row, since values like prep_time
+ * ("30 min (plus 4 hr chill, ideally overnight)") are prose-length, not
+ * short numbers — a fixed label column keeps them scannable instead of
+ * wrapping under a wrapped label. */
+.recipe-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+.recipe-meta-row {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+.recipe-meta-label {
+  flex: 0 0 42px;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--ink-faint);
+}
+.recipe-meta-value {
+  flex: 1;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .78rem;
+  color: var(--ink-muted);
+  line-height: 1.4;
 }
 .list-pagination-ellipsis { color: var(--ink-faint); padding: 0 4px; }

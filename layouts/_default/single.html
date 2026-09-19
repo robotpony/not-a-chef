@@ -62,7 +62,7 @@
 
       <div class="min-w-0 min-h-0 max-w-fit">
         {{ partial "series/series.html" . }}
-        <div class="article-content max-w-prose mb-20"{{ if eq .Section "recipes" }} data-page-key="{{ .RelPermalink }}"{{ end }}>
+        <div class="article-content max-w-prose mb-20"{{ if eq .Section "recipes" }} data-page-key="{{ .RelPermalink }}" data-enable-kelvin="{{ site.Params.recipe.enableKelvin | default false }}"{{ end }}>
           {{/* Reset before every render pass through this content — Hugo's
             own automatic .Summary/.Description generation also runs the
             heading hook against the same Page/Scratch, so this pass must
@@ -143,6 +143,34 @@
         <div class="recipe-sidebar-wrap lg:ms-auto px-0 lg:ps-8 lg:max-w-2xs">
           <button type="button" class="recipe-sidebar-toggle lg:hidden" aria-expanded="false" aria-controls="recipe-sidebar">Recipe notes</button>
           <div class="recipe-sidebar print:hidden lg:sticky {{ $topClass }}" id="recipe-sidebar">
+            {{/* Meta rail: frontmatter facts that never render anywhere else
+              on a recipe page (article.showDate/showAuthor/showReadingTime
+              are all off site-wide, config/_default/params.toml) — servings,
+              prep/cook/total time, and author when a recipe sets one (no
+              recipe does yet; FORMAT.md has no `author` field, this repo
+              being a single-author family cookbook — the row is here for
+              whenever that changes, not fabricated for now). Date was here
+              too but didn't earn its place in a compact column and got cut.
+              Server-rendered directly, unlike the other slots below, since
+              it's plain frontmatter rather than content that has to be
+              walked out of the article body. Serves gets a
+              data-servings-base hook so assets/js/ingredients.js can keep
+              it in step with the scale slider (parseable numbers only — a
+              descriptive value like "4–6" is left as written, see
+              applyServings). */}}
+            {{ $metaRows := slice }}
+            {{ with .Params.servings }}{{ $metaRows = $metaRows | append (dict "label" "Serves" "value" . "id" "recipe-meta-servings" "base" .) }}{{ end }}
+            {{ with .Params.prep_time }}{{ $metaRows = $metaRows | append (dict "label" "Prep" "value" .) }}{{ end }}
+            {{ with .Params.cook_time }}{{ $metaRows = $metaRows | append (dict "label" "Cook" "value" .) }}{{ end }}
+            {{ with .Params.total_time }}{{ $metaRows = $metaRows | append (dict "label" "Total" "value" .) }}{{ end }}
+            {{ with .Params.author }}{{ $metaRows = $metaRows | append (dict "label" "Author" "value" .) }}{{ end }}
+            {{ if $metaRows }}
+              <div class="recipe-meta">
+                {{ range $metaRows }}
+                  <div class="recipe-meta-row"><span class="recipe-meta-label">{{ .label }}</span><span class="recipe-meta-value"{{ with .id }} id="{{ . }}"{{ end }}{{ with .base }} data-servings-base="{{ . }}"{{ end }}>{{ .value }}</span></div>
+                {{ end }}
+              </div>
+            {{ end }}
             <div class="recipe-sidebar-section" data-sidebar-slot="mechanic" hidden></div>
             <div class="recipe-sidebar-section recipe-sidebar-section--units" data-sidebar-slot="units" hidden></div>
             <div class="recipe-sidebar-section" data-sidebar-slot="to-serve" hidden></div>

@@ -665,6 +665,11 @@
   var SCALE_MIN = 1;
   var SCALE_MAX = 5;
   var SCALE_STEP = 0.5;
+  // Kelvin conversion is fully implemented (toCelsius/fromCelsius above)
+  // but is more of a joke than a real option for a home-cooking site — off
+  // by default, flipped by single.html's data-enable-kelvin attribute
+  // (config/_default/params.toml's [recipe].enableKelvin), read in init().
+  var ENABLE_KELVIN = false;
   var GEAR_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" ' +
     'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
     '<circle cx="12" cy="12" r="3"></circle>' +
@@ -684,13 +689,12 @@
     return (Number.isInteger(n) ? String(n) : n.toFixed(1)) + '×';
   }
 
-  // Builds one set of scale-slider + units-buttons controls (no chrome
-  // around them) — the raw material shared by both mount styles below.
-  // Returns the fragment to insert plus the live elements a controller
-  // needs to drive (see attachSurface).
-  function buildControlSurface() {
+  // Scale and units are built separately (rather than one combined
+  // surface) so a mount can take just one of them — the sidebar only gets
+  // Units (see mountInlineControls); Scale stays with the ingredient list,
+  // where changing "how much of this" is anchored to the thing it changes.
+  function buildScaleControl() {
     var frag = document.createDocumentFragment();
-
     var scaleGroup = document.createElement('div');
     scaleGroup.className = 'ing-config-group';
     var scaleLabel = document.createElement('div');
@@ -712,6 +716,11 @@
     scaleGroup.appendChild(scaleSliderRow);
     frag.appendChild(scaleGroup);
 
+    return { frag: frag, scaleSlider: scaleSlider, scaleValue: scaleValue };
+  }
+
+  function buildUnitsControl() {
+    var frag = document.createDocumentFragment();
     var unitsGroup = document.createElement('div');
     unitsGroup.className = 'ing-config-group ing-config-group--units';
     var unitsLabel = document.createElement('div');
@@ -720,9 +729,11 @@
     unitsGroup.appendChild(unitsLabel);
     var unitsRow = document.createElement('div');
     unitsRow.className = 'ing-config-row';
-    var unitButtons = [
-      ['original', 'As written'], ['metric', 'Metric'], ['imperial', 'Imperial'], ['kelvin', 'Kelvin']
-    ].map(function (pair) {
+    var unitOptions = [
+      ['original', 'As written'], ['metric', 'Metric'], ['imperial', 'Imperial']
+    ];
+    if (ENABLE_KELVIN) unitOptions.push(['kelvin', 'Kelvin']);
+    var unitButtons = unitOptions.map(function (pair) {
       var btn = buildUnitButton(pair[1], pair[0]);
       unitsRow.appendChild(btn);
       return btn;
@@ -730,7 +741,7 @@
     unitsGroup.appendChild(unitsRow);
     frag.appendChild(unitsGroup);
 
-    return { frag: frag, scaleSlider: scaleSlider, scaleValue: scaleValue, unitButtons: unitButtons };
+    return { frag: frag, unitButtons: unitButtons };
   }
 
   // Owns the scale/units state for the whole page (a multi-component
@@ -756,6 +767,7 @@
     function readUnits() {
       try {
         var v = localStorage.getItem(unitsKey);
+        if (v === 'kelvin' && !ENABLE_KELVIN) return 'original';
         return (v === 'metric' || v === 'imperial' || v === 'kelvin') ? v : 'original';
       } catch (e) { return 'original'; }
     }
@@ -765,12 +777,33 @@
 
     function syncControls() {
       surfaces.forEach(function (s) {
-        s.scaleSlider.value = String(state.scale);
-        s.scaleValue.textContent = formatScaleValue(state.scale);
+        if (s.scaleSlider) {
+          s.scaleSlider.value = String(state.scale);
+          s.scaleValue.textContent = formatScaleValue(state.scale);
+        }
         s.unitButtons.forEach(function (btn) {
           btn.classList.toggle('active', btn.dataset.units === state.units);
         });
       });
+    }
+
+    // The sidebar's Serves meta row (single.html) is plain server-rendered
+    // text, not a .qty span — it isn't a quantity in an ingredient/method
+    // sense, just a frontmatter fact, but it should still track the scale
+    // slider. Only touched when the frontmatter value is a bare number
+    // (data-servings-base); a descriptive value like "4–6" or "1 loaf"
+    // (FORMAT.md allows both) can't be scaled arithmetically and is left
+    // exactly as written.
+    function applyServings() {
+      var el = document.getElementById('recipe-meta-servings');
+      if (!el) return;
+      var raw = el.dataset.servingsBase;
+      // A strict whole-string match, not just isNaN(parseFloat(...)) — that
+      // check passes "4-6" (parseFloat reads its leading "4" and stops,
+      // silently truncating a real range like braised-red-cabbage's
+      // servings instead of leaving it alone).
+      if (!/^\d+(\.\d+)?$/.test(raw)) return;
+      el.textContent = String(Math.round(parseFloat(raw) * state.scale));
     }
 
     function apply() {
@@ -780,16 +813,19 @@
       document.querySelectorAll('.temp').forEach(function (temp) {
         renderTemp(temp, state.units);
       });
+      applyServings();
       syncControls();
     }
 
     function attachSurface(surface) {
       surfaces.push(surface);
-      surface.scaleSlider.addEventListener('input', function () {
-        state.scale = parseFloat(surface.scaleSlider.value);
-        try { localStorage.setItem(scaleKey, String(state.scale)); } catch (e) {}
-        apply();
-      });
+      if (surface.scaleSlider) {
+        surface.scaleSlider.addEventListener('input', function () {
+          state.scale = parseFloat(surface.scaleSlider.value);
+          try { localStorage.setItem(scaleKey, String(state.scale)); } catch (e) {}
+          apply();
+        });
+      }
       surface.unitButtons.forEach(function (btn) {
         btn.addEventListener('click', function () {
           state.units = btn.dataset.units;
@@ -816,20 +852,23 @@
 
     var panel = document.createElement('div');
     panel.className = 'ing-config-panel';
-    var surface = buildControlSurface();
-    panel.appendChild(surface.frag);
+    var scale = buildScaleControl();
+    var units = buildUnitsControl();
+    panel.appendChild(scale.frag);
+    panel.appendChild(units.frag);
     details.appendChild(panel);
 
-    controller.attachSurface(surface);
+    controller.attachSurface({ scaleSlider: scale.scaleSlider, scaleValue: scale.scaleValue, unitButtons: units.unitButtons });
     return details;
   }
 
   // Mount style 2: plain controls with no disclosure chrome, for the
-  // sidebar's `[data-sidebar-slot="units"]` hook (single.html).
+  // sidebar's `[data-sidebar-slot="units"]` hook (single.html). Units
+  // only — Scale stays with the ingredient list (buildPopupMenu above).
   function mountInlineControls(container, controller) {
-    var surface = buildControlSurface();
-    container.appendChild(surface.frag);
-    controller.attachSurface(surface);
+    var units = buildUnitsControl();
+    container.appendChild(units.frag);
+    controller.attachSurface({ unitButtons: units.unitButtons });
   }
 
   // --- Sidebar relocation (prototype) -----------------------------------
@@ -889,6 +928,7 @@
     var root = document.querySelector('.article-content[data-page-key]');
     if (!root) return;
     var pageKey = root.dataset.pageKey;
+    ENABLE_KELVIN = root.dataset.enableKelvin === 'true';
 
     var sidebar = document.getElementById('recipe-sidebar');
     moveSidebarSections(root, sidebar);
