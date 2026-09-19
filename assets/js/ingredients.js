@@ -223,13 +223,13 @@
   // goes through one canonical rule. Only a JS-level constant for now, not
   // a UI setting; flip it to 'spaced' to try the alternative.
   //
-  // Only applies to symbol-style units (g, kg, mg, ml, l, oz, lb) — spelled-
-  // out word units (tsp, tbsp, cup) always keep a space regardless of this
-  // setting ("2 tbsp", never "2tbsp"), same as any other carried-over word
-  // (cloves, cans, ...): gluing a number straight to a whole word reads
-  // wrong in a way gluing it to a unit symbol doesn't.
+  // Only applies to metric symbol units (g, kg, mg, ml, l) — imperial units
+  // (oz, lb) and spelled-out word units (tsp, tbsp, cup) always keep a
+  // space regardless of this setting ("5 oz", "2 tbsp", never "5oz"/
+  // "2tbsp"), same as any other carried-over word (cloves, cans, ...):
+  // metric symbols read fine compressed, but imperial/standard ones don't.
   var UNIT_SPACING = 'glued'; // 'glued' ("50ml") | 'spaced' ("50 ml")
-  var SYMBOL_UNITS = { g: true, kg: true, mg: true, ml: true, l: true, oz: true, lb: true };
+  var SYMBOL_UNITS = { g: true, kg: true, mg: true, ml: true, l: true };
 
   function spaceUnit(numText, label) {
     if (!label) return numText;
