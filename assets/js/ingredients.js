@@ -28,12 +28,17 @@
   // ("2 ¼") — the \s? here tolerates that. The unit's leading \s* (not \s?)
   // similarly tolerates a stray double space before the unit word, seen in
   // some migrated recipes.
+  // Shared "number, or number-range" source (no capture groups of its own,
+  // so it can be embedded in either QTY_RE's anchored form or PROSE_TOKEN_RE's
+  // free-floating one below) — a lone value ("2", "¼") or two of them joined
+  // by a dash/en-dash ("2-3", "80–100"), same range syntax either context
+  // needs to recognize.
+  var NUM_OR_RANGE_SRC =
+    '\\d+\\s?[¼½¾⅓⅔⅛⅜⅝⅞⅙⅚]?(?:\\.\\d+)?(?:\\s?/\\s?\\d+)?(?:[\\s\\-–—]\\d+\\s?[¼½¾⅓⅔⅛⅜⅝⅞⅙⅚]?(?:\\.\\d+)?(?:\\s?/\\s?\\d+)?)?' +
+    '|[¼½¾⅓⅔⅛⅜⅝⅞⅙⅚](?:[\\s\\-–—][¼½¾⅓⅔⅛⅜⅝⅞⅙⅚\\d]+)?';
+
   var QTY_RE = new RegExp(
-    '^\\s*(' +
-      '\\d+\\s?[¼½¾⅓⅔⅛⅜⅝⅞⅙⅚]?(?:\\.\\d+)?(?:\\s?/\\s?\\d+)?(?:[\\s\\-–—]\\d+\\s?[¼½¾⅓⅔⅛⅜⅝⅞⅙⅚]?(?:\\.\\d+)?(?:\\s?/\\s?\\d+)?)?' +
-      '|[¼½¾⅓⅔⅛⅜⅝⅞⅙⅚]' +
-        '(?:[\\s\\-–—][¼½¾⅓⅔⅛⅜⅝⅞⅙⅚\\d]+)?' +
-    ')' +
+    '^\\s*(' + NUM_OR_RANGE_SRC + ')' +
     '(\\s*(?:g|kg|mg|ml|mL|L|l|cups?|tsps?|tbsps?|teaspoons?|tablespoons?|oz|ounces?|lbs?|pounds?|' +
       'cloves?|heads?|cans?|packages?|slices?|pinch(?:es)?|dash(?:es)?|sprigs?|bunch(?:es)?|stalks?|sheets?)\\b)?' +
     '\\.?\\s+',
@@ -497,27 +502,36 @@
   // line. Only a mention with a RECOGNIZED unit (g/ml/tbsp/...) is scaled
   // and converted; bare numbers — cook times, day counts, step repetitions
   // — don't carry a unit from this table, so they never match and are
-  // never touched. Ranges aren't supported in prose (single values only) —
-  // method text doesn't write ranges the way ingredient lines do.
+  // never touched. Ranges ("200–250 ml") are supported the same way a
+  // leading ingredient-line quantity is (NUM_OR_RANGE_SRC, shared with
+  // QTY_RE) — this scanner also runs over a Mechanic/ratio table's
+  // "Example" column (the walk in init() treats any non-UL, non-heading
+  // sibling under an Ingredients heading as prose, tables included), and
+  // those columns write ranges just like ingredient lines do.
 
   var PROSE_UNIT_WORDS = 'g|kg|mg|ml|mL|L|l|cups?|tsps?|tbsps?|teaspoons?|tablespoons?|oz|ounces?|lbs?|pounds?';
   var PROSE_TOKEN_RE = new RegExp(
     '(\\d+(?:\\.\\d+)?)\\s?[°º]\\s?([CFKcfk])\\b' +
     '|' +
-    '(\\d+\\s?[¼½¾⅓⅔⅛⅜⅝⅞⅙⅚]?(?:\\.\\d+)?(?:\\s?/\\s?\\d+)?|[¼½¾⅓⅔⅛⅜⅝⅞⅙⅚])\\s?(' + PROSE_UNIT_WORDS + ')\\b',
+    '(' + NUM_OR_RANGE_SRC + ')\\s?(' + PROSE_UNIT_WORDS + ')\\b',
     'g'
   );
 
   function buildProseQtySpan(rawText, numToken, unitWord) {
     var parsed = parseQtyToken(numToken);
-    if (!parsed || parsed.kind !== 'single') return null;
+    if (!parsed) return null;
     var unitKey = normalizeUnit(unitWord);
     if (!unitKey) return null;
     var span = document.createElement('span');
     span.className = 'qty mono';
     span.textContent = rawText;
-    span.dataset.qtyKind = 'single';
-    span.dataset.qtyValue = String(parsed.value);
+    span.dataset.qtyKind = parsed.kind;
+    if (parsed.kind === 'single') {
+      span.dataset.qtyValue = String(parsed.value);
+    } else {
+      span.dataset.qtyLo = String(parsed.lo);
+      span.dataset.qtyHi = String(parsed.hi);
+    }
     span.dataset.qtyUnit = unitKey;
     return span;
   }
@@ -569,7 +583,11 @@
           }
         } else {
           span = buildProseQtySpan(m[0], m[3], m[4]);
-          if (span) {
+          // Alt-bracket pairing only applies to single-valued quantities
+          // (matchAltBracket/renderQty were never taught to carry a second
+          // linked value through a range) — same restriction wrapQty
+          // already applies to ingredient lines.
+          if (span && span.dataset.qtyKind === 'single') {
             var altQ = matchAltBracket(text.slice(matchEnd), span.dataset.qtyUnit);
             if (altQ) {
               span.dataset.qtyAltValue = String(altQ.value);

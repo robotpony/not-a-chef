@@ -54,7 +54,7 @@
      own "### To serve" component (ingredients for garnishes, nested under
      "## Ingredients") is never mistaken for the top-level "## To serve"
      prose section — components are always one level deeper. */}}
-{{ $sidebarHeadingKeys := dict "mechanic" "mechanic" "to serve" "to-serve" "notes" "notes" }}
+{{ $sidebarHeadingKeys := dict "mechanic" "mechanic" "to serve" "to-serve" "variations" "variations" "notes" "notes" }}
 {{ $normalized := .Text | plainify | strings.TrimSuffix ":" | strings.TrimSpace | lower }}
 {{ $hasNonIngredientWord := false }}
 {{ range split $normalized " " }}

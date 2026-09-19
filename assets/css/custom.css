@@ -849,6 +849,20 @@ footer.pt-8.max-w-prose { padding-top: 0; }
 }
 .recipe-sidebar-section h2 .anchor,
 .recipe-sidebar-section h2 a[href^="#"] { display: none; }
+/* Variation blocks (FORMAT.md's "## Variations" -> "### <name>" per
+ * variation) carry an h3 per variation — unstyled by default at this
+ * width, so it needs the same compact treatment as the section h2 above,
+ * one notch smaller/lighter since it's a subheading within the section. */
+.recipe-sidebar-section h3 {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: .9em 0 .25em;
+}
+.recipe-sidebar-section h3:first-of-type { margin-top: 0; }
+.recipe-sidebar-section h3 .anchor,
+.recipe-sidebar-section h3 a[href^="#"] { display: none; }
 .recipe-sidebar-section > p,
 .recipe-sidebar-section > ul {
   font-family: 'Lora', serif;
