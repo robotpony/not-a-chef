@@ -196,6 +196,9 @@
     var whole = Math.floor(value + 1e-9);
     var frac = value - whole;
     if (frac < 0.03) return String(whole || 0);
+    // Same 0.06 tolerance as the fraction match below, applied to "close
+    // enough to the next whole number" (e.g. 4.96 -> "5", not "4.96").
+    if (frac > 0.94) return String(whole + 1);
     var best = null, bestDiff = 0.06;
     FRACTIONS.forEach(function (pair) {
       var diff = Math.abs(frac - pair[0]);
@@ -595,6 +598,18 @@
   function enhanceRow(li, pageKey) {
     li.classList.add('ing');
     wrapQty(li);
+
+    // Weight/volume annotations after the leading quantity — "15 onions
+    // (about 1kg)", "7½ carrots (about 150g)" — aren't a system-pair alt
+    // for the primary (that's a bare count, "large onions" isn't a unit)
+    // so wrapQty's own bracket-pairing never sees them; a qualifier word
+    // like "about" also sits before the number, which a same-system pair
+    // match wouldn't tolerate anyway. Scanning the rest of the line the
+    // same way Directions prose is scanned catches these — and anything
+    // else recognized-unit-bearing in an ingredient line's trailing
+    // text — wrapping just the number+unit and leaving "about"/commas/
+    // everything else as-is.
+    enhanceProseText(li);
 
     var label = document.createElement('label');
     while (li.firstChild) label.appendChild(li.firstChild);
