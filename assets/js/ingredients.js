@@ -812,7 +812,17 @@
     headings.forEach(function (h2) {
       var el = h2.nextElementSibling;
       while (el && el.tagName !== 'H2') {
-        if (el.tagName === 'UL') enhanceList(el, pageKey);
+        if (el.tagName === 'UL') {
+          enhanceList(el, pageKey);
+        } else if (!/^H[1-6]$/.test(el.tagName)) {
+          // A multi-component recipe (FORMAT.md) has no separate "Method"
+          // heading — the component's own heading ("## Cake", "## Icing")
+          // covers both its ingredients list and its prose method, so any
+          // non-list, non-heading content here (the method paragraphs) needs
+          // the same temp/qty scanning a data-method-heading section gets
+          // below, or its temperatures/quantities never become convertible.
+          enhanceProseText(el);
+        }
         el = el.nextElementSibling;
       }
     });
