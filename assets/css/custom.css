@@ -338,6 +338,90 @@ h4.ing-subhead {
   margin: 14px 0 6px;
 }
 
+/* Ingredient config menu (scale recipe / change units) — injected by
+ * assets/js/ingredients.js next to the recipe's first Ingredients heading.
+ * A plain <details>/<summary> disclosure, the same pattern the nav's
+ * mega-menu dropdowns use (.nav-drop below) — no open/close JS needed.
+ * Its option pills reuse .filter-pill's "neutral outline, accent-soft fill
+ * when active" language rather than inventing a new selected-state look. */
+/* Reserves room so a long heading's text can't run under the button. */
+h2:has(> .ing-config) {
+  padding-right: 40px;
+}
+.ing-config {
+  position: absolute;
+  top: 2px;
+  right: 0;
+}
+.ing-config > summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--border-strong);
+  border-radius: 5px;
+  background: var(--surface);
+  color: var(--ink-muted);
+  cursor: pointer;
+}
+.ing-config > summary::-webkit-details-marker { display: none; }
+.ing-config > summary::marker { content: ''; }
+.ing-config > summary:hover { color: var(--ink); border-color: var(--accent); }
+.ing-config[open] > summary { color: var(--accent-strong); border-color: var(--accent); }
+.ing-config > summary svg { width: 15px; height: 15px; }
+
+.ing-config-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 20;
+  width: 240px;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 6px;
+  box-shadow: 0 14px 40px rgba(0,0,0,.16);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: 'Libre Franklin', sans-serif;
+}
+.ing-config-group { display: flex; flex-direction: column; gap: 8px; }
+.ing-config-label { font-size: .65rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-faint); }
+.ing-config-row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+
+.ing-pill {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .78rem;
+  font-weight: 500;
+  padding: 5px 10px;
+  border: 1px solid var(--border-strong);
+  border-radius: 14px;
+  background: transparent;
+  color: var(--ink-muted);
+  cursor: pointer;
+}
+.ing-pill:hover { border-color: var(--accent); color: var(--ink); }
+.ing-pill.active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-strong); }
+/* Units pills read as UI labels, not data, so they use the UI face
+ * instead of the mono face the scale multipliers use. */
+.ing-config-group--units .ing-pill { font-family: 'Libre Franklin', sans-serif; }
+
+.ing-scale-custom { display: flex; align-items: center; gap: 6px; font-size: .8rem; color: var(--ink-muted); }
+.ing-scale-custom input {
+  width: 52px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .8rem;
+  padding: 5px 6px;
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  background: var(--bg);
+  color: var(--ink);
+}
+.ing-scale-custom input:focus { outline: none; border-color: var(--accent); }
+
 .mono {
   font-family: 'IBM Plex Mono', ui-monospace, monospace;
   font-variant-numeric: tabular-nums;
