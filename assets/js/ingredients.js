@@ -504,9 +504,9 @@
   // — don't carry a unit from this table, so they never match and are
   // never touched. Ranges ("200–250 ml") are supported the same way a
   // leading ingredient-line quantity is (NUM_OR_RANGE_SRC, shared with
-  // QTY_RE) — this scanner also runs over a Mechanic/ratio table's
-  // "Example" column (the walk in init() treats any non-UL, non-heading
-  // sibling under an Ingredients heading as prose, tables included), and
+  // QTY_RE) — this scanner also runs over a %-based ingredient table's
+  // Weight column (enhanceTable calls enhanceProseText(table) directly,
+  // rather than going through this prose branch of the init() walk), and
   // those columns write ranges just like ingredient lines do.
 
   var PROSE_UNIT_WORDS = 'g|kg|mg|ml|mL|L|l|cups?|tsps?|tbsps?|teaspoons?|tablespoons?|oz|ounces?|lbs?|pounds?';
@@ -674,6 +674,55 @@
         enhanceSubRow(sub);
         li.parentNode.insertBefore(sub, li.nextSibling);
         li = sub; // keep inserting subsequent sub-items in order after this one
+      });
+    });
+  }
+
+  // A %-based ingredient table (baker's percentage — FORMAT.md's Mechanic
+  // section covers the convention, e.g. lazy-pizza-dough-2022's flour/
+  // water/salt breakdown) is still an ingredient list, just laid out as a
+  // <table> instead of a <ul> — Goldmark's table extension renders a plain
+  // <table>/<thead>/<tbody>, so this gives each body row the same
+  // checkbox + localStorage persistence enhanceRow gives an <li>. Weight/
+  // quantity cells ("600g") already get scaled/unit-converted without this
+  // — the init() walk's non-UL branch already ran enhanceProseText(el) over
+  // the whole table before TABLE got its own branch — enhanceProseText(table)
+  // below just keeps that behaviour now that this function owns the walk.
+  function enhanceTable(table, pageKey) {
+    table.classList.add('ing-table');
+    enhanceProseText(table);
+
+    var headRow = table.querySelector(':scope > thead > tr');
+    if (headRow) headRow.insertBefore(document.createElement('th'), headRow.firstChild);
+
+    var rows = Array.prototype.slice.call(table.querySelectorAll(':scope > tbody > tr'));
+    rows.forEach(function (tr) {
+      // Captured before the checkbox cell is inserted, from the row's
+      // existing cells (ingredient name, %, weight, notes) — same idea as
+      // enhanceRow's key (the full <li> text), just joined across columns
+      // instead of read from one label.
+      var keyText = Array.prototype.map.call(tr.children, function (td) {
+        return td.textContent.trim();
+      }).filter(Boolean).join(' ');
+
+      tr.classList.add('ing', 'ing-row');
+      var checkCell = document.createElement('td');
+      checkCell.className = 'ing-check-cell';
+      var checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkCell.appendChild(checkbox);
+      tr.insertBefore(checkCell, tr.firstChild);
+
+      var key = 'ing:' + pageKey + ':' + keyText;
+      try {
+        if (localStorage.getItem(key) === '1') checkbox.checked = true;
+      } catch (e) {}
+
+      checkbox.addEventListener('change', function () {
+        try {
+          if (checkbox.checked) localStorage.setItem(key, '1');
+          else localStorage.removeItem(key);
+        } catch (e) {}
       });
     });
   }
@@ -963,6 +1012,8 @@
       while (el && el.tagName !== 'H2') {
         if (el.tagName === 'UL') {
           enhanceList(el, pageKey);
+        } else if (el.tagName === 'TABLE') {
+          enhanceTable(el, pageKey);
         } else if (!/^H[1-6]$/.test(el.tagName)) {
           // A multi-component recipe (FORMAT.md) has no separate "Method"
           // heading — the component's own heading ("## Cake", "## Icing")
