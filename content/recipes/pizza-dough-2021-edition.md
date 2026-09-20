@@ -2,22 +2,25 @@
 title: Pizza dough 2021 edition
 tags: [breads]
 source: family
+servings: ~3 medium pizzas
 draft: false
 ---
-
-Makes ~3 medium pizzas.
 
 This is an improved dough tuned to work easily with a 6L stand mixer. It’s high-hydration and can be sticky, but the extra water provides a better ferment and lift. It also works well for focaccia with the addition of more oil in the pan and whatever toppings you enjoy.
 
 Note: I don’t suggest 00 flour for this recipe unless you have a pizza steel or oven that can reach 300C+. AP seems to work better in a home oven, though kneading and cooking times are a bit longer.
 
-## Ingredients:
+## Mechanic
+
+This is a **high-hydration dough** (~67%), which trades easy handling for better ferment and lift. The **diastatic malt powder** supplies enzymes that break starches down into sugars, giving the yeast more to work with and helping the crust brown; sub in flour if you don't have it, at the cost of a bit of that flavour development.
+
+## Ingredients
 
 Combine and let sit until foamy:
 
 - 400 grams water (warmish)
 - 20 grams olive oil
-- 10 grams diastolic malt powder
+- 10 grams diastatic malt powder
 - 6 grams yeast
 
 Add to stand mixer bowl:
@@ -25,9 +28,9 @@ Add to stand mixer bowl:
 - 600 grams AP flour
 - 12 grams salt
 
-If you can’t find malt powder, replace it with regular flour. The diastolic malt helps develop flavour more quickly and can be approximated with a bit more ferment time and can be found in specialty baking stores and online.
+If you can’t find malt powder, replace it with regular flour. The diastatic malt helps develop flavour more quickly and can be approximated with a bit more ferment time and can be found in specialty baking stores and online.
 
-## Method:
+## Method
 
 1. Combine yeast, malt powder, water, and olive oil in a pourable container and let sit for 10-20 minutes. A light foam should appear if the yeast is still viable.
 2. With the flour and salt in your mixer bowl, add the yeast slurry and set the mixer to low (1 on our KitchenAid). Mix until combined.
