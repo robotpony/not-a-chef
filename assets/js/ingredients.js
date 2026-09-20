@@ -900,11 +900,16 @@
       nodes.forEach(function (node) { slot.appendChild(node); });
     });
 
-    // Notes renders as a plain <ul> today — give it the em-dash-bullet
-    // list style now that it lives in the sidebar rather than the prose
-    // flow (mockups/STYLE.md's "Notes list" component).
-    var notesList = slots.notes && slots.notes.querySelector('ul');
-    if (notesList) notesList.classList.add('notes-list');
+    // Notes and Equipment/Hardware both render as a plain <ul> today —
+    // give them the em-dash-bullet list style now that they live in the
+    // sidebar rather than the prose flow (mockups/STYLE.md's "Notes list"
+    // component; Equipment/Hardware is the same shape of content — a flat
+    // reference list — so it gets the same treatment rather than a second
+    // bullet style).
+    ['notes', 'equipment'].forEach(function (key) {
+      var list = slots[key] && slots[key].querySelector('ul');
+      if (list) list.classList.add('notes-list');
+    });
 
     // Mechanic's prose becomes the accent-bordered callout box
     // (mockups/STYLE.md's "Mechanic callout") now that it's off on its

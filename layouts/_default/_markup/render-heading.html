@@ -43,9 +43,9 @@
      word this generic-sounding but actually used as a component name (e.g.
      a future "## Combo A") would still misfire, so keep new additions to
      words that read as meta/reference language, not food. */}}
-{{ $nonIngredientKeywords := slice "method" "directions" "steps" "notes" "serve" "variations" "timing" "example" "examples" "rules" "equipment" "substitutions" "mechanic" }}
+{{ $nonIngredientKeywords := slice "method" "directions" "steps" "notes" "serve" "variations" "timing" "example" "examples" "rules" "equipment" "hardware" "substitutions" "mechanic" }}
 {{ $methodHeadings := slice "method" "directions" "steps" }}
-{{/* Sidebar-prototype only (recipe-sidebar-prototype branch): these three
+{{/* Sidebar-prototype only (recipe-sidebar-prototype branch): these
      optional top-level sections get pulled out of the reading flow and
      into the recipe sidebar by assets/js/ingredients.js, which walks
      forward from each marked heading to the next H2 the same way the
@@ -53,8 +53,12 @@
      moveSidebarSections). Gated on .Level 2 so a multi-component recipe's
      own "### To serve" component (ingredients for garnishes, nested under
      "## Ingredients") is never mistaken for the top-level "## To serve"
-     prose section — components are always one level deeper. */}}
-{{ $sidebarHeadingKeys := dict "mechanic" "mechanic" "to serve" "to-serve" "variations" "variations" "notes" "notes" }}
+     prose section — components are always one level deeper.
+     "hardware" shares the "equipment" slot — FORMAT.md's own name for this
+     section is "Equipment", but at least one real recipe (migrated from
+     the family archive, predating FORMAT.md) titles it "Hardware"; both
+     land in the same box rather than earning separate slots. */}}
+{{ $sidebarHeadingKeys := dict "mechanic" "mechanic" "to serve" "to-serve" "variations" "variations" "notes" "notes" "equipment" "equipment" "hardware" "equipment" }}
 {{ $normalized := .Text | plainify | strings.TrimSuffix ":" | strings.TrimSpace | lower }}
 {{ $hasNonIngredientWord := false }}
 {{ range split $normalized " " }}
