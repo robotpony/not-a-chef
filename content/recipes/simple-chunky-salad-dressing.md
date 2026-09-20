@@ -7,7 +7,7 @@ draft: false
 
 This is a fridge-magnet recipe that is perfect to mop up old herbs and sour cream. We often have it over a chunky combination of sliced cabbage, broccoli, carrots, and celery.
 
-#### Ingredients:
+## Ingredients:
 
 - ½ cup Hellman's mayo
 - ½ cup sour cream
@@ -18,6 +18,6 @@ This is a fridge-magnet recipe that is perfect to mop up old herbs and sour crea
 - 1 teaspoon MSG
 - Salt/pepper to taste
 
-### Directions:
+## Directions:
 
 Combine ingredients in a small bowl and stir or whisk together. Season to taste, but should balance sweet/acid/salt in a pleasing way.

@@ -38,9 +38,11 @@ This dough runs at **~75% hydration**, with vital wheat gluten added to push the
 2. Roll out or otherwise flatten each dough ball on a floured counter. Add to a lightly greased pan or ungreased parchment, add toppings, and bake in a hot oven (233C/450F) on the middle rack. If you have a pizza steel/stone or cast/carbon steel pan, you’ll get a slightly better crust in less time.
 3. Bake for 10-15 minutes, or until the crust is golden and crispy (checking the bottom).
 
-## Making other breads
+## Notes
 
-When you have leftover pizza dough you can make other breads with it. And as usually your leftovers are more than 72 hours cold fermented, you’ll get something closer to a sourdough. The result is a nice crust and crumb, depending on how you shape and rise the dough. You can get results anywhere from focaccia, ciabatta, and baguette to small loaves. Each of these preparations vary proof time, gluten/dough folding, shaping, venting, and oven humidity.
+### Making other breads
+
+When you have leftover pizza dough you can make other breads with it. And as usually your leftovers are more than 72 hours cold fermented, you’ll get something closer to a sourdough.
 
 Focaccia: bring dough to room temperature, longer rise, lots of oil.
 
@@ -50,9 +52,7 @@ Baguette: similar to Ciabatta, but also vented and sprayed with additional water
 
 Loaf: With loose dough pull corners over itself 5-10 times, rotating between corners. Invert and form a tight dough ball much like a bun or pizza, let rise. Drop in a parchment-lined Dutch oven and score.
 
-All of the breads take a differing amount of time to cook, but can be started in a hot oven for 20 minutes with the lid on (for everything but the ciabatta). Finish at a med/high temperature for the remainder. Get the crust darker than expected (towards a deep brown/red), and let rest for 30-60 minutes depending on the size. Middle of the oven works best, generally.
-
-Internal temperature guide:
+### Internal temperature guide:
 
 - 88C (190F): slightly under
 - 94C (200F): fully done
@@ -60,5 +60,5 @@ Internal temperature guide:
 ### Troubleshooting
 
 - If the dough isn’t crispy or cooked on the bottom, add it to a medium-hot teflon pan and finish the crust.
-    - For future pizzas, try different pans, steels, stones, and positions in the oven. Try to use the hottest temperature possible, to get the best structure and chew.
-    - Electric ovens recover poorly from being opened, so making more than 2-3 will often require a bunch of recharge time to get that temp back up again.
+- For future pizzas, try different pans, steels, stones, and positions in the oven. Try to use the hottest temperature possible, to get the best structure and chew.
+- Electric ovens recover poorly from being opened, so making more than 2-3 will often require a bunch of recharge time to get that temp back up again.

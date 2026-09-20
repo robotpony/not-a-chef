@@ -7,7 +7,7 @@ draft: false
 
 This is a quick, refrigerator sweet pickle, perfect for beets, cabbage, and other hearty veg.
 
-#### Pickling solution:
+## Pickling solution:
 
 - 2 cups water
 - 2 cups apple cider vinegar
@@ -17,13 +17,13 @@ This is a quick, refrigerator sweet pickle, perfect for beets, cabbage, and othe
 - 10 cloves
 - 1 tbsp pickling spice
 
-#### Veg:
+### Veg:
 
 - 1 bag of beets, peeled
 - 1 shallot, sliced
 - 3  cloves garlic, halved
 
-### Directions:
+## Directions:
 
 1. Steam or roast peeled beets until al dente (~15 minutes steamed, ~30 minutes roasted). If your beets are different sizes, halve the larger ones. Let cool until you can handle them safely.
 2. Place pickling spice in a tied cheese cloth ball or reusable tea bag/clamp. Combine liquids to make a pickling solution, adding spices, shallot, and garlic in a sauce pan and simmer until combined. Let cool enough to handle.

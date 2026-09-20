@@ -7,6 +7,21 @@ draft: false
 
 Rice bowls are a simple combination of rice, veg, protein, and sauces. You can put pretty much any combination of foods in a rice bowl, and the goal is a balance of crunch and savoury. These bowls are about 650-800 kcals per portion.
 
+## Ingredients
+
+- 1 cup basmati rice
+- 1 portion baked chicken/fish
+- 100g sautéd bok choi
+- 100g cabbage
+- 100g steamed broccoli
+- Sauce and garnish to taste
+- 1 cup basmati rice  
+- ½ cup (100g) cooked beef  
+- 100g cabbage
+- 100g steamed broccoli  
+- 100g julienned carrot  
+- Sauce and garnish  to taste
+
 ## General rules:
 
 - 2-3 types of sautéd/steamed veg
@@ -15,12 +30,9 @@ Rice bowls are a simple combination of rice, veg, protein, and sauces. You can p
 - 2 sauces  
     (one for proteins, and one that is brighter for pickles or veg)
 - 1-2 pickled ingredients, e.g.,
-
     - Pickled ginger
     - [Quick pickled cucumber/carrot/onion](https://docs.google.com/document/d/1_kMEugsRPsGjGQ5Pj3y4dDCulchDQyT0q8RJkB06xuw/edit?tab=t.0#heading=h.3fsk0afek31n) (finely sliced/chopped)
-
 - Garnishes, e.g.,
-
     - green onion finely chopped
     - chili oil
     - ponzu sauce
@@ -28,46 +40,17 @@ Rice bowls are a simple combination of rice, veg, protein, and sauces. You can p
 
 ## Examples:
 
-Teriyaki chicken or fish
+- Teriyaki chicken or fish
+- Bulgogi beef
+- Baked/fried tofu
 
-Bulgogi beef
+## Notes
 
-Baked/fried tofu
+- Add 1 piece of cinnamon (or 5 spice, or any warming spice) to the rice
 
-1 cup basmati rice
+## Variations 
 
-1 portion baked chicken/fish
-
-100g sautéd bok choi
-
-100g cabbage
-
-100g steamed broccoli
-
-Sauce and garnish  to taste
-
-1 cup basmati rice  
-½ cup (100g) cooked beef  
-100g cabbage
-
-100g steamed broccoli  
-100g julienned carrot  
-Sauce and garnish  to taste
-
-1 cup basmati rice
-
-1 cup baked tofu (any sauce)  
-100g sautéd bok choi  
-100g steamed broccoli  
-100g cabbage  
-Sauce and garnish  to taste
-
-## Rice:
-
-- Follow rice package/cooker directions
-- Add 1 piece of cinnamon (or 5 spice, or any warming spice)
-
-## Teriyaki chicken/fish/tofu:
+### Teriyaki chicken/fish/tofu:
 
 - Bottled or [homemade teriyaki sauce](https://docs.google.com/document/d/1rsDeo852BKy-1i6lnsnuOZNa3lt3HTLNjikzdiuzh68/edit?tab=t.0#heading=h.3fsk0afek31n)
 - Season (lightly with salt/MSG)
@@ -75,13 +58,13 @@ Sauce and garnish  to taste
 - Bake on parchment at ~200C, for 15-25 minutes  
     (to internal temp of 63C, can pull at 60C and rest)
 
-## Bulgogi beef:
+### Bulgogi beef:
 
 - Prepare minced [beef base](https://docs.google.com/document/d/18B_6jJlS8MKhUsXeGs2gdse1qjwkUURhE54Xlw64Nuk/edit?tab=t.0#heading=h.3fsk0afek31n) (or thinly sliced beef or pork)
 - With 1-2 cups of beef, reheat in bulgogi sauce  
     (freezing anything you will not use in 3-4 days)
 
-## Other combos:
+### Other combos:
 
 1. [Gochujang sauce](https://docs.google.com/document/d/19ZCTwleFeCnuSSfSrqmbzvp9RyzUjepE6_UV25HP2sU/edit?tab=t.0#heading=h.3fsk0afek31n) works well with chicken or pork (same basic cooking method as teriyaki)
 2. [Shredded chicken](https://docs.google.com/document/d/1EBgVeqvXsort1FnW5urv4GntB0neI4kBYvrDw-7aGVo/edit?tab=t.0#heading=h.3fsk0afek31n) (with any sauce)

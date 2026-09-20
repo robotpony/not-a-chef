@@ -7,7 +7,7 @@ draft: false
 
 I found this recipe in our old recipe book with the following: All proceeds to charitable projects CHAPTER BF, PEO SISTERHOOD, ABBOTSFORD, BC.
 
-#### Ingredients:
+## Ingredients:
 
 - ½ cups each of 9 types of dried beans (or …)
 - 1 ham hock
@@ -15,7 +15,7 @@ I found this recipe in our old recipe book with the following: All proceeds to c
 
 Soak beans in a large pot with 2x the water and some salt overnight.
 
-#### Aromatics:
+### Aromatics:
 
 - 1 large onion, chopped
 - 1 large can of tomatoes or tomato sauce

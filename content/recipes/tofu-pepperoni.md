@@ -1,13 +1,13 @@
 ---
-title: Tofu “pepperoni”
-tags: [sauces]
+title: Tofu pepperoni
+tags: [condiments, tofu]
 source: family
 draft: false
 ---
 
 This vegetarian pepperoni substitute is great for pizzas, calzones, and rice dishes. It has a texture like cheese, with a nice, peppery flavour profile. It browns nicely, so be sure to put it on top of your cheese when using it for pizza!
 
-#### Main ingredients:
+## Ingredients:
 
 - 1/2 package smoked tofu (or home-smoked medium-firm tofu)
 - 2 tablespoons smoked / hot paprika
@@ -17,13 +17,17 @@ This vegetarian pepperoni substitute is great for pizzas, calzones, and rice dis
 - 1 teaspoon garlic powder and onion powder
 - 1-2 tablespoons olive oil
 
-#### Hardware:
+## Hardware:
 
 - 1 airtight container
 - 1 spoon
 
-### Directions:
+## Directions:
 
 1. Mix spices and taste (should taste balanced salt/sweet/spice)
 2. Thinly slice tofu and toss with oil and spice mix
 3. Let marinate (lasts 1-2 weeks in the fridge)
+
+## Notes
+
+- smoked tofu or smoked tempeh also work well

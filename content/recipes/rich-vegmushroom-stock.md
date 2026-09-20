@@ -9,7 +9,7 @@ This is a rich vegetable stock, a perfect replacement for beef stock in soups an
 
 This recipe takes about 3 hours to complete (or about half if you use a pressure cooker). It works best 2:3 (veg:water), and when the veg is cut very thin. The rich, sweet flavour and colour is mostly due to the deeply browned components.
 
-#### Ingredients:
+## Ingredients:
 
 - 2 large carrots
 - 2 stalks celery
@@ -28,7 +28,7 @@ This recipe takes about 3 hours to complete (or about half if you use a pressure
 - ~2 tablespoons Veg oil
 - ~4L water
 
-Optional add-ins:
+### Optional add-ins:
 
 - 1 beet
 - 1 knob ginger (diced)
@@ -43,5 +43,7 @@ Optional add-ins:
 4. In a 200C/400F oven, roast veg until a deep brown (but not burnt), 30-45 minutes. Stir occasionally.
 5. Transfer to a large pot, add water, and simmer for 1 hour. If using a pressure cooker, cook on low pressure for 20 minutes and decompress using the slow method (for a clearer stock).
 6. Remove solids, strain. Sample stock in a small bowl with a pinch of salt or soy and note if stock is strong or not (for whatever you plan on using the stock for). You can optionally reduce the stock by 50% for freezing or use within 5 days refrigerated.
+
+## Notes
 
 At a ratio of 3:2 the stock should be a dark, rich colour and be ready to use 1:1 in most preparations. This may vary slightly depending on roasting time and ratio of veg to water.

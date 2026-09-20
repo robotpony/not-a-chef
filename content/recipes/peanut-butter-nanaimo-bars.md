@@ -1,5 +1,5 @@
 ---
-title: Peanut Butter Nanaimo Bars
+title: Peanut butter Nanaimo bars
 tags: [desserts]
 source: family
 draft: false
@@ -7,7 +7,9 @@ draft: false
 
 Recipe is from FoodTV
 
-#### Cookie Base:
+## Ingredients 
+
+### Cookie Base:
 
 - ½ cup unsalted Butter
 - ¼ cup Sugar
@@ -17,18 +19,18 @@ Recipe is from FoodTV
 - 1 cup sweetened Coconut, shredded
 - ½ cup Blanched Almonds, finely chopped
 
-#### Peanut Butter Filling:
+### Peanut Butter Filling:
 
 - ⅓ cup unsalted Butter, softened
 - ⅓ cup Peanut Butter
 - ½ cup Confectioners Sugar
 
-#### Chocolate Glaze:
+### Chocolate Glaze:
 
 - 4 oz Semi-Sweet Chocolate, chopped
 - 2 tbsp unsalted Butter
 
-### Directions:
+## Directions:
 
 Line an 8 by 8-inch baking pan with aluminum foil, with long flaps hanging over each edge.
 

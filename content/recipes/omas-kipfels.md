@@ -9,7 +9,7 @@ A [Kipfel](https://en.wikipedia.org/wiki/Kifli) is traditionally a crescent sha
 
 > Ann and the kids visited Oma to make these for a school project that Jayda was doing on family heritage, measuring everything from memory. This is an approximation of her method.
 
-#### Ingredients:
+## Ingredients:
 
 - 1 litre of homogenized milk
 - ½ cup of unsalted butter
@@ -23,7 +23,7 @@ A [Kipfel](https://en.wikipedia.org/wiki/Kifli) is traditionally a crescent sha
 
 ## Directions:
 
-#### Making the dough:
+### Making the dough:
 
 1. Scald the milk and butter over high heat, stirring, and watching carefully not to burn the mixture. Turn off heat and let cool, stirring occasionally, until room temperature.
 2. Add flour to a large bowl, adding sugar, and salt and mix.
@@ -33,9 +33,9 @@ A [Kipfel](https://en.wikipedia.org/wiki/Kifli) is traditionally a crescent sha
 6. Place dough in a bowl with a light coating of vegetable oil and cover with damp tea towels and place in a warm spot (can use the oven on a cold day).
 7. Rise dough until doubled in size.
 
-#### Making the Kipfels:
+### Making the Kipfels:
 
-Preheat oven to 190C/375F.=8
+Preheat oven to 190C/375F
 
 1. Taking a small chunk of dough, roll it into a circle and cut into quarters (pizza slices).
 2. Roll slices and bend into crescent shape, brushing with egg and sprinkling with coarse salt and caraway seeds.

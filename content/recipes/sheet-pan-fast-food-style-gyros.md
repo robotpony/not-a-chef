@@ -11,7 +11,7 @@ I like to cook sausage-like things in a sheet pan or thin steam pan, sort of lik
 
 The recipe is based on [Chef John’s](https://foodwishes.blogspot.com/2017/06/american-gyros-mystery-meat-demystified.html) and one [Food Network](https://www.foodnetwork.com/recipes/alton-brown/gyro-meat-with-tzatziki-sauce-recipe-2047710), adjusted to my kitchen and preferences. I consider it a sort of basic sausage that could be cased, rolled, or in my case, baked in a pan.
 
-### Ingredients:
+## Ingredients:
 
 I aim for 2-3% salt per kg of protein, and spices are proportional to the salt.
 
@@ -28,22 +28,25 @@ I aim for 2-3% salt per kg of protein, and spices are proportional to the salt.
 - 1 teaspoon fresh ground black pepper
 - 1 teaspoon cumin
 - 1 teaspoon paprika
-- ¼ teaspoon MSG[\[a\]](#cmnt1)
+- ¼ teaspoon MSG
 - ⅛ teaspoon cinnamon
 
-### Directions:
+## Directions:
 
 1. Mix ingredients (except half of the water) by hand until thoroughly combined, and then a bit longer (half way towards a softer texture like Vienna sausage). Add remaining water if needed. The result should not be wet, but should be homogeneous and fairly smooth.
 2. Test cook a tablespoon of mixture, and taste for salt and seasoning (and texture). Adjust if needed.
 3. Add parchment to a quarter sheet pan and press into a flat loaf. Rest, covered with plastic wrap (or another pan) for ~2 hours in the fridge.
-4. Bake in a preheated oven at 175C (350F) for 25-35 minutes[\[b\]](#cmnt2)[\[c\]](#cmnt3), until an internal temperature of 70C (160F) is reached
+4. Bake in a preheated oven at 175C (350F) for 25-35 minutes, until an internal temperature of 70C (160F) is reached
 
 A classic food cart gyro is served on a pita (heated in olive oil in a pan), with tzatziki, diced tomatoes, onions, and lettuce. In Northern Greece, ketchup and mustard may be added, even though this is crazy talk.
 
 Gyro meat is also great in soups, on salads, and in other styles of sandwiches. It freezes well as it’s cooked, and reheats quickly.
 
-[\[a\]](#cmnt_ref1)MSG pushes most sausage over the edge. Alternatively you can use some miso, or parm.
 
-[\[b\]](#cmnt_ref2)Test this
+## Notes
 
-[\[c\]](#cmnt_ref3)I ended up bumping the heat up a bit to crisp some edges. I think the higher temperature works better overall and will try that for the entire bake time on my next pass.
+MSG pushes most sausage over the edge. Alternatively you can use some miso, or parm.
+
+Test this
+
+I ended up bumping the heat up a bit to crisp some edges. I think the higher temperature works better overall and will try that for the entire bake time on my next pass.

@@ -33,7 +33,8 @@ A great snack or condiment, based on restaurant style hummus. Makes about 750ml 
 6. Blend in olive oil last, this prevents the olive oil from turning bitter from the heat and friction of the blender.
 7. Taste one last time for seasoning, it should be balanced between creamy, nutty, and lemony, with a moderate garlic punch.
 
-Troubleshooting:
+
+## Notes 
 
 - Flat taste: check for salt, then acid (and add more in small batches)
 - Too thick: add olive oil (if balance of lemon is good)

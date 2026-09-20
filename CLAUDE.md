@@ -7,7 +7,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 A family cookbook built as a Hugo static site (Blowfish theme), edited in Obsidian. Three content types: recipes, food essays, and reference pages (technique guides, glossaries, appendices).
 
 See ARCHITECTURE.md for the data flow and component overview. See PLAN.md for the phased implementation plan. See `mockups/STYLE.md` (or `mockups/style.html`) for the settled visual design system — read it before any visual/layout work; see "Visual design" below.
-
 ## Content formats
 
 See `FORMAT.md` for the recipe specification and `FORMAT-ESSAYS.md` for the essay specification.

@@ -9,7 +9,7 @@ Makes 12 - 20 fried cookies.
 
 These are a sort of deep fried donut. Various western European cultures make a variant of these around the holidays, and some call it a New Year’s cookie.
 
-#### Ingredients:
+## Ingredients:
 
 - 3 to 4 cups flour
 - 2 eggs
@@ -21,7 +21,7 @@ These are a sort of deep fried donut. Various western European cultures make a v
 - Enough milk to make dough stiff (about 2 - 2 ½ cups)
 - Sprinkle of Cinnamon (optional); use less than 1 tsp otherwise it’s too overpowering
 
-#### Optional ingredients:
+### Optional ingredients:
 
 - Canola (or similar) oil for frying
 - Icing sugar (to roll in after)

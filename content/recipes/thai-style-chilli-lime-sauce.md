@@ -5,11 +5,11 @@ source: family
 draft: false
 ---
 
-This is a vibrant, and tasty sauce for wings, chicken sandwiches, noodles, and tofu. It’s savoury, sweet, and very midly spicy (according to our family). Makes about 500ml of sauce or marinade[\[1\]](#ftnt1).
+This is a vibrant, and tasty sauce for wings, chicken sandwiches, noodles, and tofu. It’s savoury, sweet, and very midly spicy (according to our family). Makes about 500ml of sauce or marinade.
 
-#### Puré in a blender:
+## Puré in a blender:
 
-- 60g (2 tablespoons) Thai chilli paste[\[2\]](#ftnt2)
+- 60g (2 tablespoons) Thai chilli paste
 - 120ml (½ cup) fish sauce
 - 150ml (½ cup + juice of 1 lime) lime juice
 - 60g (½ cup) brown sugar
@@ -22,16 +22,16 @@ This is a vibrant, and tasty sauce for wings, chicken sandwiches, noodles, and t
 - 10g (1 teaspoon) Accent MSG
 - 10g (1 teaspoon) salt (to taste)
 
-#### Added after puré:
+### Added after puré:
 
 - 1 red Thai chilli (seeds removed, fine chop)
 - Lime zest (added to the marinade/sauce after blitzing)
 
-#### Garnish:
+### Garnish:
 
 - 1/4 cup finely sliced scallions
 
-### Directions:
+## Directions:
 
 1. Rough chop and puré the main ingredients. Stop before the sauce is smooth.
 2. Taste and add salt as needed.
@@ -40,8 +40,8 @@ This is a vibrant, and tasty sauce for wings, chicken sandwiches, noodles, and t
 
   
 
-- * *
+## Notes:
 
-[\[1\]](#ftnt_ref1) When using as a marinade, avoid marinating for more than 30 minutes (for shrimp) and no more than a few hours for chicken and pork, as the acid will denature the proteins (which can result in a chalky texture)
+When using as a marinade, avoid marinating for more than 30 minutes (for shrimp) and no more than a few hours for chicken and pork, as the acid will denature the proteins (which can result in a chalky texture)
 
-[\[2\]](#ftnt_ref2) Look for real ingredients on the label (Aroy-D is a good brand in our area)
+Look for real ingredients on the label (Aroy-D is a good brand in our area)

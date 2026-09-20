@@ -7,7 +7,7 @@ draft: false
 
 What’s to say? This is a broccoli salad that has bacon. If you don’t want bacon, try some smoked tempeh or roasted sweet potatoes with smoked paprika. It’s a sweet and savoury salad that is more filling than most.
 
-#### Salad:
+## Salad:
 
 - 500g / 1 lb of bacon cooked and crumbled (Smoked Tempeh is a good substitute)
 - 1 large head of broccoli
@@ -16,7 +16,7 @@ What’s to say? This is a broccoli salad that has bacon. If you don’t want ba
 - 1 small red onion, diced
 - 1 package of slivered almonds
 
-#### Dressing: ([Alternative](https://docs.google.com/document/d/1OrfknfpMTr5CHOYKWmcIkMXqwUdwgJgqb0E7YuCvCE4/edit#))
+### Dressing: ([Alternative](https://docs.google.com/document/d/1OrfknfpMTr5CHOYKWmcIkMXqwUdwgJgqb0E7YuCvCE4/edit#))
 
 - 1 cup of mayonnaise (Hellman’s or fresh)
 - ½ cup of white sugar or maple syrup

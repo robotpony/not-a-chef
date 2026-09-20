@@ -7,7 +7,7 @@ draft: false
 
 We watched Alton Brown make this on Food TV then had to try it for ourselves and LOVED it!
 
-#### Ingredients:
+## Ingredients:
 
 - 1 lb & 3 oz Sweet Potatoes, peeled and cubed
 - 1 ¼ cups Plain Yogurt
@@ -20,7 +20,7 @@ We watched Alton Brown make this on Food TV then had to try it for ourselves and
 - 1 cup Pecans, chopped and toasted
 - 1 tbsp Maple Syrup
 
-### Directions:
+## Directions:
 
 1. Steam cubed Sweet Potatoes for 20 minutes or until the potatoes are fork tender.  Mash with a potato masher and set aside.
 2. Preheat the oven to 350 degrees F (175 C).
