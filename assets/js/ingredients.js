@@ -693,7 +693,11 @@
     enhanceProseText(table);
 
     var headRow = table.querySelector(':scope > thead > tr');
-    if (headRow) headRow.insertBefore(document.createElement('th'), headRow.firstChild);
+    if (headRow) {
+      var headCell = document.createElement('th');
+      headCell.className = 'ing-check-cell';
+      headRow.insertBefore(headCell, headRow.firstChild);
+    }
 
     var rows = Array.prototype.slice.call(table.querySelectorAll(':scope > tbody > tr'));
     rows.forEach(function (tr) {
