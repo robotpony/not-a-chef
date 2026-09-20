@@ -20,14 +20,18 @@
 }}
 
 {{ if $isWikiLink }}
-  {{/* Normalize curly vs. straight apostrophes before matching — real
-    content already disagrees (content/recipes/chef-johns-hamburger-buns.md's
-    title uses a curly ', a wiki link to it was typed with a straight ').
-    where's exact-match can't do this, so match by hand instead. */}}
-  {{ $normDest := replace (replace $destination "’" "'") "‘" "'" }}
+  {{/* Normalize both sides before matching: lowercase, and collapse any
+    run of non-alphanumeric characters (apostrophes, slashes, hyphens, ...)
+    to a single space. This makes matching case-insensitive and punctuation-
+    agnostic, so `[[rich veg mushroom stock]]` matches a title of
+    "Rich veg/mushroom stock", and curly vs. straight apostrophes
+    (content/recipes/chef-johns-hamburger-buns.md's title uses a curly ',
+    a wiki link to it might be typed with a straight ') no longer matter —
+    exact-match can't do either, so normalize by hand instead. */}}
+  {{ $normDest := strings.TrimSpace (replaceRE `[^a-z0-9]+` " " (strings.ToLower $destination)) }}
   {{ $matches := slice }}
   {{ range site.RegularPages }}
-    {{ $normTitle := replace (replace .Title "’" "'") "‘" "'" }}
+    {{ $normTitle := strings.TrimSpace (replaceRE `[^a-z0-9]+` " " (strings.ToLower .Title)) }}
     {{ if eq $normTitle $normDest }}
       {{ $matches = $matches | append . }}
     {{ end }}
