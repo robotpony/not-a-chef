@@ -29,6 +29,7 @@ cuisine: Indian
 | `source`     | string           | `original`, `family`, a URL, or a book title.                         |
 | `author`     | string           | Only when different from the collection author.                       |
 | `date`       | string           | ISO 8601 (YYYY-MM-DD). Date added or last modified.                   |
+| `aka`        | string           | Alternative names.                                                    |
 | `servings`   | string or number | Descriptive strings are fine: "4–6", "1 loaf", "scales to bird size". |
 | `prep_time`  | string           | Parenthetical notes are fine: "20 min (plus 24–48 hr cold ferment)".  |
 | `cook_time`  | string           | Active cooking time.                                                  |

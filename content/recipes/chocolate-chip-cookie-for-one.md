@@ -5,13 +5,10 @@ source: family
 draft: false
 ---
 
-, VEGAN, GLUTEN FREE
-
-
 
 Ever want a quick snack and have a stocked pantry? This single cookie recipe can serve 2 modestly, or 1 decedantly. Based on a recipe from the Savy Cookbook with some tuning for our pantry.
 
-#### Ingredients:
+## Ingredients:
 
 - 1 tablespoon nut butter
 - 1 ½ teaspoons honey, maple syrup, or golden syrup
@@ -21,7 +18,7 @@ Ever want a quick snack and have a stocked pantry? This single cookie recipe can
 - Splash vanilla extract
 - 1-2 squares of dark chocolate (or chips)
 
-### Method:
+## Method:
 
 1. Preheat oven to 175C/350F.
 2. Combine ingredients and place in an oiled ramekin.

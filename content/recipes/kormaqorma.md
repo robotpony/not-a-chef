@@ -7,7 +7,7 @@ draft: false
 
 This is a simple korma recipe, which is combined with a base gravy and other ingredients to make various braised dishes.
 
-#### Ingredients:
+## Ingredients:
 
 - ~8 onions finely sliced
 - 6 tablespoons green sultana raisins
@@ -16,4 +16,4 @@ This is a simple korma recipe, which is combined with a base gravy and other ing
 - 1 tablespoon ghee
 - Water (as required)
 
-(TODO: finish listing this)
+

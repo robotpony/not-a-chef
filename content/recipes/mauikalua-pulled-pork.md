@@ -5,12 +5,12 @@ source: family
 draft: false
 ---
 
-This is a Hawaiian style pulled pork that does not need a BBQ or fire pit, based on various recipes from local Maui residents[\[1\]](#ftnt1). The pork itself is simply seasoned, braised, and pulled, paired with a sweet and acidic sauce.
+This is a Hawaiian style pulled pork that does not need a BBQ or fire pit, based on various recipes from local Maui residents. The pork itself is simply seasoned, braised, and pulled, paired with a sweet and acidic sauce.
 
 ## Ingredients:
 
 - 2-3 kg bone-in pork shoulder
-- 2 tablespoons [rub](https://docs.google.com/document/d/1HId__nmRdQcgDVy6kMU66-71jsW_a5IVgzPcJeqqHf8/edit#heading=h.jnuahajl5cre)
+- 2 tablespoons [[Bruce's spice rub]]
 - 2 tablespoons Knorr chicken bouillon powder (the large jar, not packets or cubes)
 - 2 teaspoons Hawaiian Red Alea Salt (or coarse salt)
 - 2 teaspoons Worcestershire sauce
@@ -21,7 +21,7 @@ This is a Hawaiian style pulled pork that does not need a BBQ or fire pit, based
 
 Rub spices, bouillon, salt, Worcestershire, liquid and smoke over pork shoulder and set aside. Wrap shoulder in leaves, then foil. Let sit in the fridge for 30 minutes (or up to overnight).
 
-## Sauce:
+### Sauce:
 
 - ¼ cup of golden brown sugar
 - 355ml/12oz can of crushed pineapple  
@@ -47,6 +47,6 @@ You can use a hotel pan (with foil), a dutch oven, or you can wrap the pork in f
 - 1 hour in a pressure cooker on high
 - 7-10 hours in an oven at 250F
 
-- * *
+## Notes
 
-[\[1\]](#ftnt_ref1) [Slappyodaddybbq](https://www.youtube.com/watch?v=GZy6yFzXANs), [Hawaii's Pickle Lady](https://www.youtube.com/watch?v=7y5KVYXKjE8)
+[Slappyodaddybbq](https://www.youtube.com/watch?v=GZy6yFzXANs), [Hawaii's Pickle Lady](https://www.youtube.com/watch?v=7y5KVYXKjE8)

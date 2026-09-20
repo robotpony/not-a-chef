@@ -9,20 +9,11 @@ This is a sweet, barbecued Korean beef dish that is typically made with boneless
 
 ## Base:
 
-- 1000g
+- 1000g thinly sliced ribeye, shortrib, or ground beef/pork blend
+- 500g thinly sliced mushroom
+- 200g grated carrot
 
-    - Thinly sliced ribeye,
-    - Thinly sliced boneless short rib, or
-    - Ground beef/pork blend
-
-- 500g
-
-    - Thinly sliced
-
-        - Mushroom
-        - Carrot
-
-## Marinade / sauce:
+### Marinade / sauce:
 
 - ½ - 1 puréed onion
 - ¾ cup puréed pear
@@ -41,4 +32,6 @@ This is a sweet, barbecued Korean beef dish that is typically made with boneless
 - Chopped green onion
 - More toasted sesame seeds
 
-## Method:
+## Method
+
+Cook like taco beef.

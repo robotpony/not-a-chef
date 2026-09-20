@@ -7,7 +7,7 @@ draft: false
 
 From a grocery store card.
 
-#### Main ingredients:
+## Ingredients:
 
 - ¾ cup of creamy ranch dressing
 - ¾ cup sour cream
@@ -18,7 +18,7 @@ From a grocery store card.
 - Salt, pepper, and hot sauce to taste
 - 2 cups dry mozza cheese, grated
 
-### Directions:
+## Directions:
 
 1. Preheat the oven to 170C/350F.
 2. Stir ingredients (and half of mozza) together in a bowl. Season to taste with salt, pepper, and hot sauce.

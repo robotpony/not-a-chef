@@ -7,7 +7,7 @@ draft: false
 
 What else is there to say!  Once we found this recipe, it became our family favourite.  You can use Vanilla, Chocolate, or Butterscotch pudding depending on the type of cookie you are craving.  And mix up the type of chocolate chips for even more variety.
 
-#### Ingredients:
+## Ingredients:
 
 - 4 ½ cups all-purpose flour
 - 2 tsp baking soda
@@ -20,7 +20,7 @@ What else is there to say!  Once we found this recipe, it became our family fav
 - 2 tsp vanilla extract
 - 4 cups chocolate chips (or 2 to 2 ½ bags of Chipits)
 
-### Directions:
+## Directions:
 
 1. Preheat the oven to 350 degrees F (175 C).
 2. Sift together the flour, baking soda, and salt, then set aside.
@@ -32,7 +32,7 @@ What else is there to say!  Once we found this recipe, it became our family fav
 8. Bake for 10 to 12 minutes; edges should be just turning golden brown.
 9. Let cookies cool for a few minutes on the cookie sheet before transferring to a cooling rack.  Let cookies cool completely before transferring to an airtight container for storing.  Cookies can be stored in the cupboard for a few days, in the fridge for a week, or in the freezer.
 
-#### Variations:
+## Variations:
 
 - Vanilla Pudding with Dark Chocolate (Semi-Sweet) and White Chocolate Chips
 - Chocolate Pudding with Peanut Butter Chips and Milk Chocolate Chips

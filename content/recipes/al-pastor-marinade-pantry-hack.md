@@ -7,18 +7,16 @@ draft: false
 
 I don’t always have easy access to dried chilis. I do have reasonable access to ground dried and fresh chilis, so this is a pantry version that captures the basic intent of a Mexican chilli paste turned into a marinade. This recipe is loosely based on one from [BA](https://www.bonappetit.com/recipe/tacos-al-pastor-2), [Chef John](https://www.allrecipes.com/recipe/274229/pineapple-pulled-pork-al-pastor/) and [Serious Eats](https://www.seriouseats.com/tacos-al-pastor-recipe), but simplified for what I normally keep on hand.
 
-Using good quality chilli powders here works quite well, especially once toasted and combined with a good soup stock. Splitting the cook into 2 passes allows you to prep this ahead of time and eat it all week, and is far less fiddly to set up.
+## Ingredients
 
-## Marinade:
+### Marinade:
 
 - ~50g of chillies (or powders), ideally with some ancho, guajillo, árbol, etc.
 - 1-2 chipotles and some sauce
 - 300ml chicken/beef/pork stock or water
 - 150ml cider vinegar
 - (optional) 2 teaspoon of [achiote paste](https://www.bonappetit.com/recipe/achiote-paste), or
-
     - tomato paste, spices, lime
-
 - 2 teaspoons of olive oil
 - 3 garlic cloves, crushed
 - 1 onion, quartered
@@ -26,11 +24,11 @@ Using good quality chilli powders here works quite well, especially once toasted
 - 25g kosher salt (1-1.5% weight of meat)
 - (optional) ~100 grams roasted red peppers (from a jar), to add some missing sweet/non-volcanic-peppery flavour)
 
-## Meat options:
+### Meat options:
 
 - ~2kg (1) pork shoulder (remove bone or boneless), or ~2kg chicken thighs
 
-## Toppings:
+### Toppings:
 
 - Roasted (pork fat) pineapple, diced as a topping
 
@@ -45,5 +43,9 @@ Using good quality chilli powders here works quite well, especially once toasted
 7. Top with sliced pineapple and remaining juice from the tin (or as much as fits).
 8. Bake on low (135C/275F), until pork reaches 82-87C (180-190F) in the centre (2-4 hours, depending on how deep your pan is). Cool and store for use up to 5 days later.
 9. To serve, chop and fry in a pan until the edges start to crisp.
+
+## Notes
+
+Using good quality chilli powders here works quite well, especially once toasted and combined with a good soup stock. Splitting the cook into 2 passes allows you to prep this ahead of time and eat it all week, and is far less fiddly to set up.
 
 These are great on salads, in tacos, on sandwiches, and bean chili.

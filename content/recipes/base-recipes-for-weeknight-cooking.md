@@ -1,13 +1,11 @@
 ---
 title: Base recipes for weeknight cooking
-tags: [bases]
+tags: [bases, technique]
 source: family
 draft: false
 ---
 
-Base recipes for weeknight cooking
-
-It’s common for people to prepare entire meals for the week or month, or to make a large meal on the weekend and use it for leftovers. Preparing foods in bulk can save money and time, but the problem with preparing a single meal for an entire week is that you have to eat a single meal for an entire week. This works for some people, but not for me.
+Many people to prepare entire meals for the week or month, or to make a large meal on the weekend and use it for leftovers. Preparing foods in bulk can save money and time, but the problem with preparing a single meal for an entire week is that you have to eat a single meal for an entire week. This works for some people, but not for me.
 
 Less common to the home kitchen is to do what restaurants do, which is to prepare sauces and bases, as well as other washed and cut ingredients. These simpler preparations can be adapted into several recipes quickly. The bases are easy to scale up, and they often hold well in the refrigerator or freezer, though restaurants rarely freeze their prep to maintain texture and flavour. At home, however, there are many sauces and bases that freeze exceptionally well.
 
@@ -19,11 +17,7 @@ I’ve found that by following similar principles, but using the fridge and free
 
 Here are some of the things I keep in my freezer:
 
-Proteins
-
-Stews/gravies
-
-Stocks and sauces
+### Proteins, Stews/gravies, Stocks and sauces
 
 - [cooked beef/mushroom mix](https://docs.google.com/document/d/18B_6jJlS8MKhUsXeGs2gdse1qjwkUURhE54Xlw64Nuk/edit#heading=h.3fsk0afek31n)
 - [chicken patties](https://docs.google.com/document/d/1_FNFVNbjRDOEdbD1oU5-5e-PlBo4euAkmzS07YfX2bI/edit#heading=h.3fsk0afek31n)
@@ -45,22 +39,14 @@ Stocks and sauces
 - BBQ sauce
 - chipotles in sauce
 
-And in my fridge:
-
-Pickles
-
-Dressings/sauces
-
-Prepped veg
+### And in my fridge: Pickles. Dressings/sauces, Prepped veg
 
 - [pickled onions](https://docs.google.com/document/d/1_kMEugsRPsGjGQ5Pj3y4dDCulchDQyT0q8RJkB06xuw/edit#heading=h.3fsk0afek31n)
 - [pickled beets](https://docs.google.com/document/d/1_kMEugsRPsGjGQ5Pj3y4dDCulchDQyT0q8RJkB06xuw/edit#heading=h.3fsk0afek31n)
-
 - green goddess
 - donkey sauce
 - ranch
 - asian slaw dressing
-
 - Broc/cauli/carrots
 
 ## Some examples of adapting a base into quick meals
@@ -72,26 +58,20 @@ The [cooked beef/mushroom mix](https://docs.google.com/document/d/18B_6jJlS8MKhU
 - American style meat sauce, adding the beef to a quick marinara, or an already prepared frozen red sauce
 - It makes a great base for a ravioli or tortellini filling (adding ricotta and herbs)
 - Taco beef, by adding half a tin of minced chipotles in adobo, and some cumin, which can be adapted to
-
     - taco salads and tacos
     - burritos, quesadillas
     - nachos
     - taco soup
     - taco pizza
     - (etc.)
-
 - A quick Canadian chilli, adding the taco beef to a few cans of beans, some red sauce (or whole tinned tomatoes), great with
-
     - mac & cheese
     - over fries
     - over salad
-
 - Szechuan beef, by adding Szechuan peppers, 5 spice, soy, and some ginger, great over
-
     - rice bowls
     - asian style noodles
     - eggs
-
 - Bulgogi style beef, by adding a tin of asian pears, ginger, soy, and 5 spice, also great for applications like Szechuan beef
 - Cottage pie, by making gravy out of the beef, adding frozen veg, and topping with mash
 

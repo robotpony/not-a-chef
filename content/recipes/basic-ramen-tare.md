@@ -1,17 +1,14 @@
 ---
-title: Basic tare (for ramen) and pork braising liquid
+title: Basic ramen tare
 tags: [bases]
 source: family
 draft: false
 ---
 
-(needs some improvement)
-
-
 
 This is a basic [tare](https://en.wikipedia.org/wiki/Tare_sauce) and [braising](https://en.wikipedia.org/wiki/Braising) liquid for ramen style pork and tare used with simple broths. Keeps for a week in the fridge and freezes nicely (both the pork and tare). Inspired by [Ramen\_Lord](https://www.goodreads.com/en/book/show/57499458) and some tweaks for our tastes.
 
-#### Ingredients:
+## Ingredients:
 
 - Pork belly, shoulder, or rib-side loin (weight is not important here)
 - Salt and pepper the pork to taste (or use my standard pork/chicken rub)
@@ -22,12 +19,12 @@ This is a basic [tare](https://en.wikipedia.org/wiki/Tare_sauce) and [braising]
 - 12.5g brown sugar
 - 1-2 (10g)  garlic cloves, smashed
 
-## Optional add-ins:
+### Optional add-ins:
 
 - 1 knob ginger (diced or shredded)
 - Spices (like togarashi)
 
-### Directions:
+## Directions:
 
 Best made a day in advance so the pork and tare are cooled.
 

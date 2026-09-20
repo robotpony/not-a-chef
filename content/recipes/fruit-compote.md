@@ -7,7 +7,7 @@ draft: false
 
 Every Christmas day we make a huge breakfast spread. One of our staples is waffles and fruit compote, a fruit in sugar syrup. There are many variations for compote, but the key for us is to pair spices with fruits in a way that works, with choices ranging from orange zest, cinnamon, nutmeg, vanilla, and so on.
 
-#### Ingredients:
+## Ingredients:
 
 - 500g of fresh or frozen/preserved berries or fruit (about a pound)
 - ¼ cup white sugar
@@ -15,12 +15,12 @@ Every Christmas day we make a huge breakfast spread. One of our staples is waffl
 - Splash of water (as needed)
 - Tiny pinch of salt
 
-#### Turning compote → sauce:
+### Turning compote → sauce:
 
 - 1 tsp cornstarch
 - 2 tsp water
 
-#### Extras:
+### Extras:
 
 - Lime, lemon, or orange zest
 - Cinnamon (stick, pull out at end)
@@ -28,7 +28,7 @@ Every Christmas day we make a huge breakfast spread. One of our staples is waffl
 - Chilis (for some zing)
 - Unsalted butter
 
-### Method:
+## Method:
 
 A compote is basically a reduction of water, fruit, and sugars.
 

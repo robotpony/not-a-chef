@@ -7,7 +7,7 @@ draft: false
 
 A Canadian take on a classic Vietnamese marinade. Great on pork, chicken, beef, and tofu.
 
-#### Main ingredients:
+## Ingredients:
 
 - 1 ½ tsp (4g) ground white pepper
 - 1 tsp (3g) ground coriander
@@ -21,9 +21,12 @@ A Canadian take on a classic Vietnamese marinade. Great on pork, chicken, beef, 
 - 1 lime (juice and zest)
 - 1 thai chili finely sliced (optional)
 
-For 750g - 1000g of protein.
-
-### Directions:
+## Directions:
 
 1. Slice, dice, and mix marinade. Salt to taste.
 2. Marinade proteins for 4-24 hours. Adding slices in large pieces will promote absorption and browning later.
+
+## Notes
+
+For 750g - 1000g of protein.
+

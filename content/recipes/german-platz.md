@@ -5,9 +5,9 @@ source: family
 draft: false
 ---
 
-A neighbour of Bruce’s  used to make this fruity coffee cake weekly. They had a huge boxy house with two kitchens, where the second kitchen was for making desserts and canning. I always thought having a kitchen for large batch cooking was a fantastic idea.
+A neighbour used to make this fruity coffee cake weekly. They had a huge boxy house with two kitchens, where the second kitchen was for making desserts and canning. I always thought having a kitchen for large batch cooking was a fantastic idea.
 
-#### Base ingredients:
+## Ingredients:
 
 - 1 ⅔ cup of cake flour
 - 1 cup of sugar
@@ -18,13 +18,13 @@ A neighbour of Bruce’s  used to make this fruity coffee cake weekly. They had
 - 2 large eggs, slightly beaten
 - ⅔ cup of whole milk
 
-#### Fruit:
+### Fruit:
 
 - 2 cups of diced or small fruit/berries
 
 Memory tells me that strawberries and rhubarb were the best toppings, but blueberries were also quite good. I’m also guessing at the amount of fruit as the old recipe card did not specify.
 
-#### Crumble topping:
+### Crumble topping:
 
 - 1 cup of cake flour
 - ½ cup of sugar
@@ -32,7 +32,7 @@ Memory tells me that strawberries and rhubarb were the best toppings, but bluebe
 
 You can substitute all purpose flour for cake flour, but the cake will be slightly chewier.
 
-### Directions:
+## Directions:
 
 1. Add liquid ingredients for the base to a large mixing bowl and stir.
 2. Add dry ingredients (for the base) to the bowl and mix only until blended. Too much mixing will make things chewier than cake should be.
@@ -40,5 +40,7 @@ You can substitute all purpose flour for cake flour, but the cake will be slight
 4. Sprinkle fruit over the batter evenly.
 5. Mix topping ingredients roughly into a crumbly consistency and sprinkle it evenly over the fruit.
 6. Bake at 175C/350F for 20-50 minutes, or until browned.
+
+## Notes:
 
 Using parchment paper over a greased pan can make this much easier to get out of the pan.

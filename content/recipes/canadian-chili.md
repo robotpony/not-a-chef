@@ -7,7 +7,6 @@ draft: false
 
 The chili I grew up with is not the chili of the south. It’s a beany, tomato vegetable stew with a hint of beef. It’s a recipe that easily becomes vegetarian by just skipping the beef, but here I’ll outline how to make it even more savoury by adding layers of mushrooms. If you want a beefy version, just include some minced or ground beast in one of the mushroom stages.
 
-You can replace all of the beans with any beans you like, but these are what I usually use. You can also cook your beans from dry, just follow the directions on the package.
 
 #### Main ingredients:
 
@@ -39,7 +38,27 @@ You can replace all of the beans with any beans you like, but these are what I u
 - 3 tsp ancho (or similar) ground chilis
 - Salt/pepper
 
-#### Alternative spice mix:
+
+
+### Directions:
+
+1. In the bottom of a large-ish pot add olive oil and chopped mushrooms and cook on medium until they release their water, then continue cooking until the water evaporates. If using hamburger or TVP, add to watery mushrooms.
+    1. If you’re using TVP (textured vegetable protein) or hamburger, add it with the mushrooms. This will extend the cooking time, but be patient and you’ll get a nice brown savoury base.
+2. Add onions and continue cooking until softened and translucent. Add shallots, garlic, celery, carrots, and tomato paste and saute until softened. Ideally food will start sticking to the pot in here somewhere. Let the food brown (but not burn) and add your stock to deglaze the tasty brown bits.
+3. Add spice mix. Add beans. Add other ingredients. Taste / make minor adjustments.
+4. Balance flavours:
+    1. Salt and pepper to taste
+    2. Add lime juice to balance
+
+
+## Notes
+
+
+You can replace all of the beans with any beans you like, but these are what I usually use. You can also cook your beans from dry, just follow the directions on the package.
+
+## Variations
+
+#### Slightly more authentic spice mix
 
 Use instead of dried spices, with better depth of flavour. Blend together:
 
@@ -50,16 +69,3 @@ Use instead of dried spices, with better depth of flavour. Blend together:
 - 2 - 3 cloves of garlic
 - Chipotles in adobo sauce
 - Salt/pepper
-
-### Directions:
-
-1. In the bottom of a large-ish pot add olive oil and chopped mushrooms and cook on medium until they release their water, then continue cooking until the water evaporates. If using hamburger or TVP, add to watery mushrooms.
-
-    1. If you’re using TVP (textured vegetable protein) or hamburger, add it with the mushrooms. This will extend the cooking time, but be patient and you’ll get a nice brown savoury base.
-
-2. Add onions and continue cooking until softened and translucent. Add shallots, garlic, celery, carrots, and tomato paste and saute until softened. Ideally food will start sticking to the pot in here somewhere. Let the food brown (but not burn) and add your stock to deglaze the tasty brown bits.
-3. Add spice mix. Add beans. Add other ingredients. Taste / make minor adjustments.
-4. Balance flavours:
-
-    1. Salt and pepper to taste
-    2. Add lime juice to balance

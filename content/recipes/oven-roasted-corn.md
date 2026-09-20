@@ -7,13 +7,13 @@ draft: false
 
 This recipe works for most vegetables, though corn is a slightly special case as it needs a bit longer than most veg.
 
-#### Ingredients:
+## Ingredients:
 
 - 4+ cobs of fresh corn
 - Olive oil (non EVO), butter, or neutral oil
 - Salt + Pepper to taste
 
-### Directions:
+## Directions:
 
 1. Toss corn with oil or spread butter evenly over it. Salt + pepper, and let sit for 20-60 minutes.
 2. Preheat the oven to 220C (425F) and roast for 30 minutes, turning half way through.

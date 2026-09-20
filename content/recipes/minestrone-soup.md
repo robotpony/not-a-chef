@@ -7,7 +7,7 @@ draft: false
 
 This is a  hearty vegetable soup. It’s commonly started with pancetta, which can be replaced with browned diced mushrooms and smoked paprika. This recipe is adapted from [Chef John’s Minestrone soup recipe](https://www.allrecipes.com/recipe/223044/chef-johns-minestrone-soup/).
 
-#### Main ingredients:
+## Ingredients
 
 - 2 tbsp olive oil
 - 1 onion, diced
@@ -25,7 +25,7 @@ This is a  hearty vegetable soup. It’s commonly started with pancetta, which 
 - ¼ cup chopped fresh parsley (flat-leaf)
 - ¼ cup parmesan
 
-#### Vegetarian base:
+### Vegetarian base:
 
 - 2 tbsp olive oil
 - 4 cups of diced mushrooms
@@ -33,29 +33,27 @@ This is a  hearty vegetable soup. It’s commonly started with pancetta, which 
 - 2 tsp smoked paprika
 - 1-2 tsp Braggs amino or light soy sauce
 
-#### Omnivore base:
+### Omnivore base:
 
 - 1 cup of diced pancetta (or other salted/fatty meat)
 
-### Directions:
+## Directions:
 
-#### Vegetarian prep:
+### Vegetarian prep:
 
 1. Heat 2 tablespoons of olive oil in a dutch oven or stock pot over medium heat. Add savory items:
-
     1. Add mushrooms and cook until wet, and then dry and are just starting to take on colour.
     2. Add bread (or bread crumbs), and toast
     3. Add paprika and aminos.  
         Mushrooms should be browned by this point, and bread toasted.  
         Adding 1 tbsp of tomato paste after mushrooms start to take on colour can add an extra kick of savoury.
 
-#### Omnivore prep:
+### Omnivore prep:
 
 1. Heat 2 tablespoons of olive oil in a dutch oven or stock pot over medium heat. Add savory items:
-
     1. Add chopped pancetta and brown
 
-#### All versions:
+### All versions:
 
 1. Add more olive oil (if needed), then the onions and celery. Soften.
 2. Add minced garlic and soften.

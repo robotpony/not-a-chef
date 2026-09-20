@@ -7,7 +7,7 @@ draft: false
 
 There are a few ways to make pizza sauce, depending on how lazy you are. One of our favourite  sauces is cooked down from good tomatoes for a moderate amount of time, and my fastest sauce comes from a tin of crushed tomatoes or sauce (thickened with paste). For pizza sauce, better tomatoes make a difference, as cheaper ones are less sweet and flavourful.
 
-#### Main ingredients:
+## Ingredients:
 
 - 1 (820ml/28oz) tin of San Marzano tomatoes
 - 1-2 tbsp of tomato paste (to add some punch + thicken things up faster)
@@ -20,7 +20,7 @@ There are a few ways to make pizza sauce, depending on how lazy you are. One of 
 - Olive oil
 - (Bonus) 1-2 tbsp unsalted butter
 
-#### Alternative ingredients:
+### Alternative ingredients:
 
 - 1 jar (or medium tin) of crushed tomatoes or  
     1 jar (or tin) of tomato sauce and 1 tbsp of tomato paste
@@ -28,7 +28,7 @@ There are a few ways to make pizza sauce, depending on how lazy you are. One of 
 
 I don’t add chilis or paprika anymore, leaving these spices for toppings instead. Paprika, especially smoked paprika can make a sauce taste heavy (muddling the fine and sweet notes of the tomatoes).
 
-### Directions:
+## Directions:
 
 1. Dice onions, garlic, and shallot and set aside.
 2. Optional: crush tomatoes by hand or with a pastry cutter (or with a hand blender). Even more optionally, process the tomatoes in a food mill or by forcing through a fine mesh strainer with a spatula.
@@ -36,6 +36,9 @@ I don’t add chilis or paprika anymore, leaving these spices for toppings inste
 4. Reduce heat and add tomatoes and oregano.
 5. Salt and pepper to taste. I always do this 2-3 times (tasting between), so that I don’t oversalt.
 6. Simmer at the lowest heat that will just barely bubble for 20-30 minutes. You can go longer, but not much shorter than 20 minutes. Tinned tomatoes mellow out nicely only after some simmering (otherwise can taste a bit “tinny” or harsh).
+
+
+## Notes
 
 If you find the sauce tastes a bit bitter:
 

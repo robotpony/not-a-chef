@@ -1,12 +1,14 @@
 ---
 title: Meat sauce (AKA American bolognese)
-tags: [sauces]
+tags: [sauces, italian american]
 source: family
 draft: false
 ---
 
-I make this meat sauce a few times a month, from the pantry and my regular freezer prep. It’s based on fairly standard meat sauce recipes.
+I make this meat sauce a few times a month, from the pantry and my regular freezer prep. It’s based on fairly standard meat sauce recipes, primarily on one I made at a pizza restaurant.
 
+
+## Ingredients 
 - 500ml [softened beef base](https://docs.google.com/document/d/18B_6jJlS8MKhUsXeGs2gdse1qjwkUURhE54Xlw64Nuk/edit#heading=h.3fsk0afek31n) (beef, mushrooms, onion, garlic, bay)
 - 1 x 796ml (28oz) San Marzano style tomatoes
 - 100ml (1 tablespoon) tomato paste
@@ -23,5 +25,7 @@ I make this meat sauce a few times a month, from the pantry and my regular freez
 2. In a family pan, heat beef base (and optional spinach/kale) until it starts to brown. Add tomato paste, stirring, cooking until it just starts to stick. Deglaze with wine, stock, or water, scraping the brown bits off the pan bottom.
 3. Stir in spices. Add tomatoes. Simmer and cook until desired (20-45 minutes is enough as the beef is already tender).
 4. Season to taste with salt, pepper. Balance with balsamic (or wine) if acidity or sweetness is needed.
+
+## Notes 
 
 This sauce freezes well (and I often make a 2-4x portion of it). Works in any pasta dish that needs a meat sauce, or on pizza, or wherever.

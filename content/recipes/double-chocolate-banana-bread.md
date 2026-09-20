@@ -7,7 +7,7 @@ draft: false
 
 The recipe was found on the internet when a craving for Banana Bread hit.  Looking at different recipes, this one stood out as it was done by Smitten Kitchen, which was a great name.  It has been reliable, is pretty easy, and definitely filled the craving.
 
-#### Main ingredients:
+## Ingredients:
 
 - 3 medium-to-large very ripe Bananas
 - ½ cup Butter, melted
@@ -20,11 +20,11 @@ The recipe was found on the internet when a craving for Banana Bread hit.  Look
 - ½ cup Cocoa Powder
 - 1 cup Semisweet or Bittersweet Chocolate chunks or chips
 
-#### Optional:
+### Optional:
 
 - ½ tsp Cinnamon
 
-### Directions:
+## Directions:
 
 1. Preheat the oven to 350 degrees F (175 C).
 2. Butter a 9x5inch loaf pan.

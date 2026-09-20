@@ -27,15 +27,15 @@ These ingredients are added to the strained ingredients before you begin to redu
 - Bonito
 - 1 medium/large piece of kombu
 
-### Method:
+## Method:
 
 1. Roughly chop onions, garlic, and ginger, removing any dirty pieces of peel or root parts.
 2. Optionally: roast veg and chicken on a sheet pan until browned (230C/450F), about 20 minutes. The darker the roast, the darker the broth.
 3. Add pressure cooker ingredients to a large pressure cooker, top with water (to cover) and cook on high pressure setting for 30-40 minutes (check your pressure cooker for correct times for broths).
-4. Depressurize naturally and remove solids into a metal bowl using a spider and tongs. Pour into a smaller pot through a fine mesh strainer[\[1\]](#ftnt1).
+4. Depressurize naturally and remove solids into a metal bowl using a spider and tongs. Pour into a smaller pot through a fine mesh strainer.
 5. Add bonito/sababushi (optionally) and kombu to strained solids, with the heat off and let sit for 15-25 minutes. Remove any solids with a fine mesh spider (or strain again).
 6. Reduce stock on a low simmer for 2-3 hours, or  by half. It is possible to use a rolling boil if you want to emulsify any fats for a richer broth. Remove any scum with your fine mesh spider, if any remains.
 
-- * *
+## Notes
 
-[\[1\]](#ftnt_ref1) This is safer than straining the sink, as you’ll never accidentally pour your stock down the drain NOT THAT I’VE EVER DONE THAT.
+Draining over the cooktop  is safer than straining the sink, as you’ll never accidentally pour your stock down the drain NOT THAT I’VE EVER DONE THAT.

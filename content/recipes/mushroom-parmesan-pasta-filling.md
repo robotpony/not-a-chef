@@ -7,7 +7,7 @@ draft: false
 
 This is a great filling for vegetarian pasta like ravioli, tortellini, or sauced pastas like lasagne or ragu.
 
-#### Ingredients:
+## Ingredients:
 
 - 150g shiitake mushrooms,  cleaned and trimmed then finely diced
 - 150g cremini mushrooms, cleaned and trimmed then finely diced
@@ -27,4 +27,5 @@ This is a great filling for vegetarian pasta like ravioli, tortellini, or sauced
 4. Remove from heat and let cool part way. Add parmesan, stirring in thoroughly.
 5. Cool before using as a pasta filling.
 
+## Notes
 If you roll the cooled filling out and freeze, you can slice it up  in 5-10g chunks depending on the size of pasta you plan to fill..

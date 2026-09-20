@@ -7,7 +7,7 @@ draft: false
 
 White beans are an old world secret for making thick, hearty soups. When blended, they add a creamy texture, additional protein, without affecting the flavour negatively.
 
-#### Ingredients:
+## Ingredients:
 
 - 1 large can (820ml/28 ounces) whole tomatoes and liquid
 - 2 cups vegetable broth
@@ -23,7 +23,7 @@ White beans are an old world secret for making thick, hearty soups. When blended
 - Freshly ground black pepper, to taste
 - Basil (optional)
 
-### Method:
+## Method:
 
 This is a fairly standard blended soup.
 

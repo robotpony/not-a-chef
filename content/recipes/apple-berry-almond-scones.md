@@ -7,7 +7,7 @@ draft: false
 
 We first made this on Mother’s Day 💜, many years ago.
 
-#### Ingredients:
+## Ingredients:
 
 - 650g Flour
 - 100g Caster (Bakers) Sugar; if you do not have access to Caster Sugar, White Sugar can be ground down slightly with a Mortar and Pestle
@@ -23,7 +23,7 @@ We first made this on Mother’s Day 💜, many years ago.
 - Handful of flaked Almonds
 - Icing Sugar, to dues
 
-### Directions:
+## Directions:
 
 1. Preheat the oven to 200 degrees C (180 C fan assisted).
 2. In a large bowl combine the Flour, Sugar, Baking Powder, Salt, and Cinnamon.

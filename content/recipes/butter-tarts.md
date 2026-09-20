@@ -3,19 +3,22 @@ title: Butter Tarts
 tags: [desserts]
 source: family
 draft: false
+servings: Recipe makes 12 Tarts
 ---
 
 This is a cherished family recipe from the 1950s. 
 
 > Grandma Rempel (Ann’s Mom) always used to make Butter Tarts and Coconut Jam Tarts and this was her recipe.  Back in the day, the tart was homemade, but as convenience became more convenient, the tarts went to the store bought type.
 
-#### Crust/Pastry:
+## Ingredients
+
+### Crust/Pastry:
 
 - 1 cup Flour
 - ½ cup Shortening
 - 1 tsp Baking Powder
 
-#### Ingredients:
+### Filling
 
 - 2 Eggs
 - 1 cup Brown Sugar
@@ -23,9 +26,8 @@ This is a cherished family recipe from the 1950s.
 - 2 tbsp Butter, melted
 - 1 tsp Vanilla
 
-### Directions:
+## Directions:
 
-Recipe makes 12 Tarts.
 
 1. If making the crust/pastry from scratch, sift together the Flour and Baking Soda.  Cut in the Shortening.  Pour ingredients onto a floured surface and mix/knead until combined.  Roll out dough and use a circle cookie cutter and place circle dough into a muffin tin.
 2. Or use the premade store bought frozen tart shells.  Place shells onto a baking sheet.

@@ -2,18 +2,19 @@
 title: Ginger/garlic paste
 tags: [bases]
 source: family
+cuisine: Indian
 draft: false
 ---
 
 This paste is a common base component of many dishes in southeast Asia, including Indian takeaway style cookery. Use a spoon of this in soups, gravies, and on meats.
 
-##### Notes
+## Notes
 
 - Tastes better after a few days in the fridge
 - Don’t overcook (water helps with this), stop once sizzle is gone
 - Lasts weeks refrigerated
 
-#### Main ingredients:
+## Ingredients:
 
 - 1 cup neutral oil
 - 1 cup water
@@ -25,6 +26,6 @@ This paste is a common base component of many dishes in southeast Asia, includin
 - 2 teaspoons turmeric
 - 2 teaspoons salt
 
-### Directions:
+## Directions:
 
 1. Add garlic, ginger, water, neutral oil, and spices to a blender. Blend until smooth, add oil until the consistency reaches soft peanut butter.

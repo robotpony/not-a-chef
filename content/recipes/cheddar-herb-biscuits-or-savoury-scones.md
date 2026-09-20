@@ -1,17 +1,16 @@
 ---
 title: Cheddar herb biscuits (or savoury scones)
 tags: [breads]
-source: family
+source: Simply LaKita
 draft: false
+prep_time: 15 minutes
+cook_time: 15 minutes
 ---
 
-Every now and then, I crave Cheddar Herb Biscuits and have tried a few recipes and this is the best so far.  I’ve taken it from the website Simply LaKita (with a few modifications) and now this will have to be every time we make stew!
 
-Prep Time: 15 minutes
+Every now and then, I crave Cheddar Herb Biscuits and have tried a few recipes and this is the best so far.  
 
-Cook Time: 15 minutes
-
-#### Ingredients:
+## Ingredients:
 
 - 3 cups All-Purpose Flour
 - 4 tsp Baking Powder
@@ -25,7 +24,7 @@ Cook Time: 15 minutes
 - ¼ - ½ cup Fresh Herbs (any combo: Parsley + Chives if my favorite but can also include thyme, sage, rosemary. Or freeze dried herbs will work if you have them on hand)
 - ½ tsp Granulated Garlic, optional
 
-### Directions:
+## Directions:
 
 1. Preheat the oven to 232 degrees C (450 degrees F).
 2. \`wertyIn a medium bowl, whisk together the flour, baking powder, sugar, cream of tartar, and salt.  Set aside.

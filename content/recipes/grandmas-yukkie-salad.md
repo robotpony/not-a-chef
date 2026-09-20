@@ -7,7 +7,7 @@ draft: false
 
 A classic ambrosia style salad from the Rempel family.
 
-#### Ingredients:
+## Ingredients:
 
 - 1 pkg (85g) lemon Jello
 - 2 pkg (85g each) strawberry jello
@@ -18,11 +18,11 @@ A classic ambrosia style salad from the Rempel family.
 - 1 can (14oz/398ml) crushed pineapple, drained
 - 7 cups boiling water
 
-#### Optional:
+### Optional:
 
 - ½ cup chopped walnuts
 
-### Directions:
+## Directions:
 
 1. Dissolve the lemon Jello powder in 1 cup of boiling water and cool slightly. Add marshmallows and cream cheese and beat with a mixer on low until smooth. Chill until slightly thickened.
 2. Stir whipped topping, pineapple, and optional walnuts into partially set lemon Jello mixture. Pour into a 3L bowl and chill until set, but not quite firm (about an hour).

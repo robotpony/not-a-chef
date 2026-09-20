@@ -9,12 +9,14 @@ Simple english muffins that Bruce very occasionally makes to feed his mcmuffin 
 
 Note: I’m still tuning this recipe.
 
-#### Bloom:
+## Ingredients
+
+### Bloom:
 
 - 1 ¾ cups lukewarm milk
 - 2 ¼ tsp (1 pkg) yeast
 
-#### Ingredients:
+### Muffins
 
 - 3 tbsp butter, softened
 - 1 ¼ tsp salt
@@ -22,7 +24,7 @@ Note: I’m still tuning this recipe.
 - 1 large egg
 - 4 ½ cups flour
 
-### Directions:
+## Directions:
 
 1. Add milk + yeast (and some of the flour) to a bowl, and let it stand for 10 minutes (up to 24 hours). Longer bloom times develop funk (AKA flavor).
 2. Add butter, salt, sugar, egg, flour (most of it) and stir with a wooden spoon or spatula until smooth, or use a stand mixer.

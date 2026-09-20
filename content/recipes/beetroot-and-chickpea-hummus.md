@@ -37,6 +37,6 @@ A great snack when you’re beet. Makes a bright red, earthy hummus. and makes a
 6. Blend again until combined.
 7. Blend in olive oil.
 
-[\[a\]](#cmnt_ref1)This didn't seem like enough oil, so I suggest serving with more.
+## Notes:
 
-[\[b\]](#cmnt_ref2)Next time I'll try to 2x that.
+This didn't seem like enough oil, so I suggest serving with more.

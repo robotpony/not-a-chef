@@ -21,7 +21,6 @@ This is a quick hacky noodle dish that uses the 1-pan method and a precooked pro
 - Soy/sesame oil/sake to taste (~1-2 tablespoons each)
 - 2 cups shredded cabbage
 - Top with:
-
     - Thinly sliced green onion
     - Sesame seeds
 
@@ -29,12 +28,12 @@ This is a quick hacky noodle dish that uses the 1-pan method and a precooked pro
 
 1. Cook the noodles about half way in a wide pan in a minimum amount of water. Have some extra water ready to add as needed.
 2. When the noodles are half way to cooked (based on the package cooking time), add the tomato paste, beef base, Szechuan peppers and chilli flakes, and ginger, stirring and cooking until heated.
-
-    1. If using ramen noodles or egg noodles, use less water and adjust cooking time down.
-
+    - If using ramen noodles or egg noodles, use less water and adjust cooking time down.
 3. Taste the pasta liquid (which will be reducing) and add soy sauce, sesame oil, and sake to taste (1-2 tablespoons each).
 4. Test the noodles and add 1-2 tablespoons of water if needed.
 5. Add cabbage, and heat through.
 6. Taste sauce again and adjust. It should be savoury and spicy (but not too salty).
+
+## Notes 
 
 When executed correctly, the sauce should come together and coat the noodles. If there is too much liquid, call it a soup and use less liquid and more heat next time.

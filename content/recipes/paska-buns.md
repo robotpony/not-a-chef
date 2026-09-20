@@ -9,7 +9,9 @@ This is a family recipe, a classic european bun.
 
 > When Ann was growing up, her Great Oma Hamm (Oma Rille’s mom) would make Paska bread for Easter.  When Great Oma passed away, her recipes disappeared with her as she never wrote anything down.  She had her recipes memorized and the measurements were done with her hands.  I miss the family traditions of holiday baking and am hoping this recipe brings back some nostalgia.
 
-#### For the Buns:
+## Ingredients
+
+### For the Buns:
 
 - 2 tablespoons instant dry yeast
 - 1 cup room temperature water
@@ -23,7 +25,7 @@ This is a family recipe, a classic european bun.
 - 2 eggs
 - 3/4 cup sugar
 
-#### For the Frosting:
+### For the Frosting:
 
 - 8 ounces full fat cream cheese, at room temperature
 - 1/2 cup butter, at room temperature
@@ -31,7 +33,7 @@ This is a family recipe, a classic european bun.
 - a few drops of milk, until spreadable consistency is reached
 - sprinkles (if desired)
 
-### Directions:
+## Directions:
 
 For the buns:
 
@@ -48,7 +50,7 @@ For the buns:
 * Bake the buns at 325 degrees Fahrenheit for about 18 minutes, or until the buns are light golden brown on top.
 * Let the buns cool on the baking trays until completely cool.
 
-For the frosting:
+### For the frosting:
 
 * To a medium bowl, add the room temperature cream cheese and room temperature butter and cream them together with a hand mixer or wooden spoon.
 * Add the powdered sugar 1/2 cup at a time and mix well until blended, scraping down the sides of the bowl after each addition.

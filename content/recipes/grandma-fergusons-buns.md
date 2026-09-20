@@ -2,20 +2,23 @@
 title: Grandma Ferguson’s Buns
 tags: [breads]
 source: family
+servings: Makes one pan of buns (6-12, depending on the size)
 draft: false
 ---
 
-Makes one pan of buns (6-12, depending on the size)
 
-Bruce’s great grandmother (his Dad’s Mom’s Mom) used to make these buns. The buns are soft and perfect for turkey sandwiches.
 
-#### Bread starter:
+The buns are soft and perfect for turkey sandwiches.
+
+## Ingredients
+
+### Bread starter:
 
 - 2 packages (~20mg) of instant yeast
 - 1 scant cup of warm water
 - 3 tsp of white sugar
 
-#### Bread:
+### Bread:
 
 - 3 cups of white flour
 - 2 cups of whole flour
@@ -23,8 +26,6 @@ Bruce’s great grandmother (his Dad’s Mom’s Mom) used to make these buns. T
 - 1 tsp of salt
 - 1 scant cup of sugar
 - 1 scant cup of boiling water
-
-Did you know? A scant cup is a cup less 1-2 tbsp. A heaping cup is a cup plus 1-2 tbsp.
 
 ### Directions:
 
@@ -37,3 +38,8 @@ Did you know? A scant cup is a cup less 1-2 tbsp. A heaping cup is a cup plus 1-
 7. (Optional) Add egg wash or butter before baking.
 8. Bake at 175C/350F until browned.
 9. (Optional) Add a light coating of butter after baking.
+
+
+## Notes
+
+Did you know? A scant cup is a cup less 1-2 tbsp. A heaping cup is a cup plus 1-2 tbsp.

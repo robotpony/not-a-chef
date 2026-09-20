@@ -7,7 +7,7 @@ draft: false
 
 This is an example. Copy it and replace things. Keep your description short and sweet, but include a bit of history if you can. Memories are a huge part of the food we eat!
 
-#### Main ingredients:
+## Ingredients
 
 - 1 cup  Extra virgin olive oil
 - 1/4 cup Fresh lemon juice (1-2 lemons)
@@ -24,7 +24,7 @@ This is an example. Copy it and replace things. Keep your description short and 
 - 1 dash Mustard powder (helps stabilize)
 - 1 tsp Dijon mustard (helps stabilize)
 
-### Directions:
+## Directions:
 
 Pour the ingredients into a container and shake for 2 minutes. Taste, and adjust the seasoning (the lemon may be more or less sweet, and you may want more or less salt).
 
@@ -34,7 +34,7 @@ Keeps in the fridge for a week.
 
 Note that you can prepare this is a blender as well, drizzling the oil in to emulsify it fully.
 
-#### Variations:
+## Notes:
 
 - Nearly any tasty vinegar can be used
 - The lemon juice can be replaced by the same volume of vinegar

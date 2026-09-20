@@ -9,14 +9,14 @@ Based on a recipe from [Fooooood Wishes Dot Com](https://www.allrecipes.com/reci
 
 Even on your first try, these buns are better than what you can find in most markets, mostly because they’re fresh and you have to work for them.
 
-#### Ingredients:
+## Ingredients:
 
 - 2 ½ tsp t(or 1 package) of active, dry yeast
 - 450g (1lb, approx 3 ½ cups) of all purpose flour
-- 250g (1 cup) warm (40C/101F) water[\[a\]](#cmnt1)
+- 250g (1 cup) warm (40C/101F) water
 - 1 large egg
-- 3 tbsp melted butter[\[b\]](#cmnt2) 
-- 3 tbsp white sugar[\[c\]](#cmnt3)
+- 3 tbsp melted butter
+- 3 tbsp white sugar
 - 1 ¼ tsp salt
 - 1 tsp olive oil (non-EVDO)
 
@@ -41,10 +41,9 @@ This is a very standard dough procedure.
 9. Make egg wash (egg, milk, salt, whisked together), and lightly brush buns. Top with sesame seeds.
 10. Bake for 15-18 minutes, or until lightly browned. Let cool completely, and slice with a serrated knife.
 
-If you’re looking for a slightly sweeter and lighter bun, [Chef John also has a nice sweet potato and honey bun recipe here](https://youtu.be/xN-AvNQcsRA). Looking for [technically superior hot dog buns](https://youtu.be/B2R9yCuNDJc)        ?
 
-[\[a\]](#cmnt_ref1)Half milk
+## Notes: 
 
-[\[b\]](#cmnt_ref2)Add soft butter at end
-
-[\[c\]](#cmnt_ref3)Replace half or all with Diastatic Malt Powder (malted barley)
+- Half milk
+- Add soft butter at end
+- Replace half or all with Diastatic Malt Powder (malted barley)

@@ -7,7 +7,7 @@ draft: false
 
 Our family tater salad recipe. I mean, it’s not a salad per se, but it’s a classic. Add fried chicken and it’s a picnic!
 
-#### Ingredients:
+## Ingredients:
 
 - 9 cups of red potatoes (1 small bag)
 - ½ an onion, diced

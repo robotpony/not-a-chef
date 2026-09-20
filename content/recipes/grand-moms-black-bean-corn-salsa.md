@@ -7,7 +7,7 @@ draft: false
 
 Classic beany dip for nachos … also required for most family gatherings.
 
-#### Ingredients:
+## Ingredients:
 
 - 1 small can rinsed black beans
 - 2 cups sweet corn
@@ -16,7 +16,7 @@ Classic beany dip for nachos … also required for most family gatherings.
 - 1 bunch diced green onion
 - Juice of ½ lime
 
-#### Optional ingredients:
+### Optional ingredients:
 
 - 1 clove garlic, via garlic press
 - 1 tbsp olive oil

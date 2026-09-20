@@ -7,13 +7,14 @@ draft: false
 
 This is a classic baked Mac & Cheese recipe. You can sub in pretty much any combo of cheese, though there are a few that are better than others: cheddar, jack, and something like Gruyère/Edam are a great base, or you can lean towards a creamier sauce with provolone, smoked Gouda, and anything like Edam. I’ve seen people use cream cheese, but it wouldn’t add much flavour (and provolone/mozzarella would get a similar effect while also adding some needed funk and flavour).
 
-#### Mornay sauce:
+
+## Ingredients
+
+### Mornay sauce:
 
 - ⅔ cup roux
-
     - ⅓ cup unsalted butter (or mix partially with a neutral oil)
     - ⅓ cup flour (or sweet rice flour)
-
 - 3 cups whole milk
 - 2-3 cups grated cheddar (sharp or old)
 - 2-3 cups grated Gruyère or similar (I also like Edam)
@@ -30,29 +31,24 @@ This is a classic baked Mac & Cheese recipe. You can sub in pretty much any comb
 
 See: [Example percentages for scaling](https://docs.google.com/spreadsheets/d/1WioIgoLJITdosYp3fU7KlhytJqeXLdIpIVPg8ClIGTM/edit?gid=531465660#gid=531465660).
 
-#### Noodles:
+### Noodles:
 
 - 1 package uncooked macaroni or fancy noodle that will hold onto the cheese sauce (500g/1lb)
 
-#### Crust:
+### Crust:
 
 - ¾ cup panko bread crumbs
 - 2 tsp herbs (like basil, oregano, parsley, etc., freeze-dried works fine)
 - 4 tbsp (¼ cup) unsalted butter or olive oil
 - Salt and pepper to taste
 
-#### Bonus ingredients:
+## Variations
 
 - 2 small tins of roasted jalapeños (mix in with noodles & cheese sauce)
-- Vegetarian:
+- Vegetarian: ½ package of smoked tempeh, diced, and fried in some butter (or oil) with some salt (can be combined with noodles & cheese sauce and save some for the top).
+- Carnivor: a couple strips of crispy bacon - chopped (can be combined with noodles & cheese sauce and save some for the top)
 
-    - ½ package of smoked tempeh, diced, and fried in some butter (or oil) with some salt (can be combined with noodles & cheese sauce and save some for the top).
-
-- Carnivor:
-
-    - A couple strips of crispy bacon - chopped (can be combined with noodles & cheese sauce and save some for the top)
-
-### Method:
+## Method:
 
 1. In a fry pan, heat butter until melted and then remove from heat. Combine bread crumbs with melted butter and herbs. Set aside. They will brown in the oven.
 2. Cook noodles to al dente, 1-2 minutes before done, as they will finish cooking in the oven. Strain and add to the baking dish. Reserve some of the pasta water just in case you need to smooth out the cheese sauce.
@@ -67,4 +63,8 @@ See: [Example percentages for scaling](https://docs.google.com/spreadsheets/d/1W
 
     1. Avoid overheating as it can break the sauce and it becomes grainy.
 
-[\[a\]](#cmnt_ref1)A roux is the mix of flour and fat (1:1)
+## Notes
+
+A roux is the mix of flour and fat (1:1). 
+
+A mourney sauce adds milk.

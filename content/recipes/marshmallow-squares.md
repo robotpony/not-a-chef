@@ -7,7 +7,7 @@ draft: false
 
 Classic Recipe!  Ann never had these growing up, but a friend posted a few pictures of making these during the 2020 holiday season.  I asked for the recipe she used (from Food.com) and turns out, Bruce used to have these as a childhood treat.  They turned out well and brought back nostalgic memories and will continue to be a holiday treat.
 
-#### Main ingredients:
+## Ingredients:
 
 - ½ Cup Butter
 - 1 Cup Peanut Butter
@@ -15,7 +15,7 @@ Classic Recipe!  Ann never had these growing up, but a friend posted a few pict
 - 200 Grams (1 bag) Mini Marshmallows (white or coloured)
 - Options: doubling the marshmallow, or adding 2 cups of Rice Krispies / Puffed Wheat, or add chopped nuts of your choice
 
-### Directions:
+## Directions:
 
 1. Put the bag of Marshmallows in the freezer.
 2. Grease a 11” x 13” pan (or line the pan with parchment paper).  If you do not use parchment and only grease the pan, you can put the pan in the freezer so when you add the final product, it helps with the cooling time (but not required if you’re not in a hurry).

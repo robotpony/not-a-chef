@@ -11,8 +11,6 @@ servings: 6 as a meal, 8 - 10 as a side
 
 On a women's retreat in 2019, there was a private chef that cooked for the retreat for the entire weekend.  They were a vegan chef who supports local, and they made this dish for one of our lunches.  Everyone at the retreat absolutely loved this it and Erika kindly shared the recipe she used with all the attendees. They noted that she added more lemon to the dressing, and also puts a bunch of herbs on the veggies as they’re roasting.
 
-([Source](https://pinchofyum.com/autumn-glow-salad-with-lemon-dressing))
-
 ## For the Salad:
 
 - 1 cup spelt (or other grain: freemen, quinoa, bulgur)

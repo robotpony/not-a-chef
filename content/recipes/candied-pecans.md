@@ -7,7 +7,7 @@ draft: false
 
 A sweet little treat!  It’s a great snack to put out for a get-together or as a pre-treat.
 
-#### Ingredients:
+## Ingredients:
 
 - ½ cup Sugar
 - ½ tsp Cinnamon
@@ -16,7 +16,7 @@ A sweet little treat!  It’s a great snack to put out for a get-together or as
 - 2 tsp cold Water
 - 5 cups Pecans, whole
 
-### Directions:
+## Directions:
 
 1. Preheat the oven to 225 degrees F (110 C).
 2. Mix together the Sugar, Cinnamon, and Salt; ensure it is mixed well.

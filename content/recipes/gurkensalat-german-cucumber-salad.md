@@ -7,7 +7,7 @@ draft: false
 
 My Mom (Joanne Rempel) made this salad a lot in my youth and it holds nostalgic memories! I had not had it in years and in my early 40’s had a strong craving for it. I found a recipe online and made it for something different. It took me back to my childhood and I still enjoy it as much as I did as a kid!
 
-#### Ingredients:
+## Ingredients:
 
 - 2 large Cucumbers, peeled and sliced thin (English Cucumbers, but Field Cucumbers will also work)
 - 1 teaspoon salt
@@ -17,7 +17,7 @@ My Mom (Joanne Rempel) made this salad a lot in my youth and it holds nostalgic 
 - 2 teaspoon dried dill
 - Dash of Pepper
 
-### Directions:
+## Directions:
 
 If possible, prepare the cucumbers and dressing 24 hours in advance - but keep separate and combine an hour before serving.
 

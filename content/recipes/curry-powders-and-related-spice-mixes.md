@@ -2,12 +2,15 @@
 title: Curry powders and related spice mixes
 tags: [bases]
 source: family
+cuisine: Indian
 draft: false
 ---
 
 These are common bases for most UK-style Indian curries.
 
-#### Ginger/garlic paste:
+## Ingredients 
+
+### Ginger/garlic paste:
 
 - 30g ginger
 - 30g garlic
@@ -15,7 +18,7 @@ These are common bases for most UK-style Indian curries.
 
 Blend in a mixer until smooth.
 
-#### Base spice mix:
+### Base spice mix:
 
 - 6 tablespoons turmeric
 - 6 tablespoons coriander
@@ -26,7 +29,7 @@ Blend in a mixer until smooth.
 
 Toast very lightly.
 
-#### Garam masala:
+### Garam masala:
 
 - 1 tablespoon cardamom seeds (or shell green cardamoms)
 - 1 tablespoon cardamom seeds (?)

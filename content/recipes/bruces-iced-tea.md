@@ -7,7 +7,7 @@ draft: false
 
 Bruce uses this tea to get productive, it’s like magical, sweet, zen.
 
-#### Ingredients:
+## Ingredients:
 
 - 6 bags high quality black tea
 - 1 L boiled water
@@ -15,7 +15,7 @@ Bruce uses this tea to get productive, it’s like magical, sweet, zen.
 - 1 lime, juiced
 - 1 pinch of kosher salt
 
-### Directions:
+## Directions:
 
 1. Add boiled water to tea bags in a large heat-safe container (I use my 2.5L Pyrex container). Steep for 4-5 minutes (but not more), then remove tea bags with a spider or slotted spoon.
 2. Add sugar and combine. Juice lime into tea. Let cool to room temperature.

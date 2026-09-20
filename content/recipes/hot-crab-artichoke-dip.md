@@ -5,9 +5,9 @@ source: family
 draft: false
 ---
 
-A dip for crabby people.  Recipe provided by Breanna Kliewer (co-worker from Discover Software)
+A dip for crabby people.  Recipe provided by a coworker.
 
-#### Ingredients:
+## Ingredients:
 
 - 1 cup of Mayonnaise (do not use miracle whip, m’kay?)
 - 1 cup of shredded Cheese (Asiago, parmesan, or a lazy pack of 3-cheese grated Italian Cheese)
