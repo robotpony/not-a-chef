@@ -178,9 +178,9 @@
           <div class="recipe-sidebar print:hidden lg:sticky {{ $topClass }}" id="recipe-sidebar">
             {{/* Meta rail: frontmatter facts that never render anywhere else
               on a recipe page (article.showDate/showAuthor/showReadingTime
-              are all off site-wide, config/_default/params.toml) — servings,
-              prep/cook/total time, and author when a recipe sets one (no
-              recipe does yet; FORMAT.md has no `author` field, this repo
+              are all off site-wide, config/_default/params.toml) — aka,
+              servings, prep/cook/total time, and author when a recipe sets
+              one (no recipe does yet; FORMAT.md has no `author` field, this repo
               being a single-author family cookbook — the row is here for
               whenever that changes, not fabricated for now). Date was here
               too but didn't earn its place in a compact column and got cut.
@@ -192,6 +192,7 @@
               descriptive value like "4–6" is left as written, see
               applyServings). */}}
             {{ $metaRows := slice }}
+            {{ with .Params.aka }}{{ $metaRows = $metaRows | append (dict "label" "Aka" "value" .) }}{{ end }}
             {{ with .Params.servings }}{{ $metaRows = $metaRows | append (dict "label" "Serves" "value" . "id" "recipe-meta-servings" "base" .) }}{{ end }}
             {{ with .Params.prep_time }}{{ $metaRows = $metaRows | append (dict "label" "Prep" "value" .) }}{{ end }}
             {{ with .Params.cook_time }}{{ $metaRows = $metaRows | append (dict "label" "Cook" "value" .) }}{{ end }}

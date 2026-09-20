@@ -45,6 +45,7 @@ Supersedes the informal table in `FORMAT.md` §Frontmatter.
 | `tags` | MUST | string[] | Plain strings, no `#` prefix. |
 | `source` | SHOULD | string | `original`, `family`, a URL, or a book title. |
 | `author` | MAY | string | Only when different from the collection author. |
+| `aka` | MAY | string | Alternative names, comma-separated. |
 | `date` | SHOULD | string | ISO 8601. |
 | `servings` | SHOULD | string or number | Feeds `recipeYield` in the build-time schema.org output (§7.8). |
 | `prep_time` | MAY | string | |
