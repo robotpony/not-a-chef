@@ -315,21 +315,41 @@ li.ing {
  * <tr> gets the same "ing" class a <ul>'s <li> does, so it picks up the
  * checkbox appearance and checked-state rules above for free (those are
  * plain .ing/.ing selectors, not li.ing-scoped). What's added here is only
- * what a table row needs that a flex <li> doesn't: a narrow, centered
- * column to hold the checkbox instead of a leading inline one, and an
- * explicit strike-through on each <td> — text-decoration sets on the <tr>
- * itself do propagate visually onto its cells in current browsers, but this
- * keeps the strike-through from depending on that rather than a fallback in
- * .ing:has(). */
+ * what a table row needs that a flex <li> doesn't: a narrow column to hold
+ * the checkbox instead of a leading inline one, top-aligned to the first
+ * line of the row (vertical-align: middle would center it against the
+ * row's tallest cell — e.g. a two-line Notes cell — instead of sitting next
+ * to the text it belongs to), and an explicit strike-through on each <td> —
+ * text-decoration sets on the <tr> itself do propagate visually onto its
+ * cells in current browsers, but this keeps the strike-through from
+ * depending on that rather than a fallback in .ing:has(). */
 .ing-check-cell {
   width: 1%;
   padding-right: 6px !important;
-  vertical-align: middle;
+  vertical-align: top;
 }
 .ing-table tr.ing:has(input:checked) td {
   color: var(--ink-faint);
   text-decoration: line-through;
   text-decoration-color: var(--border-strong);
+}
+/* Any recipe table (ingredient percentage tables, a Timing/ratio reference
+ * table, etc.) — a narrow auto-sized column (a bare "%" or "Weight" header
+ * over short values) reads as cramped and uneven next to a wide prose
+ * column, so every column gets the same floor. The checkbox column is the
+ * one exception: it only ever holds a 19px control and earns its own
+ * width:1% rule above instead of stretching to match. Wrapped in its own
+ * scrolling box (rather than left to overflow the article column) since
+ * four 10em floors add up past a phone-width viewport. */
+.article-content table {
+  display: block;
+  overflow-x: auto;
+}
+.article-content table :is(th, td) {
+  min-width: 10em;
+}
+.article-content table .ing-check-cell {
+  min-width: 0;
 }
 /* .qty also appears outside .ing rows — assets/js/ingredients.js wraps
  * unit-bearing quantities and temperatures it finds in Directions/Method
