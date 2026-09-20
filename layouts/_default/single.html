@@ -178,9 +178,9 @@
           <div class="recipe-sidebar print:hidden lg:sticky {{ $topClass }}" id="recipe-sidebar">
             {{/* Meta rail: frontmatter facts that never render anywhere else
               on a recipe page (article.showDate/showAuthor/showReadingTime
-              are all off site-wide, config/_default/params.toml) — aka,
-              servings, prep/cook/total time, and author when a recipe sets
-              one (no recipe does yet; FORMAT.md has no `author` field, this repo
+              are all off site-wide, config/_default/params.toml) — source,
+              aka, servings, prep/cook/total time, and author when a recipe
+              sets one (no recipe does yet; FORMAT.md has no `author` field, this repo
               being a single-author family cookbook — the row is here for
               whenever that changes, not fabricated for now). Date was here
               too but didn't earn its place in a compact column and got cut.
@@ -192,6 +192,26 @@
               descriptive value like "4–6" is left as written, see
               applyServings). */}}
             {{ $metaRows := slice }}
+            {{/* Source: `original`/`family`/a book title render as plain
+              text, same as every other meta row. A URL (bare domain like
+              "www.recipetineats.com" or a full https:// link) instead
+              renders as a link, with just its domain as the visible text —
+              the full URL is too long for this column and isn't the
+              interesting part; recipetineats.com reads fine on its own.
+              Multi-URL prose values ("synthesized from https://..., https://
+              ...") deliberately don't match and fall through to plain text —
+              there's no single link to point at. */}}
+            {{ with .Params.source }}
+              {{ $src := . }}
+              {{ if findRE `^(?:https?://)?[\w-]+(?:\.[\w-]+)+(?:/\S*)?$` $src }}
+                {{ $full := $src }}
+                {{ if not (strings.HasPrefix $src "http") }}{{ $full = printf "https://%s" $src }}{{ end }}
+                {{ $host := strings.TrimPrefix "www." (urls.Parse $full).Host }}
+                {{ $metaRows = $metaRows | append (dict "label" "Source" "value" $host "link" $full) }}
+              {{ else }}
+                {{ $metaRows = $metaRows | append (dict "label" "Source" "value" $src) }}
+              {{ end }}
+            {{ end }}
             {{ with .Params.aka }}{{ $metaRows = $metaRows | append (dict "label" "Aka" "value" .) }}{{ end }}
             {{ with .Params.servings }}{{ $metaRows = $metaRows | append (dict "label" "Serves" "value" . "id" "recipe-meta-servings" "base" .) }}{{ end }}
             {{ with .Params.prep_time }}{{ $metaRows = $metaRows | append (dict "label" "Prep" "value" .) }}{{ end }}
@@ -201,7 +221,7 @@
             {{ if $metaRows }}
               <div class="recipe-meta">
                 {{ range $metaRows }}
-                  <div class="recipe-meta-row"><span class="recipe-meta-label">{{ .label }}</span><span class="recipe-meta-value"{{ with .id }} id="{{ . }}"{{ end }}{{ with .base }} data-servings-base="{{ . }}"{{ end }}>{{ .value }}</span></div>
+                  <div class="recipe-meta-row"><span class="recipe-meta-label">{{ .label }}</span><span class="recipe-meta-value"{{ with .id }} id="{{ . }}"{{ end }}{{ with .base }} data-servings-base="{{ . }}"{{ end }}>{{ if .link }}<a href="{{ .link }}" class="extlink" rel="noopener noreferrer" target="_blank">{{ .value }}</a>{{ else }}{{ .value }}{{ end }}</span></div>
                 {{ end }}
               </div>
             {{ end }}
