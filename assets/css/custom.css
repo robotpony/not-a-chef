@@ -338,12 +338,25 @@ li.ing {
  * over short values) reads as cramped and uneven next to a wide prose
  * column, so every column gets the same floor. The checkbox column is the
  * one exception: it only ever holds a 19px control and earns its own
- * width:1% rule above instead of stretching to match. Wrapped in its own
- * scrolling box (rather than left to overflow the article column) since
- * four 5em floors can still add up past a phone-width viewport. */
+ * width:1% rule above instead of stretching to match.
+ *
+ * display: inline-table (not block) matters here: a <table> is display:
+ * table by default — outer display block, inner display table — which
+ * already shrink-wraps to its columns' content width, same as
+ * inline-block. Switching only the OUTER half to inline (inline-table)
+ * keeps that shrink-to-fit sizing and the normal table column-layout
+ * algorithm; overflow-x/max-width then only kick in on the rare table
+ * whose 5em-floored columns actually exceed the article width. An earlier
+ * version of this rule used `display: block`, which drops the table
+ * formatting context entirely — the browser no longer sizes columns from
+ * their content, so a table stretches to fill the full article width and
+ * a narrow column (the checkbox one) ends up with a huge gap of unused
+ * space instead of collapsing to its content. */
 .article-content table {
-  display: block;
+  display: inline-table;
+  max-width: 100%;
   overflow-x: auto;
+  vertical-align: top;
 }
 .article-content table :is(th, td) {
   min-width: 5em;
