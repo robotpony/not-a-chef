@@ -340,13 +340,13 @@ li.ing {
  * one exception: it only ever holds a 19px control and earns its own
  * width:1% rule above instead of stretching to match. Wrapped in its own
  * scrolling box (rather than left to overflow the article column) since
- * four 10em floors add up past a phone-width viewport. */
+ * four 5em floors can still add up past a phone-width viewport. */
 .article-content table {
   display: block;
   overflow-x: auto;
 }
 .article-content table :is(th, td) {
-  min-width: 10em;
+  min-width: 5em;
 }
 .article-content table .ing-check-cell {
   min-width: 0;
