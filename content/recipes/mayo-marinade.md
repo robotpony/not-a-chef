@@ -17,6 +17,8 @@ Mayonaiuse coats the meat evenly and holds the seasonings in contact throughout 
 
 ## Ingredients
 
+For ~2 butterflied chicken breasts.
+
 - 40g mayonnaise (Helmans or Kewpie)
 - zest of 1 lemon (or a squeeze of lemon juice)
 - 2 cloves garlic (10g minced)
