@@ -10,6 +10,7 @@
 - [Enchilada pie](https://www.goodhousekeeping.com/food-recipes/a43480219/enchilada-pie-recipe/)
 - [Chicken curry](https://www.goodhousekeeping.com/food-recipes/a7386/chicken-curry/) (simplified recipe, but likely good weeknight meal)
 - [Chicken pho](https://www.goodhousekeeping.com/food-recipes/a29760153/instant-pot-chicken-pho-recipe/)
+- TODO: Chutney recipes
 
 Do a deep dive on [mennonitegirlscancook](http://www.mennonitegirlscancook.ca/) and [the woks of life](https://thewoksoflife.com/)
 
