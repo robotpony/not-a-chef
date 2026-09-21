@@ -1,9 +1,9 @@
 ---
-title: Mayo Marinade (Chicken)
+title: Mayo Marinade
 tags: [bases, mediterranean, quick]
 source: original
 date: 2023-11-01
-servings: for ~700g chicken
+servings: 2
 prep_time: 5 min
 total_time: 5 min (plus marinating)
 draft: false
@@ -17,11 +17,11 @@ Mayonaiuse coats the meat evenly and holds the seasonings in contact throughout 
 
 ## Ingredients
 
-- 50g mayonnaise (Helmans or Kewpie)
+- 40g mayonnaise (Helmans or Kewpie)
+- zest of 1 lemon (or a squeeze of lemon juice)
 - 2 cloves garlic (10g minced)
 - ~1g black pepper (10 cranks)
 - 1 teaspoons dried oregano
-- zest of 1 lemon (or a squeeze of lemon juice)
 - 3g kosher salt
 - 1g MSG
 
@@ -37,10 +37,13 @@ Grill, broil, or pan-fry as usual. The mayo coating browns and crisps on contact
 
 Serve chicken or pork with, rice, a salad, or on a bun.
 
+## Variations
+
+- Teryaki (sake, mirin, soy, ginger, sesame seeds, and sriracha for some spice)
+
 ## Notes
 
 - I was skeptical about this technique until Keji explained that mayo is a fat that is emulsified with acid, salt, and spice
 - Tested as a pure marinade (not salted separately first). Worked well; slightly salty, very tasty.
 - Reduce salt  if using a thinner cut that will marinate longer.
 - Kewpie is an thick, savoury, and enriched Japanese mayonnaise (packaged in a classic squeeze bottle)
-- Untested, but Kenji mentioned it works really well with teriyaki, so this should work well for hearty fish like salmon
