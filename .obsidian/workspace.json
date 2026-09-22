@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "FORMAT.md",
+                "file": "content/about.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "FORMAT"
+              "title": "about"
             }
           }
         ]
@@ -198,6 +198,13 @@
   },
   "active": "d0b22b16cacd0e28",
   "lastOpenFiles": [
+    "public/css/main.bundle.min.1d126e127e760805865dff3898567c837782552d449a31717846983187e991758f33eefb489dc040f41bf7dbab638069e30dc7e004b735ef59fb395d95384636.css",
+    "public/css/main.bundle.min.81ae13db717c59ae4267997ec172218e44074af319fb57a9ab1f9fb0b9a547be7b68a88bba7b04739944b8c057b3dded03b00f344376cd88bc3e494c23e21869.css",
+    "public/css/main.bundle.min.ffb0831ab18184eda8d4a38ece7a8a665accf1b0c7b3db0919dbc72f1ca9095d60330cc82544dcced7e2d3e1f19aeec871500884f7aae87b1933931693f62295.css",
+    "public/css/main.bundle.min.5a3dd2c9a058995fcfac0c08c793ada387f734d7af1d2846acc112e6ac6d848c849277041566d64a12ee78a41b0549dadd8e48f4335aa0cfe4cad24a69bdfac0.css",
+    "Warped Command Help.md",
+    "content/about.md",
+    "FORMAT.md",
     "public/js/ingredients.min.bad483eee4cd21d61b8cf7e29a95d94c477e44b7e75179274a61d01157f875a4.js",
     "content/recipes/basic-tare-for-ramen-and-pork-braising-liquid.md",
     "public/recipes/basic-ramen-tare/index.html",
@@ -208,14 +215,9 @@
     "public/css/main.bundle.min.016539a449a91137f64561903733fc9ae3347b544c102543b230874db23c42807a9f4a8d9b5bf6c05e9c9d928e913a9456892dc84e9194623bdb0317ed3bf827.css",
     "public/css/main.bundle.min.9188a8c00c6c7f495fc3760991ea2e438b64548b2146b7ee58a56e5dab78acea1e282b8dd1848b8ca50899ec63ca5156e01b3c88472de4ec750a0d102feb6f5d.css",
     "public/css/main.bundle.min.36d256991b4f40c6b19a2aee1944992e88d01f1036ce7345007790381d9d28843d4b2ddb03b9f97e8decd5e22877cc2473db6f5d6075a169add147a46f7fc794.css",
-    "public/js/ingredients.min.98d00a60fc2df18bc2c05ee513c86339c9b7a1477f47c572de490316192ed1ea.js",
-    "public/js/ingredients.min.c5f581ac404370f64edfa55e392ee89b754383405eee7ff1ad6fb202af961d3a.js",
-    "FORMAT.md",
     "public/images/recipes/candied-cranberries-sugared-cranberries.jpg",
     "static/images/recipes/candied-cranberries-sugared-cranberries.jpg",
     "CLAUDE.md",
-    "public/tags/italian-american/page/1/index.html",
-    "public/tags/italian-american/page/1",
     "ARCHITECTURE.md",
     "content/recipes/roast-poultry.md",
     "public/images/recipes/autumn-glow-salad-with-lemon-dressing.png",
@@ -228,7 +230,6 @@
     "content/recipes/dal-tadka.md",
     "content/the-food-log/2026-September.md",
     "content/scratch-test/_index.md",
-    "content/about.md",
     "content/recipes/pressure-cooker-japanese-curry.md",
     "content/recipes/instant-pot-chicken-thigh-curry.md",
     "content/recipes/butternut-squash-curry.md",
@@ -236,7 +237,6 @@
     "content/Untitled.md",
     "content/recipes/avocado-salad-dressing.md",
     "Untitled.md",
-    "Warped Command Help.md",
     "DESIGN.md",
     "public/favicon-32x32.png",
     "public/android-chrome-512x512.png",

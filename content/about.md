@@ -1,20 +1,14 @@
 ---
-title: "About"
-description: "Your dad is not a chef — an Alderson family cookbook."
+title: About
+description: I love to cook, a family cookbook
 ---
 
-Your dad is not a chef. No culinary school, no line cook years, no formal
-training beyond a lot of weeknight dinners and a habit of writing down what
-actually worked. What's here is the record of that: an Alderson family
-cookbook, built from the recipes that stuck.
+I am not a chef. I spent time in restaurants in the late 1980s and early 1990s, learning how fast-casual and family-owned restaurants worked. I prepped. I cleaned. I worked the line. I managed for a bit. I toyed with the idea of a career in the industry, but was pulled away to an internship in tech.
 
-A recipe earns a place in here by surviving contact with a real kitchen on a
-real schedule — tested more than once, adjusted where the first attempt
-didn't work, and written down with the ratios and substitutions that made it
-repeatable. Where there's a lesson worth keeping — a technique, a ratio, a
-mistake worth not making twice — it's in the Method, not left for someone to
-rediscover the hard way.
+We had kids, and we ate simply when they were young. Our cooking evolved, and we started cooking from scratch. We watched a lot of food television: *Good Eats*, *Iron Chef*, Bourdain, and the various travelling food shows. We tried more recipes, bought cookbooks, and slowly we learned.
 
-This isn't a restaurant cookbook, and it isn't trying to be. It's the
-practical, occasionally over-engineered record of how one family actually
-cooks.
+And then one day it clicked. Those college years in restaurants, the explanations by TV chefs, and the hours of watching chefs work all made sense. I learned how to properly dice onions, to set my mise en place, to prepare sauces, bases, and full meals. It was a lot of fun discovering technique, authentic flavours, and even learning how flavours have evolved by culture and time. It became one of my reasons for existing, both learning to cook and cooking for family and friends.
+
+And now I *love* to cook. It's an obsession. It's cathartic. It's fulfilling. I'm glad I stuck with it.
+
+The recipes here are the foods we eat. They span cooking styles from the 1950s through today, with a focus on food memories, discoveries, and traditions new and old.

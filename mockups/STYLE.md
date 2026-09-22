@@ -1,23 +1,43 @@
-# Not a Chef — style standards
+# Bruce loves to cook: style standards
 
-A style guide for "Your dad is not a chef".
+A style guide for "Bruce loves to cook", an Alderson family cookbook.
 
 ## Messaging
 
-Name and tagline, standardized 2026-09-18:
+Name and tagline, standardized 2026-09-22 (replaces "Your dad is not a chef",
+2026-09-18):
 
-- **Name**: "Your dad is not a chef"
+- **Name**: "Bruce loves to cook"
 - **Tagline**: "an Alderson family cookbook"
-- **Combined line** (meta description, About page, anywhere the two read as one sentence): "Your dad is not a chef, an Alderson family cookbook."
+- **Combined line** (site description, footer blurb, anywhere the two read as one sentence): "Bruce loves to cook, an Alderson family cookbook."
+- **Nav logo and footer brand name**: the full name, "Bruce loves to cook." (sentence case, trailing period). There is no short form; layouts adapt to the full name.
+- **"Alderson"**: keep to a minimum. The tagline is its only regular use.
 
-Canonical copy — the full story behind the name — lives in `content/about.md`;
-that page is the source of truth. Everywhere else (site title, homepage
-hero, footer blurb, README) should read as a consistent restatement of the
-name/tagline above, not invent new phrasing.
+Canonical copy lives in `content/about.md`; that page is the source of truth.
+Everywhere else (site title, homepage hero, footer blurb, README) restates the
+name and tagline above rather than inventing new phrasing.
 
-The nav logo and footer brand name stay the short lowercase form
-("not a chef.") for space — that's a deliberate exception, not a drift from
-the standard.
+### Voice
+
+First person, the same voice as the essays. Modest about credentials ("I am
+not a chef") and open about loving to cook. Reader-facing copy says what a
+thing is for, never how the site is built: no references to indexes, tags,
+templates, or PLAN.md in anything a visitor reads.
+
+### Core message
+
+Not a chef, but decades of restaurant work, food TV, and cookbooks turned into
+a real love of cooking. These are the foods we eat, from 1950s kitchens to
+today, with the ratios, timings, and fixes that make them work.
+
+Three threads carry it, in this order:
+
+1. **Love**: the name and the About page.
+2. **Method**: the homepage lede, reference pages, and planning essays.
+3. **Heritage**: the food memories band on the homepage and the essays.
+
+The homepage hero lede is the method promise: "{count} recipes we actually
+cook, with the ratios, timings, and fixes that make them work."
 
 ## Color tokens
 
@@ -84,7 +104,7 @@ it in a new mockup without settling this first.
 All five hues (including the unused green) share one saturation/lightness
 formula (57%/62%) at different rotations — red 14°, orange 34°, yellow 54°,
 green 151°, blue 210° — taken directly from warpedvisions.org's shipped CSS
-(`warped.css`'s flourish-bar hues). Not a Chef reorders the hierarchy to lead
+(`warped.css`'s flourish-bar hues). This site reorders the hierarchy to lead
 with orange→red instead of the blog's blue-led order; it does not invent new
 hues. **Never introduce a hue outside this five-color family** (no teal, sage,
 mustard, plum, ember, etc. — those were an earlier, discarded palette).
@@ -283,7 +303,7 @@ everything discarded or superseded getting to this list.
 - **Search box** — real `<input>`, lives inline in the homepage hero, not a header icon button
 - **Theme toggle** (`.theme-toggle`) — labeled pill, cycles system → light → dark; lives in the **site footer**, matching `footer.showAppearanceSwitcher` in Hugo config
 - **Site footer** (`.site-footer`) — brand blurb, link columns (Browse / Index), theme toggle, meta line
-- **Stat rail** (`.stat-rail`) — the one component for "numbers at a glance," used both in a recipe header (serves/prep/cook/total) and the homepage hero (recipes/cuisines/tags/guides)
+- **Stat rail** (`.stat-rail`) — the one component for "numbers at a glance," used in the recipe header (serves/prep/cook/total); removed from the homepage hero 2026-09-22, where the "tonight" tag pills now sit beside search
 - **Format/component gallery card** (`.comp-card`) — also reused for real content: the four essay-format teasers on the homepage
 
 ### Decisions (2026-09-17, resolving `COMPONENTS.md`'s open list)
