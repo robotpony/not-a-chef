@@ -26,7 +26,7 @@
     <div class="foot-row">
       <div class="foot-brand">
         <div class="name">Bruce loves to cook.</div>
-        <p>Bruce loves to cook, an Alderson family cookbook. Recipes, essays, and reference notes from a home kitchen.</p>
+        <p>An Alderson family cookbook. Recipes, essays, and reference notes from a home kitchen.</p>
       </div>
       <div class="foot-links">
         <div>
@@ -56,7 +56,7 @@
       {{ with replace .Site.Params.copyright "{ year }" now.Year }}
         <span>{{ . | markdownify }}</span>
       {{ else }}
-        <span>&copy; {{ now.Format "2006" }} {{ .Site.Params.Author.name | default "the Aldersons" | markdownify }}</span>
+        <span>Copyright &copy; Bruce Alderson</span>
       {{ end }}
       {{ if .Site.Params.footer.showThemeAttribution | default false }}
         <span>{{ i18n "footer.powered_by" (dict "Hugo" "Hugo" "Theme" "Blowfish") }}</span>

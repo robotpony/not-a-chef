@@ -9,9 +9,11 @@ Name and tagline, standardized 2026-09-22 (replaces "Your dad is not a chef",
 
 - **Name**: "Bruce loves to cook"
 - **Tagline**: "an Alderson family cookbook"
-- **Combined line** (site description, footer blurb, anywhere the two read as one sentence): "Bruce loves to cook, an Alderson family cookbook."
+- **Combined line** (site description, About page description, anywhere the two read as one sentence): "Bruce loves to cook, an Alderson family cookbook."
+- **Footer blurb**: starts with the tagline, not the combined line, since the brand name sits directly above it: "An Alderson family cookbook. Recipes, essays, and reference notes from a home kitchen."
+- **Copyright line**: "Copyright © Bruce Alderson" (no year), matching `LICENSE`.
 - **Nav logo and footer brand name**: the full name, "Bruce loves to cook." (sentence case, trailing period). There is no short form; layouts adapt to the full name.
-- **"Alderson"**: keep to a minimum. The tagline is its only regular use.
+- **"Alderson"**: keep to a minimum. The tagline and the copyright line are its only regular uses.
 
 Canonical copy lives in `content/about.md`; that page is the source of truth.
 Everywhere else (site title, homepage hero, footer blurb, README) restates the
@@ -304,7 +306,7 @@ everything discarded or superseded getting to this list.
 - **Theme toggle** (`.theme-toggle`) — labeled pill, cycles system → light → dark; lives in the **site footer**, matching `footer.showAppearanceSwitcher` in Hugo config
 - **Site footer** (`.site-footer`) — brand blurb, link columns (Browse / Index), theme toggle, meta line
 - **Stat rail** (`.stat-rail`) — the one component for "numbers at a glance," used in the recipe header (serves/prep/cook/total); removed from the homepage hero 2026-09-22, where the "tonight" tag pills now sit beside search
-- **Format/component gallery card** (`.comp-card`) — also reused for real content: the four essay-format teasers on the homepage
+- **Format/component gallery card** (`.comp-card`) — also reused for real content: the three essay-format teasers and the food memories band on the homepage
 
 ### Decisions (2026-09-17, resolving `COMPONENTS.md`'s open list)
 
@@ -313,7 +315,7 @@ everything discarded or superseded getting to this list.
 - **Archive stats**: the plain `.stat-rail` wins over the rotated-card-stack ledger. It already does the job in two different contexts (recipe header, homepage hero) without a bespoke visual device — the ledger would have been a one-off.
 - **Search & theme toggle placement**: homepage's answer wins — real search input in the hero, labeled theme-toggle pill in the footer. Both the header icon-button pair and the toolbar-only placement are retired.
 - **Page-level "this is thin" note**: the inline caveat wins over a full-width banner — smaller, scoped to the section it's actually about, doesn't interrupt every page load. Renamed `.section-caveat` since it's used beyond nav (e.g. above a single-entry Food Log section).
-- **Essay/reference teasers**: the card grid (`.comp-card`, already reused for the four essay formats) and `.browse-list` (reference guides) both win over their label/description-row alternates — one less layout to maintain, and both were already real, working components before the alternates existed.
+- **Essay/reference teasers**: the card grid (`.comp-card`, already reused for the essay formats and food memories) and `.browse-list` (reference guides) both win over their label/description-row alternates — one less layout to maintain, and both were already real, working components before the alternates existed.
 - **Wordmark**: plain text, no per-letter color accent.
 - **Footer shape**: homepage's `.site-footer` (brand blurb + link columns + theme toggle) wins over the earlier simpler footer — it's the only one built Hugo-config-aware (`footer.showAppearanceSwitcher`).
 

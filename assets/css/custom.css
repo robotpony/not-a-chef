@@ -1,4 +1,4 @@
-/* Not a Chef — sitewide tokens, applied on top of Blowfish/Tailwind.
+/* Bruce loves to cook: sitewide tokens, applied on top of Blowfish/Tailwind.
  *
  * Blowfish's compiled Tailwind CSS has no font-customization hook (confirmed
  * by reading themes/blowfish/tailwind.config.js and the compiled bundle —
@@ -141,7 +141,7 @@ main {
  * (recipe/essay/reference) had none, so its title/content sat flush
  * against that column's edge — 20px left of where the nav wordmark and
  * every other section's content actually starts. Confirmed by measuring
- * both in the browser: .site-nav-inner's padding put "not a chef." at
+ * both in the browser: .site-nav-inner's padding put the wordmark at
  * x=90, while #single_header's h1 sat at x=70. Giving the single template
  * its own matching 20px gutter, the same way every other section already
  * does, instead of leaving it to inherit <main>'s bare edge. */

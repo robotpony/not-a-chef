@@ -1,5 +1,5 @@
 ---
 title: Recipes
-description: A collection of personal and family recipes.
+description: The recipes we actually cook.
 outputs: [HTML, JSON]
 ---
