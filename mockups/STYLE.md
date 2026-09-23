@@ -319,6 +319,34 @@ everything discarded or superseded getting to this list.
 - **Wordmark**: plain text, no per-letter color accent.
 - **Footer shape**: homepage's `.site-footer` (brand blurb + link columns + theme toggle) wins over the earlier simpler footer — it's the only one built Hugo-config-aware (`footer.showAppearanceSwitcher`).
 
+## Favicon
+
+Settled 2026-09-23 (second pass; the pixel-grid pans and fried eggs in
+`icons.html` were the first). Source and variants: `favicon-heart-pan.html`,
+variant 04.
+
+A red heart in a top-down cast-iron skillet on a rounded `--accent-soft` tile.
+The handle points to the top-left at 45°. It has to stay diagonal-but-thin
+and paired with a round pan floor; a thick diagonal handle heading
+bottom-right reads as a magnifying glass (search icon) at 16px.
+
+| Part | Value | Note |
+|---|---|---|
+| Tile | `#F6EADA` (`--accent-soft`) | rounded, `rx` 7 on a 32 grid; square for `apple-touch-icon.png` (iOS masks its own corners) |
+| Pan rim, handle | `#23241E` (`--ink`) | rim 1.5 units, handle 3.5 units |
+| Pan floor | `#3A3B32` | `--ink` lifted ~8%, favicon only |
+| Heart | `#C6522F` | `hsl(14 62% 48%)`: the palette's red hue, darker than the shared 57%/62% formula so it reads as red, not salmon. Favicon only; not a UI token. |
+
+The tile makes one icon work on light and dark browser chrome, so there is
+no dark-mode variant.
+
+Files, all in `static/`: `favicon.svg` (source of truth), `favicon.ico`
+(16/32/48), `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`
+(180), `android-chrome-192x192.png`, `android-chrome-512x512.png`,
+`site.webmanifest`. Wired in by `layouts/partials/favicons.html`, which
+Blowfish's `head.html` picks up in place of its defaults. To change the icon,
+edit `favicon.svg` and re-render the PNGs and ICO from it.
+
 ## Spacing & radius
 
 Not a formal 4/8px scale yet — this is descriptive of what's accumulated

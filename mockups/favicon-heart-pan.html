@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Favicon mockups &mdash; heart in a pan</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  :root{
+    --bg:#F3F3EC; --surface:#FBFBF6; --surface-2:#EAEBDF;
+    --ink:#23241E; --ink-muted:#63645A; --ink-faint:#93948A;
+    --border:#DCDCCE; --border-strong:#C7C8B4;
+    --accent:#A67330; --accent-strong:#7C361D; --accent-soft:#F6EADA;
+    --highlight:#997F29; --highlight-soft:#F6F1D5;
+    --flag:#3D638F; --flag-soft:#E1EAF4;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+      --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+      --border:#383A2C; --border-strong:#4A4C3A;
+      --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+      --highlight:#DDCC88; --highlight-soft:#342D19;
+      --flag:#97B8D8; --flag-soft:#1D2835;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+    --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+    --border:#383A2C; --border-strong:#4A4C3A;
+    --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+    --highlight:#DDCC88; --highlight-soft:#342D19;
+    --flag:#97B8D8; --flag-soft:#1D2835;
+  }
+
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:'Lora',serif; line-height:1.5; }
+  h1,h2,h3{ font-family:'Libre Franklin',sans-serif; margin:0; }
+  .wrap{ max-width:1080px; margin:0 auto; padding:40px 16px 64px; }
+
+  .page-head{ padding-bottom:28px; border-bottom:1px solid var(--border); margin-bottom:32px; }
+  .eyebrow{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--accent-strong); display:block; margin-bottom:10px; }
+  .page-head h1{ font-size:1.7rem; font-weight:700; margin-bottom:10px; }
+  .page-head p{ color:var(--ink-muted); max-width:64ch; font-size:.98rem; margin:0 0 8px; }
+  code{ background:var(--surface-2); padding:1px 5px; border-radius:3px; font-family:'IBM Plex Mono',monospace; font-size:.85em; }
+
+  h2{ font-size:1.05rem; font-weight:700; margin:40px 0 14px; }
+
+  .icon-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:20px; }
+  .icon-card{ background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:18px; display:flex; flex-direction:column; gap:14px; }
+  .icon-card-head{ display:flex; align-items:baseline; gap:10px; }
+  .icon-num{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--ink-faint); }
+  .icon-card-head h3{ font-size:1rem; font-weight:600; }
+  .icon-card p{ margin:0; font-size:.88rem; color:var(--ink-muted); }
+
+  .icon-stage{ display:flex; align-items:flex-end; gap:18px; padding:16px; background:var(--bg); border:1px solid var(--border); border-radius:6px; flex-wrap:wrap; }
+  .icon-stage svg{ display:block; }
+  .size{ display:flex; flex-direction:column; align-items:center; gap:6px; }
+  .size-label{ font-family:'IBM Plex Mono',monospace; font-size:.62rem; color:var(--ink-faint); }
+  .chip{ padding:6px; border-radius:4px; display:flex; gap:8px; }
+  .chip.light{ background:#FFFFFF; border:1px solid #DCDCCE; }
+  .chip.dark{ background:#202124; border:1px solid #3C3D40; }
+
+  .icon-legend{ display:flex; flex-wrap:wrap; gap:8px 14px; padding-top:12px; border-top:1px solid var(--border); }
+  .leg-item{ display:flex; align-items:center; gap:6px; font-family:'Libre Franklin',sans-serif; font-size:.7rem; color:var(--ink-muted); }
+  .leg-swatch{ width:10px; height:10px; border-radius:2px; border:1px solid var(--border-strong); flex-shrink:0; }
+
+  /* Simulated browser tab strips, fixed chrome colours (not site tokens) */
+  .tabs{ display:flex; gap:2px; padding:8px 8px 0; border-radius:8px 8px 0 0; overflow-x:auto; }
+  .tabs.light{ background:#DEE1E6; }
+  .tabs.dark{ background:#202124; margin-top:12px; }
+  .tab{ display:flex; align-items:center; gap:8px; padding:8px 12px; border-radius:8px 8px 0 0; font:13px/1 system-ui, sans-serif; white-space:nowrap; min-width:0; }
+  .tabs.light .tab{ background:#FFFFFF; color:#202124; }
+  .tabs.dark .tab{ background:#35363A; color:#E8EAED; }
+  .tab svg{ width:16px; height:16px; flex-shrink:0; }
+  .tab-num{ font-family:'IBM Plex Mono',monospace; font-size:11px; opacity:.55; }
+
+  .foot-note{ display:flex; gap:12px; padding:14px 16px; background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--flag); border-radius:0 6px 6px 0; margin-top:32px; }
+  .foot-note-mark{ font-family:'IBM Plex Mono',monospace; font-size:.75rem; font-weight:700; color:var(--flag); flex-shrink:0; }
+  .foot-note p{ font-size:.9rem; color:var(--ink-muted); margin:0 0 6px; }
+  .foot-note p:last-child{ margin:0; }
+  .foot-note strong{ color:var(--ink); font-weight:600; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="page-head">
+      <span class="eyebrow">Mockup &middot; favicon pass 2 &middot; decided 2026-09-23: variant 04, see STYLE.md</span>
+      <h1>Heart in a frying pan: vector favicon variants</h1>
+      <p>Second favicon pass. The pixel-grid pans and fried eggs (<code>icons.html</code>) read as retro; this pass goes for a brand mark instead: a red heart, emoji-shaped, sitting in a flat top-down skillet. Drawn on a 32&times;32 grid so the 16px tab icon lands on half-pixel boundaries.</p>
+      <p>Every colour is a token from <code>STYLE.md</code> except the heart red, which is the palette's red hue (14&deg;) pushed darker and more saturated than the shared 57%/62% formula so it reads as "red heart" and not salmon. See the note at the bottom.</p>
+    </header>
+
+    <h2>In the tab strip</h2>
+    <div id="tabs-light" class="tabs light"></div>
+    <div id="tabs-dark" class="tabs dark"></div>
+
+    <h2>Variants</h2>
+    <div id="grid" class="icon-grid"></div>
+
+    <div class="foot-note">
+      <span class="foot-note-mark">NOTE</span>
+      <div>
+        <p><strong>The heart red is the one new value.</strong> The palette's red at the shared formula, <code>hsl(14 57% 62%)</code> = <code>#D58167</code>, looks like salmon next to a dark pan. The mockups use <code>#C6522F</code> (<code>hsl(14 62% 48%)</code>): same hue, so it doesn't break the "no new hues" rule, but it is a new lightness. A true emoji red (hue ~355&deg;) would be a new hue and is left out on purpose. Variant 06 shows <code>--accent-strong</code> as the heart for comparison.</p>
+        <p><strong>Dark tabs.</strong> A cast-iron (<code>--ink</code>) pan nearly vanishes on a dark tab strip. Variants 01 and 06 are drawn without a background tile, so they need the adaptive treatment in 05 (an SVG favicon can carry its own <code>prefers-color-scheme</code> rule) or a tile like 04.</p>
+        <p><strong>Shipping.</strong> Once one is picked: <code>static/favicon.svg</code> (the adaptive version), plus 16/32 PNGs and a 180px <code>apple-touch-icon.png</code> rendered from the tiled version, wired through <code>layouts/partials/favicons.html</code> so the Blowfish fallback in <code>head.html</code> stops firing.</p>
+      </div>
+    </div>
+  </div>
+
+<script>
+  // Heart: Material "favorite" path, 24-unit box spanning x 2..22, y 3..21.35
+  const HEART = "M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z";
+  const heart = (cx, cy, w, fill) => {
+    const s = w / 20;
+    return `<path d="${HEART}" fill="${fill}" transform="translate(${cx - 12*s} ${cy - 12.2*s}) scale(${s})"/>`;
+  };
+
+  const T = {
+    ink:'#23241E', inkMuted:'#63645A', surface:'#FBFBF6', surface2:'#EAEBDF', bg:'#F3F3EC',
+    accent:'#A67330', accentStrong:'#7C361D', accentSoft:'#F6EADA',
+    red:'#C6522F', warpedRed:'#D58167', darkInk:'#ECEEE2', darkBorder:'#4A4C3A'
+  };
+
+  // Top-down skillet: pan centred at (18,18), handle out to the top-left at 45deg
+  // with a hang hole. Thin rim and handle.
+  const skillet = ({ rim, floor, handle, heartFill, tile, rimStroke, hole }) => `
+    ${tile ? `<rect width="32" height="32" rx="7" fill="${tile}"/>` : ''}
+    <line x1="11" y1="11" x2="4" y2="4" stroke="${handle}" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="5.2" cy="5.2" r=".85" fill="${hole || floor}"/>
+    <circle cx="18" cy="18" r="11.5" fill="${rim}" ${rimStroke ? `stroke="${rimStroke}" stroke-width="1"` : ''}/>
+    <circle cx="18" cy="18" r="9.75" fill="${floor}"/>
+    ${heart(18, 18.4, 12, heartFill)}`;
+
+  // Tiled variant needs the pan pulled in from the edges
+  const skilletTiled = ({ rim, floor, handle, heartFill, tile }) => `
+    <rect width="32" height="32" rx="7" fill="${tile}"/>
+    <line x1="12.5" y1="12.5" x2="7" y2="7" stroke="${handle}" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="18" cy="18" r="9.5" fill="${rim}"/>
+    <circle cx="18" cy="18" r="8" fill="${floor}"/>
+    ${heart(18, 18.4, 10, heartFill)}`;
+
+  // Side-on pan with the heart mid-flip above it
+  const flip = ({ pan, lip, heartFill }) => `
+    <line x1="24" y1="23.5" x2="30.5" y2="21.5" stroke="${pan}" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M2 21.5 h24 a12 5.5 0 0 1 -24 0 z" fill="${pan}"/>
+    <ellipse cx="14" cy="21.5" rx="12" ry="2.6" fill="${lip}"/>
+    ${heart(14, 10.2, 15, heartFill)}`;
+
+  const variants = [
+    { name:'Cast iron', note:'Ink pan, dark floor lifted a step with --ink-muted, red heart. Strongest silhouette on light tabs; weakest on dark.',
+      draw: m => skillet({ rim:T.ink, floor:'#3A3B32', handle:T.ink, heartFill:T.red }),
+      legend:[['--ink','Pan'],['#3A3B32','Floor (ink +8%)'],['#C6522F','Heart']] },
+    { name:'Copper', note:'--accent pan with a cream --surface floor. Warmest, most "brand"; the heart gets the most contrast here.',
+      draw: m => skillet({ rim:T.accent, floor:T.surface, handle:T.accentStrong, heartFill:T.red, hole:T.accentSoft }),
+      legend:[['--accent','Pan'],['--surface','Floor'],['--accent-strong','Handle'],['#C6522F','Heart']] },
+    { name:'Enamel', note:'Enamelled pan in the palette\'s own red (#D58167), cream floor, --accent-strong heart. Softer, more Le Creuset.',
+      draw: m => skillet({ rim:T.warpedRed, floor:T.surface, handle:T.accentStrong, heartFill:T.accentStrong, hole:T.accentSoft }),
+      legend:[['#D58167','Pan (red 14°)'],['--surface','Floor'],['--accent-strong','Heart, handle']] },
+    { name:'Cast iron on a tile', note:'01 on an --accent-soft rounded tile. Same everywhere, light or dark. The tile costs pan size at 16px.',
+      draw: m => skilletTiled({ rim:T.ink, floor:'#3A3B32', handle:T.ink, heartFill:T.red, tile:T.accentSoft }),
+      legend:[['--accent-soft','Tile'],['--ink','Pan'],['#C6522F','Heart']] },
+    { name:'Cast iron, adaptive', note:'01 in light mode; in dark mode the pan lifts to the dark-theme --ink-faint with a --border-strong floor. What favicon.svg would ship as.',
+      draw: m => m === 'dark'
+        ? skillet({ rim:'#75766A', floor:T.darkBorder, handle:'#75766A', heartFill:'#D9603A' })
+        : skillet({ rim:T.ink, floor:'#3A3B32', handle:T.ink, heartFill:T.red }),
+      legend:[['--ink','Pan (light)'],['#75766A','Pan (dark, --ink-faint)'],['#D9603A','Heart (dark, +lightness)']] },
+    { name:'Mid-flip', note:'Side-on pan, heart tossed above it. Bigger heart at 16px, more personality; the pan reads as a thin bar at tab size.',
+      draw: m => flip({ pan: m === 'dark' ? T.inkMuted : T.ink, lip:'#3A3B32', heartFill:T.red }),
+      legend:[['--ink','Pan'],['#C6522F','Heart']] },
+  ];
+
+  const svg = (inner, size) =>
+    `<svg viewBox="0 0 32 32" width="${size}" height="${size}" xmlns="http://www.w3.org/2000/svg">${inner}</svg>`;
+
+  const swatch = v => v.startsWith('--') ? `var(${v})` : v;
+
+  document.getElementById('grid').innerHTML = variants.map((v, i) => `
+    <article class="icon-card">
+      <div class="icon-card-head"><span class="icon-num">${String(i+1).padStart(2,'0')}</span><h3>${v.name}</h3></div>
+      <div class="icon-stage">
+        <div class="size">${svg(v.draw('light'), 128)}<span class="size-label">128</span></div>
+        <div class="size"><div class="chip light">${svg(v.draw('light'), 32)}${svg(v.draw('light'), 16)}</div><span class="size-label">32 / 16 light</span></div>
+        <div class="size"><div class="chip dark">${svg(v.draw('dark'), 32)}${svg(v.draw('dark'), 16)}</div><span class="size-label">32 / 16 dark</span></div>
+      </div>
+      <p>${v.note}</p>
+      <div class="icon-legend">${v.legend.map(([c, l]) => `<span class="leg-item"><span class="leg-swatch" style="background:${swatch(c)}"></span>${l}</span>`).join('')}</div>
+    </article>`).join('');
+
+  const tabs = mode => variants.map((v, i) =>
+    `<div class="tab">${svg(v.draw(mode), 16)}<span class="tab-num">${String(i+1).padStart(2,'0')}</span>Bruce loves to cook.</div>`).join('');
+  document.getElementById('tabs-light').innerHTML = tabs('light');
+  document.getElementById('tabs-dark').innerHTML = tabs('dark');
+</script>
+</body>
+</html>
