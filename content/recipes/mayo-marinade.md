@@ -6,6 +6,7 @@ date: 2026-09-21
 servings: 2
 prep_time: 5 min
 total_time: 5 min (plus marinating)
+cuisine: American
 draft: false
 ---
 

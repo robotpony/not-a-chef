@@ -1,6 +1,6 @@
 # Bruce loves to cook: style standards
 
-A style guide for "Bruce loves to cook", an Alderson family cookbook.
+A style guide for "Bruce loves to cook", our family cookbook.
 
 ## Messaging
 
@@ -8,12 +8,12 @@ Name and tagline, standardized 2026-09-22 (replaces "Your dad is not a chef",
 2026-09-18):
 
 - **Name**: "Bruce loves to cook"
-- **Tagline**: "an Alderson family cookbook"
-- **Combined line** (site description, About page description, anywhere the two read as one sentence): "Bruce loves to cook, an Alderson family cookbook."
-- **Footer blurb**: starts with the tagline, not the combined line, since the brand name sits directly above it: "An Alderson family cookbook. Recipes, essays, and reference notes from a home kitchen."
+- **Tagline**: "our family cookbook" (replaces "an Alderson family cookbook", 2026-09-22)
+- **Combined line** (site description, About page description, anywhere the two read as one sentence): "Bruce loves to cook, our family cookbook."
+- **Footer blurb**: starts with the tagline, not the combined line, since the brand name sits directly above it: "Our family cookbook. Recipes, essays, and reference notes from a home kitchen."
 - **Copyright line**: "Copyright © Bruce Alderson" (no year), matching `LICENSE`.
-- **Nav logo and footer brand name**: the full name, "Bruce loves to cook." (sentence case, trailing period). There is no short form; layouts adapt to the full name.
-- **"Alderson"**: keep to a minimum. The tagline and the copyright line are its only regular uses.
+- **Nav logo and footer brand name**: the full name, "Bruce loves to cook." (sentence case, trailing period). There is no short form; layouts adapt to the full name. Wherever the name is set as a wordmark (nav logo, mobile drawer, footer brand, homepage h1), "loves" is `--accent-strong` via `.brand-loves`; plain-text uses (titles, meta) stay uncoloured.
+- **"Alderson"**: keep to a minimum. The copyright line is its only regular use.
 
 Canonical copy lives in `content/about.md`; that page is the source of truth.
 Everywhere else (site title, homepage hero, footer blurb, README) restates the

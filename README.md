@@ -1,6 +1,6 @@
 # Bruce loves to cook
 
-An Alderson family cookbook.
+Our family cookbook.
 
 This is a cookbook project, collecting recipes from my personal sources: originally a combination of markdown files in an Obsidian vault and a drive of Google docs.
 
