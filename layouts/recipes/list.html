@@ -7,14 +7,15 @@
   .ltitle / .listing-count.
 */}}
 {{ .Scratch.Set "scope" "list" }}
-{{/* 24 = six rows of four; overrides the site-wide pagerSize (12) for this page only. */}}
-{{ $pager := .Paginate .Pages 24 }}
+{{/* 16 = four rows of four, so pagination stays near the fold; overrides the site-wide pagerSize (12) for this page only. */}}
+{{ $pager := .Paginate .Pages 16 }}
 <section class="listing">
   <header class="listing-head">
     <h1 class="ltitle">{{ .Title }}</h1>
     <span class="listing-count">{{ len .Pages }} recipes{{ if gt $pager.TotalPages 1 }} · page {{ $pager.PageNumber }} of {{ $pager.TotalPages }}{{ end }}</span>
   </header>
   {{ with .Description }}<p class="listing-dek">{{ . }}</p>{{ end }}
+  <div class="listing-search">{{ partial "search-box.html" (len .Pages) }}</div>
   <div class="rgrid">
     {{ range $pager.Pages }}
       {{ partial "recipe-card.html" . }}
