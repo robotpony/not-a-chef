@@ -1,6 +1,6 @@
 ---
 title: About
-description: Bruce loves to cook, an Alderson family cookbook.
+description: Bruce loves to cook, our family cookbook.
 ---
 
 I am not a chef. I spent time in restaurants in the late 1980s and early 1990s, learning how fast-casual and family-owned restaurants worked. I prepped. I cleaned. I worked the line. I managed for a bit. I toyed with the idea of a career in the industry, but was pulled away to an internship in tech.
