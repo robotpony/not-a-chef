@@ -1,4 +1,4 @@
-/* Not a Chef — sitewide tokens, applied on top of Blowfish/Tailwind.
+/* Bruce loves to cook: sitewide tokens, applied on top of Blowfish/Tailwind.
  *
  * Blowfish's compiled Tailwind CSS has no font-customization hook (confirmed
  * by reading themes/blowfish/tailwind.config.js and the compiled bundle —
@@ -141,7 +141,7 @@ main {
  * (recipe/essay/reference) had none, so its title/content sat flush
  * against that column's edge — 20px left of where the nav wordmark and
  * every other section's content actually starts. Confirmed by measuring
- * both in the browser: .site-nav-inner's padding put "not a chef." at
+ * both in the browser: .site-nav-inner's padding put the wordmark at
  * x=90, while #single_header's h1 sat at x=70. Giving the single template
  * its own matching 20px gutter, the same way every other section already
  * does, instead of leaving it to inherit <main>'s bare edge. */
@@ -345,8 +345,8 @@ li.ing {
  * already shrink-wraps to its columns' content width, same as
  * inline-block. Switching only the OUTER half to inline (inline-table)
  * keeps that shrink-to-fit sizing and the normal table column-layout
- * algorithm; overflow-x/max-width then only kick in on the rare table
- * whose 5em-floored columns actually exceed the article width. An earlier
+ * algorithm; the .table-scroll wrapper below only scrolls on the rare
+ * table whose 5em-floored columns actually exceed the article width. An earlier
  * version of this rule used `display: block`, which drops the table
  * formatting context entirely — the browser no longer sizes columns from
  * their content, so a table stretches to fill the full article width and
@@ -354,9 +354,13 @@ li.ing {
  * space instead of collapsing to its content. */
 .article-content table {
   display: inline-table;
+  vertical-align: top;
+}
+/* overflow-x does nothing on a table box, so the scrolling happens on the
+ * wrapper from layouts/_default/_markup/render-table.html instead. */
+.article-content .table-scroll {
   max-width: 100%;
   overflow-x: auto;
-  vertical-align: top;
 }
 .article-content table :is(th, td) {
   min-width: 5em;
@@ -628,13 +632,17 @@ h2:has(> .ing-config) {
 .hero h1 { font-size: clamp(2.1rem, 4.2vw, 2.9rem); font-weight: 700; letter-spacing: -.015em; line-height: 1.08; text-wrap: balance; margin-bottom: 16px; max-width: 16ch; }
 .hero p.lede { max-width: 56ch; color: var(--ink-muted); font-size: 1.08rem; line-height: 1.6; margin-bottom: 28px; }
 
-.search-row { display: flex; gap: 10px; margin: 0 0 26px; flex-wrap: wrap; max-width: 460px; }
+/* Search on the left, the tag pills to its right, centered on it; they
+ * wrap below the search box when there isn't room. */
+.search-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 32px; margin: 0; }
+.search-row .filter-row { flex: 1 1 320px; min-width: 0; }
 .search-box {
-  flex: 1; min-width: 180px; display: flex; align-items: center; gap: 8px;
+  flex: 0 1 460px; min-width: 180px; display: flex; align-items: center; gap: 8px;
   background: var(--surface); border: 1px solid var(--border-strong); border-radius: 4px;
   padding: 10px 12px; font-family: 'Libre Franklin', sans-serif; font-size: .85rem; color: var(--ink-faint);
   cursor: pointer; text-align: left;
 }
+@media (max-width: 820px) { .search-box { flex-basis: 100%; } }
 .search-box svg { width: 15px; height: 15px; flex-shrink: 0; }
 .search-box kbd { font-family: 'IBM Plex Mono', monospace; font-size: .7rem; border: 1px solid var(--border-strong); border-radius: 3px; padding: 2px 5px; color: var(--ink-faint); margin-left: auto; }
 
@@ -655,6 +663,9 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
 .filter-pill:hover { border-color: var(--accent); color: var(--ink); }
 
 .rgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap: 16px; margin-top: 4px; }
+/* Homepage bands: exactly one row of four on desktop, two by two on mobile. */
+.rgrid.home-row, .comp-grid.home-row { grid-template-columns: repeat(4, minmax(0,1fr)); }
+@media (max-width: 820px) { .rgrid.home-row, .comp-grid.home-row { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; } }
 .rcard { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 16px; display: flex; flex-direction: column; gap: 10px; min-width: 0; text-decoration: none; }
 .rcard:hover { border-color: var(--accent); }
 .rcard-top { display: flex; gap: 5px; flex-wrap: wrap; }
@@ -670,6 +681,10 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
 .tag { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; border: 1px solid var(--border-strong); color: var(--ink-muted); padding: 3px 7px; border-radius: 3px; display: inline-block; }
 .tag-more { color: var(--ink-faint); border-style: dashed; }
 .cuisine-chip { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; background: var(--highlight-soft); color: var(--highlight); padding: 3px 7px; border-radius: 3px; display: inline-block; }
+/* Homepage "Recently added" cards are narrow (four across), so their tags
+ * step down a size to keep the top row from wrapping into the title. */
+.home-row .rcard-top { gap: 4px; }
+.home-row .tag, .home-row .cuisine-chip { font-size: .62rem; padding: 2px 5px; }
 .draft-badge { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; font-weight: 600; border: 1px solid var(--flag); color: var(--flag); background: var(--flag-soft); padding: 3px 7px; border-radius: 3px; display: inline-block; }
 
 /* Label above the desktop sticky recipe/essay TOC (layouts/partials/toc.html
@@ -688,9 +703,6 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
 .comp-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px; display: flex; flex-direction: column; gap: 8px; }
 .comp-card-label { font-family: 'Libre Franklin', sans-serif; font-size: .92rem; font-weight: 700; }
 .comp-card-note { font-family: 'Lora', serif; font-size: .88rem; color: var(--ink-muted); line-height: 1.55; }
-
-.split { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; }
-@media (max-width: 820px) { .split { grid-template-columns: 1fr; } }
 
 .section-caveat { font-family: 'Libre Franklin', sans-serif; font-size: .78rem; color: var(--ink-faint); padding: 8px 12px; background: var(--surface-2); border-radius: 4px; }
 .section-caveat strong { color: var(--ink-muted); }
@@ -754,6 +766,21 @@ footer.pt-8.max-w-prose { padding-top: 0; }
  * content past the recipe rather than one more section within it.
  * Two-class selectors beat .prose h2's element+class specificity without
  * needing !important. */
+/* See render-heading.html: the anchor's "#" is generated here so it stays
+ * out of .Summary text. */
+.heading-anchor-link::before { content: '#'; }
+
+/* The recipe page's Related block (<div class="max-w-prose"> after the
+ * two-column section) and every single page's prev/next <footer> sit
+ * directly inside <article>, outside #single_header + section, so they
+ * missed that rule's 20px gutter: flush to the screen edge on a phone and
+ * 20px left of the title on desktop. */
+article > .max-w-prose,
+article > footer {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .related-section {
   margin-top: 48px;
   padding-top: 32px;
@@ -999,3 +1026,8 @@ footer.pt-8.max-w-prose { padding-top: 0; }
   line-height: 1.4;
 }
 .list-pagination-ellipsis { color: var(--ink-faint); padding: 0 4px; }
+
+/* Food memories band: comp-cards as links. */
+a.comp-card { color: inherit; text-decoration: none; }
+a.comp-card:hover { border-color: var(--accent); }
+a.comp-card:hover .comp-card-label { color: var(--accent-strong); }

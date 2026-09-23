@@ -50,7 +50,7 @@ Migrate the family archive from `development-notes/gdrive/Alderson Family Recipe
 - [x] Implement folder-to-tag mapping (see ARCHITECTURE.md)
 - [x] Run `--dry-run` first; review what would be created
 - [x] Run full normalization — 163 files written (140 new, 3 duplicates, 24 pre-run)
-- [ ] Review drafts; promote to published as they pass — **144 of 153 family-archive recipes are still `draft: true`** as of 2026-08-20
+- [ ] Review drafts; promote to published as they pass — **144 of 153 family-archive recipes are still `draft: true`** as of 2026-08-20 (1 recipe draft left as of 2026-09-22)
 - [x] Write `.claude/commands/gdrive-migrate.md` (since removed, see below)
 
 **Conflict resolution:** Some personal and family archive recipes overlap (two Chai versions, etc.). Personal recipe kept; family archive version normalized as a draft. Per-file merge/replace/discard decisions have not been made yet.
@@ -140,7 +140,7 @@ Two facts from inspecting `themes/blowfish/` directly change how this has to be 
 - [x] `hugo --quiet` builds clean; confirmed in the rendered output: fonts linked, footer renders with the toggle, header no longer has the icon toggle (`appearance-switcher` appears exactly once, in the footer), dark-mode CSS block present in the compiled bundle.
 - **Not verified**: no Chrome extension was connected this session, so the actual rendered look — Blowfish's own chrome (nav, buttons, prose) against the new scheme, and the dark-mode toggle actually working in a browser — hasn't been eyeballed yet. Do that before calling 6.1 fully sound; Tailwind's neutral/primary ramps are a real color-math translation of the tokens, not a guaranteed pixel match to the mockups.
 
-### 6.2 — Recipe content: the harder, more custom half
+### 6.2 — Recipe content: the harder, more custom half ✅ done (marked complete 2026-09-22)
 
 FORMAT.md's markdown structure (`## Mechanic`, `## Ingredients`, `## Method`, component headings) needs to render as the mockup's actual components, not generic Tailwind prose. Two ways to get there, worth deciding explicitly rather than drifting into one:
 
@@ -189,14 +189,14 @@ Broken into pieces (2026-09-18), each landing and getting browser-verified on it
 - Verified in an actual Chrome window (light + dark), on `dal-tadka` (multi-component, fractions, a range, mixed g/L/tbsp/tsp units): slider scaling math (including fraction rounding, and range scaling), metric↔imperial conversion in both directions, the 1000g→1kg magnitude switch at 5× under both "As written" and explicit Metric, Kelvin's no-op behavior, one menu governing both `## Dal` and `## Tadka` sections, `localStorage` persistence of both scale and units across a reload, and the default 1×/as-written state rendering pixel-identical to before this feature (it just restores the untouched original text rather than reformatting it).
 - This absorbs the "servings scaling" and "portion scaling and measure conversion" line items that Phase 7 and Phase 9 had scoped to a future `warped-food.js` — done here instead since it only touches the same qty spans `ingredients.js` already owns; Phase 9's `warped-food.js` still owns the *other* ingredient features on those lists (optional-ingredient toggle, substitutions, shopping list, pantry tool).
 
-Still open from the original 6.2 scope, unblocked by either piece above:
+Remainder of the original 6.2 scope (confirmed complete 2026-09-22):
 
-- [ ] `layouts/recipes/single.html`: title, taxonomy row (cuisine chip + tags), stat rail from frontmatter
-- [ ] Render hook or shortcode for the Mechanic callout
-- [ ] Numbered-step vs. prose procedure — both need to work, since FORMAT.md allows either
-- [ ] Notes list, notes sub-section, variation blocks
-- [ ] `layouts/recipes/list.html`: the recipe card grid, using whichever card design won in 6.0
-- [ ] Same pass for `layouts/essays/` and `layouts/reference/` once there's real content to verify against
+- [x] `layouts/recipes/single.html`: title, taxonomy row (cuisine chip + tags), stat rail from frontmatter
+- [x] Render hook or shortcode for the Mechanic callout
+- [x] Numbered-step vs. prose procedure — both need to work, since FORMAT.md allows either
+- [x] Notes list, notes sub-section, variation blocks
+- [x] `layouts/recipes/list.html`: the recipe card grid, using whichever card design won in 6.0
+- [x] Same pass for `layouts/essays/` and `layouts/reference/` once there's real content to verify against
 
 ### 6.3 — Homepage ✅ done 2026-09-17
 
@@ -281,17 +281,38 @@ User caught the reference page's header still misaligned with its content, well 
 
 Same story as `article-pagination.html`, different component: the numbered pager at the bottom of listing pages (`layouts/partials/pagination.html`) was still bare Tailwind utility classes (`mx-1`, no padding, no border) — no target size, no visual weight, nothing matching the system. No mockup ever covered it either. Overrode it with a pill treatment matching `.filter-pill` (border, radius, padding; accent-soft fill for the current page), and gave it its own `margin: 40px 0` rather than leaning on Blowfish's `mt-8` plus whatever the footer happens to add (the exact class of bug found in `article-pagination.html` moments earlier). Verified on both a short pager (`/reference/`, 2 pages, clicked through to page 2) and a long one with ellipsis (`/recipes/page/4/`, 20 pages — `← 1 2 3 4 5 6 … 20 →`), and measured the gap before the footer directly (40px, deliberate).
 
-### 6.4 — Verify
+### 6.4 — Verify ✅ done 2026-09-22
 
-- [ ] Build incrementally (nav → recipe single → recipe listing → homepage → footer), `hugo --quiet` + visual check after each section, not one big-bang build
-- [ ] Dark mode check across all three content types once 6.1's `.dark`-class targeting is confirmed working
-- [ ] Cross-check `public/recipes/index.json` numbers against what the mega-menu/homepage actually render, to catch any live-data wiring bugs
+- [x] Build incrementally (nav → recipe single → recipe listing → homepage → footer), `hugo --quiet` + visual check after each section, not one big-bang build
+- [x] Dark mode check across all three content types once 6.1's `.dark`-class targeting is confirmed working
+- [x] Cross-check `public/recipes/index.json` numbers against what the mega-menu/homepage actually render, to catch any live-data wiring bugs
+
+**Sweep, 2026-09-22.** Scripted Playwright pass against the installed Chrome: 15 pages (home, recipe list, two recipes, essays list + one essay, reference list + two pages, tags, one tag, cuisines, about, food log, 404) × light/dark × 1280px/390px. Checked `.dark` matched the emulated scheme, body background, console errors, failed requests, horizontal overflow, then read the screenshots.
+
+- Dark mode: `.dark` tracks `prefers-color-scheme` on every page type; no errors or failed requests anywhere.
+- Counts (production build, no drafts): `index.json` has 226 recipes, the homepage says 226, all 13 mega-menu cuisine counts match. The dev server's 227 includes the one remaining draft.
+- Fixed: wide tables pushed the page sideways on a phone (`flour-protein-content`, +30px). `overflow-x` does nothing on a table box, so `render-table.html` now wraps tables in `.table-scroll`; `ingredients.js` looks through the wrapper. Verified all 7 recipes with tables (5 ingredient tables still get checkboxes, 2 timing tables correctly don't).
+- Fixed: the recipe page's Related block and every page's prev/next footer had no side gutter (flush to the screen edge on a phone, 20px left of the title on desktop). Everything now starts at x=110 desktop / x=20 phone.
+- Fixed: card summaries read "Mechanic # 1 part lentils…" because the heading anchor's literal "#" landed in `.Summary`. The "#" now comes from CSS.
+
+Found, not fixed (see Phase 7 follow-ups below):
+
+- `/recipes/` still renders Blowfish's summary cards, not the ratified `.rcard` grid the homepage uses.
+- Card summaries still open with the heading word ("Mechanic 1 part lentils…") and can show raw `[[wiki links]]` (reference cards).
+- Header tag badges and related-card tags are accent-coloured; STYLE.md says tags are neutral outline, never coloured.
+- Tag overlap: cuisine duplicated as a tag ("JAPANESE" chip + "japanese" tag), and near-duplicates (Bread/Breads, Dressing/Dressings).
 
 **Output:** The mockups become the actual site. A cookbook, not a generic blog, in both light and dark mode, with the recipe index as the live source of truth rather than a number copied into a mockup by hand.
 
 ## Phase 7: UX improvements
 
 Four areas, roughly in priority order. Some of this depends on Phase 6 landing first since card and typography decisions affect layout work here.
+
+**Follow-ups from the 6.4 sweep (2026-09-22)**
+- [ ] `/recipes/` listing: swap Blowfish's summary cards for the `.rcard` partial
+- [ ] Card summaries: skip section headings and unresolved `[[wiki links]]` (or set a `summary`/`description` per recipe)
+- [ ] Tags on single-page headers and related cards: neutral outline per STYLE.md, not accent
+- [ ] Tag cleanup: drop cuisine-duplicate tags; merge Bread/Breads, Dressing/Dressings
 
 **Recipe browsing and filtering**
 - [ ] Verify the `tags` and `cuisine` taxonomy pages are usable as filters, not just link dumps

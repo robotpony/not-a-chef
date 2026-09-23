@@ -2,7 +2,7 @@
 title: Mayo Marinade
 tags: [bases, mediterranean, quick]
 source: original
-date: 2023-11-01
+date: 2026-09-21
 servings: 2
 prep_time: 5 min
 total_time: 5 min (plus marinating)

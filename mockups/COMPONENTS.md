@@ -109,7 +109,7 @@ one.
 |---|---|---|---|
 | Draft state (banner + inline badge) | ✅ | see Recipe content above | |
 | Open question card (`.qlist`/`.qitem`/`.qitem-mark`) | 🔵 (candidate if promoted) | style-guide | Flag-blue-left-border callout for "this isn't decided yet" — used in the style guide's own "Open questions" section. A genuinely useful pattern (distinct from the Mechanic callout's accent-left-border) that could be promoted for real site use — e.g. flagging thin/incomplete content sections — but currently only used reflexively, to talk about the guide itself |
-| Full-width notice banner (`.notice`) | 🔴 | landing-page-alt | Page-top banner ("Design concept for the Not a Chef landing page…"). Competes with `.nav-caveat` (inline, under the nav) for the same "admit something about this page" job — two treatments, one job |
+| Full-width notice banner (`.notice`) | 🔴 | landing-page-alt | Page-top banner ("Design concept for the Bruce loves to cook landing page…"). Competes with `.nav-caveat` (inline, under the nav) for the same "admit something about this page" job — two treatments, one job |
 
 ## Footer
 
@@ -126,7 +126,7 @@ Not meant for the real site — these exist only to explain the system to a
 human reader of the guide itself.
 
 - Doc top bar with jump links (`.topbar`, `.tb-jump`)
-- Two-up comparison card (`.compare`, `.compare-card`, `.swatch-row`) — used once, to compare Not a Chef's palette against warpedvisions.org's
+- Two-up comparison card (`.compare`, `.compare-card`, `.swatch-row`) — used once, to compare the cookbook's palette against warpedvisions.org's
 - Color swatch grid (`.swatch`, `.swatch-fill`, `.swatch-name`, `.swatch-hex`)
 - Type specimen row (`.type-spec`, `.type-role`, `.type-face`, `.type-sample-ui`/`.type-sample-mono`)
 - Spacing scale row (`.scale-row`, `.scale-vis`, `.scale-usage`)

@@ -6,22 +6,26 @@
   data replacing the mockup's hand-copied numbers: .Site.RegularPages for
   "recently added" and counts, .Site.Taxonomies for cuisine/tag browsing.
 
-  Essays and Reference currently have zero published pages (no essays exist
-  yet; all 19 reference drafts are unreviewed — see PLAN.md Phase 2/8) — the
-  Reference section falls back to a `.section-caveat` note rather than an
-  empty grid, matching the ratified pattern for an under-built section.
+  Copy follows the About page (content/about.md): first person, reader-facing.
+  Section deks say what a section is for, never how it's built. Cuisine,
+  essay, and reference browsing live in the header menu, so the homepage
+  keeps only what the menu can't show: recent recipes and food memories.
 */}}
 {{ $recipes := where site.RegularPages "Section" "recipes" }}
-{{ $reference := where site.RegularPages "Section" "reference" }}
 {{ $essays := where site.RegularPages "Section" "essays" }}
-{{ $cuisines := site.Taxonomies.cuisine.ByCount }}
 {{ $tags := site.Taxonomies.tags.ByCount }}
-{{ $recent := first 6 $recipes.ByDate.Reverse }}
+{{ $recent := first 4 $recipes.ByDate.Reverse }}
+{{ $memories := slice }}
+{{ range $essays }}
+  {{ if strings.HasPrefix .File.Path "essays/food-memories/" }}
+    {{ $memories = $memories | append . }}
+  {{ end }}
+{{ end }}
 
 <section class="hero">
   <span class="hero-eyebrow">An Alderson family cookbook</span>
-  <h1>Your dad is not a chef.</h1>
-  <p class="lede">{{ len $recipes }} family recipes, indexed by what actually works: ratios, timings, substitutions, and the fixes for when a first attempt didn't.</p>
+  <h1>Bruce loves to cook.</h1>
+  <p class="lede">{{ len $recipes }} recipes we actually cook, with the ratios, timings, and fixes that make them work.</p>
 
   <div class="search-row">
     <button id="search-button" type="button" class="search-box">
@@ -29,142 +33,47 @@
       Search {{ len $recipes }} recipes, tags, cuisines&hellip;
       <kbd>/</kbd>
     </button>
-  </div>
-
-  <div class="stat-rail">
-    <div class="stat"><span class="stat-label">Recipes</span><span class="stat-value mono">{{ len $recipes }}</span></div>
-    <div class="stat"><span class="stat-label">Cuisines</span><span class="stat-value mono">{{ len $cuisines }}</span></div>
-    <div class="stat"><span class="stat-label">Tags</span><span class="stat-value mono">{{ len $tags }}</span></div>
-    <div class="stat"><span class="stat-label">Reference guides</span><span class="stat-value mono">{{ len $reference }}</span></div>
-  </div>
-</section>
-
-<section class="home-section" id="tonight">
-  <div class="block-head">
-    <div>
-      <span class="block-num">01</span>
-      <h2 class="block-title">What's for dinner tonight?</h2>
-      <p class="block-dek">Filters drawn from the tags actually used across the collection.</p>
-    </div>
-  </div>
-  <div class="filter-row">
-    {{ range first 7 $tags }}
-      <a class="filter-pill" href="{{ printf "tags/%s/" (.Name | urlize) | relURL }}">{{ .Name }}</a>
-    {{ end }}
+    <nav class="filter-row" id="tonight" aria-label="Browse by tag">
+      {{ range first 7 $tags }}
+        <a class="filter-pill" href="{{ printf "tags/%s/" (.Name | urlize) | relURL }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
   </div>
 </section>
 
 <section class="home-section" id="recent">
   <div class="block-head">
     <div>
-      <span class="block-num">02</span>
+      <span class="block-num">01</span>
       <h2 class="block-title">Recently added</h2>
-      <p class="block-dek">The six most recent entries in the index, most recent first.</p>
+      <p class="block-dek">The latest recipes to make it into the book.</p>
     </div>
     <a class="mega-viewall" href="{{ "recipes" | relURL }}">View all {{ len $recipes }} recipes &rarr;</a>
   </div>
-  <div class="rgrid">
+  <div class="rgrid home-row">
     {{ range $recent }}
       {{ partial "recipe-card.html" . }}
     {{ end }}
   </div>
 </section>
 
-<section class="home-section" id="cuisine">
+<section class="home-section" id="memories">
   <div class="block-head">
     <div>
-      <span class="block-num">03</span>
-      <h2 class="block-title">By cuisine</h2>
-      <p class="block-dek">{{ len $cuisines }} cuisines are represented so far, led by the weeknight regulars.</p>
+      <span class="block-num">02</span>
+      <h2 class="block-title">Food memories</h2>
+      <p class="block-dek">Where the cooking started: the kitchens I grew up in, and the meals that changed how I eat. <a href="{{ "about" | relURL }}">More about me &rarr;</a></p>
     </div>
-  </div>
-  <div class="browse-grid">
-    {{ range first 9 $cuisines }}
-      <div class="browse-list"><a href="{{ printf "cuisine/%s/" (.Name | urlize) | relURL }}">{{ .Name }} <span class="n">{{ .Count }}</span></a></div>
+    {{ if gt (len $memories) 4 }}
+      <a class="mega-viewall" href="{{ "essays" | relURL }}">All essays &rarr;</a>
     {{ end }}
   </div>
-  {{ if gt (len $cuisines) 9 }}
-    <p style="margin-top:8px;"><a class="browse-more" href="{{ "cuisine" | relURL }}">All {{ len $cuisines }} cuisines &rarr;</a></p>
-  {{ end }}
-</section>
-
-<section class="home-section split" id="essays-reference">
-  <div>
-    <div class="block-head">
-      <div>
-        <span class="block-num">04</span>
-        <h2 class="block-title">Essays</h2>
-        <p class="block-dek">
-          {{ if $essays }}
-            {{ len $essays }} essay{{ if ne (len $essays) 1 }}s{{ end }} so far, across four formats — each anchored to a lesson rather than nostalgia for its own sake.
-          {{ else }}
-            No essays published yet. Four formats are planned, each anchored to a lesson rather than nostalgia for its own sake.
-          {{ end }}
-        </p>
-      </div>
-    </div>
-    {{/*
-      Each format is a subfolder under content/essays/ (content/essays/
-      food-memories/ is the only one populated so far) — matched by path
-      prefix rather than a tag, since there's no formalized `format` field
-      in FORMAT-ESSAYS.md yet. Nests each format's real essays under its own
-      tile instead of a disconnected list below the whole grid.
-    */}}
-    {{ $formats := slice
-      (dict "label" "Food memories" "slug" "food-memories" "note" "Thematic vignettes from childhood or formative meals, each carrying a lesson about cooking.")
-      (dict "label" "Cooking reflections" "slug" "cooking-reflections" "note" "What technique, ingredients, or a specific failure taught. Ratio-based thinking, post-mortems welcome.")
-      (dict "label" "Technique essays" "slug" "technique-essays" "note" "A single method or principle in depth: brining, emulsification, stock. Reference material dressed as prose.")
-      (dict "label" "Planning essays" "slug" "planning-essays" "note" "Meal-prep philosophy and systems for getting a weeknight dinner on the table.")
-    }}
-    <div class="comp-grid">
-      {{ range $formats }}
-        {{ $prefix := printf "essays/%s/" .slug }}
-        {{ $matches := slice }}
-        {{ range $essays }}
-          {{ if strings.HasPrefix .File.Path $prefix }}
-            {{ $matches = $matches | append . }}
-          {{ end }}
-        {{ end }}
-        <div class="comp-card">
-          <span class="comp-card-label">{{ .label }}</span>
-          <p class="comp-card-note">{{ .note }}</p>
-          {{ if $matches }}
-            <div class="browse-list">
-              {{ range sort $matches "Date" "desc" }}
-                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-              {{ end }}
-            </div>
-          {{ end }}
-        </div>
-      {{ end }}
-    </div>
-  </div>
-
-  <div>
-    <div class="block-head">
-      <div>
-        <span class="block-num">05</span>
-        <h2 class="block-title">Reference</h2>
-        <p class="block-dek">
-          {{ if $reference }}
-            {{ len $reference }} guides, meant to be looked up mid-cook, not read start to finish.
-          {{ else }}
-            Meant to be looked up mid-cook, not read start to finish — not published yet.
-          {{ end }}
-        </p>
-      </div>
-    </div>
-    {{ if $reference }}
-      <div class="browse-list">
-        {{ range first 5 $reference.ByTitle }}
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        {{ end }}
-      </div>
-      {{ if gt (len $reference) 5 }}
-        <p style="margin-top:8px;"><a class="browse-more" href="{{ "reference" | relURL }}">All {{ len $reference }} reference guides &rarr;</a></p>
-      {{ end }}
-    {{ else }}
-      <div class="section-caveat">Reference guides exist as drafts from the family archive but haven't been reviewed for publish yet (see PLAN.md's draft-review backlog).</div>
+  <div class="comp-grid home-row">
+    {{ range first 4 (sort $memories "Date" "desc") }}
+      <a class="comp-card" href="{{ .RelPermalink }}">
+        <span class="comp-card-label">{{ .Title }}</span>
+        <p class="comp-card-note">{{ .Summary | plainify | truncate 140 }}</p>
+      </a>
     {{ end }}
   </div>
 </section>

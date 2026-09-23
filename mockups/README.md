@@ -1,6 +1,6 @@
 # Mockups
 
-Static HTML/markdown design specs for Not a Chef, saved locally so decisions
+Static HTML/markdown design specs for Bruce loves to cook, saved locally so decisions
 made in them don't get lost between sessions. Open any `.html` file directly
 in a browser — no build step.
 

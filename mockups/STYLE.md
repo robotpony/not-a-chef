@@ -1,23 +1,45 @@
-# Not a Chef — style standards
+# Bruce loves to cook: style standards
 
-A style guide for "Your dad is not a chef".
+A style guide for "Bruce loves to cook", an Alderson family cookbook.
 
 ## Messaging
 
-Name and tagline, standardized 2026-09-18:
+Name and tagline, standardized 2026-09-22 (replaces "Your dad is not a chef",
+2026-09-18):
 
-- **Name**: "Your dad is not a chef"
+- **Name**: "Bruce loves to cook"
 - **Tagline**: "an Alderson family cookbook"
-- **Combined line** (meta description, About page, anywhere the two read as one sentence): "Your dad is not a chef, an Alderson family cookbook."
+- **Combined line** (site description, About page description, anywhere the two read as one sentence): "Bruce loves to cook, an Alderson family cookbook."
+- **Footer blurb**: starts with the tagline, not the combined line, since the brand name sits directly above it: "An Alderson family cookbook. Recipes, essays, and reference notes from a home kitchen."
+- **Copyright line**: "Copyright © Bruce Alderson" (no year), matching `LICENSE`.
+- **Nav logo and footer brand name**: the full name, "Bruce loves to cook." (sentence case, trailing period). There is no short form; layouts adapt to the full name.
+- **"Alderson"**: keep to a minimum. The tagline and the copyright line are its only regular uses.
 
-Canonical copy — the full story behind the name — lives in `content/about.md`;
-that page is the source of truth. Everywhere else (site title, homepage
-hero, footer blurb, README) should read as a consistent restatement of the
-name/tagline above, not invent new phrasing.
+Canonical copy lives in `content/about.md`; that page is the source of truth.
+Everywhere else (site title, homepage hero, footer blurb, README) restates the
+name and tagline above rather than inventing new phrasing.
 
-The nav logo and footer brand name stay the short lowercase form
-("not a chef.") for space — that's a deliberate exception, not a drift from
-the standard.
+### Voice
+
+First person, the same voice as the essays. Modest about credentials ("I am
+not a chef") and open about loving to cook. Reader-facing copy says what a
+thing is for, never how the site is built: no references to indexes, tags,
+templates, or PLAN.md in anything a visitor reads.
+
+### Core message
+
+Not a chef, but decades of restaurant work, food TV, and cookbooks turned into
+a real love of cooking. These are the foods we eat, from 1950s kitchens to
+today, with the ratios, timings, and fixes that make them work.
+
+Three threads carry it, in this order:
+
+1. **Love**: the name and the About page.
+2. **Method**: the homepage lede, reference pages, and planning essays.
+3. **Heritage**: the food memories band on the homepage and the essays.
+
+The homepage hero lede is the method promise: "{count} recipes we actually
+cook, with the ratios, timings, and fixes that make them work."
 
 ## Color tokens
 
@@ -84,7 +106,7 @@ it in a new mockup without settling this first.
 All five hues (including the unused green) share one saturation/lightness
 formula (57%/62%) at different rotations — red 14°, orange 34°, yellow 54°,
 green 151°, blue 210° — taken directly from warpedvisions.org's shipped CSS
-(`warped.css`'s flourish-bar hues). Not a Chef reorders the hierarchy to lead
+(`warped.css`'s flourish-bar hues). This site reorders the hierarchy to lead
 with orange→red instead of the blog's blue-led order; it does not invent new
 hues. **Never introduce a hue outside this five-color family** (no teal, sage,
 mustard, plum, ember, etc. — those were an earlier, discarded palette).
@@ -275,7 +297,7 @@ everything discarded or superseded getting to this list.
 - **Tag** — neutral outline (`--border-strong`), never colored
 - **Filter pill** — pill-shaped (14px radius), neutral outline, `--accent-soft` fill when active — listing-page filters, distinct from the chip's "fact about the recipe"
 - **Draft state** (banner or badge) — `--flag` blue, never red
-- **Recipe card** (`.rcard`) — title, taxonomy row (cuisine chip + tags), a stat row (prep/cook/serves in mono), optional flags row (Mechanic/Variations, shown only when the recipe actually has that section)
+- **Recipe card** (`.rcard`) — title, taxonomy row (cuisine chip + tags), a stat row (prep/cook/serves in mono), optional flags row (Mechanic/Variations, shown only when the recipe actually has that section). On the homepage's four-across "Recently added" row (`.home-row`), the taxonomy row steps down to `.62rem` with `2px 5px` padding and a 4px gap (2026-09-22) so the narrow cards don't wrap tags into the title; everywhere else chips and tags stay at `.7rem`
 - **Listing page header** (`.ltitle` / `.listing-count`) — title + a count line ("83 recipes · showing 18"), distinct from the hero used for page openers
 - **Section caveat** (`.section-caveat`, formerly `.nav-caveat`) — a one-line honesty note for admitting a section is thin; not limited to nav panels, use it above any under-built section
 - **Nav item with mega-menu** — caret only on items with a real dropdown (Recipes, Reference); other sections stay plain links until they have enough content to categorize
@@ -283,8 +305,8 @@ everything discarded or superseded getting to this list.
 - **Search box** — real `<input>`, lives inline in the homepage hero, not a header icon button
 - **Theme toggle** (`.theme-toggle`) — labeled pill, cycles system → light → dark; lives in the **site footer**, matching `footer.showAppearanceSwitcher` in Hugo config
 - **Site footer** (`.site-footer`) — brand blurb, link columns (Browse / Index), theme toggle, meta line
-- **Stat rail** (`.stat-rail`) — the one component for "numbers at a glance," used both in a recipe header (serves/prep/cook/total) and the homepage hero (recipes/cuisines/tags/guides)
-- **Format/component gallery card** (`.comp-card`) — also reused for real content: the four essay-format teasers on the homepage
+- **Stat rail** (`.stat-rail`) — the one component for "numbers at a glance," used in the recipe header (serves/prep/cook/total); removed from the homepage hero 2026-09-22, where the "tonight" tag pills now sit beside search
+- **Format/component gallery card** (`.comp-card`) — also reused for real content: the food memories band on the homepage
 
 ### Decisions (2026-09-17, resolving `COMPONENTS.md`'s open list)
 
@@ -293,7 +315,7 @@ everything discarded or superseded getting to this list.
 - **Archive stats**: the plain `.stat-rail` wins over the rotated-card-stack ledger. It already does the job in two different contexts (recipe header, homepage hero) without a bespoke visual device — the ledger would have been a one-off.
 - **Search & theme toggle placement**: homepage's answer wins — real search input in the hero, labeled theme-toggle pill in the footer. Both the header icon-button pair and the toolbar-only placement are retired.
 - **Page-level "this is thin" note**: the inline caveat wins over a full-width banner — smaller, scoped to the section it's actually about, doesn't interrupt every page load. Renamed `.section-caveat` since it's used beyond nav (e.g. above a single-entry Food Log section).
-- **Essay/reference teasers**: the card grid (`.comp-card`, already reused for the four essay formats) and `.browse-list` (reference guides) both win over their label/description-row alternates — one less layout to maintain, and both were already real, working components before the alternates existed.
+- **Essay/reference teasers**: the card grid (`.comp-card`, already reused for the essay formats and food memories) and `.browse-list` (reference guides) both win over their label/description-row alternates — one less layout to maintain, and both were already real, working components before the alternates existed.
 - **Wordmark**: plain text, no per-letter color accent.
 - **Footer shape**: homepage's `.site-footer` (brand blurb + link columns + theme toggle) wins over the earlier simpler footer — it's the only one built Hugo-config-aware (`footer.showAppearanceSwitcher`).
 
