@@ -677,6 +677,10 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
 .tag { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; border: 1px solid var(--border-strong); color: var(--ink-muted); padding: 3px 7px; border-radius: 3px; display: inline-block; }
 .tag-more { color: var(--ink-faint); border-style: dashed; }
 .cuisine-chip { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; background: var(--highlight-soft); color: var(--highlight); padding: 3px 7px; border-radius: 3px; display: inline-block; }
+/* Homepage "Recently added" cards are narrow (four across), so their tags
+ * step down a size to keep the top row from wrapping into the title. */
+.home-row .rcard-top { gap: 4px; }
+.home-row .tag, .home-row .cuisine-chip { font-size: .62rem; padding: 2px 5px; }
 .draft-badge { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; font-weight: 600; border: 1px solid var(--flag); color: var(--flag); background: var(--flag-soft); padding: 3px 7px; border-radius: 3px; display: inline-block; }
 
 /* Label above the desktop sticky recipe/essay TOC (layouts/partials/toc.html

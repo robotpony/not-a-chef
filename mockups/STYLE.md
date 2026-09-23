@@ -297,7 +297,7 @@ everything discarded or superseded getting to this list.
 - **Tag** — neutral outline (`--border-strong`), never colored
 - **Filter pill** — pill-shaped (14px radius), neutral outline, `--accent-soft` fill when active — listing-page filters, distinct from the chip's "fact about the recipe"
 - **Draft state** (banner or badge) — `--flag` blue, never red
-- **Recipe card** (`.rcard`) — title, taxonomy row (cuisine chip + tags), a stat row (prep/cook/serves in mono), optional flags row (Mechanic/Variations, shown only when the recipe actually has that section)
+- **Recipe card** (`.rcard`) — title, taxonomy row (cuisine chip + tags), a stat row (prep/cook/serves in mono), optional flags row (Mechanic/Variations, shown only when the recipe actually has that section). On the homepage's four-across "Recently added" row (`.home-row`), the taxonomy row steps down to `.62rem` with `2px 5px` padding and a 4px gap (2026-09-22) so the narrow cards don't wrap tags into the title; everywhere else chips and tags stay at `.7rem`
 - **Listing page header** (`.ltitle` / `.listing-count`) — title + a count line ("83 recipes · showing 18"), distinct from the hero used for page openers
 - **Section caveat** (`.section-caveat`, formerly `.nav-caveat`) — a one-line honesty note for admitting a section is thin; not limited to nav panels, use it above any under-built section
 - **Nav item with mega-menu** — caret only on items with a real dropdown (Recipes, Reference); other sections stay plain links until they have enough content to categorize
