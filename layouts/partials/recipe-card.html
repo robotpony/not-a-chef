@@ -1,36 +1,58 @@
 {{/*
-  Recipe card (.rcard) — ratified in mockups/STYLE.md over the alternate
-  tabbed/dated card (see COMPONENTS.md's Decisions). Takes a recipe Page as
-  context. Shared by the homepage "recently added" grid and (eventually)
-  the recipes list page — see PLAN.md Phase 6.2.
+  Recipe card (.rcard) — ratified in mockups/STYLE.md, v2 layout from
+  mockups/recipe-card-v2.html. Takes a recipe Page as context. Shared by
+  the homepage "recently added" row and the recipes list page.
+
+  Top row: two slots (cuisine takes one when present; a tag repeating the
+  cuisine is skipped), then +N. Middle: the recipe's intro paragraph (text
+  before the first ##), or frontmatter summary/description if set. Bottom:
+  one compact stat line, times shortened and parentheticals dropped for
+  the card only (the full value is in the stat's title).
 */}}
-{{ $tagLimit := 3 }}
-{{ $tags := .Params.tags }}
+{{ $slots := 2 }}
+{{ $cuisine := .Params.cuisine }}
+{{ $tags := slice }}
+{{ range .Params.tags }}
+  {{ if not (and $cuisine (eq (lower .) (lower $cuisine))) }}{{ $tags = $tags | append . }}{{ end }}
+{{ end }}
+{{ $room := cond (ne $cuisine nil) (sub $slots 1) $slots }}
+
+{{ $intro := .Params.summary | default .Description }}
+{{ if not $intro }}
+  {{ $head := index (split .RawContent "\n## ") 0 | strings.TrimSpace }}
+  {{ if and $head (not (hasPrefix $head "#")) }}
+    {{ $intro = index (split $head "\n\n") 0 }}
+  {{ end }}
+{{ end }}
+{{ with $intro }}
+  {{ $intro = replaceRE `\[\[(?:[^\]|]*\|)?([^\]]+)\]\]` "$1" . | markdownify | plainify | htmlUnescape | truncate 240 }}
+{{ end }}
+
+{{ $stats := slice }}
+{{ range slice (slice "Prep" .Params.prep_time) (slice "Cook" .Params.cook_time) (slice "Serves" .Params.servings) }}
+  {{ $v := index . 1 }}
+  {{ if $v }}
+    {{ $v = string $v | replaceRE `\s*\([^)]*\)?` "" | strings.TrimSpace }}
+    {{ if ne (index . 0) "Serves" }}
+      {{ $v = $v | replaceRE `(?i)\s*(minutes?|mins?)\b` "m" | replaceRE `(?i)\s*(hours?|hrs?)\b` "h" | replaceRE `\s*-\s*` "-" }}
+    {{ end }}
+    {{ $stats = $stats | append (dict "label" (index . 0) "value" $v "full" (string (index . 1))) }}
+  {{ end }}
+{{ end }}
+
 <a class="rcard" href="{{ .RelPermalink }}">
   <div class="rcard-top">
-    {{ with .Params.cuisine }}<span class="cuisine-chip">{{ . }}</span>{{ end }}
-    {{ range first $tagLimit $tags }}<span class="tag">{{ . }}</span>{{ end }}
-    {{ if gt (len $tags) $tagLimit }}<span class="tag tag-more">+{{ sub (len $tags) $tagLimit }}</span>{{ end }}
+    {{ with $cuisine }}<span class="cuisine-chip">{{ . }}</span>{{ end }}
+    {{ range first $room $tags }}<span class="tag">{{ . }}</span>{{ end }}
+    {{ if gt (len $tags) $room }}<span class="tag tag-more">+{{ sub (len $tags) $room }}</span>{{ end }}
   </div>
   <h3 class="rcard-title">{{ .Title }}</h3>
-  <div class="rcard-meta">
-    {{ with .Params.prep_time }}
-      <div class="rcard-stat"><span class="rcard-stat-label">Prep</span><span class="rcard-stat-value mono" title="{{ . }}">{{ . }}</span></div>
-    {{ end }}
-    {{ with .Params.cook_time }}
-      <div class="rcard-stat"><span class="rcard-stat-label">Cook</span><span class="rcard-stat-value mono" title="{{ . }}">{{ . }}</span></div>
-    {{ end }}
-    {{ with .Params.servings }}
-      <div class="rcard-stat"><span class="rcard-stat-label">Serves</span><span class="rcard-stat-value mono" title="{{ . }}">{{ . }}</span></div>
-    {{ end }}
-  </div>
-  {{ $raw := .RawContent }}
-  {{ $hasMechanic := strings.Contains $raw "## Mechanic" }}
-  {{ $hasVariations := strings.Contains $raw "## Variations" }}
-  {{ if or $hasMechanic $hasVariations }}
-    <div class="rcard-flags">
-      {{ if $hasMechanic }}<span>Mechanic</span>{{ end }}
-      {{ if $hasVariations }}<span>Variations</span>{{ end }}
+  {{ with $intro }}<p class="rcard-intro">{{ . }}</p>{{ end }}
+  {{ with $stats }}
+    <div class="rcard-stats">
+      {{ range . }}
+        <div class="rcard-stat" title="{{ .label }}: {{ .full }}"><b>{{ .label }}</b><span>{{ .value }}</span></div>
+      {{ end }}
     </div>
   {{ end }}
 </a>

@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Recipe Card v2</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  :root{
+    --bg:#F3F3EC; --surface:#FBFBF6; --surface-2:#EAEBDF;
+    --ink:#23241E; --ink-muted:#63645A; --ink-faint:#93948A;
+    --border:#DCDCCE; --border-strong:#C7C8B4;
+    --accent:#A67330; --accent-strong:#7C361D; --accent-soft:#F6EADA;
+    --highlight:#997F29; --highlight-soft:#F6F1D5;
+    --flag:#3D638F; --flag-soft:#E1EAF4;
+    --focus:#A67330;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+      --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+      --border:#383A2C; --border-strong:#4A4C3A;
+      --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+      --highlight:#DDCC88; --highlight-soft:#342D19;
+      --flag:#97B8D8; --flag-soft:#1D2835;
+      --focus:#D3A569;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+    --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+    --border:#383A2C; --border-strong:#4A4C3A;
+    --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+    --highlight:#DDCC88; --highlight-soft:#342D19;
+    --flag:#97B8D8; --flag-soft:#1D2835;
+    --focus:#D3A569;
+  }
+
+  *{box-sizing:border-box;}
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:'Lora',Georgia,serif; font-size:16px; line-height:1.5; -webkit-font-smoothing:antialiased; }
+  p{ margin:0; }
+  code{ font-family:'IBM Plex Mono',monospace; font-size:.85em; }
+  .mono{ font-family:'IBM Plex Mono',ui-monospace,monospace; font-variant-numeric:tabular-nums; }
+
+  .page{ max-width:1100px; margin:0 auto; padding:32px 20px 64px; }
+  header.doc h1{ font-family:'Libre Franklin',sans-serif; font-size:1.7rem; line-height:1.15; margin:0 0 8px; }
+  header.doc p{ color:var(--ink-muted); max-width:68ch; }
+  .theme-toggle{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:600; border:1px solid var(--border-strong); border-radius:14px; padding:4px 11px; background:var(--surface); color:var(--ink-muted); cursor:pointer; margin-top:12px; }
+
+  section.band{ margin-top:44px; }
+  .band-head{ display:flex; align-items:baseline; gap:10px; margin-bottom:6px; }
+  .block-num{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--accent-strong); }
+  .band h2{ font-family:'Libre Franklin',sans-serif; font-size:1.15rem; margin:0; line-height:1.2; }
+  .band-dek{ color:var(--ink-muted); font-size:.9rem; margin-bottom:16px; max-width:72ch; }
+  .notes{ margin:18px 0 0; padding:14px 16px 14px 18px; border-left:3px solid var(--accent); background:var(--surface); border-radius:0 6px 6px 0; font-size:.88rem; }
+  .notes li{ margin:4px 0; }
+  .notes ul{ margin:0; padding-left:18px; }
+
+  /* ---------- shared chips (unchanged from custom.css) ---------- */
+  .tag{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; border:1px solid var(--border-strong); color:var(--ink-muted); padding:3px 7px; border-radius:3px; display:inline-block; white-space:nowrap; }
+  .tag-more{ color:var(--ink-faint); border-style:dashed; }
+  .cuisine-chip{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; font-weight:600; text-transform:uppercase; letter-spacing:.05em; background:var(--highlight-soft); color:var(--highlight); padding:3px 7px; border-radius:3px; display:inline-block; white-space:nowrap; }
+
+  .rgrid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(240px,1fr)); gap:16px; }
+  .rgrid.home-row{ grid-template-columns:repeat(4, minmax(0,1fr)); }
+  @media (max-width:820px){ .rgrid.home-row{ grid-template-columns:repeat(2, minmax(0,1fr)); gap:12px; } }
+  @media (max-width:520px){ .rgrid.home-row{ grid-template-columns:1fr; } }
+
+  /* ---------- CURRENT card (copied from assets/css/custom.css) ---------- */
+  .old .rcard{ background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:16px; display:flex; flex-direction:column; gap:10px; min-width:0; text-decoration:none; color:inherit; }
+  .old .rcard-top{ display:flex; gap:4px; flex-wrap:wrap; }
+  .old .rcard-top .tag, .old .rcard-top .cuisine-chip{ font-size:.62rem; padding:2px 5px; }
+  .old .rcard-title{ font-family:'Libre Franklin',sans-serif; font-size:1.02rem; font-weight:700; line-height:1.3; text-wrap:balance; margin:0; }
+  .old .rcard-meta{ display:flex; gap:16px; flex-wrap:wrap; padding-top:2px; }
+  .old .rcard-stat{ display:flex; flex-direction:column; gap:2px; min-width:0; max-width:12ch; }
+  .old .rcard-stat-label{ font-family:'Libre Franklin',sans-serif; font-size:.62rem; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); }
+  .old .rcard-stat-value{ font-size:.78rem; color:var(--ink-muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .old .rcard-flags{ display:flex; gap:10px; padding-top:8px; margin-top:auto; border-top:1px solid var(--border); font-family:'Libre Franklin',sans-serif; font-size:.68rem; font-weight:600; color:var(--accent-strong); text-transform:uppercase; letter-spacing:.04em; }
+
+  /* ---------- PROPOSED card ---------- */
+  .rcard{ background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:14px 16px 12px; display:flex; flex-direction:column; gap:8px; min-width:0; text-decoration:none; color:inherit; }
+  .rcard:hover{ border-color:var(--accent); }
+  /* one line, never wraps: cuisine + tags capped at 2 items, then +N */
+  .rcard-top{ display:flex; gap:4px; flex-wrap:nowrap; overflow:hidden; min-width:0; }
+  .rcard-top > *{ font-size:.62rem; padding:2px 5px; flex:none; }
+  .rcard-top > .tag:not(.tag-more){ flex:0 1 auto; min-width:0; overflow:hidden; text-overflow:ellipsis; }
+  .rcard-title{ font-family:'Libre Franklin',sans-serif; font-size:1.02rem; font-weight:700; line-height:1.3; letter-spacing:-.005em; text-wrap:balance; margin:0; }
+  /* intro: first paragraph of the recipe, clamped */
+  .rcard-intro{ font-size:.84rem; line-height:1.5; color:var(--ink-muted); display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; overflow:hidden; }
+  /* stats: one inline line, anchored to the card bottom */
+  .rcard-stats{ margin-top:auto; padding-top:8px; border-top:1px solid var(--border); display:flex; gap:12px; white-space:nowrap; min-width:0; }
+  .rcard-stat{ display:flex; align-items:baseline; gap:4px; flex:none; }
+  .rcard-stat:last-child{ flex:0 1 auto; min-width:0; overflow:hidden; }
+  .rcard-stat b{ font-family:'Libre Franklin',sans-serif; font-size:.56rem; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); }
+  .rcard-stat span{ font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums; font-size:.72rem; font-weight:600; color:var(--accent-strong); overflow:hidden; text-overflow:ellipsis; }
+
+  .compare{ display:grid; grid-template-columns:repeat(2, minmax(0,260px)); gap:16px; align-items:stretch; }
+  .compare-label{ font-family:'Libre Franklin',sans-serif; font-size:.66rem; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); margin-bottom:6px; }
+  .compare > div{ display:flex; flex-direction:column; }
+  .compare .rcard{ flex:1; }
+  @media (max-width:560px){ .compare{ grid-template-columns:1fr; } }
+
+  .listing-head{ display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-bottom:14px; flex-wrap:wrap; }
+  .ltitle{ font-family:'Libre Franklin',sans-serif; font-size:1.9rem; font-weight:700; margin:0; line-height:1.1; }
+  .listing-count{ font-family:'IBM Plex Mono',monospace; font-size:.78rem; color:var(--ink-faint); }
+  .frame{ border:1px dashed var(--border-strong); border-radius:8px; padding:20px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="doc">
+  <h1>Recipe card v2</h1>
+  <p>One card for both the homepage "Recently added" row and the recipes list. Tags drop to one line, the recipe's intro paragraph fills the middle, and a compact stat line replaces the Mechanic/Variations flags at the bottom. Real recipe data throughout.</p>
+  <button class="theme-toggle" id="tt" type="button">Theme: system</button>
+</header>
+
+<section class="band">
+  <div class="band-head"><span class="block-num">01</span><h2>Before and after</h2></div>
+  <p class="band-dek">Same recipe, same width as a homepage card (about 250px).</p>
+  <div class="compare">
+    <div><div class="compare-label">Current</div><div class="old" id="old" style="display:flex;flex:1"></div></div>
+    <div><div class="compare-label">Proposed</div><div id="new" style="display:flex;flex:1"></div></div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="band-head"><span class="block-num">02</span><h2>Homepage: recently added</h2></div>
+  <p class="band-dek">Four across at the full 1100px column. The stat line sits on the bottom edge whatever the intro length, so the row lines up.</p>
+  <div class="rgrid home-row" id="home"></div>
+</section>
+
+<section class="band">
+  <div class="band-head"><span class="block-num">03</span><h2>Recipes list page</h2></div>
+  <p class="band-dek">The same partial in the existing <code>.rgrid</code> (auto-fill, 240px minimum). Replaces the default list and its auto-generated summaries, which pull in Mechanic text and run long.</p>
+  <div class="frame">
+    <div class="listing-head"><h1 class="ltitle">Recipes</h1><span class="listing-count">228 recipes</span></div>
+    <div class="rgrid" id="list"></div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="band-head"><span class="block-num">04</span><h2>What changed</h2></div>
+  <div class="notes"><ul>
+    <li><b>Tags:</b> two slots, then <code>+N</code>. Cuisine takes a slot when a recipe has one, and a tag that repeats the cuisine ("thai" next to Thai) is skipped. The row never wraps; a long tag truncates instead.</li>
+    <li><b>Intro:</b> the recipe's first paragraph (the text before the first <code>##</code>), clamped to 3 lines. 141 of 228 recipes have one today. A recipe without one just gets a shorter card (see the salsa card in 03).</li>
+    <li><b>Stats:</b> one inline line instead of a stacked label/value grid, roughly a third of the height. Values are bold <code>--accent-strong</code> against faint labels, so the line reads apart from the intro above it. Times are shortened for the card only ("35 min" becomes "35m", "8-10 hours" becomes "8-10h"). Serves truncates with an ellipsis when it's free text.</li>
+    <li><b>Flags removed:</b> Mechanic/Variations are gone from the card. They still show on the recipe page itself.</li>
+  </ul></div>
+</section>
+
+</div>
+
+<script>
+const DATA = [{"title": "Almond Chocolate Cake", "cuisine": null, "tags": ["desserts", "chocolate", "gluten-free", "make-ahead"], "prep": "15 min", "cook": "35 min", "serves": 10, "intro": "The beaten eggs and sugar are the only leavening: no flour, no baking powder. Beat until the mixture has tripled in volume and gone very pale; this is what lifts the cake. Ground almonds give it structure and a dense, fudgy crumb. Don't overbake: the skewer test fails here. You want the crust firm and the interior still moist.", "mech": false, "vari": false}, {"title": "Autumn Glow Salad with Lemon Dressing", "cuisine": null, "tags": ["salads"], "prep": "15 minutes", "cook": "1 hour", "serves": "6 as a meal, 8 - 10 as a side", "intro": "On a women's retreat in 2019, there was a private chef that cooked for the retreat for the entire weekend.  They were a vegan chef who supports local, and they made this dish for one of our lunches.  Everyone at the retreat absolutely loved this it and Erika kindly shared the recipe she used with all the attendees. They noted that she added more lemon to the dressing, and also puts a bunch of herbs on the veggies as they’re roasting.", "mech": false, "vari": false}, {"title": "Breakfast Sausage", "cuisine": null, "tags": ["bases", "american", "make-ahead"], "prep": "15 min", "cook": null, "serves": "scales to any quantity (percentages by weight)", "intro": "These make great patties, sausages, or crumble. I use this sausage in pastas, on breakfast sandwhiches, and in stir fries.", "mech": true, "vari": false}, {"title": "Bruce's Burger Sauce", "cuisine": null, "tags": ["sauces", "quick", "vegetarian"], "prep": "5 min", "cook": null, "serves": "makes ~4 servings", "intro": "This is a simple, classic burger sauce.", "mech": true, "vari": false}, {"title": "Butternut Squash Curry", "cuisine": "Thai", "tags": ["mains", "thai", "curries", "vegetarian", "weeknight"], "prep": "15 min", "cook": "30 min", "serves": 4, "intro": "A simplified weeknight coconut curry built around roasted butternut squash and yellow Thai curry paste. Fish sauce can be swapped for soy sauce to keep it vegetarian.", "mech": false, "vari": false}, {"title": "Egg Roll Bowls", "cuisine": "Chinese", "tags": ["mains", "weeknight", "low-carb", "quick", "chinese"], "prep": "10 min", "cook": "25 min", "serves": 4, "intro": "All the flavour of egg rolls without the wrapper: ground pork with cabbage, carrot, ginger, and sesame. Low-carb, quick, and highly riff-able.", "mech": false, "vari": false}, {"title": "Instant Pot Chicken Thigh Curry", "cuisine": "Thai", "tags": ["mains", "thai", "curries", "weeknight"], "prep": "15 min", "cook": "20 min", "serves": 6, "intro": "Adapted from an Instant Pot beef chuck curry, swapped to boneless chicken thighs for a faster weeknight cook. Pressure time is cut way down from the original (which called for 35 minutes to break down chuck roast) — needs testing.", "mech": false, "vari": false}, {"title": "Kālua Pig & Cabbage", "cuisine": "Hawaiian", "tags": ["mains", "hawaiian", "slow-cooker"], "prep": "5 min", "cook": "8-10 hours", "serves": "6-10", "intro": "Kālua pig and cabbage is Hawaiʻi's ultimate comfort food: slow-cooked pork shoulder until it's fall-apart tender, then finished with wilted cabbage and a splash of soy sauce. Traditionally cooked in an imu (underground oven); this slow cooker version is a weeknight-friendly stand-in.", "mech": false, "vari": false}, {"title": "Mayo Marinade", "cuisine": "American", "tags": ["bases", "mediterranean", "quick"], "prep": "5 min", "cook": null, "serves": 2, "intro": "This is a quick and effective way to marinade chicken and pork. The mayo ensure spices don't burn, and it adheres to the cut surprisingly well.", "mech": true, "vari": true}, {"title": "Never-Fail Chocolate Cake", "cuisine": null, "tags": ["desserts", "chocolate", "make-ahead"], "prep": "15 min", "cook": "32 min", "serves": 12, "intro": "1:3 cocoa to flour by weight is the consensus across three reliable sources. The fat combination (butter for flavour, oil for lasting moisture) outperforms either alone. One-bowl method: wet into dry. The batter is intentionally thin. Bake to touch, not skewer.", "mech": false, "vari": true}, {"title": "Pad Kra Pao Moo Saap", "cuisine": "Thai", "tags": ["mains", "thai", "quick"], "prep": "10 min", "cook": "8 min", "serves": 2, "intro": "Thailand's everyday lunch dish: minced pork stir-fried hard and fast with garlic, chili, and holy basil, served over rice with a fried egg. The dish lives or dies on two things: real holy basil (not sweet Thai basil) and heat high enough to sear the pork rather than steam it.", "mech": false, "vari": false}, {"title": "Pork Dumpling Bowls", "cuisine": "Chinese", "tags": ["mains", "weeknight", "chinese"], "prep": "20 min", "cook": "25 min", "serves": "4-6", "intro": "All the flavour of pork dumplings, ground pork, shrimp, cabbage, and scallions, tossed with chewy wheat noodles instead of wrapped. Weeknight-friendly and highly rated.", "mech": false, "vari": false}, {"title": "Tofu in Tomato Sauce", "cuisine": "Vietnamese", "tags": ["mains", "vietnamese", "weeknight", "dairy-free"], "prep": "10 min", "cook": "20 min", "serves": 4, "intro": "The mechanic here is frying the tofu separately before it meets the sauce. A golden crust holds shape during the braise and absorbs flavour without turning to mush. Lard rather than oil deepens the sauce noticeably: worth seeking out.", "mech": false, "vari": false}, {"title": "(Grand) Mom’s Black Bean & Corn Salsa", "cuisine": null, "tags": ["sauces"], "prep": null, "cook": null, "serves": null, "intro": "", "mech": false, "vari": false}];
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const shortTime = s => s == null ? null : String(s)
+  .replace(/\s*minutes?\b|\s*mins?\b/gi, 'm')
+  .replace(/\s*hours?\b|\s*hrs?\b/gi, 'h')
+  .replace(/\s*-\s*/g, '-');
+
+function pills(r){
+  const items = [];
+  if (r.cuisine) items.push(`<span class="cuisine-chip">${esc(r.cuisine)}</span>`);
+  const tags = r.tags.filter(t => !r.cuisine || t.toLowerCase() !== r.cuisine.toLowerCase());
+  const room = 2 - items.length;
+  tags.slice(0, room).forEach(t => items.push(`<span class="tag">${esc(t)}</span>`));
+  const extra = tags.length - room;
+  if (extra > 0) items.push(`<span class="tag tag-more">+${extra}</span>`);
+  return items.join('');
+}
+
+function card(r){
+  const stats = [['Prep', shortTime(r.prep)], ['Cook', shortTime(r.cook)], ['Serves', r.serves]]
+    .filter(([, v]) => v != null && v !== '')
+    .map(([k, v]) => `<div class="rcard-stat" title="${k}: ${esc(v)}"><b>${k}</b><span>${esc(v)}</span></div>`).join('');
+  return `<a class="rcard" href="#">
+    <div class="rcard-top">${pills(r)}</div>
+    <h3 class="rcard-title">${esc(r.title)}</h3>
+    ${r.intro ? `<p class="rcard-intro">${esc(r.intro)}</p>` : ''}
+    ${stats ? `<div class="rcard-stats">${stats}</div>` : ''}
+  </a>`;
+}
+
+function oldCard(r){
+  const stat = (k, v) => v == null ? '' : `<div class="rcard-stat"><span class="rcard-stat-label">${k}</span><span class="rcard-stat-value mono">${esc(v)}</span></div>`;
+  const flags = [r.mech && 'Mechanic', r.vari && 'Variations'].filter(Boolean);
+  return `<a class="rcard" href="#" style="flex:1">
+    <div class="rcard-top">${r.cuisine ? `<span class="cuisine-chip">${esc(r.cuisine)}</span>` : ''}${r.tags.slice(0,3).map(t => `<span class="tag">${esc(t)}</span>`).join('')}${r.tags.length > 3 ? `<span class="tag tag-more">+${r.tags.length-3}</span>` : ''}</div>
+    <h3 class="rcard-title">${esc(r.title)}</h3>
+    <div class="rcard-meta">${stat('Prep', r.prep)}${stat('Cook', r.cook)}${stat('Serves', r.serves)}</div>
+    ${flags.length ? `<div class="rcard-flags">${flags.map(f => `<span>${f}</span>`).join(' · ')}</div>` : ''}
+  </a>`;
+}
+
+const by = t => DATA.find(r => r.title === t);
+const cmp = by('Butternut Squash Curry');
+document.getElementById('old').innerHTML = oldCard(cmp);
+document.getElementById('new').innerHTML = card(cmp);
+document.getElementById('home').innerHTML =
+  ['Pad Kra Pao Moo Saap', 'Almond Chocolate Cake', 'Kālua Pig & Cabbage', "Bruce's Burger Sauce"].map(t => card(by(t))).join('');
+document.getElementById('list').innerHTML = DATA.map(card).join('');
+
+const tt = document.getElementById('tt'), modes = ['system', 'light', 'dark']; let mi = 0;
+tt.addEventListener('click', () => {
+  mi = (mi + 1) % 3; const m = modes[mi];
+  if (m === 'system') document.documentElement.removeAttribute('data-theme');
+  else document.documentElement.setAttribute('data-theme', m);
+  tt.textContent = 'Theme: ' + m;
+});
+</script>
+</body>
+</html>

@@ -28,6 +28,11 @@ in a browser — no build step.
   the review copy for the "filter for quality" pass. Also published as an
   artifact: https://claude.ai/artifact/MwRnqh7dJJvgWXqFoetU9m
 
+- **`recipe-card-v2.html`** — the recipe card redesign (2026-09-23) with
+  real recipe data: before/after, homepage row, and recipes list grid.
+  Built into `layouts/partials/recipe-card.html` and
+  `layouts/recipes/list.html`; `STYLE.md`'s Recipe card entry describes it.
+
 ## `archived/` — reference only
 
 The four original mockup rounds `style.html`/`COMPONENTS.md` were built

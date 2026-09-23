@@ -82,7 +82,7 @@ one.
 
 | Component | Status | Where | Notes |
 |---|---|---|---|
-| Recipe card (`.rgrid`/`.rcard`/`.rcard-top`/`.rcard-title`/`.rcard-meta`/`.rcard-stat`/`.rcard-flags`) | ✅ | recipe-spec-sheet, homepage | Cuisine chip + tags, mono stat pairs, optional Mechanic/Variations flags row |
+| Recipe card (`.rgrid`/`.rcard`/`.rcard-top`/`.rcard-title`/`.rcard-intro`/`.rcard-stats`/`.rcard-stat`) | ✅ | recipe-spec-sheet, homepage, recipe-card-v2 | v2 (2026-09-23): one-line cuisine + tags, intro paragraph, compact accent stat line pinned to the bottom. Replaced the stacked stat pairs and the Mechanic/Variations flags row |
 | Recipe card — alternate (`.rcard` w/ colored left tab, `.top-row`/`.label`/`.date`, stats as label+bold pairs) | 🔴 | landing-page-alt | A **structurally different** card for the same job. Left-edge color tab (now recolored to highlight/accent per the 2026-09-17 fix), a date shown (canonical card never shows a date), no cuisine-chip. This is the clearest head-to-head duplicate in the whole set — needs an explicit keep/cut decision, not just a color fix |
 | Tag (`.tag`) | ✅ | recipe-spec-sheet, homepage, landing-page-alt | Neutral outline, never colored |
 | Tag overflow badge (`.tag-more`) | 🟡 | recipe-spec-sheet, homepage | Dashed-border tag showing "+n" when a card's tag list is truncated. Real and used, not separately called out in `STYLE.md`'s Tag entry |
