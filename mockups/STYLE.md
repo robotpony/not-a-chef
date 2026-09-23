@@ -340,6 +340,10 @@ bottom-right reads as a magnifying glass (search icon) at 16px.
 The tile makes one icon work on light and dark browser chrome, so there is
 no dark-mode variant.
 
+The same `favicon.svg` is the logo mark: 26px, 8px gap, in front of the
+wordmark in the nav and the mobile drawer head (`.site-logo-icon`). The
+footer and homepage h1 stay text-only.
+
 Files, all in `static/`: `favicon.svg` (source of truth), `favicon.ico`
 (16/32/48), `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`
 (180), `android-chrome-192x192.png`, `android-chrome-512x512.png`,

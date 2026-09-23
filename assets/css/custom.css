@@ -550,7 +550,8 @@ h2:has(> .ing-config) {
  * <summary> — no JS needed to open or close beyond the mobile backdrop click. */
 .site-nav { border-bottom: 1px solid var(--border); background: var(--surface); font-family: 'Libre Franklin', sans-serif; }
 .site-nav-inner { max-width: 1100px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; gap: 22px; position: relative; }
-.site-logo { font-weight: 700; font-size: 1.05rem; letter-spacing: -.01em; margin-right: auto; text-decoration: none; white-space: nowrap; color: var(--ink); }
+.site-logo { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 1.05rem; letter-spacing: -.01em; margin-right: auto; text-decoration: none; white-space: nowrap; color: var(--ink); }
+.site-logo-icon { display: block; flex-shrink: 0; width: 26px; height: 26px; }
 .site-nav-links { display: flex; align-items: center; gap: 2px; }
 
 .nav-link, .nav-drop > summary {
