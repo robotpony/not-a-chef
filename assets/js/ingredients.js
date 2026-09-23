@@ -1018,6 +1018,9 @@
           enhanceList(el, pageKey);
         } else if (el.tagName === 'TABLE') {
           enhanceTable(el, pageKey);
+        } else if (el.classList.contains('table-scroll') && el.querySelector(':scope > table')) {
+          // render-table.html wraps every table in a scroll container.
+          enhanceTable(el.querySelector(':scope > table'), pageKey);
         } else if (!/^H[1-6]$/.test(el.tagName)) {
           // A multi-component recipe (FORMAT.md) has no separate "Method"
           // heading — the component's own heading ("## Cake", "## Icing")

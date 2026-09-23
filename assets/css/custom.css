@@ -345,8 +345,8 @@ li.ing {
  * already shrink-wraps to its columns' content width, same as
  * inline-block. Switching only the OUTER half to inline (inline-table)
  * keeps that shrink-to-fit sizing and the normal table column-layout
- * algorithm; overflow-x/max-width then only kick in on the rare table
- * whose 5em-floored columns actually exceed the article width. An earlier
+ * algorithm; the .table-scroll wrapper below only scrolls on the rare
+ * table whose 5em-floored columns actually exceed the article width. An earlier
  * version of this rule used `display: block`, which drops the table
  * formatting context entirely — the browser no longer sizes columns from
  * their content, so a table stretches to fill the full article width and
@@ -354,9 +354,13 @@ li.ing {
  * space instead of collapsing to its content. */
 .article-content table {
   display: inline-table;
+  vertical-align: top;
+}
+/* overflow-x does nothing on a table box, so the scrolling happens on the
+ * wrapper from layouts/_default/_markup/render-table.html instead. */
+.article-content .table-scroll {
   max-width: 100%;
   overflow-x: auto;
-  vertical-align: top;
 }
 .article-content table :is(th, td) {
   min-width: 5em;
@@ -762,6 +766,21 @@ footer.pt-8.max-w-prose { padding-top: 0; }
  * content past the recipe rather than one more section within it.
  * Two-class selectors beat .prose h2's element+class specificity without
  * needing !important. */
+/* See render-heading.html: the anchor's "#" is generated here so it stays
+ * out of .Summary text. */
+.heading-anchor-link::before { content: '#'; }
+
+/* The recipe page's Related block (<div class="max-w-prose"> after the
+ * two-column section) and every single page's prev/next <footer> sit
+ * directly inside <article>, outside #single_header + section, so they
+ * missed that rule's 20px gutter: flush to the screen edge on a phone and
+ * 20px left of the title on desktop. */
+article > .max-w-prose,
+article > footer {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .related-section {
   margin-top: 48px;
   padding-top: 32px;
