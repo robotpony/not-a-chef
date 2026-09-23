@@ -1,7 +1,7 @@
 ---
 title: Minestrone
 tags: [mains, soups, vegetarian, make-ahead, italian, family]
-source: family
+source: https://www.allrecipes.com/recipe/223044/chef-johns-minestrone-soup/
 date: 2026-06-18
 servings: 6–8
 prep_time: 20 min
@@ -24,7 +24,9 @@ The vegetarian base replaces pancetta with deeply browned mushrooms, toasted bre
 - 1–2 teaspoons soy sauce or Bragg's aminos
     - Or: 150 g diced pancetta instead of all of the above
 
-Heat olive oil in a large Dutch oven over medium. Add mushrooms and cook until they release their liquid and begin to brown, about 8 minutes. Add bread and toast until golden. Add paprika and soy sauce and stir to combine.
+Heat olive oil in a large Dutch oven over medium. Add mushrooms and cook until they release their liquid, then dry out and begin to brown, about 8 minutes. Add bread and toast until golden. Add paprika and soy sauce and stir to combine.
+
+For the pancetta version, brown the pancetta in the oil until crisp at the edges, about 6 minutes, and skip the mushrooms, bread, paprika, and soy sauce.
 
 ## Soup
 
@@ -45,13 +47,14 @@ Heat olive oil in a large Dutch oven over medium. Add mushrooms and cook until t
 
 Add more olive oil to the pot if needed. Add onion and celery and soften, about 5 minutes. Add garlic and cook 1 minute. Add red pepper flakes and Italian seasoning and stir. Pour in the stock, water, and tomatoes. Bring to a bare simmer.
 
-Add beans and greens and cook until tender, about 10 minutes. Season with salt and pepper. Add pasta and increase heat to maintain a lively simmer. Cook until pasta is just tender, 8–10 minutes.
+Add beans and greens and cook until tender, about 10 minutes. Season with salt and pepper. Add pasta and increase heat to a lively simmer, not a boil. Cook until pasta is just tender, 8–10 minutes.
 
 ## To serve
 
-Finished with a drizzle of good olive oil, Parmesan, and parsley.
+Finish with a drizzle of good olive oil, Parmesan, and parsley.
 
 ## Notes
 
+- For extra savoury depth, add 1 tablespoon tomato paste once the mushrooms start to colour.
 - If freezing, cook pasta separately and add when reheating.
 - The bread in the base can be a stale heel. It disappears completely.
