@@ -306,7 +306,7 @@ everything discarded or superseded getting to this list.
 - **Theme toggle** (`.theme-toggle`) — labeled pill, cycles system → light → dark; lives in the **site footer**, matching `footer.showAppearanceSwitcher` in Hugo config
 - **Site footer** (`.site-footer`) — brand blurb, link columns (Browse / Index), theme toggle, meta line
 - **Stat rail** (`.stat-rail`) — the one component for "numbers at a glance," used in the recipe header (serves/prep/cook/total); removed from the homepage hero 2026-09-22, where the "tonight" tag pills now sit beside search
-- **Format/component gallery card** (`.comp-card`) — also reused for real content: the three essay-format teasers and the food memories band on the homepage
+- **Format/component gallery card** (`.comp-card`) — also reused for real content: the food memories band on the homepage
 
 ### Decisions (2026-09-17, resolving `COMPONENTS.md`'s open list)
 

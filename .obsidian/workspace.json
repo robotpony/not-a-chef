@@ -198,6 +198,7 @@
   },
   "active": "d0b22b16cacd0e28",
   "lastOpenFiles": [
+    "public/css/main.bundle.min.9739edbeef77ddd5ed8ddbac31b92780af57c7c97716eb9f8efd2245e5668c3704f81bf57d9c256a7cc6a45e80e2d07467f01b7c8017d3cde715f9cab260fc7a.css",
     "public/css/main.bundle.min.1d126e127e760805865dff3898567c837782552d449a31717846983187e991758f33eefb489dc040f41bf7dbab638069e30dc7e004b735ef59fb395d95384636.css",
     "public/css/main.bundle.min.81ae13db717c59ae4267997ec172218e44074af319fb57a9ab1f9fb0b9a547be7b68a88bba7b04739944b8c057b3dded03b00f344376cd88bc3e494c23e21869.css",
     "public/css/main.bundle.min.ffb0831ab18184eda8d4a38ece7a8a665accf1b0c7b3db0919dbc72f1ca9095d60330cc82544dcced7e2d3e1f19aeec871500884f7aae87b1933931693f62295.css",
@@ -214,7 +215,6 @@
     "content/recipes/breakfast-style-sausage.md",
     "public/css/main.bundle.min.016539a449a91137f64561903733fc9ae3347b544c102543b230874db23c42807a9f4a8d9b5bf6c05e9c9d928e913a9456892dc84e9194623bdb0317ed3bf827.css",
     "public/css/main.bundle.min.9188a8c00c6c7f495fc3760991ea2e438b64548b2146b7ee58a56e5dab78acea1e282b8dd1848b8ca50899ec63ca5156e01b3c88472de4ec750a0d102feb6f5d.css",
-    "public/css/main.bundle.min.36d256991b4f40c6b19a2aee1944992e88d01f1036ce7345007790381d9d28843d4b2ddb03b9f97e8decd5e22877cc2473db6f5d6075a169add147a46f7fc794.css",
     "public/images/recipes/candied-cranberries-sugared-cranberries.jpg",
     "static/images/recipes/candied-cranberries-sugared-cranberries.jpg",
     "CLAUDE.md",

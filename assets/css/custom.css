@@ -696,9 +696,6 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
 .comp-card-label { font-family: 'Libre Franklin', sans-serif; font-size: .92rem; font-weight: 700; }
 .comp-card-note { font-family: 'Lora', serif; font-size: .88rem; color: var(--ink-muted); line-height: 1.55; }
 
-.split { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; }
-@media (max-width: 820px) { .split { grid-template-columns: 1fr; } }
-
 .section-caveat { font-family: 'Libre Franklin', sans-serif; font-size: .78rem; color: var(--ink-faint); padding: 8px 12px; background: var(--surface-2); border-radius: 4px; }
 .section-caveat strong { color: var(--ink-muted); }
 
