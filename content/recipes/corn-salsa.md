@@ -2,6 +2,7 @@
 title: Corn salsa
 tags: [sauces]
 source: www.recipetineats.com
+cook_time: 5 min
 cuisine: Mexican
 draft: false
 ---

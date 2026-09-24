@@ -2,6 +2,7 @@
 title: Vodka cream sauce
 tags: [sauces]
 source: family
+cook_time: 3-5 min
 cuisine: Italian
 draft: false
 ---

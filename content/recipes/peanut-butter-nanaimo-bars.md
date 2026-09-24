@@ -2,6 +2,7 @@
 title: Peanut butter Nanaimo bars
 tags: [desserts]
 source: family
+cook_time: 6 min
 cuisine: Canadian
 draft: false
 ---

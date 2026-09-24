@@ -2,6 +2,7 @@
 title: Butter tarts
 tags: [desserts]
 source: family
+cook_time: 12-15 min
 cuisine: Canadian
 draft: false
 servings: Recipe makes 12 Tarts

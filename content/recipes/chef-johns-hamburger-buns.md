@@ -2,6 +2,7 @@
 title: Chef John’s hamburger buns
 tags: [breads]
 source: family
+cook_time: 15-18 min
 cuisine: American
 draft: false
 ---

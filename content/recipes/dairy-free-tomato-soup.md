@@ -2,6 +2,7 @@
 title: Dairy free tomato soup
 tags: [mains, soups]
 source: family
+cook_time: 30-60 min
 cuisine: American
 draft: false
 ---

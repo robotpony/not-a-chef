@@ -2,6 +2,8 @@
 title: Neapolitan strips
 tags: [desserts]
 source: family
+prep_time: 2 hr (or overnight)
+cook_time: 7-10 min
 cuisine: Canadian
 draft: false
 ---

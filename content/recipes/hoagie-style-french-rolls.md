@@ -2,6 +2,7 @@
 title: Hoagie style French rolls
 tags: [breads]
 source: family
+cook_time: 20 min
 cuisine: American
 draft: false
 ---

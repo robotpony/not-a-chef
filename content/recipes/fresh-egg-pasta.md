@@ -5,6 +5,7 @@ source: family
 date: 2026-06-18
 servings: 4
 prep_time: 20 min
+cook_time: 2-3 min
 total_time: 50 min (plus 30 min rest)
 cuisine: Italian
 draft: false

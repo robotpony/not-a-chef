@@ -2,6 +2,7 @@
 title: Indian takeout tomato purée
 tags: [bases]
 source: family
+cook_time: 10-15 min
 cuisine: Indian
 draft: false
 ---

@@ -2,6 +2,7 @@
 title: Double chocolate banana bread
 tags: [desserts]
 source: family
+cook_time: 55-65 min
 cuisine: American
 draft: false
 ---

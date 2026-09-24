@@ -2,6 +2,7 @@
 title: Mushroom parmesan pasta filling
 tags: [breads]
 source: family
+cook_time: 15-20 min
 cuisine: Italian
 draft: false
 ---

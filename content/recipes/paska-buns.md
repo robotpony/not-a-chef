@@ -2,6 +2,7 @@
 title: Paska buns
 tags: [breads]
 source: family
+cook_time: 18 min
 cuisine: Mennonite
 draft: false
 ---

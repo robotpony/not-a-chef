@@ -2,8 +2,9 @@
 title: Al pastor marinade (pantry hack)
 tags: [bases]
 source: family
-cuisine: Mexican
 prep_time: 20m
+cook_time: 2-4 hr
+cuisine: Mexican
 draft: false
 ---
 

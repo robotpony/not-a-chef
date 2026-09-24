@@ -4,6 +4,7 @@ tags: [bases, indian, make-ahead, vegan, dairy-free]
 source: original
 date: 2024-07-01
 prep_time: 15 min
+cook_time: 2-3 min
 total_time: 15 min
 cuisine: Indian
 draft: false

@@ -5,6 +5,7 @@ source: original
 date: 2024-10-01
 servings: ~1.5L 
 prep_time: 30 min
+cook_time: 10 min
 total_time: 50 min (plus steeping)
 cuisine: American
 draft: false

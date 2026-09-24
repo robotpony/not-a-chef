@@ -2,6 +2,7 @@
 title: Our favourite chocolate chip cookies
 tags: [desserts]
 source: family
+cook_time: 10-12 min
 cuisine: Canadian
 draft: false
 ---

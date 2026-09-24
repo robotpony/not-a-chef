@@ -2,6 +2,7 @@
 title: Spaghetti squash boats (or casserole)
 tags: [mains, casseroles]
 source: family
+cook_time: 30 min
 cuisine: American
 draft: false
 ---

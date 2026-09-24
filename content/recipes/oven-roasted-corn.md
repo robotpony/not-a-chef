@@ -2,6 +2,8 @@
 title: Oven roasted corn
 tags: [appetizers, sides]
 source: family
+prep_time: 20-60 min
+cook_time: 30 min
 cuisine: American
 draft: false
 ---

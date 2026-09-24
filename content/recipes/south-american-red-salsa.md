@@ -2,6 +2,7 @@
 title: South American red salsa
 tags: [sauces]
 source: family
+prep_time: 30 min (or up to 7 days)
 cuisine: Latin
 draft: false
 ---

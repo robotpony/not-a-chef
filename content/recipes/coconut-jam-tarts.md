@@ -2,6 +2,7 @@
 title: Coconut jam tarts
 tags: [desserts]
 source: family
+cook_time: 15-20 min
 cuisine: Canadian
 draft: false
 ---

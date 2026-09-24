@@ -2,6 +2,7 @@
 title: English muffins
 tags: [breads]
 source: family
+cook_time: 6 min per side
 cuisine: British
 draft: false
 ---

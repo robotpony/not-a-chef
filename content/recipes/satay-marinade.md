@@ -2,6 +2,7 @@
 title: Satay marinade
 tags: [bases]
 source: family
+prep_time: 2 min (plus up to 4 hr refrigeration)
 cuisine: Indonesian
 draft: false
 ---

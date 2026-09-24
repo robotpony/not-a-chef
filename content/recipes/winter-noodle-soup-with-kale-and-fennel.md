@@ -2,6 +2,7 @@
 title: Winter noodle soup, with kale and fennel
 tags: [mains, soups]
 source: family
+prep_time: 45 min
 cuisine: French
 draft: false
 ---

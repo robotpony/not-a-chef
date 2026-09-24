@@ -2,6 +2,7 @@
 title: White Rock Cheesecake
 tags: [desserts]
 source: family
+cook_time: 10 min
 cuisine: Canadian
 draft: true
 ---

@@ -2,6 +2,7 @@
 title: Bienenstich
 tags: [desserts]
 source: family
+cook_time: 15 min
 cuisine: German
 draft: false
 ---
