@@ -335,9 +335,13 @@ heading bottom-right reads as a magnifying glass (search icon) at 16px.
 | Part | Value | Note |
 |---|---|---|
 | Tile (burner) | `#EAEBDF` (`--surface-2`) | one step darker than the pan floor so the tile edge shows on white tabs; `rx` 7 on a 32 grid, square for `apple-touch-icon.png` (iOS masks its own corners) |
-| Pan rim | `#D58167` | the palette's red at the shared 57%/62% formula (`hsl(14 57% 62%)`); rim 2.25 units, thick enough to hold at 16px |
+| Pan rim | `#D58167` | the palette's red at the shared 57%/62% formula (`hsl(14 57% 62%)`); rim 2.5 units, thick enough to hold at 16px |
 | Pan floor | `#FBFBF6` (`--surface`) | |
-| Heart, handle | `#7C361D` (`--accent-strong`) | handle 3.5 units |
+| Heart, handle | `#7C361D` (`--accent-strong`) | handle 4 units |
+
+The mark fills the tile: pan radius 11 centred at (18.5, 18.5), handle cap
+out to 2.75 from the top-left corner, roughly 2.5 units of tile margin all
+round. Variant 07 in `favicon-heart-pan.html` is the smaller original.
 
 Every value is an existing token or the palette's own red; the favicon adds
 no new colours.
@@ -354,7 +358,9 @@ Files, all in `static/`: `favicon.svg` (source of truth), `favicon.ico`
 (180), `android-chrome-192x192.png`, `android-chrome-512x512.png`,
 `site.webmanifest`. Wired in by `layouts/partials/favicons.html`, which
 Blowfish's `head.html` picks up in place of its defaults. To change the icon,
-edit `favicon.svg` and re-render the PNGs and ICO from it.
+edit `favicon.svg` and re-render the PNGs and ICO from it. Render with
+headless Chrome and downscale with ImageMagick; ImageMagick's own SVG
+renderer draws the stroked handle as a hairline.
 
 ## Spacing & radius
 
