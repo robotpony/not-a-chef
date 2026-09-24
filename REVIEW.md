@@ -166,15 +166,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 
 ### Food log
 
-- [x] ! `the-food-log/2026-September.md`
-    - No frontmatter (no title/date). Q: does the food log section have its own layout that doesn't need it, or should it get `title: September 2026`?
-    - Obsidian `#todo` tags (L5–7) will render as literal text on the site.
-    - L7: "Japanese curry #todo" Q: done? `pressure-cooker-japanese-curry.md` exists and links the same source.
-    - L15: "the woks of life" → "The Woks of Life".
-    - Goulash (L24–52): "leak" → "leek"; "msg" → "MSG"; "add a 100ml of water" → "add 100 ml"; "the stock stock" duplicated.
-    - Goulash: incoherent: shallot is one of the "4 onions" in the list, but the method adds "garlic and shallots (if using)" separately. Worcestershire (15 ml) is listed but never used in the method.
-    - Goulash: "Add the spices" never says which: paprika and fennel/caraway, presumably; name them.
-    - Q: goulash.md already exists as a recipe. Should this log version be merged into it as a variation?
+- [x] `the-food-log/2026-September.md` (fixed 2026-09-24: no frontmatter is by design (title comes from the filename); the three `#todo` items link to their finished recipes; The Woks of Life; goulash typos, garlic step, named spices, Worcestershire added with the stock; merged into goulash.md as a variation)
 
 ### Recipes
 
@@ -491,11 +483,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - L23: "1 cup ginger ... (1 smaller knob)". A cup of ginger is several large knobs (~150 g).
     - Section order: Notes come before Ingredients. Move to the end. Headings end in colons.
 - [x] `recipes/gochujang-wing-sauce.md`
-- [x] ! `recipes/goulash.md`
-    - L18: garbled logic: "That's what makes this taste like goulash and not paprika stew." The heavy paprika is what makes it goulash; the contrast is with generic beef stew. → "and not like beef stew with a little paprika".
-    - L18: "Skipping the bacon is fine", but there's no bacon in the recipe (only bacon fat as an option).
-    - L60: empty trailing bullet in Notes.
-    - Q: see the-food-log goulash notes. Merge that version in as a variation?
+- [x] `recipes/goulash.md` (fixed 2026-09-24: Mechanic wording; bacon line; empty bullet; food-log prep-day version added as a variation)
 - [x] ! `recipes/grand-moms-black-bean-corn-salsa.md`
     - No salt anywhere, even as optional. Q: intentional (the beans and corn carry salt)? Add "salt to taste".
     - L14: "1 small can" → a size (398 ml / 14 oz). "Let sit 30 minutes" with avocado in it will brown; add the avocado just before serving.
