@@ -23,6 +23,8 @@ Even on your first try, these buns are better than what you can find in most mar
 - 1¼ tsp salt
 - 1 tsp olive oil (not extra-virgin)
 
+## Method
+
 Whisk the yeast, ½ cup of the flour, and the warm water in the bowl of a stand mixer until smooth. Let stand until foamy, 10–15 minutes.
 
 Add the egg, melted butter, sugar, and salt, and whisk until smooth again.
