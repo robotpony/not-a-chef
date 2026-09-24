@@ -3,10 +3,9 @@ title: Base curry gravy
 tags: [bases, indian, make-ahead, vegan, dairy-free]
 source: family
 date: 2026-06-18
-servings: makes ~1.5 L
-prep_time: 15 min
-cook_time: 45 min
-total_time: 60 min
+prep_time: 15m
+cook_time: 45m
+total_time: 60m
 cuisine: Indian
 draft: false
 ---

@@ -31,7 +31,7 @@ This is a fresh and delicious autumn salad.
 - 1 lemon, juiced (more to taste)
 - 1 tsp agavé (optional)
 - ½ tsp salt
-- pepper to yaste
+- pepper to taste
 
 ## Directions:
 

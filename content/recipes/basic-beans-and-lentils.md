@@ -2,8 +2,11 @@
 title: Basic beans and lentils
 tags: [mains, stews]
 source: family
+cuisine: global
 draft: false
 ---
+
+Beans and lentils are a great addition to soups and stews, or as a side dish.
 
 ## Mechanic
 

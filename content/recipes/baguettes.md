@@ -1,11 +1,19 @@
 ---
 title: Baguettes
-tags: [breads]
+tags: [breads, techniquess]
 source: family
 draft: false
+cuisine: French
+prep_time: 2.5h
+rest_time: 5-24h
+cook_time: 20m
 ---
 
-This is more of a method than a specific recipe, and the dough can be used for several similar types of breads (including focaccia, buns, and loaves) by varying the rise and oven time. The baguette method uses a narrow shape and steam to form a fantastic crust. This recipe and method is based on [Ethan Chlebowski’s excellent tutorial video](https://www.ethanchlebowski.com/cooking-techniques-recipes/sandwich-baguettes). Also see [Paul Holywood’s recipe](https://www.paulhollywood.com/post/baguettes).
+Baguettes are a crusty, airy bread, perfect for snacking, sandwiches, and with soup.
+
+## Mechanic
+
+This is more of a method than a specific recipe, and the dough can be used for several similar types of breads by varying the rise and oven time. The baguette method uses a narrow shape and steam to form a fantastic crust. This recipe and method is based on [Ethan Chlebowski’s excellent tutorial video](https://www.ethanchlebowski.com/cooking-techniques-recipes/sandwich-baguettes). Also see [Paul Holywood’s recipe](https://www.paulhollywood.com/post/baguettes).
 
 ## Ingredients
 
