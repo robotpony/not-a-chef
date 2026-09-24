@@ -1,0 +1,18 @@
+{{/*
+  Label and sort key for one Food Log page. Log files are named by month
+  (content/the-food-log/2026-September.md) and carry no frontmatter, so
+  the title falls back to "September 2026" from the filename, and the sort
+  key comes from the same place.
+*/}}
+{{ $name := .File.ContentBaseName }}
+{{ $label := .Title }}
+{{ $key := 0 }}
+{{ with findRESubmatch `^(\d{4})-([A-Za-z]+)$` $name 1 }}
+  {{ $year := index (index . 0) 1 }}
+  {{ $month := index (index . 0) 2 }}
+  {{ if not $label }}{{ $label = printf "%s %s" $month $year }}{{ end }}
+  {{ $months := dict "january" 1 "february" 2 "march" 3 "april" 4 "may" 5 "june" 6 "july" 7 "august" 8 "september" 9 "october" 10 "november" 11 "december" 12 }}
+  {{ $key = add (mul (int $year) 100) (index $months (lower $month) | default 0) }}
+{{ end }}
+{{ if not $label }}{{ $label = $name | humanize }}{{ end }}
+{{ return dict "label" $label "key" $key "page" . }}

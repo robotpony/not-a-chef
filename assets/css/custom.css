@@ -1069,3 +1069,50 @@ article > footer {
 a.comp-card { color: inherit; text-decoration: none; }
 a.comp-card:hover { border-color: var(--accent); }
 a.comp-card:hover .comp-card-label { color: var(--accent-strong); }
+
+/* Reading sidebar (mockups/reading-sidebar.html) — essays, reference,
+ * the Food Log, and About (layouts/partials/reading-sidebar.html, placed
+ * by _default/single.html). Reuses .search-box, .browse-list,
+ * .filter-pill, and .section-caveat. Content column is 18.6rem, as in
+ * the mockup (10% narrower than the recipe sidebar there, since these
+ * modules are denser); the wrap's width adds lg:ps-8's 2rem on top. Two-class selectors
+ * throughout so they beat custom.css's own `.prose h2` rules; `not-prose`
+ * on the wrapper opts out of Tailwind Typography's. */
+.reading-sidebar-wrap { border-top: 1px solid var(--border); padding-top: 24px; margin-bottom: 32px; }
+@media (min-width: 1024px) {
+  .reading-sidebar-wrap { flex: 0 0 20.6rem; max-width: 20.6rem; border-top: none; padding-top: 0; margin-bottom: 0; }
+}
+.reading-sidebar { display: flex; flex-direction: column; gap: 26px; }
+.reading-sidebar .rs-label {
+  font-family: 'Libre Franklin', sans-serif; font-size: .72rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .07em; color: var(--ink-faint);
+  line-height: 1.3; margin: 0 0 8px; padding: 0;
+}
+.reading-sidebar .rs-label .n { font-family: 'IBM Plex Mono', monospace; font-weight: 500; letter-spacing: 0; margin-left: 4px; }
+.reading-sidebar .search-box { width: 100%; flex: none; padding: 9px 11px; font-size: .82rem; }
+.reading-sidebar .search-box:hover { border-color: var(--accent); }
+.reading-sidebar .browse-list { margin: 0 -8px; }
+.reading-sidebar .browse-list a { font-size: .86rem; line-height: 1.35; padding: 5px 8px; align-items: baseline; }
+.reading-sidebar .browse-list a.sub { padding-left: 20px; font-size: .82rem; color: var(--ink-muted); }
+.reading-sidebar .browse-list a[aria-current="page"] { background: var(--accent-soft); color: var(--accent-strong); font-weight: 600; }
+.reading-sidebar .browse-list a:hover .n,
+.reading-sidebar .browse-list a[aria-current="page"] .n { color: var(--accent-strong); }
+.reading-sidebar .rs-more summary {
+  list-style: none; cursor: pointer; display: inline-block; margin-top: 6px;
+  font-family: 'Libre Franklin', sans-serif; font-size: .8rem; font-weight: 600; color: var(--accent-strong);
+}
+.reading-sidebar .rs-more summary::-webkit-details-marker { display: none; }
+.reading-sidebar .rs-more summary::after { content: " \2192"; }
+.reading-sidebar .rs-more[open] summary { display: none; }
+.reading-sidebar .filter-pill { display: inline-flex; gap: 6px; align-items: baseline; font-size: .76rem; padding: 5px 11px; }
+.reading-sidebar .filter-pill .n { font-family: 'IBM Plex Mono', monospace; font-size: .68rem; color: var(--ink-faint); }
+.reading-sidebar .rs-all { display: block; text-align: right; margin-top: 10px; font-family: 'Libre Franklin', sans-serif; font-size: .8rem; text-decoration: none; }
+.reading-sidebar .section-caveat { margin-top: 8px; line-height: 1.45; }
+.reading-sidebar .rs-numbers { display: flex; flex-direction: column; }
+.reading-sidebar .rs-number {
+  display: flex; justify-content: space-between; gap: 12px; padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  font-family: 'Libre Franklin', sans-serif; font-size: .82rem; color: var(--ink-muted);
+}
+.reading-sidebar .rs-number:last-child { border-bottom: none; }
+.reading-sidebar .rs-number b { font-family: 'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums; font-weight: 600; color: var(--accent-strong); }

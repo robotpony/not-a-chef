@@ -1,0 +1,384 @@
+<title>Reading Sidebar</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  :root{
+    --bg:#F3F3EC; --surface:#FBFBF6; --surface-2:#EAEBDF;
+    --ink:#23241E; --ink-muted:#63645A; --ink-faint:#93948A;
+    --border:#DCDCCE; --border-strong:#C7C8B4;
+    --accent:#A67330; --accent-strong:#7C361D; --accent-soft:#F6EADA;
+    --highlight:#997F29; --highlight-soft:#F6F1D5;
+    --flag:#3D638F; --flag-soft:#E1EAF4;
+    --focus:#A67330;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+      --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+      --border:#383A2C; --border-strong:#4A4C3A;
+      --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+      --highlight:#DDCC88; --highlight-soft:#342D19;
+      --flag:#97B8D8; --flag-soft:#1D2835;
+      --focus:#D3A569;
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+    --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+    --border:#383A2C; --border-strong:#4A4C3A;
+    --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+    --highlight:#DDCC88; --highlight-soft:#342D19;
+    --flag:#97B8D8; --flag-soft:#1D2835;
+    --focus:#D3A569;
+    color-scheme:dark;
+  }
+
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:'Lora',Georgia,serif; font-size:16px; line-height:1.5; -webkit-font-smoothing:antialiased; }
+  p{ margin:0; }
+  a{ color:inherit; }
+  code{ font-family:'IBM Plex Mono',monospace; font-size:.85em; }
+  :focus-visible{ outline:2px solid var(--focus); outline-offset:2px; }
+
+  /* ---------- harness (not site UI) ---------- */
+  .page{ max-width:1180px; margin:0 auto; padding-block:32px 64px; padding-inline:20px; }
+  header.doc h1{ font-family:'Libre Franklin',sans-serif; font-size:1.7rem; line-height:1.15; margin:0 0 8px; text-wrap:balance; }
+  header.doc p{ color:var(--ink-muted); max-width:70ch; }
+  .harness{ display:flex; flex-wrap:wrap; gap:8px 20px; align-items:center; margin:20px 0 14px; font-family:'Libre Franklin',sans-serif; }
+  .seg{ display:flex; flex-wrap:wrap; gap:6px; }
+  .seg button, .theme-toggle{ font-family:'Libre Franklin',sans-serif; font-size:.78rem; font-weight:500; padding:6px 12px; border:1px solid var(--border-strong); border-radius:14px; color:var(--ink-muted); background:transparent; cursor:pointer; }
+  .seg button[aria-pressed="true"]{ background:var(--accent-soft); border-color:var(--accent); color:var(--ink); }
+  .theme-toggle{ font-size:.72rem; font-weight:600; background:var(--surface); }
+  .harness-label{ font-size:.66rem; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); }
+
+  .frame{ border:1px dashed var(--border-strong); border-radius:8px; overflow:hidden; background:var(--bg); margin-inline:auto; transition:max-width .2s; }
+  .frame.phone{ max-width:390px; }
+  @media (prefers-reduced-motion: reduce){ .frame{ transition:none; } }
+
+  section.band{ margin-top:44px; }
+  .band h2{ font-family:'Libre Franklin',sans-serif; font-size:1.15rem; margin:0 0 6px; line-height:1.2; }
+  .band-dek{ color:var(--ink-muted); font-size:.92rem; margin-bottom:16px; max-width:72ch; }
+  .tbl-wrap{ overflow-x:auto; border:1px solid var(--border); border-radius:6px; background:var(--surface); }
+  table{ border-collapse:collapse; width:100%; min-width:640px; font-family:'Libre Franklin',sans-serif; font-size:.82rem; }
+  th, td{ text-align:left; padding:9px 12px; border-bottom:1px solid var(--border); vertical-align:top; }
+  th{ font-size:.66rem; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); font-weight:600; }
+  tr:last-child td{ border-bottom:none; }
+  td.y{ color:var(--accent-strong); font-weight:600; }
+  td.n{ color:var(--ink-faint); }
+  .notes{ padding:14px 16px 14px 18px; border-left:3px solid var(--accent); background:var(--surface); border-radius:0 6px 6px 0; font-size:.9rem; }
+  .notes ul{ margin:0; padding-left:18px; }
+  .notes li{ margin:6px 0; }
+
+  /* ---------- site chrome (from custom.css) ---------- */
+  .site-nav{ border-bottom:1px solid var(--border); background:var(--surface); font-family:'Libre Franklin',sans-serif; }
+  .site-nav-inner{ max-width:1100px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; gap:22px; }
+  .site-logo{ font-weight:700; font-size:1.05rem; letter-spacing:-.01em; margin-right:auto; text-decoration:none; white-space:nowrap; }
+  .brand-loves{ color:var(--accent-strong); }
+  .site-nav-links{ display:flex; gap:18px; font-size:.86rem; color:var(--ink-muted); }
+  .site-nav-links span.on{ color:var(--ink); box-shadow:inset 0 -2px 0 var(--accent); padding-bottom:2px; }
+  .burger{ display:none; width:22px; height:22px; color:var(--ink-muted); }
+  .phone .site-nav-links{ display:none; }
+  .phone .burger{ display:block; }
+  @media (max-width:680px){ .site-nav-links{ display:none; } .burger{ display:block; } }
+
+  /* ---------- page layout ---------- */
+  /* Title block sits above the two columns, as #single_header does on
+     recipes, so the sidebar's top lines up with the body, not the title. */
+  .page-head{ max-width:1100px; margin:0 auto; padding:24px 20px 0; }
+  .page-head > *{ max-width:65ch; }
+  .layout{ max-width:1100px; margin:0 auto; padding:0 20px 40px; display:flex; gap:40px; align-items:flex-start; }
+  .main{ flex:1 1 auto; min-width:0; max-width:65ch; }
+  .rail{ flex:0 0 18.6rem; width:18.6rem; }
+  .phone .layout, .layout.stack{ flex-direction:column; gap:28px; }
+  .phone .rail{ width:100%; flex-basis:auto; border-top:1px solid var(--border); padding-top:24px; }
+  @media (max-width:900px){ .layout{ flex-direction:column; gap:28px; } .rail{ width:100%; flex-basis:auto; border-top:1px solid var(--border); padding-top:24px; } }
+
+  .crumbs{ font-family:'Libre Franklin',sans-serif; font-size:.74rem; color:var(--ink-faint); margin-bottom:8px; }
+  .page-head h1{ font-family:'Libre Franklin',sans-serif; font-size:2.1rem; font-weight:700; line-height:1.1; letter-spacing:-.01em; margin:0 0 10px; text-wrap:balance; }
+  .tagrow{ display:flex; gap:6px; flex-wrap:wrap; margin-bottom:22px; }
+  .tag{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; border:1px solid var(--border-strong); color:var(--ink-muted); padding:3px 7px; border-radius:3px; display:inline-block; text-decoration:none; }
+  .prose{ display:flex; flex-direction:column; gap:1.25em; }
+  .prose h2{ font-family:'Libre Franklin',sans-serif; font-size:1.5rem; line-height:1.25; margin:.5em 0 -.5em; }
+  .prose h3{ font-family:'Libre Franklin',sans-serif; font-size:1.2rem; line-height:1.3; margin:.2em 0 -.8em; }
+  .prose h4{ font-family:'Libre Franklin',sans-serif; font-size:1rem; margin:0 0 -.9em; }
+  .prose ul{ margin:0; padding-left:1.2em; }
+  .prose li{ margin:.25em 0; }
+  .wikilink{ color:var(--accent-strong); text-decoration:underline dotted; text-underline-offset:3px; }
+  .wikilink::after{ content:" →"; font-size:.85em; }
+  .extlink{ text-decoration:underline; text-decoration-color:var(--border-strong); text-underline-offset:3px; }
+  .extlink::after{ content:" ↗"; font-size:.8em; color:var(--ink-faint); }
+  .fade{ color:var(--ink-faint); font-style:italic; font-size:.9rem; }
+
+  /* ---------- the sidebar ---------- */
+  .rail{ display:flex; flex-direction:column; gap:26px; }
+  .rail-section h2{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-faint); margin:0 0 8px; }
+  .rail-section h2 .n{ font-family:'IBM Plex Mono',monospace; font-weight:500; letter-spacing:0; margin-left:4px; }
+
+  .search-box{ width:100%; display:flex; align-items:center; gap:8px; background:var(--surface); border:1px solid var(--border-strong); border-radius:4px; padding:9px 11px; font-family:'Libre Franklin',sans-serif; font-size:.82rem; color:var(--ink-faint); cursor:pointer; text-align:left; }
+  .search-box:hover{ border-color:var(--accent); }
+  .search-box svg{ width:15px; height:15px; flex-shrink:0; }
+  .search-box kbd{ font-family:'IBM Plex Mono',monospace; font-size:.7rem; border:1px solid var(--border-strong); border-radius:3px; padding:2px 5px; margin-left:auto; }
+
+  .browse-list{ display:flex; flex-direction:column; gap:1px; margin:0 -8px; }
+  .browse-list a{ display:flex; justify-content:space-between; align-items:baseline; gap:14px; font-family:'Libre Franklin',sans-serif; font-size:.86rem; color:var(--ink); text-decoration:none; padding:5px 8px; border-radius:4px; line-height:1.35; }
+  .browse-list a:hover{ background:var(--accent-soft); color:var(--accent-strong); }
+  .browse-list a[aria-current="page"]{ background:var(--accent-soft); color:var(--accent-strong); font-weight:600; }
+  .browse-list a .n{ font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums; font-size:.72rem; color:var(--ink-faint); flex-shrink:0; }
+  .browse-list a.sub{ padding-left:20px; font-size:.82rem; color:var(--ink-muted); }
+  .browse-more{ font-family:'Libre Franklin',sans-serif; font-size:.8rem; font-weight:600; color:var(--accent-strong); text-decoration:none; display:inline-block; margin-top:6px; }
+
+  .browse-more-end{ display:block; text-align:right; margin-top:10px; }
+  .pill-row{ display:flex; gap:6px; flex-wrap:wrap; }
+  .filter-pill{ font-family:'Libre Franklin',sans-serif; font-size:.76rem; font-weight:500; padding:5px 11px; border:1px solid var(--border-strong); border-radius:14px; color:var(--ink-muted); text-decoration:none; display:inline-flex; gap:6px; align-items:baseline; }
+  .filter-pill:hover{ border-color:var(--accent); color:var(--ink); }
+  .filter-pill .n{ font-family:'IBM Plex Mono',monospace; font-size:.68rem; color:var(--ink-faint); }
+
+  .meta-rows{ display:flex; flex-direction:column; }
+  .meta-row{ display:flex; justify-content:space-between; gap:12px; padding:6px 0; border-bottom:1px solid var(--border); font-family:'Libre Franklin',sans-serif; font-size:.82rem; color:var(--ink-muted); }
+  .meta-row:last-child{ border-bottom:none; }
+  .meta-row b{ font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums; font-weight:600; color:var(--accent-strong); }
+
+  .section-caveat{ font-family:'Libre Franklin',sans-serif; font-size:.76rem; color:var(--ink-faint); padding:8px 12px; background:var(--surface-2); border-radius:4px; margin-top:8px; line-height:1.45; }
+
+  .toc-only-desktop{}
+  .phone .toc-only-desktop{ display:none; }
+  @media (max-width:900px){ .toc-only-desktop{ display:none; } }
+  .mobile-toc{ display:none; font-family:'Libre Franklin',sans-serif; font-size:.82rem; border:1px solid var(--border); border-radius:4px; padding:8px 12px; color:var(--ink-muted); margin-bottom:18px; background:var(--surface); }
+  .phone .mobile-toc{ display:block; }
+  @media (max-width:900px){ .mobile-toc{ display:block; } }
+</style>
+
+<div class="page">
+
+<header class="doc">
+  <h1>Sidebar for reading pages</h1>
+  <p>One sidebar for essays, reference guides, the Food Log, and About. Search sits at the top on every page, then one or two modules for the page you're on, then a short way back into the recipes. Real content and real counts throughout (published pages only, as of 24 September 2026).</p>
+</header>
+
+<div class="harness" role="group" aria-label="Mockup controls">
+  <span class="harness-label">Page</span>
+  <div class="seg" id="pageSeg">
+    <button type="button" data-page="essay" aria-pressed="true">Essay</button>
+    <button type="button" data-page="reference" aria-pressed="false">Reference</button>
+    <button type="button" data-page="log" aria-pressed="false">Food Log</button>
+    <button type="button" data-page="about" aria-pressed="false">About</button>
+  </div>
+  <span class="harness-label">Width</span>
+  <div class="seg" id="widthSeg">
+    <button type="button" data-w="desk" aria-pressed="true">Desktop</button>
+    <button type="button" data-w="phone" aria-pressed="false">Phone</button>
+  </div>
+  <button class="theme-toggle" id="tt" type="button">Theme: system</button>
+</div>
+
+<div class="frame" id="frame">
+  <div class="site-nav"><div class="site-nav-inner">
+    <a class="site-logo" href="#">Bruce <span class="brand-loves">loves</span> to cook.</a>
+    <nav class="site-nav-links" id="navLinks">
+      <span data-nav="recipes">Recipes ▾</span><span data-nav="essay">Essays</span><span data-nav="log">The Food Log</span><span data-nav="reference">Reference ▾</span><span data-nav="about">About</span>
+    </nav>
+    <svg class="burger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </div></div>
+
+  <header class="page-head" id="head"></header>
+  <div class="layout">
+    <article class="main" id="main"></article>
+    <aside class="rail" id="rail" aria-label="Sidebar"></aside>
+  </div>
+</div>
+
+<section class="band">
+  <h2>What goes in it, by page</h2>
+  <p class="band-dek">Search and "Cook tonight" are on every reading page. Everything else earns its place on one page type. Order in the table is top to bottom in the sidebar.</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Module</th><th>Essay</th><th>Reference</th><th>Food Log</th><th>About</th><th>Built from</th></tr></thead>
+    <tbody>
+      <tr><td>Search</td><td class="y">yes</td><td class="y">yes</td><td class="y">yes</td><td class="y">yes</td><td>Existing search modal (<code>#search-button</code>)</td></tr>
+      <tr><td>On this page</td><td class="n">if headings</td><td class="y">yes</td><td class="y">days</td><td class="n">no</td><td><code>.TableOfContents</code>; replaces Blowfish's TOC column</td></tr>
+      <tr><td>Recipes in this guide</td><td class="n">if links</td><td class="y">yes</td><td class="n">no</td><td class="n">no</td><td>Wiki links found in the page body</td></tr>
+      <tr><td>Sibling essays</td><td class="y">yes</td><td class="n">no</td><td class="n">no</td><td class="n">no</td><td>Essay sub-sections, published only</td></tr>
+      <tr><td>Months</td><td class="n">no</td><td class="n">no</td><td class="y">yes</td><td class="n">no</td><td>Food Log pages, newest first</td></tr>
+      <tr><td>The cookbook in numbers</td><td class="n">no</td><td class="n">no</td><td class="n">no</td><td class="y">yes</td><td>Section and taxonomy counts</td></tr>
+      <tr><td>Start here</td><td class="n">no</td><td class="n">no</td><td class="n">no</td><td class="y">yes</td><td>Hand-picked in <code>about.md</code> frontmatter</td></tr>
+      <tr><td>Cook tonight</td><td class="y">yes</td><td class="y">yes</td><td class="y">yes</td><td class="y">yes</td><td>Same tags as the nav's quick filters</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section class="band">
+  <h2>Decisions and open questions</h2>
+  <div class="notes"><ul>
+    <li><b>Reuses the recipe sidebar's frame.</b> An 18.6rem column (10% narrower than the recipe sidebar's 20.7rem, since these modules are denser), the same small-caps section labels, same "after the content in DOM order" placement, and the same top edge: the title block sits above both columns, so the sidebar starts level with the first line of the body. No new visual devices: <code>.search-box</code>, <code>.browse-list</code>, <code>.filter-pill</code>, <code>.section-caveat</code>, and the recipe meta rail's label/value rows.</li>
+    <li><b>Not sticky.</b> The reference sidebar runs past a screen's height, and a sticky column that can't show its own bottom is worse than a static one.</li>
+    <li><b>On phones it drops below the article, open, with no toggle.</b> Unlike the recipe sidebar, nothing here is needed while reading. "On this page" is hidden there because Blowfish's collapsible TOC already sits at the top.</li>
+    <li><b>No section-wide lists.</b> Essay formats and the full reference guide list were cut; they made the sidebar long and repeat what the nav already offers. Modules stay scoped to the page you&rsquo;re on.</li>
+    <li><b>No tag lists for essays or reference.</b> Their tags (<code>food-memory</code>, <code>reference</code>) mostly repeat the section, so a tag cloud would be noise. "Cook tonight" uses recipe tags instead, since the point is getting a reader from a story to something to make.</li>
+    <li><b>Open:</b> should the search box say "Search recipes, essays, guides…" once search indexes more than recipes? It's worded that way here on the assumption it will.</li>
+    <li><b>Open:</b> backlinks ("Essays that mention this") on recipe pages would be the natural pair to "Recipes in this guide." Out of scope here.</li>
+  </ul></div>
+</section>
+
+</div>
+
+<script>
+const searchBox = `<div class="rail-section"><button type="button" class="search-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>Search recipes, essays, guides&hellip;<kbd>/</kbd></button></div>`;
+
+const cookTonight = `<div class="rail-section"><h2>Cook tonight</h2>
+  <div class="pill-row">
+    <a class="filter-pill" href="#">quick <span class="n">41</span></a>
+    <a class="filter-pill" href="#">make-ahead <span class="n">37</span></a>
+    <a class="filter-pill" href="#">vegetarian <span class="n">26</span></a>
+    <a class="filter-pill" href="#">weeknight <span class="n">24</span></a>
+  </div>
+  <a class="browse-more browse-more-end" href="#">All 222 recipes &rarr;</a></div>`;
+
+const pages = {
+  essay: {
+    main: `<div class="crumbs">Essays / Food memories</div>
+      <h1>The Dutch deli</h1>
+      <div class="tagrow"><span class="tag">food-memory</span></div>
+      <div class="prose">
+        <p>I grew up in a small town of immigrants mostly from various parts of central, eastern, and northern Europe. Many of our neighbours were second and third generation Mennonites, with a few Dutch families sprinkled here and there. We were the outsiders, which was honestly a great way to grow up.</p>
+        <p>If I wanted to be extra honest, I would say that we were white trash. We had an old pickup sitting on blocks in the front yard. Our driveway was gravel. Well, it was mostly weeds and some gravel, always in a state of disrepair. The driveway led back to the back yard, which had a shed and two lean-tos, each filled with firewood and spiders.</p>
+        <p>The term white trash didn’t quite fit who we were. My mom was Métis, or mixed-blood. My dad was Scottish, separated by several generations from the homeland and identity. We identified as Canadian, or rural Canadian, but we always felt like outsiders.</p>
+        <p class="fade">…essay continues</p>
+      </div>`,
+    rail: `${searchBox}
+      <div class="rail-section"><h2>Food memories <span class="n">5</span></h2>
+        <div class="browse-list">
+          <a href="#">Camp cooking</a>
+          <a href="#">Garbage plates</a>
+          <a href="#">Slick spaghetti with a hint of oregano</a>
+          <a href="#" aria-current="page">The Dutch deli</a>
+          <a href="#">The smells of India</a>
+        </div></div>
+      ${cookTonight}`
+  },
+  reference: {
+    main: `<div class="crumbs">Reference</div>
+      <h1>Base recipes for weeknight cooking</h1>
+      <div class="tagrow"><span class="tag">bases</span><span class="tag">technique</span></div>
+      <div class="mobile-toc">▸ On this page</div>
+      <div class="prose">
+        <p>Many people like to prepare entire meals for the week or month, or to make a large meal on the weekend and use it for leftovers. The problem with preparing a single meal for an entire week is that you have to eat a single meal for an entire week. This works for some people, but not for me.</p>
+        <p>Less common to the home kitchen is to do what restaurants do, which is to prepare sauces and bases, as well as other washed and cut ingredients. These simpler preparations can be adapted into several recipes quickly.</p>
+        <h2>Example bases</h2>
+        <h3>Proteins, stews/gravies, stocks and sauces</h3>
+        <ul>
+          <li><a class="wikilink" href="#">cooked beef/mushroom mix</a></li>
+          <li><a class="wikilink" href="#">chicken patties</a>, <a class="wikilink" href="#">meatballs</a></li>
+          <li><a class="wikilink" href="#">base gravy for curries</a></li>
+          <li><a class="wikilink" href="#">chicken stock</a>, <a class="wikilink" href="#">beef stock</a></li>
+        </ul>
+        <p class="fade">…guide continues</p>
+      </div>`,
+    rail: `${searchBox}
+      <div class="rail-section toc-only-desktop"><h2>On this page</h2>
+        <div class="browse-list">
+          <a href="#">Example bases</a>
+          <a class="sub" href="#">Proteins, stews/gravies, stocks and sauces</a>
+          <a class="sub" href="#">And in my fridge</a>
+          <a href="#">Adapting a base into quick meals</a>
+          <a class="sub" href="#">Precooked ground protein bases</a>
+          <a class="sub" href="#">Patties, sausages, and meatballs</a>
+          <a class="sub" href="#">Stocks and base gravies</a>
+          <a class="sub" href="#">A theory for better cooking</a>
+        </div></div>
+      <div class="rail-section"><h2>Recipes in this guide <span class="n">15</span></h2>
+        <div class="browse-list">
+          <a href="#">Base curry gravy</a>
+          <a href="#">Beef base</a>
+          <a href="#">Beef stew</a>
+          <a href="#">Beef stock</a>
+          <a href="#">Breakfast sausage</a>
+          <a href="#">Bulgogi beef</a>
+          <a href="#">Chicken or turkey stock</a>
+          <a href="#">Chicken patties</a>
+        </div>
+        <a class="browse-more" href="#">7 more &rarr;</a></div>
+      ${cookTonight}`
+  },
+  log: {
+    main: `<div class="crumbs">The Food Log</div>
+      <h1>September 2026</h1>
+      <div class="tagrow"></div>
+      <div class="prose">
+        <h2>Friday, September 18th</h2>
+        <h4>Food ideas</h4>
+        <ul>
+          <li><a class="extlink" href="#">Butternut squash curry</a></li>
+          <li><a class="extlink" href="#">Beef Thai curry</a>, with chicken thighs instead</li>
+          <li><a class="extlink" href="#">Japanese curry</a></li>
+          <li><a class="extlink" href="#">Chicken curry</a> (simplified recipe, but likely a good weeknight meal)</li>
+        </ul>
+        <h2>Monday, September 14th</h2>
+        <p>The food log has moved!</p>
+        <h3>Goulash from 1st principles</h3>
+        <p>Made this as a prep day hack. Turned out better than expected.</p>
+        <p class="fade">…log continues</p>
+      </div>`,
+    rail: `${searchBox}
+      <div class="rail-section toc-only-desktop"><h2>This month</h2>
+        <div class="browse-list">
+          <a href="#">Fri 18 Sep <span class="n">9 ideas</span></a>
+          <a href="#">Mon 14 Sep <span class="n">goulash</span></a>
+        </div></div>
+      <div class="rail-section"><h2>Months</h2>
+        <div class="browse-list">
+          <a href="#" aria-current="page">September 2026 <span class="n">2 days</span></a>
+        </div>
+        <div class="section-caveat">The log moved here in September 2026. Older entries aren't here yet.</div></div>
+      ${cookTonight}`
+  },
+  about: {
+    main: `<h1>About</h1>
+      <div class="tagrow"></div>
+      <div class="prose">
+        <p>I am not a chef. I spent time in restaurants in the late 1980s and early 1990s, learning how fast-casual and family-owned restaurants worked. I prepped. I cleaned. I worked the line. I managed for a bit.</p>
+        <p>We had kids, and we ate simply when they were young. Our cooking evolved, and we started cooking from scratch. We watched a lot of food television: <i>Good Eats</i>, <i>Iron Chef</i>, Bourdain, and the various travelling food shows.</p>
+        <p>And then one day it clicked. Those college years in restaurants, the explanations by TV chefs, and the hours of watching chefs work all made sense.</p>
+        <p>And now I <i>love</i> to cook. It's an obsession. It's cathartic. It's fulfilling. I'm glad I stuck with it.</p>
+        <p>The recipes here are the foods we eat. They span cooking styles from the 1950s through today, with a focus on food memories, discoveries, and traditions new and old.</p>
+      </div>`,
+    rail: `${searchBox}
+      <div class="rail-section"><h2>The cookbook in numbers</h2>
+        <div class="meta-rows">
+          <div class="meta-row">Recipes <b>222</b></div>
+          <div class="meta-row">Cuisines <b>39</b></div>
+          <div class="meta-row">Essays <b>5</b></div>
+          <div class="meta-row">Reference guides <b>1</b></div>
+        </div></div>
+      <div class="rail-section"><h2>Start here</h2>
+        <div class="browse-list">
+          <a href="#">Base recipes for weeknight cooking <span class="n">guide</span></a>
+          <a href="#">The Dutch deli <span class="n">essay</span></a>
+          <a href="#">Chai <span class="n">recipe</span></a>
+          <a href="#">Pressure cooker Japanese curry <span class="n">recipe</span></a>
+        </div></div>
+      ${cookTonight}`
+  }
+};
+
+const main = document.getElementById('main'), rail = document.getElementById('rail');
+function show(p){
+  const html = pages[p].main;
+  const cut = [html.indexOf('<div class="mobile-toc">'), html.indexOf('<div class="prose">')].filter(i => i >= 0).sort((a,b) => a-b)[0];
+  document.getElementById('head').innerHTML = html.slice(0, cut);
+  main.innerHTML = html.slice(cut); rail.innerHTML = pages[p].rail;
+  document.querySelectorAll('#pageSeg button').forEach(b => b.setAttribute('aria-pressed', b.dataset.page === p));
+  document.querySelectorAll('#navLinks span').forEach(s => s.classList.toggle('on', s.dataset.nav === p));
+}
+document.getElementById('pageSeg').addEventListener('click', e => { const b = e.target.closest('button'); if (b) show(b.dataset.page); });
+document.getElementById('widthSeg').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  document.querySelectorAll('#widthSeg button').forEach(x => x.setAttribute('aria-pressed', x === b));
+  document.getElementById('frame').classList.toggle('phone', b.dataset.w === 'phone');
+});
+const tt = document.getElementById('tt'); const modes = ['system','light','dark']; let m = 0;
+tt.addEventListener('click', () => { m = (m + 1) % 3; const r = document.documentElement;
+  if (modes[m] === 'system') r.removeAttribute('data-theme'); else r.setAttribute('data-theme', modes[m]);
+  tt.textContent = 'Theme: ' + modes[m]; });
+const hash = location.hash.slice(1); show(pages[hash] ? hash : 'essay');
+</script>

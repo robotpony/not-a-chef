@@ -51,8 +51,13 @@
       {{/* Not shown for recipes (see the sidebar block below instead, after
         the main content column) — recipes get a dedicated sidebar in place
         of this generic jump-to TOC. */}}
+      {{/* Reading pages (essays, reference, the Food Log, About) get the
+        reading sidebar below instead; they keep only the mobile half of
+        this TOC (lg:hidden), since the sidebar's "On this page" is
+        desktop-only. */}}
+      {{ $reading := or (in (slice "essays" "reference" "the-food-log") .Section) (and (eq .Section "") (eq .Kind "page")) }}
       {{ if and $showToc (ne .Section "recipes") }}
-        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs{{ if $reading }} lg:hidden{{ end }}">
           <div class="toc ps-5 print:hidden lg:sticky {{ $topClass }}">
             {{ partial "toc.html" . }}
           </div>
@@ -149,6 +154,17 @@
         `open` attribute. assets/js/ingredients.js's initSidebarToggle
         drives the button. See PLAN.md/STYLE.md before promoting this out
         of prototype. */}}
+      {{/* Reading sidebar (mockups/reading-sidebar.html): after the main
+        column in DOM order, so it lands on the right on desktop, level
+        with the top of the body (the title block is above this section),
+        and below the article on mobile. Not sticky: on reference pages
+        it runs taller than a screen. */}}
+      {{ if $reading }}
+        <div class="reading-sidebar-wrap lg:ms-auto px-0 lg:ps-8 print:hidden">
+          {{ partial "reading-sidebar.html" . }}
+        </div>
+      {{ end }}
+
       {{ if eq .Section "recipes" }}
         {{/* order-first/lg:order-last: same trick as the TOC block above
           (bare `order-last` doesn't exist in Blowfish's compiled CSS, see

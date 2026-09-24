@@ -57,6 +57,11 @@ mainSections = ["recipes"]
   # config flag (not a code change) if that ever stops being true.
   enableKelvin = false
 
+[readingSidebar]
+  # Recipe tags shown as "Cook tonight" pills in the sidebar on essay,
+  # reference, Food Log, and About pages (layouts/partials/reading-sidebar.html).
+  cookTonight = ["quick", "make-ahead", "vegetarian", "weeknight"]
+
 [list]
   showHero = false
   showBreadcrumbs = true

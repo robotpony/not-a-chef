@@ -33,6 +33,10 @@ in a browser — no build step.
   Built into `layouts/partials/recipe-card.html` and
   `layouts/recipes/list.html`; `STYLE.md`'s Recipe card entry describes it.
 
+- **`reading-sidebar.html`**: proposed sidebar for essay, reference,
+  Food Log, and About pages (2026-09-24). Not built yet. Also published as
+  an artifact: https://claude.ai/artifact/Ga6iBFYqvHfFt1yki672pg
+
 ## `archived/` — reference only
 
 The four original mockup rounds `style.html`/`COMPONENTS.md` were built

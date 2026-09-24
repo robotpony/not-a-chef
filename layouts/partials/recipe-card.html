@@ -13,12 +13,29 @@
   can't be one big <a> (nested anchors are invalid HTML). Instead the
   title link's ::after stretches over the whole card (.rcard-link in
   custom.css) and the chip sits above that overlay.
+
+  Essays (layouts/essays/list.html) use this card too: the top row is the
+  essay's format, from its folder (food-memories/ -> "food memories"),
+  and the stat line is its reading time.
+
+  Food Log months (layouts/the-food-log/list.html) too: the title comes
+  from reading-sidebar/log-month.html (log files have no frontmatter),
+  the middle lists the month's days (its h2s), and the stat line is the
+  day count and reading time.
 */}}
+{{ $isEssay := eq .Section "essays" }}
+{{ $isLog := eq .Section "the-food-log" }}
+{{ $title := .Title }}
+{{ if $isLog }}{{ $title = (partial "reading-sidebar/log-month.html" .).label }}{{ end }}
 {{ $slots := 2 }}
 {{ $cuisine := .Params.cuisine }}
 {{ $tags := slice }}
 {{ range .Params.tags }}
   {{ if not (and $cuisine (eq (lower .) (lower $cuisine))) }}{{ $tags = $tags | append . }}{{ end }}
+{{ end }}
+{{ if $isEssay }}
+  {{ $folder := path.Base (strings.TrimSuffix "/" .File.Dir) }}
+  {{ $tags = cond (eq $folder "essays") (slice) (slice (replace $folder "-" " ")) }}
 {{ end }}
 {{ $room := cond (ne $cuisine nil) (sub $slots 1) $slots }}
 
@@ -45,13 +62,23 @@
   {{ end }}
 {{ end }}
 
+{{ if $isLog }}
+  {{ $days := where (partial "reading-sidebar/headings.html" .Fragments.Headings) "level" 2 }}
+  {{ $names := slice }}{{ range $days }}{{ $names = $names | append .title }}{{ end }}
+  {{ $intro = delimit $names " · " }}
+  {{ $stats = slice (dict "label" "Days" "value" (string (len $days)) "full" (string (len $days))) (dict "label" "Read" "value" (printf "%dm" .ReadingTime) "full" (printf "%d min" .ReadingTime)) }}
+{{ end }}
+{{ if $isEssay }}
+  {{ $stats = slice (dict "label" "Read" "value" (printf "%dm" .ReadingTime) "full" (printf "%d min" .ReadingTime)) }}
+{{ end }}
+
 <article class="rcard">
   <div class="rcard-top">
     {{ with $cuisine }}{{ with $.GetTerms "cuisine" }}<a class="cuisine-chip" href="{{ (index . 0).RelPermalink }}">{{ $cuisine }}</a>{{ else }}<span class="cuisine-chip">{{ . }}</span>{{ end }}{{ end }}
     {{ range first $room $tags }}<span class="tag">{{ . }}</span>{{ end }}
     {{ if gt (len $tags) $room }}<span class="tag tag-more">+{{ sub (len $tags) $room }}</span>{{ end }}
   </div>
-  <h3 class="rcard-title"><a class="rcard-link" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  <h3 class="rcard-title"><a class="rcard-link" href="{{ .RelPermalink }}">{{ $title }}</a></h3>
   {{ with $intro }}<p class="rcard-intro">{{ . }}</p>{{ end }}
   {{ with $stats }}
     <div class="rcard-stats">
