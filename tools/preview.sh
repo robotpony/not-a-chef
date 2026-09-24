@@ -25,4 +25,12 @@ open_browser &
 # heavy template/config editing (served published-only counts despite -D
 # until restarted) — full rebuilds on every change cost a little speed but
 # avoid silently serving wrong content while previewing.
-exec hugo server -D --disableFastRender --bind 0.0.0.0
+#
+# --renderToMemory: this Hugo version's server writes to public/ by
+# default, with drafts, a localhost baseURL, and the livereload script.
+# `make deploy` rsyncs public/, so a running preview could ship all of
+# that (it did on 2026-09-24: drafts went live, and search fetched
+# //localhost:1313/index.json, which triggers Chrome's local network
+# access prompt). Keep the server in memory so public/ only ever holds
+# real builds.
+exec hugo server -D --disableFastRender --renderToMemory --bind 0.0.0.0
