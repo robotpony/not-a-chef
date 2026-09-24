@@ -8,6 +8,11 @@
   before the first ##), or frontmatter summary/description if set. Bottom:
   one compact stat line, times shortened and parentheticals dropped for
   the card only (the full value is in the stat's title).
+
+  The cuisine chip links to its /cuisine/<name>/ term page, so the card
+  can't be one big <a> (nested anchors are invalid HTML). Instead the
+  title link's ::after stretches over the whole card (.rcard-link in
+  custom.css) and the chip sits above that overlay.
 */}}
 {{ $slots := 2 }}
 {{ $cuisine := .Params.cuisine }}
@@ -40,13 +45,13 @@
   {{ end }}
 {{ end }}
 
-<a class="rcard" href="{{ .RelPermalink }}">
+<article class="rcard">
   <div class="rcard-top">
-    {{ with $cuisine }}<span class="cuisine-chip">{{ . }}</span>{{ end }}
+    {{ with $cuisine }}{{ with $.GetTerms "cuisine" }}<a class="cuisine-chip" href="{{ (index . 0).RelPermalink }}">{{ $cuisine }}</a>{{ else }}<span class="cuisine-chip">{{ . }}</span>{{ end }}{{ end }}
     {{ range first $room $tags }}<span class="tag">{{ . }}</span>{{ end }}
     {{ if gt (len $tags) $room }}<span class="tag tag-more">+{{ sub (len $tags) $room }}</span>{{ end }}
   </div>
-  <h3 class="rcard-title">{{ .Title }}</h3>
+  <h3 class="rcard-title"><a class="rcard-link" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
   {{ with $intro }}<p class="rcard-intro">{{ . }}</p>{{ end }}
   {{ with $stats }}
     <div class="rcard-stats">
@@ -55,4 +60,4 @@
       {{ end }}
     </div>
   {{ end }}
-</a>
+</article>

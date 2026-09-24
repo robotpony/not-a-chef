@@ -3,7 +3,8 @@
      row (where it forced its own line above the tags row on recipe
      pages). It now renders at the end of the taxonomies row, pushed to
      the right with ms-auto, styled as a distinct --flag badge instead of
-     the same treatment as a tag — see mockups/STYLE.md "Draft state". */}}
+     the same treatment as a tag — see mockups/STYLE.md "Draft state".
+     Also adds the cuisine chip at the start of the taxonomies row. */}}
 
 {{/* Determine the correct context and scope */}}
 {{/* This allows for different logic depending on where the partial is called */}}
@@ -101,6 +102,11 @@
   {{ if or ($showDraftLabel) (.Params.showTaxonomies | default (.Site.Params.article.showTaxonomies | default false)) }}
     <div class="flex flex-row flex-wrap items-center">
       {{ if .Params.showTaxonomies | default (.Site.Params.article.showTaxonomies | default false) }}
+        {{/* Cuisine leads the row as the same yellow chip the recipe cards
+          use (partials/recipe-card.html), linked to its term page. */}}
+        {{ range .GetTerms "cuisine" }}
+          <a class="cuisine-chip mt-[0.5rem] me-2" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        {{ end }}
         {{ range $taxonomy, $terms := .Site.Taxonomies }}
           {{ if (gt (len ($context.GetTerms $taxonomy)) 0) }}
             {{ range $context.GetTerms $taxonomy }}

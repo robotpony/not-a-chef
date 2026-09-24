@@ -579,6 +579,9 @@ h2:has(> .ing-config) {
   min-width: 460px;
 }
 .mega-panel-simple { min-width: 230px; }
+/* The last menu (Reference) opens leftward from its button's right edge,
+ * so it can't run off the right side of a narrow window. */
+.mega-panel-end { left: auto; right: 0; }
 .mega-col { display: flex; flex-direction: column; gap: 1px; min-width: 160px; }
 .mega-col-label { font-size: .65rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-faint); margin-bottom: 6px; }
 .mega-col a { display: flex; justify-content: space-between; gap: 14px; font-size: .85rem; color: var(--ink); text-decoration: none; padding: 5px 6px; border-radius: 4px; }
@@ -590,7 +593,9 @@ h2:has(> .ing-config) {
 .mega-chip-row { display: flex; gap: 6px; flex-wrap: wrap; }
 .mega-chip { font-size: .74rem; font-weight: 500; padding: 5px 10px; border: 1px solid var(--border-strong); border-radius: 14px; color: var(--ink-muted); text-decoration: none; }
 .mega-chip:hover { border-color: var(--accent); color: var(--ink); }
-.mega-viewall { font-size: .8rem; font-weight: 600; color: var(--accent-strong); text-decoration: none; margin-top: auto; }
+/* Same size and vertical padding as .mega-more (a .mega-col a row), so the
+ * two bottom links share a baseline across the panel's columns. */
+.mega-viewall { font-size: .85rem; font-weight: 600; color: var(--accent-strong); text-decoration: none; margin-top: auto; padding: 5px 0; }
 
 .mobile-drawer-toggle { display: none; }
 @media (max-width: 680px) {
@@ -682,7 +687,14 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
  * intro paragraph in the middle, compact stat line pinned to the bottom so
  * cards in a row line up regardless of intro length. */
 .rcard { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 14px 16px 12px; display: flex; flex-direction: column; gap: 8px; min-width: 0; text-decoration: none; }
-.rcard:hover { border-color: var(--accent); }
+/* The title link's ::after covers the whole card, so the card still clicks
+ * through anywhere; the cuisine chip (its own link) is lifted above it. */
+.rcard { position: relative; }
+.rcard:hover, .rcard:focus-within { border-color: var(--accent); }
+.rcard-link { color: inherit; text-decoration: none; }
+.rcard-link::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.rcard-link:focus-visible { outline: none; }
+.rcard a.cuisine-chip { position: relative; z-index: 1; }
 .rcard-top { display: flex; gap: 4px; flex-wrap: nowrap; overflow: hidden; min-width: 0; }
 .rcard-top > * { font-size: .62rem; padding: 2px 5px; flex: none; white-space: nowrap; }
 .rcard-top > .tag:not(.tag-more) { flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
@@ -699,6 +711,7 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
 .listing { max-width: 1100px; margin: 0 auto; padding: 32px 20px 0; }
 .listing-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 6px; }
 .ltitle { font-family: 'Libre Franklin', sans-serif; font-size: 2.1rem; font-weight: 700; line-height: 1.1; letter-spacing: -.01em; color: var(--ink); }
+.ltitle-kind { color: var(--accent-strong); }
 .listing-count { font-family: 'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums; font-size: .78rem; color: var(--ink-faint); }
 .listing-dek { color: var(--ink-muted); font-size: .95rem; margin-bottom: 16px; }
 .listing-search { display: flex; margin-bottom: 24px; }
@@ -706,6 +719,10 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
 .tag { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; border: 1px solid var(--border-strong); color: var(--ink-muted); padding: 3px 7px; border-radius: 3px; display: inline-block; }
 .tag-more { color: var(--ink-faint); border-style: dashed; }
 .cuisine-chip { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; background: var(--highlight-soft); color: var(--highlight); padding: 3px 7px; border-radius: 3px; display: inline-block; }
+/* Linked chip (cards and recipe pages): same yellow, an inset --highlight
+ * ring on hover rather than an accent colour, so it stays cuisine-only. */
+a.cuisine-chip { text-decoration: none; }
+a.cuisine-chip:hover, a.cuisine-chip:focus-visible { box-shadow: inset 0 0 0 1px var(--highlight); outline: none; }
 .draft-badge { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; font-weight: 600; border: 1px solid var(--flag); color: var(--flag); background: var(--flag-soft); padding: 3px 7px; border-radius: 3px; display: inline-block; }
 
 /* Label above the desktop sticky recipe/essay TOC (layouts/partials/toc.html

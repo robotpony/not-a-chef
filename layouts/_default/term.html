@@ -1,0 +1,30 @@
+{{ define "main" }}
+{{/*
+  Single taxonomy term (/cuisine/x/, /tags/x/) — overrides Blowfish's
+  term.html (article-link rows/cards) with the same layout as the recipes
+  list (layouts/recipes/list.html): .ltitle header and the shared recipe
+  card in the .rgrid. The search box searches the whole site, not just
+  this term, so it gets the site-wide recipe count.
+*/}}
+{{ .Scratch.Set "scope" "term" }}
+{{ $pager := .Paginate .Pages 16 }}
+{{ $allRecipes := eq (len (where .Pages "Section" "recipes")) (len .Pages) }}
+<section class="listing">
+  <header class="listing-head">
+    {{/* Cuisine pages read "Canadian cuisine", the suffix in the accent red. */}}
+    <h1 class="ltitle">{{ .Title }}{{ if eq .Data.Plural "cuisine" }} <span class="ltitle-kind">cuisine</span>{{ end }}</h1>
+    <span class="listing-count">{{ len .Pages }} {{ cond $allRecipes "recipes" "entries" }}{{ if gt $pager.TotalPages 1 }} · page {{ $pager.PageNumber }} of {{ $pager.TotalPages }}{{ end }}</span>
+  </header>
+  {{/* Tagline: the term's own description (content/cuisine/<name>/_index.md)
+    if one exists, else the recipes section's (content/recipes/_index.md),
+    so the header lines up with the recipes list. */}}
+  {{ with .Description | default (site.GetPage "/recipes").Description }}<p class="listing-dek">{{ . }}</p>{{ end }}
+  <div class="listing-search">{{ partial "search-box.html" (len (where site.RegularPages "Section" "recipes")) }}</div>
+  <div class="rgrid">
+    {{ range $pager.Pages }}
+      {{ partial "recipe-card.html" . }}
+    {{ end }}
+  </div>
+  {{ partial "pagination.html" . }}
+</section>
+{{ end }}

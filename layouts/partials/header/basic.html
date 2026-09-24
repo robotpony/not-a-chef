@@ -51,7 +51,7 @@
 
       <details class="nav-drop" name="nav-menu">
         <summary>Reference</summary>
-        <div class="mega-panel mega-panel-simple">
+        <div class="mega-panel mega-panel-simple mega-panel-end">
           <div class="mega-col">
             <span class="mega-col-label">Guides</span>
             {{ if $referenceSection }}
@@ -131,6 +131,16 @@
   var drawerClose = document.querySelector('.drawer-close');
   [drawerBackdrop, drawerClose].forEach(function(el){
     if(el){ el.addEventListener('click', function(){ drawerToggle.open = false; }); }
+  });
+
+  // Same gap for the desktop dropdowns and the ingredient gear popup
+  // (.ing-config, built later by assets/js/ingredients.js, hence the
+  // document-level listener): a click anywhere outside an open one closes
+  // it. Clicks inside, including its own summary, are left to the browser.
+  document.addEventListener('click', function(e){
+    document.querySelectorAll('details.nav-drop[open], details.ing-config[open]').forEach(function(d){
+      if(!d.contains(e.target)){ d.open = false; }
+    });
   });
 })();
 </script>

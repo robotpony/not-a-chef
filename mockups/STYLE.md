@@ -79,8 +79,10 @@ the one color allowed real prominence.
 | `--highlight` | `#997F29` | `#DDCC88` | cuisine chip text |
 | `--highlight-soft` | `#F6F1D5` | `#342D19` | cuisine chip fill |
 
-Descriptive, not interactive — **cuisine only**. Never used for anything
-else, so it never competes with the accent for attention.
+Cuisine only. Never used for anything else, so it never competes with the
+accent for attention. The chip links to its cuisine's term page
+(`/cuisine/<name>/`), but hover stays yellow: an inset `--highlight` ring,
+never the accent.
 
 ### 3 · Utility, reserved — blue (`--flag`)
 
@@ -293,11 +295,11 @@ everything discarded or superseded getting to this list.
 - **Variation block** (`.variation`) — heading + prose, one block per variation, stacked
 - **Wikilink** (`.wikilink`) — internal cross-reference: dotted underline + trailing →
 - **External link** (`.extlink`) — outside reference: muted underline + trailing ↗, distinct from wikilink
-- **Cuisine chip** — filled `--highlight-soft` / `--highlight` text, one per recipe, always yellow regardless of which cuisine — deliberately never color-coded by cuisine (see Decisions below)
+- **Cuisine chip** — filled `--highlight-soft` / `--highlight` text, one per recipe, always yellow regardless of which cuisine — deliberately never color-coded by cuisine (see Decisions below). Links to `/cuisine/<name>/` (as of 2026-09-24); shown on recipe cards and at the start of the tag row on recipe pages. On cards the title link stretches over the whole card (`.rcard-link::after`) and the chip sits above it, since the card can't be one `<a>` with a link inside
 - **Tag** — neutral outline (`--border-strong`), never colored
 - **Filter pill** — pill-shaped (14px radius), neutral outline, `--accent-soft` fill when active — listing-page filters, distinct from the chip's "fact about the recipe"
 - **Draft state** (banner or badge) — `--flag` blue, never red
-- **Recipe card** (`.rcard`), v2 as of 2026-09-23 (`recipe-card-v2.html`): one-line taxonomy row (two slots, cuisine takes one when present, a tag repeating the cuisine is skipped, then `+N`; never wraps, chips/tags at `.62rem`), title, intro (the recipe's first paragraph before any `##`, or frontmatter `summary`/`description`; Lora `.84rem`, clamped to 3 lines), and a compact stat line pinned to the card bottom (Prep/Cook/Serves inline; faint Franklin labels, values bold IBM Plex Mono in `--accent-strong`; times shortened to `15m`/`2-3h` and parentheticals dropped on the card only, full value in the title attribute). The Mechanic/Variations flags row was removed. Same card on the homepage "Recently added" row and the recipes list page (`layouts/recipes/list.html`)
+- **Recipe card** (`.rcard`), v2 as of 2026-09-23 (`recipe-card-v2.html`): one-line taxonomy row (two slots, cuisine takes one when present, a tag repeating the cuisine is skipped, then `+N`; never wraps, chips/tags at `.62rem`), title, intro (the recipe's first paragraph before any `##`, or frontmatter `summary`/`description`; Lora `.84rem`, clamped to 3 lines), and a compact stat line pinned to the card bottom (Prep/Cook/Serves inline; faint Franklin labels, values bold IBM Plex Mono in `--accent-strong`; times shortened to `15m`/`2-3h` and parentheticals dropped on the card only, full value in the title attribute). The Mechanic/Variations flags row was removed. Same card on the homepage "Recently added" row, the recipes list page (`layouts/recipes/list.html`), and single-term pages like `/cuisine/x/` and `/tags/x/` (`layouts/_default/term.html`)
 - **Listing page header** (`.ltitle` / `.listing-count`) — title + a count line ("83 recipes · showing 18"), distinct from the hero used for page openers
 - **Section caveat** (`.section-caveat`, formerly `.nav-caveat`) — a one-line honesty note for admitting a section is thin; not limited to nav panels, use it above any under-built section
 - **Nav item with mega-menu** — caret only on items with a real dropdown (Recipes, Reference); other sections stay plain links until they have enough content to categorize
