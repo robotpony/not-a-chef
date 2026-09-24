@@ -26,7 +26,7 @@ Safety is temperature *and* time. The instant numbers (74°C poultry, 71°C grou
 5. ~~Raw egg without a note: `caesar-dressing`, `white-spot-burgers` mayo.~~ Fixed.
 
 **Broken or unfinished pages that are published (`draft: false`)**
-- Template placeholder text as the intro: `greek-islands-creamy-greek-dressing`, `south-american-red-salsa`.
+- ~~Template placeholder text as the intro: `greek-islands-creamy-greek-dressing`, `south-american-red-salsa`.~~ Fixed.
 - Truncated or no method: `kormaqorma` (ingredients only), `no-knead-pizza-dough` (stops mid-sentence), `jerk-chicken` (step 2 is "Re"), `bulgogi-beef` ("Cook like taco beef"), `vegan-burger-savoury-chew-gluten`, `english-muffins`.
 - Missing a core ingredient or step: `bruces-thai-redgreen-curry` (no coconut milk; paste never added), `grandma-fergusons-buns` (yeast never added), `omas-kipfels` (yeast never added), `bienenstich` (milk and topping ingredients never added), `butter-tarts` and `coconut-jam-tarts` (pastry has no water), `prosecco-sangria` (no Prosecco), `vodka-cream-sauce` (cream never added), `rocky-road-brownies` (chocolate never melted; chips unused; no bake time).
 - `essays/edgar-wright-style-cookery.md` has no frontmatter at all.
@@ -479,8 +479,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] ! `recipes/butternut-squash-soup.md`
     - Tagged `vegetarian` but the stock type isn't named. Say "vegetable stock" (or "chicken or vegetable") so the tag holds; the vegan note (L51) also needs veg stock and to skip the crème fraîche.
     - Otherwise clear and well structured.
-- [x] ! `recipes/caesar-dressing.md` (fixed 2026-09-24: raw egg note; `vegetarian` tag dropped)
-    - Q: "2–3 tablespoons good olive oil" seems far too little to emulsify an egg white plus 2 tbsp Dijon into a dressing "thick enough to coat a spoon". This style usually takes ½–¾ cup. Typo for cups/quarter-cups?
+- [x] `recipes/caesar-dressing.md` (fixed 2026-09-24: raw egg note; `vegetarian` tag dropped; oil ½–¾ cup)
 - [x] ! `recipes/canadian-chili.md`
     - Ingredients never used in the method: dried shiitakes (rehydrate? add the soaking liquid?), corn, cilantro/parsley, roasted garlic. Step 3 "Add other ingredients" is too vague.
     - Notes say "vegetarian by just skipping the beef", but there's no beef in the ingredients. The optional hamburger/TVP appears only in the method, twice (step 1 and its sub-step say the same thing).
@@ -701,11 +700,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - L14: "minimizing carbohydrates" contradicts the recipe (oats, dates, maple, banana are almost all carbohydrate). Q: meant "minimizing refined sugar"?
     - L46: stale note: "Toast the nuts next time" is already in the method. Delete.
     - Otherwise clean.
-- [x] ! `recipes/greek-islands-creamy-greek-dressing.md`
-    - L10: template placeholder text published as the intro ("This is an example. Copy it and replace things..."). Replace it with a real intro.
-    - Title: "Greek island's" Q: the restaurant is "Greek Islands"? Then "Greek Islands' creamy Greek dressing". Also not creamy unless you do the egg-yolk step; see greek-dressing-research.md.
-    - L31: "the lemon may be more or less sweet" → "more or less sour". L37: "prepare this is a blender" → "in a blender". L20: "Braggs" → "Bragg".
-    - Title Case ingredients ("Extra virgin olive oil" fine, "Fresh lemon juice", "Garlic", "Dried oregano" etc.); "1/4", "1/2" → glyphs; L14 double space.
+- [x] `recipes/greek-islands-creamy-greek-dressing.md` (fixed 2026-09-24: real intro; converted to FORMAT.md; title "Greek Islands'"; egg yolks optional with raw-yolk note; typos)
 - [x] ! `recipes/greek-lemon-and-herb-marinade.md`
     - Error: "2 lemons juiced (about 250ml)". Two lemons give ~90–100 ml. Either 5–6 lemons or ~100 ml.
     - Q: 4–5 tsp salt with ~½ cup oil and lemon is very salty unless it's for a large batch of protein. How much meat is this for? (No yield.)
@@ -1085,11 +1080,8 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - L15–16: "2 can" → "2 cans", "2 cup" → "2 cups", "1 ½ tablespoon" → "tablespoons". L15: "non-emulsified coconut milk" Q: meaning no guar gum/stabilizers? Say that; it matters for splitting.
     - L39: "### Directions:" → `## Method`; L47: "## To serve:" colon.
     - Q: three Thai red curries now (this, red-thai-curry.md, bruces-thai-redgreen-curry.md). Consolidate?
-- [x] ! `recipes/south-american-red-salsa.md`
-    - L10: template placeholder text published as the intro ("This is an example. Copy it and replace things..."). Same as greek-islands-creamy-greek-dressing.md.
-    - L21: broken Google Docs comment anchor `[\[a\]](#cmnt1)`.
-    - L15: "tomoatoes" → "tomatoes"; L18, L31: "jalapeno" → "jalapeño"; L20: "½ lemon, juice" → "juiced". L16: double space.
-    - Q: "South American" is vague. Is this a pebre (Chilean) or from a specific source? A one-line intro would fix both issues.
+- [x] ! `recipes/south-american-red-salsa.md` (fixed 2026-09-24: real intro; converted to FORMAT.md; comment anchor removed; typos; keeps 5–7 days)
+    - Q: "South American" is vague. Is this a pebre (Chilean) or from a specific source? (Deferred 2026-09-24.)
 - [x] ! `recipes/spaghetti-squash-boats-or-casserole.md`
     - No seasonings listed, though step 3 says "incorporate your seasonings". Q: what do you use (e.g. taco spice for the Mexican version, Italian herbs otherwise)?
     - Q: 30 minutes at 190°C is short for spaghetti squash halves (usually 40–50 min, until a fork shreds the strands easily). Add a doneness cue.

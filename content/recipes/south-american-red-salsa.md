@@ -2,35 +2,37 @@
 title: South American red salsa
 tags: [sauces]
 source: family
-prep_time: 30 min (or up to 7 days)
+prep_time: 30 min (plus 30 min resting)
 cuisine: Latin
 draft: false
 ---
 
-This is an example. Copy it and replace things. Keep your description short and sweet, but include a bit of history if you can. Memories are a huge part of the food we eat!
+A fresh, chunky tomato salsa sharpened with lime, lemon, and a splash of red wine vinegar. It's better after a rest in the fridge, once the onion mellows and the juices come together.
 
-## Main ingredients:
+## Ingredients
 
-- 6 fresh tomatoes, diced  
-    (or 1-2 tins of canned tomoatoes)
-- 1  large green pepper, diced
+- 6 fresh tomatoes, diced, or 1–2 cans diced tomatoes
+- 1 large green pepper, diced
 - 1 large onion, finely diced
-- 1 large jalapeno pepper, seeds removed and finely diced
+- 1 large jalapeño, seeds removed and kept, finely diced
 - 1 lime, juiced
-- ½ lemon, juice
-- 2 tbsp red wine vinegar[\[a\]](#cmnt1)
+- ½ lemon, juiced
+- 2 tbsp red wine vinegar
 - 1 tbsp sugar
 - 1 tsp kosher salt
 - 2 tsp black pepper
-- 1-2 cloves garlic, finely minced
+- 1–2 cloves garlic, finely minced
 - ½ cup cilantro, finely chopped
 
-## Directions:
+## Method
 
-1. Mix ingredients by hand in a large bowl. Taste for seasoning and adjust.
-2. Bake jalapeno seeds and crush in a mortar and pestle. Combine with salsa.
-3. Rest salsa in the fridge for 30 minutes (or up to 7 days).
+Mix everything except the jalapeño seeds by hand in a large bowl. Taste and adjust the seasoning.
 
-## Notes:
+Toast the jalapeño seeds in a dry pan or the oven until fragrant and lightly browned. Crush them in a mortar and pestle and stir them into the salsa.
 
-The original recipe had 1 cup of vinegar, but that seems like a lot.
+Rest in the fridge for at least 30 minutes before serving.
+
+## Notes
+
+- The original recipe had 1 cup of vinegar, but that seems like a lot.
+- Keeps 5–7 days in the fridge.

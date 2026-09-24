@@ -27,7 +27,7 @@ This is a blended emulsion: the egg white and Dijon suspend the olive oil. Drizz
 - 2 tablespoons sugar
 - ¼ teaspoon black pepper
 - 2 tablespoons Dijon mustard
-- 2–3 tablespoons good olive oil
+- 125–175 ml (½–¾ cup) good olive oil
 - 1 teaspoon Accent (optional)
 
 ## Method
