@@ -115,98 +115,34 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 
 ### Site pages
 
-- [x] ! `about.md`
-    - Frontmatter `description: Bruce loves to cook, our family cookbook.` reads as two fragments spliced together. Suggest "A family cookbook from someone who loves to cook." or similar.
-    - L10: "It was a lot of fun discovering technique, authentic flavours, and even learning how..." breaks parallelism; "discovering technique and authentic flavours, and learning how..."
-    - L10: "It became one of my reasons for existing, both learning to cook and cooking..." slightly tangled; "Learning to cook, and cooking for family and friends, became one of my reasons for existing."
+- [x] `about.md` (fixed 2026-09-24: description; parallelism; L10 reworded)
 
 ### Essays
 
 - [x] `essays/_index.md`
-- [x] ! `essays/cooking-reflections/tips-and-tricks-for-cooking-on-the-road.md`
-    - Draft, unfinished: the third Q ("How do you cook without salt and pepper?") has no answer, and "Salad dressing or water can help." is a placeholder answer.
-    - L14: "a variant of the reverse method" is undefined. This is usually called the water or steam-fry method; "reverse" suggests reverse sear, which is a different technique. Q: which did you mean?
-    - L14: "a minimum amount of food will stick" → "very little will stick".
-    - L10/18/22: "Q." Q&A labels will render as plain paragraphs; consider `##` question headings.
+- [x] ! `essays/cooking-reflections/tips-and-tricks-for-cooking-on-the-road.md` (fixed 2026-09-24: Q labels → `##` headings; "very little will stick"; reverse method explained and linked to the new reverse-cooking reference page)
+    - Draft, unfinished: the third question has no answer, and "Salad dressing or water can help." is a placeholder answer.
 - [x] ! `essays/edgar-wright-style-cookery.md` → moved to `reference/food-video-filming-techniques.md` (fixed 2026-09-24: frontmatter added, H1 dropped; sentence-case headings; em-dashes removed; spellings; time-lapse speeds; burnt → dark onions; hyphens)
     - L259: "The Cornetto freeze-frame endings" Q: I can't place freeze-frame endings in the Cornetto films; is this a specific scene, or should the reference go?
     - L273: "Baby Driver's opening isn't the beginning of the story ... starts in medias res" Q: Baby Driver opens with a heist and runs mostly linear. Shaun of the Dead or Hot Fuzz may be a better fit, or drop the film reference.
 - [x] ! `essays/food-memories/.ideas.md`
     - Author scratch file with no frontmatter (dotfile, so Hugo skips it). Not reviewed as content. Q: move out of `content/` so it can't leak into a build?
-- [x] ! `essays/food-memories/camp-cooking.md`
-    - L8: "kids camp" → "kids' camp"; "cut up veg" → "cut-up veg".
-    - L8: "¼ pound of beef": metric rule → "115 g (¼ lb) of beef" (or leave as-is if memory pieces keep period units; see collection-wide Q).
-    - L10: "realised" → "realized" (-ize rule; also in the-smells-of-india.md).
-    - L10: "the veg tasted like the rest of the pack" → "pouch" (pack/pouch mixed); the phrase itself is unclear. Maybe "the veg soaked up the beef and butter"?
-    - L12: run-on with three "and" clauses; split after "safe to eat."
-    - L16: "hotdogs" → "hot dogs" (and in L16 again).
-    - L18: brand names: "corn flakes" → "Corn Flakes", "rice crispies" → "Rice Krispies", "fruit loops" → "Froot Loops", "cheerios" → "Cheerios".
-    - L20: semicolon before the list should be a colon: "...not what we ate: time at the lake, ..."
-    - L22: "evolved into something more equally about the food and the fun" is tangled; "became as much about the food as the fun".
-    - L22: "The foods we made evolved" → tense mismatch with "we make every year"; "my best memory is in developing menus" → "my best memories are of planning menus".
-    - Q: close lands on buying too many groceries. CLAUDE.md says food memories should anchor a lesson; is the lesson the foil-pouch "simple pleasure" idea from L10? If so, the ending could return to it.
-- [x] ! `essays/food-memories/garbage-plates.md`
-    - L8: "brand named KD" → "brand-name KD".
-    - L10: "aluminium" is British; Canadian usage is usually "aluminum". Q: preference? (also in slick-spaghetti).
-    - L10: "cooked the noodles ..., draining it" → "draining them".
-    - Otherwise clean; strong close.
-- [x] ! `essays/food-memories/slick-spaghetti-with-a-hint-of-oregano.md`
-    - L8: "puréd" → "puréed".
-    - L10: "homoeopathic" → "homeopathic" (British spelling; minor).
-    - L12: "to drop a 1 pound package of mince" is missing where it's dropped ("into the pot" / "into the hot pot"); metric rule → "450 g (1 lb)".
-    - L12: "stored the paper wrapped in stamped packages" is garbled → "stored the stamped, paper-wrapped packages".
-    - L16: "A small amount of salt and pepper were added" → "was added".
-    - L18: "use a lower fat beef mixture and emulsify the oil into the beef mixture" repeats "beef mixture"; "use leaner beef and emulsify the fat into the sauce".
-    - L22: "space-aged microwave" → "space-age".
-    - Q: like camp-cooking, it ends on a side memory (friend's microwave). Is there a lesson to close on, e.g. the oil slick → why you now emulsify?
-- [x] ! `essays/food-memories/the-dutch-deli.md`
-    - L8: "second and third generation Mennonites" → "second- and third-generation".
-    - L10: "some ravel" → "some gravel". "back yard" vs "backyard" elsewhere; pick one. "backing on a dyke" → "backing onto a dyke".
-    - L12: "Métis, or mixed-blood. A muggle." Q: "muggle" (a non-magical person) doesn't fit here. If the Harry Potter reference was meant to be "mudblood", that's a slur in-universe, so check that's the intended weight. Either way this line needs your call.
-    - L14: "swiss cheese" → "Swiss cheese" (also L16). "a good deli, which these days are difficult to find" → "good delis, which are hard to find these days".
-    - L16: typos: "constrast" → "contrast", "Turkeys" → "turkeys", "pasturizing" → "pasteurizing", "sprouds" → "sprouts". "moist, and deeply flavourful" drop the comma.
-    - Q: the title says Dutch deli, but the text never says the deli was Dutch. Worth one clause in L14.
-- [x] ! `essays/food-memories/the-smells-of-india.md`
-    - L10: "grandparent's careers" → "grandparents' careers"; "2 bedroom" → "two-bedroom".
-    - L12: comma splice: "It wasn't just one family moving into that house, it was five families." → "Five families moved into that house, not one." (also avoids the not-X-but-Y pattern).
-    - L14: "flat bread" → "flatbread".
-    - L16: "I didn't know it at the time, but I think I realised" contradicts itself; "Even then, I think I realized...". "realised" → "realized".
-    - Q: L16 says "the food of southern India", but paneer, a tandoor on the deck, and charred flatbread point to Punjabi (northern) cooking, which also fits a farming family in the Fraser Valley. Should this be northern India / Punjab?
-- [x] ! `essays/planning-essays/meal-planning-bruces-take.md`
+- [x] `essays/food-memories/camp-cooking.md` (fixed 2026-09-24: possessives, hyphens, -ize, run-on split, hot dogs, cereal brand names, colon, L22 tense and wording; units and ending kept as-is by choice)
+- [x] `essays/food-memories/garbage-plates.md` (fixed 2026-09-24: brand-name; "draining them"; aluminum via the spelling pass)
+- [x] `essays/food-memories/slick-spaghetti-with-a-hint-of-oregano.md` (fixed 2026-09-24: puréed, homeopathic, "into the hot pot", paper-wrapped packages, "was added", leaner beef line, space-age; units and ending kept as-is by choice)
+- [x] `essays/food-memories/the-dutch-deli.md` (fixed 2026-09-24: hyphens, backyard, "backing onto", Swiss, delis sentence, typos; "mudblood" as intended; "a Dutch deli")
+- [x] `essays/food-memories/the-smells-of-india.md` (fixed 2026-09-24: grandparents', two-bedroom, comma splice, flatbread, "Even then"; "southern" removed)
+- [x] ! `essays/planning-essays/meal-planning-bruces-take.md` (fixed 2026-09-24: heading, units, duplicate word, list case, spatchcocked, colon, "at a time"; "braise" defined as cook in liquid, then brown)
     - Draft (marked "Rambly + In progress"); ends mid-list at "Roast the veg".
-    - L12: `###` heading with no parent `##`, and a trailing colon. → "## An example week for 2–4 people".
-    - L17: "1.36kg/3lbs" → "1.36 kg (3 lb)".
-    - L22: "heads of garlic garlic" duplicated word. L22–25: capitalized list words mid-line ("Onions", "Robust", "Starches") → lower case.
-    - L31: "spatcocked" → "spatchcocked".
-    - L34: "(in any style you wish; Indian, French, etc.)" → colon, not semicolon.
-    - L38: "Braise the ground beef" Q: braising ground beef is unusual; do you mean brown-then-simmer? Worth saying what "braise" means here.
-    - L49: "(for 2-3 days at time)" → "at a time".
-- [x] ! `essays/technique-essays/how-to-find-great-recipes.md`
+- [x] ! `essays/technique-essays/how-to-find-great-recipes.md` (fixed 2026-09-24: all grammar and wording notes applied)
     - Draft; ends in a "Notes:" stub.
-    - L10: "For example, It's" → "it's". "the approach.." double period.
-    - L12: "When a recipe doesn't include ... they force" → "it forces". "distinct styles of variations of a type of recipes" → "distinct styles or variations of a type of recipe". "Low quality" → "Low-quality".
-    - L16: "If I know a recipe has a dark roux or needs a soffritto is a hint at how and shortcut for how it will go together." is garbled. Suggest: "Knowing a recipe starts with a dark roux or a soffritto tells me how it will go together."
-    - L16: "One of the best things about..." is on the vague-intensifier list; start with the claim.
-    - L18: "a base of savoury" → "a savoury base"; "a cured pork" → "cured pork".
-    - L20/26: hyphenate compound modifiers: "North American-style", "high-end", L22 "carbonara-style".
-    - L22: "different than" → "different from"; "expectations on the results" → "of the results".
-    - L24: "handed down to him for generations" → "handed down through generations". "mostly delicious and edible" reads backwards; "edible and often delicious".
-    - L26: "As I've learned more ..., I realized" → "I've realized".
-    - L28: "scotch bonnet" → "Scotch bonnet".
-- [x] ! `essays/technique-essays/why-ingredients-matter-in-soup-stock.md`
+- [x] ! `essays/technique-essays/why-ingredients-matter-in-soup-stock.md` (fixed 2026-09-24: comma and hyphen, glucosinolate link, "With care", heading colon, bitter, "is those", fennel bulb, kombu clause; carrot tops/greens merged into one row; acid explanation added)
     - Draft; ends mid-section.
-    - L10: "While the premise is simple there is a lot of well meaning" → "While the premise is simple, there is a lot of well-meaning".
-    - L16: incorrect link: the "sulphur-like" link points to phenylthiocarbamide (a lab compound used in bitter-taste genetics tests). Brassica bitterness comes from glucosinolates and their sulphur breakdown products. Suggest linking https://en.wikipedia.org/wiki/Glucosinolate.
-    - L14 vs L23: "generally or always avoid" then "some chefs get great flavour out of roasted cabbage" is fine as an exception, but "Generally, and with care and balance," is awkward; "With care, some chefs...".
-    - L25: "### Examples:" drop the colon; `###` under a `##` is fine.
-    - L29–31: "Carrot tops" and "Carrot greens" are usually the same thing, and the "tops" row says "peel", which only fits the crown end of the root. Q: did you mean the crown (stem end) for "tops"? If so, say "carrot crowns / stem ends".
-    - L33: typo "Can be better or gamey" → "bitter".
-    - L37: "Another class ... are those" → "is those"; list ends with a dangling "or sweet." fragment. Also "fennel root" → "fennel bulb".
-    - L41: "kombu (which tastes better under the boil)" → "below a simmer"; the list breaks at "and acids tend to do poorly" (needs its own clause and an explanation).
 
 ### Reference
 
 - [x] `reference/_index.md`
+- [x] `reference/reverse-cooking-reverse-sear-and-water-frying.md` (new draft 2026-09-24: reverse sear and water frying, linked from the cooking-on-the-road essay)
 - [x] ! `reference/base-recipes-for-weeknight-cooking.md` (Google links fixed 2026-09-24)
     - L10: "Less common to the home kitchen is to do what restaurants do" is awkward; "Less common at home is what restaurants do: prepare sauces and bases..."
     - L12: "the art of canning both requires investment and practice, as well as specialized recipes" → "canning takes investment, practice, and specialized recipes".
