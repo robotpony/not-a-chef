@@ -27,7 +27,7 @@ Safety is temperature *and* time. The instant numbers (74°C poultry, 71°C grou
 
 **Broken or unfinished pages that are published (`draft: false`)**
 - ~~Template placeholder text as the intro: `greek-islands-creamy-greek-dressing`, `south-american-red-salsa`.~~ Fixed.
-- Truncated or no method: `kormaqorma` (ingredients only), `no-knead-pizza-dough` (stops mid-sentence), `jerk-chicken` (step 2 is "Re"), `bulgogi-beef` ("Cook like taco beef"), `vegan-burger-savoury-chew-gluten`, `english-muffins`.
+- ~~Truncated or no method: `kormaqorma` (ingredients only), `no-knead-pizza-dough` (stops mid-sentence), `jerk-chicken` (step 2 is "Re"), `bulgogi-beef` ("Cook like taco beef"), `vegan-burger-savoury-chew-gluten`, `english-muffins`.~~ Fixed (methods drafted 2026-09-24; review against how you actually cook them).
 - Missing a core ingredient or step: `bruces-thai-redgreen-curry` (no coconut milk; paste never added), `grandma-fergusons-buns` (yeast never added), `omas-kipfels` (yeast never added), `bienenstich` (milk and topping ingredients never added), `butter-tarts` and `coconut-jam-tarts` (pastry has no water), `prosecco-sangria` (no Prosecco), `vodka-cream-sauce` (cream never added), `rocky-road-brownies` (chocolate never melted; chips unused; no bake time).
 - `essays/edgar-wright-style-cookery.md` has no frontmatter at all.
 - Flattened tables (unreadable): `reference/food-ratios-for-creating-your-own-recipes.md`, `reference/temperature-and-doneness-cheat-sheet.md` (both drafts).
@@ -455,10 +455,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - L45: "kaffir lime leaves" → "makrut lime leaves" ("kaffir" is a slur in South Africa; most food publications have switched).
     - Typos: L60 "cobbs" → "cobs"; L76 "brocolli" → "broccoli"; L105 "isnt" → "isn't"; L56 "restaurant quality" → "restaurant-quality"; L91 "Dark Soy" → "dark soy".
     - L105: "Mirepoix isnt authentic or needed, using stock is more typical" is a comma splice, and the logic is unclear (stock doesn't replace mirepoix). Q: meaning Thai curries skip the aromatic veg base?
-- [x] ! `recipes/bulgogi-beef.md`
-    - Incomplete: the whole method is "Cook like taco beef." Needs steps: marinate (how long), then sear in batches or cook the ground version, and when the mushrooms and carrot go in.
-    - L27: "4 tablespoon" → "4 tablespoons"; L30: "Salt  & Pepper" → "salt and pepper"; L31: MSG with no amount; L15: "shortrib" → "short rib".
-    - Headings: "## Base:" / "### Marinade / sauce:" / "## Garnish:" have colons and uneven levels.
+- [x] `recipes/bulgogi-beef.md` (fixed 2026-09-24: sliced and ground methods drafted; MSG ½ tsp; converted to FORMAT.md)
 - [x] ! `recipes/butter-chicken.md`
     - L43: open TODO: sugar is mentioned in the original but not listed. Q: how much sugar (1–2 tsp is common in BIR butter chicken)?
     - L49–51 contradict: "Turn off the heat. Add yogurt" then "Simmer on low until heated through". Say: temper and stir in off the heat, then warm gently without boiling.
@@ -614,13 +611,8 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] ! `recipes/egg-roll-bowls.md`
     - L23–24: "1/4 head", "1/2 yellow onion" → "¼", "½". "scallion" → "green onion" (the rest of the collection uses it).
     - Otherwise clean.
-- [x] ! `recipes/english-muffins.md`
-    - Unfinished steps: step 3 ends mid-sentence ("Rising in the fridge overnight"); step 4 "let rest for 10-20" has no unit; steps 3–6 lack periods.
-    - L10: "english" → "English", "mcmuffin" → "McMuffin"; third person ("Bruce ... his") where the rest is first person. L31: "flavor" → "flavour".
-    - Missing: cornmeal or semolina for dusting (standard, stops sticking), and a doneness check. At 6 min/side the centres are often gummy; "until 93°C (200°F) inside" or "finish 10 min in a 175°C oven".
-    - L31: "(and some of the flour)" needs an amount (e.g. ½ cup). No yield: ~1 kg of dough at 75 g makes about 14.
+- [x] ! `recipes/english-muffins.md` (fixed 2026-09-24: truncated steps finished; cornmeal, doneness check, yield; converted to FORMAT.md)
     - L12: "Note: I'm still tuning this recipe." but `draft: false`. Q: publish as-is?
-    - Headings "### Bloom:", "## Directions:" colons.
 - [x] ! `recipes/essence-of-cola.md`
     - The 10 ml neutral alcohol is listed but never added in the method. Add it with the vanilla in step 3.
     - L42: gum arabic stirred straight into syrup tends to clump. "Whisk it with a spoonful of the sugar first" (or pre-hydrate it).
@@ -760,12 +752,8 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] ! `recipes/instant-pot-chicken-thigh-curry.md`
     - Open testing flag in the intro ("needs testing"). Q: tested yet?
     - Two em-dashes (L14, L40).
-- [x] ! `recipes/jerk-chicken.md`
-    - Step 2 is truncated: the whole step reads "Re". Q: "Remove chicken from marinade and let excess drip off"?
-    - L34: "85C/185C" → "85°C (185°F)"; "dark mean" → "dark meat"; triple space before 65C.
-    - L32: "marinade for 2 - 24hours" → "marinate for 2–24 hours". L15: "scotch bonnet" → "Scotch bonnet". L10: "Jerk Chicken" → "jerk chicken". L40: "cut upto in manageable pieces" → "cut into manageable pieces". L18: "1/4" → "¼".
+- [x] ! `recipes/jerk-chicken.md` (fixed 2026-09-24: step 2 completed; rest as hold; units and typos; converted to FORMAT.md)
     - Q: three jerk pages overlap (this, jerk-marinade.md, and reference/jerk-marinade-adapted-from-serious-eats.md) with different marinades. Consolidate into one recipe with variations?
-    - Food safety (minor): breasts at "65C/150F" (65°C is 149°F): fine for quartered chicken with a 5-minute rest, which the recipe should state.
 - [x] ! `recipes/jerk-marinade.md`
     - L16 contradicts itself: "Scotch bonnets are non-negotiable ... habaneros are the closest substitute".
     - L23: "scotch bonnet" → "Scotch bonnet"; L46: "caramelised" → "caramelized"; L56 missing period.
@@ -774,9 +762,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - L22: "3/4 head" → "¾ head". L18: "pork butt" → "pork shoulder (butt)" for Canadian readers.
     - Filename contains "ā" (non-ASCII slug); see note on indian-takeout-tomato-purée.md.
     - Otherwise clean.
-- [x] ! `recipes/kormaqorma.md`
-    - Incomplete: the file ends after the ingredient list. No method, no quantities for water, and L10 refers to combining with a base gravy that isn't linked. Q: is the method somewhere else? Otherwise mark it `draft: true` until it's written.
-    - "~8 onions" Q: 8 whole onions for 1 tbsp paste and 6 tbsp sultanas? That reads like a big batch of fried-onion korma base. A yield line would help.
+- [x] `recipes/kormaqorma.md` (fixed 2026-09-24: method drafted (slow-fried onion paste), linked to base gravy; converted to FORMAT.md)
 - [x] ! `recipes/lazy-pizza-dough-2022.md`
     - Error: the baker's percentages don't match the weights. At 600 g flour: 420 g water is 70% (table and Mechanic say 66%); 15 g sugar and 15 g salt are 2.5% each (table says 2%); 35 g oil is 5.8% (says 4%); 10 g yeast is 1.7% (says 1.5%). Q: which column is right? (66% would be 396 g water.)
     - Portion math: the dough is ~1.1 kg, but the pizza step makes "4 equal portions of ~200g" (800 g), focaccia uses "½ (or about 350g)", and `servings` says ~3 pizzas. Reconcile (e.g. 350 g focaccia + 3 × 250 g pizzas).
@@ -891,9 +877,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - L13: "½ cups each of 9 types of dried beans (or …)" → "½ cup each"; the trailing "(or …)" is unfinished.
     - L17: the soaking instruction sits between the ingredient lists; move it to step 1. L31: "2L/quarts" → "2 L (2 qt)"; "Add ham hock and bones" (what bones?).
     - L22: "1 large can" → size (796 ml).
-- [x] ! `recipes/no-knead-pizza-dough.md`
-    - Truncated: step 3 ends mid-sentence ("form a ball with the dough") and there are no rise, storage, or shaping steps. The Mechanic promises a multi-day rise. Q: finish the method, or mark `draft: true`.
-    - Title: "No knead" → "No-knead". L33: "1TSP" → "1 tsp". L29: "## Steps:" → "## Method".
+- [x] `recipes/no-knead-pizza-dough.md` (fixed 2026-09-24: rise, fridge, and shaping steps drafted; converted to FORMAT.md; title hyphenated)
 - [x] ! `recipes/nut-crusted-salmon.md`
     - Tagged `dairy-free`, but the crust has 50 g Parmesan. Drop the tag or make the cheese optional.
     - L33: "parmesan" → "Parmesan".
@@ -1177,10 +1161,8 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - Q: near-duplicate of asian-slaw-dressing.md (same 90 g oil / ~45–50 g rice vinegar / 30 g Dijon / sesame / soy / maple). Merge?
     - L14: garbled unit: "50g tablespoons seasoned rice vinegar" → "50 g seasoned rice vinegar".
     - L9: "Asian style" → "Asian-style"; "ginger/garlic depth" → "ginger or garlic for depth".
-- [x] ! `recipes/vegan-burger-savoury-chew-gluten.md`
-    - Not vegan as written: Worcestershire (L24) contains anchovy. Use a vegan Worcestershire.
-    - Incomplete: no intro, and the method stops at "combine thoroughly". No forming, resting, or cooking step, and no amounts for salt, liquid smoke, or oil. Steps 1 and 2 both fry the onions and garlic.
-    - Title has a trailing space; the filename (`vegan-burger-savoury-chew-gluten`) doesn't match the title. Q: `draft: true` until finished?
+- [x] ! `recipes/vegan-burger-savoury-chew-gluten.md` (fixed 2026-09-24: intro, forming and cooking drafted; amounts added; vegan Worcestershire; converted to FORMAT.md)
+    - Filename (`vegan-burger-savoury-chew-gluten`) doesn't match the title.
 - [x] ! `recipes/vegetarian-lasagna.md`
     - Contradiction: the marinara link is `[[Simple Marinara]]`, which is built on meat drippings, so it doesn't fit a vegetarian lasagna. Also, that recipe makes ~500 ml, far too little for a 8–10 serving lasagna (usually 1.5 L+). Link `[[Marinara sauce]]` or `[[Classic pizza sauce]]` and give a volume.
     - L14: "our kids first" → "our kids' first". L33: "caramelise" → "caramelize".
