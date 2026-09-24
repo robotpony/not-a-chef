@@ -3,34 +3,37 @@ title: Gina’s tomato salsa
 tags: [sauces]
 source: family
 cuisine: Mexican
+prep_time: 10 min
 draft: false
 ---
 
-Something similar to our favourite Nanaimo Mexican hut’s fresh salsa. This is a fairly liquidy salsa, great as a starter for a dinner party (or snack). Lasts up to a few weeks in the fridge.
+Something similar to our favourite Nanaimo Mexican hut’s fresh salsa. This is a fairly liquidy salsa, great as a starter for a dinner party (or snack).
 
-## Ingredients:
+## Ingredients
 
-- 1 x 796ml/28oz can of whole roma tomatoes and liquid
+- 1 can (796 ml, 28 oz) whole Roma tomatoes, with their liquid
 - 1 small carrot, roughly chopped
 - 1 medium onion, roughly chopped
-- 2-3 cloves of garlic, whole/smashed
-- 1 small bunch of cilantro, woody stems removed
-- 2 poblanos or anaheim peppers, seeds removed, roughly chopped
-- ~3 teaspoons salt
-- 1 teaspoon fresh ground black pepper
-- 1 teaspoon ground chilis (hot-ish)
-- 1 teaspoon granulated garlic
-- 1 tablespoon white sugar
-- 1 teaspoon cumin
-- 2 limes, juiced (sometimes more)
+- 2–3 cloves garlic, whole or smashed
+- 1 small bunch cilantro, woody stems removed
+- 2 poblano or Anaheim peppers, seeded and roughly chopped
+- 3 tsp salt, about
+- 1 tsp freshly ground black pepper
+- 1 tsp ground chili (hot-ish)
+- 1 tsp granulated garlic
+- 1 tbsp white sugar
+- 1 tsp ground cumin
+- 2 limes, juiced, plus more to taste
 
-## Directions:
+## Method
 
-1. (Optional) Roast onion, garlic, and peppers at 230C/450F (with the broiler on if you can babysit it), until you see some char on the onions and peppers. Wrap the peppers in foil or put in a bowl with a plate over and let rest. Once cooled down a bit, remove and discard the charred skins.
-2. Combine ingredients, with the juice of one of the limes, in a blender or food processor until combined and medium fine.
-3. Add remaining lime juice + seasonings and combine, taste, adjust, etc. Depending on the size of your limes, often another lime (or pre-juiced lime) is needed.
+For more depth, roast the onion, garlic, and peppers at 230°C (450°F) until the onion and peppers are charred in spots. The broiler speeds this up if you can watch it. Cover the peppers with foil or a plate and let them steam. Once cool enough to handle, peel off and discard the charred skins.
 
+Blend everything except the second lime's juice in a blender or food processor until medium-fine.
 
-## Notes:
+Add the remaining lime juice. Taste and adjust. Depending on the size of your limes, another lime is often needed.
 
-Note that I don't think Gina's roasts their peppers, but it adds some depth.
+## Notes
+
+- I don't think Gina's roasts their peppers, but it adds some depth.
+- Keeps 5–7 days in the fridge. The raw onion, garlic, and cilantro are what limit it.

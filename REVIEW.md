@@ -22,7 +22,7 @@ Safety is temperature *and* time. The instant numbers (74°C poultry, 71°C grou
 1. ~~`recipes/turkey-burgers.md`: ground turkey to 63–65°C, then a 5–10 minute rest. Thin patties won't stay at temperature through the rest. Hold them at 65°C for 6 minutes (in a low oven) or cook them to 74°C.~~ Fixed: cook to 70°C; the climb in the pan counts toward the hold (see the new "The climb counts" section of the safety page).
 2. ~~Thin poultry pulled low with a rest instead of a hold: `pan-fried-chicken-burger` (70°C, fine if it holds ~15 sec; the carry-over claim is the only issue), `fajita-chicken-bowl` (62°C → needs ~14 min), `mayo-marinade` chicken (63°C), `simple-rice-bowls` chicken (60°C → needs ~30 min). `roast-poultry` breasts at 63°C are borderline (bone-in pieces do hold through a 10-minute rest, but 63°C needs 9–11 min); pull at 65°C for margin.~~ Fixed: thin chicken to 68°C, the burger stays at 70°C, roast breasts to 65°C with the rest as the hold.
 3. ~~`reference/temperature-and-doneness-cheat-sheet.md`: "fall apart" targets are too low (shoulder/chuck at 80°C), and one flat 3-minute hold is right for red meat but short for poultry below 65°C. Link it to the new safety page.~~ Fixed; fall-apart numbers synced on the safety page too.
-4. Storage that's too long or too warm: fresh salsas kept "a few weeks" (`ginas-tomato-salsa`, `salsa-verde`); counter cold-brew tea for 12 h; cream-cheese-frosted `paska-buns` kept unrefrigerated 3 days; `the-anything-casserole` reheated to only 65°C.
+4. ~~Storage that's too long or too warm: fresh salsas kept "a few weeks" (`ginas-tomato-salsa`, `salsa-verde`); counter cold-brew tea for 12 h; cream-cheese-frosted `paska-buns` kept unrefrigerated 3 days; `the-anything-casserole` reheated to only 65°C.~~ Fixed.
 5. Raw egg without a note: `caesar-dressing`, `white-spot-burgers` mayo.
 
 **Broken or unfinished pages that are published (`draft: false`)**
@@ -435,9 +435,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - L56: "saussage" → "sausage". L15: private Google Sheet link.
 - [x] ! `recipes/bruces-burger-sauce.md`
     - L24: "1/2 teaspoon" → "½ teaspoon" (the rest of the file uses glyphs). Otherwise clean.
-- [x] ! `recipes/bruces-cold-brewed-iced-tea.md`
-    - Q: food safety: steeping on the counter for 12 hours is the "sun tea" pattern food-safety agencies advise against (bacteria growth in lukewarm tea). Suggest making the fridge method the default.
-    - Title: "cold brewed" → "cold-brewed". Heading colons.
+- [x] `recipes/bruces-cold-brewed-iced-tea.md` (fixed 2026-09-24: converted to FORMAT.md; fridge steep only; title hyphenated)
 - [x] ! `recipes/bruces-iced-tea.md`
     - L10: garbled, third person, and a comma splice: "Bruce uses this tea to get productive, it's like magical, sweet, zen." → e.g. "My working-day tea: sweet, tart, and calming."
     - The pinch of salt is listed but never added. Add it with the sugar in step 2.
@@ -671,10 +669,8 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - Crumble butter: cold and cut in, or melted? Step 5 doesn't say.
     - L41: "(the 1inch deep ones)" → "(2.5 cm / 1 in deep)". L44: "175C/350F" → "175°C (350°F)".
     - L10: backstory (neighbour's two kitchens), and the same image appears in the-smells-of-india.md. Q: same family? It would make a nice cross-link.
-- [x] ! `recipes/ginas-tomato-salsa.md`
-    - Food safety: "Lasts up to a few weeks in the fridge" is too long for fresh (uncooked) salsa with raw onion, garlic, and cilantro. 5–7 days is the usual guidance.
-    - L10: "Nanaimo Mexican hut’s" Q: is the restaurant called Gina's Mexican Café? Capitalize the name. L14: "roma" → "Roma"; L19: "anaheim" → "Anaheim".
-    - Step 2 "Combine ingredients" vs step 3 "Add remaining ... seasonings": unclear which seasonings go in first. Say "everything except the second lime".
+- [x] ! `recipes/ginas-tomato-salsa.md` (fixed 2026-09-24: converted to FORMAT.md; keeps 5–7 days; Roma/Anaheim; second lime clarified)
+    - L10: "Nanaimo Mexican hut’s" Q: is the restaurant called Gina's Mexican Café? Capitalize the name.
 - [x] ! `recipes/gingergarlic-paste.md`
     - Incomplete method: Notes say "Don't overcook ... stop once sizzle is gone", which implies frying the paste after blending, but the only step is blending. Q: blend, then cook in the oil until the sizzle stops?
     - Step 1 adds "neutral oil" and then says "add oil until the consistency reaches soft peanut butter", so the oil is added twice.
@@ -944,12 +940,8 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] ! `recipes/pancakes-and-waffles.md`
     - Title promises waffles, but they only get one Notes line. Fine, or add a line on waffle-iron heat and batter amount.
     - Q: L18 overstates it: most baking powder is double-acting and releases most of its gas on heat, so batter can rest 10–15 min without going flat. The last-minute addition still helps a little; soften "lets the gas escape" to "loses some lift".
-- [x] ! `recipes/paska-buns.md`
+- [x] ! `recipes/paska-buns.md` (fixed 2026-09-24: converted to FORMAT.md; frosted buns refrigerated; 5-minute yeast bloom; metric oven and cream cheese; icing sugar; European)
     - Q: the recipe text looks copied from a web source (US units only, "powdered sugar", °F only, "Enjoy immediately"), while `source: family` and the intro says Great Oma's recipe was never written down. If it's adapted from a site, credit it in `source`.
-    - Food safety: "store in an air-tight container for up to 3 days" (L61) plus "Do not refrigerate" (L65), with cream cheese frosting. Frosted buns should be refrigerated (or frost only what you'll eat that day).
-    - L42: "Let rise for 2 minutes" → "Let stand 5 minutes until foamy".
-    - Imperial-only: "325 degrees Fahrenheit" → "165°C (325°F)"; "8 ounces" → "250 g (8 oz)". "powdered sugar" → "icing sugar". Fractions "1/2", "3/4" → glyphs.
-    - L10: "european" → "European". Headings "### For the Buns:" / "### For the Frosting:" title case with colons. Steps use `*` bullets rather than prose or numbers.
 - [x] ! `recipes/peach-fruit-crisp.md`
     - L23: "Heat on low, stirring, until the sauce turns glossy". Cornstarch needs to reach a simmer to thicken and clear → "bring to a simmer, stirring".
     - Salt: L45 flags the 3 tsp total as high. Rather than a note, fix the recipe (e.g. ¼ tsp in the filling, ½ tsp in the crumble) and drop the note. Same for L44's cinnamon note: the fix is in, so drop the history.
@@ -1048,9 +1040,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - Typos: L13 "coresly" → "coarsely"; L9 "they staff" → "the staff". Title Case throughout ("Bittersweet Chocolate", "Butter a 9 x 13inch Baking Dish").
     - Imperial: "9 x 13inch" → "23 × 33 cm (9 × 13 in)"; "2 inches" of water → "5 cm". Temps "160 degrees C (325 F)", "76 degrees C (170 F)" → "160°C (325°F)", "76°C (170°F)".
     - L9: very long backstory (recipe rules Q).
-- [x] ! `recipes/salsa-verde.md`
-    - Food safety: "Lasts up to 3 weeks in the fridge" is too long for fresh salsa with raw onion, garlic, and cilantro. 5–7 days is safer.
-    - Lime juice is listed but never used. Step 3 is a note, not a step.
+- [x] `recipes/salsa-verde.md` (fixed 2026-09-24: converted to FORMAT.md; keeps 5–7 days; lime juice used in the blend)
 - [x] `recipes/sandwich-sour-pickles.md`
 - [x] ! `recipes/satay-marinade.md`
     - Missing step: the 1 tbsp salt is excluded from the blend (step 1) and never added. Q: rub it on the protein before the marinade (dry brine)?
@@ -1147,9 +1137,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - L15: "150ml (½ cup + juice of 1 lime) lime juice" is circular. → "150 ml lime juice (about 5 limes)".
     - Typos: L9 "midly" → "mildly"; "Puré" → "Purée" (L11, L26, L37). Title: "Thai style" → "Thai-style". L33: "1/4 cup ... scallions" → "¼ cup ... green onions".
     - L9: intro duplicated from sweet-gochujang-sauce.md.
-- [x] ! `recipes/the-anything-casserole.md`
-    - Food safety: "until brown and bubbly (~65C/150F)". Reheated leftovers should reach 74°C (165°F) in the centre. The time-and-temperature trick doesn't apply well here: leftovers have been through cooling and storage, and a casserole's centre heats slowly and unevenly.
-    - L18: "Stir fried" → "Stir-fried". L27: "200C/400F" → "200°C (400°F)". No bake time (from fridge vs from frozen); add rough times.
+- [x] `recipes/the-anything-casserole.md` (fixed 2026-09-24: converted to FORMAT.md; reheat to 74°C; rough bake times from fridge and frozen)
 - [x] ! `recipes/toblerone-shortbread.md`
     - No bake time. Step 6 only gives a cue; add "about 12–15 minutes".
     - Typos: L29 "Toblernone" → "Toblerone"; "spoon full" → "spoonful"; L17 "corn starch" → "cornstarch"; L31 "air-tight" → "airtight". L27: Title Case ("Icing Sugar, Corn Starch, Flour").

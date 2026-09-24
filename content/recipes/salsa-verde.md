@@ -8,21 +8,24 @@ draft: false
 
 A classic fresh tomatillo salsa. It’s fresh, tart, and great on chips or tacos.
 
-## Ingredients:
+## Ingredients
 
-- 500g (8-10) tomatillos, outer peel removed, halved
+- 500 g (8–10) tomatillos, husks removed, halved
 - ½ onion, roughly chopped
-- 2 serrano or jalapeños, chopped (seeds removed if you don’t like it hot)
-    - Alternative: dried chilis rehydrated (or 1-2 tablespoons of quality ancho powder)
-- 2-3 cloves of garlic
-- Handful of cilantro, lower stems removed
+- 2 serrano or jalapeño peppers, chopped, seeds removed if you don’t like it hot
+    - or dried chilies, rehydrated, or 1–2 tbsp good ancho powder
+- 2–3 cloves garlic
+- 1 handful cilantro, lower stems removed
 - Salt
-- 1 tablespoon olive oil
-- 1 tablespoon fresh lime juice (optional)
+- 1 tbsp olive oil
+- 1 tbsp fresh lime juice (optional)
 
-## Directions:
+## Method
 
-1. Wash veg and roughly chop.
-    - Optionally: roast the tomatillo, onions, and garlic until brown spots appear
-2. Blend veg and cilantro to desired texture, adding oil and salt to taste.
-3. Lasts up to 3 weeks in the fridge
+Wash the vegetables and chop them roughly. For a deeper flavour, roast the tomatillos, onion, and garlic until they have brown spots.
+
+Blend the vegetables and cilantro to the texture you like, adding the oil, salt, and lime juice to taste.
+
+## Notes
+
+- Keeps 5–7 days in the fridge. The raw onion, garlic, and cilantro are what limit it.

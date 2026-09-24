@@ -2,64 +2,57 @@
 title: Paska buns
 tags: [breads]
 source: family
+servings: 30 buns
 cook_time: 18 min
 cuisine: Mennonite
 draft: false
 ---
 
-This is a family recipe, a classic european bun.
+This is a family recipe, a classic European bun.
 
-> When Ann was growing up, her Great Oma Hamm (Oma Rille’s mom) would make Paska bread for Easter.  When Great Oma passed away, her recipes disappeared with her as she never wrote anything down.  She had her recipes memorized and the measurements were done with her hands.  I miss the family traditions of holiday baking and am hoping this recipe brings back some nostalgia.
+> When Ann was growing up, her Great Oma Hamm (Oma Rille’s mom) would make Paska bread for Easter.  When Great Oma passed away, her recipes disappeared with her as she never wrote anything down.  She had her recipes memorized and the measurements were done with her hands.  I miss the family traditions of holiday baking and am hoping this recipe brings back some nostalgia.
 
-## Ingredients
+## Buns
 
-### For the Buns:
-
-- 2 tablespoons instant dry yeast
-- 1 cup room temperature water
-- 1 teaspoon white sugar
-- 7 - 7 1/2 cups all purpose flour
-- 3/4 teaspoon salt
+- 2 tbsp instant dry yeast
+- 1 cup room-temperature water
+- 1 tsp white sugar
+- 7–7½ cups all-purpose flour
+- ¾ tsp salt
 - 1 lemon
 - 1 orange
-- 1 1/4 cup milk, at room temperature
-- 1/2 cup butter, melted
+- 1¼ cups milk, at room temperature
+- ½ cup butter, melted
 - 2 eggs
-- 3/4 cup sugar
+- ¾ cup sugar
 
-### For the Frosting:
+Combine the yeast, water, and 1 tsp sugar in the bowl of a stand mixer fitted with a dough hook (or a large bowl and a hand mixer with dough hooks). Let stand until foamy, about 5 minutes.
 
-- 8 ounces full fat cream cheese, at room temperature
-- 1/2 cup butter, at room temperature
-- 2 cups powdered sugar
-- a few drops of milk, until spreadable consistency is reached
-- sprinkles (if desired)
+Add 6 cups of the flour and the salt. Zest the lemon and orange into the bowl.
 
-## Directions:
+Peel the lemon and orange, remove the seeds, and put the flesh in a blender. Add the milk, melted butter, eggs, and ¾ cup sugar, and blend on high until smooth.
 
-For the buns:
+Pour the blender contents into the mixer bowl and mix on low until a sticky dough forms. With the mixer kneading, add the remaining 1–1½ cups flour, ½ cup at a time, until the dough is less sticky but still soft.
 
-* Add the yeast, water and sugar to the bowl of a stand mixer fitted with a dough hook attachment (or use a large bowl and a hand mixer with a dough hook attachment). Let rise for 2 minutes.
-* Add 6 cups of the flour and salt to the bowl with the yeast mixture.
-* Zest the lemon and orange and add the zest to the bowl with the flour and yeast mixture.
-* Peel the orange and lemon and add the flesh of the fruit to your blender (be sure to remove the seeds).
-* Add the milk, melted butter, eggs and sugar to the blender and blend on high speed until smooth.
-* Add the contents of the blender to the bowl of the mixer and mix on low speed until a sticky dough forms.
-* Add the additional 1 to 1 1/2 cup flour as the mixer kneads the dough, 1/2 cup at a time until the dough becomes less sticky, but still soft.
-* Cover the bowl with plastic wrap and rise for 90 minutes.
-* Divide the dough into 30 equal pieces and roll each piece into a round bun shape. Place the buns on parchment paper-lined baking sheets.
-* Cover with a kitchen towel and rise for about 20 minutes (this is a good time to preheat your oven to 325 degrees Fahrenheit).
-* Bake the buns at 325 degrees Fahrenheit for about 18 minutes, or until the buns are light golden brown on top.
-* Let the buns cool on the baking trays until completely cool.
+Cover the bowl with plastic wrap and let rise for 90 minutes.
 
-### For the frosting:
+Divide the dough into 30 equal pieces and roll each into a round bun. Set them on parchment-lined baking sheets. Cover with a kitchen towel and let rise about 20 minutes. Heat the oven to 165°C (325°F) while they rise.
 
-* To a medium bowl, add the room temperature cream cheese and room temperature butter and cream them together with a hand mixer or wooden spoon.
-* Add the powdered sugar 1/2 cup at a time and mix well until blended, scraping down the sides of the bowl after each addition.
-* Add a few drops of milk if necessary to loosen up the frosting so it's easily spreadable.
-* Spread a little frosting over each of the cooled buns and sprinkle with sprinkles for decoration.
-* Enjoy immediately, or store in an air-tight container for up to 3 days.
+Bake until light golden brown on top, about 18 minutes. Cool completely on the baking sheets.
+
+## Frosting
+
+- 250 g (8 oz) full-fat cream cheese, at room temperature
+- ½ cup butter, at room temperature
+- 2 cups icing sugar
+- A few drops of milk
+- Sprinkles (optional)
+
+Beat the cream cheese and butter together with a hand mixer or wooden spoon until smooth. Add the icing sugar ½ cup at a time, mixing well and scraping down the bowl after each addition. Add a few drops of milk if needed to make it spreadable.
+
+Spread a little frosting over each cooled bun and top with sprinkles.
 
 ## Notes
 
-Do not refrigerate the buns after baking as this dries them out. Store in an airtight container at room temperature.
+- Store unfrosted buns in an airtight container at room temperature for up to 3 days; the fridge dries them out.
+- Frost only the buns you'll eat that day. Frosted buns go in the fridge, since cream cheese frosting shouldn't sit out more than a few hours.

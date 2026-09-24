@@ -6,22 +6,29 @@ cuisine: American
 draft: false
 ---
 
-You can make pretty much any leftovers into a casserole. This works especially well with large holiday dinner leftovers, or family style takeout for American/Chinese, Indian, Thai, and similar cuisines.
+You can make pretty much any leftovers into a casserole. This works especially well with large holiday dinner leftovers, or family-style takeout for American/Chinese, Indian, Thai, and similar cuisines.
 
-## Ingredients:
+## Ingredients
 
-- 2-3 cups of protein (seasoned, cooked). Examples:
-    - Turkey or chicken
-    - Minced beef (cottage pie)
-    - Lentils or chili (vegetarian cottage pie)
-    - Breakfast eggs (can be made vegetarian)
-    - Stir fried pork, curry, etc.
-- 1-2 cups of gravy (matched to the proteins)
-- 2-3 cups of mashed potatoes
-- 2-3 cups of veg (from dinner, or frozen mix)
-- (optional) ½ cup grated cheese
+- 2–3 cups cooked, seasoned protein, such as:
+    - turkey or chicken
+    - minced beef (cottage pie)
+    - lentils or chili (vegetarian cottage pie)
+    - breakfast eggs (can be made vegetarian)
+    - stir-fried pork, curry, and so on
+- 1–2 cups gravy, matched to the protein
+- 2–3 cups mashed potatoes
+- 2–3 cups vegetables, from dinner or a frozen mix
+- ½ cup grated cheese (optional)
 
-## Method:
+## Method
 
-1. Layer a suitable baking dish, starting with the proteins and gravy, cover in veg, and spread potatoes over top. Sprinkle it with cheese.
-2. Bake in a 200C/400F oven until brown and bubbly (~65C/150F), or freeze with a lid (and wrap with beeswax paper or plastic wrap).
+Layer the protein and gravy in a baking dish. Cover with the vegetables, spread the potatoes over top, and sprinkle with cheese.
+
+Bake at 200°C (400°F) until browned and bubbling at the edges and the centre reads 74°C (165°F), about 30–40 minutes from the fridge.
+
+To freeze instead, cover with a lid or wrap and freeze before baking. Bake from frozen, covered, for about 60 minutes, then uncover until browned and the centre reads 74°C (165°F).
+
+## Notes
+
+- Leftovers have already been cooked, cooled, and stored once, and a casserole's centre heats slowly and unevenly, so reheat all the way to 74°C rather than relying on a lower temperature with a hold.
