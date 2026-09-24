@@ -6,6 +6,8 @@ cuisine: American
 draft: false
 ---
 
+A quick, tasty marinade for shrimp.
+
 ## Ingredients:
 
 - Olive oil

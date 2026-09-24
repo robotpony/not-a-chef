@@ -9,6 +9,8 @@ total_time: 1 min
 draft: false
 ---
 
+We call this camping cream, but it's equally comforting around Christmas when the weather is miserable.
+
 ## Mechanic
 
 Sweetened condensed milk carries both the sweetness and the body — regular milk is too thin and evaporated milk won't thicken the same way. Blend everything **on low speed**; a high-speed blender whips air into the cream and can curdle it as the whiskey's alcohol hits the dairy.

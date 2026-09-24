@@ -6,11 +6,13 @@ cuisine: Italian
 draft: false
 ---
 
+Pizza with less effort, what's not to like? A long rise time results in a deeper flavour.
+
 ## Mechanic
 
 Adapted from my traditional and very knead-y pizza dough, which we discovered by accident that one time when we somehow left it in a cupboard for a few days. It turns out [we weren’t the first ones to discover this](https://www.seriouseats.com/recipes/2012/03/jim-laheys-no-knead-pizza-dough-recipe.html), and it’s a fantastic way of making doughs in general.
 
-Many recipes use weights for ingredients ... this one does not. It is a super lazy dough that can take as little as 10 minutes if you work at it. It also produces one of the nicest pizza and focaccia doughs I’ve ever made.
+Many recipes use weights for ingredients ... this one does not. It is a lazy dough that can take as little as 10 minutes if you work at it. It also produces one of the nicest pizza and focaccia doughs I’ve ever made.
 
 ## Ingredients 
 
@@ -21,8 +23,8 @@ Many recipes use weights for ingredients ... this one does not. It is a super la
 
 ### Optional:
 
-- 2 TBSP olive oil (30ml)
-- 2 TBSP sugar (home style pizzas usually have a sweeter crust, and it helps with browning at lower temps)
+- 2 tbsp olive oil (30ml)
+- 2 tbsp sugar (home style pizzas usually have a sweeter crust, and it helps with browning at lower temps)
 
 ## Steps:
 
