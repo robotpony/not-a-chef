@@ -29,8 +29,8 @@ Safety is temperature *and* time. The instant numbers (74°C poultry, 71°C grou
 - ~~Template placeholder text as the intro: `greek-islands-creamy-greek-dressing`, `south-american-red-salsa`.~~ Fixed.
 - ~~Truncated or no method: `kormaqorma` (ingredients only), `no-knead-pizza-dough` (stops mid-sentence), `jerk-chicken` (step 2 is "Re"), `bulgogi-beef` ("Cook like taco beef"), `vegan-burger-savoury-chew-gluten`, `english-muffins`.~~ Fixed (methods drafted 2026-09-24; review against how you actually cook them).
 - ~~Missing a core ingredient or step: `bruces-thai-redgreen-curry` (no coconut milk; paste never added), `grandma-fergusons-buns` (yeast never added), `omas-kipfels` (yeast never added), `bienenstich` (milk and topping ingredients never added), `butter-tarts` and `coconut-jam-tarts` (pastry has no water), `prosecco-sangria` (no Prosecco), `vodka-cream-sauce` (cream never added), `rocky-road-brownies` (chocolate never melted; chips unused; no bake time).~~ Fixed.
-- `essays/edgar-wright-style-cookery.md` has no frontmatter at all.
-- Flattened tables (unreadable): `reference/food-ratios-for-creating-your-own-recipes.md`, `reference/temperature-and-doneness-cheat-sheet.md` (both drafts).
+- ~~`essays/edgar-wright-style-cookery.md` has no frontmatter at all.~~ Fixed.
+- ~~Flattened tables (unreadable): `reference/food-ratios-for-creating-your-own-recipes.md`, `reference/temperature-and-doneness-cheat-sheet.md` (both drafts).~~ Fixed.
 
 **Wrong numbers likely to ruin a dish**
 `fresh-egg-pasta` (4% salt), `baked-oatmeal` (8×8 cm pan), `meat-sauce-aka-american-bolognese` (100 ml = 1 tbsp), `lazy-pizza-dough-2022` (percentages ≠ grams), `pizza-dough` (10% vital wheat gluten), `butternut-squash-curry` (750 g spinach), `yam-and-sage-pasta-filling` (60 g = 2 cups), `stuffed-mushroom-caps` (units swapped), `beef-stroganoff` (a cup of vinegar), `triple-layered-double-pumpkin-cheesecake` (1000 ml cream cheese), `chef-johns-hamburger-buns` (40°C ≠ 101°F).
@@ -94,16 +94,9 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - L14: "a variant of the reverse method" is undefined. This is usually called the water or steam-fry method; "reverse" suggests reverse sear, which is a different technique. Q: which did you mean?
     - L14: "a minimum amount of food will stick" → "very little will stick".
     - L10/18/22: "Q." Q&A labels will render as plain paragraphs; consider `##` question headings.
-- [x] ! `essays/edgar-wright-style-cookery.md`
-    - No YAML frontmatter at all (starts with `# Food Video Filming Techniques`), so it has no `date`, `draft`, or `title` and fails the essay spec. It will publish with a filename-derived title. Q: is this meant to be public? It reads as a production reference doc, not an essay; `reference/` (or out of `content/` entirely) may fit better.
-    - Title/filename mismatch: file is `edgar-wright-style-cookery`, H1 is "Food Video Filming Techniques" (title case). Sentence-case rule applies to every `###` heading here too ("Match Cut on Action" → "Match cut on action", etc.; 20+ headings).
-    - 60 em-dashes. Rule is none in reference/essay prose; most convert to colons or full stops.
-    - US spellings: L159 "behavioral" → "behavioural"; L174 "color" → "colour"; L210, L238 "humor" → "humour".
-    - L296: incoherent speeds: "Bread proof at 2× feels like impatience. Bread proof at 0.3× (near real-time)". 0.3× is slow motion, and a 2× proof time-lapse is essentially real time. Real proof time-lapses run at hundreds of times speed. Suggest "a fast 1000× time-lapse" vs "a gentle 60× time-lapse".
+- [x] ! `essays/edgar-wright-style-cookery.md` → moved to `reference/food-video-filming-techniques.md` (fixed 2026-09-24: frontmatter added, H1 dropped; sentence-case headings; em-dashes removed; spellings; time-lapse speeds; burnt → dark onions; hyphens)
     - L259: "The Cornetto freeze-frame endings" Q: I can't place freeze-frame endings in the Cornetto films; is this a specific scene, or should the reference go?
     - L273: "Baby Driver's opening isn't the beginning of the story ... starts in medias res" Q: Baby Driver opens with a heist and runs mostly linear. Shaun of the Dead or Hot Fuzz may be a better fit, or drop the film reference.
-    - L162: "Chef burns the onions ... dish succeeds because of the caramelization" conflates burnt and caramelized. Fine as a story beat if the shot shows dark caramelization, not char.
-    - L216: "Two second hold" → "Two-second hold"; L202 "1.5 second extension" → "1.5-second".
 - [x] ! `essays/food-memories/.ideas.md`
     - Author scratch file with no frontmatter (dotfile, so Hugo skips it). Not reviewed as content. Q: move out of `content/` so it can't leak into a build?
 - [x] ! `essays/food-memories/camp-cooking.md`
@@ -207,14 +200,9 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - "Extra gluten" column arithmetic is right as protein deltas, but L20 says it's how much vital wheat gluten to add. VWG is only ~75% protein, so matching the delta takes about 1.33× the listed amount (e.g. +2.3 g protein ≈ 3 g VWG). Either relabel the column "protein gap" or convert it.
     - L18: em-dash. Also Q: the claim that finer milling lowers practical gluten strength. 00's softer performance usually comes from the wheat (soft wheat, lower-quality gluten) rather than grind size. Want to keep, soften, or source it?
     - L8: "Bread flour (14g/100g) is the reference point" is fine, but note Canadian bread flours vary 13–14.5%; worth a "typical" qualifier.
-- [x] ! `reference/food-ratios-for-creating-your-own-recipes.md`
-    - Broken formatting (largest issue in the reference section): every ratio table was flattened on import into one value per paragraph (L41–91, L97–147, L155–205, L234–276). Unreadable as published. The tables need rebuilding as Markdown tables (Ingredient | Ratio | % | Example).
-    - Units wrong in the example columns: salt/MSG "~2mg", "2.5mg", brine "50mg", "10mg" etc. should be grams (2 g of salt, not 2 mg).
-    - Brine numbers disagree with each other: table ratio 13.5 : 0.25–0.75 water:salt is 1.9–5.6%, the % column says 2.5–7.5%, and the note at L207 says 5–8%. Example column pairs 1000 ml water with "75ml" of salt (volume, and 7.5%). Pick one range and make all three agree.
-    - L228: incorrect: "Lower pH can also be used to velvet non-minced meats" sits under the higher-pH bullet, and baking-soda velveting raises pH. Should read "Higher pH (baking soda) is also how you velvet sliced meats."
-    - L280: "1kg of chicken would need 10g of dry brine spice rub" contradicts the 1% salt rule on L278: it's 10 g of salt, and the rub total would be higher.
-    - L8: title repeated as a body line; delete. L10: "sweater" → "sweeter"; "or it's used to adjust" → "or adjust for". L213: "brining longer both makes foods" dangles; the list that follows isn't a both/and.
-    - L94: "worcestershire" → "Worcestershire"; L223 "vienna" → "Vienna"; L225 "asian" → "Asian"; L232 "southern style" → "Southern-style".
+- [x] ! `reference/food-ratios-for-creating-your-own-recipes.md` (fixed 2026-09-24: four tables rebuilt with the % column as the source of truth and ratio/example recomputed from it; mg → g; brine range made consistent (2.5–7.5%); velvet line; dry-brine 10 g; typos)
+    - Q: the dry brine seasonings row disagreed three ways (ratio 0.5 = 50%, % column ~5%, example 24 g = 10%). Kept ~5% (12 g); a rub is often closer to 50%. Which is right?
+    - Q: the wet brine sugar note said "up to 50% of the salt" while the table said 0–5% of the water; now "from none up to about the weight of the salt". Confirm.
     - L12, L55, etc.: six links to a private Google Sheet. Readers can't open them. Q: publish the worksheet, or drop the links?
     - Draft with a TODO section; fine to stay `draft: true`.
 - [x] ! `reference/greek-dressing-research.md`
