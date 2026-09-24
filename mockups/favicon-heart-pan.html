@@ -86,7 +86,7 @@
 <body>
   <div class="wrap">
     <header class="page-head">
-      <span class="eyebrow">Mockup &middot; favicon pass 2 &middot; decided 2026-09-23: variant 04, see STYLE.md</span>
+      <span class="eyebrow">Mockup &middot; favicon pass 2 &middot; decided 2026-09-23: variant 07 (replaced 04), see STYLE.md</span>
       <h1>Heart in a frying pan: vector favicon variants</h1>
       <p>Second favicon pass. The pixel-grid pans and fried eggs (<code>icons.html</code>) read as retro; this pass goes for a brand mark instead: a red heart, emoji-shaped, sitting in a flat top-down skillet. Drawn on a 32&times;32 grid so the 16px tab icon lands on half-pixel boundaries.</p>
       <p>Every colour is a token from <code>STYLE.md</code> except the heart red, which is the palette's red hue (14&deg;) pushed darker and more saturated than the shared 57%/62% formula so it reads as "red heart" and not salmon. See the note at the bottom.</p>
@@ -134,11 +134,11 @@
     ${heart(18, 18.4, 12, heartFill)}`;
 
   // Tiled variant needs the pan pulled in from the edges
-  const skilletTiled = ({ rim, floor, handle, heartFill, tile }) => `
+  const skilletTiled = ({ rim, floor, handle, heartFill, tile, inner = 8 }) => `
     <rect width="32" height="32" rx="7" fill="${tile}"/>
     <line x1="12.5" y1="12.5" x2="7" y2="7" stroke="${handle}" stroke-width="3.5" stroke-linecap="round"/>
     <circle cx="18" cy="18" r="9.5" fill="${rim}"/>
-    <circle cx="18" cy="18" r="8" fill="${floor}"/>
+    <circle cx="18" cy="18" r="${inner}" fill="${floor}"/>
     ${heart(18, 18.4, 10, heartFill)}`;
 
   // Side-on pan with the heart mid-flip above it
@@ -169,6 +169,9 @@
     { name:'Mid-flip', note:'Side-on pan, heart tossed above it. Bigger heart at 16px, more personality; the pan reads as a thin bar at tab size.',
       draw: m => flip({ pan: m === 'dark' ? T.inkMuted : T.ink, lip:'#3A3B32', heartFill:T.red }),
       legend:[['--ink','Pan'],['#C6522F','Heart']] },
+    { name:'Enamel on a burner', note:'03 on a --surface-2 rounded tile (the burner), one step darker than the pan floor so the tile edge shows on white tabs. Rim thickened to 2.25 units. The dark --accent-strong heart on cream holds up better at 16px than cast iron.',
+      draw: m => skilletTiled({ rim:T.warpedRed, floor:T.surface, handle:T.accentStrong, heartFill:T.accentStrong, tile:T.surface2, inner:7.25 }),
+      legend:[['--surface-2','Tile'],['--surface','Floor'],['#D58167','Pan (red 14°)'],['--accent-strong','Heart, handle']] },
   ];
 
   const svg = (inner, size) =>

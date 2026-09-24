@@ -321,21 +321,26 @@ everything discarded or superseded getting to this list.
 
 ## Favicon
 
-Settled 2026-09-23 (second pass; the pixel-grid pans and fried eggs in
-`icons.html` were the first). Source and variants: `favicon-heart-pan.html`,
-variant 04.
+Settled 2026-09-23 (third pass; the pixel-grid pans and fried eggs in
+`icons.html` were the first, a cast-iron pan on an `--accent-soft` tile the
+second). Source and variants: `favicon-heart-pan.html`, variant 07. Cast iron
+looked good large but turned into a dark blob at 16px; the lighter enamel pan
+with a dark heart holds up better small.
 
-A red heart in a top-down cast-iron skillet on a rounded `--accent-soft` tile.
-The handle points to the top-left at 45°. It has to stay diagonal-but-thin
-and paired with a round pan floor; a thick diagonal handle heading
-bottom-right reads as a magnifying glass (search icon) at 16px.
+A heart in a top-down enamelled skillet, sitting on a rounded tile (the
+burner). The handle points to the top-left at 45°. It has to stay
+diagonal-but-thin and paired with a round pan floor; a thick diagonal handle
+heading bottom-right reads as a magnifying glass (search icon) at 16px.
 
 | Part | Value | Note |
 |---|---|---|
-| Tile | `#F6EADA` (`--accent-soft`) | rounded, `rx` 7 on a 32 grid; square for `apple-touch-icon.png` (iOS masks its own corners) |
-| Pan rim, handle | `#23241E` (`--ink`) | rim 1.5 units, handle 3.5 units |
-| Pan floor | `#3A3B32` | `--ink` lifted ~8%, favicon only |
-| Heart | `#C6522F` | `hsl(14 62% 48%)`: the palette's red hue, darker than the shared 57%/62% formula so it reads as red, not salmon. Favicon only; not a UI token. |
+| Tile (burner) | `#EAEBDF` (`--surface-2`) | one step darker than the pan floor so the tile edge shows on white tabs; `rx` 7 on a 32 grid, square for `apple-touch-icon.png` (iOS masks its own corners) |
+| Pan rim | `#D58167` | the palette's red at the shared 57%/62% formula (`hsl(14 57% 62%)`); rim 2.25 units, thick enough to hold at 16px |
+| Pan floor | `#FBFBF6` (`--surface`) | |
+| Heart, handle | `#7C361D` (`--accent-strong`) | handle 3.5 units |
+
+Every value is an existing token or the palette's own red; the favicon adds
+no new colours.
 
 The tile makes one icon work on light and dark browser chrome, so there is
 no dark-mode variant.
