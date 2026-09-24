@@ -33,7 +33,7 @@ Safety is temperature *and* time. The instant numbers (74°C poultry, 71°C grou
 - ~~Flattened tables (unreadable): `reference/food-ratios-for-creating-your-own-recipes.md`, `reference/temperature-and-doneness-cheat-sheet.md` (both drafts).~~ Fixed.
 
 **Wrong numbers likely to ruin a dish**
-`fresh-egg-pasta` (4% salt), `baked-oatmeal` (8×8 cm pan), `meat-sauce-aka-american-bolognese` (100 ml = 1 tbsp), `lazy-pizza-dough-2022` (percentages ≠ grams), `pizza-dough` (10% vital wheat gluten), `butternut-squash-curry` (750 g spinach), `yam-and-sage-pasta-filling` (60 g = 2 cups), `stuffed-mushroom-caps` (units swapped), `beef-stroganoff` (a cup of vinegar), `triple-layered-double-pumpkin-cheesecake` (1000 ml cream cheese), `chef-johns-hamburger-buns` (40°C ≠ 101°F).
+~~`fresh-egg-pasta` (4% salt), `baked-oatmeal` (8×8 cm pan), `meat-sauce-aka-american-bolognese` (100 ml = 1 tbsp), `lazy-pizza-dough-2022` (percentages ≠ grams), `pizza-dough` (10% vital wheat gluten), `butternut-squash-curry` (750 g spinach), `yam-and-sage-pasta-filling` (60 g = 2 cups), `stuffed-mushroom-caps` (units swapped), `beef-stroganoff` (a cup of vinegar), `triple-layered-double-pumpkin-cheesecake` (1000 ml cream cheese), `chef-johns-hamburger-buns` (40°C ≠ 101°F).~~ Fixed 2026-09-24, except the stroganoff paprika (8 g vs 2 tbsp), still open.
 
 **Privacy and sharing**
 - `welsh-cakes` names your street. `white-rock-cheesecake` says "do not share outside of our family" (it's a draft), but `carrot-cake` from the same restaurant is published with "stays in the family".
