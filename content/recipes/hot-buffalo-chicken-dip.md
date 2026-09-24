@@ -3,10 +3,12 @@ title: Hot Buffalo chicken dip
 tags: [appetizers, sides]
 source: family
 cuisine: American
+prep_time: 15m
+cook_time: ~25m
 draft: false
 ---
 
-This is a classic chicken dip
+This is a classic chicken dip, mildly spicy, tangy, and tasty.
 
 > In 2023, Ann stayed in Calgary to house/dog sit for cousin Rachael, and during that trip, also had a visit with Auntie Diane who always spoils me when I’m visiting. She made this dip and I insisted on the recipe which she forwarded from Pinterest. It took over a year for me to finally make it, for Jay & Taylor’s Back Home Wedding Celebration, and it was a huge success which means it gets added to our family recipes!
 
@@ -27,13 +29,9 @@ This is a classic chicken dip
 ## Method:
 
 1. Preheat oven to 375°F (190°C). Arrange oven rack to the middle of your oven.  
-    
-2. In an 8-inch cast-iron skillet (or an ovenproof pan), melt the butter over medium-high heat. Sauté garlic until fragrant (30 seconds). Add the chicken and hot sauce and simmer until sauce has thickened and reduced by half (about 2 minutes).  
-    
+2. In an 8-inch cast-iron skillet (or an ovenproof pan), melt the butter over medium-high heat. Sauté garlic until fragrant (30 seconds). Add the chicken and hot sauce and simmer until sauce has thickened and reduced by half (about 2 minutes).   
 3. Reduce heat to low and stir in cream cheese; mix until combined. Take off heat, stir through sour cream and top with both cheddar cheese(s) over the top.  
-    
 4. Bake until bubbling around the edges and the cheese has melted (about 10 minutes). Broil (or grill) for a further minute to brown on top.  
-    
 5. Immediately garnish with blue cheese and green onions. Serve with vegetable sticks, chips, crusty bread pieces for dipping.
 
 ## Notes:

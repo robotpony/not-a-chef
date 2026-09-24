@@ -1,12 +1,13 @@
 ---
 title: Curry powders and related spice mixes
-tags: [bases]
+tags: [bases, spices, blends]
 source: family
 cuisine: Indian
+prep_time: ~5m
 draft: false
 ---
 
-These are common bases for most UK-style Indian curries.
+These are common spice blends for UK-style Indian curries.
 
 ## Ingredients 
 
@@ -43,3 +44,4 @@ Toast very lightly.
 - 1 star anise
 - 4 tablespoons coriander seeds
 - ¾ teaspoon powdered bay leaves
+

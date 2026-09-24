@@ -3,10 +3,16 @@ title: French onion soup
 tags: [mains, soups]
 source: family
 cuisine: French
+cook_time: ~2h
 draft: false
 ---
 
-This is a simplified version of the classic French-cut, slowly caramelized onion soup. Traditionally the soup uses a homemade veal or beef stock, but it also works well with a [[rich veg mushroom stock]]. This recipe blends methods from [Serious Eats](https://www.seriouseats.com/recipes/2015/01/french-onion-soup-recipe.html), [Chef John](https://youtu.be/Ptauy20rLjg), [Andrew Rea](https://youtu.be/1qRir364aNk), [Josh Weissman](https://youtu.be/LIy6Bhg7nH8), and others.
+This is a simplified version of the classic French-cut, slowly caramelized onion soup. 
+
+
+## Mechanic 
+
+Traditionally the soup uses a homemade veal or beef stock, but it also works well with a [[rich veg mushroom stock]]. This recipe blends methods from [Serious Eats](https://www.seriouseats.com/recipes/2015/01/french-onion-soup-recipe.html), [Chef John](https://youtu.be/Ptauy20rLjg), [Andrew Rea](https://youtu.be/1qRir364aNk), [Josh Weissman](https://youtu.be/LIy6Bhg7nH8), and others.
 
 ## Ingredients:
 

@@ -3,6 +3,7 @@ title: Korma/qorma
 tags: [mains, curries]
 source: family
 cuisine: Indian
+prep_time: 15m
 draft: false
 ---
 

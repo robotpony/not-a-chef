@@ -1,11 +1,14 @@
 ---
 title: Crème brûlée
-tags: [desserts]
+tags: [desserts, custards]
 source: family
 cuisine: French
+prep_time: ~20m
+cook_time: 40m
 draft: false
 ---
 We had a craving for crème brûlée on day, and not having anywhere to go to have it we decided to make it at home. 
+
 ## Ingredients
 
 - 2 ¼ cups (560 ml) 35% cream
@@ -13,6 +16,7 @@ We had a craving for crème brûlée on day, and not having anywhere to go to ha
 - 5 egg yolks
 - ¼ cup (60 ml) sugar
 - ¼ cup (60 ml) additional sugar
+
 ## Directions
 
 1. Preheat the oven to 170 ºC (325 ºF).

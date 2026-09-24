@@ -3,6 +3,7 @@ title: Grandma’s yukkie salad
 tags: [desserts]
 source: family
 cuisine: American
+prep_time: ~30m
 draft: false
 ---
 

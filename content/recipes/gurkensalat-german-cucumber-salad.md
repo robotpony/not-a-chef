@@ -3,6 +3,7 @@ title: Gurkensalat (German cucumber salad)
 tags: [salads]
 source: family
 cuisine: Mennonite
+prep_time: ~15m
 draft: false
 ---
 

@@ -3,6 +3,8 @@ title: Candied pecans
 tags: [desserts]
 source: family
 cuisine: American
+prep_time: 10m
+cook_time: 1h
 draft: false
 ---
 

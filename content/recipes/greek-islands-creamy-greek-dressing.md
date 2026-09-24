@@ -3,6 +3,7 @@ title: Greek island's creamy Greek dressing
 tags: [salads]
 source: family
 cuisine: Greek
+prep_time: 10m
 draft: false
 ---
 

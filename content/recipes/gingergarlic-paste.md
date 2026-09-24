@@ -3,6 +3,7 @@ title: Ginger/garlic paste
 tags: [bases]
 source: family
 cuisine: Indian
+prep_time: 10m
 draft: false
 ---
 

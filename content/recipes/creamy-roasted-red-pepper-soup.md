@@ -3,6 +3,8 @@ title: Creamy roasted red pepper soup
 tags: [mains, soups]
 source: family
 cuisine: American
+prep_time: 45m
+cook_time: 30m
 draft: false
 ---
 
