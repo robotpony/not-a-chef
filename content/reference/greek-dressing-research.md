@@ -36,7 +36,7 @@ On to the research ...
 - Mint (1:1 w/oregano)
 - Dill (also 1:1)
 - Thyme (1:1)
-- Yoghurt (1 tbsp, similar to mayo)
+- Yogurt (1 tbsp, similar to mayo)
 - Marjoram (.25:1)
 
 #### Extra notes:

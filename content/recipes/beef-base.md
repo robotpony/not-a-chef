@@ -30,8 +30,8 @@ This is a savoury ground beef base for tacos, salads, in soups, casseroles, and 
 ## Taco style, add:
 
 - 2 tablespoons ground cumin
-- 2 tablespoons chilli powder
-- 2 teaspoons ground chilis (like aleppo, something sweet + spicy)
+- 2 tablespoons chili powder
+- 2 teaspoons ground chilies (like aleppo, something sweet + spicy)
 - 1 small tin of smoked jalapenos (185g/6.55oz)
 
 ## Directions:

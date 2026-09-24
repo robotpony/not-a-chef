@@ -22,7 +22,7 @@ Adapted from an Instant Pot beef chuck curry, swapped to boneless chicken thighs
 - 900g boneless, skinless chicken thighs, cut into 3cm pieces
 - 1 can (400 ml) coconut milk, well shaken
 - 3 tablespoons Thai red curry paste
-- Cooked rice, lime wedges, cilantro, and sliced red chile, to serve
+- Cooked rice, lime wedges, cilantro, and sliced red chili, to serve
 
 ## Method
 
@@ -32,7 +32,7 @@ Add the remaining tablespoon of oil, season the chicken with ¼ teaspoon each of
 
 Whisk together the coconut milk and curry paste, add to the pot, and scrape up any browned bits. Cover, lock the lid, and cook on high pressure for 8 to 10 minutes. Quick release.
 
-Toss the chicken with the onion and red pepper. Serve over rice with lime wedges, cilantro, and red chile.
+Toss the chicken with the onion and red pepper. Serve over rice with lime wedges, cilantro, and red chili.
 
 ## Notes
 

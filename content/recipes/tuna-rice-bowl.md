@@ -36,7 +36,7 @@ This is a simple way to use frozen tuna, cooking quickly, served with easy sides
 - 60ml rice vinegar (¼ cup)
 - 60ml water (¼ cup)
 - 12g sugar (2½ teaspoons)
-- 1 scallion, thinly sliced
+- 1 green onion, thinly sliced
 - 2 teaspoons fresh ginger, minced
 - 7g toasted sesame oil (1½ teaspoons)
 - ½ teaspoon red pepper flakes
@@ -45,7 +45,7 @@ This is a simple way to use frozen tuna, cooking quickly, served with easy sides
 
 - steamed rice or quinoa
 - cucumber, thinly sliced or lightly pickled
-- scallions, for garnish
+- green onions, for garnish
 - kimchi (optional)
 
 ## Method
@@ -60,7 +60,7 @@ Cube the tuna and toss with the tuna sauce.
 
 ## To serve
 
-Spoon rice into bowls. Add cucumber, dressed lightly with some of the bowl dressing. Top with tuna and scallions. Drizzle remaining bowl dressing over everything. Add kimchi if using.
+Spoon rice into bowls. Add cucumber, dressed lightly with some of the bowl dressing. Top with tuna and green onions. Drizzle remaining bowl dressing over everything. Add kimchi if using.
 
 ## Notes
 

@@ -33,7 +33,7 @@ Taste and add sugar as needed. Remove any whole spices. The compote thickens fur
 
 ## To serve
 
-Warm over waffles or pancakes, or cold with yoghurt or ice cream.
+Warm over waffles or pancakes, or cold with yogurt or ice cream.
 
 ## Variations
 

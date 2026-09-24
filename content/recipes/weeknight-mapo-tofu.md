@@ -15,14 +15,14 @@ I make this for lunch more than dinner, and it's a tasty and quick meal.
 
 ## Mechanic
 
-**Toast the whole Szechuan peppercorns first**, then grind with the chilis and paprika. Adding soy along the edge of a hot wok caramelizes it before it hits the meat. Add tofu last and stir minimally; it breaks up easily.
+**Toast the whole Sichuan peppercorns first**, then grind with the chilies and paprika. Adding soy along the edge of a hot wok caramelizes it before it hits the meat. Add tofu last and stir minimally; it breaks up easily.
 
 ## Ingredients
 
 ### Spice powder
 
-- 2–3 tablespoons Szechuan peppercorns, whole
-- 4–5 dried red chilis, chopped
+- 2–3 tablespoons Sichuan peppercorns, whole
+- 4–5 dried red chilies, chopped
 - 1 tablespoon sweet paprika
 
 ### Base
@@ -30,7 +30,7 @@ I make this for lunch more than dinner, and it's a tasty and quick meal.
 - 2 tablespoons neutral oil
 - 1 cm piece fresh ginger, julienned
 - 2 cloves garlic, thinly sliced
-- 2 scallions, cut into ½ cm pieces (dark greens reserved for garnish)
+- 2 green onions, cut into ½ cm pieces (dark greens reserved for garnish)
 - 30ml sake (2 tablespoons)
 - 30ml mirin (2 tablespoons)
 - 15ml light soy sauce (1 tablespoon)
@@ -44,9 +44,9 @@ I make this for lunch more than dinner, and it's a tasty and quick meal.
 
 ## Method
 
-Toast Szechuan peppercorns in a dry pan until fragrant and slightly darkened, about 2 minutes. Cool, then grind with the chilis and paprika to a medium powder.
+Toast Sichuan peppercorns in a dry pan until fragrant and slightly darkened, about 2 minutes. Cool, then grind with the chilies and paprika to a medium powder.
 
-Heat oil in a wok over medium-high. Add ginger, then garlic, then scallion whites. Cook until fragrant, about 2 minutes. Add the spice powder and stir briefly.
+Heat oil in a wok over medium-high. Add ginger, then garlic, then green onion whites. Cook until fragrant, about 2 minutes. Add the spice powder and stir briefly.
 
 Drizzle soy along the wok edge. Add sake and mirin. Add beef and break up; stir to combine.
 
@@ -56,7 +56,7 @@ Taste and adjust salt. Add tofu gently and fold in; heat through without mashing
 
 ## To serve
 
-Over steamed rice, topped with scallion greens and chili oil.
+Over steamed rice, topped with green onion greens and chili oil.
 
 ## Special equipment
 
@@ -64,5 +64,5 @@ A medium to large carbon steel wok (not teflon).
 
 ## Notes
 
-- Adapted toward Szechuan flavour from Kenji Lopez-Alt's "The Wok."
+- Adapted toward Sichuan flavour from Kenji Lopez-Alt's "The Wok."
 - Pre-cooked frozen mince works well: add directly from frozen and break up as it heats.

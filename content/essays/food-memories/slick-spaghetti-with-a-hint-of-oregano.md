@@ -5,7 +5,7 @@ draft: false
 tags: [food-memory]
 ---
 
-I remember an old cast aluminium pot, handed down from my grandparents. It was pockmarked, with a patina of polymerized oils in the depressions. It once served as a pressure cooker that exploded in my grandmother’s kitchen, so it no longer had a lid. The handle was loose and the bolt seized, making it a death trap when loaded with a hot sauce. This pot was mostly used for my mom’s frugal spaghetti sauce, which was a simple combination of beef, puréd tomatoes, and just a hint of oregano, salt, and pepper.
+I remember an old cast aluminum pot, handed down from my grandparents. It was pockmarked, with a patina of polymerized oils in the depressions. It once served as a pressure cooker that exploded in my grandmother’s kitchen, so it no longer had a lid. The handle was loose and the bolt seized, making it a death trap when loaded with a hot sauce. This pot was mostly used for my mom’s frugal spaghetti sauce, which was a simple combination of beef, puréd tomatoes, and just a hint of oregano, salt, and pepper.
 
 And when I say a hint of oregano, it was an almost homoeopathic amount of seasoning. I remember helping my mom move in the 1990s and packing up that oregano, labelled with a best before date from somewhere in the early 1980s. I opened the bottle and smelled it, and somehow it still smelled like my childhood.
 

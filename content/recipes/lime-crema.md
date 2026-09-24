@@ -14,7 +14,7 @@ A fresh tasting sauce, perfect for nachos, tacos, or over rice bowls.
 
 ## Ingredients
 
-- 125ml Mexican crema, sour cream, or Greek yoghurt
+- 125ml Mexican crema, sour cream, or Greek yogurt
 - 30ml mayonnaise
 - 30ml fresh lime juice (~1 lime)
 - 1 clove garlic, minced

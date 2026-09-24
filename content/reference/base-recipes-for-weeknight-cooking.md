@@ -64,15 +64,15 @@ The [[Beef base]] is a great example and one of my favourites, as it can be tran
     - taco soup
     - taco pizza
     - (etc.)
-- A quick Canadian chilli, adding the taco beef to a few cans of beans, some red sauce (or whole tinned tomatoes), great with
+- A quick Canadian chili, adding the taco beef to a few cans of beans, some red sauce (or whole tinned tomatoes), great with
     - mac & cheese
     - over fries
     - over salad
-- Szechuan beef, by adding Szechuan peppers, 5 spice, soy, and some ginger, great over
+- Sichuan beef, by adding Sichuan peppers, 5 spice, soy, and some ginger, great over
     - rice bowls
     - Asian style noodles
     - eggs
-- [[Bulgogi beef|Bulgogi style beef]], by adding a tin of Asian pears, ginger, soy, and 5 spice, also great for applications like Szechuan beef
+- [[Bulgogi beef|Bulgogi style beef]], by adding a tin of Asian pears, ginger, soy, and 5 spice, also great for applications like Sichuan beef
 - [[Cottage Pie]], by making gravy out of the beef, adding frozen veg, and topping with mash
 
 I freeze my mince bases in 500ml and 250ml deli containers, which are portion sizes for 2-4 people, or 1-2, depending on the adaptation. As I normally prepare it using a pressure cooker, it’s extra tender and deeply seasoned. You can apply the reverse sear method to it if you want some browning, by heating it on high and stirring regularly. It will express any remaining water, reduce, and start browning in about 5 minutes.
@@ -81,7 +81,7 @@ I freeze my mince bases in 500ml and 250ml deli containers, which are portion si
 
 I try to keep a dozen or so ground [[Chicken Patties|chicken patties]] in the freezer, for quick burgers, sandwiches, and noodle or rice bowls. The patties are made from ground chicken, with some added water and elevated pH, making the patties a bit more springy, and more substantial feeling than straight ground chicken (similar to Vietnamese or Chinese beef balls).
 
-I also like to keep a kilo or so of breakfast sausage in the freezer, either in patty or hand-made link form. These are great for breakfast sandwiches and wraps, but are also great in a quick mac & cheese, chilli, or stir fry. They tend towards a mildly sweet and fennel-y flavour.
+I also like to keep a kilo or so of breakfast sausage in the freezer, either in patty or hand-made link form. These are great for breakfast sandwiches and wraps, but are also great in a quick mac & cheese, chili, or stir fry. They tend towards a mildly sweet and fennel-y flavour.
 
 Meatballs are a fantastic freezer food, if frozen carefully. They can dress up a quick red sauce or pizza, they make great sandwiches, and they work surprisingly well in Italian or French soups.
 

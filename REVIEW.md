@@ -75,7 +75,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - `recipes/triple-layered-double-pumpkin-cheesecake.md`: "Not sure where this recipe came from" (L9)
     - `recipes/vindaloo-wing-sauce.md`: "[draft] needs testing" (L45)
     - `recipes/vodka-cream-sauce.md`: "no idea if it's any good" (L11)
-6. One spelling each. Current counts and a suggestion (Canadian usage):
+6. ~~One spelling each.~~ Decided and applied 2026-09-24 (39 files; FORMAT.md updated). Chosen spellings:
     - **chili** (38 uses) / chilis (15) / chilies (6) / chilli (21) / chillies (8) / chile (3) / chiles (2) → **chili**, plural **chilies**, for the dish, the pepper, and the powder. Keep "chile" only inside a proper name (e.g. chile de árbol) and brand names as sold (Heinz Chili Sauce).
     - **yogurt** (12) / yoghurt (7) → **yogurt**, the usual Canadian spelling.
     - **Szechuan** (10) / Sichuan (0) → **Sichuan**, the current standard romanization, except in a restaurant or product name.

@@ -11,7 +11,7 @@ Four-day meal plan for a trip to Nicola (2018).
 
 | | Thursday | Friday | Saturday | Sunday |
 |---|---|---|---|---|
-| **Breakfast** | | Granola/yoghurt, cereal, fruit | Breakfast snack, see Friday | Leftovers, fruit, French toast, boiled eggs |
+| **Breakfast** | | Granola/yogurt, cereal, fruit | Breakfast snack, see Friday | Leftovers, fruit, French toast, boiled eggs |
 | **Lunch** | | Sandwiches, veggies, chips | Brunch wraps, fruit | |
 | **Dinner** | Boston Pizza | Pierogies, farmer sausage, corn | Cheese ravioli, pesto/marinara, roasted veg | |
 | **Snacks** | Chips | Banana boats, s'mores | Banana splits (or fruit + ice cream) | |
@@ -19,7 +19,7 @@ Four-day meal plan for a trip to Nicola (2018).
 ## Grocery list
 
 **Dairy:**
-- Cream, milk, cheese, sour cream (small), yoghurt (plain)
+- Cream, milk, cheese, sour cream (small), yogurt (plain)
 
 **Proteins:**
 - Lunch meat (200g), farmer sausage (from home), eggs (from home)

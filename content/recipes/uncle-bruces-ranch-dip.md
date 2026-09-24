@@ -23,4 +23,4 @@ Growing up we ate a lot of post-war style food, including the famous Uncle Danâ€
 1. Combine the ingredients in a suitable and sealable container. Add salt to taste.
 2. Stow in the refrigerator for at least 6 hours, but 24 is better.
 
-If you have buttermilk, replace some of the mayo with it. Yoghurt can replace the sour cream in a pinch, but it needs some sugar to balance out the tartness.
+If you have buttermilk, replace some of the mayo with it. Yogurt can replace the sour cream in a pinch, but it needs some sugar to balance out the tartness.

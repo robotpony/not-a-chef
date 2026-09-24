@@ -36,7 +36,7 @@ Scrape off excess marinade (it burns). Bake at 220°C (425°F) or broil to 50–
 
 ## To serve
 
-Over steamed rice or alongside simple roasted veg. Garnish with thinly sliced scallions and sesame seeds.
+Over steamed rice or alongside simple roasted veg. Garnish with thinly sliced green onions and sesame seeds.
 
 ## Notes
 

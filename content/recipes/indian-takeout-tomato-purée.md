@@ -19,7 +19,7 @@ Making Indian style dishes quickly is much easier with a few base ingredients th
 - 1 ½ teaspoon coriander powder
 - 1 tablespoon ground cumin
 - 1 tablespoon kasuri methi
-- ½ tablespoons ground chillies
+- ½ tablespoons ground chilies
 - ½ tablespoons garam masala
 - 1 teaspoon turmeric
 

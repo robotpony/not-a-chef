@@ -55,7 +55,7 @@ Bake at 190–220°C (375–425°F) until browned and just cooked through, 15–
 
 Replace some of the liquid with hoisin (3%), soy sauce (6.5%), and sesame oil (1%). Add ginger (1%). Reduce salt (soy takes its place). Skip the Parmesan. Scale back liquid slightly. The mixture should be a little firmer than the Italian version.
 
-Glaze: 60 ml hoisin, 30 ml ketchup, 15 ml honey or maple syrup, 30 ml rice vinegar, 15 ml soy sauce, 5 ml sesame oil. Brush over meatballs in the last 5 minutes of baking. Finish with sesame seeds and sliced scallions.
+Glaze: 60 ml hoisin, 30 ml ketchup, 15 ml honey or maple syrup, 30 ml rice vinegar, 15 ml soy sauce, 5 ml sesame oil. Brush over meatballs in the last 5 minutes of baking. Finish with sesame seeds and sliced green onions.
 
 ## Notes
 

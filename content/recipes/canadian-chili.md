@@ -37,7 +37,7 @@ The chili I grew up with is not the chili of the south. It’s a beany, tomato
 
 - 2-3 tbsp whole cumin seeds (toasted and crushed in a mortar and pestle)
 - 2-3 tbsp of nice chili powder
-- 3 tsp ancho (or similar) ground chilis
+- 3 tsp ancho (or similar) ground chilies
 - Salt/pepper
 
 ## Directions:
@@ -65,7 +65,7 @@ Use instead of dried spices, with better depth of flavour. Blend together:
 
 - 2-3 tbsp toasted whole cumin seeds (toasted and crushed in a mortar and pestle)
 - ½ stalk of roasted cinnamon
-- Dried guajillo and ancho chiles  (rehydrated with boiling water, include water)
+- Dried guajillo and ancho chilies  (rehydrated with boiling water, include water)
 - Roasted diced tomatoes
 - 2 - 3 cloves of garlic
 - Chipotles in adobo sauce

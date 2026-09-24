@@ -12,13 +12,13 @@ Al pastor is a tart and savoury marinade that begs for pork and fresh tortillas.
 
 ## Mechanic
 
-I don’t always have easy access to dried chilis. I do have reasonable access to ground dried and fresh chilis, so this is a pantry version that captures the basic intent of a Mexican chilli paste turned into a marinade. 
+I don’t always have easy access to dried chilies. I do have reasonable access to ground dried and fresh chilies, so this is a pantry version that captures the basic intent of a Mexican chili paste turned into a marinade. 
 
 ## Ingredients
 
 ### Marinade
 
-- ~50g of chillies (or powders), ideally with some ancho, guajillo, árbol, etc.
+- ~50g of chilies (or powders), ideally with some ancho, guajillo, árbol, etc.
 - 1-2 chipotles and some sauce
 - 300ml chicken/beef/pork stock or water
 - 150ml cider vinegar
@@ -43,7 +43,7 @@ I don’t always have easy access to dried chilis. I do have reasonable access t
 
 1. Clip and deseed peppers.
 2. Toast dried spices and peppers, add to simmering stock, and simmer. Let cool and add to a medium-large blender.
-3. Add remaining marinade ingredients to the blender and blend. Blend some more. And a bit more. Ensure any whole chillies or seeds are smooth.
+3. Add remaining marinade ingredients to the blender and blend. Blend some more. And a bit more. Ensure any whole chilies or seeds are smooth.
 4. Taste and adjust acid and salt. It should taste sweet, spicy, and have some depth. Salt and acid should be somewhere below prominent
 5. Slice the pork shoulder as thin as you can, across the grain. If using chicken thighs, slice in half (if you can), this is easier when thighs are partially frozen.
 6. Combine meat with marinade in a large bowl and combine thoroughly, so that all nooks and/or crannies have some marinade. Pack slices tightly in a hotel pan (or loaf pan, or corningware style dish), cover, and let marinate in a fridge for 24-48 hours.
@@ -53,6 +53,6 @@ I don’t always have easy access to dried chilis. I do have reasonable access t
 
 ## Notes
 
-Using good quality chilli powders here works quite well, especially once toasted and combined with a good soup stock. Splitting the cook into 2 passes allows you to prep this ahead of time and eat it all week, and is far less fiddly to set up.
+Using good quality chili powders here works quite well, especially once toasted and combined with a good soup stock. Splitting the cook into 2 passes allows you to prep this ahead of time and eat it all week, and is far less fiddly to set up.
 
 These are great on salads, in tacos, on sandwiches, and bean chili.

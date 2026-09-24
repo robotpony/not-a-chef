@@ -20,7 +20,7 @@ This is a Hawaiian style pulled pork that does not need a BBQ or fire pit, based
 - 2 teaspoons liquid smoke
 - (optional) enough banana, taro, ti, or bamboo leaves, to wrap the shoulder in  
     (can be found frozen from Asian market like T&T)
-- Aluminium foil
+- Aluminum foil
 
 Rub spices, bouillon, salt, Worcestershire, liquid and smoke over pork shoulder and set aside. Wrap shoulder in leaves, then foil. Let sit in the fridge for 30 minutes (or up to overnight).
 

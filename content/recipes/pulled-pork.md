@@ -11,7 +11,7 @@ cuisine: American
 draft: false
 ---
 
-Pulled pork is a great base for dozens of dishes, including sliders, chilis, tacos, macaroni, rice bowls, and more.
+Pulled pork is a great base for dozens of dishes, including sliders, chilies, tacos, macaroni, rice bowls, and more.
 
 ## Mechanic
 

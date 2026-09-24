@@ -33,7 +33,7 @@ This is a simpler version of my Thai curry recipe that works especially well wit
 - Fresh herbs
     - Mint, basil
     - Cilantro
-- Sliced Thai chilis
+- Sliced Thai chilies
 - Extra coconut cream
 
 ### Directions:
@@ -49,5 +49,5 @@ This is a simpler version of my Thai curry recipe that works especially well wit
 I like to serve this curry with basmati/cinnamon rice, and top with:
 
 - Picked or chopped herbs
-- Finely sliced chilis
+- Finely sliced chilies
 - Drizzled with coconut cream

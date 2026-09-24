@@ -1,5 +1,5 @@
 ---
-title: Thai style chilli lime sauce
+title: Thai style chili lime sauce
 tags: [sauces]
 source: family
 cuisine: Thai
@@ -10,7 +10,7 @@ This is a vibrant, and tasty sauce for wings, chicken sandwiches, noodles, and t
 
 ## Puré in a blender:
 
-- 60g (2 tablespoons) Thai chilli paste
+- 60g (2 tablespoons) Thai chili paste
 - 120ml (½ cup) fish sauce
 - 150ml (½ cup + juice of 1 lime) lime juice
 - 60g (½ cup) brown sugar
@@ -18,19 +18,19 @@ This is a vibrant, and tasty sauce for wings, chicken sandwiches, noodles, and t
 - 40g (1 medium) shallot (rough chop)
 - 20g finely minced garlic
 - 10g finely minced ginger
-- 2-4 red Thai chiles (seeds removed, rough chop)
+- 2-4 red Thai chilies (seeds removed, rough chop)
 - 1-2 cups cilantro (head of a small bunch, rough chop)
 - 10g (1 teaspoon) Accent MSG
 - 10g (1 teaspoon) salt (to taste)
 
 ### Added after puré:
 
-- 1 red Thai chilli (seeds removed, fine chop)
+- 1 red Thai chili (seeds removed, fine chop)
 - Lime zest (added to the marinade/sauce after blitzing)
 
 ### Garnish:
 
-- 1/4 cup finely sliced scallions
+- 1/4 cup finely sliced green onions
 
 ## Directions:
 

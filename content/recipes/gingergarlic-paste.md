@@ -23,7 +23,7 @@ This paste is a common base component of many dishes in southeast Asia, includin
 - 1 cup ginger, peeled/scrubbed (1 smaller knob)
 - 1 bunch coriander
 - 1 green pepper
-- 4 green chillies
+- 4 green chilies
 - 2 teaspoons turmeric
 - 2 teaspoons salt
 

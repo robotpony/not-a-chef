@@ -20,7 +20,7 @@ Fried black beans are a perfect base for nachos, quick burritos, beans and rice,
 - Salt to taste
 - Black pepper to taste (a few grinds)
 - 1-2 tbsp cumin
-- ½ tsp ground chilis (or 1 tsp cayenne)
+- ½ tsp ground chilies (or 1 tsp cayenne)
 - 1 tbsp olive oil
 
 ## Directions:

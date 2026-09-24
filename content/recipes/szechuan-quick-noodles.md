@@ -1,5 +1,5 @@
 ---
-title: Szechuan quick noodles
+title: Sichuan quick noodles
 tags: [mains, pasta, chinese, weeknight, quick]
 source: original
 date: 2024-04-01
@@ -22,10 +22,10 @@ The noodles cook in the sauce. Start them in **just enough water to cover** in a
 - 85g dried noodles (spaghetti, linguine, ramen, or Chinese egg noodles)
 - 250ml [[Beef base]]
 - 115g medium tofu, cubed
-- 1 tbsp chilli-garlic paste
+- 1 tbsp chili-garlic paste
 - 1 tbsp tomato paste
-- 1–2 tsp Szechuan peppercorns, toasted and ground
-- 2 tsp Korean chilli flakes (gochugaru)
+- 1–2 tsp Sichuan peppercorns, toasted and ground
+- 2 tsp Korean chili flakes (gochugaru)
 - 1 tbsp fresh ginger, minced
 - 2 tsp MSG
 - 150g cabbage, shredded (about 2 cups)
@@ -35,7 +35,7 @@ The noodles cook in the sauce. Start them in **just enough water to cover** in a
 
 Drop the noodles in a wide pan with just enough water to cover and bring to a simmer. Keep a cup of hot water nearby.
 
-When the noodles are halfway cooked by the package time, add the beef base, tofu, chilli-garlic paste, tomato paste, Szechuan pepper, chilli flakes, ginger, and MSG. Stir and cook until heated through and the liquid is reducing. Ramen and egg noodles cook faster; start them in less water.
+When the noodles are halfway cooked by the package time, add the beef base, tofu, chili-garlic paste, tomato paste, Sichuan pepper, chili flakes, ginger, and MSG. Stir and cook until heated through and the liquid is reducing. Ramen and egg noodles cook faster; start them in less water.
 
 Taste the liquid. Season with soy sauce, sesame oil, and sake. Test a noodle; if it's still firm and the pan is dry, add 1–2 tbsp water.
 
@@ -47,7 +47,7 @@ In the pan or a bowl, topped with sliced green onion, sesame seeds, and togarash
 
 ## Variations
 
-**Stock only.** No beef base on hand: boil and drain the noodles, reserving a splash of water. In the same pan, fry the ginger in a little oil until fragrant, 1 minute, then the pepper, chilli flakes, and tomato paste. Add 125ml beef stock and the cabbage and simmer until the sauce reduces slightly, 3–5 minutes. Toss in the noodles and season as above.
+**Stock only.** No beef base on hand: boil and drain the noodles, reserving a splash of water. In the same pan, fry the ginger in a little oil until fragrant, 1 minute, then the pepper, chili flakes, and tomato paste. Add 125ml beef stock and the cabbage and simmer until the sauce reduces slightly, 3–5 minutes. Toss in the noodles and season as above.
 
 ## Notes
 

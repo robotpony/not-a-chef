@@ -32,7 +32,7 @@ Garlic and wings are a great combination. These lean sweet and savory.
 ### To finish
 
 - sesame seeds
-- sliced spring onion
+- sliced green onion
 - cilantro or parsley
 
 ## Method
@@ -45,7 +45,7 @@ Toss cooked wings in the sauce while hot, or brush onto wings in the last few mi
 
 ## To serve
 
-Garnish with sesame seeds, spring onion, and cilantro. Good alongside rice or as a standalone platter.
+Garnish with sesame seeds, green onion, and cilantro. Good alongside rice or as a standalone platter.
 
 ## Notes
 

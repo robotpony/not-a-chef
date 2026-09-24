@@ -35,7 +35,7 @@ A comforting, lovely lentil stew. Or is it curry?
 
 - lime juice
 - fresh cilantro
-- chilli flakes or sliced chilli
+- chili flakes or sliced chili
 
 ## Method
 
@@ -53,7 +53,7 @@ Season with salt and a squeeze of lime. Taste and adjust.
 
 ## To serve
 
-Over rice or with naan. Topped with cilantro and fresh chilli.
+Over rice or with naan. Topped with cilantro and fresh chili.
 
 ## Notes
 

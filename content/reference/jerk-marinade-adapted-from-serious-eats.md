@@ -13,7 +13,7 @@ Notes for a recipe update.
 
 2 tbsp chili flakes
 
-6 scallions, roughly chopped
+6 green onions, roughly chopped
 
 1 (3-inch) knob fresh ginger, roughly chopped
 

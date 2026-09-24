@@ -28,7 +28,7 @@ There are a few ways to make pizza sauce, depending on how lazy you are. One of 
     1 jar (or tin) of tomato sauce and 1 tbsp of tomato paste
 - 1-2 tbsp balsamic vinegar, honey, or sugar (depending on how bland your tomatoes are)
 
-I don’t add chilis or paprika anymore, leaving these spices for toppings instead. Paprika, especially smoked paprika can make a sauce taste heavy (muddling the fine and sweet notes of the tomatoes).
+I don’t add chilies or paprika anymore, leaving these spices for toppings instead. Paprika, especially smoked paprika can make a sauce taste heavy (muddling the fine and sweet notes of the tomatoes).
 
 ## Directions:
 

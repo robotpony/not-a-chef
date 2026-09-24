@@ -31,4 +31,4 @@ Taste and adjust sugar. The compote thickens further as it cools.
 
 ## To serve
 
-Warm or cold. Over ice cream, yoghurt, pancakes, or alongside pork. Keeps refrigerated for up to a week.
+Warm or cold. Over ice cream, yogurt, pancakes, or alongside pork. Keeps refrigerated for up to a week.

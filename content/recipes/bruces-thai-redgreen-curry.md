@@ -12,7 +12,7 @@ These are rough approximations for the Thai red and green curries I’ve been ma
 
 The most important part of these recipes is the curry paste. While you can make curry paste yourself, there are many store brands that are fantastic. Most stores have a few great choices including these pastes.
 
-Also note that the only difference between red and green curry with this method is (a) the paste (and chilis used), and (b) veg that tends towards sweet/reds and more savoury/greens, so both colour and flavour pairings.
+Also note that the only difference between red and green curry with this method is (a) the paste (and chilies used), and (b) veg that tends towards sweet/reds and more savoury/greens, so both colour and flavour pairings.
 
 ## Mechanic
 

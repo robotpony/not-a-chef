@@ -19,7 +19,7 @@ This is a BIR (British Indian Restaurant) base gravy: a neutral, lightly spiced 
 ## Ingredients
 
 - 250 ml neutral oil (or oil reserved from frying [[Onion Bhaji]])
-- 2 tablespoons garlic-ginger paste <!-- TODO: gingergarlic-paste.md is in the orphan list; recover or use store-bought. The original offered the alternative: plain garlic/ginger paste + ¼ bunch cilantro stalks + 1 green chilli -->
+- 2 tablespoons garlic-ginger paste <!-- TODO: gingergarlic-paste.md is in the orphan list; recover or use store-bought. The original offered the alternative: plain garlic/ginger paste + ¼ bunch cilantro stalks + 1 green chili -->
 - 1 tin (400g) plum tomatoes
 - 3 medium yellow onions, quartered
 - 1 green pepper and 1 red pepper, roughly chopped
@@ -32,7 +32,7 @@ This is a BIR (British Indian Restaurant) base gravy: a neutral, lightly spiced 
 Spices:
 - 1 teaspoon turmeric
 - 1 teaspoon Madras curry powder or masala
-- 1 teaspoon hot paprika or ground Indian chilli
+- 1 teaspoon hot paprika or ground Indian chili
 - 1 teaspoon ground cumin
 - 1 teaspoon ground coriander
 - 1 teaspoon fenugreek powder

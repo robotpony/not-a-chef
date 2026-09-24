@@ -49,7 +49,7 @@ Balance: taste and add fish sauce for salt/umami, sugar for sweetness, lime juic
 
 ## To serve
 
-Over jasmine rice, topped with sliced chillies, fresh basil or cilantro, and a drizzle of coconut cream.
+Over jasmine rice, topped with sliced chilies, fresh basil or cilantro, and a drizzle of coconut cream.
 
 ## Notes
 

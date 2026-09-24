@@ -19,8 +19,8 @@ Spicy, sweet, and warming, perfect for pork and chicken.
 
 Enough for ~1 kg meat
 
-- 4–6 scallions (green onions), roughly chopped
-- 4–6 scotch bonnet chillies, stems removed (seeds in for hot, seeds out for medium)
+- 4–6 green onions, roughly chopped
+- 4–6 scotch bonnet chilies, stems removed (seeds in for hot, seeds out for medium)
 - 1 tablespoon fresh thyme leaves (or 1 teaspoon dried)
 - 1 tablespoon ground allspice
 - 1 teaspoon ground cinnamon

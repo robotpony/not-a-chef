@@ -11,7 +11,7 @@ cuisine: world
 draft: false
 ---
 
-A savoury and tasty vegetarian base for stews, chilis, and soups.
+A savoury and tasty vegetarian base for stews, chilies, and soups.
 
 ## Mechanic
 
