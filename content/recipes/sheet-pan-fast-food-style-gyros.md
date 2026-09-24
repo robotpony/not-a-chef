@@ -1,9 +1,9 @@
 ---
-title: Sheet pan fast food style gyros
+title: Sheet-pan fast-food-style gyros
 tags: [bases]
 source: family
-prep_time: 2 hr
-cook_time: 25-35 min
+prep_time: 15 min (plus 2 hr chill)
+cook_time: 25–35 min
 cuisine: Greek
 draft: false
 ---
@@ -14,42 +14,28 @@ I like to cook sausage-like things in a sheet pan or thin steam pan, sort of lik
 
 The recipe is based on [Chef John’s](https://foodwishes.blogspot.com/2017/06/american-gyros-mystery-meat-demystified.html) and one [Food Network](https://www.foodnetwork.com/recipes/alton-brown/gyro-meat-with-tzatziki-sauce-recipe-2047710), adjusted to my kitchen and preferences. I consider it a sort of basic sausage that could be cased, rolled, or in my case, baked in a pan.
 
-## Ingredients:
+## Ingredients
 
-I aim for 2-3% salt per kg of protein, and spices are proportional to the salt.
+- 1 batch [[Gyro base]] (about 1 kg), mixed but not shaped
+- 1 tsp vinegar (optional; classic in gyros, still being tested)
 
-- 500g ground lamb
-- 500g ground beef
-- 1 small yellow onion, finely diced
-- 4 cloves garlic, crushed
-- ¼ cup of bread crumbs
-- 2 tablespoons ice water
-- 1 teaspoon vinegar ← needs to be tested, but is in classic Gyros
-- 1 tablespoon freshly minced rosemary
-- 2 teaspoons dried oregano
-- 2 teaspoons kosher salt
-- 1 teaspoon fresh ground black pepper
-- 1 teaspoon cumin
-- 1 teaspoon paprika
-- ¼ teaspoon MSG
-- ⅛ teaspoon cinnamon
+## Method
 
-## Directions:
+Make the gyro base, mixing in the vinegar if using. Fry a tablespoon of the mixture to taste for salt, seasoning, and texture, and adjust if needed.
 
-1. Mix ingredients (except half of the water) by hand until thoroughly combined, and then a bit longer (half way towards a softer texture like Vienna sausage). Add remaining water if needed. The result should not be wet, but should be homogeneous and fairly smooth.
-2. Test cook a tablespoon of mixture, and taste for salt and seasoning (and texture). Adjust if needed.
-3. Add parchment to a quarter sheet pan and press into a flat loaf. Rest, covered with plastic wrap (or another pan) for ~2 hours in the fridge.
-4. Bake in a preheated oven at 175C (350F) for 25-35 minutes, until an internal temperature of 70C (160F) is reached
+Line a quarter sheet pan with parchment and press the mixture into a flat, even loaf. Cover with plastic wrap (or another pan) and chill for about 2 hours.
+
+Bake at 175°C (350°F) until the centre reads 71°C (160°F), 25–35 minutes. Cool, then slice thinly, or cut into portions to freeze.
+
+To serve, reheat the slices in a hot pan until the edges crisp.
+
+## To serve
 
 A classic food cart gyro is served on a pita (heated in olive oil in a pan), with tzatziki, diced tomatoes, onions, and lettuce. In Northern Greece, ketchup and mustard may be added, even though this is crazy talk.
 
-Gyro meat is also great in soups, on salads, and in other styles of sandwiches. It freezes well as it’s cooked, and reheats quickly.
-
+Gyro meat is also great in soups, on salads, and in other styles of sandwiches.
 
 ## Notes
 
-MSG pushes most sausage over the edge. Alternatively you can use some miso, or parm.
-
-Test this
-
-I ended up bumping the heat up a bit to crisp some edges. I think the higher temperature works better overall and will try that for the entire bake time on my next pass.
+- Freezes well once cooked, and reheats quickly.
+- I ended up bumping the heat up a bit to crisp some edges. I think the higher temperature works better overall and will try that for the entire bake time on my next pass.

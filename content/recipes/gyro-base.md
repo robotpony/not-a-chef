@@ -10,12 +10,11 @@ cuisine: Greek
 draft: false
 ---
 
-Gyro beef or lamb is a great base for salads, pitas, sandwhichs, and other preparations.
-
+Gyro beef or lamb is a great base for salads, pitas, sandwiches, and other preparations.
 
 ## Mechanic
 
-This is the gyro spice-and-meat base, sized to **1 kg of ground meat** so it scales cleanly for freezing or batch cooking. The technique is sausage-making applied without a grinder: mixing with **cold water and a bread crumb panade until sticky** emulsifies the proteins, giving a snap and shape-holding bite whether you form it into dogs, patties, or kebabs. MSG rounds out the umami without adding more salt to the mix. Skipping the chill or under-mixing still gives a crumbly result.
+This is the gyro spice-and-meat base, sized to **1 kg of ground meat** so it scales cleanly for freezing or batch cooking. The technique is sausage-making applied without a grinder: mixing with **cold water and a bread crumb panade until sticky** emulsifies the proteins, giving a snap and shape-holding bite whether you form it into dogs, patties, or kebabs. MSG rounds out the umami without adding more salt to the mix. Skipping the chill or under-mixing gives a crumbly result.
 
 ## Ingredients
 
@@ -46,6 +45,6 @@ Chill for at least 4 hours, preferably overnight, before cooking. If freezing ra
 
 ## Notes
 
-- The base freezes well in flat zip-top bags. Flat bags defrost in water in 30 minutes, overnight in the fridge, or can be cooked as-is.
+- The base freezes well in flat zip-top bags. Flat bags defrost in cold water in 30 minutes, or overnight in the fridge.
 - MSG and salt work together here; ¾ tsp MSG per kg is enough to round out the umami without needing more salt.
 - Cayenne stays subtle at this stage; add more heat at the cooking or glazing step if you want it.

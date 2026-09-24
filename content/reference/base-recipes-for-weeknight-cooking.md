@@ -46,7 +46,7 @@ Here are some of the things I keep in my freezer:
 - [[Simple green goddess dressing|green goddess]]
 - donkey sauce
 - [[Uncle Bruce's Ranch Dip|ranch]]
-- [[Asian Slaw Dressing|asian slaw dressing]]
+- [[Asian slaw dressing]]
 - Broc/cauli/carrots
 
 ## Some examples of adapting a base into quick meals

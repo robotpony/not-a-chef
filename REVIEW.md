@@ -45,7 +45,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 1. ~~Normalize the ~110 legacy-format recipes (numbered `Directions:`) to FORMAT.md prose, or accept both?~~ Decided 2026-09-24: convert to FORMAT.md as each page is touched.
 2. ~~centre/litre vs center/liter?~~ Decided 2026-09-24: centre and litre. FORMAT.md and the recipe writing rules updated; the 9 "center/centered/liter" uses in content converted.
 3. ~~Family backstory blockquotes: keep, or move to essays?~~ Decided 2026-09-24: keep them in recipes. They're hidden on the site by default (`hideFamilyHistory` in `assets/js/ingredients.js`); a special build will show them later.
-4. Consolidate overlapping recipes? One decision per group (merge with the other as a variation, cross-link, or keep both):
+4. ~~Consolidate overlapping recipes?~~ Decided 2026-09-24. Pizza doughs, Thai curries, Greek marinades, and beef base: keep all (the doughs show the recipe's evolution). Jerk, hoagie rolls, slaw dressings, ramen pork, and smash burgers: merged (old URLs redirect via `aliases`). Gyros: the sheet-pan page now builds on `[[Gyro base]]`. Breakfast sausage: still open. Groups as reviewed:
 
     | Group | Pages | How they differ |
     |---|---|---|
@@ -71,7 +71,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - `recipes/instant-pot-chicken-thigh-curry.md`: "needs testing" (L14)
     - `recipes/marinated-pressed-tofu.md`: "[draft]" (L48)
     - `recipes/pulled-pork.md`: "[draft] Untested", `servings: TBD` (L47)
-    - `recipes/sheet-pan-fast-food-style-gyros.md`: "to be tested" (L27)
+    - `recipes/sheet-pan-fast-food-style-gyros.md`: vinegar "still being tested"
     - `recipes/triple-layered-double-pumpkin-cheesecake.md`: "Not sure where this recipe came from" (L9)
     - `recipes/vindaloo-wing-sauce.md`: "[draft] needs testing" (L45)
     - `recipes/vodka-cream-sauce.md`: "no idea if it's any good" (L11)
@@ -258,13 +258,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - L40: Chocolate fountain prep (Wednesday) comes before its shopping day (Thursday). Q: swapped?
     - Q: no date or year. Add one so the page makes sense later (and to match the other event pages, which carry a year).
     - Q: "Mac" (L32): mac and cheese? Spell it out.
-- [x] ! `reference/jerk-marinade-adapted-from-serious-eats.md`
-    - Unfinished: an ingredient list with no method ("Directions" heading is empty at L44). Ingredients are separate paragraphs, not a list.
-    - L8: title repeated. L10 "Notes for a recipe update." Q: which recipe? `jerk-chicken.md` exists; should this merge there as a Variation and this page go?
-    - L38: "(see note)" refers to a note that isn't here.
-    - L40–42: the allspice berries and bay leaves are for smoking over the grill in the original. Without the method they read as marinade ingredients (3 dozen bay leaves in a marinade would be wrong).
-    - US-only units ("3-inch", "4 to 4 1/2 pounds"); metric rule → "8 cm (3 in)", "1.8–2 kg (4–4½ lb)".
-    - No link to the source; add the Serious Eats URL in `source:` (currently `family`).
+- [x] `reference/jerk-marinade-adapted-from-serious-eats.md` (merged into recipes/jerk-chicken.md as a variation 2026-09-24; draft removed)
 - [x] ! `reference/nicola-2018-food-planning.md`
     - Grocery list misses items the plan needs: pierogies (Friday dinner) and marinara (Saturday dinner) aren't listed.
     - L14: "Breakfast snack, see Friday" is unclear. Q: same as Friday's breakfast?
@@ -335,9 +329,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - L29: "## Optional garnish (before covering):" drop the colon.
     - Numbered steps in a new-format recipe (FORMAT.md says prose).
     - L24: "Serrano" → "serrano".
-- [x] ! `recipes/asian-slaw-dressing.md`
-    - L13 and `cuisine: asian` → "Asian".
-    - Otherwise clean.
+- [x] `recipes/asian-slaw-dressing.md` (merged 2026-09-24: MSG, ginger, seasoned vinegar from the vaguely-Asian version)
 - [x] ! `recipes/autumn-glow-salad-with-lemon-dressing.md`
     - Typos: L18 "freemen" → "freekeh"; L22 "sried" → "dried"; L32 "agavé" → "agave"; L51 "loved this it" → "loved it".
     - Incoherent: the apple is chopped (step 3) and the cranberries and seeds are listed, but none of them are ever added. Step 4 "toss everything together" should name them. Salt and pepper for the veg (step 2) aren't in the ingredient list.
@@ -381,11 +373,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - Typos: "carcases" → "carcasses"; "sababushi" → "saba-bushi"; L43 "straining the sink" → "straining in the sink"; "Chintan style" → "chintan-style".
     - L36: "pressure cooker ingredients" refers to a heading called "Base stock"; use the same name. Heading colons (Base stock:, Dashi:, Method:).
     - Dashi quantities: "Bonito" with no amount. Q: roughly how much (e.g. 20 g)?
-- [x] ! `recipes/basic-ramen-tare.md`
-    - Step 1 "Make marinade" never says how: combine water, sake, soy, mirin, sugar, garlic (and heat to dissolve the sugar?).
-    - Step 3: no time guidance. At a 110°C oven, belly or butt to 93°C is many hours. Q: rough time (e.g. 3–4 h), and covered or uncovered?
-    - L16: "Salt and pepper the pork to taste" is an instruction in the ingredient list → "Salt and pepper" or "[[Bruce's poultry and pork spice rub]]" (named as "my standard pork/chicken rub"; link it).
-    - L11: "ramen style pork" → "ramen-style". Headings end in colons. L22 double space.
+- [x] `recipes/basic-ramen-tare.md` (merged into chashu-pork.md 2026-09-24; redirects)
 - [x] ! `recipes/beef-base.md`
     - Heading levels disagree: "### Italian style, add:" vs "## Taco style, add:". Both should be the same level, and without colons.
     - L20 lists "Accent", but step 2 says "MSG". Same thing; use one name (collection uses both, see beef-stew).
@@ -492,10 +480,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - Food safety: the leftover marinade has held raw meat. Say "bring to a full boil, then simmer until thick" before brushing on at the end.
     - Order mismatch: the Mechanic says reduce the glaze "while the meat rests"; the method brushes it on "in the last few minutes of cooking". Pick one.
     - Food safety (minor): 65°C for white meat is fine for roasted pieces if they rest a few minutes (chicken at 65°C needs ~4–5 min). Say "rest 5 minutes" so the rest is the hold.
-- [x] ! `recipes/chashu-pork.md`
-    - Cross-recipe inconsistency: belly target is 85°C here, 93°C in basic-ramen-tare.md. Q: which is your number? (93°C gives the more yielding, sliceable-when-cold belly.)
-    - Q: chashu-pork.md and basic-ramen-tare.md are the same dish (braised pork whose liquid becomes tare) with different ratios. Keep both, or merge with one as a variation?
-    - Otherwise clean.
+- [x] `recipes/chashu-pork.md` (merged 2026-09-24: basic-ramen-tare.md's sake oven braise as a variation; tare use and storage notes)
 - [x] ! `recipes/cheddar-herb-biscuits-or-savoury-scones.md`
     - L31: stray keyboard garbage at the start of step 2: "\`werty".
     - Step 3 whisks "the egg and milk", but the ingredient is buttermilk.
@@ -678,23 +663,14 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - Typos: L19 "2 teaspoon" → "2 teaspoons"; L28 "Parsely" → "parsley"; L32 "mandolin" → "mandoline", "as thin that you can" → "as thin as you can"; L10 "40’s" → "40s"; L24 spaced hyphen as a dash.
     - Three prose paragraphs of advice sit between "Directions" and the steps; move the serving size to `servings`, dill swap to Variations, make-ahead to Notes.
     - L10: backstory (recipe rules). Title Case ingredients ("Cucumbers", "English Cucumbers", "Field Cucumbers", "Pepper").
-- [x] ! `recipes/gyro-base.md`
-    - L13: "sandwhichs" → "sandwiches".
-    - L49: "can be cooked as-is" (from frozen) contradicts L45, which says to thaw, shape, and chill before cooking.
-    - L18: "Skipping the chill or under-mixing still gives a crumbly result": "still" reads oddly; drop it.
+- [x] `recipes/gyro-base.md` (fixed 2026-09-24: typo; thaw-before-cooking contradiction; "still")
 - [x] ! `recipes/gyro-dogs.md`
     - Portion math doesn't work: the ingredient is "500g of gyro base", but the method divides it into 8 × ~112 g (≈ 900 g). The gyro base recipe makes ~1.1 kg. → "1 batch [[Gyro base]] (about 1 kg)".
     - Buns aren't in the ingredient list (the serving step uses them). No internal temperature for ground lamb/beef: add "to 71°C (160°F)" (a grilled dog won't hold a lower temperature long enough off the heat).
     - Mechanic repeats gyro-base's Mechanic nearly word for word. Link to it instead.
     - L14: "based on inspiration a Chef John video" → "inspired by a Chef John video". L66: comma splice ("That's intentional, it builds").
-- [x] ! `recipes/hoagie-rolls.md`
-    - Clean. Q: near-duplicate of hoagie-style-french-rolls.md (same method, 4 vs 8 rolls). Keep both, or make one a variation?
-- [x] ! `recipes/hoagie-style-french-rolls.md`
-    - Weight/volume mismatch: "15g (2 tsp) instant yeast". 2 tsp is ~6 g. Same for "15g (2 tsp) diastatic malt": 15 g of diastatic malt is ~1.9% of the flour, above the usual 0.5–1% and likely to make the crumb gummy. Q: which numbers are right?
-    - Step 10 garbled: "On a pan below your middle rack, add a pan and a handful of ice cubes" → "Put a pan on the rack below the rolls and add a handful of ice cubes."
-    - Step 6: "until doubled (about an hour) until they pass the poke test" doubled "until".
-    - Title "Hoagie style" → "Hoagie-style"; L10 "sub style" → "sub-style", "poboys" → "po' boys"; step 8 "hogies" → "hoagies".
-    - Temps: "40C", "190C/375F", "90-95C (or about 200F)" → "40°C (104°F)", "190°C (375°F)", "90–95°C (195–205°F)".
+- [x] `recipes/hoagie-rolls.md` (merged 2026-09-24: family tips from hoagie-style-french-rolls.md folded in; converted to FORMAT.md)
+- [x] `recipes/hoagie-style-french-rolls.md` (merged into hoagie-rolls.md 2026-09-24; redirects)
 - [x] ! `recipes/homemade-baileys-irish-cream.md`
     - Contradiction: the intro says "We call this camping cream" (family use), but Notes say "[draft] Untested ... not yet made in this kitchen", and `draft: false`. Q: tested?
     - Title: "Homemade Baileys Irish Cream" → "Homemade Baileys Irish cream" per sentence case ("Baileys" is the brand).
@@ -722,12 +698,8 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] ! `recipes/instant-pot-chicken-thigh-curry.md`
     - Open testing flag in the intro ("needs testing"). Q: tested yet?
     - Two em-dashes (L14, L40).
-- [x] ! `recipes/jerk-chicken.md` (fixed 2026-09-24: step 2 completed; rest as hold; units and typos; converted to FORMAT.md)
-    - Q: three jerk pages overlap (this, jerk-marinade.md, and reference/jerk-marinade-adapted-from-serious-eats.md) with different marinades. Consolidate into one recipe with variations?
-- [x] ! `recipes/jerk-marinade.md`
-    - L16 contradicts itself: "Scotch bonnets are non-negotiable ... habaneros are the closest substitute".
-    - L23: "scotch bonnet" → "Scotch bonnet"; L46: "caramelised" → "caramelized"; L56 missing period.
-    - See the jerk-overlap Q on jerk-chicken.md.
+- [x] `recipes/jerk-chicken.md` (merged 2026-09-24: now includes jerk-marinade.md (Jamaican cooking-class paste) and the Serious Eats notes as variations)
+- [x] `recipes/jerk-marinade.md` (merged into jerk-chicken.md 2026-09-24; redirects)
 - [x] ! `recipes/kālua-pig-cabbage.md`
     - L22: "3/4 head" → "¾ head". L18: "pork butt" → "pork shoulder (butt)" for Canadian readers.
     - Filename contains "ā" (non-ASCII slug); see note on indian-takeout-tomato-purée.md.
@@ -781,15 +753,8 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - L55: Notes are two bare links; label them as sources.
     - Overlaps with kālua-pig-cabbage.md. Cross-link?
 - [x] `recipes/mayo-marinade.md` (fixed 2026-09-24: safety, Mechanic, typos, Kenji note; dropped the `mediterranean` tag)
-- [x] ! `recipes/mcburgers.md`
-    - No `servings` or yield (the ingredient list is per burger; say so).
-    - L28: "Double-grind the patties" → "Double-grind the beef".
-    - Q: overlaps with mcdouble.md (same technique, same seasoning idea). Merge, with McDouble as a variation?
-    - `## Research` isn't a FORMAT.md section; rename it Notes (sources).
-- [x] ! `recipes/mcdouble.md`
-    - Contradictions: the build says "1 slice American cheese" but Notes say "I use 1/2 a slice"; the bun is "~9 cm, slightly pressed" in the build but "pressed to ~11 cm" in Notes.
-    - MSG is listed "(applied after cooking)", but the method seasons with only salt and pepper.
-    - L20: "using to flat surfaces" → "two"; "Par freeze" → "Par-freeze". L57: "sweet-savory" → "sweet-savoury". L60 missing period. L61: "1/2" → "½".
+- [x] `recipes/mcburgers.md` (merged into mcdouble.md 2026-09-24; redirects)
+- [x] `recipes/mcdouble.md` (merged 2026-09-24: McBurgers as the single-hamburger variation; 4:2:1 seasoning; converted to FORMAT.md)
 - [x] `recipes/meat-sauce-aka-american-bolognese.md` (fixed 2026-09-24: 1 tbsp tomato paste; [[Beef base]] link; herbs named; converted to FORMAT.md)
 - [x] ! `recipes/meatballs.md`
     - Tagged `dairy-free`, but the recipe has 60 g Parmesan (and the panade options include cream, buttermilk, sour cream). Remove the tag.
@@ -963,12 +928,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - No quantity of protein for this batch. Q: ~1 kg?
     - Step 3 "Cook protein until done" has no internal temperatures (pork/chicken/beef differ); link the doneness cheat sheet or list them.
     - L25: "juiced and zest" → "juiced and zested"; L27: "worcestershire" → "Worcestershire"; L40: "230C/450F" → "230°C (450°F)", "foil lined" → "foil-lined".
-- [x] ! `recipes/sheet-pan-fast-food-style-gyros.md`
-    - Contradiction: L19 says "2-3% salt per kg of protein", but 2 tsp kosher salt in 1 kg of meat is ~0.6–1%.
-    - Open test markers: L27 "← needs to be tested", L53 "Test this", L55 plans for the next pass, while `draft: false`.
-    - Q: near-duplicate of gyro-base.md (same meats and spices, different method). Merge, with the sheet-pan bake as a method variation?
-    - Title: "Sheet pan fast food style gyros" → "Sheet-pan fast-food-style gyros". Tag `bases` fits; no cuisine issue.
-    - L39: "half way" → "halfway". L42: missing period; "175C (350F)" → "175°C (350°F)"; "70C (160F)" → "71°C (160°F)". L51: "parm" → "Parmesan".
+- [x] `recipes/sheet-pan-fast-food-style-gyros.md` (fixed 2026-09-24: now uses 1 batch [[Gyro base]]; 71°C; title hyphenated; converted to FORMAT.md)
 - [x] ! `recipes/shredded-taco-chicken.md`
     - L30: "Marinade chicken" → "Marinate". L31: "excess marinate" → "excess marinade". L30: mismatched quotes around “ham“.
     - L36: "½-1cup" → "½–1 cup". Temps "75C-90C (170F-200F)", "200C/400F" → degree signs.
@@ -1088,10 +1048,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - Weight/volume pairs disagree: "2g (2 teaspoons) salt" (2 tsp is ~12 g fine salt or ~6 g kosher); "1g (1 ½ teaspoon) ground black peppercorns" (≈ 3.5 g). Q: which unit did you measure in?
     - Step 1 says "Add salt to taste", but salt is already a listed ingredient. Pick one.
     - L14: "Hellman’s" → "Hellmann’s". L9: "post-war style" → "post-war-style". L15: "1 ½ teaspoon" → "teaspoons".
-- [x] ! `recipes/vaguely-asian-slaw-dressing.md`
-    - Q: near-duplicate of asian-slaw-dressing.md (same 90 g oil / ~45–50 g rice vinegar / 30 g Dijon / sesame / soy / maple). Merge?
-    - L14: garbled unit: "50g tablespoons seasoned rice vinegar" → "50 g seasoned rice vinegar".
-    - L9: "Asian style" → "Asian-style"; "ginger/garlic depth" → "ginger or garlic for depth".
+- [x] `recipes/vaguely-asian-slaw-dressing.md` (merged into asian-slaw-dressing.md 2026-09-24; redirects)
 - [x] ! `recipes/vegan-burger-savoury-chew-gluten.md` (fixed 2026-09-24: intro, forming and cooking drafted; amounts added; vegan Worcestershire; converted to FORMAT.md)
     - Filename (`vegan-burger-savoury-chew-gluten`) doesn't match the title.
 - [x] ! `recipes/vegetarian-lasagna.md`
