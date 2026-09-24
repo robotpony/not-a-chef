@@ -87,6 +87,14 @@
  * semantic tokens above already work around this Tailwind/ours split. */
 body {
   background-color: var(--bg);
+  /* Subtle paper grain: a tileable SVG fractal-noise filter, compressed to a
+   * narrow band around mid-gray so `overlay` blending only nudges lightness
+   * by a few percent either way. Overlay (not multiply/normal) is what makes
+   * one image work unchanged across both themes — it reads as fine grain
+   * against light and dark `--bg` alike, rather than needing a light/dark
+   * pair like the color tokens above. */
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyNTAnIGhlaWdodD0nMjUwJz4KICA8ZmlsdGVyIGlkPSdwYXBlcicgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSdzUkdCJz4KICAgIDxmZVR1cmJ1bGVuY2UgdHlwZT0nZnJhY3RhbE5vaXNlJyBiYXNlRnJlcXVlbmN5PScwLjg1JyBudW1PY3RhdmVzPSczJyBzdGl0Y2hUaWxlcz0nc3RpdGNoJy8+CiAgICA8ZmVDb2xvck1hdHJpeCB0eXBlPSdzYXR1cmF0ZScgdmFsdWVzPScwJy8+CiAgICA8ZmVDb21wb25lbnRUcmFuc2Zlcj4KICAgICAgPGZlRnVuY1IgdHlwZT0nbGluZWFyJyBzbG9wZT0nMC4zJyBpbnRlcmNlcHQ9JzAuMzUnLz4KICAgICAgPGZlRnVuY0cgdHlwZT0nbGluZWFyJyBzbG9wZT0nMC4zJyBpbnRlcmNlcHQ9JzAuMzUnLz4KICAgICAgPGZlRnVuY0IgdHlwZT0nbGluZWFyJyBzbG9wZT0nMC4zJyBpbnRlcmNlcHQ9JzAuMzUnLz4KICAgICAgPGZlRnVuY0EgdHlwZT0nbGluZWFyJyBzbG9wZT0nMCcgaW50ZXJjZXB0PScxJy8+CiAgICA8L2ZlQ29tcG9uZW50VHJhbnNmZXI+CiAgPC9maWx0ZXI+CiAgPHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsdGVyPSd1cmwoI3BhcGVyKScvPgo8L3N2Zz4K");
+  background-blend-mode: overlay;
   color: var(--ink);
   /* Blowfish's own `max-w-7xl` + responsive padding (up to 128px per side
    * at wide viewports) squeezes every non-chrome section (.hero,
