@@ -23,7 +23,7 @@ Safety is temperature *and* time. The instant numbers (74°C poultry, 71°C grou
 2. ~~Thin poultry pulled low with a rest instead of a hold: `pan-fried-chicken-burger` (70°C, fine if it holds ~15 sec; the carry-over claim is the only issue), `fajita-chicken-bowl` (62°C → needs ~14 min), `mayo-marinade` chicken (63°C), `simple-rice-bowls` chicken (60°C → needs ~30 min). `roast-poultry` breasts at 63°C are borderline (bone-in pieces do hold through a 10-minute rest, but 63°C needs 9–11 min); pull at 65°C for margin.~~ Fixed: thin chicken to 68°C, the burger stays at 70°C, roast breasts to 65°C with the rest as the hold.
 3. ~~`reference/temperature-and-doneness-cheat-sheet.md`: "fall apart" targets are too low (shoulder/chuck at 80°C), and one flat 3-minute hold is right for red meat but short for poultry below 65°C. Link it to the new safety page.~~ Fixed; fall-apart numbers synced on the safety page too.
 4. ~~Storage that's too long or too warm: fresh salsas kept "a few weeks" (`ginas-tomato-salsa`, `salsa-verde`); counter cold-brew tea for 12 h; cream-cheese-frosted `paska-buns` kept unrefrigerated 3 days; `the-anything-casserole` reheated to only 65°C.~~ Fixed.
-5. Raw egg without a note: `caesar-dressing`, `white-spot-burgers` mayo.
+5. ~~Raw egg without a note: `caesar-dressing`, `white-spot-burgers` mayo.~~ Fixed.
 
 **Broken or unfinished pages that are published (`draft: false`)**
 - Template placeholder text as the intro: `greek-islands-creamy-greek-dressing`, `south-american-red-salsa`.
@@ -479,10 +479,8 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] ! `recipes/butternut-squash-soup.md`
     - Tagged `vegetarian` but the stock type isn't named. Say "vegetable stock" (or "chicken or vegetable") so the tag holds; the vegan note (L51) also needs veg stock and to skip the crème fraîche.
     - Otherwise clear and well structured.
-- [x] ! `recipes/caesar-dressing.md`
+- [x] ! `recipes/caesar-dressing.md` (fixed 2026-09-24: raw egg note; `vegetarian` tag dropped)
     - Q: "2–3 tablespoons good olive oil" seems far too little to emulsify an egg white plus 2 tbsp Dijon into a dressing "thick enough to coat a spoon". This style usually takes ½–¾ cup. Typo for cups/quarter-cups?
-    - Tagged `vegetarian`, but both options (anchovy paste, Worcestershire) contain anchovy.
-    - Raw egg white: add a Notes line, "use a pasteurized egg if serving anyone vulnerable".
 - [x] ! `recipes/canadian-chili.md`
     - Ingredients never used in the method: dried shiitakes (rehydrate? add the soaking liquid?), corn, cilantro/parsley, roasted garlic. Step 3 "Add other ingredients" is too vague.
     - Notes say "vegetarian by just skipping the beef", but there's no beef in the ingredients. The optional hamburger/TVP appears only in the method, twice (step 1 and its sub-step say the same thing).
@@ -1224,12 +1222,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - Missing ingredients: the crust (graham crumbs, butter, cinnamon) is used in step 2 but not listed. Step 2 is copied from the pumpkin cheesecake. No pan size.
     - Typos: "compliment" → "complement"; "scrapped" → "scraped"; "Tirmasu" → "Tiramisu"; "Drizzle with white cake with 1 shot" → "Drizzle the white cake with"; "Wrapped baked and cooled cake" → "Wrap the cooled cake"; "an 1 inch" → "2.5 cm (1 in)"; "Require" → "You'll need".
     - Title: "White Rock Cheesecake" → "White Rock cheesecake". L10: "Aka:" line → `aka:` frontmatter. "## Varieties:" → "## Variations".
-- [x] ! `recipes/white-spot-burgers.md`
-    - Contradictory explanations of "triple O": L13 says the O's were condiment checkboxes on order pads; L33 says they were three sauce choices. Pick one (or say sources disagree).
-    - Raw egg yolk in the mayo (L47), made ahead for 8 burgers. Suggest a pasteurized yolk, or note to use it the same day.
-    - L9: "This Bruce’s take" → "This is Bruce’s take"; "Whitespot" (L11) → "White Spot"; L33 "Tripple" → "Triple"; "meat balls" → "meatballs"; "accent" → "Accent"; "teflon" → "non-stick".
-    - Units: "4-5oz" → "115–140 g (4–5 oz)"; "⅛ - ¼ inch" → "3–6 mm"; "1/2 tsp", "3/4 tbsp" → glyphs; L25: "1 package" → weight.
-    - L38: "Heinz Chilli Sauce" → the product is "Heinz Chili Sauce".
+- [x] `recipes/white-spot-burgers.md` (fixed 2026-09-24: converted to FORMAT.md; pasteurized yolk; triple "O" accounts presented as disagreeing; typos and units; beef ~500 g)
 - [x] ! `recipes/winter-noodle-soup-with-kale-and-fennel.md`
     - Ingredients never used: 4 cups water (only stock goes in) and the dill. Step 3 "Add bouquet and bay" (bay is already in the bouquet garni).
     - L10: private Google Doc link for veg stock → `[[Rich veg/mushroom stock]]`.

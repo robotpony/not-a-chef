@@ -1,6 +1,6 @@
 ---
 title: Caesar dressing
-tags: [salads, quick, vegetarian, family]
+tags: [salads, quick, family]
 source: family
 date: 2026-06-18
 servings: 4–6
@@ -42,3 +42,5 @@ Romaine, croutons, shaved Parmesan.
 
 - From Auntie Linda Stout.
 - Keeps refrigerated 3–4 days.
+- The egg white is raw. Use a pasteurized egg if serving anyone pregnant, elderly, very young, or immunocompromised.
+- Not vegetarian: both anchovy paste and Worcestershire sauce contain anchovy.
