@@ -9,6 +9,8 @@ cook_time: 15 min
 total_time: 20 min
 cuisine: Indian
 draft: false
+aliases:
+  - /recipes/chai-masala-sweet-masala-spiced-milk-tea/
 ---
 
 This is my favourite tea towards the end of Fall. It's warming and mellow.
@@ -40,6 +42,12 @@ Strain and serve.
 ## To serve
 
 In small cups. Add more sugar at the table.
+
+## Variations
+
+Allspice and cinnamon: Swap the cloves and ginger for 3 green cardamom pods, 3 allspice berries, and 1 cm of Ceylon cinnamon stick, broken up. Warmer and rounder, with less bite. Nutmeg or 2–3 black peppercorns also work here; pick two or three spices, not all of them.
+
+Lazy daily cup: Put the spices, lightly crushed, into a tea ball or filter with the tea. Pour over water at a full boil and steep 6–8 minutes, longer than English tea. Add milk and sugar in the cup. No boil-over, so it's lighter and less caramelized, but it takes one pot and no watching.
 
 ## Notes
 
