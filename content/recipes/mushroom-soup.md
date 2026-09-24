@@ -7,8 +7,11 @@ servings: 4
 prep_time: 20 min
 cook_time: 30 min
 total_time: 50 min
+cuisine: french
 draft: false
 ---
+
+A great bowl of soup, and our replacement for classic canned mushroom soup.
 
 ## Mechanic
 

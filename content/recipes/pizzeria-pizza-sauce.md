@@ -3,12 +3,14 @@ title: Pizzeria pizza sauce
 tags: [sauces, italian, make-ahead, vegan, dairy-free]
 source: original
 date: 2021-12-01
-servings: 2 large pizzas (makes ~700ml)
 prep_time: 10 min
 total_time: 10 min
 cuisine: Italian
 draft: false
 ---
+
+Our pizza sauce continues to evolve. This version uses pasata and is uncooked.
+
 
 ## Mechanic
 
@@ -39,5 +41,6 @@ Spread thin on pizza dough (about 100ml per medium pizza). Keeps refrigerated fo
 
 ## Notes
 
-- See also quick-pizza-sauce.md for a smaller-batch, paste-only version.
 - The sugar and salt are listed at 15g each but this is the upper end. Start with 10g of each and taste up.
+
+See also [[quick pizza sauce]] for a smaller-batch, paste-only version.

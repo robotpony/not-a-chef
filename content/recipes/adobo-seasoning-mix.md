@@ -3,12 +3,13 @@ title: Adobo seasoning mix
 tags: [bases, latin, quick, vegan, dairy-free]
 source: original
 date: 2023-11-01
-servings: makes ~50g (enough for several meals)
 prep_time: 5 min
 total_time: 5 min
 cuisine: Latin
 draft: false
 ---
+
+This dry rub is especially nice on beef flank or chuck. Great for tacos.
 
 ## Ingredients
 

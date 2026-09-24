@@ -3,13 +3,15 @@ title: Vindaloo wing sauce
 tags: [sauces, indian, quick]
 source: original
 date: 2022-07-01
-servings: for ~1 kg wings
+servings: 2-4
 prep_time: 10 min
 cook_time: 5 min
 total_time: 15 min
 cuisine: Indian
 draft: false
 ---
+
+This is a mildy spicy, warm, and tangy wing sauce.
 
 ## Ingredients
 

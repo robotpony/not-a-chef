@@ -10,6 +10,8 @@ cuisine: Thai
 draft: false
 ---
 
+This is our version of a common Thai side.
+
 ## Ingredients
 
 - 1 cucumber, peeled, seeded, and cut into ½ cm dice

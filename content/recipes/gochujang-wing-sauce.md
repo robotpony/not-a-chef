@@ -3,12 +3,14 @@ title: Gochujang wing sauce
 tags: [sauces, korean, quick]
 source: original
 date: 2023-11-01
-servings: for ~1 kg wings
+servings: 2-4
 prep_time: 5 min
 total_time: 5 min
 cuisine: Korean
 draft: false
 ---
+
+Sweet, savoury, and warm. Perfect for wings.
 
 ## Mechanic
 

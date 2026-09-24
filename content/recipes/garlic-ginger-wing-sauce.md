@@ -7,8 +7,11 @@ servings: enough for ~1 kg wings
 prep_time: 10 min
 cook_time: 5 min
 total_time: 15 min
+cuisine: American
 draft: false
 ---
+
+Garlic and wings are a great combination. These lean sweet and savory.
 
 ## Mechanic
 

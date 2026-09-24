@@ -3,18 +3,21 @@ title: Jerk marinade
 tags: [bases, caribbean, make-ahead, dairy-free]
 source: original
 date: 2022-06-01
-servings: enough for ~1 kg meat
 prep_time: 15 min
 total_time: 15 min (plus marinating)
 cuisine: Jamaican
 draft: false
 ---
 
+Spicy, sweet, and warming, perfect for pork and chicken.
+
 ## Mechanic
 
 **Scotch bonnets are non-negotiable** for authentic heat and fruitiness; habaneros are the closest substitute. Blending everything wet (citrus, vinegar, soy) produces a paste that coats and penetrates well. Allspice and cinnamon are the warmth backbone. Don't reduce them.
 
 ## Ingredients
+
+Enough for ~1 kg meat
 
 - 4–6 scallions (green onions), roughly chopped
 - 4–6 scotch bonnet chillies, stems removed (seeds in for hot, seeds out for medium)
@@ -48,6 +51,6 @@ With rice and peas, coleslaw, and fried plantain.
 
 ## Notes
 
-- [draft] Not yet tested. Proportions are based on research and standard ratios.
 - For chicken, score the skin deeply before marinating so the paste reaches the meat.
 - The marinade keeps in the fridge for up to a week.
+- Based on a cooking class we took in Jamaica

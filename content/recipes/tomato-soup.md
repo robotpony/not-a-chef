@@ -3,12 +3,15 @@ title: Tomato soup
 tags: [mains, soups, italian, weeknight, vegetarian]
 source: original
 date: 2021-11-01
-servings: 4
+servings: 2-4
 prep_time: 10 min
 cook_time: 25 min
 total_time: 35 min
+cuisine: world
 draft: false
 ---
+
+Who doesn't love a warm bowl of tomato soup? Pair with simple grilled cheese!
 
 ## Ingredients
 

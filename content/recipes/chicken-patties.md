@@ -7,8 +7,11 @@ servings: 4
 prep_time: 20 min (plus 30 min brine)
 cook_time: 15 min
 total_time: 35 min (plus brine)
+cuisine: American
 draft: false
 ---
+
+I love chicken sandwhiches. The ground chicken patties bread nicely, but are also great on their own.
 
 ## Mechanic
 
@@ -16,16 +19,19 @@ draft: false
 
 ## Ingredients
 
-### Breast brine (for pounded fillets)
+### Chicken brine
 
-Per 1 litre water:
-- 1 litre cold water
-- 1 litre white vinegar
+For pounded fillets.
+
+- 500mL cold water
+- 500mL white vinegar
 - 100g kosher salt
-- 10g MSG
+- 20g MSG
 - 50g sugar
 
-### Ground chicken seasoning (per 1 kg ground chicken)
+### Ground chicken seasoning
+
+Per 1 kg ground chicken:
 
 - 25g kosher salt (2.5%)
 - 5g MSG (0.5%)
@@ -38,13 +44,15 @@ Per 1 litre water:
 
 ## Method
 
-**Brined breast fillets:** Combine brine ingredients and stir until dissolved. Submerge breast fillets (pounded to even thickness) and brine for 30 minutes in the fridge. Pat dry before cooking.
+### Brined breast fillets:
+
+Combine brine ingredients and stir until dissolved. Submerge breast fillets (pounded to even thickness) and brine for 30 minutes in the fridge. Pat dry before cooking.
 
 Pan-fry in a lightly oiled pan over medium-high heat until golden on both sides and cooked through, about 4 minutes per side depending on thickness.
 
----
+### Ground chicken patties:
 
-**Ground chicken patties:** Combine ground chicken with all seasoning ingredients. Mix thoroughly with your hands. Form into patties (about 120g each) and flatten slightly.
+Combine ground chicken with all seasoning ingredients. Mix thoroughly with your hands. Form into patties (about 120g each) and flatten slightly.
 
 Cook in a non-stick pan over medium heat until cooked through and browned, about 5 minutes per side.
 

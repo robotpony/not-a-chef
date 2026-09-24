@@ -3,7 +3,6 @@ title: Quick pizza sauce
 tags: [sauces, italian, quick, vegan, dairy-free]
 source: original
 date: 2024-07-01
-servings: 2–3 pizzas (makes ~250ml)
 prep_time: 5 min
 cook_time: 10 min
 total_time: 15 min

@@ -3,18 +3,21 @@ title: Char siu marinade
 tags: [bases, chinese, make-ahead, dairy-free]
 source: original
 date: 2022-03-01
-servings: for ~600g chicken (8 small boneless thighs)
 prep_time: 10 min
 total_time: 10 min (plus marinating)
 cuisine: Chinese
 draft: false
 ---
 
+A sweet and warming marinade for chicken and pork.
+
 ## Mechanic
 
 A **ratio-based marinade** where "1" equals ¼ cup (60ml). Doubling or tripling scales cleanly. The marinade finishes as a reduction glaze: simmer the remainder until thick and sticky while the meat rests.
 
-## Ingredients (ratio: 1 = 60ml / ¼ cup)
+## Ingredients 
+
+Ratio: 1 = 60ml / ¼ cup
 
 - 1 part soy sauce
 - 1 part oyster sauce

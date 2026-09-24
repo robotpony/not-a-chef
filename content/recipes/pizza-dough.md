@@ -11,6 +11,8 @@ cuisine: Italian
 draft: false
 ---
 
+This is my original pizza dough recipe, based on my memory of doughs I made in restaurants. 
+
 ## Mechanic
 
 The **vital wheat gluten** supplements bread flour to push gluten content higher, producing a chewier crumb and stronger structure than all-purpose flour alone. Low yeast (0.1%) and a long cold ferment develop flavour. The autolyse (30-minute rest before adding salt) speeds gluten development.

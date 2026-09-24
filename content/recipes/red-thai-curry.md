@@ -11,6 +11,8 @@ cuisine: Thai
 draft: false
 ---
 
+This is our classic Thai curry, based on a restaurant that closed many years ago.
+
 ## Mechanic
 
 The key step is **heating the coconut cream alone until it splits** (the fat separates from the liquid). Frying the curry paste in this split cream is what develops deep flavour; adding all the coconut milk at once and simmering is a shortcut that produces a flatter result.

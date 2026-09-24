@@ -7,8 +7,11 @@ servings: 4
 prep_time: 10 min
 cook_time: 25 min
 total_time: 35 min
+cuisine: American
 draft: false
 ---
+
+A comforting, lovely lentil stew. Or is it curry?
 
 ## Mechanic
 

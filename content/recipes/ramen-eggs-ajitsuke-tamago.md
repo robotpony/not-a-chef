@@ -3,13 +3,15 @@ title: Ramen eggs (ajitsuke tamago)
 tags: [sides, japanese, make-ahead]
 source: original
 date: 2023-09-01
-servings: 6 eggs
+servings: 3-4
 prep_time: 5 min
 cook_time: 7 min (plus marinating)
 total_time: 6 hr (mostly hands-off)
 cuisine: Japanese
 draft: false
 ---
+
+These savoury and jammy eggs are a perfect topping for ramen.
 
 ## Mechanic
 

@@ -7,8 +7,11 @@ servings: 8–10 (as a base for other dishes)
 prep_time: 20 min
 cook_time: 40 min
 total_time: 60 min
+cuisine: world
 draft: false
 ---
+
+A savoury and tasty vegetarian base for stews, chilis, and soups.
 
 ## Mechanic
 

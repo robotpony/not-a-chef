@@ -7,8 +7,11 @@ servings: 4
 prep_time: 5 min
 cook_time: 20 min
 total_time: 25 min
+cuisine: Japanese
 draft: false
 ---
+
+Sweet, soft, and comfort in a bowl. Great with fruit or icecream. 
 
 ## Mechanic
 

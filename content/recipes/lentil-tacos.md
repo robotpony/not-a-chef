@@ -7,8 +7,11 @@ servings: 4–6 (as taco filling)
 prep_time: 20 min
 cook_time: 30 min
 total_time: 50 min
+cuisine: Tex-Mex
 draft: false
 ---
+
+A filling and frugal filling for tacos. Delicious, too.
 
 ## Mechanic
 
