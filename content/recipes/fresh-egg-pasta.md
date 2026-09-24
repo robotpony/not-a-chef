@@ -5,7 +5,7 @@ source: family
 date: 2026-06-18
 servings: 4
 prep_time: 20 min
-cook_time: 2-3 min
+cook_time: 2–3 min
 total_time: 50 min (plus 30 min rest)
 cuisine: Italian
 draft: false
@@ -22,7 +22,7 @@ Making pasta by hand is easier than it looks. It takes about 20 minutes, plus a 
 - 250g (about 2 cups) AP flour, plus more for dusting
 - 2 large eggs (about 110g)
 - 4 egg yolks (about 70g)
-- 10g (1 teaspoon) salt
+- 3 g (½ teaspoon) salt
 
 ## Method
 

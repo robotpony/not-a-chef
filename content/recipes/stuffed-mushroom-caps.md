@@ -2,33 +2,39 @@
 title: Stuffed mushroom caps
 tags: [appetizers, sides]
 source: family
-cook_time: 30-45 min
+servings: 8 caps
+cook_time: 30–45 min
 cuisine: American
 draft: false
 ---
 
-> Grandma Rempel (Ann’s Mom) used to make stuffed mushrooms caps for special occasions.  I never had a taste for them, but then one day, I realized I was missing out.  There was no real recipe for these, and my mom just told me how she whipped them up and this is how I’ve been making them since.  The ingredients can be altered/adjusted based on the number and size of mushrooms and you are welcome to add or change to your taste preferences.  I’m basing this recipe on 8 large white mushrooms so alter as required.
+> Grandma Rempel (Ann’s Mom) used to make stuffed mushroom caps for special occasions.  I never had a taste for them, but then one day, I realized I was missing out.  There was no real recipe for these, and my mom just told me how she whipped them up and this is how I’ve been making them since.  The ingredients can be altered/adjusted based on the number and size of mushrooms and you are welcome to add or change to your taste preferences.  I’m basing this recipe on 8 large white mushrooms so alter as required.
 
-## Ingredients:
+## Ingredients
 
-- 8 Large White Mushrooms
-- ⅓ Anaheim Pepper, finely minced
-- ½ Shallot, finely minced
-- 2 Tbsp Purple Onion, finely minced (or one slice of the onion)
-- ¾ Package Shallot & Chive or Garlic & Herb Boursin
-- 3 Tbsp Hummus (plain or garlic)
-- Parmesan Cheese, finely grated (¼ cup or so), and additional if desired, to top while baking
-- 30 Grams of fresh Shrimp, or 1 Large Prawn, finely chopped (optional) Just do not use too much otherwise the caps will taste fishy
-- Mix together and add Salt & Pepper to taste
+- 8 large white mushrooms
+- ⅓ Anaheim pepper, finely minced
+- ½ shallot, finely minced
+- 2 tbsp red onion, finely minced (about one slice)
+- ¾ package Boursin, shallot and chive or garlic and herb
+- 3 tbsp hummus, plain or garlic
+- ¼ cup finely grated Parmesan, plus more for topping
+- 30 g fresh shrimp or 1 large prawn, finely chopped (optional)
+- Salt and pepper
+- Oil, for brushing (optional)
 
-## Directions:
+## Method
 
-1. Wash the mushrooms and remove the stems.  Place on a piece of paper towel and allow them to completely dry.
-2. Preheat the oven to 177 degrees F (375 C) and use a convection oven if possible (to help dry out the mushrooms).
-3. Mix together all the filling ingredients.
-4. Once the mushrooms have dried, trim the bottom edges to maximum stuffing space.
-5. Optional: lightly oil the outside of the mushrooms to encourage browning.
-6. Place a rack onto a lined baking sheet (you do not want the mushrooms cooking in their own liquid because the mushrooms will stay mushy).
-7. Place the mushrooms on the rack and pack the mushrooms with the filling until their level is full.  If there is any filling left over, the mushrooms can be topped with a little more filling to make a small dome.  Top with additional Parmesan if desired.
-8. Bake low and slow; about 30 - 45 minutes (size has a lot to do with cooking time).  Place under the broiler for the last few minutes of cooking if you want a little more browning.
-9. Allow the Caps to sit for 5 minutes before trying to move.
+Wash the mushrooms and remove the stems. Set them on paper towel and let them dry completely.
+
+Heat the oven to 190°C (375°F), with convection if you have it; it helps dry out the mushrooms.
+
+Mix all the filling ingredients together and season with salt and pepper. Go easy on the shrimp, or the caps will taste fishy.
+
+Once the mushrooms are dry, trim the bottom edges to make as much room for filling as possible. Lightly oil the outsides if you want more browning.
+
+Set a rack on a lined baking sheet, so the mushrooms don't sit in their own liquid and stay mushy. Pack each cap level with filling, then dome any extra on top. Top with more Parmesan if you like.
+
+Bake until the mushrooms are tender and the tops are browned, 30–45 minutes depending on size. Finish under the broiler for a few minutes if you want more colour.
+
+Let the caps sit 5 minutes before moving them.

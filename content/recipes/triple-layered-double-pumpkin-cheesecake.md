@@ -1,5 +1,5 @@
 ---
-title: Triple layered double pumpkin cheesecake
+title: Triple-layered double pumpkin cheesecake
 tags: [desserts]
 source: family
 cuisine: American
@@ -8,39 +8,51 @@ draft: false
 
 Not sure where this recipe came from but it looks Yummy!
 
+## Crust
 
-## Ingredients:
+- Graham crumbs, enough to cover the bottom of your pan (or half graham and half chocolate or Oreo crumbs)
+- ¼ cup butter, melted
+- A sprinkle of cinnamon
 
-- 1000ml Cream Cheese (2 blocks)
-- 4 Eggs
-- 1 can Condensed Milk
-- 1 can Pumpkin (284ml)
-- 1 tsp Cinnamon
-- 2 tsp Vanilla
-- 1 L Whipping Cream
-- 3 tbsp Sugar
-- 2 envelopes of Knox Gelatine
+Heat the oven to 150°C (300°F).
 
+Pour the crumbs into your pan about 2.5 cm (1 inch) deep. Sprinkle in a little cinnamon (skip it if it won't complement your flavours) and mix it in with your fingers. Make a well in the middle, pour in the melted butter, and mix it into the crumbs with your fingers. If it's too wet, add more crumbs; too dry, add more butter. Press the crumbs firmly into the bottom of the pan, including the edges.
 
-### Crust:
+Bake 10 minutes. Cool on a rack.
 
-- Graham Crumbs (the amount depends on the size of your cheesecake pan)
-    - Option: a combination of ½ Graham Crumbs and ½ Chocolate/Oreo Crumbs)
-- ¼ cup Butter, melted
-- Sprinkle of Cinnamon
+## Pumpkin layer
 
-## Directions:
+- 250 g (1 block) cream cheese, softened
+- 4 eggs
+- 1 can sweetened condensed milk
+- 1 can (284 ml) pumpkin purée
+- 1 tsp cinnamon
+- 1 tsp vanilla
 
-1. Preheat the Oven to 300 degrees F (150 C).
-2. Prepare your crusts: pour the Graham Crumbs (or Graham and Oreo Crumbs combo) directly into your pans until it’s about an inch up.  Sprinkle in a little bit of Cinnamon (can be omitted if Cinnamon will not compliment your cheesecake flavours) and with your fingers, mix into the crumbs and then form a little well in the middle of the pan.  Pour the melted Butter into the well and with your fingers, mix the butter into the crumbs.  If too wet, add more crumbs; if too dry, add more butter.  Once you have the right consistency, press the crumbs into the bottom of the pan to form the crust.  Ensure the edges are also pressed down.
-3. Bake the crust for 10 minutes.  Remove and cool on a cooling rack.
-4. Turn up the oven to 350 degrees F (175 C).
-5. Layer 1: In a mixer, blend well, 1 of the blocks of Cream Cheese, Eggs, can of Pumpkin, Condensed Milk, Cinnamon, and 1 tsp Vanilla.  Then slowly pour mixture into the pan with the crust.
-6. Bake for about 45 to 60 minutes; check after 40 minutes.  If the toothpick comes out clean, then it is done.  Cool slightly on a cooling rack; then cool completely in the refrigerator for about 1 ½ hours.
-7. Once the first layer has cooled, start the second layer.  In the mixer, add the second block of Cream Cheese, 1 tsp Vanilla, 2 tbsp Sugar, and ⅛ cup of the Whipping Cream.  Mix until smooth.
-8. In another bowl, whip 2 cups of the whipping cream with a portion of the remaining  Sugar and Vanilla.
-9. Dissolve the Gelatine in a mixing bowl and add a small amount of hot water.  Once dissolved, whip into the second cream cheese mixture (step 7).
-10. Now fold into the whip cream mixture (step 8).
-11. Add on to the first layer; place back into the refrigerator.
-12. Take the remaining whipping cream, sugar, and vanilla and whip until firm.  Place onto the top of the cake.  You now have three layers.
-13. Let cool for a minimum of one hour before serving.
+Turn the oven up to 175°C (350°F).
+
+Blend everything in a mixer until smooth. Pour slowly over the crust.
+
+Bake until set at the edges with a slight wobble in the centre, 45–60 minutes; start checking at 40. Cool slightly on a rack, then refrigerate until completely cool, about 1½ hours.
+
+## Cream cheese layer
+
+- 2 envelopes Knox gelatine
+- 250 g (1 block) cream cheese, softened
+- 1 tsp vanilla, divided
+- 3 tbsp sugar, divided
+- 1 L whipping cream, divided
+
+Sprinkle the gelatine over 60 ml (¼ cup) cold water and let it bloom for 5 minutes. Add 60 ml (¼ cup) hot water and stir until completely dissolved.
+
+In the mixer, beat the cream cheese with ½ tsp of the vanilla, 2 tbsp of the sugar, and 30 ml (⅛ cup) of the cream until smooth. Beat in the dissolved gelatine.
+
+In another bowl, whip 500 ml (2 cups) of the cream with half the remaining sugar and vanilla until soft peaks form. Fold it into the cream cheese mixture.
+
+Spread over the cooled pumpkin layer and return to the fridge.
+
+## Whipped cream layer
+
+Whip the remaining cream, sugar, and vanilla until firm. Spread over the top.
+
+Chill at least 1 hour before serving.

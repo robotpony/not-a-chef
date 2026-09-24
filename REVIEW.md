@@ -335,10 +335,8 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - L58: broken Google Docs comment anchor `[\[a\]](#cmnt1)`. L35: private Google Sheet link.
     - L48: Variations sits between the ingredients and the method; move it after Method. L16, L37, L41, L54 headings end in colons.
     - L65: "175-190C or 350-375F" → "175–190°C (350–375°F)".
-- [x] ! `recipes/baked-oatmeal.md`
-    - Error: L37 "8×8 or 9×9 cm baking dish". Those are inch sizes; 8 cm is a ramekin. → "20 cm or 23 cm (8 or 9 in) square baking dish".
+- [x] ! `recipes/baked-oatmeal.md` (fixed 2026-09-24: 20 or 23 cm square dish)
     - `source: adapted`: adapted from what? Add the source or use `original`.
-    - Otherwise clean and well structured.
 - [x] ! `recipes/base-curry-gravy.md`
     - Tags say `vegan, dairy-free`, but the recipe uses 250 ml cream ("or coconut cream"). Either drop the tags or make coconut cream the default.
     - L22: stale HTML TODO says gingergarlic-paste.md is orphaned, but that recipe exists now. Replace the comment with a wiki link to it.
@@ -379,13 +377,8 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - L15: "kneck" → "neck"; "side cut" Q: is this a butcher term you use? Otherwise "marrow or knuckle bones".
     - L32: "suc" → "fond". L11: "bones leftover" → "bones left over". L25: "Veg oil" → "vegetable oil". L31: "rough cut veg" → "rough-cut".
     - L38: "(or using a cooling paddle)" → "or use"; missing final period. "## Notes:" colon.
-- [x] ! `recipes/beef-stroganoff.md`
-    - Error: Authentic version uses "250 ml white wine or white wine vinegar". A cup of vinegar would make it inedibly sour. Q: 1–2 tbsp vinegar as the alternative?
-    - The Fancy version lists no stock, but the shared method adds stock twice. Butter is listed (45 g) for two versions, but the method only browns in oil.
-    - Nostalgic L29: "8g (2 tablespoons) mild paprika". 2 tbsp paprika is ~14 g; 8 g is a little over 1 tbsp. One number is wrong.
-    - Tenderloin: the ingredient says "sliced on the bias after cooking", and the method says "add tenderloin sliced at serving", but no step cooks it (sear whole, rest, slice?). Spell out the fancy path.
-    - Heading hierarchy is inverted: "### Ingredients" sits above three "##" version headings. Make the versions `##` and drop the `###`, or per FORMAT use `####` labels.
-    - "crimini" (L38) vs "cremini" elsewhere. Pressure-cooker times are under "To serve"; move them to the method or Notes.
+- [x] ! `recipes/beef-stroganoff.md` (fixed 2026-09-24: vinegar 1–2 tbsp; fancy tenderloin path spelled out; stock and butter per version; converted to FORMAT.md)
+    - Nostalgic: "8g (2 tablespoons) mild paprika". 2 tbsp paprika is ~14 g; 8 g is a little over 1 tbsp. One number is wrong.
     - Q: "Authentic (1950s style)". Stroganoff is 19th-century Russian; the 1950s version is the North American one. Rename "Classic" or "Mid-century"?
 - [x] ! `recipes/beetroot-and-chickpea-hummus.md`
     - L31: beets are tossed "in a little oil", which isn't listed (minor). Otherwise clean.
@@ -442,11 +435,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - L14: "take out" → "takeout". L22: `[[Base Curry Gravy]]` → sentence case. L33: "To finish:" → `#### To finish`.
 - [x] ! `recipes/butter-tarts.md` (fixed 2026-09-24: ice water in pastry; baking powder kept; case and units; converted to FORMAT.md)
     - Q: no corn syrup, so the filling will set firmer and less runny than most butter tarts. Intentional family style? Worth a Mechanic line if so.
-- [x] ! `recipes/butternut-squash-curry.md`
-    - Likely error: "750 g baby spinach" is about seven bags. The Good Housekeeping original uses ~140 g (5 oz). Q: confirm; 750 g won't fit in a skillet with the curry.
-    - L14 says "roasted butternut squash", but the method pan-browns it for 4–6 minutes.
-    - L26: "thai chili" → "Thai chili". "1cm" → "1 cm" (L20, L28). L20: "about 600 ml" volume for diced squash is unusual; drop it or use "about 4 cups".
-    - Tagged `vegetarian` but fish sauce is the default. Make soy sauce the default, or drop the tag.
+- [x] `recipes/butternut-squash-curry.md` (fixed 2026-09-24: 140 g spinach per the source; soy sauce default; pan-browned; units)
 - [x] ! `recipes/butternut-squash-soup.md`
     - Tagged `vegetarian` but the stock type isn't named. Say "vegetable stock" (or "chicken or vegetable") so the tag holds; the vegan note (L51) also needs veg stock and to skip the crème fraîche.
     - Otherwise clear and well structured.
@@ -490,13 +479,8 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - Q: cream of tartar with no baking soda does little here (it's the acid half of a soda leavening). Did the original have ½ tsp baking soda?
     - L25: "if my favorite" → "is my favourite". Step 5 has an unclosed parenthesis. Title Case ingredients throughout. L12: "Cheddar Herb Biscuits" → lower case.
     - L30: "232 degrees C (450 degrees F)" → "230°C (450°F)".
-- [x] ! `recipes/chef-johns-hamburger-buns.md`
-    - L18: temperature error: 40°C is 104°F, not 101°F.
-    - L16: typo "2 ½ tsp t(or 1 package)"; L23: "non-EVDO" → "non-EVOO"; L38, L40: "taught" → "taut" (×2).
-    - L38: "form into a smooth, rough shape" contradicts itself.
-    - L43: the egg wash includes salt, which isn't listed under egg wash.
-    - Notes (L49–51) are cryptic fragments: "Half milk" (swap half the water for milk?), "Add soft butter at end" (of kneading?), "Replace half or all with Diastatic Malt Powder" (replace what? the sugar?). Q: expand, or they won't make sense later.
-    - Headings: "#### Egg wash/toppings:" and "### Directions:" levels and colons.
+- [x] ! `recipes/chef-johns-hamburger-buns.md` (fixed 2026-09-24: 40°C (104°F); typos; salt in egg wash; converted to FORMAT.md)
+    - Notes are cryptic fragments: "Half milk" (swap half the water for milk?), "Add soft butter at end" (of kneading?), "Replace half or all with Diastatic Malt Powder" (replace what? the sugar?). Q: expand, or they won't make sense later.
 - [x] ! `recipes/chicken-or-turkey-stock.md`
     - L33: "(our roughly)" → "(or roughly)". L11: "consummé" → "consommé"; "bones leftover" → "left over".
     - L34: "roast veg until a deep brown" but the bones are on the trays too; say "roast bones and veg".
@@ -608,9 +592,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - Step 2: "Deglaze with the alcohol and vinegar". Vinegar only appears in one of the sherry substitutes; "Deglaze with the sherry (or substitute)".
     - L42: the pressure-cooker option doesn't say which stage it replaces. Q: pressure-caramelizing the onions (then reduce)? Spell out.
     - L25: "1/2 cup" → "½ cup"; L38: "Gruyere" → "Gruyère"; L42: "dutch oven" → "Dutch oven" (×2); L15: "Josh Weissman" → "Joshua Weissman"; L44: "suc" → drop ("fond" is already there). L48: missing period. L53: comma splice.
-- [x] ! `recipes/fresh-egg-pasta.md`
-    - Error: "10g (1 teaspoon) salt" for 250 g flour is 4%, very salty for dough (and 1 tsp fine salt is ~6 g, not 10). Typical is a pinch to ~1% (2–3 g). Q: typo for 1 g / a pinch?
-    - Otherwise clean.
+- [x] `recipes/fresh-egg-pasta.md` (fixed 2026-09-24: salt 3 g, about 1%)
 - [x] ! `recipes/fruit-compote.md`
     - Clean. (Collection-wide: "yoghurt" in 4 files vs "yogurt" in 5; pick one.)
 - [x] ! `recipes/fruit-crisp-individual.md`
@@ -1038,11 +1020,8 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - Step 1: "Fry nuts, shallots and garlic until translucent" (nuts don't go translucent). Toast the nuts first, then soften the shallot and garlic.
     - L9: "ragu" → "ragù"; L17: "parmesan" → "Parmesan"; L29: double period and double space.
 - [x] `recipes/strawberry-rhubarb-compote.md`
-- [x] ! `recipes/stuffed-mushroom-caps.md`
-    - Error: L27 "177 degrees F (375 C)" has the units swapped. It means 190°C (375°F) (or 175°C / 350°F).
-    - L33: "Bake low and slow" at 190°C isn't low; drop "low and slow".
-    - L22: "Mix together and add Salt & Pepper to taste" is an instruction in the ingredient list. L29: "to maximum stuffing space" → "to maximize".
-    - Title Case ingredients; L21: long parenthetical instruction inside an ingredient line. L10: "mushrooms caps" → "mushroom caps"; backstory blockquote (recipe rules Q).
+- [x] ! `recipes/stuffed-mushroom-caps.md` (fixed 2026-09-24: 190°C (375°F); instructions out of the ingredient list; converted to FORMAT.md)
+    - Backstory blockquote (open question 3).
 - [x] ! `recipes/sweet-gochujang-sauce.md`
     - L9: the intro is copied word for word from thai-style-chilli-lime-sauce.md ("This is a vibrant, and tasty sauce for wings, chicken sandwiches, noodles, and tofu..."). Give each its own line; also drop the comma after "vibrant".
     - L20: "5 spice" → "five-spice". L19: "1-2 teaspoons ground ginger (or equivalent minced)": ground and fresh aren't equivalent by volume; "1–2 tsp ground ginger or 1 tbsp fresh".
@@ -1083,12 +1062,10 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] ! `recipes/tomato-soup.md`
     - L21: "780ml ... (2 × 400ml tins)" is 800 ml. Tags say `italian`, `cuisine: world`.
     - Otherwise clean.
-- [x] ! `recipes/triple-layered-double-pumpkin-cheesecake.md`
-    - Error: L14 "1000ml Cream Cheese (2 blocks)". Two blocks are 500 g (2 × 250 g); cream cheese isn't measured in ml.
-    - Gelatine step (9) is out of order: gelatine should bloom in cold water first, then dissolve with a little hot liquid. Adding hot water to dry gelatine clumps.
-    - Q: step 6 uses a toothpick-comes-out-clean test for a baked cheesecake layer. By then it's usually overbaked and cracked; "set at the edges with a slight wobble in the centre" is the standard cue. No water bath either.
+- [x] ! `recipes/triple-layered-double-pumpkin-cheesecake.md` (fixed 2026-09-24: 250 g blocks; gelatine bloomed first; wobble cue; per-layer components; converted to FORMAT.md)
     - L9: "Not sure where this recipe came from but it looks Yummy!" suggests it's untested, but `draft: false`. Q: made it?
-    - L35: "compliment" → "complement"; "an inch up" → "2.5 cm". L17: "1 can Pumpkin (284ml)" Q: pumpkin purée cans are usually 398 ml (14 oz); confirm. Title: "Triple layered" → "Triple-layered". Title Case ingredients. Temps "300 degrees F (150 C)".
+    - Q: "1 can (284 ml)" pumpkin: pumpkin purée cans are usually 398 ml (14 oz); confirm.
+    - No water bath; fine if the wobble cue works for you.
 - [x] ! `recipes/ts-broccoli-salad.md`
     - L20: private Google Doc link for the "Alternative" dressing. Unlink or add it here.
     - L14: prep for the broccoli isn't given (raw florets, chopped small? blanched?). L18: "1 package of slivered almonds" → weight (~100 g).

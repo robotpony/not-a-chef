@@ -34,7 +34,7 @@ I grew up on oatmeal, and love it prepared pretty much any way, but baked is bes
 
 ## Method
 
-Heat the oven to 175°C (350°F). Grease an 8×8 or 9×9 cm baking dish. Spread the nuts on a dry baking sheet and toast 4–5 minutes while the oven heats. Set aside.
+Heat the oven to 175°C (350°F). Grease a 20 cm or 23 cm (8 or 9 inch) square baking dish. Spread the nuts on a dry baking sheet and toast 4–5 minutes while the oven heats. Set aside.
 
 Whisk together the milk, eggs, maple syrup, butter, banana, vanilla, baking powder, cinnamon, and salt in a large bowl. Stir in the oats and three-quarters of the nuts. Pour into the prepared dish and smooth into an even layer. Scatter the fruit and remaining nuts over the top.
 
