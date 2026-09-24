@@ -6,18 +6,29 @@
   as .article-pagination below it) — Blowfish's default h2 (bare mt-8/
   mb-10) reads as just another heading inside the recipe's prose, not a
   break from it into suggested links. Markup otherwise unchanged from the
-  theme original.
+  theme original, except the heading also takes .block-title so it matches
+  the homepage section headings (the theme's weight/size classes are gone).
+  On recipe pages the grid uses the shared recipe card (.rcard in .rgrid),
+  same as the recipes list; essays keep the theme's card-related.
 */}}
 {{ if .Params.showRelatedContent | default (.Site.Params.article.showRelatedContent | default false) }}
   {{ $related := .Site.RegularPages.Related . | first .Site.Params.article.relatedContentLimit }}
   {{ with $related }}
     <div class="related-section">
-      <h2 class="related-heading">{{ i18n "article.related_articles" | emojify }}</h2>
-      <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-        {{ range . }}
-          {{ partial "article-link/card-related.html" . }}
-        {{ end }}
-      </section>
+      <h2 class="block-title related-heading">{{ i18n "article.related_articles" | emojify }}</h2>
+      {{ if eq $.Section "recipes" }}
+        <section class="rgrid">
+          {{ range . }}
+            {{ partial "recipe-card.html" . }}
+          {{ end }}
+        </section>
+      {{ else }}
+        <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+          {{ range . }}
+            {{ partial "article-link/card-related.html" . }}
+          {{ end }}
+        </section>
+      {{ end }}
     </div>
   {{ end }}
 {{ end }}
