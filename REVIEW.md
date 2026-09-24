@@ -1,0 +1,1258 @@
+# Content review pass
+
+Tracks a page-by-page review of everything under `content/`.
+
+- **Resume:** pick up at the first `- [ ]` item.
+- **Reference:** food-safety notes below are framed against `content/reference/food-safety-time-and-temperature.md` (draft, added 2026-09-24): safety is temperature × time, so a lower temperature is fine when the centre really holds it.
+- **Rerun with new parameters:** add a `## Pass 2` section with its criteria, copy the checklist (or regenerate it with `find content -name '*.md' | sort`), and reset the boxes. Keep Pass 1 notes for reference.
+- **Fixing:** when an issue is fixed, strike it through (`~~...~~`) or delete the bullet; when a page has no bullets left, drop the `!`.
+
+## Status
+
+Pass 1 complete: 253 of 253 pages reviewed on 2026-09-24 (9 clean, 244 with notes). Existing content was not edited; one new draft page was added (`reference/food-safety-time-and-temperature.md`).
+
+## Fix first
+
+These can hurt someone or publish something wrong. Details are under each page.
+
+**Food safety**
+
+Safety is temperature *and* time. The instant numbers (74°C poultry, 71°C ground meat) kill almost immediately; lower temperatures pasteurize just as well if the centre holds them long enough, and keep the meat juicier. 63°C held 5 minutes is enough for beef, pork, and lamb. Poultry needs longer at the same temperature (USDA: 9–13 minutes at 63°C, about 5–6 minutes at 65°C). The new draft `reference/food-safety-time-and-temperature.md` has the full tables. So the problem in the recipes below isn't a low temperature. It's a low temperature with no real hold, usually on thin pieces that cool within a minute of leaving the pan.
+
+1. ~~`recipes/turkey-burgers.md`: ground turkey to 63–65°C, then a 5–10 minute rest. Thin patties won't stay at temperature through the rest. Hold them at 65°C for 6 minutes (in a low oven) or cook them to 74°C.~~ Fixed: cook to 70°C; the climb in the pan counts toward the hold (see the new "The climb counts" section of the safety page).
+2. ~~Thin poultry pulled low with a rest instead of a hold: `pan-fried-chicken-burger` (70°C, fine if it holds ~15 sec; the carry-over claim is the only issue), `fajita-chicken-bowl` (62°C → needs ~14 min), `mayo-marinade` chicken (63°C), `simple-rice-bowls` chicken (60°C → needs ~30 min). `roast-poultry` breasts at 63°C are borderline (bone-in pieces do hold through a 10-minute rest, but 63°C needs 9–11 min); pull at 65°C for margin.~~ Fixed: thin chicken to 68°C, the burger stays at 70°C, roast breasts to 65°C with the rest as the hold.
+3. `reference/temperature-and-doneness-cheat-sheet.md`: "fall apart" targets are too low (shoulder/chuck at 80°C), and one flat 3-minute hold is right for red meat but short for poultry below 65°C. Link it to the new safety page.
+4. Storage that's too long or too warm: fresh salsas kept "a few weeks" (`ginas-tomato-salsa`, `salsa-verde`); counter cold-brew tea for 12 h; cream-cheese-frosted `paska-buns` kept unrefrigerated 3 days; `the-anything-casserole` reheated to only 65°C.
+5. Raw egg without a note: `caesar-dressing`, `white-spot-burgers` mayo.
+
+**Broken or unfinished pages that are published (`draft: false`)**
+- Template placeholder text as the intro: `greek-islands-creamy-greek-dressing`, `south-american-red-salsa`.
+- Truncated or no method: `kormaqorma` (ingredients only), `no-knead-pizza-dough` (stops mid-sentence), `jerk-chicken` (step 2 is "Re"), `bulgogi-beef` ("Cook like taco beef"), `vegan-burger-savoury-chew-gluten`, `english-muffins`.
+- Missing a core ingredient or step: `bruces-thai-redgreen-curry` (no coconut milk; paste never added), `grandma-fergusons-buns` (yeast never added), `omas-kipfels` (yeast never added), `bienenstich` (milk and topping ingredients never added), `butter-tarts` and `coconut-jam-tarts` (pastry has no water), `prosecco-sangria` (no Prosecco), `vodka-cream-sauce` (cream never added), `rocky-road-brownies` (chocolate never melted; chips unused; no bake time).
+- `essays/edgar-wright-style-cookery.md` has no frontmatter at all.
+- Flattened tables (unreadable): `reference/food-ratios-for-creating-your-own-recipes.md`, `reference/temperature-and-doneness-cheat-sheet.md` (both drafts).
+
+**Wrong numbers likely to ruin a dish**
+`fresh-egg-pasta` (4% salt), `baked-oatmeal` (8×8 cm pan), `meat-sauce-aka-american-bolognese` (100 ml = 1 tbsp), `lazy-pizza-dough-2022` (percentages ≠ grams), `pizza-dough` (10% vital wheat gluten), `butternut-squash-curry` (750 g spinach), `yam-and-sage-pasta-filling` (60 g = 2 cups), `stuffed-mushroom-caps` (units swapped), `beef-stroganoff` (a cup of vinegar), `triple-layered-double-pumpkin-cheesecake` (1000 ml cream cheese), `chef-johns-hamburger-buns` (40°C ≠ 101°F).
+
+**Privacy and sharing**
+- `welsh-cakes` names your street. `white-rock-cheesecake` says "do not share outside of our family" (it's a draft), but `carrot-cake` from the same restaurant is published with "stays in the family".
+- About 25 links to private Google Docs/Sheets, listed per page. Most can become wiki links now that the recipes live here.
+
+## Open questions (collected)
+
+Questions are inline as `Q:` under each page. Collection-wide questions that need one decision each:
+1. ~~Normalize the ~110 legacy-format recipes (numbered `Directions:`) to FORMAT.md prose, or accept both?~~ Decided 2026-09-24: convert to FORMAT.md as each page is touched.
+2. centre/litre (current usage) vs center/liter (current rule)?
+3. Family backstory blockquotes in recipe files: keep, or move to food-memory essays and link? (~15 recipes)
+4. Consolidate overlapping recipes? Candidates: 4 pizza doughs, 3 Thai red curries, 3 jerk pages, 2 breakfast sausages, 2 gyro bases, 2 hoagie rolls, 2 Asian slaw dressings, 2 Greek marinades, chashu/ramen tare, McBurgers/McDouble, beef base vs meat-sauce base.
+5. Pages with "needs testing"/"[draft]"/"work in progress" notes but `draft: false`: publish as-is, or flip to draft? (~15 pages)
+6. One spelling each: chili/chilli/chile, yogurt/yoghurt, Szechuan/Sichuan, aluminum/aluminium, green onion/scallion.
+
+## Pass 1 (2026-09-24)
+
+**Criteria**
+1. Spelling and grammar (Canadian English: colour/flavour, -ize)
+2. Style guide: `FORMAT.md` / `SPEC.md` for recipes, `FORMAT-ESSAYS.md` + blog rules for essays, `~/.claude/rules/recipe-writing-rules.md` (sentence-case titles and headings, no em-dashes, imperative method, sensory cue before time, metric with imperial in parentheses, no backstory in recipe files)
+3. Incorrect or incoherent explanations or instructions (missing ingredients, steps that reference things not listed, wrong temps/ratios, contradictions)
+
+**Conventions**
+- `[x]` reviewed, no issues. `[x] !` reviewed, issues logged below the item. `[ ]` not yet reviewed.
+- Issues are logged, not fixed. `Q:` marks a question for the author.
+- Baseline: working tree as of 2026-09-24 (includes uncommitted prep/cook-time edits).
+
+**Collection-wide findings** (patterns logged once here instead of per page)
+
+- **Two recipe formats.** 112 recipes follow FORMAT.md (`## Ingredients` / `## Method`, prose steps). About 110 are still in the legacy import format: `## Ingredients:` / `## Directions:` headings with trailing colons, and numbered steps (113 files use numbered steps). FORMAT.md says method is prose. This is one normalization job, not 110 separate notes, so per-page entries below don't repeat it. Q: normalize in a separate pass, or accept numbered steps for family/legacy recipes?
+- **Temperatures and units.** Many legacy recipes write "175C/350F", "220C/450F", or "350F" with no degree sign. The style is "180°C (350°F)". Also common: "500ml" with no space, and cups-only quantities with no metric. Only flagged per page when a value is wrong or missing, not just formatted differently.
+- **Ranges.** Hyphen ranges ("2-3 minutes") are everywhere in legacy recipes; the new-format recipes use en-dashes ("2–3"). Mechanical fix; not repeated per page.
+- **centre/litre vs center/liter.** The rules say American -er ("center", "liter"), but the collection uses "centre" 6× and "litre" 6× (and "liter" 0×). Canadian usage is centre/litre. Q: update the rule to centre/litre, or change the files?
+- **Em-dashes.** 11 files still have em-dashes (60 in edgar-wright-style-cookery.md alone). Listed per page.
+- **Wiki links.** The render hook matches titles case- and punctuation-insensitively, so case-only mismatches resolve. One link is actually broken: `[[Bruce's spice rub]]` in mauikalua-pulled-pork.md (probably meant "Bruce's poultry and pork spice rub"). About 20 links use Title Case text (`[[Onion Bhaji]]`, `[[Base Curry Gravy]]`), which displays in title case on the site; worth a sweep with the sentence-case rule.
+- **Private Google Docs/Sheets links.** Several reference pages link to private Google Docs or Sheets, or to Docs-only anchors (`#id.…`, `#ftnt1`, `#cmnt1`). Listed per page.
+- **Flattened tables from the Google Docs import.** food-ratios and temperature-and-doneness lost their tables (one cell per paragraph). Probably the same importer bug; check any other draft that came from Docs.
+- **Missing `date`.** 129 of 223 recipes have no `date` field (optional per FORMAT.md, so not an error). Noting it in case the index/sorting relies on it.
+
+## Checklist
+
+### Site pages
+
+- [x] ! `about.md`
+    - Frontmatter `description: Bruce loves to cook, our family cookbook.` reads as two fragments spliced together. Suggest "A family cookbook from someone who loves to cook." or similar.
+    - L10: "It was a lot of fun discovering technique, authentic flavours, and even learning how..." breaks parallelism; "discovering technique and authentic flavours, and learning how..."
+    - L10: "It became one of my reasons for existing, both learning to cook and cooking..." slightly tangled; "Learning to cook, and cooking for family and friends, became one of my reasons for existing."
+
+### Essays
+
+- [x] `essays/_index.md`
+- [x] ! `essays/cooking-reflections/tips-and-tricks-for-cooking-on-the-road.md`
+    - Draft, unfinished: the third Q ("How do you cook without salt and pepper?") has no answer, and "Salad dressing or water can help." is a placeholder answer.
+    - L14: "a variant of the reverse method" is undefined. This is usually called the water or steam-fry method; "reverse" suggests reverse sear, which is a different technique. Q: which did you mean?
+    - L14: "a minimum amount of food will stick" → "very little will stick".
+    - L10/18/22: "Q." Q&A labels will render as plain paragraphs; consider `##` question headings.
+- [x] ! `essays/edgar-wright-style-cookery.md`
+    - No YAML frontmatter at all (starts with `# Food Video Filming Techniques`), so it has no `date`, `draft`, or `title` and fails the essay spec. It will publish with a filename-derived title. Q: is this meant to be public? It reads as a production reference doc, not an essay; `reference/` (or out of `content/` entirely) may fit better.
+    - Title/filename mismatch: file is `edgar-wright-style-cookery`, H1 is "Food Video Filming Techniques" (title case). Sentence-case rule applies to every `###` heading here too ("Match Cut on Action" → "Match cut on action", etc.; 20+ headings).
+    - 60 em-dashes. Rule is none in reference/essay prose; most convert to colons or full stops.
+    - US spellings: L159 "behavioral" → "behavioural"; L174 "color" → "colour"; L210, L238 "humor" → "humour".
+    - L296: incoherent speeds: "Bread proof at 2× feels like impatience. Bread proof at 0.3× (near real-time)". 0.3× is slow motion, and a 2× proof time-lapse is essentially real time. Real proof time-lapses run at hundreds of times speed. Suggest "a fast 1000× time-lapse" vs "a gentle 60× time-lapse".
+    - L259: "The Cornetto freeze-frame endings" Q: I can't place freeze-frame endings in the Cornetto films; is this a specific scene, or should the reference go?
+    - L273: "Baby Driver's opening isn't the beginning of the story ... starts in medias res" Q: Baby Driver opens with a heist and runs mostly linear. Shaun of the Dead or Hot Fuzz may be a better fit, or drop the film reference.
+    - L162: "Chef burns the onions ... dish succeeds because of the caramelization" conflates burnt and caramelized. Fine as a story beat if the shot shows dark caramelization, not char.
+    - L216: "Two second hold" → "Two-second hold"; L202 "1.5 second extension" → "1.5-second".
+- [x] ! `essays/food-memories/.ideas.md`
+    - Author scratch file with no frontmatter (dotfile, so Hugo skips it). Not reviewed as content. Q: move out of `content/` so it can't leak into a build?
+- [x] ! `essays/food-memories/camp-cooking.md`
+    - L8: "kids camp" → "kids' camp"; "cut up veg" → "cut-up veg".
+    - L8: "¼ pound of beef": metric rule → "115 g (¼ lb) of beef" (or leave as-is if memory pieces keep period units; see collection-wide Q).
+    - L10: "realised" → "realized" (-ize rule; also in the-smells-of-india.md).
+    - L10: "the veg tasted like the rest of the pack" → "pouch" (pack/pouch mixed); the phrase itself is unclear. Maybe "the veg soaked up the beef and butter"?
+    - L12: run-on with three "and" clauses; split after "safe to eat."
+    - L16: "hotdogs" → "hot dogs" (and in L16 again).
+    - L18: brand names: "corn flakes" → "Corn Flakes", "rice crispies" → "Rice Krispies", "fruit loops" → "Froot Loops", "cheerios" → "Cheerios".
+    - L20: semicolon before the list should be a colon: "...not what we ate: time at the lake, ..."
+    - L22: "evolved into something more equally about the food and the fun" is tangled; "became as much about the food as the fun".
+    - L22: "The foods we made evolved" → tense mismatch with "we make every year"; "my best memory is in developing menus" → "my best memories are of planning menus".
+    - Q: close lands on buying too many groceries. CLAUDE.md says food memories should anchor a lesson; is the lesson the foil-pouch "simple pleasure" idea from L10? If so, the ending could return to it.
+- [x] ! `essays/food-memories/garbage-plates.md`
+    - L8: "brand named KD" → "brand-name KD".
+    - L10: "aluminium" is British; Canadian usage is usually "aluminum". Q: preference? (also in slick-spaghetti).
+    - L10: "cooked the noodles ..., draining it" → "draining them".
+    - Otherwise clean; strong close.
+- [x] ! `essays/food-memories/slick-spaghetti-with-a-hint-of-oregano.md`
+    - L8: "puréd" → "puréed".
+    - L10: "homoeopathic" → "homeopathic" (British spelling; minor).
+    - L12: "to drop a 1 pound package of mince" is missing where it's dropped ("into the pot" / "into the hot pot"); metric rule → "450 g (1 lb)".
+    - L12: "stored the paper wrapped in stamped packages" is garbled → "stored the stamped, paper-wrapped packages".
+    - L16: "A small amount of salt and pepper were added" → "was added".
+    - L18: "use a lower fat beef mixture and emulsify the oil into the beef mixture" repeats "beef mixture"; "use leaner beef and emulsify the fat into the sauce".
+    - L22: "space-aged microwave" → "space-age".
+    - Q: like camp-cooking, it ends on a side memory (friend's microwave). Is there a lesson to close on, e.g. the oil slick → why you now emulsify?
+- [x] ! `essays/food-memories/the-dutch-deli.md`
+    - L8: "second and third generation Mennonites" → "second- and third-generation".
+    - L10: "some ravel" → "some gravel". "back yard" vs "backyard" elsewhere; pick one. "backing on a dyke" → "backing onto a dyke".
+    - L12: "Métis, or mixed-blood. A muggle." Q: "muggle" (a non-magical person) doesn't fit here. If the Harry Potter reference was meant to be "mudblood", that's a slur in-universe, so check that's the intended weight. Either way this line needs your call.
+    - L14: "swiss cheese" → "Swiss cheese" (also L16). "a good deli, which these days are difficult to find" → "good delis, which are hard to find these days".
+    - L16: typos: "constrast" → "contrast", "Turkeys" → "turkeys", "pasturizing" → "pasteurizing", "sprouds" → "sprouts". "moist, and deeply flavourful" drop the comma.
+    - Q: the title says Dutch deli, but the text never says the deli was Dutch. Worth one clause in L14.
+- [x] ! `essays/food-memories/the-smells-of-india.md`
+    - L10: "grandparent's careers" → "grandparents' careers"; "2 bedroom" → "two-bedroom".
+    - L12: comma splice: "It wasn't just one family moving into that house, it was five families." → "Five families moved into that house, not one." (also avoids the not-X-but-Y pattern).
+    - L14: "flat bread" → "flatbread".
+    - L16: "I didn't know it at the time, but I think I realised" contradicts itself; "Even then, I think I realized...". "realised" → "realized".
+    - Q: L16 says "the food of southern India", but paneer, a tandoor on the deck, and charred flatbread point to Punjabi (northern) cooking, which also fits a farming family in the Fraser Valley. Should this be northern India / Punjab?
+- [x] ! `essays/planning-essays/meal-planning-bruces-take.md`
+    - Draft (marked "Rambly + In progress"); ends mid-list at "Roast the veg".
+    - L12: `###` heading with no parent `##`, and a trailing colon. → "## An example week for 2–4 people".
+    - L17: "1.36kg/3lbs" → "1.36 kg (3 lb)".
+    - L22: "heads of garlic garlic" duplicated word. L22–25: capitalized list words mid-line ("Onions", "Robust", "Starches") → lower case.
+    - L31: "spatcocked" → "spatchcocked".
+    - L34: "(in any style you wish; Indian, French, etc.)" → colon, not semicolon.
+    - L38: "Braise the ground beef" Q: braising ground beef is unusual; do you mean brown-then-simmer? Worth saying what "braise" means here.
+    - L49: "(for 2-3 days at time)" → "at a time".
+- [x] ! `essays/technique-essays/how-to-find-great-recipes.md`
+    - Draft; ends in a "Notes:" stub.
+    - L10: "For example, It's" → "it's". "the approach.." double period.
+    - L12: "When a recipe doesn't include ... they force" → "it forces". "distinct styles of variations of a type of recipes" → "distinct styles or variations of a type of recipe". "Low quality" → "Low-quality".
+    - L16: "If I know a recipe has a dark roux or needs a soffritto is a hint at how and shortcut for how it will go together." is garbled. Suggest: "Knowing a recipe starts with a dark roux or a soffritto tells me how it will go together."
+    - L16: "One of the best things about..." is on the vague-intensifier list; start with the claim.
+    - L18: "a base of savoury" → "a savoury base"; "a cured pork" → "cured pork".
+    - L20/26: hyphenate compound modifiers: "North American-style", "high-end", L22 "carbonara-style".
+    - L22: "different than" → "different from"; "expectations on the results" → "of the results".
+    - L24: "handed down to him for generations" → "handed down through generations". "mostly delicious and edible" reads backwards; "edible and often delicious".
+    - L26: "As I've learned more ..., I realized" → "I've realized".
+    - L28: "scotch bonnet" → "Scotch bonnet".
+- [x] ! `essays/technique-essays/why-ingredients-matter-in-soup-stock.md`
+    - Draft; ends mid-section.
+    - L10: "While the premise is simple there is a lot of well meaning" → "While the premise is simple, there is a lot of well-meaning".
+    - L16: incorrect link: the "sulphur-like" link points to phenylthiocarbamide (a lab compound used in bitter-taste genetics tests). Brassica bitterness comes from glucosinolates and their sulphur breakdown products. Suggest linking https://en.wikipedia.org/wiki/Glucosinolate.
+    - L14 vs L23: "generally or always avoid" then "some chefs get great flavour out of roasted cabbage" is fine as an exception, but "Generally, and with care and balance," is awkward; "With care, some chefs...".
+    - L25: "### Examples:" drop the colon; `###` under a `##` is fine.
+    - L29–31: "Carrot tops" and "Carrot greens" are usually the same thing, and the "tops" row says "peel", which only fits the crown end of the root. Q: did you mean the crown (stem end) for "tops"? If so, say "carrot crowns / stem ends".
+    - L33: typo "Can be better or gamey" → "bitter".
+    - L37: "Another class ... are those" → "is those"; list ends with a dangling "or sweet." fragment. Also "fennel root" → "fennel bulb".
+    - L41: "kombu (which tastes better under the boil)" → "below a simmer"; the list breaks at "and acids tend to do poorly" (needs its own clause and an explanation).
+
+### Reference
+
+- [x] `reference/_index.md`
+- [x] ! `reference/base-recipes-for-weeknight-cooking.md`
+    - L10: "Less common to the home kitchen is to do what restaurants do" is awkward; "Less common at home is what restaurants do: prepare sauces and bases..."
+    - L12: "the art of canning both requires investment and practice, as well as specialized recipes" → "canning takes investment, practice, and specialized recipes".
+    - L14: doubled "that": "I've found that by following ..., that I can" → drop the second.
+    - L20, L42: heading case and punctuation: "Proteins, Stews/gravies, Stocks and sauces" → "Proteins, stews, stocks, and sauces"; "And in my fridge: Pickles. Dressings/sauces, Prepped veg" → "In the fridge". (See also wiki-link check in collection-wide findings.)
+    - L44–45: both pickle links point to the same private Google Doc heading. Readers can't open them. Link to recipes or unlink.
+    - L58, L73: "American style", "Asian style" → hyphenate ("American-style").
+    - L67, L84: "chilli" vs "chili" (used elsewhere in the collection). Pick one.
+    - L71: "Szechuan peppers" → "Sichuan peppercorns"; "5 spice" → "five-spice" (also L75).
+    - L78: "apply the reverse sear method ... by heating it on high" misuses the term. Reverse sear is low heat first, then a hard sear on a whole cut; this is just frying off the moisture. Suggest "fry it on high to brown it". "500ml and 250ml" → "500 ml and 250 ml".
+    - L90: "super power" → "superpower"; "take out style" → "takeout-style"; "These little flavour bombs." is a sentence fragment.
+    - L92: "more flavourful than a traditional curry dish, as it's more layered" states opinion as fact. The next sentence ("I am biased") hints at it; fold them together: "To me it tastes more layered..."
+    - L100: "weaponize my love of cooking occasionally with my laziness" is tangled; "spent" → "spend" (present habit).
+- [x] ! `reference/burger-night-2022.md`
+    - L16: Pickles cost doesn't compute: $15.99 per 4 L at 5 g/portion is about $0.02, not $0.08. Q: was the price per a smaller jar?
+    - L23: Bacon at $2.05/kg is implausibly cheap (2022 retail was ~$15–25/kg). Q: typo for $20.50/kg? That would make the bacon portion ~$1.03 and change the Cheese + Bacon row.
+    - L31–38: column labels are wrong. "@ 20% margin" is cost ÷ 0.20, a 20% food-cost target, and "True margin" is cost ÷ price, i.e. food-cost %. Suggest "Price at 20% food cost" and "Actual food cost %". "Retail target" is empty in every row; drop it.
+    - L25: Potato 0.002 × 175 = $0.35, table says $0.37 (rounding in unit price, probably fine).
+- [x] ! `reference/chili-costing-2022.md`
+    - Arithmetic checks out for the food total ($56.11), loaded total ($176.11), and per-portion figures.
+    - L14–29: "Qty" has no units (1 what of beef?). Add package size or weight.
+    - L51: dry-bean saving of $11.66 equals the entire canned-bean cost, i.e. dry beans treated as free. Q: net of dry-bean cost?
+    - L52: "saves ~$7.24/h" is a rate, not a total, so the L54 total can't be reproduced. The reductions shown don't explain the $83.24 drop to $92.87. Q: what's in that figure (fewer labour/overhead hours from the pressure cooker?)
+- [x] ! `reference/flour-protein-content.md`
+    - "Extra gluten" column arithmetic is right as protein deltas, but L20 says it's how much vital wheat gluten to add. VWG is only ~75% protein, so matching the delta takes about 1.33× the listed amount (e.g. +2.3 g protein ≈ 3 g VWG). Either relabel the column "protein gap" or convert it.
+    - L18: em-dash. Also Q: the claim that finer milling lowers practical gluten strength. 00's softer performance usually comes from the wheat (soft wheat, lower-quality gluten) rather than grind size. Want to keep, soften, or source it?
+    - L8: "Bread flour (14g/100g) is the reference point" is fine, but note Canadian bread flours vary 13–14.5%; worth a "typical" qualifier.
+- [x] ! `reference/food-ratios-for-creating-your-own-recipes.md`
+    - Broken formatting (largest issue in the reference section): every ratio table was flattened on import into one value per paragraph (L41–91, L97–147, L155–205, L234–276). Unreadable as published. The tables need rebuilding as Markdown tables (Ingredient | Ratio | % | Example).
+    - Units wrong in the example columns: salt/MSG "~2mg", "2.5mg", brine "50mg", "10mg" etc. should be grams (2 g of salt, not 2 mg).
+    - Brine numbers disagree with each other: table ratio 13.5 : 0.25–0.75 water:salt is 1.9–5.6%, the % column says 2.5–7.5%, and the note at L207 says 5–8%. Example column pairs 1000 ml water with "75ml" of salt (volume, and 7.5%). Pick one range and make all three agree.
+    - L228: incorrect: "Lower pH can also be used to velvet non-minced meats" sits under the higher-pH bullet, and baking-soda velveting raises pH. Should read "Higher pH (baking soda) is also how you velvet sliced meats."
+    - L280: "1kg of chicken would need 10g of dry brine spice rub" contradicts the 1% salt rule on L278: it's 10 g of salt, and the rub total would be higher.
+    - L8: title repeated as a body line; delete. L10: "sweater" → "sweeter"; "or it's used to adjust" → "or adjust for". L213: "brining longer both makes foods" dangles; the list that follows isn't a both/and.
+    - L94: "worcestershire" → "Worcestershire"; L223 "vienna" → "Vienna"; L225 "asian" → "Asian"; L232 "southern style" → "Southern-style".
+    - L12, L55, etc.: six links to a private Google Sheet. Readers can't open them. Q: publish the worksheet, or drop the links?
+    - Draft with a TODO section; fine to stay `draft: true`.
+- [x] ! `reference/greek-dressing-research.md`
+    - L8: title repeated as a body line ("Creamy Greek dressing research"). Q: the page is mostly about non-creamy vinaigrette; which title is right?
+    - Typos: L12 "lethicin" → "lecithin"; L31 "verus" → "versus"; L99 "processer" → "processor"; L44 "ratios varies" → "vary"; L46 "acidy" → "acidic"; L23 "1-2 clove" → "cloves"; L10, L32 "greek" → "Greek"; L111 "dijon" → "Dijon"; L98 "Honey" → "honey".
+    - L12 vs L21–26: says the spices are 1:1:1:1 (tsp per 500 ml), but the list right below is 2 : 1.5 : 0.75 tsp. One of them is wrong.
+    - L44: calls 0.75:1 oil:acid the least common, but the Restaurant and Smaller samples on this page are both 0.75:1.
+    - L87–99: "Creamy 2" is a copy of the Restaurant recipe with two parentheticals, and has nothing creamy in it. Q: was a different recipe meant to go here?
+    - L78: "Creamy Greek Style Dressing" is a title that ended up as a list item; L79 title-case "Extra Virgin Olive Oil".
+    - Headings end in colons ("## Main ratio:", "#### Restaurant:" etc.); drop them. Mixed unit spellings in quoted samples (Tbs, TBSP, Tablespoon) are fine if they are verbatim quotes, but the sources aren't credited. Q: add source links?
+- [x] ! `reference/growing-sprouts.md`
+    - Unfinished: L22 trails off ("Key is to hydrate the …"); "Harvesting" (L50) has no content.
+    - L8: title repeated as body text; delete.
+    - L35: broken link `[Cleanup notes](#id.5clel2ai7ykx)` is a Google Docs anchor. Use `#cleanup` or plain text.
+    - L36: garbled: "Install that the red syphons ... or they may not draining" → "Install the red siphons on the drain tubes. Don't press them in too far or they won't drain well."
+    - L14: comma splice: "Most seeds come with instructions, follow these..." → "Follow the seed and grower instructions."
+    - "syphons" (L29, L36, L48): "siphons" is the standard Canadian spelling; Q: or is "syphon" the product's own term?
+    - Labels "Tips:", "Germinating:", "Watering:", "Cleanup:" are bold-less colon labels; make them `###` headings (sentence case) so the in-page link works.
+- [x] ! `reference/jaydas-birthday-dinner-menu.md`
+    - Menu and prep table disagree: the table has Poutine, Mac, and Angel food cake, which aren't on the menu; "Chocolate mint wafer" (menu) vs "After 8 w/mint" (table); "Thai curry" vs "Red Thai curry".
+    - L15: "S'more's drink" → "S'mores drink".
+    - L40: Chocolate fountain prep (Wednesday) comes before its shopping day (Thursday). Q: swapped?
+    - Q: no date or year. Add one so the page makes sense later (and to match the other event pages, which carry a year).
+    - Q: "Mac" (L32): mac and cheese? Spell it out.
+- [x] ! `reference/jerk-marinade-adapted-from-serious-eats.md`
+    - Unfinished: an ingredient list with no method ("Directions" heading is empty at L44). Ingredients are separate paragraphs, not a list.
+    - L8: title repeated. L10 "Notes for a recipe update." Q: which recipe? `jerk-chicken.md` exists; should this merge there as a Variation and this page go?
+    - L38: "(see note)" refers to a note that isn't here.
+    - L40–42: the allspice berries and bay leaves are for smoking over the grill in the original. Without the method they read as marinade ingredients (3 dozen bay leaves in a marinade would be wrong).
+    - US-only units ("3-inch", "4 to 4 1/2 pounds"); metric rule → "8 cm (3 in)", "1.8–2 kg (4–4½ lb)".
+    - No link to the source; add the Serious Eats URL in `source:` (currently `family`).
+- [x] ! `reference/nicola-2018-food-planning.md`
+    - Grocery list misses items the plan needs: pierogies (Friday dinner) and marinara (Saturday dinner) aren't listed.
+    - L14: "Breakfast snack, see Friday" is unclear. Q: same as Friday's breakfast?
+    - L34: "Ms. Vickie's" → "Miss Vickie's"; "M&Ms" → "M&M's".
+    - L8: Q: "Nicola" is Nicola Lake? One word of context helps readers outside the family.
+- [x] ! `reference/sodium-citrate-ratios.md`
+    - Q: most of the page appears to be copied verbatim from the linked Reddit post, including its US spellings ("flavor", "molded"). If it's ever published, rewrite it in your words, attribute it, and condense it. The same "choose flavours / pick a liquid / 2–3% citrate" paragraph repeats four times (L26–56).
+    - Suggest collapsing it to one table: use | liquid % of cheese weight | result, plus one line on citrate (2–3% of cheese + liquid weight).
+    - L12–18: hyphens used as separators ("0% to 35% liquid - firm") → colons.
+    - L24, L34, L42, L50: pseudo-headings in Title Case as plain paragraphs ("Melty Cheese") → `## Cheese sauce`, etc.
+    - L54: "up to 35% less firm slice" → "up to 35% for a softer slice". L56 missing final period.
+- [x] ! `reference/soft-sandwich-bun-research.md`
+    - Eggs double-counted: the dough table lists 3 eggs "(2 in dough, 1 for wash)", and Toppings lists another "1 egg + water for eggwash". Keep one.
+    - Metric column for yeast/salt/sugar is millilitres ("7ml", "10ml", "44ml"). For baking these should be grams: ~4.5 g instant yeast, ~6 g kosher salt (Diamond) or ~10 g (Morton), ~38 g sugar. Q: which kosher salt brand?
+    - L29: "Combine ... into a sticky dough. (~10 min)" doesn't say how: knead by hand, mixer, how you know it's done (windowpane?).
+    - L37: the "ramekin of water ... thicker crust" tip is a baking tip filed under Storage; move it to step 5.
+    - L23: em-dash; "eggwash" vs "egg wash" used inconsistently (pick "egg wash").
+    - L8: wiki link `[[Chef John's Hamburger Buns]]` is title case; the recipe title is sentence case (see wiki-link check in collection-wide findings).
+- [x] ! `reference/temperature-and-doneness-cheat-sheet.md`
+    - Broken formatting: the doneness table was flattened on import into one cell per paragraph (L8–144). Unreadable as published. Rebuild as a Markdown table (Cut | Medium rare | Medium | Well | Fall-apart). Same import problem as food-ratios.
+    - Footnotes are Google Docs anchors (`#ftnt1`), which won't link in Hugo. Convert to Markdown footnotes or a Notes list.
+    - Incorrect "fall apart" targets: pork shoulder 80°C, beef chuck 80°C, and dark meat 75°C are too low for collagen breakdown. Pulled pork and braised chuck usually run 90–95°C (195–203°F); dark meat gets tender from ~80–85°C. As written, cooks will stop early and get tough meat.
+    - Footnotes 1 and 2 contradict each other ("Heat to ... plus 5 min rest per kilo" vs "Heat at ... including 5 min rest per kilo"), and L148 gives a third rest rule (~5% of cook time). Pick one.
+    - Safety note: the reduced temps are right in principle (safety is temperature × time), and a 3–5 minute hold at 63°C is enough for beef, pork, and lamb. For poultry the hold is longer at the same temperature (USDA: ~4–5 min at 65°C, 9–13 min at 63°C, 26–32 min at 60°C). The flat "3 minutes" understates the low end for chicken and turkey. Link to `reference/food-safety-time-and-temperature.md` (new draft) for the tables.
+    - L148: "maximise" → "maximize". L147: "more rare" → "rarer"; "bottom roasts" → "bottom round roasts"? L149: "Fish and seafood does" → "do". L162: "AHI TUNA" → "ahi tuna"; note that "sushi grade" is a marketing term, not a regulated grade.
+    - L150: good explanation; could name the cause (haemoglobin from the marrow) in one clause.
+- [x] ! `reference/thanksgiving-2021.md`
+    - L12: typo "Jalapeno poppersx" plus a Google Docs comment anchor `[\[a\]](#cmnt1)` whose note ("No oven time", L87) is broken in Hugo. Suggest "Jalapeño poppers (no oven time)".
+    - L20: "brussel" → "Brussels"; L12, L23 "Jalapeno/jalapenos" → "jalapeño(s)".
+    - L23: private Google Doc link for mac and cheese; link `[[Baked mac & cheese]]` (recipe exists: baked-mac-cheese.md) instead. Q: "chez" intentional (vegan cheese joke) or typo?
+    - L18: "BTB" is undefined; "Better Than Bouillon".
+    - Headings mix `####` and `###` and end in colons ("#### Pregame snacks:", "### The plan:"). Day labels in the plan are plain paragraphs; make them `####` so the plan scans.
+    - L45–49: "Sunday before" is listed ahead of "Week before". Swap, or confirm "Sunday before" means the Sunday of the week before.
+- [x] ! `reference/the-aldersons-epic-12-days-of-pizza.md`
+    - Title: "The Alderson’s" → "The Aldersons’" (plural possessive; the family, not one Alderson).
+    - L21: the first pizza name repeats as a dangling heading with no description. Q: were descriptions for each pizza planned, or should this line go?
+    - L23: "that time where" → "that time when"; "Pepperidge farm" → "Pepperidge Farm".
+    - L10: "cheesus" Q: typo or pun (for vegan cheese?).
+    - L14: "Mario, toad & Luigi" → "Toad". L17: "shepherds pie" → "shepherd's pie". L18: stray comma "(poutine pizza,)".
+    - List titles are in title case on purpose (they're names); fine to leave.
+
+### Food log
+
+- [x] ! `the-food-log/2026-September.md`
+    - No frontmatter (no title/date). Q: does the food log section have its own layout that doesn't need it, or should it get `title: September 2026`?
+    - Obsidian `#todo` tags (L5–7) will render as literal text on the site.
+    - L7: "Japanese curry #todo" Q: done? `pressure-cooker-japanese-curry.md` exists and links the same source.
+    - L15: "the woks of life" → "The Woks of Life".
+    - Goulash (L24–52): "leak" → "leek"; "msg" → "MSG"; "add a 100ml of water" → "add 100 ml"; "the stock stock" duplicated.
+    - Goulash: incoherent: shallot is one of the "4 onions" in the list, but the method adds "garlic and shallots (if using)" separately. Worcestershire (15 ml) is listed but never used in the method.
+    - Goulash: "Add the spices" never says which: paprika and fennel/caraway, presumably; name them.
+    - Q: goulash.md already exists as a recipe. Should this log version be merged into it as a variation?
+
+### Recipes
+
+- [x] `recipes/_index.md`
+- [x] ! `recipes/adobo-seasoning-mix.md`
+    - L35: "Mix used for meatballs; described as very good." Passive and vague (described by whom?). "Used for meatballs; very good. A slightly wet panade worked well."
+- [x] ! `recipes/al-pastor-marinade-pantry-hack.md`
+    - Spelling of chile varies within the file: "chilis" (L15), "chilli" (L15), "chillies" (L21), "chili" (L58). Pick one collection-wide (see chili/chilli note).
+    - Incoherent: Toppings lists "roasted (pork fat) pineapple, diced", but step 7 puts sliced tinned pineapple and its juice on before baking. The tin of pineapple isn't in the ingredients.
+    - L47: "It should taste sweet" but there's no sweetener unless you add the optional roasted peppers. Q: is sugar or pineapple juice meant to be in the marinade?
+    - L30: stray closing paren; L31 "2 teaspoon" → "2 teaspoons"; L35 trailing comma; L47 missing final period.
+    - Mechanic is backstory (why you made a pantry version). The mechanic is the technique: toasted chile powders bloomed in stock stand in for rehydrated whole chiles. Move the backstory to the intro.
+    - Heading "## Directions" in an otherwise new-format file → "## Method".
+- [x] ! `recipes/almond-chocolate-cake.md`
+    - Clean. Metric only: "23cm" → "23 cm (9 in)"; oven "170°C fan (190°C conventional)" could add "(375°F)".
+    - Q: cocoa % for "dark chocolate"? It changes sweetness a lot with 200 g brown sugar.
+    - `cuisine: world` is unusual; other recipes use a region or leave it out.
+- [x] ! `recipes/apple-berry-almond-scones.md`
+    - Title Case on almost every ingredient ("650g Flour", "Caster (Bakers) Sugar", "White Sugar", "Mortar and Pestle") → lower case.
+    - L27: typo "Icing Sugar, to dues" → "icing sugar, to dust". L25: "Black Berries" → "blackberries".
+    - Missing ingredient: step 8 brushes with "a beaten egg", but both eggs go into the dough at step 5. Add "1 egg, beaten, for egg wash".
+    - L37: "Using a rolling pin to roll out the scone mixture into about 1-inch thickness" is a fragment → "Roll the dough to 2.5 cm (1 in) thick." No yield: how many scones?
+- [x] ! `recipes/arroz-rojo-mexican-red-rice.md`
+    - L14: "leftovers burritos" → "leftover burritos"; "Tex-Mex style" → "Tex-Mex-style"; "a great addition ... a great filler" repeats "great".
+    - L29: "## Optional garnish (before covering):" drop the colon.
+    - Numbered steps in a new-format recipe (FORMAT.md says prose).
+    - L24: "Serrano" → "serrano".
+- [x] ! `recipes/asian-slaw-dressing.md`
+    - L13 and `cuisine: asian` → "Asian".
+    - Otherwise clean.
+- [x] ! `recipes/autumn-glow-salad-with-lemon-dressing.md`
+    - Typos: L18 "freemen" → "freekeh"; L22 "sried" → "dried"; L32 "agavé" → "agave"; L51 "loved this it" → "loved it".
+    - Incoherent: the apple is chopped (step 3) and the cranberries and seeds are listed, but none of them are ever added. Step 4 "toss everything together" should name them. Salt and pepper for the veg (step 2) aren't in the ingredient list.
+    - L47: "The picture below" but the image is above the Notes.
+    - L39: "218 degrees C (425 F)" → "220°C (425°F)".
+    - Headings: "## For the Salad:" / "### For the Lemon Dressing:" are title case with colons, and the levels are uneven → "## Salad", "## Lemon dressing".
+    - `## History` isn't a FORMAT.md section and is backstory; it belongs in the intro or an essay. Also both `source: family` and `source_url:`; FORMAT.md puts the URL in `source`.
+- [x] ! `recipes/avocado-salad-dressing.md`
+    - L44: garbled: "Limit and blending to prevent olive oil and herbs from becomming bitter." → "Blend briefly; over-blending turns olive oil and herbs bitter." ("becomming" typo.)
+    - L27: "4g salt and black pepper" lumps two ingredients under one weight. Q: 4 g salt plus pepper to taste?
+    - Yield: the ingredients total ~195 g, but `servings` says "makes ~135ml". Q: which is right?
+    - `tested: "1"` is a non-standard field (fine per the open schema, but it's the only recipe with it?).
+- [x] ! `recipes/baguettes.md`
+    - Tag typo `techniquess`, which creates its own "Techniquess" tag page. → `technique`.
+    - L16: "Paul Holywood" → "Paul Hollywood"; "This recipe and method is" → "are".
+    - Timing contradicts: `rest_time: 5-24h` implies an optional cold retard, but the method never mentions one, and L28 says "Start to finish takes 5-6 hours". Q: is there an overnight fridge option to add?
+    - Mechanic is a description plus credits, not a mechanic. The mechanic is 75% hydration + narrow shape + steam = open crumb and crisp crust. Move the credits to Notes or `source`.
+    - L36–38: "let rest 15 minutes" then "Proof for about an hour" in the next paragraph. Say whether the hour includes the 15 minutes, and covered or not.
+- [x] ! `recipes/baked-mac-cheese.md`
+    - Incoherent order: step 2 puts the drained noodles in the baking dish, step 5 combines noodles and sauce "in the pot", and step 6 layers them into "an oven dish". Pick one flow.
+    - Duplicate/conflicting MSG: "MSG 1.5%" (L29) and "10g MSG (optional)" (L31). 1.5% of the batch would be ~30 g, far more than normal (0.1–0.5% is typical). Q: what should it be?
+    - L73: incorrect: "A mourney sauce adds milk." Béchamel is roux + milk; mornay is béchamel + cheese. L71 is fine. Suggest one line: "Roux is flour and fat, 1:1. Add milk for béchamel; add cheese to béchamel for mornay."
+    - Typos: L11 "Mac & Cheese" → "mac and cheese"; L52 "Carnivor" → "Carnivore"; L58 "littly thickened" → "lightly"; L64 "Tempah or Bacon" → "tempeh or bacon"; "parmesan" → "Parmesan".
+    - L58: broken Google Docs comment anchor `[\[a\]](#cmnt1)`. L35: private Google Sheet link.
+    - L48: Variations sits between the ingredients and the method; move it after Method. L16, L37, L41, L54 headings end in colons.
+    - L65: "175-190C or 350-375F" → "175–190°C (350–375°F)".
+- [x] ! `recipes/baked-oatmeal.md`
+    - Error: L37 "8×8 or 9×9 cm baking dish". Those are inch sizes; 8 cm is a ramekin. → "20 cm or 23 cm (8 or 9 in) square baking dish".
+    - `source: adapted`: adapted from what? Add the source or use `original`.
+    - Otherwise clean and well structured.
+- [x] ! `recipes/base-curry-gravy.md`
+    - Tags say `vegan, dairy-free`, but the recipe uses 250 ml cream ("or coconut cream"). Either drop the tags or make coconut cream the default.
+    - L22: stale HTML TODO says gingergarlic-paste.md is orphaned, but that recipe exists now. Replace the comment with a wiki link to it.
+    - L32: "Spices:" as a bare label → `#### Spices` (the FORMAT.md grouping label).
+    - L13: "restaurant style" → "restaurant-style".
+- [x] ! `recipes/basic-beans-and-lentils.md`
+    - L14: em-dash. Also Q: "[soaking] doesn't reduce gassiness." Studies are mixed; soaking and discarding the water does remove some of the oligosaccharides. Soften to "does little for gassiness"?
+    - `cook_time: 5-25m` contradicts the table, where stovetop beans take up to 120 min.
+    - "stove-top" (L26) vs "Stove top" (table) → "stovetop".
+    - L39: the kidney-bean note is correct and important. Consider promoting it into the method, since slow cookers are a common failure point.
+    - `cuisine: global` lower case (others use "Global"/"World"); pick one value.
+- [x] ! `recipes/basic-chicken-ramen-stock.md`
+    - Error: step 5 adds bonito and kombu "to strained solids", and L27 says "strained ingredients". They go into the strained stock. As written, a cook would steep the dashi in the discarded bones.
+    - Typos: "carcases" → "carcasses"; "sababushi" → "saba-bushi"; L43 "straining the sink" → "straining in the sink"; "Chintan style" → "chintan-style".
+    - L36: "pressure cooker ingredients" refers to a heading called "Base stock"; use the same name. Heading colons (Base stock:, Dashi:, Method:).
+    - Dashi quantities: "Bonito" with no amount. Q: roughly how much (e.g. 20 g)?
+- [x] ! `recipes/basic-ramen-tare.md`
+    - Step 1 "Make marinade" never says how: combine water, sake, soy, mirin, sugar, garlic (and heat to dissolve the sugar?).
+    - Step 3: no time guidance. At a 110°C oven, belly or butt to 93°C is many hours. Q: rough time (e.g. 3–4 h), and covered or uncovered?
+    - L16: "Salt and pepper the pork to taste" is an instruction in the ingredient list → "Salt and pepper" or "[[Bruce's poultry and pork spice rub]]" (named as "my standard pork/chicken rub"; link it).
+    - L11: "ramen style pork" → "ramen-style". Headings end in colons. L22 double space.
+- [x] ! `recipes/beef-base.md`
+    - Heading levels disagree: "### Italian style, add:" vs "## Taco style, add:". Both should be the same level, and without colons.
+    - L20 lists "Accent", but step 2 says "MSG". Same thing; use one name (collection uses both, see beef-stew).
+    - L26: "1 teaspoons" → "1 teaspoon". L34: "aleppo" → "Aleppo". L35: "jalapenos" → "jalapeños".
+    - L51, L56: unclosed paren "(and some red wine if desired." ×2.
+    - L57: contradicts itself: "20-30 minutes" then "You can cook this for as long as 30 minutes". Q: the second probably meant a longer time (45?).
+    - L57, L66: "6L/qt" → 6 L is about 6.3 qt; say "6 L (6 qt)".
+    - L47: "minimise" → "minimize". L11: "for tacos, salads, in soups, casseroles" → "for tacos, salads, soups, casseroles".
+    - L39 vs L62: the intro says the pressure method is fastest (under 30 min); Notes say it takes about as long once you fry it. Say "fastest if you use it wet".
+- [x] ! `recipes/beef-stew.md`
+    - Missing ingredient: L44 seasons with "smoked paprika if using", which isn't in the list.
+    - The "Optional flavour enhancers" (Accent, soy, fish sauce) are never used in the method; say when to add them (with the stock?). Heading typo "enahancers".
+    - L26: "crimini" → "cremini"; L14: "along side" → "alongside"; "classic style" → "classic-style"; L54 "Depressurise" → "Depressurize".
+    - Q: 30 min at high pressure for 4 cm chuck cubes is on the short side (35–45 min is typical for spoon-tender). Tested?
+- [x] ! `recipes/beef-stock.md`
+    - Missing step: tomato paste (and shallot, garlic) are in the ingredients but never used. Q: roast the paste on the bones in step 2 (usual), or add it with the water?
+    - L15: "kneck" → "neck"; "side cut" Q: is this a butcher term you use? Otherwise "marrow or knuckle bones".
+    - L32: "suc" → "fond". L11: "bones leftover" → "bones left over". L25: "Veg oil" → "vegetable oil". L31: "rough cut veg" → "rough-cut".
+    - L38: "(or using a cooling paddle)" → "or use"; missing final period. "## Notes:" colon.
+- [x] ! `recipes/beef-stroganoff.md`
+    - Error: Authentic version uses "250 ml white wine or white wine vinegar". A cup of vinegar would make it inedibly sour. Q: 1–2 tbsp vinegar as the alternative?
+    - The Fancy version lists no stock, but the shared method adds stock twice. Butter is listed (45 g) for two versions, but the method only browns in oil.
+    - Nostalgic L29: "8g (2 tablespoons) mild paprika". 2 tbsp paprika is ~14 g; 8 g is a little over 1 tbsp. One number is wrong.
+    - Tenderloin: the ingredient says "sliced on the bias after cooking", and the method says "add tenderloin sliced at serving", but no step cooks it (sear whole, rest, slice?). Spell out the fancy path.
+    - Heading hierarchy is inverted: "### Ingredients" sits above three "##" version headings. Make the versions `##` and drop the `###`, or per FORMAT use `####` labels.
+    - "crimini" (L38) vs "cremini" elsewhere. Pressure-cooker times are under "To serve"; move them to the method or Notes.
+    - Q: "Authentic (1950s style)". Stroganoff is 19th-century Russian; the 1950s version is the North American one. Rename "Classic" or "Mid-century"?
+- [x] ! `recipes/beetroot-and-chickpea-hummus.md`
+    - L31: beets are tossed "in a little oil", which isn't listed (minor). Otherwise clean.
+- [x] ! `recipes/beetroot-dip.md`
+    - L17 says "drained and rinsed" but Notes say rinsing is optional and not rinsing works better here. Make the ingredient "drained".
+- [x] ! `recipes/bienenstich.md`
+    - Incoherent cake method: the scalded milk/margarine/vanilla (step 1) never goes into the batter, and there's no "pour into the pan" step. Step 2 "Combine with dry ingredients" then step 3 bakes.
+    - Incoherent topping: only sugar and margarine are melted; the whipping cream, coconut, and almonds are never added.
+    - Filling step 1 "Beat until firm" doesn't say what (cream, sugar, and pudding mix together).
+    - L12 promises "Quick ingredient list is condensed at the bottom of the page", but there isn't one. Delete the sentence.
+    - Typos: L12 "who delicious" → "how delicious"; L14 "make head & tails" → "make heads or tails"; L50 "untill"; L58 "as it it browns".
+    - Title Case in ingredients ("5 Eggs", "Whipping Cream", "Instant Vanilla Pudding"); "### Cream Filling:" → "### Filling" to match the ingredient heading.
+    - Q: the long family-history blockquote is lovely but is backstory in the recipe file (recipe rules). Keep it as-is for family recipes, or move it to a food-memory essay and link? (Applies to several family recipes; one decision covers all.)
+- [x] ! `recipes/boerenkool-stamppot-aka-green-potatoes-aka-boerenkool-met-worst.md`
+    - Bay leaves and nutmeg are listed but never used. Also Q: "2 teaspoons of nutmeg" is a lot; traditional stamppot uses a pinch to ¼ tsp. Typo for ⅛–¼?
+    - Spelling: "rookworst" (L14, L18) vs "rookwurst" (L38–41); Dutch is "rookworst". L38 "saute" → "sauté".
+    - L38: "(if using)" for the rookworst, but it's not marked optional in the list.
+    - Title has a trailing space. `aka: brittacole` Q: is this a family nickname? "Boerenkool Met Worst" → "boerenkool met worst". L12: "farmers cabbage" → "farmer's cabbage"; L33: "hide more cruciferous" → "cruciferous veg".
+    - Oil for the onions isn't listed. "6-8L/qt" → "6–8 L (6–8 qt)".
+- [x] ! `recipes/braised-red-cabbage.md`
+    - L38–39: a word is split across lines ("cabbag" / "e."), which renders as a broken bullet. Rejoin it.
+    - L12: "saussage" → "sausage". `cuisine: german` → "German".
+    - L17: imperial first: "about 1¼ lb (565 g)" → "about 565 g (1¼ lb)". Cup measures for water/wine have no metric (80 ml / 60 ml).
+- [x] ! `recipes/breakfast-sausage.md`
+    - Q: duplicate recipe. breakfast-sausage.md and breakfast-style-sausage.md are the same thing with different percentages (salt 2.0% vs 1.6%, milk powder 4% vs 2%, water 10% vs 7.5%). Merge into one, with the other as a variation?
+    - L38: "Combine all dry spices and milk powder. Dissolve in the cold water." Spices don't dissolve; "Stir into the cold water."
+    - No cooking target: add "to 71°C (160°F) internal" for ground pork (or 63°C held 5 minutes; see the food-safety page, but patties won't hold that off the heat).
+    - L13: "sandwhiches" → "sandwiches". `cuisine: american` → "American". Table: "Dry parsley" → "Dried parsley".
+- [x] ! `recipes/breakfast-style-sausage.md`
+    - See the duplicate Q on breakfast-sausage.md.
+    - Toasting mismatch: the table says toast coriander and fennel; the method toasts "fennel and peppercorns".
+    - L51: pulling ground pork at 68°C is actually safe (at 68°C pork pasteurizes in well under a minute), so the target is fine. The claim is wrong: patties and links won't carry over 7°C to 75°C. Drop the carry-over sentence, or say "68°C, held for a minute in the pan".
+    - L43: em-dash; "aiming for less than 50% firm" is unclear. Q: meaning the mix should be tacky but still soft?
+    - Table rounding is inconsistent with the percentages (sugar 0.8% → 7.5 g, brown sugar 0.6% → 6.3 g, white pepper 0.1% → 1.3 g). Either the % or the grams are off.
+    - L56: "saussage" → "sausage". L15: private Google Sheet link.
+- [x] ! `recipes/bruces-burger-sauce.md`
+    - L24: "1/2 teaspoon" → "½ teaspoon" (the rest of the file uses glyphs). Otherwise clean.
+- [x] ! `recipes/bruces-cold-brewed-iced-tea.md`
+    - Q: food safety: steeping on the counter for 12 hours is the "sun tea" pattern food-safety agencies advise against (bacteria growth in lukewarm tea). Suggest making the fridge method the default.
+    - Title: "cold brewed" → "cold-brewed". Heading colons.
+- [x] ! `recipes/bruces-iced-tea.md`
+    - L10: garbled, third person, and a comma splice: "Bruce uses this tea to get productive, it's like magical, sweet, zen." → e.g. "My working-day tea: sweet, tart, and calming."
+    - The pinch of salt is listed but never added. Add it with the sugar in step 2.
+    - L26: "farmer's market" → "farmers' market".
+- [x] ! `recipes/bruces-poultry-and-pork-spice-rub.md`
+    - L17, L32: "smoky notes" come from nothing in the list (no smoked paprika, no chipotle). Q: is smoked paprika missing, or should "smoky" go?
+    - Yield: ingredients total ~775 g; `servings` says ~850 g.
+    - L45: private Google Sheet link.
+- [x] ! `recipes/bruces-quick-fried-black-beans.md`
+    - Step 3 adds the "remaining spice", but no spice was added earlier, and cumin/chili are never cooked. Adding 1–2 tbsp of raw cumin off the heat will taste dusty. Suggest blooming the cumin and chili with the garlic in step 1.
+    - Q: 1–2 tbsp cumin for one can of beans is a lot; did you mean 1–2 tsp?
+    - L14: "large can" → give a size, e.g. "1 can (540 ml / 19 oz)". L18: spaced en-dash range "½ – 1 cup" → "½–1 cup". L30: "stir" → "Stir".
+    - Tag is `sauces`; `sides` or `bases` fits better.
+- [x] ! `recipes/bruces-thai-redgreen-curry.md`
+    - Missing ingredient: the method depends on coconut milk (L49, step 2), and it isn't in any ingredient list.
+    - Incoherent steps: the curry paste is never added; aromatics are added twice (steps 1 and 3); the protein is browned but never added back; sugar, stock, lime leaves, potatoes, lime juice, and basil never appear in the steps. The "Details" list needs a rewrite in order: sweat mirepoix → crack coconut cream → fry paste → garlic/ginger → coconut milk + stock + tomatoes → veg/potatoes → protein → lime leaves, sugar, salt → lime juice and basil off the heat.
+    - L45: "kaffir lime leaves" → "makrut lime leaves" ("kaffir" is a slur in South Africa; most food publications have switched).
+    - Typos: L60 "cobbs" → "cobs"; L76 "brocolli" → "broccoli"; L105 "isnt" → "isn't"; L56 "restaurant quality" → "restaurant-quality"; L91 "Dark Soy" → "dark soy".
+    - L105: "Mirepoix isnt authentic or needed, using stock is more typical" is a comma splice, and the logic is unclear (stock doesn't replace mirepoix). Q: meaning Thai curries skip the aromatic veg base?
+- [x] ! `recipes/bulgogi-beef.md`
+    - Incomplete: the whole method is "Cook like taco beef." Needs steps: marinate (how long), then sear in batches or cook the ground version, and when the mushrooms and carrot go in.
+    - L27: "4 tablespoon" → "4 tablespoons"; L30: "Salt  & Pepper" → "salt and pepper"; L31: MSG with no amount; L15: "shortrib" → "short rib".
+    - Headings: "## Base:" / "### Marinade / sauce:" / "## Garnish:" have colons and uneven levels.
+- [x] ! `recipes/butter-chicken.md`
+    - L43: open TODO: sugar is mentioned in the original but not listed. Q: how much sugar (1–2 tsp is common in BIR butter chicken)?
+    - L49–51 contradict: "Turn off the heat. Add yogurt" then "Simmer on low until heated through". Say: temper and stir in off the heat, then warm gently without boiling.
+    - L28: "2 teaspoons masala" Q: garam masala, or a BIR mix powder?
+    - L55: `[Naan](Naan)` is a link to a page that doesn't exist (there's no naan recipe). Unlink it, or add the recipe.
+    - L14: "take out" → "takeout". L22: `[[Base Curry Gravy]]` → sentence case. L33: "To finish:" → `#### To finish`.
+- [x] ! `recipes/butter-tarts.md`
+    - Crust can't work as written: 1 cup flour + ½ cup shortening + baking powder has no water, so it won't form a dough. Q: how much ice water?
+    - Contradiction: ingredients say baking powder, step 1 says "Baking Soda". Pastry usually has neither; Q: which, if any?
+    - Title Case throughout the ingredients and steps ("Flour", "Shortening", "Brown Sugar", "Eggs"). L13 "the tart was homemade" → "the tart shells were homemade".
+    - L35: "400 degrees F (200 C)" → "200°C (400°F)". Headings: "### Crust/Pastry:" and "## Directions:" colons.
+    - Q: no corn syrup, so the filling will set firmer and less runny than most butter tarts. Intentional family style? Worth a Mechanic line if so.
+- [x] ! `recipes/butternut-squash-curry.md`
+    - Likely error: "750 g baby spinach" is about seven bags. The Good Housekeeping original uses ~140 g (5 oz). Q: confirm; 750 g won't fit in a skillet with the curry.
+    - L14 says "roasted butternut squash", but the method pan-browns it for 4–6 minutes.
+    - L26: "thai chili" → "Thai chili". "1cm" → "1 cm" (L20, L28). L20: "about 600 ml" volume for diced squash is unusual; drop it or use "about 4 cups".
+    - Tagged `vegetarian` but fish sauce is the default. Make soy sauce the default, or drop the tag.
+- [x] ! `recipes/butternut-squash-soup.md`
+    - Tagged `vegetarian` but the stock type isn't named. Say "vegetable stock" (or "chicken or vegetable") so the tag holds; the vegan note (L51) also needs veg stock and to skip the crème fraîche.
+    - Otherwise clear and well structured.
+- [x] ! `recipes/caesar-dressing.md`
+    - Q: "2–3 tablespoons good olive oil" seems far too little to emulsify an egg white plus 2 tbsp Dijon into a dressing "thick enough to coat a spoon". This style usually takes ½–¾ cup. Typo for cups/quarter-cups?
+    - Tagged `vegetarian`, but both options (anchovy paste, Worcestershire) contain anchovy.
+    - Raw egg white: add a Notes line, "use a pasteurized egg if serving anyone vulnerable".
+- [x] ! `recipes/canadian-chili.md`
+    - Ingredients never used in the method: dried shiitakes (rehydrate? add the soaking liquid?), corn, cilantro/parsley, roasted garlic. Step 3 "Add other ingredients" is too vague.
+    - Notes say "vegetarian by just skipping the beef", but there's no beef in the ingredients. The optional hamburger/TVP appears only in the method, twice (step 1 and its sub-step say the same thing).
+    - L56: "ground beast" Q: joke or typo for "beef"?
+    - L67: "½ stalk of roasted cinnamon" → "½ cinnamon stick, toasted". L11: "the chili of the south" → "of the American South". L47: "saute" → "sauté".
+    - `cook_time: ~25m` looks short once mushrooms go wet → dry → brown and the chili simmers. Q: tested time?
+    - Headings "## Main ingredients:", "## Spice mix:", "## Directions:" colons.
+- [x] ! `recipes/candied-cranberries-sugared-cranberries.md`
+    - No sugar quantities: the syrup needs amounts (e.g. 1 cup sugar + 1 cup water), plus about ½ cup each of coarse and granulated sugar for rolling.
+    - L10: long backstory in the recipe file (potluck, teammate by nickname). The Instagram source (@ourbestbites) belongs in `source:` (currently `family`).
+    - L14: "1 bag Fresh Cranberries (12oz bag)" → "340 g (12 oz) fresh cranberries". Title Case ingredients. "Roller Derby" → "roller derby".
+    - L26: "The result: incredible little sparkly berries..." is promotional and a second description; trim.
+- [x] ! `recipes/candied-pecans.md`
+    - Title Case ingredients and steps ("Sugar", "Egg White", "Pecans"). L24: "225 degrees F (110 C)" → "110°C (225°F)".
+    - L11: "as a pre-treat" is unclear; "before dinner"?
+- [x] ! `recipes/carrot-cake.md`
+    - Incoherent: L14 says "serve warm", but the method refrigerates overnight before icing and the icing is cream cheese. Drop "serve warm" (or say "serve at room temperature").
+    - L14: "creamcheese" → "cream cheese"; "lemon creamcheese icing", but the icing has no lemon. Q: add zest/juice, or drop "lemon"?
+    - Q: 360 g icing sugar + 310 g cream cheese + 170 g butter is scant to fill and cover a three-layer 23 cm cake. Enough in practice?
+    - L55: "Bruce's Birthday Cake" → "Bruce's birthday cake".
+- [x] ! `recipes/chai.md`
+    - L16: "Fall" → "fall".
+    - L48: the "Allspice and cinnamon" variation says to swap the cloves and ginger "for 3 green cardamom pods", but cardamom is already in the base. Say "keep the cardamom; swap the cloves and ginger for allspice and cinnamon".
+    - Variations are bold-less inline labels; FORMAT.md uses `###` per variation.
+- [x] ! `recipes/char-siu-marinade.md`
+    - Q: "⅓ part red food colouring" = 20 ml, far more than needed (a few drops to ½ tsp gel colours a batch). Typo?
+    - Food safety: the leftover marinade has held raw meat. Say "bring to a full boil, then simmer until thick" before brushing on at the end.
+    - Order mismatch: the Mechanic says reduce the glaze "while the meat rests"; the method brushes it on "in the last few minutes of cooking". Pick one.
+    - Food safety (minor): 65°C for white meat is fine for roasted pieces if they rest a few minutes (chicken at 65°C needs ~4–5 min). Say "rest 5 minutes" so the rest is the hold.
+- [x] ! `recipes/chashu-pork.md`
+    - Cross-recipe inconsistency: belly target is 85°C here, 93°C in basic-ramen-tare.md. Q: which is your number? (93°C gives the more yielding, sliceable-when-cold belly.)
+    - Q: chashu-pork.md and basic-ramen-tare.md are the same dish (braised pork whose liquid becomes tare) with different ratios. Keep both, or merge with one as a variation?
+    - Otherwise clean.
+- [x] ! `recipes/cheddar-herb-biscuits-or-savoury-scones.md`
+    - L31: stray keyboard garbage at the start of step 2: "\`werty".
+    - Step 3 whisks "the egg and milk", but the ingredient is buttermilk.
+    - Q: cream of tartar with no baking soda does little here (it's the acid half of a soda leavening). Did the original have ½ tsp baking soda?
+    - L25: "if my favorite" → "is my favourite". Step 5 has an unclosed parenthesis. Title Case ingredients throughout. L12: "Cheddar Herb Biscuits" → lower case.
+    - L30: "232 degrees C (450 degrees F)" → "230°C (450°F)".
+- [x] ! `recipes/chef-johns-hamburger-buns.md`
+    - L18: temperature error: 40°C is 104°F, not 101°F.
+    - L16: typo "2 ½ tsp t(or 1 package)"; L23: "non-EVDO" → "non-EVOO"; L38, L40: "taught" → "taut" (×2).
+    - L38: "form into a smooth, rough shape" contradicts itself.
+    - L43: the egg wash includes salt, which isn't listed under egg wash.
+    - Notes (L49–51) are cryptic fragments: "Half milk" (swap half the water for milk?), "Add soft butter at end" (of kneading?), "Replace half or all with Diastatic Malt Powder" (replace what? the sugar?). Q: expand, or they won't make sense later.
+    - Headings: "#### Egg wash/toppings:" and "### Directions:" levels and colons.
+- [x] ! `recipes/chicken-or-turkey-stock.md`
+    - L33: "(our roughly)" → "(or roughly)". L11: "consummé" → "consommé"; "bones leftover" → "left over".
+    - L34: "roast veg until a deep brown" but the bones are on the trays too; say "roast bones and veg".
+    - L23: "Veg oil" → "vegetable oil". `cuisine: world`.
+- [x] ! `recipes/chicken-patties.md`
+    - Q: the brine is 50% white vinegar plus 10% salt. That's a very aggressive acid brine; 30 minutes can turn thin fillets chalky on the surface. Tested as written? (Also "tenderises" → "tenderizes".)
+    - Q: ground seasoning is 2.5% salt, higher than the collection's other ground-meat formulas (1.6–2%). Intentional?
+    - Cross-reference mismatch: reference/base-recipes-for-weeknight-cooking.md describes these patties as made "with some added water and elevated pH" (springy texture), but this recipe has neither water nor baking soda. One of them is out of date.
+    - No safe internal temperature. Thin patties can't hold a lower temperature off the heat, so give the instant number, 74°C (165°F), or 68°C held about a minute in the pan (see the food-safety page).
+    - L14: "sandwhiches" → "sandwiches".
+- [x] ! `recipes/chicken-yakisoba.md`
+    - L14: "stirfry" → "stir-fry". L35: "1/2 head" → "½ head".
+    - Q: "35 g bean sprouts" is a small handful; the source uses about 1 cup (~100 g). Intended?
+- [x] ! `recipes/chocolate-chip-cookie-for-one.md`
+    - L11: "decedantly" → "decadently"; "Savy Cookbook" Q: title "Savvy"? Put the book in `source:`.
+    - L27: "until brown" is vague for 6–8 minutes: "until the edges are set and the centre looks just underdone".
+    - L25: "175C/350F" → "175°C (350°F)"; heading colons.
+- [x] ! `recipes/classic-french-dressing.md`
+    - Tagged `vegan`, but Worcestershire contains anchovy. Use a vegan Worcestershire or drop the tag.
+    - Otherwise clean; good Mechanic.
+- [x] ! `recipes/classic-pizza-sauce.md`
+    - Ingredients never used in the method: granulated garlic, balsamic/red wine, and the "bonus" butter. Say when each goes in (balsamic and butter at the end?).
+    - Herbs added twice: step 3 sweats onion, garlic, "and herbs", and step 4 adds the oregano.
+    - L31: "Paprika, especially smoked paprika can" → "Paprika, especially smoked paprika, can". L10, L27: double spaces.
+    - L14: "(820ml/28oz)": Canadian tins are 796 ml. Minor.
+- [x] ! `recipes/coconut-jam-tarts.md`
+    - Same crust problems as butter-tarts.md: no water in the pastry, and baking powder (ingredients) vs baking soda (step 1).
+    - Jam quantity mismatch: ¼ cup jam across 12 tarts is 1 tsp each, but step 7 says ½ tsp.
+    - L38: "on at a time" → "one at a time". L18: "1/2 cup" vs "½ cup" on the next line.
+    - "Recipe makes 12 Tarts." belongs in `servings: 12`. Title Case ingredients. The blockquote duplicates the butter-tarts intro word for word.
+- [x] ! `recipes/coconut-lentils.md`
+    - L61: "add more broth after blending", but there's no blending step. Q: do you blend it (immersion blender)? If so, add the step.
+    - L18: says green or brown lentils work for a chunkier result, but those need ~35–45 min, not 20. Add the time.
+    - `cuisine: American` but tagged `indian`; pick one.
+- [x] ! `recipes/corn-salsa.md`
+    - Paprika is listed but never used in the method.
+    - L26: "Smokey flavor" → "smoky flavour"; L45: "can not" → "cannot", "flavor" → "flavour"; L36: "stir and stir" duplicated.
+    - L10: "the Rempel’s" → "the Rempels'". Title Case ingredients. L30: "2 oz Cotija" → "55 g (2 oz) cotija".
+    - `source` is recipetineats while the intro credits Grandma; fine if she used that recipe. Worth one clause saying so.
+- [x] ! `recipes/cottage-pie.md`
+    - L63: open "[draft]" marker on the browning-sauce quantity. Q: tested yet?
+    - L65: "Reheat from frozen either fully defrosted or more gently for longer" is self-contradictory. "Thaw overnight and reheat at 175°C, or bake from frozen at 160°C for about twice as long."
+    - L55: the Variation suggests [[beef base]], but the filling already starts from "cooked beef mince (frozen)", which is beef base. Fold into the ingredient line: "500 g [[Beef base]] or other cooked mince".
+    - `aka: Shepherd's pie`. Shepherd's pie is the lamb version; fine as a search alias, but some readers will object.
+- [x] ! `recipes/creamy-roasted-red-pepper-soup.md`
+    - "Salt, pepper, and spices to taste" and "Add whole spices, if using" name no spices. Suggest one default (e.g. 1 tsp smoked paprika) plus the Notes options.
+    - L20: "crimini" → "cremini".
+    - L37: "Reserve the remaining coconut milk", but the list only calls for the cream from the top of the tin. Say "1 tin coconut milk; use the cream, reserve the rest".
+- [x] ! `recipes/creme-brulee.md`
+    - L23: "combine with the milk", but there's no milk; it's cream.
+    - L10: "on day" → "one day"; L26: "bruleeing" → "brûléeing" or "torching".
+    - L22: "170 ºC (325 ºF)" uses the ordinal sign º instead of °, and 325°F is 165°C.
+    - Step 4: no doneness cue for the 40 minutes → "until set at the edges with a slight wobble in the centre".
+    - L26: contradiction: says serve immediately "or place in the fridge for up to 3 days" after caramelizing. The sugar crust goes soft and weeps within hours. Store the custards un-torched and caramelize just before serving.
+    - "### Variations" should be `##`. L32–33: "Irish Cream", "Almond extract" → lower case ("Amaretto" is a brand, so fine).
+- [x] ! `recipes/crisp-topping.md`
+    - Q: 5 g (1 tsp) salt in ~300 g of topping is ~1.7%, noticeably salty for a dessert crumble (most use ¼–½ tsp). Intended?
+    - L33: the bottom-crust path says "Add the top layer", but one batch is a thin single layer (L45). Say "use 1½–2 batches when doing both crusts" right in the method.
+    - Otherwise clear.
+- [x] ! `recipes/crispy-chicken-rub.md`
+    - L13: typo "she same" → "the same". L40: `[[Roast Poultry]]` → sentence case.
+    - Otherwise clean; accurate Mechanic.
+    - Food safety (minor): breasts at 65°C are fine for a whole bird or bone-in pieces that rest ~5 minutes (the rest is the hold). Say so.
+- [x] ! `recipes/curry-powders-and-related-spice-mixes.md`
+    - L42: incorrect: "cassia bark (ceylon cinnamon)". Cassia and Ceylon are different species; Ceylon is "true" cinnamon. And L41 already has a cinnamon stick. Q: which two barks did you mean? (Commonly: one cassia, or one of each.)
+    - L35–36: cardamom seeds listed twice, the second with "(?)". Q: was the second meant to be black cardamom?
+    - Garam masala has no method: toast (which spices), cool, grind.
+    - "Supreme Bassar curry masala" Q: brand spelling ("Bassar" is a Punjabi masala brand). Lower-case "ceylon" → "Ceylon".
+    - Overlaps with gingergarlic-paste.md (the paste is defined in both, with different ratios). Link rather than duplicate.
+    - Headings end in colons.
+- [x] ! `recipes/dairy-free-tomato-soup.md`
+    - Contradiction: title says dairy-free, but the ingredients include butter ("optional", never used in the method). Drop it or name a vegan butter.
+    - Title: "Dairy free" → "Dairy-free". L32: "dutch oven" → "Dutch oven", "saute" → "sauté". L10: "old world" → "Old World".
+    - Basil is listed but never used.
+- [x] ! `recipes/dal-tadka.md`
+    - Incoherent: L49 is pasted research notes (from a Vice recipe) sitting in the middle of the method. It describes a different method (onion cooked before the lentils, coriander, lemon juice, dried chile), none of which is in the ingredients, and it ends with a bare link. Move it to Variations or Notes, or delete it.
+    - Tadka ingredients never used: cloves and fenugreek (optional) aren't in the tadka step. L40 says "sliced" onion; L49 says "diced".
+    - L27: "+10 minutes pressure cooking time", but there's no pressure-cooker method (only stovetop). Add a pressure line or change it to a stovetop time.
+    - Variation "Coconut cream dal": "stir in the spices" doesn't say which spices or how much.
+    - "Dhungar" → "dhungar" (common noun).
+- [x] ! `recipes/double-chocolate-banana-bread.md`
+    - L10: backstory with passive voice; "Smitten Kitchen, which was a great name" reads oddly (the site, not the recipe, has the name). Put the Smitten Kitchen URL in `source:` (currently `family`).
+    - Typos: L33 "Wisk" → "Whisk"; L34 "shifter" → "sifter"; L37 "center of cake" → "centre of the loaf" (see centre/center Q).
+    - L32: "9x5inch loaf pan" → "23×13 cm (9×5 in) loaf pan". L31: "350 degrees F (175 C)" → "175°C (350°F)".
+    - Title Case ingredients and steps ("Bananas", "Brown Sugar", "Banana Bread").
+- [x] ! `recipes/egg-roll-bowls.md`
+    - L23–24: "1/4 head", "1/2 yellow onion" → "¼", "½". "scallion" → "green onion" (the rest of the collection uses it).
+    - Otherwise clean.
+- [x] ! `recipes/english-muffins.md`
+    - Unfinished steps: step 3 ends mid-sentence ("Rising in the fridge overnight"); step 4 "let rest for 10-20" has no unit; steps 3–6 lack periods.
+    - L10: "english" → "English", "mcmuffin" → "McMuffin"; third person ("Bruce ... his") where the rest is first person. L31: "flavor" → "flavour".
+    - Missing: cornmeal or semolina for dusting (standard, stops sticking), and a doneness check. At 6 min/side the centres are often gummy; "until 93°C (200°F) inside" or "finish 10 min in a 175°C oven".
+    - L31: "(and some of the flour)" needs an amount (e.g. ½ cup). No yield: ~1 kg of dough at 75 g makes about 14.
+    - L12: "Note: I'm still tuning this recipe." but `draft: false`. Q: publish as-is?
+    - Headings "### Bloom:", "## Directions:" colons.
+- [x] ! `recipes/essence-of-cola.md`
+    - The 10 ml neutral alcohol is listed but never added in the method. Add it with the vanilla in step 3.
+    - L42: gum arabic stirred straight into syrup tends to clump. "Whisk it with a spoonful of the sugar first" (or pre-hydrate it).
+- [x] `recipes/fajita-chicken-bowl.md` (fixed 2026-09-24: components as `##` sections; 68°C; corn oil, garlic, and fresh chili listed)
+- [x] ! `recipes/farmer-soup.md`
+    - L22: "herbs de provence" → "herbes de Provence"; L27: "corn starch" → "cornstarch"; L33: "saute" → "sauté"; L16: "bite size" → "bite-size"; L29: double space.
+    - L11: "ABC Family restaurants" Q: the chain is ABC Country Restaurants; is that the one?
+    - L11: "work in progress" but `draft: false`. Q: publish as-is?
+    - Step 2: say to bring the soup back to a simmer after adding the cornstarch slurry; cornstarch doesn't thicken until it nears boiling.
+- [x] ! `recipes/flatbread-white-sauce.md`
+    - L38: "ATK" → "America's Test Kitchen" on first use.
+    - Otherwise clean.
+- [x] ! `recipes/focaccia.md`
+    - Oil contradiction: L23 says "neutral oil (not extra-virgin)" for the pans, while the intro (L14) and herb step (L41) use olive oil. Traditional focaccia uses olive oil in the pan. Q: is neutral deliberate (smoke point at 220°C)? If so, say why.
+    - Olive oil for steeping the herbs isn't in the ingredient list (only in the optional brine).
+    - Order: the oven is heated only after topping (L47). Preheat at the start of the final rise so the dough doesn't overproof waiting for a cold oven.
+    - The optional brine is described only in Notes; the method never says when to use it.
+    - L18: "Focaccia is an enriched pizza dough", but nothing here enriches it (the pizza dough is used as-is). Add "2 tbsp olive oil kneaded in" or drop "enriched".
+    - L22: `[[Pizza Dough]]` → sentence case. "Toppings" and "Brine" labels → `####`. `servings: 2-10 people` is too vague to scale; "2 pans" or "10 pieces".
+- [x] ! `recipes/french-onion-soup.md`
+    - Butter and olive oil for the onions (step 1) aren't listed.
+    - Herbs: the ingredients are fresh sprigs (thyme/sage, bay), but steps 2–3 say "the dried herbs".
+    - Step 2: "Deglaze with the alcohol and vinegar". Vinegar only appears in one of the sherry substitutes; "Deglaze with the sherry (or substitute)".
+    - L42: the pressure-cooker option doesn't say which stage it replaces. Q: pressure-caramelizing the onions (then reduce)? Spell out.
+    - L25: "1/2 cup" → "½ cup"; L38: "Gruyere" → "Gruyère"; L42: "dutch oven" → "Dutch oven" (×2); L15: "Josh Weissman" → "Joshua Weissman"; L44: "suc" → drop ("fond" is already there). L48: missing period. L53: comma splice.
+- [x] ! `recipes/fresh-egg-pasta.md`
+    - Error: "10g (1 teaspoon) salt" for 250 g flour is 4%, very salty for dough (and 1 tsp fine salt is ~6 g, not 10). Typical is a pinch to ~1% (2–3 g). Q: typo for 1 g / a pinch?
+    - Otherwise clean.
+- [x] ! `recipes/fruit-compote.md`
+    - Clean. (Collection-wide: "yoghurt" in 4 files vs "yogurt" in 5; pick one.)
+- [x] ! `recipes/fruit-crisp-individual.md`
+    - L57: `&nbsp; <!-- hacky hack -->` is a layout workaround living in content. Q: what is it working around (list continuation?) Fix in the template, or end the list with a blank line and plain paragraph.
+    - Otherwise clean.
+- [x] ! `recipes/garlic-broccoli.md`
+    - L14: "brocolli" → "broccoli". L37: "teflon" → "Teflon" (or "non-stick").
+    - Tagged `vegan`, but both liquid options (chicken stock, dashi) are animal-based. Use "vegetable stock" as an option or drop the tag.
+    - L41: `[[weeknight ginger beef]]` → sentence case.
+- [x] ! `recipes/garlic-ginger-wing-sauce.md`
+    - L14: "savory" → "savoury".
+    - Tags list `chinese, japanese` with `cuisine: American`. Fine, but pick the cuisine that matches the tags.
+- [x] ! `recipes/german-platz.md`
+    - Bake time "20-50 minutes" is too wide to be useful. With about 1⅔ cups flour spread in a half sheet pan the layer is thin, so ~25–35 min is likely. Q: tested time? Add a doneness cue ("a skewer in the cake layer comes out clean").
+    - Crumble butter: cold and cut in, or melted? Step 5 doesn't say.
+    - L41: "(the 1inch deep ones)" → "(2.5 cm / 1 in deep)". L44: "175C/350F" → "175°C (350°F)".
+    - L10: backstory (neighbour's two kitchens), and the same image appears in the-smells-of-india.md. Q: same family? It would make a nice cross-link.
+- [x] ! `recipes/ginas-tomato-salsa.md`
+    - Food safety: "Lasts up to a few weeks in the fridge" is too long for fresh (uncooked) salsa with raw onion, garlic, and cilantro. 5–7 days is the usual guidance.
+    - L10: "Nanaimo Mexican hut’s" Q: is the restaurant called Gina's Mexican Café? Capitalize the name. L14: "roma" → "Roma"; L19: "anaheim" → "Anaheim".
+    - Step 2 "Combine ingredients" vs step 3 "Add remaining ... seasonings": unclear which seasonings go in first. Say "everything except the second lime".
+- [x] ! `recipes/gingergarlic-paste.md`
+    - Incomplete method: Notes say "Don't overcook ... stop once sizzle is gone", which implies frying the paste after blending, but the only step is blending. Q: blend, then cook in the oil until the sizzle stops?
+    - Step 1 adds "neutral oil" and then says "add oil until the consistency reaches soft peanut butter", so the oil is added twice.
+    - L10: incorrect region: Indian cooking is South Asian, not southeast Asian. "takeaway style" → "takeaway-style".
+    - L23: "1 cup ginger ... (1 smaller knob)". A cup of ginger is several large knobs (~150 g).
+    - Section order: Notes come before Ingredients. Move to the end. Headings end in colons.
+- [x] `recipes/gochujang-wing-sauce.md`
+- [x] ! `recipes/goulash.md`
+    - L18: garbled logic: "That's what makes this taste like goulash and not paprika stew." The heavy paprika is what makes it goulash; the contrast is with generic beef stew. → "and not like beef stew with a little paprika".
+    - L18: "Skipping the bacon is fine", but there's no bacon in the recipe (only bacon fat as an option).
+    - L60: empty trailing bullet in Notes.
+    - Q: see the-food-log goulash notes. Merge that version in as a variation?
+- [x] ! `recipes/grand-moms-black-bean-corn-salsa.md`
+    - No salt anywhere, even as optional. Q: intentional (the beans and corn carry salt)? Add "salt to taste".
+    - L14: "1 small can" → a size (398 ml / 14 oz). "Let sit 30 minutes" with avocado in it will brown; add the avocado just before serving.
+- [x] ! `recipes/grandma-fergusons-buns.md`
+    - Error: the yeast starter (step 1) is never added to the dough. Step 2 mixes butter/sugar/water plus whole-wheat flour, step 3 adds white flour. Add "stir in the yeast mixture" after the butter mixture cools.
+    - L18: "2 packages (~20mg)" → grams: 2 packets is ~14–16 g.
+    - L25: "whole flour" → "whole wheat flour"; L26: "soften" → "softened". L40: no bake time; add "about 20–25 min" or a cue (hollow sound, 90°C inside).
+    - L31: "### Directions:" under Ingredients (should be `##`, no colon). L5: `servings: Makes one pan...` Capital M.
+- [x] ! `recipes/grandmas-potato-salad.md`
+    - Missing step: the hard-boiled eggs are never added. Say where (chopped into step 2, or sliced on top).
+    - Step 1 doesn't say to drain and cool the potatoes before step 2's "cooled potatoes".
+    - Step 5: "Chill. Then chill the potato salad for a minimum of 30 minutes." Chill once.
+    - L21: "Hellman’s" → "Hellmann’s". L29: "bite size" → "bite-size".
+- [x] ! `recipes/grandmas-yukkie-salad.md`
+    - Cool Whip split is unclear: step 2 stirs in "whipped topping" (implies all of it), then step 3 uses "the remaining whipped topping ... half a container". Say "half the container" in step 2.
+    - "Jello" / "jello" mixed. The brand is Jell-O; "jelly powder" is the generic Canadian term. L10: "ambrosia style" → "ambrosia-style". L18: double space.
+- [x] ! `recipes/granola-bars.md`
+    - L14: "minimizing carbohydrates" contradicts the recipe (oats, dates, maple, banana are almost all carbohydrate). Q: meant "minimizing refined sugar"?
+    - L46: stale note: "Toast the nuts next time" is already in the method. Delete.
+    - Otherwise clean.
+- [x] ! `recipes/greek-islands-creamy-greek-dressing.md`
+    - L10: template placeholder text published as the intro ("This is an example. Copy it and replace things..."). Replace it with a real intro.
+    - Title: "Greek island's" Q: the restaurant is "Greek Islands"? Then "Greek Islands' creamy Greek dressing". Also not creamy unless you do the egg-yolk step; see greek-dressing-research.md.
+    - L31: "the lemon may be more or less sweet" → "more or less sour". L37: "prepare this is a blender" → "in a blender". L20: "Braggs" → "Bragg".
+    - Title Case ingredients ("Extra virgin olive oil" fine, "Fresh lemon juice", "Garlic", "Dried oregano" etc.); "1/4", "1/2" → glyphs; L14 double space.
+- [x] ! `recipes/greek-lemon-and-herb-marinade.md`
+    - Error: "2 lemons juiced (about 250ml)". Two lemons give ~90–100 ml. Either 5–6 lemons or ~100 ml.
+    - Q: 4–5 tsp salt with ~½ cup oil and lemon is very salty unless it's for a large batch of protein. How much meat is this for? (No yield.)
+    - L34: "Add sage, garlic and onion", but the ingredient is a shallot. L35: "tiny whisk" → "whisk". L24: "accent" → "Accent". L43: "greek-fried rice" → "Greek fried rice". L42: "over marinate" → "over-marinate".
+    - L10: "used for plating" Q: meaning drizzled on the plate as a sauce?
+- [x] ! `recipes/greek-marinade.md`
+    - L17: migration artifact: the Mechanic quotes an old note ("The note 'needs more lemon' suggests..."). Rewrite as a plain statement: "It needs more lemon than 1:1 suggests; start there and taste up."
+    - Q: overlaps with greek-lemon-and-herb-marinade.md. Keep both (quick vs herb-heavy) and cross-link?
+- [x] ! `recipes/gurkensalat-german-cucumber-salad.md`
+    - Step 2 doesn't say how long to salt. Q: 30 min? overnight (L24 suggests prepping 24 h ahead)?
+    - L30: fragment: "Under salt the dressing (when tasting, as the cucumbers ...)" → "Go light on salt in the dressing; the cucumbers are already salted."
+    - Typos: L19 "2 teaspoon" → "2 teaspoons"; L28 "Parsely" → "parsley"; L32 "mandolin" → "mandoline", "as thin that you can" → "as thin as you can"; L10 "40’s" → "40s"; L24 spaced hyphen as a dash.
+    - Three prose paragraphs of advice sit between "Directions" and the steps; move the serving size to `servings`, dill swap to Variations, make-ahead to Notes.
+    - L10: backstory (recipe rules). Title Case ingredients ("Cucumbers", "English Cucumbers", "Field Cucumbers", "Pepper").
+- [x] ! `recipes/gyro-base.md`
+    - L13: "sandwhichs" → "sandwiches".
+    - L49: "can be cooked as-is" (from frozen) contradicts L45, which says to thaw, shape, and chill before cooking.
+    - L18: "Skipping the chill or under-mixing still gives a crumbly result": "still" reads oddly; drop it.
+- [x] ! `recipes/gyro-dogs.md`
+    - Portion math doesn't work: the ingredient is "500g of gyro base", but the method divides it into 8 × ~112 g (≈ 900 g). The gyro base recipe makes ~1.1 kg. → "1 batch [[Gyro base]] (about 1 kg)".
+    - Buns aren't in the ingredient list (the serving step uses them). No internal temperature for ground lamb/beef: add "to 71°C (160°F)" (a grilled dog won't hold a lower temperature long enough off the heat).
+    - Mechanic repeats gyro-base's Mechanic nearly word for word. Link to it instead.
+    - L14: "based on inspiration a Chef John video" → "inspired by a Chef John video". L66: comma splice ("That's intentional, it builds").
+- [x] ! `recipes/hoagie-rolls.md`
+    - Clean. Q: near-duplicate of hoagie-style-french-rolls.md (same method, 4 vs 8 rolls). Keep both, or make one a variation?
+- [x] ! `recipes/hoagie-style-french-rolls.md`
+    - Weight/volume mismatch: "15g (2 tsp) instant yeast". 2 tsp is ~6 g. Same for "15g (2 tsp) diastatic malt": 15 g of diastatic malt is ~1.9% of the flour, above the usual 0.5–1% and likely to make the crumb gummy. Q: which numbers are right?
+    - Step 10 garbled: "On a pan below your middle rack, add a pan and a handful of ice cubes" → "Put a pan on the rack below the rolls and add a handful of ice cubes."
+    - Step 6: "until doubled (about an hour) until they pass the poke test" doubled "until".
+    - Title "Hoagie style" → "Hoagie-style"; L10 "sub style" → "sub-style", "poboys" → "po' boys"; step 8 "hogies" → "hoagies".
+    - Temps: "40C", "190C/375F", "90-95C (or about 200F)" → "40°C (104°F)", "190°C (375°F)", "90–95°C (195–205°F)".
+- [x] ! `recipes/homemade-baileys-irish-cream.md`
+    - Contradiction: the intro says "We call this camping cream" (family use), but Notes say "[draft] Untested ... not yet made in this kitchen", and `draft: false`. Q: tested?
+    - Title: "Homemade Baileys Irish Cream" → "Homemade Baileys Irish cream" per sentence case ("Baileys" is the brand).
+    - Three em-dashes (L16, L33, L51).
+- [x] ! `recipes/hot-buffalo-chicken-dip.md`
+    - L19: private Google Doc link on "cooked chicken shredded". Readers can't open it; link a recipe (e.g. pulled chicken) or unlink.
+    - Imperial-first units: "8 oz cream cheese" → "250 g (8 oz)"; "8-inch cast-iron skillet" → "20 cm (8 in)"; L31 "375°F (190°C)" → "190°C (375°F)"; L39 "1-quart (1-litre)" → "1 L (1 qt)".
+    - L13: backstory blockquote (recipe rules Q, see bienenstich). L33: "both cheddar cheese(s)" → "both cheddars".
+    - Ingredient lines lack commas before prep notes ("2 teaspoons garlic minced" → "2 teaspoons garlic, minced"; same for cream cheese, cheddars, blue cheese).
+- [x] ! `recipes/hot-crab-artichoke-dip.md`
+    - Sizes missing: "1 small can of Real Crab", "1 can Artichoke Hearts". Give ml/g (e.g. 120 g crab, 398 ml artichokes).
+    - L14: "miracle whip" → "Miracle Whip". Title Case ingredients ("Mayonnaise", "Cheese", "Real Crab", "Lemon Juice"). "parmesan" → "Parmesan".
+    - L25: "175C/350F" → "175°C (350°F)". Step 1 missing period. No serving suggestion (bread, crackers?).
+- [x] ! `recipes/hot-ranch-spinach-and-artichoke-dip.md`
+    - L25: "170C/350F" doesn't match (350°F ≈ 175°C) → "175°C (350°F)".
+    - L18: "1 package" → give the weight (typically 300 g / 10 oz). Squeeze the spinach dry, not just drain; wet spinach makes a watery dip.
+    - L16: "parmesan" → "Parmesan". L17: imperial first "1 14oz (400ml) can" → "1 can (398 ml / 14 oz)".
+- [x] ! `recipes/in-n-out-burger-spread.md`
+    - L13: "diner style" → "diner-style". Fractions "1/2", "1/4", "1/32" → glyphs (½, ¼).
+    - Otherwise clean.
+- [x] ! `recipes/indian-takeout-tomato-purée.md`
+    - L17: placeholder left in: "(link recipe)" → link `[[Ginger/garlic paste]]`.
+    - Q: 320 ml purée + 500 ml water cooked for 10–15 minutes won't reduce to "slightly thinner than regular tomato paste" (L36). Either more cook time or less water. Which is it?
+    - L19: "1 ½ teaspoon" → "teaspoons"; L22–23: "½ tablespoons" → "½ tablespoon". L10, L18: "Indian style", "takeout style", "English style" → hyphenate. L14–15: double spaces.
+    - Filename has a non-ASCII "é" (`indian-takeout-tomato-purée.md`); FORMAT.md says special characters should be replaced. Also kālua-pig-cabbage.md.
+- [x] ! `recipes/instant-pot-chicken-thigh-curry.md`
+    - Open testing flag in the intro ("needs testing"). Q: tested yet?
+    - Two em-dashes (L14, L40).
+- [x] ! `recipes/jerk-chicken.md`
+    - Step 2 is truncated: the whole step reads "Re". Q: "Remove chicken from marinade and let excess drip off"?
+    - L34: "85C/185C" → "85°C (185°F)"; "dark mean" → "dark meat"; triple space before 65C.
+    - L32: "marinade for 2 - 24hours" → "marinate for 2–24 hours". L15: "scotch bonnet" → "Scotch bonnet". L10: "Jerk Chicken" → "jerk chicken". L40: "cut upto in manageable pieces" → "cut into manageable pieces". L18: "1/4" → "¼".
+    - Q: three jerk pages overlap (this, jerk-marinade.md, and reference/jerk-marinade-adapted-from-serious-eats.md) with different marinades. Consolidate into one recipe with variations?
+    - Food safety (minor): breasts at "65C/150F" (65°C is 149°F): fine for quartered chicken with a 5-minute rest, which the recipe should state.
+- [x] ! `recipes/jerk-marinade.md`
+    - L16 contradicts itself: "Scotch bonnets are non-negotiable ... habaneros are the closest substitute".
+    - L23: "scotch bonnet" → "Scotch bonnet"; L46: "caramelised" → "caramelized"; L56 missing period.
+    - See the jerk-overlap Q on jerk-chicken.md.
+- [x] ! `recipes/kālua-pig-cabbage.md`
+    - L22: "3/4 head" → "¾ head". L18: "pork butt" → "pork shoulder (butt)" for Canadian readers.
+    - Filename contains "ā" (non-ASCII slug); see note on indian-takeout-tomato-purée.md.
+    - Otherwise clean.
+- [x] ! `recipes/kormaqorma.md`
+    - Incomplete: the file ends after the ingredient list. No method, no quantities for water, and L10 refers to combining with a base gravy that isn't linked. Q: is the method somewhere else? Otherwise mark it `draft: true` until it's written.
+    - "~8 onions" Q: 8 whole onions for 1 tbsp paste and 6 tbsp sultanas? That reads like a big batch of fried-onion korma base. A yield line would help.
+- [x] ! `recipes/lazy-pizza-dough-2022.md`
+    - Error: the baker's percentages don't match the weights. At 600 g flour: 420 g water is 70% (table and Mechanic say 66%); 15 g sugar and 15 g salt are 2.5% each (table says 2%); 35 g oil is 5.8% (says 4%); 10 g yeast is 1.7% (says 1.5%). Q: which column is right? (66% would be 396 g water.)
+    - Portion math: the dough is ~1.1 kg, but the pizza step makes "4 equal portions of ~200g" (800 g), focaccia uses "½ (or about 350g)", and `servings` says ~3 pizzas. Reconcile (e.g. 350 g focaccia + 3 × 250 g pizzas).
+    - Temperature conversions are odd or off: "176C/350F" → "175°C (350°F)"; "247C/476F" → "250°C (475°F)"; "220C/430F" → "220°C (425°F)"; "280C/530F" → "275°C (525°F)". Round both sides.
+    - L74: "May bubble and misshapen more" ("misshapen" isn't a verb) → "May bubble and lose its shape".
+    - L36: "coax that MF". Q: keep the profanity in a recipe? (Blog rules allow sparing use; recipe rules are stricter.)
+    - L32: "pyrex" → "Pyrex"; "Greek or Roman style" → "Greek- or Roman-style"; "anyways" (×2) → "anyway".
+- [x] ! `recipes/lemon-chicken-marinade.md`
+    - L17: incorrect: "MSG rounds the salt without adding more sodium load". MSG is ~12% sodium (about a third of table salt's). Say "rounds the savouriness, so you can use less salt".
+    - Otherwise clean.
+- [x] ! `recipes/lemon-lime-iced-tea.md`
+    - L18: "3 heaping teaspoon" → "teaspoons". L13: "Spring and Summer" → lower case. `cuisine: american` → "American".
+    - L19–20: "dashes" of fresh juice isn't a usable measure for fresh citrus. Give ml (e.g. 15 ml lime, 10 ml lemon).
+    - Q: 500–700 ml of tea for one serving, shaken in a "martini shaker" (most hold ~500 ml total with ice). Is it 250–350 ml?
+- [x] ! `recipes/lemongrass-marinade.md`
+    - L28: "Marinade proteins" → "Marinate". "Adding slices in large pieces" contradicts itself; "Cut the protein into large slices; they absorb well and brown later."
+    - L15: "thinly minced" → "finely minced". L23: "thai chili" → "Thai chili".
+    - L32: the yield ("For 750g - 1000g of protein") belongs in `servings`. No prep time.
+- [x] ! `recipes/lentil-stew.md`
+    - Missing ingredient: tomato paste (step 2) isn't listed.
+    - Q: 1 cup of raw rice simmered in the stew with one can of coconut milk. Is there enough liquid? Rice needs ~2 cups. Tested?
+    - L48: "Browning these under the broiler" — browning what? (the roasted veg you serve it over?)
+    - L46: "a new recipe that still needs some testing", but `draft: false`.
+    - L17: "anaheim" → "Anaheim"; L24: "saute" → "sauté"; L27: "Addins" → "Add-ins". L21: ¼ cup sugar is a lot for a savoury stew; confirm.
+- [x] ! `recipes/lentil-tacos.md`
+    - Oil is used in the method (L41) but not listed.
+    - L22: "yellow lentils" fall apart quickly, which contradicts the Mechanic's "cook to just al dente". Suggest green or brown only (or black/beluga).
+    - L14: "A filling and frugal filling" repeats "filling". L26: "anaheim" → "Anaheim".
+- [x] ! `recipes/lime-crema.md`
+    - L13: "fresh tasting" → "fresh-tasting". Otherwise clean.
+- [x] ! `recipes/marinara-sauce.md`
+    - L9: private Google Doc link for "pizza sauce". → `[[Classic pizza sauce]]`.
+    - Ingredients used but not listed: sugar (optional, step 3) and white wine/stock (step 1). Butter is listed but never used (say "stir in off the heat at the end").
+    - L26: "medium/lop" → "medium-low". "Shred onions and garlic" vs the ingredient list's "finely minced"; pick one.
+    - L18: "italian herbs" → "Italian"; L19: "2 teaspoon" → "teaspoons"; L14: "fire roasted" → "fire-roasted".
+- [x] ! `recipes/marinated-pressed-tofu.md`
+    - `cuisine: CHINESE` (all caps), while tags say `japanese`. Pick one; sentence case.
+    - L46: "preseve" → "preserve". L48: open "[draft]" testing note while `draft: false`.
+    - L30: "48–72 hours minimum" is a range and a minimum at once. Say "at least 48 hours".
+    - L6: `servings: 4+(as a protein component)` missing space.
+- [x] ! `recipes/marshmallow-squares.md`
+    - L24: typo that changes the instruction: "store until melted" → "stir until melted".
+    - L22: "11” x 13” pan" Q: standard pans are 23 × 33 cm (9 × 13 in); typo? Give metric.
+    - L25: "add you additional" → "your". L23: "medium low" → "medium-low"; double space. L27 missing period.
+    - Title Case ingredients ("½ Cup Butter", "300 Grams", "Mini Marshmallows"). L9: backstory (recipe rules Q).
+- [x] ! `recipes/mauikalua-pulled-pork.md`
+    - L16: broken wiki link `[[Bruce's spice rub]]`; no page has that title. → `[[Bruce's poultry and pork spice rub]]`.
+    - L25: "liquid and smoke" → "liquid smoke". L18: "Red Alea Salt" → "alaea salt".
+    - L23: "Aluminium foil" is equipment, not an ingredient; also "aluminum" Q (see garbage-plates).
+    - Order: the sauce needs "remaining liquids from the cooked pork", but it's written before the cooking method. Move the sauce after the Oven section.
+    - Q: "1 hour in a pressure cooker" for a 2–3 kg bone-in shoulder is short; 75–90 min is typical for pull-apart. Tested?
+    - Temps: "162C/325F" → "165°C (325°F)"; "250F" → "120°C (250°F)". L32: "½ stick butter" → "55 g (¼ cup) butter". L42: "dutch oven" → "Dutch oven"; "2-4 inch deep" → "5–10 cm (2–4 in) deep".
+    - L55: Notes are two bare links; label them as sources.
+    - Overlaps with kālua-pig-cabbage.md. Cross-link?
+- [x] ! `recipes/mayo-marinade.md` (safety, Mechanic, typos, and Kenji note fixed 2026-09-24)
+    - Tagged `mediterranean` with `cuisine: American`. Q: intended?
+- [x] ! `recipes/mcburgers.md`
+    - No `servings` or yield (the ingredient list is per burger; say so).
+    - L28: "Double-grind the patties" → "Double-grind the beef".
+    - Q: overlaps with mcdouble.md (same technique, same seasoning idea). Merge, with McDouble as a variation?
+    - `## Research` isn't a FORMAT.md section; rename it Notes (sources).
+- [x] ! `recipes/mcdouble.md`
+    - Contradictions: the build says "1 slice American cheese" but Notes say "I use 1/2 a slice"; the bun is "~9 cm, slightly pressed" in the build but "pressed to ~11 cm" in Notes.
+    - MSG is listed "(applied after cooking)", but the method seasons with only salt and pepper.
+    - L20: "using to flat surfaces" → "two"; "Par freeze" → "Par-freeze". L57: "sweet-savory" → "sweet-savoury". L60 missing period. L61: "1/2" → "½".
+- [x] ! `recipes/meat-sauce-aka-american-bolognese.md`
+    - Error: L16 "100ml (1 tablespoon) tomato paste". 1 tbsp is 15 ml. Q: which amount?
+    - L14: private Google Doc link for "softened beef base". → `[[Beef base]]`.
+    - L15: "1 x 796ml (28oz) San Marzano style tomatoes" missing "can"; "San Marzano-style".
+    - L28: "Stir in spices", but the list says "Seasonings (thyme, rosemary)". Call them herbs, and give amounts.
+- [x] ! `recipes/meatballs.md`
+    - Tagged `dairy-free`, but the recipe has 60 g Parmesan (and the panade options include cream, buttermilk, sour cream). Remove the tag.
+    - No internal temperature: add "to 71°C (160°F)" to the bake step. (Meatballs simmered in sauce afterwards effectively get a long hold, so this matters most when they're served straight from the oven.)
+    - L14: "elevates it to perfection" (promotional; recipe rules). L54: "Asian style" → "Asian-style". L58: "scallions" → "green onions".
+    - Asian variation: 6.5% soy (65 g per kg) is a lot of sodium even with the salt reduced. Q: tested at that level?
+- [x] ! `recipes/minestrone.md`
+    - Heading structure: an empty "## Ingredients" is followed by "## Base" and "## Soup" at the same level, and Method is separate. Per FORMAT.md, make Base/Soup `####` labels under Ingredients (the method isn't per-component).
+    - L14: "Summer or Fall" → lower case. L28: "Bragg's aminos" → "Bragg Liquid Aminos". L43: "⅔ cup small pasta" has no metric (≈ 110 g).
+- [x] ! `recipes/miso-salmon.md`
+    - L35: "Bake at 220°C (425°F)" gives no time, only the broil time does. Add "about 8–10 minutes".
+    - L39: "scallions" → "green onions". Otherwise clean.
+- [x] ! `recipes/mushroom-and-lentil-freezer-base.md`
+    - Volume conversions are off: "300g green or brown lentils (3 cups)" is about 1½ cups; "400–500g sofrito (4–5 cups)" is closer to 2 cups.
+    - Q: 300 g lentils with 500 ml stock + 125 ml sherry isn't enough liquid to soften them in 20 minutes (lentils take ~2.5× their weight in liquid). Is "just beginning to soften" deliberate so they finish in the final dish? Say so.
+    - Tomato paste (L40) isn't listed. L22: "crimini" → "cremini".
+    - L55: migration artifact: a quoted note ("Some sort of thickener...") in quotation marks. Rewrite as a plain note.
+    - L18: "the beef/mushroom/sofrito freezer base" → link `[[Beef base]]`.
+- [x] ! `recipes/mushroom-parmesan-pasta-filling.md`
+    - Tag is wrong: `breads` → `bases` or `pasta`.
+    - L26: "Fry mushrooms in butter (or oil)": butter isn't listed. "(to slow down the fond browning too much)" is garbled → "(so the fond doesn't burn)".
+    - L28: "Add spices" but the only one is thyme (never named in the method).
+    - Title and L22, L29: "parmesan" → "Parmesan" (the collection capitalizes it elsewhere). L10: "ragu" → "ragù". L21: "1/2 cup" → "½ cup". L33: double period, double space. L14: double space.
+- [x] ! `recipes/mushroom-soup.md`
+    - The potage is called "dairy-free", but the shared base uses "butter or olive oil" and the velouté path adds butter and cream. Say "use olive oil for the dairy-free version" in the base.
+    - Tagged `vegetarian`, but the broth is "vegetable or chicken". Fine if veg is the default; say so.
+    - `cuisine: french` → "French".
+- [x] ! `recipes/naan.md`
+    - Butter for brushing and the garlic/herbs (L41) aren't in the ingredient list (all 110 g of butter goes into the dough).
+    - Yield: `servings: 3-4`, but ~1.1 kg of dough at 100 g makes ~11 naan. Say "about 11 naan (serves 4–6)".
+- [x] ! `recipes/neapolitan-strips.md`
+    - Walnuts are listed but never used. Q: which layer (usually the cherry or vanilla)?
+    - Typos: step 6 "until form" → "until firm"; step 5 "wrapped formed log" → "wrap the formed log"; L13 "favorite" → "favourite".
+    - Step 4 lines the box twice ("Line an empty Wax Paper Box ... and line box with plastic wrap").
+    - L25: "1 square Semi-Sweet Chocolate" → "28 g (1 square) semi-sweet chocolate"; "2tbsp" → "2 tbsp". Step 7: "¼ inch" → "6 mm (¼ in)". L30: "375 degrees F (190 C)" → "190°C (375°F)".
+    - Title Case ingredients throughout.
+- [x] ! `recipes/never-fail-chocolate-cake.md`
+    - Contradiction: the Mechanic says "Bake to touch, not skewer", and L46 says "A skewer should come out clean". Keep one.
+    - L18: "1:3 cocoa to flour by weight", but 75 g : 270 g is 1:3.6.
+    - L56: the sour-milk substitute is muddled: "Sour ½ cup evaporated milk (or 1 cup whole milk) and ½ cup water". With whole milk the water would make 1½ cups. → "Mix ½ cup evaporated milk + ½ cup water (or 1 cup whole milk) with 1 tbsp vinegar."
+    - Imperial pans: "two 9-inch round pans" → "two 23 cm (9 in) round pans"; "9×13" → "23 × 33 cm (9 × 13 in)". Fractions "2 1/4", "1/2" etc. → glyphs.
+- [x] ! `recipes/nine-bean-soup-mix.md`
+    - Missing step: the "2-4 cups of sausage, turkey, and/or bacon" is never used in the method. Also say whether the ham-hock meat is shredded back in after step 2.
+    - L13: "½ cups each of 9 types of dried beans (or …)" → "½ cup each"; the trailing "(or …)" is unfinished.
+    - L17: the soaking instruction sits between the ingredient lists; move it to step 1. L31: "2L/quarts" → "2 L (2 qt)"; "Add ham hock and bones" (what bones?).
+    - L22: "1 large can" → size (796 ml).
+- [x] ! `recipes/no-knead-pizza-dough.md`
+    - Truncated: step 3 ends mid-sentence ("form a ball with the dough") and there are no rise, storage, or shaping steps. The Mechanic promises a multi-day rise. Q: finish the method, or mark `draft: true`.
+    - Title: "No knead" → "No-knead". L33: "1TSP" → "1 tsp". L29: "## Steps:" → "## Method".
+- [x] ! `recipes/nut-crusted-salmon.md`
+    - Tagged `dairy-free`, but the crust has 50 g Parmesan. Drop the tag or make the cheese optional.
+    - L33: "parmesan" → "Parmesan".
+- [x] ! `recipes/olie-bollen.md`
+    - Title: Dutch spelling is one word: "Oliebollen".
+    - L34: typo that changes the instruction: "Stir in mill" → "Stir in milk". Step 1 never adds the apples, raisins, or cinnamon ("eggs and dry ingredients"); add "fold in the apples and raisins".
+    - Frying oil is listed under "Optional ingredients"; it isn't optional.
+    - No fry time: add "about 4–6 minutes, turning once, until deep golden and cooked through". L35: "4-5 inches of oil" → "10–12 cm (4–5 in)"; "160C - 175C (325F - 350F)" → "160–175°C (325–350°F)".
+    - L9: "Makes 12 - 20" → `servings`. L39: "air tight" → "airtight". L22: "stiff" dough with 2–2½ cups milk to 3–4 cups flour is closer to a thick batter; "thick, scoopable batter".
+- [x] ! `recipes/omas-kipfels.md`
+    - Error: the yeast is never added in the method. Q: proofed in some of the warm milk with the ¼ cup sugar? That would explain the second sugar line (L19).
+    - Salt is used in step 2 (and coarse salt on top in step 2 of shaping) but isn't listed.
+    - L20: "2 packages of yeast (~3 tsp)": two packets are ~4½ tsp (14 g).
+    - L18: "¾ cups" → "¾ cup"; L9: "crescent shaped" → "crescent-shaped". L37: "Making the Kipfels" → "Making the kipfels". Temps "190C/375F" → "190°C (375°F)". No yield.
+- [x] ! `recipes/onion-base-for-curries.md`
+    - L24: "2 cinnamon bark" → "2 pieces cinnamon bark (about 5 cm each)".
+    - Q: no oil or salt, and everything simmers raw. Is that the intent (a boiled onion base, like BIR), or are the onions fried first?
+    - L16–17: link `[[Base curry gravy]]` and `[[Ginger/garlic paste]]`.
+- [x] ! `recipes/onion-bhaji.md`
+    - Contradiction: the Mechanic says "The salted onions release liquid ... so don't squeeze them", while Notes say to squeeze liquid from the onions next time.
+    - L61: stale test note ("batch was about 2x too large"). Either halve the recipe or update `servings` (2–4 looks low for 4 onions + 3 eggs).
+    - L14: "best serviced with" → "best served with".
+- [x] ! `recipes/our-favourite-chocolate-chip-cookies.md`
+    - Title Case in steps and variations ("Brown Sugar", "White Sugar", "Vanilla Pudding with Dark Chocolate..."). L10: "Vanilla, Chocolate, or Butterscotch pudding" → lower case.
+    - L17: "2 cups (500ml) of butter" → "454 g (2 cups / 4 sticks) butter"; butter by weight is clearer.
+    - L27: "350 degrees F (175 C)" → "175°C (350°F)". No yield (probably ~6 dozen).
+- [x] ! `recipes/oven-roasted-corn.md`
+    - Title: "Oven roasted" → "Oven-roasted". L16: "Olive oil (non EVO)" → "(not extra-virgin)". L22: "half way" → "halfway"; "220C (425F)" → "220°C (425°F)".
+    - L15: say "shucked". L24: the closing tip belongs above the steps or in Notes.
+- [x] ! `recipes/pad-kra-pao-moo-saap.md`
+    - Comma splices: L33 "a blender doesn't, it purées" → "a blender doesn't: it purées"; L34 "until fragrant, don't let" → "until fragrant. Don't let".
+    - Otherwise clean and well written.
+- [x] ! `recipes/pan-fried-chicken-burger.md` (safety, spelling, and units fixed 2026-09-24)
+    - Open work-in-progress markers: L12 ("work in progress", private Google Sheet link) and L34 "(Consider a standard panko/crumb instead?)", while `draft: false`.
+- [x] ! `recipes/panago-style-jalapeño-cheese-dip.md`
+    - Title: "Panago style" → "Panago-style". Filename has "ñ" (non-ASCII; see note on indian-takeout-tomato-purée.md).
+    - L13: "wizzy cheese spread" → "Cheez Whiz". L9: "; thick crust" → colon; "NY style" → "New York-style"; "tonnes" is fine in Canadian English.
+- [x] ! `recipes/pancakes-and-waffles.md`
+    - Title promises waffles, but they only get one Notes line. Fine, or add a line on waffle-iron heat and batter amount.
+    - Q: L18 overstates it: most baking powder is double-acting and releases most of its gas on heat, so batter can rest 10–15 min without going flat. The last-minute addition still helps a little; soften "lets the gas escape" to "loses some lift".
+- [x] ! `recipes/paska-buns.md`
+    - Q: the recipe text looks copied from a web source (US units only, "powdered sugar", °F only, "Enjoy immediately"), while `source: family` and the intro says Great Oma's recipe was never written down. If it's adapted from a site, credit it in `source`.
+    - Food safety: "store in an air-tight container for up to 3 days" (L61) plus "Do not refrigerate" (L65), with cream cheese frosting. Frosted buns should be refrigerated (or frost only what you'll eat that day).
+    - L42: "Let rise for 2 minutes" → "Let stand 5 minutes until foamy".
+    - Imperial-only: "325 degrees Fahrenheit" → "165°C (325°F)"; "8 ounces" → "250 g (8 oz)". "powdered sugar" → "icing sugar". Fractions "1/2", "3/4" → glyphs.
+    - L10: "european" → "European". Headings "### For the Buns:" / "### For the Frosting:" title case with colons. Steps use `*` bullets rather than prose or numbers.
+- [x] ! `recipes/peach-fruit-crisp.md`
+    - L23: "Heat on low, stirring, until the sauce turns glossy". Cornstarch needs to reach a simmer to thicken and clear → "bring to a simmer, stirring".
+    - Salt: L45 flags the 3 tsp total as high. Rather than a note, fix the recipe (e.g. ¼ tsp in the filling, ½ tsp in the crumble) and drop the note. Same for L44's cinnamon note: the fix is in, so drop the history.
+    - Title: "Peach / fruit crisp" → "Peach (or any fruit) crisp".
+- [x] ! `recipes/peanut-butter-nanaimo-bars.md`
+    - L10: "Recipe is from FoodTV" → put in `source:` (with a link if possible).
+    - Step 2 garbled: "In a mixer, whisk ... in a medium bowl (or use an electric mixer with ingredients in a medium bowl)" → "Beat the butter, peanut butter, and icing sugar until light."
+    - Imperial-only: "8 by 8-inch" → "20 cm (8 in) square"; "4 oz" → "115 g (4 oz)"; "an inch of water" → "2–3 cm". "Confectioners Sugar" → "icing sugar".
+    - Title Case ingredients and steps ("Butter", "Graham Cracker Crumbs", "the Egg"). Headings end in colons.
+- [x] `recipes/peanut-sauce.md`
+- [x] ! `recipes/perogies.md`
+    - Incomplete: no rolling, cutting, filling, sealing, or boiling details (size, thickness, how long to boil, "until they float + 2 min"). L22 compresses all of it into one sentence.
+    - Q: proportions look off. 3 cups flour to 1 cup sour cream + 1 egg + ¾ cup water is a very wet dough (most sour-cream perogy doughs use about half that liquid), and 2.3 kg (5 lb) of potatoes is far more filling than one batch of dough can hold. Tested as written?
+    - Imperial/vague: "5lbs potatoes" → "2.3 kg (5 lb)"; "1 block cream cheese" → "250 g". Method: "Cook potatoes and diced onions together" (boiled onion?). Most recipes fry the onion in butter separately.
+    - L9: "Not our family, of course, but from a random internet stranger’s family." Then `source: family` isn't accurate.
+- [x] ! `recipes/pizza-dough-2021-edition.md`
+    - Diastatic malt at 10 g per 600 g flour is ~1.7%, above the usual 0.5–1% (can make the crumb gummy). Same Q as hoagie-style-french-rolls.
+    - L32: run-on ("...can be approximated with a bit more ferment time and can be found in specialty baking stores"), and it repeats the Mechanic's flour-substitute note.
+    - L46: temps "176C/350F" → "175°C (350°F)"; "220C/430F" → "220°C (425°F)". L44: "corn-meal" → "cornmeal". L40 "prove" vs "proof" elsewhere.
+- [x] ! `recipes/pizza-dough-2022-edition.md`
+    - Error: L25 "7g instant yeast (~1 tsp)". 7 g is about 2¼ tsp (one packet).
+    - L47: "And as usually your leftovers are more than 72 hours" → "Since leftovers have usually fermented more than 72 hours".
+    - L51: "Ciabatta: (Italian baguettes)" isn't accurate (ciabatta is a flat "slipper" loaf). Drop the parenthetical. L53: "Ciabatta" → lower case.
+    - L13: private Google Sheet link. L40: "233C/450F" → "230°C (450°F)". L64: "teflon" → "non-stick". "### Internal temperature guide:" colon.
+    - Q: four pizza-dough recipes now (pizza-dough, 2021, 2022, lazy 2022). Keep as a history, or promote one as current and move the others to Variations/Notes?
+- [x] ! `recipes/pizza-dough.md`
+    - Q: 100 g vital wheat gluten per 900 g bread flour is ~10%, which pushes protein toward ~19%, far beyond "chewier". Notes mention aiming for ~12.5–14% total. Typo for 10 g?
+    - Notes contradict the recipe: the 2023 test found "best results with 1.5% yeast + ... 200g dough weight", but the recipe still says 0.1% yeast and 175 g balls. Update the recipe, or say the notes are an alternate.
+    - L39: "12–16 minutes" is a sentence fragment; fine, but add a doneness cue (browned bottom, bubbling cheese).
+- [x] ! `recipes/pizzeria-pizza-sauce.md`
+    - L12: "pasata" → "passata". L46: `[[quick pizza sauce]]` → sentence case.
+    - Salt: 15 g in ~700 g sauce is ~2%, quite salty. L44 already says start at 10 g; make 10 g the listed amount and drop the note.
+    - L25: "6g granulated garlic (1 teaspoon)". 1 tsp is ~3 g. One of the numbers is off.
+- [x] ! `recipes/pork-dumpling-bowls.md`
+    - Fractions "3/4", "1/2", "1/4" → glyphs. "scallions" → "green onions". L14: "highly rated" is promotional and about the source's reviews; drop.
+- [x] ! `recipes/potato-leek-and-mushroom-soup.md`
+    - Butter for the mushrooms (L45) isn't listed (the 2 tbsp is for the leeks). L45: extra spaces in "Melt the     butter".
+    - L18: private Google Doc link for cashew cream. Unlink or add a recipe. Also: sour cream and buttermilk curdle if added to a simmering soup; temper them or add off the heat.
+    - L9: "Serious Eat’s" → "Serious Eats’"; "John’s" → "Chef John’s". L43: "sautéd" → "sautéed". L38: "over blend" → "over-blend". L18: "1 ½ cup" → "cups". L25: "1 bag of mushrooms" → weight (~225 g).
+- [x] ! `recipes/pressure-cooker-japanese-curry.md`
+    - Two em-dashes (L48, L58). L24, L56: "Yukon gold" → "Yukon Gold".
+    - Otherwise clean. (The food log's "Japanese curry #todo" can be ticked off.)
+- [x] ! `recipes/prosecco-sangria.md`
+    - Error: the title says Prosecco, but there's no Prosecco in the ingredients (two red wines + brandy). Q: is Prosecco topped up at serving, or is the title wrong?
+    - L16: "remove as much skin from the oranges if possible" → "remove as much peel and pith as possible". No chill/steep time (sangria usually sits 2+ hours).
+    - L9: "The first best Sangria I’ve ever had" → "The best sangria I've ever had". Backstory (recipe rules Q). Title Case ingredients. Steps lack periods.
+- [x] ! `recipes/pulled-bbq-style-chicken.md`
+    - Tag `pork` is wrong → `poultry`.
+    - L21: the rub step mentions salt, which isn't listed. L17: "1 teaspoons" → "1 teaspoon"; L19: "1.5 teaspoon" → "teaspoons".
+    - Two private Google Doc links (L11 taco chicken, L18 rub). → `[[Bruce's poultry and pork spice rub]]` for the rub.
+    - Q: at 70°C, thighs and breasts are safe but won't shred easily; pulled chicken usually goes to ~80–85°C for thighs. Intended?
+    - Title: "Pulled BBQ style" → "Pulled BBQ-style". L36: "dutch oven" → "Dutch oven"; L38 stray space before comma.
+- [x] ! `recipes/pulled-pork.md`
+    - Unfinished: `servings: TBD`, `total_time: TBD`, and a "[draft] Untested" note, while `draft: false`.
+    - L23: "1 pork shoulders", while the rub line and method refer to shoulders plural. Give a weight (e.g. 1 boneless shoulder, 2–3 kg).
+    - Q: 45–60 min at high pressure plus 20 min natural release is short for pull-apart shoulder (75–90 min is typical for a whole one). Tested?
+    - Salt and pepper for the sauce (step 4) aren't listed. L22: `[[Bruce's Poultry and Pork Spice Rub]]` → sentence case.
+- [x] ! `recipes/quick-crispy-wings.md`
+    - Missing step: the hot sauce (Frank's, butter, rub, herbs) is listed but never used. Add "Toss the baked wings in the sauce".
+    - Timing contradicts: step 3 is 20–30 min, flip, then another 20–30 (40–60 total), but `cook_time` says 20–30.
+    - L19: private Google Doc link for the poultry rub → `[[Bruce's poultry and pork spice rub]]`.
+    - L38: "preheat and oven" → "preheat the oven"; "219C (425F)" → "220°C (425°F)". L11: "5 birds worth" → "5 birds' worth". L41: comma splice.
+- [x] ! `recipes/quick-hummus.md`
+    - L14: "2x 3-4 cloves of garlic" is unclear. Q: 6–8 cloves total?
+    - Step 1 reserves the cooking liquid "you may need some later", but it's never used again; Notes suggest olive oil to thin. Mention the liquid there too.
+    - L16: "3 tablespoon" → "tablespoons". Steps 6–7: comma splices. Step 1 missing period. L9: "restaurant style" → "restaurant-style"; yield belongs in `servings`.
+- [x] ! `recipes/quick-pizza-sauce.md`
+    - L44: the "Canned tomato style" variation is incomplete (only the tomatoes and paste, no seasoning) and duplicates pizzeria-pizza-sauce.md. Link `[[Pizzeria pizza sauce]]` instead.
+    - L50: "A bit sweet ... or less sugar" doesn't match this recipe (sugar is only "a pinch if needed"). It probably belongs to the variation.
+    - No yield: 2 tbsp paste + water makes ~⅓ cup, about one pizza. Say so.
+- [x] ! `recipes/ramen-eggs-ajitsuke-tamago.md`
+    - L18: incorrect: "The eggs finish cooking in the marinade as they cool". They're shocked in ice water first and go into a cooled marinade, so they don't cook further. Drop the claim; the 7-minute time is the jammy result.
+    - L46: reusing the marinade 2–3 times: bring it to a boil and cool before each reuse (it has held peeled eggs for days).
+- [x] ! `recipes/ramen-noodles.md`
+    - L10, L33: the "Ramen Lord's book" links go to private Google Docs. Link the book (as basic-ramen-tare.md does) or unlink.
+    - L24: em-dash, and an open testing note ("consider testing some egg white"). Move it to Notes.
+    - L16: "38% hydration": 145 g water over 400 g flour + gluten is ~36%. Minor.
+    - L34: "noodlize" is jokey; fine in voice, but "cut into noodles" reads better in a recipe.
+- [x] ! `recipes/red-thai-curry.md`
+    - L22: "1/3" → "⅓". L34: "caramelised" → "caramelized".
+    - Otherwise clean; strong Mechanic.
+- [x] ! `recipes/rice-pudding.md`
+    - `cuisine: Japanese` looks wrong for this rice pudding (vanilla, cinnamon, milk). Q: typo?
+    - Q: the temperatures don't quite line up with the texture. Egg custards start to thicken around 70°C and curdle above ~80–85°C, so pulling at 65–70°C (L34) may leave it thin, and "above [70°C] the egg curdles" (L18) is too low. 71–75°C would be safer and still smooth.
+    - L14: "icecream" → "ice cream". L25: "3¼ tablespoons sugar" is oddly precise (a scaled value?); "3 tablespoons" or 40 g.
+- [x] ! `recipes/rich-vegmushroom-stock.md`
+    - Contradiction: L11 says it "works best 2:3 (veg:water)", Notes (L50) say "At a ratio of 3:2".
+    - The kombu is listed but never used in the method. Q: steeped after the simmer, like the ramen stock?
+    - L9: "PhØ" → "pho" (or "phở"); "Ramen" → "ramen"; "Cooking With Glen’s" Q: the channel is "Glen & Friends Cooking".
+    - L24: "shitake" → "shiitake"; L26: "5ml/1 teaspoons" → "1 teaspoon (5 ml)"; L29: "Veg oil" → "vegetable oil"; L45: "decompress" → "depressurize". L39: "### Directions:" → `## Method`.
+- [x] `recipes/roast-poultry.md` (fixed 2026-09-24: breasts 65°C with the rest as the hold, 68°C boneless; "in pieces"; 220°C)
+- [x] ! `recipes/rocky-road-brownies.md`
+    - Incoherent: the chocolate chips and white chocolate are listed but never used; the 600 g bittersweet chocolate is "folded in" at step 5 with no melting step (surely melted with the butter?); salt is used in step 3 but isn't in the base ingredients.
+    - Order: step 9 swirls in the marshmallow meringue before the meringue section is made. Move the meringue first, or say "make the meringue now".
+    - No bake time: "Bake Brownies until no longer jiggling" needs an approximate time (~35–45 min at 160°C for a 23 × 33 cm pan) and a cue.
+    - Typos: L13 "coresly" → "coarsely"; L9 "they staff" → "the staff". Title Case throughout ("Bittersweet Chocolate", "Butter a 9 x 13inch Baking Dish").
+    - Imperial: "9 x 13inch" → "23 × 33 cm (9 × 13 in)"; "2 inches" of water → "5 cm". Temps "160 degrees C (325 F)", "76 degrees C (170 F)" → "160°C (325°F)", "76°C (170°F)".
+    - L9: very long backstory (recipe rules Q).
+- [x] ! `recipes/salsa-verde.md`
+    - Food safety: "Lasts up to 3 weeks in the fridge" is too long for fresh salsa with raw onion, garlic, and cilantro. 5–7 days is safer.
+    - Lime juice is listed but never used. Step 3 is a note, not a step.
+- [x] `recipes/sandwich-sour-pickles.md`
+- [x] ! `recipes/satay-marinade.md`
+    - Missing step: the 1 tbsp salt is excluded from the blend (step 1) and never added. Q: rub it on the protein before the marinade (dry brine)?
+    - No quantity of protein for this batch. Q: ~1 kg?
+    - Step 3 "Cook protein until done" has no internal temperatures (pork/chicken/beef differ); link the doneness cheat sheet or list them.
+    - L25: "juiced and zest" → "juiced and zested"; L27: "worcestershire" → "Worcestershire"; L40: "230C/450F" → "230°C (450°F)", "foil lined" → "foil-lined".
+- [x] ! `recipes/sheet-pan-fast-food-style-gyros.md`
+    - Contradiction: L19 says "2-3% salt per kg of protein", but 2 tsp kosher salt in 1 kg of meat is ~0.6–1%.
+    - Open test markers: L27 "← needs to be tested", L53 "Test this", L55 plans for the next pass, while `draft: false`.
+    - Q: near-duplicate of gyro-base.md (same meats and spices, different method). Merge, with the sheet-pan bake as a method variation?
+    - Title: "Sheet pan fast food style gyros" → "Sheet-pan fast-food-style gyros". Tag `bases` fits; no cuisine issue.
+    - L39: "half way" → "halfway". L42: missing period; "175C (350F)" → "175°C (350°F)"; "70C (160F)" → "71°C (160°F)". L51: "parm" → "Parmesan".
+- [x] ! `recipes/shredded-taco-chicken.md`
+    - L30: "Marinade chicken" → "Marinate". L31: "excess marinate" → "excess marinade". L30: mismatched quotes around “ham“.
+    - L36: "½-1cup" → "½–1 cup". Temps "75C-90C (170F-200F)", "200C/400F" → degree signs.
+    - Otherwise the method is clear, and simmering the used marinade (step 4) is good.
+- [x] ! `recipes/simple-chicken-pork-and-beef-gravy.md`
+    - Unit error: L9 "50mg roux to 250mg liquid" → "50 g roux to 250 ml liquid".
+    - L30: two private Google Doc links for stock → `[[Chicken or turkey stock]]` and `[[Beef stock]]` (they're "in this book").
+    - No quantities at all in the ingredient list. Add the 1:5 example as a base batch (25 g butter, 25 g flour, 250 ml stock + drippings).
+    - L29: "pan dripping" → "pan drippings". L27: "## Notes:" colon.
+- [x] ! `recipes/simple-chunky-salad-dressing.md`
+    - L13: "Hellman's" → "Hellmann's"; L15: "Braggs" → "Bragg"; L15–16: "1-2 tablespoon", "2 tablespoon" → "tablespoons". L18: "coriander": ground or fresh?
+    - L24: "Season to taste, but should balance..." has no subject → "It should balance...".
+- [x] ! `recipes/simple-green-goddess-dressing.md`
+    - L20: "dashi powder/msg" → "MSG". L9: "garlic forward" → "garlic-forward"; L13: "flat leaf" → "flat-leaf".
+    - Notes (L33, L35) are test status; fine, but combine into one line.
+- [x] ! `recipes/simple-marinara.md`
+    - Tagged `vegan, dairy-free`, but the whole method depends on meat drippings (L18, L43). Drop `vegan`.
+    - L14: "flat breads" → "flatbreads"; "as a quick and fresh pasta" → "a quick pasta sauce".
+    - Q: the title "Simple marinara" undersells that it's a pan sauce from meat drippings; "Pan-drippings marinara"?
+- [x] `recipes/simple-rice-bowls.md` (fixed 2026-09-24: converted to FORMAT.md; two example bowls split; chicken 68°C; Google Doc links → wiki links; rice is cooked)
+- [x] ! `recipes/simple-shrimp-marinade.md`
+    - No salt at all. Q: intentional?
+    - No quantities for oil or shrimp: "Olive oil" → "2 tbsp olive oil"; add "for about 450 g shrimp".
+    - L23: "Roasted jalapenos seeds in" → "Roasted jalapeños, seeds in". L15: "½ knob of ginger" → "1 tsp grated ginger".
+- [x] ! `recipes/simple-sweet-pickled-veg.md`
+    - L9 says it's for "beets, cabbage, and other hearty veg", but the method only covers beets. Add a line for raw veg (cabbage/carrot: no pre-cook, pour warm brine over).
+    - L23: "1 bag of beets" → weight (~1 kg). L30: "cheese cloth" → "cheesecloth", "sauce pan" → "saucepan". L16, L25: double spaces.
+    - The loose peppercorns and cloves vs the pickling spice in a bag (step 2) aren't clear. Say which go in the bag.
+- [x] ! `recipes/simpler-thai-red-curry.md`
+    - Ingredients never used: tomato paste (1½ tbsp) and the "savoury sauce" (miso/soy/sake). Salt is only implied.
+    - L41: "219C (450F)". 219°C is 425°F; → "230°C (450°F)" or "220°C (425°F)".
+    - L15–16: "2 can" → "2 cans", "2 cup" → "2 cups", "1 ½ tablespoon" → "tablespoons". L15: "non-emulsified coconut milk" Q: meaning no guar gum/stabilizers? Say that; it matters for splitting.
+    - L39: "### Directions:" → `## Method`; L47: "## To serve:" colon.
+    - Q: three Thai red curries now (this, red-thai-curry.md, bruces-thai-redgreen-curry.md). Consolidate?
+- [x] ! `recipes/south-american-red-salsa.md`
+    - L10: template placeholder text published as the intro ("This is an example. Copy it and replace things..."). Same as greek-islands-creamy-greek-dressing.md.
+    - L21: broken Google Docs comment anchor `[\[a\]](#cmnt1)`.
+    - L15: "tomoatoes" → "tomatoes"; L18, L31: "jalapeno" → "jalapeño"; L20: "½ lemon, juice" → "juiced". L16: double space.
+    - Q: "South American" is vague. Is this a pebre (Chilean) or from a specific source? A one-line intro would fix both issues.
+- [x] ! `recipes/spaghetti-squash-boats-or-casserole.md`
+    - No seasonings listed, though step 3 says "incorporate your seasonings". Q: what do you use (e.g. taco spice for the Mexican version, Italian herbs otherwise)?
+    - Q: 30 minutes at 190°C is short for spaghetti squash halves (usually 40–50 min, until a fork shreds the strands easily). Add a doneness cue.
+    - L10: "spagehetti" → "spaghetti". L17: "1 package" → weight (~450 g). Title Case ingredients. L29: "375 degrees F (190 C)" → "190°C (375°F)". L34–35: "Boats - fill" hyphen-dash → colon.
+- [x] ! `recipes/spinach-dip.md`
+    - L17: "Hellman's" → "Hellmann's"; L16–17: "1 ¼ cup" → "cups". Package and can sizes missing (Knorr packet, water chestnuts 227 ml, spinach 300 g).
+    - L26: missing period; L27: double spaces. Title Case in the blockquote.
+- [x] ! `recipes/spinach-mushroom-flatbread.md`
+    - Missing temperature: step 2 "Preheat your oven with your flatbreads" never gives one. Q: 200°C (400°F)?
+    - Formatting: the bullet sub-lists under steps 1 and 3 aren't indented, so the numbered list restarts and renders as separate lists.
+    - L20: "criminis" → "cremini"; L14: "parmesan" → "Parmesan"; L15: "swiss" → "Swiss". L18: "## Topping:" sits at the same level as Ingredients; make it `####`.
+- [x] ! `recipes/spinach-pecan-pasta-filling.md`
+    - Error: step 1 fries "shallots" and adds "peppers", neither of which is in the ingredient list. Q: were these meant to be in the recipe (1 shallot, ½ red pepper?) or leftovers from the mushroom filling?
+    - Q: "20g fresh or dried herbs". 20 g of dried herbs is about 10 tbsp, far too much. "5g black pepper" (~2 tsp) is also heavy for ~400 g filling. Check both.
+    - Tag is wrong: `breads` → `bases` or `pasta`.
+    - Step 1: "Fry nuts, shallots and garlic until translucent" (nuts don't go translucent). Toast the nuts first, then soften the shallot and garlic.
+    - L9: "ragu" → "ragù"; L17: "parmesan" → "Parmesan"; L29: double period and double space.
+- [x] `recipes/strawberry-rhubarb-compote.md`
+- [x] ! `recipes/stuffed-mushroom-caps.md`
+    - Error: L27 "177 degrees F (375 C)" has the units swapped. It means 190°C (375°F) (or 175°C / 350°F).
+    - L33: "Bake low and slow" at 190°C isn't low; drop "low and slow".
+    - L22: "Mix together and add Salt & Pepper to taste" is an instruction in the ingredient list. L29: "to maximum stuffing space" → "to maximize".
+    - Title Case ingredients; L21: long parenthetical instruction inside an ingredient line. L10: "mushrooms caps" → "mushroom caps"; backstory blockquote (recipe rules Q).
+- [x] ! `recipes/sweet-gochujang-sauce.md`
+    - L9: the intro is copied word for word from thai-style-chilli-lime-sauce.md ("This is a vibrant, and tasty sauce for wings, chicken sandwiches, noodles, and tofu..."). Give each its own line; also drop the comma after "vibrant".
+    - L20: "5 spice" → "five-spice". L19: "1-2 teaspoons ground ginger (or equivalent minced)": ground and fresh aren't equivalent by volume; "1–2 tsp ground ginger or 1 tbsp fresh".
+    - Q: overlaps with gochujang-wing-sauce.md (cooked vs uncooked). Cross-link at least.
+- [x] ! `recipes/sweet-potato-pie.md`
+    - Imperial and odd units: "1 lb & 3 oz" → "540 g (1 lb 3 oz)"; "1 9in Deep Dish" → "one 23 cm (9 in) deep-dish"; "350 degrees F (175 C)" → "175°C (350°F)". L15: "¾ cups" → "¾ cup".
+    - Step 7: no doneness cue for 50–55 min: "until the centre is just set with a slight wobble".
+    - L9: source is Alton Brown on Food Network; put it in `source:` (currently `family`). "LOVED" all caps. Title Case ingredients and steps.
+- [x] `recipes/sweet-soy-sauce-kecap-manis-style.md`
+- [x] ! `recipes/szechuan-quick-noodles.md`
+    - Title and body: "Szechuan" → "Sichuan" (current standard romanization; "Szechuan peppercorns" is still common on labels, so either is defensible. Pick one collection-wide; beef-base note too).
+    - L54: "Needs acid" is a test note. Add "a splash of rice vinegar" to the seasoning step instead.
+    - Q: 2 tsp MSG (~8 g) for one serving is heavy; most of the collection uses 0.5–1%. Intended?
+- [x] ! `recipes/teriyaki-sauce.md`
+    - Percentages mix volume and weight (sugar, MSG, ginger in g against shoyu in ml). Fine in practice; say "% of shoyu volume, solids by weight" once.
+    - L37: "kabobs" → "kebabs". L33: "corn or rice starch" → "cornstarch or rice starch".
+- [x] `recipes/thai-cucumber-relish.md`
+- [x] ! `recipes/thai-style-chilli-lime-sauce.md`
+    - Weight/volume pairs don't agree: "60g (2 tablespoons) Thai chilli paste" (2 tbsp ≈ 35 g); "20g (1 tablespoon) neutral oil" (≈ 14 g); "10g (1 teaspoon) MSG" (1 tsp ≈ 4 g); "10g (1 teaspoon) salt" (1 tsp ≈ 6 g fine salt, 3 g kosher). Pick the tested unit and fix the other.
+    - L15: "150ml (½ cup + juice of 1 lime) lime juice" is circular. → "150 ml lime juice (about 5 limes)".
+    - Typos: L9 "midly" → "mildly"; "Puré" → "Purée" (L11, L26, L37). Title: "Thai style" → "Thai-style". L33: "1/4 cup ... scallions" → "¼ cup ... green onions".
+    - L9: intro duplicated from sweet-gochujang-sauce.md.
+- [x] ! `recipes/the-anything-casserole.md`
+    - Food safety: "until brown and bubbly (~65C/150F)". Reheated leftovers should reach 74°C (165°F) in the centre. The time-and-temperature trick doesn't apply well here: leftovers have been through cooling and storage, and a casserole's centre heats slowly and unevenly.
+    - L18: "Stir fried" → "Stir-fried". L27: "200C/400F" → "200°C (400°F)". No bake time (from fridge vs from frozen); add rough times.
+- [x] ! `recipes/toblerone-shortbread.md`
+    - No bake time. Step 6 only gives a cue; add "about 12–15 minutes".
+    - Typos: L29 "Toblernone" → "Toblerone"; "spoon full" → "spoonful"; L17 "corn starch" → "cornstarch"; L31 "air-tight" → "airtight". L27: Title Case ("Icing Sugar, Corn Starch, Flour").
+    - L11: "made by a coworker while both working at Discover Software, Linda" puts the name at the end; "made by Linda, a coworker at Discover Software".
+    - L15: "1 lb butter" → "454 g (1 lb) butter". "batter" (steps 4–5) → "dough".
+- [x] ! `recipes/tofu-in-tomato-sauce.md`
+    - L14: the Mechanic paragraph sits in the intro with no heading ("The mechanic here is..."). Make it `## Mechanic` and give the page a one-line intro.
+    - L24: "seasoning powder" is unclear for most readers. Name it (Vietnamese hạt nêm, or chicken/mushroom bouillon powder).
+    - L35: "Heat a generous amount of oil ... over low heat. Once bubbling" is contradictory for shallow-frying tofu → "medium heat, until shimmering".
+    - L33 repeats the cutting instructions already in the ingredient list. L51: "helps them break down faster than omitting it entirely" is redundant → "helps them break down faster".
+- [x] ! `recipes/tofu-pepperoni.md`
+    - L13: "1/2 package smoked tofu" → a weight (~200 g). L18: "1 teaspoon garlic powder and onion powder" → "1 teaspoon each".
+    - L21: "## Hardware:" (legacy) listing a container and a spoon adds nothing; drop it.
+    - L9: "It has a texture like cheese" Q: meaning firm and sliceable? Reword. L34: capitalize "Smoked".
+- [x] ! `recipes/tomato-soup.md`
+    - L21: "780ml ... (2 × 400ml tins)" is 800 ml. Tags say `italian`, `cuisine: world`.
+    - Otherwise clean.
+- [x] ! `recipes/triple-layered-double-pumpkin-cheesecake.md`
+    - Error: L14 "1000ml Cream Cheese (2 blocks)". Two blocks are 500 g (2 × 250 g); cream cheese isn't measured in ml.
+    - Gelatine step (9) is out of order: gelatine should bloom in cold water first, then dissolve with a little hot liquid. Adding hot water to dry gelatine clumps.
+    - Q: step 6 uses a toothpick-comes-out-clean test for a baked cheesecake layer. By then it's usually overbaked and cracked; "set at the edges with a slight wobble in the centre" is the standard cue. No water bath either.
+    - L9: "Not sure where this recipe came from but it looks Yummy!" suggests it's untested, but `draft: false`. Q: made it?
+    - L35: "compliment" → "complement"; "an inch up" → "2.5 cm". L17: "1 can Pumpkin (284ml)" Q: pumpkin purée cans are usually 398 ml (14 oz); confirm. Title: "Triple layered" → "Triple-layered". Title Case ingredients. Temps "300 degrees F (150 C)".
+- [x] ! `recipes/ts-broccoli-salad.md`
+    - L20: private Google Doc link for the "Alternative" dressing. Unlink or add it here.
+    - L14: prep for the broccoli isn't given (raw florets, chopped small? blanched?). L18: "1 package of slivered almonds" → weight (~100 g).
+    - L22: "Hellman’s" → "Hellmann’s"; "Smoked Tempeh", "Apple Cider" → lower case. L38 repeats the tempeh substitute already in L13.
+- [x] ! `recipes/tuna-rice-bowl.md`
+    - L14 says it uses frozen tuna, but no thaw step. Add "thaw overnight in the fridge and pat very dry".
+    - Doneness mismatch: the method says "center still red to pink" (rare to medium-rare), Notes say "Cook tuna to medium".
+    - "scallion(s)" → "green onion(s)"; L57: "center" (see centre/center Q).
+- [x] `recipes/turkey-burgers.md` (fixed 2026-09-24: converted to FORMAT.md; cook to 70°C; spelling, units, intro)
+- [x] ! `recipes/ultimate-every-bun-recipe.md`
+    - L10: "Weissman's" → "Joshua Weissman's". L22: "until dissolved" → "until smooth" (flour doesn't dissolve).
+    - L66: Q: "refrigerated for up to a week". The fridge stales bread fastest; room temperature 2–3 days or freezer is usually better. Intentional?
+    - L32: "60g (1 large egg)". A large egg is ~50 g out of shell. Minor.
+    - Otherwise well built; dough weights match the table.
+- [x] ! `recipes/unbaked-cookies.md`
+    - Missing: how long to boil. No-bake cookies set only if the syrup boils for about 1–2 minutes; too short and they stay wet, too long and they crumble. Add "boil 1½ minutes".
+    - L11: "use to make" → "used to make". Variations come before Directions; move them after. Title Case ingredients. No yield (~3 dozen?).
+    - L19: "Coconut" → "shredded coconut" (sweetened or unsweetened?).
+- [x] ! `recipes/uncle-bruces-ranch-dip.md`
+    - Weight/volume pairs disagree: "2g (2 teaspoons) salt" (2 tsp is ~12 g fine salt or ~6 g kosher); "1g (1 ½ teaspoon) ground black peppercorns" (≈ 3.5 g). Q: which unit did you measure in?
+    - Step 1 says "Add salt to taste", but salt is already a listed ingredient. Pick one.
+    - L14: "Hellman’s" → "Hellmann’s". L9: "post-war style" → "post-war-style". L15: "1 ½ teaspoon" → "teaspoons".
+- [x] ! `recipes/vaguely-asian-slaw-dressing.md`
+    - Q: near-duplicate of asian-slaw-dressing.md (same 90 g oil / ~45–50 g rice vinegar / 30 g Dijon / sesame / soy / maple). Merge?
+    - L14: garbled unit: "50g tablespoons seasoned rice vinegar" → "50 g seasoned rice vinegar".
+    - L9: "Asian style" → "Asian-style"; "ginger/garlic depth" → "ginger or garlic for depth".
+- [x] ! `recipes/vegan-burger-savoury-chew-gluten.md`
+    - Not vegan as written: Worcestershire (L24) contains anchovy. Use a vegan Worcestershire.
+    - Incomplete: no intro, and the method stops at "combine thoroughly". No forming, resting, or cooking step, and no amounts for salt, liquid smoke, or oil. Steps 1 and 2 both fry the onions and garlic.
+    - Title has a trailing space; the filename (`vegan-burger-savoury-chew-gluten`) doesn't match the title. Q: `draft: true` until finished?
+- [x] ! `recipes/vegetarian-lasagna.md`
+    - Contradiction: the marinara link is `[[Simple Marinara]]`, which is built on meat drippings, so it doesn't fit a vegetarian lasagna. Also, that recipe makes ~500 ml, far too little for a 8–10 serving lasagna (usually 1.5 L+). Link `[[Marinara sauce]]` or `[[Classic pizza sauce]]` and give a volume.
+    - L14: "our kids first" → "our kids' first". L33: "caramelise" → "caramelize".
+- [x] ! `recipes/velveting-pork.md`
+    - Clean. (Optional: many velveting methods rinse after a baking-soda soak to avoid a soapy taste at ½ tsp per 350 g; worth a line if you've tasted it.)
+- [x] ! `recipes/vindaloo-paste.md`
+    - Incorrect: L47 "Lemon juice is the traditional souring agent". Goan vindaloo (from Portuguese vinha d'alhos) is traditionally made with vinegar and a lot of garlic. The Mechanic's "fenugreek and dried chilies are what make this vindaloo" is also debatable. Suggest: "Vinegar is traditional; lemon is my swap."
+    - L21: "50g fresh ginger (2 inches)" → "(5 cm)". Q: only 3 garlic cloves for a vindaloo, intentional?
+- [x] ! `recipes/vindaloo-wing-sauce.md`
+    - L14: "mildy" → "mildly". L21: calls for "vindaloo spice blend (see [[Vindaloo Paste]])", but that recipe is a wet paste with lemon and ginger. Q: 1½ tbsp of the paste, or a dry blend?
+    - L45: "[draft] needs testing" note while `draft: false`. L46 repeats the gochugaru tip already in the ingredient list.
+- [x] ! `recipes/vodka-cream-sauce.md`
+    - Missing step: the cream is never added. Add it in step 7 (off the heat, with the basil).
+    - No pasta quantity (e.g. 450 g). L18: "1 large can (1000ml/32oz)". Canadian large cans are 796 ml (28 oz), and 32 oz is 946 ml, not 1 L.
+    - L28: "½ cup Parmesan similar" → "or similar". L40: "3~5 minutes" → "3–5". L42: missing period. L33: double space.
+    - L10: "I have no idea if it's any good" with `draft: false`. Q: retest or mark draft?
+- [x] ! `recipes/weeknight-ginger-beef.md`
+    - L45: refers to broccoli ("stir-fry them alongside broccoli"), which isn't in the recipe.
+    - Sesame seeds and chili oil (To serve) aren't listed; fine as garnish. L53: "teflon" → "non-stick". L18: "center" (see centre Q).
+- [x] ! `recipes/weeknight-mapo-tofu.md`
+    - Q: "2–3 tablespoons Szechuan peppercorns" for 3–4 servings is very numbing; most recipes use 1–2 teaspoons. Typo for teaspoons?
+    - L67: "Kenji Lopez-Alt" → "Kenji López-Alt". "Szechuan" (see sichuan Q). "scallions" → "green onions". L63: "teflon".
+    - L42: "medium-firm silken tofu" is fine (silken comes in grades), but it's worth saying "silken, medium-firm".
+- [x] ! `recipes/welsh-cakes.md`
+    - Privacy: L34 names your street ("our stove on Vidal St in White Rock"). Q: keep a street name on a public site? "our old stove" would do.
+    - Typos: "Currents" → "Currants" (L22, L31); L11 "Grandman Rempel" → "Grandma"; L34 missing space "brown.For"; L18 double space.
+    - L34: "Bake on a griddle at 325 degrees F" → "Cook on a griddle at 165°C (325°F)"; no cook time per side (~3–4 min). L32: "½ inch" → "1 cm (½ in)".
+    - L9: "Welsh flat bread" → they're griddle cakes; "flatbread" misleads. Title Case ingredients and blockquote.
+- [x] ! `recipes/white-rock-cheesecake.md`
+    - Q: family-only recipe: the blockquote says "Do not share outside of our family!" It's `draft: true`, which keeps it off the site, but it's in the repo. Note that carrot-cake.md, from the same restaurant with "This recipe stays in the family", is `draft: false` and published.
+    - Missing ingredients: the crust (graham crumbs, butter, cinnamon) is used in step 2 but not listed. Step 2 is copied from the pumpkin cheesecake. No pan size.
+    - Typos: "compliment" → "complement"; "scrapped" → "scraped"; "Tirmasu" → "Tiramisu"; "Drizzle with white cake with 1 shot" → "Drizzle the white cake with"; "Wrapped baked and cooled cake" → "Wrap the cooled cake"; "an 1 inch" → "2.5 cm (1 in)"; "Require" → "You'll need".
+    - Title: "White Rock Cheesecake" → "White Rock cheesecake". L10: "Aka:" line → `aka:` frontmatter. "## Varieties:" → "## Variations".
+- [x] ! `recipes/white-spot-burgers.md`
+    - Contradictory explanations of "triple O": L13 says the O's were condiment checkboxes on order pads; L33 says they were three sauce choices. Pick one (or say sources disagree).
+    - Raw egg yolk in the mayo (L47), made ahead for 8 burgers. Suggest a pasteurized yolk, or note to use it the same day.
+    - L9: "This Bruce’s take" → "This is Bruce’s take"; "Whitespot" (L11) → "White Spot"; L33 "Tripple" → "Triple"; "meat balls" → "meatballs"; "accent" → "Accent"; "teflon" → "non-stick".
+    - Units: "4-5oz" → "115–140 g (4–5 oz)"; "⅛ - ¼ inch" → "3–6 mm"; "1/2 tsp", "3/4 tbsp" → glyphs; L25: "1 package" → weight.
+    - L38: "Heinz Chilli Sauce" → the product is "Heinz Chili Sauce".
+- [x] ! `recipes/winter-noodle-soup-with-kale-and-fennel.md`
+    - Ingredients never used: 4 cups water (only stock goes in) and the dill. Step 3 "Add bouquet and bay" (bay is already in the bouquet garni).
+    - L10: private Google Doc link for veg stock → `[[Rich veg/mushroom stock]]`.
+    - L50: "Add more wine to the soup or chef." A joke; keep if you like, but it's the only instruction for the second cup of wine's purpose.
+    - Temps: "176C (350F)" → "175°C (350°F)". L48: "dutch oven" → "Dutch oven", "saute" → "sauté". L47: "bite size" → "bite-size". L59: "6L/qt" → "6 L (6 qt)".
+- [x] ! `recipes/yam-and-sage-pasta-filling.md`
+    - Error: "60g (2 cups) cooked and mashed yam". 2 cups of mash is ~480 g. Q: which is right? It changes the filling a lot.
+    - Tag is wrong: `breads` → `bases`/`pasta`. L11: "#### Ingredients:" → "## Ingredients".
+    - L19: open test note ("← missing from first batch, play with this"). L9: "ragu" → "ragù". L30: double space.

@@ -1,5 +1,5 @@
 ---
-title: Pan fried chicken burger
+title: Pan-fried chicken burger
 tags: [mains, burgers]
 source: family
 servings: 9 burgers
@@ -27,7 +27,7 @@ This is a work in progress and I’m tracking my [experiments in a spreadsheet](
 
 Dissolve the salt, sugar, baking soda, and MSG in the water, then mix thoroughly into the ground chicken along with the spices.
 
-Form into patties about 1-2cm wider than the buns you plan to use; this batch makes about 9 patties at ~90g each. Rest on lightly oiled parchment in the refrigerator (or freezer) for 20 minutes, or up to a few hours.
+Form into patties about 1–2 cm wider than the buns you plan to use; this batch makes about 9 patties at ~90g each. Rest on lightly oiled parchment in the refrigerator (or freezer) for 20 minutes, or up to a few hours.
 
 ## Breading
 
@@ -41,17 +41,17 @@ Form into patties about 1-2cm wider than the buns you plan to use; this batch ma
 
 #### Batter
 - 100g water
-- 50g corn starch
+- 50g cornstarch
 - 2g salt
 
 #### Breadcrumbs
 - 100g breadcrumbs
 
-Combine the flour, pepper, onion powder, and garlic powder for the dredge. Separately, combine the water, corn starch, and salt into a loose batter.
+Combine the flour, pepper, onion powder, and garlic powder for the dredge. Separately, combine the water, cornstarch, and salt into a loose batter.
 
-Dredge each patty in the flour mixture, dip into the batter, let the excess drip off, then roll in breadcrumbs until maximally covered. Let sit for 10-20 minutes.
+Dredge each patty in the flour mixture, dip into the batter, let the excess drip off, then roll in breadcrumbs until maximally covered. Let sit for 10–20 minutes.
 
-Shallow fry on medium (175-190C) until both sides are nicely browned and the internal temperature hits 70C. Carry-over heat will bring the patties up to the recommended 75C.
+Shallow fry in oil at 175–190°C (350–375°F) until both sides are deep golden and the centre reads 70°C (158°F). The last minutes of frying count toward the safety hold, so 70°C is enough for a patty this size; see [[Food safety: time and temperature]]. Cook to 74°C (165°F) for vulnerable guests.
 
 ## Build your sandwich
 
@@ -71,6 +71,6 @@ The Bruce: mayo with lettuce and tomato (top), extra pickles and onions, chicken
 
 Swiss: mayo, lettuce and tomato (top), Swiss cheese, ham, chicken, mustard, and pickle.
 
-Italian parm: mayo, lettuce and tomato (top), mozzarella, parmesan, chicken, and marinara.
+Italian parm: mayo, lettuce and tomato (top), mozzarella, Parmesan, chicken, and marinara.
 
-Rancher style: mayo, lettuce and tomato (top), cheddar, onions, chicken, BBQ sauce.
+Rancher-style: mayo, lettuce and tomato (top), cheddar, onions, chicken, BBQ sauce.

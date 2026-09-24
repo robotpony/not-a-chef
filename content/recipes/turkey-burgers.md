@@ -7,53 +7,46 @@ draft: false
 calories: 265 kcal per 140g/5oz
 ---
 
-It can be difficult to make turkey into a great burger without some extra oomph. This recipe uses extras packed with flavour to bump up the savoury, better texture, and improve browning. 
+It can be difficult to make turkey into a great burger without some extra oomph. This recipe uses extras packed with flavour to add savouriness, improve texture, and help browning.
 
-## Patties:
+## Patties
 
-- 1 small eggplant, about 200g / 7oz (or mushrooms)
+- 1 small eggplant, about 200 g (7 oz), or the same weight of mushrooms
 - Salt and freshly ground black pepper
-- 1 teaspoon olive oil
-- 1 teaspoon soy sauce
-- ¼ teaspoon marmite or soup base (bouillon, demi, soup powder, etc.)
-- 500g / 1 lb of boneless, skinless turkey thighs, cut into 1-inch cubes (or ground)
-- 1 anchovy filet, mashed to a paste
-    - or ¼ cup feta + ¼ cup of diced sundried tomatoes
-    - (or can sub parmesan for feta)
+- 1 tsp olive oil
+- 1 tsp soy sauce
+- ¼ tsp Marmite or soup base (bouillon, demi, soup powder)
+- 500 g (1 lb) boneless, skinless turkey thighs, cut into 2.5 cm (1 inch) cubes, or ground turkey
+- 1 anchovy fillet, mashed to a paste
+    - or 60 ml (¼ cup) feta and 60 ml (¼ cup) diced sun-dried tomatoes
+    - Parmesan works in place of the feta
 
+Oil and season the eggplant or mushrooms, wrap in foil, and roast at 200°C (400°F) until tender, 20–30 minutes. Cool. Scrape the flesh away from the skin and mince or mash it fine.
 
-## Special sauce:
+Stir the Marmite or soup base, soy sauce, and any other minced savoury extras together in a bowl. Add the turkey and mash everything together, or run it through a meat grinder.
 
-- 1 cup Hellman’s mayonnaise
-- 2 tablespoons (or so) of finely diced sundried tomatoes
-- 2 (sweet garlic/dill) pickles diced
-- 2 tablespoon onions (or shallots) finely diced
-- Salt/pepper (to taste)
-- Other greenery (if you have it: parsley, dill, etc.)
+Cut squares of parchment slightly larger than your patties. Set a 140 g (5 oz) ball of the mixture on each square, top with a second square, and press flat with a cutting board or pan to no more than 7 mm (¼ inch) thick. Tidy the edges with your fingers. Thin patties brown more for their weight and don't ball up in the pan; two thin patties beat one thick one.
 
-Chop, mix, season, and set aside.
+Freeze the patties, at least partially, before cooking.
 
-## Other optional condiments:
+Heat a pan with oil, a flattop, or a grill. Peel off the top sheet of parchment, flip the patty onto the cooking surface, and peel away the bottom sheet as it drops. Cook until well browned on both sides and the centre reads 70°C (158°F). Rest briefly while you toast the buns.
 
-- Finely shredded iceberg or romaine
-- Thinly sliced tomatoes
-- Raw finely sliced purple (or any) onions
-- Sliced pickles
-- Mustard    
+## Special sauce
 
-Roast the oiled and seasoned eggplant or mushrooms wrapped in foil at 200C/400F until tender (20-30 minutes). Cool, scrape flesh away, and finely mince or mash.
+- 250 ml (1 cup) Hellmann’s mayonnaise
+- 2 tbsp sun-dried tomatoes, diced fine
+- 2 sweet garlic or dill pickles, diced
+- 2 tbsp onion or shallot, diced fine
+- Salt and pepper
+- Parsley, dill, or other soft herbs, chopped (optional)
 
-Add marmite or soup base, soy and any other minced savory components to a bowl and stir until combined. Add to turkey and stir/mash together, or run through a meat grinder. Form into patties and freeze (at least partially).
+Mix everything together. Taste and adjust. Set aside.
 
-When making patties, I both form and store patties separated with squares of parchment paper. Cut up squares that are slightly larger than your desired patty size and top with 140g / 5oz balls of meat mixture. Then add a second sheet over each ball, and press with a cutting board or pan. I like to tidy up the edges a bit with my fingers, and I prefer patties no more than about 7mm or ¼ inch thick, which both maximizes the browned surface to meat ratio, and won’t ball up like a thicker patty. I’d prefer two thin, but nicely browned patties over one thicker one.
+## To serve
 
-Stack patties in a container or ziptop in the fridge (for 3-4 days) or freezer (for up to 3-4 weeks). Note that most parchment can be composted and is fairly non-stick. When adding patties to the grill, flattop, or pan, remove the top sheet of parchment, flip and hold the bottom parchment, peeling it off as the patty falls on the cooking surface.
+Buns toasted in a dry non-stick pan until browned, with the special sauce and any of: shredded iceberg or romaine, thinly sliced tomato, thinly sliced red onion, sliced pickles, mustard. The patties also work over salads, or on regular bread with sprouts.
 
+## Notes
 
-
-## Method:
-
-1. Cook prepared patties in a pan with oil or on a grill until medium or medium-well (63 - 65C, 145-149F). Let rest for 5-10 minutes while preparing the buns.
-2. Toast buns in a teflon pan, moving around until nicely browned. Add special sauce, and your choice of condiments.
-
-These patties are also great over salads or on regular bread with sprouts.
+- Patties keep 3–4 days in the fridge or 3–4 weeks in the freezer, stacked with their parchment in a container or zip-top bag. Most parchment can be composted.
+- The 70°C target counts the last minutes in the pan toward the safety hold. See [[Food safety: time and temperature]]. Cook to 74°C (165°F) for anyone pregnant, elderly, very young, or immunocompromised.
