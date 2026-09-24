@@ -711,13 +711,8 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - Filename contains "ā" (non-ASCII slug); see note on indian-takeout-tomato-purée.md.
     - Otherwise clean.
 - [x] `recipes/kormaqorma.md` (fixed 2026-09-24: method drafted (slow-fried onion paste), linked to base gravy; converted to FORMAT.md)
-- [x] ! `recipes/lazy-pizza-dough-2022.md`
-    - Error: the baker's percentages don't match the weights. At 600 g flour: 420 g water is 70% (table and Mechanic say 66%); 15 g sugar and 15 g salt are 2.5% each (table says 2%); 35 g oil is 5.8% (says 4%); 10 g yeast is 1.7% (says 1.5%). Q: which column is right? (66% would be 396 g water.)
-    - Portion math: the dough is ~1.1 kg, but the pizza step makes "4 equal portions of ~200g" (800 g), focaccia uses "½ (or about 350g)", and `servings` says ~3 pizzas. Reconcile (e.g. 350 g focaccia + 3 × 250 g pizzas).
-    - Temperature conversions are odd or off: "176C/350F" → "175°C (350°F)"; "247C/476F" → "250°C (475°F)"; "220C/430F" → "220°C (425°F)"; "280C/530F" → "275°C (525°F)". Round both sides.
-    - L74: "May bubble and misshapen more" ("misshapen" isn't a verb) → "May bubble and lose its shape".
+- [x] ! `recipes/lazy-pizza-dough-2022.md` (fixed 2026-09-24: % column recomputed from the weights (70% water); 350 g focaccia + 3 × 250 g pizzas; temperatures rounded; typos; converted to FORMAT.md)
     - L36: "coax that MF". Q: keep the profanity in a recipe? (Blog rules allow sparing use; recipe rules are stricter.)
-    - L32: "pyrex" → "Pyrex"; "Greek or Roman style" → "Greek- or Roman-style"; "anyways" (×2) → "anyway".
 - [x] ! `recipes/lemon-chicken-marinade.md`
     - L17: incorrect: "MSG rounds the salt without adding more sodium load". MSG is ~12% sodium (about a third of table salt's). Say "rounds the savouriness, so you can use less salt".
     - Otherwise clean.
@@ -775,11 +770,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - Contradictions: the build says "1 slice American cheese" but Notes say "I use 1/2 a slice"; the bun is "~9 cm, slightly pressed" in the build but "pressed to ~11 cm" in Notes.
     - MSG is listed "(applied after cooking)", but the method seasons with only salt and pepper.
     - L20: "using to flat surfaces" → "two"; "Par freeze" → "Par-freeze". L57: "sweet-savory" → "sweet-savoury". L60 missing period. L61: "1/2" → "½".
-- [x] ! `recipes/meat-sauce-aka-american-bolognese.md`
-    - Error: L16 "100ml (1 tablespoon) tomato paste". 1 tbsp is 15 ml. Q: which amount?
-    - L14: private Google Doc link for "softened beef base". → `[[Beef base]]`.
-    - L15: "1 x 796ml (28oz) San Marzano style tomatoes" missing "can"; "San Marzano-style".
-    - L28: "Stir in spices", but the list says "Seasonings (thyme, rosemary)". Call them herbs, and give amounts.
+- [x] `recipes/meat-sauce-aka-american-bolognese.md` (fixed 2026-09-24: 1 tbsp tomato paste; [[Beef base]] link; herbs named; converted to FORMAT.md)
 - [x] ! `recipes/meatballs.md`
     - Tagged `dairy-free`, but the recipe has 60 g Parmesan (and the panade options include cream, buttermilk, sour cream). Remove the tag.
     - No internal temperature: add "to 71°C (160°F)" to the bake step. (Meatballs simmered in sauce afterwards effectively get a long hold, so this matters most when they're served straight from the oven.)
@@ -888,10 +879,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - L51: "Ciabatta: (Italian baguettes)" isn't accurate (ciabatta is a flat "slipper" loaf). Drop the parenthetical. L53: "Ciabatta" → lower case.
     - L13: private Google Sheet link. L40: "233C/450F" → "230°C (450°F)". L64: "teflon" → "non-stick". "### Internal temperature guide:" colon.
     - Q: four pizza-dough recipes now (pizza-dough, 2021, 2022, lazy 2022). Keep as a history, or promote one as current and move the others to Variations/Notes?
-- [x] ! `recipes/pizza-dough.md`
-    - Q: 100 g vital wheat gluten per 900 g bread flour is ~10%, which pushes protein toward ~19%, far beyond "chewier". Notes mention aiming for ~12.5–14% total. Typo for 10 g?
-    - Notes contradict the recipe: the 2023 test found "best results with 1.5% yeast + ... 200g dough weight", but the recipe still says 0.1% yeast and 175 g balls. Update the recipe, or say the notes are an alternate.
-    - L39: "12–16 minutes" is a sentence fragment; fine, but add a doneness cue (browned bottom, bubbling cheese).
+- [x] `recipes/pizza-dough.md` (fixed 2026-09-24: 990 g flour + 10 g gluten keeps 70% hydration; adopted the 2023 test (1.5% yeast, 200 g balls); yeast now added in the method; doneness cue)
 - [x] ! `recipes/pizzeria-pizza-sauce.md`
     - L12: "pasata" → "passata". L46: `[[quick pizza sauce]]` → sentence case.
     - Salt: 15 g in ~700 g sauce is ~2%, quite salty. L44 already says start at 10 g; make 10 g the listed amount and drop the note.
@@ -1130,7 +1118,4 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - L10: private Google Doc link for veg stock → `[[Rich veg/mushroom stock]]`.
     - L50: "Add more wine to the soup or chef." A joke; keep if you like, but it's the only instruction for the second cup of wine's purpose.
     - Temps: "176C (350F)" → "175°C (350°F)". L48: "dutch oven" → "Dutch oven", "saute" → "sauté". L47: "bite size" → "bite-size". L59: "6L/qt" → "6 L (6 qt)".
-- [x] ! `recipes/yam-and-sage-pasta-filling.md`
-    - Error: "60g (2 cups) cooked and mashed yam". 2 cups of mash is ~480 g. Q: which is right? It changes the filling a lot.
-    - Tag is wrong: `breads` → `bases`/`pasta`. L11: "#### Ingredients:" → "## Ingredients".
-    - L19: open test note ("← missing from first batch, play with this"). L9: "ragu" → "ragù". L30: double space.
+- [x] `recipes/yam-and-sage-pasta-filling.md` (fixed 2026-09-24: 480 g (2 cups) yam; tags; test note moved to Notes; converted to FORMAT.md)
