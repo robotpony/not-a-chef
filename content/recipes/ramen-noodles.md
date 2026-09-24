@@ -2,6 +2,7 @@
 title: Ramen noodles
 tags: [bases, japanese, make-ahead]
 source: family
+cuisine: Japanese
 draft: false
 ---
 

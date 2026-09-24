@@ -2,6 +2,7 @@
 title: Candied cranberries (sugared cranberries)
 tags: [appetizers, sides]
 source: family
+cuisine: American
 draft: false
 ---
 

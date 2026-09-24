@@ -2,6 +2,7 @@
 title: Chai masala (sweet masala-spiced milk tea)
 tags: [drinks]
 source: family
+cuisine: Indian
 draft: false
 ---
 

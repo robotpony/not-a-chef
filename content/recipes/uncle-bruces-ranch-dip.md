@@ -2,6 +2,7 @@
 title: Uncle Bruce's ranch dip
 tags: [sauces]
 source: family
+cuisine: American
 draft: false
 ---
 

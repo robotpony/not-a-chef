@@ -2,6 +2,7 @@
 title: Grandma’s yukkie salad
 tags: [desserts]
 source: family
+cuisine: American
 draft: false
 ---
 

@@ -2,6 +2,7 @@
 title: South American red salsa
 tags: [sauces]
 source: family
+cuisine: Latin
 draft: false
 ---
 

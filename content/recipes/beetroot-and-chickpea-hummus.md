@@ -2,6 +2,7 @@
 title: Beetroot and chickpea hummus
 tags: [sauces]
 source: family
+cuisine: Mediterranean
 draft: false
 ---
 

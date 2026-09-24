@@ -2,6 +2,7 @@
 title: Shredded taco chicken
 tags: [bases]
 source: family
+cuisine: Mexican
 draft: false
 ---
 

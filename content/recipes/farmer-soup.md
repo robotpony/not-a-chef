@@ -2,6 +2,7 @@
 title: Farmer soup
 tags: [mains, soups]
 source: family
+cuisine: Canadian
 draft: false
 ---
 

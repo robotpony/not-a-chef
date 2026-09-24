@@ -2,6 +2,7 @@
 title: Maui/Kalua pulled pork
 tags: [mains, pork]
 source: family
+cuisine: Hawaiian
 draft: false
 ---
 

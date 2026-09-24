@@ -2,6 +2,7 @@
 title: Rocky road brownies
 tags: [desserts]
 source: family
+cuisine: American
 draft: false
 ---
 

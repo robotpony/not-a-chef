@@ -3,6 +3,7 @@ title: Ultimate every-bun recipe
 tags: [breads]
 source: family
 servings: 6 burger buns, 8 hot dog buns, or 9 dinner buns
+cuisine: American
 draft: false
 ---
 

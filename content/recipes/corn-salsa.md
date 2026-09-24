@@ -2,6 +2,7 @@
 title: Corn salsa
 tags: [sauces]
 source: www.recipetineats.com
+cuisine: Mexican
 draft: false
 ---
 

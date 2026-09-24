@@ -3,6 +3,7 @@ title: Lazy pizza dough (2022)
 tags: [breads]
 source: family
 servings: ~3 medium pizzas
+cuisine: Italian
 draft: false
 ---
 

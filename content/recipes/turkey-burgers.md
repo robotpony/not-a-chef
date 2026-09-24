@@ -2,6 +2,7 @@
 title: Turkey burgers
 tags: [mains, burgers]
 source: family
+cuisine: American
 draft: false
 calories: 265 kcal per 140g/5oz
 ---

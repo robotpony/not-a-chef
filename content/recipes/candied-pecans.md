@@ -2,6 +2,7 @@
 title: Candied pecans
 tags: [desserts]
 source: family
+cuisine: American
 draft: false
 ---
 

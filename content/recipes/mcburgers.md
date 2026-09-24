@@ -2,6 +2,7 @@
 title: McBurgers
 tags: [mains, burgers]
 source: family
+cuisine: American
 draft: false
 ---
 

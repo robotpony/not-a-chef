@@ -2,6 +2,7 @@
 title: Bulgogi beef
 tags: [mains, beef]
 source: family
+cuisine: Korean
 draft: false
 ---
 

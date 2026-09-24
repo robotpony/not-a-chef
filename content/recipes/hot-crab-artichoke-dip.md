@@ -2,6 +2,7 @@
 title: Hot crab & artichoke dip
 tags: [sauces]
 source: family
+cuisine: American
 draft: false
 ---
 

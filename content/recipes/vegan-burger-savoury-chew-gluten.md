@@ -2,6 +2,7 @@
 title: Vegan burger 
 tags: [mains, burgers]
 source: family
+cuisine: American
 draft: false
 ---
 

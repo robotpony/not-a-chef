@@ -2,6 +2,7 @@
 title: German platz
 tags: [desserts]
 source: family
+cuisine: Mennonite
 draft: false
 ---
 

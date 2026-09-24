@@ -2,6 +2,7 @@
 title: Lemongrass marinade
 tags: [bases]
 source: family
+cuisine: Vietnamese
 draft: false
 ---
 

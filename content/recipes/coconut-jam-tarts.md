@@ -2,6 +2,7 @@
 title: Coconut jam tarts
 tags: [desserts]
 source: family
+cuisine: Canadian
 draft: false
 ---
 

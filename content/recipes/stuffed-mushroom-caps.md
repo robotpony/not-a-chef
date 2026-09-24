@@ -2,6 +2,7 @@
 title: Stuffed mushroom caps
 tags: [appetizers, sides]
 source: family
+cuisine: American
 draft: false
 ---
 

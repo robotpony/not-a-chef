@@ -2,6 +2,7 @@
 title: Welsh cakes
 tags: [desserts]
 source: family
+cuisine: Welsh
 draft: false
 ---
 

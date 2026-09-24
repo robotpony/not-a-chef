@@ -2,6 +2,7 @@
 title: Gina’s tomato salsa
 tags: [sauces]
 source: family
+cuisine: Mexican
 draft: false
 ---
 

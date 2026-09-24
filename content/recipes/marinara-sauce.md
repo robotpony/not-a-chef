@@ -2,6 +2,7 @@
 title: Marinara sauce
 tags: [sauces]
 source: family
+cuisine: Italian
 draft: false
 ---
 

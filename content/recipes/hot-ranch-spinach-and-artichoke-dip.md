@@ -2,6 +2,7 @@
 title: Hot ranch spinach and artichoke dip
 tags: [sauces]
 source: family
+cuisine: American
 draft: false
 ---
 

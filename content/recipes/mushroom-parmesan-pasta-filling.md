@@ -2,6 +2,7 @@
 title: Mushroom parmesan pasta filling
 tags: [breads]
 source: family
+cuisine: Italian
 draft: false
 ---
 

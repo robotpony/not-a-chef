@@ -3,6 +3,7 @@ title: Boerenkool stamppot
 tags: [mains, mashes]
 source: family
 aka: brittacole, green potatoes, Boerenkool Met Worst
+cuisine: Dutch
 draft: false
 ---
 

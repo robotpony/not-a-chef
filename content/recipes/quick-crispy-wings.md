@@ -2,6 +2,7 @@
 title: Quick crispy wings
 tags: [mains, poultry]
 source: family
+cuisine: American
 draft: false
 prep_time: 20 minutes
 cook_time: 20-30 minutes

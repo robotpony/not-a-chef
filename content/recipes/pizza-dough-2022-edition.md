@@ -3,6 +3,7 @@ title: Pizza dough 2022 edition
 tags: [breads]
 source: family
 servings: ~4 medium pizzas
+cuisine: Italian
 draft: false
 ---
 

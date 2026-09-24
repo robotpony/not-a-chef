@@ -2,6 +2,7 @@
 title: French onion soup
 tags: [mains, soups]
 source: family
+cuisine: French
 draft: false
 ---
 

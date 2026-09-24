@@ -2,6 +2,7 @@
 title: White Spot burgers
 tags: [mains, burgers]
 source: family
+cuisine: Canadian
 draft: false
 ---
 

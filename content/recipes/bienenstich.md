@@ -2,6 +2,7 @@
 title: Bienenstich
 tags: [desserts]
 source: family
+cuisine: German
 draft: false
 ---
 

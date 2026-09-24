@@ -2,6 +2,7 @@
 title: Bruce’s cold brewed iced tea
 tags: [drinks]
 source: family
+cuisine: Canadian
 draft: false
 ---
 

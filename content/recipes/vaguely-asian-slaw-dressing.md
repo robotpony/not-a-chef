@@ -2,6 +2,7 @@
 title: Vaguely Asian slaw dressing
 tags: [salads]
 source: family
+cuisine: Asian
 draft: false
 ---
 

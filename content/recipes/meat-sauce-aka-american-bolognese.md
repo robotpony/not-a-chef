@@ -2,6 +2,7 @@
 title: Meat sauce (AKA American bolognese)
 tags: [sauces, italian american]
 source: family
+cuisine: Italian American
 draft: false
 ---
 

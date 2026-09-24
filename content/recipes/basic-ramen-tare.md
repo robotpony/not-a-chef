@@ -2,6 +2,7 @@
 title: Basic ramen tare
 tags: [bases]
 source: family
+cuisine: Japanese
 draft: false
 ---
 

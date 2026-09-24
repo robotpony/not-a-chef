@@ -2,6 +2,7 @@
 title: Teriyaki sauce
 tags: [sauces]
 source: family
+cuisine: Japanese
 draft: false
 ---
 

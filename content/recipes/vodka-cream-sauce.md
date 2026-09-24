@@ -2,6 +2,7 @@
 title: Vodka cream sauce
 tags: [sauces]
 source: family
+cuisine: Italian
 draft: false
 ---
 

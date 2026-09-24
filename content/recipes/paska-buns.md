@@ -2,6 +2,7 @@
 title: Paska buns
 tags: [breads]
 source: family
+cuisine: Mennonite
 draft: false
 ---
 

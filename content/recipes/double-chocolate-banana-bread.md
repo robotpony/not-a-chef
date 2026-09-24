@@ -2,6 +2,7 @@
 title: Double chocolate banana bread
 tags: [desserts]
 source: family
+cuisine: American
 draft: false
 ---
 

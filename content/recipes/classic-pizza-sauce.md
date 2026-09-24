@@ -2,6 +2,7 @@
 title: Classic pizza sauce
 tags: [sauces]
 source: family
+cuisine: Italian
 draft: false
 ---
 

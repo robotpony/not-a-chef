@@ -2,6 +2,7 @@
 title: Jerk chicken
 tags: [mains, poultry]
 source: family
+cuisine: Jamaican
 draft: false
 ---
 

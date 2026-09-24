@@ -2,6 +2,7 @@
 title: Oven roasted corn
 tags: [appetizers, sides]
 source: family
+cuisine: American
 draft: false
 ---
 

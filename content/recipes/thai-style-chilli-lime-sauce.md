@@ -2,6 +2,7 @@
 title: Thai style chilli lime sauce
 tags: [sauces]
 source: family
+cuisine: Thai
 draft: false
 ---
 

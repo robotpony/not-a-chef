@@ -2,6 +2,7 @@
 title: Peanut butter Nanaimo bars
 tags: [desserts]
 source: family
+cuisine: Canadian
 draft: false
 ---
 

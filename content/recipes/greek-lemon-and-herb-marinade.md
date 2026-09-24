@@ -3,6 +3,7 @@ title: Greek lemon and herb marinade
 tags: [bases]
 source: family
 servings: 300-400ml of marinade
+cuisine: Greek
 draft: false
 ---
 

@@ -2,6 +2,7 @@
 title: Dairy free tomato soup
 tags: [mains, soups]
 source: family
+cuisine: American
 draft: false
 ---
 

@@ -2,6 +2,7 @@
 title: English muffins
 tags: [breads]
 source: family
+cuisine: British
 draft: false
 ---
 

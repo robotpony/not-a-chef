@@ -2,6 +2,7 @@
 title: Beef base
 tags: [bases]
 source: family
+cuisine: American
 draft: false
 ---
 

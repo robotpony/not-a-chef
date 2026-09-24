@@ -2,6 +2,7 @@
 title: Pulled BBQ style chicken
 tags: [mains, pork]
 source: family
+cuisine: American
 draft: false
 ---
 

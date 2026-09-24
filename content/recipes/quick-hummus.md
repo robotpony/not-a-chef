@@ -2,6 +2,7 @@
 title: Quick hummus
 tags: [sauces]
 source: family
+cuisine: Mediterranean
 draft: false
 ---
 

@@ -2,6 +2,7 @@
 title: Onion base for curries
 tags: [bases]
 source: family
+cuisine: Indian
 draft: false
 ---
 

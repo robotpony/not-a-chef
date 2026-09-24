@@ -2,6 +2,7 @@
 title: Rich veg/mushroom stock
 tags: [bases]
 source: family
+cuisine: world
 draft: false
 ---
 

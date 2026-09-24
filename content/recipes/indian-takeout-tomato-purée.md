@@ -2,6 +2,7 @@
 title: Indian takeout tomato purée
 tags: [bases]
 source: family
+cuisine: Indian
 draft: false
 ---
 

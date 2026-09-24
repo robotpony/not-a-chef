@@ -5,6 +5,7 @@ source: family
 servings: 4–6 (makes ~400ml)
 prep_time: 5 min
 cook_time: 15 min
+cuisine: world
 draft: false
 ---
 

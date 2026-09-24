@@ -2,6 +2,7 @@
 title: Sheet pan fast food style gyros
 tags: [bases]
 source: family
+cuisine: Greek
 draft: false
 ---
 

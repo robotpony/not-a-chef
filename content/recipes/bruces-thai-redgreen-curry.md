@@ -2,6 +2,7 @@
 title: Bruce’s Thai red/green curry
 tags: [mains, curries]
 source: family
+cuisine: Thai
 draft: false
 ---
 

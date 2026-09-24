@@ -2,6 +2,7 @@
 title: Winter noodle soup, with kale and fennel
 tags: [mains, soups]
 source: family
+cuisine: French
 draft: false
 ---
 

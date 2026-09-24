@@ -2,6 +2,7 @@
 title: Spaghetti squash boats (or casserole)
 tags: [mains, casseroles]
 source: family
+cuisine: American
 draft: false
 ---
 

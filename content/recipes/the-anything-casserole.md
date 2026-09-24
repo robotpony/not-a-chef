@@ -2,6 +2,7 @@
 title: The anything casserole
 tags: [mains, casseroles]
 source: family
+cuisine: American
 draft: false
 ---
 

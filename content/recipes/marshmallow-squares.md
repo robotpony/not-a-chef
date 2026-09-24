@@ -2,6 +2,7 @@
 title: Marshmallow squares
 tags: [desserts]
 source: family
+cuisine: American
 draft: false
 ---
 

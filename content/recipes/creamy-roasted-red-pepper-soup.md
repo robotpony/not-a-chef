@@ -2,6 +2,7 @@
 title: Creamy roasted red pepper soup
 tags: [mains, soups]
 source: family
+cuisine: American
 draft: false
 ---
 

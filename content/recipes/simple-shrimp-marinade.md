@@ -2,6 +2,7 @@
 title: Simple shrimp marinade
 tags: [bases]
 source: family
+cuisine: American
 draft: false
 ---
 

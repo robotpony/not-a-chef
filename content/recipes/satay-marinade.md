@@ -2,6 +2,7 @@
 title: Satay marinade
 tags: [bases]
 source: family
+cuisine: Indonesian
 draft: false
 ---
 

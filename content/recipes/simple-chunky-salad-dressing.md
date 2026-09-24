@@ -2,6 +2,7 @@
 title: Simple chunky salad dressing
 tags: [salads]
 source: family
+cuisine: American
 draft: false
 ---
 

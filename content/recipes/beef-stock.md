@@ -2,6 +2,7 @@
 title: Beef stock
 tags: [bases]
 source: family
+cuisine: world
 draft: false
 ---
 

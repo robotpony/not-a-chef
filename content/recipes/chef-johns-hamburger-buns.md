@@ -2,6 +2,7 @@
 title: Chef John’s hamburger buns
 tags: [breads]
 source: family
+cuisine: American
 draft: false
 ---
 

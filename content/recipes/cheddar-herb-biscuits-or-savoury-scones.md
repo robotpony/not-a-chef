@@ -2,6 +2,7 @@
 title: Cheddar herb biscuits (or savoury scones)
 tags: [breads]
 source: Simply LaKita
+cuisine: American
 draft: false
 prep_time: 15 minutes
 cook_time: 15 minutes

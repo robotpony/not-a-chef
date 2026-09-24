@@ -2,6 +2,7 @@
 title: Neapolitan strips
 tags: [desserts]
 source: family
+cuisine: Canadian
 draft: false
 ---
 

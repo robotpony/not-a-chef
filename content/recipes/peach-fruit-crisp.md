@@ -3,6 +3,7 @@ title: Peach / fruit crisp
 tags: [desserts]
 source: family
 cook_time: 45 min
+cuisine: Canadian
 draft: false
 ---
 

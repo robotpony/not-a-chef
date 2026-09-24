@@ -2,6 +2,7 @@
 title: Unbaked cookies
 tags: [desserts]
 source: family
+cuisine: Canadian
 draft: false
 ---
 

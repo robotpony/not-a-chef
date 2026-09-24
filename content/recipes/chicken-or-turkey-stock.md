@@ -2,6 +2,7 @@
 title: Chicken or turkey stock
 tags: [bases]
 source: family
+cuisine: world
 draft: false
 ---
 

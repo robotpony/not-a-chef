@@ -2,6 +2,7 @@
 title: Triple layered double pumpkin cheesecake
 tags: [desserts]
 source: family
+cuisine: American
 draft: false
 ---
 

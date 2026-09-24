@@ -2,6 +2,7 @@
 title: Korma/qorma
 tags: [mains, curries]
 source: family
+cuisine: Indian
 draft: false
 ---
 

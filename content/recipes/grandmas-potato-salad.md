@@ -2,6 +2,7 @@
 title: Grandma’s potato salad
 tags: [salads]
 source: family
+cuisine: Canadian
 draft: false
 ---
 

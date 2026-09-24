@@ -2,6 +2,7 @@
 title: Olie bollen
 tags: [desserts]
 source: family
+cuisine: Dutch
 draft: false
 ---
 

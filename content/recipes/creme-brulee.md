@@ -2,6 +2,7 @@
 title: Crème brûlée
 tags: [desserts]
 source: family
+cuisine: French
 draft: false
 ---
 We had a craving for crème brûlée on day, and not having anywhere to go to have it we decided to make it at home. 

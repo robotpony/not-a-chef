@@ -2,6 +2,7 @@
 title: Simple green goddess dressing
 tags: [salads, dressing]
 source: family
+cuisine: American
 draft: false
 ---
 

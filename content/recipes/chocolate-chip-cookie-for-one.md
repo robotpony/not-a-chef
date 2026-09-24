@@ -2,6 +2,7 @@
 title: Chocolate chip cookie for one
 tags: [desserts]
 source: family
+cuisine: American
 draft: false
 ---
 

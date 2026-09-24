@@ -2,6 +2,7 @@
 title: Prosecco sangria
 tags: [drinks]
 source: family
+cuisine: Spanish
 draft: false
 ---
 

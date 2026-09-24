@@ -2,6 +2,7 @@
 title: Panago style jalapeño cheese dip
 tags: [sauces]
 source: family
+cuisine: Canadian
 draft: false
 ---
 

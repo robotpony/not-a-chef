@@ -2,6 +2,7 @@
 title: Hoagie style French rolls
 tags: [breads]
 source: family
+cuisine: American
 draft: false
 ---
 

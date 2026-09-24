@@ -2,6 +2,7 @@
 title: Our favourite chocolate chip cookies
 tags: [desserts]
 source: family
+cuisine: Canadian
 draft: false
 ---
 

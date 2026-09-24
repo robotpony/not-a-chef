@@ -2,6 +2,7 @@
 title: Canadian chili
 tags: [mains, stews]
 source: family
+cuisine: Canadian
 draft: false
 ---
 

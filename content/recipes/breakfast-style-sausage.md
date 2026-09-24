@@ -2,6 +2,7 @@
 title: Breakfast style sausage
 tags: [bases]
 source: family
+cuisine: American
 draft: false
 ---
 

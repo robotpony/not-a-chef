@@ -2,6 +2,7 @@
 title: Sweet gochujang sauce
 tags: [sauces]
 source: family
+cuisine: Korean
 draft: false
 ---
 

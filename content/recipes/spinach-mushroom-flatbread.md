@@ -2,6 +2,7 @@
 title: Spinach mushroom flatbread
 tags: [appetizers, sides]
 source: family
+cuisine: American
 draft: false
 ---
 

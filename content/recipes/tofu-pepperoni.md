@@ -2,6 +2,7 @@
 title: Tofu pepperoni
 tags: [condiments, tofu]
 source: family
+cuisine: American
 draft: false
 ---
 

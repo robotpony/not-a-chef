@@ -2,6 +2,7 @@
 title: White Rock Cheesecake
 tags: [desserts]
 source: family
+cuisine: Canadian
 draft: true
 ---
 

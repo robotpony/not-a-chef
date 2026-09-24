@@ -2,6 +2,7 @@
 title: Sweet potato pie
 tags: [desserts]
 source: family
+cuisine: American
 draft: false
 ---
 

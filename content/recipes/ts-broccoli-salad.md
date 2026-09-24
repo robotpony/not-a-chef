@@ -2,6 +2,7 @@
 title: T’s broccoli salad
 tags: [salads]
 source: family
+cuisine: American
 draft: false
 ---
 
