@@ -999,6 +999,21 @@
     }
   }
 
+  // A top-level "## History" section (render-heading.html flags its H2 with
+  // data-hide-heading) is the same family-provenance content as the intro
+  // blockquotes above, just further down the page — hidden the same way,
+  // by walking forward to the next H2 rather than relocating it anywhere.
+  function hideHistorySections(article) {
+    article.querySelectorAll('h2[data-hide-heading="true"]').forEach(function (h2) {
+      h2.hidden = true;
+      var el = h2.nextElementSibling;
+      while (el && el.tagName !== 'H2') {
+        el.hidden = true;
+        el = el.nextElementSibling;
+      }
+    });
+  }
+
   function init() {
     var root = document.querySelector('.article-content[data-page-key]');
     if (!root) return;
@@ -1006,6 +1021,7 @@
     ENABLE_KELVIN = root.dataset.enableKelvin === 'true';
 
     hideFamilyHistory(root);
+    hideHistorySections(root);
 
     var sidebar = document.getElementById('recipe-sidebar');
     moveSidebarSections(root, sidebar);

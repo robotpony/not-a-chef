@@ -1,15 +1,17 @@
 ---
 title: Autumn glow salad with lemon dressing
-tags: [salads]
+tags: [salads, vegan]
 source: family
 source_url: https://pinchofyum.com/autumn-glow-salad-with-lemon-dressing
 draft: false
-prep_time: 15 minutes
-cook_time: 1 hour
-servings: 6 as a meal, 8 - 10 as a side
+prep_time: 15m
+cook_time: 45m
+servings: 4-6
+cuisine: PNW
 ---
 
-On a women's retreat in 2019, there was a private chef that cooked for the retreat for the entire weekend.  They were a vegan chef who supports local, and they made this dish for one of our lunches.  Everyone at the retreat absolutely loved this it and Erika kindly shared the recipe she used with all the attendees. They noted that she added more lemon to the dressing, and also puts a bunch of herbs on the veggies as they’re roasting.
+This is a fresh and delicious autumn salad.
+
 
 ## For the Salad:
 
@@ -38,10 +40,12 @@ On a women's retreat in 2019, there was a private chef that cooked for the retre
 3. While the veggies are roasting, combine all the dressing ingredients into a jar with a tight lid and shake to combine.  Chop the apple and set aside.
 4. When the grains and veggies are done, toss everything together.  This can be done when everything is hot or when it’s cooled, although the texture will be different (heavier) when hot.  Store leftovers separately (salad and dressing) if possible.
 
-This picture is from the lunch during the retreat in which Erika made this salad for us!
-
 ![Autumn Glow Salad with Lemon Dressing](/images/recipes/autumn-glow-salad-with-lemon-dressing.png)
 
-## Notes: 
+## Notes
 
 If you want some crunch, add a few handfuls of chopped nuts like cashews or pecans.  The picture below looks like pumpkin and/or sunflower seeds were included.
+
+## History
+
+> On a women's retreat in 2019, there was a private chef that cooked for the retreat for the entire weekend.  They were a vegan chef who supports local, and they made this dish for one of our lunches.  Everyone at the retreat absolutely loved this it and Erika kindly shared the recipe she used with all the attendees. They noted that she added more lemon to the dressing, and also puts a bunch of herbs on the veggies as they’re roasting.

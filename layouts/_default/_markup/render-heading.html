@@ -43,7 +43,7 @@
      word this generic-sounding but actually used as a component name (e.g.
      a future "## Combo A") would still misfire, so keep new additions to
      words that read as meta/reference language, not food. */}}
-{{ $nonIngredientKeywords := slice "method" "directions" "steps" "notes" "serve" "variations" "timing" "example" "examples" "rules" "equipment" "hardware" "substitutions" "mechanic" }}
+{{ $nonIngredientKeywords := slice "method" "directions" "steps" "notes" "serve" "variations" "timing" "example" "examples" "rules" "equipment" "hardware" "substitutions" "mechanic" "history" }}
 {{ $methodHeadings := slice "method" "directions" "steps" }}
 {{/* Sidebar-prototype only (recipe-sidebar-prototype branch): these
      optional top-level sections get pulled out of the reading flow and
@@ -70,6 +70,12 @@
 {{ if and $isRecipe (eq .Level 2) }}
   {{ with index $sidebarHeadingKeys $normalized }}{{ $sidebarHeading = . }}{{ end }}
 {{ end }}
+{{/* "History" is family-provenance text (same reason as the intro
+     blockquotes handled in assets/js/ingredients.js's hideFamilyHistory) —
+     not meant for anonymous visitors until sign-in exists, so it's hidden
+     client-side by the same "walk to the next H2" approach as the sidebar
+     sections above, rather than relocated anywhere visible. */}}
+{{ $isHistoryHeading := and $isRecipe (eq .Level 2) (eq $normalized "history") }}
 
 {{ if and $isRecipe (eq .Level 2) }}
   {{ .Page.Scratch.Set "ingSection" $isIngredientHeading }}
@@ -77,7 +83,7 @@
 {{ $inIngredientSection := and $isRecipe (in (slice 3 4) .Level) (.Page.Scratch.Get "ingSection") }}
 
 <h{{ .Level }} class="relative group{{ if $inIngredientSection }} ing-subhead{{ end }}"
-  {{- if and $isRecipe (eq .Level 2) }} data-ing-heading="{{ $isIngredientHeading }}" data-method-heading="{{ $isMethodHeading }}"{{ if $sidebarHeading }} data-sidebar-heading="{{ $sidebarHeading }}"{{ end }}{{ end -}}
+  {{- if and $isRecipe (eq .Level 2) }} data-ing-heading="{{ $isIngredientHeading }}" data-method-heading="{{ $isMethodHeading }}"{{ if $sidebarHeading }} data-sidebar-heading="{{ $sidebarHeading }}"{{ end }}{{ if $isHistoryHeading }} data-hide-heading="true"{{ end }}{{ end -}}
 >{{ .Text | safeHTML }}
     <div id="{{ $anchor }}" class="anchor"></div>
     {{ if .Page.Params.showHeadingAnchors | default (.Page.Site.Params.article.showHeadingAnchors | default true) }}
