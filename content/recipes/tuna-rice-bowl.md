@@ -54,7 +54,7 @@ Combine all tuna sauce ingredients and set aside. Combine all bowl dressing ingr
 
 Pat tuna dry. Season with salt, pepper, and sesame seeds on all sides.
 
-Heat oil in a pan over high heat until smoking. Sear tuna 60–90 seconds per side until a crust forms but the center is still red to pink. Rest briefly.
+Heat oil in a pan over high heat until smoking. Sear tuna 60–90 seconds per side until a crust forms but the centre is still red to pink. Rest briefly.
 
 Cube the tuna and toss with the tuna sauce.
 

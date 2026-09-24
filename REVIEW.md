@@ -43,11 +43,44 @@ Safety is temperature *and* time. The instant numbers (74°C poultry, 71°C grou
 
 Questions are inline as `Q:` under each page. Collection-wide questions that need one decision each:
 1. ~~Normalize the ~110 legacy-format recipes (numbered `Directions:`) to FORMAT.md prose, or accept both?~~ Decided 2026-09-24: convert to FORMAT.md as each page is touched.
-2. centre/litre (current usage) vs center/liter (current rule)?
-3. Family backstory blockquotes in recipe files: keep, or move to food-memory essays and link? (~15 recipes)
-4. Consolidate overlapping recipes? Candidates: 4 pizza doughs, 3 Thai red curries, 3 jerk pages, 2 breakfast sausages, 2 gyro bases, 2 hoagie rolls, 2 Asian slaw dressings, 2 Greek marinades, chashu/ramen tare, McBurgers/McDouble, beef base vs meat-sauce base.
-5. Pages with "needs testing"/"[draft]"/"work in progress" notes but `draft: false`: publish as-is, or flip to draft? (~15 pages)
-6. One spelling each: chili/chilli/chile, yogurt/yoghurt, Szechuan/Sichuan, aluminum/aluminium, green onion/scallion.
+2. ~~centre/litre vs center/liter?~~ Decided 2026-09-24: centre and litre. FORMAT.md and the recipe writing rules updated; the 9 "center/centered/liter" uses in content converted.
+3. ~~Family backstory blockquotes: keep, or move to essays?~~ Decided 2026-09-24: keep them in recipes. They're hidden on the site by default (`hideFamilyHistory` in `assets/js/ingredients.js`); a special build will show them later.
+4. Consolidate overlapping recipes? One decision per group (merge with the other as a variation, cross-link, or keep both):
+
+    | Group | Pages | How they differ |
+    |---|---|---|
+    | Pizza dough | `pizza-dough`, `pizza-dough-2021-edition`, `pizza-dough-2022-edition`, `lazy-pizza-dough-2022`, `no-knead-pizza-dough` | Cold-ferment 70% dough, two dated editions, a same-day 70% dough with focaccia, and a volume-measured no-knead |
+    | Thai red curry | `bruces-thai-redgreen-curry`, `red-thai-curry`, `simpler-thai-red-curry` | Family red/green method, a fuller red curry, and a shortcut red curry |
+    | Jerk | `jerk-chicken`, `jerk-marinade`, `reference/jerk-marinade-adapted-from-serious-eats` (draft) | Different marinades; the reference page is "notes for a recipe update" |
+    | Breakfast sausage | `breakfast-sausage`, `breakfast-style-sausage` | Same thing, different percentages (salt 2.0% vs 1.6%, milk powder 4% vs 2%, water 10% vs 7.5%) |
+    | Gyros | `gyro-base`, `sheet-pan-fast-food-style-gyros` (`gyro-dogs` uses the base) | Same meats and spices, different method |
+    | Hoagie rolls | `hoagie-rolls`, `hoagie-style-french-rolls` | Same method, 4 vs 8 rolls |
+    | Asian slaw dressing | `asian-slaw-dressing`, `vaguely-asian-slaw-dressing` | Near-identical (90 g oil, ~45–50 g rice vinegar, 30 g Dijon, sesame, soy, maple) |
+    | Greek marinade | `greek-marinade`, `greek-lemon-and-herb-marinade` | Quick vs herb-heavy |
+    | Ramen pork | `chashu-pork`, `basic-ramen-tare` | Same braise; its liquid becomes the tare; different ratios |
+    | Smashed burgers | `mcburgers`, `mcdouble` | Same technique and seasoning idea |
+    | Beef base | `beef-base`, `meat-sauce-aka-american-bolognese` | Not duplicates: the sauce is built on the base. Already linked; probably keep both |
+
+5. ~~Pages with work-in-progress notes but `draft: false`: publish as-is, or flip to draft?~~ Decided 2026-09-24: publish them all as-is. Current list:
+    - `recipes/base-curry-gravy.md`: TODO (L22)
+    - `recipes/butter-chicken.md`: TODO, sugar amount (L43)
+    - `recipes/cottage-pie.md`: "[draft] need testing" (L63)
+    - `recipes/english-muffins.md`: "still tuning" (L13)
+    - `recipes/farmer-soup.md`: "work in progress" (L11)
+    - `recipes/homemade-baileys-irish-cream.md`: "[draft] Untested" (L48)
+    - `recipes/instant-pot-chicken-thigh-curry.md`: "needs testing" (L14)
+    - `recipes/marinated-pressed-tofu.md`: "[draft]" (L48)
+    - `recipes/pulled-pork.md`: "[draft] Untested", `servings: TBD` (L47)
+    - `recipes/sheet-pan-fast-food-style-gyros.md`: "to be tested" (L27)
+    - `recipes/triple-layered-double-pumpkin-cheesecake.md`: "Not sure where this recipe came from" (L9)
+    - `recipes/vindaloo-wing-sauce.md`: "[draft] needs testing" (L45)
+    - `recipes/vodka-cream-sauce.md`: "no idea if it's any good" (L11)
+6. One spelling each. Current counts and a suggestion (Canadian usage):
+    - **chili** (38 uses) / chilis (15) / chilies (6) / chilli (21) / chillies (8) / chile (3) / chiles (2) → **chili**, plural **chilies**, for the dish, the pepper, and the powder. Keep "chile" only inside a proper name (e.g. chile de árbol) and brand names as sold (Heinz Chili Sauce).
+    - **yogurt** (12) / yoghurt (7) → **yogurt**, the usual Canadian spelling.
+    - **Szechuan** (10) / Sichuan (0) → **Sichuan**, the current standard romanization, except in a restaurant or product name.
+    - **aluminum** (2) / aluminium (3) → **aluminum**, the Canadian usage.
+    - **green onion** (18) / scallion (16) / spring onion (2) → **green onion**, the Canadian grocery term.
 
 ## Follow-up tasks
 

@@ -216,7 +216,7 @@ Kebab-case. One recipe per file. Match the title: `dal-tadka.md` for "Dal tadka"
 
 ## Language
 
-Canadian English. British spellings (colour, favour, behaviour, flavour, grey) with American -ize endings (realize, organize, optimize). Metric units with optional imperial in parentheses: "180°C (350°F)", "250 ml (1 cup)".
+Canadian English. British spellings (colour, favour, behaviour, flavour, grey) with American -ize endings (realize, organize, optimize), and Canadian centre and litre. Metric units with optional imperial in parentheses: "180°C (350°F)", "250 ml (1 cup)".
 
 Imperative, present tense in method steps: "Add the lentils" not "You should add the lentils." No passive voice.
 

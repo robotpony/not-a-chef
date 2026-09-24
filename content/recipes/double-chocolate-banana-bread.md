@@ -34,6 +34,6 @@ The recipe was found on the internet when a craving for Banana Bread hit.  Look
 4. Place Baking Soda, Salt, Cinnamon (if you are using), Flour, and Cocoa in a shifter (or fine-mesh strainer) and sift over wet ingredients.  As cocoa is almost always lumpy, this step is essential (you may have to use the back of a spoon to get all the ingredients through the fine-mesh strainer).
 5. Stir the dry and wet ingredients with a spoon until just combined.
 6. Stir in the chocolate chunks or chips.
-7. Pour the batter into the prepared pan and bake for 55 to 65 minutes, until a tester toothpick inserted into the center of cake comes out mostly batter-free (a melted chocolate chip smear is expected, however).
+7. Pour the batter into the prepared pan and bake for 55 to 65 minutes, until a tester toothpick inserted into the centre of cake comes out mostly batter-free (a melted chocolate chip smear is expected, however).
 8. Cool in the pan for 15 minutes, then run a knife around the edge and invert it out onto a cooling rack.  Serve warm or at room temperature.
 9. The Banana Bread will keep for up to 4 days at room temperature (wrapped in foil).  It will keep a little bit longer stored in the fridge.

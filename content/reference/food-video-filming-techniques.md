@@ -24,7 +24,7 @@ Two directors whose methods translate unusually well to food video, for opposite
 
 Wright works with momentum. He cuts on functional completion (the moment a step finishes its purpose) rather than on feeling or aesthetic peak. Cooking is already organized as discrete steps; Wright's editing respects that structure where most food video overrides it with beauty shots. His rhythm is shared pulse, not sync: cuts and music both run against a common underlying grid, with Foley treated as composition before the editing rhythm begins.
 
-Anderson works with stillness and geometry. His camera waits, centered, while the subject arrives in frame. The comedy and emotion come from the precision of the composition, not the energy of the edit. His colour discipline is total: every film establishes a palette in the first minute and holds it through production design, wardrobe, and grade. His structural move is the chapter card: typography as story beat, not transition.
+Anderson works with stillness and geometry. His camera waits, centred, while the subject arrives in frame. The comedy and emotion come from the precision of the composition, not the energy of the edit. His colour discipline is total: every film establishes a palette in the first minute and holds it through production design, wardrobe, and grade. His structural move is the chapter card: typography as story beat, not transition.
 
 Used together: Anderson for the frame and the structure, Wright for the cuts between them.
 
@@ -188,7 +188,7 @@ Replace voiceover narration for recipe structure with chapter cards:
 Works especially well for multi-stage or multi-day recipes where the time jumps would otherwise require narration to navigate. Typography signals tone: elegant serif for classic technique, typewriter for rustic, sans-serif for modern.
 
 **Concrete example**
-Single white card, centered, on a muted background that matches the episode's colour palette. Text: "Part I: The Bones." Hold 2 seconds. Cut to overhead of raw stock ingredients. No voiceover. No music change. The card carries the whole transition.
+Single white card, centred, on a muted background that matches the episode's colour palette. Text: "Part I: The Bones." Hold 2 seconds. Cut to overhead of raw stock ingredients. No voiceover. No music change. The card carries the whole transition.
 
 ---
 
@@ -311,13 +311,13 @@ Aggressive quick-cut time-lapse of messy prep = chaos energy. Single slow near-r
 **Director: Anderson | Production cost: Medium ★★**
 
 **Technique**
-The camera is almost always centered on the subject, frame divided into equal halves. This is a compositional commitment. Everything in the shot is placed relative to the center axis: symmetry signals control; any deviation from it signals disruption. The flatness (no dynamic angle, no Dutch tilt) reads as authorial confidence.
+The camera is almost always centred on the subject, frame divided into equal halves. This is a compositional commitment. Everything in the shot is placed relative to the centre axis: symmetry signals control; any deviation from it signals disruption. The flatness (no dynamic angle, no Dutch tilt) reads as authorial confidence.
 
 **Food application**
-Overhead mise en place with ingredients arranged symmetrically around a central bowl or board. Two pans equidistant from center on the stove. A plated dish positioned exactly at frame center. Forces pre-planning of the physical set-up; the camera cannot fix asymmetric prep. Most food video uses overhead shots aesthetically; Anderson uses them architecturally.
+Overhead mise en place with ingredients arranged symmetrically around a central bowl or board. Two pans equidistant from centre on the stove. A plated dish positioned exactly at frame centre. Forces pre-planning of the physical set-up; the camera cannot fix asymmetric prep. Most food video uses overhead shots aesthetically; Anderson uses them architecturally.
 
 **Concrete example**
-- Top-down shot: knife centered vertically, vegetables in equal rows left and right
+- Top-down shot: knife centred vertically, vegetables in equal rows left and right
 - Camera does not move
 - The arrangement of the ingredients is the shot's entire content
 - No narration, no host hands, no movement; the composition does the work
@@ -336,7 +336,7 @@ Camera tracks along a counter to reveal each mise en place station in sequence (
 **Concrete example**
 - Camera starts tight on empty cutting board
 - Tracks right: ingredients appear in sequence, already arranged
-- Camera stops centered on the full layout
+- Camera stops centred on the full layout
 - Hold 2 seconds
 - Cut to first step
 

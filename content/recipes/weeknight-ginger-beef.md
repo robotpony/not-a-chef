@@ -15,7 +15,7 @@ This is a quick version of ginger beef, great in rice bowls.
 
 ## Mechanic
 
-**Drizzle soy around the edge of the hot wok**, not into the center. It caramelizes briefly as it hits the metal before reaching the meat, adding depth without extra ingredients.
+**Drizzle soy around the edge of the hot wok**, not into the centre. It caramelizes briefly as it hits the metal before reaching the meat, adding depth without extra ingredients.
 
 ## Ingredients
 
