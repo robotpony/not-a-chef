@@ -321,46 +321,59 @@ everything discarded or superseded getting to this list.
 
 ## Favicon
 
-Settled 2026-09-23 (third pass; the pixel-grid pans and fried eggs in
+Settled 2026-09-24 (fourth pass; the pixel-grid pans and fried eggs in
 `icons.html` were the first, a cast-iron pan on an `--accent-soft` tile the
-second). Source and variants: `favicon-heart-pan.html`, variant 07. Cast iron
-looked good large but turned into a dark blob at 16px; the lighter enamel pan
-with a dark heart holds up better small.
+second, an enamel pan on a `--surface-2` burner tile the third). Source and
+variants: `favicon-heart-pan.html`, variant 08 ("Enamel, no tile, filled").
+Cast iron looked good large but turned into a dark blob at 16px; the burner
+tile that replaced it worked on both light and dark tabs but cost the mark
+margin. Dropping the tile and scaling the pan + heart into the freed space
+reads bolder at 16px than either — the cream floor and red rim carry enough
+contrast on their own, no tile needed.
 
-A heart in a top-down enamelled skillet, sitting on a rounded tile (the
-burner). The handle points to the top-left at 45°. It has to stay
-diagonal-but-thin and paired with a round pan floor; a thick diagonal handle
-heading bottom-right reads as a magnifying glass (search icon) at 16px.
+A heart in a top-down enamelled skillet, no background. The handle points to
+the top-left at 45°. It has to stay diagonal-but-thin and paired with a round
+pan floor; a thick diagonal handle heading bottom-right reads as a
+magnifying glass (search icon) at 16px.
 
 | Part | Value | Note |
 |---|---|---|
-| Tile (burner) | `#EAEBDF` (`--surface-2`) | one step darker than the pan floor so the tile edge shows on white tabs; `rx` 7 on a 32 grid, square for `apple-touch-icon.png` (iOS masks its own corners) |
-| Pan rim | `#D58167` | the palette's red at the shared 57%/62% formula (`hsl(14 57% 62%)`); rim 2.5 units, thick enough to hold at 16px |
+| Pan rim | `#D58167` | the palette's red at the shared 57%/62% formula (`hsl(14 57% 62%)`); rim 2 units, thick enough to hold at 16px |
 | Pan floor | `#FBFBF6` (`--surface`) | |
-| Heart, handle | `#7C361D` (`--accent-strong`) | handle 4 units |
+| Heart, handle | `#7C361D` (`--accent-strong`) | handle 4.5 units |
 
-The mark fills the tile: pan radius 11 centred at (18.5, 18.5), handle cap
-out to 2.75 from the top-left corner, roughly 2.5 units of tile margin all
-round. Variant 07 in `favicon-heart-pan.html` is the smaller original.
+No background tile: the mark fills the full 32×32 canvas, pan radius 13
+centred at (17.5, 17.5), handle cap out to roughly 1.5 units of the
+top-left corner. `favicon.svg` is transparent everywhere it's used as a tab
+icon or nav mark, so it sits directly on whatever chrome or page background
+is behind it — verified against both light and dark browser tab strips.
 
 Every value is an existing token or the palette's own red; the favicon adds
 no new colours.
-
-The tile makes one icon work on light and dark browser chrome, so there is
-no dark-mode variant.
 
 The same `favicon.svg` is the logo mark: 26px, 8px gap, in front of the
 wordmark in the nav and the mobile drawer head (`.site-logo-icon`). The
 footer and homepage h1 stay text-only.
 
-Files, all in `static/`: `favicon.svg` (source of truth), `favicon.ico`
-(16/32/48), `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`
-(180), `android-chrome-192x192.png`, `android-chrome-512x512.png`,
-`site.webmanifest`. Wired in by `layouts/partials/favicons.html`, which
-Blowfish's `head.html` picks up in place of its defaults. To change the icon,
-edit `favicon.svg` and re-render the PNGs and ICO from it. Render with
-headless Chrome and downscale with ImageMagick; ImageMagick's own SVG
-renderer draws the stroked handle as a hairline.
+`apple-touch-icon.png` and the two `android-chrome-*.png` files are the one
+exception: home-screen icon slots expect an opaque square, so those three
+are rendered on a `#EAEBDF` (`--surface-2`) square background (no `rx` —
+iOS/Android mask their own corners) instead of transparent. `favicon.ico`
+and the 16/32 PNGs stay transparent, matching `favicon.svg`.
+
+Files, all in `static/`: `favicon.svg` (source of truth, transparent),
+`favicon.ico` (16/32/48, transparent), `favicon-16x16.png`,
+`favicon-32x32.png` (transparent), `apple-touch-icon.png` (180),
+`android-chrome-192x192.png`, `android-chrome-512x512.png` (opaque
+`--surface-2` background), `site.webmanifest`. Wired in by
+`layouts/partials/favicons.html`, which Blowfish's `head.html` picks up in
+place of its defaults. To change the icon, edit `favicon.svg` and re-render
+the PNGs and ICO from it. Render with headless Chrome
+(`--headless --screenshot`, `--default-background-color=00000000` for the
+transparent sizes) at each target pixel size directly rather than
+downscaling one large render — ImageMagick's own SVG renderer draws the
+stroked handle as a hairline, and downscaling loses the per-size hinting a
+direct render gets at 16px.
 
 ## Spacing & radius
 
