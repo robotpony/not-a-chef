@@ -1,20 +1,20 @@
 ---
 title: Flour protein content comparison
 source: family
-draft: true
+draft: false
 tags: [reference, baking, flour]
 ---
 
-Protein content affects gluten development and final texture. Bread flour (14g/100g) is the reference point for most yeasted bread recipes. Higher-protein flours build more structure; lower-protein flours produce more tender results.
+Protein content affects gluten development and final texture. Bread flour (typically 14 g/100 g; Canadian bread flours run 13–14.5%) is the reference point for most yeasted bread recipes. Higher-protein flours build more structure; lower-protein flours produce more tender results.
 
-| Flour | Ash min | Ash max | Protein/100g | Extra gluten vs bread flour |
+| Flour | Ash min | Ash max | Protein/100 g | Vital wheat gluten to match bread flour (per 100 g) |
 |---|---|---|---|---|
-| 00 Italian | 0.50% | 0.60% | 12.5g | +1.5g |
-| US AP unbleached | 0.50% | 0.60% | 11.7g | +2.3g |
-| CAD AP unbleached | 0.65% | 0.85% | 13g | +1.0g |
-| Bread flour unbleached | 0.50% | 0.60% | 14g | reference |
-| Pasta flour unbleached | 0.65% | 0.70% | 12g | +2.0g |
+| 00 Italian | 0.50% | 0.60% | 12.5 g | +2 g |
+| US AP unbleached | 0.50% | 0.60% | 11.7 g | +3.1 g |
+| CAD AP unbleached | 0.65% | 0.85% | 13 g | +1.3 g |
+| Bread flour unbleached | 0.50% | 0.60% | 14 g | reference |
+| Pasta flour unbleached | 0.65% | 0.70% | 12 g | +2.7 g |
 
-**Note:** Higher milling (e.g., 00 Italian) reduces effective gluten development even when protein content is similar to AP flour — finer grind, lower practical strength.
+**Note:** 00 flour often performs softer than its protein number suggests. That's usually down to the wheat (softer varieties with weaker gluten) more than the fine grind.
 
-The "extra gluten" column shows how much additional vital wheat gluten to add per 100g if you want to approximate bread flour performance from a lower-protein flour.
+The last column is how much vital wheat gluten to add per 100 g of flour to approximate bread flour. Vital wheat gluten is about 75% protein, so it takes about 1.33 g to add 1 g of protein.

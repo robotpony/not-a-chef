@@ -2,34 +2,34 @@
 title: Greek dressing research
 tags: [reference, dressings, research]
 source: family
-draft: true
+draft: false
 ---
 
-Creamy Greek dressing research
+This is a survey of techniques and sample recipes, not a recipe; it's what led to [[Greek Islands' creamy Greek dressing]]. The samples are kept as found, so their ratios don't all agree.
 
-I've been trying to replicate the Greek Islands / Rendezvous style creamy greek dressings at home. The standard ingredients are simple anyway, and it only takes a few minutes to prepare … so there's no good reason to buy it from the restaurant or the lesser stuff from the grocery store.
+I've been trying to replicate the Greek Islands / Rendezvous style creamy Greek dressings at home. The standard ingredients are simple anyway, and it only takes a few minutes to prepare … so there's no good reason to buy it from the restaurant or the lesser stuff from the grocery store.
 
-The way this works is that I simplify a recipe enough that I can memorize it. Just a ratio or two, a principle, and then I can make it while I prepare dinner (and can make sure we have the ingredients on hand). Greek dressing looks simple enough that it's just 1:1 (oil/acid), and 1:1:1:1 to most of the spices (tsp per 500ml). Important flavours are oregano, garlic, salt, and pepper. It looks like you can stabilize it in the standard ways (lethicin, mustard powder, mayo, or egg yolk), and there are a bunch of other flavours you can fold in.
+The way this works is that I simplify a recipe enough that I can memorize it. Just a ratio or two, a principle, and then I can make it while I prepare dinner (and can make sure we have the ingredients on hand). Greek dressing looks simple enough that it's just 1:1 (oil/acid), and 1:1:1:1 to most of the spices (tsp per 500ml). Important flavours are oregano, garlic, salt, and pepper. It looks like you can stabilize it in the standard ways (lecithin, mustard powder, mayo, or egg yolk), and there are a bunch of other flavours you can fold in.
 
 On to the research ...
 
-## Main ratio:
+## Main ratio
 
 1:1 oil/vinegar  
         (and can split vinegar 50:50 with lemon juice for a more classic flavour)
 
 #### Per 500ml, flavour with ...
 
-- 1-2 clove of garlic (top up with some granulated garlic)
+- 1–2 cloves of garlic (top up with some granulated garlic)
 - 2 tsp of oregano (can include some basil)
 - 1.5 tsp of salt
-- .75tsp of black pepper
+- 0.75 tsp of black pepper
 
 #### Many recipes also include (but I have not tested) ...
 
 - 1 tsp onion powder
-- Dijon verus yellow mustard (versus just mustard powder)
-- 1:1 basil to oregano (this seems very basil-y for greek dressing)
+- Dijon versus yellow mustard (versus just mustard powder)
+- 1:1 basil to oregano (this seems very basil-y for Greek dressing)
 
 #### A few recipes include ...
 
@@ -39,17 +39,17 @@ On to the research ...
 - Yogurt (1 tbsp, similar to mayo)
 - Marjoram (.25:1)
 
-#### Extra notes:
+#### Extra notes
 
-- Oil/acid ratios varies widely, though 1:1 seems common (least common was .75:1, fairly common was 2:1 … but this tastes very oily)
+- Oil/acid ratios vary widely, though 1:1 seems common (least common was .75:1, fairly common was 2:1 … but this tastes very oily)
 - My preference so far is something around 1:1, splitting the acid between a wine vinegar and lemon (and using a mellower oil)
-- Mustard powder to help emulsify (or mustard, though this would push towards more acidy)
-- Can also cut with 1-2 tbsp mayo to push to creamy (and help emulsify) (this means that you could probably whisk into an egg yolk + mustard powder)
+- Mustard powder to help emulsify (or mustard, though this would push it more acidic)
+- Can also cut with 1–2 tbsp mayo to push to creamy (and help emulsify) (this means that you could probably whisk into an egg yolk + mustard powder)
 - Some recipes include water (I don't see the need)
 
-## Source recipe samples:
+## Source recipe samples
 
-#### Restaurant:
+#### Restaurant
 
 - 1 1/2 quarts olive oil
 - 1/3 cup garlic powder
@@ -61,7 +61,7 @@ On to the research ...
 - 1/4 cup Dijon-style mustard
 - 2 quarts red wine vinegar
 
-#### Smaller version:
+#### Smaller version
 
 - 3/4 cup oil
 - 1 cup vinegar
@@ -73,11 +73,10 @@ On to the research ...
 - 1.5 tsp onion powder
 - 1.5 tsp mustard
 
-#### Creamy:
+#### Creamy ("Creamy Greek-style dressing")
 
-- Creamy Greek Style Dressing
-- 1/4 cup Extra Virgin Olive Oil
-- 1/4 cup Fresh lemon juice
+- 1/4 cup extra virgin olive oil
+- 1/4 cup fresh lemon juice
 - 1-2 cloves of grated garlic
 - 1 Tbs of honey
 - 2 Tbs of mayonnaise
@@ -95,10 +94,10 @@ On to the research ...
 - 1/4 cup onion powder (onions)
 - 1/4 cup Dijon-style mustard
 - 2 quarts red wine vinegar
-- (I add some sugar or Honey)
-- Mix in a blender or food processer
+- (I add some sugar or honey)
+- Mix in a blender or food processor
 
-#### A dry-goods style:
+#### A dry-goods style
 
 - 1 cup light virgin olive oil
 - 1 cup red wine vinegar
@@ -108,9 +107,9 @@ On to the research ...
 - 1 tablespoon onion powder
 - 2 teaspoons salt
 - 2 teaspoons pepper
-- 2 teaspoons dijon mustard
+- 2 teaspoons Dijon mustard
 
-#### A fresher version:
+#### A fresher version
 
 - 4 TBSP olive oil
 - 3 TBSP lemon juice
@@ -119,7 +118,7 @@ On to the research ...
 - 2 tsp red wine vinegar
 - 1/8 tsp kosher salt
 
-#### A larger ingredient list:
+#### A larger ingredient list
 
 - 2 large garlic cloves, crushed through a garlic press to get a fine paste
 - 1 tablespoon chopped fresh basil, or two teaspoons dried basil
@@ -135,7 +134,7 @@ On to the research ...
 - 1 teaspoon Dijon mustard
 - 1 cup good quality Greek extra virgin olive oil (use Italian olive oil if you can’t find Greek)
 
-#### A more general recipe:
+#### A more general recipe
 
 - 1 cup extra virgin olive oil
 - 1/2 cup any vinegar, lemon or lime juice

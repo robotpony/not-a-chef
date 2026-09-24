@@ -1,7 +1,7 @@
 ---
 title: Nicola 2018 food planning
 source: family
-draft: true
+draft: false
 tags: [reference, menus, events, camping]
 ---
 
@@ -25,10 +25,10 @@ Four-day meal plan for a trip to Nicola (2018).
 - Lunch meat (200g), farmer sausage (from home), eggs (from home)
 
 **Dry/pantry:**
-- Coffee, bread, wraps, granola, cereal, cheese ravioli, pesto (from home)
+- Coffee, bread, wraps, granola, cereal, cheese ravioli, pierogies, pesto (from home), marinara
 
 **Produce:**
 - Bananas, berries, frozen berries, lettuce, tomato, small tomatoes, broccoli (from home), zucchini (from home), carrots, bell pepper, corn, canned pineapple
 
 **Snacks/dessert:**
-- Chocolate, marshmallows, graham crackers, ice cream (?), chocolate sauce, M&Ms, Doritos, jalapeño Cheetos, Ms. Vickie's
+- Chocolate, marshmallows, graham crackers, ice cream (?), chocolate sauce, M&M's, Doritos, jalapeño Cheetos, Miss Vickie's

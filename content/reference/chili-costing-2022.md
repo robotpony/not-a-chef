@@ -1,7 +1,7 @@
 ---
 title: Chili costing analysis (2022)
 source: family
-draft: true
+draft: false
 tags: [reference, costing, chili]
 ---
 
@@ -48,7 +48,9 @@ Cost breakdown for a large batch of chili. Total yield: 9.5L, 38 portions at 250
 
 | Change | Current | Reduced |
 |---|---|---|
-| Dry beans (vs canned) | — | saves ~$11.66, adds cooking time |
-| Butcher own meat | — | saves ~$7.24/h |
-| Use pressure cooker | $60 one-time | reduces time/energy |
-| Total with improvements | $176.11 | ~$92.87 loaded ($2.44/portion) |
+| Dry beans (vs canned) | $11.66 canned | ~$3.00 dry; saves ~$8.66, adds soaking and cooking time |
+| Butcher own meat | — | saves ~$7.24 per hour of butchering; not counted below |
+| Use pressure cooker ($60 one-time) | 4 h kitchen time | ~1.5 h; saves ~$50 of overhead |
+| Total with dry beans and pressure cooker | $176.11 | ~$117.45 loaded ($3.09/portion) |
+
+The dry bean cost (~$3.00 for the equivalent of four cans) and the 1.5 hours of pressure cooker kitchen time are estimates. The butchering saving depends on how many hours you spend, so it isn't in the total.

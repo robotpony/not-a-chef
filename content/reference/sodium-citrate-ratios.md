@@ -2,55 +2,31 @@
 title: Sodium citrate ratios
 tags: [reference, cheese-sauce, ratios]
 source: family
-draft: true
+draft: false
 ---
 
-([source](https://www.reddit.com/r/AskCulinary/comments/7gxetm/sodium_citrate_ratios/))
+Sodium citrate lets almost any cheese melt smoothly without splitting, from a firm sliceable cheese to a thin soup. The texture comes down to one ratio: liquid as a percentage of the cheese's weight. Adapted from a [Reddit r/AskCulinary thread](https://www.reddit.com/r/AskCulinary/comments/7gxetm/sodium_citrate_ratios/).
 
-The thickness of the sauce will depend on the ratio of liquid to cheese. If you weigh the cheese and then add the liquid as a percent of the weight you will get:
+## Liquid ratios
 
-Cheese plus 0% to 35% liquid - firm, molded cheese, cheese slices
+| Liquid (% of cheese weight) | Result | Use |
+|---|---|---|
+| 0–35% | Firm to soft, sets when cool | Sliceable cheese, moulded cheese |
+| 35–85% | Thick and flowing | Dips and queso |
+| 50–90% | Dippable | Fondue and queso for chips |
+| 85–120% | Thin sauce | Mac and cheese, fondue for bread, cheese foam |
+| 120–175% | Soup | Cheese soup (heartier at 120%, thinner at 175%) |
 
-Cheese plus 35% to 85% liquid - thick and flowing cheese sauce, good for dips and quesos
+**Sodium citrate:** 2–3% of the combined weight of the cheese and liquid. It adds a salty, sour note, so stay near the low end and season to taste.
 
-Cheese plus 85% to 120% liquid - thin cheese sauce, cheese foam, fondues, mac and cheese
+## Method
 
-Cheese plus 120% liquid or more - continues to become thinner and thinner.
+Pick a cheese or two for the flavour you want. It doesn't need to be a traditionally melty cheese; anything that isn't very dry works.
 
-The final ingredient is the sodium citrate, which causes the cheese to stay together as it melts. It's typically used in a 2.0% to 3.0% ratio of total liquid plus cheese weight.
+Pick a liquid that complements it: beer, wine, cider, stock, milk, or juice.
 
-Since sodium citrate brings a salty, sour taste it's important to use appropriate proportions while keeping the flavor of the dish in mind.
+Weigh the cheese, then measure the liquid and sodium citrate from the table. Dissolve the citrate in the warm liquid, then add the cheese a handful at a time over low heat until smooth. An immersion blender gives the smoothest sauce; a whisk gives a stringier one.
 
-Melty Cheese
+For parties, a slow cooker on low keeps it melted on the counter.
 
-To make your own cheese sauces first choose the flavors you are aiming for. Then pick a cheese or two that will fit in that flavor profile. Remember, they don't have to be a traditionally "melty" cheese; anything that isn't super-dry should work fine.
-
-Next, pick a liquid that will complement the cheese. Some common liquids are beer, wine, cider, stock, milk, or juices. Depending on how firm you want your cheese to be you can use anywhere between 35% liquid for a semi-molded cheese, up to 120% for a thin and runny sauce.
-
-The final ingredient is the sodium citrate, which causes the cheese to stay together as it melts. It's typically used in a 2.0% to 3.0% ratio of total liquid plus cheese weight.
-
-When adding the cheese to the sauce you can use an immersion blender for a smooth sauce or a whisk for a stringier sauce. I often use a crockpot to keep the sauce melted for parties, that way you can just leave it out on the counter.
-
-Cheese Soup
-
-To make your own cheese soup first choose the flavors you are aiming for. Then pick a cheese or two that will fit in that flavor profile. Remember, they don't have to be a traditionally "melty" cheese; anything that isn't super-dry should work fine.
-
-Next, pick a liquid that will complement the cheese. Some common liquids are beer, wine, cider, stock, milk, or juices. Depending on how firm you want your cheese soup to be you can use anywhere around 120% liquid for a heartier cheese soup, up to 175% for a thinner version.
-
-The sodium citrate, which causes the cheese to stay together as it melts, is typically used in a 2.0% to 3.0% ratio of total liquid plus cheese weight.
-
-Fondue or Queso
-
-To make your own cheese fondue or queso, first choose the flavors you are aiming for. Then pick a cheese or two that will fit in that flavor profile. Remember, they don't have to be a traditionally "melty" cheese; anything that isn't super-dry should work fine.
-
-Next, pick a liquid that will complement the cheese. Some common liquids are beer, wine, cider, stock, milk, or juices. I tend to use between 50% and 90% for dips, depending on what I'm dipping into it, but you can go as high as 120% for runnier dips used with bread or other delicate items.
-
-Sodium citrate, which causes the cheese to stay together as it melts, is typically used in a 2.0% to 3.0% ratio of total liquid plus cheese weight.
-
-Sliceable Cheese
-
-To make your own sliceable cheese first choose the flavors you are aiming for. Then pick a cheese or two that will fit in that flavor profile. Remember, they don't have to be a traditionally "melty" cheese; anything that isn't super-dry should work fine.
-
-Next, pick a liquid that will complement the cheese. Some common liquids are beer, wine, cider, stock, milk, or juices. Depending on how firm you want your cheese to be you can use anywhere between 0% liquid for a firm molded cheese, up to 35% less firm slice.
-
-Sodium citrate, which causes the cheese to stay together as it melts, is typically used in a 2.0% to 3.0% ratio of total liquid plus cheese weight
+For sliceable cheese, pour it into a lined mould and chill until set.

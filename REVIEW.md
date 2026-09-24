@@ -143,89 +143,26 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 
 - [x] `reference/_index.md`
 - [x] `reference/reverse-cooking-reverse-sear-and-water-frying.md` (new draft 2026-09-24: reverse sear and water frying, linked from the cooking-on-the-road essay)
-- [x] ! `reference/base-recipes-for-weeknight-cooking.md` (Google links fixed 2026-09-24)
-    - L10: "Less common to the home kitchen is to do what restaurants do" is awkward; "Less common at home is what restaurants do: prepare sauces and bases..."
-    - L12: "the art of canning both requires investment and practice, as well as specialized recipes" → "canning takes investment, practice, and specialized recipes".
-    - L14: doubled "that": "I've found that by following ..., that I can" → drop the second.
-    - L20, L42: heading case and punctuation: "Proteins, Stews/gravies, Stocks and sauces" → "Proteins, stews, stocks, and sauces"; "And in my fridge: Pickles. Dressings/sauces, Prepped veg" → "In the fridge". (See also wiki-link check in collection-wide findings.)
-    - L58, L73: "American style", "Asian style" → hyphenate ("American-style").
-    - L67, L84: "chilli" vs "chili" (used elsewhere in the collection). Pick one.
-    - L71: "Szechuan peppers" → "Sichuan peppercorns"; "5 spice" → "five-spice" (also L75).
-    - L78: "apply the reverse sear method ... by heating it on high" misuses the term. Reverse sear is low heat first, then a hard sear on a whole cut; this is just frying off the moisture. Suggest "fry it on high to brown it". "500ml and 250ml" → "500 ml and 250 ml".
-    - L90: "super power" → "superpower"; "take out style" → "takeout-style"; "These little flavour bombs." is a sentence fragment.
-    - L92: "more flavourful than a traditional curry dish, as it's more layered" states opinion as fact. The next sentence ("I am biased") hints at it; fold them together: "To me it tastes more layered..."
-    - L100: "weaponize my love of cooking occasionally with my laziness" is tangled; "spent" → "spend" (present habit).
-- [x] ! `reference/burger-night-2022.md`
-    - L16: Pickles cost doesn't compute: $15.99 per 4 L at 5 g/portion is about $0.02, not $0.08. Q: was the price per a smaller jar?
-    - L23: Bacon at $2.05/kg is implausibly cheap (2022 retail was ~$15–25/kg). Q: typo for $20.50/kg? That would make the bacon portion ~$1.03 and change the Cheese + Bacon row.
-    - L31–38: column labels are wrong. "@ 20% margin" is cost ÷ 0.20, a 20% food-cost target, and "True margin" is cost ÷ price, i.e. food-cost %. Suggest "Price at 20% food cost" and "Actual food cost %". "Retail target" is empty in every row; drop it.
-    - L25: Potato 0.002 × 175 = $0.35, table says $0.37 (rounding in unit price, probably fine).
-- [x] ! `reference/chili-costing-2022.md`
-    - Arithmetic checks out for the food total ($56.11), loaded total ($176.11), and per-portion figures.
-    - L14–29: "Qty" has no units (1 what of beef?). Add package size or weight.
-    - L51: dry-bean saving of $11.66 equals the entire canned-bean cost, i.e. dry beans treated as free. Q: net of dry-bean cost?
-    - L52: "saves ~$7.24/h" is a rate, not a total, so the L54 total can't be reproduced. The reductions shown don't explain the $83.24 drop to $92.87. Q: what's in that figure (fewer labour/overhead hours from the pressure cooker?)
-- [x] ! `reference/flour-protein-content.md`
-    - "Extra gluten" column arithmetic is right as protein deltas, but L20 says it's how much vital wheat gluten to add. VWG is only ~75% protein, so matching the delta takes about 1.33× the listed amount (e.g. +2.3 g protein ≈ 3 g VWG). Either relabel the column "protein gap" or convert it.
-    - L18: em-dash. Also Q: the claim that finer milling lowers practical gluten strength. 00's softer performance usually comes from the wheat (soft wheat, lower-quality gluten) rather than grind size. Want to keep, soften, or source it?
-    - L8: "Bread flour (14g/100g) is the reference point" is fine, but note Canadian bread flours vary 13–14.5%; worth a "typical" qualifier.
+- [x] `reference/base-recipes-for-weeknight-cooking.md` (fixed 2026-09-24: wording, headings, hyphens, spellings, five-spice, wiki-link case; "reverse sear" → water-fry with a link; opinion folded into "To me")
+- [x] `reference/burger-night-2022.md` (fixed 2026-09-24: column labels; pickles $0.02; bacon $20.50/kg ($1.03); potato $0.35; menu rows recomputed)
+- [x] ! `reference/chili-costing-2022.md` (fixed 2026-09-24: reductions total recomputed to ~$117.45 ($3.09/portion) from stated estimates: ~$3 dry beans, 1.5 h pressure-cooker kitchen time; butchering left out)
+    - L14–29: "Qty" has no units (1 what of beef?). Add package size or weight if you have it.
+- [x] `reference/flour-protein-content.md` (fixed 2026-09-24: column converted to grams of vital wheat gluten (÷ 0.75); "typical" qualifier; em-dash; 00 note kept, no source needed)
 - [x] ! `reference/food-ratios-for-creating-your-own-recipes.md` (fixed 2026-09-24: four tables rebuilt with the % column as the source of truth and ratio/example recomputed from it; mg → g; brine range made consistent (2.5–7.5%); velvet line; dry-brine 10 g; typos)
     - Q: the dry brine seasonings row disagreed three ways (ratio 0.5 = 50%, % column ~5%, example 24 g = 10%). Kept ~5% (12 g); a rub is often closer to 50%. Which is right?
     - Q: the wet brine sugar note said "up to 50% of the salt" while the table said 0–5% of the water; now "from none up to about the weight of the salt". Confirm.
     - Draft with a TODO section; fine to stay `draft: true`.
-- [x] ! `reference/greek-dressing-research.md`
-    - L8: title repeated as a body line ("Creamy Greek dressing research"). Q: the page is mostly about non-creamy vinaigrette; which title is right?
-    - Typos: L12 "lethicin" → "lecithin"; L31 "verus" → "versus"; L99 "processer" → "processor"; L44 "ratios varies" → "vary"; L46 "acidy" → "acidic"; L23 "1-2 clove" → "cloves"; L10, L32 "greek" → "Greek"; L111 "dijon" → "Dijon"; L98 "Honey" → "honey".
-    - L12 vs L21–26: says the spices are 1:1:1:1 (tsp per 500 ml), but the list right below is 2 : 1.5 : 0.75 tsp. One of them is wrong.
-    - L44: calls 0.75:1 oil:acid the least common, but the Restaurant and Smaller samples on this page are both 0.75:1.
-    - L87–99: "Creamy 2" is a copy of the Restaurant recipe with two parentheticals, and has nothing creamy in it. Q: was a different recipe meant to go here?
-    - L78: "Creamy Greek Style Dressing" is a title that ended up as a list item; L79 title-case "Extra Virgin Olive Oil".
-    - Headings end in colons ("## Main ratio:", "#### Restaurant:" etc.); drop them. Mixed unit spellings in quoted samples (Tbs, TBSP, Tablespoon) are fine if they are verbatim quotes, but the sources aren't credited. Q: add source links?
-- [x] ! `reference/growing-sprouts.md`
-    - Unfinished: L22 trails off ("Key is to hydrate the …"); "Harvesting" (L50) has no content.
-    - L8: title repeated as body text; delete.
-    - L36: garbled: "Install that the red syphons ... or they may not draining" → "Install the red siphons on the drain tubes. Don't press them in too far or they won't drain well."
-    - L14: comma splice: "Most seeds come with instructions, follow these..." → "Follow the seed and grower instructions."
-    - "syphons" (L29, L36, L48): "siphons" is the standard Canadian spelling; Q: or is "syphon" the product's own term?
-    - Labels "Tips:", "Germinating:", "Watering:", "Cleanup:" are bold-less colon labels; make them `###` headings (sentence case) so the in-page link works.
-- [x] ! `reference/jaydas-birthday-dinner-menu.md`
-    - Menu and prep table disagree: the table has Poutine, Mac, and Angel food cake, which aren't on the menu; "Chocolate mint wafer" (menu) vs "After 8 w/mint" (table); "Thai curry" vs "Red Thai curry".
-    - L15: "S'more's drink" → "S'mores drink".
-    - L40: Chocolate fountain prep (Wednesday) comes before its shopping day (Thursday). Q: swapped?
-    - Q: no date or year. Add one so the page makes sense later (and to match the other event pages, which carry a year).
-    - Q: "Mac" (L32): mac and cheese? Spell it out.
+- [x] `reference/greek-dressing-research.md` (fixed 2026-09-24: typos, heading colons, duplicate title line; stays a draft, framed as a survey that led to the Greek Islands' dressing recipe; sample inconsistencies kept as found)
+- [x] ! `reference/growing-sprouts.md` (fixed 2026-09-24: duplicate title line, comma splice, garbled siphon step, labels → `###` headings, syphon → siphon)
+    - Unfinished: L22 trails off ("Key is to hydrate the …"); "Harvesting" has no content.
+- [x] `reference/jaydas-birthday-dinner-menu.md` (removed 2026-09-24)
 - [x] `reference/jerk-marinade-adapted-from-serious-eats.md` (merged into recipes/jerk-chicken.md as a variation 2026-09-24; draft removed)
-- [x] ! `reference/nicola-2018-food-planning.md`
-    - Grocery list misses items the plan needs: pierogies (Friday dinner) and marinara (Saturday dinner) aren't listed.
-    - L14: "Breakfast snack, see Friday" is unclear. Q: same as Friday's breakfast?
-    - L34: "Ms. Vickie's" → "Miss Vickie's"; "M&Ms" → "M&M's".
-    - L8: Q: "Nicola" is Nicola Lake? One word of context helps readers outside the family.
-- [x] ! `reference/sodium-citrate-ratios.md`
-    - Q: most of the page appears to be copied verbatim from the linked Reddit post, including its US spellings ("flavor", "molded"). If it's ever published, rewrite it in your words, attribute it, and condense it. The same "choose flavours / pick a liquid / 2–3% citrate" paragraph repeats four times (L26–56).
-    - Suggest collapsing it to one table: use | liquid % of cheese weight | result, plus one line on citrate (2–3% of cheese + liquid weight).
-    - L12–18: hyphens used as separators ("0% to 35% liquid - firm") → colons.
-    - L24, L34, L42, L50: pseudo-headings in Title Case as plain paragraphs ("Melty Cheese") → `## Cheese sauce`, etc.
-    - L54: "up to 35% less firm slice" → "up to 35% for a softer slice". L56 missing final period.
-- [x] ! `reference/soft-sandwich-bun-research.md`
-    - Eggs double-counted: the dough table lists 3 eggs "(2 in dough, 1 for wash)", and Toppings lists another "1 egg + water for eggwash". Keep one.
-    - Metric column for yeast/salt/sugar is millilitres ("7ml", "10ml", "44ml"). For baking these should be grams: ~4.5 g instant yeast, ~6 g kosher salt (Diamond) or ~10 g (Morton), ~38 g sugar. Q: which kosher salt brand?
-    - L29: "Combine ... into a sticky dough. (~10 min)" doesn't say how: knead by hand, mixer, how you know it's done (windowpane?).
-    - L37: the "ramekin of water ... thicker crust" tip is a baking tip filed under Storage; move it to step 5.
-    - L23: em-dash; "eggwash" vs "egg wash" used inconsistently (pick "egg wash").
-    - L8: wiki link `[[Chef John's Hamburger Buns]]` is title case; the recipe title is sentence case (see wiki-link check in collection-wide findings).
+- [x] `reference/nicola-2018-food-planning.md` (fixed 2026-09-24: pierogies and marinara added to the grocery list; Miss Vickie's, M&M's; remaining questions dropped)
+- [x] `reference/sodium-citrate-ratios.md` (fixed 2026-09-24: rewritten in own words and condensed to one ratio table plus a short method, attributed to the Reddit thread)
+- [x] `reference/soft-sandwich-bun-research.md` (fixed 2026-09-24: egg counted once; metric in grams with both kosher salt brands; kneading step; crust tip moved to the bake; em-dash; egg wash; wiki-link case)
 - [x] `reference/temperature-and-doneness-cheat-sheet.md` (fixed 2026-09-24: table rebuilt; fall-apart raised to 90–95°C shoulder/chuck, 80–85°C dark meat; per-meat holds and thin-piece pulls; one rest rule; footnotes folded into notes; links the safety page)
-- [x] ! `reference/thanksgiving-2021.md` (Google links fixed 2026-09-24)
-    - L20: "brussel" → "Brussels"; L12, L23 "Jalapeno/jalapenos" → "jalapeño(s)".
-    - L18: "BTB" is undefined; "Better Than Bouillon".
-    - Headings mix `####` and `###` and end in colons ("#### Pregame snacks:", "### The plan:"). Day labels in the plan are plain paragraphs; make them `####` so the plan scans.
-    - L45–49: "Sunday before" is listed ahead of "Week before". Swap, or confirm "Sunday before" means the Sunday of the week before.
-- [x] ! `reference/the-aldersons-epic-12-days-of-pizza.md`
-    - Title: "The Alderson’s" → "The Aldersons’" (plural possessive; the family, not one Alderson).
-    - L21: the first pizza name repeats as a dangling heading with no description. Q: were descriptions for each pizza planned, or should this line go?
-    - L23: "that time where" → "that time when"; "Pepperidge farm" → "Pepperidge Farm".
-    - L10: "cheesus" Q: typo or pun (for vegan cheese?).
-    - L14: "Mario, toad & Luigi" → "Toad". L17: "shepherds pie" → "shepherd's pie". L18: stray comma "(poutine pizza,)".
-    - List titles are in title case on purpose (they're names); fine to leave.
+- [x] `reference/thanksgiving-2021.md` (fixed 2026-09-24: Brussels, jalapeños, Better Than Bouillon, heading levels, day labels as `####`, week before / Sunday before reordered)
+- [x] `reference/the-aldersons-epic-12-days-of-pizza.md` (fixed 2026-09-24: "Aldersons’", Toad, shepherd's, stray comma, dangling heading removed, "that time when", Pepperidge Farm; "cheesus" is the intended pun)
 
 ### Food log
 

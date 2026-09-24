@@ -2,20 +2,18 @@
 title: Growing sprouts
 tags: [reference, sprouts, growing]
 source: family
-draft: true
+draft: false
 ---
-
-Growing sprouts
 
 ## General
 
 - There are many types of sprouts
 - I mostly grow sandwich sprouts
-- Most seeds come with instructions, follow these and your grower instructions
+- Follow the instructions that come with your seeds and your grower
 
 ## Using a mason jar
 
-Tips:
+### Tips
 
 - You can find growing kits for mason jars that tilt the jar (and add a fine mesh lid) to help water drain. Place the device on a plate with a lip.
 
@@ -23,17 +21,17 @@ Germinating and watering are similar to the Biosta grower. Key is to hydrate the
 
 ## Using a Biosta grower
 
-Tips:
+### Tips
 
 - The sprouter needs to sit on a flat surface (or it may leak)
-- Make sure the red syphons are not directly on top of each other, staggering them ⅓ or ½ way around works.
+- Make sure the red siphons are not directly on top of each other, staggering them ⅓ or ½ way around works.
 - Most sprouts are happy in a bright area, but not in direct sunlight
 - Plant one tray per day or two, to spread out growth (oldest tray should be on top).
 
-Germinating:
+### Germinating
 
 1. Wash the tray(s), see Cleanup below for details.
-2. Install that the red syphons on the water drain tubes (do not press them in too much, or they may not draining well enough)
+2. Install the red siphons on the drain tubes. Don't press them in too far, or they won't drain well.
 3. Before adding the seeds, rinse the growing surface of the trays again, but do not dry.
 4. In a fine mesh strainer, rinse the seeds (some seeds may not need this, check the instructions on the seeds just in case).
 
@@ -41,15 +39,15 @@ Germinating:
 
 5. Sprinkle 3 tablespoons of small seeds evenly on the tray.
 
-Watering:
+### Watering
 
-1. Fill the top tray with cool (and rested) tap water. If it’s not full enough, it may not start to drain. This takes 500-750ml of water.
+1. Fill the top tray with cool (and rested) tap water. If it’s not full enough, it may not start to drain. This takes 500–750 ml of water.
 2. Wait until all of the trays are irrigated, then recycle the water from the bottom recovery tray (and return it to the sprouter stack).
-3. If water is sitting in a tray, you may need to clear or slightly loosen the red syphons. Sitting water will kill the sprouts.
+3. If water is sitting in a tray, you may need to clear or slightly loosen the red siphons. Sitting water will kill the sprouts.
 
-Harvesting
+### Harvesting
 
-Cleanup:
+### Cleanup
 
 - Wash with warm soapy water, rinse thoroughly. Use a brush to clean out the ridges.
 - Do not put it in the dishwasher!

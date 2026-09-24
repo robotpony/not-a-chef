@@ -2,76 +2,76 @@
 title: Thanksgiving 2021
 tags: [reference, menus, events]
 source: family
-draft: true
+draft: false
 ---
 
 The focus this year is comfort foods and casserole leftovers.
 
-#### Pregame snacks:
+## The menu
+
+### Pregame snacks
 
 - Jalapeño poppers (no oven time)
 - Chips
 - Veggie platter
 
-#### Vegetarian fare:
+### Vegetarian fare
 
-- Gravy (mushroom, veg, kombu, BTB)
+- Gravy (mushroom, veg, kombu, Better Than Bouillon)
 - Mixed roasted veg (carrots, cauli, sweet potato)
-- Broccoli / brussel slaw, cranberry, nuts, and tempeh (with simple white dressing)
+- Broccoli / Brussels sprout slaw, cranberry, nuts, and tempeh (with simple white dressing)
 - Mashed potatoes (to rebake)
 - Stuffing (bread, cran, nuts, fried tempeh, veg, stock)
-- [[Baked mac & cheese]] with tempeh, panko, parm, and jalapenos
+- [[Baked mac & cheese]] with tempeh, panko, parm, and jalapeños
 - Canned corn
 - Dinner rolls
 - Cranberry sauce
 
-#### Classic omni fare:
+### Classic omni fare
 
 - Roast turkey
 - Turkey/chicken gravy
 
-#### Desserts:
+### Desserts
 
 - Meridian snacks (Nanaimo bars, etc.)
 
-#### After party:
+### After party
 
-- Oven fried bacon (for sandwiches)
-- Shepherd's pie style veg casseroles for J
+- Oven-fried bacon (for sandwiches)
+- Shepherd's pie-style veg casseroles for J
 - Turkey madness casseroles for us
 
-### The plan:
+## The plan
 
-Sunday before
-
-- ✔️ Veg stock
-
-Week before
+#### Week before
 
 - ✔️ Recipe outlines and research (potatoes, salad)
 - ✔️ Consider sad dessert situation
 
-Wednesday
+#### Sunday before
+
+- ✔️ Veg stock
+
+#### Wednesday
 
 - Grocery run (and cheater turkey)
 
-Friday
+#### Friday
 
 - Pick up real turkey from Meridian
 - Pick up snacks (M&M)
 
-Saturday
+#### Saturday
 
 - Grocery run
 - Veg gravy
 - Turkey stock / gravy
 - Dry brine turkey
-- Mac&chez
+- Mac and cheese
 - Pre-cook potatoes in casserole dish
 
-Sunday
-
-(day of)
+#### Sunday (day of)
 
 - Prep salad and dressing
 - Prep roasting veg
@@ -79,7 +79,7 @@ Sunday
 - Reheat roasted veg / mashed potatoes
 - Reheat gravies
 
-Day after
+#### Day after
 
 - Make casseroles!
 - Turkey sandies
