@@ -26,13 +26,13 @@ Target internal temperatures for texture, assuming the temperature is held (reac
 | Cut | Medium rare | Medium | Well | Fall-apart tender |
 |---|---|---|---|---|
 | Chicken/turkey (white meat) | ⛔️ | 65°C | 70°C | ⛔️ |
-| Chicken/turkey (dark meat) | ⛔️ | 68°C | 72°C | 75°C |
+| Chicken/turkey (dark meat) | ⛔️ | 68°C | 72°C | 80–85°C |
 | Chicken (ground) | ⛔️ | 70°C | 80°C | ⛔️ |
 | Pork (loin) | 60°C | 65°C | 75°C | ⛔️ |
-| Pork (shoulder) | 60°C | 65°C | 75°C | 80°C |
+| Pork (shoulder) | 60°C | 65°C | 75°C | 90–95°C |
 | Pork (ground) | ⛔️ | 65°C | 75°C | ⛔️ |
 | Beef (steak, roasts) | 57°C | 63°C | 70°C | ⛔️ |
-| Beef (chuck) | 57°C | 63°C | 70°C | 80°C |
+| Beef (chuck) | 57°C | 63°C | 70°C | 90–95°C |
 | Beef (ground) | ⛔️ | 63°C | 70°C | ⛔️ |
 | Salmon (steaks) | 52°C | 60°C | 68°C | ⛔️ |
 | Tuna (steaks) | 50–60°C | 63°C | 68°C | ⛔️ |
@@ -44,8 +44,6 @@ Target internal temperatures for texture, assuming the temperature is held (reac
 - Most meats should rest for about 5% of their cooking time to stay moist: steaks for 5 minutes, roasts for 10–20 minutes. For large cuts, the rest is also part of the hold.
 - Most fish has little connective tissue and is best rare to medium. Fish and seafood don't need a significant rest.
 - Poultry can have streaks of red in the dark meat near the bone even when fully cooked. It's pigment leached from the marrow through weak, broken, or cut bones, common in bone-in poultry that has been frozen. It's safe and has no strong flavour, even if it looks unpleasant.
-
-Q: the fall-apart column (75–80°C) is where collagen starts to break down, but most pulled pork and braised chuck recipes finish at 90–95°C, and dark meat shreds best from about 80–85°C. Keep these as starting points, or raise them?
 
 ## How it works
 

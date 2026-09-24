@@ -21,7 +21,7 @@ Safety is temperature *and* time. The instant numbers (74°C poultry, 71°C grou
 
 1. ~~`recipes/turkey-burgers.md`: ground turkey to 63–65°C, then a 5–10 minute rest. Thin patties won't stay at temperature through the rest. Hold them at 65°C for 6 minutes (in a low oven) or cook them to 74°C.~~ Fixed: cook to 70°C; the climb in the pan counts toward the hold (see the new "The climb counts" section of the safety page).
 2. ~~Thin poultry pulled low with a rest instead of a hold: `pan-fried-chicken-burger` (70°C, fine if it holds ~15 sec; the carry-over claim is the only issue), `fajita-chicken-bowl` (62°C → needs ~14 min), `mayo-marinade` chicken (63°C), `simple-rice-bowls` chicken (60°C → needs ~30 min). `roast-poultry` breasts at 63°C are borderline (bone-in pieces do hold through a 10-minute rest, but 63°C needs 9–11 min); pull at 65°C for margin.~~ Fixed: thin chicken to 68°C, the burger stays at 70°C, roast breasts to 65°C with the rest as the hold.
-3. `reference/temperature-and-doneness-cheat-sheet.md`: "fall apart" targets are too low (shoulder/chuck at 80°C), and one flat 3-minute hold is right for red meat but short for poultry below 65°C. Link it to the new safety page.
+3. ~~`reference/temperature-and-doneness-cheat-sheet.md`: "fall apart" targets are too low (shoulder/chuck at 80°C), and one flat 3-minute hold is right for red meat but short for poultry below 65°C. Link it to the new safety page.~~ Fixed; fall-apart numbers synced on the safety page too.
 4. Storage that's too long or too warm: fresh salsas kept "a few weeks" (`ginas-tomato-salsa`, `salsa-verde`); counter cold-brew tea for 12 h; cream-cheese-frosted `paska-buns` kept unrefrigerated 3 days; `the-anything-casserole` reheated to only 65°C.
 5. Raw egg without a note: `caesar-dressing`, `white-spot-burgers` mayo.
 
@@ -264,14 +264,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - L37: the "ramekin of water ... thicker crust" tip is a baking tip filed under Storage; move it to step 5.
     - L23: em-dash; "eggwash" vs "egg wash" used inconsistently (pick "egg wash").
     - L8: wiki link `[[Chef John's Hamburger Buns]]` is title case; the recipe title is sentence case (see wiki-link check in collection-wide findings).
-- [x] ! `reference/temperature-and-doneness-cheat-sheet.md`
-    - Broken formatting: the doneness table was flattened on import into one cell per paragraph (L8–144). Unreadable as published. Rebuild as a Markdown table (Cut | Medium rare | Medium | Well | Fall-apart). Same import problem as food-ratios.
-    - Footnotes are Google Docs anchors (`#ftnt1`), which won't link in Hugo. Convert to Markdown footnotes or a Notes list.
-    - Incorrect "fall apart" targets: pork shoulder 80°C, beef chuck 80°C, and dark meat 75°C are too low for collagen breakdown. Pulled pork and braised chuck usually run 90–95°C (195–203°F); dark meat gets tender from ~80–85°C. As written, cooks will stop early and get tough meat.
-    - Footnotes 1 and 2 contradict each other ("Heat to ... plus 5 min rest per kilo" vs "Heat at ... including 5 min rest per kilo"), and L148 gives a third rest rule (~5% of cook time). Pick one.
-    - Safety note: the reduced temps are right in principle (safety is temperature × time), and a 3–5 minute hold at 63°C is enough for beef, pork, and lamb. For poultry the hold is longer at the same temperature (USDA: ~4–5 min at 65°C, 9–13 min at 63°C, 26–32 min at 60°C). The flat "3 minutes" understates the low end for chicken and turkey. Link to `reference/food-safety-time-and-temperature.md` (new draft) for the tables.
-    - L148: "maximise" → "maximize". L147: "more rare" → "rarer"; "bottom roasts" → "bottom round roasts"? L149: "Fish and seafood does" → "do". L162: "AHI TUNA" → "ahi tuna"; note that "sushi grade" is a marketing term, not a regulated grade.
-    - L150: good explanation; could name the cause (haemoglobin from the marrow) in one clause.
+- [x] `reference/temperature-and-doneness-cheat-sheet.md` (fixed 2026-09-24: table rebuilt; fall-apart raised to 90–95°C shoulder/chuck, 80–85°C dark meat; per-meat holds and thin-piece pulls; one rest rule; footnotes folded into notes; links the safety page)
 - [x] ! `reference/thanksgiving-2021.md`
     - L12: typo "Jalapeno poppersx" plus a Google Docs comment anchor `[\[a\]](#cmnt1)` whose note ("No oven time", L87) is broken in Hugo. Suggest "Jalapeño poppers (no oven time)".
     - L20: "brussel" → "Brussels"; L12, L23 "Jalapeno/jalapenos" → "jalapeño(s)".
