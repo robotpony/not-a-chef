@@ -1,14 +1,16 @@
 ---
-title: Velveting (Pork)
+title: Velveting (pork)
 tags: [bases, chinese, make-ahead, quick, weeknight]
 source: original
 date: 2026-01-11
-servings: for 350g pork
+servings: 2-3
 prep_time: 5 min (plus 30 min rest)
 total_time: 35 min
 cuisine: Chinese
 draft: false
 ---
+
+This technique is surprisingly effective for the effort, producing soft, savoury bites.
 
 ## Mechanic
 

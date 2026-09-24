@@ -1,5 +1,5 @@
 ---
-title: Gochujang Wing Sauce
+title: Gochujang wing sauce
 tags: [sauces, korean, quick]
 source: original
 date: 2023-11-01

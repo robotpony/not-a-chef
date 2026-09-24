@@ -1,5 +1,5 @@
 ---
-title: Butternut Squash Curry
+title: Butternut squash curry
 tags: [mains, thai, curries, vegetarian, weeknight]
 source: https://www.goodhousekeeping.com/food-recipes/a38375880/butternut-squash-curry-recipe/
 date: 2026-09-18

@@ -1,5 +1,5 @@
 ---
-title: Spaghetti Squash Boats (or Casserole)
+title: Spaghetti squash boats (or casserole)
 tags: [mains, casseroles]
 source: family
 draft: false

@@ -1,5 +1,5 @@
 ---
-title: German Platz
+title: German platz
 tags: [desserts]
 source: family
 draft: false

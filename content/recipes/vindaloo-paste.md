@@ -1,14 +1,15 @@
 ---
-title: Vindaloo Paste
+title: Vindaloo paste
 tags: [bases, indian, make-ahead, vegan, dairy-free]
 source: original
 date: 2024-07-01
-servings: for ~1 kg meat
 prep_time: 15 min
 total_time: 15 min
 cuisine: Indian
 draft: false
 ---
+
+Vindaloo is my favourite curry, so I developed this paste.
 
 ## Mechanic
 

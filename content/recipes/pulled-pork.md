@@ -1,6 +1,6 @@
 ---
-title: Pulled Pork
-tags: [mains, pork, american, slow-cooker, make-ahead]
+title: Pulled pork
+tags: [mains, pork, american, slow-cooker, make-ahead, bases]
 source: original
 date: 2026-08-20
 servings: TBD
@@ -10,6 +10,8 @@ total_time: TBD
 cuisine: American
 draft: false
 ---
+
+Pulled pork is a great base for dozens of dishes, including sliders, chilis, tacos, macaroni, rice bowls, and more.
 
 ## Mechanic
 

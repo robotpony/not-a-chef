@@ -1,13 +1,16 @@
 ---
-title: Lemon Chicken Marinade
+title: Lemon chicken marinade
 tags: [bases, mediterranean, make-ahead, quick]
 source: original
 date: 2026-05-24
 servings: 4 (marinade for ~700g chicken)
 prep_time: 10 min
 total_time: 10 min
+cuisine: Greek
 draft: false
 ---
+
+Lemon chicken is great on salad, in wraps, or in rice bowls.
 
 ## Mechanic
 

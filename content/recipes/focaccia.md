@@ -3,17 +3,19 @@ title: Focaccia
 tags: [breads, italian, vegan, dairy-free, family]
 source: family
 date: 2026-06-18
-servings: 2–3 sheet pans
+servings: 2-10 people
 prep_time: 20 min
-cook_time: 20–40 min
-total_time: 3 hr (including dough rise)
+cook_time: ~30 min
+total_time: 3 hr
 cuisine: Italian
 draft: false
 ---
 
+I started making focaccia when I needed to find a use for some leftover pizza dough. I enriched it with olive oil, topped it with kosher salt, and baked it in a pan. We ate it with olive oil and balsamic, and it was lovely.
+
 ## Mechanic
 
-Focaccia is pizza dough baked in an oiled pan rather than on a stone. The heavy oil in the pan fries the bottom crust as it bakes, giving it crunch. Deep dimples aren't decorative; they anchor toppings and prevent the dough from puffing unevenly. Rest the dough between spreading attempts; it will relax and spread to the corners without tearing.
+Focaccia is an enriched pizza dough baked in an oiled pan rather than on a stone. The heavy oil in the pan fries the bottom crust as it bakes, giving it crunch. Deep dimples aren't decorative; they anchor toppings and prevent the dough from puffing unevenly. Rest the dough between spreading attempts; it will relax and spread to the corners without tearing.
 
 ## Ingredients
 

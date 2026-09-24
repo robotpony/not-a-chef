@@ -15,12 +15,12 @@ See `FORMAT.md` for the recipe specification and `FORMAT-ESSAYS.md` for the essa
 
 See `FORMAT.md` for the full specification. Key points:
 
-- YAML frontmatter with `title` (required) and `tags` (required, plain strings — no `#` prefix)
+- YAML frontmatter with `title` (required, sentence case: first word and proper nouns only) and `tags` (required, plain strings — no `#` prefix)
 - Optional `## Mechanic` section explaining the key ratio or technique
 - Simple recipes: `## Ingredients` (unordered list) + `## Method` (prose)
 - Multi-component recipes: one `## ComponentName` heading per component, each containing its ingredients list and prose method
 - Optional sections: `## To serve`, `## Variations`, `## Notes`
-- Cross-references use wiki links: `[[Pizza Sauce]]`, `[[Basic Pie Crust]]`
+- Cross-references use wiki links: `[[Pizza sauce]]`, `[[Basic pie crust]]`
 - Canadian English; metric units with optional imperial in parentheses
 
 ## Content sources

@@ -1,5 +1,5 @@
 ---
-title: Double Chocolate Banana Bread
+title: Double chocolate banana bread
 tags: [desserts]
 source: family
 draft: false

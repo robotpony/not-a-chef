@@ -1,5 +1,5 @@
 ---
-title: Marshmallow Squares
+title: Marshmallow squares
 tags: [desserts]
 source: family
 draft: false

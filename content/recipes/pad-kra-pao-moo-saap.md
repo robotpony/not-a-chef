@@ -1,5 +1,5 @@
 ---
-title: Pad Kra Pao Moo Saap
+title: Pad kra pao moo saap
 tags: [mains, thai, quick]
 source: synthesized from https://hungryinthailand.com/pad-kra-pao/, https://makethatdish.com/thai-basil-minced-pork/,
   https://thaicaliente.com/pad-kra-pao-moo/

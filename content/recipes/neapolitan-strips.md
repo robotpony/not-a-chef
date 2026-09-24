@@ -1,5 +1,5 @@
 ---
-title: Neapolitan Strips
+title: Neapolitan strips
 tags: [desserts]
 source: family
 draft: false

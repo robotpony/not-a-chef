@@ -1,5 +1,5 @@
 ---
-title: Baked Oatmeal
+title: Baked oatmeal
 tags: [breakfast, make-ahead, oats, gluten-free-optional, vegetarian]
 source: adapted
 date: 2026-06-17
@@ -7,8 +7,11 @@ servings: 6
 prep_time: 10 min
 cook_time: 40 min
 total_time: 50 min
+cuisine: American
 draft: false
 ---
+
+I grew up on oatmeal, and love it prepared pretty much any way, but baked is best.
 
 ## Mechanic
 
@@ -44,10 +47,10 @@ Warm, with plain yogurt and a drizzle of maple syrup.
 ## Variations
 
 ### Blueberry banana
-Use 150 g blueberries (1 cup) and 1 banana, sliced, as the fruit. Pecans on top. The most forgiving version: the banana in the base and the banana on top give you two textures.
+Use 150 g blueberries (1 cup) and 1 banana, sliced, as the fruit. Pecans on top. 
 
 ### Apple cinnamon
-Peel and dice 2 medium apples into ½ cm pieces. Add a pinch of nutmeg to the wet mix. Walnuts on top. Best in fall when apples are good.
+Peel and dice 2 medium apples into ½ cm pieces. Add a pinch of nutmeg to the wet mix. Walnuts on top. 
 
 ### Pumpkin chocolate chip
 Replace the mashed banana with ¼ cup pumpkin purée. Fold ½ cup chocolate chips into the oat mix instead of topping with fruit. Add ½ teaspoon each nutmeg and ginger to the wet mix.
@@ -55,17 +58,8 @@ Replace the mashed banana with ¼ cup pumpkin purée. Fold ½ cup chocolate chip
 ### PB banana
 Skip the topping fruit. Press 1 sliced banana across the top before baking. After baking, warm 2 tablespoons peanut butter until pourable and drizzle over.
 
-### Vegan
-Omit the eggs. Add ¼ cup almond or peanut butter to the wet mix and increase milk by 2 tablespoons to compensate. Use coconut oil in place of butter. The nut butter binds and adds richness; the result is slightly denser.
-
-### Muffin format
-Fill a greased 12-count muffin tin to the top. Bake 25–28 minutes until the edges are set and tops are lightly browned. Makes 10–12 cups.
-
 ## Notes
 
 - Mix and bake immediately. Oats absorb liquid fast; batter left to sit produces a dry, uneven result.
-- Keeps refrigerated 5 days. Reheat individual portions about 60 seconds in the microwave.
-- Freeze individually wrapped squares up to 3 months. Thaw in the fridge and reheat as above, or unwrap and microwave from frozen in 30-second intervals.
+- Keeps refrigerated 5 days. 
 - Frozen fruit works straight from the bag. Add 3–5 minutes to the bake time.
-- For a crispier top, scatter 2 tablespoons raw or turbinado sugar over the fruit before baking.
-- 9×13 cm pan: double the recipe and add 10–15 minutes to the bake time. Tent with foil if edges brown before the centre sets.

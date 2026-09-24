@@ -1,5 +1,5 @@
 ---
-title: Ramen Eggs (Ajitsuke Tamago)
+title: Ramen eggs (ajitsuke tamago)
 tags: [sides, japanese, make-ahead]
 source: original
 date: 2023-09-01

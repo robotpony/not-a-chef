@@ -3,13 +3,15 @@ title: McDouble
 tags: [mains, american, weeknight, quick]
 source: original
 date: 2024-10-01
-servings: 1 burger
+servings: 1 
 prep_time: 10 min
 cook_time: 5 min
 total_time: 15 min
 cuisine: American
 draft: false
 ---
+
+A very cravable burger. This is the closest I've gotten to perfecting it.
 
 ## Mechanic
 
@@ -22,7 +24,7 @@ Smash-and-freeze before cooking locks the shape. Press between parchment sheets 
 ### Patties
 
 - 150g ground beef, double-ground (two 75g patties)
-- salt, black pepper (applied after cooking)
+- salt, black pepper, MSG (applied after cooking)
 
 ### Dressing (per burger)
 
@@ -55,4 +57,5 @@ Immediately. These hold badly.
 - The 5:1 ketchup:mustard ratio gives that distinctive fast-food sweet-savory balance.
 - Double-ground beef: pulse the ground beef through the grinder twice, or blitz briefly in a food processor.
 - Bun pressed to ~11 cm (4⅓ inch) matches the patty diameter after smashing.
-- The restaurant version uses45g patties, but they're a pain to work with at that size at home
+- The restaurant version uses 45g patties, but they're a pain to work with at that size at home
+- Kraft Deluxe cheese is thicker than what the golden king uses, so I use 1/2 a slice.

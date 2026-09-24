@@ -1,13 +1,16 @@
 ---
-title: Lemon-Lime Iced Tea
+title: Lemon-lime iced tea
 tags: [drinks, quick, vegan, dairy-free]
 source: original
 date: 2026-05-16
 servings: 1
 prep_time: 5 min
 total_time: 5 min
+cuisine: american
 draft: false
 ---
+
+This is my favourite Spring and Summer drink.
 
 ## Ingredients
 

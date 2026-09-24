@@ -1,5 +1,5 @@
 ---
-title: Pizza Dough
+title: Pizza dough
 tags: [breads, italian, make-ahead]
 source: original
 date: 2022-01-01

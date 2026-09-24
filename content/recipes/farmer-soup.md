@@ -1,5 +1,5 @@
 ---
-title: Farmer Soup
+title: Farmer soup
 tags: [mains, soups]
 source: family
 draft: false

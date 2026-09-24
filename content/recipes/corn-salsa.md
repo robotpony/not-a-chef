@@ -1,5 +1,5 @@
 ---
-title: Corn Salsa
+title: Corn salsa
 tags: [sauces]
 source: www.recipetineats.com
 draft: false

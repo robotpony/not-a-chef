@@ -1,5 +1,5 @@
 ---
-title: Simple Marinara
+title: Simple marinara
 tags: [sauces, italian, quick, vegan, dairy-free]
 source: original
 date: 2024-10-01
@@ -10,6 +10,8 @@ total_time: 25 min
 cuisine: Italian
 draft: false
 ---
+
+A perfect sauce for flat breads, pizza, and as a quick and fresh pasta.
 
 ## Mechanic
 

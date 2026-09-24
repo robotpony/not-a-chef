@@ -1,5 +1,5 @@
 ---
-title: Candied Pecans
+title: Candied pecans
 tags: [desserts]
 source: family
 draft: false

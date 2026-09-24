@@ -54,11 +54,11 @@
      own "### To serve" component (ingredients for garnishes, nested under
      "## Ingredients") is never mistaken for the top-level "## To serve"
      prose section — components are always one level deeper.
-     "hardware" shares the "equipment" slot — FORMAT.md's own name for this
+     "special equipment" and "hardware" share the "equipment" slot — FORMAT.md's own name for this
      section is "Equipment", but at least one real recipe (migrated from
-     the family archive, predating FORMAT.md) titles it "Hardware"; both
+     the family archive, predating FORMAT.md) titles it "Hardware"; all three
      land in the same box rather than earning separate slots. */}}
-{{ $sidebarHeadingKeys := dict "mechanic" "mechanic" "to serve" "to-serve" "variations" "variations" "notes" "notes" "equipment" "equipment" "hardware" "equipment" }}
+{{ $sidebarHeadingKeys := dict "mechanic" "mechanic" "to serve" "to-serve" "variations" "variations" "notes" "notes" "equipment" "equipment" "special equipment" "equipment" "hardware" "equipment" }}
 {{ $normalized := .Text | plainify | strings.TrimSuffix ":" | strings.TrimSpace | lower }}
 {{ $hasNonIngredientWord := false }}
 {{ range split $normalized " " }}

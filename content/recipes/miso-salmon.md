@@ -1,5 +1,5 @@
 ---
-title: Miso Salmon
+title: Miso salmon
 tags: [mains, japanese, quick, make-ahead, dairy-free]
 source: original
 date: 2021-07-01

@@ -1,5 +1,5 @@
 ---
-title: Spinach Dip
+title: Spinach dip
 tags: [sauces]
 source: family
 draft: false

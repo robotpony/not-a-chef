@@ -1,11 +1,14 @@
 ---
-title: Braised Red Cabbage
+title: Braised red cabbage
 tags: [sides, german, vegetarian, weeknight]
 source: https://foodwishes.blogspot.com/2012/04/braised-red-cabbage-that-is-all.html
 date: 2026-08-29
 servings: 4-6
+cuisine: german
 draft: false
 ---
+
+Cabbage is a comforting side dish on a cool, dark evening. It pairs nicely with schnitzel, saussage, roasts, and dumplings.
 
 ## Ingredients
 
@@ -30,8 +33,8 @@ Taste once the liquid is gone. Adjust with more salt and pepper, sugar for sweet
 
 ## Notes
 
-- [draft] Untested. Filed from a recipe source, not yet made in this kitchen.
 - Everything here is to taste, not precisely measured; the amounts above are a starting point.
-- For a more complex version, sauté diced or sliced onion in the butter before adding the cabbage. Bacon or pancetta also works, cooked first to render fat.
+- For a more complex version, sauté diced or sliced onion in the butter before adding the cabbag
+e. Bacon or pancetta also works, cooked first to render fat.
 - Raisins, currants, shallots, leeks, apples, and pears are all common additions.
 - Good base for a one-dish meal with smoked sausage or leftover pork ribs stirred in.

@@ -1,7 +1,8 @@
 ---
-title: Cottage Pie
+title: Cottage pie
 tags: [mains, british, make-ahead, weeknight]
 source: original
+aka: Shepherd's pie
 date: 2025-09-10
 servings: 4
 prep_time: 20 min
@@ -11,9 +12,11 @@ cuisine: British
 draft: false
 ---
 
+A comforting and simple meal, based on the classic 1950s Americanized version. Easy to make from pantry and freezer items.
+
 ## Mechanic
 
-Built from a batch of pre-cooked frozen beef mince, so the cooking time is mostly about thickening the filling and building the potato topping. A **1:1:1:1 spice ratio** (salt, pepper, coriander, rosemary) gives the beef a clear identity. BtB and browning sauce add depth without a long braise.
+Built from a batch of pre-cooked frozen beef mince, so the cooking time is mostly about thickening the filling and building the potato topping. A **1:1 spice ratio** (salt, pepper, coriander, rosemary) gives the beef a clear identity. BtB and browning sauce add depth without a long braise.
 
 ## Ingredients
 
@@ -47,6 +50,10 @@ Sprinkle flour over the meat and stir for 1 minute. Add BtB, browning sauce, and
 
 Transfer filling to a baking dish. Spoon mashed potato over the top and rough it up with a fork. Broil until the peaks are golden, 5–8 minutes.
 
+## Variations
+
+You can use the [[beef base]] for a weeknight version of this.
+
 ## To serve
 
 With a simple green salad. Better the next day.
@@ -55,5 +62,4 @@ With a simple green salad. Better the next day.
 
 - Browning sauce quantities need testing; start with 1 teaspoon and adjust. [draft]
 - Steaming potatoes (vs. boiling) keeps them less waterlogged and produces a drier, better-textured mash.
-- The original family version ("Bruce's lazy cottage pie") built on a pre-prepped [softened ground beef mix](https://docs.google.com/document/d/18B_6jJlS8MKhUsXeGs2gdse1qjwkUURhE54Xlw64Nuk/edit#heading=h.3fsk0afek31n) (beef, mushrooms, onions, garlic) instead of plain mince — worth keeping on hand for weeknight versions.
 - Freezes well. Reheat from frozen either fully defrosted or more gently for longer.

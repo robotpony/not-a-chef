@@ -1,5 +1,5 @@
 ---
-title: Onion Bhaji
+title: Onion bhaji
 tags: [sides, indian, vegetarian, dairy-free]
 source: original
 date: 2021-11-01

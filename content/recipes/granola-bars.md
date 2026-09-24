@@ -1,13 +1,16 @@
 ---
-title: Granola Bars
+title: Granola bars
 tags: [snacks, make-ahead, vegetarian]
 source: original
 date: 2026-02-02
 servings: 12–14 bars
 prep_time: 20 min
 total_time: 20 min (plus 2 hr chilling)
+cuisine: Canadian
 draft: false
 ---
+
+I was looking for the perfect granola bar recipe, minimizing carbohydrates and costs.
 
 ## Mechanic
 
@@ -39,6 +42,6 @@ Cut into bars. Keep refrigerated; they soften at room temperature.
 
 ## Notes
 
-- Tested once: held together, assembled in under 20 minutes. Toast the nuts next time. More banana may improve binding. [draft]
+- Toast the nuts next time. More banana may improve binding.
 - More dates makes chewier bars; more syrup makes them softer.
 - Toasting the oats is essential for flavour; don't skip it.

@@ -1,5 +1,5 @@
 ---
-title: Tuna Rice Bowl
+title: Tuna rice bowl
 tags: [mains, japanese, weeknight, quick]
 source: original
 date: 2025-12-05
@@ -10,6 +10,8 @@ total_time: 25 min
 cuisine: Japanese
 draft: false
 ---
+
+This is a simple way to use frozen tuna, cooking quickly, served with easy sides.
 
 ## Ingredients
 

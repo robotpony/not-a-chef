@@ -1,13 +1,15 @@
 ---
-title: Sandwich Sour Pickles
+title: Sandwich sour pickles
 tags: [sauces, quick, vegan, dairy-free]
 source: original
 date: 2024-10-01
-servings: 1 jar (~500ml)
 prep_time: 10 min
 total_time: 10 min (plus chilling)
+cuisine: world
 draft: false
 ---
+
+These are delicious little pickles, perfect for fresh roast beef sandwiches.
 
 ## Mechanic
 

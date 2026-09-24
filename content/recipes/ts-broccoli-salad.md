@@ -1,5 +1,5 @@
 ---
-title: T’s Broccoli Salad
+title: T’s broccoli salad
 tags: [salads]
 source: family
 draft: false

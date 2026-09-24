@@ -1,5 +1,5 @@
 ---
-title: Chicken Yakisoba
+title: Chicken yakisoba
 tags: [mains, weeknight, japanese, dairy-free]
 source: https://www.delish.com/cooking/recipe-ideas/a35396705/chicken-yakisoba-recipe/
 date: 2026-04-18
@@ -11,9 +11,13 @@ cuisine: Japanese
 draft: false
 ---
 
+This is a warm, filling Japanese stirfry.
+
+
 ## Ingredients
 
 ### Sauce
+
 - 2 tablespoons Worcestershire sauce
 - 1 tablespoon soy sauce
 - 1 tablespoon ketchup
@@ -21,6 +25,7 @@ draft: false
 - 1 teaspoon granulated sugar
 
 ### Stir-fry
+
 - 2 chicken breasts, cut into 4 cm strips
 - Kosher salt
 - Freshly ground black pepper

@@ -1,5 +1,5 @@
 ---
-title: Greek island's creamy greek dressing
+title: Greek island's creamy Greek dressing
 tags: [salads]
 source: family
 draft: false

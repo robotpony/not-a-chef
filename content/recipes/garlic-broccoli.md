@@ -1,5 +1,5 @@
 ---
-title: Garlic Broccoli
+title: Garlic broccoli
 tags: [sides, chinese, weeknight, quick, vegan, dairy-free]
 source: original
 date: 2026-01-10
@@ -10,6 +10,8 @@ total_time: 15 min
 cuisine: Chinese
 draft: false
 ---
+
+Classic takeout garlic brocolli is very simple, and delicious.
 
 ## Ingredients
 
@@ -30,6 +32,10 @@ Add broccoli and toss to coat. Add Shaoxing wine and stock; the pan will steam h
 
 Add white pepper. Pour in the cornstarch slurry around the edge; toss until the sauce clings, about 1 minute. Finish with sesame oil.
 
+## Special equipment
+
+A medium to large carbon steel wok (not teflon).
+
 ## To serve
 
-As a side or part of a multi-dish wok meal. Goes well alongside weeknight ginger beef.
+As a side or part of a multi-dish wok meal. Goes well alongside [[weeknight ginger beef]].

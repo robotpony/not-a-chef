@@ -1,5 +1,5 @@
 ---
-title: Strawberry-Rhubarb Compote
+title: Strawberry-rhubarb compote
 tags: [sauces, quick, vegetarian]
 source: original
 date: 2025-12-25
@@ -7,8 +7,11 @@ servings: 4–6 (makes ~500ml)
 prep_time: 10 min
 cook_time: 20 min
 total_time: 30 min
+cuisine: Canadian
 draft: false
 ---
+
+A great topping for waffles or as a base for a crisp.
 
 ## Ingredients
 

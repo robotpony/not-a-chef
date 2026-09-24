@@ -1,5 +1,5 @@
 ---
-title: Almond Chocolate Cake
+title: Almond chocolate cake
 tags: [desserts, chocolate, gluten-free, make-ahead]
 source: https://kitchenbee.substack.com/p/the-wonders-of-a-hand-written-recipe
 date: 2026-05-09
@@ -7,8 +7,13 @@ servings: 10
 prep_time: 15 min
 cook_time: 35 min
 total_time: 50 min
+cuisine: world
 draft: false
 ---
+
+This is a lovely, light, chocolate cake.
+
+## Mechanic
 
 The beaten eggs and sugar are the only leavening: no flour, no baking powder. Beat until the mixture has tripled in volume and gone very pale; this is what lifts the cake. Ground almonds give it structure and a dense, fudgy crumb. **Don't overbake**: the skewer test fails here. You want the crust firm and the interior still moist.
 

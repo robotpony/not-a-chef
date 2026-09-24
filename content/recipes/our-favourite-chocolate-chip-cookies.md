@@ -1,5 +1,5 @@
 ---
-title: Our Favourite Chocolate Chip Cookies
+title: Our favourite chocolate chip cookies
 tags: [desserts]
 source: family
 draft: false

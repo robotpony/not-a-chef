@@ -1,5 +1,5 @@
 ---
-title: Butter Tarts
+title: Butter tarts
 tags: [desserts]
 source: family
 draft: false

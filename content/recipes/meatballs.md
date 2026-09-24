@@ -7,8 +7,11 @@ servings: makes ~1.7 kg (about 30–35 meatballs)
 prep_time: 30 min
 cook_time: 20 min
 total_time: 50 min
+cuisine: Italian
 draft: false
 ---
+
+A plate of spaghetti is a warm, comforting meal. Topping it with a meatball or two elevates it to perfection.
 
 ## Mechanic
 
@@ -36,9 +39,7 @@ Based on 1 kg ground meat:
 
 ## Method
 
-<!-- TODO: original method step 1 was incomplete ("Make a panade with the liquids and bread crumbs, adding in the."; sentence cut off). The intent appears to be: combine breadcrumbs and liquid first, let soak, then proceed.) -->
-
-Combine breadcrumbs and liquid (water, stock, or a mix with cream, buttermilk, or sour cream). Let soak until absorbed.
+Combine breadcrumbs and liquid (water, stock, or a mix with cream, buttermilk, or sour cream). Let soak until absorbed. This is the *panade*.
 
 Grind or measure spices and herbs. Add to the panade along with grated onion and garlic. Mix to combine.
 
@@ -51,6 +52,7 @@ Bake at 190–220°C (375–425°F) until browned and just cooked through, 15–
 ## Variations
 
 ### Asian style
+
 Replace some of the liquid with hoisin (3%), soy sauce (6.5%), and sesame oil (1%). Add ginger (1%). Reduce salt (soy takes its place). Skip the Parmesan. Scale back liquid slightly. The mixture should be a little firmer than the Italian version.
 
 Glaze: 60 ml hoisin, 30 ml ketchup, 15 ml honey or maple syrup, 30 ml rice vinegar, 15 ml soy sauce, 5 ml sesame oil. Brush over meatballs in the last 5 minutes of baking. Finish with sesame seeds and sliced scallions.

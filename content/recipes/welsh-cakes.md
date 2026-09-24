@@ -1,5 +1,5 @@
 ---
-title: Welsh Cakes
+title: Welsh cakes
 tags: [desserts]
 source: family
 draft: false

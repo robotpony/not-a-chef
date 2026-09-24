@@ -1,5 +1,5 @@
 ---
-title: Lentil Tacos
+title: Lentil tacos
 tags: [mains, vegetarian, vegan, dairy-free]
 source: original
 date: 2022-03-01

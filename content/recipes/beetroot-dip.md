@@ -1,5 +1,5 @@
 ---
-title: Beetroot Dip
+title: Beetroot dip
 tags: [sauces, mediterranean, quick, vegetarian, vegan, gluten-free]
 source: original
 date: 2025-05-31
@@ -9,6 +9,8 @@ total_time: 10 min
 cuisine: Mediterranean
 draft: false
 ---
+
+This is a fresh, delicious dip for pita and vegetables.
 
 ## Ingredients
 

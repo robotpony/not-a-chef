@@ -1,5 +1,5 @@
 ---
-title: Rocky Road Brownies
+title: Rocky road brownies
 tags: [desserts]
 source: family
 draft: false

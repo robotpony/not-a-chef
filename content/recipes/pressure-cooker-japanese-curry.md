@@ -1,5 +1,5 @@
 ---
-title: Pressure Cooker Japanese Curry
+title: Pressure cooker Japanese curry
 tags: [mains, japanese, weeknight]
 source: https://www.justonecookbook.com/pressure-cooker-japanese-curry/
 date: 2026-09-18
@@ -10,6 +10,8 @@ total_time: 60 min
 cuisine: Japanese
 draft: false
 ---
+
+This is a simple, warm curry, based on widely available Japanese curry cubes. These cubes last forever and are delicious.
 
 ## Mechanic
 

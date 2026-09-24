@@ -1,5 +1,5 @@
 ---
-title: Stuffed Mushroom Caps
+title: Stuffed mushroom caps
 tags: [appetizers, sides]
 source: family
 draft: false

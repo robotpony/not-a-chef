@@ -1,5 +1,5 @@
 ---
-title: Jerk Marinade
+title: Jerk marinade
 tags: [bases, caribbean, make-ahead, dairy-free]
 source: original
 date: 2022-06-01

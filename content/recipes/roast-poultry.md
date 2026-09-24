@@ -1,5 +1,5 @@
 ---
-title: Roast Poultry
+title: Roast poultry
 tags: [bases, weeknight, make-ahead]
 source: original
 date: 2025-05-31
@@ -7,8 +7,11 @@ servings: scales to bird size
 prep_time: 10 min (plus 40 min resting)
 cook_time: 75–95 min (varies by bird)
 total_time: 2 hr
+cuisine: world
 draft: false
 ---
+
+A roasted chicken or turkey is a comforting base for a family meal, or for food prep.
 
 ## Mechanic
 

@@ -1,15 +1,16 @@
 ---
-title: Sweet Soy Sauce (Kecap Manis Style)
+title: Sweet soy sauce (kecap manis style)
 tags: [sauces, indonesian, quick, vegan, dairy-free]
 source: original
 date: 2024-04-01
-servings: makes ~150ml
 prep_time: 5 min
 cook_time: 5 min
 total_time: 10 min
 cuisine: Indonesian
 draft: false
 ---
+
+This is a great glaze for pork or chicken, perfect for rice bowls.
 
 ## Mechanic
 

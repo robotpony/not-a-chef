@@ -1,5 +1,5 @@
 ---
-title: Char Siu Marinade
+title: Char siu marinade
 tags: [bases, chinese, make-ahead, dairy-free]
 source: original
 date: 2022-03-01

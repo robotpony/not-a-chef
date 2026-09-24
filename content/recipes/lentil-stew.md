@@ -1,5 +1,5 @@
 ---
-title: Lentil Stew
+title: Lentil stew
 tags: [mains, curries]
 source: family
 draft: false

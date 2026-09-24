@@ -1,5 +1,5 @@
 ---
-title: Uncle Bruce's Ranch Dip
+title: Uncle Bruce's ranch dip
 tags: [sauces]
 source: family
 draft: false

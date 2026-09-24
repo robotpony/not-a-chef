@@ -1,5 +1,5 @@
 ---
-title: Grandma’s Yukkie Salad
+title: Grandma’s yukkie salad
 tags: [desserts]
 source: family
 draft: false

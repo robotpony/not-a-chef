@@ -1,5 +1,5 @@
 ---
-title: Weeknight Mapo Tofu
+title: Weeknight mapo tofu
 tags: [mains, chinese, japanese, weeknight, quick]
 source: original
 date: 2026-01-10
@@ -10,6 +10,8 @@ total_time: 30 min
 cuisine: Chinese-Japanese
 draft: false
 ---
+
+I make this for lunch more than dinner, and it's a tasty and quick meal.
 
 ## Mechanic
 
@@ -33,7 +35,7 @@ draft: false
 - 30ml mirin (2 tablespoons)
 - 15ml light soy sauce (1 tablespoon)
 
-### Rest
+### Protein
 
 - 120g ground beef (precooked or fresh)
 - 60ml low-sodium chicken stock, dashi, or water
@@ -55,6 +57,10 @@ Taste and adjust salt. Add tofu gently and fold in; heat through without mashing
 ## To serve
 
 Over steamed rice, topped with scallion greens and chili oil.
+
+## Special equipment
+
+A medium to large carbon steel wok (not teflon).
 
 ## Notes
 

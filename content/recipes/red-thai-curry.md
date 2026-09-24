@@ -1,5 +1,5 @@
 ---
-title: Red Thai Curry
+title: Red Thai curry
 tags: [mains, thai, weeknight]
 source: original
 date: 2022-09-01

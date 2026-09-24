@@ -1,5 +1,5 @@
 ---
-title: Rice Pudding
+title: Rice pudding
 tags: [desserts, quick, vegetarian]
 source: original
 date: 2022-01-01

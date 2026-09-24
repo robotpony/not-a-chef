@@ -1,5 +1,5 @@
 ---
-title: Tofu in Tomato Sauce
+title: Tofu in tomato sauce
 tags: [mains, vietnamese, weeknight, dairy-free]
 source: https://cookpad.com/vn/cong-thuc/3563057
 date: 2026-05-18

@@ -1,5 +1,5 @@
 ---
-title: Prosecco Sangria
+title: Prosecco sangria
 tags: [drinks]
 source: family
 draft: false

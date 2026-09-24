@@ -1,5 +1,5 @@
 ---
-title: (Grand) Mom’s Black Bean & Corn Salsa
+title: (Grand) Mom’s black bean & corn salsa
 tags: [sauces]
 source: family
 draft: false

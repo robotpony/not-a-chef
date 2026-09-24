@@ -1,5 +1,5 @@
 ---
-title: Gina’s Tomato Salsa
+title: Gina’s tomato salsa
 tags: [sauces]
 source: family
 draft: false

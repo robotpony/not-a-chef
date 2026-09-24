@@ -1,5 +1,5 @@
 ---
-title: Lime Crema
+title: Lime crema
 tags: [sauces, mexican, quick, vegetarian, gluten-free]
 source: original
 date: 2025-04-01
@@ -9,6 +9,8 @@ total_time: 10 min
 cuisine: Mexican
 draft: false
 ---
+
+A fresh tasting sauce, perfect for nachos, tacos, or over rice bowls.
 
 ## Ingredients
 

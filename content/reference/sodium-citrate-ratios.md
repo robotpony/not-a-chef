@@ -1,5 +1,5 @@
 ---
-title: sodium citrate ratios
+title: Sodium citrate ratios
 tags: [reference, cheese-sauce, ratios]
 source: family
 draft: true

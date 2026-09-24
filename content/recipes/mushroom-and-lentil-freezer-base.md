@@ -1,5 +1,5 @@
 ---
-title: Mushroom and Lentil Freezer Base
+title: Mushroom and lentil freezer base
 tags: [bases, vegetarian, vegan, make-ahead]
 source: original
 date: 2022-12-01

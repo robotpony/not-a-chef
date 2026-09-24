@@ -1,5 +1,5 @@
 ---
-title: Egg Roll Bowls
+title: Egg roll bowls
 tags: [mains, weeknight, low-carb, quick, chinese]
 source: https://www.delish.com/cooking/recipe-ideas/a56236/egg-roll-bowls-recipe/
 date: 2026-04-18

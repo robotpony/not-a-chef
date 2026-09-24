@@ -1,5 +1,5 @@
 ---
-title: Hot Ranch Spinach and Artichoke Dip
+title: Hot ranch spinach and artichoke dip
 tags: [sauces]
 source: family
 draft: false

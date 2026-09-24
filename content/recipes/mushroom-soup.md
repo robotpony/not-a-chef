@@ -1,5 +1,5 @@
 ---
-title: Mushroom Soup
+title: Mushroom soup
 tags: [mains, soups, french, vegetarian]
 source: original
 date: 2022-10-01

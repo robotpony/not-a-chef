@@ -1,5 +1,5 @@
 ---
-title: Vegetarian Lasagna
+title: Vegetarian lasagna
 tags: [mains, casseroles, vegetarian, italian, make-ahead, family]
 source: family
 date: 2026-06-18
@@ -11,6 +11,8 @@ cuisine: Italian
 draft: false
 ---
 
+This was our kids first and favourite lasagna, and we used it as a vessel to hide vegetables in.
+
 ## Mechanic
 
 Eggs in the cheese filling bind the layers together so the lasagna cuts cleanly as a casserole. Draining the ricotta and cottage cheese if they're watery prevents the lasagna from going soupy. The 20-minute rest after baking is non-negotiable: the layers need time to set before cutting.
@@ -18,8 +20,6 @@ Eggs in the cheese filling bind the layers together so the lasagna cuts cleanly 
 ## Marinara
 
 Use 1 batch of [[Simple Marinara]].
-
-<!-- TODO: original also referenced an optional meaty base (Google Doc link, no longer accessible). For a meat version, add browned ground beef or Italian sausage to the marinara. -->
 
 ## Savoury veg
 

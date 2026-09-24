@@ -10,7 +10,7 @@ Required fields: `title`, `tags`. Everything else is optional but encouraged.
 
 ```yaml
 ---
-title: Dal Tadka
+title: Dal tadka
 tags: [soups, indian, weeknight, vegetarian]
 source: original
 date: 2026-05-02
@@ -24,7 +24,7 @@ cuisine: Indian
 
 | Field        | Type             | Notes                                                                 |
 | ------------ | ---------------- | --------------------------------------------------------------------- |
-| `title`      | string           | Recipe name. Must be unique in the collection.                        |
+| `title`      | string           | Recipe name, sentence case. Must be unique in the collection.         |
 | `tags`       | string[]         | Plain strings, no `#` prefix. Category and descriptive tags.          |
 | `source`     | string           | `original`, `family`, a URL, or a book title.                         |
 | `author`     | string           | Only when different from the collection author.                       |
@@ -158,7 +158,7 @@ Use yellow split peas instead of masoor ...
 - Leftovers thicken considerably. Loosen with water when reheating.
 ```
 
-**Equipment**: freeform bullet list of anything beyond standard kitchen kit.
+**Equipment**: freeform bullet list of anything beyond standard kitchen kit. `## Special equipment` (and the legacy `## Hardware`) is accepted as the same section. On the site it moves into the recipe sidebar, above Notes.
 
 ```markdown
 ## Equipment
@@ -192,15 +192,15 @@ Use yellow split peas instead of masoor ...
 Use wiki links to reference other recipes as ingredients or related reading:
 
 ```markdown
-- 1 cup [[Pizzeria Pizza Sauce]]
-- 1 batch [[Basic Pie Crust]], blind-baked
+- 1 cup [[Pizzeria pizza sauce]]
+- 1 batch [[Basic pie crust]], blind-baked
 ```
 
 Wiki links resolve by matching `title` in frontmatter. They work natively in Obsidian and require a render hook in Hugo.
 
 ## File naming
 
-Kebab-case. One recipe per file. Match the title: `dal-tadka.md` for "Dal Tadka". Special characters should be replaced by their equivalent or removed, e.g., 
+Kebab-case. One recipe per file. Match the title: `dal-tadka.md` for "Dal tadka". Special characters should be replaced by their equivalent or removed, e.g., 
 
 ## Ingredient line format
 
@@ -222,7 +222,7 @@ Imperative, present tense in method steps: "Add the lentils" not "You should add
 
 ## Typography and layout conventions
 
-Prefer sentence case for titles. Capitalize proper nouns. 
+Titles use sentence case: capitalize the first word and proper nouns only (places, people, nationalities, brands). "Red Thai curry", "Chef John’s hamburger buns", "Instant Pot chicken thigh curry"; not "Red Thai Curry". Dish names borrowed from other languages are not proper nouns: "Dal tadka", "Salsa verde", "Pad kra pao moo saap". This applies to every content type (recipes, essays, reference pages) and to headings within them.
 
 Avoid em-dashes. 
 

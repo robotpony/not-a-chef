@@ -1,37 +1,53 @@
 ---
 title: Fruit compote
-tags: [sauces]
+tags: [sauces, quick, vegetarian]
 source: family
+servings: 4–6 (makes ~400ml)
+prep_time: 5 min
+cook_time: 15 min
 draft: false
 ---
 
-Every Christmas day we make a huge breakfast spread. One of our staples is waffles and fruit compote, a fruit in sugar syrup. There are many variations for compote, but the key for us is to pair spices with fruits in a way that works, with choices ranging from orange zest, cinnamon, nutmeg, vanilla, and so on.
+This is a generic fruit compote, which I typically make with frozen or canned fruit.
 
-## Ingredients:
+## Mechanic
 
-- 500g of fresh or frozen/preserved berries or fruit (about a pound)
-- ¼ cup white sugar
-- ½ lemon or lime (about 2 teaspoons)
-- Splash of water (as needed)
-- Tiny pinch of salt
+Compote is fruit reduced in its own juice with sugar. Start at **10 parts fruit to 1 part sugar by weight**, then sweeten to taste at the end; tart fruit can take more. Juicy or frozen fruit releases enough liquid on its own. Add water only for firm fruit like apples or pears. The flavouring should suit the fruit: citrus zest brightens berries, cinnamon and nutmeg suit apples and pears, and balsamic deepens red fruit.
 
-### Turning compote → sauce:
+## Ingredients
 
-- 1 tsp cornstarch
-- 2 tsp water
+- 500g fresh or frozen berries or fruit (about 1 lb), chopped if large
+- 50g white sugar (¼ cup)
+- ½ lemon or lime, juiced (about 1 tbsp)
+- 1 small pinch salt
+- 30–60ml water (2–4 tbsp), for firm fruit only
 
-### Extras:
+## Method
 
-- Lime, lemon, or orange zest
-- Cinnamon (stick, pull out at end)
-- Balsamic vinegar (for red things)
-- Chilis (for some zing)
-- Unsalted butter
+Combine the fruit, sugar, salt, and citrus juice in a saucepan. Add water if the fruit is firm. Add any flavourings now.
 
-## Method:
+Bring to a boil over medium heat. Crush some of the fruit against the side of the pan to release its juice. Lower the heat and simmer, stirring occasionally, until the liquid turns syrupy and coats a spoon, about 10–15 minutes.
 
-A compote is basically a reduction of water, fruit, and sugars.
+Taste and add sugar as needed. Remove any whole spices. The compote thickens further as it cools.
 
-1. Add fruit. Chop and crush to speed things up. Add water, sugar, salt, spices, and citrus, and bring to a boil. Simmer until you reach a syrupy consistency.
-2. Taste for seasoning. Add sugar as needed.
-3. To thicken, combine cornstarch and water, and add to syrup and cook until thicker.
+## To serve
+
+Warm over waffles or pancakes, or cold with yoghurt or ice cream.
+
+## Variations
+
+### Flavourings
+
+Add one or two, matched to the fruit: lemon, lime, or orange zest; a cinnamon stick; a grating of nutmeg; a split vanilla bean; a splash of balsamic for red fruit; a chili for heat. Stir a knob of unsalted butter in off the heat for a glossier finish.
+
+### Pourable sauce
+
+For a smooth, glossy sauce that holds on waffles, stir 1 tsp cornstarch into 2 tsp cold water. Stir it into the simmering compote and cook until it turns clear and thickens, about 1 minute.
+
+### Strawberry-rhubarb
+
+See [[Strawberry-rhubarb compote]]. The rhubarb supplies enough liquid that no water is needed.
+
+## Notes
+
+Keeps refrigerated for up to a week.

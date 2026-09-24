@@ -1,5 +1,5 @@
 ---
-title: Oma’s Kipfels
+title: Oma’s kipfels
 tags: [breads]
 source: family
 draft: false

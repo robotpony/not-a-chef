@@ -3,13 +3,15 @@ title: Naan
 tags: [breads, indian]
 source: original
 date: 2024-10-01
-servings: 11–12 pieces (100g each)
+servings: 3-4 
 prep_time: 30 min (plus overnight chill)
 cook_time: 20 min
 total_time: 26 hr
 cuisine: Indian
 draft: false
 ---
+
+Naan is a simple, delicious bread, best covered with garlic and ghee.
 
 ## Mechanic
 

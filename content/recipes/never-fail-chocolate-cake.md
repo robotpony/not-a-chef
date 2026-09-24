@@ -1,14 +1,19 @@
 ---
-title: Never-Fail Chocolate Cake
+title: Never-fail chocolate cake
 tags: [desserts, chocolate, make-ahead]
 source: synthesized
 date: 2026-05-09
-servings: 12
+servings: 4-8
 prep_time: 15 min
 cook_time: 32 min
 total_time: 50 min
+cuisine: American
 draft: false
 ---
+
+This is the chocolate cake of my childhood, but using a more nuanced technique.
+
+## Mechanic
 
 **1:3 cocoa to flour by weight** is the consensus across three reliable sources. The fat combination (butter for flavour, oil for lasting moisture) outperforms either alone. One-bowl method: wet into dry. The batter is intentionally thin. Bake to touch, not skewer.
 

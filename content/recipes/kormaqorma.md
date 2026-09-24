@@ -1,5 +1,5 @@
 ---
-title: Korma/Qorma
+title: Korma/qorma
 tags: [mains, curries]
 source: family
 draft: false

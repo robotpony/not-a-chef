@@ -1,5 +1,5 @@
 ---
-title: Base Curry Gravy
+title: Base curry gravy
 tags: [bases, indian, make-ahead, vegan, dairy-free]
 source: family
 date: 2026-06-18
@@ -10,6 +10,8 @@ total_time: 60 min
 cuisine: Indian
 draft: false
 ---
+
+This is a restaurant style base for takeout curries.
 
 ## Mechanic
 

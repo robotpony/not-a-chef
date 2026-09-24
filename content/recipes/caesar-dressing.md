@@ -1,13 +1,16 @@
 ---
-title: Caesar Dressing
+title: Caesar dressing
 tags: [salads, quick, vegetarian, family]
 source: family
 date: 2026-06-18
 servings: 4–6
 prep_time: 10 min
 total_time: 10 min
+cuisine: American
 draft: false
 ---
+
+This is an emulsified dressing that's commonly used in local Greek restaurants. It may not be authentic, but it hits all of the notes of the classic table-side service.
 
 ## Mechanic
 

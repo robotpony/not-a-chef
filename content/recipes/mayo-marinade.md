@@ -1,5 +1,5 @@
 ---
-title: Mayo Marinade
+title: Mayo marinade
 tags: [bases, mediterranean, quick]
 source: original
 date: 2026-09-21

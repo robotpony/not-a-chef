@@ -1,5 +1,5 @@
 ---
-title: Onion Bhajis
+title: Onion bhajis
 tags: [appetizers, sides]
 source: family
 draft: false

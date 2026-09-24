@@ -1,5 +1,5 @@
 ---
-title: Hoagie Rolls
+title: Hoagie rolls
 tags: [breads, american]
 source: https://www.cookwell.com/recipe/hoagie-rolls
 date: 2026-04-18

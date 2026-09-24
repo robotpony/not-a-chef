@@ -1,5 +1,5 @@
 ---
-title: Instant Pot Chicken Thigh Curry
+title: Instant Pot chicken thigh curry
 tags: [mains, thai, curries, weeknight]
 source: https://www.goodhousekeeping.com/food-recipes/a38867914/instant-pot-beef-curry-recipe/
 date: 2026-09-18

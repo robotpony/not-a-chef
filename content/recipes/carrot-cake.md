@@ -1,5 +1,5 @@
 ---
-title: Carrot Cake
+title: Carrot cake
 tags: [desserts, make-ahead, family]
 source: family
 date: 2026-06-18
@@ -10,6 +10,8 @@ total_time: 90 min (plus overnight refrigeration before icing)
 cuisine: American
 draft: false
 ---
+
+This is my favourite cake. Cover it in a subtle lemon creamcheese icing, and serve warm. Also makes a great breakfast with tea.
 
 ## Mechanic
 

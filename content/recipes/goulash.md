@@ -11,6 +11,8 @@ cuisine: Hungarian
 draft: false
 ---
 
+This is one of my favourite stews. It's slightly sweet and savoury, and completely delicious.
+
 ## Mechanic
 
 The **paprika load here is 4 tablespoons per kg of meat**, not the 1 tablespoon most North American recipes use. That's what makes this taste like goulash and not paprika stew. Caraway is more traditional than cumin; either works but they produce different results. Skipping the bacon is fine with fatty pork shoulder.
@@ -54,5 +56,5 @@ With egg noodles, sour cream, and crusty bread. The stew deepens overnight.
 
 ## Notes
 
-- v1: aimed at thicker American-style texture with authentic paprika and caraway ratios.
 - Pork shoulder is more forgiving than chuck; equally good result.
+- 

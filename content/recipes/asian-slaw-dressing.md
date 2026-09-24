@@ -1,13 +1,16 @@
 ---
-title: Asian Slaw Dressing
+title: Asian slaw dressing
 tags: [salads, quick, vegan, dairy-free]
 source: original
 date: 2024-04-01
 servings: 6–8 (makes ~200ml)
 prep_time: 5 min
+cuisine: asian
 total_time: 5 min
 draft: false
 ---
+
+This is my approximation of an asian slaw dressing, based on pantry ingredients.
 
 ## Mechanic
 

@@ -1,5 +1,5 @@
 ---
-title: Crème Brûlée
+title: Crème brûlée
 tags: [desserts]
 source: family
 draft: false

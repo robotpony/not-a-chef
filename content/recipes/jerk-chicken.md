@@ -1,5 +1,5 @@
 ---
-title: Jerk Chicken
+title: Jerk chicken
 tags: [mains, poultry]
 source: family
 draft: false

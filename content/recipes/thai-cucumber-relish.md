@@ -1,5 +1,5 @@
 ---
-title: Thai Cucumber Relish
+title: Thai cucumber relish
 tags: [sauces, thai, quick, vegan, dairy-free]
 source: original
 date: 2024-04-01

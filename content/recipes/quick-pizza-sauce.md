@@ -1,5 +1,5 @@
 ---
-title: Quick Pizza Sauce
+title: Quick pizza sauce
 tags: [sauces, italian, quick, vegan, dairy-free]
 source: original
 date: 2024-07-01
@@ -10,6 +10,8 @@ total_time: 15 min
 cuisine: Italian
 draft: false
 ---
+
+A quick pizza sauce that requires only tomato paste.
 
 ## Mechanic
 
@@ -39,7 +41,10 @@ Spread on pizza dough, flatbread, or as a dipping sauce. Can be made ahead and r
 ## Variations
 
 ### Canned tomato style
-The family original uses strained tomatoes instead of paste: 650ml strained tomatoes (one 680ml jar), 20g tomato paste, 3g olive oil, 7g salt, 2g sugar (or sweet balsamic or maple syrup), 2g granulated garlic, 1g black pepper, 1g MSG (optional), 1g oregano (and thyme if on hand). No cooking — mix and taste, adjusting salt, garlic, or sugar. Refrigerate a few hours before using; it tastes better after resting. Makes ~700ml, closer to mall-food-court pizza than a slow-simmered sauce.
+
+The family original uses strained tomatoes instead of paste (650ml strained tomatoes, 20g tomato paste)
+
+Refrigerate a few hours before using; it tastes better after resting. Makes ~700ml, closer to mall-food-court pizza than a slow-simmered sauce.
 
 ## Notes
 

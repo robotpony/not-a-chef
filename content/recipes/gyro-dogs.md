@@ -1,5 +1,5 @@
 ---
-title: Gyro Dogs
+title: Gyro dogs
 tags: [mains, beef, mediterranean, make-ahead]
 source: https://www.youtube.com/watch?v=PQZWsH2Mpb4
 date: 2026-07-19
@@ -11,6 +11,8 @@ cuisine: Greek
 draft: false
 ---
 
+This is a recipe based on inspiration a Chef John video. It inspired me to make the gyro mix as a base, which I freeze in large flat zip-top bags.
+
 ## Mechanic
 
 This is sausage-making technique applied to a gyro spice blend. Mixing the ground meat with **cold water and a bread crumb panade until sticky** develops the proteins into an emulsion, which is what gives the dogs their snap and lets them hold a hot-dog shape on the grill instead of falling apart like a loose burger. Skipping the chill or under-mixing gives a crumbly result.
@@ -19,21 +21,7 @@ This is sausage-making technique applied to a gyro spice blend. Mixing the groun
 
 ### Gyro dogs
 
-- 450g ground lamb
-- 450g ground beef
-- 60 ml (¼ cup) grated yellow onion
-- 4 cloves garlic, crushed
-- 2 tbsp dry bread crumbs
-- 1 tbsp minced fresh rosemary
-- 2 tsp dried oregano
-- 2 tsp kosher salt
-- 1 tsp black pepper, freshly ground
-- 1 tsp ground cumin
-- 1 tsp paprika
-- ⅛ tsp cayenne pepper
-- 1 tiny pinch ground cinnamon
-- 2 tbsp cold water
-- 8 split-top hot dog buns
+- 500g of [[gyro base]]
 
 ### Swicy glaze
 
@@ -59,9 +47,7 @@ This is sausage-making technique applied to a gyro spice blend. Mixing the groun
 
 ## Method
 
-Combine lamb, beef, onion, garlic, bread crumbs, rosemary, oregano, salt, pepper, cumin, paprika, cayenne, cinnamon, and cold water in a large bowl. Mix by hand for about 2 minutes, until the mixture feels sticky and emulsified. A food processor gives a firmer, snappier texture if you want that instead.
-
-Weigh the mixture and divide into 8 equal portions, about 112g each. Roll each portion on plastic wrap into an 18 cm (7 in) log using damp fingers, then twist the ends of the wrap to hold the shape.
+Make the [[gyro base]], then weigh the mixture and divide into 8 equal portions, about 112g each. Roll each portion on plastic wrap into an 18 cm (7 in) log using damp fingers, then twist the ends of the wrap to hold the shape.
 
 Chill for at least 4 hours, preferably overnight.
 

@@ -41,7 +41,7 @@ Supersedes the informal table in `FORMAT.md` §Frontmatter.
 
 | Field | Required | Type | Notes |
 |---|---|---|---|
-| `title` | MUST | string | Unique across the collection. |
+| `title` | MUST | string | Unique across the collection. Sentence case: first word and proper nouns capitalized, nothing else. |
 | `tags` | MUST | string[] | Plain strings, no `#` prefix. |
 | `source` | SHOULD | string | `original`, `family`, a URL, or a book title. |
 | `author` | MAY | string | Only when different from the collection author. |
@@ -134,7 +134,8 @@ Notes).
 ### `## Equipment`
 
 Plain bullet list, freeform text. Not cross-referenced against anything;
-this is descriptive, not structural.
+this is descriptive, not structural. `## Special equipment` and `## Hardware`
+are accepted aliases for the same section.
 
 ```markdown
 ## Equipment

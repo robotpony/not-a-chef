@@ -1,5 +1,5 @@
 ---
-title: Baked Mac & Cheese
+title: Baked mac & cheese
 tags: [mains, casseroles]
 source: family
 draft: false

@@ -1,5 +1,5 @@
 ---
-title: Crisp Topping
+title: Crisp topping
 tags: [desserts, quick]
 source: original
 date: 2026-05-01
@@ -7,19 +7,22 @@ servings: 1 pan (23×33cm / 9×13in)
 prep_time: 10 min
 cook_time: 35 min
 total_time: 45 min
+cuisine: Canadian
 draft: false
 ---
 
+This is a tasty topping for fruit, crisp casseroles, and other desserts.
+
 ## Mechanic
 
-The topping works as a top crust, a bottom crust, or both. Cold fat is what creates the crumbly, sandy texture; cut it in until the mixture clumps when pressed but stays loose otherwise. This v2 uses **60g butter + 20g neutral oil** instead of all butter, which slightly reduces richness and keeps the oats crisping evenly. Sugar is on the lower end (130g) so the fruit can carry the sweetness.
+The topping works as a top crust, a bottom crust, or both. Cold fat is what creates the crumbly, sandy texture; cut it in until the mixture clumps when pressed but stays loose otherwise. This v2 uses **60g butter + 20g neutral oil** instead of all butter, which slightly reduces richness and keeps the oats crisping evenly. Sugar is high (130g, more than the oats and flour combined), which is what caramelizes and crisps the top; use less when the fruit is already sweet.
 
 ## Ingredients
 
-- 55g old-fashioned rolled oats (1 cup)
-- 50g all-purpose flour (2/3 cup)
-- 130g brown sugar, packed, or 60g cane sugar, or maple syrup to taste
-- 5g salt (2 teaspoons)
+- 55g old-fashioned rolled oats (⅔ cup)
+- 50g all-purpose flour (⅓ cup)
+- 130g brown sugar, packed (⅔ cup), or 60g cane sugar for a much less sweet topping, or maple syrup to taste
+- 5g salt (1 teaspoon)
 - 60g cold butter, cubed
 - 20g neutral oil
 
@@ -39,4 +42,6 @@ With vanilla ice cream or whipped cream. Best warm.
 
 - Fruit layer is not defined here. Add it based on what's in season. Stone fruit and berries need minimal sugar; apples and pears benefit from a bit more and some cinnamon.
 - The oil substitution is intentional; all butter is richer but the oats don't crisp as evenly.
+- One batch gives a thin layer over a 23×33cm (9×13in) pan. Make 1½ batches for a thick top, or when using it as both the bottom and top crust.
+- For single-serve ramekins, see [[Fruit crisp (individual)]], which uses a softer melted-butter topping.
 - Maple syrup in place of brown sugar adds flavour but loosens the mixture; reduce oil slightly to compensate.

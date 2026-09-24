@@ -1,14 +1,16 @@
 ---
-title: Don's French Dressing
+title: Classic French dressing
 tags: [salads, quick, make-ahead, vegan, dairy-free, gluten-free, family]
 source: family
 date: 2026-06-18
-servings: makes ~240 ml (8 oz)
+servings: 4-6 people
 prep_time: 5 min
 total_time: 5 min
 cuisine: American
 draft: false
 ---
+
+French dressing is a classic early restaurant memory for us. The emulsified version is a North American twist, but it works just as well as an oil and vinegar dressing.
 
 ## Mechanic
 

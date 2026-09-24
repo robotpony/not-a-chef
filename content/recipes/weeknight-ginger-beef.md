@@ -1,5 +1,5 @@
 ---
-title: Weeknight Ginger Beef
+title: Weeknight ginger beef
 tags: [mains, chinese, weeknight, quick, dairy-free]
 source: original
 date: 2026-01-10
@@ -10,6 +10,8 @@ total_time: 25 min
 cuisine: Chinese
 draft: false
 ---
+
+This is a quick version of ginger beef, great in rice bowls.
 
 ## Mechanic
 
@@ -45,6 +47,10 @@ If using carrots, stir-fry them alongside broccoli separately, then combine and 
 ## To serve
 
 Over rice or in bowls. Top with sliced cilantro, toasted sesame seeds, and chili oil.
+
+## Special equipment
+
+A medium to large carbon steel wok (not teflon).
 
 ## Notes
 

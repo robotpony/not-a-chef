@@ -1,5 +1,5 @@
 ---
-title: Beef Stew
+title: Beef stew
 tags: [mains, make-ahead, dairy-free, family]
 source: family
 date: 2026-06-18
@@ -7,8 +7,11 @@ servings: 4–6
 prep_time: 30 min
 cook_time: 2–3 hr (or 30 min pressure)
 total_time: 3 hr
+cuisine: French
 draft: false
 ---
+
+This is our classic style beef stew. I tend to make it as a base now, skipping the potatoes and more delicate vegetables, which are served along side it during service.
 
 ## Mechanic
 
@@ -30,8 +33,8 @@ Brown the beef in batches without crowding; you want a sear, not a steam. The fo
 - 1–2 tablespoons herbes de Provence, in a cheesecloth bundle or tea infuser
 - salt and pepper
 
-Optional:
-- 1 teaspoon smoked paprika
+### Optional flavour enahancers 
+
 - 1 teaspoon Accent
 - 1–2 tablespoons soy sauce
 - 2–3 teaspoons fish sauce

@@ -1,5 +1,5 @@
 ---
-title: Vindaloo Wing Sauce
+title: Vindaloo wing sauce
 tags: [sauces, indian, quick]
 source: original
 date: 2022-07-01

@@ -1,5 +1,5 @@
 ---
-title: Candied Cranberries (Sugared Cranberries)
+title: Candied cranberries (sugared cranberries)
 tags: [appetizers, sides]
 source: family
 draft: false

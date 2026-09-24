@@ -1,5 +1,5 @@
 ---
-title: South American Red Salsa
+title: South American red salsa
 tags: [sauces]
 source: family
 draft: false

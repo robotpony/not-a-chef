@@ -1,5 +1,5 @@
 ---
-title: Toblerone Shortbread
+title: Toblerone shortbread
 tags: [desserts]
 source: family
 draft: false

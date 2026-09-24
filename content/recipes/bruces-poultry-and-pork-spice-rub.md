@@ -1,13 +1,16 @@
 ---
-title: Bruce's Poultry and Pork Spice Rub
+title: Bruce's poultry and pork spice rub
 tags: [bases, quick]
 source: original
 date: 2026-05-08
 servings: ~850g (about 5 cups)
 prep_time: 10 min
 total_time: 10 min
+cuisine: Canadian
 draft: false
 ---
+
+I use this spice blend a few times a week. It's perfect for grilled chicken or pork.
 
 ## Mechanic
 
@@ -40,5 +43,3 @@ Rub generously onto chicken or pork before grilling, smoking, or roasting. Works
 - Store sealed at room temperature; keeps for several months.
 
 See the [precise poultry mix sheet](https://docs.google.com/spreadsheets/d/1D9Ls2SRHtvSBeVAVhLJZC5CSqrhxuTvu3vb2kW5LvrU/edit?gid=1772331421#gid=1772331421) for a weight-based scaling worksheet.
-
-

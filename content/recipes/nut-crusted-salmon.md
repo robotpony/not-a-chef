@@ -1,5 +1,5 @@
 ---
-title: Nut-Crusted Salmon
+title: Nut-crusted salmon
 tags: [mains, quick, dairy-free]
 source: original
 date: 2021-07-01

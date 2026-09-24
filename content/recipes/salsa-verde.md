@@ -1,5 +1,5 @@
 ---
-title: Salsa Verde
+title: Salsa verde
 tags: [sauces]
 source: family
 draft: false

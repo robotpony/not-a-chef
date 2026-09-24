@@ -1,5 +1,5 @@
 ---
-title: Garlic Ginger Wing Sauce
+title: Garlic ginger wing sauce
 tags: [sauces, chinese, japanese, make-ahead, dairy-free]
 source: original
 date: 2021-10-01

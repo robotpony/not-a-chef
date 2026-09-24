@@ -1,5 +1,5 @@
 ---
-title: Butternut Squash Soup
+title: Butternut squash soup
 tags: [mains, soups, vegetarian, gluten-free, make-ahead, family]
 source: family
 date: 2026-06-18
@@ -7,8 +7,11 @@ servings: 4–6
 prep_time: 20 min
 cook_time: 1 hr 30 min
 total_time: 2 hr
+cuisine: American
 draft: false
 ---
+
+This is a warm, filling soup that pairs nicely with garlic or cheese bread, or grilled cheese.
 
 ## Mechanic
 

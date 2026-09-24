@@ -1,14 +1,17 @@
 ---
-title: Marinated Pressed Tofu
+title: Marinated pressed tofu
 tags: [bases, japanese, make-ahead, vegetarian, vegan]
 source: original
 date: 2026-03-24
-servings: 4 (as a protein component)
+servings: 4+(as a protein component)
 prep_time: 10 min (plus 48–72 hr freeze and thaw)
 cook_time: 25 min
 total_time: 48–72 hr (mostly hands-off)
+cuisine: CHINESE
 draft: false
 ---
+
+I ate a handmade wide noodle dish with this tofu that had chew, and depth. This is my version.
 
 ## Mechanic
 
@@ -40,5 +43,6 @@ In rice bowls, stir-fries, or alongside pickled vegetables.
 
 ## Notes
 
+- This is a fantastic way to preseve tofu and prep for simple meals.
 - A light coat of neutral oil before baking promotes browning.
 - Specific bake time and marinade ratios need another round of testing. [draft]

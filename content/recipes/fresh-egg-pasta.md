@@ -1,5 +1,5 @@
 ---
-title: Fresh Egg Pasta
+title: Fresh egg pasta
 tags: [pasta, bases, dairy-free, family]
 source: family
 date: 2026-06-18
@@ -9,6 +9,8 @@ total_time: 50 min (plus 30 min rest)
 cuisine: Italian
 draft: false
 ---
+
+Making pasta by hand is easier than it looks. It takes about 20 minutes, plus a bit of cleanup.
 
 ## Mechanic
 

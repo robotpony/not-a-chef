@@ -1,13 +1,15 @@
 ---
-title: Flatbread White Sauce
+title: Flatbread white sauce
 tags: [sauces, quick, vegetarian]
 source: original
 date: 2024-04-01
-servings: for 2–3 flatbreads or pizzas
 prep_time: 10 min
 total_time: 10 min
+cuisine: American
 draft: false
 ---
+
+This is a hacky white sauce recipe, for a mushroom flatbread snack.
 
 ## Ingredients
 

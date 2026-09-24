@@ -1,5 +1,5 @@
 ---
-title: Avocado Salad Dressing
+title: Avocado salad dressing
 tags:
   - salads
   - quick
@@ -11,7 +11,11 @@ prep_time: 5 min
 total_time: 5 min
 draft: false
 tested: "1"
+cuisine: Canadian
 ---
+
+This is a fresh, quick, and tasty salad dressing. I make this a few times a month.
+
 ## Ingredients
 
 - 50g ripe avocado (about half)
@@ -37,4 +41,4 @@ On green salads, grain bowls, or slaws. Use immediately or refrigerate up to 2 d
 
 - 50g citrus juice is the working amount; 75g was too sharp.
 - Chicken stock adds quiet savoury depth; water works if you want this vegetarian.
-- Needs more testing to pin down the right thyme and ginger balance. [draft]
+- Limit and blending to prevent olive oil and herbs from becomming bitter.

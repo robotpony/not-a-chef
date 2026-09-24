@@ -1,5 +1,5 @@
 ---
-title: Coconut Jam Tarts
+title: Coconut jam tarts
 tags: [desserts]
 source: family
 draft: false

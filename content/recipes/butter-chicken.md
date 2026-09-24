@@ -1,5 +1,5 @@
 ---
-title: Butter Chicken
+title: Butter chicken
 tags: [mains, curries, indian, family]
 source: family
 date: 2026-06-18
@@ -10,6 +10,8 @@ total_time: 35 min
 cuisine: Indian
 draft: false
 ---
+
+Butter chicken was a gateway curry for our kids. This recipe is our best attempt at the warm, delicious curries from our local take out shops.
 
 ## Mechanic
 

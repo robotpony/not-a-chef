@@ -1,5 +1,5 @@
 ---
-title: Fajita Chicken Bowl
+title: Fajita chicken bowl
 tags: [mains, mexican, weeknight, make-ahead]
 source: original
 date: 2026-05-16
@@ -10,6 +10,8 @@ total_time: 45 min (plus marinating)
 cuisine: Mexican
 draft: false
 ---
+
+Fajita rice bowls are a quick weeknight dinner. 
 
 ## Mechanic
 

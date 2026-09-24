@@ -11,9 +11,13 @@ cuisine: Italian
 draft: false
 ---
 
+This is a classic, comforting soup, perfect for the late Summer or Fall.
+
 ## Mechanic
 
 The vegetarian base replaces pancetta with deeply browned mushrooms, toasted bread, and smoked paprika. The bread is the surprising part: it toasts in the oil, adding a savoury nuttiness that disappears into the soup. Don't skip it.
+
+## Ingredients
 
 ## Base
 
@@ -23,10 +27,6 @@ The vegetarian base replaces pancetta with deeply browned mushrooms, toasted bre
 - 2 teaspoons smoked paprika
 - 1–2 teaspoons soy sauce or Bragg's aminos
     - Or: 150 g diced pancetta instead of all of the above
-
-Heat olive oil in a large Dutch oven over medium. Add mushrooms and cook until they release their liquid, then dry out and begin to brown, about 8 minutes. Add bread and toast until golden. Add paprika and soy sauce and stir to combine.
-
-For the pancetta version, brown the pancetta in the oil until crisp at the edges, about 6 minutes, and skip the mushrooms, bread, paprika, and soy sauce.
 
 ## Soup
 
@@ -44,6 +44,12 @@ For the pancetta version, brown the pancetta in the oil until crisp at the edges
 - salt and black pepper
 - ¼ cup fresh flat-leaf parsley, chopped
 - ¼ cup Parmesan, grated
+
+## Method
+
+Heat olive oil in a large Dutch oven over medium. Add mushrooms and cook until they release their liquid, then dry out and begin to brown, about 8 minutes. Add bread and toast until golden. Add paprika and soy sauce and stir to combine.
+
+For the pancetta version, brown the pancetta in the oil until crisp at the edges, about 6 minutes, and skip the mushrooms, bread, paprika, and soy sauce.
 
 Add more olive oil to the pot if needed. Add onion and celery and soften, about 5 minutes. Add garlic and cook 1 minute. Add red pepper flakes and Italian seasoning and stir. Pour in the stock, water, and tomatoes. Bring to a bare simmer.
 

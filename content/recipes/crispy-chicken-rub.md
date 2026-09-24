@@ -1,13 +1,16 @@
 ---
-title: Crispy Chicken Rub
+title: Crispy chicken rub
 tags: [bases, quick, dairy-free]
 source: original
 date: 2024-10-01
 servings: for 1 whole chicken or 4 bone-in pieces
 prep_time: 5 min
 total_time: 5 min
+cuisine: Canadian
 draft: false
 ---
+
+When we crave shake-and-bake, this is what we make. It hits she same notes with fewer calories.
 
 ## Mechanic
 

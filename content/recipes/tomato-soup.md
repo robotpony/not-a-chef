@@ -1,5 +1,5 @@
 ---
-title: Tomato Soup
+title: Tomato soup
 tags: [mains, soups, italian, weeknight, vegetarian]
 source: original
 date: 2021-11-01

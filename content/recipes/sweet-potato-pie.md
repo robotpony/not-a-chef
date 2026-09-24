@@ -1,5 +1,5 @@
 ---
-title: Sweet Potato Pie
+title: Sweet potato pie
 tags: [desserts]
 source: family
 draft: false

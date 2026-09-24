@@ -1,5 +1,5 @@
 ---
-title: Autumn Glow Salad with Lemon Dressing
+title: Autumn glow salad with lemon dressing
 tags: [salads]
 source: family
 source_url: https://pinchofyum.com/autumn-glow-salad-with-lemon-dressing

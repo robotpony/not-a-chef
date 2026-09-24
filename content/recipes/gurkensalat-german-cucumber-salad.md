@@ -1,5 +1,5 @@
 ---
-title: Gurkensalat (German Cucumber Salad)
+title: Gurkensalat (German cucumber salad)
 tags: [salads]
 source: family
 draft: false

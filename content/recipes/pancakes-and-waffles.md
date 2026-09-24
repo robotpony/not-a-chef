@@ -1,5 +1,5 @@
 ---
-title: Pancakes and Waffles
+title: Pancakes and waffles
 tags: [breakfast, vegetarian, family]
 source: family
 date: 2026-06-18
@@ -7,8 +7,11 @@ servings: 4 (about 12 pancakes)
 prep_time: 10 min
 cook_time: 20 min
 total_time: 30 min
+cuisine: American
 draft: false
 ---
+
+Our kids loved this recipe, and it makes an appearance most Christmas days still.
 
 ## Mechanic
 

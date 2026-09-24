@@ -1,5 +1,5 @@
 ---
-title: Unbaked Cookies
+title: Unbaked cookies
 tags: [desserts]
 source: family
 draft: false

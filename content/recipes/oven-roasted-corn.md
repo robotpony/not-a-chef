@@ -1,5 +1,5 @@
 ---
-title: Oven Roasted Corn
+title: Oven roasted corn
 tags: [appetizers, sides]
 source: family
 draft: false

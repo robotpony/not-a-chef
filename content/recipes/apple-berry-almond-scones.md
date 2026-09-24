@@ -1,5 +1,5 @@
 ---
-title: Apple, Berry & Almond Scones
+title: Apple, berry & almond scones
 tags: [breads]
 source: family
 draft: false

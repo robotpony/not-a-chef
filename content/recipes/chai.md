@@ -11,6 +11,8 @@ cuisine: Indian
 draft: false
 ---
 
+This is my favourite tea towards the end of Fall. It's warming and mellow.
+
 ## Mechanic
 
 This breaks English tea rules on purpose. Boiling the tea with spices for 5 minutes and then **"boiling over" the milk three times** produces a different flavour than standard steep-and-strain: more caramelized, less grassy, with the spices fully integrated. The goal colour is caramel sauce.

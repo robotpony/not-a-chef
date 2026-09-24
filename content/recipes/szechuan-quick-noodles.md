@@ -1,5 +1,5 @@
 ---
-title: Szechuan Quick Noodles
+title: Szechuan quick noodles
 tags: [mains, pasta, chinese, weeknight, quick]
 source: original
 date: 2024-04-01

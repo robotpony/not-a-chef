@@ -1,5 +1,5 @@
 ---
-title: Greek Marinade
+title: Greek marinade
 tags: [bases, mediterranean, quick, dairy-free]
 source: original
 date: 2025-04-01
@@ -9,6 +9,8 @@ total_time: 5 min (plus marinating)
 cuisine: Greek
 draft: false
 ---
+
+I developed this when trying to replicate a local Greek restaurant's roast chicken and potatoes. It's good enough for a weeknight meal.
 
 ## Mechanic
 

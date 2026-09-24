@@ -1,5 +1,5 @@
 ---
-title: Triple Layered Double Pumpkin Cheesecake
+title: Triple layered double pumpkin cheesecake
 tags: [desserts]
 source: family
 draft: false

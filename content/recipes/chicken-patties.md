@@ -1,5 +1,5 @@
 ---
-title: Chicken Patties
+title: Chicken patties
 tags: [mains, bases, weeknight, dairy-free]
 source: original
 date: 2023-01-01

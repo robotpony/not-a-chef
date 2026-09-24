@@ -1,5 +1,5 @@
 ---
-title: Beef Stroganoff
+title: Beef stroganoff
 tags: [mains, stews, family]
 source: family
 date: 2026-06-18
@@ -11,11 +11,13 @@ cuisine: Russian
 draft: false
 ---
 
+A warm and comforting stew. This is a 3-part stroganoff that covers a few styles of the dish. 
+
 ## Mechanic
 
 This recipe exists in three versions; choose the protein and build accordingly. The method is the same in all three: brown the beef, brown the mushrooms, deglaze, simmer, finish with sour cream. The sour cream must be tempered (hot liquid added gradually) or it will break.
 
-<!-- TODO: the original had a three-column comparison table (Nostalgic / Authentic / Fancy) that was mangled in migration. Ingredient quantities below are reconstructed from the surrounding text; verify against source. -->
+### Ingredients
 
 ## Nostalgic (hamburger helper style)
 

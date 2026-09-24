@@ -1,5 +1,5 @@
 ---
-title: Gyro Base
+title: Gyro base
 tags: [bases, beef, lamb, mediterranean, make-ahead, freezer-friendly]
 source: original
 date: 2026-07-19
@@ -9,6 +9,9 @@ total_time: 15 min (plus chill)
 cuisine: Greek
 draft: false
 ---
+
+Gyro beef or lamb is a great base for salads, pitas, sandwhichs, and other preparations.
+
 
 ## Mechanic
 
@@ -43,6 +46,6 @@ Chill for at least 4 hours, preferably overnight, before cooking. If freezing ra
 
 ## Notes
 
+- The base freezes well in flat zip-top bags. Flat bags defrost in water in 30 minutes, overnight in the fridge, or can be cooked as-is.
 - MSG and salt work together here; ¾ tsp MSG per kg is enough to round out the umami without needing more salt.
 - Cayenne stays subtle at this stage; add more heat at the cooking or glazing step if you want it.
-- Not published as a standalone dish. Shape and finish per the specific recipe, e.g. [[Gyro Dogs]].

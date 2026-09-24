@@ -1,11 +1,12 @@
 ---
-title: Breakfast Sausage
+title: Breakfast sausage
 tags: [bases, american, make-ahead]
 source: original
 date: 2025-09-19
 servings: scales to any quantity (percentages by weight)
 prep_time: 15 min
 total_time: 15 min (plus mixing into ground pork)
+cuisine: american
 draft: false
 ---
 

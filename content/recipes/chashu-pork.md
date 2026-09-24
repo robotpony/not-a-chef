@@ -1,5 +1,5 @@
 ---
-title: Chashu Pork
+title: Chashu pork
 tags: [bases, japanese, make-ahead]
 source: original
 date: 2026-01-11
@@ -10,6 +10,8 @@ total_time: 2 hr 15 min (plus 24 hr refrigeration)
 cuisine: Japanese
 draft: false
 ---
+
+This is one of the best pork recipes I know; tender, savoury, and perfect on soups and with noodles.
 
 ## Mechanic
 

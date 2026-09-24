@@ -1,5 +1,5 @@
 ---
-title: Arroz Rojo (Mexican Red Rice)
+title: Arroz rojo (Mexican red rice)
 tags: [sides, mexican, stovetop, weeknight]
 source: https://www.reddit.com/r/mexicanfood/comments/1tu7ti4/how_do_i_make_this_rice/
 date: 2026-06-01
@@ -10,6 +10,9 @@ total_time: 35 min
 cuisine: Mexican
 draft: false
 ---
+
+This is a great addition to any Tex-Mex style meal, and is a great filler for leftovers burritos.
+
 
 ## Ingredients
 
@@ -23,7 +26,8 @@ draft: false
 - 480 ml hot water (2 cups)
 - 1½ tablespoons Knorr chicken bouillon powder
 
-**Optional garnish (before covering):**
+## Optional garnish (before covering):
+
 - ¼ onion, finely sliced
 - 1 jalapeño, halved
 

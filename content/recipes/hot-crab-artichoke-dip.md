@@ -1,5 +1,5 @@
 ---
-title: Hot Crab & Artichoke Dip
+title: Hot crab & artichoke dip
 tags: [sauces]
 source: family
 draft: false
