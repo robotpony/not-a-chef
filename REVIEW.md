@@ -52,6 +52,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 ## Follow-up tasks
 
 - [ ] Import the pan-fried chicken burger experiment log (private Google Sheet, linked in an HTML comment in `recipes/pan-fried-chicken-burger.md`) into the book, probably as a Notes table or a companion page.
+- [ ] Import the other private Google Sheets and Docs now kept in HTML comments (`grep -rn 'to import' content`): the food ratios worksheet, scaling sheets in baked mac & cheese, breakfast sausage, pizza dough 2022, the poultry rub mix sheet, and T's broccoli salad's alternative dressing.
 
 ## Pass 1 (2026-09-24)
 
