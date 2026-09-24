@@ -37,7 +37,7 @@ In your stand mixer bowl, combine the dry ingredients, including the sugar, and 
 
 Turn off the mixer for a few minutes and clean up some of your mess. This is a lazy autolyse-like step and is totally optional, but why not clean up a bit?
 
-Return the mixer to low and mix until a ball starts to form. Speed up to around medium for 4–7 minutes, scraping the bowl down occasionally (or lowering and raising the bowl). On a good day, a ball comes together without much fuss and cleans your bowl. Other days, you need to coax that MF.
+Return the mixer to low and mix until a ball starts to form. Speed up to around medium for 4–7 minutes, scraping the bowl down occasionally (or lowering and raising the bowl). On a good day, a ball comes together without much fuss and cleans your bowl. Other days, you need to coax the stubborn thing along.
 
 Let the dough proof until doubled, about 1–2 hours, or until you remember you need to be somewhere else. This depends a lot on your yeast and the temperature of your kitchen.
 

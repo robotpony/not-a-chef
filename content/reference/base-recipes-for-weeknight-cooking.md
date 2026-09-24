@@ -41,8 +41,8 @@ Here are some of the things I keep in my freezer:
 
 ### And in my fridge: Pickles. Dressings/sauces, Prepped veg
 
-- [pickled onions](https://docs.google.com/document/d/1_kMEugsRPsGjGQ5Pj3y4dDCulchDQyT0q8RJkB06xuw/edit#heading=h.3fsk0afek31n)
-- [pickled beets](https://docs.google.com/document/d/1_kMEugsRPsGjGQ5Pj3y4dDCulchDQyT0q8RJkB06xuw/edit#heading=h.3fsk0afek31n)
+- [[Simple, sweet pickled veg|pickled onions]]
+- [[Simple, sweet pickled veg|pickled beets]]
 - [[Simple green goddess dressing|green goddess]]
 - donkey sauce
 - [[Uncle Bruce's Ranch Dip|ranch]]

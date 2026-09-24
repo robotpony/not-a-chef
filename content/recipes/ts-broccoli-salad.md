@@ -17,7 +17,7 @@ What’s to say? This is a broccoli salad that has bacon. If you don’t want ba
 - 1 small red onion, diced
 - 1 package of slivered almonds
 
-### Dressing: ([Alternative](https://docs.google.com/document/d/1OrfknfpMTr5CHOYKWmcIkMXqwUdwgJgqb0E7YuCvCE4/edit#))
+### Dressing: <!-- Alternative dressing (private doc, to import): https://docs.google.com/document/d/1OrfknfpMTr5CHOYKWmcIkMXqwUdwgJgqb0E7YuCvCE4/edit# -->
 
 - 1 cup of mayonnaise (Hellman’s or fresh)
 - ½ cup of white sugar or maple syrup

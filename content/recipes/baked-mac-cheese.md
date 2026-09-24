@@ -32,7 +32,7 @@ This is a classic baked Mac & Cheese recipe. You can sub in pretty much any comb
 - 40g sodium citrate (optional)  
     emulsifying salt, makes smooth sauces
 
-See: [Example percentages for scaling](https://docs.google.com/spreadsheets/d/1WioIgoLJITdosYp3fU7KlhytJqeXLdIpIVPg8ClIGTM/edit?gid=531465660#gid=531465660).
+<!-- Private worksheet (to import): https://docs.google.com/spreadsheets/d/1WioIgoLJITdosYp3fU7KlhytJqeXLdIpIVPg8ClIGTM/edit?gid=531465660#gid=531465660 -->
 
 ### Noodles:
 
@@ -55,7 +55,7 @@ See: [Example percentages for scaling](https://docs.google.com/spreadsheets/d/1W
 
 1. In a fry pan, heat butter until melted and then remove from heat. Combine bread crumbs with melted butter and herbs. Set aside. They will brown in the oven.
 2. Cook noodles to al dente, 1-2 minutes before done, as they will finish cooking in the oven. Strain and add to the baking dish. Reserve some of the pasta water just in case you need to smooth out the cheese sauce.
-3. Over low heat, make a blonde roux[\[a\]](#cmnt1) with the butter and flour, stirring constantly. Slowly whisk in the milk to form a smooth bechamel sauce (littly thickened), and then add most (but not all) of the combined cheese a handful at a time and stir until silky smooth (forming an American style mornay sauce).
+3. Over low heat, make a blonde roux with the butter and flour, stirring constantly. Slowly whisk in the milk to form a smooth bechamel sauce (littly thickened), and then add most (but not all) of the combined cheese a handful at a time and stir until silky smooth (forming an American style mornay sauce).
 
     1. Take care not to overheat the mornay (cheese) sauce, and remove it from the heat while adding the cheese to moderate the temperature quickly. Overheating a cheese sauce will cause it to break and become gritty.
 

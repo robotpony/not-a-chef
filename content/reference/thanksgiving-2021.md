@@ -9,7 +9,7 @@ The focus this year is comfort foods and casserole leftovers.
 
 #### Pregame snacks:
 
-- Jalapeno poppersx[\[a\]](#cmnt1)
+- Jalapeño poppers (no oven time)
 - Chips
 - Veggie platter
 
@@ -20,7 +20,7 @@ The focus this year is comfort foods and casserole leftovers.
 - Broccoli / brussel slaw, cranberry, nuts, and tempeh (with simple white dressing)
 - Mashed potatoes (to rebake)
 - Stuffing (bread, cran, nuts, fried tempeh, veg, stock)
-- [Baked Mac & chez](https://docs.google.com/document/d/1nF2oqFoura6lQMVRS4wUkPPRp907GElqI3yJSTjX3E4/edit) with tempeh, panko, parm, and jalapenos
+- [[Baked mac & cheese]] with tempeh, panko, parm, and jalapenos
 - Canned corn
 - Dinner rolls
 - Cranberry sauce
@@ -83,5 +83,3 @@ Day after
 
 - Make casseroles!
 - Turkey sandies
-
-[\[a\]](#cmnt_ref1)No oven time

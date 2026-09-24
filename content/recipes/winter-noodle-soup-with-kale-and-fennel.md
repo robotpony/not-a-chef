@@ -7,7 +7,7 @@ cuisine: French
 draft: false
 ---
 
-This is a hearty and herbal noodle soup. For a vegetarian version, replace the chicken and stock with large white beans and a [veg stock](https://docs.google.com/document/d/1in6Rd_2AY09AHBUBgT6TPGLSA5yKQUh2UngpQ_PFcBU/edit?usp=sharing).
+This is a hearty and herbal noodle soup. For a vegetarian version, replace the chicken and stock with large white beans and a [[Rich veg/mushroom stock|veg stock]].
 
 ## Main ingredients:
 

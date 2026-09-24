@@ -11,7 +11,7 @@ cuisine: American
 draft: false
 ---
 
-This is my favourite cake. Cover it in a subtle lemon creamcheese icing, and serve warm. Also makes a great breakfast with tea.
+This is my favourite cake. Cover it in a subtle cream cheese icing, and serve at room temperature. Also makes a great breakfast with tea.
 
 ## Mechanic
 
@@ -52,5 +52,5 @@ Spread icing between each layer and over the top and sides of the assembled cake
 
 ## Notes
 
-- Bruce's Birthday Cake, originally from Afterthoughts Dessert Restaurant. This recipe stays in the family.
-- Keeps covered at room temperature 2 days, refrigerated up to a week.
+- Bruce's birthday cake, originally from Afterthoughts Dessert Restaurant.
+- Keeps refrigerated up to a week, since the icing is cream cheese. Bring it to room temperature before serving.

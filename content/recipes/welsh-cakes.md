@@ -6,30 +6,31 @@ cuisine: Welsh
 draft: false
 ---
 
-This is a classic family recipe for a Welsh flat bread. They are dense, sweet, and filling.
+This is a classic family recipe for Welsh cakes, sweet griddle cakes studded with currants. They are dense, sweet, and filling.
 
-> Grandpa Rempel had a Welsh background.  This recipe was given by his family, yet it has been Grandman Rempel and Ann who continue to make this recipe.  They are great on their own, topped with Cream Cheese Icing, or warmed and served with butter.  Gluten-free flour can be substituted for the All-Purpose flour and they still taste the same!
+> Grandpa Rempel had a Welsh background.  This recipe was given by his family, yet it has been Grandma Rempel and Ann who continue to make this recipe.  They are great on their own, topped with cream cheese icing, or warmed and served with butter.  Gluten-free flour can be substituted for the all-purpose flour and they still taste the same!
 
-## Ingredients:
+## Ingredients
 
-- 3 cups Flour
-- 1 ½ tsp Baking Powder
-- ½ tsp Baking Soda
-- 1  ¼ tsp Salt
-- 1 tsp Nutmeg
-- 1 cup Sugar
-- 1 cup Shortening
-- 1 cup Currents
-- 6 tbsp Milk
-- 2 Eggs, beaten
+- 3 cups flour
+- 1½ tsp baking powder
+- ½ tsp baking soda
+- 1¼ tsp salt
+- 1 tsp nutmeg
+- 1 cup sugar
+- 1 cup shortening
+- 1 cup currants
+- 6 tbsp milk
+- 2 eggs, beaten
 
-## Method:
+## Method
 
-1. Sift together the Flour, Baking Powder, Baking Soda, Salt, and Nutmeg.
-2. Add in the Sugar.
-3. Then cut in the Shortening with a pastry blender.
-4. Stir in the Currents, Milk and beaten Eggs.
-5. Divide the dough into 3 parts; and place in the refrigerator.  One portion at a time, on a floured surface, roll out into ½ inch thickness.  
-6. Using a cookie cutter, cut into rounds.
-7. Bake on a griddle at 325 degrees F, or a pan over medium low heat; turning once until brown.For our stove on Vidal St in White Rock, use the front burner on High Simmer. Let the pan heat up before adding the rounds.
-8. Cool on a cooling rack.
+Sift together the flour, baking powder, baking soda, salt, and nutmeg. Stir in the sugar. Cut in the shortening with a pastry blender until it looks like coarse crumbs.
+
+Stir in the currants, milk, and eggs until the dough comes together.
+
+Divide the dough into 3 parts and refrigerate. Roll out one portion at a time on a floured surface to 1 cm (½ inch) thick, and cut into rounds with a cookie cutter.
+
+Heat a griddle to 165°C (325°F), or a pan over medium-low heat, and let it heat through before adding the rounds. Cook until browned on both sides, turning once, about 3–4 minutes a side.
+
+Cool on a rack.

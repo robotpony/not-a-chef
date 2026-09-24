@@ -15,7 +15,7 @@ For the 2021 Christmas season, we made a variety of soups. This one was one of t
 - 2 tablespoons unsalted butter
 - 3 russet potatoes, peeled and quartered
 - 1 bay leaf
-- 1 ½ cup cream (or sour cream, or buttermilk, or [cashew cream](https://docs.google.com/document/d/1kJQD1oO2rTovdkK9rq8FGdhJgK1_HLLwp7STzq-aafE/edit#bookmark=id.nyr842kgm4kz))
+- 1 ½ cup cream (or sour cream, or buttermilk, or cashew cream)
 - ½ teaspoon ground nutmeg
 - ½ cup dry sherry
 - Salt and pepper to taste

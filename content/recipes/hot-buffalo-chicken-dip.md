@@ -16,7 +16,7 @@ This is a classic chicken dip, mildly spicy, tangy, and tasty.
 
 - 1 tablespoon unsalted butter
 - 2 teaspoons garlic minced
-- 2 cups [cooked chicken shredded](https://docs.google.com/document/d/1D4TNsiR2t58u-sUKcSB50PM4nB71mBJfslNnLUuyrDY/edit?tab=t.0#heading=h.3fsk0afek31n)
+- 2 cups cooked chicken, shredded
 - ½ cup Frank's Original Red Hot Sauce
 - 8 oz cream cheese softened
 - ½ cup sour cream

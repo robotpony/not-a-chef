@@ -32,7 +32,7 @@ Tips:
 
 Germinating:
 
-1. Wash the tray(s), see [Cleanup notes](#id.5clel2ai7ykx) for details.
+1. Wash the tray(s), see Cleanup below for details.
 2. Install that the red syphons on the water drain tubes (do not press them in too much, or they may not draining well enough)
 3. Before adding the seeds, rinse the growing surface of the trays again, but do not dry.
 4. In a fine mesh strainer, rinse the seeds (some seeds may not need this, check the instructions on the seeds just in case).

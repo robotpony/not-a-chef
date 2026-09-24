@@ -27,7 +27,7 @@ Gravy lasts 3-4 days in the fridge and generally freezes well in casseroles or o
 ## Notes:
 
 1. Taste the pan dripping before salting the stock, as some dry brines will make the pan drippings salty. This is okay, but you don’t want to over-season early.
-2. You can use any type of stock, but I usually make chicken stock with extra chicken bones from our weekly dinners. Check out the [poultry stock](https://docs.google.com/document/d/1JGauyRa-mkrfgG_awfpB9IftJBjFRFy5GhGZnwR1KNw/edit?tab=t.0#heading=h.3fsk0afek31n) and [beef stock](https://docs.google.com/document/d/1H55W7CSn_WOlQueXzDtV2VTeHdDKQdWezyVZhUIusVo/edit?tab=t.0#heading=h.3fsk0afek31n) recipes in this book for examples. Boxed or frozen stock also work, as do bouillon cubes and jars (just check salt levels on those).
+2. You can use any type of stock, but I usually make chicken stock with extra chicken bones from our weekly dinners. Check out the [[Chicken or turkey stock|poultry stock]] and [[Beef stock|beef stock]] recipes in this book for examples. Boxed or frozen stock also work, as do bouillon cubes and jars (just check salt levels on those).
 3. You can replace flour with any starch (or gluten-free flour substitute), but some starches are less effective for leftovers.
 4. You can balance a flat stock with some MSG and salt. White pepper can add some depth, and occasionally (and very sparingly) some acid can help elevate.
 

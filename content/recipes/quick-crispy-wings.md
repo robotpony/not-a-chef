@@ -16,7 +16,7 @@ I like to save wings from the whole chickens that I roast for weekly dinners by 
 
 ### Spicy poultry rub:
 
-- ½ cup of [poultry rub](https://docs.google.com/document/d/1HId__nmRdQcgDVy6kMU66-71jsW_a5IVgzPcJeqqHf8/edit)
+- ½ cup of [[Bruce's poultry and pork spice rub]]
 - 1 tablespoon of sugar
 - 1-2 teaspoons of crushed red pepper flakes (break down in a mortar and pestle)
 - 1 teaspoon of smoked and dried habanero

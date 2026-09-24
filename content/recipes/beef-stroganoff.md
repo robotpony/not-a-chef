@@ -20,17 +20,19 @@ This recipe exists in three versions; choose the protein and build accordingly. 
 ## Ingredients
 
 #### Nostalgic (Hamburger Helper style)
+
 - 750 g ground beef
 - 120 g yellow onion, diced
 - 350 g cremini mushrooms, sliced
 - 500 ml beef or chicken stock
 - 45 g unsalted butter
-- 8 g (2 tablespoons) mild paprika
+- 14 g (2 tablespoons) mild paprika
 - 500 ml sour cream
 - 455 g (4 cups) wide egg noodles
 - Salt and pepper
 
 #### Authentic (1950s style)
+
 - 750 g chuck roast, cut into thin strips
 - Pearl onions (up to 400 g)
 - 350 g cremini mushrooms, quartered
@@ -44,6 +46,7 @@ This recipe exists in three versions; choose the protein and build accordingly. 
 - Salt and pepper
 
 #### Fancy (bistro style)
+
 - 750 g beef tenderloin, in one piece
 - 1 shallot, finely diced
 - 350 g cremini, chanterelles, or mousserons, quartered

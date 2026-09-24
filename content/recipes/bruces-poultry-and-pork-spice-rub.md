@@ -42,4 +42,4 @@ Rub generously onto chicken or pork before grilling, smoking, or roasting. Works
 - Scales linearly: the core ratio is salt (270g) : brown sugar (360g) : white sugar (100g).
 - Store sealed at room temperature; keeps for several months.
 
-See the [precise poultry mix sheet](https://docs.google.com/spreadsheets/d/1D9Ls2SRHtvSBeVAVhLJZC5CSqrhxuTvu3vb2kW5LvrU/edit?gid=1772331421#gid=1772331421) for a weight-based scaling worksheet.
+<!-- Private worksheet (to import): https://docs.google.com/spreadsheets/d/1D9Ls2SRHtvSBeVAVhLJZC5CSqrhxuTvu3vb2kW5LvrU/edit?gid=1772331421#gid=1772331421 -->

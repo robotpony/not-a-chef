@@ -10,7 +10,7 @@ draft: false
 
 This is another iteration of my pizza dough recipe, based on some experimentation in late 2021. This is a medium-high hydration dough, optionally reinforced with additional gluten for structure and chew. I skip the autolyse step now, which I’ve replaced with a longer cold rise time. This recipe is based on [Flour Water Salt Yeast](https://www.amazon.ca/Flour-Water-Salt-Yeast-Fundamentals/dp/160774273X), with gluten ratios lifted from recipes at Serious Eats (aiming at ~13-14% gluten).
 
-(Here is a [worksheet for scaling](https://docs.google.com/spreadsheets/d/1mGH0Liy4oM1DtfYYihxtBdcbKprFoXHQsPHK2FIZL-8/edit#gid=0) if you need more or less of the recipe)
+<!-- Private worksheet (to import): https://docs.google.com/spreadsheets/d/1mGH0Liy4oM1DtfYYihxtBdcbKprFoXHQsPHK2FIZL-8/edit#gid=0 -->
 
 ## Mechanic
 

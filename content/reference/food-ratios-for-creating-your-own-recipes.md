@@ -7,7 +7,9 @@ draft: true
 
 Most recipes can be boiled down to a ratio of their ingredients. There is an interesting range for many ingredients, and in the tables below a tilde (~) denotes a moderate difference, and explicit ranges are given for ingredients that matter more. You’ll find that the ranges can lean a recipe towards one set of flavours or another, or adjust for differences between ingredients like acids that can be stronger or weaker (or sweeter, saltier, etc.).
 
-See the [food ratios worksheet](https://docs.google.com/spreadsheets/d/1WioIgoLJITdosYp3fU7KlhytJqeXLdIpIVPg8ClIGTM/edit?gid=1047817223#gid=1047817223) to calculate ingredients based on different base amounts, which I find handy when doubling or halving recipes. I find that a digital scale is helpful, and using the metric system you can often treat grams and millilitres as equivalent for things that contain mostly water. Dry ingredient weights are not usually interchangeable with millilitres, especially dried spices.
+<!-- Private worksheet (to import): https://docs.google.com/spreadsheets/d/1WioIgoLJITdosYp3fU7KlhytJqeXLdIpIVPg8ClIGTM/edit?gid=1047817223#gid=1047817223 -->
+
+I find that a digital scale is helpful, and using the metric system you can often treat grams and millilitres as equivalent for things that contain mostly water. Dry ingredient weights are not usually interchangeable with millilitres, especially dried spices.
 
 ## TODO
 
@@ -38,7 +40,7 @@ This chapter is a work in progress, and I still need to develop and test ratios 
 
 ### Salad dressing
 
-([worksheet](https://docs.google.com/spreadsheets/d/1WioIgoLJITdosYp3fU7KlhytJqeXLdIpIVPg8ClIGTM/edit?gid=289299382#gid=289299382))
+<!-- Private worksheet (to import): https://docs.google.com/spreadsheets/d/1WioIgoLJITdosYp3fU7KlhytJqeXLdIpIVPg8ClIGTM/edit?gid=289299382#gid=289299382 -->
 
 | Ingredient | Ratio | % of oil | Example |
 |---|---|---|---|
@@ -55,7 +57,7 @@ This chapter is a work in progress, and I still need to develop and test ratios 
 
 ### Mayonnaise
 
-([worksheet](https://docs.google.com/spreadsheets/d/1WioIgoLJITdosYp3fU7KlhytJqeXLdIpIVPg8ClIGTM/edit?gid=2035385783#gid=2035385783))
+<!-- Private worksheet (to import): https://docs.google.com/spreadsheets/d/1WioIgoLJITdosYp3fU7KlhytJqeXLdIpIVPg8ClIGTM/edit?gid=2035385783#gid=2035385783 -->
 
 | Ingredient | Ratio | % of oil | Example |
 |---|---|---|---|
@@ -66,7 +68,7 @@ This chapter is a work in progress, and I still need to develop and test ratios 
 | Salt | 0.04 | 1% | 2.5 g |
 | MSG | 0.02 | 0.5% | 1.25 g |
 
-- Sugar, fat, and additional glutamates (or dashi) can be added to make more of a Kewpie mayonnaise (see [worksheet](https://docs.google.com/spreadsheets/d/1WioIgoLJITdosYp3fU7KlhytJqeXLdIpIVPg8ClIGTM/edit?gid=2035385783#gid=2035385783) for ratios)
+- Sugar, fat, and additional glutamates (or dashi) can be added to make more of a Kewpie mayonnaise
 - Other seasonings can be added, or mixed in afterwards
 - Use a large deli container and immersion blender by adding everything but the oil to the bottom of the container, covering ingredients with the blender head. Pour oil over the blender head, and blend. The oil will get pulled in slowly (much simpler than drizzling it in).
 
@@ -74,7 +76,7 @@ This chapter is a work in progress, and I still need to develop and test ratios 
 
 ### Wet brine
 
-([worksheet](https://docs.google.com/spreadsheets/d/1WioIgoLJITdosYp3fU7KlhytJqeXLdIpIVPg8ClIGTM/edit?gid=1047817223#gid=1047817223))
+<!-- Private worksheet (to import): https://docs.google.com/spreadsheets/d/1WioIgoLJITdosYp3fU7KlhytJqeXLdIpIVPg8ClIGTM/edit?gid=1047817223#gid=1047817223 -->
 
 | Ingredient | % of water | Example |
 |---|---|---|
@@ -91,7 +93,7 @@ This chapter is a work in progress, and I still need to develop and test ratios 
     - Tubers like potatoes become softer
     - Cruciferous vegetables like cauliflower taste more like themselves, and can have a softer internal texture
 
-- Brine time is proportional to the size of the pieces of food (see brine time recommendations in the [worksheet](https://docs.google.com/spreadsheets/d/1WioIgoLJITdosYp3fU7KlhytJqeXLdIpIVPg8ClIGTM/edit?gid=1047817223#gid=1047817223))
+- Brine time is proportional to the size of the pieces of food
 
 - Brining longer makes foods:
 
@@ -116,7 +118,7 @@ This chapter is a work in progress, and I still need to develop and test ratios 
 
 ### Dry brine
 
-([worksheet](https://docs.google.com/spreadsheets/d/1WioIgoLJITdosYp3fU7KlhytJqeXLdIpIVPg8ClIGTM/edit?gid=1500133711#gid=1500133711))
+<!-- Private worksheet (to import): https://docs.google.com/spreadsheets/d/1WioIgoLJITdosYp3fU7KlhytJqeXLdIpIVPg8ClIGTM/edit?gid=1500133711#gid=1500133711 -->
 
 | Ingredient | % of salt | Example |
 |---|---|---|

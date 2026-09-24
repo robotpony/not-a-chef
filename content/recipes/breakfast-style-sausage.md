@@ -12,7 +12,7 @@ This is a quick breakfast sausage. It does not require casings, unless you have 
 
 ## Mechanic
 
-Salt runs **1–2% of the ground meat's weight**, and every other spice scales proportionally from there. See [the scaling worksheet](https://docs.google.com/spreadsheets/d/1D9Ls2SRHtvSBeVAVhLJZC5CSqrhxuTvu3vb2kW5LvrU/edit?gid=2146379760#gid=2146379760) to calculate percentages automatically for a different batch size.
+Salt runs **1–2% of the ground meat's weight**, and every other spice scales proportionally from there. <!-- Private worksheet (to import): https://docs.google.com/spreadsheets/d/1D9Ls2SRHtvSBeVAVhLJZC5CSqrhxuTvu3vb2kW5LvrU/edit?gid=2146379760#gid=2146379760 -->
 
 ## Ingredients
 
