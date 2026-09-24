@@ -3,12 +3,15 @@ title: Nut-crusted salmon
 tags: [mains, quick, dairy-free]
 source: original
 date: 2021-07-01
-servings: 4
+servings: 2-4
 prep_time: 15 min
 cook_time: 15 min
 total_time: 30 min
+cuisine: Canadian
 draft: false
 ---
+
+The nuts add a nice crunch to this savoury salmon main.
 
 ## Mechanic
 

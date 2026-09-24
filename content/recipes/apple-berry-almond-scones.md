@@ -1,8 +1,11 @@
 ---
 title: Apple, berry & almond scones
-tags: [breads]
+tags: [breads, tea]
 source: family
 draft: false
+cuisine: Canadian
+prep_time: 20m
+cook_time: 20m
 ---
 
 We first made this on Mother’s Day 💜, many years ago.

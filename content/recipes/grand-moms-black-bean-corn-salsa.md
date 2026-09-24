@@ -3,9 +3,11 @@ title: (Grand) Mom’s black bean & corn salsa
 tags: [sauces]
 source: family
 draft: false
+cuisine: Canadian
+prep_time: 10m
 ---
 
-Classic beany dip for nachos … also required for most family gatherings.
+Classic beany dip for nachos, which is also required for most family gatherings.
 
 ## Ingredients:
 

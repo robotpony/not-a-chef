@@ -11,6 +11,8 @@ cuisine: Japanese
 draft: false
 ---
 
+Savoury and sweet, a subtle glaze for a clean and simple meal.
+
 ## Mechanic
 
 The miso paste acts as both marinade and glaze. White miso is sweeter and milder; red miso is deeper and saltier. **The marinade will start to firm up the fish** as the salt draws out moisture. This is not a problem and actually helps the glaze adhere. Pull at 50–53°C for medium.

@@ -2,37 +2,43 @@
 title: Al pastor marinade (pantry hack)
 tags: [bases]
 source: family
+cuisine: Mexican
+prep_time: 20m
 draft: false
 ---
 
-I don’t always have easy access to dried chilis. I do have reasonable access to ground dried and fresh chilis, so this is a pantry version that captures the basic intent of a Mexican chilli paste turned into a marinade. This recipe is loosely based on one from [BA](https://www.bonappetit.com/recipe/tacos-al-pastor-2), [Chef John](https://www.allrecipes.com/recipe/274229/pineapple-pulled-pork-al-pastor/) and [Serious Eats](https://www.seriouseats.com/tacos-al-pastor-recipe), but simplified for what I normally keep on hand.
+Al pastor is a tart and savoury marinade that begs for pork and fresh tortillas.
+
+## Mechanic
+
+I don’t always have easy access to dried chilis. I do have reasonable access to ground dried and fresh chilis, so this is a pantry version that captures the basic intent of a Mexican chilli paste turned into a marinade. 
 
 ## Ingredients
 
-### Marinade:
+### Marinade
 
 - ~50g of chillies (or powders), ideally with some ancho, guajillo, árbol, etc.
 - 1-2 chipotles and some sauce
 - 300ml chicken/beef/pork stock or water
 - 150ml cider vinegar
-- (optional) 2 teaspoon of [achiote paste](https://www.bonappetit.com/recipe/achiote-paste), or
-    - tomato paste, spices, lime
 - 2 teaspoons of olive oil
 - 3 garlic cloves, crushed
 - 1 onion, quartered
 - ½ teaspoon each of cumin, oregano, cinnamon, and allspice
 - 25g kosher salt (1-1.5% weight of meat)
 - (optional) ~100 grams roasted red peppers (from a jar), to add some missing sweet/non-volcanic-peppery flavour)
+- (optional) 2 teaspoon of achiote paste or tomato paste, spices, lime
 
-### Meat options:
+### Meat options
 
-- ~2kg (1) pork shoulder (remove bone or boneless), or ~2kg chicken thighs
+- ~2kg (1) pork shoulder (remove bone or boneless), 
+- or ~2kg chicken thighs
 
-### Toppings:
+### Toppings
 
 - Roasted (pork fat) pineapple, diced as a topping
 
-## Directions:
+## Directions
 
 1. Clip and deseed peppers.
 2. Toast dried spices and peppers, add to simmering stock, and simmer. Let cool and add to a medium-large blender.
