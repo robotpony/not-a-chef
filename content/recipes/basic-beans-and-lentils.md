@@ -3,6 +3,7 @@ title: Basic beans and lentils
 tags: [mains, stews]
 source: family
 cuisine: global
+cook_time: 5-25m
 draft: false
 ---
 

@@ -2,6 +2,8 @@
 title: Basic chicken ramen stock
 tags: [bases]
 source: family
+cook_time: 2-3h
+cuisine: Japanese
 draft: false
 ---
 
