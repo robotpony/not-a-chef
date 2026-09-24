@@ -3,8 +3,8 @@ title: Bruce’s Thai red/green curry
 tags: [mains, curries]
 source: family
 cuisine: Thai
-prep_time: 15m
-cook_time: 20m
+prep_time: 15 min
+cook_time: 20 min
 draft: false
 ---
 
@@ -14,56 +14,54 @@ The most important part of these recipes is the curry paste. While you can make 
 
 Also note that the only difference between red and green curry with this method is (a) the paste (and chilis used), and (b) veg that tends towards sweet/reds and more savoury/greens, so both colour and flavour pairings.
 
+## Mechanic
 
-## Ingredients 
+**Cracking the coconut cream** (cooking the thick top of the tin until its fat separates) gives you oil to fry the curry paste in, which is what makes the curry taste like a restaurant's rather than a soup. The paste provides almost all the seasoning; the rest is sugar, salt, and lime to balance it.
 
-### Green curry:
+## Ingredients
 
+#### Green curry
 - 4 tbsp green curry paste
-- 2 tbsp cane sugar (or similar)
-- 2-3 cups of green veggies (broccoli stalks, peas)
-- fresh or dried basil
-- 1 lime (juice of)
+- 2 tbsp cane sugar
+- 2–3 cups green vegetables (broccoli stalks, peas)
+- Fresh or dried basil
+- 1 lime, juiced
 
-### Red curry:
-
+#### Red curry
 - 4 tbsp red curry paste
-- 1/4 cup sugar (cane or similar)
-- 2-3 cups colourful veggies (red is better, like red or yellow peppers)
-- 1 tin of good tomatoes (break them up by hand), or crushed tomatoes
+- ¼ cup cane sugar
+- 2–3 cups colourful vegetables (red or yellow peppers)
+- 1 can good whole tomatoes, broken up by hand, or crushed tomatoes
 
-### Both curries:
+#### Both curries
+- 1–2 cans (400 ml each) coconut milk, unshaken
+- 2 cups mirepoix (onion, celery, carrot), diced
+- 2 tbsp [[Ginger/garlic paste]]
+- 2–3 potatoes or sweet potatoes, roasted and diced
+- 1 can bamboo shoots, drained
+- 1 can baby corn, drained
+- 1–2 cups protein (tofu, shrimp, or chicken)
+- 1–2 cups stock
+- A handful of makrut lime leaves, pulled off their stems
+- About 1 tbsp salt
 
-- 2 cups of mirepoix (onion, celery, carrot)
-- 2 tbsp garlic and ginger paste
-- 2-3 roast and diced potatoes (or sweet potatoes)
-- 1 tin of bamboo shoots
-- 1 tin of canned mini corn cobs
-- 1-2 cups of protein
-- salt to taste (1 tbsp or so)
-- 1-2 cups of stock
-- a handful of kaffir lime leaves (pinched off of stems)
+## Method
 
-## Directions:
+Brown the protein separately first. Fried medium tofu (with salt and garlic) works for a vegetarian curry; shrimp or chicken, marinated and browned, for the rest. Set aside.
 
-The basic method is to sweat the mirepoix and coconut milk solids until the coconut solids split (fats float to the top). The solids are usually the top of the tin of coconut milk (the rest of the tin is useful for adding liquid to the curry).
+Spoon the thick coconut cream off the top of the cans, keeping the thin milk underneath.
 
-I don't add additional seasoning (other than salt) as the curry paste provides most of the punch.
+Sweat the mirepoix in a little oil over medium heat until soft, about 5 minutes. Add the coconut cream and cook on high, stirring, until the fat splits out and pools on top.
 
-### Details:
+Add the curry paste and fry in the coconut fat until fragrant and darker, 1–2 minutes. Add the ginger-garlic paste and fry 1 minute more.
 
-1. Sweat mirepoix and aromatics.
-2. Add coconut solids and cook on high until the fat in the coconut splits. This step gets you something closer to restaurant quality Thai curries (but doesn't really affect flavour much).
-3. Reduce heat. Add aromatics, including garlic, ginger, etc.
-4. Separately, sauté your protein. Browning it adds a nice depth and texture.
-5. Add other liquid ingredients (tomatoes, etc.)
-6. Add solids (canned cobbs, bamboo, etc.)
+Add the thin coconut milk, the stock, and (for red curry) the tomatoes. Bring to a simmer.
 
-### Proteins
+Add the vegetables, potatoes, bamboo shoots, and baby corn. Simmer until the vegetables are just tender, 5–10 minutes.
 
-Separately, brown your protein. A vegetarian curry works well with fried medium tofu (with salt, garlic). A non-vegetarian Thai coconut curry works well with shrimp or chicken (browned after marinating).
+Return the protein to the pot with the lime leaves, sugar, and salt. Simmer until the protein is hot through, about 3 minutes. Taste and adjust.
 
-Browned potatoes/sweet potatoes are a pretty close approximation to a protein in terms of texture and flavour if you don't want to use tofu or similar.
+Off the heat, stir in the lime juice and basil (for green curry).
 
 ## Variations
 
@@ -73,7 +71,7 @@ You can include any of the following if you want:
 
 - Roasted squash
 - Roasted potatoes
-- Fried brocolli stalks (green curry)
+- Fried broccoli stalks (green curry)
 - Frozen peas (green curry)
 - Frozen or canned corn (green curry)
 
@@ -88,7 +86,7 @@ Fish sauce is traditional and adds a bunch of depth, but you can simulate it wit
 The goal is a dense, savoury sauce. Soy + mushrooms can be enough, but the following is a bit closer:
 
 - Wakame
-- Dark Soy
+- Dark soy
 - Garlic
 - Miso
 - Water
@@ -102,4 +100,4 @@ Even miso on its own is a good savoury base.
 
 ## Notes
 
-Mirepoix isnt authentic or needed, using stock is more typical.
+Mirepoix isn't authentic or needed; using stock is more typical.

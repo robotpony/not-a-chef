@@ -2,42 +2,42 @@
 title: Coconut jam tarts
 tags: [desserts]
 source: family
-cook_time: 15-20 min
+servings: 12
+cook_time: 15–20 min
 cuisine: Canadian
 draft: false
 ---
 
 This is a family recipe from the 1950s.
 
-> Grandma Rempel (Ann’s Mom) always used to make Butter Tarts and Coconut Jam Tarts and this was her recipe.  Back in the day, the tart was homemade, but as convenience became more convenient, the tarts went to the store bought type.
+> Grandma Rempel (Ann’s Mom) always used to make butter tarts and coconut jam tarts and this was her recipe.  Back in the day, the tart shells were homemade, but as convenience became more convenient, the tarts went to the store-bought type.
 
+## Pastry
 
-## Ingredients:
+Skip this and use 12 store-bought frozen tart shells, set on a baking sheet, if you prefer.
 
-- 2 Eggs
-- 1/2 cup Sugar
-- ½ cup Butter, softened
-- 1 tsp Vanilla
-- 1 cup Coconut, shredded
-- ¼ cup Raspberry Jam
+- 1 cup flour
+- 1 tsp baking powder
+- ½ cup shortening
+- 3–4 tbsp ice water
 
-### Crust/Pastry:
+Sift the flour and baking powder together. Cut in the shortening until it looks like coarse crumbs. Sprinkle in the ice water a tablespoon at a time, mixing with a fork, until the dough just holds together.
 
-- 1 cup Flour
-- ½ cup Shortening
-- 1 tsp Baking Powder
+Roll out on a floured surface. Cut rounds with a circle cutter and press them into a muffin tin.
 
-## Directions:
+## Filling
 
-Recipe makes 12 Tarts.
+- ½ cup butter, softened
+- ½ cup sugar
+- 2 eggs
+- 1 tsp vanilla
+- 1 cup shredded coconut
+- ¼ cup raspberry jam
 
-1. If making the crust/pastry from scratch, sift together the Flour and Baking Soda.  Cut in the Shortening.  Pour ingredients onto a floured surface and mix/knead until combined.  Roll out dough and use a circle cookie cutter and place circle dough into a muffin tin.
-2. Or use the premade store bought frozen tart shells.  Place shells onto a baking sheet.
-3. Preheat the oven to 350 degrees F (175 C).
-4. Cream together Butter and Sugar.
-5. Beat in the Eggs on at a time until smooth.
-6. Stir in Coconut and Vanilla.
-7. Spoon ½ tsp of the Raspberry Jam into the bottom of the tart shell.
-8. Then spoon the coconut mixture over the jam; only fill ¾ full.
-9. Bake for 15 to 20 minutes, or until golden brown.
-10. Cool on a cooling rack and store in the refrigerator.
+Heat the oven to 175°C (350°F).
+
+Cream the butter and sugar together. Beat in the eggs one at a time until smooth. Stir in the coconut and vanilla.
+
+Spoon 1 tsp jam into the bottom of each tart shell, then top with the coconut mixture, filling them only ¾ full.
+
+Bake until golden brown, 15–20 minutes. Cool on a rack. Store in the fridge.

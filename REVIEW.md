@@ -28,7 +28,7 @@ Safety is temperature *and* time. The instant numbers (74°C poultry, 71°C grou
 **Broken or unfinished pages that are published (`draft: false`)**
 - ~~Template placeholder text as the intro: `greek-islands-creamy-greek-dressing`, `south-american-red-salsa`.~~ Fixed.
 - ~~Truncated or no method: `kormaqorma` (ingredients only), `no-knead-pizza-dough` (stops mid-sentence), `jerk-chicken` (step 2 is "Re"), `bulgogi-beef` ("Cook like taco beef"), `vegan-burger-savoury-chew-gluten`, `english-muffins`.~~ Fixed (methods drafted 2026-09-24; review against how you actually cook them).
-- Missing a core ingredient or step: `bruces-thai-redgreen-curry` (no coconut milk; paste never added), `grandma-fergusons-buns` (yeast never added), `omas-kipfels` (yeast never added), `bienenstich` (milk and topping ingredients never added), `butter-tarts` and `coconut-jam-tarts` (pastry has no water), `prosecco-sangria` (no Prosecco), `vodka-cream-sauce` (cream never added), `rocky-road-brownies` (chocolate never melted; chips unused; no bake time).
+- ~~Missing a core ingredient or step: `bruces-thai-redgreen-curry` (no coconut milk; paste never added), `grandma-fergusons-buns` (yeast never added), `omas-kipfels` (yeast never added), `bienenstich` (milk and topping ingredients never added), `butter-tarts` and `coconut-jam-tarts` (pastry has no water), `prosecco-sangria` (no Prosecco), `vodka-cream-sauce` (cream never added), `rocky-road-brownies` (chocolate never melted; chips unused; no bake time).~~ Fixed.
 - `essays/edgar-wright-style-cookery.md` has no frontmatter at all.
 - Flattened tables (unreadable): `reference/food-ratios-for-creating-your-own-recipes.md`, `reference/temperature-and-doneness-cheat-sheet.md` (both drafts).
 
@@ -403,14 +403,8 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - L31: beets are tossed "in a little oil", which isn't listed (minor). Otherwise clean.
 - [x] ! `recipes/beetroot-dip.md`
     - L17 says "drained and rinsed" but Notes say rinsing is optional and not rinsing works better here. Make the ingredient "drained".
-- [x] ! `recipes/bienenstich.md`
-    - Incoherent cake method: the scalded milk/margarine/vanilla (step 1) never goes into the batter, and there's no "pour into the pan" step. Step 2 "Combine with dry ingredients" then step 3 bakes.
-    - Incoherent topping: only sugar and margarine are melted; the whipping cream, coconut, and almonds are never added.
-    - Filling step 1 "Beat until firm" doesn't say what (cream, sugar, and pudding mix together).
-    - L12 promises "Quick ingredient list is condensed at the bottom of the page", but there isn't one. Delete the sentence.
-    - Typos: L12 "who delicious" → "how delicious"; L14 "make head & tails" → "make heads or tails"; L50 "untill"; L58 "as it it browns".
-    - Title Case in ingredients ("5 Eggs", "Whipping Cream", "Instant Vanilla Pudding"); "### Cream Filling:" → "### Filling" to match the ingredient heading.
-    - Q: the long family-history blockquote is lovely but is backstory in the recipe file (recipe rules). Keep it as-is for family recipes, or move it to a food-memory essay and link? (Applies to several family recipes; one decision covers all.)
+- [x] ! `recipes/bienenstich.md` (fixed 2026-09-24: milk into batter; topping completed; filling named; typos; converted to FORMAT.md)
+    - Q: the long family-history blockquote is backstory in the recipe file (open question 3).
 - [x] ! `recipes/boerenkool-stamppot-aka-green-potatoes-aka-boerenkool-met-worst.md`
     - Bay leaves and nutmeg are listed but never used. Also Q: "2 teaspoons of nutmeg" is a lot; traditional stamppot uses a pinch to ¼ tsp. Typo for ⅛–¼?
     - Spelling: "rookworst" (L14, L18) vs "rookwurst" (L38–41); Dutch is "rookworst". L38 "saute" → "sauté".
@@ -449,12 +443,8 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - Q: 1–2 tbsp cumin for one can of beans is a lot; did you mean 1–2 tsp?
     - L14: "large can" → give a size, e.g. "1 can (540 ml / 19 oz)". L18: spaced en-dash range "½ – 1 cup" → "½–1 cup". L30: "stir" → "Stir".
     - Tag is `sauces`; `sides` or `bases` fits better.
-- [x] ! `recipes/bruces-thai-redgreen-curry.md`
-    - Missing ingredient: the method depends on coconut milk (L49, step 2), and it isn't in any ingredient list.
-    - Incoherent steps: the curry paste is never added; aromatics are added twice (steps 1 and 3); the protein is browned but never added back; sugar, stock, lime leaves, potatoes, lime juice, and basil never appear in the steps. The "Details" list needs a rewrite in order: sweat mirepoix → crack coconut cream → fry paste → garlic/ginger → coconut milk + stock + tomatoes → veg/potatoes → protein → lime leaves, sugar, salt → lime juice and basil off the heat.
-    - L45: "kaffir lime leaves" → "makrut lime leaves" ("kaffir" is a slur in South Africa; most food publications have switched).
-    - Typos: L60 "cobbs" → "cobs"; L76 "brocolli" → "broccoli"; L105 "isnt" → "isn't"; L56 "restaurant quality" → "restaurant-quality"; L91 "Dark Soy" → "dark soy".
-    - L105: "Mirepoix isnt authentic or needed, using stock is more typical" is a comma splice, and the logic is unclear (stock doesn't replace mirepoix). Q: meaning Thai curries skip the aromatic veg base?
+- [x] ! `recipes/bruces-thai-redgreen-curry.md` (fixed 2026-09-24: coconut milk added; method rewritten in order; makrut; typos; converted to FORMAT.md)
+    - L105: "Mirepoix isn't authentic or needed; using stock is more typical": the logic is unclear (stock doesn't replace mirepoix). Q: meaning Thai curries skip the aromatic veg base?
 - [x] `recipes/bulgogi-beef.md` (fixed 2026-09-24: sliced and ground methods drafted; MSG ½ tsp; converted to FORMAT.md)
 - [x] ! `recipes/butter-chicken.md`
     - L43: open TODO: sugar is mentioned in the original but not listed. Q: how much sugar (1–2 tsp is common in BIR butter chicken)?
@@ -462,11 +452,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - L28: "2 teaspoons masala" Q: garam masala, or a BIR mix powder?
     - L55: `[Naan](Naan)` is a link to a page that doesn't exist (there's no naan recipe). Unlink it, or add the recipe.
     - L14: "take out" → "takeout". L22: `[[Base Curry Gravy]]` → sentence case. L33: "To finish:" → `#### To finish`.
-- [x] ! `recipes/butter-tarts.md`
-    - Crust can't work as written: 1 cup flour + ½ cup shortening + baking powder has no water, so it won't form a dough. Q: how much ice water?
-    - Contradiction: ingredients say baking powder, step 1 says "Baking Soda". Pastry usually has neither; Q: which, if any?
-    - Title Case throughout the ingredients and steps ("Flour", "Shortening", "Brown Sugar", "Eggs"). L13 "the tart was homemade" → "the tart shells were homemade".
-    - L35: "400 degrees F (200 C)" → "200°C (400°F)". Headings: "### Crust/Pastry:" and "## Directions:" colons.
+- [x] ! `recipes/butter-tarts.md` (fixed 2026-09-24: ice water in pastry; baking powder kept; case and units; converted to FORMAT.md)
     - Q: no corn syrup, so the filling will set firmer and less runny than most butter tarts. Intentional family style? Worth a Mechanic line if so.
 - [x] ! `recipes/butternut-squash-curry.md`
     - Likely error: "750 g baby spinach" is about seven bags. The Good Housekeeping original uses ~140 g (5 oz). Q: confirm; 750 g won't fit in a skillet with the curry.
@@ -548,11 +534,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - Herbs added twice: step 3 sweats onion, garlic, "and herbs", and step 4 adds the oregano.
     - L31: "Paprika, especially smoked paprika can" → "Paprika, especially smoked paprika, can". L10, L27: double spaces.
     - L14: "(820ml/28oz)": Canadian tins are 796 ml. Minor.
-- [x] ! `recipes/coconut-jam-tarts.md`
-    - Same crust problems as butter-tarts.md: no water in the pastry, and baking powder (ingredients) vs baking soda (step 1).
-    - Jam quantity mismatch: ¼ cup jam across 12 tarts is 1 tsp each, but step 7 says ½ tsp.
-    - L38: "on at a time" → "one at a time". L18: "1/2 cup" vs "½ cup" on the next line.
-    - "Recipe makes 12 Tarts." belongs in `servings: 12`. Title Case ingredients. The blockquote duplicates the butter-tarts intro word for word.
+- [x] `recipes/coconut-jam-tarts.md` (fixed 2026-09-24: ice water in pastry; 1 tsp jam each; servings; converted to FORMAT.md)
 - [x] ! `recipes/coconut-lentils.md`
     - L61: "add more broth after blending", but there's no blending step. Q: do you blend it (immersion blender)? If so, add the step.
     - L18: says green or brown lentils work for a chunkier result, but those need ~35–45 min, not 20. Add the time.
@@ -675,11 +657,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] ! `recipes/grand-moms-black-bean-corn-salsa.md`
     - No salt anywhere, even as optional. Q: intentional (the beans and corn carry salt)? Add "salt to taste".
     - L14: "1 small can" → a size (398 ml / 14 oz). "Let sit 30 minutes" with avocado in it will brown; add the avocado just before serving.
-- [x] ! `recipes/grandma-fergusons-buns.md`
-    - Error: the yeast starter (step 1) is never added to the dough. Step 2 mixes butter/sugar/water plus whole-wheat flour, step 3 adds white flour. Add "stir in the yeast mixture" after the butter mixture cools.
-    - L18: "2 packages (~20mg)" → grams: 2 packets is ~14–16 g.
-    - L25: "whole flour" → "whole wheat flour"; L26: "soften" → "softened". L40: no bake time; add "about 20–25 min" or a cue (hollow sound, 90°C inside).
-    - L31: "### Directions:" under Ingredients (should be `##`, no colon). L5: `servings: Makes one pan...` Capital M.
+- [x] `recipes/grandma-fergusons-buns.md` (fixed 2026-09-24: yeast added to the dough; grams; bake time and cue; converted to FORMAT.md)
 - [x] ! `recipes/grandmas-potato-salad.md`
     - Missing step: the hard-boiled eggs are never added. Say where (chopped into step 2, or sliced on top).
     - Step 1 doesn't say to drain and cool the potatoes before step 2's "cooled potatoes".
@@ -887,11 +865,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - Frying oil is listed under "Optional ingredients"; it isn't optional.
     - No fry time: add "about 4–6 minutes, turning once, until deep golden and cooked through". L35: "4-5 inches of oil" → "10–12 cm (4–5 in)"; "160C - 175C (325F - 350F)" → "160–175°C (325–350°F)".
     - L9: "Makes 12 - 20" → `servings`. L39: "air tight" → "airtight". L22: "stiff" dough with 2–2½ cups milk to 3–4 cups flour is closer to a thick batter; "thick, scoopable batter".
-- [x] ! `recipes/omas-kipfels.md`
-    - Error: the yeast is never added in the method. Q: proofed in some of the warm milk with the ¼ cup sugar? That would explain the second sugar line (L19).
-    - Salt is used in step 2 (and coarse salt on top in step 2 of shaping) but isn't listed.
-    - L20: "2 packages of yeast (~3 tsp)": two packets are ~4½ tsp (14 g).
-    - L18: "¾ cups" → "¾ cup"; L9: "crescent shaped" → "crescent-shaped". L37: "Making the Kipfels" → "Making the kipfels". Temps "190C/375F" → "190°C (375°F)". No yield.
+- [x] `recipes/omas-kipfels.md` (fixed 2026-09-24: yeast proofed in milk with the ¼ cup sugar; salt listed; 4½ tsp yeast; converted to FORMAT.md)
 - [x] ! `recipes/onion-base-for-curries.md`
     - L24: "2 cinnamon bark" → "2 pieces cinnamon bark (about 5 cm each)".
     - Q: no oil or salt, and everything simmers raw. Is that the intent (a boiled onion base, like BIR), or are the onions fried first?
@@ -961,10 +935,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] ! `recipes/pressure-cooker-japanese-curry.md`
     - Two em-dashes (L48, L58). L24, L56: "Yukon gold" → "Yukon Gold".
     - Otherwise clean. (The food log's "Japanese curry #todo" can be ticked off.)
-- [x] ! `recipes/prosecco-sangria.md`
-    - Error: the title says Prosecco, but there's no Prosecco in the ingredients (two red wines + brandy). Q: is Prosecco topped up at serving, or is the title wrong?
-    - L16: "remove as much skin from the oranges if possible" → "remove as much peel and pith as possible". No chill/steep time (sangria usually sits 2+ hours).
-    - L9: "The first best Sangria I’ve ever had" → "The best sangria I've ever had". Backstory (recipe rules Q). Title Case ingredients. Steps lack periods.
+- [x] `recipes/prosecco-sangria.md` (fixed 2026-09-24: Prosecco topping added; 2-hour chill; converted to FORMAT.md)
 - [x] ! `recipes/pulled-bbq-style-chicken.md`
     - Tag `pork` is wrong → `poultry`.
     - L21: the rub step mentions salt, which isn't listed. L17: "1 teaspoons" → "1 teaspoon"; L19: "1.5 teaspoon" → "teaspoons".
@@ -1010,13 +981,8 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - L9: "PhØ" → "pho" (or "phở"); "Ramen" → "ramen"; "Cooking With Glen’s" Q: the channel is "Glen & Friends Cooking".
     - L24: "shitake" → "shiitake"; L26: "5ml/1 teaspoons" → "1 teaspoon (5 ml)"; L29: "Veg oil" → "vegetable oil"; L45: "decompress" → "depressurize". L39: "### Directions:" → `## Method`.
 - [x] `recipes/roast-poultry.md` (fixed 2026-09-24: breasts 65°C with the rest as the hold, 68°C boneless; "in pieces"; 220°C)
-- [x] ! `recipes/rocky-road-brownies.md`
-    - Incoherent: the chocolate chips and white chocolate are listed but never used; the 600 g bittersweet chocolate is "folded in" at step 5 with no melting step (surely melted with the butter?); salt is used in step 3 but isn't in the base ingredients.
-    - Order: step 9 swirls in the marshmallow meringue before the meringue section is made. Move the meringue first, or say "make the meringue now".
-    - No bake time: "Bake Brownies until no longer jiggling" needs an approximate time (~35–45 min at 160°C for a 23 × 33 cm pan) and a cue.
-    - Typos: L13 "coresly" → "coarsely"; L9 "they staff" → "the staff". Title Case throughout ("Bittersweet Chocolate", "Butter a 9 x 13inch Baking Dish").
-    - Imperial: "9 x 13inch" → "23 × 33 cm (9 × 13 in)"; "2 inches" of water → "5 cm". Temps "160 degrees C (325 F)", "76 degrees C (170 F)" → "160°C (325°F)", "76°C (170°F)".
-    - L9: very long backstory (recipe rules Q).
+- [x] ! `recipes/rocky-road-brownies.md` (fixed 2026-09-24: meringue first; chocolate melted with butter; chips used; salt; bake time; metric; converted to FORMAT.md)
+    - L9: very long backstory (open question 3).
 - [x] `recipes/salsa-verde.md` (fixed 2026-09-24: converted to FORMAT.md; keeps 5–7 days; lime juice used in the blend)
 - [x] `recipes/sandwich-sour-pickles.md`
 - [x] ! `recipes/satay-marinade.md`
@@ -1174,10 +1140,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] ! `recipes/vindaloo-wing-sauce.md`
     - L14: "mildy" → "mildly". L21: calls for "vindaloo spice blend (see [[Vindaloo Paste]])", but that recipe is a wet paste with lemon and ginger. Q: 1½ tbsp of the paste, or a dry blend?
     - L45: "[draft] needs testing" note while `draft: false`. L46 repeats the gochugaru tip already in the ingredient list.
-- [x] ! `recipes/vodka-cream-sauce.md`
-    - Missing step: the cream is never added. Add it in step 7 (off the heat, with the basil).
-    - No pasta quantity (e.g. 450 g). L18: "1 large can (1000ml/32oz)". Canadian large cans are 796 ml (28 oz), and 32 oz is 946 ml, not 1 L.
-    - L28: "½ cup Parmesan similar" → "or similar". L40: "3~5 minutes" → "3–5". L42: missing period. L33: double space.
+- [x] ! `recipes/vodka-cream-sauce.md` (fixed 2026-09-24: cream added; 450 g pasta; 796 ml can; converted to FORMAT.md)
     - L10: "I have no idea if it's any good" with `draft: false`. Q: retest or mark draft?
 - [x] ! `recipes/weeknight-ginger-beef.md`
     - L45: refers to broccoli ("stir-fry them alongside broccoli"), which isn't in the recipe.

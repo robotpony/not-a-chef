@@ -2,40 +2,41 @@
 title: Butter tarts
 tags: [desserts]
 source: family
-cook_time: 12-15 min
+cook_time: 12–15 min
 cuisine: Canadian
 draft: false
 servings: 12
 ---
 
-This is a sweet and tasty treat, a cherished family recipe from the 1950s. 
+This is a sweet and tasty treat, a cherished family recipe from the 1950s.
 
-> Grandma Rempel (Ann’s Mom) always used to make Butter Tarts and Coconut Jam Tarts and this was her recipe.  Back in the day, the tart was homemade, but as convenience became more convenient, the tarts went to the store bought type.
+> Grandma Rempel (Ann’s Mom) always used to make butter tarts and coconut jam tarts and this was her recipe.  Back in the day, the tart shells were homemade, but as convenience became more convenient, the tarts went to the store-bought type.
 
-## Ingredients
+## Pastry
 
-### Crust/Pastry:
+Skip this and use 12 store-bought frozen tart shells, set on a baking sheet, if you prefer.
 
-- 1 cup Flour
-- ½ cup Shortening
-- 1 tsp Baking Powder
+- 1 cup flour
+- 1 tsp baking powder
+- ½ cup shortening
+- 3–4 tbsp ice water
 
-### Filling
+Sift the flour and baking powder together. Cut in the shortening until it looks like coarse crumbs. Sprinkle in the ice water a tablespoon at a time, mixing with a fork, until the dough just holds together.
 
-- 2 Eggs
-- 1 cup Brown Sugar
-- 1 cup Raisins
-- 2 tbsp Butter, melted
-- 1 tsp Vanilla
+Roll out on a floured surface. Cut rounds with a circle cutter and press them into a muffin tin.
 
-## Directions:
+## Filling
 
-1. If making the crust/pastry from scratch, sift together the Flour and Baking Soda.  Cut in the Shortening.  Pour ingredients onto a floured surface and mix/knead until combined.  Roll out dough and use a circle cookie cutter and place circle dough into a muffin tin.
-2. Or use the premade store bought frozen tart shells.  Place shells onto a baking sheet.
-3. Preheat the oven to 400 degrees F (200 C).
-4. Beat the Eggs in a mixing bowl.
-5. Stir in Sugar and Vanilla.
-6. Fold in the Raisins and Butter.
-7. Spoon the mixture into the tart shells; only fill ¾ full.
-8. Bake for 12 to 15 minutes.
-9. Cool on a cooling rack and store in the refrigerator.
+- 2 eggs
+- 1 cup brown sugar
+- 1 tsp vanilla
+- 1 cup raisins
+- 2 tbsp butter, melted
+
+Heat the oven to 200°C (400°F).
+
+Beat the eggs in a mixing bowl. Stir in the brown sugar and vanilla, then fold in the raisins and butter.
+
+Spoon into the tart shells, filling them only ¾ full. Bake until the pastry is golden and the filling is puffed and set, 12–15 minutes.
+
+Cool on a rack. Store in the fridge.

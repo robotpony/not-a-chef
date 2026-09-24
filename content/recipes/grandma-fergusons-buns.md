@@ -2,45 +2,42 @@
 title: Grandma Ferguson’s buns
 tags: [breads]
 source: family
-servings: Makes one pan of buns (6-12, depending on the size)
+servings: 1 pan of buns (6–12, depending on size)
 cuisine: Canadian
 draft: false
 ---
-
-
 
 The buns are soft and perfect for turkey sandwiches.
 
 ## Ingredients
 
-### Bread starter:
+#### Starter
+- 2 packages (about 15 g) instant yeast
+- 1 scant cup warm water
+- 3 tsp white sugar
 
-- 2 packages (~20mg) of instant yeast
-- 1 scant cup of warm water
-- 3 tsp of white sugar
+#### Dough
+- 3 cups white flour
+- 2 cups whole wheat flour
+- ½ cup unsalted butter, softened
+- 1 tsp salt
+- 1 scant cup sugar
+- 1 scant cup boiling water
 
-### Bread:
+## Method
 
-- 3 cups of white flour
-- 2 cups of whole flour
-- ½ cup of soften, unsalted butter
-- 1 tsp of salt
-- 1 scant cup of sugar
-- 1 scant cup of boiling water
+Stir the yeast, warm water, and 3 tsp sugar together. Let stand until frothy, about 10 minutes.
 
-### Directions:
+Mix the butter, salt, sugar, and boiling water in a large bowl until smooth. Once it cools to room temperature, stir in the yeast mixture, then the whole wheat flour.
 
-1. Let yeast, warm water, and 3 tsp of sugar stand for 10 minutes, or until frothy.
-2. Mix butter, salt, sugar, and boiling water in a mixing bowl until smooth. Once the mixture cools to room temperature, add wholewheat flour.
-3. Incorporate white flour and knead for 10 minutes.
-4. Let rise in a greased bowl until it doubles in size.
-5. Punch down and cut into buns and shape gently into balls.
-6. Place on a greased sheet pan and rise for 45 minutes.
-7. (Optional) Add egg wash or butter before baking.
-8. Bake at 175C/350F until browned.
-9. (Optional) Add a light coating of butter after baking.
+Work in the white flour and knead until smooth and elastic, about 10 minutes.
 
+Let rise in a greased bowl until doubled.
+
+Punch down, cut into 6–12 pieces, and shape gently into balls. Set on a greased sheet pan and let rise 45 minutes. Brush with egg wash or butter if you like.
+
+Bake at 175°C (350°F) until browned and hollow-sounding when tapped underneath, about 20–25 minutes. Brush with a little butter after baking if you like.
 
 ## Notes
 
-Did you know? A scant cup is a cup less 1-2 tbsp. A heaping cup is a cup plus 1-2 tbsp.
+- A scant cup is a cup less 1–2 tbsp. A heaping cup is a cup plus 1–2 tbsp.

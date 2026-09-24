@@ -6,49 +6,49 @@ cuisine: American
 draft: false
 ---
 
-This recipe is an original from the Assistant Pastry Chef at Tiny Lou’s located inside the Hotel Clermont, Atlanta, Georgia.  Dad & I have each stayed at Hotel Clermont individually and together.  On our first trip together (January 2020), we ate at Tiny Lou’s 6 times!  On one of our first nights, the waitress handed us a free dessert to take back up to our room.  We were not sure what it was, but Dad loved it.  So the next day we asked at the restaurant what it was that they had given us, and they replied that the Assistant Pastry Chef was playing around with a new recipe and it was a Rocky Road Brownie.  The next night we had dinner at Tiny Lou’s, they sent us up with 2 more Brownies.  We thanked the staff and let them know we really enjoyed the treats, and on the final day, they staff provided us with the Rocky Road Brownie recipe written out and 4 more Brownies to take with us.
+This recipe is an original from the Assistant Pastry Chef at Tiny Lou’s located inside the Hotel Clermont, Atlanta, Georgia.  Dad & I have each stayed at Hotel Clermont individually and together.  On our first trip together (January 2020), we ate at Tiny Lou’s 6 times!  On one of our first nights, the waitress handed us a free dessert to take back up to our room.  We were not sure what it was, but Dad loved it.  So the next day we asked at the restaurant what it was that they had given us, and they replied that the Assistant Pastry Chef was playing around with a new recipe and it was a Rocky Road Brownie.  The next night we had dinner at Tiny Lou’s, they sent us up with 2 more Brownies.  We thanked the staff and let them know we really enjoyed the treats, and on the final day, the staff provided us with the Rocky Road Brownie recipe written out and 4 more Brownies to take with us.
 
-## Brownie Base Ingredients:
+## Marshmallow meringue
 
-- 600g Bittersweet Chocolate; coresly chopped
-- 230g Unsalted Butter
-- 140g Flour
-- 8 Eggs, Large
-- 540g Sugar
-- 2 tsp Vanilla
-- 100g Chocolate Chips
-- 100g White Chocolate
-- 120g Black Cocoa Powder
-- Pecans (amount was not listed, so guessing 100 - 200g and use quartered/half pecan pieces)
+- 120 ml large egg whites (about 4)
+- 185 g sugar
+- 3 pinches salt
+- 4 tsp vanilla extract
 
-### Marshmallow Meringue Topping:
+Make the meringue first. Bring 5 cm (2 inches) of water to a simmer in a saucepan over medium heat.
 
-- 120ml Large Egg Whites
-- 185g Sugar
-- 3 pinches of Salt
-- 4 tsp Vanilla Extract
+Combine the egg whites, sugar, and salt in the bowl of a stand mixer. Set the bowl over the water, making sure the water doesn't touch the bowl.
 
-## Directions:
+Whisk until combined, then switch to a spatula and keep stirring so the whites don't scramble. When the mixture reaches 76°C (170°F), return the bowl to the mixer, add the vanilla, and whisk on high until the bowl is cold and the meringue is bright white.
 
-Preheat the Oven to 160 degrees C (325 F)
+## Brownies
 
-### For the Rocky Road Brownie Base:
+- 600 g bittersweet chocolate, coarsely chopped
+- 230 g unsalted butter
+- 8 large eggs
+- 540 g sugar
+- 2 tsp vanilla
+- 1 tsp salt
+- 140 g flour
+- 120 g black cocoa powder
+- 100 g chocolate chips
+- 100 g white chocolate, chopped
+- 100–200 g pecans, halved or quartered
 
-1. Butter a 9 x 13inch Baking Dish.
-2. Put Flour and Cocoa Powder in a mixing bowl and set aside.
-3. In the bowl of a standing mixer with a whisk attachment, combine Eggs, Sugar, Vanilla, and Salt.
-4. Whisk on high speed until the mixture becomes pale yellow.
-5. Using a rubber spatula, fold the chocolate into the egg mixture.
-6. Fold in Butter (the recipe does not say, but I’m assuming melted and cooled butter).
-7. Fold in Flour and Cocoa Powder.
-8. Fold in Pecans.
-9. Pour batter into the prepared pan, and mix the top of the batter with the marshmallow meringue.
+Heat the oven to 160°C (325°F). Butter a 23 × 33 cm (9 × 13 inch) baking dish.
 
-### Marshmallow Meringue:
+Melt the bittersweet chocolate and butter together over low heat or in a bowl over simmering water, stirring until smooth. Let cool slightly.
 
-1. Pour water to the depth of 2 inches in a saucepan over medium heat, bring to simmer.
-2. Combine Egg Whites, Sugar, and Salt in the bowl of a standing mixer.  Place over water, make sure water does not touch the stand mixer bowl.
-3. Mix the egg whites with a whisk until combined.  Switch to a spatula, mixing to prevent scrambling.
-4. When the egg whites mixture reaches 76 degrees C (170 F), remove from the heat and return to the stand mixer.  Whisk at high speed until the bowl is cold.  The meringue will become bright white.
+Whisk the flour and cocoa powder together in a bowl and set aside.
 
-Bake Brownies until no longer jiggling.
+In a stand mixer with the whisk, beat the eggs, sugar, vanilla, and salt on high until pale yellow.
+
+With a rubber spatula, fold the melted chocolate into the egg mixture. Fold in the flour and cocoa, then the chocolate chips, white chocolate, and pecans.
+
+Pour the batter into the pan. Dollop the meringue over the top and swirl it into the surface of the batter.
+
+Bake until the centre no longer jiggles and the meringue is toasted, about 35–45 minutes. Cool completely before cutting.
+
+## Notes
+
+- The original recipe didn't list amounts for the pecans or salt, or say to melt the butter and chocolate; these are best guesses.

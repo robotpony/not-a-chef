@@ -6,38 +6,40 @@ cuisine: Mennonite
 draft: false
 ---
 
-A [Kipfel](https://en.wikipedia.org/wiki/Kifli) is traditionally a crescent shaped yeast bread, one of the oldest styles of pastries. 
+A [Kipfel](https://en.wikipedia.org/wiki/Kifli) is traditionally a crescent-shaped yeast bread, one of the oldest styles of pastries.
 
 > Ann and the kids visited Oma to make these for a school project that Jayda was doing on family heritage, measuring everything from memory. This is an approximation of her method.
 
-## Ingredients:
+## Dough
 
-- 1 litre of homogenized milk
-- ½ cup of unsalted butter
-- 8 cups of all purpose flour (approximate)
-- ¾ cups of sugar
-- ¼ cups of sugar
-- 2 packages of yeast (~3 tsp)
-- 2 eggs + 1 egg for egg wash
+- 1 L homogenized milk
+- ½ cup unsalted butter
+- ¼ cup sugar, for the yeast
+- 2 packages (4½ tsp, 14 g) yeast
+- About 8 cups all-purpose flour
+- ¾ cup sugar
+- 1 tsp salt
+- 2 eggs
 - ¼ cup vegetable oil
-- ¼ cup caraway seeds (approx)
 
-## Directions:
+Scald the milk and butter over high heat, stirring and watching carefully so it doesn't burn. Turn off the heat and let cool to lukewarm, stirring occasionally.
 
-### Making the dough:
+Take out ½ cup of the lukewarm milk, stir in the ¼ cup sugar and the yeast, and let stand until foamy, about 10 minutes.
 
-1. Scald the milk and butter over high heat, stirring, and watching carefully not to burn the mixture. Turn off heat and let cool, stirring occasionally, until room temperature.
-2. Add flour to a large bowl, adding sugar, and salt and mix.
-3. Combine cooled scalded milk and butter mixture, as well as 2 eggs and vegetable oil.
-4. Mix thoroughly by hand, adding flour as needed.
-5. Once you have the right consistency (smooth, soft), oil your hands and work the dough for 10 minutes, punching and turning.
-6. Place dough in a bowl with a light coating of vegetable oil and cover with damp tea towels and place in a warm spot (can use the oven on a cold day).
-7. Rise dough until doubled in size.
+Mix the flour, ¾ cup sugar, and salt in a large bowl. Add the rest of the milk mixture, the yeast mixture, the eggs, and the oil. Mix thoroughly by hand, adding flour as needed until the dough is smooth and soft.
 
-### Making the Kipfels:
+Oil your hands and work the dough for 10 minutes, punching and turning.
 
-Preheat oven to 190C/375F
+Put the dough in a lightly oiled bowl, cover with damp tea towels, and set in a warm spot (the oven, turned off, works on a cold day). Let rise until doubled.
 
-1. Taking a small chunk of dough, roll it into a circle and cut into quarters (pizza slices).
-2. Roll slices and bend into crescent shape, brushing with egg and sprinkling with coarse salt and caraway seeds.
-3. Place kipfels on a sheet pan and cover with a tea towel. Let rise for 15-20 minutes before baking at 190C/375F for approximately 17 minutes, or until nicely browned.
+## Kipfels
+
+- 1 egg, beaten, for egg wash
+- Coarse salt
+- About ¼ cup caraway seeds
+
+Heat the oven to 190°C (375°F).
+
+Roll a small chunk of dough into a circle and cut it into quarters, like pizza slices. Roll each slice up from the wide end and bend it into a crescent. Brush with egg and sprinkle with coarse salt and caraway seeds.
+
+Set the kipfels on a sheet pan, cover with a tea towel, and let rise 15–20 minutes. Bake until nicely browned, about 17 minutes.
