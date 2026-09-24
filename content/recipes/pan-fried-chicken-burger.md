@@ -9,7 +9,7 @@ draft: false
 
 This is a sort of copy-cat recipe of the BK classic chicken sandwich, which is a lightly breaded, pepper-forward, minced patty made from mostly white meat. I like them with fresh onion, mustard, lettuce, pickles, tomatoes, and mayonnaise. The goal is something with a few layers of crunch, some bite, and a good kick of savoury fatty goodness.
 
-This is a work in progress and I’m tracking my [experiments in a spreadsheet](https://docs.google.com/spreadsheets/d/1D9Ls2SRHtvSBeVAVhLJZC5CSqrhxuTvu3vb2kW5LvrU/edit#gid=0). The goal is to find a balance of savoury, salty, and spice, with the desired texture.
+<!-- Experiment log (to import): https://docs.google.com/spreadsheets/d/1D9Ls2SRHtvSBeVAVhLJZC5CSqrhxuTvu3vb2kW5LvrU/edit#gid=0 -->
 
 ## Mechanic
 
@@ -30,8 +30,6 @@ Dissolve the salt, sugar, baking soda, and MSG in the water, then mix thoroughly
 Form into patties about 1–2 cm wider than the buns you plan to use; this batch makes about 9 patties at ~90g each. Rest on lightly oiled parchment in the refrigerator (or freezer) for 20 minutes, or up to a few hours.
 
 ## Breading
-
-(Consider a standard panko/crumb instead?)
 
 #### Dredge
 - 50g flour
@@ -64,6 +62,8 @@ Per sandwich:
 Toast your buns. Be proud of them. Spread a generous amount of mayonnaise on the buns and dress.
 
 ## Variations
+
+Panko: skip the batter and bread the patties the standard way, dredged in flour, dipped in beaten egg, and rolled in panko.
 
 Classic: mayo with lettuce. Chicken in the middle.
 

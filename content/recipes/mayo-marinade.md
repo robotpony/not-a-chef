@@ -1,6 +1,6 @@
 ---
 title: Mayo marinade
-tags: [bases, mediterranean, quick]
+tags: [bases, quick]
 source: original
 date: 2026-09-21
 servings: 2

@@ -49,6 +49,10 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 5. Pages with "needs testing"/"[draft]"/"work in progress" notes but `draft: false`: publish as-is, or flip to draft? (~15 pages)
 6. One spelling each: chili/chilli/chile, yogurt/yoghurt, Szechuan/Sichuan, aluminum/aluminium, green onion/scallion.
 
+## Follow-up tasks
+
+- [ ] Import the pan-fried chicken burger experiment log (private Google Sheet, linked in an HTML comment in `recipes/pan-fried-chicken-burger.md`) into the book, probably as a Notes table or a companion page.
+
 ## Pass 1 (2026-09-24)
 
 **Criteria**
@@ -845,8 +849,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - Temps: "162C/325F" → "165°C (325°F)"; "250F" → "120°C (250°F)". L32: "½ stick butter" → "55 g (¼ cup) butter". L42: "dutch oven" → "Dutch oven"; "2-4 inch deep" → "5–10 cm (2–4 in) deep".
     - L55: Notes are two bare links; label them as sources.
     - Overlaps with kālua-pig-cabbage.md. Cross-link?
-- [x] ! `recipes/mayo-marinade.md` (safety, Mechanic, typos, and Kenji note fixed 2026-09-24)
-    - Tagged `mediterranean` with `cuisine: American`. Q: intended?
+- [x] `recipes/mayo-marinade.md` (fixed 2026-09-24: safety, Mechanic, typos, Kenji note; dropped the `mediterranean` tag)
 - [x] ! `recipes/mcburgers.md`
     - No `servings` or yield (the ingredient list is per burger; say so).
     - L28: "Double-grind the patties" → "Double-grind the beef".
@@ -941,8 +944,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] ! `recipes/pad-kra-pao-moo-saap.md`
     - Comma splices: L33 "a blender doesn't, it purées" → "a blender doesn't: it purées"; L34 "until fragrant, don't let" → "until fragrant. Don't let".
     - Otherwise clean and well written.
-- [x] ! `recipes/pan-fried-chicken-burger.md` (safety, spelling, and units fixed 2026-09-24)
-    - Open work-in-progress markers: L12 ("work in progress", private Google Sheet link) and L34 "(Consider a standard panko/crumb instead?)", while `draft: false`.
+- [x] `recipes/pan-fried-chicken-burger.md` (fixed 2026-09-24: safety, spelling, units; spreadsheet link moved to an HTML comment; panko aside became a variation)
 - [x] ! `recipes/panago-style-jalapeño-cheese-dip.md`
     - Title: "Panago style" → "Panago-style". Filename has "ñ" (non-ASCII; see note on indian-takeout-tomato-purée.md).
     - L13: "wizzy cheese spread" → "Cheez Whiz". L9: "; thick crust" → colon; "NY style" → "New York-style"; "tonnes" is fine in Canadian English.
