@@ -2,7 +2,7 @@
 title: Lazy pizza dough (2022)
 tags: [breads]
 source: family
-servings: ~3 medium pizzas
+servings: 3 medium pizzas and a focaccia
 cuisine: Italian
 draft: false
 ---
@@ -11,7 +11,7 @@ Some days I just want an easy pizza dough. I don’t want it 3 days from now, I 
 
 ## Mechanic
 
-Every ingredient here is scaled as a **baker's percentage** against the flour weight, so the recipe holds up if you scale it up or down. At 66% hydration it's a medium-hydration dough, and the vital wheat gluten nudges standard Canadian AP flour (13.5% protein) toward bread-flour territory for more chew.
+Every ingredient here is scaled as a **baker's percentage** against the flour weight, so the recipe holds up if you scale it up or down. At 70% hydration it's a medium-hydration dough, and the vital wheat gluten nudges standard Canadian AP flour (13.5% protein) toward bread-flour territory for more chew.
 
 This recipe uses weight measures as it’s simpler, assuming you have a decent scale. I just tare (reset) it between ingredients.
 
@@ -19,71 +19,67 @@ This recipe uses weight measures as it’s simpler, assuming you have a decent s
 
 | Ingredient | % | Weight | Notes |
 |---|---|---|---|
-| AP flour | 100% | 600g | Canadian AP is 13.5% protein |
-| Vital wheat gluten | 2.5% | 15g | Gets close to a good bread flour, more chew |
-| White sugar | 2% | 15g | Helps crisp in a home oven |
-| Kosher salt | 2% | 15g | Pushes flavour a bit |
-| Olive oil | 4% | 35g | 25g added with the liquid, ~10g for the rise |
-| Instant yeast | 1.5% | 10g | |
-| Lukewarm water | 66% | 420g | Medium hydration |
+| AP flour | 100% | 600 g | Canadian AP is 13.5% protein |
+| Vital wheat gluten | 2.5% | 15 g | Gets close to a good bread flour, more chew |
+| White sugar | 2.5% | 15 g | Helps crisp in a home oven |
+| Kosher salt | 2.5% | 15 g | Pushes flavour a bit |
+| Olive oil | 5.8% | 35 g | 25 g added with the liquid, ~10 g for the rise |
+| Instant yeast | 1.7% | 10 g | |
+| Lukewarm water | 70% | 420 g | Medium hydration |
+
+Makes about 1.1 kg of dough: enough for a 350 g focaccia and three 250 g pizzas.
 
 ## Method
 
-1. In a large pyrex measuring vessel: combine water, most of the oil, and yeast, and stir until the yeast dissolves.
-2. In your stand mixer bowl: combine dry ingredients, including sugar, and set to low. Slowly pour in the liquid ingredients and combine into a shaggy lump on low.
-3. Turn off the mixer for a few minutes, and clean up some of your mess. This is a lazy autolyse-like step and is totally optional, but why not clean up a bit?
-4. Return the mixer to low and mix until the ingredients combine and a ball starts to form.
-5. Speed up the mixing to something around medium for 4-7 minutes, occasionally scraping the bowl down (or lowering and raising the bowl). On a good day, a ball comes together without much fuss and cleans your bowl. Other days, you need to coax that MF.
-6. Let the dough proof for about 1-2 hours, or until double, or until you remember you need to be somewhere else. This depends a lot on your yeast and ambient kitchen temperature.
-7. If not using immediately, throw it in the fridge in a sealed container (with some oil).
+In a large Pyrex measuring jug, stir together the water, most of the oil, and the yeast until the yeast dissolves.
 
-## Making pizza
+In your stand mixer bowl, combine the dry ingredients, including the sugar, and set the mixer to low. Slowly pour in the liquid and mix on low into a shaggy lump.
 
-I don’t bother with any fancy dough prep method while it proofs, though this can help develop layers and gluten alignment or whatever. Generally, the dough works pretty well as-is, at least for a Greek or Roman style pizza.
+Turn off the mixer for a few minutes and clean up some of your mess. This is a lazy autolyse-like step and is totally optional, but why not clean up a bit?
 
-This dough can be used for a few different things, too. We usually make a focaccia snack in the afternoon with it (because focaccia is awesome).
+Return the mixer to low and mix until a ball starts to form. Speed up to around medium for 4–7 minutes, scraping the bowl down occasionally (or lowering and raising the bowl). On a good day, a ball comes together without much fuss and cleans your bowl. Other days, you need to coax that MF.
 
-### Focaccia
+Let the dough proof until doubled, about 1–2 hours, or until you remember you need to be somewhere else. This depends a lot on your yeast and the temperature of your kitchen.
 
-1. In a medium sized baking dish (or ½ short steam pan), add too much (~75ml) of olive oil and ½ (or about 350g) of your dough.
-    1. Stretch it to the pan size, and let it rest 10-20 minutes.
-    2. Stretch it again, repeating until it relents to your will.
-    3. Dimple the dough with your fingers as hard and deep as you can, like you’re playing a Ben Folds song on someone else’s piano.
-    4. Add another 25ml of oil and your toppings and press them in with more force than seems necessary.
-2. In a 220C convection oven (or 230C standard oven), bake for 25-30 minutes, or until nicely browned.
-3. Pull out and let cool on a rack. Once cool enough to handle, pull the bread out of the pan and cool for another 20 or so minutes. Waiting to cut into it is always best, but I don’t care if you cut into it early. I know you probably will anyway.
+If you're not using it right away, oil it and refrigerate it in a sealed container.
 
-### Pizza
+I don’t bother with any fancy dough prep while it proofs, though folding can help develop layers and gluten alignment or whatever. The dough works pretty well as-is, at least for a Greek- or Roman-style pizza.
 
-Now we’re ready for the main event: pizza.
+## Focaccia
 
-1. Divide the dough into 4 equal portions of ~200g each and roll into balls. Let these rest for 10-20 minutes if the dough is at room temp, or a few hours if it’s coming out of the fridge.
-2. Flatten and stretch the dough as thin as you can reasonably get it. Form a crust or not, either way it will be tasty pizza. It really doesn’t matter how you do this; you can roll it out, flip it in the air, use cutting boards to flatten it, or whatever. Just make sure it’s even and about the size of pie you want to make.
-3. If the dough isn’t stretching, leave it for 10-20 minutes to think about its life choices and try again. This may be inconvenient to your dinner plans, but it’s unlikely you can convince dough that time matters. Once you let it rest, your dough should be easier to work with.
-4. Set your oven to the hottest temperature it goes. If you have a cast iron griddle, carbon steel pan, or similar, set that on the middle rack (or even better, a pizza steel). If you have neither, just set out a few baking sheets instead.
-5. Construct your pizza on some parchment with some cornmeal, on a cutting board, and then transfer it to your hot surface. This takes some finesse, but the gist is that you slide the pizza and parchment onto the surface, then pull out the parchment paper. If you don’t get the parchment paper out in the process it’s likely fine, but parchment does tend to char at 260C and above.
-6. Bake until the top is browning. If the bottom isn’t done, pull it anyways and finish it in a pan on the stove top. Every oven is different and you will have to experiment on a temp/rack to get both crusts at the right doneness.
-7. Pull out the pizza and let it cool on a wire rack. I don’t recommend cutting into molten hot pizza as it will just all melt back together anyways, but you do you.
+We usually make a focaccia snack in the afternoon with part of the dough (because focaccia is awesome).
 
-Pizza in a home oven can be a bit frustrating, but the finishing it in a pan on the hob hack has saved me more than a few times. You can also just par-bake it for ~10 minutes (or until you start seeing a tiny bit of colour), but I’ve always found this method much less satisfying for my ego.
+Pour too much olive oil (about 75 ml) into a medium baking dish or a ½ short steam pan, and add about 350 g of the dough. Stretch it to the size of the pan and let it rest 10–20 minutes. Stretch it again, repeating until it relents to your will.
 
-The challenge is in getting everything cooked to the desired doneness without a lot of practice. There are several ways to do this, too, which makes it more difficult to learn.
+Dimple the dough with your fingers as hard and deep as you can, like you’re playing a Ben Folds song on someone else’s piano. Add another 25 ml of oil and your toppings, and press them in with more force than seems necessary.
 
-1. The easy bake:
-    1. 176C/350F for 25-30 minutes (this is like a roman pie, or focaccia)
-    2. May bubble and misshapen more as the crust forms more slowly, so aerating the stretched dough is a common way to prevent this.
-    3. You won’t see scorch marks.
-    4. Finding the right rack in your oven will take some practice.
-2. The par bake:
-    1. 220C/430F and bake the crust until about half done.
-    2. Dress and complete baking until browned (at a lower temperature if you load it up like we do).
-3. The steel/stone:
-    1. 280C/530F, or as hot as the oven goes.
-    2. Slide pizza onto the stone and pray.
-    3. Scorching will happen, so timing is key.
-4. The preheated sheet pan pile:
-    1. 247C/476F
-    2. Slide onto the sheet pan pile (if you have a griddle that is oven safe it can work too, but watch for smoke).
-    3. Nice browning will occur, both sides will be done if you’ve picked the right rack.
+Bake in a 220°C (425°F) convection oven, or 230°C (450°F) standard, until nicely browned, 25–30 minutes.
 
-There are a few methods around this that work, too, so keep practicing and track your results. A mediocre home pizza is usually better than most quick delivery pizzas (assuming good ingredients and assembly).
+Cool in the pan on a rack. Once it's cool enough to handle, lift the bread out and cool it another 20 minutes or so. Waiting to cut into it is always best, but I don’t care if you cut into it early. I know you probably will anyway.
+
+## Pizza
+
+Divide the remaining dough into 3 portions of about 250 g and roll into balls. Rest them 10–20 minutes if the dough is at room temperature, or a few hours if it’s coming out of the fridge.
+
+Flatten and stretch the dough as thin as you can reasonably get it. Form a crust or not; either way it will be tasty pizza. It really doesn’t matter how you do this: roll it out, flip it in the air, use cutting boards to flatten it, or whatever. Just make sure it’s even and about the size of pie you want to make. If the dough won't stretch, leave it for 10–20 minutes to think about its life choices and try again. This may be inconvenient to your dinner plans, but it’s unlikely you can convince dough that time matters.
+
+Set your oven to the hottest temperature it goes. Put a cast iron griddle, carbon steel pan, or similar on the middle rack (or even better, a pizza steel). If you have none of these, use a few baking sheets instead.
+
+Build your pizza on parchment dusted with cornmeal, on a cutting board, then transfer it to the hot surface: slide the pizza and parchment on, then pull the parchment out. If the parchment doesn't come out it's likely fine, but it does tend to char at 260°C (500°F) and above.
+
+Bake until the top is browning. If the bottom isn’t done, pull it anyway and finish it in a pan on the stovetop. Every oven is different, and you'll have to experiment with temperature and rack position to get both crusts right.
+
+Cool the pizza on a wire rack. I don’t recommend cutting into molten hot pizza as it will just melt back together anyway, but you do you.
+
+## Notes
+
+Pizza in a home oven can be a bit frustrating, but the finish-it-in-a-pan-on-the-hob hack has saved me more than a few times. You can also par-bake the crust for ~10 minutes (until you see a tiny bit of colour), but I’ve always found this much less satisfying for my ego.
+
+The challenge is getting everything cooked to the right doneness without a lot of practice, and there are several ways to do it:
+
+- **The easy bake:** 175°C (350°F) for 25–30 minutes, like a Roman pie or focaccia. It may bubble and lose its shape because the crust forms slowly, so docking the stretched dough helps. You won’t see scorch marks. Finding the right rack takes practice.
+- **The par-bake:** 220°C (425°F). Bake the crust until about half done, then dress it and finish baking until browned (at a lower temperature if you load it up like we do).
+- **The steel or stone:** 275°C (525°F), or as hot as the oven goes. Slide the pizza onto the stone and pray. Scorching will happen, so timing is key.
+- **The preheated sheet pan pile:** 250°C (475°F). Slide onto the stacked sheet pans (an oven-safe griddle works too, but watch for smoke). You get nice browning, and both sides will be done if you’ve picked the right rack.
+
+Keep practising and track your results. A mediocre home pizza is usually better than most quick delivery pizzas (assuming good ingredients and assembly).
