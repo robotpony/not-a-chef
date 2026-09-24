@@ -3,6 +3,8 @@ title: Bulgogi beef
 tags: [mains, beef]
 source: family
 cuisine: Korean
+prep_time: 10m
+cook_time: 15m
 draft: false
 ---
 

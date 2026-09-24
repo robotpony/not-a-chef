@@ -3,6 +3,7 @@ title: Bruce’s quick fried black beans
 tags: [sauces]
 source: family
 cuisine: Mexican
+prep_time: ~15m
 draft: false
 ---
 

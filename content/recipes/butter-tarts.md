@@ -5,10 +5,10 @@ source: family
 cook_time: 12-15 min
 cuisine: Canadian
 draft: false
-servings: Recipe makes 12 Tarts
+servings: 12
 ---
 
-This is a cherished family recipe from the 1950s. 
+This is a sweet and tasty treat, a cherished family recipe from the 1950s. 
 
 > Grandma Rempel (Ann’s Mom) always used to make Butter Tarts and Coconut Jam Tarts and this was her recipe.  Back in the day, the tart was homemade, but as convenience became more convenient, the tarts went to the store bought type.
 
@@ -29,7 +29,6 @@ This is a cherished family recipe from the 1950s.
 - 1 tsp Vanilla
 
 ## Directions:
-
 
 1. If making the crust/pastry from scratch, sift together the Flour and Baking Soda.  Cut in the Shortening.  Pour ingredients onto a floured surface and mix/knead until combined.  Roll out dough and use a circle cookie cutter and place circle dough into a muffin tin.
 2. Or use the premade store bought frozen tart shells.  Place shells onto a baking sheet.

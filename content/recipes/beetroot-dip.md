@@ -37,3 +37,4 @@ With pita, flatbread, raw vegetables, or as part of a mezze spread. A drizzle of
 
 - Rinsing the chickpeas is optional; not rinsing gives a slightly beany flavour that works here.
 - Roasted beets are more intensely flavoured than boiled; canned beets are convenient and consistent.
+- For a richer version with tahini, see [[Beetroot and chickpea hummus]].

@@ -1,43 +1,45 @@
 ---
 title: Beetroot and chickpea hummus
-tags: [sauces]
+tags: [sauces, mediterranean, vegetarian, vegan, gluten-free]
 source: family
+servings: makes ~750ml
+prep_time: 15 min
+cook_time: 45 min
+total_time: 1 hr
 cuisine: Mediterranean
 draft: false
 ---
 
-A great snack when you’re beet. Makes a bright red, earthy hummus. and makes about 750ml (3ish ~200ml grocery store sized hummus containers).
+A bright red, earthy hummus. Makes about three grocery-store tubs' worth.
 
-## Ingredients:
+## Ingredients
 
-- 200g raw or roasted beetroot
-- ~400g tin chickpeas, drained
-- 3-4 cloves of garlic, smashed and minced
-- 80 - 100 ml tahini (~3 spoons)
-- 2-3 tablespoon extra virgin olive oil[\[a\]](#cmnt1)[\[b\]](#cmnt2) 
-- ~2 lemons, juiced 60ml
+- 200g raw beetroot, cubed (or 200g already roasted)
+- 400g tin chickpeas, drained
+- 3–4 cloves garlic, smashed and minced
+- 80–100ml tahini
+- 60ml lemon juice (about 2 lemons)
 - 2 teaspoons sea salt or kosher salt
-- a few ice cubes (for blending)
-
-### Seasoning:
-
 - ¼ teaspoon ground cumin
 - ¼ teaspoon ground coriander
 - ⅛ teaspoon freshly cracked black pepper
+- a few ice cubes
+- 3 tablespoons extra virgin olive oil, plus more to drizzle
 
-## Directions:
+## Method
 
-1. Roast beets in the oven (cubed, in some oil) until soft.
-2. Simmer chickpeas until soft, while beets are roasting.
-3. Add tahini paste, lemon, and salt/seasonings in a powerful blender. Add roasted beet and chickpeas once cooled.
+Toss the beets in a little oil and roast at 200°C (400°F) until a knife slides through easily, about 40 minutes. While they roast, simmer the chickpeas in water until very soft, 15–20 minutes, then drain.
 
-    1. You can add the chickpeas and beets hot, but be sure to use a towel to hold the lid down to prevent burns (it can pop the lid up, and the molten hummus can be an unpleasant experience).
+Put the tahini, garlic, lemon juice, salt, spices, and ice cubes in a high-powered blender. Add the beets and chickpeas once they've cooled. Blend until completely smooth, 1–2 minutes in a Vitamix and longer in other blenders.
 
-4. Blend until smooth, 1-2 minutes in a Vitamix, possibly longer in other blenders.
-5. Season to taste, adding salt and lemon juice until it tastes like hummus.
-6. Blend again until combined.
-7. Blend in olive oil.
+Taste. Add salt and lemon until it tastes like hummus, then blend again. Blend in the olive oil last.
 
-## Notes:
+## To serve
 
-This didn't seem like enough oil, so I suggest serving with more.
+In a shallow bowl with a well of olive oil on top, with pita or raw vegetables.
+
+## Notes
+
+- You can blend the beets and chickpeas hot. Hold the lid down with a towel: the steam can push the lid up and spray hot hummus.
+- The ice cubes keep the blend cool and make it lighter and fluffier.
+- For a quicker version without tahini, see [[Beetroot dip]].

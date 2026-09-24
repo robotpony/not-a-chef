@@ -2,7 +2,8 @@
 title: Breakfast style sausage
 tags: [bases]
 source: family
-cook_time: 15-25 min
+prep_time: 15m
+cook_time: ~20m
 cuisine: American
 draft: false
 ---

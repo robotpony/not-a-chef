@@ -3,9 +3,10 @@ title: Basic ramen tare
 tags: [bases]
 source: family
 cuisine: Japanese
+prep_time: 10m
+cook_time: ~20m
 draft: false
 ---
-
 
 This is a basic [tare](https://en.wikipedia.org/wiki/Tare_sauce) and [braising](https://en.wikipedia.org/wiki/Braising) liquid for ramen style pork and tare used with simple broths. Keeps for a week in the fridge and freezes nicely (both the pork and tare). Inspired by [Ramen\_Lord](https://www.goodreads.com/en/book/show/57499458) and some tweaks for our tastes.
 

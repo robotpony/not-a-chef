@@ -3,6 +3,8 @@ title: Bruce’s Thai red/green curry
 tags: [mains, curries]
 source: family
 cuisine: Thai
+prep_time: 15m
+cook_time: 20m
 draft: false
 ---
 

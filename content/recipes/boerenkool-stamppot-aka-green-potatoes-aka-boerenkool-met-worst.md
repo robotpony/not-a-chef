@@ -4,6 +4,8 @@ tags: [mains, mashes]
 source: family
 aka: brittacole, green potatoes, Boerenkool Met Worst
 cuisine: Dutch
+prep_time: 15m
+cook_time: ~20m
 draft: false
 ---
 

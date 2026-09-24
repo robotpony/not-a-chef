@@ -3,13 +3,14 @@ title: Canadian chili
 tags: [mains, stews]
 source: family
 cuisine: Canadian
+prep_time: 15m
+cook_time: ~25m
 draft: false
 ---
 
-The chili I grew up with is not the chili of the south. It’s a beany, tomato vegetable stew with a hint of beef. It’s a recipe that easily becomes vegetarian by just skipping the beef, but here I’ll outline how to make it even more savoury by adding layers of mushrooms. If you want a beefy version, just include some minced or ground beast in one of the mushroom stages.
+The chili I grew up with is not the chili of the south. It’s a beany, tomato vegetable stew with a hint of beef. 
 
-
-#### Main ingredients:
+## Main ingredients:
 
 - 800ml (1 larger can) of kidney beans
 - 400ml (1 smaller can) of black beans
@@ -30,7 +31,7 @@ The chili I grew up with is not the chili of the south. It’s a beany, tomato
 - 1 lime
 - 1 handful of cilantro or parsley (or both), finely chopped
 
-#### Spice mix:
+## Spice mix:
 
 (Spice to taste)
 
@@ -39,9 +40,7 @@ The chili I grew up with is not the chili of the south. It’s a beany, tomato
 - 3 tsp ancho (or similar) ground chilis
 - Salt/pepper
 
-
-
-### Directions:
+## Directions:
 
 1. In the bottom of a large-ish pot add olive oil and chopped mushrooms and cook on medium until they release their water, then continue cooking until the water evaporates. If using hamburger or TVP, add to watery mushrooms.
     1. If you’re using TVP (textured vegetable protein) or hamburger, add it with the mushrooms. This will extend the cooking time, but be patient and you’ll get a nice brown savoury base.
@@ -54,12 +53,13 @@ The chili I grew up with is not the chili of the south. It’s a beany, tomato
 
 ## Notes
 
+This recipe easily becomes vegetarian by just skipping the beef, but here I’ll outline how to make it even more savoury by adding layers of mushrooms. If you want a beefy version, just include some minced or ground beast in one of the mushroom stages.
 
 You can replace all of the beans with any beans you like, but these are what I usually use. You can also cook your beans from dry, just follow the directions on the package.
 
 ## Variations
 
-#### Slightly more authentic spice mix
+### More authentic spice mix
 
 Use instead of dried spices, with better depth of flavour. Blend together:
 

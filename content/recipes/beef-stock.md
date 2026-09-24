@@ -1,12 +1,14 @@
 ---
 title: Beef stock
-tags: [bases]
+tags: [bases, stocks]
 source: family
-cuisine: world
+cuisine: French
+prep_time: 20m
+cook_time: ~2h
 draft: false
 ---
 
-This is a rich stock that uses bones leftover when buying and breaking down whole birds.
+This is a rich stock that uses bones leftover when buying and breaking down whole cuts.
 
 ## Ingredients:
 
@@ -34,3 +36,8 @@ This is a rich stock that uses bones leftover when buying and breaking down whol
 
 - The reduced stock should cool into a solid and gelatinous state. I don’t bother skimming off the fat as I use it for starting soups with a bit of extra flavour.
 - To speed up cooling, add a smaller pot filled with ice and water (or using a cooling paddle) 
+
+
+## Special equipment
+
+6L pressure cooker.
