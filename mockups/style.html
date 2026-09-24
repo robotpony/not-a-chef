@@ -191,8 +191,8 @@
   .ing.sub{ padding-left:29px; font-size:.86rem; color:var(--ink-muted); border-bottom:none; }
 
   .notes-list{ font-family:'Lora',serif; font-size:.95rem; list-style:none; margin:0; padding:0; }
-  .notes-list li{ display:flex; gap:8px; margin-bottom:8px; }
-  .notes-list li::before{ content:'—'; color:var(--ink-faint); flex-shrink:0; }
+  .notes-list li{ position:relative; padding-left:1.3em; margin-bottom:8px; } /* not flex: links inside an item would split into columns */
+  .notes-list li::before{ content:'—'; color:var(--ink-faint); position:absolute; left:0; }
   .notes-list li:last-child{ margin-bottom:0; }
   .notes-sub{ margin-top:14px; }
   .notes-sub h4{ font-family:'Libre Franklin',sans-serif; font-size:.82rem; font-weight:600; margin-bottom:6px; color:var(--ink-muted); }

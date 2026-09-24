@@ -1014,15 +1014,18 @@ article > footer {
   list-style: none;
   padding: 0;
 }
+/* Marker is absolutely positioned, not a flex sibling: a flex li turns
+ * every inline child (text, links) into its own column. */
 .recipe-sidebar-section .notes-list li {
-  display: flex;
-  gap: 6px;
+  position: relative;
+  padding-left: 1.3em;
   margin-bottom: 6px;
 }
 .recipe-sidebar-section .notes-list li::before {
   content: '—';
   color: var(--ink-faint);
-  flex-shrink: 0;
+  position: absolute;
+  left: 0;
 }
 .recipe-sidebar-section .notes-list li:last-child { margin-bottom: 0; }
 
