@@ -24,7 +24,7 @@ Here are some of the things I keep in my freezer:
 - beef patties
 - [[Meatballs|meatballs]]
 - chicken chunks in broth
-- [[Breakfast Sausage|handmade breakfast sausage]]
+- [[Breakfast sausage|handmade breakfast sausage]]
 - precooked bacon
 
 - [[Beef Stew|basic beef stew]]

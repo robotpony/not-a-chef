@@ -45,7 +45,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 1. ~~Normalize the ~110 legacy-format recipes (numbered `Directions:`) to FORMAT.md prose, or accept both?~~ Decided 2026-09-24: convert to FORMAT.md as each page is touched.
 2. ~~centre/litre vs center/liter?~~ Decided 2026-09-24: centre and litre. FORMAT.md and the recipe writing rules updated; the 9 "center/centered/liter" uses in content converted.
 3. ~~Family backstory blockquotes: keep, or move to essays?~~ Decided 2026-09-24: keep them in recipes. They're hidden on the site by default (`hideFamilyHistory` in `assets/js/ingredients.js`); a special build will show them later.
-4. ~~Consolidate overlapping recipes?~~ Decided 2026-09-24. Pizza doughs, Thai curries, Greek marinades, and beef base: keep all (the doughs show the recipe's evolution). Jerk, hoagie rolls, slaw dressings, ramen pork, and smash burgers: merged (old URLs redirect via `aliases`). Gyros: the sheet-pan page now builds on `[[Gyro base]]`. Breakfast sausage: still open. Groups as reviewed:
+4. ~~Consolidate overlapping recipes?~~ Decided 2026-09-24. Pizza doughs, Thai curries, Greek marinades, and beef base: keep all (the doughs show the recipe's evolution). Jerk, hoagie rolls, slaw dressings, ramen pork, and smash burgers: merged (old URLs redirect via `aliases`). Gyros: the sheet-pan page now builds on `[[Gyro base]]`. Breakfast sausage: merged. Groups as reviewed:
 
     | Group | Pages | How they differ |
     |---|---|---|
@@ -411,17 +411,8 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
     - L38–39: a word is split across lines ("cabbag" / "e."), which renders as a broken bullet. Rejoin it.
     - L12: "saussage" → "sausage". `cuisine: german` → "German".
     - L17: imperial first: "about 1¼ lb (565 g)" → "about 565 g (1¼ lb)". Cup measures for water/wine have no metric (80 ml / 60 ml).
-- [x] ! `recipes/breakfast-sausage.md`
-    - Q: duplicate recipe. breakfast-sausage.md and breakfast-style-sausage.md are the same thing with different percentages (salt 2.0% vs 1.6%, milk powder 4% vs 2%, water 10% vs 7.5%). Merge into one, with the other as a variation?
-    - L38: "Combine all dry spices and milk powder. Dissolve in the cold water." Spices don't dissolve; "Stir into the cold water."
-    - No cooking target: add "to 71°C (160°F) internal" for ground pork (or 63°C held 5 minutes; see the food-safety page, but patties won't hold that off the heat).
-    - L13: "sandwhiches" → "sandwiches". `cuisine: american` → "American". Table: "Dry parsley" → "Dried parsley".
-- [x] ! `recipes/breakfast-style-sausage.md` (Google links fixed 2026-09-24)
-    - See the duplicate Q on breakfast-sausage.md.
-    - Toasting mismatch: the table says toast coriander and fennel; the method toasts "fennel and peppercorns".
-    - L51: pulling ground pork at 68°C is actually safe (at 68°C pork pasteurizes in well under a minute), so the target is fine. The claim is wrong: patties and links won't carry over 7°C to 75°C. Drop the carry-over sentence, or say "68°C, held for a minute in the pan".
-    - L43: em-dash; "aiming for less than 50% firm" is unclear. Q: meaning the mix should be tacky but still soft?
-    - Table rounding is inconsistent with the percentages (sugar 0.8% → 7.5 g, brown sugar 0.6% → 6.3 g, white pepper 0.1% → 1.3 g). Either the % or the grams are off.
+- [x] `recipes/breakfast-sausage.md` (merged 2026-09-24: breakfast-style-sausage.md's formula and method as the main recipe, the sage-forward mix as a variation; toasting fixed; 68°C; typos)
+- [x] `recipes/breakfast-style-sausage.md` (merged into breakfast-sausage.md 2026-09-24; redirects)
 - [x] ! `recipes/bruces-burger-sauce.md`
     - L24: "1/2 teaspoon" → "½ teaspoon" (the rest of the file uses glyphs). Otherwise clean.
 - [x] `recipes/bruces-cold-brewed-iced-tea.md` (fixed 2026-09-24: converted to FORMAT.md; fridge steep only; title hyphenated)
