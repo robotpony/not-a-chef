@@ -37,6 +37,11 @@
     </div>
   {{ end }}
 
+  {{/* Notes, relocated by automagic-sidebar.js like the slots below, but
+    placed above "On this page" so it isn't pushed under a long heading
+    list. Hidden until filled. */}}
+  <div class="rs-section recipe-sidebar-section" data-sidebar-slot="notes" hidden></div>
+
   {{/* On this page: desktop only. On mobile, Blowfish's collapsible TOC
     already sits at the top of the article (see single.html). The Food Log
     gets a flat list of days (its h2s) instead, or of entries (h3s) when
@@ -67,7 +72,7 @@
     (single.html). Hidden until filled; most pages fill none. rs-section
     for the reading sidebar's spacing, recipe-sidebar-section for the
     heading/Notes-list/Mechanic styling the two sidebars share. */}}
-  {{ range slice "mechanic" "to-serve" "variations" "equipment" "notes" }}
+  {{ range slice "mechanic" "to-serve" "variations" "equipment" }}
     <div class="rs-section recipe-sidebar-section" data-sidebar-slot="{{ . }}" hidden></div>
   {{ end }}
 
