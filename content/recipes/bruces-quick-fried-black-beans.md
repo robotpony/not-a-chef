@@ -1,30 +1,32 @@
 ---
 title: Bruce’s quick fried black beans
-tags: [sauces]
+tags: [sides]
 source: family
 cuisine: Mexican
-prep_time: ~15m
+prep_time: ~15 min
 draft: false
 ---
 
 Fried black beans are a perfect base for nachos, quick burritos, beans and rice, and other quick food hacks.
 
-## Ingredients:
+## Ingredients
 
-- large can of black beans drained
-- 2-3 cloves of garlic (or 1 tsp of granulated garlic, or both)
-- ½ an onion diced
-- 1-2 jalapeños diced (seeds removed, optionally)
-- ½ – 1 cup of chopped cilantro leaves (optional)
-- ½ a lime juiced (and some of its zest for extra zing)
-- Salt to taste
-- Black pepper to taste (a few grinds)
-- 1-2 tbsp cumin
-- ½ tsp ground chilies (or 1 tsp cayenne)
 - 1 tbsp olive oil
+- ½ onion, diced
+- 2–3 garlic cloves (or 1 tsp granulated garlic, or both)
+- 1–2 tsp cumin
+- ½ tsp ground chilies (or 1 tsp cayenne)
+- 1–2 jalapeños, diced (seeds removed, if you like)
+- 1 can (540 ml / 19 oz) black beans, drained
+- Salt, to taste
+- Black pepper, to taste (a few grinds)
+- ½–1 cup chopped cilantro leaves (optional)
+- ½ lime, juiced (plus some zest for extra zing)
 
-## Directions:
+## Method
 
-1. Heat the olive oil in a pan on medium until the oil shimmers. Sauté the onions for 2-3 minutes until translucent, add the garlic and continue for another 2-3 minutes.
-2. Add the jalapeños and drained beans with the salt and pepper. Stir on medium/medium low until everything is heated up thoroughly (but nothing is sticking). Mash the beans about half way, adding a tsp of oil if things start to stick.
-3. Turn off the heat. Add remaining spice, cilantro, and lime juice. stir, and taste. Finish seasoning (salt, pepper, etc.) to taste.
+Heat the olive oil in a pan over medium until it shimmers. Sauté the onion until translucent, 2–3 minutes. Add the garlic, cumin, and chilies and cook until fragrant, another 1–2 minutes.
+
+Add the jalapeños and beans with the salt and pepper. Stir over medium to medium-low until everything is heated through, without letting anything stick. Mash the beans about halfway, adding a teaspoon of oil if they start to stick.
+
+Turn off the heat. Stir in the cilantro and lime juice, then taste. Finish seasoning with salt and pepper.

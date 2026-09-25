@@ -206,61 +206,26 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] ! `recipes/beef-stew.md` (fixed 2026-09-24: smoked paprika listed (optional); flavour enhancers go in with the stock; typos; cremini; alongside; classic-style)
     - Q: the enhancers now go in with the stock. Right?
     - Q: 30 min at high pressure for 4 cm chuck cubes is on the short side (35–45 min is typical for spoon-tender). Tested?
-- [x] ! `recipes/beef-stock.md`
-    - Missing step: tomato paste (and shallot, garlic) are in the ingredients but never used. Q: roast the paste on the bones in step 2 (usual), or add it with the water?
-    - L15: "kneck" → "neck"; "side cut" Q: is this a butcher term you use? Otherwise "marrow or knuckle bones".
-    - L32: "suc" → "fond". L11: "bones leftover" → "bones left over". L25: "Veg oil" → "vegetable oil". L31: "rough cut veg" → "rough-cut".
-    - L38: "(or using a cooling paddle)" → "or use"; missing final period. "## Notes:" colon.
-- [x] ! `recipes/beef-stroganoff.md` (fixed 2026-09-24: vinegar 1–2 tbsp; fancy tenderloin path spelled out; stock and butter per version; converted to FORMAT.md)
-    - Q: "Authentic (1950s style)". Stroganoff is 19th-century Russian; the 1950s version is the North American one. Rename "Classic" or "Mid-century"?
-- [x] ! `recipes/beetroot-and-chickpea-hummus.md`
-    - L31: beets are tossed "in a little oil", which isn't listed (minor). Otherwise clean.
-- [x] ! `recipes/beetroot-dip.md`
-    - L17 says "drained and rinsed" but Notes say rinsing is optional and not rinsing works better here. Make the ingredient "drained".
-- [x] ! `recipes/bienenstich.md` (fixed 2026-09-24: milk into batter; topping completed; filling named; typos; converted to FORMAT.md)
-    - Q: the long family-history blockquote is backstory in the recipe file (open question 3).
-- [x] ! `recipes/boerenkool-stamppot-aka-green-potatoes-aka-boerenkool-met-worst.md`
-    - Bay leaves and nutmeg are listed but never used. Also Q: "2 teaspoons of nutmeg" is a lot; traditional stamppot uses a pinch to ¼ tsp. Typo for ⅛–¼?
-    - Spelling: "rookworst" (L14, L18) vs "rookwurst" (L38–41); Dutch is "rookworst". L38 "saute" → "sauté".
-    - L38: "(if using)" for the rookworst, but it's not marked optional in the list.
-    - Title has a trailing space. `aka: brittacole` Q: is this a family nickname? "Boerenkool Met Worst" → "boerenkool met worst". L12: "farmers cabbage" → "farmer's cabbage"; L33: "hide more cruciferous" → "cruciferous veg".
-    - Oil for the onions isn't listed. "6-8L/qt" → "6–8 L (6–8 qt)".
-- [x] ! `recipes/braised-red-cabbage.md`
-    - L38–39: a word is split across lines ("cabbag" / "e."), which renders as a broken bullet. Rejoin it.
-    - L12: "saussage" → "sausage". `cuisine: german` → "German".
-    - L17: imperial first: "about 1¼ lb (565 g)" → "about 565 g (1¼ lb)". Cup measures for water/wine have no metric (80 ml / 60 ml).
+- [x] `recipes/beef-stock.md` (fixed 2026-09-24: converted to FORMAT.md; tomato paste brushed on the bones halfway through the roast to brown in their fat; "side cut" kept, shallot and garlic roasted with the veg; neck; fond; left over; vegetable oil; cooling note; Equipment)
+- [x] `recipes/beef-stroganoff.md` (fixed 2026-09-24: vinegar 1–2 tbsp; fancy tenderloin path spelled out; stock and butter per version; converted to FORMAT.md; "Authentic (1950s style)" kept: true to the common 1950s version, not the Russian original)
+- [x] `recipes/beetroot-and-chickpea-hummus.md` (fixed 2026-09-24: roasting oil covered by the olive oil line; unit spacing)
+- [x] `recipes/beetroot-dip.md` (fixed 2026-09-24: chickpeas "drained"; unit spacing)
+- [x] `recipes/bienenstich.md` (fixed 2026-09-24: milk into batter; topping completed; filling named; typos; converted to FORMAT.md; blockquote kept per open question 3)
+- [x] `recipes/boerenkool-stamppot-aka-green-potatoes-aka-boerenkool-met-worst.md` (fixed 2026-09-24: converted to FORMAT.md; bay in the cooking water, ¼ tsp nutmeg in the mash; rookworst throughout and marked optional; oil and cooking-water salt listed; trailing space; aka case; farmer's; caulipots as a variation; 6–8 L (6–8 qt); `aka: brittacole` kept, a family nickname anglicized from boerenkool)
+- [x] `recipes/braised-red-cabbage.md` (fixed 2026-09-24: split word rejoined; sausage; German; metric first; 80 ml / 60 ml)
 - [x] `recipes/breakfast-sausage.md` (merged 2026-09-24: breakfast-style-sausage.md's formula and method as the main recipe, the sage-forward mix as a variation; toasting fixed; 68°C; typos)
 - [x] `recipes/breakfast-style-sausage.md` (merged into breakfast-sausage.md 2026-09-24; redirects)
-- [x] ! `recipes/bruces-burger-sauce.md`
-    - L24: "1/2 teaspoon" → "½ teaspoon" (the rest of the file uses glyphs). Otherwise clean.
+- [x] `recipes/bruces-burger-sauce.md` (fixed 2026-09-24: ½ glyph; trailing spaces)
 - [x] `recipes/bruces-cold-brewed-iced-tea.md` (fixed 2026-09-24: converted to FORMAT.md; fridge steep only; title hyphenated)
-- [x] ! `recipes/bruces-iced-tea.md`
-    - L10: garbled, third person, and a comma splice: "Bruce uses this tea to get productive, it's like magical, sweet, zen." → e.g. "My working-day tea: sweet, tart, and calming."
-    - The pinch of salt is listed but never added. Add it with the sugar in step 2.
-    - L26: "farmer's market" → "farmers' market".
-- [x] ! `recipes/bruces-poultry-and-pork-spice-rub.md` (Google links fixed 2026-09-24)
-    - L17, L32: "smoky notes" come from nothing in the list (no smoked paprika, no chipotle). Q: is smoked paprika missing, or should "smoky" go?
-    - Yield: ingredients total ~775 g; `servings` says ~850 g.
-- [x] ! `recipes/bruces-quick-fried-black-beans.md`
-    - Step 3 adds the "remaining spice", but no spice was added earlier, and cumin/chili are never cooked. Adding 1–2 tbsp of raw cumin off the heat will taste dusty. Suggest blooming the cumin and chili with the garlic in step 1.
-    - Q: 1–2 tbsp cumin for one can of beans is a lot; did you mean 1–2 tsp?
-    - L14: "large can" → give a size, e.g. "1 can (540 ml / 19 oz)". L18: spaced en-dash range "½ – 1 cup" → "½–1 cup". L30: "stir" → "Stir".
-    - Tag is `sauces`; `sides` or `bases` fits better.
-- [x] ! `recipes/bruces-thai-redgreen-curry.md` (fixed 2026-09-24: coconut milk added; method rewritten in order; makrut; typos; converted to FORMAT.md)
-    - L105: "Mirepoix isn't authentic or needed; using stock is more typical": the logic is unclear (stock doesn't replace mirepoix). Q: meaning Thai curries skip the aromatic veg base?
+- [x] `recipes/bruces-iced-tea.md` (fixed 2026-09-24: converted to FORMAT.md; intro rewritten; salt goes in with the sugar; farmers' market; peach note to Notes)
+- [x] `recipes/bruces-poultry-and-pork-spice-rub.md` (Google links fixed 2026-09-24; yield corrected to ~775 g, the sum of the ingredients; smoky notes credited to Tellicherry pepper; unit spacing)
+- [x] `recipes/bruces-quick-fried-black-beans.md` (fixed 2026-09-24: converted to FORMAT.md; cumin 1–2 tsp, bloomed with the garlic and chilies; 540 ml (19 oz) can; ranges; tag `sides`)
+- [x] `recipes/bruces-thai-redgreen-curry.md` (fixed 2026-09-24: coconut milk added; method rewritten in order; makrut; typos; converted to FORMAT.md; mirepoix note reworded: Thai curries sweat down the paste instead, so the mirepoix is optional)
 - [x] `recipes/bulgogi-beef.md` (fixed 2026-09-24: sliced and ground methods drafted; MSG ½ tsp; converted to FORMAT.md)
-- [x] ! `recipes/butter-chicken.md`
-    - L43: open TODO: sugar is mentioned in the original but not listed. Q: how much sugar (1–2 tsp is common in BIR butter chicken)?
-    - L49–51 contradict: "Turn off the heat. Add yogurt" then "Simmer on low until heated through". Say: temper and stir in off the heat, then warm gently without boiling.
-    - L28: "2 teaspoons masala" Q: garam masala, or a BIR mix powder?
-    - L55: `[Naan](Naan)` is a link to a page that doesn't exist (there's no naan recipe). Unlink it, or add the recipe.
-    - L14: "take out" → "takeout". L22: `[[Base Curry Gravy]]` → sentence case. L33: "To finish:" → `#### To finish`.
-- [x] ! `recipes/butter-tarts.md` (fixed 2026-09-24: ice water in pastry; baking powder kept; case and units; converted to FORMAT.md)
-    - Q: no corn syrup, so the filling will set firmer and less runny than most butter tarts. Intentional family style? Worth a Mechanic line if so.
+- [x] `recipes/butter-chicken.md` (fixed 2026-09-24: temper off the heat, then warm gently without boiling; naan unlinked; takeout; wiki links (gravy, ginger/garlic paste); `#### To finish`; garam masala; sugar to taste with the almond powder, TODO removed)
+- [x] `recipes/butter-tarts.md` (fixed 2026-09-24: ice water in pastry; baking powder kept; case and units; converted to FORMAT.md; ¼ cup maple syrup in the filling, with a Mechanic line)
 - [x] `recipes/butternut-squash-curry.md` (fixed 2026-09-24: 140 g spinach per the source; soy sauce default; pan-browned; units)
-- [x] ! `recipes/butternut-squash-soup.md`
-    - Tagged `vegetarian` but the stock type isn't named. Say "vegetable stock" (or "chicken or vegetable") so the tag holds; the vegan note (L51) also needs veg stock and to skip the crème fraîche.
-    - Otherwise clear and well structured.
+- [x] `recipes/butternut-squash-soup.md` (fixed 2026-09-24: vegetable stock; vegan note skips the crème fraîche)
 - [x] `recipes/caesar-dressing.md` (fixed 2026-09-24: raw egg note; `vegetarian` tag dropped; oil ½–¾ cup)
 - [x] ! `recipes/canadian-chili.md`
     - Ingredients never used in the method: dried shiitakes (rehydrate? add the soaking liquid?), corn, cilantro/parsley, roasted garlic. Step 3 "Add other ingredients" is too vague.

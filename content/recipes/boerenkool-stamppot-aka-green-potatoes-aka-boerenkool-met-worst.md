@@ -1,44 +1,50 @@
 ---
-title: Boerenkool stamppot 
+title: Boerenkool stamppot
 tags: [mains, mashes]
 source: family
-aka: brittacole, green potatoes, Boerenkool Met Worst
+aka: brittacole, green potatoes, boerenkool met worst
 cuisine: Dutch
-prep_time: 15m
-cook_time: ~20m
+prep_time: 15 min
+cook_time: ~20 min
 draft: false
 ---
 
-This is a rustic farmer mash, a family recipe from one of the Dutch branches of our tribe. Roughly translated, it’s farmers cabbage hodgepodge, and is a combination of potatoes, cruciferous vegetables (in our version, kale), and dairy. 
+This is a rustic farmer mash, a family recipe from one of the Dutch branches of our tribe. Roughly translated, it's farmer's cabbage hodgepodge: a combination of potatoes, cruciferous vegetables (in our version, kale), and dairy.
 
-It is commonly served with sausage, often a medium grind rookworst.
+It's commonly served with sausage, often a medium-grind rookworst. We make it in a single large pot. Many online recipes use 3–4 pots, but for us it's comforting because it's so simple to make.
 
-## Ingredients:
+## Ingredients
 
-- 2 whole rookworst
-- 1 large tin/jar of stewed kale (from most Dutch grocers)
+- 1 tablespoon oil
 - 1 medium onion, diced
-- 1 medium bag of Yukon Gold potatoes, cleaned, and roughly diced (enough to fill ½ - ⅔ of your largest pot)
-- 1 cup cream or whole milk
-- 2-4 tablespoons of butter
-- Salt and pepper to taste
+- 2 whole rookworst (optional)
+- 1 medium bag of Yukon Gold potatoes, cleaned and roughly diced (enough to fill ½–⅔ of your largest pot)
+- 1 large tin or jar of stewed kale (from most Dutch grocers)
+- 2–3 tablespoons salt, for the cooking water
 - 2 bay leaves (optional)
-- 2 teaspoons of nutmeg (optional)
-- Vinegar (to serve with)
+- 250 ml (1 cup) cream or whole milk
+- 2–4 tablespoons butter
+- ¼ teaspoon nutmeg (optional)
+- Salt and pepper, to taste
+- Vinegar, to serve
 
-### Optional:
+## Method
 
-- Replace up to half of the potatoes with roughly chopped and washed cauliflower  
-    We call this “caulipots”, and it was a way to hide more cruciferous when the kids were younger
+Heat the oil in a large pot (6–8 L / 6–8 qt) and sauté the onion until soft. Add the whole rookworst, if using, and fry, flipping a few times.
 
-## Directions:
+Add the potatoes and cover with cold water. Add the kale with its brine, the salt, and the bay leaves.
 
-We make Boerenkool in a single, large pot. Many online recipes break the method down to use 3-4 pots, but it’s the type of meal for us that is comforting due to how simple it is to make.
+Bring to a boil, then reduce to a simmer. Cook until the potatoes are soft; they'll be about 95°C, and the rookworst will be over 80°C.
 
-1. Add onions to a large pot (6-8L/qt) with some oil and saute. Add whole rookwurst (if using), and fry flipping a few times.
-2. Add cleaned and chopped potatoes, cover with cold water, and add the container of kale and its brine. Add 2-3 tablespoons of salt.
-3. Bring to a boil, and reduce to a simmer. Cook until potatoes are soft (they’ll be ~95C, and the rookwurst will be > 80C).
-4. Remove rookwurst to a large cutting board, drain water carefully, and mash with butter and cream. Season to taste.
-5. Dice sausage (once it cools a bit) and add back to mash, combining. Serve in a bowl with an ample side of nice vinegar.
+Lift the rookworst onto a large cutting board. Drain the pot carefully and remove the bay leaves. Mash with the butter, cream, and nutmeg. Season to taste.
 
+Once the sausage has cooled a bit, dice it and stir it back into the mash.
 
+## To serve
+
+In a bowl, with an ample side of nice vinegar.
+
+## Variations
+
+### Caulipots
+Replace up to half the potatoes with roughly chopped, washed cauliflower. We called this "caulipots", a way to hide more cruciferous veg when the kids were younger.

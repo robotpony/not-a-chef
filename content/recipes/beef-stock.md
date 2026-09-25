@@ -3,41 +3,43 @@ title: Beef stock
 tags: [bases, stocks]
 source: family
 cuisine: French
-prep_time: 20m
-cook_time: ~2h
+prep_time: 20 min
+cook_time: ~2 hr
 draft: false
 ---
 
-This is a rich stock that uses bones leftover when buying and breaking down whole cuts.
+This is a rich stock that uses the bones left over when buying and breaking down whole cuts.
 
-## Ingredients:
+## Ingredients
 
-- 2-3kg beef bones (side cut is best, something like a knuckle or kneck is good too)
-- 2 yellow onions (250-350g)
-- 1 medium carrot (100g)
-- 1 large celery rib (90g)
+- 2–3 kg beef bones (side cut is best; knuckle or neck is good too)
+- 2 yellow onions (250–350 g)
+- 1 medium carrot (100 g)
+- 1 large celery rib (90 g)
 - 1 shallot
-- 2 cloves garlic
-- 2 tablespoons of tomato paste
+- 2 garlic cloves
+- 2 tablespoons tomato paste
 - 2 teaspoons black peppercorns
 - 3 bay leaves
-- 1 teaspoon (or a few sprigs) of thyme and rosemary
-- ~2 tablespoons Veg oil (to coat roastables)
-- ~5L water (to cover)
+- 1 teaspoon thyme and rosemary, or a few sprigs
+- ~2 tablespoons vegetable oil
+- ~5 L water, or enough to cover
 
-## Directions:
+## Method
 
-1. Roughly cut veg and toss with oil.
-2. In a 220C/450F oven, roast bones until browned, 30-60 minutes. Flip about half way through, adding the rough cut veg.
-3. Transfer to a pressure cooker, including any liquids and suc remaining on the pan. Add water and spices, and bring to a gentle simmer. Cook on high pressure for 45-100 minutes, depressurize using the slow method (for a clearer stock).
-4. Remove solids, strain. Sample stock in a small bowl with a pinch of salt or soy and note if stock is strong or not (for whatever you plan on using the stock for). Reduce the stock by 50% for freezing or use within 5 days refrigerated.
+Heat the oven to 220°C (450°F). Roughly cut the onions, carrot, celery, shallot, and garlic, and toss them with the oil.
 
-## Notes:
+Roast the bones until browned, 30–60 minutes. About halfway through, flip the bones and brush them with the tomato paste, so it browns in the fat from the bones. Add the vegetables to the pan.
 
-- The reduced stock should cool into a solid and gelatinous state. I don’t bother skimming off the fat as I use it for starting soups with a bit of extra flavour.
-- To speed up cooling, add a smaller pot filled with ice and water (or using a cooling paddle) 
+Transfer everything to a pressure cooker, including any liquid and fond left on the pan. Add the water, peppercorns, bay, and herbs, and bring to a gentle simmer. Cook at high pressure for 45–100 minutes, then let the pressure release slowly for a clearer stock.
 
+Lift out the solids and strain. Taste a little in a small bowl with a pinch of salt or soy, to judge whether it's strong enough for what you plan to use it for. Reduce by half for freezing, or refrigerate and use within 5 days.
 
-## Special equipment
+## Notes
 
-6L pressure cooker.
+- The reduced stock should set solid and gelatinous as it cools. I don't bother skimming off the fat, as I use it to start soups with a bit of extra flavour.
+- To speed up cooling, set a smaller pot filled with ice and water in the stock, or use a cooling paddle.
+
+## Equipment
+
+- 6 L (6 qt) pressure cooker

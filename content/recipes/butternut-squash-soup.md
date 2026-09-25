@@ -24,7 +24,7 @@ Roasting the squash and vegetables first concentrates their sugars and develops 
 - 240 ml (1 cup) carrots or yam, diced
 - 6 cloves garlic, smashed and peeled
 - 1 tablespoon olive oil
-- 1.5 L (6 cups) stock, plus more as needed
+- 1.5 L (6 cups) vegetable stock, plus more as needed
 - 2 tablespoons maple syrup
 - 2 tablespoons apple cider vinegar
 - 2 teaspoons salt, or to taste
@@ -48,4 +48,4 @@ With a spoon of crème fraîche or yogurt and something green. Good with fresh b
 
 - Keeps refrigerated 5 days. Freezes well.
 - Thyme or rosemary can replace the sage.
-- Vegan with neutral oil instead of butter.
+- Vegan with neutral oil instead of butter; skip the crème fraîche or yogurt when serving.

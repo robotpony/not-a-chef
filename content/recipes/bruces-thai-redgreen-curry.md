@@ -100,4 +100,4 @@ Even miso on its own is a good savoury base.
 
 ## Notes
 
-Mirepoix isn't authentic or needed; using stock is more typical.
+Thai curries build their base by sweating down the curry paste rather than a mirepoix. The two do a similar job, so the mirepoix here is optional.

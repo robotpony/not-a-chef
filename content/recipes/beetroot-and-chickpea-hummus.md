@@ -2,7 +2,7 @@
 title: Beetroot and chickpea hummus
 tags: [sauces, mediterranean, vegetarian, vegan, gluten-free]
 source: family
-servings: makes ~750ml
+servings: makes ~750 ml
 prep_time: 15 min
 cook_time: 45 min
 total_time: 1 hr
@@ -14,17 +14,17 @@ A bright red, earthy hummus. Makes about three grocery-store tubs' worth.
 
 ## Ingredients
 
-- 200g raw beetroot, cubed (or 200g already roasted)
-- 400g tin chickpeas, drained
+- 200 g raw beetroot, cubed (or 200 g already roasted)
+- 400 g tin chickpeas, drained
 - 3–4 cloves garlic, smashed and minced
-- 80–100ml tahini
-- 60ml lemon juice (about 2 lemons)
+- 80–100 ml tahini
+- 60 ml lemon juice (about 2 lemons)
 - 2 teaspoons sea salt or kosher salt
 - ¼ teaspoon ground cumin
 - ¼ teaspoon ground coriander
 - ⅛ teaspoon freshly cracked black pepper
 - a few ice cubes
-- 3 tablespoons extra virgin olive oil, plus more to drizzle
+- 3 tablespoons extra virgin olive oil, plus more for roasting and to drizzle
 
 ## Method
 

@@ -3,7 +3,7 @@ title: Beetroot dip
 tags: [sauces, mediterranean, quick, vegetarian, vegan, gluten-free]
 source: original
 date: 2025-05-31
-servings: 6–8 (makes ~600ml)
+servings: 6–8 (makes ~600 ml)
 prep_time: 10 min
 total_time: 10 min
 cuisine: Mediterranean
@@ -14,14 +14,14 @@ This is a fresh, delicious dip for pita and vegetables.
 
 ## Ingredients
 
-- 430g canned chickpeas, drained and rinsed
-- 140g cooked beets
+- 430 g canned chickpeas, drained
+- 140 g cooked beets
 - 2 teaspoons dried or fresh oregano
-- 30g extra virgin olive oil (2 tablespoons)
+- 30 g extra virgin olive oil (2 tablespoons)
 - ½ teaspoon minced garlic
 - 1 medium lemon, zest finely grated and juiced
-- black pepper
-- salt
+- Black pepper
+- Salt
 
 ## Method
 
