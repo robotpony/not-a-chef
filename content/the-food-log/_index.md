@@ -1,6 +1,6 @@
 ---
 title: The Food Log
-description: What we're cooking, what we want to try next, and notes on what worked.
+description: Working notes from the kitchen, including the tests that didn't work.
 cascade:
   showDate: false
   showReadingTime: false
