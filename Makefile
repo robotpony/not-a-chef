@@ -1,12 +1,12 @@
-.PHONY: build preview deploy
+.PHONY: build preview deploy publish
 
-# --cleanDestinationDir: drop anything in public/ this build didn't write
-# (old drafts, deleted pages) so deploy's rsync --delete can't ship it.
 build:
-	hugo --minify --cleanDestinationDir
+	tools/publish.sh build
 
 preview:
 	tools/preview.sh
 
-deploy: build
-	tools/deploy.sh
+deploy: publish
+
+publish:
+	tools/publish.sh

@@ -1,7 +1,13 @@
 #!/usr/bin/env bash
 # Deploy the built Hugo site (public/) to the server via rsync.
 # Reads [deploy] host / remote_path from tools/config.toml.
+# Pass --dry-run to list what would change without touching the server.
 set -euo pipefail
+
+RSYNC_FLAGS=(-avz --delete)
+if [[ "${1:-}" == "--dry-run" ]]; then
+  RSYNC_FLAGS+=(--dry-run)
+fi
 
 cd "$(dirname "$0")/.."
 
@@ -35,6 +41,12 @@ if [[ ! -d public ]]; then
   exit 1
 fi
 
-echo "Deploying public/ -> ${HOST}:${REMOTE_PATH}"
-rsync -avz --delete public/ "${HOST}:${REMOTE_PATH}/"
-echo "Deploy complete."
+if [[ " ${RSYNC_FLAGS[*]} " == *" --dry-run "* ]]; then
+  echo "Dry run: public/ -> ${HOST}:${REMOTE_PATH} (nothing will be changed)"
+  rsync "${RSYNC_FLAGS[@]}" public/ "${HOST}:${REMOTE_PATH}/"
+  echo "Dry run complete."
+else
+  echo "Deploying public/ -> ${HOST}:${REMOTE_PATH}"
+  rsync "${RSYNC_FLAGS[@]}" public/ "${HOST}:${REMOTE_PATH}/"
+  echo "Deploy complete."
+fi

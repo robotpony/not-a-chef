@@ -124,9 +124,9 @@ Builds the site and deploys to the self-hosted server.
 /publish
 ```
 
-- Runs `hugo build`
-- Runs the deploy script (`tools/deploy.sh`)
+- Runs `tools/publish.sh`: builds with `hugo --minify --cleanDestinationDir`, refuses to ship a `public/` containing dev-server output (localhost URLs, livereload), then runs `tools/deploy.sh` (rsync)
 - Reports build output and any errors
+- `tools/publish.sh dry-run` shows what rsync would change without deploying; `build`, `check`, and `deploy` run the steps individually
 
 ---
 
