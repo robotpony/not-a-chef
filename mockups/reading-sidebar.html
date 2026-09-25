@@ -148,6 +148,45 @@
   .mobile-toc{ display:none; font-family:'Libre Franklin',sans-serif; font-size:.82rem; border:1px solid var(--border); border-radius:4px; padding:8px 12px; color:var(--ink-muted); margin-bottom:18px; background:var(--surface); }
   .phone .mobile-toc{ display:block; }
   @media (max-width:900px){ .mobile-toc{ display:block; } }
+
+  /* ---------- "On this page" density variants (2026-09-25) ---------- */
+  .toc-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(15rem, 1fr)); gap:28px 32px; align-items:start; }
+  .toc-panel{ min-width:0; }
+  .toc-panel > h3{ font-family:'Libre Franklin',sans-serif; font-size:.9rem; margin:0 0 2px; }
+  .toc-panel > p{ font-family:'Libre Franklin',sans-serif; font-size:.78rem; color:var(--ink-muted); line-height:1.45; margin-bottom:6px; min-height:5.8em; }
+  .toc-panel .measure{ font-family:'IBM Plex Mono',monospace; font-size:.7rem; color:var(--accent-strong); margin-bottom:14px; }
+  .toc-panel .rail-section{ max-width:18.6rem; }
+
+  /* A: tight. Same shape, less vertical space, sections carry weight. */
+  .toc-a{ display:flex; flex-direction:column; }
+  .toc-a a{ font-family:'Libre Franklin',sans-serif; font-size:.84rem; line-height:1.3; color:var(--ink); text-decoration:none; padding:1px 0; }
+  .toc-a a.top{ font-weight:600; }
+  .toc-a a.top:not(:first-child){ margin-top:6px; }
+  .toc-a a.sub{ padding-left:12px; font-size:.8rem; color:var(--ink-muted); }
+  .toc-a a:hover{ color:var(--accent-strong); }
+  .toc-a a.active{ color:var(--accent-strong); }
+
+  /* B: rail. Subsections hang off a hairline; the current one is marked on it. */
+  .toc-b{ display:flex; flex-direction:column; }
+  .toc-b a{ font-family:'Libre Franklin',sans-serif; line-height:1.3; text-decoration:none; }
+  .toc-b a.top{ font-size:.84rem; font-weight:600; color:var(--ink); padding:1px 0; }
+  .toc-b a.top:not(:first-child){ margin-top:6px; }
+  .toc-b .group{ display:flex; flex-direction:column; border-left:1px solid var(--border-strong); margin:2px 0 0 1px; }
+  .toc-b a.sub{ font-size:.8rem; color:var(--ink-muted); padding:1px 0 1px 11px; margin-left:-1px; border-left:2px solid transparent; }
+  .toc-b a:hover{ color:var(--accent-strong); }
+  .toc-b a.sub.active{ border-left-color:var(--accent); color:var(--accent-strong); font-weight:500; }
+  .toc-b a.top.active-parent{ color:var(--accent-strong); }
+
+  /* C: collapsed. Top level only, with a count; the section you're in opens. */
+  .toc-c{ display:flex; flex-direction:column; }
+  .toc-c a{ font-family:'Libre Franklin',sans-serif; line-height:1.3; text-decoration:none; }
+  .toc-c a.top{ display:flex; justify-content:space-between; gap:12px; align-items:baseline; font-size:.84rem; font-weight:500; color:var(--ink); padding:3px 0; }
+  .toc-c a.top .n{ font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums; font-size:.7rem; font-weight:400; color:var(--ink-faint); }
+  .toc-c a.top.active-parent{ color:var(--accent-strong); font-weight:600; }
+  .toc-c .group{ display:flex; flex-direction:column; border-left:1px solid var(--border-strong); margin:1px 0 5px 1px; }
+  .toc-c a.sub{ font-size:.8rem; color:var(--ink-muted); padding:1px 0 1px 11px; margin-left:-1px; border-left:2px solid transparent; }
+  .toc-c a.sub.active{ border-left-color:var(--accent); color:var(--accent-strong); font-weight:500; }
+  .toc-c a:hover{ color:var(--accent-strong); }
 </style>
 
 <div class="page">
@@ -188,6 +227,43 @@
     <aside class="rail" id="rail" aria-label="Sidebar"></aside>
   </div>
 </div>
+
+<section class="band" id="toc-density">
+  <h2>"On this page": three denser versions</h2>
+  <p class="band-dek">The longest real case: <code>food-video-filming-techniques</code>, 9 sections and 29 subsections. Each panel is the sidebar module at full column width, with the reader partway through "Smash cut to consequence" (B and C show that; the live site doesn't track it yet). Heights are measured from the rendered panels.</p>
+  <div class="toc-grid">
+    <div class="toc-panel">
+      <h3>Now</h3>
+      <p>Every row is a padded hover target. Sections and subsections differ only by indent and a slightly fainter grey.</p>
+      <div class="measure" data-measure="now"></div>
+      <div class="rail-section" id="toc-now"><h2>On this page</h2><div class="browse-list"></div></div>
+    </div>
+    <div class="toc-panel">
+      <h3>A. Tight</h3>
+      <p>Same list, no hover pills. Rows at 1px padding, sections bold with a small gap above, so the list reads as groups.</p>
+      <div class="measure" data-measure="a"></div>
+      <div class="rail-section" id="toc-a"><h2>On this page</h2><div class="toc-a"></div></div>
+    </div>
+    <div class="toc-panel">
+      <h3>B. Rail</h3>
+      <p>A plus a hairline down each group's subsections. The current subsection is marked on the line, and its section turns accent.</p>
+      <div class="measure" data-measure="b"></div>
+      <div class="rail-section" id="toc-b"><h2>On this page</h2><div class="toc-b"></div></div>
+    </div>
+    <div class="toc-panel">
+      <h3>C. Collapsed (chosen, 2026-09-25)</h3>
+      <p>Sections only, each with its subsection count. Clicking the count opens that section's subsections as B's rail. Shown here with Editorial open.</p>
+      <div class="measure" data-measure="c"></div>
+      <div class="rail-section" id="toc-c"><h2>On this page</h2><div class="toc-c"></div></div>
+    </div>
+  </div>
+  <div class="notes" style="margin-top:24px"><ul>
+    <li><b>A is CSS only.</b> Changes to <code>.reading-sidebar .browse-list</code> in <code>custom.css</code> plus a <code>top</code> class on level-2 links in the partial.</li>
+    <li><b>B is A plus markup.</b> The partial wraps each section's subsections in a <code>.group</code>. The active marker needs a scroll listener; the Blowfish <code>smartTOC</code> script already does this for its own TOC and could be pointed at this list. Without it, B is A with a line.</li>
+    <li><b>C is click to expand, not scroll tracking.</b> The sidebar isn't sticky, so a section opening as you scroll would happen off-screen. The count is a toggle button; the section name still jumps to the section. Pages with 12 headings or fewer skip collapsing and show every subsection. Built 2026-09-25.</li>
+    <li>Hover is a colour change in all three, not a background pill; at 1px row padding a pill looks cramped.</li>
+  </ul></div>
+</section>
 
 <section class="band">
   <h2>What goes in it, by page</h2>
@@ -381,4 +457,43 @@ tt.addEventListener('click', () => { m = (m + 1) % 3; const r = document.documen
   if (modes[m] === 'system') r.removeAttribute('data-theme'); else r.setAttribute('data-theme', modes[m]);
   tt.textContent = 'Theme: ' + modes[m]; });
 const hash = location.hash.slice(1); show(pages[hash] ? hash : 'essay');
+
+// "On this page" density variants: headings from food-video-filming-techniques.md.
+const tocData = [
+  ['Categories', []],
+  ['Editorial', ['Match cut on action', 'Action cut compression', 'Smash cut to consequence', 'Motivated whip pan']],
+  ['Sound design', ['Percussive sound design', 'Sound bridge across time', 'Comic sound punctuation']],
+  ['Structural', ['Spatial geography montage', 'Recurring motif callback', 'Title cards and chapter typography']],
+  ['Visual comedy', ['Hold on reaction', 'Deadpan insert shot', 'Parallel action rack', 'Deadpan blocking']],
+  ['Temporal', ['Step-print freeze', 'Non-linear reveal structure', 'Expressive time-lapse integration']],
+  ['Compositional', ['Symmetrical framing', 'Lateral tracking shot', 'Colour palette as episode identity']],
+  ['Strategic notes', ['Highest leverage / lowest production cost', 'Most unexplored territory in food video', 'Production cost cliff', 'Using both directors together', 'Recommended starting stack (low cost, high signal)']],
+  ['Glossary', ['Abbreviations', 'Production terms', 'Films referenced']]
+];
+const ACTIVE = 'Smash cut to consequence';
+const link = (t, cls) => `<a href="#" class="${cls}${t === ACTIVE ? ' active' : ''}">${t}</a>`;
+const hasActive = subs => subs.includes(ACTIVE);
+
+document.querySelector('#toc-now .browse-list').innerHTML =
+  tocData.map(([h, subs]) => `<a href="#">${h}</a>` + subs.map(s => `<a class="sub" href="#">${s}</a>`).join('')).join('');
+document.querySelector('#toc-a .toc-a').innerHTML =
+  tocData.map(([h, subs]) => link(h, 'top') + subs.map(s => link(s, 'sub')).join('')).join('');
+document.querySelector('#toc-b .toc-b').innerHTML =
+  tocData.map(([h, subs]) => `<a href="#" class="top${hasActive(subs) ? ' active-parent' : ''}">${h}</a>` +
+    (subs.length ? `<div class="group">${subs.map(s => link(s, 'sub')).join('')}</div>` : '')).join('');
+document.querySelector('#toc-c .toc-c').innerHTML =
+  tocData.map(([h, subs]) => `<a href="#" class="top${hasActive(subs) ? ' active-parent' : ''}">${h}${subs.length ? `<span class="n">${subs.length}</span>` : ''}</a>` +
+    (hasActive(subs) ? `<div class="group">${subs.map(s => link(s, 'sub')).join('')}</div>` : '')).join('');
+
+function measureTocs(){
+  const ids = { now: 'toc-now', a: 'toc-a', b: 'toc-b', c: 'toc-c' };
+  const base = document.getElementById('toc-now').offsetHeight;
+  for (const [k, id] of Object.entries(ids)) {
+    const h = document.getElementById(id).offsetHeight;
+    document.querySelector(`[data-measure="${k}"]`).textContent =
+      k === 'now' ? `${h}px tall` : `${h}px tall, ${Math.round((1 - h / base) * 100)}% shorter`;
+  }
+}
+document.fonts.ready.then(measureTocs);
+window.addEventListener('resize', measureTocs);
 </script>

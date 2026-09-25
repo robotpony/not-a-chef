@@ -822,6 +822,13 @@ footer.pt-8.max-w-prose { padding-top: 0; }
 .prose h3 { margin-bottom: 0.45em; }
 .prose h4 { margin-bottom: 0.375em; }
 
+/* Horizontal rules: Tailwind Typography gives them 3em above and below,
+ * and the next heading's own top margin stacks on that. Cut to a thin
+ * divider with minimal space, and let the rule be the only gap by zeroing
+ * whatever follows it. Opacity 40% below the default border colour. */
+.prose hr { margin-top: 1em; margin-bottom: 1em; opacity: .6; }
+.prose hr + * { margin-top: 0; }
+
 /* Related recipes, at the end of a recipe/essay's prose column
  * (layouts/partials/related.html overrides Blowfish's to add these
  * wrapping classes). Same divider language as .article-pagination right
@@ -1131,7 +1138,27 @@ a.comp-card:hover .comp-card-label { color: var(--accent-strong); }
 .recipe-sidebar .search-box:hover { border-color: var(--accent); }
 .reading-sidebar .browse-list { margin: 0 -8px; }
 .reading-sidebar .browse-list a { font-size: .86rem; line-height: 1.35; padding: 5px 8px; align-items: baseline; }
-.reading-sidebar .browse-list a.sub { padding-left: 20px; font-size: .82rem; color: var(--ink-muted); }
+/* "On this page" (variant C in mockups/reading-sidebar.html): sections with
+ * a subsection count that opens a hairline rail of subsections. Rows are
+ * tight (1px), so hover is a colour change, not .browse-list's pill. */
+.reading-sidebar .rs-toc { display: flex; flex-direction: column; font-family: 'Libre Franklin', sans-serif; line-height: 1.3; }
+.reading-sidebar .rs-toc a { color: var(--ink); text-decoration: none; }
+.reading-sidebar .rs-toc a:hover { color: var(--accent-strong); }
+.reading-sidebar .rs-toc-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: .84rem; font-weight: 500; padding: 3px 0; }
+.reading-sidebar .rs-toc-toggle {
+  flex-shrink: 0; font-family: 'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums;
+  font-size: .7rem; color: var(--ink-faint); background: none; border: 0; padding: 0 0 0 8px; cursor: pointer;
+}
+.reading-sidebar .rs-toc-toggle[hidden] { display: none; }
+.reading-sidebar .rs-toc-toggle::after { content: "\203A"; display: inline-block; margin-left: 5px; transition: transform .15s; }
+.reading-sidebar .rs-toc-toggle[aria-expanded="true"]::after { transform: rotate(90deg); }
+.reading-sidebar .rs-toc-toggle:hover { color: var(--accent-strong); }
+.reading-sidebar .rs-toc-top:has(.rs-toc-toggle[aria-expanded="true"]) a { color: var(--accent-strong); font-weight: 600; }
+.reading-sidebar .rs-toc-group { display: flex; flex-direction: column; border-left: 1px solid var(--border-strong); margin: 1px 0 5px 1px; }
+.reading-sidebar .rs-toc-group[hidden] { display: none; }
+.reading-sidebar .rs-toc-group a { font-size: .8rem; color: var(--ink-muted); padding: 1px 0 1px 11px; }
+.reading-sidebar .rs-toc-group a:hover { color: var(--accent-strong); }
+@media (prefers-reduced-motion: reduce) { .reading-sidebar .rs-toc-toggle::after { transition: none; } }
 .reading-sidebar .browse-list a[aria-current="page"] { background: var(--accent-soft); color: var(--accent-strong); font-weight: 600; }
 .reading-sidebar .browse-list a:hover .n,
 .reading-sidebar .browse-list a[aria-current="page"] .n { color: var(--accent-strong); }

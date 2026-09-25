@@ -1,5 +1,6 @@
-// Sidebar behaviour: section relocation, the mobile toggle, and the
-// frontmatter meta rail's live Serves value.
+// Sidebar behaviour: section relocation, the mobile toggle, the
+// frontmatter meta rail's live Serves value, and the reading sidebar's
+// "On this page" section toggles.
 //
 // Split out of ingredients.js so the sidebar can work on pages that have
 // no ingredient list. Everything here is driven by markup, not page type:
@@ -113,11 +114,33 @@
     });
   }
 
+  // --- On this page toggles -----------------------------------------------
+  //
+  // Reading sidebar "On this page" (partials/reading-sidebar.html): on long
+  // pages each section with subsections gets a count button. The markup
+  // ships open with the buttons hidden, so without JS every subsection
+  // stays reachable; this collapses the groups and shows the buttons.
+  function initTocToggles() {
+    document.querySelectorAll('.rs-toc-toggle').forEach(function (button) {
+      var group = document.getElementById(button.getAttribute('aria-controls'));
+      if (!group) return;
+      group.hidden = true;
+      button.setAttribute('aria-expanded', 'false');
+      button.hidden = false;
+      button.addEventListener('click', function () {
+        var open = group.hidden;
+        group.hidden = !open;
+        button.setAttribute('aria-expanded', String(open));
+      });
+    });
+  }
+
   function init() {
     var article = document.querySelector('.article-content');
     if (article) moveSidebarSections(article);
     initServings();
     initSidebarToggle();
+    initTocToggles();
   }
 
   if (document.readyState === 'loading') {

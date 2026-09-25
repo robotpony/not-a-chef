@@ -59,10 +59,41 @@
       </div>
     {{ end }}
   {{ else if and (not $isAbout) (gt (len $headings) 1) }}
+    {{/* Grouped: each h2 with the h3s under it (mockups/reading-sidebar.html,
+      "On this page" variant C). An h3 before any h2 stands alone as a
+      section. Long pages (over 12 headings) get a toggle per section,
+      which automagic-sidebar.js's initTocToggles collapses on load; short
+      ones, and pages without JS, show every subsection. */}}
+    {{ $groups := slice }}
+    {{ $cur := false }}
+    {{ $subs := slice }}
+    {{ range $headings }}
+      {{ if or (eq .level 2) (not $cur) }}
+        {{ with $cur }}{{ $groups = $groups | append (dict "h" . "subs" $subs) }}{{ end }}
+        {{ $cur = . }}
+        {{ $subs = slice }}
+      {{ else }}
+        {{ $subs = $subs | append . }}
+      {{ end }}
+    {{ end }}
+    {{ with $cur }}{{ $groups = $groups | append (dict "h" . "subs" $subs) }}{{ end }}
+    {{ $collapse := gt (len $headings) 12 }}
     <div class="rs-section hidden lg:block">
       <h2 class="rs-label">On this page</h2>
-      <div class="browse-list">
-        {{ range $headings }}<a href="#{{ .id }}"{{ if eq .level 3 }} class="sub"{{ end }}>{{ .title }}</a>{{ end }}
+      <div class="rs-toc">
+        {{ range $i, $g := $groups }}
+          <div class="rs-toc-top">
+            <a href="#{{ $g.h.id }}">{{ $g.h.title }}</a>
+            {{ if and $collapse $g.subs }}
+              <button type="button" class="rs-toc-toggle" aria-expanded="true" aria-controls="rs-toc-{{ $i }}" aria-label="{{ $g.h.title }}: {{ len $g.subs }} subsections" hidden>{{ len $g.subs }}</button>
+            {{ end }}
+          </div>
+          {{ with $g.subs }}
+            <div class="rs-toc-group" id="rs-toc-{{ $i }}">
+              {{ range . }}<a href="#{{ .id }}">{{ .title }}</a>{{ end }}
+            </div>
+          {{ end }}
+        {{ end }}
       </div>
     </div>
   {{ end }}
