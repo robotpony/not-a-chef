@@ -852,25 +852,6 @@
       });
     }
 
-    // The sidebar's Serves meta row (single.html) is plain server-rendered
-    // text, not a .qty span — it isn't a quantity in an ingredient/method
-    // sense, just a frontmatter fact, but it should still track the scale
-    // slider. Only touched when the frontmatter value is a bare number
-    // (data-servings-base); a descriptive value like "4–6" or "1 loaf"
-    // (FORMAT.md allows both) can't be scaled arithmetically and is left
-    // exactly as written.
-    function applyServings() {
-      var el = document.getElementById('recipe-meta-servings');
-      if (!el) return;
-      var raw = el.dataset.servingsBase;
-      // A strict whole-string match, not just isNaN(parseFloat(...)) — that
-      // check passes "4-6" (parseFloat reads its leading "4" and stops,
-      // silently truncating a real range like braised-red-cabbage's
-      // servings instead of leaving it alone).
-      if (!/^\d+(\.\d+)?$/.test(raw)) return;
-      el.textContent = String(Math.round(parseFloat(raw) * state.scale));
-    }
-
     function apply() {
       document.querySelectorAll('.qty').forEach(function (qty) {
         renderQty(qty, state.scale, state.units);
@@ -878,7 +859,8 @@
       document.querySelectorAll('.temp').forEach(function (temp) {
         renderTemp(temp, state.units);
       });
-      applyServings();
+      // The sidebar's Serves row listens for this (automagic-sidebar.js).
+      document.dispatchEvent(new CustomEvent('recipe:scale', { detail: { scale: state.scale } }));
       syncControls();
     }
 
@@ -923,64 +905,6 @@
     return details;
   }
 
-  // --- Sidebar relocation (prototype) -----------------------------------
-  //
-  // Mechanic / To serve / Notes are simple optional top-level sections
-  // (FORMAT.md) — render-heading.html flags each one's H2 with
-  // data-sidebar-heading so this can walk forward to the next H2 (same
-  // "walk from a marked heading" approach as the ingredient/method walks
-  // above, for the same reason: Hugo's heading-only render hook has no
-  // "end of section" hook to close a template-level wrapper around). The
-  // matched heading + everything after it up to the next H2 is moved
-  // (not copied) into the matching slot single.html already laid out;
-  // slots with nothing to show stay hidden.
-  function moveSidebarSections(article, sidebar) {
-    if (!sidebar) return;
-    var slots = {};
-    sidebar.querySelectorAll('[data-sidebar-slot]').forEach(function (el) {
-      slots[el.dataset.sidebarSlot] = el;
-    });
-
-    article.querySelectorAll('h2[data-sidebar-heading]').forEach(function (h2) {
-      var slot = slots[h2.dataset.sidebarHeading];
-      if (!slot) return;
-      var nodes = [h2];
-      var el = h2.nextElementSibling;
-      while (el && el.tagName !== 'H2') {
-        nodes.push(el);
-        el = el.nextElementSibling;
-      }
-      nodes.forEach(function (node) { slot.appendChild(node); });
-    });
-
-    // Notes and Equipment/Hardware both render as a plain <ul> today —
-    // give them the em-dash-bullet list style now that they live in the
-    // sidebar rather than the prose flow (mockups/STYLE.md's "Notes list"
-    // component; Equipment/Hardware is the same shape of content — a flat
-    // reference list — so it gets the same treatment rather than a second
-    // bullet style).
-    ['notes', 'equipment'].forEach(function (key) {
-      var list = slots[key] && slots[key].querySelector('ul');
-      if (list) list.classList.add('notes-list');
-    });
-
-    // Mechanic's prose becomes the accent-bordered callout box
-    // (mockups/STYLE.md's "Mechanic callout") now that it's off on its
-    // own in the sidebar instead of opening the article body.
-    if (slots.mechanic && slots.mechanic.children.length > 1) {
-      var box = document.createElement('div');
-      box.className = 'mechanic';
-      var heading = slots.mechanic.firstElementChild;
-      while (heading.nextSibling) box.appendChild(heading.nextSibling);
-      slots.mechanic.appendChild(box);
-    }
-
-    Object.keys(slots).forEach(function (key) {
-      var slot = slots[key];
-      if (slot.hasChildNodes()) slot.hidden = false;
-    });
-  }
-
   // --- Family history blockquotes (intro section only) -------------------
   //
   // A blockquote in a recipe's intro (the prose before the first H2 —
@@ -990,7 +914,7 @@
   // publish to anonymous visitors — sign-in is a future feature, so for
   // now these are just hidden client-side rather than left server-rendered
   // for anyone to read in the page source. `.hidden`, not a CSS class,
-  // matches how the sidebar slots above are hidden/shown.
+  // matches how the sidebar slots are hidden/shown (automagic-sidebar.js).
   function hideFamilyHistory(article) {
     var el = article.firstElementChild;
     while (el && el.tagName !== 'H2') {
@@ -1022,9 +946,6 @@
 
     hideFamilyHistory(root);
     hideHistorySections(root);
-
-    var sidebar = document.getElementById('recipe-sidebar');
-    moveSidebarSections(root, sidebar);
 
     var headings = root.querySelectorAll('h2[data-ing-heading="true"]');
     headings.forEach(function (h2) {
@@ -1076,24 +997,6 @@
       headings[0].appendChild(buildPopupMenu(controller));
     }
     controller.apply();
-
-    initSidebarToggle();
-  }
-
-  // Mobile-only collapse for the recipe sidebar (single.html's
-  // .recipe-sidebar-wrap / .recipe-sidebar-toggle) — see that file's
-  // comment for why this is a plain button + class toggle rather than
-  // <details>. No-ops (and stays hidden via the lg: media query in
-  // custom.css) above the lg breakpoint, where the button is display:none
-  // and the sidebar is always shown regardless of `.is-open`.
-  function initSidebarToggle() {
-    var toggle = document.querySelector('.recipe-sidebar-toggle');
-    var wrap = document.querySelector('.recipe-sidebar-wrap');
-    if (!toggle || !wrap) return;
-    toggle.addEventListener('click', function () {
-      var open = wrap.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', String(open));
-    });
   }
 
   if (document.readyState === 'loading') {

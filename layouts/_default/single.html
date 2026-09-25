@@ -55,7 +55,7 @@
         reading sidebar below instead; they keep only the mobile half of
         this TOC (lg:hidden), since the sidebar's "On this page" is
         desktop-only. */}}
-      {{ $reading := or (in (slice "essays" "reference" "the-food-log") .Section) (and (eq .Section "") (eq .Kind "page")) }}
+      {{ $reading := eq (partial "sidebar/kind.html" .) "reading" }}
       {{ if and $showToc (ne .Section "recipes") }}
         <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs{{ if $reading }} lg:hidden{{ end }}">
           <div class="toc ps-5 print:hidden lg:sticky {{ $topClass }}">
@@ -84,6 +84,13 @@
           {{ $md = replaceRE `\[\[([^\]|]+)\|([^\]]+)\]\]` `[$2](<$1>)` $md }}
           {{ $md = replaceRE `\[\[([^\]]+)\]\]` `[$1](<$1>)` $md }}
           {{ .RenderString $md }}
+          {{/* Sidebar first: its DOMContentLoaded handler has to run
+            before ingredients.js's (see automagic-sidebar.js). Every page
+            with a sidebar gets it, recipe or reading. */}}
+          {{ if partial "sidebar/kind.html" . }}
+            {{ $sidebarJS := resources.Get "js/automagic-sidebar.js" | resources.Minify | resources.Fingerprint "sha256" }}
+            <script src="{{ $sidebarJS.RelPermalink }}" integrity="{{ $sidebarJS.Data.Integrity }}" defer></script>
+          {{ end }}
           {{ if eq .Section "recipes" }}
             {{ $ingredientsJS := resources.Get "js/ingredients.js" | resources.Minify | resources.Fingerprint "sha256" }}
             <script src="{{ $ingredientsJS.RelPermalink }}" integrity="{{ $ingredientsJS.Data.Integrity }}" defer></script>
@@ -127,7 +134,7 @@
       {{/* Sidebar prototype (recipe-sidebar-prototype branch): recipes get
         a dedicated sidebar instead of the generic jump-to TOC above —
         To serve, Mechanic, and Notes are relocated here client-side by
-        assets/js/ingredients.js (moveSidebarSections), driven by the
+        assets/js/automagic-sidebar.js (moveSidebarSections), driven by the
         data-sidebar-heading markers render-heading.html sets. Scale and
         Units both stay with the ingredient list (buildPopupMenu in
         ingredients.js) rather than living here — tried Units-only in the
@@ -151,7 +158,7 @@
         children (as confirmed in devtools) and Chrome still lays the
         closed instance out at ~0 width, so there's no reliable pure-CSS
         way to keep one `<details>` open at `lg:` regardless of its
-        `open` attribute. assets/js/ingredients.js's initSidebarToggle
+        `open` attribute. assets/js/automagic-sidebar.js's initSidebarToggle
         drives the button. See PLAN.md/STYLE.md before promoting this out
         of prototype. */}}
       {{/* Reading sidebar (mockups/reading-sidebar.html): after the main
@@ -202,15 +209,15 @@
               aka, servings, prep/cook/total time, and author when a recipe
               sets one (no recipe does yet; FORMAT.md has no `author` field, this repo
               being a single-author family cookbook — the row is here for
-              whenever that changes, not fabricated for now). Date was here
-              too but didn't earn its place in a compact column and got cut.
+              whenever that changes, not fabricated for now). Date and
+              Updated close the rail (partials/sidebar/date-rows.html).
               Server-rendered directly, unlike the other slots below, since
               it's plain frontmatter rather than content that has to be
               walked out of the article body. Serves gets a
-              data-servings-base hook so assets/js/ingredients.js can keep
+              data-servings-base hook so assets/js/automagic-sidebar.js can keep
               it in step with the scale slider (parseable numbers only — a
               descriptive value like "4–6" is left as written, see
-              applyServings). */}}
+              initServings). */}}
             {{ $metaRows := slice }}
             {{/* Source: `original`/`family`/a book title render as plain
               text, same as every other meta row. A URL (bare domain like
@@ -239,6 +246,7 @@
             {{ with .Params.cook_time }}{{ $metaRows = $metaRows | append (dict "label" "Cook" "value" .) }}{{ end }}
             {{ with .Params.total_time }}{{ $metaRows = $metaRows | append (dict "label" "Total" "value" .) }}{{ end }}
             {{ with .Params.author }}{{ $metaRows = $metaRows | append (dict "label" "Author" "value" .) }}{{ end }}
+            {{ $metaRows = $metaRows | append (partial "sidebar/date-rows.html" .) }}
             {{ if $metaRows }}
               <div class="recipe-meta">
                 {{ range $metaRows }}

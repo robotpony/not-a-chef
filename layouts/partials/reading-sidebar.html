@@ -3,20 +3,39 @@
   guides, the Food Log, and About. Rendered by _default/single.html after
   the main column, so it sits level with the top of the body on desktop
   (the title block is above both columns) and falls below the article on
-  mobile. Search and "Cook tonight" are on every page; the other modules
-  are scoped to the page type and only render when they have something
-  to show.
+  mobile. Search is on every page; the other modules are scoped to the
+  page type and only render when they have something to show. "Cook
+  tonight" tag pills used to close every page; removed 2026-09-25 to
+  match the recipe sidebar, which never had them.
 */}}
 {{ $page := . }}
 {{ $section := .Section }}
 {{ $isAbout := and (eq .Section "") (eq .Kind "page") }}
 {{ $recipes := where site.RegularPages "Section" "recipes" }}
-{{ $headings := partial "reading-sidebar/headings.html" .Fragments.Headings }}
+{{/* Sections automagic-sidebar.js moves into the slots below (Notes,
+  Mechanic, ...) are dropped from "On this page": their anchors end up in
+  the sidebar itself, hidden, so a jump link would go nowhere. */}}
+{{ $headings := slice }}
+{{ range partial "reading-sidebar/headings.html" .Fragments.Headings }}
+  {{ $norm := .title | strings.TrimSuffix ":" | strings.TrimSpace | lower }}
+  {{ if not (and (eq .level 2) (partial "sidebar/heading-slot.html" $norm)) }}
+    {{ $headings = $headings | append . }}
+  {{ end }}
+{{ end }}
 
 <div class="reading-sidebar not-prose">
   <div class="rs-section">
     {{ partial "search-box.html" "Search recipes, essays, guides" }}
   </div>
+
+  {{/* Date and Updated, in the recipe sidebar's meta rail style. */}}
+  {{ with partial "sidebar/date-rows.html" . }}
+    <div class="recipe-meta">
+      {{ range . }}
+        <div class="recipe-meta-row"><span class="recipe-meta-label">{{ .label }}</span><span class="recipe-meta-value">{{ .value }}</span></div>
+      {{ end }}
+    </div>
+  {{ end }}
 
   {{/* On this page: desktop only. On mobile, Blowfish's collapsible TOC
     already sits at the top of the article (see single.html). The Food Log
@@ -41,6 +60,15 @@
         {{ range $headings }}<a href="#{{ .id }}"{{ if eq .level 3 }} class="sub"{{ end }}>{{ .title }}</a>{{ end }}
       </div>
     </div>
+  {{ end }}
+
+  {{/* Page sections relocated from the article body by
+    assets/js/automagic-sidebar.js, same slots as the recipe sidebar
+    (single.html). Hidden until filled; most pages fill none. rs-section
+    for the reading sidebar's spacing, recipe-sidebar-section for the
+    heading/Notes-list/Mechanic styling the two sidebars share. */}}
+  {{ range slice "mechanic" "to-serve" "variations" "equipment" "notes" }}
+    <div class="rs-section recipe-sidebar-section" data-sidebar-slot="{{ . }}" hidden></div>
   {{ end }}
 
   {{/* Recipes this page links to with [[wiki links]], matched to recipe
@@ -152,21 +180,4 @@
       </div>
     {{ end }}
   {{ end }}
-
-  {{/* Cook tonight: recipe tags from params.toml readingSidebar.cookTonight,
-    each with its recipe count, so a reader can get from a story to
-    something to make. */}}
-  {{ $tags := site.Params.readingSidebar.cookTonight | default (slice "quick" "make-ahead" "vegetarian" "weeknight") }}
-  <div class="rs-section">
-    <h2 class="rs-label">Cook tonight</h2>
-    <div class="filter-row">
-      {{ range $tags }}
-        {{ $n := len (index site.Taxonomies.tags (. | urlize)) }}
-        {{ if $n }}
-          <a class="filter-pill" href="{{ printf "tags/%s/" (. | urlize) | relURL }}">{{ . }} <span class="n">{{ $n }}</span></a>
-        {{ end }}
-      {{ end }}
-    </div>
-    <a class="browse-more rs-all" href="{{ "recipes/" | relURL }}">All {{ len $recipes }} recipes &rarr;</a>
-  </div>
 </div>

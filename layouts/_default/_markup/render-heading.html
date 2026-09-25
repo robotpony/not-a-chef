@@ -45,20 +45,18 @@
      words that read as meta/reference language, not food. */}}
 {{ $nonIngredientKeywords := slice "method" "directions" "steps" "notes" "serve" "variations" "timing" "example" "examples" "rules" "equipment" "hardware" "substitutions" "mechanic" "history" }}
 {{ $methodHeadings := slice "method" "directions" "steps" }}
-{{/* Sidebar-prototype only (recipe-sidebar-prototype branch): these
-     optional top-level sections get pulled out of the reading flow and
-     into the recipe sidebar by assets/js/ingredients.js, which walks
-     forward from each marked heading to the next H2 the same way the
+{{/* These optional top-level sections (Mechanic, To serve, Variations,
+     Equipment, Notes) get pulled out of the reading flow and into the
+     page's sidebar by assets/js/automagic-sidebar.js, which walks forward
+     from each marked heading to the next H2 the same way the
      ingredient/method walks already do (see that file's
-     moveSidebarSections). Gated on .Level 2 so a multi-component recipe's
-     own "### To serve" component (ingredients for garnishes, nested under
-     "## Ingredients") is never mistaken for the top-level "## To serve"
-     prose section — components are always one level deeper.
-     "special equipment" and "hardware" share the "equipment" slot — FORMAT.md's own name for this
-     section is "Equipment", but at least one real recipe (migrated from
-     the family archive, predating FORMAT.md) titles it "Hardware"; all three
-     land in the same box rather than earning separate slots. */}}
-{{ $sidebarHeadingKeys := dict "mechanic" "mechanic" "to serve" "to-serve" "variations" "variations" "notes" "notes" "equipment" "equipment" "special equipment" "equipment" "hardware" "equipment" }}
+     moveSidebarSections). Any page with a sidebar gets this, recipe or
+     reading (partials/sidebar/kind.html); the slot names live in
+     partials/sidebar/heading-slot.html. Gated on .Level 2 so a
+     multi-component recipe's own "### To serve" component (ingredients for
+     garnishes, nested under "## Ingredients") is never mistaken for the
+     top-level "## To serve" prose section — components are always one
+     level deeper. */}}
 {{ $normalized := .Text | plainify | strings.TrimSuffix ":" | strings.TrimSpace | lower }}
 {{ $hasNonIngredientWord := false }}
 {{ range split $normalized " " }}
@@ -67,8 +65,8 @@
 {{ $isIngredientHeading := and $isRecipe (eq .Level 2) (not $hasNonIngredientWord) }}
 {{ $isMethodHeading := and $isRecipe (eq .Level 2) (in $methodHeadings $normalized) }}
 {{ $sidebarHeading := "" }}
-{{ if and $isRecipe (eq .Level 2) }}
-  {{ with index $sidebarHeadingKeys $normalized }}{{ $sidebarHeading = . }}{{ end }}
+{{ if and (partial "sidebar/kind.html" .Page) (eq .Level 2) }}
+  {{ $sidebarHeading = partial "sidebar/heading-slot.html" $normalized }}
 {{ end }}
 {{/* "History" is family-provenance text (same reason as the intro
      blockquotes handled in assets/js/ingredients.js's hideFamilyHistory) —
@@ -83,7 +81,8 @@
 {{ $inIngredientSection := and $isRecipe (in (slice 3 4) .Level) (.Page.Scratch.Get "ingSection") }}
 
 <h{{ .Level }} class="relative group{{ if $inIngredientSection }} ing-subhead{{ end }}"
-  {{- if and $isRecipe (eq .Level 2) }} data-ing-heading="{{ $isIngredientHeading }}" data-method-heading="{{ $isMethodHeading }}"{{ if $sidebarHeading }} data-sidebar-heading="{{ $sidebarHeading }}"{{ end }}{{ if $isHistoryHeading }} data-hide-heading="true"{{ end }}{{ end -}}
+  {{- if and $isRecipe (eq .Level 2) }} data-ing-heading="{{ $isIngredientHeading }}" data-method-heading="{{ $isMethodHeading }}"{{ if $isHistoryHeading }} data-hide-heading="true"{{ end }}{{ end -}}
+  {{- with $sidebarHeading }} data-sidebar-heading="{{ . }}"{{ end -}}
 >{{ .Text | safeHTML }}
     <div id="{{ $anchor }}" class="anchor"></div>
     {{ if .Page.Params.showHeadingAnchors | default (.Page.Site.Params.article.showHeadingAnchors | default true) }}

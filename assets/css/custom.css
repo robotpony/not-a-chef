@@ -909,7 +909,7 @@ article > footer {
 /* Recipe sidebar prototype (recipe-sidebar-prototype branch) — replaces the
  * generic jump-to TOC on recipe pages (layouts/_default/single.html).
  * Mechanic / To serve / Notes are relocated here client-side by
- * assets/js/ingredients.js (moveSidebarSections); slots start `hidden`
+ * assets/js/automagic-sidebar.js (moveSidebarSections); slots start `hidden`
  * in markup and are only revealed once populated. Scale/Units stay with
  * the ingredient list instead (the popup gear, unchanged) — tried Units
  * alone here for a round, cut once Scale left. Not yet in
@@ -917,7 +917,7 @@ article > footer {
  * any of it to the ratified component list. */
 /* Mobile: the sidebar starts collapsed behind `.recipe-sidebar-toggle`
  * (a real button, not a native <details> — see single.html's comment for
- * why); assets/js/ingredients.js's initSidebarToggle flips
+ * why); assets/js/automagic-sidebar.js's initSidebarToggle flips
  * `.recipe-sidebar-wrap.is-open` and the button's aria-expanded together.
  * Desktop: always visible regardless of that state — the media query
  * below wins over the base mobile-collapsed rule by appearing later in
@@ -1083,7 +1083,8 @@ article > footer {
   align-items: baseline;
 }
 .recipe-meta-label {
-  flex: 0 0 42px;
+  /* Fits "Updated", the longest label (sidebar/date-rows.html). */
+  flex: 0 0 54px;
   font-family: 'Libre Franklin', sans-serif;
   font-size: .62rem;
   font-weight: 700;
@@ -1107,8 +1108,8 @@ a.comp-card:hover .comp-card-label { color: var(--accent-strong); }
 
 /* Reading sidebar (mockups/reading-sidebar.html) — essays, reference,
  * the Food Log, and About (layouts/partials/reading-sidebar.html, placed
- * by _default/single.html). Reuses .search-box, .browse-list,
- * .filter-pill, and .section-caveat. Content column is 18.6rem, as in
+ * by _default/single.html). Reuses .search-box, .browse-list, and
+ * .section-caveat. Content column is 18.6rem, as in
  * the mockup (10% narrower than the recipe sidebar there, since these
  * modules are denser); the wrap's width adds lg:ps-8's 2rem on top. Two-class selectors
  * throughout so they beat custom.css's own `.prose h2` rules; `not-prose`
@@ -1141,9 +1142,6 @@ a.comp-card:hover .comp-card-label { color: var(--accent-strong); }
 .reading-sidebar .rs-more summary::-webkit-details-marker { display: none; }
 .reading-sidebar .rs-more summary::after { content: " \2192"; }
 .reading-sidebar .rs-more[open] summary { display: none; }
-.reading-sidebar .filter-pill { display: inline-flex; gap: 6px; align-items: baseline; font-size: .76rem; padding: 5px 11px; }
-.reading-sidebar .filter-pill .n { font-family: 'IBM Plex Mono', monospace; font-size: .68rem; color: var(--ink-faint); }
-.reading-sidebar .rs-all { display: block; text-align: right; margin-top: 10px; font-family: 'Libre Franklin', sans-serif; font-size: .8rem; text-decoration: none; }
 .reading-sidebar .section-caveat { margin-top: 8px; line-height: 1.45; }
 .reading-sidebar .rs-numbers { display: flex; flex-direction: column; }
 .reading-sidebar .rs-number {

@@ -7,7 +7,10 @@
   uses reading time for the stat line.
 */}}
 {{ .Scratch.Set "scope" "list" }}
-{{ $pager := .Paginate .Pages 16 }}
+{{/* By title: every guide now has a `date`, and Hugo's default order
+  (newest first) would put the migration-day guides in one arbitrary
+  block. Alphabetical is how this list has always read. */}}
+{{ $pager := .Paginate .Pages.ByTitle 16 }}
 <section class="listing">
   <header class="listing-head">
     <h1 class="ltitle">{{ .Title }}</h1>
