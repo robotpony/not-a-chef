@@ -18,6 +18,9 @@
   essay's format, from its folder (food-memories/ -> "food memories"),
   and the stat line is its reading time.
 
+  Reference guides (layouts/reference/list.html) too: the "reference"
+  tag every guide carries is skipped, and the stat line is reading time.
+
   Food Log months (layouts/the-food-log/list.html) too: the title comes
   from reading-sidebar/log-month.html (log files have no frontmatter),
   the middle lists the month's days (its h2s), and the stat line is the
@@ -25,12 +28,14 @@
 */}}
 {{ $isEssay := eq .Section "essays" }}
 {{ $isLog := eq .Section "the-food-log" }}
+{{ $isRef := eq .Section "reference" }}
 {{ $title := .Title }}
 {{ if $isLog }}{{ $title = (partial "reading-sidebar/log-month.html" .).label }}{{ end }}
 {{ $slots := 2 }}
 {{ $cuisine := .Params.cuisine }}
 {{ $tags := slice }}
 {{ range .Params.tags }}
+  {{ if and $isRef (eq (lower .) "reference") }}{{ continue }}{{ end }}
   {{ if not (and $cuisine (eq (lower .) (lower $cuisine))) }}{{ $tags = $tags | append . }}{{ end }}
 {{ end }}
 {{ if $isEssay }}
@@ -68,7 +73,7 @@
   {{ $intro = delimit $names " · " }}
   {{ $stats = slice (dict "label" "Days" "value" (string (len $days)) "full" (string (len $days))) (dict "label" "Read" "value" (printf "%dm" .ReadingTime) "full" (printf "%d min" .ReadingTime)) }}
 {{ end }}
-{{ if $isEssay }}
+{{ if or $isEssay $isRef }}
   {{ $stats = slice (dict "label" "Read" "value" (printf "%dm" .ReadingTime) "full" (printf "%d min" .ReadingTime)) }}
 {{ end }}
 

@@ -1,0 +1,25 @@
+{{ define "main" }}
+{{/*
+  Reference list: same layout as the recipes and essays lists
+  (layouts/recipes/list.html, layouts/essays/list.html), listing header,
+  tagline (_index.md description), search box, and the shared card grid.
+  recipe-card.html drops the "reference" tag every guide carries and
+  uses reading time for the stat line.
+*/}}
+{{ .Scratch.Set "scope" "list" }}
+{{ $pager := .Paginate .Pages 16 }}
+<section class="listing">
+  <header class="listing-head">
+    <h1 class="ltitle">{{ .Title }}</h1>
+    <span class="listing-count">{{ len .Pages }} {{ cond (eq (len .Pages) 1) "guide" "guides" }}{{ if gt $pager.TotalPages 1 }} · page {{ $pager.PageNumber }} of {{ $pager.TotalPages }}{{ end }}</span>
+  </header>
+  {{ with .Description }}<p class="listing-dek">{{ . }}</p>{{ end }}
+  <div class="listing-search">{{ partial "search-box.html" "Search recipes, essays, guides" }}</div>
+  <div class="rgrid">
+    {{ range $pager.Pages }}
+      {{ partial "recipe-card.html" . }}
+    {{ end }}
+  </div>
+  {{ partial "pagination.html" . }}
+</section>
+{{ end }}
