@@ -11,7 +11,7 @@ cuisine: Italian
 draft: false
 ---
 
-This was our kids first and favourite lasagna, and we used it as a vessel to hide vegetables in.
+This was our kids' first and favourite lasagna, and we used it as a vessel to hide vegetables in.
 
 ## Mechanic
 
@@ -19,7 +19,7 @@ Eggs in the cheese filling bind the layers together so the lasagna cuts cleanly 
 
 ## Marinara
 
-Use 1 batch of [[Simple Marinara]].
+Use as much [[Marinara sauce]] as the layers need, about 1.5 L. Make extra; leftovers make a quick lunch.
 
 ## Savoury veg
 
@@ -30,13 +30,13 @@ Use 1 batch of [[Simple Marinara]].
 - 1–2 carrots, finely diced or grated
 - 1 zucchini, finely diced
 
-Heat olive oil over medium-high. Add mushrooms with a pinch of salt and cook until they release their liquid and begin to brown. Add onion, garlic, and remaining vegetables and cook on medium-low until everything is soft and starting to caramelise. Deglaze the pan if needed. Stir in enough marinara to coat generously. Set aside.
+Heat the olive oil over medium-high. Add the mushrooms with a pinch of salt and cook until they release their liquid and begin to brown. Add onion, garlic, and remaining vegetables and cook on medium-low until everything is soft and starting to caramelize. Deglaze the pan if needed. Stir in enough marinara to coat generously. Set aside.
 
 ## Cheese filling
 
 - 2 eggs
-- 2 small containers (about 425g each) whole milk ricotta
-- 2 medium containers (about 500g each) dry cottage cheese
+- 2 small containers (about 425 g each) whole milk ricotta
+- 2 medium containers (about 500 g each) dry cottage cheese
 - 110–220 g grated mozzarella (about 1–2 cups; fresher is better; mix in some cheddar)
 - 100 g Parmesan, grated (about 1 cup)
 - ¼ cup fresh parsley, chopped
@@ -46,21 +46,21 @@ If the ricotta or cottage cheese are watery, drain in a fine-mesh strainer first
 
 ## Garnish
 
-- 75g (¾ cup) Parmesan, grated
-- 100g (1 cup) mozzarella, diced or grated
+- 75 g (¾ cup) Parmesan, grated
+- 100 g (1 cup) mozzarella, diced or grated
 - ½ cup fresh parsley, finely chopped
 
 Toss together.
 
 ## Assembly
 
-- 1 box (375g) lasagna noodles, cooked to al dente and drained
+- 1 box (375 g) lasagna noodles, cooked to al dente and drained
 
 Heat the oven to 175°C (350°F).
 
 Spread ¼ of the marinara on the bottom of a large lasagna pan. Layer noodles, then cheese filling, then the veg mixture. Repeat three more times. Finish the top layer with the remaining marinara and the garnish.
 
-Cover tightly with foil and bake 30 minutes. Remove foil and bake another 30 minutes until browned and bubbling.
+Cover tightly with foil and bake for 30 minutes. Uncover and bake until browned and bubbling, about 30 minutes more.
 
 Rest 20 minutes before cutting.
 

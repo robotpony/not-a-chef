@@ -3,6 +3,7 @@ title: Vegan burger
 tags: [mains, burgers]
 source: family
 cuisine: American
+aliases: [/recipes/vegan-burger-savoury-chew-gluten/]
 draft: false
 ---
 

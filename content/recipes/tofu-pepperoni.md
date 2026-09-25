@@ -6,29 +6,27 @@ cuisine: American
 draft: false
 ---
 
-This vegetarian pepperoni substitute is great for pizzas, calzones, and rice dishes. It has a texture like cheese, with a nice, peppery flavour profile. It browns nicely, so be sure to put it on top of your cheese when using it for pizza!
+This vegetarian pepperoni substitute is great for pizzas, calzones, and rice dishes. It's firm and sliceable like a hard cheese, with a nice, peppery flavour. It browns nicely, so put it on top of the cheese when using it on pizza!
 
-## Ingredients:
+## Ingredients
 
-- 1/2 package smoked tofu (or home-smoked medium-firm tofu)
-- 2 tablespoons smoked / hot paprika
-- 2 teaspoons kosher salt
-- 5-10 turns fresh black pepper
-- 1 tablespoon sugar
-- 1 teaspoon garlic powder and onion powder
-- 1-2 tablespoons olive oil
+- ~200 g (½ package) smoked tofu, or home-smoked medium-firm tofu
+- 2 tbsp smoked or hot paprika
+- 2 tsp kosher salt
+- 5–10 turns fresh black pepper
+- 1 tbsp sugar
+- 1 tsp garlic powder
+- 1 tsp onion powder
+- 1–2 tbsp olive oil
 
-## Hardware:
+## Method
 
-- 1 airtight container
-- 1 spoon
+Mix the spices and taste; the salt, sweet, and spice should balance.
 
-## Directions:
+Slice the tofu thinly and toss it with the oil and spice mix in an airtight container.
 
-1. Mix spices and taste (should taste balanced salt/sweet/spice)
-2. Thinly slice tofu and toss with oil and spice mix
-3. Let marinate (lasts 1-2 weeks in the fridge)
+Let it marinate in the fridge. It keeps 1–2 weeks.
 
 ## Notes
 
-- smoked tofu or smoked tempeh also work well
+- Smoked tempeh also works well.

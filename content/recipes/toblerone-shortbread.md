@@ -2,30 +2,38 @@
 title: Toblerone shortbread
 tags: [desserts]
 source: family
+portions: about 2 dozen cookies
 cuisine: Canadian
 draft: false
 ---
 
-One of our favourite family Christmas traditions! 
+One of our favourite family Christmas traditions! Shortbread balls, each hiding a piece of Toblerone.
 
-> Ann & Bruce first had these cookies made by a coworker while both working at Discover Software, Linda.  We loved them and have been making them every holiday season since.
+> Ann & Bruce first had these cookies made by Linda, a coworker at Discover Software. We loved them and have been making them every holiday season since.
 
-## Ingredients:
+## Ingredients
 
-- 1 lb butter (softened)
+- 454 g (1 lb) butter, softened
 - 1 cup icing sugar
-- ½ cup corn starch
+- ½ cup cornstarch
 - 3 cups flour
 - 2 tsp vanilla
-- chopped up Toblerone (original); if it’s a small bar, chop triangles in half and if it’s a large bar, chop triangles into thirds
-    - Makes about 2 dozen cookies (one small Toblerone = 24 pieces)
+- Toblerone (original), chopped: halve the triangles of a small bar, or cut a large bar's triangles into thirds (one small bar gives 24 pieces)
 
-## Directions:
+## Method
 
-1. Preheat the oven to 350 degrees F (175 C).
-2. Place butter in a mixer and blend until lightly fluffed.
-3. To the butter, mix in Icing Sugar, Corn Starch, Flour, and Vanilla and fluff all ingredients together.
-4. The batter has to be fluffy and not too warm.  If it is too warm, place batter in the refrigerator for about half an hour.  Though, do not let it get too cold or you cannot work with the batter.
-5. Take a spoon full of the shortbread batter and roll into a ball.  Then take one piece of Toblerone and push it into the centre of your shortbread ball.  Reroll the shortbread to get the batter all around the Toblernone.
-6. Your shortbread balls will melt slightly in the oven.  Once the edges start to turn golden brown, they are ready to be removed.
-7. Allow cookies to cool on the pan before removing and fully cooling on a cooling rack.  Store in an air-tight container in the fridge.  Cookies can be served straight from the fridge, or pull some out a few hours before enjoying.
+Heat the oven to 175°C (350°F).
+
+Beat the butter in a mixer until lightly fluffy. Add the icing sugar, cornstarch, flour, and vanilla and beat until fluffy.
+
+The dough needs to be fluffy but not too warm. If it's too warm, chill it for about half an hour, but don't let it get so cold that you can't work it.
+
+Roll a spoonful of dough into a ball. Push a piece of Toblerone into the centre, then reroll so the dough covers it completely.
+
+Bake until the edges just start to turn golden, roughly 12–15 minutes. Ovens vary a lot, so go by the colour, not the clock. The balls will spread slightly.
+
+Let the cookies cool on the pan, then move them to a rack to cool completely.
+
+## Notes
+
+- Store in an airtight container in the fridge. Serve straight from the fridge, or pull some out a few hours ahead.

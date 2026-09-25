@@ -10,7 +10,7 @@ This is a simple teriyaki sauce, with some common add-ins. It's simmered until r
 
 ## Mechanic
 
-Every ingredient scales as a **percentage of the soy sauce (shoyu) volume**, the base of the formula, so the sauce scales to any batch size.
+Every ingredient scales as a **percentage of the soy sauce (shoyu) volume**, the base of the formula, so the sauce scales to any batch size. Liquids are by volume and solids by weight: 40% sugar means 40 g per 100 ml shoyu.
 
 ## Ingredients
 
@@ -30,8 +30,8 @@ Every ingredient scales as a **percentage of the soy sauce (shoyu) volume**, the
 
 Combine the ingredients and simmer for 10–15 minutes, reducing slightly. Adjust the shoyu or mirin to taste, depending on your local ingredients.
 
-To thicken, combine 1–1.5 tablespoons of corn or rice starch with the same amount of water, then add to the boiling sauce.
+To thicken, combine 1–1½ tablespoons of cornstarch or rice starch with the same amount of water, then add to the boiling sauce.
 
 ## To serve
 
-Rice bowls, kabobs, and burgers.
+Rice bowls, kebabs, and burgers.

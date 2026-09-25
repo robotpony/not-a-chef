@@ -6,7 +6,7 @@ cuisine: American
 draft: false
 ---
 
-Not sure where this recipe came from but it looks Yummy!
+Three layers over a graham crust: a baked pumpkin cheesecake, a set cream cheese mousse, and whipped cream on top.
 
 ## Crust
 
@@ -24,7 +24,7 @@ Bake 10 minutes. Cool on a rack.
 
 - 250 g (1 block) cream cheese, softened
 - 4 eggs
-- 1 can sweetened condensed milk
+- 1 (300 ml) can sweetened condensed milk
 - 1 can (284 ml) pumpkin purée
 - 1 tsp cinnamon
 - 1 tsp vanilla

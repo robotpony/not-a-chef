@@ -386,67 +386,25 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] `recipes/sweet-gochujang-sauce.md` (fixed 2026-09-25: own intro; five-spice; ginger ground vs fresh; cross-linked with `[[Gochujang wing sauce]]`; converted to FORMAT.md)
 - [x] `recipes/sweet-potato-pie.md` (fixed 2026-09-25: converted to FORMAT.md; 540 g (1 lb 3 oz); 23 cm (9 in) deep-dish; 175°C (350°F); ¾ cup; slight-wobble doneness cue; `source: Alton Brown, Food Network`; lower case)
 - [x] `recipes/sweet-soy-sauce-kecap-manis-style.md`
-- [x] ! `recipes/szechuan-quick-noodles.md`
-    - Title and body: "Szechuan" → "Sichuan" (current standard romanization; "Szechuan peppercorns" is still common on labels, so either is defensible. Pick one collection-wide; beef-base note too).
-    - L54: "Needs acid" is a test note. Add "a splash of rice vinegar" to the seasoning step instead.
-    - Q: 2 tsp MSG (~8 g) for one serving is heavy; most of the collection uses 0.5–1%. Intended?
-- [x] ! `recipes/teriyaki-sauce.md`
-    - Percentages mix volume and weight (sugar, MSG, ginger in g against shoyu in ml). Fine in practice; say "% of shoyu volume, solids by weight" once.
-    - L37: "kabobs" → "kebabs". L33: "corn or rice starch" → "cornstarch or rice starch".
+- [x] `recipes/sichuan-quick-noodles.md` (fixed 2026-09-25: renamed to `sichuan-quick-noodles.md` to match the title (old URL redirects; no Szechuan left in content); rice vinegar added to the finish, test note dropped; MSG 1–2 g (the 2 tsp was an estimate); stock-only variation as `###`; unit spacing)
+- [x] `recipes/teriyaki-sauce.md` (fixed 2026-09-25: volume/weight basis stated in the Mechanic; kebabs; cornstarch or rice starch)
 - [x] `recipes/thai-cucumber-relish.md`
-- [x] ! `recipes/thai-style-chilli-lime-sauce.md`
-    - Weight/volume pairs don't agree: "60g (2 tablespoons) Thai chilli paste" (2 tbsp ≈ 35 g); "20g (1 tablespoon) neutral oil" (≈ 14 g); "10g (1 teaspoon) MSG" (1 tsp ≈ 4 g); "10g (1 teaspoon) salt" (1 tsp ≈ 6 g fine salt, 3 g kosher). Pick the tested unit and fix the other.
-    - L15: "150ml (½ cup + juice of 1 lime) lime juice" is circular. → "150 ml lime juice (about 5 limes)".
-    - Typos: L9 "midly" → "mildly"; "Puré" → "Purée" (L11, L26, L37). Title: "Thai style" → "Thai-style". L33: "1/4 cup ... scallions" → "¼ cup ... green onions".
-    - L9: intro duplicated from sweet-gochujang-sauce.md.
+- [x] `recipes/thai-style-chili-lime-sauce.md` (fixed 2026-09-25: Thai-style; renamed to `thai-style-chili-lime-sauce.md` (old URL redirects); own intro; grams kept, volume equivalents corrected; MSG cut to 1% (5 g); 150 ml lime juice (about 5 limes); mildly; purée; ¼ cup green onions; yield to `portions`; converted to FORMAT.md)
 - [x] `recipes/the-anything-casserole.md` (fixed 2026-09-24: converted to FORMAT.md; reheat to 74°C; rough bake times from fridge and frozen)
-- [x] ! `recipes/toblerone-shortbread.md`
-    - No bake time. Step 6 only gives a cue; add "about 12–15 minutes".
-    - Typos: L29 "Toblernone" → "Toblerone"; "spoon full" → "spoonful"; L17 "corn starch" → "cornstarch"; L31 "air-tight" → "airtight". L27: Title Case ("Icing Sugar, Corn Starch, Flour").
-    - L11: "made by a coworker while both working at Discover Software, Linda" puts the name at the end; "made by Linda, a coworker at Discover Software".
-    - L15: "1 lb butter" → "454 g (1 lb) butter". "batter" (steps 4–5) → "dough".
-- [x] ! `recipes/tofu-in-tomato-sauce.md`
-    - L14: the Mechanic paragraph sits in the intro with no heading ("The mechanic here is..."). Make it `## Mechanic` and give the page a one-line intro.
-    - L24: "seasoning powder" is unclear for most readers. Name it (Vietnamese hạt nêm, or chicken/mushroom bouillon powder).
-    - L35: "Heat a generous amount of oil ... over low heat. Once bubbling" is contradictory for shallow-frying tofu → "medium heat, until shimmering".
-    - L33 repeats the cutting instructions already in the ingredient list. L51: "helps them break down faster than omitting it entirely" is redundant → "helps them break down faster".
-- [x] ! `recipes/tofu-pepperoni.md`
-    - L13: "1/2 package smoked tofu" → a weight (~200 g). L18: "1 teaspoon garlic powder and onion powder" → "1 teaspoon each".
-    - L21: "## Hardware:" (legacy) listing a container and a spoon adds nothing; drop it.
-    - L9: "It has a texture like cheese" Q: meaning firm and sliceable? Reword. L34: capitalize "Smoked".
-- [x] ! `recipes/tomato-soup.md`
-    - L21: "780ml ... (2 × 400ml tins)" is 800 ml. Tags say `italian`, `cuisine: world`.
-    - Otherwise clean.
-- [x] ! `recipes/triple-layered-double-pumpkin-cheesecake.md` (fixed 2026-09-24: 250 g blocks; gelatine bloomed first; wobble cue; per-layer components; converted to FORMAT.md)
-    - L9: "Not sure where this recipe came from but it looks Yummy!" suggests it's untested, but `draft: false`. Q: made it?
-    - No water bath; fine if the wobble cue works for you.
-- [x] ! `recipes/ts-broccoli-salad.md` (Google links fixed 2026-09-24)
-    - L14: prep for the broccoli isn't given (raw florets, chopped small? blanched?). L18: "1 package of slivered almonds" → weight (~100 g).
-    - L22: "Hellman’s" → "Hellmann’s"; "Smoked Tempeh", "Apple Cider" → lower case. L38 repeats the tempeh substitute already in L13.
-- [x] ! `recipes/tuna-rice-bowl.md`
-    - L14 says it uses frozen tuna, but no thaw step. Add "thaw overnight in the fridge and pat very dry".
-    - Doneness mismatch: the method says "center still red to pink" (rare to medium-rare), Notes say "Cook tuna to medium".
-    - "scallion(s)" → "green onion(s)"; L57: "center" (see centre/center Q).
+- [x] `recipes/toblerone-shortbread.md` (fixed 2026-09-25: converted to FORMAT.md; bake to colour (edges just golden, roughly 12–15 minutes); Toblerone; spoonful; cornstarch; airtight; lower case; "made by Linda, a coworker"; 454 g (1 lb) butter; dough, not batter; yield to `portions`)
+- [x] `recipes/tofu-in-tomato-sauce.md` (fixed 2026-09-25: one-line intro and `## Mechanic`; seasoning powder named (hạt nêm or bouillon powder); medium heat until shimmering; repeated cutting step dropped; Notes line trimmed)
+- [x] `recipes/tofu-pepperoni.md` (fixed 2026-09-25: converted to FORMAT.md; ~200 g tofu; garlic and onion powder 1 tsp each; Hardware dropped; texture reworded (firm and sliceable); Notes)
+- [x] `recipes/tomato-soup.md` (fixed 2026-09-25: 800 ml (2 × 400 ml tins); `italian` tag dropped to match `cuisine: world`; unit spacing)
+- [x] `recipes/triple-layered-double-pumpkin-cheesecake.md` (fixed 2026-09-24: 250 g blocks; gelatine bloomed first; wobble cue; per-layer components; converted to FORMAT.md; 2026-09-25: "Not sure where this came from" intro replaced (all recipes are tested); 300 ml condensed milk)
+- [x] `recipes/ts-broccoli-salad.md` (fixed 2026-09-25: converted to FORMAT.md as dressing / salad; raw small florets; ~100 g almonds; Hellmann’s; lower case; duplicate tempeh line merged into a Vegetarian variation)
+- [x] `recipes/tuna-rice-bowl.md` (fixed 2026-09-25: thaw overnight and pat dry; doneness agrees (centre red to pink); `####` labels; unit spacing (green onions and centre were already fine))
 - [x] `recipes/turkey-burgers.md` (fixed 2026-09-24: converted to FORMAT.md; cook to 70°C; spelling, units, intro)
-- [x] ! `recipes/ultimate-every-bun-recipe.md`
-    - L10: "Weissman's" → "Joshua Weissman's". L22: "until dissolved" → "until smooth" (flour doesn't dissolve).
-    - L66: Q: "refrigerated for up to a week". The fridge stales bread fastest; room temperature 2–3 days or freezer is usually better. Intentional?
-    - L32: "60g (1 large egg)". A large egg is ~50 g out of shell. Minor.
-    - Otherwise well built; dough weights match the table.
-- [x] ! `recipes/unbaked-cookies.md`
-    - Missing: how long to boil. No-bake cookies set only if the syrup boils for about 1–2 minutes; too short and they stay wet, too long and they crumble. Add "boil 1½ minutes".
-    - L11: "use to make" → "used to make". Variations come before Directions; move them after. Title Case ingredients. No yield (~3 dozen?).
-    - L19: "Coconut" → "shredded coconut" (sweetened or unsweetened?).
-- [x] ! `recipes/uncle-bruces-ranch-dip.md`
-    - Weight/volume pairs disagree: "2g (2 teaspoons) salt" (2 tsp is ~12 g fine salt or ~6 g kosher); "1g (1 ½ teaspoon) ground black peppercorns" (≈ 3.5 g). Q: which unit did you measure in?
-    - Step 1 says "Add salt to taste", but salt is already a listed ingredient. Pick one.
-    - L14: "Hellman’s" → "Hellmann’s". L9: "post-war style" → "post-war-style". L15: "1 ½ teaspoon" → "teaspoons".
+- [x] `recipes/ultimate-every-bun-recipe.md` (fixed 2026-09-25: Joshua Weissman's; until smooth; 60 g beaten egg (about 1 large); fridge storage kept, per the author; yield to `portions`; unit spacing; en-dash ranges)
+- [x] `recipes/unbaked-cookies.md` (fixed 2026-09-25: converted to FORMAT.md; boil 1½ minutes; used to make; variations after the method; lower case; sweetened shredded coconut; about 2 dozen in `portions`)
+- [x] `recipes/uncle-bruces-ranch-dip.md` (fixed 2026-09-25: converted to FORMAT.md; grams kept, volumes corrected (½ tsp pepper, ½ tsp kosher salt); salt listed plus more to taste; Hellmann’s; post-war-style; dried dill; substitutions as a variation)
 - [x] `recipes/vaguely-asian-slaw-dressing.md` (merged into asian-slaw-dressing.md 2026-09-24; redirects)
-- [x] ! `recipes/vegan-burger-savoury-chew-gluten.md` (fixed 2026-09-24: intro, forming and cooking drafted; amounts added; vegan Worcestershire; converted to FORMAT.md)
-    - Filename (`vegan-burger-savoury-chew-gluten`) doesn't match the title.
-- [x] ! `recipes/vegetarian-lasagna.md`
-    - Contradiction: the marinara link is `[[Simple Marinara]]`, which is built on meat drippings, so it doesn't fit a vegetarian lasagna. Also, that recipe makes ~500 ml, far too little for a 8–10 serving lasagna (usually 1.5 L+). Link `[[Marinara sauce]]` or `[[Classic pizza sauce]]` and give a volume.
-    - L14: "our kids first" → "our kids' first". L33: "caramelise" → "caramelize".
+- [x] `recipes/vegan-burger.md` (fixed 2026-09-24: intro, forming and cooking drafted; amounts added; vegan Worcestershire; converted to FORMAT.md; 2026-09-25: renamed to `vegan-burger.md` to match the title (old URL redirects))
+- [x] `recipes/vegetarian-lasagna.md` (fixed 2026-09-25: marinara → `[[Marinara sauce]]`, as much as needed (about 1.5 L); kids'; caramelize; unit spacing)
 - [x] ! `recipes/velveting-pork.md`
     - Clean. (Optional: many velveting methods rinse after a baking-soda soak to avoid a soapy taste at ½ tsp per 350 g; worth a line if you've tasted it.)
 - [x] ! `recipes/vindaloo-paste.md`
