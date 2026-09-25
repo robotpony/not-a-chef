@@ -85,6 +85,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 ## Follow-up tasks
 
 - [ ] Import the pan-fried chicken burger experiment log (private Google Sheet, linked in an HTML comment in `recipes/pan-fried-chicken-burger.md`) into the book, probably as a Notes table or a companion page.
+- [ ] Move non-people `servings` values to the new `portions` field (added 2026-09-25; shown as "Makes"). About 20 recipes say things like "makes ~750 ml", "8 buns", or "enough for about 1 kg wings"; keep a people count in `servings` where one makes sense.
 - [ ] Import the other private Google Sheets and Docs now kept in HTML comments (`grep -rn 'to import' content`): the food ratios worksheet, scaling sheets in baked mac & cheese, breakfast sausage, pizza dough 2022, the poultry rub mix sheet, and T's broccoli salad's alternative dressing.
 
 ## Pass 1 (2026-09-24)
@@ -262,78 +263,27 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] `recipes/fajita-chicken-bowl.md` (fixed 2026-09-24: components as `##` sections; 68°C; corn oil, garlic, and fresh chili listed)
 - [x] `recipes/farmer-soup.md` (fixed 2026-09-25: converted to FORMAT.md; ABC Country Restaurants; herbes de Provence; cornstarch; sauté; bite-size; bring back to a simmer after the slurry; thickener as a `####` label; "work in progress" kept, per open question 5)
 - [x] `recipes/flatbread-white-sauce.md` (fixed 2026-09-25: America's Test Kitchen; unit spacing; dip use leaves out the raw yolks)
-- [x] ! `recipes/focaccia.md`
-    - Oil contradiction: L23 says "neutral oil (not extra-virgin)" for the pans, while the intro (L14) and herb step (L41) use olive oil. Traditional focaccia uses olive oil in the pan. Q: is neutral deliberate (smoke point at 220°C)? If so, say why.
-    - Olive oil for steeping the herbs isn't in the ingredient list (only in the optional brine).
-    - Order: the oven is heated only after topping (L47). Preheat at the start of the final rise so the dough doesn't overproof waiting for a cold oven.
-    - The optional brine is described only in Notes; the method never says when to use it.
-    - L18: "Focaccia is an enriched pizza dough", but nothing here enriches it (the pizza dough is used as-is). Add "2 tbsp olive oil kneaded in" or drop "enriched".
-    - L22: `[[Pizza Dough]]` → sentence case. "Toppings" and "Brine" labels → `####`. `servings: 2-10 people` is too vague to scale; "2 pans" or "10 pieces".
-- [x] ! `recipes/french-onion-soup.md`
-    - Butter and olive oil for the onions (step 1) aren't listed.
-    - Herbs: the ingredients are fresh sprigs (thyme/sage, bay), but steps 2–3 say "the dried herbs".
-    - Step 2: "Deglaze with the alcohol and vinegar". Vinegar only appears in one of the sherry substitutes; "Deglaze with the sherry (or substitute)".
-    - L42: the pressure-cooker option doesn't say which stage it replaces. Q: pressure-caramelizing the onions (then reduce)? Spell out.
-    - L25: "1/2 cup" → "½ cup"; L38: "Gruyere" → "Gruyère"; L42: "dutch oven" → "Dutch oven" (×2); L15: "Josh Weissman" → "Joshua Weissman"; L44: "suc" → drop ("fond" is already there). L48: missing period. L53: comma splice.
+- [x] `recipes/focaccia.md` (fixed 2026-09-25: olive oil in the pans and drizzled over the top as you dimple, per the author; Mechanic says so; oven heated during the final rise; brine step placed in the method; `[[Pizza dough]]`; `####` labels; `servings: 2–10 (people)` restored, with the new `portions: 2–3 sheet pans`)
+- [x] `recipes/french-onion-soup.md` (fixed 2026-09-25: converted to FORMAT.md as soup / crusty bread / assembly; 2 tbsp each butter and olive oil, more if the onions stick; herbs removed by stem, not "dried"; deglaze with the sherry; pressure cooker note covers the onion phase only; Mechanic is now the fond, sources moved to the intro; `[[Rich veg/mushroom stock]]`; Gruyère; Dutch oven; Joshua Weissman; suc; 220°C (425°F); ½ cup)
 - [x] `recipes/fresh-egg-pasta.md` (fixed 2026-09-24: salt 3 g, about 1%)
-- [x] ! `recipes/fruit-compote.md`
-    - Clean. (Collection-wide: "yoghurt" in 4 files vs "yogurt" in 5; pick one.)
-- [x] ! `recipes/fruit-crisp-individual.md`
-    - L57: `&nbsp; <!-- hacky hack -->` is a layout workaround living in content. Q: what is it working around (list continuation?) Fix in the template, or end the list with a blank line and plain paragraph.
-    - Otherwise clean.
-- [x] ! `recipes/garlic-broccoli.md`
-    - L14: "brocolli" → "broccoli". L37: "teflon" → "Teflon" (or "non-stick").
-    - Tagged `vegan`, but both liquid options (chicken stock, dashi) are animal-based. Use "vegetable stock" as an option or drop the tag.
-    - L41: `[[weeknight ginger beef]]` → sentence case.
-- [x] ! `recipes/garlic-ginger-wing-sauce.md`
-    - L14: "savory" → "savoury".
-    - Tags list `chinese, japanese` with `cuisine: American`. Fine, but pick the cuisine that matches the tags.
-- [x] ! `recipes/german-platz.md`
-    - Bake time "20-50 minutes" is too wide to be useful. With about 1⅔ cups flour spread in a half sheet pan the layer is thin, so ~25–35 min is likely. Q: tested time? Add a doneness cue ("a skewer in the cake layer comes out clean").
-    - Crumble butter: cold and cut in, or melted? Step 5 doesn't say.
-    - L41: "(the 1inch deep ones)" → "(2.5 cm / 1 in deep)". L44: "175C/350F" → "175°C (350°F)".
-    - L10: backstory (neighbour's two kitchens), and the same image appears in the-smells-of-india.md. Q: same family? It would make a nice cross-link.
-- [x] ! `recipes/ginas-tomato-salsa.md` (fixed 2026-09-24: converted to FORMAT.md; keeps 5–7 days; Roma/Anaheim; second lime clarified)
-    - L10: "Nanaimo Mexican hut’s" Q: is the restaurant called Gina's Mexican Café? Capitalize the name.
-- [x] ! `recipes/gingergarlic-paste.md`
-    - Incomplete method: Notes say "Don't overcook ... stop once sizzle is gone", which implies frying the paste after blending, but the only step is blending. Q: blend, then cook in the oil until the sizzle stops?
-    - Step 1 adds "neutral oil" and then says "add oil until the consistency reaches soft peanut butter", so the oil is added twice.
-    - L10: incorrect region: Indian cooking is South Asian, not southeast Asian. "takeaway style" → "takeaway-style".
-    - L23: "1 cup ginger ... (1 smaller knob)". A cup of ginger is several large knobs (~150 g).
-    - Section order: Notes come before Ingredients. Move to the end. Headings end in colons.
-- [x] `recipes/gochujang-wing-sauce.md`
+- [x] `recipes/fruit-compote.md` (fixed 2026-09-25: unit spacing)
+- [x] `recipes/fruit-crisp-individual.md` (fixed 2026-09-25: `&nbsp;` hack removed, the crisp-topping pointer is now a Notes bullet; `####` labels; unit spacing)
+- [x] `recipes/garlic-broccoli.md` (fixed 2026-09-25: broccoli; vegetable stock listed first so the `vegan` tag holds; non-stick; `## Equipment`; `[[Weeknight ginger beef]]`; sensory cue before time)
+- [x] `recipes/garlic-ginger-wing-sauce.md` (fixed 2026-09-25: savoury; `####` label; unit spacing; `cuisine: American` kept, since wings are the American dish and the tags name the flavour sources)
+- [x] `recipes/german-platz.md` (fixed 2026-09-25: converted to FORMAT.md; bake time 25–35 min with a skewer cue; crumble butter cold, rubbed in (both confirmed); 2.5 cm (1 in) pan; 175°C (350°F); oven heated first; fruit and flour notes moved to Notes; linked to `[[The smells of India]]`, same neighbours)
+- [x] `recipes/ginas-tomato-salsa.md` (fixed 2026-09-24: converted to FORMAT.md; keeps 5–7 days; Roma/Anaheim; second lime clarified; 2026-09-25: Gina's Mexican Café named in the intro)
+- [x] `recipes/gingergarlic-paste.md` (fixed 2026-09-25: converted to FORMAT.md; cooking step (fry the paste until the sizzle dies away), confirmed; oil listed once, "plus more as needed"; South Asian; takeaway-style; 1 cup ginger is about 150 g; Notes moved to the end)
+- [x] `recipes/gochujang-wing-sauce.md` (fixed 2026-09-25: unit spacing; en-dash range)
 - [x] `recipes/goulash.md` (fixed 2026-09-24: Mechanic wording; bacon line; empty bullet; food-log prep-day version added as a variation)
-- [x] ! `recipes/grand-moms-black-bean-corn-salsa.md`
-    - No salt anywhere, even as optional. Q: intentional (the beans and corn carry salt)? Add "salt to taste".
-    - L14: "1 small can" → a size (398 ml / 14 oz). "Let sit 30 minutes" with avocado in it will brown; add the avocado just before serving.
+- [x] `recipes/grand-moms-black-bean-corn-salsa.md` (fixed 2026-09-25: converted to FORMAT.md; 398 ml (14 oz) can; 1 tsp salt, to taste; avocado added just before serving; optional markers)
 - [x] `recipes/grandma-fergusons-buns.md` (fixed 2026-09-24: yeast added to the dough; grams; bake time and cue; converted to FORMAT.md)
-- [x] ! `recipes/grandmas-potato-salad.md`
-    - Missing step: the hard-boiled eggs are never added. Say where (chopped into step 2, or sliced on top).
-    - Step 1 doesn't say to drain and cool the potatoes before step 2's "cooled potatoes".
-    - Step 5: "Chill. Then chill the potato salad for a minimum of 30 minutes." Chill once.
-    - L21: "Hellman’s" → "Hellmann’s". L29: "bite size" → "bite-size".
-- [x] ! `recipes/grandmas-yukkie-salad.md`
-    - Cool Whip split is unclear: step 2 stirs in "whipped topping" (implies all of it), then step 3 uses "the remaining whipped topping ... half a container". Say "half the container" in step 2.
-    - "Jello" / "jello" mixed. The brand is Jell-O; "jelly powder" is the generic Canadian term. L10: "ambrosia style" → "ambrosia-style". L18: double space.
-- [x] ! `recipes/granola-bars.md`
-    - L14: "minimizing carbohydrates" contradicts the recipe (oats, dates, maple, banana are almost all carbohydrate). Q: meant "minimizing refined sugar"?
-    - L46: stale note: "Toast the nuts next time" is already in the method. Delete.
-    - Otherwise clean.
+- [x] `recipes/grandmas-potato-salad.md` (fixed 2026-09-25: converted to FORMAT.md; eggs chopped and added with the potatoes; drain and cool; chill once; Hellmann's; bite-size)
+- [x] `recipes/grandmas-yukkie-salad.md` (fixed 2026-09-25: converted to FORMAT.md; half the Cool Whip in the lemon layer, the rest in the strawberry; Jell-O throughout; ambrosia-style; water split per layer)
+- [x] `recipes/granola-bars.md` (fixed 2026-09-25: intro says refined carbs (flour, sugar, binders); stale note deleted; unit spacing)
 - [x] `recipes/greek-islands-creamy-greek-dressing.md` (fixed 2026-09-24: real intro; converted to FORMAT.md; title "Greek Islands'"; egg yolks optional with raw-yolk note; typos)
-- [x] ! `recipes/greek-lemon-and-herb-marinade.md`
-    - Error: "2 lemons juiced (about 250ml)". Two lemons give ~90–100 ml. Either 5–6 lemons or ~100 ml.
-    - Q: 4–5 tsp salt with ~½ cup oil and lemon is very salty unless it's for a large batch of protein. How much meat is this for? (No yield.)
-    - L34: "Add sage, garlic and onion", but the ingredient is a shallot. L35: "tiny whisk" → "whisk". L24: "accent" → "Accent". L43: "greek-fried rice" → "Greek fried rice". L42: "over marinate" → "over-marinate".
-    - L10: "used for plating" Q: meaning drizzled on the plate as a sauce?
-- [x] ! `recipes/greek-marinade.md`
-    - L17: migration artifact: the Mechanic quotes an old note ("The note 'needs more lemon' suggests..."). Rewrite as a plain statement: "It needs more lemon than 1:1 suggests; start there and taste up."
-    - Q: overlaps with greek-lemon-and-herb-marinade.md. Keep both (quick vs herb-heavy) and cross-link?
-- [x] ! `recipes/gurkensalat-german-cucumber-salad.md`
-    - Step 2 doesn't say how long to salt. Q: 30 min? overnight (L24 suggests prepping 24 h ahead)?
-    - L30: fragment: "Under salt the dressing (when tasting, as the cucumbers ...)" → "Go light on salt in the dressing; the cucumbers are already salted."
-    - Typos: L19 "2 teaspoon" → "2 teaspoons"; L28 "Parsely" → "parsley"; L32 "mandolin" → "mandoline", "as thin that you can" → "as thin as you can"; L10 "40’s" → "40s"; L24 spaced hyphen as a dash.
-    - Three prose paragraphs of advice sit between "Directions" and the steps; move the serving size to `servings`, dill swap to Variations, make-ahead to Notes.
-    - L10: backstory (recipe rules). Title Case ingredients ("Cucumbers", "English Cucumbers", "Field Cucumbers", "Pepper").
+- [x] `recipes/greek-lemon-and-herb-marinade.md` (fixed 2026-09-25: converted to FORMAT.md; 2 lemons ≈ 100 ml; salt sized for a large cut, 2–2½ tsp per kg, `portions: enough for about 2 kg protein`; shallot; whisk; Accent; Greek fried rice; over-marinate; finishing sauce; balance note moved into the method; cross-linked with Greek marinade)
+- [x] `recipes/greek-marinade.md` (fixed 2026-09-25: Mechanic states the lemon note plainly, duplicate Notes line dropped; cross-linked with the herb version (both kept per open question 4); extra-virgin; unit spacing)
+- [x] `recipes/gurkensalat-german-cucumber-salad.md` (fixed 2026-09-25: converted to FORMAT.md; advice paragraphs moved to `servings`, Substitutions, and Notes; salt at least 30 minutes, or as long as the rest of the prep takes; dressing-salt fragment rewritten; typos; 40s; lower-case ingredients)
 - [x] `recipes/gyro-base.md` (fixed 2026-09-24: typo; thaw-before-cooking contradiction; "still")
 - [x] ! `recipes/gyro-dogs.md`
     - Portion math doesn't work: the ingredient is "500g of gyro base", but the method divides it into 8 × ~112 g (≈ 900 g). The gyro base recipe makes ~1.1 kg. → "1 batch [[Gyro base]] (about 1 kg)".

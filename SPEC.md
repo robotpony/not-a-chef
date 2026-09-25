@@ -47,7 +47,8 @@ Supersedes the informal table in `FORMAT.md` §Frontmatter.
 | `author` | MAY | string | Only when different from the collection author. |
 | `aka` | MAY | string | Alternative names, comma-separated. |
 | `date` | SHOULD | string | ISO 8601. |
-| `servings` | SHOULD | string or number | Feeds `recipeYield` in the build-time schema.org output (§7.8). |
+| `servings` | SHOULD | string or number | How many people it feeds. Feeds `recipeYield` in the build-time schema.org output (§7.8). |
+| `portions` | MAY | string | What the batch makes, when that isn't a head count: "2–3 sheet pans", "about 1.5 L", "8 buns". |
 | `prep_time` | MAY | string | |
 | `cook_time` | MAY | string | |
 | `total_time` | MAY | string | |

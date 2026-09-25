@@ -234,6 +234,7 @@
             {{ end }}
             {{ with .Params.aka }}{{ $metaRows = $metaRows | append (dict "label" "Aka" "value" .) }}{{ end }}
             {{ with .Params.servings }}{{ $metaRows = $metaRows | append (dict "label" "Serves" "value" . "id" "recipe-meta-servings" "base" .) }}{{ end }}
+            {{ with .Params.portions }}{{ $metaRows = $metaRows | append (dict "label" "Makes" "value" .) }}{{ end }}
             {{ with .Params.prep_time }}{{ $metaRows = $metaRows | append (dict "label" "Prep" "value" .) }}{{ end }}
             {{ with .Params.cook_time }}{{ $metaRows = $metaRows | append (dict "label" "Cook" "value" .) }}{{ end }}
             {{ with .Params.total_time }}{{ $metaRows = $metaRows | append (dict "label" "Total" "value" .) }}{{ end }}

@@ -30,7 +30,8 @@ cuisine: Indian
 | `author`     | string           | Only when different from the collection author.                       |
 | `date`       | string           | ISO 8601 (YYYY-MM-DD). Date added or last modified.                   |
 | `aka`        | string           | Alternative names.                                                    |
-| `servings`   | string or number | Descriptive strings are fine: "4–6", "1 loaf", "scales to bird size". |
+| `servings`   | string or number | People it feeds: "4", "4–6", "12+ (people)".                         |
+| `portions`   | string           | What the batch makes, when that isn't people: "2 pans", "1 loaf".    |
 | `prep_time`  | string           | Parenthetical notes are fine: "20 min (plus 24–48 hr cold ferment)".  |
 | `cook_time`  | string           | Active cooking time.                                                  |
 | `total_time` | string           | Total elapsed time if different from prep + cook.                     |

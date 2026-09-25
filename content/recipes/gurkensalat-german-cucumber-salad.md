@@ -3,35 +3,38 @@ title: Gurkensalat (German cucumber salad)
 tags: [salads]
 source: family
 cuisine: Mennonite
-prep_time: ~15m
+servings: 4, or a small appy for more
+prep_time: 15 min
 draft: false
 ---
 
-My Mom (Joanne Rempel) made this salad a lot in my youth and it holds nostalgic memories! I had not had it in years and in my early 40’s had a strong craving for it. I found a recipe online and made it for something different. It took me back to my childhood and I still enjoy it as much as I did as a kid!
+My Mom (Joanne Rempel) made this salad a lot in my youth and it holds nostalgic memories! I had not had it in years and in my early 40s had a strong craving for it. I found a recipe online and made it for something different. It took me back to my childhood and I still enjoy it as much as I did as a kid!
 
-## Ingredients:
+## Ingredients
 
-- 2 large Cucumbers, peeled and sliced thin (English Cucumbers, but Field Cucumbers will also work)
-- 1 teaspoon salt
+- 2 large cucumbers (English or field), peeled and sliced thin
+- 1 tsp salt
 - ½ cup sour cream
-- 2 tablespoons white sugar
-- 2 tablespoons white vinegar
-- 2 teaspoon dried dill
-- Dash of Pepper
+- 2 tbsp white sugar
+- 2 tbsp white vinegar
+- 2 tsp dried dill
+- a pinch of pepper
 
-## Directions:
+## Method
 
-If possible, prepare the cucumbers and dressing 24 hours in advance - but keep separate and combine an hour before serving.
+Slice the cucumbers as thin as you can, on the thinnest setting of a mandoline or with a knife.
 
-This recipe is for a family of 4 or a small appy for more. For 2 people, use one cucumber and cut all the other ingredients in half, as this is better served shortly after mixing (but still refrigerate for at least an hour before serving).
+Layer the slices in a colander, salting each layer lightly, and set it in the fridge so the salt can pull the water out, at least 30 minutes (or however long the rest of the prep takes). If you have time, toss and squeeze them once partway through.
 
-For those who do not like dill, you can substitute Parsely (fresh or freeze dried) + a little sprinkle of thyme or tarragon.
+Mix the sour cream, sugar, vinegar, dill, and pepper to make the dressing. Go light on salt in the dressing; the cucumbers are already salted.
 
-Under salt the dressing (when tasting, as the cucumbers will have also been salted to remove the extra water)
+When you're ready to combine, squeeze the excess water from the cucumbers. Fold them into the dressing and refrigerate for at least an hour before serving.
 
-1. Peel and thinly slice cucumbers using the thinnest option on the mandolin or as thin that you can possibly slice using a knife.
-2. Place sliced cucumber in a colander and lightly salt (in layers) and place in the fridge so the salt can pull the moisture out of the cucumbers. Mix and squeeze out moisture once if you have the time.
-3. Mix together the remaining ingredients to make the dressing.
-4. Squeeze excess moisture from cucumbers when you are ready to mix with the dressing.
-5. Fold the cucumbers into the dressing and refrigerate.
-6. Serve!
+## Substitutions
+
+- Dried dill → parsley (fresh or freeze-dried) plus a little thyme or tarragon
+
+## Notes
+
+- If possible, prepare the cucumbers and dressing 24 hours ahead, but keep them separate and combine them an hour before serving.
+- For 2 people, use one cucumber and halve everything else. A small batch is best served shortly after mixing (still chill it for at least an hour).

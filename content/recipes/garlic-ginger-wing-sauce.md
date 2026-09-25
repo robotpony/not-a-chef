@@ -3,7 +3,7 @@ title: Garlic ginger wing sauce
 tags: [sauces, chinese, japanese, make-ahead, dairy-free]
 source: original
 date: 2021-10-01
-servings: enough for ~1 kg wings
+servings: enough for about 1 kg wings
 prep_time: 10 min
 cook_time: 5 min
 total_time: 15 min
@@ -11,7 +11,7 @@ cuisine: American
 draft: false
 ---
 
-Garlic and wings are a great combination. These lean sweet and savory.
+Garlic and wings are a great combination. These lean sweet and savoury.
 
 ## Mechanic
 
@@ -19,18 +19,17 @@ Garlic and wings are a great combination. These lean sweet and savory.
 
 ## Ingredients
 
-- 80ml soy sauce (⅓ cup)
-- 80ml honey or maple syrup (⅓ cup)
-- 80ml hoisin sauce (⅓ cup)
-- 60ml sake or rice wine vinegar (¼ cup)
+- 80 ml soy sauce (⅓ cup)
+- 80 ml honey or maple syrup (⅓ cup)
+- 80 ml hoisin sauce (⅓ cup)
+- 60 ml sake or rice wine vinegar (¼ cup)
 - 1 tablespoon sesame oil
 - 1 small knob ginger, grated (about 2 tablespoons)
 - 2 cloves garlic, grated
 - 1 small shallot, grated
 - 1 tablespoon togarashi
 
-### To finish
-
+#### To finish
 - sesame seeds
 - sliced green onion
 - cilantro or parsley

@@ -3,51 +3,53 @@ title: French onion soup
 tags: [mains, soups]
 source: family
 cuisine: French
-cook_time: ~2h
+cook_time: 2 hr
 draft: false
 ---
 
-This is a simplified version of the classic French-cut, slowly caramelized onion soup. 
+This is a simplified version of the classic French-cut, slowly caramelized onion soup. It blends methods from [Serious Eats](https://www.seriouseats.com/recipes/2015/01/french-onion-soup-recipe.html), [Chef John](https://youtu.be/Ptauy20rLjg), [Andrew Rea](https://youtu.be/1qRir364aNk), [Joshua Weissman](https://youtu.be/LIy6Bhg7nH8), and others.
 
+## Mechanic
 
-## Mechanic 
+The flavour comes from the fond: onions cooked low and slow for an hour or more until deeply browned, with the brown layer scraped off the bottom of the pot again and again before it burns. Traditionally the soup uses a homemade veal or beef stock, but it also works well with a [[Rich veg/mushroom stock]].
 
-Traditionally the soup uses a homemade veal or beef stock, but it also works well with a [[rich veg mushroom stock]]. This recipe blends methods from [Serious Eats](https://www.seriouseats.com/recipes/2015/01/french-onion-soup-recipe.html), [Chef John](https://youtu.be/Ptauy20rLjg), [Andrew Rea](https://youtu.be/1qRir364aNk), [Josh Weissman](https://youtu.be/LIy6Bhg7nH8), and others.
+## Soup
 
-## Ingredients:
-
-- 1 x 1.3kg / 3lb bag of yellow onions
-- 1-2 large white onions
+- 1 bag (1.3 kg / 3 lb) yellow onions
+- 1–2 large white onions
 - 2 leeks
-- 1-2 shallots
+- 1–2 shallots
+- 2 tbsp butter
+- 2 tbsp olive oil
 - 2 sprigs thyme or sage
 - 1 bay leaf
-- 1/2 cup (120ml) dry sherry (such as Amontillado)
-    - Or: white wine + cider vinegar
-    - Or: bourbon + white wine
-- 2L of your stock of choice, ideally a darker stock (veal, beef, mushroom, roasted chicken)
+- ½ cup (120 ml) dry sherry, such as Amontillado
+    - or white wine plus a splash of cider vinegar
+    - or bourbon plus white wine
+- 2 L stock of your choice, ideally a darker one (veal, beef, mushroom, roasted chicken)
+- salt and pepper
 
-### Crusty bread:
+Thinly slice the onions, leeks, and shallots. Put them in a large pot or Dutch oven with the butter and olive oil over medium-low heat. Cook, stirring regularly, until deeply browned, 1–1½ hours. Scrape the fond off the bottom each time you stir so none of it burns, and add more butter or oil if the onions start to stick.
 
-- 1 baguette sliced into 2 cm slices
-- Olive oil
-- Garlic
+Deglaze with the sherry (or substitute), scraping with a wooden spoon until all of the fond is lifted. Add the stock and herbs, and simmer for 20–30 minutes.
 
-### Topping:
+Season with salt and pepper. Remove the herb stems and bay leaf, and take the pot off the heat.
 
-- Cheeses! About 100g per portion, commonly Gruyere or similar
+## Crusty bread
 
-## Directions:
+- 1 baguette, cut into 2 cm slices
+- olive oil
+- 1–2 garlic cloves, halved
 
-This can be made in a large stock pot, enamelled dutch oven, or in a pressure cooker, but works best done by hand in a large pot/dutch oven on the cooktop. The pressure cooker method uses the high setting and 20-25 minutes with a soft release.
+Heat the oven to 220°C (425°F). Rub the bread with the cut garlic, brush lightly with oil, and toast until golden. The broiler is faster, but don't walk away or it will burn.
 
-1. Slice onions, leek, and shallots thinly. Add to a pot with butter and olive oil on med/low and cook until browned. Stir regularly and take care to scrape the suc off the bottom and prevent any of the fond from burning. This takes ~1-1.5 hours.
-2. Deglaze the pot with the alcohol and vinegar, scraping with your wooden spoon until all of the fond is lifted and combined. Add stock, the dried herbs, and simmer for 20-30 minutes.
-3. Season to taste (adding salt and pepper), remove dried herbs, and take off the heat.
-4. Slice the crusty bread, rub with garlic, lightly oil the surface, and toast in a 220C/450F oven. Optionally use the broiler, but don’t walk away or you’ll burn it. Set aside.
-5. Ladle soup into individual oven safe dishes or into a larger casserole dish. Place crusty bread half submerged into soup
-6. Top with cheese and finish under the broiler. Don’t walk away from it, until you remove it (as it goes from browning to sadness quickly).
+## Assembly
 
-## Notes:
+- about 100 g cheese per portion, usually Gruyère or similar
 
-Unless you have access to great commercial stocks (hint: there aren’t many good ones out there) take the time and make your own, it really makes the dish shine.
+Ladle the soup into individual oven-safe bowls or a larger casserole dish. Set the bread in the soup, half submerged. Top with the cheese and broil until bubbling and browned. Don't walk away from it; it goes from browning to sadness quickly.
+
+## Notes
+
+- A pressure cooker can handle the first phase: cook the sliced onions with the fat at high pressure for 20–25 minutes, with a soft release, then cook uncovered, stirring, until the liquid is gone and the onions brown. The stovetop method is best.
+- Unless you have access to a great commercial stock (there aren't many good ones), make your own. It really makes the dish shine.

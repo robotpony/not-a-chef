@@ -11,31 +11,31 @@ cuisine: Chinese
 draft: false
 ---
 
-Classic takeout garlic brocolli is very simple, and delicious.
+Classic takeout garlic broccoli is very simple, and delicious.
 
 ## Ingredients
 
-- 400g broccoli (~4 cups), cut into florets
+- 400 g broccoli (about 4 cups), cut into florets
 - 5 cloves garlic, thinly sliced
 - 1 tablespoon neutral oil
 - 1 tablespoon Shaoxing wine
-- 250ml chicken stock or dashi
+- 250 ml vegetable stock, chicken stock, or dashi
 - ⅛ teaspoon white pepper
 - ½ teaspoon sesame oil
 - 1 teaspoon cornstarch + 1 tablespoon cold water, combined into a slurry
 
 ## Method
 
-Heat a wok over high until smoking. Add oil and garlic; stir-fry until fragrant and just starting to colour, about 30 seconds.
+Heat a wok over high until smoking. Add the oil and garlic; stir-fry until fragrant and just starting to colour, about 30 seconds.
 
-Add broccoli and toss to coat. Add Shaoxing wine and stock; the pan will steam heavily. Cover briefly and steam 2 minutes until broccoli is bright green and tender-crisp.
+Add the broccoli and toss to coat. Add the Shaoxing wine and stock; the pan will steam heavily. Cover and steam until the broccoli is bright green and tender-crisp, about 2 minutes.
 
-Add white pepper. Pour in the cornstarch slurry around the edge; toss until the sauce clings, about 1 minute. Finish with sesame oil.
+Add the white pepper. Pour the cornstarch slurry in around the edge; toss until the sauce clings, about 1 minute. Finish with the sesame oil.
 
-## Special equipment
+## Equipment
 
-A medium to large carbon steel wok (not teflon).
+- A medium to large carbon steel wok (not non-stick)
 
 ## To serve
 
-As a side or part of a multi-dish wok meal. Goes well alongside [[weeknight ginger beef]].
+As a side or part of a multi-dish wok meal. Goes well alongside [[Weeknight ginger beef]].

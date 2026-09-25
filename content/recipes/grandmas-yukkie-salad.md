@@ -3,30 +3,30 @@ title: Grandma’s yukkie salad
 tags: [desserts]
 source: family
 cuisine: American
-prep_time: ~30m
+prep_time: 30 min
 draft: false
 ---
 
-A classic ambrosia style salad from the Rempel family.
+A classic ambrosia-style salad from the Rempel family.
 
-## Ingredients:
+## Ingredients
 
-- 1 pkg (85g) lemon Jello
-- 2 pkg (85g each) strawberry jello
-- 2 pkg (85g each) cherry jello (for larger bowls)
-- 1 cup of miniature marshmallows
-- 1 pkg (250g) cream cheese  (softened)
+- 1 package (85 g) lemon Jell-O
+- 2 packages (85 g each) strawberry Jell-O
+- 2 packages (85 g each) cherry Jell-O (optional, for larger bowls)
+- 1 cup miniature marshmallows
+- 1 package (250 g) cream cheese, softened
 - 1 container Cool Whip
-- 1 can (14oz/398ml) crushed pineapple, drained
+- 1 can (398 ml / 14 oz) crushed pineapple, drained
 - 7 cups boiling water
+- ½ cup walnuts, chopped (optional)
 
-### Optional:
+## Method
 
-- ½ cup chopped walnuts
+Dissolve the lemon Jell-O in 1 cup of the boiling water and let it cool slightly. Add the marshmallows and cream cheese and beat with a mixer on low until smooth. Chill until slightly thickened.
 
-## Directions:
+Stir half the Cool Whip, the pineapple, and the walnuts, if using, into the partly set lemon mixture. Pour into a 3 L bowl and chill until set but not quite firm, about 1 hour.
 
-1. Dissolve the lemon Jello powder in 1 cup of boiling water and cool slightly. Add marshmallows and cream cheese and beat with a mixer on low until smooth. Chill until slightly thickened.
-2. Stir whipped topping, pineapple, and optional walnuts into partially set lemon Jello mixture. Pour into a 3L bowl and chill until set, but not quite firm (about an hour).
-3. Dissolve strawberry jello in 3 cups of boiling water. Cool and whip with the remaining whipped topping. Say “whhhhhiiiippped” topping for bonus points. Pour cooled-but-still-pourable Jello over lemon mixture and chill until set (about 4 hours).  Adding the Cool Whip is optional (but you still have half a container, so waste not, want not!)
-4. Dissolve cherry Jello in 3 cups of boiling water. Cool and pour over the strawberry layer. Chill until set. This layer is optional if you have room.
+Dissolve the strawberry Jell-O in 3 cups of the boiling water. Let it cool, then whip in the rest of the Cool Whip. Say “whhhhhiiiippped” topping for bonus points. The Cool Whip is optional in this layer, but you still have half a container, so waste not, want not! Pour the cooled but still pourable strawberry layer over the lemon layer and chill until set, about 4 hours.
+
+If you have room in the bowl, dissolve the cherry Jell-O in the last 3 cups of boiling water. Let it cool, pour it over the strawberry layer, and chill until set.

@@ -8,6 +8,7 @@
     "tags"           .Params.tags
     "cuisine"        .Params.cuisine
     "servings"       .Params.servings
+    "portions"       .Params.portions
     "source"         .Params.source
     "prep_time"      .Params.prep_time
     "cook_time"      .Params.cook_time

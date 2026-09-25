@@ -7,7 +7,7 @@ prep_time: 10 min
 draft: false
 ---
 
-Something similar to our favourite Nanaimo Mexican hut’s fresh salsa. This is a fairly liquidy salsa, great as a starter for a dinner party (or snack).
+Something similar to the fresh salsa at Gina’s Mexican Café, our favourite Nanaimo spot. This is a fairly liquidy salsa, great as a starter for a dinner party (or snack).
 
 ## Ingredients
 

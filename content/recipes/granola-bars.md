@@ -5,13 +5,13 @@ source: original
 date: 2026-02-02
 servings: 12–14 bars
 prep_time: 20 min
-cook_time: 10-12 min
+cook_time: 10–12 min
 total_time: 20 min (plus 2 hr chilling)
 cuisine: Canadian
 draft: false
 ---
 
-I was looking for the perfect granola bar recipe, minimizing carbohydrates and costs.
+I was looking for the perfect granola bar recipe, minimizing refined carbs (flour, sugar, and binders) and costs.
 
 ## Mechanic
 
@@ -19,12 +19,12 @@ The binding ratio is **dates : oats : nuts at 1:2.5:1** by weight, held together
 
 ## Ingredients
 
-- 100g dates, pitted and mashed
-- 250g rolled oats, toasted
-- 100g mixed nuts, chopped and toasted
-- 77g maple syrup
-- 25g nut butter (almond or peanut)
-- 50g banana, mashed
+- 100 g dates, pitted and mashed
+- 250 g rolled oats, toasted
+- 100 g mixed nuts, chopped and toasted
+- 77 g maple syrup
+- 25 g nut butter (almond or peanut)
+- 50 g banana, mashed
 - spices to taste (cinnamon, cardamom)
 
 ## Method
@@ -43,6 +43,6 @@ Cut into bars. Keep refrigerated; they soften at room temperature.
 
 ## Notes
 
-- Toast the nuts next time. More banana may improve binding.
+- More banana may improve binding.
 - More dates makes chewier bars; more syrup makes them softer.
 - Toasting the oats is essential for flavour; don't skip it.

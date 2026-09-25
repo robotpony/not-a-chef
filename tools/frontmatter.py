@@ -30,7 +30,7 @@ CONTINUATION_RE = re.compile(r"^[ \t]+\S")
 # Output field order — same spirit as migrate.py's FIELD_ORDER, extended
 # with essay/reference-only fields. Unknown fields are appended after.
 FIELD_ORDER = [
-    "title", "tags", "source", "author", "date", "servings",
+    "title", "tags", "source", "author", "date", "servings", "portions",
     "prep_time", "cook_time", "total_time", "cuisine",
     "description", "draft", "featured",
 ]

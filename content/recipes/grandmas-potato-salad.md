@@ -9,25 +9,27 @@ draft: false
 
 Our family tater salad recipe. I mean, it’s not a salad per se, but it’s a classic. Add fried chicken and it’s a picnic!
 
-## Ingredients:
+## Ingredients
 
-- 9 cups of red potatoes (1 small bag)
-- ½ an onion, diced
-- ½ cup of diced celery
+- 9 cups red potatoes (1 small bag)
+- ½ onion, diced
+- ½ cup celery, diced
 - ¼ cup green relish
-- 3 hard boiled eggs (but not too hard, that’s cruel)
-- 1 clove of garlic, minced
+- 3 hard-boiled eggs (but not too hard, that’s cruel), chopped
+- 1 clove garlic, minced
 - ¾ cup sour cream
-- ⅓ cup of mayonnaise (Hellman’s, please)
+- ⅓ cup mayonnaise (Hellmann’s, please)
 - 2 tbsp parsley
 - 1 tsp dry mustard
-- ¾ tbsp salt (or to taste)
-- ¼ tsp black pepper (or to taste)
+- ¾ tbsp salt, or to taste
+- ¼ tsp black pepper, or to taste
 
-## Directions:
+## Method
 
-1. Cut potatoes into bite size pieces. Boil for 8 minutes (salted water at a rolling boil), until a knife slides in and out easily.
-2. Place cooled potatoes in a bowl with celery, relish, onions, and garlic.
-3. In a separate bowl, combine mayo, sour cream, parsley, mustard powder, salt, and pepper. Stir well. Stir some more.
-4. Pour mixture over potato mixture and toss to coat. If stirring, carefully fold potatoes (i.e., you don’t want to break the potatoes up).
-5. Chill. Then chill the potato salad for a minimum of 30 minutes.
+Cut the potatoes into bite-size pieces. Boil them in well-salted water until a knife slides in and out easily, about 8 minutes. Drain and let them cool.
+
+Put the cooled potatoes in a bowl with the eggs, celery, relish, onion, and garlic.
+
+In a separate bowl, stir the mayo, sour cream, parsley, mustard, salt, and pepper together well.
+
+Pour the dressing over the potatoes and fold gently to coat, so the potatoes don't break up. Chill for at least 30 minutes.

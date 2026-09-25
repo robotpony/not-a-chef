@@ -2,7 +2,7 @@
 title: Fruit compote
 tags: [sauces, quick, vegetarian]
 source: family
-servings: 4–6 (makes ~400ml)
+servings: 4–6 (makes about 400 ml)
 prep_time: 5 min
 cook_time: 15 min
 cuisine: world
@@ -17,11 +17,11 @@ Compote is fruit reduced in its own juice with sugar. Start at **10 parts fruit 
 
 ## Ingredients
 
-- 500g fresh or frozen berries or fruit (about 1 lb), chopped if large
-- 50g white sugar (¼ cup)
+- 500 g fresh or frozen berries or fruit (about 1 lb), chopped if large
+- 50 g white sugar (¼ cup)
 - ½ lemon or lime, juiced (about 1 tbsp)
 - 1 small pinch salt
-- 30–60ml water (2–4 tbsp), for firm fruit only
+- 30–60 ml water (2–4 tbsp), for firm fruit only
 
 ## Method
 
