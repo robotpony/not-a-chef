@@ -6,7 +6,9 @@ cuisine: American
 draft: false
 ---
 
-This recipe is an original from the Assistant Pastry Chef at Tiny Lou’s located inside the Hotel Clermont, Atlanta, Georgia.  Dad & I have each stayed at Hotel Clermont individually and together.  On our first trip together (January 2020), we ate at Tiny Lou’s 6 times!  On one of our first nights, the waitress handed us a free dessert to take back up to our room.  We were not sure what it was, but Dad loved it.  So the next day we asked at the restaurant what it was that they had given us, and they replied that the Assistant Pastry Chef was playing around with a new recipe and it was a Rocky Road Brownie.  The next night we had dinner at Tiny Lou’s, they sent us up with 2 more Brownies.  We thanked the staff and let them know we really enjoyed the treats, and on the final day, the staff provided us with the Rocky Road Brownie recipe written out and 4 more Brownies to take with us.
+Fudgy brownies swirled with a toasted marshmallow meringue, from the assistant pastry chef at Tiny Lou's in Atlanta's Hotel Clermont.
+
+> This recipe is an original from the Assistant Pastry Chef at Tiny Lou’s located inside the Hotel Clermont, Atlanta, Georgia. Dad & I have each stayed at Hotel Clermont individually and together. On our first trip together (January 2020), we ate at Tiny Lou’s 6 times! On one of our first nights, the waitress handed us a free dessert to take back up to our room. We were not sure what it was, but Dad loved it. So the next day we asked at the restaurant what it was that they had given us, and they replied that the Assistant Pastry Chef was playing around with a new recipe and it was a rocky road brownie. The next night we had dinner at Tiny Lou’s, they sent us up with 2 more brownies. We thanked the staff and let them know we really enjoyed the treats, and on the final day, the staff provided us with the rocky road brownie recipe written out and 4 more brownies to take with us.
 
 ## Marshmallow meringue
 

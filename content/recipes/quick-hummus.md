@@ -2,40 +2,42 @@
 title: Quick hummus
 tags: [sauces]
 source: family
+portions: about 750 ml (3 small grocery-store tubs)
 cuisine: Mediterranean
 draft: false
 ---
 
-A great snack or condiment, based on restaurant style hummus. Makes about 750ml (3 small grocery store sized containers).
+A great snack or condiment, based on restaurant-style hummus.
 
-## Ingredients:
+## Ingredients
 
-- ~400g tin chickpeas, drained
-- 2x 3-4 cloves of garlic, boiled until soft
-- 100 ml tahini (1-2 big spoons)
-- 3 tablespoon extra virgin olive oil 
-- 90ml lemon juice (2-3 lemons, or from a bottle)
-- 2-4 teaspoons kosher salt (to taste)
+- ~400 g tin chickpeas, drained
+- 6–8 cloves garlic, peeled
+- 100 ml tahini (1–2 big spoons)
+- 90 ml lemon juice (2–3 lemons, or from a bottle)
+- 2–4 tsp kosher salt, to taste
+- 3 tbsp extra-virgin olive oil
 
-### Seasoning:
+#### Seasoning
 
-- ½ teaspoon ground cumin
-- ½ teaspoon ground coriander
-- ½ teaspoon granulated garlic (for more garlic punch)
-- ⅓ teaspoon black pepper (optional)
+- ½ tsp ground cumin
+- ½ tsp ground coriander
+- ½ tsp granulated garlic, for more garlic punch
+- ⅓ tsp black pepper (optional)
 
-## Directions:
+## Method
 
-1. Simmer chickpeas and whole garlic until soft. Drain liquid into a bowl (you may need some later)
-2. Add tahini paste, lemon, and salt/seasonings in a powerful blender. Add chickpeas once cooled to a safe temperature (to prevent burns from splashes).
-3. Blend until smooth, 1-2 minutes in a Vitamix, possibly longer in other blenders.
-4. Season to taste, adding salt and lemon juice until it tastes like hummus.
-5. Blend again until combined.
-6. Blend in olive oil last, this prevents the olive oil from turning bitter from the heat and friction of the blender.
-7. Taste one last time for seasoning, it should be balanced between creamy, nutty, and lemony, with a moderate garlic punch.
+Simmer the chickpeas and whole garlic cloves in water until soft. Drain, saving the cooking liquid.
 
+Put the tahini, lemon juice, salt, and seasoning in a powerful blender. Add the chickpeas and garlic once they've cooled enough not to burn you if they splash.
 
-## Notes 
+Blend until smooth, 1–2 minutes in a Vitamix, possibly longer in other blenders. Taste and add salt and lemon juice until it tastes like hummus, then blend again.
 
-- Flat taste: check for salt, then acid (and add more in small batches)
-- Too thick: add olive oil (if balance of lemon is good)
+Blend in the olive oil last. The heat and friction of a long blend can turn olive oil bitter.
+
+Taste one last time. It should be balanced between creamy, nutty, and lemony, with a moderate garlic punch.
+
+## Notes
+
+- Flat taste: check for salt, then acid, adding more in small amounts.
+- Too thick: blend in a little of the reserved cooking liquid, or more olive oil if the lemon balance is already good.

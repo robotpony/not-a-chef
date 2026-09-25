@@ -6,11 +6,12 @@ date: 2024-07-01
 prep_time: 5 min
 cook_time: 10 min
 total_time: 15 min
+portions: about ⅓ cup (1 pizza)
 cuisine: Italian
 draft: false
 ---
 
-A quick pizza sauce that requires only tomato paste.
+A quick pizza sauce that requires only tomato paste. One batch makes enough for about one pizza.
 
 ## Mechanic
 
@@ -29,23 +30,16 @@ Built on double-strength tomato paste rather than crushed tomatoes. The paste is
 
 ## Method
 
-Heat olive oil in a small saucepan over medium. Add tomato paste and stir, cooking for 1–2 minutes until it darkens slightly and smells sweeter.
+Heat the olive oil in a small saucepan over medium. Add the tomato paste and cook, stirring, until it darkens slightly and smells sweeter, 1–2 minutes.
 
-Add wine and stir to deglaze. Add water and herbs; simmer 5 minutes. Taste and add a pinch of sugar if the sauce is sharp.
+Add the wine and stir to deglaze. Add the water and herbs and simmer for 5 minutes. Taste and add a pinch of sugar if the sauce is sharp.
 
 ## To serve
 
 Spread on pizza dough, flatbread, or as a dipping sauce. Can be made ahead and refrigerated for a week.
 
-## Variations
-
-### Canned tomato style
-
-The family original uses strained tomatoes instead of paste (650ml strained tomatoes, 20g tomato paste)
-
-Refrigerate a few hours before using; it tastes better after resting. Makes ~700ml, closer to mall-food-court pizza than a slow-simmered sauce.
-
 ## Notes
 
-- A bit sweet, a bit thick as written. Add more water if you want a looser sauce, or less sugar.
+- For a bigger batch built on strained tomatoes, see [[Pizzeria pizza sauce]].
+- Add more water for a looser sauce.
 - The double-paste concentrate is important; regular paste needs more reduction time.

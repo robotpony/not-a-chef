@@ -86,7 +86,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 
 - [ ] Import the pan-fried chicken burger experiment log (private Google Sheet, linked in an HTML comment in `recipes/pan-fried-chicken-burger.md`) into the book, probably as a Notes table or a companion page.
 - [ ] Move non-people `servings` values to the new `portions` field (added 2026-09-25; shown as "Makes"). About 20 recipes say things like "makes ~750 ml", "8 buns", or "enough for about 1 kg wings"; keep a people count in `servings` where one makes sense.
-- [ ] Remove stale "needs testing" / "[draft]" / "work in progress" notes: every recipe has been tested (the author, 2026-09-25); the text just wasn't updated. Remaining ones from open question 5 include `base-curry-gravy`, `butter-chicken`, `english-muffins`, `farmer-soup`, `pulled-pork`, `sheet-pan-fast-food-style-gyros`, `vindaloo-wing-sauce`, `vodka-cream-sauce`.
+- [ ] Remove stale "needs testing" / "[draft]" / "work in progress" notes: every recipe has been tested (the author, 2026-09-25); the text just wasn't updated. Remaining ones from open question 5 include `base-curry-gravy`, `butter-chicken`, `english-muffins`, `farmer-soup`, `sheet-pan-fast-food-style-gyros`, `vindaloo-wing-sauce`, `vodka-cream-sauce`.
 - [ ] Import the other private Google Sheets and Docs now kept in HTML comments (`grep -rn 'to import' content`): the food ratios worksheet, scaling sheets in baked mac & cheese, breakfast sausage, pizza dough 2022, the poultry rub mix sheet, and T's broccoli salad's alternative dressing.
 
 ## Pass 1 (2026-09-24)
@@ -346,66 +346,25 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] `recipes/pizza-dough-2022-edition.md` (fixed 2026-09-25: 7 g yeast is ~2¼ tsp; leftovers sentence; ciabatta parenthetical dropped, lower case; method as prose; 230°C (450°F); °C/°F throughout; yield to `portions`)
 - [x] `recipes/pizza-dough.md` (fixed 2026-09-24: 990 g flour + 10 g gluten keeps 70% hydration; adopted the 2023 test (1.5% yeast, 200 g balls); yeast now added in the method; doneness cue)
 - [x] `recipes/pizzeria-pizza-sauce.md` (fixed 2026-09-25: passata; `[[Quick pizza sauce]]`; salt and sugar listed at 10 g, note dropped; 6 g garlic is 2 tsp, start as written and adjust up; unit spacing)
-- [x] ! `recipes/pork-dumpling-bowls.md`
-    - Fractions "3/4", "1/2", "1/4" → glyphs. "scallions" → "green onions". L14: "highly rated" is promotional and about the source's reviews; drop.
-- [x] ! `recipes/potato-leek-and-mushroom-soup.md` (Google links fixed 2026-09-24)
-    - Butter for the mushrooms (L45) isn't listed (the 2 tbsp is for the leeks). L45: extra spaces in "Melt the     butter".
-    - L9: "Serious Eat’s" → "Serious Eats’"; "John’s" → "Chef John’s". L43: "sautéd" → "sautéed". L38: "over blend" → "over-blend". L18: "1 ½ cup" → "cups". L25: "1 bag of mushrooms" → weight (~225 g).
-- [x] ! `recipes/pressure-cooker-japanese-curry.md`
-    - Two em-dashes (L48, L58). L24, L56: "Yukon gold" → "Yukon Gold".
-    - Otherwise clean. (The food log's "Japanese curry #todo" can be ticked off.)
+- [x] `recipes/pork-dumpling-bowls.md` (fixed 2026-09-25: fraction glyphs; "highly rated" dropped; method as prose; serving line moved to To serve (green onions were already fixed))
+- [x] `recipes/potato-leek-and-mushroom-soup.md` (fixed 2026-09-25: converted to FORMAT.md as soup / mushroom garnish; mushroom butter listed; emulsion note as a Mechanic; Serious Eats'; Chef John's; sautéed; over-blend; 1½ cups; 225 g mushrooms)
+- [x] `recipes/pressure-cooker-japanese-curry.md` (fixed 2026-09-25: em-dashes; Yukon Gold; unit spacing (food log already links the recipe))
 - [x] `recipes/prosecco-sangria.md` (fixed 2026-09-24: Prosecco topping added; 2-hour chill; converted to FORMAT.md)
-- [x] ! `recipes/pulled-bbq-style-chicken.md` (Google links fixed 2026-09-24)
-    - Tag `pork` is wrong → `poultry`.
-    - L21: the rub step mentions salt, which isn't listed. L17: "1 teaspoons" → "1 teaspoon"; L19: "1.5 teaspoon" → "teaspoons".
-    - Q: at 70°C, thighs and breasts are safe but won't shred easily; pulled chicken usually goes to ~80–85°C for thighs. Intended?
-    - Title: "Pulled BBQ style" → "Pulled BBQ-style". L36: "dutch oven" → "Dutch oven"; L38 stray space before comma.
-- [x] ! `recipes/pulled-pork.md`
-    - Unfinished: `servings: TBD`, `total_time: TBD`, and a "[draft] Untested" note, while `draft: false`.
-    - L23: "1 pork shoulders", while the rub line and method refer to shoulders plural. Give a weight (e.g. 1 boneless shoulder, 2–3 kg).
-    - Q: 45–60 min at high pressure plus 20 min natural release is short for pull-apart shoulder (75–90 min is typical for a whole one). Tested?
-    - Salt and pepper for the sauce (step 4) aren't listed. L22: `[[Bruce's Poultry and Pork Spice Rub]]` → sentence case.
-- [x] ! `recipes/quick-crispy-wings.md` (Google links fixed 2026-09-24)
-    - Missing step: the hot sauce (Frank's, butter, rub, herbs) is listed but never used. Add "Toss the baked wings in the sauce".
-    - Timing contradicts: step 3 is 20–30 min, flip, then another 20–30 (40–60 total), but `cook_time` says 20–30.
-    - L38: "preheat and oven" → "preheat the oven"; "219C (425F)" → "220°C (425°F)". L11: "5 birds worth" → "5 birds' worth". L41: comma splice.
-- [x] ! `recipes/quick-hummus.md`
-    - L14: "2x 3-4 cloves of garlic" is unclear. Q: 6–8 cloves total?
-    - Step 1 reserves the cooking liquid "you may need some later", but it's never used again; Notes suggest olive oil to thin. Mention the liquid there too.
-    - L16: "3 tablespoon" → "tablespoons". Steps 6–7: comma splices. Step 1 missing period. L9: "restaurant style" → "restaurant-style"; yield belongs in `servings`.
-- [x] ! `recipes/quick-pizza-sauce.md`
-    - L44: the "Canned tomato style" variation is incomplete (only the tomatoes and paste, no seasoning) and duplicates pizzeria-pizza-sauce.md. Link `[[Pizzeria pizza sauce]]` instead.
-    - L50: "A bit sweet ... or less sugar" doesn't match this recipe (sugar is only "a pinch if needed"). It probably belongs to the variation.
-    - No yield: 2 tbsp paste + water makes ~⅓ cup, about one pizza. Say so.
-- [x] ! `recipes/ramen-eggs-ajitsuke-tamago.md`
-    - L18: incorrect: "The eggs finish cooking in the marinade as they cool". They're shocked in ice water first and go into a cooled marinade, so they don't cook further. Drop the claim; the 7-minute time is the jammy result.
-    - L46: reusing the marinade 2–3 times: bring it to a boil and cool before each reuse (it has held peeled eggs for days).
-- [x] ! `recipes/ramen-noodles.md` (Google links fixed 2026-09-24)
-    - L24: em-dash, and an open testing note ("consider testing some egg white"). Move it to Notes.
-    - L16: "38% hydration": 145 g water over 400 g flour + gluten is ~36%. Minor.
-    - L34: "noodlize" is jokey; fine in voice, but "cut into noodles" reads better in a recipe.
-- [x] ! `recipes/red-thai-curry.md`
-    - L22: "1/3" → "⅓". L34: "caramelised" → "caramelized".
-    - Otherwise clean; strong Mechanic.
-- [x] ! `recipes/rice-pudding.md`
-    - `cuisine: Japanese` looks wrong for this rice pudding (vanilla, cinnamon, milk). Q: typo?
-    - Q: the temperatures don't quite line up with the texture. Egg custards start to thicken around 70°C and curdle above ~80–85°C, so pulling at 65–70°C (L34) may leave it thin, and "above [70°C] the egg curdles" (L18) is too low. 71–75°C would be safer and still smooth.
-    - L14: "icecream" → "ice cream". L25: "3¼ tablespoons sugar" is oddly precise (a scaled value?); "3 tablespoons" or 40 g.
-- [x] ! `recipes/rich-vegmushroom-stock.md`
-    - Contradiction: L11 says it "works best 2:3 (veg:water)", Notes (L50) say "At a ratio of 3:2".
-    - The kombu is listed but never used in the method. Q: steeped after the simmer, like the ramen stock?
-    - L9: "PhØ" → "pho" (or "phở"); "Ramen" → "ramen"; "Cooking With Glen’s" Q: the channel is "Glen & Friends Cooking".
-    - L24: "shitake" → "shiitake"; L26: "5ml/1 teaspoons" → "1 teaspoon (5 ml)"; L29: "Veg oil" → "vegetable oil"; L45: "decompress" → "depressurize". L39: "### Directions:" → `## Method`.
+- [x] `recipes/pulled-bbq-style-chicken.md` (fixed 2026-09-25: converted to FORMAT.md as chicken / braising liquid; `poultry` tag; salt 1–1.5% of the chicken; breasts pulled at 70°C, thighs at 80–85°C so they shred; 1 tsp, 1½ tsp; Pulled BBQ-style; Dutch oven; sauce and other cookers as variations)
+- [x] `recipes/pulled-pork.md` (fixed 2026-09-25: TBD fields: `servings` dropped (Notes: 150–250 g per person), `total_time: 13–25 hr`; [draft] note removed; 1–2 shoulders; 45–60 min matches the ~50 min for a bone-in shoulder; sauce salt and pepper listed; wiki-link case; method as prose)
+- [x] `recipes/quick-crispy-wings.md` (fixed 2026-09-25: converted to FORMAT.md as wings / hot sauce; wings tossed in the sauce; `cook_time: 40–60 minutes`; `servings: 2–3`; preheat the oven; 220°C (425°F); birds'; comma splice)
+- [x] `recipes/quick-hummus.md` (fixed 2026-09-25: converted to FORMAT.md; 6–8 cloves garlic; cooking liquid used to thin; tablespoons; comma splices; restaurant-style; yield to `portions`)
+- [x] `recipes/quick-pizza-sauce.md` (fixed 2026-09-25: canned-tomato variation replaced by a `[[Pizzeria pizza sauce]]` link; "a bit sweet" note dropped; yield ~⅓ cup (1 pizza))
+- [x] `recipes/ramen-eggs-ajitsuke-tamago.md` (fixed 2026-09-25: "finish cooking in the marinade" claim replaced (the 7-minute boil sets the yolk); marinade boiled and cooled before reuse; unit spacing)
+- [x] `recipes/ramen-noodles.md` (fixed 2026-09-25: em-dash; egg-white idea and sodium carbonate warning moved to Notes; ~36% hydration; "cut the noodles"; method as prose)
+- [x] `recipes/red-thai-curry.md` (fixed 2026-09-25: ⅓; caramelized; unit spacing)
+- [x] `recipes/rice-pudding.md` (fixed 2026-09-25: pull at about 70°C, curdling above ~80°C; `cuisine: world`; ice cream; 3 tbsp (40 g) sugar)
+- [x] `recipes/rich-vegmushroom-stock.md` (fixed 2026-09-25: converted to FORMAT.md; one ratio (2:3 veg:water) in the Mechanic and Notes; kombu steeped in the strained stock (or soaked in the water beforehand); phở; ramen; Glen & Friends Cooking; shiitake; 1 tsp (5 ml); vegetable oil; depressurize)
 - [x] `recipes/roast-poultry.md` (fixed 2026-09-24: breasts 65°C with the rest as the hold, 68°C boneless; "in pieces"; 220°C)
-- [x] ! `recipes/rocky-road-brownies.md` (fixed 2026-09-24: meringue first; chocolate melted with butter; chips used; salt; bake time; metric; converted to FORMAT.md)
-    - L9: very long backstory (open question 3).
+- [x] `recipes/rocky-road-brownies.md` (fixed 2026-09-24: meringue first; chocolate melted with butter; chips used; salt; bake time; metric; converted to FORMAT.md; 2026-09-25: backstory moved into a family blockquote under a one-line intro)
 - [x] `recipes/salsa-verde.md` (fixed 2026-09-24: converted to FORMAT.md; keeps 5–7 days; lime juice used in the blend)
 - [x] `recipes/sandwich-sour-pickles.md`
-- [x] ! `recipes/satay-marinade.md`
-    - Missing step: the 1 tbsp salt is excluded from the blend (step 1) and never added. Q: rub it on the protein before the marinade (dry brine)?
-    - No quantity of protein for this batch. Q: ~1 kg?
-    - Step 3 "Cook protein until done" has no internal temperatures (pork/chicken/beef differ); link the doneness cheat sheet or list them.
-    - L25: "juiced and zest" → "juiced and zested"; L27: "worcestershire" → "Worcestershire"; L40: "230C/450F" → "230°C (450°F)", "foil lined" → "foil-lined".
+- [x] `recipes/satay-marinade.md` (fixed 2026-09-25: converted to FORMAT.md; salt dry-brines the protein first; ~1 kg protein; chicken 68°C, pork 63°C, linked to the food safety page; zested; Worcestershire; 230°C (450°F); foil-lined)
 - [x] `recipes/sheet-pan-fast-food-style-gyros.md` (fixed 2026-09-24: now uses 1 batch [[Gyro base]]; 71°C; title hyphenated; converted to FORMAT.md)
 - [x] ! `recipes/shredded-taco-chicken.md`
     - L30: "Marinade chicken" → "Marinate". L31: "excess marinate" → "excess marinade". L30: mismatched quotes around “ham“.

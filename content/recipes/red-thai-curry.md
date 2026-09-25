@@ -19,11 +19,11 @@ The key step is **heating the coconut cream alone until it splits** (the fat sep
 
 ## Ingredients
 
-- 400ml tin coconut milk (use the cream + about 1/3 of the liquid in the first step; reserve the rest)
+- 400 ml tin coconut milk (use the cream + about ⅓ of the liquid in the first step; reserve the rest)
 - 2–3 tablespoons Thai red curry paste
 - 1 tablespoon tomato paste
 - 1 onion or 2 shallots, diced
-- 250ml chicken or vegetable stock
+- 250 ml chicken or vegetable stock
 - 2 tins mixed additions: water chestnuts, mini corn, bamboo shoots (drained)
 - roasted veg (sweet potato, carrot, cauliflower, whatever you have)
 - protein: tofu, cooked chicken, or shrimp added at the end
@@ -31,7 +31,7 @@ The key step is **heating the coconut cream alone until it splits** (the fat sep
 
 ## Method
 
-Roast veg in advance at 200°C (400°F) until caramelised. Set aside.
+Roast veg in advance at 200°C (400°F) until caramelized. Set aside.
 
 Scoop the thick cream from the top of the coconut tin into a wide pan. Heat over medium until reduced and starting to separate (sizzling, oily at the edges), about 5 minutes.
 
