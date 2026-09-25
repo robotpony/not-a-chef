@@ -27,16 +27,22 @@
     {{ end }}
 
     {{/* Header */}}
-    <header id="single_header" class="mt-5 max-w-prose">
+    {{/* Food Log files have no frontmatter, so no title: skip the empty
+      h1 and meta block, and the file's first heading (e.g. "## Fall 2024,
+      undated") takes the title's place under the breadcrumb
+      (.single-header-untitled in custom.css). */}}
+    <header id="single_header" class="mt-5 max-w-prose{{ if not .Title }} single-header-untitled{{ end }}">
       {{ if .Params.showBreadcrumbs | default (site.Params.article.showBreadcrumbs | default false) }}
         {{ partial "breadcrumbs.html" . }}
       {{ end }}
-      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        {{ .Title | emojify }}
-      </h1>
-      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
-        {{ partial "article-meta/basic.html" (dict "context" . "scope" "single") }}
-      </div>
+      {{ with .Title }}
+        <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+          {{ . | emojify }}
+        </h1>
+        <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          {{ partial "article-meta/basic.html" (dict "context" $ "scope" "single") }}
+        </div>
+      {{ end }}
       {{ if not (.Params.showAuthorBottom | default (site.Params.article.showAuthorBottom | default false)) }}
         {{ template "SingleAuthor" . }}
       {{ end }}

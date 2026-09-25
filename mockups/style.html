@@ -201,9 +201,12 @@
   .variation h4{ font-family:'Libre Franklin',sans-serif; font-size:.95rem; font-weight:600; margin-bottom:6px; }
   .variation p{ font-family:'Lora',serif; font-size:.95rem; margin:0; }
 
-  .wikilink{ color:var(--accent-strong); text-decoration:underline; text-decoration-style:dotted; text-underline-offset:2px; font-weight:600; }
+  .wikilink, .extlink{ text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:3px; text-decoration-color:color-mix(in srgb, var(--accent) 35%, transparent); transition:text-decoration-color .15s; }
+  .wikilink:hover, .extlink:hover{ text-decoration-color:var(--accent); }
+  .wikilink{ color:inherit; transition:text-decoration-color .15s, color .15s; }
+  .wikilink:hover{ color:var(--accent-strong); }
   .wikilink::after{ content:' \2192'; font-size:.85em; }
-  .extlink{ color:inherit; text-decoration:underline; text-decoration-color:var(--border-strong); text-underline-offset:2px; }
+  .extlink{ color:inherit; }
   .extlink::after{ content:' \2197'; font-size:.75em; color:var(--ink-faint); }
 
   .ltitle{ font-family:'Libre Franklin',sans-serif; font-size:1.5rem; font-weight:700; letter-spacing:-.01em; margin:0 0 4px; }
@@ -503,7 +506,7 @@
         <div class="comp-demo" style="font-family:'Lora',serif; font-size:.95rem;">
           <p style="margin:0;">Serve over <a href="#" class="wikilink">Steamed Rice</a>, or alongside <a href="#" class="extlink">Serious Eats' braising primer</a>.</p>
         </div>
-        <p class="comp-card-note">Wikilink (dotted underline + →) is an internal cross-reference; extlink (muted underline + ↗) points outside the site. Distinct treatments, never interchangeable.</p>
+        <p class="comp-card-note">Wikilink (body text + →; accent text on hover) is an internal cross-reference; extlink (ink text + ↗) points outside the site. Both share a solid underline in muted accent that goes full accent on hover.</p>
       </div>
 
       <div class="comp-card">

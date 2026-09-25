@@ -293,8 +293,8 @@ everything discarded or superseded getting to this list.
 - **Notes list** (`.notes-list`) — em-dash bullets (via `::before`), not a native list marker
 - **Notes sub-section** (`.notes-sub`) — a labeled sub-block nested one level inside Notes, for a note that needs its own heading
 - **Variation block** (`.variation`) — heading + prose, one block per variation, stacked
-- **Wikilink** (`.wikilink`) — internal cross-reference: dotted underline + trailing →
-- **External link** (`.extlink`) — outside reference: muted underline + trailing ↗, distinct from wikilink
+- **Wikilink** (`.wikilink`) — internal cross-reference: body-colour, body-weight text (`--accent-strong` on hover, 2026-09-25), trailing →. Underline (shared with extlink, 2026-09-25, after warpedvisions.org): solid 2px, `--accent` mixed to 35%, full `--accent` on hover
+- **External link** (`.extlink`) — outside reference: ink text + trailing ↗, same underline as wikilink; only the arrow (→ vs ↗) tells them apart
 - **Cuisine chip** — filled `--highlight-soft` / `--highlight` text, one per recipe, always yellow regardless of which cuisine — deliberately never color-coded by cuisine (see Decisions below). Links to `/cuisine/<name>/` (as of 2026-09-24); shown on recipe cards and at the start of the tag row on recipe pages. On cards the title link stretches over the whole card (`.rcard-link::after`) and the chip sits above it, since the card can't be one `<a>` with a link inside
 - **Tag** — neutral outline (`--border-strong`), never colored
 - **Filter pill** — pill-shaped (14px radius), neutral outline, `--accent-soft` fill when active — listing-page filters, distinct from the chip's "fact about the recipe"

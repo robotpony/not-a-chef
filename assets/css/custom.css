@@ -215,17 +215,45 @@ main > header + section {
   margin-top: 0.25em;
   margin-bottom: 0.25em;
 }
+/* Nested lists: Tailwind Typography gives `ul ul` a .75em margin above and
+ * below, so a sub-list opened a gap wider than the spacing between items.
+ * Match the li rhythm instead. Found on Food Log pages, which nest deeply. */
+.prose li > :is(ul, ol) {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
 
 /* Wikilink/extlink, from mockups/style.html §3. Unlayered here beats
  * Tailwind Typography's layered `.prose a { color: var(--tw-prose-links) }`
  * regardless of specificity (same mechanism as the token bridge above), so
  * these colors win without needing a `.prose` prefix. */
-.wikilink {
-  color: var(--accent-strong);
+/* Both link kinds share one underline, after warpedvisions.org: a solid
+ * 2px line in the accent mixed down to 35% so it reads as a quiet rule
+ * rather than a second text colour, brought to full --accent on hover.
+ * The mix follows --accent into dark mode, so there's no separate dark
+ * value. (Replaced the wikilink's dotted underline and the extlink's grey
+ * --border-strong one, 2026-09-25.) */
+.wikilink,
+.extlink {
   text-decoration: underline;
-  text-decoration-style: dotted;
-  text-underline-offset: 2px;
-  font-weight: 600;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, var(--accent) 35%, transparent);
+  transition: text-decoration-color .15s;
+}
+.wikilink:hover,
+.extlink:hover {
+  text-decoration-color: var(--accent);
+}
+/* Wikilink text stays body colour and weight until hover (2026-09-25),
+ * so a page dense with cross-references doesn't read as a wall of bold
+ * red; the underline and → carry it at rest. */
+.wikilink {
+  color: inherit;
+  transition: text-decoration-color .15s, color .15s;
+}
+.wikilink:hover {
+  color: var(--accent-strong);
 }
 .wikilink::after {
   content: ' \2192';
@@ -233,9 +261,6 @@ main > header + section {
 }
 .extlink {
   color: inherit;
-  text-decoration: underline;
-  text-decoration-color: var(--border-strong);
-  text-underline-offset: 2px;
 }
 .extlink::after {
   content: ' \2197';
@@ -817,6 +842,20 @@ article > .max-w-prose,
 article > footer {
   padding-left: 20px;
   padding-right: 20px;
+}
+
+/* Untitled pages (Food Log months, see single.html): the body's first
+ * heading stands in for the missing h1, so it sits right under the
+ * breadcrumb the way a recipe title does. */
+.single-header-untitled + section .article-content > :first-child {
+  margin-top: 0;
+}
+/* Below lg the mobile "Table of Contents" box sits between the breadcrumb
+ * and that heading, so it needs a gap there. */
+@media (max-width: 1023px) {
+  .single-header-untitled + section .article-content > :first-child {
+    margin-top: 1rem;
+  }
 }
 
 .related-section {
