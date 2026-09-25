@@ -1,5 +1,6 @@
 ---
 title: April 2025
+date: 2025-04-01
 ---
 
 _Undated._

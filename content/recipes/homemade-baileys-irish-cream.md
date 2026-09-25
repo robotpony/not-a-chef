@@ -2,6 +2,7 @@
 title: Homemade Baileys Irish cream
 tags: [drinks, irish, christmas]
 source: https://aseasyasapplepie.com/homemade-baileys-irish-cream/
+date: 2026-09-11
 cuisine: Irish
 portions: about 1 L (4 cups)
 prep_time: 1 min

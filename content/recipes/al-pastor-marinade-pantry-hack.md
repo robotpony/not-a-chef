@@ -2,6 +2,7 @@
 title: Al pastor marinade (pantry hack)
 tags: [bases]
 source: family
+date: 2026-06-08
 prep_time: 20 min (plus 24–48 hr marinating)
 cook_time: 2–4 hr
 cuisine: Mexican

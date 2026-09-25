@@ -1,5 +1,6 @@
 ---
 title: December 2025
+date: 2025-12-01
 ---
 
 ## Thursday, December 25th

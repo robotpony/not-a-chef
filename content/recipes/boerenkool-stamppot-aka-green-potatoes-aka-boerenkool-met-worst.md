@@ -2,6 +2,7 @@
 title: Boerenkool stamppot
 tags: [mains, mashes]
 source: family
+date: 2026-06-08
 aka: brittacole, green potatoes, boerenkool met worst
 cuisine: Dutch
 prep_time: 15 min

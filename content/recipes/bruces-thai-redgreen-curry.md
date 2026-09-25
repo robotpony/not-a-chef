@@ -2,6 +2,7 @@
 title: Bruce’s Thai red/green curry
 tags: [mains, curries]
 source: family
+date: 2026-06-08
 cuisine: Thai
 prep_time: 15 min
 cook_time: 20 min

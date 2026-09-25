@@ -3,6 +3,7 @@ title: "Food safety: time and temperature"
 source: family
 draft: false
 tags: [reference, safety, temperature, doneness]
+date: 2026-09-24
 ---
 
 Food safety is a combination of temperature and time. The familiar "safe" numbers (74°C for poultry, 71°C for ground meat) are the temperatures where bacteria die almost instantly. Below them, the same kill happens if the meat holds that temperature long enough. This is how sous vide chicken at 63°C is safe, and it's how you keep lean cuts juicy without gambling.

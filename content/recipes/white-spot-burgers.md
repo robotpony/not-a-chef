@@ -2,6 +2,7 @@
 title: White Spot burgers
 tags: [mains, burgers]
 source: family
+date: 2026-06-08
 servings: 4
 cuisine: Canadian
 draft: false

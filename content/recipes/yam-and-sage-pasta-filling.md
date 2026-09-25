@@ -2,6 +2,7 @@
 title: Yam and sage pasta filling
 tags: [pasta, bases]
 source: family
+date: 2026-06-08
 cuisine: Italian
 draft: false
 ---

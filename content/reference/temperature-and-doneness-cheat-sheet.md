@@ -2,6 +2,7 @@
 title: Temperature and doneness cheat sheet
 tags: [reference, temperature, doneness]
 source: family
+date: 2026-06-08
 draft: true
 ---
 

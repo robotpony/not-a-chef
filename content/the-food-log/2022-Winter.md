@@ -1,5 +1,6 @@
 ---
 title: Fall and winter 2022–23
+date: 2022-12-01
 ---
 
 _Undated. About October 2022 to March 2023; the original notes grouped these as Fall/Winter._

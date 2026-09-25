@@ -2,6 +2,7 @@
 title: Chef John’s hamburger buns
 tags: [breads]
 source: family
+date: 2026-06-08
 servings: 8 buns
 cook_time: 15–18 min
 cuisine: American

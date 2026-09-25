@@ -2,6 +2,7 @@
 title: Sheet-pan fast-food-style gyros
 tags: [bases]
 source: family
+date: 2026-06-08
 prep_time: 15 min (plus 2 hr chill)
 cook_time: 25–35 min
 cuisine: Greek

@@ -2,6 +2,7 @@
 title: Pizza dough 2022 edition
 tags: [breads]
 source: family
+date: 2026-06-08
 portions: ~4 medium pizzas
 cook_time: 10–15 min
 cuisine: Italian

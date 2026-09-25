@@ -2,6 +2,7 @@
 title: Panago-style jalapeño cheese dip
 tags: [sauces]
 source: family
+date: 2026-06-08
 cuisine: Canadian
 aliases: [/recipes/panago-style-jalapeño-cheese-dip/]
 draft: false

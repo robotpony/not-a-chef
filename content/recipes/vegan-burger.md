@@ -2,6 +2,7 @@
 title: Vegan burger
 tags: [mains, burgers]
 source: family
+date: 2026-06-08
 cuisine: American
 aliases: [/recipes/vegan-burger-savoury-chew-gluten/]
 draft: false

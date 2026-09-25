@@ -2,6 +2,7 @@
 title: Autumn glow salad with lemon dressing
 tags: [salads, vegan]
 source: https://pinchofyum.com/autumn-glow-salad-with-lemon-dressing
+date: 2026-06-08
 draft: false
 prep_time: 15 min
 cook_time: 45 min

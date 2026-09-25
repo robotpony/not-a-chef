@@ -2,6 +2,7 @@
 title: Ramen noodles
 tags: [bases, japanese, make-ahead]
 source: family
+date: 2026-06-08
 prep_time: 24 hr (or 20+ min at room temp)
 cuisine: Japanese
 draft: false

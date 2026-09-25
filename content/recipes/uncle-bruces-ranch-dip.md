@@ -2,6 +2,7 @@
 title: Uncle Bruce's ranch dip
 tags: [sauces]
 source: family
+date: 2026-06-08
 cuisine: American
 draft: false
 ---

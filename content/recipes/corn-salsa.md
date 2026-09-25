@@ -2,6 +2,7 @@
 title: Corn salsa
 tags: [sauces]
 source: family
+date: 2026-06-08
 cook_time: 5 min
 cuisine: Mexican
 draft: false

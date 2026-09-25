@@ -2,6 +2,7 @@
 title: Gurkensalat (German cucumber salad)
 tags: [salads]
 source: family
+date: 2026-06-08
 cuisine: Mennonite
 servings: 4, or a small appy for more
 prep_time: 15 min

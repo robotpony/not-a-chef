@@ -2,6 +2,7 @@
 title: Coconut jam tarts
 tags: [desserts]
 source: family
+date: 2026-06-08
 servings: 12
 cook_time: 15–20 min
 cuisine: Canadian

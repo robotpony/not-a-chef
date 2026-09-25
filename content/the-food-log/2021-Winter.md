@@ -1,5 +1,6 @@
 ---
 title: Fall and winter 2021
+date: 2021-12-01
 ---
 
 _Undated. About late September to December 2021; the original notes grouped these as Fall/Winter._

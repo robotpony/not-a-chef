@@ -1,6 +1,7 @@
 ---
 title: Flour protein content comparison
 source: family
+date: 2026-06-08
 draft: false
 tags: [reference, baking, flour]
 ---

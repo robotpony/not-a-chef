@@ -2,6 +2,7 @@
 title: Chocolate chip cookie for one
 tags: [desserts]
 source: Savvy Cookbook (adapted)
+date: 2026-06-08
 cook_time: 6–8 min
 cuisine: American
 draft: false

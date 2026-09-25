@@ -2,6 +2,7 @@
 title: Lentil stew
 tags: [mains, curries]
 source: family
+date: 2026-06-08
 cuisine: Jamaican
 draft: false
 ---

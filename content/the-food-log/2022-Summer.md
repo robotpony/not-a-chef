@@ -1,5 +1,6 @@
 ---
 title: Summer 2022
+date: 2022-08-01
 ---
 
 _Undated. The original notes called this “IT’S FUCKING SUMMER AGAIN.”_

@@ -2,6 +2,7 @@
 title: Toblerone shortbread
 tags: [desserts]
 source: family
+date: 2026-06-08
 portions: about 2 dozen cookies
 cuisine: Canadian
 draft: false

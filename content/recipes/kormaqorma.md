@@ -2,6 +2,7 @@
 title: Korma/qorma
 tags: [mains, curries]
 source: family
+date: 2026-06-08
 cuisine: Indian
 prep_time: 15 min
 cook_time: 1 hr

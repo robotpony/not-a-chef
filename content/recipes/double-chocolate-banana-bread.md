@@ -2,6 +2,7 @@
 title: Double chocolate banana bread
 tags: [desserts]
 source: https://smittenkitchen.com/2013/05/double-chocolate-banana-bread/
+date: 2026-06-08
 cook_time: 55–65 min
 cuisine: American
 draft: false

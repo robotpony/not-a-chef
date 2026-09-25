@@ -2,6 +2,7 @@
 title: Gina’s tomato salsa
 tags: [sauces]
 source: family
+date: 2026-06-08
 cuisine: Mexican
 prep_time: 10 min
 draft: false

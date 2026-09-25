@@ -2,6 +2,7 @@
 title: Peach (or any fruit) crisp
 tags: [desserts]
 source: family
+date: 2026-06-08
 cook_time: 45 min
 cuisine: Canadian
 draft: false

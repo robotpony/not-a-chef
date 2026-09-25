@@ -6,7 +6,7 @@ See `SPEC.md` for the normative version of this document — exact frontmatter t
 
 ## Frontmatter
 
-Required fields: `title`, `tags`. Everything else is optional but encouraged.
+Required fields: `title`, `tags`, `date`. Everything else is optional but encouraged.
 
 ```yaml
 ---
@@ -28,14 +28,18 @@ cuisine: Indian
 | `tags`       | string[]         | Plain strings, no `#` prefix. Category and descriptive tags.          |
 | `source`     | string           | `original`, `family`, a URL, or a book title.                         |
 | `author`     | string           | Only when different from the collection author.                       |
-| `date`       | string           | ISO 8601 (YYYY-MM-DD). Date added or last modified.                   |
+| `date`       | string           | ISO 8601 (YYYY-MM-DD). Date added. Required. "Updated" comes from git. |
 | `aka`        | string           | Alternative names.                                                    |
 | `servings`   | string or number | People it feeds: "4", "4–6", "12+ (people)".                         |
-| `portions`   | string           | What the batch makes, when that isn't people: "2 pans", "1 loaf".    |
+| `portions`   | string           | What the batch makes, when that isn't people: "2 pans", "1 loaf", "~500 ml". |
 | `prep_time`  | string           | Parenthetical notes are fine: "20 min (plus 24–48 hr cold ferment)".  |
 | `cook_time`  | string           | Active cooking time.                                                  |
 | `total_time` | string           | Total elapsed time if different from prep + cook.                     |
 | `cuisine`    | string           | Region or cuisine (e.g., "Indian", "Italian").                        |
+
+Approximate values use a leading `~`, not "about": `portions: ~500 ml`, `cook_time: ~2 hr`. It's shorter, and it fits the compact metadata on cards and in the sidebar. Ranges (`4–6`, `20–30 min`) don't need it.
+
+Every page on the site carries `date`, not just recipes: essays (`FORMAT-ESSAYS.md`), reference guides, Food Log months (first of the month; season files use the month the log sorts them by), and About. Both sidebars show it as **Date**, plus **Updated** from the file's last git commit when that falls on a different day.
 
 The schema is open. Unknown fields are preserved and ignored by tools. Don't add `difficulty`, `diet`, or `license` unless there's a reason.
 

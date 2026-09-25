@@ -2,7 +2,8 @@
 title: Thai-style chili lime sauce
 tags: [sauces]
 source: family
-portions: about 500 ml
+date: 2026-06-08
+portions: ~500 ml
 cuisine: Thai
 aliases: [/recipes/thai-style-chilli-lime-sauce/]
 draft: false

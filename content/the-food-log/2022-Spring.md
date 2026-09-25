@@ -1,5 +1,6 @@
 ---
 title: Winter and spring 2022
+date: 2022-06-01
 ---
 
 _Undated. About January to June 2022; the original notes grouped these as Winter/Spring._

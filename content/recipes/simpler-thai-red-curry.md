@@ -2,6 +2,7 @@
 title: Simpler Thai red curry
 tags: [mains, curries]
 source: family
+date: 2026-06-08
 cuisine: Thai
 draft: false
 ---

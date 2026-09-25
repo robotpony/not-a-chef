@@ -2,6 +2,7 @@
 title: Bruce’s quick fried black beans
 tags: [sides]
 source: family
+date: 2026-06-08
 cuisine: Mexican
 prep_time: ~15 min
 draft: false

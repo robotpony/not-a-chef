@@ -1,5 +1,6 @@
 ---
 title: Spring 2024
+date: 2024-06-01
 ---
 
 _Undated. January to June; the original notes grouped these as Spring._

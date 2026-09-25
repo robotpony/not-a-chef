@@ -2,6 +2,7 @@
 title: Winter noodle soup, with kale and fennel
 tags: [mains, soups]
 source: family
+date: 2026-06-08
 servings: 10
 portions: about 6 L (6 qt)
 prep_time: 45 min

@@ -2,6 +2,7 @@
 title: Mushroom Parmesan pasta filling
 tags: [pasta, bases]
 source: family
+date: 2026-06-08
 cook_time: 15–20 min
 cuisine: Italian
 draft: false

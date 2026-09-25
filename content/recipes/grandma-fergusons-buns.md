@@ -2,6 +2,7 @@
 title: Grandma Ferguson’s buns
 tags: [breads]
 source: family
+date: 2026-06-08
 servings: 1 pan of buns (6–12, depending on size)
 cuisine: Canadian
 draft: false

@@ -2,6 +2,7 @@
 title: Our favourite chocolate chip cookies
 tags: [desserts]
 source: family
+date: 2026-06-08
 portions: about 2–3 dozen cookies
 cook_time: 10–12 min
 cuisine: Canadian

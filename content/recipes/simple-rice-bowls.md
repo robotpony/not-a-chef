@@ -2,6 +2,7 @@
 title: Simple rice bowls
 tags: [mains, rice-bowls]
 source: family
+date: 2026-06-08
 cuisine: Asian
 draft: false
 ---

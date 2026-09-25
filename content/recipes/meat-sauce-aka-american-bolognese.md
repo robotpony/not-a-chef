@@ -2,6 +2,7 @@
 title: Meat sauce (AKA American bolognese)
 tags: [sauces, italian american]
 source: family
+date: 2026-06-08
 cook_time: 20–45 min
 cuisine: Italian American
 draft: false

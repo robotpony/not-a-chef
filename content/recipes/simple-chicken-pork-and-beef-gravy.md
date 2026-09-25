@@ -2,6 +2,7 @@
 title: Simple chicken, pork, and beef gravy
 tags: [bases]
 source: family
+date: 2026-06-08
 cuisine: world
 draft: false
 ---

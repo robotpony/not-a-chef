@@ -2,6 +2,7 @@
 title: Farmer soup
 tags: [mains, soups]
 source: family
+date: 2026-06-08
 cuisine: Canadian
 prep_time: 10 min
 cook_time: 20 min

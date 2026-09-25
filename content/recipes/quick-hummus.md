@@ -2,6 +2,7 @@
 title: Quick hummus
 tags: [sauces]
 source: family
+date: 2026-06-08
 portions: about 750 ml (3 small grocery-store tubs)
 cuisine: Mediterranean
 draft: false

@@ -2,6 +2,7 @@
 title: French onion soup
 tags: [mains, soups]
 source: family
+date: 2026-06-08
 cuisine: French
 cook_time: 2 hr
 draft: false

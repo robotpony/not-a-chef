@@ -2,6 +2,7 @@
 title: The Aldersons’ epic 12 days of pizza
 tags: [reference, menus, events, pizza]
 source: family
+date: 2026-06-08
 draft: false
 ---
 

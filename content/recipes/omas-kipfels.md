@@ -2,6 +2,7 @@
 title: Oma’s kipfels
 tags: [breads]
 source: family
+date: 2026-06-08
 cuisine: Mennonite
 draft: false
 ---

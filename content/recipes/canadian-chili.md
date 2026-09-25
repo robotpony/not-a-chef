@@ -2,6 +2,7 @@
 title: Canadian chili
 tags: [mains, stews]
 source: family
+date: 2026-06-08
 cuisine: Canadian
 prep_time: 15 min
 cook_time: 60–90 min (~25 min with beef base)

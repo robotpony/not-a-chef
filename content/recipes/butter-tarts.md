@@ -2,6 +2,7 @@
 title: Butter tarts
 tags: [desserts]
 source: family
+date: 2026-06-08
 cook_time: 12–15 min
 cuisine: Canadian
 draft: false

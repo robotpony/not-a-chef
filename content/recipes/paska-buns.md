@@ -2,6 +2,7 @@
 title: Paska buns
 tags: [breads]
 source: family
+date: 2026-06-08
 portions: 30 buns
 cook_time: 18 min
 cuisine: Mennonite

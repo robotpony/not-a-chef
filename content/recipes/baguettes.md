@@ -2,6 +2,7 @@
 title: Baguettes
 tags: [breads, technique]
 source: family
+date: 2026-06-08
 draft: false
 cuisine: French
 prep_time: 2½ hr

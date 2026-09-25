@@ -2,6 +2,7 @@
 title: Pan-fried chicken burger
 tags: [mains, burgers]
 source: family
+date: 2026-06-08
 servings: 9 burgers
 cuisine: American
 draft: false

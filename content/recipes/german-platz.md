@@ -2,6 +2,7 @@
 title: German platz
 tags: [desserts]
 source: family
+date: 2026-06-08
 cook_time: 25–35 min
 cuisine: Mennonite
 draft: false

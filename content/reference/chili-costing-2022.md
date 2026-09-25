@@ -3,6 +3,7 @@ title: Chili costing analysis (2022)
 source: family
 draft: false
 tags: [reference, costing, chili]
+date: 2026-06-08
 ---
 
 Cost breakdown for a large batch of chili. Total yield: 9.5L, 38 portions at 250ml each.

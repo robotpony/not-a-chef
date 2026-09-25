@@ -2,6 +2,7 @@
 title: Candied cranberries (sugared cranberries)
 tags: [appetizers, sides]
 source: Our Best Bites (@ourbestbites on Instagram)
+date: 2026-06-08
 cuisine: American
 prep_time: 10 min (plus overnight soak and 2+ hr drying)
 draft: false

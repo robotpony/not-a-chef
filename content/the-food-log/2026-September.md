@@ -1,5 +1,6 @@
 ---
 title: September 2026
+date: 2026-09-01
 ---
 
 ## Friday, September 18th

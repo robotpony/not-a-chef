@@ -1,5 +1,6 @@
 ---
 title: December 2024
+date: 2024-12-01
 ---
 
 _Undated. Winter._

@@ -3,6 +3,7 @@ title: Nicola 2018 food planning
 source: family
 draft: false
 tags: [reference, menus, events, camping]
+date: 2026-06-08
 ---
 
 Four-day meal plan for a trip to Nicola (2018).

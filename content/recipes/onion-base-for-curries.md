@@ -2,6 +2,7 @@
 title: Onion base for curries
 tags: [bases]
 source: family
+date: 2026-06-08
 cook_time: 1 hr
 cuisine: Indian
 draft: false

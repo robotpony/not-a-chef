@@ -2,6 +2,7 @@
 title: Oliebollen
 tags: [desserts]
 source: family
+date: 2026-06-08
 portions: 12–20 oliebollen
 cuisine: Dutch
 aliases: [/recipes/olie-bollen/]

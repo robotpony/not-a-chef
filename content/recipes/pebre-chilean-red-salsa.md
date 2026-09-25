@@ -2,6 +2,7 @@
 title: Pebre (Chilean red salsa)
 tags: [sauces]
 source: family
+date: 2026-06-08
 prep_time: 30 min (plus 30 min resting)
 cuisine: Chilean
 aliases: [/recipes/south-american-red-salsa/]

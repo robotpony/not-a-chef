@@ -2,6 +2,7 @@
 title: Chicken or turkey stock
 tags: [bases]
 source: family
+date: 2026-06-08
 cuisine: world
 prep_time: 45 min
 cook_time: 45 min

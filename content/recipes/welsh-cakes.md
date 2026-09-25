@@ -2,6 +2,7 @@
 title: Welsh cakes
 tags: [desserts]
 source: family
+date: 2026-06-08
 cuisine: Welsh
 draft: false
 ---

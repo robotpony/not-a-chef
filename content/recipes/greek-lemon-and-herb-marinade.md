@@ -2,6 +2,7 @@
 title: Greek lemon and herb marinade
 tags: [bases]
 source: family
+date: 2026-06-08
 portions: enough for about 2 kg protein
 prep_time: 10 min
 cuisine: Greek

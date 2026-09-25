@@ -2,6 +2,7 @@
 title: Salsa verde
 tags: [sauces]
 source: family
+date: 2026-06-08
 cuisine: Mexican
 draft: false
 ---

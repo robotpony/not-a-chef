@@ -2,6 +2,7 @@
 title: (Grand) Mom’s black bean & corn salsa
 tags: [sauces]
 source: family
+date: 2026-06-08
 draft: false
 cuisine: Canadian
 prep_time: 10 min

@@ -2,6 +2,7 @@
 title: Classic pizza sauce
 tags: [sauces]
 source: family
+date: 2026-06-08
 cook_time: 20–30 min
 cuisine: Italian
 draft: false

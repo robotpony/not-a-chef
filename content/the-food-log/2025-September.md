@@ -1,5 +1,6 @@
 ---
 title: September 2025
+date: 2025-09-01
 ---
 
 ## Friday, September 19th

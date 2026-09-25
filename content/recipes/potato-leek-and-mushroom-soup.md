@@ -2,6 +2,7 @@
 title: Potato, leek, and mushroom soup
 tags: [mains, soups]
 source: family
+date: 2026-06-08
 cuisine: French
 draft: false
 ---

@@ -1,5 +1,6 @@
 ---
 title: August 2025
+date: 2025-08-01
 ---
 
 ## Saturday, August 9th

@@ -2,6 +2,7 @@
 title: Lemongrass marinade
 tags: [bases]
 source: family
+date: 2026-06-08
 portions: enough for 750 g–1 kg protein
 cuisine: Vietnamese
 draft: false

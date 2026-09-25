@@ -36,15 +36,17 @@ FIELD_ORDER = [
 ]
 
 REQUIRED_FIELDS = {
-    "recipe": ["title", "tags"],
+    "recipe": ["title", "tags", "date"],
     "essay": ["title", "date"],
-    "reference": ["title"],
+    "reference": ["title", "date"],
+    "log": ["title", "date"],
 }
 
 RECOMMENDED_FIELDS = {
-    "recipe": ["source", "date", "draft"],
+    "recipe": ["source", "draft"],
     "essay": ["tags", "draft"],
     "reference": ["source", "tags", "draft"],
+    "log": [],
 }
 
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -284,6 +286,8 @@ def classify(path):
         return "essay"
     if parts[0] == "reference":
         return "reference"
+    if parts[0] == "the-food-log":
+        return "log"
     return None
 
 
@@ -298,7 +302,7 @@ def collect_files(paths):
                 files.append(p)
         return files
     files = []
-    for section in ("recipes", "essays", "reference"):
+    for section in ("recipes", "essays", "reference", "the-food-log"):
         files.extend(sorted((REPO_ROOT / "content" / section).rglob("*.md")))
     return files
 

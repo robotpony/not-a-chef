@@ -2,6 +2,7 @@
 title: Spinach pecan pasta filling
 tags: [pasta, bases]
 source: family
+date: 2026-06-08
 portions: about 50 small pastas (10 g each)
 cuisine: Italian
 draft: false

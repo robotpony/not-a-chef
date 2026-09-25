@@ -3,7 +3,7 @@ title: Bruce's poultry and pork spice rub
 tags: [bases, quick]
 source: original
 date: 2026-05-08
-servings: ~775 g (about 5 cups)
+portions: ~775 g (~5 cups)
 prep_time: 10 min
 total_time: 10 min
 cuisine: Canadian

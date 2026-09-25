@@ -2,6 +2,7 @@
 title: Hot ranch spinach and artichoke dip
 tags: [sauces]
 source: family
+date: 2026-06-08
 cook_time: 30 min
 cuisine: American
 draft: false

@@ -2,6 +2,7 @@
 title: Apple, berry & almond scones
 tags: [breads, tea]
 source: family
+date: 2026-06-08
 draft: false
 cuisine: Canadian
 portions: 6 scones

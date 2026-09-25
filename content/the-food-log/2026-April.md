@@ -1,5 +1,6 @@
 ---
 title: April 2026
+date: 2026-04-01
 ---
 
 ## Monday, April 27th

@@ -3,6 +3,7 @@ title: White Rock cheesecake
 aka: Unbaked cheesecake, Vancouver cheesecake
 tags: [desserts]
 source: family
+date: 2026-06-08
 cook_time: 10 min
 cuisine: Canadian
 draft: false

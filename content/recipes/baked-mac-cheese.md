@@ -2,6 +2,7 @@
 title: Baked mac & cheese
 tags: [mains, casseroles]
 source: family
+date: 2026-06-08
 draft: false
 cuisine: American
 prep_time: 20 min

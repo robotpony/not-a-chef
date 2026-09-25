@@ -2,6 +2,7 @@
 title: Jerk chicken
 tags: [mains, poultry, caribbean, make-ahead]
 source: family
+date: 2026-06-08
 cuisine: Jamaican
 servings: 4–8
 prep_time: 15 min

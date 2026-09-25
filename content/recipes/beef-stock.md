@@ -2,6 +2,7 @@
 title: Beef stock
 tags: [bases, stocks]
 source: family
+date: 2026-06-08
 cuisine: French
 prep_time: 20 min
 cook_time: ~2 hr

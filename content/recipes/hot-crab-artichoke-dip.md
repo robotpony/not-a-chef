@@ -2,6 +2,7 @@
 title: Hot crab & artichoke dip
 tags: [sauces]
 source: family
+date: 2026-06-08
 cook_time: 15 min
 cuisine: American
 draft: false

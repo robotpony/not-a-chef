@@ -2,6 +2,7 @@
 title: Beef base
 tags: [bases, meat]
 source: family
+date: 2026-06-08
 cuisine: Canadian
 prep_time: 15 min
 cook_time: 35–90 min

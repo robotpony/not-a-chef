@@ -2,6 +2,7 @@
 title: Nine bean soup mix
 tags: [mains, soups]
 source: family
+date: 2026-06-08
 cuisine: Canadian
 draft: false
 ---

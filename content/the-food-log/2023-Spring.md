@@ -1,5 +1,6 @@
 ---
 title: Spring 2023
+date: 2023-06-01
 ---
 
 _Undated. About April to June; the original notes grouped these as Spring._

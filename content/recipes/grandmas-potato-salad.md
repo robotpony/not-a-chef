@@ -2,6 +2,7 @@
 title: Grandma’s potato salad
 tags: [salads]
 source: family
+date: 2026-06-08
 cook_time: 8 min
 cuisine: Canadian
 draft: false

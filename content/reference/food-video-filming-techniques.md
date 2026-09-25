@@ -2,6 +2,7 @@
 title: Food video filming techniques
 tags: [reference, video]
 source: original
+date: 2026-06-17
 draft: false
 ---
 

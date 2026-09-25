@@ -2,6 +2,7 @@
 title: Perogies
 tags: [mains, dumplings]
 source: family
+date: 2026-06-08
 cuisine: Ukrainian
 draft: false
 ---

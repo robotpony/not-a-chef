@@ -2,6 +2,7 @@
 title: Hot Buffalo chicken dip
 tags: [appetizers, sides]
 source: family
+date: 2026-06-08
 cuisine: American
 prep_time: 15 min
 cook_time: 25 min

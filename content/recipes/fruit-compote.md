@@ -2,6 +2,7 @@
 title: Fruit compote
 tags: [sauces, quick, vegetarian]
 source: family
+date: 2026-06-08
 servings: 4–6 (makes about 400 ml)
 prep_time: 5 min
 cook_time: 15 min

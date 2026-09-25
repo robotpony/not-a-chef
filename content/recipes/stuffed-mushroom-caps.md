@@ -2,6 +2,7 @@
 title: Stuffed mushroom caps
 tags: [appetizers, sides]
 source: family
+date: 2026-06-08
 portions: 8 caps
 cook_time: 30–45 min
 cuisine: American

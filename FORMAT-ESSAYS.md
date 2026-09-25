@@ -21,7 +21,7 @@ description: "AI hasn't changed the fundamentals of software development as much
 | Field | Type | Notes |
 |---|---|---|
 | `title` | string | Essay title. Sentence case. |
-| `date` | string | ISO 8601 (YYYY-MM-DD). Publication date. Required. |
+| `date` | string | ISO 8601 (YYYY-MM-DD). Publication date. Required. "Updated" comes from git. |
 | `draft` | boolean | `true` while in progress; `false` to publish. Default: `false`. |
 | `tags` | string[] | Optional. Plain strings, no `#` prefix. Topic tags for browsing. |
 | `description` | string | Optional. 1–2 sentences for SEO and listing cards. |

@@ -2,6 +2,7 @@
 title: Quick crispy wings
 tags: [mains, poultry]
 source: family
+date: 2026-06-08
 cuisine: American
 servings: 2–3
 prep_time: 20 minutes (plus 1–8 hr in the fridge)

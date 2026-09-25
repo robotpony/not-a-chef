@@ -2,6 +2,7 @@
 title: Simple, sweet pickled veg
 tags: [sauces]
 source: family
+date: 2026-06-08
 cuisine: American
 draft: false
 ---

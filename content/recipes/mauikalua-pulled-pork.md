@@ -2,6 +2,7 @@
 title: Maui/Kalua pulled pork
 tags: [mains, pork]
 source: family
+date: 2026-06-08
 prep_time: 30 min (or overnight)
 cook_time: 4–5 hr
 cuisine: Hawaiian

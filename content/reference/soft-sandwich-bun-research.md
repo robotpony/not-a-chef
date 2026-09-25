@@ -3,6 +3,7 @@ title: Soft sandwich bun (research notes)
 source: family
 draft: false
 tags: [reference, baking, bread, research]
+date: 2026-06-08
 ---
 
 Recipe research notes for a soft sandwich bun. Adapted from Serious Eats (Cemita rolls) and Food Wishes (hamburger buns). See also [[Chef John’s hamburger buns]].

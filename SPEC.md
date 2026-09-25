@@ -46,15 +46,17 @@ Supersedes the informal table in `FORMAT.md` §Frontmatter.
 | `source` | SHOULD | string | `original`, `family`, a URL, or a book title. |
 | `author` | MAY | string | Only when different from the collection author. |
 | `aka` | MAY | string | Alternative names, comma-separated. |
-| `date` | SHOULD | string | ISO 8601. |
+| `date` | MUST | string | ISO 8601 (YYYY-MM-DD). The day the page was added. Required on every page type (recipes, essays, reference, Food Log, About). Last-modified comes from git, not front matter (`enableGitInfo`); don't hand-maintain a `lastmod`. |
 | `servings` | SHOULD | string or number | How many people it feeds. Feeds `recipeYield` in the build-time schema.org output (§7.8). |
-| `portions` | MAY | string | What the batch makes, when that isn't a head count: "2–3 sheet pans", "about 1.5 L", "8 buns". |
+| `portions` | MAY | string | What the batch makes, when that isn't a head count: "2–3 sheet pans", "~1.5 L", "8 buns". Approximate values use `~` (§2 note below the table). |
 | `prep_time` | MAY | string | |
 | `cook_time` | MAY | string | |
 | `total_time` | MAY | string | |
 | `cuisine` | MAY | string | |
 | `draft` | MUST | boolean | Hugo publish gate. |
 | `cost_note` | MAY | string | Free-text author commentary on cost ("expensive because of saffron"). Not a number — the computed estimate lives in build-time data, §6. |
+
+Approximate front-matter values MUST use a leading `~` rather than "about", "approx.", or "roughly": `~500 ml`, `~2 hr`, `~3 medium pizzas`. Keep the space between number and unit. A range (`4–6`, `20–30 min`) needs no `~`.
 
 The schema stays open: unknown fields MUST be preserved and MUST NOT
 cause a validation error. This spec only adds normative status to fields

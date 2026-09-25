@@ -2,6 +2,7 @@
 title: Greek Islands' creamy Greek dressing
 tags: [salads]
 source: family
+date: 2026-06-08
 cuisine: Greek
 prep_time: 10 min
 draft: false
