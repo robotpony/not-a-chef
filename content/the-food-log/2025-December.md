@@ -1,3 +1,7 @@
+---
+title: December 2025
+---
+
 ## Thursday, December 25th
 
 ### Holiday week recipes

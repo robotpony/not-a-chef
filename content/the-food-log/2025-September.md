@@ -1,3 +1,7 @@
+---
+title: September 2025
+---
+
 ## Friday, September 19th
 
 ### Breakfast sausage

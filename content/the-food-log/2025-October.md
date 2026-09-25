@@ -1,3 +1,7 @@
+---
+title: October 2025
+---
+
 ## Sunday, October 19th
 
 ### Turkey v2

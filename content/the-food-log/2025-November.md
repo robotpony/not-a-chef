@@ -1,3 +1,7 @@
+---
+title: November 2025
+---
+
 ## Sunday, November 9th
 
 ### Goulash, v1

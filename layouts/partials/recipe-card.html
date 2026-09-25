@@ -21,16 +21,14 @@
   Reference guides (layouts/reference/list.html) too: the "reference"
   tag every guide carries is skipped, and the stat line is reading time.
 
-  Food Log months (layouts/the-food-log/list.html) too: the title comes
-  from reading-sidebar/log-month.html (log files have no frontmatter),
-  the middle lists the month's days (its h2s), and the stat line is the
-  day count and reading time.
+  Food Log months (layouts/the-food-log/list.html) too: the middle lists
+  the month's days (from reading-sidebar/log-month.html), and the stat
+  line is the day count and reading time.
 */}}
 {{ $isEssay := eq .Section "essays" }}
 {{ $isLog := eq .Section "the-food-log" }}
 {{ $isRef := eq .Section "reference" }}
 {{ $title := .Title }}
-{{ if $isLog }}{{ $title = (partial "reading-sidebar/log-month.html" .).label }}{{ end }}
 {{ $slots := 2 }}
 {{ $cuisine := .Params.cuisine }}
 {{ $tags := slice }}
@@ -68,10 +66,12 @@
 {{ end }}
 
 {{ if $isLog }}
-  {{ $days := where (partial "reading-sidebar/headings.html" .Fragments.Headings) "level" 2 }}
-  {{ $names := slice }}{{ range $days }}{{ $names = $names | append .title }}{{ end }}
-  {{ $intro = delimit $names " · " }}
-  {{ $stats = slice (dict "label" "Days" "value" (string (len $days)) "full" (string (len $days))) (dict "label" "Read" "value" (printf "%dm" .ReadingTime) "full" (printf "%d min" .ReadingTime)) }}
+  {{/* Undated pages have no days, so list their first few entries (h3s) instead. */}}
+  {{ $month := partial "reading-sidebar/log-month.html" . }}
+  {{ $days := $month.days }}
+  {{ $intro = delimit (cond (gt (len $days) 0) $days (first 4 $month.entries)) " · " }}
+  {{ $n := cond (gt (len $days) 0) (string (len $days)) "—" }}
+  {{ $stats = slice (dict "label" "Days" "value" $n "full" (cond (gt (len $days) 0) $n "undated")) (dict "label" "Read" "value" (printf "%dm" .ReadingTime) "full" (printf "%d min" .ReadingTime)) }}
 {{ end }}
 {{ if or $isEssay $isRef }}
   {{ $stats = slice (dict "label" "Read" "value" (printf "%dm" .ReadingTime) "full" (printf "%d min" .ReadingTime)) }}

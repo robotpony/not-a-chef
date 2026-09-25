@@ -1,3 +1,7 @@
+---
+title: February 2026
+---
+
 ## Monday, February 2nd
 
 ### Prep and good food

@@ -1,6 +1,8 @@
-## December 2024, undated
+---
+title: December 2024
+---
 
-_Winter_
+_Undated. Winter._
 
 ### Pho bo
 

@@ -1,3 +1,7 @@
+---
+title: April 2026
+---
+
 ## Monday, April 27th
 
 ### Various tests

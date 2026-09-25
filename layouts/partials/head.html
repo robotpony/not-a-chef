@@ -76,8 +76,7 @@
   {{ end }}
 
   {{/* Social */}}
-  {{ template "_internal/opengraph.html" . }}
-  {{ template "_internal/twitter_cards.html" . }}
+  {{ partial "social.html" . }}
   {{/* Use defaultSocialImage if feature image does not exist */}}
   {{ $featureImage := "" }}
   {{ $pageImages := .Resources.ByType "image" }}

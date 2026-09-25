@@ -1,4 +1,8 @@
-## January 2025, undated
+---
+title: January 2025
+---
+
+_Undated._
 
 ### January meals
 

@@ -1,3 +1,7 @@
+---
+title: August 2026
+---
+
 ## Saturday, August 22nd
 
 ### Ideas

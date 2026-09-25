@@ -1,3 +1,7 @@
+---
+title: August 2025
+---
+
 ## Saturday, August 9th
 
 ### Summer blow out

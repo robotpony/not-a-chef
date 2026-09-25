@@ -1,3 +1,7 @@
+---
+title: September 2026
+---
+
 ## Friday, September 18th
 
 #### Food ideas

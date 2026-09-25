@@ -1,4 +1,8 @@
-## April 2025, undated
+---
+title: April 2025
+---
+
+_Undated._
 
 ### April food TODO
 

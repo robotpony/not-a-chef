@@ -1,3 +1,7 @@
+---
+title: January 2026
+---
+
 ## Monday, January 19th
 
 _Post-holidays grind (fresher foods)_

@@ -844,20 +844,6 @@ article > footer {
   padding-right: 20px;
 }
 
-/* Untitled pages (Food Log months, see single.html): the body's first
- * heading stands in for the missing h1, so it sits right under the
- * breadcrumb the way a recipe title does. */
-.single-header-untitled + section .article-content > :first-child {
-  margin-top: 0;
-}
-/* Below lg the mobile "Table of Contents" box sits between the breadcrumb
- * and that heading, so it needs a gap there. */
-@media (max-width: 1023px) {
-  .single-header-untitled + section .article-content > :first-child {
-    margin-top: 1rem;
-  }
-}
-
 .related-section {
   margin-top: 48px;
   padding-top: 32px;

@@ -1,4 +1,8 @@
-## Summer 2024, undated
+---
+title: Summer 2024
+---
+
+_Undated._
 
 ### Retro dishes
 

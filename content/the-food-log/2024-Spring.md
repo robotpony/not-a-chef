@@ -1,6 +1,8 @@
-## Spring 2024, undated
+---
+title: Spring 2024
+---
 
-_January to June; the original notes grouped these as Spring._
+_Undated. January to June; the original notes grouped these as Spring._
 
 ### Rice bowls
 

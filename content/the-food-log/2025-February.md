@@ -1,6 +1,8 @@
-## February 2025, undated
+---
+title: February 2025
+---
 
-_Late winter_
+_Undated. Late winter._
 
 ### Jamaican recipe card
 

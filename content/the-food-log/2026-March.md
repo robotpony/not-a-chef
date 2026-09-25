@@ -1,3 +1,7 @@
+---
+title: March 2026
+---
+
 ## Thursday, March 26th
 
 ### Explorations

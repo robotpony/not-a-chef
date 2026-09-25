@@ -20,12 +20,15 @@
 
   {{/* On this page: desktop only. On mobile, Blowfish's collapsible TOC
     already sits at the top of the article (see single.html). The Food Log
-    gets a flat list of days (its h2s) instead. */}}
+    gets a flat list of days (its h2s) instead, or of entries (h3s) when
+    the page is undated. */}}
   {{ if eq $section "the-food-log" }}
     {{ $days := where $headings "level" 2 }}
+    {{ $undated := not $days }}
+    {{ if $undated }}{{ $days = where $headings "level" 3 }}{{ end }}
     {{ if $days }}
       <div class="rs-section hidden lg:block">
-        <h2 class="rs-label">This month</h2>
+        <h2 class="rs-label">{{ cond $undated "On this page" "This month" }}</h2>
         <div class="browse-list">
           {{ range $days }}<a href="#{{ .id }}">{{ .title }}</a>{{ end }}
         </div>
@@ -105,8 +108,8 @@
       <h2 class="rs-label">Months</h2>
       <div class="browse-list">
         {{ range sort $months "key" "desc" }}
-          {{ $days := len (where (partial "reading-sidebar/headings.html" .page.Fragments.Headings) "level" 2) }}
-          <a href="{{ .page.RelPermalink }}"{{ if eq .page $page }} aria-current="page"{{ end }}>{{ .label }} <span class="n">{{ $days }} {{ cond (eq $days 1) "day" "days" }}</span></a>
+          {{ $days := len .days }}
+          <a href="{{ .page.RelPermalink }}"{{ if eq .page $page }} aria-current="page"{{ end }}>{{ .label }} <span class="n">{{ if $days }}{{ $days }} {{ cond (eq $days 1) "day" "days" }}{{ else }}undated{{ end }}</span></a>
         {{ end }}
       </div>
       {{ if eq (len $months) 1 }}
