@@ -8,17 +8,17 @@ draft: false
 
 This is a fridge-magnet recipe that is perfect to mop up old herbs and sour cream. We often have it over a chunky combination of sliced cabbage, broccoli, carrots, and celery.
 
-## Ingredients:
+## Ingredients
 
-- ½ cup Hellman's mayo
+- ½ cup Hellmann's mayo
 - ½ cup sour cream
-- 1-2 tablespoon cider vinegar (Braggs is good)
-- 2 tablespoon white sugar
+- 1–2 tablespoons cider vinegar (Bragg is good)
+- 2 tablespoons white sugar
 - 2 teaspoons fresh thyme leaves, finely chopped
-- 1 teaspoon coriander
+- 1 teaspoon ground coriander
 - 1 teaspoon MSG
-- Salt/pepper to taste
+- salt and pepper
 
-## Directions:
+## Method
 
-Combine ingredients in a small bowl and stir or whisk together. Season to taste, but should balance sweet/acid/salt in a pleasing way.
+Whisk everything together in a small bowl. Season to taste; it should balance sweet, acid, and salt.

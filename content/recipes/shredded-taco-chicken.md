@@ -8,30 +8,39 @@ draft: false
 
 This is a quick shredded chicken for tacos, salads, or rice bowls.
 
-## Ingredients:
+## Mechanic
 
-- 1 kg (1 package) of boneless, skinless chicken thighs
-- 100g (½ tin) of chipotle peppers and sauce (minced)
+Aim for a good crust and an internal temperature of **75–90°C (170–195°F)**. Dark meat with connective tissue softens above 75°C and shreds best closer to 90°C; lean cuts like breast shouldn't go far past 70°C.
+
+## Ingredients
+
+- 1 kg (1 package) boneless, skinless chicken thighs
+- 100 g (½ tin) chipotle peppers in adobo, minced
 - 1 onion, finely minced
-- Juice of 1 lime
-- 3 large cloves of garlic, minced
-- 2 teaspoons ancho chili powder
-- 2 teaspoons cumin
-- 2 teaspoons salt
-- 1 teaspoon black pepper
-- ½ teaspoon MSG (Accent, optional)
-
+- juice of 1 lime
+- 3 large cloves garlic, minced
+- 2 tsp ancho chili powder
+- 2 tsp cumin
+- 2 tsp salt
+- 1 tsp black pepper
+- ½ tsp MSG (Accent) (optional)
 
 ## Method
 
-You can cook the chicken in a large skillet, in the oven, or on a grill. We’ll list some suggestions for all methods, but the goal will be to get a nice crust on it and get the internal temperature to 75C-90C (170F-200F). Darker meat with connective tissue softens above 75C and is best closer to 90C, whereas leaner cuts like breast shouldn’t be cooked far past 65C.
+Make a paste with the chipotles, lime juice, onion, garlic, and spices.
 
-1. Make a paste with the chipotles, lime juice, onions, and spices.
-2. Marinade chicken for 30 minutes to 4 hours (overnight is okay, but the texture starts to shift towards “ham“ the longer it sits).
-3. Remove chicken, shaking off excess marinate.
-    1. Grill on medium: oil grill, turn frequently until browned and at temperature.
-    2. Pan on medium-low: oil pan, turn frequently until browned and at temperature.
-    3. Oven at 200C/400F: line pan with foil or parchment, oil liner, add chicken and flip a few times to coat with oil. Bake for 20-30 minutes until browned and at temperature.
-4. While letting meat rest, add remaining marinade to a pot and simmer for 10 minutes. Taste and adjust seasoning.
-5. Add chicken to a large bowl and shred. Add ½-1cup of sauce back to the chicken and stir. Reserve and refrigerate the remaining sauce for service. Sauce can be used in tacos or as a dip.
-    1. Sauce is good for 2-3 days in the refrigerator.
+Marinate the chicken in the paste for 30 minutes to 4 hours. Overnight is okay, but the texture starts to turn "ham-like" the longer it sits.
+
+Lift out the chicken, shaking off the excess marinade. Cook it on an oiled grill over medium or in an oiled pan over medium-low, turning often, until browned and at temperature. Or bake it at 200°C (400°F) on an oiled foil- or parchment-lined pan, turning the chicken to coat it in the oil, until browned and at temperature, about 20–30 minutes.
+
+While the meat rests, simmer the leftover marinade in a small pot for 10 minutes. Taste and adjust the seasoning.
+
+Shred the chicken in a large bowl. Stir in ½–1 cup of the sauce.
+
+## To serve
+
+In tacos, salads, or rice bowls, with the rest of the sauce on the side or as a dip.
+
+## Notes
+
+- The sauce keeps 2–3 days in the fridge.

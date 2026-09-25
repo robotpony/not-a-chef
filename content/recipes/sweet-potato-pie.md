@@ -1,32 +1,38 @@
 ---
 title: Sweet potato pie
 tags: [desserts]
-source: family
+source: Alton Brown, Food Network
 cuisine: American
 draft: false
 ---
 
-We watched Alton Brown make this on Food TV then had to try it for ourselves and LOVED it!
+We watched Alton Brown make this on Food TV, then had to try it for ourselves, and loved it!
 
-## Ingredients:
+## Ingredients
 
-- 1 lb & 3 oz Sweet Potatoes, peeled and cubed
-- 1 ¼ cups Plain Yogurt
-- ¾ cups Dark Brown Sugar, packed
-- ½ tsp Cinnamon
-- ¼ tsp Nutmeg
-- 5 Egg Yolks
-- Pinch of Salt
-- 1 9in Deep Dish frozen Pie Shell
-- 1 cup Pecans, chopped and toasted
-- 1 tbsp Maple Syrup
+- 540 g (1 lb 3 oz) sweet potatoes, peeled and cubed
+- 1¼ cups plain yogurt
+- ¾ cup dark brown sugar, packed
+- ½ tsp cinnamon
+- ¼ tsp nutmeg
+- 5 egg yolks
+- pinch of salt
+- one 23 cm (9 in) deep-dish frozen pie shell
+- 1 cup pecans, chopped and toasted
+- 1 tbsp maple syrup
 
-## Directions:
+## Method
 
-1. Steam cubed Sweet Potatoes for 20 minutes or until the potatoes are fork tender.  Mash with a potato masher and set aside.
-2. Preheat the oven to 350 degrees F (175 C).
-3. Place Sweet Potatoes in the bowl of a stand mixer and beat with the paddle attachment.
-4. Add Yogurt, Brown Sugar, Cinnamon, Nutmeg, Egg Yolks, and Salt to taste, then beat until well combined.
-5. Pour batter into pie shell and place onto a sheet pan.
-6. Sprinkle top of pie with the toasted pecans and drizzle with the Maple Syrup.
-7. Bake for 50 to 55 minutes.  Remove from the oven and cool on a cooling rack.  Keep refrigerated after cooling.
+Steam the sweet potatoes until fork-tender, about 20 minutes. Mash with a potato masher.
+
+Heat the oven to 175°C (350°F).
+
+Beat the sweet potatoes in a stand mixer with the paddle attachment. Add the yogurt, brown sugar, cinnamon, nutmeg, egg yolks, and salt, and beat until well combined.
+
+Pour the filling into the pie shell and set it on a sheet pan. Sprinkle the toasted pecans over the top and drizzle with the maple syrup.
+
+Bake until the centre is just set with a slight wobble, 50–55 minutes. Cool on a rack.
+
+## Notes
+
+- Keep refrigerated once cooled.

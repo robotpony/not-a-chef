@@ -6,48 +6,42 @@ cuisine: Thai
 draft: false
 ---
 
-This is a simpler version of my Thai curry recipe that works especially well with vegetarian ingredients. It’s a bit closer to an authentic curry, except that we skip the shrimp paste and use a commercial curry paste rather than making it from scratch.
+This is a simpler version of my Thai curry recipe that works especially well with vegetarian ingredients. It's a bit closer to an authentic curry, except that we skip the shrimp paste and use a commercial curry paste rather than making it from scratch.
 
-## Ingredients:
+## Ingredients
 
-- 6 tablespoons red curry paste
-- 1 ½ tablespoon tomato paste
-- 2 can of non-emulsified coconut milk
-- 2 cup of veg stock
+- 6 tbsp red curry paste
+- 1½ tbsp tomato paste
+- 2 cans non-emulsified coconut milk (no guar gum or other stabilizers, so the cream splits when fried)
+- 2 cups veg stock
 - ½ cup sugar (cane, brown, or similar)
-- 2-3 cups colourful veggies, roasted where appropriate
-    - Carrots and sweet potato
-    - Frozen peas
-- 3 tablespoons garlic and ginger paste
-- 2 tablespoons savoury sauce (miso, soy, sake)
-- 1 tin of bamboo shoots (drained)
-- 1 tin of canned mini corn cobs (drained)
+- 2–3 cups colourful veggies, such as carrots and sweet potato (roasted) and frozen peas
+- 3 tbsp [[Ginger/garlic paste]]
+- 2 tbsp savoury sauce (miso, soy, or sake)
+- 1 tin bamboo shoots, drained
+- 1 tin mini corn cobs, drained
 - 2 limes, juiced
-- ~2 cups of protein
-    - Thinly sliced mushrooms
-    - Tofu (dusted with rice flour, white pepper, and salt)
-- Salt to taste (1 tablespoon or so)
+- ~2 cups protein, such as thinly sliced mushrooms and tofu (dusted with rice flour, white pepper, and salt)
+- neutral oil
+- salt, to taste (about 1 tbsp)
 
-### Optional:
+#### Optional toppings
+- fresh herbs: mint, basil, cilantro
+- sliced Thai chilies
+- extra coconut cream
 
-- Fresh herbs
-    - Mint, basil
-    - Cilantro
-- Sliced Thai chilies
-- Extra coconut cream
+## Method
 
-### Directions:
+Heat the oven to 220°C (425°F). Toss the larger veg in oil and salt and roast until browning or slightly charred. Set aside.
 
-1. Roast the larger veg tossed in oil and salt, in a 219C (450F) oven until browning or slightly charred. Set aside.
-2. Fry mushrooms in oil until browning, then add tofu tossed in rice flour and salt. Add ginger/garlic paste and continue to fry until tofu starts to brown. Note that mushrooms need to be started first as they release water, it evaporates, and then they start to brown.
-3. Fry curry paste in a small amount of oil for 2-3 minutes. Add coconut milk solids and continue frying until fragrant, for 3-4 minutes or until oil starts to separate slightly. Add the remaining coconut milk.
-4. If you have any uncooked veg, add to the base and cook until nearing tender. Add roasted veg, fried mushrooms/tofu, and tinned ingredients. Add stock, sugar, and simmer until everything is heated and the veg is tender.
-5. Lower heat and add lime juice, and season to taste.
+Fry the mushrooms in oil until they release their water, it evaporates, and they start to brown. Add the dusted tofu and the ginger/garlic paste, and keep frying until the tofu starts to brown.
 
-## To serve:
+In a large pot, fry the curry paste and tomato paste in a little oil for 2–3 minutes. Add the thick coconut cream from the tops of the cans and keep frying until fragrant and the oil starts to separate slightly, 3–4 minutes. Add the rest of the coconut milk.
 
-I like to serve this curry with basmati/cinnamon rice, and top with:
+Add any uncooked veg and cook until nearly tender. Add the roasted veg, the mushrooms and tofu, and the tinned veg. Add the stock, sugar, and savoury sauce, and simmer until everything is hot and the veg is tender.
 
-- Picked or chopped herbs
-- Finely sliced chilies
-- Drizzled with coconut cream
+Lower the heat, add the lime juice, and season with salt to taste.
+
+## To serve
+
+With basmati or cinnamon rice, topped with picked or chopped herbs, finely sliced chilies, and a drizzle of coconut cream.

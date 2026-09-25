@@ -8,21 +8,22 @@ draft: false
 
 A quick, tasty marinade for shrimp.
 
-## Ingredients:
+## Ingredients
 
-- Olive oil
-- 1 large clove of garlic, minced
-- ½ knob of ginger, grated
-- ½ shallot minced
+- about 450 g shrimp, peeled and deveined
+- 2 tbsp olive oil
+- 1 large clove garlic, minced
+- 1 tsp grated ginger
+- ½ shallot, minced
 - 1 tsp smoked paprika
 - 1 tsp mustard powder
-- 1 lemon/lime, juiced
+- ½ tsp salt
+- juice of 1 lemon or lime
 
-### Bonus ingredients:
+#### Bonus ingredients
+- roasted jalapeños, seeds in
+- cilantro or other herbs
 
-- Roasted jalapenos seeds in
-- Cilantro or other herbs
+## Method
 
-## Directions:
-
-Roughly mix ingredients. Add peeled, deveined shrimp. Marinate for 30m - 1h (much longer and you’ll end up with ceviche).
+Roughly mix everything except the shrimp. Add the shrimp and marinate for 30 minutes to 1 hour. Much longer and you'll end up with ceviche.

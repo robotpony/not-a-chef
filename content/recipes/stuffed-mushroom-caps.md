@@ -2,13 +2,15 @@
 title: Stuffed mushroom caps
 tags: [appetizers, sides]
 source: family
-servings: 8 caps
+portions: 8 caps
 cook_time: 30–45 min
 cuisine: American
 draft: false
 ---
 
-> Grandma Rempel (Ann’s Mom) used to make stuffed mushroom caps for special occasions.  I never had a taste for them, but then one day, I realized I was missing out.  There was no real recipe for these, and my mom just told me how she whipped them up and this is how I’ve been making them since.  The ingredients can be altered/adjusted based on the number and size of mushrooms and you are welcome to add or change to your taste preferences.  I’m basing this recipe on 8 large white mushrooms so alter as required.
+Mushroom caps stuffed with Boursin, hummus, and finely minced pepper and onion, then baked.
+
+> Grandma Rempel (Ann’s Mom) used to make stuffed mushroom caps for special occasions. I never had a taste for them, but then one day, I realized I was missing out. There was no real recipe for these, and my mom just told me how she whipped them up and this is how I’ve been making them since. The ingredients can be altered/adjusted based on the number and size of mushrooms and you are welcome to add or change to your taste preferences. I’m basing this recipe on 8 large white mushrooms so alter as required.
 
 ## Ingredients
 

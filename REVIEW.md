@@ -366,69 +366,25 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] `recipes/sandwich-sour-pickles.md`
 - [x] `recipes/satay-marinade.md` (fixed 2026-09-25: converted to FORMAT.md; salt dry-brines the protein first; ~1 kg protein; chicken 68°C, pork 63°C, linked to the food safety page; zested; Worcestershire; 230°C (450°F); foil-lined)
 - [x] `recipes/sheet-pan-fast-food-style-gyros.md` (fixed 2026-09-24: now uses 1 batch [[Gyro base]]; 71°C; title hyphenated; converted to FORMAT.md)
-- [x] ! `recipes/shredded-taco-chicken.md`
-    - L30: "Marinade chicken" → "Marinate". L31: "excess marinate" → "excess marinade". L30: mismatched quotes around “ham“.
-    - L36: "½-1cup" → "½–1 cup". Temps "75C-90C (170F-200F)", "200C/400F" → degree signs.
-    - Otherwise the method is clear, and simmering the used marinade (step 4) is good.
-- [x] ! `recipes/simple-chicken-pork-and-beef-gravy.md` (Google links fixed 2026-09-24)
-    - Unit error: L9 "50mg roux to 250mg liquid" → "50 g roux to 250 ml liquid".
-    - No quantities at all in the ingredient list. Add the 1:5 example as a base batch (25 g butter, 25 g flour, 250 ml stock + drippings).
-    - L29: "pan dripping" → "pan drippings". L27: "## Notes:" colon.
-- [x] ! `recipes/simple-chunky-salad-dressing.md`
-    - L13: "Hellman's" → "Hellmann's"; L15: "Braggs" → "Bragg"; L15–16: "1-2 tablespoon", "2 tablespoon" → "tablespoons". L18: "coriander": ground or fresh?
-    - L24: "Season to taste, but should balance..." has no subject → "It should balance...".
-- [x] ! `recipes/simple-green-goddess-dressing.md`
-    - L20: "dashi powder/msg" → "MSG". L9: "garlic forward" → "garlic-forward"; L13: "flat leaf" → "flat-leaf".
-    - Notes (L33, L35) are test status; fine, but combine into one line.
-- [x] ! `recipes/simple-marinara.md`
-    - Tagged `vegan, dairy-free`, but the whole method depends on meat drippings (L18, L43). Drop `vegan`.
-    - L14: "flat breads" → "flatbreads"; "as a quick and fresh pasta" → "a quick pasta sauce".
-    - Q: the title "Simple marinara" undersells that it's a pan sauce from meat drippings; "Pan-drippings marinara"?
+- [x] `recipes/shredded-taco-chicken.md` (fixed 2026-09-25: converted to FORMAT.md; temperature note as a Mechanic (breast capped at 70°C, per the pulled-chicken answer); marinate; marinade; quotes; ½–1 cup; °C/°F; cooking options as prose; sauce storage to Notes)
+- [x] `recipes/simple-chicken-pork-and-beef-gravy.md` (fixed 2026-09-25: 50 g roux to 250 ml; base batch listed (25 g butter, 25 g flour, 250 ml stock + drippings); ratio as a Mechanic; drippings; Notes as bullets, heading colon)
+- [x] `recipes/simple-chunky-salad-dressing.md` (fixed 2026-09-25: Hellmann's; Bragg; tablespoons; ground coriander; balance sentence; headings)
+- [x] `recipes/simple-green-goddess-dressing.md` (fixed 2026-09-25: MSG; garlic-forward; flat-leaf; test notes combined; method as prose; 12 g garlic)
+- [x] `recipes/simple-marinara.md` (fixed 2026-09-25: olive oil base with pan drippings as a variation (title kept; `vegan` tag stays for the base); flatbreads; "quick pasta sauce"; yield to `portions`; unit spacing)
 - [x] `recipes/simple-rice-bowls.md` (fixed 2026-09-24: converted to FORMAT.md; two example bowls split; chicken 68°C; Google Doc links → wiki links; rice is cooked)
-- [x] ! `recipes/simple-shrimp-marinade.md`
-    - No salt at all. Q: intentional?
-    - No quantities for oil or shrimp: "Olive oil" → "2 tbsp olive oil"; add "for about 450 g shrimp".
-    - L23: "Roasted jalapenos seeds in" → "Roasted jalapeños, seeds in". L15: "½ knob of ginger" → "1 tsp grated ginger".
-- [x] ! `recipes/simple-sweet-pickled-veg.md`
-    - L9 says it's for "beets, cabbage, and other hearty veg", but the method only covers beets. Add a line for raw veg (cabbage/carrot: no pre-cook, pour warm brine over).
-    - L23: "1 bag of beets" → weight (~1 kg). L30: "cheese cloth" → "cheesecloth", "sauce pan" → "saucepan". L16, L25: double spaces.
-    - The loose peppercorns and cloves vs the pickling spice in a bag (step 2) aren't clear. Say which go in the bag.
-- [x] ! `recipes/simpler-thai-red-curry.md`
-    - Ingredients never used: tomato paste (1½ tbsp) and the "savoury sauce" (miso/soy/sake). Salt is only implied.
-    - L41: "219C (450F)". 219°C is 425°F; → "230°C (450°F)" or "220°C (425°F)".
-    - L15–16: "2 can" → "2 cans", "2 cup" → "2 cups", "1 ½ tablespoon" → "tablespoons". L15: "non-emulsified coconut milk" Q: meaning no guar gum/stabilizers? Say that; it matters for splitting.
-    - L39: "### Directions:" → `## Method`; L47: "## To serve:" colon.
-    - Q: three Thai red curries now (this, red-thai-curry.md, bruces-thai-redgreen-curry.md). Consolidate?
+- [x] `recipes/simple-shrimp-marinade.md` (fixed 2026-09-25: converted to FORMAT.md; 2 tbsp olive oil; for about 450 g shrimp; ½ tsp salt added; roasted jalapeños, seeds in; 1 tsp grated ginger)
+- [x] `recipes/simple-sweet-pickled-veg.md` (fixed 2026-09-25: converted to FORMAT.md; raw-veg variation; ~1 kg beets; cheesecloth; saucepan; spice bag vs loose peppercorns and cloves spelled out; double spaces)
+- [x] `recipes/simpler-thai-red-curry.md` (fixed 2026-09-25: converted to FORMAT.md; tomato paste fried with the curry paste; savoury sauce added with the stock; salt listed; 220°C (425°F); non-emulsified glossed (no stabilizers); plurals; `[[Ginger/garlic paste]]` (consolidation already decided: keep all three))
 - [x] ! `recipes/south-american-red-salsa.md` (fixed 2026-09-24: real intro; converted to FORMAT.md; comment anchor removed; typos; keeps 5–7 days)
     - Q: "South American" is vague. Is this a pebre (Chilean) or from a specific source? (Deferred 2026-09-24.)
-- [x] ! `recipes/spaghetti-squash-boats-or-casserole.md`
-    - No seasonings listed, though step 3 says "incorporate your seasonings". Q: what do you use (e.g. taco spice for the Mexican version, Italian herbs otherwise)?
-    - Q: 30 minutes at 190°C is short for spaghetti squash halves (usually 40–50 min, until a fork shreds the strands easily). Add a doneness cue.
-    - L10: "spagehetti" → "spaghetti". L17: "1 package" → weight (~450 g). Title Case ingredients. L29: "375 degrees F (190 C)" → "190°C (375°F)". L34–35: "Boats - fill" hyphen-dash → colon.
-- [x] ! `recipes/spinach-dip.md`
-    - L17: "Hellman's" → "Hellmann's"; L16–17: "1 ¼ cup" → "cups". Package and can sizes missing (Knorr packet, water chestnuts 227 ml, spinach 300 g).
-    - L26: missing period; L27: double spaces. Title Case in the blockquote.
-- [x] ! `recipes/spinach-mushroom-flatbread.md`
-    - Missing temperature: step 2 "Preheat your oven with your flatbreads" never gives one. Q: 200°C (400°F)?
-    - Formatting: the bullet sub-lists under steps 1 and 3 aren't indented, so the numbered list restarts and renders as separate lists.
-    - L20: "criminis" → "cremini"; L14: "parmesan" → "Parmesan"; L15: "swiss" → "Swiss". L18: "## Topping:" sits at the same level as Ingredients; make it `####`.
-- [x] ! `recipes/spinach-pecan-pasta-filling.md`
-    - Error: step 1 fries "shallots" and adds "peppers", neither of which is in the ingredient list. Q: were these meant to be in the recipe (1 shallot, ½ red pepper?) or leftovers from the mushroom filling?
-    - Q: "20g fresh or dried herbs". 20 g of dried herbs is about 10 tbsp, far too much. "5g black pepper" (~2 tsp) is also heavy for ~400 g filling. Check both.
-    - Tag is wrong: `breads` → `bases` or `pasta`.
-    - Step 1: "Fry nuts, shallots and garlic until translucent" (nuts don't go translucent). Toast the nuts first, then soften the shallot and garlic.
-    - L9: "ragu" → "ragù"; L17: "parmesan" → "Parmesan"; L29: double period and double space.
+- [x] `recipes/spaghetti-squash-boats-or-casserole.md` (fixed 2026-09-25: converted to FORMAT.md; seasoning listed (French or Italian herbs, taco spice for the Mexican version); fork-shred doneness cue; spaghetti; ~450 g meat; lower case; 190°C (375°F); boats/casserole as prose; `servings: 2`)
+- [x] `recipes/spinach-dip.md` (fixed 2026-09-25: converted to FORMAT.md; Hellmann's; cups; 300 g spinach, 227 ml water chestnuts (now used in the method); punctuation and spacing; blockquote case)
+- [x] `recipes/spinach-mushroom-flatbread.md` (fixed 2026-09-25: converted to FORMAT.md; 200°C (400°F); sub-lists folded into prose; cremini; Parmesan; Swiss; Topping as a `####` label; lemon juice used)
+- [x] `recipes/spinach-pecan-pasta-filling.md` (fixed 2026-09-25: converted to FORMAT.md; 1 shallot listed, peppers dropped; herbs 20 g fresh or ~1 tbsp dried; pepper 1–2 g; tags `pasta, bases`; nuts toasted first; ragù; Parmesan; yield to `portions`)
 - [x] `recipes/strawberry-rhubarb-compote.md`
-- [x] ! `recipes/stuffed-mushroom-caps.md` (fixed 2026-09-24: 190°C (375°F); instructions out of the ingredient list; converted to FORMAT.md)
-    - Backstory blockquote (open question 3).
-- [x] ! `recipes/sweet-gochujang-sauce.md`
-    - L9: the intro is copied word for word from thai-style-chilli-lime-sauce.md ("This is a vibrant, and tasty sauce for wings, chicken sandwiches, noodles, and tofu..."). Give each its own line; also drop the comma after "vibrant".
-    - L20: "5 spice" → "five-spice". L19: "1-2 teaspoons ground ginger (or equivalent minced)": ground and fresh aren't equivalent by volume; "1–2 tsp ground ginger or 1 tbsp fresh".
-    - Q: overlaps with gochujang-wing-sauce.md (cooked vs uncooked). Cross-link at least.
-- [x] ! `recipes/sweet-potato-pie.md`
-    - Imperial and odd units: "1 lb & 3 oz" → "540 g (1 lb 3 oz)"; "1 9in Deep Dish" → "one 23 cm (9 in) deep-dish"; "350 degrees F (175 C)" → "175°C (350°F)". L15: "¾ cups" → "¾ cup".
-    - Step 7: no doneness cue for 50–55 min: "until the centre is just set with a slight wobble".
-    - L9: source is Alton Brown on Food Network; put it in `source:` (currently `family`). "LOVED" all caps. Title Case ingredients and steps.
+- [x] `recipes/stuffed-mushroom-caps.md` (fixed 2026-09-24: 190°C (375°F; 2026-09-25: intro line above the blockquote; blockquote spacing; yield to `portions`)
+- [x] `recipes/sweet-gochujang-sauce.md` (fixed 2026-09-25: own intro; five-spice; ginger ground vs fresh; cross-linked with `[[Gochujang wing sauce]]`; converted to FORMAT.md)
+- [x] `recipes/sweet-potato-pie.md` (fixed 2026-09-25: converted to FORMAT.md; 540 g (1 lb 3 oz); 23 cm (9 in) deep-dish; 175°C (350°F); ¾ cup; slight-wobble doneness cue; `source: Alton Brown, Food Network`; lower case)
 - [x] `recipes/sweet-soy-sauce-kecap-manis-style.md`
 - [x] ! `recipes/szechuan-quick-noodles.md`
     - Title and body: "Szechuan" → "Sichuan" (current standard romanization; "Szechuan peppercorns" is still common on labels, so either is defensible. Pick one collection-wide; beef-base note too).

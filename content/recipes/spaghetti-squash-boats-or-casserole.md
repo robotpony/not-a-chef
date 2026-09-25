@@ -2,34 +2,37 @@
 title: Spaghetti squash boats (or casserole)
 tags: [mains, casseroles]
 source: family
+servings: 2
 cook_time: 30 min
 cuisine: American
 draft: false
 ---
 
-This dish is great when spagehetti squash is in season.
+This dish is great when spaghetti squash is in season.
 
 > Both Grandma Rempel and my sister, Teresa, eat Spaghetti Squash Boats (Grandma) or Spaghetti Squash Casserole (Teresa) on a weekly basis! So we wanted to give it a try. The concepts are pretty much the same and both have room for variations.
 
-## Ingredients:
+## Ingredients
 
-- 1 Spaghetti Squash (for 2 people)
-- 1 package Ground Chicken, Turkey, or Beef/Pork combo
-- Small Onion or Shallot, diced
-- 3 Cloves Garlic, finely chopped
-- Optional Vegetables: chopped celery, celery leaves, zucchini, peppers
+- 1 spaghetti squash
+- oil and salt, for the squash
+- ~450 g (1 package) ground chicken, turkey, or beef/pork mix
+- 1 small onion or shallot, diced
+- 3 cloves garlic, finely chopped
+- seasoning to taste: French or Italian herbs, or taco spice for the Mexican version
+- chopped celery, celery leaves, zucchini, or peppers (optional)
+- grated cheese, for topping
 
-### For a more Mexican version:
+#### For a more Mexican version
+- 1 can black beans, drained
+- 1 cup corn (frozen, canned, or fresh)
 
-- 1 can Black Beans
-- 1 cup Corn (Frozen, canned, or fresh)
+## Method
 
-## Directions:
+Heat the oven to 190°C (375°F). Cut the squash in half and scoop out all the seeds. Brush with oil and season with a little salt. Bake until a fork shreds the strands easily, about 30 minutes.
 
-1. Preheat the oven to 375 degrees F (190 C)
-2. Cut the Squash in half, and remove all the seeds. Brush the squash with oil and season with a small amount of salt. Bake until cooked (about 30 minutes).
-3. While the squash is cooking, prepare your filling. Cook up your meat filling of choice and brown. Add your chosen vegetables and cook until tender. Then incorporate your seasonings.
-    - If using canned beans and corn, add them after the mixture is cooked.
-4. This is where you choose if you want boats or a casserole!
-    - Boats - fill the squash with your mixture. You can top with grated cheese, feta, salsa, and sun-dried tomatoes. Then place back into the oven for the cheese to melt or to heat back up.
-    - Casserole - once the squash is cooked, shred the baked squash with a fork and place into a mixing bowl. Add the meat mixture (with additives if applicable) and toss. Add the combined mixture to a casserole dish and toss with shredded cheese. Place back into the oven for 15-20 minutes. You can also turn on the broiler for a few minutes to let the cheese get a nice brown!
+While the squash bakes, brown the meat with the onion and garlic. Add any vegetables and cook until tender, then stir in the seasoning. If using canned beans and corn, add them once the mixture is cooked.
+
+For boats, fill the squash halves with the mixture. Top with grated cheese, feta, salsa, or sun-dried tomatoes, and return to the oven until the cheese melts and everything is hot.
+
+For a casserole, shred the baked squash with a fork into a mixing bowl. Toss with the meat mixture, spread in a casserole dish, and top with shredded cheese. Bake for 15–20 minutes. A few minutes under the broiler browns the cheese nicely.

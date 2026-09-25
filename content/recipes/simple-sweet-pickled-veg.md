@@ -8,24 +8,36 @@ draft: false
 
 This is a quick, refrigerator sweet pickle, perfect for beets, cabbage, and other hearty veg.
 
-## Pickling solution:
+## Pickling solution
 
 - 2 cups water
 - 2 cups apple cider vinegar
 - 1 cup granulated sugar
-- 2  tbsp kosher salt
+- 2 tbsp kosher salt
 - 10 whole peppercorns
 - 10 cloves
 - 1 tbsp pickling spice
 
-### Veg:
+## Veg
 
-- 1 bag of beets, peeled
+- about 1 kg (1 bag) beets, peeled
 - 1 shallot, sliced
-- 3  cloves garlic, halved
+- 3 cloves garlic, halved
 
-## Directions:
+## Method
 
-1. Steam or roast peeled beets until al dente (~15 minutes steamed, ~30 minutes roasted). If your beets are different sizes, halve the larger ones. Let cool until you can handle them safely.
-2. Place pickling spice in a tied cheese cloth ball or reusable tea bag/clamp. Combine liquids to make a pickling solution, adding spices, shallot, and garlic in a sauce pan and simmer until combined. Let cool enough to handle.
-3. Add brine and beets to a large, glass container. Refrigerate and enjoy in 2-3 days (good for up to a few months).
+Steam or roast the peeled beets until al dente, about 15 minutes steamed or 30 minutes roasted. Halve any larger beets so they cook evenly. Let cool until you can handle them.
+
+Tie the pickling spice in cheesecloth or a reusable tea bag. Combine the water, vinegar, sugar, and salt in a saucepan with the spice bag, the loose peppercorns and cloves, the shallot, and the garlic. Simmer until the sugar and salt dissolve. Let cool enough to handle.
+
+Put the beets and brine in a large glass container. Refrigerate for 2–3 days before eating.
+
+## Variations
+
+### Raw veg
+
+For cabbage, carrots, and other veg that don't need cooking, skip the steaming. Slice them, pack them into the container, and pour the warm brine over.
+
+## Notes
+
+- Keeps in the fridge for up to a few months.

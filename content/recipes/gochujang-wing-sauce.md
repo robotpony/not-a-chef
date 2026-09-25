@@ -40,3 +40,4 @@ On baked or fried wings. Also good on chicken thighs or as a dipping sauce.
 
 - This is the go-to wing sauce; tested repeatedly. Straightforward and reliable.
 - Maple syrup makes a noticeably different (rounder, less sharp) sauce than brown sugar.
+- For a cooked, glossier glaze with ketchup and five-spice, see [[Sweet gochujang sauce]].
