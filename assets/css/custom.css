@@ -1124,6 +1124,11 @@ a.comp-card:hover .comp-card-label { color: var(--accent-strong); }
 .reading-sidebar-wrap { border-top: 1px solid var(--border); padding-top: 24px; margin-bottom: 32px; }
 @media (min-width: 1024px) {
   .reading-sidebar-wrap { flex: 0 0 20.6rem; max-width: 20.6rem; border-top: none; padding-top: 0; margin-bottom: 0; }
+  /* Pinned like the recipe sidebar (single.html). Capped to the viewport
+   * (less the lg:top-10 offset and a little breathing room) so a tall one,
+   * like a long reference guide's "On this page", scrolls on its own
+   * rather than pinning its bottom half out of reach. */
+  .reading-sidebar-pin { max-height: calc(100vh - 3.5rem); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; padding-bottom: 8px; }
 }
 .reading-sidebar { display: flex; flex-direction: column; gap: 26px; }
 .reading-sidebar .rs-label {

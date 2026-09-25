@@ -164,11 +164,14 @@
       {{/* Reading sidebar (mockups/reading-sidebar.html): after the main
         column in DOM order, so it lands on the right on desktop, level
         with the top of the body (the title block is above this section),
-        and below the article on mobile. Not sticky: on reference pages
-        it runs taller than a screen. */}}
+        and below the article on mobile. Pinned on desktop like the recipe
+        sidebar; reference pages can run it taller than a screen, so
+        custom.css caps its height and lets it scroll on its own. */}}
       {{ if $reading }}
         <div class="reading-sidebar-wrap lg:ms-auto px-0 lg:ps-8 print:hidden">
-          {{ partial "reading-sidebar.html" . }}
+          <div class="reading-sidebar-pin lg:sticky {{ $topClass }}">
+            {{ partial "reading-sidebar.html" . }}
+          </div>
         </div>
       {{ end }}
 
