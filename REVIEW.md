@@ -408,7 +408,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] `recipes/velveting-pork.md` (fixed 2026-09-25: optional flavouring as a `####` label; unit spacing; baking soda first, then rinse and pat dry, then cornstarch and flavouring)
 - [x] `recipes/vindaloo-paste.md` (fixed 2026-09-25: "Vinegar is traditional; lemon is my swap" with the *vinha d'alhos* origin; Mechanic and fenugreek note scoped to this version; 50 g ginger (5 cm); garlic is 3 cloves or more, to taste)
 - [x] `recipes/vindaloo-wing-sauce.md` (fixed 2026-09-25: mildly; 1½ tbsp `[[Vindaloo paste]]` (paste works); salt to taste; stale "needs testing" note and repeated gochugaru note dropped)
-    - TODO: the author also makes an undocumented dry vindaloo spice blend; write it up and offer it here as an alternative.
+    - TODO: write up the dry vindaloo spice blend (logged in the September 2026 food log).
 - [x] `recipes/vodka-cream-sauce.md` (fixed 2026-09-24: cream added; 450 g pasta; 796 ml can; converted to FORMAT.md; 2026-09-25: "no idea if it's any good" dropped (all recipes are tested); lower case; 1 tbsp each olive oil and butter)
 - [x] `recipes/weeknight-ginger-beef.md` (fixed 2026-09-25: stray broccoli reference dropped (carrots stir-fried separately until crisp-tender); `## Equipment`, non-stick; unit spacing; "centre" was already fine)
 - [x] `recipes/weeknight-mapo-tofu.md` (fixed 2026-09-25: Sichuan peppercorns 2–3 tsp, with the numbing 2–3 tbsp version in Notes; Kenji López-Alt; non-stick; `## Equipment`; silken tofu (medium-firm); `####` labels; unit spacing; Sichuan and green onions were already fine)
