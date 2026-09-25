@@ -3,43 +3,42 @@ title: Creamy roasted red pepper soup
 tags: [mains, soups]
 source: family
 cuisine: American
-prep_time: 45m
-cook_time: 30m
+prep_time: 45 min
+cook_time: 30 min
 draft: false
 ---
 
-We had half a kilo of baby red peppers left over after a social event, so I tried a simple roasted red pepper soup. This is roughly based on [Chef John’s](https://www.allrecipes.com/recipe/17550/red-pepper-soup/) take, but with the ingredients that I tend to have on hand.
+We had half a kilo of baby red peppers left over after a social event, so I tried a simple roasted red pepper soup. This is roughly based on [Chef John's](https://www.allrecipes.com/recipe/17550/red-pepper-soup/) take, but with the ingredients that I tend to have on hand.
 
 ## Ingredients
 
-- 650g red peppers
-- 250g onion
-- 100g carrots
+- 650 g red peppers
+- 250 g onion
+- 100 g carrots
 - 4 cloves garlic
-- ~20ml light olive oil (or neutral oil)
-- 50g crimini mushrooms
-- 20ml tomato paste
-- 100ml white wine or sherry
-- 750ml stock (veg or chicken)
-- 250ml coconut cream (top part of tin)
-- Salt, pepper, and spices to taste
+- about 20 ml light olive oil (or neutral oil)
+- 50 g cremini mushrooms
+- 20 ml tomato paste
+- 100 ml white wine or sherry
+- 750 ml stock (vegetable or chicken)
+- 1 tin (400 ml) coconut milk, unshaken; use the thick cream from the top (about 250 ml) and reserve the rest
+- 1 tsp smoked paprika, or other spices (see Notes)
+- salt and pepper, to taste
 
 ## Method
 
-Rough dice the peppers, carrots, onion, and garlic. Toss in the oil and roast at 220°C (425°F) for 20-30 minutes.
+Heat the oven to 220°C (425°F). Roughly dice the peppers, carrots, onion, and garlic. Toss them in the oil and roast until soft and charred at the edges, 20–30 minutes.
 
-Chop and fry the mushrooms until golden brown. Add whole spices, if using. Add tomato paste and fry until it starts to stick. Deglaze with the wine, scraping up any brown bits in the pan.
+Chop the mushrooms and fry them until golden brown. Add the paprika or other spices. Add the tomato paste and fry until it starts to stick. Deglaze with the wine, scraping up any brown bits in the pan.
 
 Add the stock and roasted vegetables. Simmer until heated through.
 
-Blend thoroughly and, optionally, pour through a fine mesh strainer, using a ladle to help it through.
+Blend thoroughly. For a smoother soup, pour it through a fine-mesh strainer, using a ladle to push it through.
 
-Add the coconut cream solids and season to taste. Reserve the remaining coconut milk for thinning the soup if needed.
-
-The finished soup should coat the back of a spoon.
+Stir in the coconut cream and season to taste. The finished soup should coat the back of a spoon; thin it with the reserved coconut milk if needed.
 
 ## Notes
 
-- If you find the soup tasting flat, add some wine, lemon, or lime juice and salt (adding and tasting in steps).
-- If the garlic isn’t punching through, cheat by adding some granulated garlic.
-- This recipe works well with Thai (red curry), Indian (masala), or French (herbal) seasonings, and may also work well towards Creole or southwestern spices.
+- If the soup tastes flat, add wine, lemon or lime juice, and salt, a little at a time, tasting as you go.
+- If the garlic isn't punching through, cheat by adding some granulated garlic.
+- This works well with Thai (red curry), Indian (masala), or French (herbal) seasonings, and may also work with Creole or southwestern spices.

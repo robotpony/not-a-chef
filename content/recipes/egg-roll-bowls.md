@@ -20,8 +20,8 @@ All the flavour of egg rolls without the wrapper: ground pork with cabbage, carr
 - 1 tablespoon finely chopped peeled ginger
 - 450 g ground pork
 - 1 tablespoon toasted sesame oil
-- 1/4 head green cabbage, thinly sliced
-- 1/2 yellow onion, thinly sliced
+- ¼ head green cabbage, thinly sliced
+- ½ yellow onion, thinly sliced
 - 110 g shredded carrot
 - 60 ml reduced-sodium soy sauce
 - 1 tablespoon sriracha
@@ -31,10 +31,13 @@ All the flavour of egg rolls without the wrapper: ground pork with cabbage, carr
 
 ## Method
 
-1. In a large skillet over medium heat, heat vegetable oil. Add garlic and ginger and cook, stirring, until fragrant, about 1 minute.
-2. Add pork and cook, breaking up into small pieces with a wooden spoon, until browned and cooked through, 8–10 minutes.
-3. Push pork to the side and pour in sesame oil. Add cabbage, onion, and carrot; stir to combine with the meat. Add soy sauce and sriracha. Cook, stirring frequently, until cabbage is tender, 5–8 minutes; season with salt.
-4. Divide among bowls. Top with green onions and sesame seeds.
+Heat the vegetable oil in a large skillet over medium heat. Add the garlic and ginger and cook, stirring, until fragrant, about 1 minute.
+
+Add the pork and cook, breaking it into small pieces with a wooden spoon, until browned and cooked through, 8–10 minutes.
+
+Push the pork to the side and pour in the sesame oil. Add the cabbage, onion, and carrot, and stir them into the meat. Add the soy sauce and sriracha. Cook, stirring often, until the cabbage is tender, 5–8 minutes. Season with salt.
+
+Divide among bowls. Top with the green onion and sesame seeds.
 
 ## Notes
 

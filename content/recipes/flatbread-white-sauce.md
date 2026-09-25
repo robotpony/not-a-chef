@@ -13,7 +13,7 @@ This is a hacky white sauce recipe, for a mushroom flatbread snack.
 
 ## Ingredients
 
-- 250g whole-milk ricotta (avoid brands with stabilizers)
+- 250 g whole-milk ricotta (avoid brands with stabilizers)
 - 4 cloves garlic, finely minced
 - 1 shallot, finely minced
 - 2 tablespoons extra-virgin olive oil
@@ -31,10 +31,10 @@ Spread on flatbread or pizza dough before adding toppings. The egg yolk sets as 
 
 ## To serve
 
-Under mushrooms, roasted garlic, or prosciutto on flatbread. Also good as a dip.
+Under mushrooms, roasted garlic, or prosciutto on flatbread. Also good as a dip; leave out the egg yolks, since they only set in the oven.
 
 ## Notes
 
-- Adapted loosely from an ATK white pizza sauce.
+- Adapted loosely from an America's Test Kitchen white pizza sauce.
 - 1 egg yolk gives a lighter result; 2 is richer and slightly sturdier.
 - Avoid stabilized ricotta (such as brands with guar gum); it doesn't blend as smoothly and can separate.

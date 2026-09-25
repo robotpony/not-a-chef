@@ -3,7 +3,7 @@ title: Essence of cola
 tags: [drinks, make-ahead, vegan, dairy-free]
 source: original
 date: 2024-10-01
-servings: ~1.5L 
+servings: about 1.5 L
 prep_time: 30 min
 cook_time: 10 min
 total_time: 50 min (plus steeping)
@@ -22,33 +22,33 @@ A concentrated syrup of citrus oils, warm spices, and caramel notes that forms t
 - zest and juice of 1 lemon
 - zest and juice of 1 lime
 - zest and juice of 2 oranges
-- 3 large cinnamon sticks (12 cm / 5 inches), broken into small pieces
+- 3 large cinnamon sticks (12 cm / 5 in), broken into small pieces
 - 2 tablespoons dried bitter orange peel
 - 2 teaspoons coriander seed
 - ¼ teaspoon freshly grated nutmeg
 - 1 teaspoon gum arabic (optional)
-- 900g (2 lbs) sugar
-- 60ml browning sauce (such as Kitchen Bouquet)
+- 900 g (2 lb) sugar
+- 60 ml browning sauce (such as Kitchen Bouquet)
 - ½ teaspoon vanilla extract
 - small amount of ascorbic acid or additional lemon juice (to taste)
-- 10ml neutral alcohol (or rely on vanilla's alcohol content)
+- 10 ml neutral alcohol, such as vodka (optional; see Notes)
 
 ## Method
 
-Combine sugar with 900ml water in a saucepan. Add cinnamon sticks, bitter orange peel, coriander seed, and nutmeg. Bring to a simmer, stirring until sugar dissolves. Simmer 10 minutes.
+Combine the sugar with 900 ml water in a saucepan. Add the cinnamon, bitter orange peel, coriander seed, and nutmeg. Bring to a simmer, stirring until the sugar dissolves. Simmer 10 minutes.
 
-Add citrus zests and juice. Steep off heat, covered, for 20 minutes.
+Add the citrus zests and juice. Steep off heat, covered, for 20 minutes.
 
-Strain through a fine sieve. While still warm, stir in gum arabic (if using), browning sauce, vanilla, and ascorbic acid.
+Strain through a fine sieve. If using gum arabic, whisk it into 2 tbsp of the warm syrup until smooth, then stir it back in; added straight to the pot, it clumps. While the syrup is still warm, stir in the browning sauce, vanilla, alcohol, and ascorbic acid.
 
 Cool completely before bottling.
 
 ## To serve
 
-Mix 30–45ml syrup per 300ml of cold carbonated water. Adjust ratio to taste.
+Mix 30–45 ml syrup per 300 ml of cold carbonated water. Adjust the ratio to taste.
 
 ## Notes
 
 - Bitter orange peel is available dried at specialty and Middle Eastern grocers.
 - Gum arabic dissolves best in warm liquid; add it while the syrup is still hot.
-- The alcohol note (10ml) is to preserve the syrup; vanilla extract already contains some.
+- The alcohol helps preserve the syrup. Vanilla extract already contains some, so you can skip it.

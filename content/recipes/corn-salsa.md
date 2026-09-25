@@ -1,47 +1,47 @@
 ---
 title: Corn salsa
 tags: [sauces]
-source: www.recipetineats.com
+source: family
 cook_time: 5 min
 cuisine: Mexican
 draft: false
 ---
 
-We were at the Rempel’s for dinner and Grandma made this delicious corn salsa that I could not get enough of. 
+We were at the Rempels' for dinner and Grandma made this corn salsa. I could not get enough of it.
 
-## Ingredients:
+## Ingredients
 
-- 5 cups Corn (preferred cut from cob; approximately 4 large ears or can use frozen corn)
-- 2 tbsp Butter
-- 2 cloves Garlic, minced
-- ½ tsp each Salt and Pepper
-- ¼ cup Mayonnaise
-- ¼ cup Sour Cream
-- ½ cup Parmesan Cheese, finely grated
-- 1 tbsp Jalapeño, deseeded and finely chopped
-- ½ cup Cilantro (or Coriander), roughly chopped
-- 1 cup Green Onion, finely sliced (~2 stems)
-- ½ a Red Onion, finely chopped
-- 2 - 3 tbsp Lime Juice
-- Paprika if you’d like a little bit of that Smokey flavor
+- 5 cups corn, cut from the cob (about 4 large ears) or frozen
+- 2 tbsp butter
+- 2 cloves garlic, minced
+- ½ tsp salt
+- ½ tsp pepper
+- ½ tsp smoked paprika (optional)
+- ¼ cup mayonnaise
+- ¼ cup sour cream
+- ½ cup parmesan, finely grated
+- 2–3 tbsp lime juice
+- ½ cup cilantro, roughly chopped
+- ½ red onion, finely chopped
+- 1 cup green onion, finely sliced (about 2 stems)
+- 1 tbsp jalapeño, seeded and finely chopped
 
-### Garnishes:
+#### Garnish
+- 55 g (2 oz) cotija, feta, or parmesan
+- jalapeño slices, cilantro leaves, lime wedges
 
-- 2 oz Cotija (Mexican Cheese) or Feta or Parmesan
-- Jalapeño Slices, cilantro leaves, lime wedges
+## Method
 
-## Directions:
+Cut the corn off the cob. If using frozen corn, don't thaw it.
 
-1. Cut the corn off the cob. If using frozen, do not thaw.
-2. Melt the butter in a large skillet over high heat. Add the garlic and stir and stir for 10 seconds. Add the corn and cook for 5 minutes, stirring every now and then, until you get lovely brown bits and the corn is cooked and sweet. Do not stir constantly as it’s harder to brown.
-3. Add the salt and pepper halfway through cooking the corn.
-4. Transfer the corn into a large bowl. Add the mayonnaise, sour cream, lime juice, and parmesan. Toss well to combine; the heat will “melt” the dressing. Add the cilantro, red onion, green onion, and jalapeño. Toss again.
-5. Transfer to a serving bowl and garnish before serving with your chosen accompaniments. Best served warm or at room temperature.
+Melt the butter in a large skillet over high heat. Add the garlic and stir for 10 seconds. Add the corn and cook, stirring only now and then, until it has brown bits and tastes cooked and sweet, about 5 minutes. Constant stirring stops it browning. Add the salt, pepper, and paprika, if using, halfway through.
+
+Transfer the corn to a large bowl. Add the mayonnaise, sour cream, lime juice, and parmesan, and toss well; the heat melts them into a dressing. Add the cilantro, red onion, green onion, and jalapeño, and toss again.
+
+Transfer to a serving bowl and add the garnishes. Serve warm or at room temperature.
 
 ## Notes
 
-Canned corn can work for this recipe but since it’s so wet, it does not brown very well, so drain it and let it dry out in the fridge overnight.
-
-Also, parsley can be swapped out for the cilantro for those that can not stand the flavor of cilantro.
-
-You can go light on the dressing; this recipe is not meant to be coated thickly with mayo, like potato salad. Because the mayo and sour cream are added while the corn is hot, they melt and become a dressing. 
+- Canned corn works, but it's too wet to brown well. Drain it and let it dry out in the fridge overnight first.
+- Swap parsley for the cilantro for anyone who can't stand cilantro.
+- Go light on the dressing. This isn't meant to be coated thickly with mayo like potato salad; the mayo and sour cream melt on the hot corn into a thin dressing.

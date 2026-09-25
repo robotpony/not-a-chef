@@ -16,43 +16,37 @@ A comforting and simple meal, based on the classic 1950s Americanized version. E
 
 ## Mechanic
 
-Built from a batch of pre-cooked frozen beef mince, so the cooking time is mostly about thickening the filling and building the potato topping. A **1:1 spice ratio** (salt, pepper, coriander, rosemary) gives the beef a clear identity. BtB and browning sauce add depth without a long braise.
+Built from a batch of pre-cooked frozen beef mince, so the cooking time is mostly about thickening the filling and building the potato topping. A **1:1 spice ratio** (equal parts salt, pepper, coriander, and rosemary) gives the beef a clear identity. Better than Bouillon and browning sauce add depth without a long braise.
 
-## Ingredients
+## Topping
 
-### Filling
-
-- 500g cooked beef mince (frozen)
-- 1 teaspoon each: kosher salt, black pepper, ground coriander, dried rosemary or thyme
-- 1 teaspoon granulated garlic
-- 1 teaspoon MSG
-- 2 tablespoons flour or cornstarch (adjust for thickness)
-- 1 teaspoon Better than Bouillon (beef or chicken)
-- 1 teaspoon browning sauce (to taste)
-- 250ml beef or chicken stock, or water
-- 300g mixed frozen vegetables (peas, corn, carrots)
-
-### Topping
-
-- 700g steaming potatoes (Yukon Gold or similar)
-- 60g butter
-- 60–80ml cream or milk
+- 700 g steaming potatoes (Yukon Gold or similar)
+- 60 g butter
+- 60–80 ml cream or milk
 - salt and pepper
-- 50g aged cheddar, grated
+- 50 g aged cheddar, grated
 
-## Method
+Steam the potatoes until a fork slides in easily, 25–30 minutes. Drain and mash with the butter, cream, salt, and pepper until smooth. Stir in the cheese.
 
-Steam potatoes until a fork slides in easily, about 25–30 minutes. Drain and mash with butter, cream, salt, and pepper until smooth. Stir in cheese.
+## Filling
 
-Meanwhile, heat a wide pan over medium-high. Add frozen mince and break up as it heats through. Add spices and garlic; stir to coat.
+- 500 g [[Beef base]] or other cooked beef mince, frozen
+- 1 tsp each kosher salt, black pepper, ground coriander, and dried rosemary or thyme
+- 1 tsp granulated garlic
+- 1 tsp MSG
+- 2 tbsp flour or cornstarch, adjusted for thickness
+- 1 tsp Better than Bouillon (beef or chicken)
+- 1 tsp browning sauce, to taste
+- 250 ml beef or chicken stock, or water
+- 300 g mixed frozen vegetables (peas, corn, carrots)
 
-Sprinkle flour over the meat and stir for 1 minute. Add BtB, browning sauce, and stock. Simmer until the filling is thick and glossy, adding more thickener if needed. Stir in frozen vegetables and heat through.
+While the potatoes steam, heat a wide pan over medium-high. Add the frozen mince and break it up as it heats through. Add the spices and garlic, and stir to coat.
 
-Transfer filling to a baking dish. Spoon mashed potato over the top and rough it up with a fork. Broil until the peaks are golden, 5–8 minutes.
+Sprinkle the flour over the meat and stir for 1 minute. Add the Better than Bouillon, browning sauce, and stock. Simmer until the filling is thick and glossy, adding more thickener if needed. Stir in the frozen vegetables and heat through.
 
-## Variations
+## Assembly
 
-You can use the [[beef base]] for a weeknight version of this.
+Transfer the filling to a baking dish. Spoon the mashed potato over the top and rough it up with a fork. Broil until the peaks are golden, 5–8 minutes.
 
 ## To serve
 
@@ -60,6 +54,5 @@ With a simple green salad. Better the next day.
 
 ## Notes
 
-- Browning sauce quantities need testing; start with 1 teaspoon and adjust. [draft]
-- Steaming potatoes (vs. boiling) keeps them less waterlogged and produces a drier, better-textured mash.
-- Freezes well. Reheat from frozen either fully defrosted or more gently for longer.
+- Steaming the potatoes (rather than boiling) keeps them from getting waterlogged, for a drier, better-textured mash.
+- Freezes well. Thaw overnight in the fridge and reheat at 175°C (350°F), or bake from frozen at 160°C (325°F) for about twice as long.

@@ -10,7 +10,7 @@ cuisine: Canadian
 draft: false
 ---
 
-When we crave shake-and-bake, this is what we make. It hits she same notes with fewer calories.
+When we crave shake-and-bake, this is what we make. It hits the same notes with fewer calories.
 
 ## Mechanic
 
@@ -18,8 +18,8 @@ When we crave shake-and-bake, this is what we make. It hits she same notes with 
 
 ## Ingredients
 
-- 15g kosher salt (1 tablespoon)
-- 3g baking powder (1 teaspoon)
+- 15 g kosher salt (1 tablespoon)
+- 3 g baking powder (1 teaspoon)
 - ½ teaspoon black pepper
 - ½ teaspoon ground coriander
 - ½ teaspoon MSG
@@ -31,10 +31,9 @@ Combine all ingredients. Rub all over chicken, including under the skin where po
 
 Coat skin lightly with neutral oil before roasting.
 
-Roast at 205–230°C (400–450°F) until breasts reach 65°C internal and dark meat reaches 75°C.
+Roast at 205–230°C (400–450°F) until the breasts reach 65°C and the dark meat reaches 75°C. Rest for 5–10 minutes before carving; for a whole bird or bone-in pieces, the rest is the hold that makes 65°C safe for the breast meat.
 
 ## Notes
 
-230°C gives maximum browning; use it only if your oven runs accurately at that temp.
-
-For a whole bird, see [[Roast Poultry]] for the two-temperature timing method.
+- 230°C (450°F) gives maximum browning; use it only if your oven runs accurately at that temperature.
+- For a whole bird, see [[Roast poultry]] for the two-temperature timing method.

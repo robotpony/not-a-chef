@@ -246,74 +246,22 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] `recipes/classic-pizza-sauce.md` (fixed 2026-09-24: converted to FORMAT.md; granulated garlic with the oregano; balsamic and butter at the end; herbs once; quick sauce as a variation; comma; 796 ml)
 - [x] `recipes/coconut-jam-tarts.md` (fixed 2026-09-24: ice water in pastry; 1 tsp jam each; servings; converted to FORMAT.md)
 - [x] `recipes/coconut-lentils.md` (fixed 2026-09-24: green/brown lentil time; `cuisine: Indian` to match the tag; "after blending" dropped; unit spacing; `####` label; blend, mash, or leave as is, to taste)
-- [x] ! `recipes/corn-salsa.md`
-    - Paprika is listed but never used in the method.
-    - L26: "Smokey flavor" → "smoky flavour"; L45: "can not" → "cannot", "flavor" → "flavour"; L36: "stir and stir" duplicated.
-    - L10: "the Rempel’s" → "the Rempels'". Title Case ingredients. L30: "2 oz Cotija" → "55 g (2 oz) cotija".
-    - `source` is recipetineats while the intro credits Grandma; fine if she used that recipe. Worth one clause saying so.
-- [x] ! `recipes/cottage-pie.md`
-    - L63: open "[draft]" marker on the browning-sauce quantity. Q: tested yet?
-    - L65: "Reheat from frozen either fully defrosted or more gently for longer" is self-contradictory. "Thaw overnight and reheat at 175°C, or bake from frozen at 160°C for about twice as long."
-    - L55: the Variation suggests [[beef base]], but the filling already starts from "cooked beef mince (frozen)", which is beef base. Fold into the ingredient line: "500 g [[Beef base]] or other cooked mince".
-    - `aka: Shepherd's pie`. Shepherd's pie is the lamb version; fine as a search alias, but some readers will object.
-- [x] ! `recipes/creamy-roasted-red-pepper-soup.md`
-    - "Salt, pepper, and spices to taste" and "Add whole spices, if using" name no spices. Suggest one default (e.g. 1 tsp smoked paprika) plus the Notes options.
-    - L20: "crimini" → "cremini".
-    - L37: "Reserve the remaining coconut milk", but the list only calls for the cream from the top of the tin. Say "1 tin coconut milk; use the cream, reserve the rest".
-- [x] ! `recipes/creme-brulee.md`
-    - L23: "combine with the milk", but there's no milk; it's cream.
-    - L10: "on day" → "one day"; L26: "bruleeing" → "brûléeing" or "torching".
-    - L22: "170 ºC (325 ºF)" uses the ordinal sign º instead of °, and 325°F is 165°C.
-    - Step 4: no doneness cue for the 40 minutes → "until set at the edges with a slight wobble in the centre".
-    - L26: contradiction: says serve immediately "or place in the fridge for up to 3 days" after caramelizing. The sugar crust goes soft and weeps within hours. Store the custards un-torched and caramelize just before serving.
-    - "### Variations" should be `##`. L32–33: "Irish Cream", "Almond extract" → lower case ("Amaretto" is a brand, so fine).
-- [x] ! `recipes/crisp-topping.md`
-    - Q: 5 g (1 tsp) salt in ~300 g of topping is ~1.7%, noticeably salty for a dessert crumble (most use ¼–½ tsp). Intended?
-    - L33: the bottom-crust path says "Add the top layer", but one batch is a thin single layer (L45). Say "use 1½–2 batches when doing both crusts" right in the method.
-    - Otherwise clear.
-- [x] ! `recipes/crispy-chicken-rub.md`
-    - L13: typo "she same" → "the same". L40: `[[Roast Poultry]]` → sentence case.
-    - Otherwise clean; accurate Mechanic.
-    - Food safety (minor): breasts at 65°C are fine for a whole bird or bone-in pieces that rest ~5 minutes (the rest is the hold). Say so.
-- [x] ! `recipes/curry-powders-and-related-spice-mixes.md`
-    - L42: incorrect: "cassia bark (ceylon cinnamon)". Cassia and Ceylon are different species; Ceylon is "true" cinnamon. And L41 already has a cinnamon stick. Q: which two barks did you mean? (Commonly: one cassia, or one of each.)
-    - L35–36: cardamom seeds listed twice, the second with "(?)". Q: was the second meant to be black cardamom?
-    - Garam masala has no method: toast (which spices), cool, grind.
-    - "Supreme Bassar curry masala" Q: brand spelling ("Bassar" is a Punjabi masala brand). Lower-case "ceylon" → "Ceylon".
-    - Overlaps with gingergarlic-paste.md (the paste is defined in both, with different ratios). Link rather than duplicate.
-    - Headings end in colons.
-- [x] ! `recipes/dairy-free-tomato-soup.md`
-    - Contradiction: title says dairy-free, but the ingredients include butter ("optional", never used in the method). Drop it or name a vegan butter.
-    - Title: "Dairy free" → "Dairy-free". L32: "dutch oven" → "Dutch oven", "saute" → "sauté". L10: "old world" → "Old World".
-    - Basil is listed but never used.
-- [x] ! `recipes/dal-tadka.md`
-    - Incoherent: L49 is pasted research notes (from a Vice recipe) sitting in the middle of the method. It describes a different method (onion cooked before the lentils, coriander, lemon juice, dried chile), none of which is in the ingredients, and it ends with a bare link. Move it to Variations or Notes, or delete it.
-    - Tadka ingredients never used: cloves and fenugreek (optional) aren't in the tadka step. L40 says "sliced" onion; L49 says "diced".
-    - L27: "+10 minutes pressure cooking time", but there's no pressure-cooker method (only stovetop). Add a pressure line or change it to a stovetop time.
-    - Variation "Coconut cream dal": "stir in the spices" doesn't say which spices or how much.
-    - "Dhungar" → "dhungar" (common noun).
-- [x] ! `recipes/double-chocolate-banana-bread.md`
-    - L10: backstory with passive voice; "Smitten Kitchen, which was a great name" reads oddly (the site, not the recipe, has the name). Put the Smitten Kitchen URL in `source:` (currently `family`).
-    - Typos: L33 "Wisk" → "Whisk"; L34 "shifter" → "sifter"; L37 "center of cake" → "centre of the loaf" (see centre/center Q).
-    - L32: "9x5inch loaf pan" → "23×13 cm (9×5 in) loaf pan". L31: "350 degrees F (175 C)" → "175°C (350°F)".
-    - Title Case ingredients and steps ("Bananas", "Brown Sugar", "Banana Bread").
-- [x] ! `recipes/egg-roll-bowls.md`
-    - L23–24: "1/4 head", "1/2 yellow onion" → "¼", "½". "scallion" → "green onion" (the rest of the collection uses it).
-    - Otherwise clean.
-- [x] ! `recipes/english-muffins.md` (fixed 2026-09-24: truncated steps finished; cornmeal, doneness check, yield; converted to FORMAT.md)
-    - L12: "Note: I'm still tuning this recipe." but `draft: false`. Q: publish as-is?
-- [x] ! `recipes/essence-of-cola.md`
-    - The 10 ml neutral alcohol is listed but never added in the method. Add it with the vanilla in step 3.
-    - L42: gum arabic stirred straight into syrup tends to clump. "Whisk it with a spoonful of the sugar first" (or pre-hydrate it).
+- [x] `recipes/corn-salsa.md` (fixed 2026-09-25: converted to FORMAT.md; smoked paprika listed as optional and added with the salt and pepper; typos; Rempels'; lower-case ingredients; 55 g (2 oz) cotija; garnish as a `####` label; `source: family` (a family recipe, per the author; the RecipeTin Eats credit dropped))
+- [x] `recipes/cottage-pie.md` (fixed 2026-09-25: split into topping / filling / assembly; `[[Beef base]]` folded into the ingredient line, Variation dropped; reheat note rewritten; BtB spelled out; unit spacing; `aka: Shepherd's pie` kept as a search alias; browning sauce tested, [draft] note removed)
+- [x] `recipes/creamy-roasted-red-pepper-soup.md` (fixed 2026-09-25: converted to FORMAT.md; cremini; coconut milk listed as a tin, cream used, rest reserved for thinning; oven heat-up and roast cue; 1 tsp smoked paprika as the default spice, others in the Notes)
+- [x] `recipes/creme-brulee.md` (fixed 2026-09-25: converted to FORMAT.md; cream, not milk; one day; 165°C (325°F); doneness cue; custards stored un-torched and caramelized just before serving; variations as `###` prose; "less sweet" moved to Notes; lower case; Equipment added; `total_time`)
+- [x] `recipes/crisp-topping.md` (fixed 2026-09-25: bottom-and-top method now says 1½–2 batches, half pressed in as the base; salt halved to 2.5 g (½ tsp), matching the last test; unit spacing)
+- [x] `recipes/crispy-chicken-rub.md` (fixed 2026-09-25: typo; `[[Roast poultry]]`; 5–10 minute rest as the hold for 65°C breasts; Notes as bullets; unit spacing)
+- [x] `recipes/curry-powders-and-related-spice-mixes.md` (fixed 2026-09-25: converted to FORMAT.md with one `##` per mix, garam masala first since the base mix uses it; garam masala method drafted and confirmed; Ceylon cinnamon plus cassia; duplicate cardamom line merged into 2 tbsp green cardamom seeds; "toast very lightly" given a pan and heat; Supreme Bassar is the brand; quick ginger/garlic paste kept, linked to `[[Ginger/garlic paste]]`)
+- [x] `recipes/dairy-free-tomato-soup.md` (fixed 2026-09-25: converted to FORMAT.md; "Dairy-free"; butter → vegan butter (optional), stirred in at the end with the basil; `dairy-free` tag; 796 ml (28 oz) can; Dutch oven; sauté; Old World; meta line dropped)
+- [x] `recipes/dal-tadka.md` (fixed 2026-09-25: split into dal / tadka components; Vice notes moved out of the method into an "Onion-first dal" variation with the link; cloves and fenugreek added to the tadka step; ratio bolded; dhungar; stray rule removed; split-pea timing and coconut-dal spices left as written, per the author)
+- [x] `recipes/double-chocolate-banana-bread.md` (fixed 2026-09-25: converted to FORMAT.md; `source` is the Smitten Kitchen URL; intro rewritten; typos; 23×13 cm (9×5 in); 175°C (350°F); lower case; cinnamon marked optional; storage in Notes)
+- [x] `recipes/egg-roll-bowls.md` (fixed 2026-09-25: prose method; ¼, ½)
+- [x] `recipes/english-muffins.md` (fixed 2026-09-24: truncated steps finished; cornmeal, doneness check, yield; converted to FORMAT.md; "still tuning" note kept, per open question 5)
+- [x] `recipes/essence-of-cola.md` (fixed 2026-09-25: alcohol added with the vanilla, marked optional; gum arabic whisked into a little warm syrup first; unit spacing)
 - [x] `recipes/fajita-chicken-bowl.md` (fixed 2026-09-24: components as `##` sections; 68°C; corn oil, garlic, and fresh chili listed)
-- [x] ! `recipes/farmer-soup.md`
-    - L22: "herbs de provence" → "herbes de Provence"; L27: "corn starch" → "cornstarch"; L33: "saute" → "sauté"; L16: "bite size" → "bite-size"; L29: double space.
-    - L11: "ABC Family restaurants" Q: the chain is ABC Country Restaurants; is that the one?
-    - L11: "work in progress" but `draft: false`. Q: publish as-is?
-    - Step 2: say to bring the soup back to a simmer after adding the cornstarch slurry; cornstarch doesn't thicken until it nears boiling.
-- [x] ! `recipes/flatbread-white-sauce.md`
-    - L38: "ATK" → "America's Test Kitchen" on first use.
-    - Otherwise clean.
+- [x] `recipes/farmer-soup.md` (fixed 2026-09-25: converted to FORMAT.md; ABC Country Restaurants; herbes de Provence; cornstarch; sauté; bite-size; bring back to a simmer after the slurry; thickener as a `####` label; "work in progress" kept, per open question 5)
+- [x] `recipes/flatbread-white-sauce.md` (fixed 2026-09-25: America's Test Kitchen; unit spacing; dip use leaves out the raw yolks)
 - [x] ! `recipes/focaccia.md`
     - Oil contradiction: L23 says "neutral oil (not extra-virgin)" for the pans, while the intro (L14) and herb step (L41) use olive oil. Traditional focaccia uses olive oil in the pan. Q: is neutral deliberate (smoke point at 220°C)? If so, say why.
     - Olive oil for steeping the herbs isn't in the ingredient list (only in the optional brine).
