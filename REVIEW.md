@@ -405,32 +405,15 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] `recipes/vaguely-asian-slaw-dressing.md` (merged into asian-slaw-dressing.md 2026-09-24; redirects)
 - [x] `recipes/vegan-burger.md` (fixed 2026-09-24: intro, forming and cooking drafted; amounts added; vegan Worcestershire; converted to FORMAT.md; 2026-09-25: renamed to `vegan-burger.md` to match the title (old URL redirects))
 - [x] `recipes/vegetarian-lasagna.md` (fixed 2026-09-25: marinara → `[[Marinara sauce]]`, as much as needed (about 1.5 L); kids'; caramelize; unit spacing)
-- [x] ! `recipes/velveting-pork.md`
-    - Clean. (Optional: many velveting methods rinse after a baking-soda soak to avoid a soapy taste at ½ tsp per 350 g; worth a line if you've tasted it.)
-- [x] ! `recipes/vindaloo-paste.md`
-    - Incorrect: L47 "Lemon juice is the traditional souring agent". Goan vindaloo (from Portuguese vinha d'alhos) is traditionally made with vinegar and a lot of garlic. The Mechanic's "fenugreek and dried chilies are what make this vindaloo" is also debatable. Suggest: "Vinegar is traditional; lemon is my swap."
-    - L21: "50g fresh ginger (2 inches)" → "(5 cm)". Q: only 3 garlic cloves for a vindaloo, intentional?
-- [x] ! `recipes/vindaloo-wing-sauce.md`
-    - L14: "mildy" → "mildly". L21: calls for "vindaloo spice blend (see [[Vindaloo Paste]])", but that recipe is a wet paste with lemon and ginger. Q: 1½ tbsp of the paste, or a dry blend?
-    - L45: "[draft] needs testing" note while `draft: false`. L46 repeats the gochugaru tip already in the ingredient list.
-- [x] ! `recipes/vodka-cream-sauce.md` (fixed 2026-09-24: cream added; 450 g pasta; 796 ml can; converted to FORMAT.md)
-    - L10: "I have no idea if it's any good" with `draft: false`. Q: retest or mark draft?
-- [x] ! `recipes/weeknight-ginger-beef.md`
-    - L45: refers to broccoli ("stir-fry them alongside broccoli"), which isn't in the recipe.
-    - Sesame seeds and chili oil (To serve) aren't listed; fine as garnish. L53: "teflon" → "non-stick". L18: "center" (see centre Q).
-- [x] ! `recipes/weeknight-mapo-tofu.md`
-    - Q: "2–3 tablespoons Szechuan peppercorns" for 3–4 servings is very numbing; most recipes use 1–2 teaspoons. Typo for teaspoons?
-    - L67: "Kenji Lopez-Alt" → "Kenji López-Alt". "Szechuan" (see sichuan Q). "scallions" → "green onions". L63: "teflon".
-    - L42: "medium-firm silken tofu" is fine (silken comes in grades), but it's worth saying "silken, medium-firm".
+- [x] `recipes/velveting-pork.md` (fixed 2026-09-25: optional flavouring as a `####` label; unit spacing; baking soda first, then rinse and pat dry, then cornstarch and flavouring)
+- [x] `recipes/vindaloo-paste.md` (fixed 2026-09-25: "Vinegar is traditional; lemon is my swap" with the *vinha d'alhos* origin; Mechanic and fenugreek note scoped to this version; 50 g ginger (5 cm); garlic is 3 cloves or more, to taste)
+- [x] `recipes/vindaloo-wing-sauce.md` (fixed 2026-09-25: mildly; 1½ tbsp `[[Vindaloo paste]]` (paste works); salt to taste; stale "needs testing" note and repeated gochugaru note dropped)
+    - TODO: the author also makes an undocumented dry vindaloo spice blend; write it up and offer it here as an alternative.
+- [x] `recipes/vodka-cream-sauce.md` (fixed 2026-09-24: cream added; 450 g pasta; 796 ml can; converted to FORMAT.md; 2026-09-25: "no idea if it's any good" dropped (all recipes are tested); lower case; 1 tbsp each olive oil and butter)
+- [x] `recipes/weeknight-ginger-beef.md` (fixed 2026-09-25: stray broccoli reference dropped (carrots stir-fried separately until crisp-tender); `## Equipment`, non-stick; unit spacing; "centre" was already fine)
+- [x] `recipes/weeknight-mapo-tofu.md` (fixed 2026-09-25: Sichuan peppercorns 2–3 tsp, with the numbing 2–3 tbsp version in Notes; Kenji López-Alt; non-stick; `## Equipment`; silken tofu (medium-firm); `####` labels; unit spacing; Sichuan and green onions were already fine)
 - [x] `recipes/welsh-cakes.md` (fixed 2026-09-24: street name removed; currants; griddle temp and time; converted to FORMAT.md)
-- [x] ! `recipes/white-rock-cheesecake.md`
-    - Q: family-only recipe: the blockquote says "Do not share outside of our family!" It's `draft: true`, which keeps it off the site, but it's in the repo. Note that carrot-cake.md, from the same restaurant with "This recipe stays in the family", is `draft: false` and published.
-    - Missing ingredients: the crust (graham crumbs, butter, cinnamon) is used in step 2 but not listed. Step 2 is copied from the pumpkin cheesecake. No pan size.
-    - Typos: "compliment" → "complement"; "scrapped" → "scraped"; "Tirmasu" → "Tiramisu"; "Drizzle with white cake with 1 shot" → "Drizzle the white cake with"; "Wrapped baked and cooled cake" → "Wrap the cooled cake"; "an 1 inch" → "2.5 cm (1 in)"; "Require" → "You'll need".
-    - Title: "White Rock Cheesecake" → "White Rock cheesecake". L10: "Aka:" line → `aka:` frontmatter. "## Varieties:" → "## Variations".
+- [x] `recipes/white-rock-cheesecake.md` (fixed 2026-09-25: converted to FORMAT.md as crust / filling; crust ingredients listed, matching the pumpkin cheesecake's crust; White Rock cheesecake; `aka:` in frontmatter; one-line intro; Variations; complement, scraped, Tiramisu, "Drizzle the cake", "Wrap the cooled cake", 2.5 cm (1 inch), "You'll need"; blockquote kept; "Do not share" note removed and published (`draft: false`), per the author (carrot cake's note was already gone); Whistler uses a boxed cake mix (drier and more cohesive, holds up in the filling); 23 cm (9 inch) round pan)
 - [x] `recipes/white-spot-burgers.md` (fixed 2026-09-24: converted to FORMAT.md; pasteurized yolk; triple "O" accounts presented as disagreeing; typos and units; beef ~500 g)
-- [x] ! `recipes/winter-noodle-soup-with-kale-and-fennel.md` (Google links fixed 2026-09-24)
-    - Ingredients never used: 4 cups water (only stock goes in) and the dill. Step 3 "Add bouquet and bay" (bay is already in the bouquet garni).
-    - L50: "Add more wine to the soup or chef." A joke; keep if you like, but it's the only instruction for the second cup of wine's purpose.
-    - Temps: "176C (350F)" → "175°C (350°F)". L48: "dutch oven" → "Dutch oven", "saute" → "sauté". L47: "bite size" → "bite-size". L59: "6L/qt" → "6 L (6 qt)".
+- [x] `recipes/winter-noodle-soup-with-kale-and-fennel.md` (Google links fixed 2026-09-24; fixed 2026-09-25: converted to FORMAT.md as chicken / soup / noodles; water goes in with the stock, dill with the spices; "Add the bouquet garni"; 175°C (350°F); Dutch oven; sauté; bite-size; yield to `portions` (6 L (6 qt)), `servings: 10`; wine: a splash to deglaze, about 1 cup in all to taste, the rest for the cook)
 - [x] `recipes/yam-and-sage-pasta-filling.md` (fixed 2026-09-24: 480 g (2 cups) yam; tags; test note moved to Notes; converted to FORMAT.md)

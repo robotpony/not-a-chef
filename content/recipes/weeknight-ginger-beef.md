@@ -19,17 +19,17 @@ This is a quick version of ginger beef, great in rice bowls.
 
 ## Ingredients
 
-- 680g ground beef chuck, 80% lean
+- 680 g ground beef chuck, 80% lean
 - 8 cm piece fresh ginger, minced or grated
 - 6 cloves garlic, minced
 - 1 shallot, minced
-- 60ml soy sauce (¼ cup)
+- 60 ml (¼ cup) soy sauce
 - 2 limes, juiced
 - 2 tablespoons sriracha
 - 1 tablespoon fish sauce
 - 1 tablespoon neutral oil
 - kosher salt
-- 30g fresh cilantro, leaves and stems, thinly sliced
+- 30 g fresh cilantro, leaves and stems, thinly sliced
 - 2 carrots, julienned (optional)
 
 ## Method
@@ -42,15 +42,15 @@ Drizzle soy around the edge of the wok. Add lime juice. Add beef and break up, c
 
 Add fish sauce and sriracha. Toss and reduce briefly until the sauce clings and the mixture looks slightly glossy.
 
-If using carrots, stir-fry them alongside broccoli separately, then combine and toss everything together.
+If using carrots, stir-fry them separately until crisp-tender, then toss them in with the beef.
 
 ## To serve
 
 Over rice or in bowls. Top with sliced cilantro, toasted sesame seeds, and chili oil.
 
-## Special equipment
+## Equipment
 
-A medium to large carbon steel wok (not teflon).
+- Medium to large carbon steel wok (not non-stick)
 
 ## Notes
 

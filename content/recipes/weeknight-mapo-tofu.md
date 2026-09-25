@@ -19,27 +19,24 @@ I make this for lunch more than dinner, and it's a tasty and quick meal.
 
 ## Ingredients
 
-### Spice powder
-
-- 2–3 tablespoons Sichuan peppercorns, whole
+#### Spice powder
+- 2–3 teaspoons Sichuan peppercorns, whole
 - 4–5 dried red chilies, chopped
 - 1 tablespoon sweet paprika
 
-### Base
-
+#### Base
 - 2 tablespoons neutral oil
 - 1 cm piece fresh ginger, julienned
 - 2 cloves garlic, thinly sliced
 - 2 green onions, cut into ½ cm pieces (dark greens reserved for garnish)
-- 30ml sake (2 tablespoons)
-- 30ml mirin (2 tablespoons)
-- 15ml light soy sauce (1 tablespoon)
+- 30 ml (2 tablespoons) sake
+- 30 ml (2 tablespoons) mirin
+- 15 ml (1 tablespoon) light soy sauce
 
-### Protein
-
-- 120g ground beef (precooked or fresh)
-- 60ml low-sodium chicken stock, dashi, or water
-- 680g medium-firm silken tofu, cut into 1.5 cm cubes
+#### Protein
+- 120 g ground beef (precooked or fresh)
+- 60 ml low-sodium chicken stock, dashi, or water
+- 680 g silken tofu (medium-firm), cut into 1.5 cm cubes
 - 1 teaspoon cornstarch + 1 tablespoon cold water, combined into a slurry
 
 ## Method
@@ -58,11 +55,12 @@ Taste and adjust salt. Add tofu gently and fold in; heat through without mashing
 
 Over steamed rice, topped with green onion greens and chili oil.
 
-## Special equipment
+## Equipment
 
-A medium to large carbon steel wok (not teflon).
+- Medium to large carbon steel wok (not non-stick)
 
 ## Notes
 
-- Adapted toward Sichuan flavour from Kenji Lopez-Alt's "The Wok."
+- For a properly numbing version, use up to 2–3 tablespoons of peppercorns.
+- Adapted toward Sichuan flavour from Kenji López-Alt's "The Wok."
 - Pre-cooked frozen mince works well: add directly from frozen and break up as it heats.

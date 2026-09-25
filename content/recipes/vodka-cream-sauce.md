@@ -8,18 +8,18 @@ cuisine: Italian
 draft: false
 ---
 
-This was one of the first fancy recipes we made when the kids were young. It was the beginning of our shared journey into cooking new foods. I haven’t made this in ages now, so I have no idea if it’s any good. But … memories ...   
+This was one of the first fancy recipes we made when the kids were young. It was the beginning of our shared journey into cooking new foods.
 
 ## Ingredients
 
-- Olive oil
-- Butter
+- 1 tbsp olive oil
+- 1 tbsp butter
 - 2 cloves garlic, minced
 - 2 shallots, minced
 - 1 cup vodka (and 1 cup for the cook)
 - 1 cup chicken or mushroom stock, fresh if you’ve got it
 - 1 large can (796 ml, 28 oz) crushed tomatoes, the good ones if you can find them
-- Salt and pepper
+- salt and pepper
 - 450 g (1 lb) pasta with texture, like penne rigate
 - ½ cup heavy (whipping) cream
 - 1 cup fresh basil (about 20 leaves), julienned or torn

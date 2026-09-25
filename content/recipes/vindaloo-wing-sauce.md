@@ -3,7 +3,7 @@ title: Vindaloo wing sauce
 tags: [sauces, indian, quick]
 source: original
 date: 2022-07-01
-servings: 2-4
+servings: 2–4
 prep_time: 10 min
 cook_time: 5 min
 total_time: 15 min
@@ -11,14 +11,14 @@ cuisine: Indian
 draft: false
 ---
 
-This is a mildy spicy, warm, and tangy wing sauce.
+This is a mildly spicy, warm, and tangy wing sauce.
 
 ## Ingredients
 
 - 3 tablespoons fresh lime juice
 - 3 tablespoons maple syrup
 - 2 tablespoons soy sauce
-- 1½ tablespoons vindaloo spice blend (see [[Vindaloo Paste]] recipe)
+- 1½ tablespoons [[Vindaloo paste]]
 - 1–2 tablespoons extra-virgin olive oil
 - 2 teaspoons mild chili flakes (Korean gochugaru worked well)
 - 2 teaspoons garlic, minced or grated
@@ -27,7 +27,7 @@ This is a mildy spicy, warm, and tangy wing sauce.
 - 1 teaspoon cornstarch
 - ½ teaspoon granulated garlic
 - ½ teaspoon MSG
-- salt
+- salt, to taste
 - water, to thin
 
 ## Method
@@ -39,8 +39,3 @@ Taste and adjust: more lime for acid, more maple for balance, more salt as neede
 ## To serve
 
 Toss over freshly baked wings while still hot. Also good on chicken thighs.
-
-## Notes
-
-- From memory, not a fixed recipe; listed as "needs testing" at the time of writing. [draft]
-- Korean chili worked well.

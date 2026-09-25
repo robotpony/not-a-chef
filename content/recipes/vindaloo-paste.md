@@ -4,7 +4,7 @@ tags: [bases, indian, make-ahead, vegan, dairy-free]
 source: original
 date: 2024-07-01
 prep_time: 15 min
-cook_time: 2-3 min
+cook_time: 2–3 min
 total_time: 15 min
 cuisine: Indian
 draft: false
@@ -14,12 +14,12 @@ Vindaloo is my favourite curry, so I developed this paste.
 
 ## Mechanic
 
-The fenugreek and dried chilies are what make this paste taste like vindaloo rather than a generic curry paste. **Toast all whole spices first**: the heat activates their oils and deepens every flavour in the final dish.
+In this version, the fenugreek and dried chilies set the paste apart from a generic curry paste. **Toast all whole spices first**: the heat activates their oils and deepens every flavour in the final dish.
 
 ## Ingredients
 
-- 50g fresh ginger (2 inches), roughly chopped
-- 3 cloves garlic, roughly chopped
+- 50 g fresh ginger (5 cm), roughly chopped
+- 3 or more cloves garlic, to taste, roughly chopped
 - 10 dried red chilies (adjust heat to taste)
 - 2 teaspoons coriander seeds
 - 1 teaspoon fenugreek seeds
@@ -44,6 +44,6 @@ Rub onto pork, lamb, or chicken. Marinate at least 2 hours, overnight preferred.
 
 ## Notes
 
-- Lemon juice is the traditional souring agent; some versions use tamarind or vinegar.
-- Fenugreek is non-negotiable; its bitterness is a defining feature of the style.
+- Vinegar is traditional (vindaloo comes from the Portuguese *vinha d'alhos*, meat in wine vinegar and garlic); lemon is my swap. Tamarind also works.
+- Don't skip the fenugreek; its bitterness defines this paste.
 - Keeps refrigerated for a week or frozen for a month.

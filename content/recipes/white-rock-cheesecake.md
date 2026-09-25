@@ -1,63 +1,69 @@
 ---
-title: White Rock Cheesecake
+title: White Rock cheesecake
+aka: Unbaked cheesecake, Vancouver cheesecake
 tags: [desserts]
 source: family
 cook_time: 10 min
 cuisine: Canadian
-draft: true
+draft: false
 ---
 
-Aka: Unbaked Cheesecake or Vancouver Cheesecake.  
+An unbaked, whipped cheesecake on a graham crust, set overnight in the fridge.
 
-> Originally from Afterthoughts Dessert Restaurant back from Ann’s working days. Do not share outside of our family!
+> Originally from Afterthoughts Dessert Restaurant back from Ann’s working days.
 
+## Crust
 
-## Ingredients:
+- graham crumbs, enough to cover the bottom of the pan (or half graham and half Oreo crumbs)
+- ¼ cup butter, melted
+- a sprinkle of cinnamon
 
-- 750g Cream Cheese
-- 1 ½ cups Icing Sugar
-- 1 tsp Lemon Juice
-- 1 tsp Vanilla
-- 1 L Whipping Cream
+Heat the oven to 150°C (300°F).
 
-## Directions:
+Pour the crumbs into a 23 cm (9 inch) round pan about 2.5 cm (1 inch) deep. Sprinkle in a little cinnamon (skip it if it won't complement your flavours) and mix it in with your fingers. Make a well in the middle, pour in the melted butter, and mix it into the crumbs with your fingers. If it's too wet, add more crumbs; too dry, add more butter. Press the crumbs firmly into the bottom of the pan, including the edges.
 
-1. Preheat the Oven to 300 degrees F (150 C).
-2. Prepare your crusts: pour the Graham Crumbs (or Graham and Oreo Crumbs combo) directly into your pans until it’s about an inch up.  Sprinkle in a little bit of Cinnamon (can be omitted if Cinnamon will not compliment your cheesecake flavours) and with your fingers, mix into the crumbs and then form a little well in the middle of the pan.  Pour the melted Butter into the well and with your fingers, mix the butter into the crumbs.  If too wet, add more crumbs; if too dry, add more butter.  Once you have the right consistency, press the crumbs into the bottom of the pan to form the crust.  Ensure the edges are also pressed down.
-3. Bake the crust for 10 minutes.  Remove and cool on a cooling rack.
-4. In a mixer, cream the cream cheese.  Add the Icing Sugar, Lemon Juice, and Vanilla and mix until blended.
-5. With the mixer on low, slowly pour in the Whipping Cream.  Once all the whipping cream has been added, stop the mixer and scrape down the sides and ensure the bottom of the bowl has been scrapped as well.
-6. Start the mixer on low again, and as the whipping cream becomes incorporated, increase the speed of the mixer.
-7. Once the mixture is a thick consistency, it is ready.  Do not over whip/under whip (should stick to spatula; not slide right off).
-8. Throw whipped cheesecake to the sides of the pan (to prevent air bubbles).
-9. Smooth out with spatula and push it to the edges.
-10. Chill for 24 hours before removing from the pan.
-11. Top with a sauce or fresh fruit or drizzle sides with Ganache.
+Bake 10 minutes. Cool on a rack.
 
+## Filling
 
-## Varieties:
+- 750 g cream cheese
+- 1½ cups icing sugar
+- 1 tsp lemon juice
+- 1 tsp vanilla
+- 1 L whipping cream
 
-### Cherry: 
+Cream the cream cheese in a mixer. Add the icing sugar, lemon juice, and vanilla, and mix until blended.
 
-Use 1 can Cherry Pie filling
+With the mixer on low, pour in the whipping cream slowly. Stop the mixer and scrape down the sides and the bottom of the bowl.
 
-Fill the pan just over half with cheesecake mixture and form a shallow well within an 1 inch of edges all around the pan.  Add Cherry Pie Filling and reserve a portion of just the cherry jelly (no pieces) for the topping.  Fill the pan with remaining cheesecake mixture.  Once the top has been smoothed, add a circle of the cherry pie filling (no pieces) to the top of the cheesecake.   Drizzle sides with Chocolate ganache and top with whipping cream rosettes.
+Start the mixer on low again, and increase the speed as the cream is incorporated. Whip until thick enough to stick to a spatula rather than slide off. Don't over- or under-whip.
 
-### Tirmasu: 
+Throw the filling against the sides of the pan to prevent air bubbles. Smooth it with a spatula, pushing it to the edges.
 
-Require 2 shots of espresso, cocoa and icing sugar, and bake a White Cake.  Wrapped baked and cooled cake in saran wrap; place in the refrigerator overnight, and before adding to the cheesecake, trim all the edges.
+Chill for 24 hours before removing from the pan.
 
-Replace the Lemon Juice and Vanilla in the cheesecake recipe with 1 shot of espresso.
-Fill the pan just over half with cheesecake mixture and form a shallow well within an 1 inch of edges all around the pan.  Add trimmed white cake to the cheesecake well.  Drizzle with white cake with 1 shot of espresso.  Fill the pan with remaining cheesecake mixture.  Once the top has been smoothed, dust with a 50/50 mixture of cocoa and icing sugar.
+## To serve
+
+Top with a sauce or fresh fruit, or drizzle the sides with ganache.
+
+## Equipment
+
+- 23 cm (9 inch) round pan
+
+## Variations
+
+### Cherry
+
+You'll need 1 can cherry pie filling. Fill the pan just over half with the filling and form a shallow well to within 2.5 cm (1 inch) of the edges. Add the cherry pie filling, reserving some of the jelly (no cherries) for the top. Fill the pan with the remaining cheesecake mixture and smooth the top. Add a circle of the reserved jelly to the top. Drizzle the sides with chocolate ganache and top with whipped cream rosettes.
+
+### Tiramisu
+
+You'll need a baked white cake, 2 shots of espresso, and cocoa and icing sugar for dusting. Wrap the cooled cake in plastic wrap and refrigerate it overnight, then trim all the edges. Replace the lemon juice and vanilla in the filling with 1 shot of espresso. Fill the pan just over half with the filling and form a shallow well to within 2.5 cm (1 inch) of the edges. Lay the trimmed cake in the well and drizzle it with the second shot of espresso. Fill the pan with the remaining filling and smooth the top. Dust with a 50/50 mix of cocoa and icing sugar.
 
 ### Whistler
 
-Require baked Chocolate Cake, Chocolate Sauce and Ganache.  Wrapped baked and cooled cake in saran wrap; place in refrigerator overnight, and before adding to cheesecake, cut cake into cubes.
+You'll need a baked chocolate cake, chocolate sauce, and ganache. Use a boxed cake mix: it's drier and more cohesive than scratch-made, so it holds up better in the filling. Wrap the cooled cake in plastic wrap and refrigerate it overnight, then cut it into cubes. Fold half the cake gently into the filling without overmixing. Mound the rest of the cake on top of the cheesecake. Drizzle the mound with chocolate sauce, then ganache.
 
-Gently fold half of the chocolate cake into the cheesecake mixture (do not over mix).  Use the remaining chocolate cake to form a mound on the top of the cheesecake.  First drizzle chocolate sauce over the chocolate cake mound and follow with ganache.
+### Fresh berry
 
-### Strawberry/Fresh Berry: 
-
-Require fresh washed, then dried berries.
-
-If using Blueberries, Raspberries, and/or Blackberries, gently fold into cheesecake mixture.  If using or adding Strawberries, save a little cheesecake mixture to cover the top.  Push Strawberries into the cheesecake mixture once into the pan.  Then top with remaining mixture and smooth the top.  Drizzle sides with Chocolate ganache and top with whipping cream rosettes and fresh fruit.
+You'll need fresh berries, washed and dried. Fold blueberries, raspberries, or blackberries gently into the filling. For strawberries, save a little filling for the top: push the strawberries into the filling once it's in the pan, then cover them with the remaining filling and smooth the top. Drizzle the sides with chocolate ganache and top with whipped cream rosettes and fresh fruit.

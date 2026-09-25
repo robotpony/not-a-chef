@@ -3,7 +3,7 @@ title: Velveting (pork)
 tags: [bases, chinese, make-ahead, quick, weeknight]
 source: original
 date: 2026-01-11
-servings: 2-3
+servings: 2–3
 prep_time: 5 min (plus 30 min rest)
 total_time: 35 min
 cuisine: Chinese
@@ -18,24 +18,25 @@ Baking soda raises the pH of the meat surface, which inhibits protein cross-link
 
 ## Ingredients
 
-- 350g pork (shoulder, tenderloin, or loin), thinly sliced
+- 350 g pork (shoulder, tenderloin, or loin), thinly sliced
 - ½ teaspoon baking soda
 - 1½ teaspoons cornstarch
-- 5g water, if the mixture feels dry
+- 5 g water, if the mixture feels dry
 
-### Optional flavouring
-
-- 7g Shaoxing wine
-- 7g oyster sauce
+#### Optional flavouring
+- 7 g Shaoxing wine
+- 7 g oyster sauce
 - 1 teaspoon neutral oil
 - ¼ teaspoon sesame oil
 - ⅛ teaspoon white pepper
 
 ## Method
 
-Combine baking soda and cornstarch. Add pork and massage for 3 minutes until the coating is evenly distributed. Add flavouring if using and massage briefly to combine.
+Add the baking soda to the pork and massage for 3 minutes, until evenly distributed. Add the water if it feels dry.
 
 Rest 30 minutes at room temperature or up to 2 hours in the fridge.
+
+Rinse the pork briefly to remove any soapy taste, and pat it dry. Toss with the cornstarch and the flavouring, if using, until evenly coated.
 
 Stir-fry in a hot wok with a little oil. The pork stays tender even when the wok temperature drops as the meat hits the pan.
 
