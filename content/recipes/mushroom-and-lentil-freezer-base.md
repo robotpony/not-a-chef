@@ -15,15 +15,16 @@ A savoury and tasty vegetarian base for stews, chilies, and soups.
 
 ## Mechanic
 
-This is a vegetarian analogue to the beef/mushroom/sofrito freezer base. The **mushrooms must go through three stages** (dry → wet → dry + browned) before adding anything else: rushing this step produces a flat, steamed flavour instead of a deep savoury one.
+This is a vegetarian analogue to [[Beef base]]. The **mushrooms must go through three stages** (dry → wet → dry + browned) before adding anything else: rushing this step produces a flat, steamed flavour instead of a deep savoury one.
 
 ## Ingredients
 
-- 300–400g crimini mushrooms, finely diced (3–4 cups)
-- 400–500g sofrito (4–5 cups)
-- 300g green or brown lentils (3 cups)
-- 500ml vegetable stock (2 cups)
-- 125ml dry sherry (½ cup)
+- 300–400 g cremini mushrooms, finely diced (3–4 cups)
+- 400–500 g sofrito (1¾–2 cups)
+- 300 g green or brown lentils (1½ cups)
+- 500 ml vegetable stock (2 cups)
+- 125 ml dry sherry (½ cup)
+- 2 tbsp tomato paste
 - 3 tablespoons olive oil
 - 2 bay leaves
 - 2 large sprigs fresh rosemary
@@ -37,19 +38,19 @@ This is a vegetarian analogue to the beef/mushroom/sofrito freezer base. The **m
 
 Heat oil in a large heavy pot over medium. Add mushrooms and a pinch of salt. Cook without stirring until the liquid releases and evaporates, then stir occasionally until dry and well-browned, 12–15 minutes.
 
-Add sofrito and continue cooking, stirring regularly. When the mixture begins sticking, add a generous squeeze of tomato paste and stir until the paste darkens, about 3 minutes.
+Add sofrito and continue cooking, stirring regularly. When the mixture begins sticking, add the tomato paste and stir until the paste darkens, about 3 minutes.
 
 Add lentils and stir to coat. Before the bottom burns, deglaze with sherry, scraping up the browned bits. Add stock.
 
-Add bay, rosemary, thyme, paprika, MSG, and granulated garlic. Stir and taste. Simmer until thickened and the lentils are just beginning to soften, about 20 minutes. Season with salt and pepper.
+Add bay, rosemary, thyme, paprika, MSG, and granulated garlic. Stir and taste. Simmer until thickened and the lentils are just beginning to soften, about 20 minutes. They finish cooking in whatever dish you use the base in. Season with salt and pepper.
 
 If too liquid, add a cornstarch slurry. If too dry, add water and adjust.
 
 ## To serve
 
-Freeze in 300–500g portions. Use as a base for pasta sauces, soups, taco filling, or casseroles.
+Freeze in 300–500 g portions. Use as a base for pasta sauces, soups, taco filling, or casseroles.
 
 ## Notes
 
-- Tested: worked well enough to eat as a snack straight out of the pot.
-- "Some sort of thickener will keep this together when used in a sauce."
+- Good enough to eat as a snack straight out of the pot.
+- When using it in a sauce, add a thickener (a cornstarch slurry works) to hold it together.

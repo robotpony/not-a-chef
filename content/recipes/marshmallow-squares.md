@@ -6,24 +6,32 @@ cuisine: American
 draft: false
 ---
 
-Classic Recipe!  Ann never had these growing up, but a friend posted a few pictures of making these during the 2020 holiday season.  I asked for the recipe she used (from Food.com) and turns out, Bruce used to have these as a childhood treat.  They turned out well and brought back nostalgic memories and will continue to be a holiday treat.
+A classic no-bake holiday square: peanut butter and butterscotch (or chocolate) fudge set around mini marshmallows.
 
-## Ingredients:
+> Ann never had these growing up, but a friend posted a few pictures of making these during the 2020 holiday season. I asked for the recipe she used (from Food.com) and it turns out Bruce used to have these as a childhood treat. They turned out well, brought back nostalgic memories, and will continue to be a holiday treat.
 
-- ½ Cup Butter
-- 1 Cup Peanut Butter
-- 300 Grams (1 bag) Butterscotch Chips or Chocolate Chips
-- 200 Grams (1 bag) Mini Marshmallows (white or coloured)
-- Options: doubling the marshmallow, or adding 2 cups of Rice Krispies / Puffed Wheat, or add chopped nuts of your choice
+## Ingredients
 
-## Directions:
+- 115 g (½ cup) butter
+- 250 g (1 cup) peanut butter
+- 300 g (1 bag) butterscotch chips or chocolate chips
+- 200 g (1 bag) mini marshmallows, white or coloured
+- up to 200 g more mini marshmallows, 2 cups Rice Krispies or puffed wheat, or chopped nuts (optional)
 
-1. Put the bag of Marshmallows in the freezer.
-2. Grease a 11” x 13” pan (or line the pan with parchment paper).  If you do not use parchment and only grease the pan, you can put the pan in the freezer so when you add the final product, it helps with the cooling time (but not required if you’re not in a hurry).
-3. Melt together butter and peanut butter in a double boiler over medium low heat (or regular pan on  low heat).  Once melted, remove from the heat.
-4. Add the butterscotch or chocolate chips to the mixture and store until melted and mixed (this prevents the mixture from getting too grainy).
-5. Allow the mixture to cool a little (as to not melt the marshmallows), then add the marshmallow.  Depending on how much you love marshmallows, you are welcome to add up to double the amount, or add you additional chosen ingredients.
-6. Pour mixture into your prepared pan.
-7. Refrigerate and let completely cool
-8. When firm, cut into pieces.
-9. If you are serving the whole portion to a group, just cut and serve.  If these are for you to enjoy over time, wrap each piece into Saran Wrap (or place into containers) and store in the fridge for maximum freshness.
+## Method
+
+Put the bag of marshmallows in the freezer.
+
+Grease a 23 × 33 cm (9 × 13 in) pan, or line it with parchment. If you only grease it, you can chill the pan in the freezer to speed up setting.
+
+Melt the butter and peanut butter together in a double boiler over medium-low heat (or in a regular pan on low). Once melted, remove from the heat.
+
+Add the butterscotch or chocolate chips and stir until melted and smooth. Stirring off the heat keeps the mixture from going grainy.
+
+Let the mixture cool a little so it doesn't melt the marshmallows, then stir in the marshmallows and any add-ins.
+
+Pour the mixture into the prepared pan. Refrigerate until completely cool and firm, then cut into squares.
+
+## Notes
+
+- To keep them over time, wrap each square in plastic wrap (or pack them in containers) and store in the fridge.

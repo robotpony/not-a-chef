@@ -3,53 +3,56 @@ title: Maui/Kalua pulled pork
 tags: [mains, pork]
 source: family
 prep_time: 30 min (or overnight)
-cook_time: 4-5 hr
+cook_time: 4–5 hr
 cuisine: Hawaiian
 draft: false
 ---
 
-This is a Hawaiian style pulled pork that does not need a BBQ or fire pit, based on various recipes from local Maui residents. The pork itself is simply seasoned, braised, and pulled, paired with a sweet and acidic sauce.
+This is a Hawaiian-style pulled pork that doesn't need a BBQ or fire pit, based on various recipes from local Maui residents. The pork itself is simply seasoned, braised, and pulled, paired with a sweet and acidic sauce.
 
-## Ingredients:
+## Pork
 
-- 2-3 kg bone-in pork shoulder
-- 2 tablespoons [[Bruce's spice rub]]
-- 2 tablespoons Knorr chicken bouillon powder (the large jar, not packets or cubes)
-- 2 teaspoons Hawaiian Red Alea Salt (or coarse salt)
-- 2 teaspoons Worcestershire sauce
-- 2 teaspoons liquid smoke
-- (optional) enough banana, taro, ti, or bamboo leaves, to wrap the shoulder in  
-    (can be found frozen from Asian market like T&T)
+- 2–3 kg bone-in pork shoulder
+- 2 tbsp [[Bruce's poultry and pork spice rub]]
+- 2 tbsp Knorr chicken bouillon powder (the large jar, not packets or cubes)
+- 2 tsp Hawaiian alaea salt (or coarse salt)
+- 2 tsp Worcestershire sauce
+- 2 tsp liquid smoke
+- banana, taro, ti, or bamboo leaves, enough to wrap the shoulder (optional)
+    - found frozen at Asian markets like T&T
+
+Rub the spice rub, bouillon, salt, Worcestershire, and liquid smoke over the pork shoulder. Wrap the shoulder in leaves, if using, then in foil. Let it sit in the fridge for 30 minutes, or up to overnight.
+
+Heat the oven to 165°C (325°F). Put the wrapped pork in a hotel pan, a Dutch oven, or any pan 5–10 cm (2–4 in) deep. Cook until the shoulder falls apart, 4–5 hours.
+
+Unwrap the pork, saving all the accumulated liquid for the sauce. Pull out the larger pieces of fat and shred the meat. Reserve the fat for a future snack.
+
+## Sauce
+
+- 50 g (¼ cup) golden brown sugar
+- 1 (398 ml / 14 oz) can crushed pineapple, or a can of pineapple pieces, blended
+    - a 355 ml (12 oz) can works too
+- 55 g (¼ cup) butter, melted
+- 1 tbsp liquid smoke (optional)
+- the liquid saved from the cooked pork
+
+Combine the sauce ingredients in a saucepan and simmer until slightly reduced. Taste for salt and adjust with a little rub or sea salt.
+
+## To serve
+
+The shredded pork, with the sauce spooned over.
+
+## Variations
+
+### Other cookers
+
+Skip the oven and cook the wrapped shoulder another way: 4–5 hours on high in a slow cooker, about 50 minutes on high pressure in a pressure cooker, or 7–10 hours in a 120°C (250°F) oven. All of them should end with pork that falls apart.
+
+## Equipment
+
 - Aluminum foil
-
-Rub spices, bouillon, salt, Worcestershire, liquid and smoke over pork shoulder and set aside. Wrap shoulder in leaves, then foil. Let sit in the fridge for 30 minutes (or up to overnight).
-
-### Sauce:
-
-- ¼ cup of golden brown sugar
-- 355ml/12oz can of crushed pineapple  
-    (or, blend up a can of pineapple pieces or slices)
-- ½ stick butter, melted
-- (optional) 1 tablespoon liquid smoke
-- Remaining liquids from the cooked pork
-
-Combine the sauce ingredients in a sauce pan and simmer, reducing slightly. Taste for salt, and adjust (with some rub or sea salt).
-
-## Method:
-
-### Oven:
-
-You can use a hotel pan (with foil), a dutch oven, or you can wrap the pork in foil and place it in a pan 2-4 inch deep.
-
-1. Cook shoulder in a 162C/325F oven for 4-5 hours, or until the shoulder falls apart.
-2. Remove from the oven, separate out the larger pieces of fat and pork (saving any accumulated liquids). Shred pork. Reserve fat for a future snack.
-
-### Alternative methods:
-
-- 4-5 hours on high in a slow cooker
-- 1 hour in a pressure cooker on high
-- 7-10 hours in an oven at 250F
 
 ## Notes
 
-[Slappyodaddybbq](https://www.youtube.com/watch?v=GZy6yFzXANs), [Hawaii's Pickle Lady](https://www.youtube.com/watch?v=7y5KVYXKjE8)
+- Sources: [Slappyodaddybbq](https://www.youtube.com/watch?v=GZy6yFzXANs) and [Hawaii's Pickle Lady](https://www.youtube.com/watch?v=7y5KVYXKjE8).
+- For a slow-cooker version finished with cabbage, see [[Kālua pig & cabbage]].

@@ -19,12 +19,12 @@ The miso paste acts as both marinade and glaze. White miso is sweeter and milder
 
 ## Ingredients
 
-- 60–120ml white or red miso (¼–½ cup)
-- 80ml sake (⅓ cup)
+- 60–120 ml white or red miso (¼–½ cup)
+- 80 ml sake (⅓ cup)
 - 2 tablespoons soy sauce
-- 60ml brown sugar (¼ cup, packed)
+- 60 ml brown sugar (¼ cup, packed)
 - 1–2 tablespoons extra-virgin olive oil
-- 4 salmon fillets (~150g each)
+- 4 salmon fillets (~150 g each)
 
 ## Method
 
@@ -32,7 +32,7 @@ Whisk miso, sake, soy sauce, sugar, and oil together until smooth. The consisten
 
 Coat salmon fillets completely. Marinate for at least 30 minutes; up to 2 days in the fridge for deeper flavour and firmer texture.
 
-Scrape off excess marinade (it burns). Bake at 220°C (425°F) or broil to 50–53°C internal (medium). A 3–4 minute broil per side works for standard fillets.
+Scrape off excess marinade (it burns). Bake at 220°C (425°F) until 50–53°C in the thickest part (medium), about 8–10 minutes. Or broil, about 3–4 minutes per side for standard fillets.
 
 ## To serve
 

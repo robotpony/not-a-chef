@@ -11,7 +11,7 @@ cuisine: Italian
 draft: false
 ---
 
-This is a classic, comforting soup, perfect for the late Summer or Fall.
+This is a classic, comforting soup, perfect for late summer or fall.
 
 ## Mechanic
 
@@ -19,16 +19,16 @@ The vegetarian base replaces pancetta with deeply browned mushrooms, toasted bre
 
 ## Ingredients
 
-## Base
+#### Base
 
 - 2 tablespoons olive oil
 - 280 g cremini or white mushrooms, diced (about 4 cups)
 - 30 g bread, diced small (about 1 cup; or 60 g breadcrumbs)
 - 2 teaspoons smoked paprika
-- 1–2 teaspoons soy sauce or Bragg's aminos
+- 1–2 teaspoons soy sauce or Bragg Liquid Aminos
     - Or: 150 g diced pancetta instead of all of the above
 
-## Soup
+#### Soup
 
 - 1 onion, diced
 - 120 g celery, diced (about 1 cup)
@@ -40,7 +40,7 @@ The vegetarian base replaces pancetta with deeply browned mushrooms, toasted bre
 - 1 large tin (825 ml) plum tomatoes, crushed by hand
 - 2 tins (540 ml each) mixed beans, drained and rinsed
 - 270 g kale or other sturdy greens, roughly chopped (about 4 cups)
-- ⅔ cup small pasta (ditalini, orzo, or similar)
+- 110 g (⅔ cup) small pasta (ditalini, orzo, or similar)
 - salt and black pepper
 - ¼ cup fresh flat-leaf parsley, chopped
 - ¼ cup Parmesan, grated

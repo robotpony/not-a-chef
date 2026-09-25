@@ -3,40 +3,38 @@ title: Neapolitan strips
 tags: [desserts]
 source: family
 prep_time: 2 hr (or overnight)
-cook_time: 7-10 min
+cook_time: 7–10 min
 cuisine: Canadian
 draft: false
 ---
 
-This is a recipe from our childhood.
+This is a recipe from our childhood: a three-layer icebox cookie, chocolate, vanilla, and cherry, chilled in a log and sliced.
 
-> Ann made this recipe with an elementary school friend, Shannon Donselaar.  This was our favorite treat.
+> Ann made this recipe with an elementary school friend, Shannon Donselaar. This was our favourite treat.
 
-## Ingredients:
+## Ingredients
 
-- 1 cup Butter
-- ½ cup Sugar
-- 1 Egg
-- 1 tsp Vanilla
-- 2 ½ cups Flour
-- ½ tsp Salt
-- ⅓ cup Walnuts, finely chopped
-- ⅓ cup Maraschino Cherries, finely chopped
-- 1 square Semi-Sweet Chocolate, melted or 2tbsp Cocoa
-- Red Food Colouring
+- 1 cup butter
+- ½ cup sugar
+- 1 egg
+- 1 tsp vanilla
+- 2½ cups flour
+- ½ tsp salt
+- ⅓ cup walnuts, finely chopped
+- ⅓ cup maraschino cherries, finely chopped
+- 28 g (1 square) semi-sweet chocolate, melted, or 2 tbsp cocoa
+- red food colouring
 
-## Directions:
+## Method
 
-The dough needs to be chilled overnight (or firm, minimum 2 hours in the refrigerator).  When ready to bake, preheat the oven to 375 degrees F (190 C).
+Cream the butter, sugar, egg, and vanilla together thoroughly in a mixer. Stir in the flour and salt and mix well.
 
-1. In a mixer, cream Butter, Sugar, Egg, and Vanilla together thoroughly.
-2. Stir in Flour and Salt; mix well.
-3. Divide dough into 3 equal portions:
-    1. Stir in melted Chocolate (or Cocoa) in one portion
-    2. Stir in Cherries and a few drops of Red Food Colouring into the second portion
-    3. Keep the third portion as is
-4. Line an empty Wax Paper Box (or create a box about 30cm long x 5cm square) and line box with plastic wrap.  Or just form dough in a shape that is 30cm L x 5cm W x 5cm H.
-5. Press Chocolate dough evenly into the box; top with Vanilla dough, then Cherry dough (if not using a box, form each portion of dough into the strip and build the 3 strips together; wrapped formed log in plastic wrap).
-6. Wrap well and chill overnight or until form (minimum 2 hours).
-7. Cut roll into ¼ inch thick slices and place on an ungreased baking sheet.
-8. Bake for 7 to 10 minutes or until set.  Cool before storing in an airtight container.
+Divide the dough into 3 equal portions. Stir the melted chocolate (or cocoa) into one. Stir the cherries and a few drops of red food colouring into the second. Stir the walnuts into the third.
+
+Line an empty wax paper box with plastic wrap, or make a box about 30 cm long and 5 cm square. Press the chocolate dough evenly into the box. Top with the vanilla dough, then the cherry dough. Without a box, shape each portion into a 30 × 5 cm strip and stack the 3 strips into a 5 cm high log.
+
+Wrap well in plastic wrap and chill until firm, at least 2 hours or overnight.
+
+Heat the oven to 190°C (375°F). Cut the log into 6 mm (¼ in) slices and place them on an ungreased baking sheet. Bake until set, 7–10 minutes.
+
+Cool before storing in an airtight container.

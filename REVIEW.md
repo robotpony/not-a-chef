@@ -86,7 +86,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 
 - [ ] Import the pan-fried chicken burger experiment log (private Google Sheet, linked in an HTML comment in `recipes/pan-fried-chicken-burger.md`) into the book, probably as a Notes table or a companion page.
 - [ ] Move non-people `servings` values to the new `portions` field (added 2026-09-25; shown as "Makes"). About 20 recipes say things like "makes ~750 ml", "8 buns", or "enough for about 1 kg wings"; keep a people count in `servings` where one makes sense.
-- [ ] Remove stale "needs testing" / "[draft]" / "work in progress" notes: every recipe has been tested (the author, 2026-09-25); the text just wasn't updated. Remaining ones from open question 5 include `base-curry-gravy`, `butter-chicken`, `english-muffins`, `farmer-soup`, `marinated-pressed-tofu`, `pulled-pork`, `sheet-pan-fast-food-style-gyros`, `vindaloo-wing-sauce`, `vodka-cream-sauce`.
+- [ ] Remove stale "needs testing" / "[draft]" / "work in progress" notes: every recipe has been tested (the author, 2026-09-25); the text just wasn't updated. Remaining ones from open question 5 include `base-curry-gravy`, `butter-chicken`, `english-muffins`, `farmer-soup`, `pulled-pork`, `sheet-pan-fast-food-style-gyros`, `vindaloo-wing-sauce`, `vodka-cream-sauce`.
 - [ ] Import the other private Google Sheets and Docs now kept in HTML comments (`grep -rn 'to import' content`): the food ratios worksheet, scaling sheets in baked mac & cheese, breakfast sausage, pizza dough 2022, the poultry rub mix sheet, and T's broccoli salad's alternative dressing.
 
 ## Pass 1 (2026-09-24)
@@ -307,82 +307,26 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] `recipes/lentil-stew.md` (fixed 2026-09-25: converted to FORMAT.md; 2 tbsp tomato paste listed; water topped up one knuckle above the rice; sugar to taste (the ¼ cup was format drift); broiler note is about browning the peppers; pressure and stovetop paths in one step; Anaheim; sauté; add-ins as a `####` label; testing note removed)
 - [x] `recipes/lentil-tacos.md` (fixed 2026-09-25: 1 tbsp neutral oil listed; green or brown lentils (yellow fall apart); "hearty, frugal filling"; Anaheim; sensory cues; unit spacing)
 - [x] `recipes/lime-crema.md` (fixed 2026-09-25: fresh-tasting; yield moved to `portions`; unit spacing)
-- [x] ! `recipes/marinara-sauce.md` (Google links fixed 2026-09-24)
-    - Ingredients used but not listed: sugar (optional, step 3) and white wine/stock (step 1). Butter is listed but never used (say "stir in off the heat at the end").
-    - L26: "medium/lop" → "medium-low". "Shred onions and garlic" vs the ingredient list's "finely minced"; pick one.
-    - L18: "italian herbs" → "Italian"; L19: "2 teaspoon" → "teaspoons"; L14: "fire roasted" → "fire-roasted".
-- [x] ! `recipes/marinated-pressed-tofu.md`
-    - `cuisine: CHINESE` (all caps), while tags say `japanese`. Pick one; sentence case.
-    - L46: "preseve" → "preserve". L48: open "[draft]" testing note while `draft: false`.
-    - L30: "48–72 hours minimum" is a range and a minimum at once. Say "at least 48 hours".
-    - L6: `servings: 4+(as a protein component)` missing space.
-- [x] ! `recipes/marshmallow-squares.md`
-    - L24: typo that changes the instruction: "store until melted" → "stir until melted".
-    - L22: "11” x 13” pan" Q: standard pans are 23 × 33 cm (9 × 13 in); typo? Give metric.
-    - L25: "add you additional" → "your". L23: "medium low" → "medium-low"; double space. L27 missing period.
-    - Title Case ingredients ("½ Cup Butter", "300 Grams", "Mini Marshmallows"). L9: backstory (recipe rules Q).
-- [x] ! `recipes/mauikalua-pulled-pork.md`
-    - L16: broken wiki link `[[Bruce's spice rub]]`; no page has that title. → `[[Bruce's poultry and pork spice rub]]`.
-    - L25: "liquid and smoke" → "liquid smoke". L18: "Red Alea Salt" → "alaea salt".
-    - L23: "Aluminium foil" is equipment, not an ingredient; also "aluminum" Q (see garbage-plates).
-    - Order: the sauce needs "remaining liquids from the cooked pork", but it's written before the cooking method. Move the sauce after the Oven section.
-    - Q: "1 hour in a pressure cooker" for a 2–3 kg bone-in shoulder is short; 75–90 min is typical for pull-apart. Tested?
-    - Temps: "162C/325F" → "165°C (325°F)"; "250F" → "120°C (250°F)". L32: "½ stick butter" → "55 g (¼ cup) butter". L42: "dutch oven" → "Dutch oven"; "2-4 inch deep" → "5–10 cm (2–4 in) deep".
-    - L55: Notes are two bare links; label them as sources.
-    - Overlaps with kālua-pig-cabbage.md. Cross-link?
+- [x] `recipes/marinara-sauce.md` (fixed 2026-09-25: converted to FORMAT.md; deglazing liquid and sugar listed (optional); butter stirred in off the heat at the end; onion and garlic minced, not shredded; medium-low; Italian; fire-roasted; Canadian can sizes (796 ml, 398 ml))
+- [x] `recipes/marinated-pressed-tofu.md` (fixed 2026-09-25: `cuisine: Chinese` (dong doufu technique), tagged both `chinese` and `japanese` (usually cooked Japanese-style); preserve; "at least 48 hours"; servings spacing; 200°C (400°F); [draft] note removed)
+- [x] `recipes/marshmallow-squares.md` (fixed 2026-09-25: converted to FORMAT.md; "stir until melted"; 23 × 33 cm (9 × 13 in) pan; your; medium-low; lower-case ingredients with metric; backstory moved into a family blockquote; add-ins marked optional)
+- [x] `recipes/mauikalua-pulled-pork.md` (fixed 2026-09-25: converted to FORMAT.md as pork / sauce components; `[[Bruce's poultry and pork spice rub]]`; liquid smoke; alaea salt; foil moved to Equipment; sauce after the cook; 165°C (325°F), 120°C (250°F); 55 g (¼ cup) butter; Dutch oven; 5–10 cm (2–4 in); other cookers as a variation (pressure cooker about 50 minutes); 355 ml pineapple can noted as an alternative; sources labelled; cross-linked to `[[Kālua pig & cabbage]]`)
 - [x] `recipes/mayo-marinade.md` (fixed 2026-09-24: safety, Mechanic, typos, Kenji note; dropped the `mediterranean` tag)
 - [x] `recipes/mcburgers.md` (merged into mcdouble.md 2026-09-24; redirects)
 - [x] `recipes/mcdouble.md` (merged 2026-09-24: McBurgers as the single-hamburger variation; 4:2:1 seasoning; converted to FORMAT.md)
 - [x] `recipes/meat-sauce-aka-american-bolognese.md` (fixed 2026-09-24: 1 tbsp tomato paste; [[Beef base]] link; herbs named; converted to FORMAT.md)
-- [x] ! `recipes/meatballs.md`
-    - Tagged `dairy-free`, but the recipe has 60 g Parmesan (and the panade options include cream, buttermilk, sour cream). Remove the tag.
-    - No internal temperature: add "to 71°C (160°F)" to the bake step. (Meatballs simmered in sauce afterwards effectively get a long hold, so this matters most when they're served straight from the oven.)
-    - L14: "elevates it to perfection" (promotional; recipe rules). L54: "Asian style" → "Asian-style". L58: "scallions" → "green onions".
-    - Asian variation: 6.5% soy (65 g per kg) is a lot of sodium even with the salt reduced. Q: tested at that level?
-- [x] ! `recipes/minestrone.md`
-    - Heading structure: an empty "## Ingredients" is followed by "## Base" and "## Soup" at the same level, and Method is separate. Per FORMAT.md, make Base/Soup `####` labels under Ingredients (the method isn't per-component).
-    - L14: "Summer or Fall" → lower case. L28: "Bragg's aminos" → "Bragg Liquid Aminos". L43: "⅔ cup small pasta" has no metric (≈ 110 g).
-- [x] ! `recipes/miso-salmon.md`
-    - L35: "Bake at 220°C (425°F)" gives no time, only the broil time does. Add "about 8–10 minutes".
-    - L39: "scallions" → "green onions". Otherwise clean.
-- [x] ! `recipes/mushroom-and-lentil-freezer-base.md`
-    - Volume conversions are off: "300g green or brown lentils (3 cups)" is about 1½ cups; "400–500g sofrito (4–5 cups)" is closer to 2 cups.
-    - Q: 300 g lentils with 500 ml stock + 125 ml sherry isn't enough liquid to soften them in 20 minutes (lentils take ~2.5× their weight in liquid). Is "just beginning to soften" deliberate so they finish in the final dish? Say so.
-    - Tomato paste (L40) isn't listed. L22: "crimini" → "cremini".
-    - L55: migration artifact: a quoted note ("Some sort of thickener...") in quotation marks. Rewrite as a plain note.
-    - L18: "the beef/mushroom/sofrito freezer base" → link `[[Beef base]]`.
-- [x] ! `recipes/mushroom-parmesan-pasta-filling.md`
-    - Tag is wrong: `breads` → `bases` or `pasta`.
-    - L26: "Fry mushrooms in butter (or oil)": butter isn't listed. "(to slow down the fond browning too much)" is garbled → "(so the fond doesn't burn)".
-    - L28: "Add spices" but the only one is thyme (never named in the method).
-    - Title and L22, L29: "parmesan" → "Parmesan" (the collection capitalizes it elsewhere). L10: "ragu" → "ragù". L21: "1/2 cup" → "½ cup". L33: double period, double space. L14: double space.
-- [x] ! `recipes/mushroom-soup.md`
-    - The potage is called "dairy-free", but the shared base uses "butter or olive oil" and the velouté path adds butter and cream. Say "use olive oil for the dairy-free version" in the base.
-    - Tagged `vegetarian`, but the broth is "vegetable or chicken". Fine if veg is the default; say so.
-    - `cuisine: french` → "French".
-- [x] ! `recipes/naan.md`
-    - Butter for brushing and the garlic/herbs (L41) aren't in the ingredient list (all 110 g of butter goes into the dough).
-    - Yield: `servings: 3-4`, but ~1.1 kg of dough at 100 g makes ~11 naan. Say "about 11 naan (serves 4–6)".
-- [x] ! `recipes/neapolitan-strips.md`
-    - Walnuts are listed but never used. Q: which layer (usually the cherry or vanilla)?
-    - Typos: step 6 "until form" → "until firm"; step 5 "wrapped formed log" → "wrap the formed log"; L13 "favorite" → "favourite".
-    - Step 4 lines the box twice ("Line an empty Wax Paper Box ... and line box with plastic wrap").
-    - L25: "1 square Semi-Sweet Chocolate" → "28 g (1 square) semi-sweet chocolate"; "2tbsp" → "2 tbsp". Step 7: "¼ inch" → "6 mm (¼ in)". L30: "375 degrees F (190 C)" → "190°C (375°F)".
-    - Title Case ingredients throughout.
-- [x] ! `recipes/never-fail-chocolate-cake.md`
-    - Contradiction: the Mechanic says "Bake to touch, not skewer", and L46 says "A skewer should come out clean". Keep one.
-    - L18: "1:3 cocoa to flour by weight", but 75 g : 270 g is 1:3.6.
-    - L56: the sour-milk substitute is muddled: "Sour ½ cup evaporated milk (or 1 cup whole milk) and ½ cup water". With whole milk the water would make 1½ cups. → "Mix ½ cup evaporated milk + ½ cup water (or 1 cup whole milk) with 1 tbsp vinegar."
-    - Imperial pans: "two 9-inch round pans" → "two 23 cm (9 in) round pans"; "9×13" → "23 × 33 cm (9 × 13 in)". Fractions "2 1/4", "1/2" etc. → glyphs.
-- [x] ! `recipes/nine-bean-soup-mix.md`
-    - Missing step: the "2-4 cups of sausage, turkey, and/or bacon" is never used in the method. Also say whether the ham-hock meat is shredded back in after step 2.
-    - L13: "½ cups each of 9 types of dried beans (or …)" → "½ cup each"; the trailing "(or …)" is unfinished.
-    - L17: the soaking instruction sits between the ingredient lists; move it to step 1. L31: "2L/quarts" → "2 L (2 qt)"; "Add ham hock and bones" (what bones?).
-    - L22: "1 large can" → size (796 ml).
+- [x] `recipes/meatballs.md` (fixed 2026-09-25: `dairy-free` tag dropped; bake to 71°C (160°F) in the centre; promotional intro rewritten; Asian-style soy cut from 6.5% to 1.5%; yield moved to `portions`, `servings: 6–12` at 3–5 meatballs each; unit spacing)
+- [x] `recipes/minestrone.md` (fixed 2026-09-25: Base/Soup as `####` labels; summer or fall; Bragg Liquid Aminos; 110 g (⅔ cup) pasta)
+- [x] `recipes/miso-salmon.md` (fixed 2026-09-25: bake time about 8–10 minutes; unit spacing (green onions were already fixed))
+- [x] `recipes/mushroom-and-lentil-freezer-base.md` (fixed 2026-09-25: volume conversions (1½ cups lentils, 1¾–2 cups sofrito); lentils finish cooking in the final dish; 2 tbsp tomato paste listed; cremini; quoted note rewritten; `[[Beef base]]` link)
+- [x] `recipes/mushroom-parmesan-pasta-filling.md` (fixed 2026-09-25: converted to FORMAT.md; tags `pasta, bases` (matching spinach pecan filling); butter listed; fond sentence; thyme and porcini named in the method; Parmesan (title too); ragù; ½; punctuation and spacing)
+- [x] `recipes/mushroom-soup.md` (fixed 2026-09-25: split into base / velouté / potage components; olive oil for the dairy-free potage; vegetable broth as the default; `cuisine: French`)
+- [x] `recipes/naan.md` (fixed 2026-09-25: butter or ghee, garlic, and herbs for finishing listed under a `#### To finish` label; `servings: 4–6`, `portions: about 11 naan`; unit spacing)
+- [x] `recipes/neapolitan-strips.md` (fixed 2026-09-25: converted to FORMAT.md; walnuts go in the vanilla layer; firm; wrap the log; box lined once; 28 g (1 square) chocolate; 6 mm (¼ in); 190°C (375°F) moved to just before baking; favourite; lower case)
+- [x] `recipes/never-fail-chocolate-cake.md` (fixed 2026-09-25: skewer test dropped (bake to touch); ratio restated as the actual 1:3.6 (75 g : 270 g); sour-milk substitute rewritten; 23 cm (9 in) and 23 × 33 cm (9 × 13 in) pans; fraction glyphs; variations as `###`; Notes as bullets)
+- [x] `recipes/nine-bean-soup-mix.md` (fixed 2026-09-25: converted to FORMAT.md; sausage/turkey/bacon goes in with the aromatics; ham hock or bone, meat shredded back in; ½ cup each (4½ cups) or a store-bought mix; soak moved to the method; 2 L (2 qt); 796 ml (28 oz) can; "bones" dropped; intro added, the cookbook note kept as a blockquote)
 - [x] `recipes/no-knead-pizza-dough.md` (fixed 2026-09-24: rise, fridge, and shaping steps drafted; converted to FORMAT.md; title hyphenated)
-- [x] ! `recipes/nut-crusted-salmon.md`
-    - Tagged `dairy-free`, but the crust has 50 g Parmesan. Drop the tag or make the cheese optional.
-    - L33: "parmesan" → "Parmesan".
+- [x] `recipes/nut-crusted-salmon.md` (fixed 2026-09-25: `dairy-free` tag dropped; Parmesan; `####` labels; unit spacing)
 - [x] ! `recipes/olie-bollen.md`
     - Title: Dutch spelling is one word: "Oliebollen".
     - L34: typo that changes the instruction: "Stir in mill" → "Stir in milk". Step 1 never adds the apples, raisins, or cinnamon ("eggs and dry ingredients"); add "fold in the apples and raisins".

@@ -1,9 +1,9 @@
 ---
 title: Nut-crusted salmon
-tags: [mains, quick, dairy-free]
+tags: [mains, quick]
 source: original
 date: 2021-07-01
-servings: 2-4
+servings: 2–4
 prep_time: 15 min
 cook_time: 15 min
 total_time: 30 min
@@ -19,32 +19,29 @@ The mayo-mustard glue does two things: it binds the crust to the fish and keeps 
 
 ## Ingredients
 
-### Glue
-
-- 60ml mayonnaise (¼ cup)
-- 40g whole grain mustard (2½ tablespoons)
+#### Glue
+- 60 ml mayonnaise (¼ cup)
+- 40 g whole grain mustard (2½ tablespoons)
 - 3 cloves garlic, minced or grated
 - salt and black pepper
 
-### Crust
-
-- 60g toasted walnuts, finely chopped (½ cup)
-- 60g toasted pecans, finely chopped (½ cup)
-- 50g parmesan, finely grated (½ cup)
+#### Crust
+- 60 g toasted walnuts, finely chopped (½ cup)
+- 60 g toasted pecans, finely chopped (½ cup)
+- 50 g Parmesan, finely grated (½ cup)
 - small handful fresh parsley, finely chopped
 - salt and black pepper
 
-### Fish
-
-- 4 salmon fillets (~150g each), skin on or off
+#### Fish
+- 4 salmon fillets (~150 g each), skin on or off
 
 ## Method
 
-Preheat oven to 220°C (425°F).
+Heat the oven to 220°C (425°F).
 
-Combine glue ingredients. Combine crust ingredients.
+Combine the glue ingredients. In a separate bowl, combine the crust ingredients.
 
-Place salmon on a lined baking tray. Spread glue generously over the top and sides of each fillet. Press crust firmly onto the glue layer.
+Place the salmon on a lined baking tray. Spread the glue generously over the top and sides of each fillet. Press the crust firmly onto the glue.
 
 Bake until the crust is deep golden brown and the fish is just opaque in the thickest part, about 12–15 minutes.
 
