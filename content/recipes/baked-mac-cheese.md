@@ -4,70 +4,72 @@ tags: [mains, casseroles]
 source: family
 draft: false
 cuisine: American
-prep_time: 20m
-cook_time: 45m
+prep_time: 20 min
+cook_time: 45 min
 ---
 
-This is a classic baked Mac & Cheese recipe. You can sub in pretty much any combo of cheese, though there are a few that are better than others: cheddar, jack, and something like Gruyère/Edam are a great base, or you can lean towards a creamier sauce with provolone, smoked Gouda, and anything like Edam. I’ve seen people use cream cheese, but it wouldn’t add much flavour (and provolone/mozzarella would get a similar effect while also adding some needed funk and flavour).
+This is a classic baked mac and cheese. You can sub in pretty much any combo of cheese, though some are better than others: cheddar, Jack, and something like Gruyère or Edam make a great base, or you can lean towards a creamier sauce with provolone, smoked Gouda, and Edam. I've seen people use cream cheese, but it doesn't add much flavour (provolone or mozzarella gets a similar effect while adding some needed funk).
 
+## Mechanic
 
-## Ingredients
+A **mornay** is a béchamel (roux plus milk) with cheese melted into it. A roux is flour and fat, 1:1. The sauce breaks and turns gritty if it overheats, so the cheese goes in off the heat and the bake stops at bubbling.
 
-### Mornay sauce:
+## Crust
 
-- ⅔ cup roux
-    - ⅓ cup unsalted butter (or mix partially with a neutral oil)
-    - ⅓ cup flour (or sweet rice flour)
+- ¾ cup panko bread crumbs
+- 2 tsp herbs, like basil, oregano, or parsley (freeze-dried works fine)
+- 4 tbsp (¼ cup) unsalted butter or olive oil
+- Salt and pepper, to taste
+
+Melt the butter in a frying pan, then take it off the heat. Stir in the bread crumbs and herbs, and season with salt and pepper. Set aside; they brown in the oven.
+
+## Noodles
+
+- 500 g (1 lb) macaroni, or a fancier noodle that holds onto the sauce
+
+Cook the noodles until 1–2 minutes short of al dente; they finish in the oven. Reserve some pasta water in case the sauce needs loosening, then drain.
+
+## Mornay sauce
+
+- ⅓ cup unsalted butter (or part neutral oil)
+- ⅓ cup flour (or sweet rice flour)
 - 3 cups whole milk
-- 2-3 cups grated cheddar (sharp or old)
-- 2-3 cups grated Gruyère or similar (I also like Edam)
-- ½ cup of mozzarella (or provolone if you want a stretchy sauce)
-- 1 cup grated parmesan
+- 2–3 cups grated cheddar, sharp or old
+- 2–3 cups grated Gruyère or similar (I also like Edam)
+- ½ cup mozzarella (or provolone for a stretchy sauce)
+- 1 cup grated Parmesan
 - Splash of lemon juice or mustard
-- Splash of cider vinegar (to taste, usually around 25ml)
-- Salt/pepper (to taste)
-- MSG 1.5%
+- Splash of cider vinegar, to taste (usually around 25 ml)
+- Salt and pepper, to taste
 - 1 tsp paprika (optional)
-- 10g MSG (optional)
-- 40g sodium citrate (optional)  
-    emulsifying salt, makes smooth sauces
+- 10 g MSG (optional)
+- 40 g sodium citrate, an emulsifying salt for a smoother sauce (optional)
 
 <!-- Private worksheet (to import): https://docs.google.com/spreadsheets/d/1WioIgoLJITdosYp3fU7KlhytJqeXLdIpIVPg8ClIGTM/edit?gid=531465660#gid=531465660 -->
 
-### Noodles:
+Combine the grated cheeses. Over low heat, stir the butter and flour into a blonde roux. Slowly whisk in the milk until you have a smooth, lightly thickened béchamel.
 
-- 1 package uncooked macaroni or fancy noodle that will hold onto the cheese sauce (500g/1lb)
+Take the pot off the heat. Add most (not all) of the cheese a handful at a time, stirring until silky. Keep it off the heat so it doesn't break.
 
-### Crust:
+Season with pepper, paprika, and MSG, then salt; taste first, since some cheeses are already salty. Add the lemon or mustard and vinegar a little at a time. You can fix a flat sauce with the right acid and more salt, but go slowly, since it's hard to undo.
 
-- ¾ cup panko bread crumbs
-- 2 tsp herbs (like basil, oregano, parsley, etc., freeze-dried works fine)
-- 4 tbsp (¼ cup) unsalted butter or olive oil
-- Salt and pepper to taste
+## Assembly
+
+Heat the oven to 175–190°C (350–375°F).
+
+Stir the noodles into the sauce in the pot, along with any add-ins.
+
+Spread half the cheesy noodles in a baking dish and scatter over half the remaining cheese. Add the rest of the noodles, then the rest of the cheese, the crumb mixture, and any reserved add-ins.
+
+Bake until browning and bubbly, 25–35 minutes (40–50 minutes from the fridge). Don't let it go longer; overheating breaks the sauce and makes it grainy.
 
 ## Variations
 
-- 2 small tins of roasted jalapeños (mix in with noodles & cheese sauce)
-- Vegetarian: ½ package of smoked tempeh, diced, and fried in some butter (or oil) with some salt (can be combined with noodles & cheese sauce and save some for the top).
-- Carnivor: a couple strips of crispy bacon - chopped (can be combined with noodles & cheese sauce and save some for the top)
+### Jalapeño
+Mix 2 small tins of roasted jalapeños into the noodles and sauce.
 
-## Method:
+### Smoked tempeh
+Dice ½ package of smoked tempeh and fry it in butter or oil with a little salt. Mix most into the noodles and sauce and save some for the top.
 
-1. In a fry pan, heat butter until melted and then remove from heat. Combine bread crumbs with melted butter and herbs. Set aside. They will brown in the oven.
-2. Cook noodles to al dente, 1-2 minutes before done, as they will finish cooking in the oven. Strain and add to the baking dish. Reserve some of the pasta water just in case you need to smooth out the cheese sauce.
-3. Over low heat, make a blonde roux with the butter and flour, stirring constantly. Slowly whisk in the milk to form a smooth bechamel sauce (littly thickened), and then add most (but not all) of the combined cheese a handful at a time and stir until silky smooth (forming an American style mornay sauce).
-
-    1. Take care not to overheat the mornay (cheese) sauce, and remove it from the heat while adding the cheese to moderate the temperature quickly. Overheating a cheese sauce will cause it to break and become gritty.
-
-4. Take off the heat and season the sauce with salt (taste before adding salt as some of your cheeses may already be salty), pepper, and paprika to taste. If you’re adding an acid, do so now a bit at a time. You can fix a flat sauce with the right acid and more salt, but do so slowly as it’s difficult to undo.
-5. Combine the cooked noodles and sauce in the pot and stir.  Add any bonus ingredients and stir.
-6. In an oven dish, add half of the cheesy noodles, and layer on half of the remaining cheese. Add the remaining noodles and top with cheese and breadcrumb mixture, plus remaining Tempah or Bacon.
-7. Bake for 25-35 minutes (or 40-50 minutes from the fridge) in a 175-190C or 350-375F oven, or until browning and bubbly.
-
-    1. Avoid overheating as it can break the sauce and it becomes grainy.
-
-## Notes
-
-A roux is the mix of flour and fat (1:1). 
-
-A mourney sauce adds milk.
+### Bacon
+Chop a couple of strips of crispy bacon. Mix most into the noodles and sauce and save some for the top.

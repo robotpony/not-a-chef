@@ -2,42 +2,45 @@
 title: Basic chicken ramen stock
 tags: [bases]
 source: family
-cook_time: 2-3h
+cook_time: 3–4 hr
 cuisine: Japanese
 draft: false
 ---
 
-This is the basic chicken ramen stock I use for my lunch ramen (when working). It’s a hybrid of a French and Chintan style stock with ingredients readily available.
+This is the basic chicken ramen stock I use for my lunch ramen (when working). It's a hybrid of a French and a chintan-style stock, with ingredients that are easy to find.
 
-This recipe uses a pressure cooker and family-size pan (or stock pot) to reduce. It is possible to replace the pressure cooker with a stock pot, given 3-4x the cooking time.
+This recipe uses a pressure cooker and a family-size pan (or stock pot) to reduce. You can replace the pressure cooker with a stock pot, given 3–4 times the cooking time.
 
-## Base stock:
+## Ingredients
 
-- 4L of water (or cover ingredients)
-- 2-3 chicken carcases, including backs, necks, wing tips
-- Pork fat/bones (if available)
-- 2 large onions
-- 4-6 large cloves garlic crushed
+#### Base stock
+- 4 L water, or enough to cover
+- 2–3 chicken carcasses, including backs, necks, and wing tips
+- Pork fat or bones (optional)
+- 2 large onions
+- 4–6 large garlic cloves, crushed
 - 1 knob of ginger
 - 1 bay leaf
 - Black peppercorns
 
-## Dashi:
+#### Dashi
+- Bonito or saba-bushi flakes (optional)
+- 1 medium or large piece of kombu
 
-These ingredients are added to the strained ingredients before you begin to reduce the stock (off the heat).
+## Method
 
-- Bonito
-- 1 medium/large piece of kombu
+Roughly chop the onions, garlic, and ginger, trimming off any dirty peel or root.
 
-## Method:
+For a darker broth, roast the vegetables and chicken on a sheet pan at 230°C (450°F) until browned, about 20 minutes (optional). The darker the roast, the darker the broth.
 
-1. Roughly chop onions, garlic, and ginger, removing any dirty pieces of peel or root parts.
-2. Optionally: roast veg and chicken on a sheet pan until browned (230C/450F), about 20 minutes. The darker the roast, the darker the broth.
-3. Add pressure cooker ingredients to a large pressure cooker, top with water (to cover) and cook on high pressure setting for 30-40 minutes (check your pressure cooker for correct times for broths).
-4. Depressurize naturally and remove solids into a metal bowl using a spider and tongs. Pour into a smaller pot through a fine mesh strainer.
-5. Add bonito/sababushi (optionally) and kombu to strained solids, with the heat off and let sit for 15-25 minutes. Remove any solids with a fine mesh spider (or strain again).
-6. Reduce stock on a low simmer for 2-3 hours, or  by half. It is possible to use a rolling boil if you want to emulsify any fats for a richer broth. Remove any scum with your fine mesh spider, if any remains.
+Put the base stock ingredients in a large pressure cooker, add water to cover, and cook at high pressure for 30–40 minutes (check your cooker's manual for broth times).
+
+Let the pressure release naturally. Lift the solids into a metal bowl with a spider and tongs. Pour the stock through a fine-mesh strainer into a smaller pot.
+
+With the heat off, add the bonito and kombu to the strained stock and steep for 15–25 minutes. Lift them out with a fine-mesh spider, or strain again.
+
+Reduce the stock at a low simmer until it's down by half, 2–3 hours. A rolling boil emulsifies the fat for a richer, cloudier broth, if you want that. Skim any remaining scum with the fine-mesh spider.
 
 ## Notes
 
-Draining over the cooktop  is safer than straining the sink, as you’ll never accidentally pour your stock down the drain NOT THAT I’VE EVER DONE THAT.
+- Draining over the cooktop is safer than straining in the sink, as you'll never accidentally pour your stock down the drain. NOT THAT I'VE EVER DONE THAT.

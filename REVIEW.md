@@ -171,87 +171,40 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 ### Recipes
 
 - [x] `recipes/_index.md`
-- [x] ! `recipes/adobo-seasoning-mix.md`
-    - L35: "Mix used for meatballs; described as very good." Passive and vague (described by whom?). "Used for meatballs; very good. A slightly wet panade worked well."
-- [x] ! `recipes/al-pastor-marinade-pantry-hack.md`
-    - Spelling of chile varies within the file: "chilis" (L15), "chilli" (L15), "chillies" (L21), "chili" (L58). Pick one collection-wide (see chili/chilli note).
-    - Incoherent: Toppings lists "roasted (pork fat) pineapple, diced", but step 7 puts sliced tinned pineapple and its juice on before baking. The tin of pineapple isn't in the ingredients.
-    - L47: "It should taste sweet" but there's no sweetener unless you add the optional roasted peppers. Q: is sugar or pineapple juice meant to be in the marinade?
-    - L30: stray closing paren; L31 "2 teaspoon" → "2 teaspoons"; L35 trailing comma; L47 missing final period.
-    - Mechanic is backstory (why you made a pantry version). The mechanic is the technique: toasted chile powders bloomed in stock stand in for rehydrated whole chiles. Move the backstory to the intro.
-    - Heading "## Directions" in an otherwise new-format file → "## Method".
-- [x] ! `recipes/almond-chocolate-cake.md`
-    - Clean. Metric only: "23cm" → "23 cm (9 in)"; oven "170°C fan (190°C conventional)" could add "(375°F)".
+- [x] `recipes/adobo-seasoning-mix.md` (fixed 2026-09-24: meatball note reworded; "for grilling")
+- [x] ! `recipes/al-pastor-marinade-pantry-hack.md` (fixed 2026-09-24: converted to FORMAT.md; backstory moved to the intro and the Mechanic rewritten around toasted powders bloomed in stock; tinned pineapple added as the topping that roasts on the pork, then gets diced; typos; units)
+    - L55: "It should taste sweet" with no sweetener in the marinade unless you add the roasted peppers. Q: is sugar or pineapple juice meant to be in the marinade, or should "sweet" go? Left as written.
+- [x] ! `recipes/almond-chocolate-cake.md` (fixed 2026-09-24: 23 cm (9 in); 190°C (375°F) conventional; unit spacing)
     - Q: cocoa % for "dark chocolate"? It changes sweetness a lot with 200 g brown sugar.
-    - `cuisine: world` is unusual; other recipes use a region or leave it out.
-- [x] ! `recipes/apple-berry-almond-scones.md`
-    - Title Case on almost every ingredient ("650g Flour", "Caster (Bakers) Sugar", "White Sugar", "Mortar and Pestle") → lower case.
-    - L27: typo "Icing Sugar, to dues" → "icing sugar, to dust". L25: "Black Berries" → "blackberries".
-    - Missing ingredient: step 8 brushes with "a beaten egg", but both eggs go into the dough at step 5. Add "1 egg, beaten, for egg wash".
-    - L37: "Using a rolling pin to roll out the scone mixture into about 1-inch thickness" is a fragment → "Roll the dough to 2.5 cm (1 in) thick." No yield: how many scones?
-- [x] ! `recipes/arroz-rojo-mexican-red-rice.md`
-    - L14: "leftovers burritos" → "leftover burritos"; "Tex-Mex style" → "Tex-Mex-style"; "a great addition ... a great filler" repeats "great".
-    - L29: "## Optional garnish (before covering):" drop the colon.
-    - Numbered steps in a new-format recipe (FORMAT.md says prose).
-    - L24: "Serrano" → "serrano".
+    - `cuisine: world` kept: it's the most common non-regional value (9 recipes).
+- [x] ! `recipes/apple-berry-almond-scones.md` (fixed 2026-09-24: converted to FORMAT.md; lower case; "to dust"; blackberries; egg-wash egg added; 2.5 cm (1 in); 200°C (400°F); "until golden")
+    - Q: how many scones does it make? No `servings` yet.
+- [x] ! `recipes/arroz-rojo-mexican-red-rice.md` (fixed 2026-09-24: converted to FORMAT.md; intro; garnish as a `####` label; serrano; long-grain)
+    - Q: the cilantro was listed but never used; I added it to the tomato blend. Right, or is it a garnish?
 - [x] `recipes/asian-slaw-dressing.md` (merged 2026-09-24: MSG, ginger, seasoned vinegar from the vaguely-Asian version)
-- [x] ! `recipes/autumn-glow-salad-with-lemon-dressing.md`
-    - Typos: L18 "freemen" → "freekeh"; L22 "sried" → "dried"; L32 "agavé" → "agave"; L51 "loved this it" → "loved it".
-    - Incoherent: the apple is chopped (step 3) and the cranberries and seeds are listed, but none of them are ever added. Step 4 "toss everything together" should name them. Salt and pepper for the veg (step 2) aren't in the ingredient list.
-    - L47: "The picture below" but the image is above the Notes.
-    - L39: "218 degrees C (425 F)" → "220°C (425°F)".
-    - Headings: "## For the Salad:" / "### For the Lemon Dressing:" are title case with colons, and the levels are uneven → "## Salad", "## Lemon dressing".
-    - `## History` isn't a FORMAT.md section and is backstory; it belongs in the intro or an essay. Also both `source: family` and `source_url:`; FORMAT.md puts the URL in `source`.
-- [x] ! `recipes/avocado-salad-dressing.md`
-    - L44: garbled: "Limit and blending to prevent olive oil and herbs from becomming bitter." → "Blend briefly; over-blending turns olive oil and herbs bitter." ("becomming" typo.)
-    - L27: "4g salt and black pepper" lumps two ingredients under one weight. Q: 4 g salt plus pepper to taste?
-    - Yield: the ingredients total ~195 g, but `servings` says "makes ~135ml". Q: which is right?
-    - `tested: "1"` is a non-standard field (fine per the open schema, but it's the only recipe with it?).
-- [x] ! `recipes/baguettes.md`
-    - Tag typo `techniquess`, which creates its own "Techniquess" tag page. → `technique`.
-    - L16: "Paul Holywood" → "Paul Hollywood"; "This recipe and method is" → "are".
-    - Timing contradicts: `rest_time: 5-24h` implies an optional cold retard, but the method never mentions one, and L28 says "Start to finish takes 5-6 hours". Q: is there an overnight fridge option to add?
-    - Mechanic is a description plus credits, not a mechanic. The mechanic is 75% hydration + narrow shape + steam = open crumb and crisp crust. Move the credits to Notes or `source`.
-    - L36–38: "let rest 15 minutes" then "Proof for about an hour" in the next paragraph. Say whether the hour includes the 15 minutes, and covered or not.
-- [x] ! `recipes/baked-mac-cheese.md` (Google links fixed 2026-09-24)
-    - Incoherent order: step 2 puts the drained noodles in the baking dish, step 5 combines noodles and sauce "in the pot", and step 6 layers them into "an oven dish". Pick one flow.
-    - Duplicate/conflicting MSG: "MSG 1.5%" (L29) and "10g MSG (optional)" (L31). 1.5% of the batch would be ~30 g, far more than normal (0.1–0.5% is typical). Q: what should it be?
-    - L73: incorrect: "A mourney sauce adds milk." Béchamel is roux + milk; mornay is béchamel + cheese. L71 is fine. Suggest one line: "Roux is flour and fat, 1:1. Add milk for béchamel; add cheese to béchamel for mornay."
-    - Typos: L11 "Mac & Cheese" → "mac and cheese"; L52 "Carnivor" → "Carnivore"; L58 "littly thickened" → "lightly"; L64 "Tempah or Bacon" → "tempeh or bacon"; "parmesan" → "Parmesan".
-    - L48: Variations sits between the ingredients and the method; move it after Method. L16, L37, L41, L54 headings end in colons.
-    - L65: "175-190C or 350-375F" → "175–190°C (350–375°F)".
+- [x] `recipes/autumn-glow-salad-with-lemon-dressing.md` (fixed 2026-09-24: converted to FORMAT.md as dressing + salad components; typos; apple, cranberries, and seeds tossed in; salt, pepper, and grain liquid listed; herbs vs. dried spices; 220°C (425°F); `source` is the Pinch of Yum URL; History blockquote kept, moved under the intro; photo note dropped)
+- [x] ! `recipes/avocado-salad-dressing.md` (fixed 2026-09-24: overblending note; salt and pepper split; optional marker; unit spacing)
+    - Q: 4 g salt plus pepper to taste: is that the split you meant?
+    - Q: yield. The ingredients total ~195 g, but `servings` says ~135 ml. Which is right?
+    - `tested: "1"` is the only use of that field; kept (open schema).
+- [x] ! `recipes/baguettes.md` (fixed 2026-09-24: `technique` tag; Mechanic is now 75% hydration + narrow shape + steam; credits moved to Notes; Hollywood; en-dash ranges; sensory cue before time)
+    - Q: `rest_time: 5–24 hr` implies an optional cold retard, but the method never mentions one and says 5–6 hours start to finish. Is there an overnight fridge option to add?
+    - Q: "let rest 15 minutes" then "Proof for about an hour": does the hour include the 15 minutes, and is it covered? Left as written.
+- [x] ! `recipes/baked-mac-cheese.md` (fixed 2026-09-24: converted to FORMAT.md as crust / noodles / sauce / assembly; one flow (noodles into the sauce pot, then layered in the dish); roux/béchamel/mornay explained in a Mechanic; variations moved after the method; typos; units)
+    - Q: MSG was listed twice ("MSG 1.5%" and "10 g MSG (optional)"). Kept 10 g (~0.5% of the batch); 1.5% would be ~30 g. Right?
+    - Q: 40 g sodium citrate is high for ~700–900 g cheese (2–3% of the cheese weight, 15–25 g, is typical). Tested?
 - [x] ! `recipes/baked-oatmeal.md` (fixed 2026-09-24: 20 or 23 cm square dish)
     - `source: adapted`: adapted from what? Add the source or use `original`.
-- [x] ! `recipes/base-curry-gravy.md`
-    - Tags say `vegan, dairy-free`, but the recipe uses 250 ml cream ("or coconut cream"). Either drop the tags or make coconut cream the default.
-    - L22: stale HTML TODO says gingergarlic-paste.md is orphaned, but that recipe exists now. Replace the comment with a wiki link to it.
-    - L32: "Spices:" as a bare label → `#### Spices` (the FORMAT.md grouping label).
-    - L13: "restaurant style" → "restaurant-style".
-- [x] ! `recipes/basic-beans-and-lentils.md`
-    - L14: em-dash. Also Q: "[soaking] doesn't reduce gassiness." Studies are mixed; soaking and discarding the water does remove some of the oligosaccharides. Soften to "does little for gassiness"?
-    - `cook_time: 5-25m` contradicts the table, where stovetop beans take up to 120 min.
-    - "stove-top" (L26) vs "Stove top" (table) → "stovetop".
-    - L39: the kidney-bean note is correct and important. Consider promoting it into the method, since slow cookers are a common failure point.
-    - `cuisine: global` lower case (others use "Global"/"World"); pick one value.
-- [x] ! `recipes/basic-chicken-ramen-stock.md`
-    - Error: step 5 adds bonito and kombu "to strained solids", and L27 says "strained ingredients". They go into the strained stock. As written, a cook would steep the dashi in the discarded bones.
-    - Typos: "carcases" → "carcasses"; "sababushi" → "saba-bushi"; L43 "straining the sink" → "straining in the sink"; "Chintan style" → "chintan-style".
-    - L36: "pressure cooker ingredients" refers to a heading called "Base stock"; use the same name. Heading colons (Base stock:, Dashi:, Method:).
-    - Dashi quantities: "Bonito" with no amount. Q: roughly how much (e.g. 20 g)?
+- [x] ! `recipes/base-curry-gravy.md` (fixed 2026-09-24: `vegan`/`dairy-free` tags dropped, coconut cream noted as the vegan swap; TODO replaced with a `[[Ginger/garlic paste]]` link (it already has the cilantro and green chili); `####` labels; restaurant-style; wiki-link case)
+    - Q: dropped the vegan tags rather than making coconut cream the default. Prefer the other way?
+- [x] `recipes/basic-beans-and-lentils.md` (fixed 2026-09-24: em-dash; "does little for gassiness"; `cook_time: 5 min–2 hr`; stovetop; kidney-bean warning moved into the method; `cuisine: world`)
+- [x] ! `recipes/basic-chicken-ramen-stock.md` (fixed 2026-09-24: converted to FORMAT.md; dashi steeps in the strained stock; typos; heading colons; `cook_time: 3–4 hr` to cover pressure, steep, and reduce)
+    - Q: roughly how much bonito (e.g. 20 g)? Listed without an amount and marked optional.
 - [x] `recipes/basic-ramen-tare.md` (merged into chashu-pork.md 2026-09-24; redirects)
-- [x] ! `recipes/beef-base.md`
-    - Heading levels disagree: "### Italian style, add:" vs "## Taco style, add:". Both should be the same level, and without colons.
-    - L20 lists "Accent", but step 2 says "MSG". Same thing; use one name (collection uses both, see beef-stew).
-    - L26: "1 teaspoons" → "1 teaspoon". L34: "aleppo" → "Aleppo". L35: "jalapenos" → "jalapeños".
-    - L51, L56: unclosed paren "(and some red wine if desired." ×2.
-    - L57: contradicts itself: "20-30 minutes" then "You can cook this for as long as 30 minutes". Q: the second probably meant a longer time (45?).
-    - L57, L66: "6L/qt" → 6 L is about 6.3 qt; say "6 L (6 qt)".
-    - L47: "minimise" → "minimize". L11: "for tacos, salads, in soups, casseroles" → "for tacos, salads, soups, casseroles".
-    - L39 vs L62: the intro says the pressure method is fastest (under 30 min); Notes say it takes about as long once you fry it. Say "fastest if you use it wet".
-- [x] ! `recipes/beef-stew.md`
-    - Missing ingredient: L44 seasons with "smoked paprika if using", which isn't in the list.
-    - The "Optional flavour enhancers" (Accent, soy, fish sauce) are never used in the method; say when to add them (with the stock?). Heading typo "enahancers".
-    - L26: "crimini" → "cremini"; L14: "along side" → "alongside"; "classic style" → "classic-style"; L54 "Depressurise" → "Depressurize".
+- [x] ! `recipes/beef-base.md` (fixed 2026-09-24: converted to FORMAT.md; add-ins as `####` labels; braise and pressure methods moved to Variations; Mechanic added from the intro and notes; MSG (Accent); typos; parens; 6 L (6 qt); "fastest if you use it wet"; Equipment)
+    - Q: the pressure step said "20–30 minutes" then "as long as 30 minutes". Now "at the long end the beef turns very soft". Did you mean a longer time (45?) there?
+- [x] ! `recipes/beef-stew.md` (fixed 2026-09-24: smoked paprika listed (optional); flavour enhancers go in with the stock; typos; cremini; alongside; classic-style)
+    - Q: the enhancers now go in with the stock. Right?
     - Q: 30 min at high pressure for 4 cm chuck cubes is on the short side (35–45 min is typical for spoon-tender). Tested?
 - [x] ! `recipes/beef-stock.md`
     - Missing step: tomato paste (and shallot, garlic) are in the ingredients but never used. Q: roast the paste on the bones in step 2 (usual), or add it with the water?

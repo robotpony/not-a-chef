@@ -3,64 +3,61 @@ title: Beef base
 tags: [bases, meat]
 source: family
 cuisine: Canadian
-prep_time: 15m
-cook_time: 35-90m
+prep_time: 15 min
+cook_time: 35–90 min
 draft: false
 ---
 
-This is a savoury ground beef base for tacos, salads, in soups, casseroles, and sauces.
+This is a savoury ground beef base for tacos, salads, soups, casseroles, and sauces.
 
-## Ingredients:
+## Mechanic
 
-- 4 cups of sliced mushrooms
+The **cooking method sets the texture**. A hot pan reduces the stock quickly and leaves a crumbly mince for tacos and salads; a long braise or the pressure cooker makes it much softer. The pressure cooker is my favourite: under 30 minutes for a texture that otherwise takes most of an afternoon. Mushrooms cooked from wet to dry to browned add a savoury backbone either way.
+
+## Ingredients
+
+- 4 cups sliced mushrooms
 - 1 onion, diced
 - 1 shallot, diced
-- 4 cloves of garlic, diced
-- Salt/pepper
-- 2 tsp Accent (optional)
-- 1.36kg/3 lbs of ground beef (or a mix of beef/veal/pork)
-- 250ml chicken stock
+- 4 garlic cloves, diced
+- Salt and pepper
+- 2 tsp MSG (Accent) (optional)
+- 1.36 kg (3 lb) ground beef, or a mix of beef, veal, and pork
+- 250 ml chicken stock
 
-### Italian style, add:
+#### Italian-style add-ins
+- 1 teaspoon freshly ground nutmeg
+- 1 bouquet garni (bay, thyme, rosemary, peppercorns)
+    - or dried herbs in cheesecloth or a stainless steel tea infuser
 
-- 1 teaspoons fresh ground nutmeg
-- 1 bouquet garni (bay, thyme, rosemary, peppercorns)  
-    (You can instead use dried herbs, placed in a cheesecloth or stainless steel tea infuser)
-
-## Taco style, add:
-
+#### Taco-style add-ins
 - 2 tablespoons ground cumin
 - 2 tablespoons chili powder
-- 2 teaspoons ground chilies (like aleppo, something sweet + spicy)
-- 1 small tin of smoked jalapenos (185g/6.55oz)
+- 2 teaspoons ground chilies, something sweet and spicy like Aleppo
+- 1 small tin (185 g / 6.5 oz) smoked jalapeños
 
-## Directions:
+## Method
 
-There are a few ways to make this, depending on the final texture you’re looking for, and what equipment you have available. My favourite method uses a pressure cooker, which takes less than 30 minutes and results in a softer texture than you can easily get with the more traditional methods (without cooking it for most of the afternoon).
+Sauté the mushrooms until they go wet, then dry, then brown. Add the onion and sweat until translucent. Add the shallot and garlic and sweat again.
 
-### Classic, family pan:
+Add the ground spices for the style you're making and heat until fragrant. Add salt, pepper, and MSG.
 
-1. Sauté mushrooms and cook until wet, then dry, then browned. Add onions and sweat until translucent, add shallot and garlic and sweat again.
-2. Add ground spices and heat until fragrant. Add salt, pepper, and MSG.
-3. Add beef and break up using a wooden spoon or potato masher. Add half of the chicken stock.
-4. Cook on medium/high, stirring regularly, until the beef is cooked and the liquid has mostly evaporated. This should take 15-25 minutes.
-5. Skim off any oil that separates or add some flour and thicken. Cook flour thickened beef long enough to minimise the flour taste.
+Add the beef and break it up with a wooden spoon or potato masher. Add half the chicken stock, and the bouquet garni if using.
 
-### Simple, single pot braise:
+Cook on medium-high, stirring regularly, until the beef is cooked and the liquid has mostly evaporated, 15–25 minutes.
 
-1. Follow steps for the Family Pan style, but add all of the chicken stock (and some red wine if desired.
-2. Cook, reducing liquid (60-90 minutes), or until the desired texture is reached.
+Skim off any fat that separates, or stir in a spoonful of flour to thicken and cook until the raw flour taste is gone.
 
-### Softened, pressure-cooked beef
+## Variations
 
-1. Follow steps for the Family Pan style, but add all of the chicken stock (and some red wine if desired.
-2. Cook in a 6L/qt pressure cooker on the low setting for 20-30 minutes, letting it depressurize slowly to avoid emulsifying the remaining liquid (as we don’t want it to be cloudy). You can cook this for as long as 30 minutes, at which point the beef becomes very soft, which is great on bread or crackers, or combined with tomato paste and milk to finish it as bolognese.
+### Single-pot braise
+Follow the method, but add all the chicken stock, plus a splash of red wine if you like. Simmer, reducing the liquid, until it reaches the texture you want, 60–90 minutes.
 
+### Pressure-cooked
+Follow the method, but add all the chicken stock, plus a splash of red wine if you like. Cook in a 6 L (6 qt) pressure cooker on low pressure for 20–30 minutes, and let it release slowly so the remaining liquid doesn't emulsify and go cloudy. At the long end the beef turns very soft: great on bread or crackers, or finished with tomato paste and milk as a bolognese.
 
-## Notes
+This is the fastest method if you use the beef wet. The result is wetter mince; for salads or tacos, brown it in a frying pan on medium-high, turning regularly, until the liquid cooks off. It's much more savoury than the other methods, though with the frying step it takes about as long as the pan method.
 
-Using a pressure cooker results in a wetter mince. To use that wetter beef for salad or tacos, brown it in a frying pan on medium-high, reducing the remaining liquid, turning it regularly. The result is much more savoury than the other methods, though with the frying step it takes about as long as using a standard pan.
+## Equipment
 
-## Special equipment
-
-6L pressure cooker.
+- 6 L (6 qt) pressure cooker, for the pressure-cooked version

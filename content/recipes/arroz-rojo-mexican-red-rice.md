@@ -11,36 +11,37 @@ cuisine: Mexican
 draft: false
 ---
 
-This is a great addition to any Tex-Mex style meal, and is a great filler for leftovers burritos.
-
+A good side for any Tex-Mex-style meal, and a filler for leftover burritos.
 
 ## Ingredients
 
-- 185 g long grain white rice (1 cup)
+- 185 g long-grain white rice (1 cup)
 - 2 tablespoons neutral oil
 - 2 Roma tomatoes
 - ¼ onion
-- 1 clove garlic (optional)
-- 1 Serrano or jalapeño (optional)
+- 1 garlic clove (optional)
+- 1 serrano or jalapeño (optional)
 - Small pinch of cilantro (optional)
 - 480 ml hot water (2 cups)
 - 1½ tablespoons Knorr chicken bouillon powder
 
-## Optional garnish (before covering):
-
-- ¼ onion, finely sliced
-- 1 jalapeño, halved
+#### Garnish, added before covering
+- ¼ onion, finely sliced (optional)
+- 1 jalapeño, halved (optional)
 
 ## Method
 
-1. Wash rice thoroughly in hot water, then finish with a cold rinse. Water should run mostly clear. Spread and let dry briefly.
-2. Heat oil in a heavy pan with a tight-fitting lid over medium heat. Add rice and stir frequently until golden brown, 8–10 minutes.
-3. While rice toasts, blend tomatoes, onion, garlic, and pepper until smooth.
-4. When rice is golden, reduce heat. Add the blended tomato sauce and stir briefly to incorporate.
-5. Mix bouillon powder into 480 ml (2 cups) of hot water until dissolved. Add to pan, stir well.
-6. Add sliced onion and halved jalapeño if using.
-7. Cover, reduce to lowest heat, and cook until water is fully absorbed, about 15 minutes.
-8. Remove from heat, keep covered for 5–10 minutes, then fluff with a fork.
+Wash the rice thoroughly in hot water, then finish with a cold rinse, until the water runs mostly clear. Spread it out and let it dry briefly.
+
+Heat the oil over medium in a heavy pan with a tight-fitting lid. Add the rice and stir often until golden brown, 8–10 minutes.
+
+While the rice toasts, blend the tomatoes, onion, garlic, pepper, and cilantro until smooth.
+
+When the rice is golden, turn the heat down. Add the tomato blend and stir briefly to incorporate.
+
+Stir the bouillon powder into the hot water until dissolved. Add it to the pan and stir well. Lay the sliced onion and halved jalapeño on top, if using.
+
+Cover, turn the heat to its lowest setting, and cook until the water is fully absorbed, about 15 minutes. Take the pan off the heat and leave it covered for 5–10 minutes, then fluff with a fork.
 
 ## Notes
 

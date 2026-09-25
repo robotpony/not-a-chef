@@ -11,7 +11,7 @@ cuisine: French
 draft: false
 ---
 
-This is our classic style beef stew. I tend to make it as a base now, skipping the potatoes and more delicate vegetables, which are served along side it during service.
+This is our classic-style beef stew. I tend to make it as a base now, skipping the potatoes and more delicate vegetables, which are served alongside it.
 
 ## Mechanic
 
@@ -23,7 +23,7 @@ Brown the beef in batches without crowding; you want a sear, not a steam. The fo
 - ½ cup AP flour or other starch
 - 1–2 tablespoons neutral oil, bacon fat, or shortening
 - 2 large yellow onions, diced
-- 225g crimini mushrooms
+- 225 g cremini mushrooms
 - 2 leeks, white and light green parts, diced
 - 2–3 cloves garlic, minced
 - 2 tablespoons tomato paste
@@ -31,13 +31,13 @@ Brown the beef in batches without crowding; you want a sear, not a steam. The fo
 - 1 L (4 cups) beef or chicken stock
 - 1 tablespoon Worcestershire sauce
 - 1–2 tablespoons herbes de Provence, in a cheesecloth bundle or tea infuser
-- salt and pepper
+- Smoked paprika (optional)
+- Salt and pepper
 
-### Optional flavour enahancers 
-
-- 1 teaspoon Accent
-- 1–2 tablespoons soy sauce
-- 2–3 teaspoons fish sauce
+#### Flavour enhancers
+- 1 teaspoon MSG (Accent) (optional)
+- 1–2 tablespoons soy sauce (optional)
+- 2–3 teaspoons fish sauce (optional)
 
 ## Method
 
@@ -47,11 +47,11 @@ Heat fat in a large Dutch oven or pressure cooker over medium-high. Sear beef in
 
 Add mushrooms with a little more fat. Cook until they release their liquid and begin to brown. Add onions and leeks and cook until soft. Stir in tomato paste and cook until fragrant, about 1 minute. Add garlic and cook 30 seconds. Deglaze with the wine, scraping up all the browned bits from the bottom.
 
-Add the Worcestershire, stock, and reserved beef with its drippings. Nestle in the herb bundle. Bring to a simmer.
+Add the Worcestershire, stock, any flavour enhancers, and the reserved beef with its drippings. Nestle in the herb bundle. Bring to a simmer.
 
-Dutch oven: cook on the lowest possible heat for 2–3 hours until the beef is spoon-tender.
+Dutch oven: cook on the lowest possible heat until the beef is spoon-tender, 2–3 hours.
 
-Pressure cooker: cook at highest pressure for 30 minutes. Depressurise naturally.
+Pressure cooker: cook at highest pressure for 30 minutes. Let the pressure release naturally.
 
 Taste and season. Thicken with a flour slurry if needed, or reduce uncovered.
 

@@ -2,8 +2,8 @@
 title: Basic beans and lentils
 tags: [mains, stews]
 source: family
-cuisine: global
-cook_time: 5-25m
+cuisine: world
+cook_time: 5 min–2 hr
 draft: false
 ---
 
@@ -11,7 +11,7 @@ Beans and lentils are a great addition to soups and stews, or as a side dish.
 
 ## Mechanic
 
-The **water-to-legume ratio** and cook time depend on the legume: lentils and split peas use less water and cook fast, while beans need more water and much longer. Soaking is optional — it shortens cooking time but doesn't reduce gassiness.
+The **water-to-legume ratio** and cook time depend on the legume: lentils and split peas use less water and cook fast, while beans need more water and much longer. Soaking is optional. It shortens the cooking time but does little for gassiness.
 
 ## Ingredients
 
@@ -21,19 +21,17 @@ The **water-to-legume ratio** and cook time depend on the legume: lentils and sp
 
 ## Method
 
-Rinse the legumes thoroughly and pick out any stones or debris. Soak if desired, see the timing table below.
+Rinse the legumes thoroughly and pick out any stones or debris. Soak beans overnight if you like.
 
-Add the legumes to water at the ratio above, then add the salt. Cook using the pressure cooker or stove-top times below.
+Add the legumes to water at the ratio above, then add the salt. Cook until tender, using the pressure cooker or stovetop times below.
+
+Don't cook beans, especially kidney beans, in a slow cooker unless you boil them hard for 10–15 minutes first. Slow cookers don't get hot enough to destroy the naturally occurring toxin (phytohaemagglutinin), and undercooked kidney beans can make you sick.
 
 ## Timing
 
-| Type | Water ratio | Pressure cooker | Stove top |
+| Type | Water ratio | Pressure cooker | Stovetop |
 |---|---|---|---|
 | Medium beans | 4:1 | 17–21 min, high pressure, slow release | 60–90 min, simmered |
 | Large beans | 4:1 | 20–25 min, high pressure, slow release | 60–120 min, simmered |
 | Lentils | 3:1 | 3–5 min, high pressure, slow release | 15–20 min, simmered |
 | Split peas | 3:1 | 5–7 min, high pressure, slow release | 25–35 min, simmered |
-
-## Notes
-
-- Avoid cooking beans, especially kidney beans, in a slow cooker unless you par-boil them 10–15 minutes first to destroy naturally occurring phytohaemagglutinin.

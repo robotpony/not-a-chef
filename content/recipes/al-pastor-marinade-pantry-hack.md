@@ -2,57 +2,62 @@
 title: Al pastor marinade (pantry hack)
 tags: [bases]
 source: family
-prep_time: 20m
-cook_time: 2-4 hr
+prep_time: 20 min (plus 24–48 hr marinating)
+cook_time: 2–4 hr
 cuisine: Mexican
 draft: false
 ---
 
-Al pastor is a tart and savoury marinade that begs for pork and fresh tortillas.
+Al pastor is a tart and savoury marinade that begs for pork and fresh tortillas. I don't always have easy access to whole dried chilies, but I do have ground dried and fresh ones, so this is a pantry version that captures the intent of a Mexican chili paste turned into a marinade.
 
 ## Mechanic
 
-I don’t always have easy access to dried chilies. I do have reasonable access to ground dried and fresh chilies, so this is a pantry version that captures the basic intent of a Mexican chili paste turned into a marinade. 
+**Toasted chili powders bloomed in stock** stand in for rehydrated whole dried chilies. Toasting wakes up the powders, and simmering them in a good stock gives the paste the body and depth that soaking liquid from whole chilies would. Splitting the cook into two passes (slow bake, then crisp in a pan) lets you prep it ahead and eat it all week.
 
 ## Ingredients
 
-### Marinade
-
-- ~50g of chilies (or powders), ideally with some ancho, guajillo, árbol, etc.
-- 1-2 chipotles and some sauce
-- 300ml chicken/beef/pork stock or water
-- 150ml cider vinegar
-- 2 teaspoons of olive oil
+#### Marinade
+- ~50 g dried chilies or chili powders, ideally a mix of ancho, guajillo, árbol, and similar
+- 1–2 chipotles in adobo, plus some of the sauce
+- 300 ml chicken, beef, or pork stock, or water
+- 150 ml cider vinegar
+- 2 teaspoons olive oil
 - 3 garlic cloves, crushed
 - 1 onion, quartered
-- ½ teaspoon each of cumin, oregano, cinnamon, and allspice
-- 25g kosher salt (1-1.5% weight of meat)
-- (optional) ~100 grams roasted red peppers (from a jar), to add some missing sweet/non-volcanic-peppery flavour)
-- (optional) 2 teaspoon of achiote paste or tomato paste, spices, lime
+- ½ teaspoon each cumin, oregano, cinnamon, and allspice
+- 25 g kosher salt (1–1.5% of the meat's weight)
+- ~100 g roasted red peppers from a jar, for sweetness without more heat (optional)
+- 2 teaspoons achiote paste or tomato paste, spices, lime (optional)
 
-### Meat options
+#### Meat
+- 1 pork shoulder, about 2 kg (4½ lb), boneless or bone removed
+    - or ~2 kg chicken thighs
 
-- ~2kg (1) pork shoulder (remove bone or boneless), 
-- or ~2kg chicken thighs
+#### Topping
+- 1 tin (398 ml / 14 oz) sliced pineapple, with its juice
 
-### Toppings
+## Method
 
-- Roasted (pork fat) pineapple, diced as a topping
+If using whole dried chilies, clip and deseed them.
 
-## Directions
+Toast the dried spices and chilies in a dry pan until fragrant. Add them to the simmering stock and simmer briefly. Let cool, then pour into a medium-large blender.
 
-1. Clip and deseed peppers.
-2. Toast dried spices and peppers, add to simmering stock, and simmer. Let cool and add to a medium-large blender.
-3. Add remaining marinade ingredients to the blender and blend. Blend some more. And a bit more. Ensure any whole chilies or seeds are smooth.
-4. Taste and adjust acid and salt. It should taste sweet, spicy, and have some depth. Salt and acid should be somewhere below prominent
-5. Slice the pork shoulder as thin as you can, across the grain. If using chicken thighs, slice in half (if you can), this is easier when thighs are partially frozen.
-6. Combine meat with marinade in a large bowl and combine thoroughly, so that all nooks and/or crannies have some marinade. Pack slices tightly in a hotel pan (or loaf pan, or corningware style dish), cover, and let marinate in a fridge for 24-48 hours.
-7. Top with sliced pineapple and remaining juice from the tin (or as much as fits).
-8. Bake on low (135C/275F), until pork reaches 82-87C (180-190F) in the centre (2-4 hours, depending on how deep your pan is). Cool and store for use up to 5 days later.
-9. To serve, chop and fry in a pan until the edges start to crisp.
+Add the remaining marinade ingredients and blend until completely smooth, with no whole chili pieces or seeds left. This takes longer than you think.
+
+Taste and adjust the acid and salt. It should taste sweet, spicy, and deep, with salt and acid present but not prominent.
+
+Slice the pork shoulder as thin as you can, across the grain. For chicken thighs, slice them in half horizontally if you can; this is easier when they're partially frozen.
+
+Combine the meat and marinade in a large bowl and mix thoroughly, so every nook has some marinade. Pack the slices tightly in a hotel pan, loaf pan, or CorningWare-style dish. Cover and marinate in the fridge for 24–48 hours.
+
+Heat the oven to 135°C (275°F). Top the meat with the pineapple slices and as much of the tin's juice as fits. Bake until the centre of the pork reaches 82–87°C (180–190°F), 2–4 hours depending on the depth of the pan. Cool, and store up to 5 days.
+
+To serve, chop the meat and fry it in a pan until the edges crisp. Dice the roasted pineapple for topping.
+
+## To serve
+
+In tacos, on salads, on sandwiches, and in bean chili.
 
 ## Notes
 
-Using good quality chili powders here works quite well, especially once toasted and combined with a good soup stock. Splitting the cook into 2 passes allows you to prep this ahead of time and eat it all week, and is far less fiddly to set up.
-
-These are great on salads, in tacos, on sandwiches, and bean chili.
+- Good-quality chili powders work well here, especially toasted and combined with a good stock.

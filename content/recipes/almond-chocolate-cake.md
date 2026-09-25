@@ -19,18 +19,18 @@ The beaten eggs and sugar are the only leavening: no flour, no baking powder. Be
 
 ## Ingredients
 
-- 200g dark chocolate
-- 200g unsalted butter, chopped
+- 200 g dark chocolate
+- 200 g unsalted butter, chopped
 - 5 large eggs (or 6 medium)
-- 200g soft brown sugar
-- 120g ground almonds
+- 200 g soft brown sugar
+- 120 g ground almonds
 - 1 teaspoon vanilla extract
 - Pinch of salt
 - Cocoa powder, for dusting
 
 ## Method
 
-Heat oven to 170°C fan (190°C conventional). Line a 23cm cake tin with baking parchment.
+Heat the oven to 170°C fan, or 190°C (375°F) conventional. Line a 23 cm (9 in) cake tin with baking parchment.
 
 Break the chocolate into pieces and place in a heatproof bowl with the butter. Set over a saucepan with a few centimetres of simmering water. Melt slowly, stirring occasionally, until smooth. Remove from heat immediately.
 

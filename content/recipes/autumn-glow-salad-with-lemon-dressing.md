@@ -1,51 +1,57 @@
 ---
 title: Autumn glow salad with lemon dressing
 tags: [salads, vegan]
-source: family
-source_url: https://pinchofyum.com/autumn-glow-salad-with-lemon-dressing
+source: https://pinchofyum.com/autumn-glow-salad-with-lemon-dressing
 draft: false
-prep_time: 15m
-cook_time: 45m
-servings: 4-6
+prep_time: 15 min
+cook_time: 45 min
+servings: 4–6
 cuisine: PNW
 ---
 
 This is a fresh and delicious autumn salad.
 
+> On a women's retreat in 2019, there was a private chef that cooked for the retreat for the entire weekend.  They were a vegan chef who supports local, and they made this dish for one of our lunches.  Everyone at the retreat absolutely loved it and Erika kindly shared the recipe she used with all the attendees. They noted that she added more lemon to the dressing, and also puts a bunch of herbs on the veggies as they're roasting.
 
-## For the Salad:
+![Autumn glow salad with lemon dressing](/images/recipes/autumn-glow-salad-with-lemon-dressing.png)
 
-- 1 cup spelt (or other grain: freemen, quinoa, bulgur)
+## Lemon dressing
+
+- 1 bunch parsley (about 1 cup), minced
+- 1 small garlic clove, minced
+- 160 ml olive oil (⅔ cup)
+- 1 lemon, juiced, plus more to taste
+- 1 tsp agave (optional)
+- ½ tsp salt
+- Pepper, to taste
+
+Combine everything in a jar with a tight lid and shake until blended.
+
+## Salad
+
+- 1 cup spelt (or another grain: freekeh, quinoa, bulgur)
+- Broth or water for the grain, per the package
 - 1 head cauliflower
 - 2 sweet potatoes
 - 1 tbsp olive oil
-- sprinkle of any sried spices, e.g., a few sprigs of thyme, rosemary, and so on
+- Salt and pepper
+- Fresh herbs (a few sprigs of thyme or rosemary) or a sprinkle of dried spices
 - 1 large apple
-- 1 handful of dried cranberries, along with a sprinkle of pumpkin and/or sunflower seeds
+- A handful of dried cranberries
+- A sprinkle of pumpkin and/or sunflower seeds
 
-### For the Lemon Dressing:
+Rinse the grain and put it in a rice cooker with the broth or water. Set it on the white rice setting and prep the rest while it cooks.
 
-- 1 bunch parsley (about 1 cup), minced
-- 1 small garlic clove minced
-- ⅔ cup olive oil
-- 1 lemon, juiced (more to taste)
-- 1 tsp agavé (optional)
-- ½ tsp salt
-- pepper to taste
+Heat the oven to 220°C (425°F). Cut the cauliflower into small florets. Peel and chop the sweet potatoes. Toss the vegetables in a large bowl with the oil, salt, pepper, and herbs or spices, then spread them on a baking sheet. Roast 20 minutes, stir, and roast until golden brown and soft, another 10–15 minutes.
 
-## Directions:
+While the vegetables roast, make the dressing and chop the apple.
 
-1. Rinse the grains and place in a rice cooker with the appropriate amount of broth or water (refer to package directions - it depends on the grain). Set on the white rice setting and prep the other stuff while it cooks.
-2. Preheat the oven to 218 degrees C (425 F).  Chop the cauliflower into small florets.  Peel and chop the sweet potatoes.  Place all the veggies into a large bowl and drizzle with oil.  Sprinkle with salt and pepper, add dried spices, and stir.  Place coated veggies on a baking sheet.  Roast for 20 minutes, stir, and roast for another 10 - 15 minutes.  When they are golden brown and soft, remove from the oven and set aside.
-3. While the veggies are roasting, combine all the dressing ingredients into a jar with a tight lid and shake to combine.  Chop the apple and set aside.
-4. When the grains and veggies are done, toss everything together.  This can be done when everything is hot or when it’s cooled, although the texture will be different (heavier) when hot.  Store leftovers separately (salad and dressing) if possible.
+When the grain and vegetables are done, toss them with the apple, cranberries, and seeds. Serve hot or cooled; hot is heavier in texture.
 
-![Autumn Glow Salad with Lemon Dressing](/images/recipes/autumn-glow-salad-with-lemon-dressing.png)
+## To serve
+
+Toss with the dressing. Store leftover salad and dressing separately if you can.
 
 ## Notes
 
-If you want some crunch, add a few handfuls of chopped nuts like cashews or pecans.  The picture below looks like pumpkin and/or sunflower seeds were included.
-
-## History
-
-> On a women's retreat in 2019, there was a private chef that cooked for the retreat for the entire weekend.  They were a vegan chef who supports local, and they made this dish for one of our lunches.  Everyone at the retreat absolutely loved this it and Erika kindly shared the recipe she used with all the attendees. They noted that she added more lemon to the dressing, and also puts a bunch of herbs on the veggies as they’re roasting.
+- For crunch, add a few handfuls of chopped nuts like cashews or pecans.
