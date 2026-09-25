@@ -11,7 +11,8 @@
   {{ $year := index (index . 0) 1 }}
   {{ $month := index (index . 0) 2 }}
   {{ if not $label }}{{ $label = printf "%s %s" $month $year }}{{ end }}
-  {{ $months := dict "january" 1 "february" 2 "march" 3 "april" 4 "may" 5 "june" 6 "july" 7 "august" 8 "september" 9 "october" 10 "november" 11 "december" 12 }}
+  {{/* Undated years use season files (2024-Fall.md); each sorts at its last month. */}}
+  {{ $months := dict "january" 1 "february" 2 "march" 3 "april" 4 "may" 5 "june" 6 "july" 7 "august" 8 "september" 9 "october" 10 "november" 11 "december" 12 "spring" 6 "summer" 8 "fall" 10 "winter" 12 }}
   {{ $key = add (mul (int $year) 100) (index $months (lower $month) | default 0) }}
 {{ end }}
 {{ if not $label }}{{ $label = $name | humanize }}{{ end }}

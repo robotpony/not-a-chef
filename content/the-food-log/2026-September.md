@@ -50,3 +50,11 @@ Deglaze with sherry and add the stock and Worcestershire. Add the tomatoes and c
 Hold a bare simmer, stirring regularly. Cook until pork is fork-tender (2-5 hours).
 
 Add browning as needed. Balance with salt and cider vinegar.
+
+## Wednesday, September 9th
+
+_New foods_
+
+### Cooking day
+
+- Stew ([1](https://www.youtube.com/watch?v=dZ_3xKZMOec), [2](https://www.youtube.com/watch?v=3ImE5jhnOt8))
