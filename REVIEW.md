@@ -237,9 +237,9 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] `recipes/cheddar-herb-biscuits-or-savoury-scones.md` (fixed 2026-09-24: converted to FORMAT.md; stray "`werty" removed; buttermilk in the whisk step; case; favourite; closed paren; 230°C (450°F); ½ tsp baking soda restored)
 - [x] `recipes/chef-johns-hamburger-buns.md` (fixed 2026-09-24: 40°C (104°F); typos; salt in egg wash; converted to FORMAT.md; cryptic notes left as-is, per the author)
 - [x] `recipes/chicken-or-turkey-stock.md` (fixed 2026-09-24: converted to FORMAT.md; "or roughly"; consommé; left over; roast bones and veg; vegetable oil; add-ins marked optional; Equipment)
-- [x] ! `recipes/chicken-patties.md` (fixed 2026-09-24: split into fillet and patty components; ground seasoning salt 2.5% → 1.6% (drifted in testing); fillets to 68°C, patties to 70°C (thin-poultry rule); sandwiches; tenderizes)
+- [x] ! `recipes/chicken-patties.md` (fixed 2026-09-24: split into fillet and patty components; ground seasoning salt 2.5% → 1.5% (drifted in testing; the worksheet's 1.25% was good); fillets to 68°C, patties to 70°C (thin-poultry rule); sandwiches; tenderizes)
     - Brine (50% white vinegar, 10% salt): author will retest; it should roughly match a typical pickling liquid.
-    - Q: reference/base-recipes-for-weeknight-cooking.md says these patties have "added water and elevated pH" (springy texture), but this recipe has neither water nor baking soda. Which one is out of date?
+    - Ground patty formula synced to the worksheet 2026-09-24 (6% water, 0.125% baking soda, sugar 0.625%, pepper and garlic by weight), matching the weeknight reference page. Sage, onion powder, and shallot kept as optional.
 - [x] `recipes/chicken-yakisoba.md` (fixed 2026-09-24: converted to prose; stir-fry; ½; chicken to 68°C; `####` labels; bean sprouts 100 g (1 cup), as in the source)
 - [x] `recipes/chocolate-chip-cookie-for-one.md` (fixed 2026-09-24: converted to FORMAT.md; decadently; Savvy Cookbook in `source`; doneness cue; 175°C (350°F))
 - [x] `recipes/classic-french-dressing.md` (fixed 2026-09-24: `vegan` tag dropped, vegan Worcestershire noted; servings)

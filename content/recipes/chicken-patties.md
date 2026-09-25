@@ -15,7 +15,7 @@ I love chicken sandwiches. The ground chicken patties bread nicely, but are also
 
 ## Mechanic
 
-**Two separate formulas.** The brine is for whole breast fillets pounded thin: the vinegar tenderizes and the salt firms the texture. The ground chicken seasoning follows a percentage formula per kilogram, which scales cleanly for larger batches.
+**Two separate formulas.** The brine is for whole breast fillets pounded thin: the vinegar tenderizes and the salt firms the texture. The ground chicken follows a percentage formula per kilogram, which scales cleanly for larger batches. **Added water and a little baking soda** raise the pH, so the meat holds more moisture and turns springy and substantial, like Vietnamese or Chinese beef balls.
 
 ## Brined breast fillets
 
@@ -32,18 +32,23 @@ Pan-fry in a lightly oiled pan over medium-high until golden on both sides and t
 
 ## Ground chicken patties
 
-Per 1 kg ground chicken:
+Per 1 kg ground chicken (half breast and half thigh, or store-bought):
 
-- 16 g kosher salt (1.6%)
+- 60 g cold water (6%)
+- 15 g kosher salt (1.5%)
+- 1.25 g baking soda (0.125%)
 - 5 g MSG (0.5%)
-- 10 g sugar (1%)
-- 2 teaspoons dried sage
-- 1 teaspoon white pepper
-- 1 teaspoon garlic powder
-- 1 teaspoon onion powder
-- 1 small shallot or ¼ onion, finely grated
+- 6 g sugar (0.625%)
+- 1.25 g white pepper (0.125%)
+- 1.25 g black pepper (0.125%)
+- 1.25 g garlic powder (0.125%)
+- 2 teaspoons dried sage (optional)
+- 1 teaspoon onion powder (optional)
+- 1 small shallot or ¼ onion, finely grated (optional)
 
-Mix the ground chicken and seasoning thoroughly with your hands. Form into patties of about 120 g and flatten slightly.
+<!-- Private worksheet (to import): https://docs.google.com/spreadsheets/d/1D9Ls2SRHtvSBeVAVhLJZC5CSqrhxuTvu3vb2kW5LvrU/edit?gid=0#gid=0 -->
+
+Stir the baking soda, salt, MSG, and sugar into the cold water until dissolved. Add it to the ground chicken with the rest of the seasoning, and mix with your hands until the meat turns tacky and sticks together. Form into patties of about 110 g (9 per kg) and flatten slightly.
 
 Cook in a non-stick pan over medium until browned and the centre reads 70°C (158°F), about 5 minutes per side. Rest 5 minutes before serving.
 
