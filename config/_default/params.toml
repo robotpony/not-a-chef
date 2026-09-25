@@ -2,6 +2,10 @@ colorScheme = "not-a-chef"
 defaultAppearance = "light"
 autoSwitchAppearance = true
 
+# Default Open Graph / Twitter image for every page (head.html). Source
+# and regeneration command: tools/social-card.html.
+defaultSocialImage = "img/social-card.png"
+
 enableSearch = true
 enableCodeCopy = false
 mainSections = ["recipes"]
@@ -77,3 +81,8 @@ mainSections = ["recipes"]
   showBreadcrumbs = true
   groupByYear = false
   cardView = true
+
+[author]
+  # Feeds <meta name="author"> and the JSON-LD author. Not shown on pages:
+  # article.showAuthor is off, and the homepage is a custom layout.
+  name = "Bruce Alderson"

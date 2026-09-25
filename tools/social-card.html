@@ -1,0 +1,49 @@
+<!doctype html>
+<!--
+  Source for assets/img/social-card.png, the default Open Graph / Twitter
+  image (params.toml `defaultSocialImage`). Mirrors the homepage hero:
+  mockups/STYLE.md colours, Libre Franklin + Lora. To regenerate:
+
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless \
+    --hide-scrollbars --window-size=1200,630 --virtual-time-budget=5000 \
+    --screenshot=assets/img/social-card.png tools/social-card.html
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Social card</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&family=Lora:wght@400&display=block" rel="stylesheet">
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    background: #F3F3EC; color: #23241E;
+    display: flex; align-items: center; gap: 72px;
+    padding: 0 110px; box-sizing: border-box;
+  }
+  svg { width: 250px; height: 250px; flex: none; }
+  .eyebrow {
+    font: 700 22px 'Libre Franklin', sans-serif; letter-spacing: .1em;
+    text-transform: uppercase; color: #7C361D; margin-bottom: 22px;
+  }
+  h1 {
+    font: 700 88px/1.04 'Libre Franklin', sans-serif; letter-spacing: -.015em;
+    margin: 0 0 28px;
+  }
+  h1 span { color: #7C361D; }
+  p { font: 400 30px/1.45 Lora, serif; color: #63645A; margin: 0; }
+</style>
+</head>
+<body>
+  <svg viewBox="0 0 32 32" aria-hidden="true">
+    <line x1="12.5" y1="12.5" x2="3.5" y2="3.5" stroke="#7C361D" stroke-width="4.5" stroke-linecap="round"/>
+    <circle cx="17.5" cy="17.5" r="13" fill="#D58167"/>
+    <circle cx="17.5" cy="17.5" r="11" fill="#FBFBF6"/>
+    <path fill="#7C361D" transform="translate(8.5 8.85) scale(.75)" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+  </svg>
+  <div>
+    <div class="eyebrow">Our family cookbook</div>
+    <h1>Bruce <span>loves</span><br>to cook.</h1>
+    <p>Recipes we actually cook, with ratios, timings, and notes.</p>
+  </div>
+</body>
+</html>

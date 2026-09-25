@@ -1,14 +1,11 @@
 {{/*
   Open Graph and Twitter card tags, replacing Hugo's _internal/opengraph.html
   and twitter_cards.html (images are added in head.html). Same tags, but the
-  description has [[wiki links]] reduced to their text: wiki links are only
-  converted when single.html renders the body, so .Summary still holds the
-  raw syntax (it showed up on Food Log pages).
+  description comes from partials/page-description.html, the same text as
+  the meta description.
 */}}
 {{ $title := cond .IsHome site.Title (.Title | default site.Title) }}
-{{ $desc := or .Description .Summary site.Params.description }}
-{{ $desc = replaceRE `\[\[(?:[^\]|]*\|)?([^\]]+)\]\]` "$1" $desc | plainify | htmlUnescape | strings.TrimSpace }}
-{{ $desc = replaceRE `\s+` " " $desc | truncate 200 }}
+{{ $desc := partial "page-description.html" . }}
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:site_name" content="{{ site.Title }}">
 <meta property="og:title" content="{{ $title }}">
@@ -23,6 +20,6 @@
 {{ else }}
   <meta property="og:type" content="website">
 {{ end }}
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ $title }}">
 {{ with $desc }}<meta name="twitter:description" content="{{ . }}">{{ end }}

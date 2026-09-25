@@ -1,5 +1,5 @@
 theme = "blowfish"
-baseURL = "/"
+baseURL = "https://bruce-loves-to-cook.warpedvisions.org/"
 defaultContentLanguage = "en"
 enableRobotsTXT = true
 summaryLength = 30
