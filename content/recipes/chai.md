@@ -13,7 +13,7 @@ aliases:
   - /recipes/chai-masala-sweet-masala-spiced-milk-tea/
 ---
 
-This is my favourite tea towards the end of Fall. It's warming and mellow.
+This is my favourite tea towards the end of fall. It's warming and mellow.
 
 ## Mechanic
 
@@ -21,13 +21,13 @@ This breaks English tea rules on purpose. Boiling the tea with spices for 5 minu
 
 ## Ingredients
 
-- 500–750ml water
+- 500–750 ml water
 - 3–4 whole cloves
 - 3–4 cardamom pods, lightly crushed
-- a few slices fresh ginger
+- A few slices fresh ginger
 - 2 teaspoons loose-leaf black tea (Scottish breakfast or similar strong black)
 - 2 teaspoons sugar
-- 120ml whole milk or 60ml cream
+- 120 ml whole milk or 60 ml cream
 
 ## Method
 
@@ -45,9 +45,11 @@ In small cups. Add more sugar at the table.
 
 ## Variations
 
-Allspice and cinnamon: Swap the cloves and ginger for 3 green cardamom pods, 3 allspice berries, and 1 cm of Ceylon cinnamon stick, broken up. Warmer and rounder, with less bite. Nutmeg or 2–3 black peppercorns also work here; pick two or three spices, not all of them.
+### Allspice and cinnamon
+Keep the cardamom, and swap the cloves and ginger for 3 allspice berries and 1 cm of Ceylon cinnamon stick, broken up. Warmer and rounder, with less bite. Nutmeg or 2–3 black peppercorns also work here; pick two or three spices, not all of them.
 
-Lazy daily cup: Put the spices, lightly crushed, into a tea ball or filter with the tea. Pour over water at a full boil and steep 6–8 minutes, longer than English tea. Add milk and sugar in the cup. No boil-over, so it's lighter and less caramelized, but it takes one pot and no watching.
+### Lazy daily cup
+Put the spices, lightly crushed, into a tea ball or filter with the tea. Pour over water at a full boil and steep 6–8 minutes, longer than English tea. Add milk and sugar in the cup. No boil-over, so it's lighter and less caramelized, but it takes one pot and no watching.
 
 ## Notes
 

@@ -227,72 +227,25 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] `recipes/butternut-squash-curry.md` (fixed 2026-09-24: 140 g spinach per the source; soy sauce default; pan-browned; units)
 - [x] `recipes/butternut-squash-soup.md` (fixed 2026-09-24: vegetable stock; vegan note skips the crème fraîche)
 - [x] `recipes/caesar-dressing.md` (fixed 2026-09-24: raw egg note; `vegetarian` tag dropped; oil ½–¾ cup)
-- [x] ! `recipes/canadian-chili.md`
-    - Ingredients never used in the method: dried shiitakes (rehydrate? add the soaking liquid?), corn, cilantro/parsley, roasted garlic. Step 3 "Add other ingredients" is too vague.
-    - Notes say "vegetarian by just skipping the beef", but there's no beef in the ingredients. The optional hamburger/TVP appears only in the method, twice (step 1 and its sub-step say the same thing).
-    - L56: "ground beast" Q: joke or typo for "beef"?
-    - L67: "½ stalk of roasted cinnamon" → "½ cinnamon stick, toasted". L11: "the chili of the south" → "of the American South". L47: "saute" → "sauté".
-    - `cook_time: ~25m` looks short once mushrooms go wet → dry → brown and the chili simmers. Q: tested time?
-    - Headings "## Main ingredients:", "## Spice mix:", "## Directions:" colons.
-- [x] ! `recipes/candied-cranberries-sugared-cranberries.md`
-    - No sugar quantities: the syrup needs amounts (e.g. 1 cup sugar + 1 cup water), plus about ½ cup each of coarse and granulated sugar for rolling.
-    - L10: long backstory in the recipe file (potluck, teammate by nickname). The Instagram source (@ourbestbites) belongs in `source:` (currently `family`).
-    - L14: "1 bag Fresh Cranberries (12oz bag)" → "340 g (12 oz) fresh cranberries". Title Case ingredients. "Roller Derby" → "roller derby".
-    - L26: "The result: incredible little sparkly berries..." is promotional and a second description; trim.
-- [x] ! `recipes/candied-pecans.md`
-    - Title Case ingredients and steps ("Sugar", "Egg White", "Pecans"). L24: "225 degrees F (110 C)" → "110°C (225°F)".
-    - L11: "as a pre-treat" is unclear; "before dinner"?
-- [x] ! `recipes/carrot-cake.md` (fixed 2026-09-24: "stays in the family" removed; serve at room temperature; refrigerate once iced; typos)
-    - Q: "lemon" dropped from the icing description since the icing has no lemon; add zest/juice instead if that's how you make it.
-    - Q: 360 g icing sugar + 310 g cream cheese + 170 g butter is scant to fill and cover a three-layer 23 cm cake. Enough in practice?
-- [x] ! `recipes/chai.md`
-    - L16: "Fall" → "fall".
-    - L48: the "Allspice and cinnamon" variation says to swap the cloves and ginger "for 3 green cardamom pods", but cardamom is already in the base. Say "keep the cardamom; swap the cloves and ginger for allspice and cinnamon".
-    - Variations are bold-less inline labels; FORMAT.md uses `###` per variation.
-- [x] ! `recipes/char-siu-marinade.md`
-    - Q: "⅓ part red food colouring" = 20 ml, far more than needed (a few drops to ½ tsp gel colours a batch). Typo?
-    - Food safety: the leftover marinade has held raw meat. Say "bring to a full boil, then simmer until thick" before brushing on at the end.
-    - Order mismatch: the Mechanic says reduce the glaze "while the meat rests"; the method brushes it on "in the last few minutes of cooking". Pick one.
-    - Food safety (minor): 65°C for white meat is fine for roasted pieces if they rest a few minutes (chicken at 65°C needs ~4–5 min). Say "rest 5 minutes" so the rest is the hold.
+- [x] `recipes/canadian-chili.md` (fixed 2026-09-24: converted to FORMAT.md; shiitakes soaked and cooked with the mushrooms; corn, tomatoes, and roasted garlic go in with the beans; cilantro at the end; beef/TVP listed once as optional; Mechanic added on the mushroom layers; American South; toasted cinnamon stick; spice paste variation as prose; "ground beast" kept, glossed as any ground meat; shiitake water goes in with the stock unless gritty; `cook_time: 60–90 min`, ~25 with a [[Beef base]] shortcut)
+- [x] `recipes/candied-cranberries-sugared-cranberries.md` (fixed 2026-09-24: converted to FORMAT.md; `source` is Our Best Bites; potluck story moved into a family blockquote (trimmed); promotional line trimmed; 340 g (12 oz); case; roller derby; sugar amounts estimated and confirmed)
+- [x] `recipes/candied-pecans.md` (fixed 2026-09-24: converted to FORMAT.md; case; 110°C (225°F); "before dinner")
+- [x] `recipes/carrot-cake.md` (fixed 2026-09-24: "stays in the family" removed; serve at room temperature; refrigerate once iced; typos; ½ tsp lemon zest in the icing, per the author: a hint of lemon, light vanilla; icing quantity assumed enough, author to recheck)
+- [x] `recipes/chai.md` (fixed 2026-09-24: fall; allspice variation keeps the cardamom; `###` variations; unit spacing)
+- [x] `recipes/char-siu-marinade.md` (fixed 2026-09-24: leftover marinade boiled before glazing; glaze reduced while the meat roasts (Mechanic and method agree); 5-minute rest as the hold for white meat; ginger/garlic paste link; food colouring 2–4 ml per batch, outside the ratio)
 - [x] `recipes/chashu-pork.md` (merged 2026-09-24: basic-ramen-tare.md's sake oven braise as a variation; tare use and storage notes)
-- [x] ! `recipes/cheddar-herb-biscuits-or-savoury-scones.md`
-    - L31: stray keyboard garbage at the start of step 2: "\`werty".
-    - Step 3 whisks "the egg and milk", but the ingredient is buttermilk.
-    - Q: cream of tartar with no baking soda does little here (it's the acid half of a soda leavening). Did the original have ½ tsp baking soda?
-    - L25: "if my favorite" → "is my favourite". Step 5 has an unclosed parenthesis. Title Case ingredients throughout. L12: "Cheddar Herb Biscuits" → lower case.
-    - L30: "232 degrees C (450 degrees F)" → "230°C (450°F)".
-- [x] ! `recipes/chef-johns-hamburger-buns.md` (fixed 2026-09-24: 40°C (104°F); typos; salt in egg wash; converted to FORMAT.md)
-    - Notes are cryptic fragments: "Half milk" (swap half the water for milk?), "Add soft butter at end" (of kneading?), "Replace half or all with Diastatic Malt Powder" (replace what? the sugar?). Q: expand, or they won't make sense later.
-- [x] ! `recipes/chicken-or-turkey-stock.md`
-    - L33: "(our roughly)" → "(or roughly)". L11: "consummé" → "consommé"; "bones leftover" → "left over".
-    - L34: "roast veg until a deep brown" but the bones are on the trays too; say "roast bones and veg".
-    - L23: "Veg oil" → "vegetable oil". `cuisine: world`.
-- [x] ! `recipes/chicken-patties.md`
-    - Q: the brine is 50% white vinegar plus 10% salt. That's a very aggressive acid brine; 30 minutes can turn thin fillets chalky on the surface. Tested as written? (Also "tenderises" → "tenderizes".)
-    - Q: ground seasoning is 2.5% salt, higher than the collection's other ground-meat formulas (1.6–2%). Intentional?
-    - Cross-reference mismatch: reference/base-recipes-for-weeknight-cooking.md describes these patties as made "with some added water and elevated pH" (springy texture), but this recipe has neither water nor baking soda. One of them is out of date.
-    - No safe internal temperature. Thin patties can't hold a lower temperature off the heat, so give the instant number, 74°C (165°F), or 68°C held about a minute in the pan (see the food-safety page).
-    - L14: "sandwhiches" → "sandwiches".
-- [x] ! `recipes/chicken-yakisoba.md`
-    - L14: "stirfry" → "stir-fry". L35: "1/2 head" → "½ head".
-    - Q: "35 g bean sprouts" is a small handful; the source uses about 1 cup (~100 g). Intended?
-- [x] ! `recipes/chocolate-chip-cookie-for-one.md`
-    - L11: "decedantly" → "decadently"; "Savy Cookbook" Q: title "Savvy"? Put the book in `source:`.
-    - L27: "until brown" is vague for 6–8 minutes: "until the edges are set and the centre looks just underdone".
-    - L25: "175C/350F" → "175°C (350°F)"; heading colons.
-- [x] ! `recipes/classic-french-dressing.md`
-    - Tagged `vegan`, but Worcestershire contains anchovy. Use a vegan Worcestershire or drop the tag.
-    - Otherwise clean; good Mechanic.
-- [x] ! `recipes/classic-pizza-sauce.md`
-    - Ingredients never used in the method: granulated garlic, balsamic/red wine, and the "bonus" butter. Say when each goes in (balsamic and butter at the end?).
-    - Herbs added twice: step 3 sweats onion, garlic, "and herbs", and step 4 adds the oregano.
-    - L31: "Paprika, especially smoked paprika can" → "Paprika, especially smoked paprika, can". L10, L27: double spaces.
-    - L14: "(820ml/28oz)": Canadian tins are 796 ml. Minor.
+- [x] `recipes/cheddar-herb-biscuits-or-savoury-scones.md` (fixed 2026-09-24: converted to FORMAT.md; stray "`werty" removed; buttermilk in the whisk step; case; favourite; closed paren; 230°C (450°F); ½ tsp baking soda restored)
+- [x] `recipes/chef-johns-hamburger-buns.md` (fixed 2026-09-24: 40°C (104°F); typos; salt in egg wash; converted to FORMAT.md; cryptic notes left as-is, per the author)
+- [x] `recipes/chicken-or-turkey-stock.md` (fixed 2026-09-24: converted to FORMAT.md; "or roughly"; consommé; left over; roast bones and veg; vegetable oil; add-ins marked optional; Equipment)
+- [x] ! `recipes/chicken-patties.md` (fixed 2026-09-24: split into fillet and patty components; ground seasoning salt 2.5% → 1.6% (drifted in testing); fillets to 68°C, patties to 70°C (thin-poultry rule); sandwiches; tenderizes)
+    - Brine (50% white vinegar, 10% salt): author will retest; it should roughly match a typical pickling liquid.
+    - Q: reference/base-recipes-for-weeknight-cooking.md says these patties have "added water and elevated pH" (springy texture), but this recipe has neither water nor baking soda. Which one is out of date?
+- [x] `recipes/chicken-yakisoba.md` (fixed 2026-09-24: converted to prose; stir-fry; ½; chicken to 68°C; `####` labels; bean sprouts 100 g (1 cup), as in the source)
+- [x] `recipes/chocolate-chip-cookie-for-one.md` (fixed 2026-09-24: converted to FORMAT.md; decadently; Savvy Cookbook in `source`; doneness cue; 175°C (350°F))
+- [x] `recipes/classic-french-dressing.md` (fixed 2026-09-24: `vegan` tag dropped, vegan Worcestershire noted; servings)
+- [x] `recipes/classic-pizza-sauce.md` (fixed 2026-09-24: converted to FORMAT.md; granulated garlic with the oregano; balsamic and butter at the end; herbs once; quick sauce as a variation; comma; 796 ml)
 - [x] `recipes/coconut-jam-tarts.md` (fixed 2026-09-24: ice water in pastry; 1 tsp jam each; servings; converted to FORMAT.md)
-- [x] ! `recipes/coconut-lentils.md`
-    - L61: "add more broth after blending", but there's no blending step. Q: do you blend it (immersion blender)? If so, add the step.
-    - L18: says green or brown lentils work for a chunkier result, but those need ~35–45 min, not 20. Add the time.
-    - `cuisine: American` but tagged `indian`; pick one.
+- [x] `recipes/coconut-lentils.md` (fixed 2026-09-24: green/brown lentil time; `cuisine: Indian` to match the tag; "after blending" dropped; unit spacing; `####` label; blend, mash, or leave as is, to taste)
 - [x] ! `recipes/corn-salsa.md`
     - Paprika is listed but never used in the method.
     - L26: "Smokey flavor" → "smoky flavour"; L45: "can not" → "cannot", "flavor" → "flavour"; L36: "stir and stir" duplicated.

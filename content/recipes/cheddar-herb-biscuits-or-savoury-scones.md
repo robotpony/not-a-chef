@@ -4,33 +4,38 @@ tags: [breads]
 source: Simply LaKita
 cuisine: American
 draft: false
-prep_time: 15 minutes
-cook_time: 15 minutes
+prep_time: 15 min
+cook_time: 15 min
 ---
 
+Every now and then, I crave cheddar herb biscuits. I've tried a few recipes, and this is the best so far.
 
-Every now and then, I crave Cheddar Herb Biscuits and have tried a few recipes and this is the best so far.  
+## Ingredients
 
-## Ingredients:
+- 3 cups all-purpose flour
+- 4 tsp baking powder
+- 2 tbsp sugar
+- ¾ tsp cream of tartar
+- ½ tsp baking soda
+- ½ tsp salt
+- ½ tsp granulated garlic (optional)
+- ¾ cup butter, cold, cut into cubes
+- 1 large egg
+- 1 cup buttermilk
+- 2 cups sharp cheddar, shredded (old white cheddar plus old cheddar is a great combo)
+- ¼–½ cup fresh herbs, chopped
+    - any combo: parsley and chives is my favourite, but thyme, sage, and rosemary work too; freeze-dried herbs are fine
 
-- 3 cups All-Purpose Flour
-- 4 tsp Baking Powder
-- 2 tbsp Sugar
-- ¾ tsp Cream of Tartar
-- ½ tsp Salt
-- ¾ cup Butter, cold cut into cubes
-- 1 large Egg
-- 1 cup Buttermilk
-- 2 cups Sharp Cheddar Cheese, shredded (Old White Cheddar + Old Cheddar was a great combo)
-- ¼ - ½ cup Fresh Herbs (any combo: Parsley + Chives if my favorite but can also include thyme, sage, rosemary. Or freeze dried herbs will work if you have them on hand)
-- ½ tsp Granulated Garlic, optional
+## Method
 
-## Directions:
+Heat the oven to 230°C (450°F). Line a baking sheet with parchment.
 
-1. Preheat the oven to 232 degrees C (450 degrees F).
-2. \`wertyIn a medium bowl, whisk together the flour, baking powder, sugar, cream of tartar, and salt.  Set aside.
-3. In a separate bowl, whisk together the egg and milk.
-4. Using a fork or pastry blender (cutter), cut the cubed cold butter into the flour mixture until the butter is about the size of small peas.
-5. Mix the egg mixture, along with the cheese and herbs into the flour mixture using a wooden spoon until it comes together to form a loose ball (you may need to use your hands for the last few moments but handle it as little as possible.
-6. Form balls with your hands and loosely pack into a biscuit shape (once again handling as little as possible) or on a clean, floured work surface, place the dough ball and use a rolling pin. Roll out the dough and cut using a biscuit cutter or anything with a round shape.
-7. Place the formed or cut biscuits on to a baking sheet lined with parchment paper.  Bake for 10 - 15 minutes, until the tops of the biscuits are golden brown.
+In a medium bowl, whisk together the flour, baking powder, sugar, cream of tartar, baking soda, salt, and garlic, if using. In a separate bowl, whisk the egg and buttermilk.
+
+Cut the cold butter into the flour mixture with a fork or pastry blender until the pieces are the size of small peas.
+
+Add the egg mixture, cheese, and herbs, and stir with a wooden spoon until the dough comes together in a loose ball. You may need your hands for the last few moments; handle it as little as possible.
+
+Shape the biscuits: either form loose balls by hand and pack them lightly into biscuit shapes, or roll the dough out on a floured surface and cut rounds with a biscuit cutter.
+
+Set the biscuits on the baking sheet. Bake until the tops are golden brown, 10–15 minutes.

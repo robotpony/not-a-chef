@@ -1,9 +1,9 @@
 ---
 title: Classic French dressing
-tags: [salads, quick, make-ahead, vegan, dairy-free, gluten-free, family]
+tags: [salads, quick, make-ahead, dairy-free, gluten-free, family]
 source: family
 date: 2026-06-18
-servings: 4-6 people
+servings: 4–6
 prep_time: 5 min
 total_time: 5 min
 cuisine: American
@@ -21,10 +21,10 @@ Equal parts oil and lemon juice makes this sharper than a modern vinaigrette: th
 - 2 teaspoons dry mustard
 - 2 teaspoons salt
 - 2 cloves garlic, split
-- dash of Tabasco sauce
+- Dash of Tabasco sauce
 - 60 ml (¼ cup) neutral oil
 - 60 ml (¼ cup) lemon juice, freshly squeezed
-- 2 teaspoons Worcestershire sauce
+- 2 teaspoons Worcestershire sauce (use a vegan one for a vegan dressing)
 - 1 tablespoon onion juice
 
 ## Method

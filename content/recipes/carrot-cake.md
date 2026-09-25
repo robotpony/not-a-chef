@@ -11,7 +11,7 @@ cuisine: American
 draft: false
 ---
 
-This is my favourite cake. Cover it in a subtle cream cheese icing, and serve at room temperature. Also makes a great breakfast with tea.
+This is my favourite cake. Cover it in a light cream cheese icing with a hint of lemon, and serve at room temperature. Also makes a great breakfast with tea.
 
 ## Mechanic
 
@@ -44,9 +44,10 @@ Divide the batter evenly between the three pans. Bake 60 minutes, or until a too
 - 170g (¾ cup) unsalted butter, at room temperature
 - 360g (3 cups) icing sugar
 - ½ teaspoon vanilla extract
+- ½ teaspoon finely grated lemon zest
 - 100g (1 cup) walnuts, roughly chopped, for finishing
 
-Beat the cream cheese and butter together until smooth. Sift in the icing sugar and beat until fluffy. Mix in the vanilla.
+Beat the cream cheese and butter together until smooth. Sift in the icing sugar and beat until fluffy. Mix in the vanilla and lemon zest.
 
 Spread icing between each layer and over the top and sides of the assembled cake. Press the chopped walnuts into the sides.
 

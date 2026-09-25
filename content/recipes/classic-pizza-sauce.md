@@ -2,48 +2,46 @@
 title: Classic pizza sauce
 tags: [sauces]
 source: family
-cook_time: 20-30 min
+cook_time: 20–30 min
 cuisine: Italian
 draft: false
 ---
 
-There are a few ways to make pizza sauce, depending on how lazy you are. One of our favourite  sauces is cooked down from good tomatoes for a moderate amount of time, and my fastest sauce comes from a tin of crushed tomatoes or sauce (thickened with paste). For pizza sauce, better tomatoes make a difference, as cheaper ones are less sweet and flavourful.
+There are a few ways to make pizza sauce, depending on how lazy you are. One of our favourites is cooked down from good tomatoes for a moderate amount of time; my fastest comes from a tin of crushed tomatoes or sauce, thickened with paste. Better tomatoes make a difference here, as cheaper ones are less sweet and flavourful.
 
-## Ingredients:
+## Ingredients
 
-- 1 (820ml/28oz) tin of San Marzano tomatoes
-- 1-2 tbsp of tomato paste (to add some punch + thicken things up faster)
-- 2-3 cloves of garlic, finely minced
-- 1 small yellow onion (and/or shallot)
-- 1-2 tsp of dried oregano
+- 1 tin (796 ml / 28 oz) San Marzano tomatoes
+- 1–2 tbsp tomato paste, for punch and to thicken things faster
+- 2–3 tbsp olive oil
+- 1 small yellow onion and/or shallot, diced
+- 2–3 garlic cloves, finely minced
+- 1–2 tsp dried oregano
 - 1 tsp granulated garlic
-- Salt and pepper to taste
-- 1-2 tsp balsamic vinegar (or red wine) to taste
-- Olive oil
-- (Bonus) 1-2 tbsp unsalted butter
+- Salt and pepper, to taste
+- 1–2 tsp balsamic vinegar (or red wine), to taste
+- 1–2 tbsp unsalted butter (optional)
 
-### Alternative ingredients:
+## Method
 
-- 1 jar (or medium tin) of crushed tomatoes or  
-    1 jar (or tin) of tomato sauce and 1 tbsp of tomato paste
-- 1-2 tbsp balsamic vinegar, honey, or sugar (depending on how bland your tomatoes are)
+Crush the tomatoes by hand, with a pastry cutter, or with a hand blender (optional). For an even smoother sauce, pass them through a food mill or force them through a fine-mesh strainer with a spatula.
 
-I don’t add chilies or paprika anymore, leaving these spices for toppings instead. Paprika, especially smoked paprika can make a sauce taste heavy (muddling the fine and sweet notes of the tomatoes).
+Sweat the onion and garlic in the olive oil until aromatic but not browned, 2–3 minutes.
 
-## Directions:
+Reduce the heat. Add the tomatoes, tomato paste, oregano, and granulated garlic.
 
-1. Dice onions, garlic, and shallot and set aside.
-2. Optional: crush tomatoes by hand or with a pastry cutter (or with a hand blender). Even more optionally, process the tomatoes in a food mill or by forcing through a fine mesh strainer with a spatula.
-3. Sweat the onion, garlic, and herbs in 2-3 tbsp of olive oil until aromatic (but not browned) for something like 2-3 minutes.
-4. Reduce heat and add tomatoes and oregano.
-5. Salt and pepper to taste. I always do this 2-3 times (tasting between), so that I don’t oversalt.
-6. Simmer at the lowest heat that will just barely bubble for 20-30 minutes. You can go longer, but not much shorter than 20 minutes. Tinned tomatoes mellow out nicely only after some simmering (otherwise can taste a bit “tinny” or harsh).
+Season with salt and pepper. I do this 2–3 times, tasting in between, so I don't oversalt.
 
+Simmer at the lowest heat that barely bubbles for 20–30 minutes. You can go longer, but not much shorter: tinned tomatoes only mellow after some simmering, and otherwise taste tinny or harsh.
+
+Stir in the balsamic and the butter, if using. Taste and adjust.
+
+## Variations
+
+### Quick sauce
+Use 1 jar or medium tin of crushed tomatoes, or 1 jar of tomato sauce plus 1 tbsp tomato paste, in place of the San Marzanos. Balance with 1–2 tbsp balsamic, honey, or sugar, depending on how bland the tomatoes are.
 
 ## Notes
 
-If you find the sauce tastes a bit bitter:
-
-- Filter it through a fine mesh strainer (removing seeds),
-- Add some balsamic, honey, or sugar (or some of all 3)
-- Add a bit more salt
+- I don't add chilies or paprika anymore, leaving those for toppings. Paprika, especially smoked paprika, can make a sauce taste heavy and muddle the sweet notes of the tomatoes.
+- If the sauce tastes bitter, strain out the seeds through a fine-mesh strainer, add a little balsamic, honey, or sugar (or some of each), or add a bit more salt.

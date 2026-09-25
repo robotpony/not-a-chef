@@ -11,50 +11,41 @@ cuisine: American
 draft: false
 ---
 
-I love chicken sandwhiches. The ground chicken patties bread nicely, but are also great on their own.
+I love chicken sandwiches. The ground chicken patties bread nicely, but are also great on their own.
 
 ## Mechanic
 
-**Two separate formulas.** The brine is for whole breast fillets pounded thin: the vinegar tenderises and the salt firms the texture. The ground chicken seasoning follows a percentage formula per kilogram, which scales cleanly for larger batches.
+**Two separate formulas.** The brine is for whole breast fillets pounded thin: the vinegar tenderizes and the salt firms the texture. The ground chicken seasoning follows a percentage formula per kilogram, which scales cleanly for larger batches.
 
-## Ingredients
+## Brined breast fillets
 
-### Chicken brine
+- 500 ml cold water
+- 500 ml white vinegar
+- 100 g kosher salt
+- 20 g MSG
+- 50 g sugar
+- Chicken breast fillets, pounded to an even thickness
 
-For pounded fillets.
+Stir the water, vinegar, salt, MSG, and sugar until dissolved. Submerge the fillets and brine for 30 minutes in the fridge. Pat dry.
 
-- 500mL cold water
-- 500mL white vinegar
-- 100g kosher salt
-- 20g MSG
-- 50g sugar
+Pan-fry in a lightly oiled pan over medium-high until golden on both sides and the centre reads 68°C (155°F), about 4 minutes per side depending on thickness.
 
-### Ground chicken seasoning
+## Ground chicken patties
 
 Per 1 kg ground chicken:
 
-- 25g kosher salt (2.5%)
-- 5g MSG (0.5%)
-- 10g sugar (1%)
+- 16 g kosher salt (1.6%)
+- 5 g MSG (0.5%)
+- 10 g sugar (1%)
 - 2 teaspoons dried sage
 - 1 teaspoon white pepper
 - 1 teaspoon garlic powder
 - 1 teaspoon onion powder
 - 1 small shallot or ¼ onion, finely grated
 
-## Method
+Mix the ground chicken and seasoning thoroughly with your hands. Form into patties of about 120 g and flatten slightly.
 
-### Brined breast fillets:
-
-Combine brine ingredients and stir until dissolved. Submerge breast fillets (pounded to even thickness) and brine for 30 minutes in the fridge. Pat dry before cooking.
-
-Pan-fry in a lightly oiled pan over medium-high heat until golden on both sides and cooked through, about 4 minutes per side depending on thickness.
-
-### Ground chicken patties:
-
-Combine ground chicken with all seasoning ingredients. Mix thoroughly with your hands. Form into patties (about 120g each) and flatten slightly.
-
-Cook in a non-stick pan over medium heat until cooked through and browned, about 5 minutes per side.
+Cook in a non-stick pan over medium until browned and the centre reads 70°C (158°F), about 5 minutes per side. Rest 5 minutes before serving.
 
 ## To serve
 
@@ -63,5 +54,4 @@ In brioche buns with burger sauce and pickles, or alongside roasted veg as a sim
 ## Notes
 
 - The brine makes a noticeable difference in juiciness. Don't skip it.
-- Ground chicken patties benefit from resting 5 minutes before serving.
 - Grated shallot adds moisture and flavour to ground patties; grated onion works in a pinch.

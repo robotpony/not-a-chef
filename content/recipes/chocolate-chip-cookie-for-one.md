@@ -1,27 +1,28 @@
 ---
 title: Chocolate chip cookie for one
 tags: [desserts]
-source: family
-cook_time: 6-8 min
+source: Savvy Cookbook (adapted)
+cook_time: 6–8 min
 cuisine: American
 draft: false
 ---
 
+Ever want a quick snack and have a stocked pantry? This single cookie can serve 2 modestly, or 1 decadently. It's based on a recipe from the Savvy Cookbook, with some tuning for our pantry.
 
-Ever want a quick snack and have a stocked pantry? This single cookie recipe can serve 2 modestly, or 1 decedantly. Based on a recipe from the Savy Cookbook with some tuning for our pantry.
-
-## Ingredients:
+## Ingredients
 
 - 1 tablespoon nut butter
-- 1 ½ teaspoons honey, maple syrup, or golden syrup
-- 1 ½ tablespoons ground almonds (or other flour)
+- 1½ teaspoons honey, maple syrup, or golden syrup
+- 1½ tablespoons ground almonds (or other flour)
 - Pinch of baking soda
 - Pinch of salt
-- Splash vanilla extract
-- 1-2 squares of dark chocolate (or chips)
+- Splash of vanilla extract
+- 1–2 squares dark chocolate (or chips)
 
-## Method:
+## Method
 
-1. Preheat oven to 175C/350F.
-2. Combine ingredients and place in an oiled ramekin.
-3. Bake for 6-8 minutes, or until brown.
+Heat the oven to 175°C (350°F). Oil a ramekin.
+
+Combine everything and press it into the ramekin.
+
+Bake until the edges are set and the centre looks just underdone, 6–8 minutes.

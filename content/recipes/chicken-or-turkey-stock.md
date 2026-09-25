@@ -3,42 +3,44 @@ title: Chicken or turkey stock
 tags: [bases]
 source: family
 cuisine: world
-prep_time: 45m
-cook_time: 45m
+prep_time: 45 min
+cook_time: 45 min
 draft: false
 ---
 
-This is a rich chicken or turkey stock that uses bones leftover from breaking down whole birds. Great for soup, sauces, and consummé.
+This is a rich chicken or turkey stock that uses the bones left over from breaking down whole birds. Great for soup, sauces, and consommé.
 
 ## Ingredients
 
-- Spines/ribcages/wingtips from 3 whole chickens
+- Spines, ribcages, and wing tips from 3 whole chickens
 - 2 large carrots
 - 2 onions
-- 1 shallot (optional, sub with onion/garlic)
-- 3 cloves garlic
+- 1 shallot (optional; sub onion or garlic)
+- 3 garlic cloves
 - 2 teaspoons black peppercorns
 - 3 bay leaves
-- 1 teaspoon (or a few sprigs) of thyme or rosemary
-- ~2 tablespoons Veg oil
-- ~5L water
+- 1 teaspoon thyme or rosemary, or a few sprigs
+- ~2 tablespoons vegetable oil
+- ~5 L water
 
-### Optional add-ins
+#### Add-ins
+- 1 knob ginger, diced (optional)
+- Bouquet garni, fennel, and similar (optional)
 
-- 1 knob ginger (diced)
-- Bouquet garni, fennel, etc.
+## Method
 
-## Directions
+Heat the oven to 220°C (450°F). Slice the vegetables thinly (or roughly) and toss them with the thawed bones and oil on one or more roasting trays. A mandoline is handy for the denser vegetables; slice the softer ones by hand.
 
-1. Thinly (our roughly) slice veg and toss with thawed bones and oil into one or more roasting trays. Denser vegetables can be sliced on a mandoline and the softer ones by hand.
-2. In a 220C/450F oven, roast veg until a deep brown (but not too burnt), 30-45 minutes. Flip about half way through.
-3. Transfer to a pressure cooker, add water and spices, and bring to a gentle simmer. Cook on high pressure for 35-45 minutes and depressurize using the slow method (for a clearer stock).
-4. Remove solids, strain. Sample stock in a small bowl with a pinch of salt or soy and note if stock is strong or not (for whatever you plan on using the stock for). Reduce the stock by 50% for freezing or use within 5 days refrigerated.
+Roast the bones and vegetables until deep brown but not burnt, 30–45 minutes, flipping about halfway through.
+
+Transfer to a pressure cooker, add the water, peppercorns, bay, herbs, and any add-ins, and bring to a gentle simmer. Cook at high pressure for 35–45 minutes, then let the pressure release slowly for a clearer stock.
+
+Lift out the solids and strain. Taste a little in a small bowl with a pinch of salt or soy, to judge whether it's strong enough for what you plan to use it for. Reduce by half for freezing, or refrigerate and use within 5 days.
 
 ## Notes
 
-The reduced stock should cool into a solid and gelatinous state. I don’t bother skimming off the fat as I use it for starting soups with a bit of extra flavour.
+- The reduced stock should set solid and gelatinous as it cools. I don't bother skimming off the fat, as I use it to start soups with a bit of extra flavour.
 
-## Special equipment
+## Equipment
 
-6L pressure cooker.
+- 6 L (6 qt) pressure cooker
