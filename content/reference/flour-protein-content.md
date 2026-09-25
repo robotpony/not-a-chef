@@ -16,6 +16,10 @@ Protein content affects gluten development and final texture. Bread flour (typic
 | Bread flour unbleached | 0.50% | 0.60% | 14 g | reference |
 | Pasta flour unbleached | 0.65% | 0.70% | 12 g | +2.7 g |
 
-**Note:** 00 flour often performs softer than its protein number suggests. That's usually down to the wheat (softer varieties with weaker gluten) more than the fine grind.
+The last column is how much vital wheat gluten to add per 100 g of flour to approximate bread flour. Vital wheat gluten is about 75% protein, so it takes about 1.33 grams to add 1 gram of protein.
 
-The last column is how much vital wheat gluten to add per 100 g of flour to approximate bread flour. Vital wheat gluten is about 75% protein, so it takes about 1.33 g to add 1 g of protein.
+
+## Notes
+
+- 00 flour (AKA "double-oh flour") often performs softer than its protein number suggests. That's usually down to the wheat (softer varieties with weaker gluten) more than the fine grind.
+- Many people don't realize AP flour differs so vastly in Canada

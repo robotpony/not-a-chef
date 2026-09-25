@@ -6,6 +6,8 @@ date: 2026-06-08
 draft: false
 ---
 
+I love sprouts in sandwhiches, in soups, and stirfry. I usually buy them, but in the summer I'll occasionally grow them myself.
+
 ## General
 
 - There are many types of sprouts
