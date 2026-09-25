@@ -2,43 +2,52 @@
 title: Our favourite chocolate chip cookies
 tags: [desserts]
 source: family
-cook_time: 10-12 min
+portions: about 2–3 dozen cookies
+cook_time: 10–12 min
 cuisine: Canadian
 draft: false
 ---
 
-What else is there to say!  Once we found this recipe, it became our family favourite.  You can use Vanilla, Chocolate, or Butterscotch pudding depending on the type of cookie you are craving.  And mix up the type of chocolate chips for even more variety.
+What else is there to say! Once we found this recipe, it became our family favourite. You can use vanilla, chocolate, or butterscotch pudding depending on the type of cookie you're craving, and mix up the chips for even more variety.
 
-## Ingredients:
+## Ingredients
 
-- 4 ½ cups all-purpose flour
+- 4½ cups all-purpose flour
 - 2 tsp baking soda
 - pinch of salt
-- 2 cups (500ml) of butter (softened)
-- 1 ½ cups packed brown sugar
+- 454 g (2 cups / 4 sticks) butter, softened
+- 1½ cups packed brown sugar
 - ½ cup white sugar
-- 2 (100g/3.4 oz) packages of pudding mix
+- 2 (100 g / 3.4 oz) packages instant pudding mix
 - 4 eggs
 - 2 tsp vanilla extract
-- 4 cups chocolate chips (or 2 to 2 ½ bags of Chipits)
+- 4 cups chocolate chips (2–2½ bags of Chipits)
 
-## Directions:
+## Method
 
-1. Preheat the oven to 350 degrees F (175 C).
-2. Sift together the flour, baking soda, and salt, then set aside.
-3. In a large bowl or your mixer, cream the butter.  Add in the Brown Sugar and White Sugar and cream all together.
-4. Beat in the pudding until blended.
-5. Stir in the eggs and vanilla.
-6. Blend in the flour mixture.  I find most of the time, my mixer is too full to incorporate the last of the flour, so I pour the remaining batter into the flour mixture bowl.  Then add in your chocolate chips and finish mixing together.
-7. Drop spoonfuls of cookie batter onto ungreased (or parchment paper lined) cookie sheets.
-8. Bake for 10 to 12 minutes; edges should be just turning golden brown.
-9. Let cookies cool for a few minutes on the cookie sheet before transferring to a cooling rack.  Let cookies cool completely before transferring to an airtight container for storing.  Cookies can be stored in the cupboard for a few days, in the fridge for a week, or in the freezer.
+Heat the oven to 175°C (350°F).
 
-## Variations:
+Sift together the flour, baking soda, and salt, then set aside.
 
-- Vanilla Pudding with Dark Chocolate (Semi-Sweet) and White Chocolate Chips
-- Chocolate Pudding with Peanut Butter Chips and Milk Chocolate Chips
-- Vanilla Pudding with Butterscotch Chips and Semi-Sweet Chocolate Chips
-- Chocolate Pudding with White Chocolate Chips and Mini M&M’s
-- Butterscotch Pudding with Milk Chocolate Chips and White Chocolate Chips
-- Any Pudding with Milk, Dark, and White Chocolate Chips
+In a large bowl or stand mixer, cream the butter. Add the brown and white sugar and cream together. Beat in the pudding mix until blended. Stir in the eggs and vanilla.
+
+Blend in the flour mixture. If the mixer gets too full to take the last of the flour, tip the batter into the flour bowl and finish there. Mix in the chocolate chips.
+
+Drop spoonfuls of dough onto ungreased or parchment-lined cookie sheets. Bake until the edges are just turning golden brown, 10–12 minutes.
+
+Let the cookies cool for a few minutes on the sheet, then move them to a rack to cool completely.
+
+## Variations
+
+Pudding and chip combinations we like:
+
+- Vanilla pudding with semi-sweet and white chocolate chips
+- Chocolate pudding with peanut butter and milk chocolate chips
+- Vanilla pudding with butterscotch and semi-sweet chocolate chips
+- Chocolate pudding with white chocolate chips and mini M&M's
+- Butterscotch pudding with milk chocolate and white chocolate chips
+- Any pudding with milk, dark, and white chocolate chips
+
+## Notes
+
+- Store in an airtight container: a few days in the cupboard, a week in the fridge, or longer in the freezer.

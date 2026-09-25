@@ -6,29 +6,42 @@ cuisine: Ukrainian
 draft: false
 ---
 
-This recipe is from an old family recipe card. Not our family, of course, but from a random internet stranger’s family.
+This recipe is from an old family recipe card. Not our family, of course, but from a random internet stranger's family.
 
-## Ingredients 
-
-### Dough:
+## Dough
 
 - 3 cups flour
-- 1 tablespoon neutral oil
-- ½ teaspoon salt
+- ½ tsp salt
+- 1 tbsp neutral oil
 - 1 cup sour cream
 - 1 egg
-- ¾ cup of warm water (approximately)
+- ~¾ cup warm water
 
-Combine ingredients (except for the water) in a large bowl. Add water and combine until you reach a soft, pliable dough. Fill with potatoes, sauerkraut, sweet cabbage, or the filling of your choice. Cook in water, and finish in a frying pan with some butter.
+Combine everything except the water in a large bowl. Add the water gradually and mix until you have a soft, pliable dough. It's a wet dough, so flour the counter well when you roll it. Cover and let it rest while you make the filling.
 
-### Potato filling:
+## Potato filling
 
-- 5lbs potatoes
+- 2.3 kg (5 lb) potatoes, peeled and cubed
 - 1 onion, finely diced
-- 1 block cream cheese (or any cheese)
-- Butter, salt, pepper to taste
+- 250 g (1 block) cream cheese, or any cheese
+- butter, salt, and pepper
 
+Boil the potatoes and onion together until the potatoes are completely tender. Drain, then mash with the cheese. Season with butter, salt, and pepper. Let cool before filling.
 
-## Method
+## Assembly
 
-Cook potatoes and diced onions together, drain, and combine with cheese (and butter/salt/pepper to taste).
+- butter, for frying
+
+Roll the dough out on a floured counter to about 3 mm thick. Cut into 7–8 cm (3 in) rounds.
+
+Put about 1 tbsp of filling in the centre of each round. Fold in half and pinch the edges firmly to seal.
+
+Boil the perogies in batches in a large pot of salted water. Once they float, cook 2 minutes more, then lift them out with a slotted spoon.
+
+Fry in butter until golden on both sides.
+
+## Variations
+
+### Other fillings
+
+Sauerkraut, sweet cabbage, or any filling you like works in place of the potato.

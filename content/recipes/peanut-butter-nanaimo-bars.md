@@ -7,37 +7,45 @@ cuisine: Canadian
 draft: false
 ---
 
-Recipe is from FoodTV
+A Nanaimo bar with a peanut butter middle layer in place of the custard. A family recipe, checked against a Food Network version.
 
-## Ingredients 
+## Cookie base
 
-### Cookie Base:
+- ½ cup unsalted butter
+- ¼ cup sugar
+- ⅓ cup cocoa
+- 1 large egg, beaten
+- 1¾ cups graham cracker crumbs
+- 1 cup sweetened shredded coconut
+- ½ cup blanched almonds, finely chopped
 
-- ½ cup unsalted Butter
-- ¼ cup Sugar
-- ⅓ cup Cocoa
-- 1 large Egg, beaten
-- 1 ¾ cup Graham Cracker Crumbs
-- 1 cup sweetened Coconut, shredded
-- ½ cup Blanched Almonds, finely chopped
+Line a 20 cm (8 in) square pan with aluminum foil, leaving long flaps hanging over each edge.
 
-### Peanut Butter Filling:
+Put the butter in a medium heatproof bowl. Bring 2–3 cm of water to a very slow simmer in a saucepan over medium-low heat, and set the bowl over the pan without touching the water. Once the butter melts, stir in the sugar and cocoa. Add the egg and cook, whisking constantly, until warm to the touch and slightly thickened to about the consistency of hot fudge, about 6 minutes.
 
-- ⅓ cup unsalted Butter, softened
-- ⅓ cup Peanut Butter
-- ½ cup Confectioners Sugar
+Remove from the heat and stir in the graham crumbs, coconut, and almonds. Press firmly into the prepared pan. Keep the pan of hot water for the glaze.
 
-### Chocolate Glaze:
+## Peanut butter filling
 
-- 4 oz Semi-Sweet Chocolate, chopped
-- 2 tbsp unsalted Butter
+- ⅓ cup unsalted butter, softened
+- ⅓ cup peanut butter
+- ½ cup icing sugar
 
-## Directions:
+Beat the butter, peanut butter, and icing sugar until light. Spread over the base and freeze while you make the glaze.
 
-Line an 8 by 8-inch baking pan with aluminum foil, with long flaps hanging over each edge.
+## Chocolate glaze
 
-1. For the Cookie: put the Butter in a heatproof medium bowl.  Bring a saucepan filled with an inch of water to a very slow simmer over medium-low heat.  Set the bowl over, but not touching, the water.  Once the butter is melted, add the Sugar and Cocoa, stir until combined.  Add the Egg and cook, stirring constantly with a whisk, until warm to the touch and slightly thickened (it should be about the consistency of hot fudge), about 6 minutes.  Remove from the heat and stir in the Graham Crumbs, Coconut, and Nuts.  Press the dough firmly into the prepared pan.  Save the pan of hot water for melting the chocolate.
-2. For the Filling: In a mixer, whisk the Butter, Peanut Butter, and Confectioners Sugar together in a medium bowl (or use an electric mixer with ingredients in a medium bowl) and beat until light.  Spread over the cookie and freeze while you prepare the chocolate glaze.
-3. For the Glaze: Put the Chocolate and Butter in a medium heatproof bowl, and set over the barely simmering water.  Stir occasionally until melted and smooth.  Remove from heat and cool slightly.  When cool but still runny, pour the chocolate over the chilled peanut butter layer and carefully smooth out with an offset spatula.  Freeze for 30 minutes.
-4. To Serve: Remove from the freezer and let sit for 5 minutes.  Pull out of the pan using the foil flaps and transfer to a cutting board.  Cut into squares using a sharp knife.  Serve cool or at room temperature.
-5. Finished bars can be wrapped in the pan in plastic wrap then aluminum foil and frozen up to a month.
+- 115 g (4 oz) semi-sweet chocolate, chopped
+- 2 tbsp unsalted butter
+
+Put the chocolate and butter in a medium heatproof bowl and set it over the barely simmering water. Stir occasionally until melted and smooth. Remove from the heat and let cool slightly.
+
+When cool but still runny, pour the chocolate over the chilled peanut butter layer and smooth it out with an offset spatula. Freeze for 30 minutes.
+
+## To serve
+
+Let sit out of the freezer for 5 minutes. Lift out of the pan by the foil flaps and cut into squares with a sharp knife. Serve cool or at room temperature.
+
+## Notes
+
+- Finished bars keep frozen for up to a month, wrapped in the pan in plastic wrap and then foil.

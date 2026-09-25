@@ -2,7 +2,7 @@
 title: Paska buns
 tags: [breads]
 source: family
-servings: 30 buns
+portions: 30 buns
 cook_time: 18 min
 cuisine: Mennonite
 draft: false
@@ -10,7 +10,7 @@ draft: false
 
 This is a family recipe, a classic European bun.
 
-> When Ann was growing up, her Great Oma Hamm (Oma Rille’s mom) would make Paska bread for Easter.  When Great Oma passed away, her recipes disappeared with her as she never wrote anything down.  She had her recipes memorized and the measurements were done with her hands.  I miss the family traditions of holiday baking and am hoping this recipe brings back some nostalgia.
+> When Ann was growing up, her Great Oma Hamm (Oma Rille’s mom) would make Paska bread for Easter. When Great Oma passed away, her recipes disappeared with her as she never wrote anything down. She had her recipes memorized and the measurements were done with her hands. I miss the family traditions of holiday baking and am hoping this recipe brings back some nostalgia.
 
 ## Buns
 

@@ -15,15 +15,15 @@ Our kids loved this recipe, and it makes an appearance most Christmas days still
 
 ## Mechanic
 
-The baking powder goes in last, just before cooking. Stirring it in early lets the gas escape before the batter hits the pan. Adding it at the last moment gives you a lighter, fluffier result. Don't overmix once it's in.
+The baking powder goes in last, just before cooking. Most baking powder is double-acting and saves most of its lift for the heat, so batter mixed early loses only some of its rise, but adding it at the last moment still gives a slightly lighter, fluffier result. Don't overmix once it's in.
 
 ## Ingredients
 
 - 2 eggs
 - 530 ml (2¼ cups) milk
 - 2 tablespoons neutral oil
-- 240g (2 cups) AP flour
-- 50g (¼ cup) sugar
+- 240 g (2 cups) all-purpose flour
+- 50 g (¼ cup) sugar
 - pinch of salt
 - 3 teaspoons baking powder, heaping
 
@@ -45,5 +45,5 @@ Maple syrup. Butter. Berries if you have them.
 
 ## Notes
 
-- Same batter works in a waffle iron.
+- The same batter works for waffles. Heat the iron fully and brush it with oil, then fill it about two-thirds so the batter spreads to the edges. Cook until the steam slows and the waffle releases easily.
 - From Ann's dad, Will Imanse. The Alderson family's only pancake recipe.

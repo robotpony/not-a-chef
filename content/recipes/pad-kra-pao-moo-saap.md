@@ -18,7 +18,7 @@ Thailand's everyday lunch dish: minced pork stir-fried hard and fast with garlic
 
 - 2 tablespoons neutral oil, divided
 - 5 cloves garlic
-- 3-4 Thai bird's eye chilies, to taste
+- 3–4 Thai bird's eye chilies, to taste
 - 300 g ground pork
 - 1 tablespoon oyster sauce
 - 1 tablespoon light soy sauce
@@ -30,13 +30,19 @@ Thailand's everyday lunch dish: minced pork stir-fried hard and fast with garlic
 
 ## Method
 
-1. Pound the garlic and chilies to a rough, chunky paste with a mortar and pestle. A knife works if you don't have one; a blender doesn't, it purées instead of crushing and loses the texture.
-2. Heat 1 tablespoon oil in a wok over high heat. Add the paste and stir-fry 20-30 seconds until fragrant, don't let the garlic brown.
-3. Add the pork. Break it up with the spatula and stir-fry 2-3 minutes over high heat until nearly cooked through.
-4. Add oyster sauce, light soy, dark soy, and sugar. Stir-fry another minute until the pork is fully cooked and the sauce coats it evenly. Taste and adjust.
-5. Turn off the heat. Add the basil and stir just until wilted, about 10-15 seconds. Don't leave it on the heat longer than that.
-6. Fry the eggs in the remaining oil over medium-high heat, spooning hot oil over the whites until set, keeping the yolk runny.
-7. Serve the pork over rice, topped with a fried egg.
+Pound the garlic and chilies to a rough, chunky paste with a mortar and pestle. A knife works if you don't have one. A blender doesn't: it purées instead of crushing and loses the texture.
+
+Heat 1 tablespoon oil in a wok over high heat. Add the paste and stir-fry until fragrant, 20–30 seconds. Don't let the garlic brown.
+
+Add the pork. Break it up with the spatula and stir-fry over high heat until nearly cooked through, 2–3 minutes.
+
+Add oyster sauce, light soy, dark soy, and sugar. Stir-fry until the pork is fully cooked and the sauce coats it evenly, about 1 minute. Taste and adjust.
+
+Turn off the heat. Add the basil and stir just until wilted, about 10–15 seconds. Don't leave it on the heat longer than that.
+
+Fry the eggs in the remaining oil over medium-high heat, spooning hot oil over the whites until set, keeping the yolk runny.
+
+Serve the pork over rice, topped with a fried egg.
 
 ## Notes
 

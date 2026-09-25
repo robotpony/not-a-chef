@@ -327,69 +327,25 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] `recipes/nine-bean-soup-mix.md` (fixed 2026-09-25: converted to FORMAT.md; sausage/turkey/bacon goes in with the aromatics; ham hock or bone, meat shredded back in; ½ cup each (4½ cups) or a store-bought mix; soak moved to the method; 2 L (2 qt); 796 ml (28 oz) can; "bones" dropped; intro added, the cookbook note kept as a blockquote)
 - [x] `recipes/no-knead-pizza-dough.md` (fixed 2026-09-24: rise, fridge, and shaping steps drafted; converted to FORMAT.md; title hyphenated)
 - [x] `recipes/nut-crusted-salmon.md` (fixed 2026-09-25: `dairy-free` tag dropped; Parmesan; `####` labels; unit spacing)
-- [x] ! `recipes/olie-bollen.md`
-    - Title: Dutch spelling is one word: "Oliebollen".
-    - L34: typo that changes the instruction: "Stir in mill" → "Stir in milk". Step 1 never adds the apples, raisins, or cinnamon ("eggs and dry ingredients"); add "fold in the apples and raisins".
-    - Frying oil is listed under "Optional ingredients"; it isn't optional.
-    - No fry time: add "about 4–6 minutes, turning once, until deep golden and cooked through". L35: "4-5 inches of oil" → "10–12 cm (4–5 in)"; "160C - 175C (325F - 350F)" → "160–175°C (325–350°F)".
-    - L9: "Makes 12 - 20" → `servings`. L39: "air tight" → "airtight". L22: "stiff" dough with 2–2½ cups milk to 3–4 cups flour is closer to a thick batter; "thick, scoopable batter".
+- [x] `recipes/oliebollen.md` (fixed 2026-09-25: converted to FORMAT.md; retitled Oliebollen, renamed `oliebollen.md` (old URL redirects); milk; apples, raisins, and cinnamon folded in; frying oil no longer optional; fry 4–6 minutes, turning once; 10–12 cm (4–5 in) oil at 160–175°C (325–350°F); yield to `portions`; thick, scoopable batter; airtight)
 - [x] `recipes/omas-kipfels.md` (fixed 2026-09-24: yeast proofed in milk with the ¼ cup sugar; salt listed; 4½ tsp yeast; converted to FORMAT.md)
-- [x] ! `recipes/onion-base-for-curries.md`
-    - L24: "2 cinnamon bark" → "2 pieces cinnamon bark (about 5 cm each)".
-    - Q: no oil or salt, and everything simmers raw. Is that the intent (a boiled onion base, like BIR), or are the onions fried first?
-    - L16–17: link `[[Base curry gravy]]` and `[[Ginger/garlic paste]]`.
-- [x] ! `recipes/onion-bhaji.md`
-    - Contradiction: the Mechanic says "The salted onions release liquid ... so don't squeeze them", while Notes say to squeeze liquid from the onions next time.
-    - L61: stale test note ("batch was about 2x too large"). Either halve the recipe or update `servings` (2–4 looks low for 4 onions + 3 eggs).
-    - L14: "best serviced with" → "best served with".
-- [x] ! `recipes/our-favourite-chocolate-chip-cookies.md`
-    - Title Case in steps and variations ("Brown Sugar", "White Sugar", "Vanilla Pudding with Dark Chocolate..."). L10: "Vanilla, Chocolate, or Butterscotch pudding" → lower case.
-    - L17: "2 cups (500ml) of butter" → "454 g (2 cups / 4 sticks) butter"; butter by weight is clearer.
-    - L27: "350 degrees F (175 C)" → "175°C (350°F)". No yield (probably ~6 dozen).
-- [x] ! `recipes/oven-roasted-corn.md`
-    - Title: "Oven roasted" → "Oven-roasted". L16: "Olive oil (non EVO)" → "(not extra-virgin)". L22: "half way" → "halfway"; "220C (425F)" → "220°C (425°F)".
-    - L15: say "shucked". L24: the closing tip belongs above the steps or in Notes.
-- [x] ! `recipes/pad-kra-pao-moo-saap.md`
-    - Comma splices: L33 "a blender doesn't, it purées" → "a blender doesn't: it purées"; L34 "until fragrant, don't let" → "until fragrant. Don't let".
-    - Otherwise clean and well written.
+- [x] `recipes/onion-base-for-curries.md` (fixed 2026-09-25: converted to FORMAT.md; 2–3 tbsp ghee or oil listed; 2 pieces cinnamon bark (about 5 cm each); `[[Base curry gravy]]` and `[[Ginger/garlic paste]]` links; `####` spice label)
+- [x] `recipes/onion-bhaji.md` (fixed 2026-09-25: Mechanic and Notes agree (extra flour first, squeeze the onions only if still loose); test note dropped; `servings: 4–6`; served; two-stage fry as a `###` variation; unit spacing)
+- [x] `recipes/our-favourite-chocolate-chip-cookies.md` (fixed 2026-09-25: converted to FORMAT.md; lower case throughout; 454 g (2 cups / 4 sticks) butter; `portions: about 2–3 dozen`; 175°C (350°F); storage to Notes)
+- [x] `recipes/oven-roasted-corn.md` (fixed 2026-09-25: converted to FORMAT.md; Oven-roasted; not extra-virgin; halfway; 220°C (425°F); shucked; closing tip moved into the intro)
+- [x] `recipes/pad-kra-pao-moo-saap.md` (fixed 2026-09-25: comma splices; method as prose; sensory cue before time; en-dash ranges)
 - [x] `recipes/pan-fried-chicken-burger.md` (fixed 2026-09-24: safety, spelling, units; spreadsheet link moved to an HTML comment; panko aside became a variation)
-- [x] ! `recipes/panago-style-jalapeño-cheese-dip.md`
-    - Title: "Panago style" → "Panago-style". Filename has "ñ" (non-ASCII; see note on indian-takeout-tomato-purée.md).
-    - L13: "wizzy cheese spread" → "Cheez Whiz". L9: "; thick crust" → colon; "NY style" → "New York-style"; "tonnes" is fine in Canadian English.
-- [x] ! `recipes/pancakes-and-waffles.md`
-    - Title promises waffles, but they only get one Notes line. Fine, or add a line on waffle-iron heat and batter amount.
-    - Q: L18 overstates it: most baking powder is double-acting and releases most of its gas on heat, so batter can rest 10–15 min without going flat. The last-minute addition still helps a little; soften "lets the gas escape" to "loses some lift".
-- [x] ! `recipes/paska-buns.md` (fixed 2026-09-24: converted to FORMAT.md; frosted buns refrigerated; 5-minute yeast bloom; metric oven and cream cheese; icing sugar; European)
-    - Q: the recipe text looks copied from a web source (US units only, "powdered sugar", °F only, "Enjoy immediately"), while `source: family` and the intro says Great Oma's recipe was never written down. If it's adapted from a site, credit it in `source`.
-- [x] ! `recipes/peach-fruit-crisp.md`
-    - L23: "Heat on low, stirring, until the sauce turns glossy". Cornstarch needs to reach a simmer to thicken and clear → "bring to a simmer, stirring".
-    - Salt: L45 flags the 3 tsp total as high. Rather than a note, fix the recipe (e.g. ¼ tsp in the filling, ½ tsp in the crumble) and drop the note. Same for L44's cinnamon note: the fix is in, so drop the history.
-    - Title: "Peach / fruit crisp" → "Peach (or any fruit) crisp".
-- [x] ! `recipes/peanut-butter-nanaimo-bars.md`
-    - L10: "Recipe is from FoodTV" → put in `source:` (with a link if possible).
-    - Step 2 garbled: "In a mixer, whisk ... in a medium bowl (or use an electric mixer with ingredients in a medium bowl)" → "Beat the butter, peanut butter, and icing sugar until light."
-    - Imperial-only: "8 by 8-inch" → "20 cm (8 in) square"; "4 oz" → "115 g (4 oz)"; "an inch of water" → "2–3 cm". "Confectioners Sugar" → "icing sugar".
-    - Title Case ingredients and steps ("Butter", "Graham Cracker Crumbs", "the Egg"). Headings end in colons.
+- [x] `recipes/panago-style-jalapeno-cheese-dip.md` (fixed 2026-09-25: Panago-style; renamed to an ASCII slug (old URL redirects); Cheez Whiz; colon; New York-style; converted to FORMAT.md)
+- [x] `recipes/pancakes-and-waffles.md` (fixed 2026-09-25: Mechanic softened (double-acting powder loses only some lift); waffle-iron note; all-purpose; unit spacing)
+- [x] `recipes/paska-buns.md` (fixed 2026-09-24: converted to FORMAT.md; frosted buns refrigerated; 5-minute yeast bloom; metric oven and cream cheese; icing sugar; European; 2026-09-25: yield moved to `portions`; blockquote spacing; `source: family` kept, origin unknown (likely a book or TV show from the early 2000s))
+- [x] `recipes/peach-fruit-crisp.md` (fixed 2026-09-25: cornstarch brought to a simmer; salt fixed at ¼ tsp filling, ½ tsp crumble, history notes dropped; Peach (or any fruit) crisp; unit spacing)
+- [x] `recipes/peanut-butter-nanaimo-bars.md` (fixed 2026-09-25: converted to FORMAT.md as base / filling / glaze; `source: family` (checked against a Food Network version); filling step rewritten; 20 cm (8 in) pan; 115 g (4 oz); 2–3 cm water; icing sugar; lower case; heading colons)
 - [x] `recipes/peanut-sauce.md`
-- [x] ! `recipes/perogies.md`
-    - Incomplete: no rolling, cutting, filling, sealing, or boiling details (size, thickness, how long to boil, "until they float + 2 min"). L22 compresses all of it into one sentence.
-    - Q: proportions look off. 3 cups flour to 1 cup sour cream + 1 egg + ¾ cup water is a very wet dough (most sour-cream perogy doughs use about half that liquid), and 2.3 kg (5 lb) of potatoes is far more filling than one batch of dough can hold. Tested as written?
-    - Imperial/vague: "5lbs potatoes" → "2.3 kg (5 lb)"; "1 block cream cheese" → "250 g". Method: "Cook potatoes and diced onions together" (boiled onion?). Most recipes fry the onion in butter separately.
-    - L9: "Not our family, of course, but from a random internet stranger’s family." Then `source: family` isn't accurate.
-- [x] ! `recipes/pizza-dough-2021-edition.md`
-    - Diastatic malt at 10 g per 600 g flour is ~1.7%, above the usual 0.5–1% (can make the crumb gummy). Same Q as hoagie-style-french-rolls.
-    - L32: run-on ("...can be approximated with a bit more ferment time and can be found in specialty baking stores"), and it repeats the Mechanic's flour-substitute note.
-    - L46: temps "176C/350F" → "175°C (350°F)"; "220C/430F" → "220°C (425°F)". L44: "corn-meal" → "cornmeal". L40 "prove" vs "proof" elsewhere.
-- [x] ! `recipes/pizza-dough-2022-edition.md` (Google links fixed 2026-09-24)
-    - Error: L25 "7g instant yeast (~1 tsp)". 7 g is about 2¼ tsp (one packet).
-    - L47: "And as usually your leftovers are more than 72 hours" → "Since leftovers have usually fermented more than 72 hours".
-    - L51: "Ciabatta: (Italian baguettes)" isn't accurate (ciabatta is a flat "slipper" loaf). Drop the parenthetical. L53: "Ciabatta" → lower case.
-    - Q: four pizza-dough recipes now (pizza-dough, 2021, 2022, lazy 2022). Keep as a history, or promote one as current and move the others to Variations/Notes?
+- [x] `recipes/perogies.md` (fixed 2026-09-25: converted to FORMAT.md as dough / filling / assembly; rolling, cutting, filling, sealing, and boiling drafted (3 mm, 7–8 cm rounds, 1 tbsp, float + 2 min, fry in butter); 2.3 kg (5 lb); 250 g cream cheese; other fillings as a variation; dough is wet as written, onions boiled with the potatoes, `source: family` kept)
+- [x] `recipes/pizza-dough-2021-edition.md` (fixed 2026-09-25: converted to FORMAT.md; malt-powder run-on merged into the Mechanic; 00-flour note moved there too; 175°C (350°F), 220°C (425°F); cornmeal; proof; yield to `portions`; 10 g malt kept, as used that year)
+- [x] `recipes/pizza-dough-2022-edition.md` (fixed 2026-09-25: 7 g yeast is ~2¼ tsp; leftovers sentence; ciabatta parenthetical dropped, lower case; method as prose; 230°C (450°F); °C/°F throughout; yield to `portions`)
 - [x] `recipes/pizza-dough.md` (fixed 2026-09-24: 990 g flour + 10 g gluten keeps 70% hydration; adopted the 2023 test (1.5% yeast, 200 g balls); yeast now added in the method; doneness cue)
-- [x] ! `recipes/pizzeria-pizza-sauce.md`
-    - L12: "pasata" → "passata". L46: `[[quick pizza sauce]]` → sentence case.
-    - Salt: 15 g in ~700 g sauce is ~2%, quite salty. L44 already says start at 10 g; make 10 g the listed amount and drop the note.
-    - L25: "6g granulated garlic (1 teaspoon)". 1 tsp is ~3 g. One of the numbers is off.
+- [x] `recipes/pizzeria-pizza-sauce.md` (fixed 2026-09-25: passata; `[[Quick pizza sauce]]`; salt and sugar listed at 10 g, note dropped; 6 g garlic is 2 tsp, start as written and adjust up; unit spacing)
 - [x] ! `recipes/pork-dumpling-bowls.md`
     - Fractions "3/4", "1/2", "1/4" → glyphs. "scallions" → "green onions". L14: "highly rated" is promotional and about the source's reviews; drop.
 - [x] ! `recipes/potato-leek-and-mushroom-soup.md` (Google links fixed 2026-09-24)
