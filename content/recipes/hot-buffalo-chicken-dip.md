@@ -3,8 +3,8 @@ title: Hot Buffalo chicken dip
 tags: [appetizers, sides]
 source: family
 cuisine: American
-prep_time: 15m
-cook_time: ~25m
+prep_time: 15 min
+cook_time: 25 min
 draft: false
 ---
 
@@ -12,32 +12,34 @@ This is a classic chicken dip, mildly spicy, tangy, and tasty.
 
 > In 2023, Ann stayed in Calgary to house/dog sit for cousin Rachael, and during that trip, also had a visit with Auntie Diane who always spoils me when I’m visiting. She made this dip and I insisted on the recipe which she forwarded from Pinterest. It took over a year for me to finally make it, for Jay & Taylor’s Back Home Wedding Celebration, and it was a huge success which means it gets added to our family recipes!
 
-## Ingredients:
+## Ingredients
 
-- 1 tablespoon unsalted butter
-- 2 teaspoons garlic minced
+- 1 tbsp unsalted butter
+- 2 tsp garlic, minced
 - 2 cups cooked chicken, shredded
-- ½ cup Frank's Original Red Hot Sauce
-- 8 oz cream cheese softened
+- ½ cup Frank's RedHot Original hot sauce
+- 250 g (8 oz) cream cheese, softened
 - ½ cup sour cream
-- ½ cup white cheddar cheese freshly shredded
-- ¼ cup American cheddar freshly shredded
-- ¼ cup crumbled blue cheese optional to serve
-- 2 teaspoons green onions sliced, or chives
-- Celery sticks, carrot sticks, tortilla chips, crusty bread pieces, potato chips for serving
+- ½ cup white cheddar, freshly shredded
+- ¼ cup American cheddar, freshly shredded
+- ¼ cup blue cheese, crumbled (optional)
+- 2 tsp green onions or chives, sliced
+- celery sticks, carrot sticks, tortilla chips, crusty bread, or potato chips, for dipping
 
-## Method:
+## Method
 
-1. Preheat oven to 375°F (190°C). Arrange oven rack to the middle of your oven.  
-2. In an 8-inch cast-iron skillet (or an ovenproof pan), melt the butter over medium-high heat. Sauté garlic until fragrant (30 seconds). Add the chicken and hot sauce and simmer until sauce has thickened and reduced by half (about 2 minutes).   
-3. Reduce heat to low and stir in cream cheese; mix until combined. Take off heat, stir through sour cream and top with both cheddar cheese(s) over the top.  
-4. Bake until bubbling around the edges and the cheese has melted (about 10 minutes). Broil (or grill) for a further minute to brown on top.  
-5. Immediately garnish with blue cheese and green onions. Serve with vegetable sticks, chips, crusty bread pieces for dipping.
+Heat the oven to 190°C (375°F), with a rack in the middle.
 
-## Notes:
+Melt the butter in a 20 cm (8 in) cast-iron skillet or other ovenproof pan over medium-high heat. Sauté the garlic until fragrant, about 30 seconds. Add the chicken and hot sauce and simmer until the sauce has thickened and reduced by half, about 2 minutes.
 
-- If you don't have a cast-iron skillet or oven-proof pan: prepare all ingredients as per recipe instructions above in a regular pan on the stove. Then transfer buffalo dip to a 1-quart (1-litre) baking dish.
-- You can use rotisserie chicken.
-- Don't like blue cheese? Feel free to omit it.
-- Halve the hot sauce amount for a milder dip.
-- Add more hot sauce for spicier dip.
+Reduce the heat to low and stir in the cream cheese until combined. Take the pan off the heat, stir in the sour cream, and top with both cheddars.
+
+Bake until bubbling around the edges and the cheese has melted, about 10 minutes. Broil for another minute to brown the top.
+
+Garnish right away with the blue cheese, if using, and the green onions. Serve with the vegetables, chips, and bread for dipping.
+
+## Notes
+
+- No ovenproof pan? Make it in a regular pan on the stove, then transfer it to a 1 L (1 qt) baking dish.
+- Rotisserie chicken works well.
+- Halve the hot sauce for a milder dip, or add more for a spicier one.

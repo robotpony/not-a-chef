@@ -3,25 +3,26 @@ title: Lime crema
 tags: [sauces, mexican, quick, vegetarian, gluten-free]
 source: original
 date: 2025-04-01
-servings: 6 (makes ~250ml)
+servings: 6
+portions: about 250 ml
 prep_time: 10 min
 total_time: 10 min
 cuisine: Mexican
 draft: false
 ---
 
-A fresh tasting sauce, perfect for nachos, tacos, or over rice bowls.
+A fresh-tasting sauce, perfect for nachos, tacos, or over rice bowls.
 
 ## Ingredients
 
-- 125ml Mexican crema, sour cream, or Greek yogurt
-- 30ml mayonnaise
-- 30ml fresh lime juice (~1 lime)
+- 125 ml Mexican crema, sour cream, or Greek yogurt
+- 30 ml mayonnaise
+- 30 ml fresh lime juice (about 1 lime)
 - 1 clove garlic, minced
 - ½ teaspoon kosher salt (adjust to taste)
-- 30g fresh cilantro (½ cup loosely packed), finely chopped
+- 30 g fresh cilantro (½ cup loosely packed), finely chopped
 - ¼ teaspoon onion powder (or dehydrated or minced fresh onion)
-- 1–2g MSG
+- 1–2 g MSG
 
 ## Method
 

@@ -3,26 +3,26 @@ title: In-N-Out burger spread
 tags: [sauces, american, quick, make-ahead]
 source: original
 date: 2026-07-07
-servings: makes ~1 cup (250 ml)
+portions: about 1 cup (250 ml)
 prep_time: 10 min
 total_time: 1 hr 10 min (mostly chilling)
 cuisine: American
 draft: false
 ---
 
-Sometimes I'm craving a diner style griddle burger with a classic hamburger sauce. This is a fairly close match to a popular burger chain that hasn't made it to our region yet.
+Sometimes I'm craving a diner-style griddle burger with a classic hamburger sauce. This is a fairly close match to a popular burger chain that hasn't made it to our region yet.
 
 ## Ingredients
 
-- 120 ml mayonnaise (1/2 cup)
+- 120 ml mayonnaise (½ cup)
 - 3 tablespoons ketchup
-- 1/2 teaspoon yellow mustard
+- ½ teaspoon yellow mustard
 - 1 tablespoon white vinegar
 - 2 teaspoons sweet pickle relish
 - 2 teaspoons sugar
 - 2 teaspoons finely minced white onion
-- 1/4 teaspoon paprika
-- 0.1 g MSG (about 1/32 teaspoon, a smidgen; 0.05% of total weight)
+- ¼ teaspoon paprika
+- 0.1 g MSG (a smidgen, about 1/32 teaspoon; 0.05% of total weight)
 - Salt and pepper, to taste
 
 ## Method

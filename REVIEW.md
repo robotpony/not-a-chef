@@ -86,6 +86,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 
 - [ ] Import the pan-fried chicken burger experiment log (private Google Sheet, linked in an HTML comment in `recipes/pan-fried-chicken-burger.md`) into the book, probably as a Notes table or a companion page.
 - [ ] Move non-people `servings` values to the new `portions` field (added 2026-09-25; shown as "Makes"). About 20 recipes say things like "makes ~750 ml", "8 buns", or "enough for about 1 kg wings"; keep a people count in `servings` where one makes sense.
+- [ ] Remove stale "needs testing" / "[draft]" / "work in progress" notes: every recipe has been tested (the author, 2026-09-25); the text just wasn't updated. Remaining ones from open question 5 include `base-curry-gravy`, `butter-chicken`, `english-muffins`, `farmer-soup`, `marinated-pressed-tofu`, `pulled-pork`, `sheet-pan-fast-food-style-gyros`, `vindaloo-wing-sauce`, `vodka-cream-sauce`.
 - [ ] Import the other private Google Sheets and Docs now kept in HTML comments (`grep -rn 'to import' content`): the food ratios worksheet, scaling sheets in baked mac & cheese, breakfast sausage, pizza dough 2022, the poultry rub mix sheet, and T's broccoli salad's alternative dressing.
 
 ## Pass 1 (2026-09-24)
@@ -247,7 +248,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] `recipes/classic-pizza-sauce.md` (fixed 2026-09-24: converted to FORMAT.md; granulated garlic with the oregano; balsamic and butter at the end; herbs once; quick sauce as a variation; comma; 796 ml)
 - [x] `recipes/coconut-jam-tarts.md` (fixed 2026-09-24: ice water in pastry; 1 tsp jam each; servings; converted to FORMAT.md)
 - [x] `recipes/coconut-lentils.md` (fixed 2026-09-24: green/brown lentil time; `cuisine: Indian` to match the tag; "after blending" dropped; unit spacing; `####` label; blend, mash, or leave as is, to taste)
-- [x] `recipes/corn-salsa.md` (fixed 2026-09-25: converted to FORMAT.md; smoked paprika listed as optional and added with the salt and pepper; typos; Rempels'; lower-case ingredients; 55 g (2 oz) cotija; garnish as a `####` label; `source: family` (a family recipe, per the author; the RecipeTin Eats credit dropped))
+- [x] `recipes/corn-salsa.md` (fixed 2026-09-25: converted to FORMAT.md; smoked paprika listed as optional and added with the salt and pepper; typos; Rempels'; lower-case ingredients, Parmesan; 55 g (2 oz) cotija; garnish as a `####` label; `source: family` (a family recipe, per the author; the RecipeTin Eats credit dropped))
 - [x] `recipes/cottage-pie.md` (fixed 2026-09-25: split into topping / filling / assembly; `[[Beef base]]` folded into the ingredient line, Variation dropped; reheat note rewritten; BtB spelled out; unit spacing; `aka: Shepherd's pie` kept as a search alias; browning sauce tested, [draft] note removed)
 - [x] `recipes/creamy-roasted-red-pepper-soup.md` (fixed 2026-09-25: converted to FORMAT.md; cremini; coconut milk listed as a tin, cream used, rest reserved for thinning; oven heat-up and roast cue; 1 tsp smoked paprika as the default spice, others in the Notes)
 - [x] `recipes/creme-brulee.md` (fixed 2026-09-25: converted to FORMAT.md; cream, not milk; one day; 165°C (325°F); doneness cue; custards stored un-torched and caramelized just before serving; variations as `###` prose; "less sweet" moved to Notes; lower case; Equipment added; `total_time`)
@@ -285,71 +286,27 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] `recipes/greek-marinade.md` (fixed 2026-09-25: Mechanic states the lemon note plainly, duplicate Notes line dropped; cross-linked with the herb version (both kept per open question 4); extra-virgin; unit spacing)
 - [x] `recipes/gurkensalat-german-cucumber-salad.md` (fixed 2026-09-25: converted to FORMAT.md; advice paragraphs moved to `servings`, Substitutions, and Notes; salt at least 30 minutes, or as long as the rest of the prep takes; dressing-salt fragment rewritten; typos; 40s; lower-case ingredients)
 - [x] `recipes/gyro-base.md` (fixed 2026-09-24: typo; thaw-before-cooking contradiction; "still")
-- [x] ! `recipes/gyro-dogs.md`
-    - Portion math doesn't work: the ingredient is "500g of gyro base", but the method divides it into 8 × ~112 g (≈ 900 g). The gyro base recipe makes ~1.1 kg. → "1 batch [[Gyro base]] (about 1 kg)".
-    - Buns aren't in the ingredient list (the serving step uses them). No internal temperature for ground lamb/beef: add "to 71°C (160°F)" (a grilled dog won't hold a lower temperature long enough off the heat).
-    - Mechanic repeats gyro-base's Mechanic nearly word for word. Link to it instead.
-    - L14: "based on inspiration a Chef John video" → "inspired by a Chef John video". L66: comma splice ("That's intentional, it builds").
+- [x] `recipes/gyro-dogs.md` (fixed 2026-09-25: components as dogs / glaze / garlic sauce / grill and assemble; 1 batch `[[Gyro base]]` (about 1 kg), 8 × ~125 g; buns listed; grilled to 71°C (160°F); Mechanic links to the base instead of repeating it; "inspired by"; comma splice)
 - [x] `recipes/hoagie-rolls.md` (merged 2026-09-24: family tips from hoagie-style-french-rolls.md folded in; converted to FORMAT.md)
 - [x] `recipes/hoagie-style-french-rolls.md` (merged into hoagie-rolls.md 2026-09-24; redirects)
-- [x] ! `recipes/homemade-baileys-irish-cream.md`
-    - Contradiction: the intro says "We call this camping cream" (family use), but Notes say "[draft] Untested ... not yet made in this kitchen", and `draft: false`. Q: tested?
-    - Title: "Homemade Baileys Irish Cream" → "Homemade Baileys Irish cream" per sentence case ("Baileys" is the brand).
-    - Three em-dashes (L16, L33, L51).
-- [x] ! `recipes/hot-buffalo-chicken-dip.md` (Google links fixed 2026-09-24)
-    - Imperial-first units: "8 oz cream cheese" → "250 g (8 oz)"; "8-inch cast-iron skillet" → "20 cm (8 in)"; L31 "375°F (190°C)" → "190°C (375°F)"; L39 "1-quart (1-litre)" → "1 L (1 qt)".
-    - L13: backstory blockquote (recipe rules Q, see bienenstich). L33: "both cheddar cheese(s)" → "both cheddars".
-    - Ingredient lines lack commas before prep notes ("2 teaspoons garlic minced" → "2 teaspoons garlic, minced"; same for cream cheese, cheddars, blue cheese).
-- [x] ! `recipes/hot-crab-artichoke-dip.md`
-    - Sizes missing: "1 small can of Real Crab", "1 can Artichoke Hearts". Give ml/g (e.g. 120 g crab, 398 ml artichokes).
-    - L14: "miracle whip" → "Miracle Whip". Title Case ingredients ("Mayonnaise", "Cheese", "Real Crab", "Lemon Juice"). "parmesan" → "Parmesan".
-    - L25: "175C/350F" → "175°C (350°F)". Step 1 missing period. No serving suggestion (bread, crackers?).
-- [x] ! `recipes/hot-ranch-spinach-and-artichoke-dip.md`
-    - L25: "170C/350F" doesn't match (350°F ≈ 175°C) → "175°C (350°F)".
-    - L18: "1 package" → give the weight (typically 300 g / 10 oz). Squeeze the spinach dry, not just drain; wet spinach makes a watery dip.
-    - L16: "parmesan" → "Parmesan". L17: imperial first "1 14oz (400ml) can" → "1 can (398 ml / 14 oz)".
-- [x] ! `recipes/in-n-out-burger-spread.md`
-    - L13: "diner style" → "diner-style". Fractions "1/2", "1/4", "1/32" → glyphs (½, ¼).
-    - Otherwise clean.
-- [x] ! `recipes/indian-takeout-tomato-purée.md`
-    - L17: placeholder left in: "(link recipe)" → link `[[Ginger/garlic paste]]`.
-    - Q: 320 ml purée + 500 ml water cooked for 10–15 minutes won't reduce to "slightly thinner than regular tomato paste" (L36). Either more cook time or less water. Which is it?
-    - L19: "1 ½ teaspoon" → "teaspoons"; L22–23: "½ tablespoons" → "½ tablespoon". L10, L18: "Indian style", "takeout style", "English style" → hyphenate. L14–15: double spaces.
-    - Filename has a non-ASCII "é" (`indian-takeout-tomato-purée.md`); FORMAT.md says special characters should be replaced. Also kālua-pig-cabbage.md.
-- [x] ! `recipes/instant-pot-chicken-thigh-curry.md`
-    - Open testing flag in the intro ("needs testing"). Q: tested yet?
-    - Two em-dashes (L14, L40).
+- [x] `recipes/homemade-baileys-irish-cream.md` (fixed 2026-09-25: sentence-case title; em-dashes removed; yield moved to `portions`; swaps as Substitutions, spiced and orange as Variations; condensed milk can 300 ml (14 oz), since 14 oz is a weight; untested note removed (tested, per the author))
+- [x] `recipes/hot-buffalo-chicken-dip.md` (fixed 2026-09-25: converted to FORMAT.md; metric first (250 g (8 oz), 20 cm (8 in), 190°C (375°F), 1 L (1 qt)); commas before prep notes; both cheddars; blue cheese marked optional; Frank's RedHot Original; family blockquote kept)
+- [x] `recipes/hot-crab-artichoke-dip.md` (fixed 2026-09-25: converted to FORMAT.md; 120 g crab can, 398 ml (14 oz) artichokes; Miracle Whip; lower-case ingredients, Parmesan; 175°C (350°F); To serve added (crackers, baguette, chips))
+- [x] `recipes/hot-ranch-spinach-and-artichoke-dip.md` (fixed 2026-09-25: converted to FORMAT.md; 175°C (350°F); spinach 300 g (10 oz), squeezed dry; 398 ml (14 oz) can; Parmesan)
+- [x] `recipes/in-n-out-burger-spread.md` (fixed 2026-09-25: diner-style; ½ and ¼ glyphs (1/32 kept, no glyph); yield moved to `portions`)
+- [x] `recipes/indian-takeout-tomato-puree.md` (fixed 2026-09-25: converted to FORMAT.md; `[[Ginger/garlic paste]]` link; water halved to 250 ml and cooked 20–30 min until near paste (the author: both); teaspoons/tablespoon; hyphens; spacing; renamed from `indian-takeout-tomato-purée.md`, old URL redirects via `aliases`)
+- [x] `recipes/instant-pot-chicken-thigh-curry.md` (fixed 2026-09-25: em-dashes removed; serving garnishes moved to To serve; unit spacing; "needs testing" removed (tested))
 - [x] `recipes/jerk-chicken.md` (merged 2026-09-24: now includes jerk-marinade.md (Jamaican cooking-class paste) and the Serious Eats notes as variations)
 - [x] `recipes/jerk-marinade.md` (merged into jerk-chicken.md 2026-09-24; redirects)
-- [x] ! `recipes/kālua-pig-cabbage.md`
-    - L22: "3/4 head" → "¾ head". L18: "pork butt" → "pork shoulder (butt)" for Canadian readers.
-    - Filename contains "ā" (non-ASCII slug); see note on indian-takeout-tomato-purée.md.
-    - Otherwise clean.
+- [x] `recipes/kalua-pig-cabbage.md` (fixed 2026-09-25: prose method; ¾ head; pork shoulder (butt); rice in To serve; cross-linked to `[[Maui/Kalua pulled pork]]`; renamed from `kālua-pig-cabbage.md`, old URL redirects via `aliases`)
 - [x] `recipes/kormaqorma.md` (fixed 2026-09-24: method drafted (slow-fried onion paste), linked to base gravy; converted to FORMAT.md)
 - [x] `recipes/lazy-pizza-dough-2022.md` (fixed 2026-09-24: "MF" softened; % column recomputed from the weights (70% water); 350 g focaccia + 3 × 250 g pizzas; temperatures rounded; typos; converted to FORMAT.md)
-- [x] ! `recipes/lemon-chicken-marinade.md`
-    - L17: incorrect: "MSG rounds the salt without adding more sodium load". MSG is ~12% sodium (about a third of table salt's). Say "rounds the savouriness, so you can use less salt".
-    - Otherwise clean.
-- [x] ! `recipes/lemon-lime-iced-tea.md`
-    - L18: "3 heaping teaspoon" → "teaspoons". L13: "Spring and Summer" → lower case. `cuisine: american` → "American".
-    - L19–20: "dashes" of fresh juice isn't a usable measure for fresh citrus. Give ml (e.g. 15 ml lime, 10 ml lemon).
-    - Q: 500–700 ml of tea for one serving, shaken in a "martini shaker" (most hold ~500 ml total with ice). Is it 250–350 ml?
-- [x] ! `recipes/lemongrass-marinade.md`
-    - L28: "Marinade proteins" → "Marinate". "Adding slices in large pieces" contradicts itself; "Cut the protein into large slices; they absorb well and brown later."
-    - L15: "thinly minced" → "finely minced". L23: "thai chili" → "Thai chili".
-    - L32: the yield ("For 750g - 1000g of protein") belongs in `servings`. No prep time.
-- [x] ! `recipes/lentil-stew.md`
-    - Missing ingredient: tomato paste (step 2) isn't listed.
-    - Q: 1 cup of raw rice simmered in the stew with one can of coconut milk. Is there enough liquid? Rice needs ~2 cups. Tested?
-    - L48: "Browning these under the broiler" — browning what? (the roasted veg you serve it over?)
-    - L46: "a new recipe that still needs some testing", but `draft: false`.
-    - L17: "anaheim" → "Anaheim"; L24: "saute" → "sauté"; L27: "Addins" → "Add-ins". L21: ¼ cup sugar is a lot for a savoury stew; confirm.
-- [x] ! `recipes/lentil-tacos.md`
-    - Oil is used in the method (L41) but not listed.
-    - L22: "yellow lentils" fall apart quickly, which contradicts the Mechanic's "cook to just al dente". Suggest green or brown only (or black/beluga).
-    - L14: "A filling and frugal filling" repeats "filling". L26: "anaheim" → "Anaheim".
-- [x] ! `recipes/lime-crema.md`
-    - L13: "fresh tasting" → "fresh-tasting". Otherwise clean.
+- [x] `recipes/lemon-chicken-marinade.md` (fixed 2026-09-25: MSG line corrected (rounds out savouriness so you can use less salt); extra-virgin; marinade size moved to `portions`; unit spacing)
+- [x] `recipes/lemon-lime-iced-tea.md` (fixed 2026-09-25: teaspoons; spring and summer; American; 400 ml tea to fit a pint shaker with headroom (or two pint glasses); dashes → 15 ml lime, 10 ml lemon; variations as `###` prose)
+- [x] `recipes/lemongrass-marinade.md` (fixed 2026-09-25: converted to FORMAT.md; marinate; large slices sentence rewritten; finely minced; Thai chili; yield moved to `portions`; salt listed)
+- [x] `recipes/lentil-stew.md` (fixed 2026-09-25: converted to FORMAT.md; 2 tbsp tomato paste listed; water topped up one knuckle above the rice; sugar to taste (the ¼ cup was format drift); broiler note is about browning the peppers; pressure and stovetop paths in one step; Anaheim; sauté; add-ins as a `####` label; testing note removed)
+- [x] `recipes/lentil-tacos.md` (fixed 2026-09-25: 1 tbsp neutral oil listed; green or brown lentils (yellow fall apart); "hearty, frugal filling"; Anaheim; sensory cues; unit spacing)
+- [x] `recipes/lime-crema.md` (fixed 2026-09-25: fresh-tasting; yield moved to `portions`; unit spacing)
 - [x] ! `recipes/marinara-sauce.md` (Google links fixed 2026-09-24)
     - Ingredients used but not listed: sugar (optional, step 3) and white wine/stock (step 1). Butter is listed but never used (say "stir in off the heat at the end").
     - L26: "medium/lop" → "medium-low". "Shred onions and garlic" vs the ingredient list's "finely minced"; pick one.

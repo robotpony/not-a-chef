@@ -3,7 +3,8 @@ title: Lemon chicken marinade
 tags: [bases, mediterranean, make-ahead, quick]
 source: original
 date: 2026-05-24
-servings: 4 (marinade for ~700g chicken)
+servings: 4
+portions: enough for about 700 g chicken
 prep_time: 10 min
 total_time: 10 min
 cuisine: Greek
@@ -14,20 +15,20 @@ Lemon chicken is great on salad, in wraps, or in rice bowls.
 
 ## Mechanic
 
-A **weight-based Mediterranean marinade** built on a 1.6:1 ratio of fat to acid (80g oil : 50g lemon juice). Lemon zest does more flavour work than the juice alone; don't skip it. MSG rounds the salt without adding more sodium load.
+A **weight-based Mediterranean marinade** built on a 1.6:1 ratio of fat to acid (80 g oil : 50 g lemon juice). Lemon zest does more flavour work than the juice alone; don't skip it. MSG rounds out the savouriness, so you can use less salt.
 
 ## Ingredients
 
-- 80g extra virgin olive oil
-- 50g fresh lemon juice (~1 large lemon)
+- 80 g extra-virgin olive oil
+- 50 g fresh lemon juice (about 1 large lemon)
 - zest of 1 lemon
-- 25g garlic cloves, minced (3–4 large)
-- 5g dried oregano
-- 3g sweet paprika
-- 4g black pepper, freshly cracked
-- 2g dried thyme
-- 7g kosher salt
-- 2g MSG
+- 25 g garlic cloves, minced (3–4 large)
+- 5 g dried oregano
+- 3 g sweet paprika
+- 4 g black pepper, freshly cracked
+- 2 g dried thyme
+- 7 g kosher salt
+- 2 g MSG
 
 ## Method
 
@@ -41,5 +42,5 @@ On chicken kebabs, spatchcocked chicken, or thighs. Works for pork as well.
 
 ## Notes
 
-- Increase paprika to 6g for deeper colour on the grill.
+- Increase paprika to 6 g for deeper colour on the grill.
 - Hold back a portion before adding raw meat and use it as a basting liquid.

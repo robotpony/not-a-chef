@@ -8,41 +8,42 @@ draft: false
 
 This stew is based on a package we bought from a farmers market years ago (as Jamaican Me Hungry Lentil Stew). It’s a great stew on its own, or over roasted veg.
 
-## Ingredients:
+## Ingredients
 
-- 1 cup of lentils (mixed red, green, black)
-- 3 cups of veg stock
+- olive oil, for sautéing
 - 1 onion, diced
-- 2 sticks of celery, diced
-- 1 pepper, diced (poblano or anaheim)
-- 1 small sweet potato diced
+- 1 pepper (poblano or Anaheim), diced
+- 1 small sweet potato, diced
 - 1 small carrot, diced
-- 3 cloves of garlic, minced
-- ¼ cup of sugar
-- 2-3 tablespoons of spices (Caribbean, French, Mexican, Greek, Indian, etc.)
-- Salt to taste (starting with 1 teaspoon)
-- Olive oil (to saute in)
-- ½ cup of white wine (to deglaze)
+- 2 sticks celery, diced
+- 3 cloves garlic, minced
+- 2 tbsp tomato paste
+- ½ cup white wine
+- 3 cups vegetable stock
+- 1 cup lentils (mixed red, green, and black)
+- 2–3 tbsp spices (Caribbean, French, Mexican, Greek, Indian, etc.)
+- sugar, to taste
+- salt, to taste (start with 1 tsp)
 
-### Addins:
+#### Add-ins
+- 1 can (400 ml) coconut milk
+- 1 cup rice
+- cilantro, to garnish
 
-- 1 can of coconut milk
-- 1 cup of rice
-- Cilantro to garnish
+## Method
 
-## Directions:
+In a large pot or pressure cooker, sauté the onion in olive oil until translucent. Add the pepper, sweet potato, carrot, and celery and keep cooking. Add the garlic and sauté for another 1–2 minutes.
 
-These directions assume a pressure cooker, but if you don’t have one just simmer for 40-50 minutes (instead of pressure cooking) until the lentils are softened.
+Add the tomato paste and cook, stirring, until it starts to stick to the pan a bit, 1–2 minutes.
 
-1. In a large pot or pressure cooker, sauté the onion in olive oil until translucent. Add the peppers, sweet potato, carrots, and celery and continue to cook. Add garlic and sauté for another 1-2 minutes.
-2. Add tomato paste, stir, and continue to cook for 1-2 minutes, things should start to stick to the pan a bit.
-3. Deglaze with wine and scrape up any bits that might have accumulated. Add stock, lentils, spices, sugar, salt, and bring to a boil.
-4. If pressure cooking, add lid, pressurize, and cook for 15-20 minutes on the low (2) setting. Depressurize naturally (10-15 minutes), then remove the lid.
-5. Add coconut milk and rice and simmer until the rice softens.
-6. Taste and add spices to taste (the original base mix is pretty bland, and I roughly double the spices).
+Deglaze with the wine, scraping up any browned bits. Add the stock, lentils, spices, a little sugar, and the salt, and bring to a boil.
+
+If pressure cooking, lock the lid and cook on the low (2) setting for 15–20 minutes. Let the pressure release naturally (10–15 minutes), then remove the lid. Without a pressure cooker, simmer until the lentils are soft, 40–50 minutes.
+
+Add the coconut milk and rice, then top up with water until it's one knuckle above the rice. Simmer until the rice is tender.
+
+Taste and add more spices and sugar. The original base mix is pretty bland; I roughly double the spices.
 
 ## Notes
 
-This is a new recipe that still needs some testing (salt/spice levels may need work).
-
-Browning these under the broiler would add a bunch of flavour.
+- Browning the peppers under the broiler first adds a bunch of flavour.

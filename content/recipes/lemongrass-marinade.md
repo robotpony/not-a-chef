@@ -2,32 +2,30 @@
 title: Lemongrass marinade
 tags: [bases]
 source: family
+portions: enough for 750 g–1 kg protein
 cuisine: Vietnamese
 draft: false
 ---
 
 A Canadian take on a classic Vietnamese marinade. Great on pork, chicken, beef, and tofu.
 
-## Ingredients:
+## Ingredients
 
-- 1 ½ tsp (4g) ground white pepper
-- 1 tsp (3g) ground coriander
-- 3 stalks lemongrass, thinly minced (~60g)
-- 1 small shallot, minced (~30g)
-- 5 cloves garlic, minced (~20g)
-- ⅓ cup palm sugar (~85g)
-- ¼ cup (60ml) fish sauce
-- 2 tbsp (30ml) vegetable oil
-- 2 tbsp (30ml) soy sauce
-- 1 lime (juice and zest)
-- 1 thai chili finely sliced (optional)
+- 1½ tsp (4 g) ground white pepper
+- 1 tsp (3 g) ground coriander
+- 3 stalks lemongrass, finely minced (about 60 g)
+- 1 small shallot, minced (about 30 g)
+- 5 cloves garlic, minced (about 20 g)
+- ⅓ cup palm sugar (about 85 g)
+- ¼ cup (60 ml) fish sauce
+- 2 tbsp (30 ml) vegetable oil
+- 2 tbsp (30 ml) soy sauce
+- zest and juice of 1 lime
+- 1 Thai chili, finely sliced (optional)
+- salt, to taste
 
-## Directions:
+## Method
 
-1. Slice, dice, and mix marinade. Salt to taste.
-2. Marinade proteins for 4-24 hours. Adding slices in large pieces will promote absorption and browning later.
+Mix everything together. Taste and add salt if it needs it.
 
-## Notes
-
-For 750g - 1000g of protein.
-
+Cut the protein into large slices; they absorb the marinade well and brown better later. Marinate for 4–24 hours.

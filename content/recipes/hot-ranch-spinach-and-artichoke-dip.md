@@ -9,20 +9,29 @@ draft: false
 
 From a grocery store card.
 
-## Ingredients:
+## Ingredients
 
-- ¾ cup of creamy ranch dressing
+- ¾ cup creamy ranch dressing
 - ¾ cup sour cream
-- ½ cup parmesan cheese
-- 1 14oz (400ml) can of artichoke hearts, drained + chopped
-- 1 package (1 ½ cups) of frozen spinach, thawed + drained
+- ½ cup Parmesan
+- 1 can (398 ml / 14 oz) artichoke hearts, drained and chopped
+- 1 package (300 g / 10 oz) frozen spinach, thawed and squeezed dry
 - 2 green onions, finely chopped
-- Salt, pepper, and hot sauce to taste
-- 2 cups dry mozza cheese, grated
+- salt, pepper, and hot sauce, to taste
+- 2 cups dry mozza, grated
 
-## Directions:
+## Method
 
-1. Preheat the oven to 170C/350F.
-2. Stir ingredients (and half of mozza) together in a bowl. Season to taste with salt, pepper, and hot sauce.
-3. Spoon into an oven-safe container and top with remaining mozza. Bake for 30 minutes or until bubbly and brown.
-4. Serve with chips, veg, or crackers.
+Heat the oven to 175°C (350°F).
+
+Stir everything except the mozza together in a bowl, then stir in half the mozza. Season to taste with salt, pepper, and hot sauce.
+
+Spoon into an oven-safe dish and top with the rest of the mozza. Bake until bubbly and browned, about 30 minutes.
+
+## To serve
+
+With chips, vegetables, or crackers.
+
+## Notes
+
+- Squeeze the spinach hard; wet spinach makes a watery dip.
