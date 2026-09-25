@@ -11,6 +11,7 @@
 - [Chicken curry](https://www.goodhousekeeping.com/food-recipes/a7386/chicken-curry/) (simplified recipe, but likely good weeknight meal)
 - [Chicken pho](https://www.goodhousekeeping.com/food-recipes/a29760153/instant-pot-chicken-pho-recipe/)
 - TODO: Chutney recipes
+- TODO: Dry vindaloo spice blend (write it up; offer it in [[Vindaloo wing sauce]] as an alternative to the paste)
 
 Do a deep dive on [mennonitegirlscancook](http://www.mennonitegirlscancook.ca/) and [The Woks of Life](https://thewoksoflife.com/)
 
