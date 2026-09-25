@@ -6,7 +6,7 @@ date: 2026-06-08
 draft: false
 ---
 
-I love sprouts in sandwhiches, in soups, and stirfry. I usually buy them, but in the summer I'll occasionally grow them myself.
+I love sprouts in sandwiches, in soups, and stir-fry". I usually buy them, but in the summer I'll occasionally grow them myself.
 
 ## General
 
