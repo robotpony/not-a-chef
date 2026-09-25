@@ -828,6 +828,13 @@ article > footer {
   margin-top: 0;
   margin-bottom: 24px;
 }
+/* Three cards across on every page type: the essay/reference column (next
+ * to the reading sidebar) is ~730px, just under the 752px .rgrid needs for
+ * three 240px cards. The card title/intro reset beats custom.css's own
+ * .prose h3 rule, which .not-prose doesn't reach. */
+.related-section .rgrid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+.related-section .rcard-title,
+.related-section .rcard-intro { margin: 0; }
 
 .article-pagination {
   display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap;
