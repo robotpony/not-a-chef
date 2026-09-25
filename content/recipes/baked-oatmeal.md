@@ -1,7 +1,6 @@
 ---
 title: Baked oatmeal
 tags: [breakfast, make-ahead, oats, gluten-free-optional, vegetarian]
-source: adapted
 date: 2026-06-17
 servings: 6
 prep_time: 10 min

@@ -174,40 +174,22 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 
 - [x] `recipes/_index.md`
 - [x] `recipes/adobo-seasoning-mix.md` (fixed 2026-09-24: meatball note reworded; "for grilling")
-- [x] ! `recipes/al-pastor-marinade-pantry-hack.md` (fixed 2026-09-24: converted to FORMAT.md; backstory moved to the intro and the Mechanic rewritten around toasted powders bloomed in stock; tinned pineapple added as the topping that roasts on the pork, then gets diced; typos; units)
-    - L55: "It should taste sweet" with no sweetener in the marinade unless you add the roasted peppers. Q: is sugar or pineapple juice meant to be in the marinade, or should "sweet" go? Left as written.
-- [x] ! `recipes/almond-chocolate-cake.md` (fixed 2026-09-24: 23 cm (9 in); 190°C (375°F) conventional; unit spacing)
-    - Q: cocoa % for "dark chocolate"? It changes sweetness a lot with 200 g brown sugar.
-    - `cuisine: world` kept: it's the most common non-regional value (9 recipes).
-- [x] ! `recipes/apple-berry-almond-scones.md` (fixed 2026-09-24: converted to FORMAT.md; lower case; "to dust"; blackberries; egg-wash egg added; 2.5 cm (1 in); 200°C (400°F); "until golden")
-    - Q: how many scones does it make? No `servings` yet.
-- [x] ! `recipes/arroz-rojo-mexican-red-rice.md` (fixed 2026-09-24: converted to FORMAT.md; intro; garnish as a `####` label; serrano; long-grain)
-    - Q: the cilantro was listed but never used; I added it to the tomato blend. Right, or is it a garnish?
+- [x] `recipes/al-pastor-marinade-pantry-hack.md` (fixed 2026-09-24: converted to FORMAT.md; backstory moved to the intro and the Mechanic rewritten around toasted powders bloomed in stock; tinned pineapple added as the topping that roasts on the pork, then gets diced; typos; units; resolved 2026-09-25: pineapple juice goes in the marinade; slices roast on the meat)
+- [x] `recipes/almond-chocolate-cake.md` (fixed 2026-09-24: 23 cm (9 in); 190°C (375°F) conventional; unit spacing; resolved 2026-09-25: 75–80% dark chocolate)
+- [x] `recipes/apple-berry-almond-scones.md` (fixed 2026-09-24: converted to FORMAT.md; lower case; "to dust"; blackberries; egg-wash egg added; 2.5 cm (1 in); 200°C (400°F); "until golden"; resolved 2026-09-25: `portions: 6 scones`)
+- [x] `recipes/arroz-rojo-mexican-red-rice.md` (fixed 2026-09-24: converted to FORMAT.md; intro; garnish as a `####` label; serrano; long-grain; resolved 2026-09-25: cilantro in the blend and as a garnish)
 - [x] `recipes/asian-slaw-dressing.md` (merged 2026-09-24: MSG, ginger, seasoned vinegar from the vaguely-Asian version)
 - [x] `recipes/autumn-glow-salad-with-lemon-dressing.md` (fixed 2026-09-24: converted to FORMAT.md as dressing + salad components; typos; apple, cranberries, and seeds tossed in; salt, pepper, and grain liquid listed; herbs vs. dried spices; 220°C (425°F); `source` is the Pinch of Yum URL; History blockquote kept, moved under the intro; photo note dropped)
-- [x] ! `recipes/avocado-salad-dressing.md` (fixed 2026-09-24: overblending note; salt and pepper split; optional marker; unit spacing)
-    - Q: 4 g salt plus pepper to taste: is that the split you meant?
-    - Q: yield. The ingredients total ~195 g, but `servings` says ~135 ml. Which is right?
-    - `tested: "1"` is the only use of that field; kept (open schema).
-- [x] ! `recipes/baguettes.md` (fixed 2026-09-24: `technique` tag; Mechanic is now 75% hydration + narrow shape + steam; credits moved to Notes; Hollywood; en-dash ranges; sensory cue before time)
-    - Q: `rest_time: 5–24 hr` implies an optional cold retard, but the method never mentions one and says 5–6 hours start to finish. Is there an overnight fridge option to add?
-    - Q: "let rest 15 minutes" then "Proof for about an hour": does the hour include the 15 minutes, and is it covered? Left as written.
-- [x] ! `recipes/baked-mac-cheese.md` (fixed 2026-09-24: converted to FORMAT.md as crust / noodles / sauce / assembly; one flow (noodles into the sauce pot, then layered in the dish); roux/béchamel/mornay explained in a Mechanic; variations moved after the method; typos; units)
-    - Q: MSG was listed twice ("MSG 1.5%" and "10 g MSG (optional)"). Kept 10 g (~0.5% of the batch); 1.5% would be ~30 g. Right?
-    - Q: 40 g sodium citrate is high for ~700–900 g cheese (2–3% of the cheese weight, 15–25 g, is typical). Tested?
-- [x] ! `recipes/baked-oatmeal.md` (fixed 2026-09-24: 20 or 23 cm square dish)
-    - `source: adapted`: adapted from what? Add the source or use `original`.
-- [x] ! `recipes/base-curry-gravy.md` (fixed 2026-09-24: `vegan`/`dairy-free` tags dropped, coconut cream noted as the vegan swap; TODO replaced with a `[[Ginger/garlic paste]]` link (it already has the cilantro and green chili); `####` labels; restaurant-style; wiki-link case)
-    - Q: dropped the vegan tags rather than making coconut cream the default. Prefer the other way?
+- [x] `recipes/avocado-salad-dressing.md` (fixed 2026-09-24: overblending note; salt and pepper split; optional marker; unit spacing; resolved 2026-09-25: salt 2 g; yield moved to `portions: ~200 ml`; `tested` field dropped (tested many times))
+- [x] `recipes/baguettes.md` (fixed 2026-09-24: `technique` tag; Mechanic is now 75% hydration + narrow shape + steam; credits moved to Notes; Hollywood; en-dash ranges; sensory cue before time; resolved 2026-09-25: overnight cold bulk rest added; after the 15-minute rest, the covered final proof runs ~40 min, until springy; `rest_time` updated)
+- [x] `recipes/baked-mac-cheese.md` (fixed 2026-09-24: converted to FORMAT.md as crust / noodles / sauce / assembly; one flow (noodles into the sauce pot, then layered in the dish); roux/béchamel/mornay explained in a Mechanic; variations moved after the method; typos; units; resolved 2026-09-25: amounts now percentages of the cheese weight: sodium citrate 3% (~20 g), MSG 1.5% (~10 g); citrate whisked into the béchamel)
+- [x] `recipes/baked-oatmeal.md` (fixed 2026-09-24: 20 or 23 cm square dish; resolved 2026-09-25: `source` removed)
+- [x] `recipes/base-curry-gravy.md` (fixed 2026-09-24: `vegan`/`dairy-free` tags dropped, coconut cream noted as the vegan swap; TODO replaced with a `[[Ginger/garlic paste]]` link (it already has the cilantro and green chili); `####` labels; restaurant-style; wiki-link case; resolved 2026-09-25: vegan tags stay dropped)
 - [x] `recipes/basic-beans-and-lentils.md` (fixed 2026-09-24: em-dash; "does little for gassiness"; `cook_time: 5 min–2 hr`; stovetop; kidney-bean warning moved into the method; `cuisine: world`)
-- [x] ! `recipes/basic-chicken-ramen-stock.md` (fixed 2026-09-24: converted to FORMAT.md; dashi steeps in the strained stock; typos; heading colons; `cook_time: 3–4 hr` to cover pressure, steep, and reduce)
-    - Q: roughly how much bonito (e.g. 20 g)? Listed without an amount and marked optional.
+- [x] `recipes/basic-chicken-ramen-stock.md` (fixed 2026-09-24: converted to FORMAT.md; dashi steeps in the strained stock; typos; heading colons; `cook_time: 3–4 hr` to cover pressure, steep, and reduce; resolved 2026-09-25: 10–15 g bonito)
 - [x] `recipes/basic-ramen-tare.md` (merged into chashu-pork.md 2026-09-24; redirects)
-- [x] ! `recipes/beef-base.md` (fixed 2026-09-24: converted to FORMAT.md; add-ins as `####` labels; braise and pressure methods moved to Variations; Mechanic added from the intro and notes; MSG (Accent); typos; parens; 6 L (6 qt); "fastest if you use it wet"; Equipment)
-    - Q: the pressure step said "20–30 minutes" then "as long as 30 minutes". Now "at the long end the beef turns very soft". Did you mean a longer time (45?) there?
-- [x] ! `recipes/beef-stew.md` (fixed 2026-09-24: smoked paprika listed (optional); flavour enhancers go in with the stock; typos; cremini; alongside; classic-style)
-    - Q: the enhancers now go in with the stock. Right?
-    - Q: 30 min at high pressure for 4 cm chuck cubes is on the short side (35–45 min is typical for spoon-tender). Tested?
+- [x] `recipes/beef-base.md` (fixed 2026-09-24: converted to FORMAT.md; add-ins as `####` labels; braise and pressure methods moved to Variations; Mechanic added from the intro and notes; MSG (Accent); typos; parens; 6 L (6 qt); "fastest if you use it wet"; Equipment; resolved 2026-09-25: pressure 20–45 min; very soft at 45)
+- [x] `recipes/beef-stew.md` (fixed 2026-09-24: smoked paprika listed (optional); flavour enhancers go in with the stock; typos; cremini; alongside; classic-style; resolved 2026-09-25: enhancers with the stock confirmed; ~35 min at high pressure, varies by cooker)
 - [x] `recipes/beef-stock.md` (fixed 2026-09-24: converted to FORMAT.md; tomato paste brushed on the bones halfway through the roast to brown in their fat; "side cut" kept, shallot and garlic roasted with the veg; neck; fond; left over; vegetable oil; cooling note; Equipment)
 - [x] `recipes/beef-stroganoff.md` (fixed 2026-09-24: vinegar 1–2 tbsp; fancy tenderloin path spelled out; stock and butter per version; converted to FORMAT.md; "Authentic (1950s style)" kept: true to the common 1950s version, not the Russian original)
 - [x] `recipes/beetroot-and-chickpea-hummus.md` (fixed 2026-09-24: roasting oil covered by the olive oil line; unit spacing)
@@ -239,9 +221,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] `recipes/cheddar-herb-biscuits-or-savoury-scones.md` (fixed 2026-09-24: converted to FORMAT.md; stray "`werty" removed; buttermilk in the whisk step; case; favourite; closed paren; 230°C (450°F); ½ tsp baking soda restored)
 - [x] `recipes/chef-johns-hamburger-buns.md` (fixed 2026-09-24: 40°C (104°F); typos; salt in egg wash; converted to FORMAT.md; cryptic notes left as-is, per the author)
 - [x] `recipes/chicken-or-turkey-stock.md` (fixed 2026-09-24: converted to FORMAT.md; "or roughly"; consommé; left over; roast bones and veg; vegetable oil; add-ins marked optional; Equipment)
-- [x] ! `recipes/chicken-patties.md` (fixed 2026-09-24: split into fillet and patty components; ground seasoning salt 2.5% → 1.5% (drifted in testing; the worksheet's 1.25% was good); fillets to 68°C, patties to 70°C (thin-poultry rule); sandwiches; tenderizes)
-    - Brine (50% white vinegar, 10% salt): author will retest; it should roughly match a typical pickling liquid.
-    - Ground patty formula synced to the worksheet 2026-09-24 (6% water, 0.125% baking soda, sugar 0.625%, pepper and garlic by weight), matching the weeknight reference page. Sage, onion powder, and shallot kept as optional.
+- [x] `recipes/chicken-patties.md` (fixed 2026-09-24: split into fillet and patty components; ground seasoning salt 2.5% → 1.5% (drifted in testing; the worksheet's 1.25% was good); fillets to 68°C, patties to 70°C (thin-poultry rule); sandwiches; tenderizes; resolved 2026-09-25: brine retested)
 - [x] `recipes/chicken-yakisoba.md` (fixed 2026-09-24: converted to prose; stir-fry; ½; chicken to 68°C; `####` labels; bean sprouts 100 g (1 cup), as in the source)
 - [x] `recipes/chocolate-chip-cookie-for-one.md` (fixed 2026-09-24: converted to FORMAT.md; decadently; Savvy Cookbook in `source`; doneness cue; 175°C (350°F))
 - [x] `recipes/classic-french-dressing.md` (fixed 2026-09-24: `vegan` tag dropped, vegan Worcestershire noted; servings)
@@ -272,7 +252,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] `recipes/garlic-broccoli.md` (fixed 2026-09-25: broccoli; vegetable stock listed first so the `vegan` tag holds; non-stick; `## Equipment`; `[[Weeknight ginger beef]]`; sensory cue before time)
 - [x] `recipes/garlic-ginger-wing-sauce.md` (fixed 2026-09-25: savoury; `####` label; unit spacing; `cuisine: American` kept, since wings are the American dish and the tags name the flavour sources)
 - [x] `recipes/german-platz.md` (fixed 2026-09-25: converted to FORMAT.md; bake time 25–35 min with a skewer cue; crumble butter cold, rubbed in (both confirmed); 2.5 cm (1 in) pan; 175°C (350°F); oven heated first; fruit and flour notes moved to Notes; linked to `[[The smells of India]]`, same neighbours)
-- [x] `recipes/ginas-tomato-salsa.md` (fixed 2026-09-24: converted to FORMAT.md; keeps 5–7 days; Roma/Anaheim; second lime clarified; 2026-09-25: Gina's Mexican Café named in the intro)
+- [x] `recipes/ginas-tomato-salsa.md` (fixed 2026-09-24: converted to FORMAT.md; keeps 5–7 days; Roma/Anaheim; second lime clarified; 2026-09-25: Gina's Mexican Café named in the intro; retitled "Pebre (Chilean red salsa)" with an alias from the old URL)
 - [x] `recipes/gingergarlic-paste.md` (fixed 2026-09-25: converted to FORMAT.md; cooking step (fry the paste until the sizzle dies away), confirmed; oil listed once, "plus more as needed"; South Asian; takeaway-style; 1 cup ginger is about 150 g; Notes moved to the end)
 - [x] `recipes/gochujang-wing-sauce.md` (fixed 2026-09-25: unit spacing; en-dash range)
 - [x] `recipes/goulash.md` (fixed 2026-09-24: Mechanic wording; bacon line; empty bullet; food-log prep-day version added as a variation)
@@ -375,8 +355,7 @@ Questions are inline as `Q:` under each page. Collection-wide questions that nee
 - [x] `recipes/simple-shrimp-marinade.md` (fixed 2026-09-25: converted to FORMAT.md; 2 tbsp olive oil; for about 450 g shrimp; ½ tsp salt added; roasted jalapeños, seeds in; 1 tsp grated ginger)
 - [x] `recipes/simple-sweet-pickled-veg.md` (fixed 2026-09-25: converted to FORMAT.md; raw-veg variation; ~1 kg beets; cheesecloth; saucepan; spice bag vs loose peppercorns and cloves spelled out; double spaces)
 - [x] `recipes/simpler-thai-red-curry.md` (fixed 2026-09-25: converted to FORMAT.md; tomato paste fried with the curry paste; savoury sauce added with the stock; salt listed; 220°C (425°F); non-emulsified glossed (no stabilizers); plurals; `[[Ginger/garlic paste]]` (consolidation already decided: keep all three))
-- [x] ! `recipes/south-american-red-salsa.md` (fixed 2026-09-24: real intro; converted to FORMAT.md; comment anchor removed; typos; keeps 5–7 days)
-    - Q: "South American" is vague. Is this a pebre (Chilean) or from a specific source? (Deferred 2026-09-24.)
+- [x] `recipes/south-american-red-salsa.md` → renamed `recipes/pebre-chilean-red-salsa.md` (fixed 2026-09-24: real intro; converted to FORMAT.md; comment anchor removed; typos; keeps 5–7 days; resolved 2026-09-25: confirmed pebre, no source to attribute; `cuisine: Chilean`, named in the intro; retitled "Pebre (Chilean red salsa)" with an alias from the old URL)
 - [x] `recipes/spaghetti-squash-boats-or-casserole.md` (fixed 2026-09-25: converted to FORMAT.md; seasoning listed (French or Italian herbs, taco spice for the Mexican version); fork-shred doneness cue; spaghetti; ~450 g meat; lower case; 190°C (375°F); boats/casserole as prose; `servings: 2`)
 - [x] `recipes/spinach-dip.md` (fixed 2026-09-25: converted to FORMAT.md; Hellmann's; cups; 300 g spinach, 227 ml water chestnuts (now used in the method); punctuation and spacing; blockquote case)
 - [x] `recipes/spinach-mushroom-flatbread.md` (fixed 2026-09-25: converted to FORMAT.md; 200°C (400°F); sub-lists folded into prose; cremini; Parmesan; Swiss; Topping as a `####` label; lemon juice used)

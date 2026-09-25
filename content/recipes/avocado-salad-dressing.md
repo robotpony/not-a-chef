@@ -6,11 +6,11 @@ tags:
   - vegetarian
 source: original
 date: 2026-03-24
-servings: 2–3 (makes ~135 ml)
+servings: 2–3
+portions: ~200 ml
 prep_time: 5 min
 total_time: 5 min
 draft: false
-tested: "1"
 cuisine: Canadian
 ---
 
@@ -24,7 +24,7 @@ This is a fresh, quick, and tasty salad dressing. I make this a few times a mont
 - 30 ml maple syrup
 - 15 g fresh ginger, grated
 - 2 g (½ teaspoon) garlic powder
-- 4 g salt
+- 2 g salt
 - Black pepper, to taste
 - 1 g MSG
 - A big pinch of dried thyme

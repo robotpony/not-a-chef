@@ -21,6 +21,7 @@ Al pastor is a tart and savoury marinade that begs for pork and fresh tortillas.
 - 1–2 chipotles in adobo, plus some of the sauce
 - 300 ml chicken, beef, or pork stock, or water
 - 150 ml cider vinegar
+- Juice from the tin of pineapple (below)
 - 2 teaspoons olive oil
 - 3 garlic cloves, crushed
 - 1 onion, quartered
@@ -34,7 +35,7 @@ Al pastor is a tart and savoury marinade that begs for pork and fresh tortillas.
     - or ~2 kg chicken thighs
 
 #### Topping
-- 1 tin (398 ml / 14 oz) sliced pineapple, with its juice
+- 1 tin (398 ml / 14 oz) sliced pineapple, drained, juice saved for the marinade
 
 ## Method
 
@@ -42,7 +43,7 @@ If using whole dried chilies, clip and deseed them.
 
 Toast the dried spices and chilies in a dry pan until fragrant. Add them to the simmering stock and simmer briefly. Let cool, then pour into a medium-large blender.
 
-Add the remaining marinade ingredients and blend until completely smooth, with no whole chili pieces or seeds left. This takes longer than you think.
+Add the pineapple juice and the remaining marinade ingredients and blend until completely smooth, with no whole chili pieces or seeds left. This takes longer than you think.
 
 Taste and adjust the acid and salt. It should taste sweet, spicy, and deep, with salt and acid present but not prominent.
 
@@ -50,7 +51,7 @@ Slice the pork shoulder as thin as you can, across the grain. For chicken thighs
 
 Combine the meat and marinade in a large bowl and mix thoroughly, so every nook has some marinade. Pack the slices tightly in a hotel pan, loaf pan, or CorningWare-style dish. Cover and marinate in the fridge for 24–48 hours.
 
-Heat the oven to 135°C (275°F). Top the meat with the pineapple slices and as much of the tin's juice as fits. Bake until the centre of the pork reaches 82–87°C (180–190°F), 2–4 hours depending on the depth of the pan. Cool, and store up to 5 days.
+Heat the oven to 135°C (275°F). Top the meat with the pineapple slices. Bake until the centre of the pork reaches 82–87°C (180–190°F), 2–4 hours depending on the depth of the pan. Cool, and store up to 5 days.
 
 To serve, chop the meat and fry it in a pan until the edges crisp. Dice the roasted pineapple for topping.
 

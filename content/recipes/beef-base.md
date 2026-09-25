@@ -12,7 +12,7 @@ This is a savoury ground beef base for tacos, salads, soups, casseroles, and sau
 
 ## Mechanic
 
-The **cooking method sets the texture**. A hot pan reduces the stock quickly and leaves a crumbly mince for tacos and salads; a long braise or the pressure cooker makes it much softer. The pressure cooker is my favourite: under 30 minutes for a texture that otherwise takes most of an afternoon. Mushrooms cooked from wet to dry to browned add a savoury backbone either way.
+The **cooking method sets the texture**. A hot pan reduces the stock quickly and leaves a crumbly mince for tacos and salads; a long braise or the pressure cooker makes it much softer. The pressure cooker is my favourite: under an hour for a texture that otherwise takes most of an afternoon. Mushrooms cooked from wet to dry to browned add a savoury backbone either way.
 
 ## Ingredients
 
@@ -54,7 +54,7 @@ Skim off any fat that separates, or stir in a spoonful of flour to thicken and c
 Follow the method, but add all the chicken stock, plus a splash of red wine if you like. Simmer, reducing the liquid, until it reaches the texture you want, 60–90 minutes.
 
 ### Pressure-cooked
-Follow the method, but add all the chicken stock, plus a splash of red wine if you like. Cook in a 6 L (6 qt) pressure cooker on low pressure for 20–30 minutes, and let it release slowly so the remaining liquid doesn't emulsify and go cloudy. At the long end the beef turns very soft: great on bread or crackers, or finished with tomato paste and milk as a bolognese.
+Follow the method, but add all the chicken stock, plus a splash of red wine if you like. Cook in a 6 L (6 qt) pressure cooker on low pressure for 20–45 minutes, and let it release slowly so the remaining liquid doesn't emulsify and go cloudy. At 45 minutes the beef turns very soft: great on bread or crackers, or finished with tomato paste and milk as a bolognese.
 
 This is the fastest method if you use the beef wet. The result is wetter mince; for salads or tacos, brown it in a frying pan on medium-high, turning regularly, until the liquid cooks off. It's much more savoury than the other methods, though with the frying step it takes about as long as the pan method.
 

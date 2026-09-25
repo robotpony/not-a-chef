@@ -19,7 +19,7 @@ The beaten eggs and sugar are the only leavening: no flour, no baking powder. Be
 
 ## Ingredients
 
-- 200 g dark chocolate
+- 200 g dark chocolate (75–80% cocoa)
 - 200 g unsalted butter, chopped
 - 5 large eggs (or 6 medium)
 - 200 g soft brown sugar

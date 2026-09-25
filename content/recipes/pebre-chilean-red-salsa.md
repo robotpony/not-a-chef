@@ -1,13 +1,14 @@
 ---
-title: South American red salsa
+title: Pebre (Chilean red salsa)
 tags: [sauces]
 source: family
 prep_time: 30 min (plus 30 min resting)
-cuisine: Latin
+cuisine: Chilean
+aliases: [/recipes/south-american-red-salsa/]
 draft: false
 ---
 
-A fresh, chunky tomato salsa sharpened with lime, lemon, and a splash of red wine vinegar. It's better after a rest in the fridge, once the onion mellows and the juices come together.
+Our take on pebre, the Chilean table salsa: a fresh, chunky tomato salsa sharpened with lime, lemon, and a splash of red wine vinegar. It's better after a rest in the fridge, once the onion mellows and the juices come together.
 
 ## Ingredients
 

@@ -5,7 +5,7 @@ source: family
 date: 2026-06-18
 servings: 4–6
 prep_time: 30 min
-cook_time: 2–3 hr (or 30 min pressure)
+cook_time: 2–3 hr (or 35 min pressure)
 total_time: 3 hr
 cuisine: French
 draft: false
@@ -51,7 +51,7 @@ Add the Worcestershire, stock, any flavour enhancers, and the reserved beef with
 
 Dutch oven: cook on the lowest possible heat until the beef is spoon-tender, 2–3 hours.
 
-Pressure cooker: cook at highest pressure for 30 minutes. Let the pressure release naturally.
+Pressure cooker: cook at high pressure for about 35 minutes; cookers vary, so check a cube and add time if it isn't spoon-tender. Let the pressure release naturally.
 
 Taste and season. Thicken with a flour slurry if needed, or reduce uncovered.
 

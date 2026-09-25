@@ -24,7 +24,7 @@ This recipe uses a pressure cooker and a family-size pan (or stock pot) to reduc
 - Black peppercorns
 
 #### Dashi
-- Bonito or saba-bushi flakes (optional)
+- 10–15 g bonito or saba-bushi flakes (optional)
 - 1 medium or large piece of kombu
 
 ## Method

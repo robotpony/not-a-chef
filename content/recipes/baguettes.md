@@ -5,7 +5,7 @@ source: family
 draft: false
 cuisine: French
 prep_time: 2½ hr
-rest_time: 5–24 hr
+rest_time: 40 min (or overnight in the fridge)
 cook_time: 20 min
 ---
 
@@ -25,7 +25,7 @@ Baguettes are a crusty, airy bread, perfect for snacking, sandwiches, and with s
 
 ## Method
 
-This is a high-hydration dough, sticky and easy to deflate, so handle it gently. A stand mixer with a dough hook makes kneading easier, though it can be done by hand. Start to finish takes 5–6 hours.
+This is a high-hydration dough, sticky and easy to deflate, so handle it gently. A stand mixer with a dough hook makes kneading easier, though it can be done by hand. Start to finish takes 5–6 hours, or overnight with a cold rest in the fridge.
 
 Optionally, bloom the yeast in the water with 50 g of the flour, about 10 minutes.
 
@@ -33,9 +33,11 @@ Combine the remaining flour, salt, and diastatic malt powder (if using) in a lar
 
 Use the [stretch and fold method](https://www.theclevercarrot.com/2020/05/how-to-stretch-and-fold-sourdough/) every 30 minutes for 2 to 2½ hours, until the dough stretches thin enough to see through. Pull each corner of the dough and fold it over itself, gently; a wetted bowl scraper makes this a bit faster than working by hand.
 
+For an overnight dough, cover the bowl after the last fold and refrigerate for up to 24 hours. Let it sit at room temperature for about an hour before dividing.
+
 Divide the dough into 6 portions (150 g each) on a floured surface. Shape each into a rough rectangle, stretching it to about 15 cm (6 inches) wide, then fold it in thirds toward the middle to form a sealed roll, sealing the seam with your fingers. Roll each piece to length, tapering the ends to points for a traditional shape (or leave them blunt for sandwich-friendly loaves). Place the rolls on parchment, cover with a slightly dampened towel, and let rest 15 minutes.
 
-Proof for about an hour, until almost doubled in size.
+Keep them covered and proof until springy and almost doubled in size, about 40 minutes.
 
 Near the end of proofing, preheat the oven to 230°C (450°F) with convection on if you have it, and place a hotel pan or casserole dish of water on a rack below the loaves. Score each roll at a 45° angle along its full length, at least 1 cm (½ inch) deep, then spray or sprinkle with water to encourage browning.
 

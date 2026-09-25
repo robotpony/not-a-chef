@@ -25,9 +25,10 @@ A good side for any Tex-Mex-style meal, and a filler for leftover burritos.
 - 480 ml hot water (2 cups)
 - 1½ tablespoons Knorr chicken bouillon powder
 
-#### Garnish, added before covering
+#### Garnish
 - ¼ onion, finely sliced (optional)
 - 1 jalapeño, halved (optional)
+- Chopped cilantro, to finish (optional)
 
 ## Method
 
@@ -41,7 +42,7 @@ When the rice is golden, turn the heat down. Add the tomato blend and stir brief
 
 Stir the bouillon powder into the hot water until dissolved. Add it to the pan and stir well. Lay the sliced onion and halved jalapeño on top, if using.
 
-Cover, turn the heat to its lowest setting, and cook until the water is fully absorbed, about 15 minutes. Take the pan off the heat and leave it covered for 5–10 minutes, then fluff with a fork.
+Cover, turn the heat to its lowest setting, and cook until the water is fully absorbed, about 15 minutes. Take the pan off the heat and leave it covered for 5–10 minutes, then fluff with a fork. Scatter with chopped cilantro, if using.
 
 ## Notes
 

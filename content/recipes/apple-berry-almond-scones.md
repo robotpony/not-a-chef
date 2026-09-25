@@ -4,6 +4,7 @@ tags: [breads, tea]
 source: family
 draft: false
 cuisine: Canadian
+portions: 6 scones
 prep_time: 20 min
 cook_time: 20 min
 ---
