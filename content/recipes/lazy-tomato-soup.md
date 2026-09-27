@@ -39,7 +39,7 @@ This is a one-pot pasta: the pasta cooks directly in the soup, with starch as th
 
 Cover the shiitakes with warm water and let soak while you prep everything else.
 
-Bake the meatballs (or shape and bake ground meat into rough meatballs) until browned, reserving the drippings. Add half the meatballs to the pot with the grated sausage and fry dry over high heat until they start to stick. That's the point; it's where the fond comes from.
+Bake the meatballs (or shape and bake ground meat into rough meatballs) until browned, reserving the drippings. Add half the meatballs to the pot and mash into a rough crumble. Add  the grated sausage and fry it with the meatballs, dry, and over medium-high heat until they start to stick. That's the point; it's where the fond comes from.
 
 Add the onion, carrot, and celery and fry until softened. Stir in the tomato paste and cook until it darkens slightly. Drain the shiitakes, reserving the soaking liquid, and add them to the pot along with any hardy extra vegetables. Set the mushroom soaking liquid aside.
 
