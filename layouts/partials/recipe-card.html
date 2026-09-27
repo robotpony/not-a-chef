@@ -28,6 +28,11 @@
   The win-the-fridge tag (partials/principle-chip.html) claims a top-row
   slot the same way cuisine does, and is dropped from the plain $tags
   list so it isn't shown twice.
+
+  A pinned page (frontmatter `pinned: true`, see DESIGN.md) gets a small
+  thumbtack icon (.pin-icon) at the end of the top row — unlinked, faint,
+  outside the cuisine/principle $room budget since it's icon-only and
+  tiny.
 */}}
 {{ $isEssay := eq .Section "essays" }}
 {{ $isLog := eq .Section "the-food-log" }}
@@ -91,6 +96,7 @@
     {{ $principle | safeHTML }}
     {{ range first $room $tags }}<span class="tag">{{ . }}</span>{{ end }}
     {{ if gt (len $tags) $room }}<span class="tag tag-more">+{{ sub (len $tags) $room }}</span>{{ end }}
+    {{ if .Params.pinned }}<span class="pin-icon" title="Pinned">{{ `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 17v5"/><path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z"/></svg>` | safeHTML }}</span>{{ end }}
   </div>
   <h3 class="rcard-title"><a class="rcard-link" href="{{ .RelPermalink }}">{{ $title }}</a></h3>
   {{ with $intro }}<p class="rcard-intro">{{ . }}</p>{{ end }}
