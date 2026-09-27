@@ -287,6 +287,52 @@ that. Now `1em` each side, the element after the rule has its top margin
 zeroed, and the rule is at 60% opacity (`.prose hr` in
 `assets/css/custom.css`).
 
+**Fixed — heading bottom-margins cut again, 2026-09-27.** Seen at real
+scale on an essay page (`win-the-fridge`), the 2:1 top:bottom ratio from
+2026-09-18 still read as too much air under a heading before its body
+text. This pass only touches the *bottom* side again (nothing was reported
+above a heading): another third off each level's 2026-09-18 bottom margin
+— `h2` `0.75em → 0.5em`, `h3` `0.45em → 0.3em`, `h4` `0.375em → 0.25em` —
+moving top:bottom from 2:1 to 3:1. Paired with an explicit line-height cut
+(`h2` `1.2`, `h3` `1.25`, `h4` `1.3`, within the "Headings: tighter,
+1.05–1.3" target from the Line-height section above, and the piece of that
+target this file had flagged as "not yet true for every heading level"):
+Tailwind Typography's own heading line-height (`h2` `1.333`, `h3`/`h4`
+`~1.5`–`1.6`) left whitespace under the glyphs before the margin even
+started, so the two together read as a bigger gap than the margin value
+alone suggested. `.prose h2/h3/h4` in `assets/css/custom.css`. Verified:
+`win-the-fridge`'s first `h2` now measures `marginBottom: 12px` (was 18px)
+with the same 0px gap-below-equals-margin relationship confirmed
+throughout this document's earlier passes.
+
+**Fixed — tags row spacing, 2026-09-27.** The recipe/essay/reference
+header's taxonomies row (cuisine chip, principle chip, tags —
+`article-meta/basic.html`) put a `mt-[0.5rem] me-2` on every child to
+space both columns and wrapped rows. Two problems: that top margin landed
+on the row's first line too (there's almost always only one), adding dead
+space between the title and the tags that had nothing to do with
+row-wrapping (measured gap: 12.6px, of which only ~4.6px was the title's
+own spacing); and per-child margins are more fragile than a single `gap`
+for guaranteeing every space in the row reads as the same size. Replaced
+with one `gap: 8px` on the row itself (`.tags-row` in
+`assets/css/custom.css`, matching the recipe card's own `.rcard-top { gap:
+4px }` pattern) — same 8px spacing between chips/tags as before, but never
+before the first or after the last. Verified: title-to-tags gap now 4.6px;
+every chip-to-chip and chip-to-tag gap measures exactly 8px.
+
+**Fixed — sidebar Mechanic/To serve heading-to-body gap, 2026-09-27.** The
+recipe sidebar's compact Mechanic section (`.recipe-sidebar-section
+.mechanic`, see Components below) measured a 16.4px gap under its "MECHANIC"
+label versus 6px under "To serve"'s, even though both headings share the
+same `.recipe-sidebar-section h2` rule (`margin-bottom: 6px`). Cause:
+Markdown wraps Mechanic's body as `<div class="mechanic"><p>...</p></div>`,
+so the `.recipe-sidebar-section > p` margin-reset next to it never matched
+(it targets a direct-child `p`, not `> div > p`) — the inner paragraph fell
+back to Tailwind Typography's own margin. "To serve" has no such wrapper
+div, so it was already correct. Zeroed the inner paragraph's margin
+directly (`.recipe-sidebar-section .mechanic p` in `assets/css/custom.css`).
+Verified: both sections now measure a 6px heading-to-body gap.
+
 ## Components
 
 Defined and demonstrated at real scale in `style.html` §3 (and originally in
@@ -324,7 +370,7 @@ everything discarded or superseded getting to this list.
 - **Theme toggle** (`.theme-toggle`) — labeled pill, cycles system → light → dark; lives in the **site footer**, matching `footer.showAppearanceSwitcher` in Hugo config
 - **Site footer** (`.site-footer`) — brand blurb, link columns (Browse / Index), theme toggle, meta line
 - **Stat rail** (`.stat-rail`) — the one component for "numbers at a glance," used in the recipe header (serves/prep/cook/total); removed from the homepage hero 2026-09-22, where the "tonight" tag pills now sit beside search
-- **Reading sidebar** (`.reading-sidebar`), as of 2026-09-24 (`reading-sidebar.html`): the right column on essay, reference, Food Log, and About pages (`layouts/partials/reading-sidebar.html`). Search on top on every page, then a Date/Updated rail in the recipe meta rail's style (`partials/sidebar/date-rows.html`, shared with the recipe sidebar; added 2026-09-25). Below that, only modules for the page you're on: a relocated `## Notes` section (above "On this page" since 2026-09-25; the other relocated sections sit below it), "On this page" (desktop only; sections with a subsection-count toggle that opens a hairline rail of subsections, collapsed on pages with more than 12 headings, variant C in the mockup, 2026-09-25), recipes the page links to, sibling essays, Food Log days and months, or the About page's numbers and optional `start_here` list. "Cook tonight" tag pills with an "All N recipes →" link used to close every page; removed 2026-09-25 to match the recipe sidebar. It has no section-wide lists (essay formats and the full reference list were cut for length), isn't sticky, and has an 18.6rem content column. The top lines up with the body, not the title, and on mobile it sits below the article, open
+- **Reading sidebar** (`.reading-sidebar`), as of 2026-09-24 (`reading-sidebar.html`): the right column on essay, reference, Food Log, and About pages (`layouts/partials/reading-sidebar.html`). Search on top on every page, then a Date/Updated rail in the recipe meta rail's style (`partials/sidebar/date-rows.html`, shared with the recipe sidebar; added 2026-09-25). Below that, only modules for the page you're on: a relocated `## Notes` section (above "On this page" since 2026-09-25; the other relocated sections sit below it), "On this page" (desktop only; sections with a subsection-count toggle that opens a hairline rail of subsections, collapsed on pages with more than 12 headings, variant C in the mockup, 2026-09-25; top-level entries sized up and bolded, `.84rem`/500 → `.88rem`/600, 2026-09-27 — at the original weight they read too close to the subsection links below), recipes the page links to, sibling essays, Food Log days and months, or the About page's numbers and optional `start_here` list. "Cook tonight" tag pills with an "All N recipes →" link used to close every page; removed 2026-09-25 to match the recipe sidebar. It has no section-wide lists (essay formats and the full reference list were cut for length), isn't sticky, and has an 18.6rem content column. The top lines up with the body, not the title, and on mobile it sits below the article, open
 - **Format/component gallery card** (`.comp-card`) — also reused for real content: the food memories band on the homepage
 
 ### Decisions (2026-09-17, resolving `COMPONENTS.md`'s open list)

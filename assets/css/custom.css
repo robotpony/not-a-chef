@@ -815,6 +815,13 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
 .ref-row a:hover { color: var(--accent-strong); }
 .ref-row .ref-kind { font-family: 'IBM Plex Mono', monospace; font-size: .66rem; color: var(--ink-faint); text-transform: uppercase; letter-spacing: .04em; flex: none; width: 6.5em; }
 
+/* Recipe/essay/reference header taxonomies row (article-meta/basic.html):
+ * one `gap` on the row replaces a per-child mt-[0.5rem] me-2. The old
+ * margin-per-child approach put its own top margin on the first line too
+ * (there's only ever one line here in practice), which stacked on top of
+ * the title's own spacing above the row — `gap` only ever applies
+ * between siblings, never before the first or after the last. */
+.tags-row { gap: 8px; }
 .tag { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; border: 1px solid var(--border-strong); color: var(--ink-muted); padding: 3px 7px; border-radius: 3px; display: inline-block; }
 .tag-more { color: var(--ink-faint); border-style: dashed; }
 .cuisine-chip { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; background: var(--highlight-soft); color: var(--highlight); padding: 3px 7px; border-radius: 3px; display: inline-block; }
@@ -907,9 +914,18 @@ footer.pt-8.max-w-prose { padding-top: 0; }
  * above widened the gap *before* a heading to separate it from the prior
  * section; this tightens the gap *after* it, so a heading reads as bound
  * to the content it titles rather than floating between two sections. */
-.prose h2 { margin-bottom: 0.75em; }
-.prose h3 { margin-bottom: 0.45em; }
-.prose h4 { margin-bottom: 0.375em; }
+/* Cut again, 2026-09-27: still read as too much air under a heading once
+ * seen at real scale on an essay page. This round leaves the top margin
+ * alone (nothing wrong was reported above a heading) and only tightens
+ * below, another third off the 2026-09-18 values (h2 0.75em→0.5em, h3
+ * 0.45em→0.3em, h4 0.375em→0.25em) — top:bottom moves from 2:1 to 3:1.
+ * Paired with the line-height cut below: Tailwind Typography's own
+ * heading line-height (h2 1.333, h3/h4 ~1.5–1.6) leaves whitespace under
+ * the glyphs before the margin even starts, so the two together were
+ * reading as a bigger gap than the margin value alone suggested. */
+.prose h2 { margin-bottom: 0.5em; line-height: 1.2; }
+.prose h3 { margin-bottom: 0.3em; line-height: 1.25; }
+.prose h4 { margin-bottom: 0.25em; line-height: 1.3; }
 
 /* Horizontal rules: Tailwind Typography gives them 3em above and below,
  * and the next heading's own top margin stacks on that. Cut to a thin
@@ -1129,6 +1145,15 @@ article > footer {
   font-size: .82rem;
   color: var(--ink-muted);
 }
+/* Markdown wraps Mechanic's body in its own <div class="mechanic"><p>...
+ * so the `.recipe-sidebar-section > p` margin reset two rules up never
+ * matches (it's a > div > p, not a direct child p) — the inner <p> fell
+ * back to Tailwind Typography's own paragraph margin, widening the gap
+ * under the "Mechanic" heading well past "To serve"'s (a direct-child
+ * <p>, correctly zeroed). Zeroed here so both read at the same heading-
+ * to-body distance. */
+.recipe-sidebar-section .mechanic p { margin: 0; }
+.recipe-sidebar-section .mechanic p + p { margin-top: .6em; }
 .recipe-sidebar-section .mechanic .ratio {
   color: var(--accent-strong);
   font-weight: 600;
@@ -1238,7 +1263,11 @@ a.comp-card:hover .comp-card-label { color: var(--accent-strong); }
 .reading-sidebar .rs-toc { display: flex; flex-direction: column; font-family: 'Libre Franklin', sans-serif; line-height: 1.3; }
 .reading-sidebar .rs-toc a { color: var(--ink); text-decoration: none; }
 .reading-sidebar .rs-toc a:hover { color: var(--accent-strong); }
-.reading-sidebar .rs-toc-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: .84rem; font-weight: 500; padding: 3px 0; }
+/* Top-level entries a size up and bolder than the .84rem/500 they started
+ * at — at that weight they read too close to the subsection links below
+ * (.rs-toc-group a, .8rem/ink-muted) to land as the section-level nav
+ * items they are. */
+.reading-sidebar .rs-toc-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: .88rem; font-weight: 600; padding: 3px 0; }
 .reading-sidebar .rs-toc-toggle {
   flex-shrink: 0; font-family: 'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums;
   font-size: .7rem; color: var(--ink-faint); background: none; border: 0; padding: 0 0 0 8px; cursor: pointer;
