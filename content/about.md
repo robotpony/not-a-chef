@@ -18,4 +18,4 @@ The recipes here are the foods we eat. They span cooking styles from the 1950s t
 
 These recipes started on paper, in a few binders. Over lockdown we digitized the recipes into Google Docs, and this year I moved them here.
 
-This site is built using Obsidian (for editing), Hugo (for publishing), Markdown (a plain text format for the recipes), and Claude (for bulk updates, theme editing, and design changes).
+This site is built using [Obsidian](https://obsidian.md) (for editing), [Hugo](https://gohugo.io) (for publishing), [Markdown](https://www.markdownguide.org) (a plain text format for the recipes), and [Claude](https://claude.ai) (for bulk updates, theme editing, and design changes). The source is on [GitHub](https://github.com/robotpony/not-a-chef).
