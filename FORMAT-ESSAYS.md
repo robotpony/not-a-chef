@@ -25,6 +25,7 @@ description: "AI hasn't changed the fundamentals of software development as much
 | `draft` | boolean | `true` while in progress; `false` to publish. Default: `false`. |
 | `tags` | string[] | Optional. Plain strings, no `#` prefix. Topic tags for browsing. |
 | `description` | string | Optional. 1–2 sentences for SEO and listing cards. |
+| `pinned` | boolean | Rare. Floats this essay to the top of the essays list and search — e.g. `win-the-fridge.md`. See DESIGN.md. |
 
 Essays do not use `cuisine`, `servings`, `prep_time`, `cook_time`, or `source`. Those fields are recipe-specific.
 

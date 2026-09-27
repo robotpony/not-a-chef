@@ -55,6 +55,7 @@ Supersedes the informal table in `FORMAT.md` §Frontmatter.
 | `cuisine` | MAY | string | |
 | `draft` | MUST | boolean | Hugo publish gate. |
 | `cost_note` | MAY | string | Free-text author commentary on cost ("expensive because of saffron"). Not a number — the computed estimate lives in build-time data, §6. |
+| `pinned` | MAY | boolean | Floats the page to the top of its section's listing, its term pages, and search results. Rare by design — not a general-purpose sort override. Applies to recipes, essays, and reference pages alike; see DESIGN.md. |
 
 Approximate front-matter values MUST use a leading `~` rather than "about", "approx.", or "roughly": `~500 ml`, `~2 hr`, `~3 medium pizzas`. Keep the space between number and unit. A range (`4–6`, `20–30 min`) needs no `~`.
 

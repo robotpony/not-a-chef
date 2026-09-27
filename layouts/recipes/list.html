@@ -8,7 +8,10 @@
 */}}
 {{ .Scratch.Set "scope" "list" }}
 {{/* 16 = four rows of four, so pagination stays near the fold; overrides the site-wide pagerSize (12) for this page only. */}}
-{{ $pager := .Paginate .Pages 16 }}
+{{/* Pinned recipes (frontmatter `pinned: true`) float to the top;
+  everything else keeps its existing relative order. See DESIGN.md. */}}
+{{ $sorted := (where .Pages "Params.pinned" true) | append (where .Pages "Params.pinned" "!=" true) }}
+{{ $pager := .Paginate $sorted 16 }}
 <section class="listing">
   <header class="listing-head">
     <h1 class="ltitle">{{ .Title }}</h1>

@@ -10,7 +10,12 @@
 {{/* By title: every guide now has a `date`, and Hugo's default order
   (newest first) would put the migration-day guides in one arbitrary
   block. Alphabetical is how this list has always read. */}}
-{{ $pager := .Paginate .Pages.ByTitle 16 }}
+{{/* Pinned guides (frontmatter `pinned: true`) float to the top, ahead
+  of the alphabetical order; everything else keeps sorting by title. See
+  DESIGN.md. */}}
+{{ $sorted := .Pages.ByTitle }}
+{{ $sorted = (where $sorted "Params.pinned" true) | append (where $sorted "Params.pinned" "!=" true) }}
+{{ $pager := .Paginate $sorted 16 }}
 <section class="listing">
   <header class="listing-head">
     <h1 class="ltitle">{{ .Title }}</h1>

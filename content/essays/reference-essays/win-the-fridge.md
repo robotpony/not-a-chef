@@ -3,6 +3,7 @@ title: Win the fridge
 date: 2026-09-27
 draft: false
 tags: [win-the-fridge]
+pinned: true
 description: "Win the fridge is the practice of using every scrap of food before it goes to waste: the idea behind the recipes tagged with it across this cookbook."
 ---
 

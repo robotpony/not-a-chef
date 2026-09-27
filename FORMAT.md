@@ -36,6 +36,7 @@ cuisine: Indian
 | `cook_time`  | string           | Active cooking time.                                                  |
 | `total_time` | string           | Total elapsed time if different from prep + cook.                     |
 | `cuisine`    | string           | Region or cuisine (e.g., "Indian", "Italian").                        |
+| `pinned`     | boolean          | Rare. Floats this recipe to the top of the recipes list, its term pages, and search. See DESIGN.md. |
 
 Approximate values use a leading `~`, not "about": `portions: ~500 ml`, `cook_time: ~2 hr`. It's shorter, and it fits the compact metadata on cards and in the sidebar. Ranges (`4–6`, `20–30 min`) don't need it.
 

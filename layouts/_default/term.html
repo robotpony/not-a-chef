@@ -18,11 +18,16 @@
 {{ $isPrinciple := .Params.principle }}
 {{ $allRecipes := eq (len (where .Pages "Section" "recipes")) (len .Pages) }}
 {{ $recipePages := where .Pages "Section" "recipes" }}
+{{/* Pinned pages (frontmatter `pinned: true`) float to the top of a term
+  listing too; everything else keeps its existing relative order. See
+  DESIGN.md. */}}
+{{ $recipePages = (where $recipePages "Params.pinned" true) | append (where $recipePages "Params.pinned" "!=" true) }}
+{{ $allPages := (where .Pages "Params.pinned" true) | append (where .Pages "Params.pinned" "!=" true) }}
 {{ $pager := "" }}
 {{ if $isPrinciple }}
   {{ $pager = .Paginate $recipePages 16 }}
 {{ else }}
-  {{ $pager = .Paginate .Pages 16 }}
+  {{ $pager = .Paginate $allPages 16 }}
 {{ end }}
 <section class="listing">
   <header class="listing-head">
@@ -53,7 +58,7 @@
   {{ if $isPrinciple }}
     {{ $essay := site.GetPage "/essays/reference-essays/win-the-fridge" }}
     {{ $further := slice }}
-    {{ range .Pages }}
+    {{ range $allPages }}
       {{ if ne .Section "recipes" }}
         {{ if not (and $essay (eq .RelPermalink $essay.RelPermalink)) }}
           {{ $further = $further | append . }}

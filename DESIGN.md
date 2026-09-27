@@ -39,7 +39,11 @@ draft: false          # set to true during review; false = published
 description: ""       # optional short blurb for SEO and cards
 ```
 
-(`featured` was considered — pin a recipe to the homepage card grid — but dropped 2026-09-17 building Phase 6.3: no recipe uses it, and "recently added" is real date-sorted data already. Add it back only if a real need shows up.)
+```yaml
+pinned: true          # optional; floats this page to the top of its listings and search
+```
+
+(`featured` was considered — pin a recipe to the homepage card grid — but dropped 2026-09-17 building Phase 6.3: no recipe uses it, and "recently added" is real date-sorted data already. A real need showed up 2026-09-27: the win-the-fridge reference essay (`content/essays/reference-essays/win-the-fridge.md`) needed to surface ahead of everything else, so it came back as `pinned`, scoped wider than the original proposal — any page in any section, not just recipes on the homepage. It floats pinned pages to the top of `layouts/recipes/list.html`, `layouts/essays/list.html`, `layouts/reference/list.html`, and `layouts/_default/term.html` (a stable partition: pinned pages first, everything else keeps its existing order), and to the top of matching results in the Fuse.js search modal — `layouts/_default/index.json` (project override of the theme's, adds a `pinned` field) feeds `assets/js/search.js` (project override of the theme's, stable-sorts pinned matches first). It still doesn't touch the homepage's "recently added" row, which stays real date-sorted data per the original reasoning above.)
 
 migrate.py adds `draft: false` on personal recipes (already reviewed).
 
