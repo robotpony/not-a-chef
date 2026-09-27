@@ -55,6 +55,11 @@ Project slash commands are in `.claude/commands/`. See DESIGN.md for description
 
 Blowfish theme as a git submodule. Wiki links require a render hook in `layouts/_default/_markup/render-link.html`. See DESIGN.md for layout and taxonomy decisions.
 
+## Pinned pages and tag reference pages
+
+- `pinned: true` in frontmatter (recipes, essays, or reference pages alike) floats a page to the top of its section's list, its term pages (tags/cuisine), and search results. Rare by design, not a general-purpose sort override. See DESIGN.md and SPEC.md.
+- A tag can carry its own `content/tags/<slug>/_index.md` with a `description`, and, when marked `principle: true`, `layouts/_default/term.html` swaps the plain description for a definition callout (the `_index.md` body) plus a "Reference & further reading" list of anything else on the tag that isn't a recipe. Only `win-the-fridge` uses this today (`content/tags/win-the-fridge/_index.md`); every other tag term page renders as before.
+
 ## Visual design
 
 `mockups/STYLE.md` (full visual mock: `mockups/style.html`) is the settled design system for the site — color tokens, type system, the ratified component list, and spacing, derived from warpedvisions.org's accent palette (same five hues, re-ordered to lead with orange/red) and set in Libre Franklin (headings/UI), Lora (body), and IBM Plex Mono (quantities/data). `mockups/COMPONENTS.md` (full visual mock: `mockups/components.html`) is the full component inventory across every mockup round ever built — broader than STYLE.md's ratified list, it includes candidates not yet promoted and every place two mockup rounds solved the same problem two different ways (shown side by side in `components.html`); check it before building a new component that might already exist in some form, and before a quality/consolidation pass.
