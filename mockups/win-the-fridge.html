@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Win the fridge — proposal</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  :root{
+    --bg:#F3F3EC; --surface:#FBFBF6; --surface-2:#EAEBDF;
+    --ink:#23241E; --ink-muted:#63645A; --ink-faint:#93948A;
+    --border:#DCDCCE; --border-strong:#C7C8B4;
+    --accent:#A67330; --accent-strong:#7C361D; --accent-soft:#F6EADA;
+    --highlight:#997F29; --highlight-soft:#F6F1D5;
+    --flag:#3D638F; --flag-soft:#E1EAF4;
+    --focus:#A67330;
+    /* NEW — proposed. Derived with the same hue/S/L formula the rest of the
+       family uses (STYLE.md "Where the palette comes from": 57%/62% at the
+       hue's own rotation for the base swatch, then hand-tuned per token for
+       text contrast). Green's rotation is 151°, which is warped-green
+       (#68d6a1) — previously reserved/unused, open question in STYLE.md
+       about a vegetarian/vegan role. This claims it for "principle" instead:
+       one tag only (win-the-fridge) for now, not a general mechanism. */
+    --principle:#247B50; --principle-strong:#1D6743; --principle-soft:#DBF5E8;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+      --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+      --border:#383A2C; --border-strong:#4A4C3A;
+      --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+      --highlight:#DDCC88; --highlight-soft:#342D19;
+      --flag:#97B8D8; --flag-soft:#1D2835;
+      --focus:#D3A569;
+      --principle:#8ED7B4; --principle-strong:#A7E2C4; --principle-soft:#1B3428;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+    --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+    --border:#383A2C; --border-strong:#4A4C3A;
+    --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+    --highlight:#DDCC88; --highlight-soft:#342D19;
+    --flag:#97B8D8; --flag-soft:#1D2835;
+    --focus:#D3A569;
+    --principle:#8ED7B4; --principle-strong:#A7E2C4; --principle-soft:#1B3428;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:'Lora',Georgia,'Times New Roman',serif;
+    font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4,.font-ui{ font-family:'Libre Franklin',system-ui,-apple-system,'Segoe UI',sans-serif; }
+  .mono{ font-family:'IBM Plex Mono',ui-monospace,'SF Mono',Menlo,monospace; font-variant-numeric:tabular-nums; }
+  a{ color:inherit; }
+  ul,ol{ margin:0; padding:0; list-style:none; }
+  p{ margin:0; }
+
+  .topbar{ position:sticky; top:0; z-index:20; background:var(--surface); border-bottom:1px solid var(--border-strong); }
+  .topbar-inner{ max-width:1040px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+  .tb-title{ font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:.95rem; margin-right:auto; }
+  .tb-jump{ display:flex; gap:2px; flex-wrap:wrap; font-family:'Libre Franklin',sans-serif; }
+  .tb-jump a{ font-size:.76rem; font-weight:600; color:var(--ink-muted); text-decoration:none; padding:6px 9px; border-radius:4px; }
+  .tb-jump a:hover{ color:var(--ink); background:var(--surface-2); }
+
+  main{ max-width:1040px; margin:0 auto; padding:8px 20px 100px; }
+
+  .hero{ padding:36px 0 26px; border-bottom:1px solid var(--border); margin-bottom:44px; }
+  .hero-eyebrow{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--principle-strong); margin-bottom:10px; display:block; }
+  .hero h1{ font-size:1.9rem; font-weight:700; letter-spacing:-.01em; margin-bottom:10px; }
+  .hero p{ max-width:70ch; color:var(--ink-muted); font-size:1rem; }
+  .hero p + p{ margin-top:8px; }
+
+  section.block{ margin-bottom:60px; }
+  .block-head{ margin-bottom:16px; }
+  .block-num{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--ink-faint); display:block; margin-bottom:4px; }
+  h2.block-title{ font-size:1.3rem; font-weight:700; letter-spacing:-.005em; margin-bottom:8px; }
+  .block-dek{ color:var(--ink-muted); max-width:70ch; font-size:.93rem; }
+
+  .note-card{
+    display:flex; gap:12px; padding:14px 16px; background:var(--surface); border:1px solid var(--border);
+    border-left:3px solid var(--flag); border-radius:0 6px 6px 0; margin-top:16px;
+  }
+  .note-mark{ font-family:'IBM Plex Mono',monospace; font-size:.75rem; font-weight:700; color:var(--flag); flex-shrink:0; }
+  .note-card p{ font-size:.9rem; color:var(--ink-muted); }
+  .note-card strong{ color:var(--ink); font-weight:600; }
+  .note-card ul{ margin-top:6px; display:flex; flex-direction:column; gap:4px; }
+  .note-card li{ font-size:.9rem; color:var(--ink-muted); }
+  .note-card li::before{ content:'– '; }
+
+  /* ---- real component CSS, copied verbatim from assets/css/custom.css ---- */
+  .tag{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; border:1px solid var(--border-strong); color:var(--ink-muted); padding:3px 7px; border-radius:3px; display:inline-block; }
+  .tag-more{ color:var(--ink-faint); border-style:dashed; }
+  .cuisine-chip{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; font-weight:600; text-transform:uppercase; letter-spacing:.05em; background:var(--highlight-soft); color:var(--highlight); padding:3px 7px; border-radius:3px; display:inline-block; }
+  a.cuisine-chip{ text-decoration:none; }
+  a.cuisine-chip:hover, a.cuisine-chip:focus-visible{ box-shadow:inset 0 0 0 1px var(--highlight); outline:none; }
+
+  .wikilink, .extlink{ text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:3px; text-decoration-color:color-mix(in srgb, var(--accent) 35%, transparent); transition:text-decoration-color .15s; }
+  .wikilink:hover, .extlink:hover{ text-decoration-color:var(--accent); }
+  .wikilink{ color:inherit; transition:text-decoration-color .15s, color .15s; }
+  .wikilink:hover{ color:var(--accent-strong); }
+  .wikilink::after{ content:' \2192'; font-size:.85em; }
+
+  .mechanic{ background:var(--bg); border-left:3px solid var(--accent); border-radius:0 3px 3px 0; padding:12px 14px; font-family:'Lora',serif; font-size:1rem; }
+  .mechanic .ratio{ color:var(--accent-strong); font-weight:600; font-family:'IBM Plex Mono',monospace; }
+
+  .listing-head{ display:flex; align-items:baseline; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:6px; }
+  .ltitle{ font-family:'Libre Franklin',sans-serif; font-size:2.1rem; font-weight:700; line-height:1.1; letter-spacing:-.01em; color:var(--ink); }
+  .ltitle-kind{ color:var(--principle-strong); }
+  .listing-count{ font-family:'Libre Franklin',sans-serif; font-size:.8rem; color:var(--ink-muted); }
+  .listing-dek{ color:var(--ink-muted); font-size:.95rem; margin-bottom:16px; }
+
+  .rcard{ background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:14px 16px 12px; display:flex; flex-direction:column; gap:8px; min-width:0; text-decoration:none; position:relative; }
+  .rcard:hover, .rcard:focus-within{ border-color:var(--accent); }
+  .rcard-link{ color:inherit; text-decoration:none; }
+  .rcard-link::after{ content:""; position:absolute; inset:0; border-radius:inherit; }
+  .rcard a.cuisine-chip, .rcard a.principle-chip{ position:relative; z-index:1; }
+  .rcard-top{ display:flex; gap:4px; flex-wrap:nowrap; overflow:hidden; min-width:0; }
+  .rcard-top > *{ font-size:.62rem; padding:2px 5px; flex:none; white-space:nowrap; }
+  .rcard-top > .tag:not(.tag-more){ flex:0 1 auto; min-width:0; overflow:hidden; text-overflow:ellipsis; }
+  .rcard-title{ font-family:'Libre Franklin',sans-serif; font-size:1.02rem; font-weight:700; line-height:1.3; letter-spacing:-.005em; text-wrap:balance; color:var(--ink); }
+  .rcard-intro{ font-family:'Lora',Georgia,serif; font-size:.84rem; line-height:1.5; color:var(--ink-muted); display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; overflow:hidden; }
+  .rcard-stats{ margin-top:auto; padding-top:8px; border-top:1px solid var(--border); display:flex; gap:12px; white-space:nowrap; min-width:0; overflow:hidden; }
+  .rcard-stat{ display:flex; align-items:baseline; gap:4px; flex:none; }
+  .rcard-stat:last-child{ flex:0 1 auto; min-width:0; overflow:hidden; }
+  .rcard-stat b{ font-family:'Libre Franklin',sans-serif; font-size:.56rem; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); }
+  .rcard-stat span{ font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums; font-size:.72rem; font-weight:600; color:var(--accent-strong); overflow:hidden; text-overflow:ellipsis; }
+  .rgrid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:14px; }
+
+  /* ---- proposed, new ---- */
+
+  /* Principle chip: structurally identical to .cuisine-chip (same padding,
+     radius, weight) but in the new green pair, and NOT uppercase — cuisine
+     names read fine shouted ("INDIAN"), but "WIN THE FRIDGE" as a phrase
+     reads better in sentence case. One entry only right now: win-the-fridge.
+     If a second tag ever wants this treatment, it should get its own review
+     rather than assuming "green = principle" generalizes automatically. */
+  .principle-chip{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; font-weight:600; background:var(--principle-soft); color:var(--principle-strong); padding:3px 7px; border-radius:3px; display:inline-flex; align-items:center; gap:4px; }
+  a.principle-chip{ text-decoration:none; }
+  a.principle-chip:hover, a.principle-chip:focus-visible{ box-shadow:inset 0 0 0 1px var(--principle); outline:none; }
+  .principle-chip svg{ width:10px; height:10px; flex:none; }
+
+  /* Glossary link: a second inline-reference style alongside .wikilink,
+     for terms (not pages) — dotted underline instead of wikilink's solid
+     one, no trailing arrow (nothing to "go to" at rest), cursor signals
+     there's more on hover. Click still navigates — to the glossary's
+     anchor, or to the term's own page when it has one (win-the-fridge). */
+  .glossary-term{ position:relative; }
+  .glossary-link{ text-decoration:underline dotted; text-decoration-thickness:1.5px; text-underline-offset:3px; text-decoration-color:var(--ink-faint); color:inherit; cursor:help; }
+  .glossary-link:hover, .glossary-link:focus-visible{ text-decoration-color:var(--ink); color:var(--ink); }
+  .glossary-pop{
+    position:absolute; left:0; bottom:calc(100% + 8px); z-index:5; width:260px;
+    background:var(--surface); border:1px solid var(--border-strong); border-radius:6px;
+    padding:11px 13px; box-shadow:0 6px 20px rgba(0,0,0,.12);
+    opacity:0; visibility:hidden; transform:translateY(4px); transition:opacity .12s, transform .12s, visibility .12s;
+    font-family:'Lora',serif; font-size:.84rem; line-height:1.45; color:var(--ink-muted);
+  }
+  .glossary-term:hover .glossary-pop, .glossary-term:focus-within .glossary-pop{ opacity:1; visibility:visible; transform:translateY(0); }
+  .glossary-pop-term{ display:block; font-family:'Libre Franklin',sans-serif; font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:var(--ink); margin-bottom:4px; }
+  .glossary-pop a{ font-family:'Libre Franklin',sans-serif; font-size:.74rem; font-weight:600; color:var(--accent-strong); text-decoration:none; display:inline-block; margin-top:6px; }
+  .glossary-pop a:hover{ text-decoration:underline; }
+
+  .definition-callout{
+    background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--principle);
+    border-radius:0 6px 6px 0; padding:20px 22px; display:flex; flex-direction:column; gap:10px; margin-bottom:32px;
+  }
+  .definition-callout-label{ font-family:'Libre Franklin',sans-serif; font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--principle-strong); display:flex; align-items:center; gap:6px; }
+  .definition-callout p{ font-size:1rem; max-width:72ch; }
+  .definition-callout p + p{ margin-top:2px; }
+  .definition-callout .read-essay{ font-family:'Libre Franklin',sans-serif; font-size:.82rem; font-weight:600; color:var(--principle-strong); text-decoration:none; margin-top:4px; }
+  .definition-callout .read-essay:hover{ text-decoration:underline; }
+
+  .subsection-title{ font-family:'Libre Franklin',sans-serif; font-size:1rem; font-weight:700; margin:0 0 12px; }
+  .ref-list{ display:flex; flex-direction:column; gap:2px; margin-top:4px; }
+  .ref-row{ display:flex; align-items:baseline; gap:10px; padding:9px 0; border-bottom:1px solid var(--border); font-family:'Libre Franklin',sans-serif; font-size:.86rem; }
+  .ref-row a{ color:var(--ink); text-decoration:none; font-weight:600; }
+  .ref-row a:hover{ color:var(--accent-strong); }
+  .ref-row .ref-kind{ font-family:'IBM Plex Mono',monospace; font-size:.66rem; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.04em; flex:none; width:6.5em; }
+
+  .kv-table{ width:100%; border-collapse:collapse; margin-top:10px; }
+  .kv-table th{ text-align:left; font-family:'Libre Franklin',sans-serif; font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); padding:6px 10px 6px 0; border-bottom:1px solid var(--border-strong); }
+  .kv-table td{ padding:8px 10px 8px 0; border-bottom:1px solid var(--border); font-size:.86rem; vertical-align:top; }
+  .kv-table td:first-child{ font-family:'IBM Plex Mono',monospace; font-size:.78rem; white-space:nowrap; }
+
+  .swatch-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:12px; margin-top:6px; }
+  .swatch{ border:1px solid var(--border); border-radius:6px; overflow:hidden; background:var(--surface); }
+  .swatch-fill{ height:52px; }
+  .swatch-label{ padding:8px 10px; }
+  .swatch-name{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; font-weight:600; display:block; }
+  .swatch-hex{ font-family:'IBM Plex Mono',monospace; font-size:.68rem; color:var(--ink-faint); }
+  .swatch-use{ font-family:'Libre Franklin',sans-serif; font-size:.68rem; color:var(--ink-faint); display:block; margin-top:2px; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <span class="tb-title">Win the fridge — proposal, 2026-09-27</span>
+    <nav class="tb-jump">
+      <a href="#color">Color</a>
+      <a href="#chip">Principle chip</a>
+      <a href="#glossary">Glossary popover</a>
+      <a href="#term-page">Tag page</a>
+      <a href="#ref-essay">Reference essay</a>
+    </nav>
+  </div>
+</div>
+
+<main>
+  <div class="hero">
+    <span class="hero-eyebrow">Not built — for review</span>
+    <h1>Special treatment for #win-the-fridge</h1>
+    <p>Three pieces: a general glossary/definition mechanism (inline popovers, reused for any term — brand names like Kewpie mayonnaise, technique terms, etc.), a new <b>reference essay</b> format that's where full definitions live (win-the-fridge gets the first one), and a one-off green "principle chip" that marks win-the-fridge wherever it appears as a tag, since it names a governing idea rather than just describing a dish.</p>
+    <p>Everything below reuses real component CSS from <code>assets/css/custom.css</code> — colors and layout should match the live site exactly except where marked <b>NEW</b>.</p>
+  </div>
+
+  <!-- ============ COLOR ============ -->
+  <section class="block" id="color">
+    <div class="block-head">
+      <span class="block-num">01</span>
+      <h2 class="block-title">Color: claiming green</h2>
+      <p class="block-dek">STYLE.md documents <code>warped-green</code> (#68d6a1, hue 151°) as reserved but untokenized — an open question about a vegetarian/vegan role. This proposes resolving that by giving it a <b>principle</b> role instead, derived with the same formula as the rest of the family (base swatch at hue's own rotation, S57/L62; per-token light/dark values hand-tuned for text contrast, matching how <code>--highlight</code> and <code>--flag</code> were built).</p>
+    </div>
+    <div class="swatch-grid">
+      <div class="swatch">
+        <div class="swatch-fill" style="background:var(--principle-strong)"></div>
+        <div class="swatch-label"><span class="swatch-name">--principle-strong</span><span class="swatch-hex">#1D6743 / #A7E2C4</span><span class="swatch-use">chip text, callout label</span></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-fill" style="background:var(--principle)"></div>
+        <div class="swatch-label"><span class="swatch-name">--principle</span><span class="swatch-hex">#247B50 / #8ED7B4</span><span class="swatch-use">chip hover ring, callout border</span></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-fill" style="background:var(--principle-soft)"></div>
+        <div class="swatch-label"><span class="swatch-name">--principle-soft</span><span class="swatch-hex">#DBF5E8 / #1B3428</span><span class="swatch-use">chip fill</span></div>
+      </div>
+    </div>
+    <div class="note-card">
+      <span class="note-mark">?</span>
+      <div>
+        <p><strong>Confirm:</strong> this uses green for "principle," not "vegetarian" — matches your answer, but worth flagging since it forecloses the vegetarian-indicator idea STYLE.md had also floated for this hue. If a veg/vegan marker is still wanted later, it'll need to compete for a spot inside the existing 5-hue family (STYLE.md is explicit: no 6th hue) rather than reuse this one.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRINCIPLE CHIP ============ -->
+  <section class="block" id="chip">
+    <div class="block-head">
+      <span class="block-num">02</span>
+      <h2 class="block-title">Principle chip</h2>
+      <p class="block-dek">Same shape as <code>.cuisine-chip</code> (filled, 3px radius, Franklin 600) so it reads as the same <em>kind</em> of thing — "a fact about this recipe," not a generic descriptor — but green and sentence case instead of yellow/uppercase. Leads the tag row same as cuisine does; when both are present, cuisine (yellow) comes first, then the principle chip, then plain tags.</p>
+    </div>
+
+    <h3 class="subsection-title">Standalone</h3>
+    <p style="margin-bottom:14px;"><span class="cuisine-chip">Canadian</span> <span class="principle-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8a5 5 0 0 1 8.5-3.5M13 8a5 5 0 0 1-8.5 3.5"/><path d="M11 2v2.5H8.5M5 14v-2.5h2.5"/></svg>Win the fridge</span> <span class="tag">soups</span> <span class="tag">weeknight</span> <span class="tag tag-more">+2</span></p>
+
+    <h3 class="subsection-title">On a recipe card (top row, real data — lazy-tomato-soup.md)</h3>
+    <div class="rgrid" style="max-width:280px;">
+      <article class="rcard">
+        <div class="rcard-top">
+          <span class="principle-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8a5 5 0 0 1 8.5-3.5M13 8a5 5 0 0 1-8.5 3.5"/><path d="M11 2v2.5H8.5M5 14v-2.5h2.5"/></svg>Win the fridge</span>
+          <span class="tag">soups</span>
+          <span class="tag tag-more">+3</span>
+        </div>
+        <h3 class="rcard-title"><a class="rcard-link" href="#">Lazy tomato soup</a></h3>
+        <p class="rcard-intro">A warm bowl of soup on a fall day is a wondrous thing. This is a classic fridge magnet recipe that I use to clean up old veg.</p>
+        <div class="rcard-stats">
+          <div class="rcard-stat"><b>Prep</b><span>10m</span></div>
+          <div class="rcard-stat"><b>Cook</b><span>15m</span></div>
+          <div class="rcard-stat"><b>Serves</b><span>4–6</span></div>
+        </div>
+      </article>
+    </div>
+    <p class="note-card" style="display:block;"><span class="note-mark">Note —</span> the card only has 2 tag slots, and cuisine already claims one when present. On a card that has <em>both</em> a cuisine and the principle chip, something has to give: either the card grows a 3rd slot for this one case, or the principle chip pre-empts a plain tag but not cuisine. Recommend the 3rd-slot option since dropping a plain tag would make the card lie about coverage (recipes with 3+ tags already show "+N").</p>
+
+    <h3 class="subsection-title" style="margin-top:24px;">On the recipe page itself (taxonomies row)</h3>
+    <p><span class="cuisine-chip">Canadian</span> <span class="principle-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8a5 5 0 0 1 8.5-3.5M13 8a5 5 0 0 1-8.5 3.5"/><path d="M11 2v2.5H8.5M5 14v-2.5h2.5"/></svg>Win the fridge</span> <span class="tag">soups</span> <span class="tag">mains</span> <span class="tag">pasta</span> <span class="tag">one-pot</span> <span class="tag">weeknight</span></p>
+  </section>
+
+  <!-- ============ GLOSSARY POPOVER ============ -->
+  <section class="block" id="glossary">
+    <div class="block-head">
+      <span class="block-num">03</span>
+      <h2 class="block-title">Glossary popover (general mechanism)</h2>
+      <p class="block-dek">A second inline-reference style, alongside <code>.wikilink</code>: dotted underline (vs. wikilink's solid one), no trailing arrow, hover/focus reveals a short definition plus a link through. Reuses the existing wiki-link render hook (<code>render-link.html</code>) rather than new markdown syntax — <code>[[Term]]</code> keeps working exactly as it does today. When the hook's page-title lookup finds nothing, it would fall back to checking headings in a new <code>content/reference/glossary.md</code>; if that also misses, it's still a <code>.broken-link</code> as today.</p>
+    </div>
+
+    <p style="max-width:68ch; font-size:1rem;">
+      For the dressing, whisk in a spoon of
+      <span class="glossary-term" tabindex="0">
+        <a href="#" class="glossary-link">Kewpie mayonnaise</a>
+        <span class="glossary-pop">
+          <span class="glossary-pop-term">Kewpie mayonnaise</span>
+          Japanese mayonnaise made with only egg yolks (not whole eggs) and rice or apple vinegar — richer and tangier than Western mayo, sold in a squeeze bottle.
+          <a href="#">Full entry in the glossary →</a>
+        </span>
+      </span>
+      instead of regular mayo. And whatever you do, remember to
+      <span class="glossary-term" tabindex="0">
+        <a href="#" class="glossary-link">win the fridge</a>
+        <span class="glossary-pop">
+          <span class="glossary-pop-term">Win the fridge</span>
+          Use every scrap before it's wasted — working the fridge, freezer, and pantry so nothing perishable goes unused. A frugal habit and an ethical one.
+          <a href="#">Read the full essay →</a>
+        </span>
+      </span>
+      before the week is out.
+    </p>
+
+    <div class="note-card">
+      <span class="note-mark">?</span>
+      <div>
+        <p><strong>Two open questions here:</strong></p>
+        <ul>
+          <li>Glossary entries that <em>don't</em> get their own page (most brand names, one-off terms) — are they one flat <code>glossary.md</code> with a heading per term (my assumption above), or split by kind (ingredients vs. brands vs. technique) later if it grows?</li>
+          <li>Should every recipe/essay mention of a glossary term become a popover automatically, or only the first mention per page (like some style guides do for footnotes) — repeating a popover on every "mayonnaise" in a long essay could get noisy.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TAG TERM PAGE ============ -->
+  <section class="block" id="term-page">
+    <div class="block-head">
+      <span class="block-num">04</span>
+      <h2 class="block-title">/tags/win-the-fridge/ — the special term page</h2>
+      <p class="block-dek">Every other tag's term page is the plain grid (<code>layouts/_default/term.html</code>). This one tag gets an override: the grid is still there, but it opens with a definition callout instead of just a description line, and closes with a reference section the plain template doesn't have.</p>
+    </div>
+
+    <div style="border:1px solid var(--border); border-radius:8px; padding:28px 32px; background:var(--bg);">
+      <header class="listing-head">
+        <h1 class="ltitle">Win the fridge <span class="ltitle-kind">principle</span></h1>
+        <span class="listing-count">14 recipes</span>
+      </header>
+
+      <div class="definition-callout" style="margin-top:18px;">
+        <span class="definition-callout-label"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8a5 5 0 0 1 8.5-3.5M13 8a5 5 0 0 1-8.5 3.5"/><path d="M11 2v2.5H8.5M5 14v-2.5h2.5"/></svg>Definition</span>
+        <p>Win the fridge is the practice of using every scrap of food before it goes to waste — working through the fridge, freezer, and pantry regularly instead of letting things quietly expire. It's a frugal habit and an ethical one: food waste is avoidable, and being well-fed is a privilege worth not squandering.</p>
+        <p>It extends nose-to-tail and root-to-stem thinking to everyday cooking — every cut from a butchered animal, every part of a vegetable (stalks, leaves, peels), and anything else that would otherwise be thrown out but is still delicious and nourishing.</p>
+        <a class="read-essay" href="#">Read the full essay →</a>
+      </div>
+
+      <h3 class="subsection-title">Recipes that follow this principle</h3>
+      <div class="rgrid" style="margin-bottom:32px;">
+        <article class="rcard">
+          <div class="rcard-top">
+            <span class="cuisine-chip">Canadian</span>
+            <span class="tag tag-more">+3</span>
+          </div>
+          <h3 class="rcard-title"><a class="rcard-link" href="#">Lazy tomato soup</a></h3>
+          <p class="rcard-intro">A warm bowl of soup on a fall day is a wondrous thing. This is a classic fridge magnet recipe that I use to clean up old veg.</p>
+          <div class="rcard-stats">
+            <div class="rcard-stat"><b>Prep</b><span>10m</span></div>
+            <div class="rcard-stat"><b>Cook</b><span>15m</span></div>
+            <div class="rcard-stat"><b>Serves</b><span>4–6</span></div>
+          </div>
+        </article>
+        <article class="rcard">
+          <div class="rcard-top">
+            <span class="tag">stock</span>
+            <span class="tag">freezer</span>
+          </div>
+          <h3 class="rcard-title"><a class="rcard-link" href="#">Vegetable scrap stock</a></h3>
+          <p class="rcard-intro">Placeholder card — onion skins, carrot tops, and herb stems, frozen in a bag until there's enough for a pot.</p>
+          <div class="rcard-stats">
+            <div class="rcard-stat"><b>Prep</b><span>5m</span></div>
+            <div class="rcard-stat"><b>Cook</b><span>1h</span></div>
+          </div>
+        </article>
+        <article class="rcard">
+          <div class="rcard-top">
+            <span class="tag">weeknight</span>
+            <span class="tag">rice</span>
+          </div>
+          <h3 class="rcard-title"><a class="rcard-link" href="#">Whatever's-left fried rice</a></h3>
+          <p class="rcard-intro">Placeholder card — the template for turning last night's protein and this week's wilting greens into dinner.</p>
+          <div class="rcard-stats">
+            <div class="rcard-stat"><b>Prep</b><span>10m</span></div>
+            <div class="rcard-stat"><b>Cook</b><span>10m</span></div>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="subsection-title">Reference &amp; further reading</h3>
+      <div class="ref-list">
+        <div class="ref-row"><span class="ref-kind">Reference</span><a href="#">Base recipes for weeknight cooking</a></div>
+        <div class="ref-row"><span class="ref-kind">Reference</span><a href="#">Food ratios for creating your own recipes</a></div>
+        <div class="ref-row"><span class="ref-kind">Essay</span><a href="#">Meal planning, Bruce's take</a></div>
+      </div>
+    </div>
+
+    <div class="note-card">
+      <span class="note-mark">?</span>
+      <div>
+        <p><strong>Open questions:</strong></p>
+        <ul>
+          <li>"Reference &amp; further reading" — I pulled candidates from <code>content/reference/</code> and <code>content/essays/</code> by guessing relevance. Should this be a manual, curated list (a field in the tag's <code>_index.md</code>, like <code>related: [...]</code>), or automatic (anything else tagged <code>win-the-fridge</code> that isn't a recipe)? Manual is more work per recipe/essay but won't drag in a false match.</li>
+          <li>Does every recipe in this list need the <code>win-the-fridge</code> tag explicitly (current plan), or should some also qualify implicitly (e.g. anything filed under a future "scrap cooking" sub-tag)?</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REFERENCE ESSAY FORMAT ============ -->
+  <section class="block" id="ref-essay">
+    <div class="block-head">
+      <span class="block-num">05</span>
+      <h2 class="block-title">New essay format: reference essays</h2>
+      <p class="block-dek">A 5th folder under <code>content/essays/</code>, alongside food-memories, cooking-reflections, technique-essays, and planning-essays. Where full definitions live — not just win-the-fridge, but any concept, brand, or principle that deserves prose rather than a one-line glossary entry. Uses the exact same essay-card and article layout everything else already has; only the folder name is new, so no new component to build here.</p>
+    </div>
+
+    <table class="kv-table">
+      <tr><th>Field</th><th>Value</th></tr>
+      <tr><td>Folder</td><td><code>content/essays/reference-essays/win-the-fridge.md</code></td></tr>
+      <tr><td>Card format label</td><td>"reference essay" (derived from folder name, same as the other four — no template change)</td></tr>
+      <tr><td>Frontmatter</td><td>same as any essay, plus <code>tags: [win-the-fridge]</code> so the tag's <code>_index.md</code> can link straight to it as "the full essay"</td></tr>
+      <tr><td>Voice</td><td>same as technique essays per CLAUDE.md — "reference material dressed as prose" — but scoped to defining/justifying the principle rather than teaching a method</td></tr>
+    </table>
+
+    <h3 class="subsection-title" style="margin-top:20px;">Essay card, in context with the other four formats</h3>
+    <div class="rgrid">
+      <article class="rcard"><div class="rcard-top"><span class="tag">food memories</span></div><h3 class="rcard-title"><a class="rcard-link" href="#">The soup my grandmother made</a></h3><p class="rcard-intro">Placeholder.</p><div class="rcard-stats"><div class="rcard-stat"><b>Read</b><span>4m</span></div></div></article>
+      <article class="rcard"><div class="rcard-top"><span class="tag">planning essays</span></div><h3 class="rcard-title"><a class="rcard-link" href="#">Meal planning, Bruce's take</a></h3><p class="rcard-intro">I plan a week of meals by selecting proteins and vegetables, stocking my pantry and fridge, and planning base sauces.</p><div class="rcard-stats"><div class="rcard-stat"><b>Read</b><span>3m</span></div></div></article>
+      <article class="rcard" style="border-color:var(--principle);"><div class="rcard-top"><span class="tag">reference essays</span></div><h3 class="rcard-title"><a class="rcard-link" href="#">Win the fridge</a></h3><p class="rcard-intro">What it means, why it matters, and how it shows up across this cookbook.</p><div class="rcard-stats"><div class="rcard-stat"><b>Read</b><span>5m</span></div></div></article>
+    </div>
+
+    <div class="note-card">
+      <span class="note-mark">?</span>
+      <div>
+        <p><strong>Confirm:</strong> should <code>CLAUDE.md</code>'s "Food essay types" list get a 5th bullet for this now, even though win-the-fridge is the only planned entry? Recommend yes — it's cheap to document and saves rediscovering the convention later.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>
