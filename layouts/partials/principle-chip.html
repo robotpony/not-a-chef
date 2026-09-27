@@ -3,9 +3,17 @@
   page carries the win-the-fridge tag, nothing otherwise. One tag only;
   not a general mechanism for arbitrary "principle" tags.
 
-  Takes a dict: page (required), compact (bool — abbreviates to "WTF"
-  with a title attr, for the recipe card's tight top row; full pages use
-  the spelled-out "Win the fridge").
+  Takes a dict: page (required), compact (bool — abbreviates to "WTF",
+  for the recipe card's tight top row; full pages use the spelled-out
+  "Win the fridge").
+
+  Also carries the glossary popover (render-link.html's reference-essay
+  branch): the chip is wrapped in the same .glossary-term/.glossary-pop
+  markup as an inline [[win the fridge]] mention, pulling its definition
+  from the reference essay, so hovering/focusing the tag itself explains
+  the term without a trip to the tag page. The chip's own look (filled
+  pill, not dotted underline) is unchanged — .glossary-link is not
+  applied to the anchor, only the popover-reveal wrapper is reused.
 */}}
 {{ $page := .page }}
 {{ $compact := .compact }}
@@ -16,9 +24,27 @@
 {{ if $tagged }}
   {{ $label := cond $compact "WTF" "Win the fridge" }}
   {{ $icon := `<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8a5 5 0 0 1 8.5-3.5M13 8a5 5 0 0 1-8.5 3.5"/><path d="M11 2v2.5H8.5M5 14v-2.5h2.5"/></svg>` }}
+  {{ $essay := site.GetPage "/essays/reference-essays/win-the-fridge" }}
+  {{ $def := "" }}
+  {{ with $essay }}
+    {{ $def = .Params.summary | default .Description }}
+    {{ if not $def }}
+      {{ $head := index (split .RawContent "\n## ") 0 | strings.TrimSpace }}
+      {{ if and $head (not (hasPrefix $head "#")) }}
+        {{ $def = index (split $head "\n\n") 0 }}
+      {{ end }}
+    {{ end }}
+    {{ $def = $def | markdownify | plainify | htmlUnescape | truncate 200 }}
+  {{ end }}
+  {{ $chip := "" }}
   {{ with site.GetPage "/tags/win-the-fridge" }}
-    <a class="principle-chip"{{ if $compact }} title="Win the fridge"{{ end }} href="{{ .RelPermalink }}">{{ $icon | safeHTML }}{{ $label }}</a>
+    {{ $chip = printf `<a class="principle-chip" href="%s">%s%s</a>` .RelPermalink ($icon | safeHTML) $label }}
   {{ else }}
-    <span class="principle-chip"{{ if $compact }} title="Win the fridge"{{ end }}>{{ $icon | safeHTML }}{{ $label }}</span>
+    {{ $chip = printf `<span class="principle-chip">%s%s</span>` ($icon | safeHTML) $label }}
+  {{ end }}
+  {{ if $def }}
+    <span class="glossary-term" tabindex="0">{{ $chip | safeHTML }}<span class="glossary-pop"><span class="glossary-pop-term">Win the fridge</span>{{ $def }}{{ with $essay }}<a href="{{ .RelPermalink }}">Read the full essay →</a>{{ end }}</span></span>
+  {{ else }}
+    {{ $chip | safeHTML }}
   {{ end }}
 {{ end }}
