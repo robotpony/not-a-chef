@@ -69,6 +69,7 @@ Essays in `content/essays/` include these formats specific to this project:
 - **Cooking reflections**: Lessons learned from technique, ingredients, or failure. Engineering-minded; ratio-based thinking and post-mortems welcome.
 - **Technique essays**: Deep dives on a single method or principle (brining, emulsification, stock-making). Reference material dressed as prose.
 - **Planning essays**: Meal prep philosophy, "winning the fridge" thinking, systems for weeknight cooking.
+- **Reference essays** (`content/essays/reference-essays/`): Full definitions for a concept, principle, or brand that deserves prose rather than a one-line glossary entry — e.g. `win-the-fridge.md`. Tag it with the term it defines so its own tag page (if the term has one, see `content/tags/win-the-fridge/_index.md`) can link straight to it as "the full essay". A term that doesn't warrant a whole essay gets a short entry in `content/reference/glossary.md` instead — see `layouts/_default/_markup/render-link.html` for how `[[Term]]` picks between the two.
 
 Voice for all food essays: engineering precision meets home cook practicality. Personal, honest about mistakes, practical takeaway at the end.
 

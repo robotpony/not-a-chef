@@ -24,6 +24,10 @@
   Food Log months (layouts/the-food-log/list.html) too: the middle lists
   the month's days (from reading-sidebar/log-month.html), and the stat
   line is the day count and reading time.
+
+  The win-the-fridge tag (partials/principle-chip.html) claims a top-row
+  slot the same way cuisine does, and is dropped from the plain $tags
+  list so it isn't shown twice.
 */}}
 {{ $isEssay := eq .Section "essays" }}
 {{ $isLog := eq .Section "the-food-log" }}
@@ -31,16 +35,20 @@
 {{ $title := .Title }}
 {{ $slots := 2 }}
 {{ $cuisine := .Params.cuisine }}
+{{ $principle := partial "principle-chip.html" (dict "page" . "compact" true) }}
 {{ $tags := slice }}
 {{ range .Params.tags }}
   {{ if and $isRef (eq (lower .) "reference") }}{{ continue }}{{ end }}
+  {{ if eq (lower .) "win-the-fridge" }}{{ continue }}{{ end }}
   {{ if not (and $cuisine (eq (lower .) (lower $cuisine))) }}{{ $tags = $tags | append . }}{{ end }}
 {{ end }}
 {{ if $isEssay }}
   {{ $folder := path.Base (strings.TrimSuffix "/" .File.Dir) }}
   {{ $tags = cond (eq $folder "essays") (slice) (slice (replace $folder "-" " ")) }}
 {{ end }}
-{{ $room := cond (ne $cuisine nil) (sub $slots 1) $slots }}
+{{ $room := $slots }}
+{{ if ne $cuisine nil }}{{ $room = sub $room 1 }}{{ end }}
+{{ if ne (len (trim $principle " \n\t")) 0 }}{{ $room = sub $room 1 }}{{ end }}
 
 {{ $intro := .Params.summary | default .Description }}
 {{ if not $intro }}
@@ -80,6 +88,7 @@
 <article class="rcard">
   <div class="rcard-top">
     {{ with $cuisine }}{{ with $.GetTerms "cuisine" }}<a class="cuisine-chip" href="{{ (index . 0).RelPermalink }}">{{ $cuisine }}</a>{{ else }}<span class="cuisine-chip">{{ . }}</span>{{ end }}{{ end }}
+    {{ $principle | safeHTML }}
     {{ range first $room $tags }}<span class="tag">{{ . }}</span>{{ end }}
     {{ if gt (len $tags) $room }}<span class="tag tag-more">+{{ sub (len $tags) $room }}</span>{{ end }}
   </div>

@@ -95,17 +95,23 @@ Means "unreviewed," not "error." Blue reads as cool/pending against the
 accent's warm/active — deliberately not red. **One role only**: the draft
 state. Don't reach for it elsewhere.
 
-### Green — reserved, unused
+### 4 · Principle, reserved — green (`--principle`)
 
-`warped-green` (`#68d6a1`) is documented in the style guide as part of the
-five-hue family the palette derives from, but it is **not tokenized** and has
-no role in the UI yet. Open question (see style guide §6): give it a
-vegetarian/vegan indicator, or leave it out entirely. Don't invent a use for
-it in a new mockup without settling this first.
+| Token | Light | Dark | Use |
+|---|---|---|---|
+| `--principle` | `#247B50` | `#8ED7B4` | chip hover ring, definition-callout border |
+| `--principle-strong` | `#1D6743` | `#A7E2C4` | chip text, "principle" kind label, callout label |
+| `--principle-soft` | `#DBF5E8` | `#1B3428` | chip fill |
+
+`warped-green` (`#68d6a1`, hue 151°) was previously reserved and untokenized,
+with an open question about a vegetarian/vegan role. Claimed 2026-09-27
+(`mockups/win-the-fridge.html`) for **principle** instead — the win-the-fridge
+tag only, not a general mechanism. If a veg/vegan marker is wanted later it
+has to compete for space inside this same 5-hue family; there's no 6th hue.
 
 ### Where the palette comes from
 
-All five hues (including the unused green) share one saturation/lightness
+All five hues share one saturation/lightness
 formula (57%/62%) at different rotations — red 14°, orange 34°, yellow 54°,
 green 151°, blue 210° — taken directly from warpedvisions.org's shipped CSS
 (`warped.css`'s flourish-bar hues). This site reorders the hierarchy to lead
@@ -303,9 +309,13 @@ everything discarded or superseded getting to this list.
 - **External link** (`.extlink`) — outside reference: ink text + trailing ↗, same underline as wikilink; only the arrow (→ vs ↗) tells them apart
 - **Cuisine chip** — filled `--highlight-soft` / `--highlight` text, one per recipe, always yellow regardless of which cuisine — deliberately never color-coded by cuisine (see Decisions below). Links to `/cuisine/<name>/` (as of 2026-09-24); shown on recipe cards and at the start of the tag row on recipe pages. On cards the title link stretches over the whole card (`.rcard-link::after`) and the chip sits above it, since the card can't be one `<a>` with a link inside
 - **Tag** — neutral outline (`--border-strong`), never colored
+- **Principle chip** (`.principle-chip`, 2026-09-27, `mockups/win-the-fridge.html`) — same shape as the cuisine chip but filled `--principle-soft` / `--principle-strong` text, sentence case not uppercase. One tag only: win-the-fridge. Links to `/tags/win-the-fridge/`. Leads the tag row after cuisine, before plain tags (`partials/principle-chip.html`, used by `recipe-card.html` and `article-meta/basic.html`). Abbreviates to "WTF" on the recipe card (`title` attr carries the full name) so it fits the card's existing 2-slot top row without a layout change; spells out "Win the fridge" everywhere else
+- **Glossary link** (`.glossary-link` / `.glossary-pop`, 2026-09-27, `mockups/win-the-fridge.html`) — a second inline-reference style alongside the wikilink, for terms rather than pages: dotted underline (vs. wikilink's solid one), no trailing arrow, hover/focus reveals a short definition and a link through. Emitted by the same render hook (`render-link.html`) a `[[Term]]` already goes through: a title match against a reference essay (`content/essays/reference-essays/`) gets this treatment instead of the plain wikilink one (reference essays are the "gets its own page" tier of the glossary); no page match falls back to a heading match in `content/reference/glossary.md` (the "doesn't get its own page" tier) before giving up as a `.broken-link`. Popovers fire on every mention, not just the first
+- **Definition callout** (`.definition-callout`) — `--principle`-left-bordered box, the win-the-fridge tag page's opener; same shape as the Mechanic callout but green and holding the tag's own `_index.md` body content instead of a ratio
+- **Reference list** (`.ref-list` / `.ref-row`) — label + link rows, used for the win-the-fridge tag page's "Reference & further reading" section (anything on the tag that isn't a recipe)
 - **Filter pill** — pill-shaped (14px radius), neutral outline, `--accent-soft` fill when active — listing-page filters, distinct from the chip's "fact about the recipe"
 - **Draft state** (banner or badge) — `--flag` blue, never red
-- **Recipe card** (`.rcard`), v2 as of 2026-09-23 (`recipe-card-v2.html`): one-line taxonomy row (two slots, cuisine takes one when present, a tag repeating the cuisine is skipped, then `+N`; never wraps, chips/tags at `.62rem`), title, intro (the recipe's first paragraph before any `##`, or frontmatter `summary`/`description`; Lora `.84rem`, clamped to 3 lines), and a compact stat line pinned to the card bottom (Prep/Cook/Serves inline; faint Franklin labels, values bold IBM Plex Mono in `--accent-strong`; times shortened to `15m`/`2-3h` and parentheticals dropped on the card only, full value in the title attribute). The Mechanic/Variations flags row was removed. Same card on the homepage "Recently added" row, the recipes list page (`layouts/recipes/list.html`), and single-term pages like `/cuisine/x/` and `/tags/x/` (`layouts/_default/term.html`). The essays list (`layouts/essays/list.html`, 2026-09-24) uses the same card: the top row is the essay's format from its folder ("food memories") and the stat line is reading time ("Read 3m"). The reference list (`layouts/reference/list.html`, 2026-09-24) does the same: the "reference" tag every guide carries is skipped, and the stat line is reading time. The Food Log list (`layouts/the-food-log/list.html`) does the same, one card per month: title from the filename ("September 2026"), the month's days in the middle, and Days/Read in the stat line
+- **Recipe card** (`.rcard`), v2 as of 2026-09-23 (`recipe-card-v2.html`): one-line taxonomy row (two slots, cuisine takes one when present and the win-the-fridge principle chip takes another when present, a tag repeating the cuisine is skipped, then `+N`; never wraps, chips/tags at `.62rem`), title, intro (the recipe's first paragraph before any `##`, or frontmatter `summary`/`description`; Lora `.84rem`, clamped to 3 lines), and a compact stat line pinned to the card bottom (Prep/Cook/Serves inline; faint Franklin labels, values bold IBM Plex Mono in `--accent-strong`; times shortened to `15m`/`2-3h` and parentheticals dropped on the card only, full value in the title attribute). The Mechanic/Variations flags row was removed. Same card on the homepage "Recently added" row, the recipes list page (`layouts/recipes/list.html`), and single-term pages like `/cuisine/x/` and `/tags/x/` (`layouts/_default/term.html`). The essays list (`layouts/essays/list.html`, 2026-09-24) uses the same card: the top row is the essay's format from its folder ("food memories") and the stat line is reading time ("Read 3m"). The reference list (`layouts/reference/list.html`, 2026-09-24) does the same: the "reference" tag every guide carries is skipped, and the stat line is reading time. The Food Log list (`layouts/the-food-log/list.html`) does the same, one card per month: title from the filename ("September 2026"), the month's days in the middle, and Days/Read in the stat line
 - **Listing page header** (`.ltitle` / `.listing-count`) — title + a count line ("83 recipes · showing 18"), distinct from the hero used for page openers
 - **Section caveat** (`.section-caveat`, formerly `.nav-caveat`) — a one-line honesty note for admitting a section is thin; not limited to nav panels, use it above any under-built section
 - **Nav item with mega-menu** — caret only on items with a real dropdown (Recipes, Reference); other sections stay plain links until they have enough content to categorize

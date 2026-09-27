@@ -37,6 +37,17 @@ in a browser — no build step.
   Food Log, and About pages (2026-09-24). Not built yet. Also published as
   an artifact: https://claude.ai/artifact/Ga6iBFYqvHfFt1yki672pg
 
+- **`win-the-fridge.html`** — special treatment for the win-the-fridge tag
+  (2026-09-27): the green principle chip, the glossary popover mechanism,
+  the `/tags/win-the-fridge/` definition-callout term page, and the new
+  reference-essay format. Built into `assets/css/custom.css`,
+  `layouts/partials/principle-chip.html`, `layouts/partials/recipe-card.html`,
+  `layouts/partials/article-meta/basic.html`, `layouts/_default/term.html`,
+  `layouts/_default/_markup/render-link.html`, `content/reference/glossary.md`,
+  and `content/essays/reference-essays/win-the-fridge.md`; `STYLE.md`'s
+  Principle chip, Glossary link, Definition callout, and Reference list
+  entries describe it.
+
 ## `archived/` — reference only
 
 The four original mockup rounds `style.html`/`COMPONENTS.md` were built

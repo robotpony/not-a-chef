@@ -52,6 +52,14 @@
 
   --flag: #3D638F;
   --flag-soft: #E1EAF4;
+
+  /* Green (hue 151°, the family's previously-unused 5th hue — STYLE.md's
+   * warped-green). Claimed for "principle" (mockups/win-the-fridge.html,
+   * 2026-09-27), not a vegetarian/vegan marker — derived with the same
+   * S57/L62 base + per-token contrast tuning as --highlight/--flag. */
+  --principle: #247B50;
+  --principle-strong: #1D6743;
+  --principle-soft: #DBF5E8;
 }
 
 .dark {
@@ -74,6 +82,10 @@
 
   --flag: #97B8D8;
   --flag-soft: #1D2835;
+
+  --principle: #8ED7B4;
+  --principle-strong: #A7E2C4;
+  --principle-soft: #1B3428;
 }
 
 /* Blowfish's <body> tag (themes/blowfish/layouts/_default/baseof.html) is
@@ -280,6 +292,28 @@ main > header + section {
   text-underline-offset: 2px;
   cursor: help;
 }
+
+/* Glossary link (mockups/win-the-fridge.html) — a second inline-reference
+ * style alongside .wikilink, for terms rather than pages: dotted underline
+ * instead of wikilink's solid one, no trailing arrow (nothing to "go to"
+ * at rest), hover/focus reveals a short definition. Emitted by the same
+ * render hook (render-link.html) when a [[Term]] doesn't match a page
+ * title but does match a heading in content/reference/glossary.md. */
+.glossary-term { position: relative; }
+.glossary-link { text-decoration: underline dotted; text-decoration-thickness: 1.5px; text-underline-offset: 3px; text-decoration-color: var(--ink-faint); color: inherit; cursor: help; }
+.glossary-link:hover, .glossary-link:focus-visible { text-decoration-color: var(--ink); color: var(--ink); }
+.glossary-pop {
+  position: absolute; left: 0; bottom: calc(100% + 8px); z-index: 5; width: 260px;
+  background: var(--surface); border: 1px solid var(--border-strong); border-radius: 6px;
+  padding: 11px 13px; box-shadow: 0 6px 20px rgba(0, 0, 0, .12);
+  opacity: 0; visibility: hidden; transform: translateY(4px);
+  transition: opacity .12s, transform .12s, visibility .12s;
+  font-family: 'Lora', Georgia, serif; font-size: .84rem; line-height: 1.45; color: var(--ink-muted);
+}
+.glossary-term:hover .glossary-pop, .glossary-term:focus-within .glossary-pop { opacity: 1; visibility: visible; transform: translateY(0); }
+.glossary-pop-term { display: block; font-family: 'Libre Franklin', sans-serif; font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--ink); margin-bottom: 4px; }
+.glossary-pop a { font-family: 'Libre Franklin', sans-serif; font-size: .74rem; font-weight: 600; color: var(--accent-strong); text-decoration: none; display: inline-block; margin-top: 6px; }
+.glossary-pop a:hover { text-decoration: underline; }
 
 /* Ingredient list (check), sub-head, and sub-note, from mockups/style.html
  * §3. Applied client-side by assets/js/ingredients.js, not by Hugo — see
@@ -725,7 +759,7 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
 .rcard-link { color: inherit; text-decoration: none; }
 .rcard-link::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
 .rcard-link:focus-visible { outline: none; }
-.rcard a.cuisine-chip { position: relative; z-index: 1; }
+.rcard a.cuisine-chip, .rcard a.principle-chip { position: relative; z-index: 1; }
 .rcard-top { display: flex; gap: 4px; flex-wrap: nowrap; overflow: hidden; min-width: 0; }
 .rcard-top > * { font-size: .62rem; padding: 2px 5px; flex: none; white-space: nowrap; }
 .rcard-top > .tag:not(.tag-more) { flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
@@ -743,9 +777,27 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
 .listing-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 6px; }
 .ltitle { font-family: 'Libre Franklin', sans-serif; font-size: 2.1rem; font-weight: 700; line-height: 1.1; letter-spacing: -.01em; color: var(--ink); }
 .ltitle-kind { color: var(--accent-strong); }
+.ltitle-kind-principle { color: var(--principle-strong); }
 .listing-count { font-family: 'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums; font-size: .78rem; color: var(--ink-faint); }
 .listing-dek { color: var(--ink-muted); font-size: .95rem; margin-bottom: 16px; }
 .listing-search { display: flex; margin-bottom: 24px; }
+
+/* Definition callout and reference list (mockups/win-the-fridge.html) —
+ * only used on /tags/win-the-fridge/ (layouts/_default/term.html, gated
+ * on the term's own `principle: true` frontmatter), not the plain term
+ * template every other tag uses. */
+.definition-callout { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--principle); border-radius: 0 6px 6px 0; padding: 20px 22px; display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; }
+.definition-callout-label { font-family: 'Libre Franklin', sans-serif; font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--principle-strong); }
+.definition-callout p { max-width: 72ch; font-family: 'Lora', Georgia, serif; font-size: 1rem; line-height: 1.5; }
+.definition-callout p + p { margin-top: 10px; }
+.definition-callout .read-essay { font-family: 'Libre Franklin', sans-serif; font-size: .82rem; font-weight: 600; color: var(--principle-strong); text-decoration: none; margin-top: 4px; display: inline-block; }
+.definition-callout .read-essay:hover { text-decoration: underline; }
+.subsection-title { font-family: 'Libre Franklin', sans-serif; font-size: 1rem; font-weight: 700; margin: 0 0 12px; }
+.ref-list { display: flex; flex-direction: column; gap: 2px; margin-top: 4px; }
+.ref-row { display: flex; align-items: baseline; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border); font-family: 'Libre Franklin', sans-serif; font-size: .86rem; }
+.ref-row a { color: var(--ink); text-decoration: none; font-weight: 600; }
+.ref-row a:hover { color: var(--accent-strong); }
+.ref-row .ref-kind { font-family: 'IBM Plex Mono', monospace; font-size: .66rem; color: var(--ink-faint); text-transform: uppercase; letter-spacing: .04em; flex: none; width: 6.5em; }
 
 .tag { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; border: 1px solid var(--border-strong); color: var(--ink-muted); padding: 3px 7px; border-radius: 3px; display: inline-block; }
 .tag-more { color: var(--ink-faint); border-style: dashed; }
@@ -754,6 +806,16 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
  * ring on hover rather than an accent colour, so it stays cuisine-only. */
 a.cuisine-chip { text-decoration: none; }
 a.cuisine-chip:hover, a.cuisine-chip:focus-visible { box-shadow: inset 0 0 0 1px var(--highlight); outline: none; }
+/* Principle chip (mockups/win-the-fridge.html) — one tag only, win-the-fridge.
+ * Same shape as .cuisine-chip so it reads as the same kind of thing ("a fact
+ * about this recipe"), but green and sentence case instead of yellow/
+ * uppercase. On a recipe card it abbreviates to "WTF" (title attr carries
+ * the full name) so it fits the card's existing 2-slot top row without a
+ * layout change; everywhere else it spells out "Win the fridge". */
+.principle-chip { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; font-weight: 600; background: var(--principle-soft); color: var(--principle-strong); padding: 3px 7px; border-radius: 3px; display: inline-flex; align-items: center; gap: 4px; }
+.principle-chip svg { width: 10px; height: 10px; flex: none; }
+a.principle-chip { text-decoration: none; }
+a.principle-chip:hover, a.principle-chip:focus-visible { box-shadow: inset 0 0 0 1px var(--principle); outline: none; }
 .draft-badge { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; font-weight: 600; border: 1px solid var(--flag); color: var(--flag); background: var(--flag-soft); padding: 3px 7px; border-radius: 3px; display: inline-block; }
 
 /* Label above the desktop sticky recipe/essay TOC (layouts/partials/toc.html
