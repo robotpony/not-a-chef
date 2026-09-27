@@ -786,7 +786,14 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
  * only used on /tags/win-the-fridge/ (layouts/_default/term.html, gated
  * on the term's own `principle: true` frontmatter), not the plain term
  * template every other tag uses. */
-.definition-callout { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--principle); border-radius: 0 6px 6px 0; padding: 20px 22px; display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; }
+/* margin-top 18px on top of .listing-head's own 6px margin-bottom makes
+ * 24px total above the callout, matching the site's title-to-content
+ * rhythm elsewhere (STYLE.md "tags row → first h2": 24px). max-w-prose
+ * (Tailwind's 65ch) matches every single page's own content column
+ * (single.html's #single_header/.article-content) — without it the
+ * callout stretched the full 1100px .listing width, wider than the
+ * definition text ever needed and wider than a boxed callout should read. */
+.definition-callout { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--principle); border-radius: 0 6px 6px 0; padding: 20px 22px; display: flex; flex-direction: column; gap: 10px; margin-top: 18px; margin-bottom: 32px; }
 .definition-callout-label { font-family: 'Libre Franklin', sans-serif; font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--principle-strong); }
 .definition-callout p { max-width: 72ch; font-family: 'Lora', Georgia, serif; font-size: 1rem; line-height: 1.5; }
 .definition-callout p + p { margin-top: 10px; }

@@ -1,6 +1,6 @@
 ---
 title: Beef stock
-tags: [bases, stocks]
+tags: [bases, stocks, win-the-fridge]
 source: family
 date: 2026-06-08
 cuisine: French

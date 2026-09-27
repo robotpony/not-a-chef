@@ -1,6 +1,6 @@
 ---
 title: Basic chicken ramen stock
-tags: [bases]
+tags: [bases, win-the-fridge]
 source: family
 date: 2026-06-08
 cook_time: 3–4 hr

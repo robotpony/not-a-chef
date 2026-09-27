@@ -75,4 +75,6 @@ Voice for all food essays: engineering precision meets home cook practicality. P
 
 ## Language
 
-See `~/.claude/rules/recipe-writing-rules.md` for the full recipe writing style guide.
+Recipes: see `~/.claude/skills/recipe-writing/SKILL.md` (also invoked via `/recipe-writing`) for the full recipe writing style guide.
+
+Essays: no dedicated skill for this project's food-essay voice yet — the "Food essay types" section above is the configured guidance. For shared language rules (Canadian spelling, em-dash restraint), recipe-writing's own skill says it "shares language foundations" with `~/.claude/skills/blog-writing/SKILL.md`, so that's the closest reference until a dedicated one exists.
