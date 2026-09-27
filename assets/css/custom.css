@@ -547,6 +547,12 @@ h2:has(> .ing-config) {
  * viewport edges instead of spanning it. This breaks out regardless of
  * body's own width/padding/centering (the math cancels exactly), rather
  * than hardcoding Tailwind's four responsive padding values. */
+/* 100vw includes the scrollbar's own width, but the % it's centered against
+ * doesn't (that's measured off the scrollbar-less content box), so on any
+ * desktop viewport with a visible scrollbar this trick overshoots the real
+ * edge by a few px and the page gains a matching horizontal scroll. Clip it
+ * on the one axis where it's expected to bleed anyway. */
+html { overflow-x: hidden; }
 .site-footer, .site-nav {
   width: 100vw;
   margin-left: calc(50% - 50vw);
