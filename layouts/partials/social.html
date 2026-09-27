@@ -10,7 +10,7 @@
 <meta property="og:site_name" content="{{ site.Title }}">
 <meta property="og:title" content="{{ $title }}">
 {{ with $desc }}<meta property="og:description" content="{{ . }}">{{ end }}
-<meta property="og:locale" content="{{ site.Language.LanguageCode | default site.Language.Lang }}">
+<meta property="og:locale" content="{{ site.Language.Locale | default site.Language.Lang }}">
 {{ if .IsPage }}
   <meta property="og:type" content="article">
   <meta property="article:section" content="{{ .Section }}">
