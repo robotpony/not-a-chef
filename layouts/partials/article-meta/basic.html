@@ -1,9 +1,13 @@
 {{/* Override of themes/blowfish/layouts/partials/article-meta/basic.html.
      Only change: the draft label no longer sits in the date/reading-time
      row (where it forced its own line above the tags row on recipe
-     pages). It now renders at the end of the taxonomies row, pushed to
-     the right with ms-auto, styled as a distinct --flag badge instead of
-     the same treatment as a tag — see mockups/STYLE.md "Draft state".
+     pages). It now renders at the start of the taxonomies row, to the
+     left of the tags, styled as a distinct --flag badge instead of the
+     same treatment as a tag — see mockups/STYLE.md "Draft state".
+     (Previously pushed to the far right with ms-auto: on reading pages
+     that put it at the header's right edge, right next to where the
+     reading sidebar starts, which read as if it had landed in the
+     sidebar instead of the tags row.)
      Also adds the cuisine chip at the start of the taxonomies row. */}}
 
 {{/* Determine the correct context and scope */}}
@@ -98,9 +102,12 @@
     </div>
   {{ end }}
 
-  {{/* Output taxonomies, plus the draft badge docked to the right of this same row */}}
+  {{/* Output the draft badge, then taxonomies, in the same row */}}
   {{ if or ($showDraftLabel) (.Params.showTaxonomies | default (.Site.Params.article.showTaxonomies | default false)) }}
     <div class="flex flex-row flex-wrap items-center">
+      {{ if $showDraftLabel }}
+        <span class="draft-badge mt-[0.5rem] me-2">{{ i18n "article.draft" | emojify }}</span>
+      {{ end }}
       {{ if .Params.showTaxonomies | default (.Site.Params.article.showTaxonomies | default false) }}
         {{/* Cuisine leads the row as the same yellow chip the recipe cards
           use (partials/recipe-card.html), linked to its term page. */}}
@@ -133,10 +140,6 @@
             {{ end }}
           {{ end }}
         {{ end }}
-      {{ end }}
-
-      {{ if $showDraftLabel }}
-        <span class="draft-badge ms-auto mt-[0.5rem]">{{ i18n "article.draft" | emojify }}</span>
       {{ end }}
     </div>
   {{ end }}
