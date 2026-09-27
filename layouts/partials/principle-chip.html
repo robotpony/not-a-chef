@@ -13,7 +13,11 @@
   from the reference essay, so hovering/focusing the tag itself explains
   the term without a trip to the tag page. The chip's own look (filled
   pill, not dotted underline) is unchanged — .glossary-link is not
-  applied to the anchor, only the popover-reveal wrapper is reused.
+  applied to the anchor, only the popover-reveal wrapper is reused. The
+  extra .glossary-term-chip class (custom.css) flips the popover to open
+  downward instead of the inline mechanism's default upward — the chip
+  always sits near the top of a card or a page's tags row, with no room
+  above it before colliding with the nav/hero.
 */}}
 {{ $page := .page }}
 {{ $compact := .compact }}
@@ -43,7 +47,7 @@
     {{ $chip = printf `<span class="principle-chip">%s%s</span>` ($icon | safeHTML) $label }}
   {{ end }}
   {{ if $def }}
-    <span class="glossary-term" tabindex="0">{{ $chip | safeHTML }}<span class="glossary-pop"><span class="glossary-pop-term">Win the fridge</span>{{ $def }}{{ with $essay }}<a href="{{ .RelPermalink }}">Read the full essay →</a>{{ end }}</span></span>
+    <span class="glossary-term glossary-term-chip" tabindex="0">{{ $chip | safeHTML }}<span class="glossary-pop"><span class="glossary-pop-term">Win the fridge</span>{{ $def }} {{ with $essay }}<a href="{{ .RelPermalink }}">Read the full essay →</a>{{ end }}</span></span>
   {{ else }}
     {{ $chip | safeHTML }}
   {{ end }}

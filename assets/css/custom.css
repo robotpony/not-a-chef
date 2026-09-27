@@ -310,10 +310,26 @@ main > header + section {
   transition: opacity .12s, transform .12s, visibility .12s;
   font-family: 'Lora', Georgia, serif; font-size: .84rem; line-height: 1.45; color: var(--ink-muted);
 }
+/* The 8px gap between the term and the popover (above, for breathing room)
+ * is otherwise dead space: the mouse crosses it to reach the popover, and
+ * since neither element is "hovered" mid-crossing, the popover blinks off
+ * and back on. This invisible strip is a descendant of .glossary-term (so
+ * hovering it keeps .glossary-term:hover true) sized to exactly bridge
+ * that gap, front-to-back with the popover's own footprint. */
+.glossary-term::after { content: ""; position: absolute; left: 0; bottom: 100%; width: 260px; height: 8px; }
 .glossary-term:hover .glossary-pop, .glossary-term:focus-within .glossary-pop { opacity: 1; visibility: visible; transform: translateY(0); }
 .glossary-pop-term { display: block; font-family: 'Libre Franklin', sans-serif; font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--ink); margin-bottom: 4px; }
 .glossary-pop a { font-family: 'Libre Franklin', sans-serif; font-size: .74rem; font-weight: 600; color: var(--accent-strong); text-decoration: none; display: inline-block; margin-top: 6px; }
 .glossary-pop a:hover { text-decoration: underline; }
+
+/* Principle-chip popovers (principle-chip.html) sit right at the top of a
+ * recipe card or a recipe page's tags row, with almost no room above them
+ * before colliding with the nav/hero — opening upward like an inline
+ * prose mention does, it overlaps whatever's above instead. Chip popovers
+ * open downward instead, where the rest of the card/page gives it room. */
+.glossary-term-chip .glossary-pop { bottom: auto; top: calc(100% + 8px); transform: translateY(-4px); }
+.glossary-term-chip:hover .glossary-pop, .glossary-term-chip:focus-within .glossary-pop { transform: translateY(0); }
+.glossary-term-chip::after { bottom: auto; top: 100%; }
 
 /* Ingredient list (check), sub-head, and sub-note, from mockups/style.html
  * §3. Applied client-side by assets/js/ingredients.js, not by Hugo — see
