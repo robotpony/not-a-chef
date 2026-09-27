@@ -309,6 +309,7 @@ main > header + section {
   opacity: 0; visibility: hidden; transform: translateY(4px);
   transition: opacity .12s, transform .12s, visibility .12s;
   font-family: 'Lora', Georgia, serif; font-size: .84rem; line-height: 1.45; color: var(--ink-muted);
+  white-space: normal;
 }
 /* The 8px gap between the term and the popover (above, for breathing room)
  * is otherwise dead space: the mouse crosses it to reach the popover, and
@@ -330,6 +331,19 @@ main > header + section {
 .glossary-term-chip .glossary-pop { bottom: auto; top: calc(100% + 8px); transform: translateY(-4px); }
 .glossary-term-chip:hover .glossary-pop, .glossary-term-chip:focus-within .glossary-pop { transform: translateY(0); }
 .glossary-term-chip::after { bottom: auto; top: 100%; }
+
+/* Compact form (recipe/essay cards): the popover's fixed 260px width is
+ * wider than a grid card, so anchoring it left:0 off the chip let it
+ * bleed sideways into the next card over — the actual "text overflow"
+ * fault, not the up/down direction fixed above. Dropping its own
+ * positioning context lets the popover's containing block resolve up to
+ * .rcard-top instead (given position: relative below for this purpose),
+ * so left:0/right:0 there means exactly the card's own content width —
+ * whatever that happens to be at the current breakpoint — rather than a
+ * hardcoded pixel value sized for prose. */
+.rcard-top { position: relative; }
+.glossary-term-chip-compact { position: static; }
+.glossary-term-chip-compact .glossary-pop, .glossary-term-chip-compact::after { left: 0; right: 0; width: auto; }
 
 /* Ingredient list (check), sub-head, and sub-note, from mockups/style.html
  * §3. Applied client-side by assets/js/ingredients.js, not by Hugo — see

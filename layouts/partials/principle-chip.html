@@ -18,6 +18,17 @@
   downward instead of the inline mechanism's default upward — the chip
   always sits near the top of a card or a page's tags row, with no room
   above it before colliding with the nav/hero.
+
+  Compact (card) form adds .glossary-term-chip-compact on top of that:
+  the popover's fixed 260px width is wider than a grid card, so left:0
+  let it bleed sideways into the next card. That variant drops its own
+  positioning context (position: static) so the popover's containing
+  block resolves up to .rcard-top instead (custom.css gives it
+  position: relative for exactly this), and spans left:0/right:0 there
+  — i.e. exactly the card's own width, however wide the grid happens to
+  make it, instead of a hardcoded pixel value that assumes prose-width
+  room. The full (tags-row) form keeps the original fixed-width popover
+  since that context has plenty of spare width either side.
 */}}
 {{ $page := .page }}
 {{ $compact := .compact }}
@@ -47,7 +58,8 @@
     {{ $chip = printf `<span class="principle-chip">%s%s</span>` ($icon | safeHTML) $label }}
   {{ end }}
   {{ if $def }}
-    <span class="glossary-term glossary-term-chip" tabindex="0">{{ $chip | safeHTML }}<span class="glossary-pop"><span class="glossary-pop-term">Win the fridge</span>{{ $def }} {{ with $essay }}<a href="{{ .RelPermalink }}">Read the full essay →</a>{{ end }}</span></span>
+    {{ $termClass := cond $compact "glossary-term glossary-term-chip glossary-term-chip-compact" "glossary-term glossary-term-chip" }}
+    <span class="{{ $termClass }}" tabindex="0">{{ $chip | safeHTML }}<span class="glossary-pop"><span class="glossary-pop-term">Win the fridge</span>{{ $def }} {{ with $essay }}<a href="{{ .RelPermalink }}">Read the full essay →</a>{{ end }}</span></span>
   {{ else }}
     {{ $chip | safeHTML }}
   {{ end }}
