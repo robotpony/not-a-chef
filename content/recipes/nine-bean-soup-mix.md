@@ -4,6 +4,8 @@ tags: [mains, soups, win-the-fridge]
 source: family
 date: 2026-06-08
 cuisine: Canadian
+prep_time: 5 minutes
+cook_time: ~3 hours
 draft: false
 ---
 
