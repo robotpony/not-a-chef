@@ -793,12 +793,21 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
  * (single.html's #single_header/.article-content) — without it the
  * callout stretched the full 1100px .listing width, wider than the
  * definition text ever needed and wider than a boxed callout should read. */
-.definition-callout { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--principle); border-radius: 0 6px 6px 0; padding: 20px 22px; display: flex; flex-direction: column; gap: 10px; margin-top: 18px; margin-bottom: 32px; }
+.definition-callout { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--principle); border-radius: 0 6px 6px 0; padding: 20px 22px; display: flex; flex-direction: column; gap: 10px; margin-top: 18px; margin-bottom: 32px; position: relative; }
 .definition-callout-label { font-family: 'Libre Franklin', sans-serif; font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--principle-strong); }
 .definition-callout p { max-width: 72ch; font-family: 'Lora', Georgia, serif; font-size: 1rem; line-height: 1.5; }
 .definition-callout p + p { margin-top: 10px; }
+/* Whole-tile click, same technique as .rcard-link::after: the "Read the
+ * full essay" link's ::after stretches over the whole box so there's no
+ * need to land precisely on the link text. Real links inside the
+ * definition prose (a wikilink, say) are lifted above that overlay with
+ * position:relative so they stay independently clickable — same pairing
+ * as .rcard a.cuisine-chip/.principle-chip over .rcard-link::after. */
+.definition-callout:hover, .definition-callout:focus-within { border-color: var(--principle); }
 .definition-callout .read-essay { font-family: 'Libre Franklin', sans-serif; font-size: .82rem; font-weight: 600; color: var(--principle-strong); text-decoration: none; margin-top: 4px; display: inline-block; }
+.definition-callout .read-essay::after { content: ""; position: absolute; inset: 0; }
 .definition-callout .read-essay:hover { text-decoration: underline; }
+.definition-callout p a { position: relative; z-index: 1; }
 .subsection-title { font-family: 'Libre Franklin', sans-serif; font-size: 1rem; font-weight: 700; margin: 0 0 12px; }
 .ref-list { display: flex; flex-direction: column; gap: 2px; margin-top: 4px; }
 .ref-row { display: flex; align-items: baseline; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border); font-family: 'Libre Franklin', sans-serif; font-size: .86rem; }
