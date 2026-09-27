@@ -10,4 +10,4 @@
   earning separate slots.
 */}}
 {{ $keys := dict "mechanic" "mechanic" "to serve" "to-serve" "variations" "variations" "notes" "notes" "equipment" "equipment" "special equipment" "equipment" "hardware" "equipment" }}
-{{ return index $keys . | default "" }}
+{{ return (index $keys . | default "") }}

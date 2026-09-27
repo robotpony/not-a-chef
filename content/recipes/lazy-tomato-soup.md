@@ -1,18 +1,17 @@
 ---
 title: Lazy tomato soup
 aka: Pantry peeler
-tags: [mains, soups, pasta, one-pot, weeknight]
+tags: [mains, soups, win-the-fridge, pasta, one-pot, weeknight]
 source: original
 date: 2026-09-27
 servings: 4–6
-prep_time: ~20 min
-cook_time: ~45 min
-total_time: ~1 hr 10 min
+prep_time: ~10 min
+cook_time: ~15 min
 cuisine: Canadian
-draft: true
+draft: false
 ---
 
-![Lazy tomato soup](/images/recipes/lazy-tomato-soup.jpg)
+A warm bowl of soup on a fall day is a wondrous thing. This is a classic fridge magnet recipe that I use to clean up old veg.
 
 ## Mechanic
 
@@ -53,6 +52,9 @@ Add the pasta and cook, stirring occasionally, until it's about 80% done. The st
 Stir in the parsley just before serving.
 
 Hold briefly off the heat to let the pasta finish and the soup thicken further, then serve.
+
+![Lazy tomato soup](/images/recipes/lazy-tomato-soup.jpg)
+
 
 ## To serve
 
