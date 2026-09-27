@@ -238,10 +238,10 @@
         <div class="swatch-label"><span class="swatch-name">--principle-soft</span><span class="swatch-hex">#DBF5E8 / #1B3428</span><span class="swatch-use">chip fill</span></div>
       </div>
     </div>
-    <div class="note-card">
-      <span class="note-mark">?</span>
+    <div class="note-card" style="border-left-color:var(--principle);">
+      <span class="note-mark" style="color:var(--principle-strong);">✓</span>
       <div>
-        <p><strong>Confirm:</strong> this uses green for "principle," not "vegetarian" — matches your answer, but worth flagging since it forecloses the vegetarian-indicator idea STYLE.md had also floated for this hue. If a veg/vegan marker is still wanted later, it'll need to compete for a spot inside the existing 5-hue family (STYLE.md is explicit: no 6th hue) rather than reuse this one.</p>
+        <p><strong>Decided:</strong> green = principle, win-the-fridge only. Closes STYLE.md's open question; a future veg/vegan marker would need to compete for space inside the existing 5-hue family rather than reuse this one.</p>
       </div>
     </div>
   </section>
@@ -254,16 +254,17 @@
       <p class="block-dek">Same shape as <code>.cuisine-chip</code> (filled, 3px radius, Franklin 600) so it reads as the same <em>kind</em> of thing — "a fact about this recipe," not a generic descriptor — but green and sentence case instead of yellow/uppercase. Leads the tag row same as cuisine does; when both are present, cuisine (yellow) comes first, then the principle chip, then plain tags.</p>
     </div>
 
-    <h3 class="subsection-title">Standalone</h3>
-    <p style="margin-bottom:14px;"><span class="cuisine-chip">Canadian</span> <span class="principle-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8a5 5 0 0 1 8.5-3.5M13 8a5 5 0 0 1-8.5 3.5"/><path d="M11 2v2.5H8.5M5 14v-2.5h2.5"/></svg>Win the fridge</span> <span class="tag">soups</span> <span class="tag">weeknight</span> <span class="tag tag-more">+2</span></p>
+    <h3 class="subsection-title">Standalone — full form and the card abbreviation</h3>
+    <p style="margin-bottom:8px;"><span class="cuisine-chip">Canadian</span> <span class="principle-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8a5 5 0 0 1 8.5-3.5M13 8a5 5 0 0 1-8.5 3.5"/><path d="M11 2v2.5H8.5M5 14v-2.5h2.5"/></svg>Win the fridge</span> <span class="tag">soups</span> <span class="tag">weeknight</span> <span class="tag tag-more">+2</span></p>
+    <p style="margin-bottom:14px;"><span class="cuisine-chip">Canadian</span> <span class="principle-chip" title="Win the fridge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8a5 5 0 0 1 8.5-3.5M13 8a5 5 0 0 1-8.5 3.5"/><path d="M11 2v2.5H8.5M5 14v-2.5h2.5"/></svg>WTF</span> <span class="tag">soups</span> <span class="tag">weeknight</span> <span class="tag tag-more">+2</span> <span style="font-family:'Libre Franklin',sans-serif; font-size:.78rem; color:var(--ink-faint);">← compact form, <code>title</code> attr carries the full name</span></p>
 
     <h3 class="subsection-title">On a recipe card (top row, real data — lazy-tomato-soup.md)</h3>
     <div class="rgrid" style="max-width:280px;">
       <article class="rcard">
         <div class="rcard-top">
-          <span class="principle-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8a5 5 0 0 1 8.5-3.5M13 8a5 5 0 0 1-8.5 3.5"/><path d="M11 2v2.5H8.5M5 14v-2.5h2.5"/></svg>Win the fridge</span>
-          <span class="tag">soups</span>
-          <span class="tag tag-more">+3</span>
+          <span class="cuisine-chip">Canadian</span>
+          <span class="principle-chip" title="Win the fridge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8a5 5 0 0 1 8.5-3.5M13 8a5 5 0 0 1-8.5 3.5"/><path d="M11 2v2.5H8.5M5 14v-2.5h2.5"/></svg>WTF</span>
+          <span class="tag tag-more">+5</span>
         </div>
         <h3 class="rcard-title"><a class="rcard-link" href="#">Lazy tomato soup</a></h3>
         <p class="rcard-intro">A warm bowl of soup on a fall day is a wondrous thing. This is a classic fridge magnet recipe that I use to clean up old veg.</p>
@@ -274,7 +275,10 @@
         </div>
       </article>
     </div>
-    <p class="note-card" style="display:block;"><span class="note-mark">Note —</span> the card only has 2 tag slots, and cuisine already claims one when present. On a card that has <em>both</em> a cuisine and the principle chip, something has to give: either the card grows a 3rd slot for this one case, or the principle chip pre-empts a plain tag but not cuisine. Recommend the 3rd-slot option since dropping a plain tag would make the card lie about coverage (recipes with 3+ tags already show "+N").</p>
+    <div class="note-card" style="border-left-color:var(--principle);">
+      <span class="note-mark" style="color:var(--principle-strong);">✓</span>
+      <div><p><strong>Decided:</strong> abbreviate to "WTF" on the card (the pun is very on-brand). That sidesteps the slot problem entirely — cuisine + WTF fill both existing slots with no layout change, <code>title="Win the fridge"</code> carries the full name on hover/long-press. The full "Win the fridge" spelling is kept everywhere non-compact: standalone, the recipe page's own taxonomies row, and the tag page title.</p></div>
+    </div>
 
     <h3 class="subsection-title" style="margin-top:24px;">On the recipe page itself (taxonomies row)</h3>
     <p><span class="cuisine-chip">Canadian</span> <span class="principle-chip"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8a5 5 0 0 1 8.5-3.5M13 8a5 5 0 0 1-8.5 3.5"/><path d="M11 2v2.5H8.5M5 14v-2.5h2.5"/></svg>Win the fridge</span> <span class="tag">soups</span> <span class="tag">mains</span> <span class="tag">pasta</span> <span class="tag">one-pot</span> <span class="tag">weeknight</span></p>
@@ -310,14 +314,14 @@
       before the week is out.
     </p>
 
+    <div class="note-card" style="border-left-color:var(--principle);">
+      <span class="note-mark" style="color:var(--principle-strong);">✓</span>
+      <div><p><strong>Decided:</strong> every mention gets the popover, not just the first — simpler (no per-page dedupe state in the render hook) and a reader who lands mid-page via search or a wikilink still gets the definition without hunting upward for the first occurrence.</p></div>
+    </div>
     <div class="note-card">
       <span class="note-mark">?</span>
       <div>
-        <p><strong>Two open questions here:</strong></p>
-        <ul>
-          <li>Glossary entries that <em>don't</em> get their own page (most brand names, one-off terms) — are they one flat <code>glossary.md</code> with a heading per term (my assumption above), or split by kind (ingredients vs. brands vs. technique) later if it grows?</li>
-          <li>Should every recipe/essay mention of a glossary term become a popover automatically, or only the first mention per page (like some style guides do for footnotes) — repeating a popover on every "mayonnaise" in a long essay could get noisy.</li>
-        </ul>
+        <p><strong>Still open:</strong> glossary entries that <em>don't</em> get their own page (most brand names, one-off terms) — are they one flat <code>glossary.md</code> with a heading per term (my assumption above), or split by kind (ingredients vs. brands vs. technique) later if it grows? Defaulting to flat for now — it's a one-line change to split later if the list gets long.</p>
       </div>
     </div>
   </section>
@@ -392,15 +396,9 @@
       </div>
     </div>
 
-    <div class="note-card">
-      <span class="note-mark">?</span>
-      <div>
-        <p><strong>Open questions:</strong></p>
-        <ul>
-          <li>"Reference &amp; further reading" — I pulled candidates from <code>content/reference/</code> and <code>content/essays/</code> by guessing relevance. Should this be a manual, curated list (a field in the tag's <code>_index.md</code>, like <code>related: [...]</code>), or automatic (anything else tagged <code>win-the-fridge</code> that isn't a recipe)? Manual is more work per recipe/essay but won't drag in a false match.</li>
-          <li>Does every recipe in this list need the <code>win-the-fridge</code> tag explicitly (current plan), or should some also qualify implicitly (e.g. anything filed under a future "scrap cooking" sub-tag)?</li>
-        </ul>
-      </div>
+    <div class="note-card" style="border-left-color:var(--principle);">
+      <span class="note-mark" style="color:var(--principle-strong);">✓</span>
+      <div><p><strong>Decided:</strong> automatic. "Recipes that follow this principle" and "Reference &amp; further reading" are both just <code>site.Taxonomies.tags.win-the-fridge</code>, split by section (recipes vs. reference/essays) — no <code>related:</code> field to maintain. Means every recipe in the list needs the <code>win-the-fridge</code> tag explicitly; nothing qualifies implicitly through a sub-tag or category.</p></div>
     </div>
   </section>
 
