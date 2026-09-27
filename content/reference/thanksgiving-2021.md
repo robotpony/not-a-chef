@@ -3,7 +3,7 @@ title: Thanksgiving 2021
 tags: [reference, menus, events]
 source: family
 date: 2026-06-08
-draft: false
+draft: true
 ---
 
 The focus this year is comfort foods and casserole leftovers.
