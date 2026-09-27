@@ -19,8 +19,24 @@ if [[ ! -f "$CONFIG" ]]; then
   exit 1
 fi
 
+# The system python3 (Apple's Xcode CLT one) can be older than 3.11 and lack
+# tomllib; prefer a homebrew python new enough to have it.
+PYTHON=""
+for candidate in python3.12 python3.13 python3.11 python3; do
+  if command -v "$candidate" >/dev/null 2>&1 && "$candidate" -c 'import tomllib' >/dev/null 2>&1; then
+    PYTHON="$candidate"
+    break
+  fi
+done
+
+if [[ -z "$PYTHON" ]]; then
+  echo "error: no python3 with tomllib (3.11+) found on PATH." >&2
+  echo "Install one (e.g. 'brew install python3') or upgrade the system python3." >&2
+  exit 1
+fi
+
 read_deploy_field() {
-  python3 -c "
+  "$PYTHON" -c "
 import tomllib
 with open('$CONFIG', 'rb') as f:
     data = tomllib.load(f)
