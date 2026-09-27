@@ -65,3 +65,4 @@ Fresh bread, for mopping. And I won't complain if you add fresh garlic and olive
 - Flexible by design: swap the hardy veg for whatever's about to turn.
 - Grating the aromatics reduces the time to cook and lets them melt into the soup.
 - This started out as a pasta dish that evolved into a hearty soup, that really deserves some navy beans.
+- A vegetarian version of this can use vegan fritters (to replace the meatballs), and tempeh. The principle is the same, building fond, softening veg, and using a bright wine for balance.
