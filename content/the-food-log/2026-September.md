@@ -3,6 +3,12 @@ title: September 2026
 date: 2026-09-01
 ---
 
+## Monday, September 28th
+
+#### TODO
+
+- Cornmeal-breaded chicken patty: chase the dark, mealy, crunchy breading from Chicken mall guy (see [[The impossible quest for the perfect chicken burger]]); try it on the [[Pan-fried chicken burger]] patty or a brined breast
+
 ## Friday, September 18th
 
 #### Food ideas
