@@ -20,7 +20,7 @@ Chicken burgers are a different animal, and a different post.
 
 Once you start paying attention, the checklist is short:
 
-- The patty and bun have to match in size. A burger that's mostly bun, or mostly meat hanging off the edges, has already lost.
+- The patty and bun have to match in size. A burger that's mostly bun, or mostly meat hanging off the edges, has already lost. ([[Chef John's hamburger buns]] is my bun.)
 - It has to be navigable: thin enough to bite through cleanly, not a wall of meat you have to disassemble.
 - Cooked medium to medium-well, but never tough.
 - Savoury, sharp, sour, sweet, salty, all present, none dominant.
@@ -30,6 +30,8 @@ Once you start paying attention, the checklist is short:
 ## How I build mine
 
 The burger I make now is a 140-gram thin patty, griddled, seasoned after cooking, double sour pickles, built deluxe style: lettuce, tomato, onion, pickle, ketchup, mustard. It's sublime, and every part of it is there because I tested the alternative and it lost.
+
+"Deluxe" is [[White Spot burgers]] language: lettuce and tomato make it deluxe, and that recipe is where a lot of this technique actually comes from, down to the patty weight and the seasoning timing below. I keep ketchup and mustard separate rather than blending them, but [[Bruce's burger sauce]] and the [[In-N-Out burger spread]] are both good arguments for combining them into one sauce instead.
 
 Patties don't get mixed, and they don't get seasoned until after they're cooked. Salt added early pulls moisture out and changes the texture of the meat before it ever hits the griddle; season the raw patty and you get a denser, springier bite instead of the loose, crumbly one a burger wants.
 
