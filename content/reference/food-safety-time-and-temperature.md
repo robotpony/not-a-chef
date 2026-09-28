@@ -135,4 +135,3 @@ Everything above depends on your thermometer being accurate. Check it in a glass
 
 - USDA FSIS, [Time-Temperature Tables for Cooking Ready-to-Eat Poultry Products](https://www.canr.msu.edu/resources/time-temperature-tables-for-cooking-ready-to-eat-poultry-products) (reproduced by [RiverStone Health](https://riverstonehealth.org/wp-content/uploads/SousVide_LethalityChart_Poultry.pdf))
 - USDA FSIS, [Cooking Guideline for Meat and Poultry Products (Revised Appendix A)](https://www.usda.gov/sites/default/files/guidance-documents/FSIS.%20FSIS%20Cooking%20Guideline%20for%20Meat%20and%20Poultry%20Products%20(Revised%20Appendix%20A).pdf)
-- See also [[Temperature and doneness cheat sheet]] for doneness (texture) temperatures by cut.
