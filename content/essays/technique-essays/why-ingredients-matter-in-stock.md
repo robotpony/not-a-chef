@@ -1,7 +1,7 @@
 ---
 title: Why ingredients matter in stock
-date: 2026-10-27
-draft: true
+date: 2026-09-27
+draft: false
 tags: [technique, stock]
 ---
 

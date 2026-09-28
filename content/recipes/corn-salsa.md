@@ -8,7 +8,7 @@ cuisine: Mexican
 draft: false
 ---
 
-We were at the Rempels' for dinner and Grandma made this corn salsa. I could not get enough of it.
+We were at the Rempels' for dinner and Grandma made this corn salsa. We could not get enough of it.
 
 ## Ingredients
 

@@ -1,7 +1,7 @@
 ---
 title: How to find great recipes
-date: 2026-06-08
-draft: true
+date: 2026-09-27
+draft: false
 tags: [technique, recipes]
 ---
 
