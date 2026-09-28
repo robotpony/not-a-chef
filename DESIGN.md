@@ -190,3 +190,15 @@ python tools/frontmatter.py unset <file> <field>
 `check` validates required fields (`title`+`tags` for recipes, `title`+`date` for essays, `title` for reference), warns on missing recommended fields (`source`/`date`/`draft` for recipes, `tags`/`draft` for essays, `source`/`tags`/`draft` for reference), checks `tags`/`date`/`draft` types, and flags duplicate recipe titles. Exits non-zero only on errors (missing required fields, bad types) — missing recommended fields are warnings and don't fail the run. `_index.md` and dotfiles (scratch notes like `.ideas.md`) are skipped.
 
 `set` preserves the rest of the file untouched (comments, field order, other values) and inserts new fields in `FIELD_ORDER` position when the key doesn't already exist.
+
+---
+
+## Drafts tool CLI
+
+`tools/drafts.py` — lists everything marked `draft: true` across `content/recipes/`, `content/essays/`, `content/reference/`, and `content/the-food-log/`. Reuses `frontmatter.py`'s parser directly (no separate frontmatter logic).
+
+```
+python tools/drafts.py [paths...] [--json]
+```
+
+Groups results by content type (recipes, essays, reference pages, log entries) with title and path. `--json` prints a flat list of `{path, kind, title}` objects instead.
