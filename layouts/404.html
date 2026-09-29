@@ -1,0 +1,34 @@
+{{ define "main" }}
+{{/*
+  Custom 404 (overrides themes/blowfish/layouts/404.html). A small text-
+  adventure bit — see mockups/STYLE.md for the palette/type this draws on.
+  The "looking for" line is filled in client-side from the request path,
+  since Hugo builds this page once and can't know what URL 404'd.
+*/}}
+<section class="error-404">
+  <span class="hero-eyebrow">404</span>
+  <h1>You wandered into the basement.</h1>
+
+  <div class="terminal-card">
+    <p class="term-room">BASEMENT</p>
+    <p>You are standing at the bottom of the basement stairs. A single bulb swings overhead. Recipe boxes line the far wall, water-stained and out of order.</p>
+    <p>You are looking for: <span id="term-path">something that isn&rsquo;t down here</span></p>
+    <p class="term-prompt">&gt; search boxes</p>
+    <p>Nothing matches. The bulb flickers.<span class="term-cursor" aria-hidden="true">_</span></p>
+  </div>
+
+  <nav class="term-actions" aria-label="What to do next">
+    <a class="term-link" href="{{ site.Home.RelPermalink }}">&gt; go home</a>
+    <button id="search-button" type="button" class="term-link term-link-btn">&gt; search the site</button>
+  </nav>
+</section>
+
+<script>
+  (function () {
+    var el = document.getElementById('term-path');
+    if (el && window.location.pathname && window.location.pathname !== '/') {
+      el.textContent = window.location.pathname;
+    }
+  })();
+</script>
+{{ end }}

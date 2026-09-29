@@ -1429,3 +1429,32 @@ a.comp-card:hover .comp-card-label { color: var(--accent-strong); }
   .photo-thumb img { transition: none; }
   .photo-thumb:hover img { transform: none; }
 }
+
+/* 404 — a small text-adventure bit (layouts/404.html). Reuses .hero-eyebrow
+ * for the "404" label; the terminal card is the one place IBM Plex Mono
+ * carries prose instead of just quantities/data, since it's standing in
+ * for a game/terminal voice rather than the site's normal body copy. */
+.error-404 { max-width: 640px; margin: 0 auto; padding: 48px 20px 80px; }
+.error-404 h1 {
+  font-family: 'Libre Franklin', sans-serif; font-weight: 700; letter-spacing: -.015em;
+  font-size: clamp(1.7rem, 3.4vw, 2.3rem); line-height: 1.15; margin-bottom: 28px; text-wrap: balance;
+}
+.terminal-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
+  padding: 24px 28px; font-family: 'IBM Plex Mono', monospace; font-size: .92rem;
+  line-height: 1.6; color: var(--ink);
+}
+.terminal-card p { margin: 0 0 16px; }
+.terminal-card p:last-child { margin-bottom: 0; }
+.term-room { font-weight: 600; letter-spacing: .08em; color: var(--accent-strong); font-size: .82rem; }
+.terminal-card #term-path { color: var(--accent-strong); font-weight: 600; }
+.term-prompt { color: var(--ink-muted); }
+.term-cursor { display: inline-block; margin-left: 2px; color: var(--accent-strong); animation: term-blink 1.1s steps(1) infinite; }
+@keyframes term-blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .term-cursor { animation: none; } }
+.term-actions { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 28px; }
+.term-link {
+  font-family: 'IBM Plex Mono', monospace; font-size: .88rem; color: var(--ink-muted);
+  text-decoration: none; background: none; border: none; padding: 0; cursor: pointer;
+}
+.term-link:hover { color: var(--accent-strong); }
