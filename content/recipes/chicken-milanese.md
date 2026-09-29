@@ -11,9 +11,11 @@ draft: false
 cuisine: Italian
 ---
 
+This is a lighter version of Milanese, with no egg or breadcrumbs. Crispy chicken and a pan sauce pairs nicely with fresh sides.
+
 ## Mechanic
 
-This is a lighter version of Milanese, with no egg or breadcrumbs. A quick flour dredge and fry leaves the pan full of fond, ready to become a pan sauce while the chicken rests.
+A quick flour dredge and fry leaves the pan full of fond, ready to become a pan sauce while the chicken rests.
 
 ## Ingredients
 
