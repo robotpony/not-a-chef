@@ -1446,8 +1446,12 @@ a.comp-card:hover .comp-card-label { color: var(--accent-strong); }
   text-align: center;
 }
 .terminal-card {
+  /* Scanline color is mixed from --ink rather than a fixed black, since --ink
+   * itself flips light/dark — a fixed dark line all but disappears against
+   * the dark-mode surface, where --ink (light) reads as a faint pale line
+   * instead. */
   background:
-    repeating-linear-gradient(to bottom, rgba(0, 0, 0, .06) 0px, rgba(0, 0, 0, .06) 1px, transparent 1px, transparent 3px),
+    repeating-linear-gradient(to bottom, color-mix(in srgb, var(--ink) 12%, transparent) 0px, color-mix(in srgb, var(--ink) 12%, transparent) 1px, transparent 1px, transparent 3px),
     var(--surface);
   border: 1px solid var(--border); border-radius: 16px;
   padding: 24px 28px; font-family: 'IBM Plex Mono', monospace; font-size: .92rem;
@@ -1471,3 +1475,20 @@ a.comp-card:hover .comp-card-label { color: var(--accent-strong); }
   border: 1px solid var(--border); border-radius: 8px; padding: 7px 14px;
 }
 .term-link:hover { border-color: var(--accent); color: var(--accent-strong); }
+
+/* Body text reveals line by line, like the room description is being
+ * printed to the terminal as you read it. */
+.terminal-card > * { opacity: 0; animation: term-line-in .4s ease-out forwards; }
+.terminal-card > *:nth-child(1) { animation-delay: .05s; }
+.terminal-card > *:nth-child(2) { animation-delay: .2s; }
+.terminal-card > *:nth-child(3) { animation-delay: .38s; }
+.terminal-card > *:nth-child(4) { animation-delay: .54s; }
+.terminal-card > *:nth-child(5) { animation-delay: .74s; }
+.terminal-card > *:nth-child(6) { animation-delay: .9s; }
+.terminal-card > *:nth-child(7) { animation-delay: 1.04s; }
+.terminal-card > *:nth-child(8) { animation-delay: 1.2s; }
+.terminal-card > *:nth-child(9) { animation-delay: 1.34s; }
+@keyframes term-line-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) {
+  .terminal-card > * { opacity: 1; animation: none; }
+}
