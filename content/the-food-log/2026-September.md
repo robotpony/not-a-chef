@@ -6,6 +6,10 @@ Two more passes at goulash (oven-browned this time, versus the from-scratch vers
 
 ## Tuesday, September 29th
 
+Research:
+
+- [ Base gravy for curry exmaple (newer)](https://www.youtube.com/watch?v=3Nogt06vSuc)
+
 This week's menu:
 
 1. [[Chicken Milanese]] (from freezer-marinated cutlets)
