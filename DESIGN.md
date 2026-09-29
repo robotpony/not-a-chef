@@ -132,6 +132,19 @@ Builds the site and deploys to the self-hosted server.
 - Reports build output and any errors
 - `tools/publish.sh dry-run` shows what rsync would change without deploying; `build`, `check`, and `deploy` run the steps individually
 
+### `/food-log-summary`
+
+Writes or refreshes a Food Log month's opening summary paragraph.
+
+```
+/food-log-summary [month file, e.g. 2026-September]
+```
+
+- Defaults to the most recently modified file in `content/the-food-log/`
+- Reads the month's entries and writes a short prose paragraph (what was cooked, tested, or planned) as the first thing in the body, before the first `## <Day>` heading — replacing one already there rather than stacking
+- This paragraph is what the recipe-card intro fallback picks up, so it's what shows on the Food Log list page and the homepage's "From the food log" band
+- Run on demand, not automatically — the log gets small edits constantly and re-summarizing on every one would be noisy
+
 ---
 
 ## Migration tool CLI

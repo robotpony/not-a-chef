@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Food Log card + homepage additions</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  :root{
+    --bg:#F3F3EC; --surface:#FBFBF6; --surface-2:#EAEBDF;
+    --ink:#23241E; --ink-muted:#63645A; --ink-faint:#93948A;
+    --border:#DCDCCE; --border-strong:#C7C8B4;
+    --accent:#A67330; --accent-strong:#7C361D; --accent-soft:#F6EADA;
+    --highlight:#997F29; --highlight-soft:#F6F1D5;
+    --flag:#3D638F; --flag-soft:#E1EAF4;
+    --focus:#A67330;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+      --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+      --border:#383A2C; --border-strong:#4A4C3A;
+      --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+      --highlight:#DDCC88; --highlight-soft:#342D19;
+      --flag:#97B8D8; --flag-soft:#1D2835;
+      --focus:#D3A569;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+    --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+    --border:#383A2C; --border-strong:#4A4C3A;
+    --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+    --highlight:#DDCC88; --highlight-soft:#342D19;
+    --flag:#97B8D8; --flag-soft:#1D2835;
+    --focus:#D3A569;
+  }
+
+  *{box-sizing:border-box;}
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:'Lora',Georgia,serif; font-size:16px; line-height:1.5; -webkit-font-smoothing:antialiased; }
+  p{ margin:0; }
+  a{ color:inherit; }
+  code{ font-family:'IBM Plex Mono',monospace; font-size:.85em; }
+
+  .page{ max-width:1100px; margin:0 auto; padding:32px 20px 64px; }
+  header.doc h1{ font-family:'Libre Franklin',sans-serif; font-size:1.7rem; line-height:1.15; margin:0 0 8px; }
+  header.doc p{ color:var(--ink-muted); max-width:68ch; }
+  .theme-toggle{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:600; border:1px solid var(--border-strong); border-radius:14px; padding:4px 11px; background:var(--surface); color:var(--ink-muted); cursor:pointer; margin-top:12px; }
+
+  section.band{ margin-top:44px; }
+  .band-head{ display:flex; align-items:baseline; gap:10px; margin-bottom:6px; }
+  .b-num{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--accent-strong); }
+  .band h2{ font-family:'Libre Franklin',sans-serif; font-size:1.15rem; margin:0; line-height:1.2; }
+  .band-dek{ color:var(--ink-muted); font-size:.9rem; margin-bottom:16px; max-width:72ch; }
+  .notes{ margin:18px 0 0; padding:14px 16px 14px 18px; border-left:3px solid var(--accent); background:var(--surface); border-radius:0 6px 6px 0; font-size:.88rem; }
+  .notes li{ margin:6px 0; }
+  .notes ul{ margin:0; padding-left:18px; }
+
+  .compare{ display:grid; grid-template-columns:repeat(2, minmax(0,260px)); gap:16px; align-items:stretch; }
+  .compare-label{ font-family:'Libre Franklin',sans-serif; font-size:.66rem; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); margin-bottom:6px; }
+  .compare > div{ display:flex; flex-direction:column; }
+  .compare .rcard{ flex:1; }
+  @media (max-width:560px){ .compare{ grid-template-columns:1fr; } }
+
+  /* ---------- shared card bits, copied from assets/css/custom.css ---------- */
+  .tag{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; border:1px solid var(--border-strong); color:var(--ink-muted); padding:3px 7px; border-radius:3px; display:inline-block; white-space:nowrap; }
+
+  .rgrid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(240px,1fr)); gap:16px; margin-top:4px; }
+  .rgrid.home-row, .comp-grid.home-row{ grid-template-columns:repeat(4, minmax(0,1fr)); }
+  @media (max-width:820px){ .rgrid.home-row, .comp-grid.home-row{ grid-template-columns:repeat(2, minmax(0,1fr)); gap:12px; } }
+  @media (max-width:520px){ .rgrid.home-row, .comp-grid.home-row{ grid-template-columns:1fr; } }
+
+  .rcard{ background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:14px 16px 12px; display:flex; flex-direction:column; gap:8px; min-width:0; text-decoration:none; position:relative; }
+  .rcard:hover{ border-color:var(--accent); }
+  .rcard-top{ display:flex; gap:4px; flex-wrap:nowrap; overflow:hidden; min-width:0; }
+  .rcard-top > *{ font-size:.62rem; padding:2px 5px; flex:none; }
+  .rcard-title{ font-family:'Libre Franklin',sans-serif; font-size:1.02rem; font-weight:700; line-height:1.3; letter-spacing:-.005em; text-wrap:balance; margin:0; }
+  .rcard-intro{ font-size:.84rem; line-height:1.5; color:var(--ink-muted); display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; overflow:hidden; }
+  .rcard-intro.headings{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; letter-spacing:-.01em; }
+  .rcard-stats{ margin-top:auto; padding-top:8px; border-top:1px solid var(--border); display:flex; gap:12px; white-space:nowrap; min-width:0; }
+  .rcard-stat{ display:flex; align-items:baseline; gap:4px; flex:none; }
+  .rcard-stat b{ font-family:'Libre Franklin',sans-serif; font-size:.56rem; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); }
+  .rcard-stat span{ font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums; font-size:.72rem; font-weight:600; color:var(--accent-strong); }
+
+  .comp-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:16px; margin-top:4px; }
+  .comp-card{ background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:16px; display:flex; flex-direction:column; gap:8px; text-decoration:none; }
+  .comp-card:hover{ border-color:var(--accent); }
+  .comp-card:hover .comp-card-label{ color:var(--accent-strong); }
+  .comp-card-label{ font-family:'Libre Franklin',sans-serif; font-size:.92rem; font-weight:700; }
+  .comp-card-note{ font-family:'Lora',serif; font-size:.88rem; color:var(--ink-muted); line-height:1.55; }
+  .comp-card-format{ font-family:'Libre Franklin',sans-serif; font-size:.62rem; font-weight:600; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-faint); }
+
+  .section-caveat{ font-family:'Libre Franklin',sans-serif; font-size:.78rem; color:var(--ink-faint); padding:8px 12px; background:var(--surface-2); border-radius:4px; margin-top:12px; }
+  .section-caveat strong{ color:var(--ink-muted); }
+
+  /* ---------- homepage band shell, copied from assets/css/custom.css ---------- */
+  .home-mock{ border:1px dashed var(--border-strong); border-radius:8px; }
+  .home-section{ padding:28px 24px; border-bottom:1px solid var(--border); }
+  .home-section:last-child{ border-bottom:none; }
+  .block-head{ margin-bottom:20px; display:flex; justify-content:space-between; align-items:flex-end; gap:16px; flex-wrap:wrap; }
+  .block-num{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--ink-faint); display:block; margin-bottom:4px; }
+  .block-title{ font-family:'Libre Franklin',sans-serif; font-size:1.35rem; font-weight:700; letter-spacing:-.005em; margin:0 0 6px; text-wrap:balance; }
+  .block-dek{ color:var(--ink-muted); max-width:60ch; font-size:.92rem; }
+  .mega-viewall{ font-size:.85rem; font-weight:600; color:var(--accent-strong); text-decoration:none; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="doc">
+  <h1>Food Log: card copy + two new homepage bands</h1>
+  <p>Two changes discussed 2026-09-29. One: the Food Log card's middle line switches from a dump of day/entry headings to an actual written summary. Two: the homepage gets two new bands after "Food memories" — a second essay row for everything that isn't a food memory, and a small teaser for the log itself.</p>
+  <button class="theme-toggle" id="tt" type="button">Theme: system</button>
+</header>
+
+<section class="band">
+  <div class="band-head"><span class="b-num">01</span><h2>Food Log card: before &amp; after</h2></div>
+  <p class="band-dek">Same page (<code>content/the-food-log/2026-September.md</code>), same card width. Current: the month's day headings, joined with a middle dot — reads like a table of contents, not a summary. Proposed: a short prose paragraph, same slot the recipe/essay/reference cards already use for their own intro text.</p>
+  <div class="compare">
+    <div>
+      <div class="compare-label">Current</div>
+      <a class="rcard" href="#">
+        <div class="rcard-top"></div>
+        <h3 class="rcard-title">September 2026</h3>
+        <p class="rcard-intro headings">Tuesday, September 29th · Monday, September 28th · Friday, September 18th · Monday, September 14th · Wednesday, September 9th</p>
+        <div class="rcard-stats">
+          <div class="rcard-stat" title="Days: 5"><b>Days</b><span>5</span></div>
+          <div class="rcard-stat" title="4 min"><b>Read</b><span>4m</span></div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <div class="compare-label">Proposed</div>
+      <a class="rcard" href="#">
+        <div class="rcard-top"></div>
+        <h3 class="rcard-title">September 2026</h3>
+        <p class="rcard-intro">Two more passes at goulash (oven-browned this time, versus the from-scratch version a week earlier), a freezer-marinated chicken Milanese, and a growing backlog of curries and recipe sites to work through.</p>
+        <div class="rcard-stats">
+          <div class="rcard-stat" title="Days: 5"><b>Days</b><span>5</span></div>
+          <div class="rcard-stat" title="4 min"><b>Read</b><span>4m</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="band-head"><span class="b-num">02</span><h2>Homepage, in context</h2></div>
+  <p class="band-dek">Bands 03 and 04 are new, appended after the existing "Recently added" (01) and "Food memories" (02). Essay rows sit next to each other; the log — newest, thinnest section — goes last.</p>
+  <div class="home-mock">
+
+    <div class="home-section">
+      <div class="block-head">
+        <div>
+          <span class="block-num">03</span>
+          <h2 class="block-title">Technique &amp; reflections</h2>
+          <p class="block-dek">The rest of the essays: lessons from the stove, ratios worth knowing, and a few long obsessions.</p>
+        </div>
+        <a class="mega-viewall" href="#">All essays &rarr;</a>
+      </div>
+      <div class="comp-grid home-row">
+        <a class="comp-card" href="#">
+          <span class="comp-card-format">cooking reflection</span>
+          <span class="comp-card-label">The quest for the perfect burger</span>
+          <p class="comp-card-note">What years of flipping, testing, and eating burgers taught me about the ratios and technique behind a great one.</p>
+        </a>
+        <a class="comp-card" href="#">
+          <span class="comp-card-format">cooking reflection</span>
+          <span class="comp-card-label">The impossible quest for the perfect chicken burger</span>
+          <p class="comp-card-note">Five textures, four builds, and forty years of chasing a sandwich that mostly exists in memory.</p>
+        </a>
+        <a class="comp-card" href="#">
+          <span class="comp-card-format">technique essay</span>
+          <span class="comp-card-label">Why ingredients matter in stock</span>
+          <p class="comp-card-note">My first dozen batches of stock were bad. It wasn't a flavour problem so much as a reminder that I needed a method I could repeat, not instincts I could only trust on a good day.</p>
+        </a>
+        <a class="comp-card" href="#">
+          <span class="comp-card-format">technique essay</span>
+          <span class="comp-card-label">How to find great recipes</span>
+          <p class="comp-card-note">Most recipes are hot garbage — not for bad writing, but for having no clear idea what they are, why, or what they're actually trying to teach you.</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="home-section">
+      <div class="block-head">
+        <div>
+          <span class="block-num">04</span>
+          <h2 class="block-title">From the food log</h2>
+          <p class="block-dek">The running, unfiltered version of what's cooking: tests, ideas, and the odd recipe-site rabbit hole.</p>
+        </div>
+        <a class="mega-viewall" href="#">Read the log &rarr;</a>
+      </div>
+      <div class="rgrid home-row">
+        <a class="rcard" href="#">
+          <div class="rcard-top"></div>
+          <h3 class="rcard-title">September 2026</h3>
+          <p class="rcard-intro">Two more passes at goulash (oven-browned this time, versus the from-scratch version a week earlier), a freezer-marinated chicken Milanese, and a growing backlog of curries and recipe sites to work through.</p>
+          <div class="rcard-stats">
+            <div class="rcard-stat" title="Days: 5"><b>Days</b><span>5</span></div>
+            <div class="rcard-stat" title="4 min"><b>Read</b><span>4m</span></div>
+          </div>
+        </a>
+      </div>
+      <p class="section-caveat"><strong>New.</strong> One month in — more will land here as the log grows.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="band">
+  <div class="band-head"><span class="b-num">03</span><h2>What changed / what's proposed</h2></div>
+  <div class="notes"><ul>
+    <li><b>Card intro:</b> the Food Log branch in <code>recipe-card.html</code> that joins day/entry headings goes away. Instead the card falls back to the same logic every other card already uses: <code>.Params.summary</code>, or the first paragraph before the file's first heading. A short prose paragraph gets added at the top of each month file, above the first <code>## &lt;day&gt;</code> entry.</li>
+    <li><b>Keeping it current:</b> a new command, run on demand (not a hook) — reads the current month file and (re)writes that opening paragraph from the entries added since it was last run. No auto-fire on every save, since the log gets small edits constantly and re-summarizing on each one would be noisy.</li>
+    <li><b>Stats line unchanged:</b> Days / Read still come from the existing day-count and reading-time logic — only the middle line changes.</li>
+    <li><b>Homepage band 03 ("Technique &amp; reflections"):</b> reuses <code>.comp-card</code>/<code>.comp-grid</code> exactly as the Food memories band does — same shape, format label instead of an essay type is already how the essays list page separates them (folder name &rarr; "technique essay"). Pulls everything in <code>essays/</code> outside <code>food-memories/</code> (cooking-reflections, planning-essays, technique-essays): 4 published essays today, sorted by date.</li>
+    <li><b>Homepage band 04 ("From the food log"):</b> reuses <code>.rcard</code> and <code>.rgrid.home-row</code> exactly as "Recently added" does, plus the existing <code>.section-caveat</code> component (already used elsewhere for "this section is thin") rather than inventing anything new. Shows the most recent month(s), newest first.</li>
+    <li><b>No new visual components</b> — everything above is an existing, ratified piece from <code>mockups/STYLE.md</code> reused in a new arrangement.</li>
+  </ul></div>
+</section>
+
+</div>
+<script>
+const tt = document.getElementById('tt'), modes = ['system', 'light', 'dark']; let mi = 0;
+tt.addEventListener('click', () => {
+  mi = (mi + 1) % 3; const m = modes[mi];
+  if (m === 'system') document.documentElement.removeAttribute('data-theme');
+  else document.documentElement.setAttribute('data-theme', m);
+  tt.textContent = 'Theme: ' + m;
+});
+</script>
+</body>
+</html>

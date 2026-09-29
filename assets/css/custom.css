@@ -898,6 +898,10 @@ a.principle-chip:hover, a.principle-chip:focus-visible { box-shadow: inset 0 0 0
 .comp-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px; display: flex; flex-direction: column; gap: 8px; }
 .comp-card-label { font-family: 'Libre Franklin', sans-serif; font-size: .92rem; font-weight: 700; }
 .comp-card-note { font-family: 'Lora', serif; font-size: .88rem; color: var(--ink-muted); line-height: 1.55; }
+/* Eyebrow above the title when a comp-card grid mixes formats (homepage
+ * "Technique & reflections" band, mockups/food-log-homepage.html) — the
+ * essay's folder name, same role as .rcard-stat b's faint uppercase label. */
+.comp-card-format { font-family: 'Libre Franklin', sans-serif; font-size: .62rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-faint); }
 
 .section-caveat { font-family: 'Libre Franklin', sans-serif; font-size: .78rem; color: var(--ink-faint); padding: 8px 12px; background: var(--surface-2); border-radius: 4px; }
 .section-caveat strong { color: var(--ink-muted); }

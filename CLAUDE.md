@@ -50,6 +50,7 @@ Project slash commands are in `.claude/commands/`. See DESIGN.md for description
 - `/lint` — validate recipe frontmatter
 - `/preview` — start Hugo dev server
 - `/publish` — build and deploy
+- `/food-log-summary` — write or refresh a Food Log month's opening summary paragraph (the card intro on the listing page and homepage)
 
 ## Hugo site
 

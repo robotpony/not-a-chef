@@ -21,9 +21,10 @@
   Reference guides (layouts/reference/list.html) too: the "reference"
   tag every guide carries is skipped, and the stat line is reading time.
 
-  Food Log months (layouts/the-food-log/list.html) too: the middle lists
-  the month's days (from reading-sidebar/log-month.html), and the stat
-  line is the day count and reading time.
+  Food Log months (layouts/the-food-log/list.html) too: the middle uses
+  the same intro fallback as everything else (frontmatter summary, else
+  the file's first paragraph before its first heading) rather than a
+  day/heading list, and the stat line is the day count and reading time.
 
   The win-the-fridge tag (partials/principle-chip.html) claims a top-row
   slot the same way cuisine does, and is dropped from the plain $tags
@@ -79,10 +80,8 @@
 {{ end }}
 
 {{ if $isLog }}
-  {{/* Undated pages have no days, so list their first few entries (h3s) instead. */}}
   {{ $month := partial "reading-sidebar/log-month.html" . }}
   {{ $days := $month.days }}
-  {{ $intro = delimit (cond (gt (len $days) 0) $days (first 4 $month.entries)) " · " }}
   {{ $n := cond (gt (len $days) 0) (string (len $days)) "—" }}
   {{ $stats = slice (dict "label" "Days" "value" $n "full" (cond (gt (len $days) 0) $n "undated")) (dict "label" "Read" "value" (printf "%dm" .ReadingTime) "full" (printf "%d min" .ReadingTime)) }}
 {{ end }}

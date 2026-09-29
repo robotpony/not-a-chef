@@ -2,6 +2,8 @@
 title: September 2026
 date: 2026-09-01
 ---
+Two more passes at goulash (oven-browned this time, versus the from-scratch version a week earlier), a freezer-marinated chicken Milanese, and a growing backlog of curries and recipe sites to work through.
+
 ## Tuesday, September 29th
 
 This week's menu:

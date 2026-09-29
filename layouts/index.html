@@ -9,18 +9,36 @@
   Copy follows the About page (content/about.md): first person, reader-facing.
   Section deks say what a section is for, never how it's built. Cuisine,
   essay, and reference browsing live in the header menu, so the homepage
-  keeps only what the menu can't show: recent recipes and food memories.
+  keeps only what the menu can't show: recent recipes, food memories, the
+  rest of the essays, and the Food Log.
+
+  Bands 03 ("Technique & reflections") and 04 ("From the food log") added
+  2026-09-29 (mockups/food-log-homepage.html): essay rows sit next to each
+  other, the Food Log — newest, thinnest section — goes last. Both reuse
+  existing components (comp-grid/comp-card, rgrid/rcard, section-caveat)
+  rather than inventing new ones.
 */}}
 {{ $recipes := where site.RegularPages "Section" "recipes" }}
 {{ $essays := where site.RegularPages "Section" "essays" }}
+{{ $logs := where site.RegularPages "Section" "the-food-log" }}
 {{ $tags := site.Taxonomies.tags.ByCount }}
 {{ $recent := first 4 $recipes.ByDate.Reverse }}
 {{ $memories := slice }}
+{{ $otherEssays := slice }}
 {{ range $essays }}
   {{ if strings.HasPrefix .File.Path "essays/food-memories/" }}
     {{ $memories = $memories | append . }}
+  {{ else }}
+    {{ $otherEssays = $otherEssays | append . }}
   {{ end }}
 {{ end }}
+{{ $logMonths := slice }}
+{{ range $logs }}
+  {{ $logMonths = $logMonths | append (partial "reading-sidebar/log-month.html" .) }}
+{{ end }}
+{{/* Starting from an empty Pages (not slice) keeps the result a Pages, matching $recipes/$essays. */}}
+{{ $recentLogs := first 0 $logs }}
+{{ range sort $logMonths "key" "desc" }}{{ $recentLogs = $recentLogs | append .page }}{{ end }}
 
 <section class="hero">
   <span class="hero-eyebrow">Our family cookbook</span>
@@ -72,5 +90,49 @@
       </a>
     {{ end }}
   </div>
+</section>
+
+<section class="home-section" id="more-essays">
+  <div class="block-head">
+    <div>
+      <span class="block-num">03</span>
+      <h2 class="block-title">Technique &amp; reflections</h2>
+      <p class="block-dek">The rest of the essays: lessons from the stove, ratios worth knowing, and a few long obsessions.</p>
+    </div>
+    {{ if gt (len $otherEssays) 4 }}
+      <a class="mega-viewall" href="{{ "essays" | relURL }}">All essays &rarr;</a>
+    {{ end }}
+  </div>
+  <div class="comp-grid home-row">
+    {{ range first 4 (sort $otherEssays "Date" "desc") }}
+      {{ $folder := path.Base (strings.TrimSuffix "/" .File.Dir) }}
+      <a class="comp-card" href="{{ .RelPermalink }}">
+        <span class="comp-card-format">{{ replace $folder "-" " " }}</span>
+        <span class="comp-card-label">{{ .Title }}</span>
+        <p class="comp-card-note">{{ .Summary | plainify | truncate 140 }}</p>
+      </a>
+    {{ end }}
+  </div>
+</section>
+
+<section class="home-section" id="food-log">
+  <div class="block-head">
+    <div>
+      <span class="block-num">04</span>
+      <h2 class="block-title">From the food log</h2>
+      <p class="block-dek">The running, unfiltered version of what's cooking: tests, ideas, and the odd recipe-site rabbit hole.</p>
+    </div>
+    {{ if gt (len $recentLogs) 1 }}
+      <a class="mega-viewall" href="{{ "the-food-log" | relURL }}">Read the log &rarr;</a>
+    {{ end }}
+  </div>
+  <div class="rgrid home-row">
+    {{ range first 4 $recentLogs }}
+      {{ partial "recipe-card.html" . }}
+    {{ end }}
+  </div>
+  {{ if lt (len $recentLogs) 3 }}
+    <p class="section-caveat"><strong>New.</strong> {{ len $recentLogs }} month{{ if ne (len $recentLogs) 1 }}s{{ end }} in — more will land here as the log grows.</p>
+  {{ end }}
 </section>
 {{ end }}

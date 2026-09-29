@@ -3,6 +3,8 @@ title: August 2026
 date: 2026-08-01
 ---
 
+A month of ideas rather than cooking: samosas and pakoras, empanadas, kofte, and a summer lasagne on the list, plus a couple of recipe sites bookmarked for later digging.
+
 ## Saturday, August 22nd
 
 ### Ideas
