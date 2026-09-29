@@ -3,6 +3,8 @@ title: August 2025
 date: 2025-08-01
 ---
 
+Mostly summer produce: a mango green salad, a scalable family meatball recipe, and a wide search for fresh pickles and salads — Japanese and Chinese cucumber pickles, sesame spinach, agedashi tofu — none yet tested.
+
 ## Saturday, August 9th
 
 ### Summer blow out

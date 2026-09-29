@@ -3,6 +3,8 @@ title: Spring 2024
 date: 2024-06-01
 ---
 
+A big stretch, January through June: Hawaii-trip-inspired kalua pulled pork and poke research, a bulgogi marinade and an Asian slaw dressing that both worked well on the first try, and a char siu marinade. Also dialed in: a broiled "home whopper" method, a family-weekend rotation of pulled pork, chili, and mac and cheese, and two wing sauces (gochujang, chili-lime) for puzzle nights — while a Serious Eats peanut sauce got flatly rejected in favour of trying Weissman's version next time.
+
 _Undated. January to June; the original notes grouped these as Spring._
 
 ### Rice bowls

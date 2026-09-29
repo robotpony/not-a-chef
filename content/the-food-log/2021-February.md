@@ -3,6 +3,8 @@ title: February 2021
 date: 2021-02-01
 ---
 
+A grab bag of undated notes: blog post ideas (recipe organization, winning the fridge) alongside weekend meal planning — a lasagna craving redirected toward something more traditional, a new butcher shop, homegrown sprouts and French bread, and some flexitarian musing.
+
 _Undated._
 
 ### Post ideas

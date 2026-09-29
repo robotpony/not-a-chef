@@ -3,6 +3,8 @@ title: March 2021
 date: 2021-03-01
 ---
 
+The ongoing burger quest turned up a hand-pressed frozen-patty method as a fallback for smash burgers, alongside a first attempt at a plant-based veggie patty and an updated jerk chicken marinade. This month also has an early write-up of the "win the fridge" philosophy that would later become its own essay.
+
 _Undated._
 
 ### The quest for a perfect burger

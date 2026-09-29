@@ -3,6 +3,8 @@ title: November 2025
 date: 2025-11-01
 ---
 
+First pass at goulash, aiming for an easy, thicker near-American stew but closer to authentic on caraway and paprika (4+ tablespoons per kg of meat, not 1), and skipping bacon since the pork brings enough fat on its own.
+
 ## Sunday, November 9th
 
 ### Goulash, v1

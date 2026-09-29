@@ -3,6 +3,8 @@ title: Fall and winter 2021
 date: 2021-12-01
 ---
 
+A season built around "Soupmas" — French onion nearly perfect, butternut squash and potato-leek-mushroom both landing well — and a pizza dough overhaul (a Flour Water Salt Yeast-based recipe called "a big win"). Coconut lentils became a genuine monthly rotation dish, an Indian takeaway-style base-gravy system got researched in depth, and a big Thanksgiving retrospective concluded: more prep ahead of time, skip the formal carving, think buffet.
+
 _Undated. About late September to December 2021; the original notes grouped these as Fall/Winter._
 
 ### Wintery food goals

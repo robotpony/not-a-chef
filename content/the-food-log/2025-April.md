@@ -3,6 +3,8 @@ title: April 2025
 date: 2025-04-01
 ---
 
+All research, no cooking: a lime crema and two Greek chop marinades worked out on paper (the marinade needs more lemon), and a big scatter of Mediterranean and vacation-inspired ideas — tabbouleh, homemade hummus, Jamaican beef patties, Dutch split pea soup — none yet tested.
+
 _Undated._
 
 ### April food TODO

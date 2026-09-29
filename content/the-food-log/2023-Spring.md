@@ -3,6 +3,8 @@ title: Spring 2023
 date: 2023-06-01
 ---
 
+A methodical pizza dough test (five iterations, landing on 1.5% yeast with a long ferment for a perfect crust), plus a ramen stock and chashu pork build-out, a big pre-vacation prep push that checked off beef stew, cottage pie, and meat sauce, and a running dessert bucket list (crepe cake, crème brûlée) still untouched.
+
 _Undated. About April to June; the original notes grouped these as Spring._
 
 ### June food ideas

@@ -3,6 +3,8 @@ title: Summer 2022
 date: 2022-08-01
 ---
 
+A summer built around Indian flavours: butter paneer masala worked well with cashews instead of cream, and a vindaloo wing sauce got drafted from memory. Veggie burger research turned up a black bean smash burger that needed more binding, and this year's cold-brew iced tea recipe (evolving in the house for two decades) got locked in.
+
 _Undated. The original notes called this “IT’S FUCKING SUMMER AGAIN.”_
 
 ### New ideas

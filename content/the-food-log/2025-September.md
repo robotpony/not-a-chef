@@ -3,6 +3,8 @@ title: September 2025
 date: 2025-09-01
 ---
 
+Late summer wind-down: cottage pie nailed (steamed potatoes, a simple 1:1:1:1 beef seasoning) alongside beef and chicken sandwich patties tested, a breakfast sausage recipe rebuilt by comparing three sources (landing closer to sage and marjoram), and a no-knead pizza bianca that needs more time in the oven next round.
+
 ## Friday, September 19th
 
 ### Breakfast sausage

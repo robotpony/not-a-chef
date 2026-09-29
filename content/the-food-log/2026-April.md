@@ -3,6 +3,8 @@ title: April 2026
 date: 2026-04-01
 ---
 
+A run of quick-dinner formulas locked in: breakfast wraps on the plancha, fast sauced noodle bowls, and rice bowls v3 with three tested proteins (teriyaki, bulgogi, oyster-soy-sake); a fruit crisp tested with strawberry and rhubarb; and a complicated teriyaki sauce recipe rejected in favour of the simpler 1:1:1 ratio already in the book.
+
 ## Monday, April 27th
 
 ### Various tests

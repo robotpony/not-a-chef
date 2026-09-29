@@ -3,6 +3,8 @@ title: Winter and spring 2022
 date: 2022-06-01
 ---
 
+A long curry stretch (chana masala, butter paneer masala, a Thai red curry that "worked especially well") alongside a big-batch beef stew and a ravioli filling that held together on the first try. A burger-and-chicken-sandwich cookery week produced real lessons — frozen pre-smashed patties work fine, the buttermilk chicken marinade needed more seasoning — and a char siu marinade and lentil tacos both got written up for the book.
+
 _Undated. About January to June 2022; the original notes grouped these as Winter/Spring._
 
 ### Test dishes

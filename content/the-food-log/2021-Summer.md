@@ -3,6 +3,8 @@ title: Summer 2021
 date: 2021-08-01
 ---
 
+A whole summer of stated cooking goals, most of them checked off: salsas, pickled peppers (salinity dialed in against four different reference recipes), roasted peppers, pastas and pizzas. A bread post-mortem diagnosed a too-hot oven behind some gummy loaves, a mushroom soup potage method with cashew cream "worked well," and a pizza dough reset (Detroit style, a few failed attempts along the way) kept the pizza streak alive.
+
 _Undated._
 
 ### Food goals!

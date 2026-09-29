@@ -3,6 +3,8 @@ title: Summer 2024
 date: 2024-08-01
 ---
 
+A wide-ranging summer: a quick pizza sauce that turned out great, a vindaloo paste built from whole spices, a broiled burger method dialed in (6 minutes a side at 288°C), and a teriyaki sauce ratio locked in for the rice-bowl rotation, alongside travel-inspired ideas from Atlanta and a growing retro-dishes wishlist.
+
 _Undated._
 
 ### Retro dishes

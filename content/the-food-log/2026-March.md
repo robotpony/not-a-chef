@@ -3,6 +3,8 @@ title: March 2026
 date: 2026-03-01
 ---
 
+Spring cooking: a quick avocado dressing dialed in (a bit too much citrus at 75g, aim for 50g), a marinated pressed-tofu method worked out for freezer-to-stir-fry, and a wide scatter of recipe research — dal, kale salad, pho meatballs — mostly still just links.
+
 ## Thursday, March 26th
 
 ### Explorations

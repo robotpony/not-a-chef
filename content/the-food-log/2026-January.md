@@ -3,6 +3,8 @@ title: January 2026
 date: 2026-01-01
 ---
 
+A three-course wok meal built out (mapo tofu, ginger beef, garlic broccoli, all in 30 minutes), alongside a chashu pork braise and a pork velveting technique dialed in — the wok lesson of the month being that velveting genuinely works, and scorching the oil matters. Also on the list after a good meal out: dal, paratha, and homemade yogurt.
+
 ## Monday, January 19th
 
 _Post-holidays grind (fresher foods)_

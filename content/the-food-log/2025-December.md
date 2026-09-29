@@ -3,6 +3,8 @@ title: December 2025
 date: 2025-12-01
 ---
 
+Holiday week ran heavy on batch cooking: a strawberry-rhubarb compote, a burger week testing sour bread-and-butter pickles, and tuna steaks that turned into rice bowls, salads, and sandwiches all week, plus early transglutaminase experiments toward homemade lunch meat.
+
 ## Thursday, December 25th
 
 ### Holiday week recipes

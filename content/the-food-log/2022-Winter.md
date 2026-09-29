@@ -3,6 +3,8 @@ title: Fall and winter 2022–23
 date: 2022-12-01
 ---
 
+A long stretch of systematic testing: baking soda ratios dialed in across ground beef, chicken velveting, and patties, plus a running ratio-research doc (roux, fake ramen noodles, iced coffee). A mushroom-lentil freezer base and a beef ragu built from leftover gravy both turned out well enough to keep, mushroom aglio e olio and forester gravy joined the regular rotation, and Friendsgiving's detailed hour-by-hour timeline worked as planned.
+
 _Undated. About October 2022 to March 2023; the original notes grouped these as Fall/Winter._
 
 ### Pizza day

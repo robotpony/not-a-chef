@@ -3,6 +3,8 @@ title: October 2025
 date: 2025-10-01
 ---
 
+Turkey timing dialed in for round two, dark and white meat roasted separately to hit their own targets, plus a fish burger revisit that was nostalgic but went soggy fast, and a twice-baked shepherd's-pie potato idea filed for later.
+
 ## Sunday, October 19th
 
 ### Turkey v2

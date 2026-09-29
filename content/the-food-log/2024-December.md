@@ -3,6 +3,8 @@ title: December 2024
 date: 2024-12-01
 ---
 
+A full winter-break meal plan (two turkey dinners, snacky days, soup days) sketched out day by day, alongside a breakfast sausage recipe locked in (half a pork loin at $1.20/100g works out to half the price of premade) and a steamed, three-day hoagie roll process built from four different sources.
+
 _Undated. Winter._
 
 ### Pho bo

@@ -3,6 +3,8 @@ title: April 2021
 date: 2021-04-01
 ---
 
+A dense month: a reverse-engineered White Spot burger, an upgraded turkey burger recipe, and a go-to salmon salad sandwich all written down, alongside a steak dinner routine (a nonstick pan works fine, contrary to convention) and a two-way wing/rib rub (smoky herb and Caribbean). Also locked in: a 5-day turkey prep timeline and a quick egg-and-sausage method for lunch ramen.
+
 _Undated._
 
 ### Random links

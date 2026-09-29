@@ -3,6 +3,8 @@ title: February 2025
 date: 2025-02-01
 ---
 
+Late-winter research mode: a Jamaican jerk chicken recipe card saved for spring testing (missing browning sauce), a tuna rice bowl sauce worked out, and a hot pot shopping list — proteins, veg, hardware — built for spring/summer, alongside a simple stroganoff and turkey noodle soup that actually got made.
+
 _Undated. Late winter._
 
 ### Jamaican recipe card

@@ -3,6 +3,8 @@ title: January 2025
 date: 2025-01-01
 ---
 
+Post-holiday month: pulled chicken stretched across three meals, a mushroom-quinoa side that needed more mushroom, breakfast sausage adjustments (softer grind, less fennel, sweeter), and a backlog of missed December ideas — goulash, stroganoff, French onion soup — to catch up on.
+
 _Undated._
 
 ### January meals
