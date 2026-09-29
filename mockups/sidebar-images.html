@@ -1,0 +1,450 @@
+<title>Sidebar Photos</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  /* Layout: the reading-sidebar page (title above two columns, 18.6rem rail),
+     with a Photos module in the rail and a <dialog> viewer over everything. */
+  :root{
+    --bg:#F3F3EC; --surface:#FBFBF6; --surface-2:#EAEBDF;
+    --ink:#23241E; --ink-muted:#63645A; --ink-faint:#93948A;
+    --border:#DCDCCE; --border-strong:#C7C8B4;
+    --accent:#A67330; --accent-strong:#7C361D; --accent-soft:#F6EADA;
+    --highlight:#997F29; --highlight-soft:#F6F1D5;
+    --flag:#3D638F; --flag-soft:#E1EAF4;
+    --focus:#A67330;
+    /* Viewer backdrop: dark in both themes, so photos are judged on the same ground. */
+    --scrim:rgba(20,21,16,.88);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+      --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+      --border:#383A2C; --border-strong:#4A4C3A;
+      --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+      --highlight:#DDCC88; --highlight-soft:#342D19;
+      --flag:#97B8D8; --flag-soft:#1D2835;
+      --focus:#D3A569;
+      --scrim:rgba(8,9,6,.92);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+    --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+    --border:#383A2C; --border-strong:#4A4C3A;
+    --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+    --highlight:#DDCC88; --highlight-soft:#342D19;
+    --flag:#97B8D8; --flag-soft:#1D2835;
+    --focus:#D3A569;
+    --scrim:rgba(8,9,6,.92);
+    color-scheme:dark;
+  }
+
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:'Lora',Georgia,serif; font-size:16px; line-height:1.5; -webkit-font-smoothing:antialiased; }
+  p{ margin:0; }
+  a{ color:inherit; }
+  code{ font-family:'IBM Plex Mono',monospace; font-size:.85em; }
+  img{ max-width:100%; }
+  :focus-visible{ outline:2px solid var(--focus); outline-offset:2px; }
+
+  /* ---------- harness (not site UI) ---------- */
+  .page{ max-width:1180px; margin:0 auto; padding-block:32px 64px; padding-inline:20px; }
+  header.doc h1{ font-family:'Libre Franklin',sans-serif; font-size:1.7rem; line-height:1.15; margin:0 0 8px; text-wrap:balance; }
+  header.doc p{ color:var(--ink-muted); max-width:70ch; }
+  .harness{ display:flex; flex-wrap:wrap; gap:8px 20px; align-items:center; margin:20px 0 14px; font-family:'Libre Franklin',sans-serif; }
+  .seg{ display:flex; flex-wrap:wrap; gap:6px; }
+  .seg button, .theme-toggle{ font-family:'Libre Franklin',sans-serif; font-size:.78rem; font-weight:500; padding:6px 12px; border:1px solid var(--border-strong); border-radius:14px; color:var(--ink-muted); background:transparent; cursor:pointer; }
+  .seg button[aria-pressed="true"]{ background:var(--accent-soft); border-color:var(--accent); color:var(--ink); }
+  .theme-toggle{ font-size:.72rem; font-weight:600; background:var(--surface); }
+  .harness-label{ font-size:.66rem; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); }
+  .frame{ border:1px dashed var(--border-strong); border-radius:8px; overflow:hidden; background:var(--bg); margin-inline:auto; transition:max-width .2s; }
+  .frame.phone{ max-width:390px; }
+  @media (prefers-reduced-motion: reduce){ .frame{ transition:none; } }
+  section.band{ margin-top:44px; }
+  .band h2{ font-family:'Libre Franklin',sans-serif; font-size:1.15rem; margin:0 0 6px; line-height:1.2; }
+  .band-dek{ color:var(--ink-muted); font-size:.92rem; margin-bottom:16px; max-width:72ch; }
+  .notes{ padding:14px 16px 14px 18px; border-left:3px solid var(--accent); background:var(--surface); border-radius:0 6px 6px 0; font-size:.9rem; max-width:80ch; }
+  .notes ul{ margin:0; padding-left:18px; }
+  .notes li{ margin:6px 0; }
+
+  /* ---------- site chrome ---------- */
+  .site-nav{ border-bottom:1px solid var(--border); background:var(--surface); font-family:'Libre Franklin',sans-serif; }
+  .site-nav-inner{ max-width:1100px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; gap:22px; }
+  .site-logo{ font-weight:700; font-size:1.05rem; letter-spacing:-.01em; margin-right:auto; text-decoration:none; white-space:nowrap; }
+  .brand-loves{ color:var(--accent-strong); }
+  .site-nav-links{ display:flex; gap:18px; font-size:.86rem; color:var(--ink-muted); }
+  .site-nav-links span.on{ color:var(--ink); box-shadow:inset 0 -2px 0 var(--accent); padding-bottom:2px; }
+  .burger{ display:none; width:22px; height:22px; color:var(--ink-muted); }
+  .phone .site-nav-links{ display:none; }
+  .phone .burger{ display:block; }
+  @media (max-width:680px){ .site-nav-links{ display:none; } .burger{ display:block; } }
+
+  /* ---------- page layout ---------- */
+  .page-head{ max-width:1100px; margin:0 auto; padding:24px 20px 0; }
+  .page-head > *{ max-width:65ch; }
+  .layout{ max-width:1100px; margin:0 auto; padding:0 20px 40px; display:flex; gap:40px; align-items:flex-start; }
+  .main{ flex:1 1 auto; min-width:0; max-width:65ch; }
+  .rail{ flex:0 0 18.6rem; width:18.6rem; display:flex; flex-direction:column; gap:26px; }
+  .phone .layout{ flex-direction:column; gap:28px; }
+  .phone .rail{ width:100%; flex-basis:auto; border-top:1px solid var(--border); padding-top:24px; }
+  @media (max-width:900px){ .layout{ flex-direction:column; gap:28px; } .rail{ width:100%; flex-basis:auto; border-top:1px solid var(--border); padding-top:24px; } }
+
+  .crumbs{ font-family:'Libre Franklin',sans-serif; font-size:.74rem; color:var(--ink-faint); margin-bottom:8px; }
+  .page-head h1{ font-family:'Libre Franklin',sans-serif; font-size:2.1rem; font-weight:700; line-height:1.1; letter-spacing:-.01em; margin:0 0 10px; text-wrap:balance; }
+  .phone .page-head h1{ font-size:1.7rem; }
+  .tagrow{ display:flex; gap:6px; flex-wrap:wrap; margin-bottom:22px; }
+  .tag{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; border:1px solid var(--border-strong); color:var(--ink-muted); padding:3px 7px; border-radius:3px; }
+  .chip{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; font-weight:600; background:var(--highlight-soft); color:var(--highlight); padding:3px 8px; border-radius:4px; }
+  .prose{ display:flex; flex-direction:column; gap:1.25em; }
+  .prose h2{ font-family:'Libre Franklin',sans-serif; font-size:1.5rem; line-height:1.25; margin:.5em 0 -.5em; }
+  .prose h3{ font-family:'Libre Franklin',sans-serif; font-size:1.2rem; line-height:1.3; margin:.2em 0 -.8em; }
+  .prose blockquote{ margin:0; padding-left:14px; border-left:2px solid var(--border-strong); color:var(--ink-muted); font-style:italic; }
+  .prose ul{ margin:0; padding-left:1.2em; }
+  .prose li{ margin:.25em 0; }
+  .mechanic{ padding:12px 16px; border-left:3px solid var(--accent); background:var(--surface); border-radius:0 6px 6px 0; }
+  .wikilink{ text-decoration:underline 2px color-mix(in srgb, var(--accent) 35%, transparent); text-underline-offset:3px; }
+  .wikilink::after{ content:" →"; font-size:.85em; }
+
+  /* ---------- rail modules (from reading-sidebar.html) ---------- */
+  .rail-section h2{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-faint); margin:0 0 8px; }
+  .rail-section h2 .n{ font-family:'IBM Plex Mono',monospace; font-weight:500; letter-spacing:0; margin-left:4px; }
+  .search-box{ width:100%; display:flex; align-items:center; gap:8px; background:var(--surface); border:1px solid var(--border-strong); border-radius:4px; padding:9px 11px; font-family:'Libre Franklin',sans-serif; font-size:.82rem; color:var(--ink-faint); }
+  .search-box svg{ width:15px; height:15px; flex-shrink:0; }
+  .meta-rows{ display:flex; flex-direction:column; }
+  .meta-row{ display:flex; justify-content:space-between; gap:12px; padding:6px 0; border-bottom:1px solid var(--border); font-family:'Libre Franklin',sans-serif; font-size:.82rem; color:var(--ink-muted); }
+  .meta-row:last-child{ border-bottom:none; }
+  .meta-row b{ font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums; font-weight:600; color:var(--accent-strong); }
+  .toc-c{ display:flex; flex-direction:column; }
+  .toc-c a{ font-family:'Libre Franklin',sans-serif; font-size:.84rem; font-weight:500; line-height:1.3; color:var(--ink); text-decoration:none; padding:3px 0; }
+  .toc-c a:hover{ color:var(--accent-strong); }
+  .rs-notes{ margin:0; padding:0; list-style:none; font-size:.86rem; display:flex; flex-direction:column; gap:6px; }
+  .rs-notes li{ padding-left:16px; position:relative; }
+  .rs-notes li::before{ content:"—"; position:absolute; left:0; color:var(--ink-faint); }
+  .only-desk{}
+  .phone .only-desk{ display:none; }
+  @media (max-width:900px){ .only-desk{ display:none; } }
+
+  /* ---------- NEW: Photos module ---------- */
+  .photos{ display:grid; gap:6px; grid-template-columns:repeat(3, 1fr); }
+  .photos.n1{ grid-template-columns:1fr; }
+  .photos.n2, .photos.n4{ grid-template-columns:repeat(2, 1fr); }
+  .thumb{ position:relative; display:block; width:100%; padding:0; border:0; border-radius:4px; overflow:hidden; background:var(--surface-2); cursor:zoom-in; aspect-ratio:1; max-width:100%; }
+  .photos.n1 .thumb{ aspect-ratio:4/3; }
+  .thumb img{ display:block; width:100%; height:100%; object-fit:cover; transition:transform .25s ease, filter .25s ease; }
+  .thumb::after{ content:""; position:absolute; inset:0; border-radius:4px; box-shadow:inset 0 0 0 1px color-mix(in srgb, var(--ink) 10%, transparent); pointer-events:none; transition:box-shadow .15s; }
+  .thumb:hover::after{ box-shadow:inset 0 0 0 2px var(--accent); }
+  .thumb:hover img{ transform:scale(1.03); }
+  .thumb .more{ position:absolute; inset:0; display:grid; place-items:center; background:rgba(20,21,16,.55); color:#FBFBF6; font-family:'IBM Plex Mono',monospace; font-size:.9rem; font-weight:600; }
+  .photo-cap{ font-family:'Lora',Georgia,serif; font-size:.8rem; line-height:1.45; color:var(--ink-muted); margin-top:7px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+  .photo-cap .from{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; color:var(--ink-faint); }
+  @media (prefers-reduced-motion: reduce){ .thumb img{ transition:none; } .thumb:hover img{ transform:none; } }
+
+  /* Phone: the reading rail sits below the article and the recipe rail is
+     collapsed, so photos move up into the page head as a strip. */
+  .photo-strip{ display:none; gap:6px; margin:-10px 0 22px; overflow-x:auto; scrollbar-width:none; }
+  .photo-strip .thumb{ flex:0 0 64px; width:64px; height:64px; }
+  .photo-strip.solo .thumb{ flex-basis:112px; width:112px; height:84px; aspect-ratio:auto; }
+  .phone .photo-strip{ display:flex; }
+  .phone .rail .photos-module{ display:none; }
+  @media (max-width:900px){ .photo-strip{ display:flex; } .rail .photos-module{ display:none; } }
+
+  /* Optional: a small marker left where the image was in the text. */
+  .photo-anchor{ display:inline-flex; align-items:center; gap:5px; align-self:flex-start; font-family:'Libre Franklin',sans-serif; font-size:.74rem; font-weight:500; color:var(--ink-muted); background:transparent; border:1px solid var(--border-strong); border-radius:3px; padding:3px 8px 3px 6px; cursor:zoom-in; }
+  .photo-anchor:hover{ border-color:var(--accent); color:var(--accent-strong); }
+  .photo-anchor svg{ width:14px; height:14px; }
+  .photo-anchor .n{ font-family:'IBM Plex Mono',monospace; font-size:.7rem; color:var(--ink-faint); }
+  .no-anchors .photo-anchor{ display:none; }
+
+  /* ---------- NEW: pop-over viewer ---------- */
+  dialog.viewer{ border:0; padding:0; margin:0; width:100%; height:100%; max-width:none; max-height:none; background:transparent; color:var(--ink); }
+  dialog.viewer::backdrop{ background:var(--scrim); }
+  .viewer-inner{ height:100%; display:grid; grid-template-rows:auto 1fr auto; padding:14px max(16px, 3vw) 18px; gap:12px; }
+  .viewer-top{ display:flex; justify-content:space-between; align-items:center; font-family:'IBM Plex Mono',monospace; font-size:.78rem; color:#C7C8B4; font-variant-numeric:tabular-nums; }
+  .vbtn{ display:grid; place-items:center; width:40px; height:40px; border-radius:50%; border:1px solid rgba(236,238,226,.25); background:rgba(20,21,16,.4); color:#ECEEE2; cursor:pointer; }
+  .vbtn:hover{ border-color:#D3A569; color:#D3A569; }
+  .vbtn svg{ width:18px; height:18px; }
+  .vbtn[disabled]{ opacity:.3; cursor:default; }
+  .viewer-stage{ min-height:0; display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:12px; }
+  .viewer-stage figure{ margin:0; min-width:0; height:100%; display:grid; place-items:center; }
+  .viewer-stage img{ max-width:100%; max-height:100%; object-fit:contain; border-radius:4px; box-shadow:0 10px 40px rgba(0,0,0,.4); }
+  .viewer-foot{ justify-self:center; width:min(100%, 44rem); background:var(--surface); border-radius:6px; padding:12px 16px; display:flex; flex-direction:column; gap:4px; }
+  .viewer-foot .cap{ font-family:'Lora',Georgia,serif; font-size:.92rem; line-height:1.45; }
+  .viewer-foot .src{ font-family:'Libre Franklin',sans-serif; font-size:.74rem; color:var(--ink-faint); display:flex; flex-wrap:wrap; gap:4px 12px; }
+  .viewer-foot .src a{ color:var(--accent-strong); text-decoration:none; font-weight:600; }
+  .viewer-foot .src a:hover{ text-decoration:underline; }
+  .phone-sim .viewer-stage{ grid-template-columns:1fr; }
+  .phone-sim .viewer-stage .vbtn{ display:none; }
+  @media (max-width:680px){ .viewer-stage{ grid-template-columns:1fr; } .viewer-stage .vbtn{ display:none; } .viewer-inner{ padding-inline:12px; } }
+</style>
+
+<div class="page">
+
+<header class="doc">
+  <h1>Photos in the sidebar</h1>
+  <p>Images come out of the recipe or essay body and into a Photos module in the sidebar: thumbnails in the rail, a pop-over viewer on click. Real pages and the real photos already on the site. Click any thumbnail; arrow keys step through, Esc closes.</p>
+</header>
+
+<div class="harness" role="group" aria-label="Mockup controls">
+  <span class="harness-label">Page</span>
+  <div class="seg" id="pageSeg">
+    <button type="button" data-page="essay" aria-pressed="true">Essay · 1 tall</button>
+    <button type="button" data-page="recipe" aria-pressed="false">Recipe · 1 wide</button>
+    <button type="button" data-page="log" aria-pressed="false">Food Log · 1</button>
+    <button type="button" data-page="many" aria-pressed="false">Stress · 6</button>
+  </div>
+  <span class="harness-label">Width</span>
+  <div class="seg" id="widthSeg">
+    <button type="button" data-w="desk" aria-pressed="true">Desktop</button>
+    <button type="button" data-w="phone" aria-pressed="false">Phone</button>
+  </div>
+  <span class="harness-label">Marker in text</span>
+  <div class="seg" id="anchorSeg">
+    <button type="button" data-a="on" aria-pressed="true">Shown</button>
+    <button type="button" data-a="off" aria-pressed="false">None</button>
+  </div>
+  <button class="theme-toggle" id="tt" type="button">Theme: system</button>
+</div>
+
+<div class="frame" id="frame">
+  <div class="site-nav"><div class="site-nav-inner">
+    <a class="site-logo" href="#">Bruce <span class="brand-loves">loves</span> to cook.</a>
+    <nav class="site-nav-links" id="navLinks">
+      <span data-nav="recipe">Recipes ▾</span><span data-nav="essay">Essays</span><span data-nav="log">The Food Log</span><span>Reference ▾</span><span>About</span>
+    </nav>
+    <svg class="burger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </div></div>
+  <header class="page-head" id="head"></header>
+  <div class="layout">
+    <article class="main" id="main"></article>
+    <aside class="rail" id="rail" aria-label="Sidebar"></aside>
+  </div>
+</div>
+
+<section class="band">
+  <h2>How it behaves</h2>
+  <div class="notes"><ul>
+    <li><b>Rail placement.</b> Photos sits right under the Date rows (recipes: under the meta rail), above Notes and "On this page". It's the one visual thing in the rail, so it goes where the eye lands first.</li>
+    <li><b>Grid by count.</b> 1 photo: full rail width at 4:3 with its caption. 2 or 4: two columns. 3, 5, 6: three columns of squares, no captions. Past 6, the sixth tile shows <code>+N</code> and opens the viewer there.</li>
+    <li><b>Crops only in the rail.</b> Thumbnails are <code>object-fit: cover</code>, so the 9:16 burger phone shot and the 4:3 soup both fit the grid. The viewer always shows the whole photo, uncropped.</li>
+    <li><b>Phone.</b> The reading rail falls below the article and the recipe rail starts collapsed, so a photo in either would be out of sight. On phones the module moves up into the page head as a strip of 64px thumbnails under the tags.</li>
+    <li><b>Viewer.</b> A native <code>&lt;dialog&gt;</code>: dark backdrop in both themes, whole image fitted to the screen, caption from the alt text, "N / M" counter, prev/next, Esc or backdrop click to close, swipe on touch. Focus returns to the thumbnail that opened it.</li>
+    <li><b>Marker in text (optional).</b> A small "Photo" button where the image used to be. It matters for the Food Log, where a photo belongs to a specific entry; the viewer's "From" line covers the same need if the marker feels like clutter.</li>
+  </ul></div>
+</section>
+
+<section class="band">
+  <h2>How it would build</h2>
+  <div class="notes"><ul>
+    <li><b>Authoring stays the same.</b> Keep writing <code>![alt](/images/…)</code> in Obsidian, so the vault preview still shows photos inline.</li>
+    <li><b>A render-image hook</b> (<code>layouts/_default/_markup/render-image.html</code>, new) wraps each image in a <code>&lt;figure data-sidebar-photo&gt;</code> with an id and records the nearest heading for the "From" line.</li>
+    <li><b><code>automagic-sidebar.js</code></b> already moves Notes, Mechanic, and friends into <code>data-sidebar-slot</code> boxes. A <code>photos</code> slot gets the same treatment: gather the figures, build the grid, leave the marker behind. Without JS, photos stay inline where they were written.</li>
+    <li><b>Print</b> hides the sidebar, so the inline figures should stay in the DOM, hidden on screen and shown in print.</li>
+    <li><b>Open question: thumbnail weight.</b> Images live in <code>static/</code>, which Hugo can't resize; the soup photo is 4032×3024. Real thumbnails need the images moved to <code>assets/</code> (or page bundles) so the hook can call <code>.Fill "400x400"</code>. Until then the rail loads full-size files.</li>
+    <li><b>Open question: lead photo on cards.</b> Once a recipe has photos, the first one could also go on its recipe card. Out of scope here.</li>
+  </ul></div>
+</section>
+
+</div>
+
+<dialog class="viewer" id="viewer" aria-label="Photo viewer">
+  <div class="viewer-inner">
+    <div class="viewer-top">
+      <span id="vCount">1 / 1</span>
+      <button class="vbtn" type="button" id="vClose" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="viewer-stage">
+      <button class="vbtn" type="button" id="vPrev" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <figure><img id="vImg" alt=""></figure>
+      <button class="vbtn" type="button" id="vNext" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+    <div class="viewer-foot">
+      <p class="cap" id="vCap"></p>
+      <p class="src" id="vSrc"></p>
+    </div>
+  </div>
+</dialog>
+
+<script>
+const IMG = {
+  blt:   { src:'img/homebrewed-chicken-blt.jpg', alt:'A homebrewed chicken BLT: minced chicken patty, bacon, yellow mustard, red onion, tomato, and shredded lettuce on a sesame bun', from:'Opening', page:'The impossible quest for the perfect chicken burger' },
+  soup:  { src:'img/lazy-tomato-soup.jpg', alt:'Lazy tomato soup', from:'Method', page:'Lazy tomato soup' },
+  card:  { src:'img/2025-jamaica-jerk-chicken-festival-card.jpg', alt:'Printed recipe card from Cooking Jamaica Experience, Unity Hall, Montego Bay: jerk chicken and Jamaican festival', from:'Jamaican recipe card', page:'February 2025' },
+  stock: { src:'img/2025-stock-cooling-pan-in-pan.jpg', alt:'Speedy stock cooling method: a pot of reduced soup stock with ice cubes, set inside a wider pan', from:'Tuesday, June 10th · Week plan', page:'June 2025' },
+  salad: { src:'img/autumn-glow-salad-with-lemon-dressing.jpg', alt:'Autumn glow salad with lemon dressing', from:'Opening', page:'Autumn glow salad with lemon dressing' },
+  cran:  { src:'img/candied-cranberries-sugared-cranberries.jpg', alt:'Candied cranberries (sugared cranberries)', from:'Opening', page:'Candied cranberries' },
+};
+
+const CAM = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 8h3l2-2.5h6L17 8h3v11H4z"/><circle cx="12" cy="13.5" r="3.5"/></svg>';
+const SEARCH = '<div class="search-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>Search recipes, essays, guides</div>';
+const anchor = i => `<button type="button" class="photo-anchor" data-open="${i}">${CAM}Photo<span class="n">${i+1}</span></button>`;
+
+const PAGES = {
+  essay: {
+    nav:'essay', photos:['blt'],
+    head:`<div class="crumbs">Essays / Cooking reflections</div><h1>The impossible quest for the perfect chicken burger</h1><div class="tagrow"><span class="tag">cooking-reflection</span><span class="tag">burgers</span><span class="tag">chicken</span></div>`,
+    body:`<p>According to <code>r/burgers</code>, most chicken burgers are not burgers:</p>
+      <blockquote>A chicken sandwich contains an entire piece of chicken or filet, rather a ground and blended patty. A pulled chicken sandwich is also not a burger.</blockquote>
+      <p>On paper, that leaves room for ground chicken. A minced patty is built exactly like a burger: ground meat, salted, formed, seared. In practice, the subreddit rejects those too. I've tried.</p>
+      ${anchor(0)}
+      <p>I'm going to keep calling it a chicken burger. I've been chasing a good one for most of my life, and I'm not about to lose the argument on a technicality.</p>
+      <h2>Chicken mall guy</h2>
+      <p>About forty years ago there was a guy in a mall food court who made the best crunchy chicken burger I've ever had. I don't remember his name or his stall, so he's just Chicken mall guy.</p>
+      <p>His patty was a chicken breast, medium-brined, in a dark, mealy, crunchy breading. It wasn't a KFC-style flaky coating. It was closer to cornmeal: gritty, fried hard, and deeply browned.</p>`,
+    rail: p => `${SEARCH}
+      <div class="meta-rows"><div class="meta-row">Date<b>28 Sep 2026</b></div></div>
+      ${p}
+      <div class="rail-section only-desk"><h2>On this page</h2><div class="toc-c">
+        <a href="#">Chicken mall guy</a><a href="#">Four years of Burger King</a><a href="#">The crunch camp</a><a href="#">The Subway sub</a><a href="#">Fast food chicken is engineered</a><a href="#">Three patties</a><a href="#">Four builds</a><a href="#">The rule under all of it</a>
+      </div></div>`,
+  },
+  recipe: {
+    nav:'recipe', photos:['soup'],
+    head:`<div class="crumbs">Recipes / Mains</div><h1>Lazy tomato soup</h1><div class="tagrow"><span class="chip">Canadian</span><span class="tag">soups</span><span class="tag">win-the-fridge</span><span class="tag">one-pot</span><span class="tag">weeknight</span></div>`,
+    body:`<p>A warm bowl of soup on a fall day is a wondrous thing. This is a classic fridge magnet recipe that I use to clean up old veg.</p>
+      <h2>Method</h2>
+      <p>Add the pasta and cook, stirring occasionally, until it's about 80% done. The starch it sheds is what thickens the soup. Season with balsamic, thyme, oregano, salt, and pepper.</p>
+      <p>Stir in the parsley just before serving.</p>
+      <p>Hold briefly off the heat to let the pasta finish and the soup thicken further, then serve.</p>
+      ${anchor(0)}
+      <h2>To serve</h2>
+      <p>Fresh bread, for mopping. And I won't complain if you add fresh garlic and olive oil to that bread.</p>`,
+    rail: p => `${SEARCH}
+      <div class="meta-rows"><div class="meta-row">Serves<b>4–6</b></div><div class="meta-row">Prep<b>~10 min</b></div><div class="meta-row">Cook<b>~15 min</b></div><div class="meta-row">Date<b>27 Sep 2026</b></div></div>
+      ${p}
+      <div class="rail-section"><h2>Mechanic</h2><div class="mechanic" style="font-size:.86rem">This is a one-pot pasta: the pasta cooks directly in the soup, with starch as the only thickener.</div></div>
+      <div class="rail-section"><h2>Notes</h2><ul class="rs-notes"><li>Flexible by design: swap the hardy veg for whatever's about to turn.</li><li>Grating the aromatics reduces the time to cook and lets them melt into the soup.</li></ul></div>`,
+  },
+  log: {
+    nav:'log', photos:['card'],
+    head:`<div class="crumbs">The Food Log</div><h1>February 2025</h1><div class="tagrow"></div>`,
+    body:`<p><em>Undated. Late winter.</em></p>
+      <h3>Jamaican recipe card</h3>
+      <p>Note: this recipe is missing browning sauce. Will test and add to the book this Spring.</p>
+      ${anchor(0)}
+      <h3>Tuna rice bowls</h3>
+      <p><a class="wikilink" href="#">Tuna rice bowl</a></p>
+      <ul><li>Tuna sauce: 2 tbsp mayonnaise, 1 tbsp sriracha, 2 tsp soy sauce, ½ tsp rice wine vinegar, ½ tsp toasted sesame oil</li><li>Tuna steaks: slice ~2 cm, cube after cooking, toss in sauce</li></ul>`,
+    rail: p => `${SEARCH}
+      <div class="meta-rows"><div class="meta-row">Date<b>1 Feb 2025</b></div></div>
+      ${p}
+      <div class="rail-section only-desk"><h2>On this page</h2><div class="toc-c"><a href="#">Jamaican recipe card</a><a href="#">Tuna rice bowls</a><a href="#">Hot pots research for spring/summer</a><a href="#">February food ideas</a><a href="#">Dessert ideas</a></div></div>`,
+  },
+  many: {
+    nav:'essay', photos:['blt','soup','salad','cran','card','stock'],
+    head:`<div class="crumbs">Stress test · not a real page</div><h1>Six photos on one page</h1><div class="tagrow"><span class="tag">layout test</span></div>`,
+    body:`<p>Every photo on the site at the moment, on one page, to check the three-column grid with mixed shapes: a 9:16 phone shot, a 4:3 landscape, a 3:4 portrait, a square, a scanned card, and a small wide screenshot.</p>
+      ${anchor(0)} ${anchor(3)}
+      <p>The grid crops each to a square; open any of them to see the whole image.</p>`,
+    rail: p => `${SEARCH}
+      <div class="meta-rows"><div class="meta-row">Date<b>28 Sep 2026</b></div></div>
+      ${p}`,
+  },
+};
+
+const $ = s => document.querySelector(s);
+let state = { page:'essay', w:'desk', a:'on' };
+let current = [];
+
+function thumb(key, i, cls=''){
+  const im = IMG[key];
+  return `<button type="button" class="thumb ${cls}" data-open="${i}" aria-label="Open photo ${i+1}: ${im.alt}"><img src="${im.src}" alt="" loading="lazy"></button>`;
+}
+
+function photosModule(keys){
+  const n = keys.length, cap = 6;
+  const shown = keys.slice(0, cap);
+  const cls = n === 1 ? 'n1' : (n === 2 || n === 4) ? 'n2' : 'n3';
+  const tiles = shown.map((k, i) => {
+    if (i === cap - 1 && n > cap) return thumb(k, i).replace('</button>', `<span class="more">+${n - cap + 1}</span></button>`);
+    return thumb(k, i);
+  }).join('');
+  const caption = n === 1 ? `<p class="photo-cap">${IMG[keys[0]].alt}</p>` : '';
+  return `<div class="rail-section photos-module"><h2>Photos<span class="n">${n}</span></h2><div class="photos ${cls}">${tiles}</div>${caption}</div>`;
+}
+
+function strip(keys){
+  return `<div class="photo-strip ${keys.length === 1 ? 'solo' : ''}" aria-label="Photos">${keys.map((k, i) => thumb(k, i)).join('')}</div>`;
+}
+
+function render(){
+  const p = PAGES[state.page];
+  current = p.photos;
+  $('#head').innerHTML = p.head;
+  $('#head').insertAdjacentHTML('beforeend', strip(p.photos));
+  $('#main').innerHTML = `<div class="prose">${p.body}</div>`;
+  $('#rail').innerHTML = p.rail(photosModule(p.photos));
+  document.querySelectorAll('#navLinks span').forEach(s => s.classList.toggle('on', s.dataset.nav === p.nav));
+  $('#frame').className = 'frame' + (state.w === 'phone' ? ' phone' : '') + (state.a === 'off' ? ' no-anchors' : '');
+}
+
+function seg(id, key){
+  $(id).addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    $(id).querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b));
+    state[key] = b.dataset[key === 'page' ? 'page' : key === 'w' ? 'w' : 'a'];
+    render();
+  });
+}
+seg('#pageSeg', 'page'); seg('#widthSeg', 'w'); seg('#anchorSeg', 'a');
+
+/* ---------- viewer ---------- */
+const dlg = $('#viewer');
+let idx = 0;
+function show(i){
+  idx = (i + current.length) % current.length;
+  const im = IMG[current[idx]];
+  $('#vImg').src = im.src; $('#vImg').alt = im.alt;
+  $('#vCap').textContent = im.alt;
+  $('#vSrc').innerHTML = `<span>From ${im.from}</span><a href="#" data-jump>Jump to it in the text →</a>`;
+  $('#vCount').textContent = `${idx + 1} / ${current.length}`;
+  const multi = current.length > 1;
+  $('#vPrev').disabled = !multi; $('#vNext').disabled = !multi;
+  $('#vPrev').style.visibility = $('#vNext').style.visibility = multi ? '' : 'hidden';
+}
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-open]');
+  if (t && !dlg.contains(t)){
+    dlg.classList.toggle('phone-sim', state.w === 'phone');
+    show(+t.dataset.open);
+    dlg.showModal();
+  }
+});
+$('#vClose').onclick = () => dlg.close();
+$('#vPrev').onclick = () => show(idx - 1);
+$('#vNext').onclick = () => show(idx + 1);
+dlg.addEventListener('click', e => {
+  if (e.target.closest('[data-jump]')){
+    e.preventDefault(); dlg.close();
+    const a = document.querySelector(`#main .photo-anchor[data-open="${idx}"]`);
+    if (a){ a.scrollIntoView({ block:'center', behavior:'smooth' }); a.focus({ preventScroll:true }); }
+    return;
+  }
+  if (e.target.closest('.viewer-foot, img, .vbtn')) return;
+  dlg.close();
+});
+dlg.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight') show(idx + 1);
+  if (e.key === 'ArrowLeft') show(idx - 1);
+});
+let x0 = null;
+dlg.addEventListener('pointerdown', e => { x0 = e.clientX; });
+dlg.addEventListener('pointerup', e => {
+  if (x0 === null || current.length < 2) return;
+  const dx = e.clientX - x0; x0 = null;
+  if (Math.abs(dx) > 50 && e.pointerType !== 'mouse') show(idx + (dx < 0 ? 1 : -1));
+});
+
+/* ---------- theme toggle ---------- */
+const modes = ['system', 'light', 'dark'];
+let m = 0;
+$('#tt').onclick = () => {
+  m = (m + 1) % 3;
+  if (modes[m] === 'system') document.documentElement.removeAttribute('data-theme');
+  else document.documentElement.setAttribute('data-theme', modes[m]);
+  $('#tt').textContent = 'Theme: ' + modes[m];
+};
+
+render();
+</script>

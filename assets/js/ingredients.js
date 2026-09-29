@@ -550,6 +550,8 @@
       acceptNode: function (node) {
         var p = node.parentNode;
         if (p && (p.classList.contains('qty') || p.classList.contains('temp'))) return NodeFilter.FILTER_REJECT;
+        // Photo markers and captions (automagic-sidebar.js) aren't method text.
+        if (p && p.closest('.photo-marker, figure')) return NodeFilter.FILTER_REJECT;
         return NodeFilter.FILTER_ACCEPT;
       }
     });

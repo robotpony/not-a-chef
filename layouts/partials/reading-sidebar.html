@@ -40,6 +40,11 @@
   {{/* Notes, relocated by automagic-sidebar.js like the slots below, but
     placed above "On this page" so it isn't pushed under a long heading
     list. Hidden until filled. */}}
+  {{/* Photos: the page's images, gathered here by automagic-sidebar.js
+    (initPhotos) as thumbnails that open a viewer. Desktop only; on
+    mobile they sit as a strip under the title instead. */}}
+  <div class="rs-section recipe-sidebar-section sidebar-photos" data-sidebar-slot="photos" hidden></div>
+
   <div class="rs-section recipe-sidebar-section" data-sidebar-slot="notes" hidden></div>
 
   {{/* On this page: desktop only. On mobile, Blowfish's collapsible TOC

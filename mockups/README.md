@@ -37,6 +37,14 @@ in a browser — no build step.
   Food Log, and About pages (2026-09-24). Not built yet. Also published as
   an artifact: https://claude.ai/artifact/Ga6iBFYqvHfFt1yki672pg
 
+- **`sidebar-images.html`**: proposal (2026-09-28) to move recipe, essay,
+  and Food Log images out of the body into a sidebar Photos module, with
+  thumbnails and a pop-over viewer. Uses web-sized copies of the site's
+  real photos in `img/`. Built 2026-09-28 (`render-image.html`,
+  `initPhotos` in `automagic-sidebar.js`); `STYLE.md`'s Photos entry
+  describes it. Also published as an artifact:
+  https://claude.ai/artifact/U1bhBmJqEwpNb8Bhfx7yGf
+
 - **`win-the-fridge.html`** — special treatment for the win-the-fridge tag
   (2026-09-27): the green principle chip, the glossary popover mechanism,
   the `/tags/win-the-fridge/` definition-callout term page, and the new

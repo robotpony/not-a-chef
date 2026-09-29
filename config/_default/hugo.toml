@@ -32,3 +32,15 @@ enableGitInfo = true
   [[related.indices]]
     name = "date"
     weight = 10
+
+# static/images is also mounted as assets/images so the image render hook
+# (layouts/_default/_markup/render-image.html) can resize photos into
+# thumbnails. Declaring any assets mount replaces Hugo's default one, so
+# the plain assets/ mount is restated first.
+[module]
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "static/images"
+    target = "assets/images"

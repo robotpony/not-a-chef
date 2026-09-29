@@ -204,6 +204,16 @@ Use wiki links to reference other recipes as ingredients or related reading:
 
 Wiki links resolve by matching `title` in frontmatter. They work natively in Obsidian and require a render hook in Hugo.
 
+## Photos
+
+Put photos in `static/images/<section>/` (`recipes`, `essays`, `food-log`) and embed them with standard markdown where they belong in the text:
+
+```markdown
+![Lazy tomato soup](/images/recipes/lazy-tomato-soup.jpg)
+```
+
+The alt text doubles as the caption, so describe what's in the photo. On the site, photos move out of the text into the sidebar as thumbnails that open a viewer, with a small "Photo N" marker left in their place. In Obsidian, and in print, they stay inline.
+
 ## File naming
 
 Kebab-case. One recipe per file. Match the title: `dal-tadka.md` for "Dal tadka". Special characters should be replaced by their equivalent or removed, e.g., 

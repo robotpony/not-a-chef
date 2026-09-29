@@ -1,4 +1,4 @@
-// Sidebar behaviour: section relocation, the mobile toggle, the
+// Sidebar behaviour: section relocation, photos, the mobile toggle, the
 // frontmatter meta rail's live Serves value, and the reading sidebar's
 // "On this page" section toggles.
 //
@@ -135,8 +135,218 @@
     });
   }
 
+  // --- Photos -------------------------------------------------------------
+  //
+  // mockups/sidebar-images.html. render-image.html renders every markdown
+  // image as a figure[data-sidebar-photo], inline. On pages with a photos
+  // slot this moves them out of the reading flow: thumbnails in the
+  // sidebar (desktop) and a strip under the title (mobile), both opening a
+  // <dialog> viewer. Each figure is hidden on screen (it still prints) and
+  // a small "Photo N" marker is left where it was. Runs before
+  // moveSidebarSections, so an image inside Notes is gathered here rather
+  // than carried into the sidebar with its section.
+  var CAMERA = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-2.5h6L17 8h3v11H4z"/><circle cx="12" cy="13.5" r="3.5"/></svg>';
+
+  function headingText(h) {
+    return h.textContent.replace(/\s+/g, ' ').trim();
+  }
+
+  // Nearest heading above the figure, for the viewer's "From" line. An h3
+  // or deeper gets its h2 in front ("Tuesday, June 10th · Week plan"),
+  // since Food Log entry names repeat from day to day.
+  function photoSource(fig, article) {
+    var el = fig, found = null;
+    while (el && el !== article) {
+      var prev = el.previousElementSibling;
+      while (prev) {
+        if (/^H[2-4]$/.test(prev.tagName)) {
+          if (!found) {
+            found = prev;
+            if (prev.tagName === 'H2') return headingText(found);
+          } else if (prev.tagName === 'H2') {
+            return headingText(prev) + ' · ' + headingText(found);
+          }
+        }
+        prev = prev.previousElementSibling;
+      }
+      el = el.parentElement;
+    }
+    return found ? headingText(found) : '';
+  }
+
+  function thumbButton(photo, i, total) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'photo-thumb';
+    b.dataset.photo = i;
+    b.setAttribute('aria-label', 'Open photo ' + (i + 1) + ' of ' + total + ': ' + photo.caption);
+    var img = document.createElement('img');
+    img.className = 'nozoom';
+    img.src = photo.thumb;
+    img.alt = '';
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    b.appendChild(img);
+    return b;
+  }
+
+  function buildViewer(photos) {
+    var dlg = document.createElement('dialog');
+    dlg.className = 'photo-viewer';
+    dlg.setAttribute('aria-label', 'Photo viewer');
+    dlg.innerHTML =
+      '<div class="pv-inner">' +
+        '<div class="pv-top"><span class="pv-count"></span>' +
+          '<button type="button" class="pv-btn pv-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>' +
+        '<div class="pv-stage">' +
+          '<button type="button" class="pv-btn pv-prev" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>' +
+          '<figure><img class="nozoom" alt=""></figure>' +
+          '<button type="button" class="pv-btn pv-next" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>' +
+        '</div>' +
+        '<div class="pv-foot"><p class="pv-cap"></p><p class="pv-src"></p></div>' +
+      '</div>';
+    document.body.appendChild(dlg);
+
+    var img = dlg.querySelector('.pv-stage img');
+    var multi = photos.length > 1;
+    var idx = 0;
+    // visibility, not hidden: the arrows keep their grid columns so a
+    // single photo still sits centred.
+    if (!multi) dlg.classList.add('is-single');
+
+    function show(i) {
+      idx = (i + photos.length) % photos.length;
+      var p = photos[idx];
+      img.src = p.full;
+      img.alt = p.alt;
+      dlg.querySelector('.pv-cap').textContent = p.caption;
+      dlg.querySelector('.pv-count').textContent = (idx + 1) + ' / ' + photos.length;
+      var src = dlg.querySelector('.pv-src');
+      src.textContent = '';
+      if (p.from) {
+        var from = document.createElement('span');
+        from.textContent = 'From ' + p.from;
+        src.appendChild(from);
+      }
+      var jump = document.createElement('a');
+      jump.href = '#' + p.marker.id;
+      jump.className = 'pv-jump';
+      jump.textContent = 'Jump to it in the text →';
+      src.appendChild(jump);
+    }
+
+    dlg.querySelector('.pv-close').addEventListener('click', function () { dlg.close(); });
+    dlg.querySelector('.pv-prev').addEventListener('click', function () { show(idx - 1); });
+    dlg.querySelector('.pv-next').addEventListener('click', function () { show(idx + 1); });
+    dlg.addEventListener('keydown', function (e) {
+      if (!multi) return;
+      if (e.key === 'ArrowRight') show(idx + 1);
+      if (e.key === 'ArrowLeft') show(idx - 1);
+    });
+    dlg.addEventListener('click', function (e) {
+      var jump = e.target.closest('.pv-jump');
+      if (jump) {
+        e.preventDefault();
+        dlg.close();
+        var marker = photos[idx].marker;
+        marker.scrollIntoView({ block: 'center' });
+        marker.focus({ preventScroll: true });
+        return;
+      }
+      // Anywhere that isn't the photo, its caption, or a button closes it.
+      if (!e.target.closest('.pv-foot, .pv-stage img, .pv-btn')) dlg.close();
+    });
+    var x0 = null;
+    dlg.addEventListener('pointerdown', function (e) { x0 = e.pointerType === 'mouse' ? null : e.clientX; });
+    dlg.addEventListener('pointerup', function (e) {
+      if (x0 === null || !multi) return;
+      var dx = e.clientX - x0;
+      x0 = null;
+      if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1));
+    });
+
+    return function open(i) {
+      show(i);
+      dlg.showModal();
+    };
+  }
+
+  function initPhotos(article) {
+    var slot = document.querySelector('[data-sidebar-slot="photos"]');
+    if (!slot) return;
+    var figs = article.querySelectorAll('figure[data-sidebar-photo]');
+    if (!figs.length) return;
+
+    var photos = [];
+    figs.forEach(function (fig, i) {
+      var img = fig.querySelector('img');
+      var cap = fig.querySelector('figcaption');
+      var alt = img ? img.alt : '';
+      var marker = document.createElement('button');
+      marker.type = 'button';
+      marker.className = 'photo-marker';
+      marker.id = 'photo-' + (i + 1);
+      marker.dataset.photo = i;
+      marker.innerHTML = CAMERA + 'Photo<span class="n">' + (i + 1) + '</span>';
+      if (alt) marker.setAttribute('aria-label', 'Photo ' + (i + 1) + ': ' + alt);
+      fig.parentNode.insertBefore(marker, fig);
+      fig.classList.add('is-relocated');
+      photos.push({
+        full: fig.dataset.full || (img && img.src),
+        thumb: fig.dataset.thumb || (img && img.src),
+        alt: alt,
+        caption: (cap && cap.textContent.trim()) || alt,
+        from: photoSource(fig, article),
+        marker: marker
+      });
+    });
+
+    var n = photos.length, cap = 6;
+    var label = document.createElement('h2');
+    label.className = 'photos-label';
+    label.innerHTML = 'Photos<span class="n">' + n + '</span>';
+    var grid = document.createElement('div');
+    grid.className = 'photo-grid ' + (n === 1 ? 'n1' : (n === 2 || n === 4) ? 'n2' : 'n3');
+    photos.slice(0, cap).forEach(function (p, i) {
+      var b = thumbButton(p, i, n);
+      if (i === cap - 1 && n > cap) {
+        var more = document.createElement('span');
+        more.className = 'more';
+        more.textContent = '+' + (n - cap + 1);
+        b.appendChild(more);
+      }
+      grid.appendChild(b);
+    });
+    slot.appendChild(label);
+    slot.appendChild(grid);
+    if (n === 1 && photos[0].caption) {
+      var p = document.createElement('p');
+      p.className = 'photo-caption';
+      p.textContent = photos[0].caption;
+      slot.appendChild(p);
+    }
+    slot.hidden = false;
+
+    var header = document.getElementById('single_header');
+    if (header) {
+      var strip = document.createElement('div');
+      strip.className = 'photo-strip' + (n === 1 ? ' solo' : '');
+      strip.setAttribute('role', 'group');
+      strip.setAttribute('aria-label', 'Photos');
+      photos.forEach(function (p, i) { strip.appendChild(thumbButton(p, i, n)); });
+      header.appendChild(strip);
+    }
+
+    var open = buildViewer(photos);
+    document.addEventListener('click', function (e) {
+      var t = e.target.closest('.photo-thumb, .photo-marker');
+      if (t) open(+t.dataset.photo);
+    });
+  }
+
   function init() {
     var article = document.querySelector('.article-content');
+    if (article) initPhotos(article);
     if (article) moveSidebarSections(article);
     initServings();
     initSidebarToggle();

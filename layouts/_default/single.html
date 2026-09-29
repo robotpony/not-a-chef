@@ -257,6 +257,9 @@
                 {{ end }}
               </div>
             {{ end }}
+            {{/* Photos (see partials/reading-sidebar.html): desktop only,
+              a strip under the title on mobile. */}}
+            <div class="recipe-sidebar-section sidebar-photos" data-sidebar-slot="photos" hidden></div>
             <div class="recipe-sidebar-section" data-sidebar-slot="to-serve" hidden></div>
             <div class="recipe-sidebar-section" data-sidebar-slot="mechanic" hidden></div>
             <div class="recipe-sidebar-section" data-sidebar-slot="variations" hidden></div>
