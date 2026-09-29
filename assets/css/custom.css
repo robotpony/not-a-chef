@@ -1435,9 +1435,15 @@ a.comp-card:hover .comp-card-label { color: var(--accent-strong); }
  * carries prose instead of just quantities/data, since it's standing in
  * for a game/terminal voice rather than the site's normal body copy. */
 .error-404 { max-width: 640px; margin: 0 auto; padding: 48px 20px 80px; }
-.error-404 h1 {
+.error-404-head { display: flex; align-items: center; gap: 8px; margin-bottom: 28px; }
+.error-404-num {
+  font-family: 'Libre Franklin', sans-serif; font-weight: 700; letter-spacing: -.03em;
+  font-size: clamp(3.5rem, 9vw, 6rem); line-height: 1; color: var(--accent-strong);
+  writing-mode: vertical-rl; transform: rotate(180deg); flex-shrink: 0;
+}
+.error-404-head h1 {
   font-family: 'Libre Franklin', sans-serif; font-weight: 700; letter-spacing: -.015em;
-  font-size: clamp(1.7rem, 3.4vw, 2.3rem); line-height: 1.15; margin-bottom: 28px; text-wrap: balance;
+  font-size: clamp(1.7rem, 3.4vw, 2.3rem); line-height: 1.15; margin: 0; text-wrap: balance;
 }
 .terminal-card {
   background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
@@ -1449,6 +1455,9 @@ a.comp-card:hover .comp-card-label { color: var(--accent-strong); }
 .term-room { font-weight: 600; letter-spacing: .08em; color: var(--accent-strong); font-size: .82rem; }
 .terminal-card #term-path { color: var(--accent-strong); font-weight: 600; }
 .term-prompt { color: var(--ink-muted); }
+.term-list { list-style: none; margin: -4px 0 16px; padding: 0; }
+.term-list li { margin: 0 0 4px; padding-left: 1.4em; text-indent: -1.4em; }
+.term-list li::before { content: '- '; color: var(--ink-faint); }
 .term-cursor { display: inline-block; margin-left: 2px; color: var(--accent-strong); animation: term-blink 1.1s steps(1) infinite; }
 @keyframes term-blink { 50% { opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .term-cursor { animation: none; } }
