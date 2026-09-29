@@ -1435,7 +1435,7 @@ a.comp-card:hover .comp-card-label { color: var(--accent-strong); }
  * carries prose instead of just quantities/data, since it's standing in
  * for a game/terminal voice rather than the site's normal body copy. */
 .error-404 { max-width: 760px; margin: 0 auto; padding: 48px 20px 80px; }
-.error-404-head { display: flex; align-items: center; gap: 10px; margin-bottom: 28px; }
+.error-404-head { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 28px; }
 .error-404-num {
   font-family: 'Libre Franklin', sans-serif; font-weight: 700; letter-spacing: -.015em;
   font-size: clamp(2.3rem, 4.6vw, 3.1rem); line-height: 1.1; color: var(--accent-strong); flex-shrink: 0;
@@ -1443,9 +1443,13 @@ a.comp-card:hover .comp-card-label { color: var(--accent-strong); }
 .error-404-head h1 {
   font-family: 'Libre Franklin', sans-serif; font-weight: 700; letter-spacing: -.015em;
   font-size: clamp(2.3rem, 4.6vw, 3.1rem); line-height: 1.1; margin: 0; text-wrap: balance;
+  text-align: center;
 }
 .terminal-card {
-  background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
+  background:
+    repeating-linear-gradient(to bottom, rgba(0, 0, 0, .06) 0px, rgba(0, 0, 0, .06) 1px, transparent 1px, transparent 3px),
+    var(--surface);
+  border: 1px solid var(--border); border-radius: 16px;
   padding: 24px 28px; font-family: 'IBM Plex Mono', monospace; font-size: .92rem;
   line-height: 1.6; color: var(--ink);
 }
@@ -1464,6 +1468,6 @@ a.comp-card:hover .comp-card-label { color: var(--accent-strong); }
 .term-link {
   font-family: 'IBM Plex Mono', monospace; font-size: .85rem; color: var(--ink-muted);
   text-decoration: none; background: none; cursor: pointer; line-height: 1.2;
-  border: 1px solid var(--border); border-radius: 4px; padding: 7px 14px;
+  border: 1px solid var(--border); border-radius: 8px; padding: 7px 14px;
 }
 .term-link:hover { border-color: var(--accent); color: var(--accent-strong); }
