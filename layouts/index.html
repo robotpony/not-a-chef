@@ -14,9 +14,16 @@
 
   Bands 03 ("Technique & reflections") and 04 ("From the food log") added
   2026-09-29 (mockups/food-log-homepage.html): essay rows sit next to each
-  other, the Food Log — newest, thinnest section — goes last. Both reuse
-  existing components (comp-grid/comp-card, rgrid/rcard, section-caveat)
-  rather than inventing new ones.
+  other, the Food Log — newest, thinnest section — goes last. All four
+  homepage bands (01, 02, 03, 04) share the one rgrid/rcard component
+  (recipe-card.html) rather than inventing new ones.
+
+  All four bands moved onto rcard on 2026-09-29: the food memories and
+  "Technique & reflections" rows previously used comp-grid/comp-card, a
+  second, separately-tuned card component whose type scale and padding had
+  drifted from rcard's. comp-card is unused in real content now — it
+  remains only in the style-guide gallery/mockups as a documented
+  component (mockups/STYLE.md, mockups/COMPONENTS.md).
 */}}
 {{ $recipes := where site.RegularPages "Section" "recipes" }}
 {{ $essays := where site.RegularPages "Section" "essays" }}
@@ -83,12 +90,9 @@
       <a class="mega-viewall" href="{{ "essays" | relURL }}">All essays &rarr;</a>
     {{ end }}
   </div>
-  <div class="comp-grid home-row">
+  <div class="rgrid home-row">
     {{ range first 4 (sort $memories "Date" "desc") }}
-      <a class="comp-card" href="{{ .RelPermalink }}">
-        <span class="comp-card-label">{{ .Title }}</span>
-        <p class="comp-card-note">{{ .Summary | plainify | truncate 140 }}</p>
-      </a>
+      {{ partial "recipe-card.html" . }}
     {{ end }}
   </div>
 </section>
@@ -104,14 +108,9 @@
       <a class="mega-viewall" href="{{ "essays" | relURL }}">All essays &rarr;</a>
     {{ end }}
   </div>
-  <div class="comp-grid home-row">
+  <div class="rgrid home-row">
     {{ range first 4 (sort $otherEssays "Date" "desc") }}
-      {{ $folder := path.Base (strings.TrimSuffix "/" .File.Dir) }}
-      <a class="comp-card" href="{{ .RelPermalink }}">
-        <span class="comp-card-format">{{ replace $folder "-" " " }}</span>
-        <span class="comp-card-label">{{ .Title }}</span>
-        <p class="comp-card-note">{{ .Summary | plainify | truncate 140 }}</p>
-      </a>
+      {{ partial "recipe-card.html" . }}
     {{ end }}
   </div>
 </section>

@@ -895,9 +895,9 @@ a.principle-chip:hover, a.principle-chip:focus-visible { box-shadow: inset 0 0 0
 .browse-more { font-weight: 600; color: var(--accent-strong); }
 
 .comp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 16px; margin-top: 4px; }
-.comp-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px; display: flex; flex-direction: column; gap: 8px; }
-.comp-card-label { font-family: 'Libre Franklin', sans-serif; font-size: .92rem; font-weight: 700; }
-.comp-card-note { font-family: 'Lora', serif; font-size: .88rem; color: var(--ink-muted); line-height: 1.55; }
+.comp-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px 12px; display: flex; flex-direction: column; gap: 8px; }
+.comp-card-label { font-family: 'Libre Franklin', sans-serif; font-size: 1.02rem; font-weight: 700; }
+.comp-card-note { font-family: 'Lora', serif; font-size: .84rem; color: var(--ink-muted); line-height: 1.5; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
 /* Eyebrow above the title when a comp-card grid mixes formats (homepage
  * "Technique & reflections" band, mockups/food-log-homepage.html) — the
  * essay's folder name, same role as .rcard-stat b's faint uppercase label. */
