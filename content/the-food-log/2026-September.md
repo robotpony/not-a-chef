@@ -2,12 +2,19 @@
 title: September 2026
 date: 2026-09-01
 ---
+## Tuesday, September 29th
+
+This week's menu:
+
+1. Chicken Milanese (from freezer-marinated cutlets)
+2. Pork goulash v2 (another test of this recipe)
 
 ## Monday, September 28th
 
-#### TODO
+####  Recipe book review pass #todo
 
-- Cornmeal-breaded chicken patty: chase the dark, mealy, crunchy breading from Chicken mall guy (see [[The impossible quest for the perfect chicken burger]]); try it on the [[Pan-fried chicken burger]] patty or a brined breast
+- Cornmeal-breaded chicken patty → *this needs research*
+	- chase the dark, mealy, crunchy breading from Chicken mall guy (see [[The impossible quest for the perfect chicken burger]]); try it on the [[Pan-fried chicken burger]] patty or a brined breast
 
 ## Friday, September 18th
 
