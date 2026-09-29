@@ -6,8 +6,16 @@ date: 2026-09-01
 
 This week's menu:
 
-1. Chicken Milanese (from freezer-marinated cutlets)
-2. Pork goulash v2 (another test of this recipe)
+1. [[Chicken Milanese]] (from freezer-marinated cutlets)
+2. [[Goulash|Pork goulash v2]] (another test of this recipe)
+	- oven-roasting the meat worked well (seasoned, rested, 233C quick heat)
+	- started onions/spices, then added dried mushrooms (soaked), garlic, carrot, celery
+	- fennel, coriander, sweet paprika, smoked paprika, anchos, salt, pepper
+	- white wine
+	- tomato paste
+	- beef stock (paste), chicken stock (homemade), mushroom soak water (strained)
+	- browning (1 tablespoon)
+	- salt/msg to taste
 
 ## Monday, September 28th
 
@@ -40,7 +48,7 @@ Example recipe sites (above, and ...):
 
 The food log has moved!
 
-### Goulash from 1st principles
+### [[Goulash]] from 1st principles
 
 Made this as a prep day hack. Turned out better than expected.
 
