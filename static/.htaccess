@@ -1,0 +1,3 @@
+# Serve Hugo's generated 404 page for missing URLs on this domain.
+# Deployed as-is by Hugo (static/ files are copied straight into public/).
+ErrorDocument 404 /404.html
