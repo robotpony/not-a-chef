@@ -24,12 +24,12 @@
     <p>You are looking for: <span id="term-path">something that isn&rsquo;t down here</span></p>
     <p class="term-prompt">&gt; search boxes</p>
     <p>Nothing matches. The bulb flickers.<span class="term-cursor" aria-hidden="true">_</span></p>
+    <p class="term-prompt">&gt; what now?</p>
+    <nav class="term-actions" aria-label="What to do next">
+      <a class="term-link" href="{{ site.Home.RelPermalink }}">go home</a>
+      <button id="search-button" type="button" class="term-link">search the site</button>
+    </nav>
   </div>
-
-  <nav class="term-actions" aria-label="What to do next">
-    <a class="term-link" href="{{ site.Home.RelPermalink }}">&gt; go home</a>
-    <button id="search-button" type="button" class="term-link term-link-btn">&gt; search the site</button>
-  </nav>
 </section>
 
 <script>
