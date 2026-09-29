@@ -25,13 +25,14 @@ The **paprika load here is 4 tablespoons per kg of meat**, not the 1 tablespoon 
 - 3 cloves garlic, finely minced
 - 1 red bell pepper, seeded and medium diced
 - 3 vine-ripe tomatoes, cored and medium diced (or 1 × 400g tin)
-- 1½ teaspoons caraway seeds (or ground cumin)
+- 1½ teaspoons caraway seeds (or ground cumin, or fennel)
 - 4 tablespoons sweet Hungarian paprika
 - 250ml red wine (1 cup)
-- 1 litre beef stock (4 cups)
+- 1 litre beef or chicken stock (4 cups)
 - 2 bay leaves
 - 2 russet potatoes, peeled and cut into 2.5 cm chunks
 - 3 carrots, peeled and large diced
+- 15 ml Worcestershire (optional)
 - salt and pepper
 
 Optional: 1 cup each large diced celeriac and turnip.
@@ -56,11 +57,13 @@ With egg noodles, sour cream, and crusty bread. The stew deepens overnight.
 
 ## Variations
 
-### Prep-day goulash with mushrooms and sherry
-A version worked out from first principles on a prep day, which turned out better than expected. Cube a pork shoulder (2 cm), season, toss in oil, and broil until one side browns; keep the drippings. In a large pot, cook 6–10 sliced cremini mushrooms in a little oil with 100 ml water until the water evaporates and they brown. Add 4 roughly diced onions (any mix of white, red, shallot, and leek) and a sliced carrot and cook down, then a head of garlic, roughly diced. Add 30 ml tomato paste and cook until it sticks, then 2 heaping tablespoons sweet paprika and 1 tsp crushed fennel or caraway. Deglaze with 125 ml sherry, then add 500 ml chicken or beef stock, 15 ml Worcestershire, a large tin of tomatoes, and the pork with its drippings. Hold at a bare simmer, stirring regularly, until the pork is fork-tender, 2–5 hours. Finish with browning sauce as needed, salt, MSG, and up to 50 ml cider vinegar to balance.
+### Goulash with mushrooms and sherry
+
+From a prep-day session, we substituted sherry and fennel (for the wine and caraway), and added a large bowl of sliced mushrooms. Browning sauce added depth, but can be sweet.
 
 ### Simplified goulash with dried mushrooms
-A leaner take on the prep-day version above: one onion instead of a mix, and fennel in place of caraway. Season cubed pork shoulder, don't sugar it, and roast at 233°C (450°F) on the oven's fast-heat setting until well browned; let it rest, then keep the drippings. Soak dried mushrooms and strain the liquid. In a pot, cook a diced onion with crushed fennel, ground coriander, sweet paprika, and smoked paprika. Add the soaked mushrooms, garlic, carrot, and celery, and cook down. Deglaze with white wine, then stir in tomato paste and cook until it sticks. Add beef stock, homemade chicken stock, the strained mushroom liquid, and the pork with its drippings. Simmer until tender. Finish with 1 tablespoon browning sauce, salt, and MSG. Skipping sugar on the meat and dosing the browning sauce properly gave a less sweet result than the first version; a small amount of ground ancho didn't come through and can be left out.
+
+From another prep day, cleaned the pantry using white onions and dried mushrooms. 233C for the seasoned pork in the oven was perfect. The simpler version was still great.
 
 ## Notes
 
