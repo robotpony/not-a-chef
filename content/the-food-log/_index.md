@@ -1,6 +1,6 @@
 ---
 title: The Food Log
-description: Working notes from the kitchen, including the tests that didn't work.
+description: "An engineering log for the kitchen: research, testing, and the odd recipe-site rabbit hole, before any of it becomes a recipe."
 cascade:
   showDate: false
   showReadingTime: false

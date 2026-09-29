@@ -39,6 +39,7 @@
 {{/* Starting from an empty Pages (not slice) keeps the result a Pages, matching $recipes/$essays. */}}
 {{ $recentLogs := first 0 $logs }}
 {{ range sort $logMonths "key" "desc" }}{{ $recentLogs = $recentLogs | append .page }}{{ end }}
+{{ $logIndex := site.GetPage "the-food-log" }}
 
 <section class="hero">
   <span class="hero-eyebrow">Our family cookbook</span>
@@ -120,7 +121,7 @@
     <div>
       <span class="block-num">04</span>
       <h2 class="block-title">From the food log</h2>
-      <p class="block-dek">The running, unfiltered version of what's cooking: tests, ideas, and the odd recipe-site rabbit hole.</p>
+      <p class="block-dek">{{ $logIndex.Description }}</p>
     </div>
     {{ if gt (len $recentLogs) 1 }}
       <a class="mega-viewall" href="{{ "the-food-log" | relURL }}">Read the log &rarr;</a>
