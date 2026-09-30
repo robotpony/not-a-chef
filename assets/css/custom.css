@@ -1281,8 +1281,10 @@ a.comp-card:hover .comp-card-label { color: var(--accent-strong); }
   /* Pinned like the recipe sidebar (single.html). Capped to the viewport
    * (less the lg:top-10 offset and a little breathing room) so a tall one,
    * like a long reference guide's "On this page", scrolls on its own
-   * rather than pinning its bottom half out of reach. */
-  .reading-sidebar-pin { max-height: calc(100vh - 3.5rem); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; padding-bottom: 8px; }
+   * rather than pinning its bottom half out of reach. overflow-y: auto
+   * forces overflow-x to auto too, so .browse-list's -8px bleed (below)
+   * would scroll sideways; the matching margin/padding makes room for it. */
+  .reading-sidebar-pin { max-height: calc(100vh - 3.5rem); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; padding: 0 8px 8px; margin: 0 -8px; }
 }
 .reading-sidebar { display: flex; flex-direction: column; gap: 26px; }
 .reading-sidebar .rs-label {

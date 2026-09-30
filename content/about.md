@@ -14,7 +14,11 @@ And now I *love* to cook. It's an obsession. It's cathartic. It's fulfilling. I'
 
 The recipes here are the foods we eat. They span cooking styles from the 1950s through today, with a focus on food memories, discoveries, and traditions new and old.
 
-### We love food 🩶
+## The archives
+
+We started our collection of recipes on paper, in a few binders. It lived in those flour-dusted binders for decades, until lockdown, when we digitized the recipes into Google Docs. This year I turned that collection of documents into this site.
+
+## We love food 🩶
 
 A small collection of food we've made over the years.
 
@@ -54,13 +58,11 @@ A small collection of food we've made over the years.
 
 ## Notes
 
-Ann and I started our collection of recipes on paper, in a few binders. Over lockdown we digitized the recipes into Google Docs, and this year I turned them into this site.
-
 The site is built on:
-- [Obsidian](https://obsidian.md) (for editing), 
-- [Hugo](https://gohugo.io) (for publishing) and [Blowfish](https://blowfish.page/) (the theme base), 
-- [Markdown](https://www.markdownguide.org) (a text format for the recipes), and 
-- [Claude](https://claude.ai) (for updates, theme editing, and design changes). 
-- *You can find the custome theme and recipes on [GitHub](https://github.com/robotpony/not-a-chef).*
 
+- [Obsidian](https://obsidian.md) for editing
+- [Hugo](https://gohugo.io) for publishing, with [Blowfish](https://blowfish.page/) as the theme base
+- [Markdown](https://www.markdownguide.org), the text format for the recipes
+- [Claude](https://claude.ai) for updates, theme editing, and design changes
 
+*You can find the custom theme and recipes on [GitHub](https://github.com/robotpony/not-a-chef).*

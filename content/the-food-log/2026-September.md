@@ -30,6 +30,9 @@ This week's menu:
 	- beef stock (paste), chicken stock (homemade), mushroom soak water (strained)
 	- browning (1 tablespoon)
 	- salt/msg to taste
+
+![Pork goulash v2 simmering in a stainless pot: oven-browned pork cubes in a thick paprika and tomato sauce with onion and mushroom](/images/food-log/2026-pork-goulash-v2-simmering.jpg)
+
 3. Sweet pickled red onions (balanced more acidic with 1.5c vinegar to 1c water and 1c sugar)
 	- used pickling spice that may be a masala (coriander, bay, peppercorn, clove, etc.)
 
