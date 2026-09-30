@@ -30,7 +30,7 @@ A small collection of food we've made over the years.
 
 ![Head of a white KitchenAid stand mixer, close up on the chrome attachment hub](/images/about/about-kitchenaid-mixer.jpg)
 
-![Tall sesame-bun burger stacked with leaf lettuce, tomato, mustard, Swiss cheese, and red onion](/images/about/about-towering-burger.jpg)
+![Tall sesame-bun veg sandwich stacked with leaf lettuce, tomato, mustard, Swiss cheese, and red onion](/images/about/about-towering-burger.jpg)
 
 ![Burger with bacon, onion, mustard, tomato, and shredded lettuce, held up on a red plate](/images/about/about-bacon-burger-red-plate.jpg)
 
