@@ -45,3 +45,7 @@ Stretch and fold the dough over itself in the bowl 4 times. Let rest 30 minutes 
 Divide into 3 portions and place on pizza or sheet pans that are oiled and dusted with cornmeal or semolina. If the dough won't stretch easily, let it sit for 10–20 minutes and try again.
 
 Bake one of two ways. Grandma-style pizza is easiest in a home oven: 175°C (350°F) for 30–40 minutes. With some practice, a thinner pizza rises nicely at 220°C (425°F) or above, with a bit more rise and crunch. Both work well.
+
+## Notes
+
+- See also [[The Aldersons’ epic 12 days of pizza]], our family's 12-pizza Christmas marathon.

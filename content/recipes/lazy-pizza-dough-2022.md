@@ -84,3 +84,5 @@ The challenge is getting everything cooked to the right doneness without a lot o
 - **The preheated sheet pan pile:** 250°C (475°F). Slide onto the stacked sheet pans (an oven-safe griddle works too, but watch for smoke). You get nice browning, and both sides will be done if you’ve picked the right rack.
 
 Keep practising and track your results. A mediocre home pizza is usually better than most quick delivery pizzas (assuming good ingredients and assembly).
+
+- See also [[The Aldersons’ epic 12 days of pizza]], our family's 12-pizza Christmas marathon.

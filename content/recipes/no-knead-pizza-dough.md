@@ -33,3 +33,7 @@ Stir in the remaining flour ½ cup at a time with a spoon or spatula, until a ve
 Grease a container with 1 tsp olive oil. Form the dough into a ball, turn it to coat, and cover. Leave at room temperature until doubled, 2–3 hours. For more flavour, move it to the fridge for 1–5 days.
 
 Divide the dough into 4–6 balls, depending on the size of your pizzas. Cover and let them come to room temperature, 1–2 hours, until soft and puffy. Stretch and top.
+
+## Notes
+
+- See also [[The Aldersons’ epic 12 days of pizza]], our family's 12-pizza Christmas marathon.

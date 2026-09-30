@@ -31,3 +31,4 @@ Let it marinate in the fridge. It keeps 1–2 weeks.
 ## Notes
 
 - Smoked tempeh also works well.
+- See also [[The Aldersons’ epic 12 days of pizza]], our family's 12-pizza Christmas marathon.

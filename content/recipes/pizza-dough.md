@@ -43,3 +43,4 @@ Bake at 233°C (450°F) with the convection fan on, on a hot carbon steel pan or
 - The yeast, ball size, and bake time come from testing for a birthday pizza in 2023: 1.5% yeast with a long ferment, 200 g balls, 14 minutes at 233°C with the fan, on carbon steel with parchment. The earlier version used 0.1% yeast and 175 g balls.
 - Reducing gluten slightly (toward 12.5% total protein) gives a less chewy crumb.
 - Autolyse can run 5 minutes shorter without significant difference.
+- See also [[The Aldersons’ epic 12 days of pizza]], our family's 12-pizza Christmas marathon.

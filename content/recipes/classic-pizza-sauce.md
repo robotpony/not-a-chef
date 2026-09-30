@@ -46,3 +46,4 @@ Use 1 jar or medium tin of crushed tomatoes, or 1 jar of tomato sauce plus 1 tbs
 
 - I don't add chilies or paprika anymore, leaving those for toppings. Paprika, especially smoked paprika, can make a sauce taste heavy and muddle the sweet notes of the tomatoes.
 - If the sauce tastes bitter, strain out the seeds through a fine-mesh strainer, add a little balsamic, honey, or sugar (or some of each), or add a bit more salt.
+- See also [[The Aldersons’ epic 12 days of pizza]], our family's 12-pizza Christmas marathon.

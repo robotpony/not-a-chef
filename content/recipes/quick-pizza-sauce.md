@@ -43,3 +43,4 @@ Spread on pizza dough, flatbread, or as a dipping sauce. Can be made ahead and r
 - For a bigger batch built on strained tomatoes, see [[Pizzeria pizza sauce]].
 - Add more water for a looser sauce.
 - The double-paste concentrate is important; regular paste needs more reduction time.
+- See also [[The Aldersons’ epic 12 days of pizza]], our family's 12-pizza Christmas marathon.

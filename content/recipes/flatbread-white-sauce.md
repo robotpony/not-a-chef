@@ -38,3 +38,4 @@ Under mushrooms, roasted garlic, or prosciutto on flatbread. Also good as a dip;
 - Adapted loosely from an America's Test Kitchen white pizza sauce.
 - 1 egg yolk gives a lighter result; 2 is richer and slightly sturdier.
 - Avoid stabilized ricotta (such as brands with guar gum); it doesn't blend as smoothly and can separate.
+- See also [[The Aldersons’ epic 12 days of pizza]], our family's 12-pizza Christmas marathon.

@@ -42,3 +42,4 @@ Spread thin on pizza dough (about 100 ml per medium pizza). Keeps refrigerated f
 
 - Garlic potency varies, even granulated. Start with the listed amounts and adjust the garlic, salt, and sugar up to taste.
 - See also [[Quick pizza sauce]] for a smaller-batch, paste-only version.
+- See also [[The Aldersons’ epic 12 days of pizza]], our family's 12-pizza Christmas marathon.
