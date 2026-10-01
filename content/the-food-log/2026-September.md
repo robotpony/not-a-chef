@@ -12,6 +12,16 @@ Two more passes at goulash (oven-browned this time, versus the from-scratch vers
 - [ ] Vegetarian patty (peas, beans, potato, etc.) find a pattern here
 - [ ] Cornmeal-breaded chicken patty → *this needs research*
 
+
+### Warped commands project bugs #todo 
+
+- [ ] Help doc needs a setting so it doesn't re-appear
+- [ ] Projects view doesn't work as a default (mess in other vaults)
+
+### Bruce loves to cook site #todo 
+
+- [ ] Image thingy doesn't swipe on mobile
+
 ## Tuesday, September 29th
 
 Research:
