@@ -4,6 +4,14 @@ date: 2026-09-01
 ---
 Two more passes at goulash (oven-browned this time, versus the from-scratch version a week earlier), a freezer-marinated chicken Milanese, and a growing backlog of curries and recipe sites to work through.
 
+
+## Wednesday, September 30th
+
+### Recipe hunt  #todo #p0
+
+- [ ] Vegetarian patty (peas, beans, potato, etc.) find a pattern here
+- [ ] Cornmeal-breaded chicken patty → *this needs research*
+
 ## Tuesday, September 29th
 
 Research:
@@ -27,7 +35,7 @@ This week's menu:
 
 ## Monday, September 28th
 
-####  Recipe book review pass #todo
+####  Recipe book review pass 
 
 - Cornmeal-breaded chicken patty → *this needs research*
 	- chase the dark, mealy, crunchy breading from Chicken mall guy (see [[The impossible quest for the perfect chicken burger]]); try it on the [[Pan-fried chicken burger]] patty or a brined breast
