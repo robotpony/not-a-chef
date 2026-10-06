@@ -296,7 +296,7 @@
           <span class="f-op" aria-hidden="true">+</span>
           <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-bowl"/></svg><span class="f-label">Starch</span><span class="f-qty">1 cup</span></div>
           <span class="f-op" aria-hidden="true">+</span>
-          <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-carrot"/></svg><span class="f-label">Vegetables</span><span class="f-qty">1 cup</span></div>
+          <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-carrot"/></svg><span class="f-label">Veg</span><span class="f-qty">1 cup</span></div>
           <span class="f-op" aria-hidden="true">+</span>
           <div class="f-slot"><span class="f-icons pair"><svg class="ic" aria-hidden="true"><use href="#i-crumbs"/></svg><svg class="ic" aria-hidden="true"><use href="#i-egg"/></svg></span><span class="f-label">Binder</span><span class="f-qty">½ cup + 1 egg</span></div>
           <span class="f-op eq" aria-hidden="true">=</span>
@@ -332,7 +332,7 @@
           <span class="f-op" aria-hidden="true">+</span>
           <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-butter"/></svg><span class="f-label">Butter</span><span class="f-qty">100 g</span></div>
           <span class="f-op" aria-hidden="true">+</span>
-          <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-cup"/></svg><span class="f-label">Hot milk</span><span class="f-qty">250 ml</span></div>
+          <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-cup"/></svg><span class="f-label">Milk</span><span class="f-qty">250 ml</span></div>
           <span class="f-op" aria-hidden="true">+</span>
           <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-salt"/></svg><span class="f-label">Salt</span><span class="f-qty">2 tsp</span></div>
         </div>
@@ -350,7 +350,7 @@
             <span class="f-op" aria-hidden="true">:</span>
             <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-butter"/></svg><span class="f-num">2</span><span class="f-label">Fat</span></div>
             <span class="f-op" aria-hidden="true">:</span>
-            <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-water"/></svg><span class="f-num">1</span><span class="f-label">Ice water</span></div>
+            <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-water"/></svg><span class="f-num">1</span><span class="f-label">Water</span></div>
           </div>
           <div class="f-bar" aria-hidden="true"><span style="flex:3"></span><span style="flex:2"></span><span style="flex:1"></span></div>
           <div class="f-bar-key" aria-hidden="true"><span style="flex:3">flour</span><span style="flex:2">fat</span><span style="flex:1">water</span></div>
@@ -400,14 +400,14 @@
       <pre class="src"><span class="c">```formula</span>
 can          | Beans      | 1 can
 <span class="k">+</span> bowl       | Starch     | 1 cup
-<span class="k">+</span> carrot     | Vegetables | 1 cup
+<span class="k">+</span> carrot     | Veg        | 1 cup
 <span class="k">+</span> crumbs egg | Binder     | ½ cup + 1 egg
 <span class="k">=</span> patty      | Patties    | 6
 <span class="c">```</span></pre>
       <pre class="src"><span class="c">```formula</span>
 flour   | Flour     | 3
 <span class="k">:</span> butter | Fat       | 2
-<span class="k">:</span> water  | Ice water | 1
+<span class="k">:</span> water  | Water     | 1
 <span class="k">caption</span>: Pie crust, by weight
 <span class="k">bar</span>: yes
 <span class="c">```</span></pre>
@@ -417,7 +417,7 @@ flour   | Flour     | 3
       <thead><tr><th>Field</th><th>Meaning</th></tr></thead>
       <tbody>
         <tr><td>icon</td><td>One or two kit keys (§5), separated by a space. An unknown key draws an empty circle and prints a build warning, so a typo shows up in review instead of breaking the page.</td></tr>
-        <tr><td>label</td><td>Short noun, sentence case. One or two words, or it wraps.</td></tr>
+        <tr><td>label</td><td>One short word, sentence case ("Veg", not "Vegetables"). The same label is used at every size, so it has to fit the sidebar.</td></tr>
         <tr><td>quantity</td><td>Same units as the recipe text (Canadian, metric first). In a <code>:</code> block it's the ratio number. In a <code>→</code> block, anything not starting with a digit renders as the italic note.</td></tr>
         <tr><td>+ : → =</td><td>One operator per block (<code>+</code>, <code>:</code> or <code>→</code>), plus an optional closing <code>=</code> result. Mixing operators in one row is refused, because it stops being glanceable.</td></tr>
         <tr><td>caption / bar</td><td>Optional trailing keys. <code>bar</code> only applies to ratios.</td></tr>
@@ -471,7 +471,7 @@ flour   | Flour     | 3
               <span class="f-op" aria-hidden="true">+</span>
               <div class="f-slot" style="width:72px"><svg class="ic" aria-hidden="true"><use href="#i-bowl"/></svg><span class="f-label">Starch</span><span class="f-qty">1 cup</span></div>
               <span class="f-op" aria-hidden="true">+</span>
-              <div class="f-slot" style="width:72px"><svg class="ic" aria-hidden="true"><use href="#i-carrot"/></svg><span class="f-label">Vegetables</span><span class="f-qty">1 cup</span></div>
+              <div class="f-slot" style="width:72px"><svg class="ic" aria-hidden="true"><use href="#i-carrot"/></svg><span class="f-label">Veg</span><span class="f-qty">1 cup</span></div>
               <span class="f-op" aria-hidden="true">+</span>
               <div class="f-slot" style="width:72px"><span class="f-icons pair"><svg class="ic" aria-hidden="true"><use href="#i-crumbs"/></svg><svg class="ic" aria-hidden="true"><use href="#i-egg"/></svg></span><span class="f-label">Binder</span><span class="f-qty">½ cup + 1 egg</span></div>
               <span class="f-op eq" aria-hidden="true">=</span>
@@ -486,7 +486,7 @@ flour   | Flour     | 3
     <div class="note-card">
       <span class="note-mark">?</span>
       <div>
-        <p><strong>Compact labels get shortened by hand, not by the renderer.</strong> "Vegetables" fits at full size but not compact, and "½ cup + 1 egg" doesn't either. A <code>short:</code> column, or just shorter labels everywhere, is a call to make (see open questions). On a wrap, each operator moves to the next line with its slot, so no row ever ends on a dangling <code>+</code>.</p>
+        <p><strong>Labels stay short everywhere</strong> (decided 2026-10-06), so the sidebar never needs a separate short label. Quantities can still run long: "½ cup + 1 egg" wraps to two lines in the sidebar. On a wrap, each operator moves to the next line with its slot, so no row ever ends on a dangling <code>+</code>.</p>
       </div>
     </div>
   </section>
@@ -543,10 +543,10 @@ flour   | Flour     | 3
       <h2 class="block-title">Open questions</h2>
     </div>
     <div class="qlist">
-      <div class="note-card" style="margin:0"><span class="note-mark">1</span><div><p><strong>Icon style.</strong> Is this the right level of simplicity, compared with Scorekeep's marks? Or should it be looser (slight wobble, uneven stroke) to read more pen and ink?</p></div></div>
-      <div class="note-card" style="margin:0"><span class="note-mark">2</span><div><p><strong>Fill.</strong> A soft accent fill on every object, as shown, or line-only, with fill reserved for the <code>=</code> result?</p></div></div>
+      <div class="note-card" style="margin:0"><span class="note-mark">1</span><div><p><strong>Icon style.</strong> Decided 2026-10-06: keep this level of simplicity.</p></div></div>
+      <div class="note-card" style="margin:0"><span class="note-mark">2</span><div><p><strong>Fill.</strong> Decided 2026-10-06: soft accent fill on every object, as shown.</p></div></div>
       <div class="note-card" style="margin:0"><span class="note-mark">3</span><div><p><strong>Slot icons: category or ingredient?</strong> "Starch" is drawn as a rice bowl even though mash works too. Should a slot show the category generically, or the one ingredient this recipe uses?</p></div></div>
-      <div class="note-card" style="margin:0"><span class="note-mark">4</span><div><p><strong>Compact labels.</strong> Add a fourth <code>short</code> field, or keep labels short everywhere?</p></div></div>
+      <div class="note-card" style="margin:0"><span class="note-mark">4</span><div><p><strong>Compact labels.</strong> Decided 2026-10-06: labels are kept short everywhere, so there's no <code>short</code> field.</p></div></div>
       <div class="note-card" style="margin:0"><span class="note-mark">5</span><div><p><strong>Card use.</strong> A 24px version on recipe cards would be a strong browse signal, but the card is already full. Out of scope for now?</p></div></div>
     </div>
   </section>
