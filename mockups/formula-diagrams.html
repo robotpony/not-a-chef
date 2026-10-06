@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Formula diagrams</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  :root{
+    --bg:#F3F3EC; --surface:#FBFBF6; --surface-2:#EAEBDF;
+    --ink:#23241E; --ink-muted:#63645A; --ink-faint:#93948A;
+    --border:#DCDCCE; --border-strong:#C7C8B4;
+    --accent:#A67330; --accent-strong:#7C361D; --accent-soft:#F6EADA;
+    --highlight:#997F29; --highlight-soft:#F6F1D5;
+    --flag:#3D638F; --flag-soft:#E1EAF4;
+    --focus:#A67330;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+      --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+      --border:#383A2C; --border-strong:#4A4C3A;
+      --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+      --highlight:#DDCC88; --highlight-soft:#342D19;
+      --flag:#97B8D8; --flag-soft:#1D2835;
+      --focus:#D3A569;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+    --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+    --border:#383A2C; --border-strong:#4A4C3A;
+    --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+    --highlight:#DDCC88; --highlight-soft:#342D19;
+    --flag:#97B8D8; --flag-soft:#1D2835;
+    --focus:#D3A569;
+  }
+
+  *{box-sizing:border-box;}
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:'Lora',Georgia,serif; font-size:16px; line-height:1.5; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3,h4{ font-family:'Libre Franklin',system-ui,sans-serif; margin:0; }
+  p{ margin:0; }
+  code, pre{ font-family:'IBM Plex Mono',monospace; }
+  code{ font-size:.85em; background:var(--surface-2); padding:1px 5px; border-radius:3px; }
+  button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
+  button:focus-visible{ outline:2px solid var(--focus); outline-offset:2px; }
+
+  .topbar{ position:sticky; top:0; z-index:10; background:var(--surface); border-bottom:1px solid var(--border-strong); }
+  .topbar-inner{ max-width:980px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+  .tb-title{ font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:.95rem; margin-right:auto; }
+  .tb-jump{ display:flex; gap:2px; flex-wrap:wrap; font-family:'Libre Franklin',sans-serif; }
+  .tb-jump a{ font-size:.76rem; font-weight:600; color:var(--ink-muted); text-decoration:none; padding:6px 9px; border-radius:4px; }
+  .tb-jump a:hover{ color:var(--ink); background:var(--surface-2); }
+  .theme-toggle{ font-family:'Libre Franklin',sans-serif; font-size:.75rem; font-weight:600; padding:7px 10px; border:1px solid var(--border-strong); border-radius:3px; color:var(--ink-muted); }
+  .theme-toggle:hover{ border-color:var(--accent); color:var(--ink); }
+
+  main{ max-width:980px; margin:0 auto; padding:8px 20px 100px; }
+  .hero{ padding:36px 0 30px; border-bottom:1px solid var(--border); margin-bottom:40px; }
+  .hero-eyebrow{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--accent-strong); margin-bottom:10px; display:block; }
+  .hero h1{ font-size:2rem; font-weight:700; letter-spacing:-.01em; margin-bottom:12px; }
+  .hero p{ max-width:66ch; color:var(--ink-muted); font-size:1.02rem; }
+  .hero p + p{ margin-top:10px; }
+
+  section.block{ margin-bottom:56px; }
+  .block-head{ margin-bottom:18px; }
+  .block-num{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--ink-faint); display:block; margin-bottom:4px; }
+  h2.block-title{ font-size:1.4rem; font-weight:700; margin-bottom:8px; }
+  .block-dek{ color:var(--ink-muted); max-width:68ch; font-size:.95rem; }
+  h3.sub-title{ font-size:.95rem; font-weight:700; margin:28px 0 6px; }
+  .sub-dek{ color:var(--ink-muted); font-size:.88rem; max-width:66ch; margin-bottom:14px; }
+
+  .stage{ background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:22px 24px; }
+  .stage + .stage{ margin-top:14px; }
+  .stage-label{ font-family:'Libre Franklin',sans-serif; font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-faint); margin-bottom:12px; display:block; }
+
+  .note-card{ display:flex; gap:12px; padding:14px 16px; background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--flag); border-radius:0 6px 6px 0; margin-top:16px; }
+  .note-mark{ font-family:'IBM Plex Mono',monospace; font-size:.75rem; font-weight:700; color:var(--flag); flex-shrink:0; }
+  .note-card p{ font-size:.9rem; color:var(--ink-muted); }
+  .note-card p + p{ margin-top:6px; }
+  .note-card strong{ color:var(--ink); font-weight:600; }
+
+  /* ---------- existing components, for context ---------- */
+  .mechanic{ background:var(--bg); border-left:3px solid var(--accent); border-radius:0 3px 3px 0; padding:12px 14px; font-family:'Lora',serif; font-size:1rem; }
+  .mechanic strong{ color:var(--accent-strong); }
+  .side-h{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:var(--ink-muted); margin-bottom:6px; }
+  .prose-h2{ font-size:1.5rem; font-weight:700; margin:0 0 8px; }
+  .prose p + p, .prose p + .formula, .prose .formula + p{ margin-top:16px; }
+
+  /* ---------- the new component: .formula ---------- */
+  .ic{ fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; overflow:visible; }
+
+  .formula{ margin:0; }
+  .formula-row{ display:flex; align-items:flex-start; justify-content:flex-start; flex-wrap:wrap; row-gap:14px; }
+  .f-slot{ display:flex; flex-direction:column; align-items:center; text-align:center; width:96px; }
+  .f-slot .ic{ width:48px; height:48px; color:var(--ink); }
+  .f-icons{ display:flex; gap:2px; height:48px; align-items:center; }
+  .f-icons.pair .ic{ width:40px; height:40px; }
+  .f-label{ font-family:'Libre Franklin',sans-serif; font-size:.74rem; font-weight:600; color:var(--ink); margin-top:6px; line-height:1.2; }
+  .f-qty{ font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums; font-size:.76rem; font-weight:600; color:var(--accent-strong); line-height:1.3; margin-top:2px; }
+  .f-sub{ font-family:'Lora',serif; font-style:italic; font-size:.72rem; color:var(--ink-muted); line-height:1.3; margin-top:3px; }
+  .f-op{ font-family:'IBM Plex Mono',monospace; font-size:1.25rem; font-weight:500; color:var(--accent); width:22px; text-align:center; line-height:48px; flex-shrink:0; }
+  .f-op.eq{ color:var(--ink-faint); }
+  .f-slot.result .f-label{ color:var(--ink-muted); }
+
+  /* ratio: the number is the point, so it leads */
+  .formula.ratio .f-num{ font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums; font-size:1.5rem; font-weight:600; color:var(--accent-strong); line-height:1.1; margin-top:4px; }
+  .formula.ratio .f-op{ font-size:1.5rem; line-height:48px; }
+  .f-bar{ display:flex; height:10px; margin-top:16px; border-radius:2px; overflow:hidden; max-width:340px; gap:2px; }
+  .f-bar span{ background:var(--accent-soft); border:1px solid var(--accent); border-radius:2px; }
+  .f-bar-key{ display:flex; max-width:340px; gap:2px; margin-top:4px; font-family:'IBM Plex Mono',monospace; font-size:.66rem; color:var(--ink-faint); }
+
+  /* sequence: arrows, and steps read left to right */
+  .formula.seq .f-op{ font-family:'Libre Franklin',sans-serif; }
+
+  /* each operator travels with the slot it introduces, so a wrap never strands a + at a line end */
+  .f-step{ display:flex; align-items:flex-start; }
+
+  /* caption: optional one-liner under the row */
+  .f-cap{ font-family:'Libre Franklin',sans-serif; font-size:.74rem; color:var(--ink-faint); margin-top:12px; }
+
+  /* compact density: the recipe sidebar (~18.6rem) */
+  .formula.compact .f-slot{ width:52px; }
+  .formula.compact .f-slot .ic, .formula.compact .f-icons{ width:34px; height:34px; }
+  .formula.compact .f-icons{ width:auto; }
+  .formula.compact .f-icons.pair .ic{ width:28px; height:28px; }
+  .formula.compact .f-op{ width:12px; font-size:1rem; line-height:34px; }
+  .formula.compact .f-label{ font-size:.66rem; margin-top:4px; }
+  .formula.compact .f-qty{ font-size:.66rem; }
+
+  /* ---------- page furniture for the demos ---------- */
+  .split{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:760px){ .split{ grid-template-columns:1fr; } }
+  pre.src{ margin:0; background:var(--surface-2); border:1px solid var(--border); border-radius:4px; padding:12px 14px; font-size:.78rem; line-height:1.55; color:var(--ink); overflow-x:auto; }
+  pre.src .k{ color:var(--accent-strong); font-weight:600; }
+  pre.src .c{ color:var(--ink-faint); }
+
+  .frames{ display:flex; gap:22px; flex-wrap:wrap; align-items:flex-start; }
+  .frame{ border:1px solid var(--border-strong); border-radius:8px; background:var(--surface); padding:16px; }
+  .frame.sidebar{ width:calc(18.6rem + 32px); }
+  .frame.phone{ width:360px; max-width:100%; }
+  .frame-cap{ font-family:'IBM Plex Mono',monospace; font-size:.66rem; color:var(--ink-faint); margin-top:8px; }
+
+  .kit{ display:grid; grid-template-columns:repeat(auto-fill,minmax(104px,1fr)); gap:10px; }
+  .kit-cell{ background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:14px 8px 10px; display:flex; flex-direction:column; align-items:center; gap:6px; }
+  .kit-cell .ic{ width:48px; height:48px; }
+  .kit-key{ font-family:'IBM Plex Mono',monospace; font-size:.7rem; font-weight:600; }
+  .kit-use{ font-family:'Libre Franklin',sans-serif; font-size:.64rem; color:var(--ink-faint); text-align:center; line-height:1.3; }
+  .kit-sizes{ display:flex; gap:22px; align-items:flex-end; margin-top:18px; color:var(--ink); }
+  .kit-sizes figure{ margin:0; display:flex; flex-direction:column; align-items:center; gap:6px; }
+  .kit-sizes figcaption{ font-family:'IBM Plex Mono',monospace; font-size:.64rem; color:var(--ink-faint); }
+
+  .qlist{ display:flex; flex-direction:column; gap:10px; }
+  .spec{ width:100%; border-collapse:collapse; font-size:.86rem; }
+  .spec th, .spec td{ text-align:left; padding:8px 10px; border-bottom:1px solid var(--border); vertical-align:top; }
+  .spec th{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-muted); }
+  .spec td:first-child{ font-family:'IBM Plex Mono',monospace; color:var(--accent-strong); white-space:nowrap; }
+  @media (max-width:680px){ .stage{ padding:16px; } .f-slot{ width:84px; } }
+</style>
+</head>
+<body>
+
+<!-- Icon kit: one sprite, 48-unit grid, 2-unit stroke in currentColor, one soft fill on the body of each object. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-can" viewBox="0 0 48 48">
+      <path style="fill:var(--accent-soft)" d="M12 11v26c0 2.2 5.4 4 12 4s12-1.8 12-4V11"/>
+      <ellipse style="fill:var(--surface)" cx="24" cy="11" rx="12" ry="4"/>
+      <ellipse cx="24" cy="11" rx="7.5" ry="2"/>
+      <path d="M12 19c0 2.2 5.4 4 12 4s12-1.8 12-4M12 30c0 2.2 5.4 4 12 4s12-1.8 12-4"/>
+    </symbol>
+    <symbol id="i-bowl" viewBox="0 0 48 48">
+      <path d="M11 24c2-7 7-11 13-11s11 4 13 11"/>
+      <path d="M19 18.5l2-1M26 16.5l2 .8M31 20l1.8-1.2M22 21.5h2.2"/>
+      <path style="fill:var(--accent-soft)" d="M6 24h36c0 9-8 15.5-18 15.5S6 33 6 24z"/>
+      <path d="M18 39.5V43h12v-3.5"/>
+    </symbol>
+    <symbol id="i-carrot" viewBox="0 0 48 48">
+      <path style="fill:var(--accent-soft)" d="M27.5 13.5L9.5 40.5l26.5-18c1.5-5-3.5-10-8.5-9z"/>
+      <path d="M19 27.5l3.5 2.5M14.5 33.5l2.5 1.8M24 21l3.2 2.2"/>
+      <path d="M31 14l4-8.5M33 16l9-3.5M32 15l7.5-7.5"/>
+    </symbol>
+    <symbol id="i-crumbs" viewBox="0 0 48 48">
+      <path style="fill:var(--accent-soft)" d="M9 37V21.5c-3 0-5-2.4-5-5.3C4 11.6 10.5 8.5 18.5 8.5S33 11.6 33 16.2c0 2.9-2 5.3-5 5.3V37z"/>
+      <path d="M13 21.5c0-3 2.5-5.5 5.5-5.5s5.5 2.5 5.5 5.5"/>
+      <path d="M37 33.5l2.5-.5.5 2.5-2.5.5zM41.5 39.5l2-1 1 2-2 1zM35.5 41l2.5.2-.2 2.4-2.4-.2z"/>
+    </symbol>
+    <symbol id="i-egg" viewBox="0 0 48 48">
+      <path style="fill:var(--accent-soft)" d="M24 6c-7.5 0-13.5 12.5-13.5 21.5a13.5 13.5 0 0 0 27 0C37.5 18.5 31.5 6 24 6z"/>
+      <path d="M17.5 24c.6-4 2.2-7.5 4.5-9.8"/>
+    </symbol>
+    <symbol id="i-flour" viewBox="0 0 48 48">
+      <path style="fill:var(--accent-soft)" d="M15 15c-3.5 6-6 14-6 20.5 0 4.5 2.5 7 6.5 7h17c4 0 6.5-2.5 6.5-7 0-6.5-2.5-14.5-6-20.5z"/>
+      <path d="M15 15h18M17 15l-2.5-7h19L31 15"/>
+      <path d="M24 25v12M24 29l-3-3M24 29l3-3M24 33l-3-3M24 33l3-3"/>
+    </symbol>
+    <symbol id="i-butter" viewBox="0 0 48 48">
+      <path style="fill:var(--accent-soft)" d="M6 23h28v14H6z"/>
+      <path style="fill:var(--surface)" d="M6 23l7-7h29l-8 7z"/>
+      <path d="M34 23l8-7v14l-8 7M15 23v14"/>
+    </symbol>
+    <symbol id="i-water" viewBox="0 0 48 48">
+      <path style="fill:var(--accent-soft)" d="M24 6S12 20.5 12 29.5a12 12 0 0 0 24 0C36 20.5 24 6 24 6z"/>
+      <path d="M18 30.5c0 3 1.8 5.3 4.2 6.2"/>
+    </symbol>
+    <symbol id="i-oil" viewBox="0 0 48 48">
+      <path style="fill:var(--accent-soft)" d="M20 12v4l-4 5v19c0 1.7 1.3 3 3 3h10c1.7 0 3-1.3 3-3V21l-4-5v-4z"/>
+      <path d="M19.5 6h9v6h-9zM16 26h16v9H16z"/>
+    </symbol>
+    <symbol id="i-onion" viewBox="0 0 48 48">
+      <path style="fill:var(--accent-soft)" d="M24 11c-9 5.5-14 12.5-14 19.5C10 37 16.3 42 24 42s14-5 14-11.5C38 23.5 33 16.5 24 11z"/>
+      <path d="M24 11V5M24 11c-4 6.5-6 13-5 21M24 11c4 6.5 6 13 5 21M20 42l-1.5 3M24 42v3.2M28 42l1.5 3"/>
+    </symbol>
+    <symbol id="i-potato" viewBox="0 0 48 48">
+      <path style="fill:var(--accent-soft)" d="M8 27c0-9 8-15.5 17-15.5S40 16 40 24s-7.5 15-17 15S8 34.5 8 27z"/>
+      <path d="M19 21.5l1.4.6M30 27l1.2 1M22.5 32l1.4-.3M32 19.5l.8 1.2"/>
+    </symbol>
+    <symbol id="i-salt" viewBox="0 0 48 48">
+      <path style="fill:var(--accent-soft)" d="M16.5 19c0-6.5 3.2-11 7.5-11s7.5 4.5 7.5 11v19.5c0 1.7-1.3 3-3 3h-9c-1.7 0-3-1.3-3-3z"/>
+      <path d="M16.5 19h15M21 13.2h.01M24 11.2h.01M27 13.2h.01"/>
+    </symbol>
+    <symbol id="i-cup" viewBox="0 0 48 48">
+      <path style="fill:var(--accent-soft)" d="M8 13h24v23c0 2.8-2.2 5-5 5H13c-2.8 0-5-2.2-5-5z"/>
+      <path d="M32 18h4.5c1.7 0 3 1.3 3 3v6c0 1.7-1.3 3-3 3H32M8 21h6M8 27h6M8 33h6"/>
+    </symbol>
+    <symbol id="i-pot" viewBox="0 0 48 48">
+      <path style="fill:var(--accent-soft)" d="M8 21h32v15c0 2.8-2.2 5-5 5H13c-2.8 0-5-2.2-5-5z"/>
+      <path style="fill:var(--surface)" d="M6 21c0-5 8-8.5 18-8.5S42 16 42 21z"/>
+      <path d="M21.5 12.5V9h5v3.5M8 25H4M40 25h4"/>
+    </symbol>
+    <symbol id="i-pan" viewBox="0 0 48 48">
+      <circle style="fill:var(--accent-soft)" cx="19" cy="27" r="13"/>
+      <circle cx="19" cy="27" r="9"/>
+      <path stroke-width="4" d="M29.5 18.5l11-8.5"/>
+    </symbol>
+    <symbol id="i-flame" viewBox="0 0 48 48">
+      <path style="fill:var(--accent-soft)" d="M23 5c2.5 6.5 11 10.5 11 21.5a10 10 0 0 1-20 0c0-5 2.5-8.5 5-11.5 0 4 1.5 6.5 4 7-1-6 0-12 0-17z"/>
+      <path d="M24 40.5a4 4 0 0 1-4-4c0-3.2 4-5.7 4-9 2 3 4 5 4 9a4 4 0 0 1-4 4z"/>
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 48 48">
+      <circle style="fill:var(--accent-soft)" cx="24" cy="25" r="16"/>
+      <path d="M24 16v9l6 4M24 9v2.5M24 38.5V41M8 25h2.5M37.5 25H40M20 5h8"/>
+    </symbol>
+    <symbol id="i-patty" viewBox="0 0 48 48">
+      <path style="fill:var(--accent-soft)" d="M7 21v8c0 3.6 7.6 6.5 17 6.5S41 32.6 41 29v-8"/>
+      <ellipse style="fill:var(--surface)" cx="24" cy="21" rx="17" ry="6.5"/>
+      <path d="M14 21l6-3M20.5 24l8-4.2M29 23.5l5.5-3"/>
+    </symbol>
+    <symbol id="i-cheese" viewBox="0 0 48 48">
+      <path style="fill:var(--accent-soft)" d="M5 31l30-15 8 4v14H5z"/>
+      <path style="fill:var(--surface)" d="M5 31l30-15 8 4-30 11z"/>
+      <path d="M13 31v3M18 36.5h.01M30 30.5a2.2 2.2 0 1 0 0 .01"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <span class="tb-title">Formula diagrams</span>
+    <nav class="tb-jump">
+      <a href="#hero-example">Veg patties</a>
+      <a href="#kinds">Three kinds</a>
+      <a href="#syntax">Syntax</a>
+      <a href="#density">Sidebar &amp; phone</a>
+      <a href="#kit">Icon kit</a>
+      <a href="#build">Build</a>
+      <a href="#open">Open questions</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle">Theme: <span id="themeLabel">System</span></button>
+  </div>
+</div>
+
+<main>
+  <header class="hero">
+    <span class="hero-eyebrow">Mockup · candidate component · 2026-10-06</span>
+    <h1>Formula diagrams</h1>
+    <p>A one-row picture of a recipe's ratio: icons for the parts, joined by <code>+</code>, <code>:</code> or <code>→</code>, with the quantity under each icon. It sits next to the sentence it illustrates and doesn't replace it. The sentence stays for search, screen readers, Obsidian and print.</p>
+    <p>The approach follows Scorekeep's rules pages: Markdown names the diagram, and the renderer draws it from one shared kit of marks, all shown on one page (§5). Ink lines, one soft fill, and quantities in the mono face. No new colours.</p>
+  </header>
+
+  <!-- 1 -->
+  <section class="block" id="hero-example">
+    <div class="block-head">
+      <span class="block-num">§1</span>
+      <h2 class="block-title">Veg patties, in the body column</h2>
+      <p class="block-dek">The worked example from the brief. The fenced block goes right after the Mechanic's opening sentence, and the swap list keeps doing its job below it.</p>
+    </div>
+
+    <div class="stage prose">
+      <h2 class="prose-h2">Mechanic</h2>
+      <p>A veg patty is a formula, not a fixed recipe: <strong>per can of beans, 1 cup cooked starch, 1 cup vegetables, ½ cup breadcrumbs, and 1 egg.</strong> The beans are the body, the starch makes the mix tacky, and the binder holds it together in the pan.</p>
+
+      <figure class="formula">
+        <div class="formula-row">
+          <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-can"/></svg><span class="f-label">Beans</span><span class="f-qty">1 can</span></div>
+          <span class="f-op" aria-hidden="true">+</span>
+          <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-bowl"/></svg><span class="f-label">Starch</span><span class="f-qty">1 cup</span></div>
+          <span class="f-op" aria-hidden="true">+</span>
+          <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-carrot"/></svg><span class="f-label">Vegetables</span><span class="f-qty">1 cup</span></div>
+          <span class="f-op" aria-hidden="true">+</span>
+          <div class="f-slot"><span class="f-icons pair"><svg class="ic" aria-hidden="true"><use href="#i-crumbs"/></svg><svg class="ic" aria-hidden="true"><use href="#i-egg"/></svg></span><span class="f-label">Binder</span><span class="f-qty">½ cup + 1 egg</span></div>
+          <span class="f-op eq" aria-hidden="true">=</span>
+          <div class="f-slot result"><svg class="ic" aria-hidden="true"><use href="#i-patty"/></svg><span class="f-label">Patties</span><span class="f-qty">6</span></div>
+        </div>
+      </figure>
+
+      <p>Water is what breaks a veg patty, so dry or cook every wet ingredient first: pat the beans dry, sauté the vegetables, and smash anything round so it can't roll loose.</p>
+    </div>
+
+    <div class="note-card">
+      <span class="note-mark">?</span>
+      <div>
+        <p><strong>The <code>=</code> result slot is optional.</strong> It turns "a list of parts" into "these make that," which is the bit the sentence leaves to the reader. It costs one slot of width. Without it, the row fits the sidebar at four slots (§4).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section class="block" id="kinds">
+    <div class="block-head">
+      <span class="block-num">§2</span>
+      <h2 class="block-title">Three kinds, one component</h2>
+      <p class="block-dek">Additive ships first. Ratio and sequence use the same slot, with a different operator and a different emphasis.</p>
+    </div>
+
+    <h3 class="sub-title">Additive: <code>+</code></h3>
+    <p class="sub-dek">Parts that go together in one bowl. The quantity is a measure, so it sits small, under the label.</p>
+    <div class="stage">
+      <figure class="formula">
+        <div class="formula-row">
+          <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-potato"/></svg><span class="f-label">Potatoes</span><span class="f-qty">1 kg</span></div>
+          <span class="f-op" aria-hidden="true">+</span>
+          <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-butter"/></svg><span class="f-label">Butter</span><span class="f-qty">100 g</span></div>
+          <span class="f-op" aria-hidden="true">+</span>
+          <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-cup"/></svg><span class="f-label">Hot milk</span><span class="f-qty">250 ml</span></div>
+          <span class="f-op" aria-hidden="true">+</span>
+          <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-salt"/></svg><span class="f-label">Salt</span><span class="f-qty">2 tsp</span></div>
+        </div>
+        <figcaption class="f-cap">Mashed potatoes, per kilogram</figcaption>
+      </figure>
+    </div>
+
+    <h3 class="sub-title">Ratio: <code>:</code></h3>
+    <p class="sub-dek">Here the numbers are the whole point, so they lead in large mono and the label goes underneath. An optional parts bar draws the proportion, which you can't see in "3 : 2 : 1" at a glance.</p>
+    <div class="split">
+      <div class="stage">
+        <figure class="formula ratio">
+          <div class="formula-row">
+            <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-flour"/></svg><span class="f-num">3</span><span class="f-label">Flour</span></div>
+            <span class="f-op" aria-hidden="true">:</span>
+            <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-butter"/></svg><span class="f-num">2</span><span class="f-label">Fat</span></div>
+            <span class="f-op" aria-hidden="true">:</span>
+            <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-water"/></svg><span class="f-num">1</span><span class="f-label">Ice water</span></div>
+          </div>
+          <div class="f-bar" aria-hidden="true"><span style="flex:3"></span><span style="flex:2"></span><span style="flex:1"></span></div>
+          <div class="f-bar-key" aria-hidden="true"><span style="flex:3">flour</span><span style="flex:2">fat</span><span style="flex:1">water</span></div>
+          <figcaption class="f-cap">Pie crust, by weight</figcaption>
+        </figure>
+      </div>
+      <div class="stage">
+        <figure class="formula ratio">
+          <div class="formula-row">
+            <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-bowl"/></svg><span class="f-num">1</span><span class="f-label">Rice</span></div>
+            <span class="f-op" aria-hidden="true">:</span>
+            <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-water"/></svg><span class="f-num">1½</span><span class="f-label">Water</span></div>
+          </div>
+          <div class="f-bar" aria-hidden="true" style="max-width:220px"><span style="flex:2"></span><span style="flex:3"></span></div>
+          <figcaption class="f-cap">Long-grain rice, by volume</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <h3 class="sub-title">Sequence: <code>→</code></h3>
+    <p class="sub-dek">For the shape of a method, not every step in it. Each slot gets one verb and an optional italic note. If it needs more than four or five slots, use numbered steps instead.</p>
+    <div class="stage">
+      <figure class="formula seq">
+        <div class="formula-row">
+          <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-pan"/></svg><span class="f-label">Sear</span><span class="f-sub">hot, in batches</span></div>
+          <span class="f-op" aria-hidden="true">→</span>
+          <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-water"/></svg><span class="f-label">Deglaze</span><span class="f-sub">scrape the fond</span></div>
+          <span class="f-op" aria-hidden="true">→</span>
+          <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-pot"/></svg><span class="f-label">Braise</span><span class="f-qty">2–3 h</span></div>
+          <span class="f-op" aria-hidden="true">→</span>
+          <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span class="f-label">Rest</span><span class="f-qty">10 min</span></div>
+        </div>
+        <figcaption class="f-cap">Any braise</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section class="block" id="syntax">
+    <div class="block-head">
+      <span class="block-num">§3</span>
+      <h2 class="block-title">What the author writes</h2>
+      <p class="block-dek">A fenced <code>formula</code> block: one slot per line, and the operator at the start of each line after the first. In Obsidian it still reads as the formula, just in plain text.</p>
+    </div>
+
+    <div class="split">
+      <pre class="src"><span class="c">```formula</span>
+can          | Beans      | 1 can
+<span class="k">+</span> bowl       | Starch     | 1 cup
+<span class="k">+</span> carrot     | Vegetables | 1 cup
+<span class="k">+</span> crumbs egg | Binder     | ½ cup + 1 egg
+<span class="k">=</span> patty      | Patties    | 6
+<span class="c">```</span></pre>
+      <pre class="src"><span class="c">```formula</span>
+flour   | Flour     | 3
+<span class="k">:</span> butter | Fat       | 2
+<span class="k">:</span> water  | Ice water | 1
+<span class="k">caption</span>: Pie crust, by weight
+<span class="k">bar</span>: yes
+<span class="c">```</span></pre>
+    </div>
+
+    <table class="spec" style="margin-top:18px">
+      <thead><tr><th>Field</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td>icon</td><td>One or two kit keys (§5), separated by a space. An unknown key draws an empty circle and prints a build warning, so a typo shows up in review instead of breaking the page.</td></tr>
+        <tr><td>label</td><td>Short noun, sentence case. One or two words, or it wraps.</td></tr>
+        <tr><td>quantity</td><td>Same units as the recipe text (Canadian, metric first). In a <code>:</code> block it's the ratio number. In a <code>→</code> block, anything not starting with a digit renders as the italic note.</td></tr>
+        <tr><td>+ : → =</td><td>One operator per block (<code>+</code>, <code>:</code> or <code>→</code>), plus an optional closing <code>=</code> result. Mixing operators in one row is refused, because it stops being glanceable.</td></tr>
+        <tr><td>caption / bar</td><td>Optional trailing keys. <code>bar</code> only applies to ratios.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="note-card">
+      <span class="note-mark">?</span>
+      <div>
+        <p><strong>Who writes it.</strong> Claude adds the block when you ask ("diagram the mechanic"), or when it finds a <code>%% diagram %%</code> comment in the file. Obsidian hides that comment, and Hugo strips it. The recipe-writing skill would get one rule: only diagram a ratio that's already stated in the text.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section class="block" id="density">
+    <div class="block-head">
+      <span class="block-num">§4</span>
+      <h2 class="block-title">Sidebar and phone</h2>
+      <p class="block-dek">On recipe pages, <code>## Mechanic</code> is moved into the right sidebar, about 18.6rem wide. A formula written there has to fit that column, so it gets a compact density: 34px icons and tighter operators. Four slots fit, and a fifth wraps.</p>
+    </div>
+
+    <div class="frames">
+      <div>
+        <div class="frame sidebar">
+          <div class="side-h">Mechanic</div>
+          <div class="mechanic">
+            <p>A veg patty is a formula: <strong>per can of beans, 1 cup cooked starch, 1 cup vegetables, ½ cup breadcrumbs, and 1 egg.</strong></p>
+            <figure class="formula compact" style="margin-top:12px">
+              <div class="formula-row">
+                <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-can"/></svg><span class="f-label">Beans</span><span class="f-qty">1 can</span></div>
+                <span class="f-op" aria-hidden="true">+</span>
+                <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-bowl"/></svg><span class="f-label">Starch</span><span class="f-qty">1 cup</span></div>
+                <span class="f-op" aria-hidden="true">+</span>
+                <div class="f-slot"><svg class="ic" aria-hidden="true"><use href="#i-carrot"/></svg><span class="f-label">Veg</span><span class="f-qty">1 cup</span></div>
+                <span class="f-op" aria-hidden="true">+</span>
+                <div class="f-slot"><span class="f-icons pair"><svg class="ic" aria-hidden="true"><use href="#i-crumbs"/></svg><svg class="ic" aria-hidden="true"><use href="#i-egg"/></svg></span><span class="f-label">Binder</span><span class="f-qty">½ c + egg</span></div>
+              </div>
+            </figure>
+          </div>
+        </div>
+        <div class="frame-cap">recipe sidebar · 18.6rem · compact</div>
+      </div>
+
+      <div>
+        <div class="frame phone">
+          <div class="side-h">Mechanic</div>
+          <figure class="formula">
+            <div class="formula-row">
+              <div class="f-slot" style="width:72px"><svg class="ic" aria-hidden="true"><use href="#i-can"/></svg><span class="f-label">Beans</span><span class="f-qty">1 can</span></div>
+              <span class="f-op" aria-hidden="true">+</span>
+              <div class="f-slot" style="width:72px"><svg class="ic" aria-hidden="true"><use href="#i-bowl"/></svg><span class="f-label">Starch</span><span class="f-qty">1 cup</span></div>
+              <span class="f-op" aria-hidden="true">+</span>
+              <div class="f-slot" style="width:72px"><svg class="ic" aria-hidden="true"><use href="#i-carrot"/></svg><span class="f-label">Vegetables</span><span class="f-qty">1 cup</span></div>
+              <span class="f-op" aria-hidden="true">+</span>
+              <div class="f-slot" style="width:72px"><span class="f-icons pair"><svg class="ic" aria-hidden="true"><use href="#i-crumbs"/></svg><svg class="ic" aria-hidden="true"><use href="#i-egg"/></svg></span><span class="f-label">Binder</span><span class="f-qty">½ cup + 1 egg</span></div>
+              <span class="f-op eq" aria-hidden="true">=</span>
+              <div class="f-slot result" style="width:72px"><svg class="ic" aria-hidden="true"><use href="#i-patty"/></svg><span class="f-label">Patties</span><span class="f-qty">6</span></div>
+            </div>
+          </figure>
+        </div>
+        <div class="frame-cap">phone · 360px · five slots wrap, operator stays with its slot</div>
+      </div>
+    </div>
+
+    <div class="note-card">
+      <span class="note-mark">?</span>
+      <div>
+        <p><strong>Compact labels get shortened by hand, not by the renderer.</strong> "Vegetables" fits at full size but not compact, and "½ cup + 1 egg" doesn't either. A <code>short:</code> column, or just shorter labels everywhere, is a call to make (see open questions). On a wrap, each operator moves to the next line with its slot, so no row ever ends on a dangling <code>+</code>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 -->
+  <section class="block" id="kit">
+    <div class="block-head">
+      <span class="block-num">§5</span>
+      <h2 class="block-title">Icon kit</h2>
+      <p class="block-dek">A 48-unit grid, 2-unit round-capped strokes in <code>currentColor</code>, one <code>--accent-soft</code> fill on each object's body, and <code>--surface</code> on lids and tops. That's the same rule as the favicon: existing tokens only, readable at 34px, and it follows dark mode for free. This first pass has 19 keys. Scorekeep's equivalent is the in-app Design guide, and this section is meant to become that page.</p>
+    </div>
+
+    <div class="kit" id="kitGrid"></div>
+
+    <h3 class="sub-title">Sizes</h3>
+    <p class="sub-dek">Full (48), compact (34), and a 24px inline size that isn't used yet, as a check that the marks survive small.</p>
+    <div class="kit-sizes">
+      <figure><svg class="ic" style="width:48px;height:48px" aria-hidden="true"><use href="#i-can"/></svg><figcaption>48</figcaption></figure>
+      <figure><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-can"/></svg><figcaption>34</figcaption></figure>
+      <figure><svg class="ic" style="width:24px;height:24px" aria-hidden="true"><use href="#i-can"/></svg><figcaption>24</figcaption></figure>
+      <figure><svg class="ic" style="width:48px;height:48px" aria-hidden="true"><use href="#i-carrot"/></svg><figcaption>48</figcaption></figure>
+      <figure><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-carrot"/></svg><figcaption>34</figcaption></figure>
+      <figure><svg class="ic" style="width:24px;height:24px" aria-hidden="true"><use href="#i-carrot"/></svg><figcaption>24</figcaption></figure>
+      <figure><svg class="ic" style="width:48px;height:48px" aria-hidden="true"><use href="#i-egg"/></svg><figcaption>48</figcaption></figure>
+      <figure><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-egg"/></svg><figcaption>34</figcaption></figure>
+      <figure><svg class="ic" style="width:24px;height:24px" aria-hidden="true"><use href="#i-egg"/></svg><figcaption>24</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- 6 -->
+  <section class="block" id="build">
+    <div class="block-head">
+      <span class="block-num">§6</span>
+      <h2 class="block-title">How it would be built</h2>
+      <p class="block-dek">Everything happens in the Hugo build, and the page needs no JavaScript.</p>
+    </div>
+    <table class="spec">
+      <thead><tr><th>Piece</th><th>What it does</th></tr></thead>
+      <tbody>
+        <tr><td>render-codeblock-formula.html</td><td>Hugo code-block render hook in <code>layouts/_default/_markup/</code>. Splits lines, then fields on <code>|</code>, and emits the <code>figure.formula</code> markup above. Gives the figure an <code>aria-label</code> made from the slot text ("Beans 1 can plus Starch 1 cup…"). The icons are <code>aria-hidden</code>.</td></tr>
+        <tr><td>assets/icons/formula/*.svg</td><td>One file per kit key, inlined via <code>resources.Get</code>. Inline rather than <code>&lt;img&gt;</code>, so <code>currentColor</code> and the tokens apply and dark mode works.</td></tr>
+        <tr><td>.formula CSS</td><td>In <code>assets/css/custom.css</code>. Compact density keys off the sidebar container (<code>.recipe-sidebar-section .formula</code>), not a flag the author has to set.</td></tr>
+        <tr><td>/lint</td><td>Flags unknown icon keys, mixed operators, and more than five slots.</td></tr>
+        <tr><td>index.json</td><td>Adds <code>has_formula</code>, so coverage questions ("which Mechanics could use one?") can be answered.</td></tr>
+        <tr><td>Kit gallery</td><td>This page's §5 becomes the living reference (<code>mockups/STYLE.md</code> entry plus <code>style.html</code>), the way Scorekeep's Design guide is.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 7 -->
+  <section class="block" id="open">
+    <div class="block-head">
+      <span class="block-num">§7</span>
+      <h2 class="block-title">Open questions</h2>
+    </div>
+    <div class="qlist">
+      <div class="note-card" style="margin:0"><span class="note-mark">1</span><div><p><strong>Icon style.</strong> Is this the right level of simplicity, compared with Scorekeep's marks? Or should it be looser (slight wobble, uneven stroke) to read more pen and ink?</p></div></div>
+      <div class="note-card" style="margin:0"><span class="note-mark">2</span><div><p><strong>Fill.</strong> A soft accent fill on every object, as shown, or line-only, with fill reserved for the <code>=</code> result?</p></div></div>
+      <div class="note-card" style="margin:0"><span class="note-mark">3</span><div><p><strong>Slot icons: category or ingredient?</strong> "Starch" is drawn as a rice bowl even though mash works too. Should a slot show the category generically, or the one ingredient this recipe uses?</p></div></div>
+      <div class="note-card" style="margin:0"><span class="note-mark">4</span><div><p><strong>Compact labels.</strong> Add a fourth <code>short</code> field, or keep labels short everywhere?</p></div></div>
+      <div class="note-card" style="margin:0"><span class="note-mark">5</span><div><p><strong>Card use.</strong> A 24px version on recipe cards would be a strong browse signal, but the card is already full. Out of scope for now?</p></div></div>
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+  var kit = [
+    ['can','beans, tomatoes, coconut milk'],['bowl','rice, grains, starch'],['carrot','vegetables'],
+    ['crumbs','breadcrumbs, bread'],['egg','egg, binder'],['flour','flour, dry goods'],
+    ['butter','butter, fat'],['water','water, stock, liquid'],['oil','oil'],['onion','onion, aromatics'],
+    ['potato','potato, root veg'],['salt','salt, seasoning'],['cup','milk, a measure'],['cheese','cheese, dairy'],
+    ['pan','sear, fry'],['pot','braise, boil, simmer'],['flame','heat, roast'],['clock','rest, time'],
+    ['patty','patties, result']
+  ];
+  // The render hook would emit this wrapper directly; here it's added after the fact.
+  document.querySelectorAll('.f-op').forEach(function(op){
+    var slot = op.nextElementSibling, step = document.createElement('div');
+    step.className = 'f-step'; op.parentNode.insertBefore(step, op); step.appendChild(op); step.appendChild(slot);
+  });
+  var grid = document.getElementById('kitGrid');
+  kit.forEach(function(k){
+    var d = document.createElement('div'); d.className = 'kit-cell';
+    d.innerHTML = '<svg class="ic" aria-hidden="true"><use href="#i-'+k[0]+'"/></svg><span class="kit-key">'+k[0]+'</span><span class="kit-use">'+k[1]+'</span>';
+    grid.appendChild(d);
+  });
+
+  var root = document.documentElement, label = document.getElementById('themeLabel');
+  var order = ['system','light','dark'], current = 'system';
+  try{ var s = localStorage.getItem('nac-style-theme'); if(order.indexOf(s) !== -1) current = s; }catch(e){}
+  function apply(m){ if(m==='system') root.removeAttribute('data-theme'); else root.setAttribute('data-theme', m);
+    label.textContent = m.charAt(0).toUpperCase()+m.slice(1); try{ localStorage.setItem('nac-style-theme', m); }catch(e){} }
+  apply(current);
+  document.getElementById('themeToggle').addEventListener('click', function(){ current = order[(order.indexOf(current)+1)%order.length]; apply(current); });
+})();
+</script>
+</body>
+</html>

@@ -28,6 +28,12 @@ in a browser — no build step.
   the review copy for the "filter for quality" pass. Also published as an
   artifact: https://claude.ai/artifact/MwRnqh7dJJvgWXqFoetU9m
 
+- **`formula-diagrams.html`**: proposal (2026-10-06) for a one-row icon
+  diagram of a recipe's ratio (`+`, `:`, `→`), written as a fenced
+  `formula` block and drawn by a Hugo render hook from a shared icon kit,
+  after Scorekeep's rules-page diagrams. Veg patties is the worked example.
+  Not built yet.
+
 - **`recipe-card-v2.html`** — the recipe card redesign (2026-09-23) with
   real recipe data: before/after, homepage row, and recipes list grid.
   Built into `layouts/partials/recipe-card.html` and
