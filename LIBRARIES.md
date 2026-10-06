@@ -20,7 +20,7 @@ Python 3.11+. No virtual environment required for the simple tools; add one if d
 
 ### python-frontmatter
 
-Parses Markdown files with YAML frontmatter into a Python object. Handles the read-modify-write cycle cleanly.
+Parses Markdown files with YAML frontmatter into a Python object. Used by `migrate.py` (retired); the current tools (`frontmatter.py`, `drafts.py`) are stdlib only and don't need it.
 
 ```
 pip install python-frontmatter
@@ -30,7 +30,7 @@ pip install python-frontmatter
 
 ### click
 
-CLI framework for migrate.py.
+CLI framework for `migrate.py` (retired). Not needed by any current tool.
 
 ```
 pip install click
@@ -50,12 +50,12 @@ Formatted terminal output (tables, progress, coloured status lines).
 pip install rich
 ```
 
-**Why:** Makes migrate.py output easier to scan. Optional — the tools work without it, just with plainer output. Add when the tools are in regular use.
+**Why:** Was for `migrate.py`'s output (retired). No current tool uses it.
 
 ## No Node.js dependency
 
-recipe-book (deprecated) used Node.js and TypeScript for the parser/CLI. This project does not. Hugo handles Markdown natively; the Python tools handle file transformation. If a more capable recipe parser is needed later (scaling, validation), it can be added as a standalone Python library.
+recipe-book (deprecated) used Node.js and TypeScript for the parser/CLI. This project does not. Hugo handles Markdown natively; the Python tools handle file transformation. Client-side features (scaling, unit conversion, the sidebar, search) are plain JS in `assets/js/`, served as-is with no build step or package manager. If a validator is needed later (`SPEC.md` §8), it can be a standalone Python tool.
 
 ## Deployment
 
-No specific library — a shell script (`tools/deploy.sh`) using `rsync` to push `public/` to the server. Requires SSH access to the host. Add a Makefile target (`make deploy`) for convenience once the host is known.
+No specific library — `tools/publish.sh` builds and checks `public/`, then `tools/deploy.sh` rsyncs it to the server. Requires SSH access to the host. `make deploy` runs both.

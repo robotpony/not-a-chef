@@ -1,6 +1,6 @@
 # Recipe Format Specification
 
-Status: **Draft, v0.1.0**
+Status: **Draft, v0.2.0**
 
 This is the normative counterpart to `FORMAT.md`. `FORMAT.md` stays the
 human-readable guide (what a recipe should look like); this document is
@@ -29,6 +29,13 @@ exactly one of them:
    own (live servings scaling, a shopping list assembled from multiple
    recipes, etc). Every client-time feature MUST degrade safely: with JS
    off or failing, the page stays fully readable and printable.
+
+`recipe.js` is the spec's name for the client layer as a whole; it was
+never built as one file. What exists today is `assets/js/ingredients.js`
+(portion scaling and measure conversion, 1a/1b below, plus ingredient
+check-off) and `assets/js/automagic-sidebar.js` (moves Mechanic, To serve,
+Notes and photos into the sidebar). Read `recipe.js` below as "the client
+layer", whichever file a feature lands in.
 
 Nothing in this spec introduces a fourth layer (a live backend, accounts,
 or shared server-side state). That was considered for saved recipes /
@@ -174,6 +181,30 @@ MAY additionally parse it into an interactive ingredient-swap control
 match any line in `## Ingredients`, since the match is best-effort text
 comparison, not a guaranteed link.
 
+### Formula block
+
+A recipe MAY illustrate a ratio its text already states with a fenced
+```` ```formula ```` block. It MUST NOT replace the stated ratio: the
+prose sentence stays the source, the diagram illustrates it.
+
+```
+icon [icon] | label | quantity | swaps      (first line, no operator)
+<op> icon [icon] | label | quantity | swaps (each later line)
+= icon | label | quantity                   (optional result, last)
+caption: <text>                             (optional)
+bar: yes                                    (optional, ratios only)
+```
+
+- `<op>` is one of `+`, `:`, `→` (`->` accepted). A block MUST use one
+  operator throughout, apart from the optional closing `=`.
+- `icon` is one or two keys from `assets/icons/formula/`. An unknown key
+  is a validation warning, not an error (it renders a placeholder).
+- `swaps` is optional, comma-separated, up to three.
+- A block SHOULD have no more than five slots.
+
+Rendering is build-time only (`layouts/_default/_markup/render-codeblock-formula.html`);
+no client code reads it. Added in 0.2.0.
+
 ## 6. Global data files
 
 Hand-maintained, versioned in git under `data/`, same directory Hugo
@@ -218,8 +249,8 @@ one depends on.
 
 | # | Feature | Layer | Depends on |
 |---|---|---|---|
-| 1a | Portion scaling | client | §3 grammar |
-| 1b | Measure conversion | client | §3 grammar + a unit-conversion factor table (small, separate concern — scope when `recipe.js` is actually built) |
+| 1a | Portion scaling | client | §3 grammar. Built: `assets/js/ingredients.js` |
+| 1b | Measure conversion | client | §3 grammar + a unit-conversion factor table. Built: `assets/js/ingredients.js` |
 | 1c | Nutrition data | **deferred** | future feature, no data model yet |
 | 1d | Quantity+unit auto-wrap (for styling) | build | Hugo render hook wraps `<span>`s at build time; simpler done once at build than repeatedly in JS |
 | 1e | Optional ingredients | build + client | §3 `(optional)` marker; static styling by default, client toggle to hide/show |
@@ -238,7 +269,7 @@ one depends on.
 
 ## 8. Validator implications
 
-Feeds the `/lint` extension already scoped in `PLAN.md` Phase 9:
+Feeds a future `/lint` extension (the validator track of the old plan's Phase 9, squashed 2026-09-25; see git history for `PLAN.md`):
 
 - Required frontmatter present and correctly typed (§2).
 - Ingredient line parse success rate (§3) — report any line that fails
@@ -249,10 +280,12 @@ Feeds the `/lint` extension already scoped in `PLAN.md` Phase 9:
 - `## Equipment`, when present, is a flat bullet list — no nesting.
 - `####` ingredient-group labels (§4) appear only directly inside an
   Ingredients block and are immediately followed by list items.
+- ```` ```formula ```` blocks (§5) use known icon keys, one operator, and
+  at most five slots. The build already warns on all three.
 
 ## 9. Versioning
 
-This draft is `0.1.0`. Bump minor for additive, backward-compatible
+This draft is `0.2.0` (0.2.0 added the optional formula block, §5). Bump minor for additive, backward-compatible
 changes (a new optional section or field — existing recipes that don't
 use it remain valid). Bump major only when a previously-valid recipe
 could fail validation under the new rule.

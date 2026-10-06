@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A family cookbook built as a Hugo static site (Blowfish theme), edited in Obsidian. Three content types: recipes, food essays, and reference pages (technique guides, glossaries, appendices).
 
-See ARCHITECTURE.md for the data flow and component overview. See PLAN.md for the phased implementation plan. See `mockups/STYLE.md` (or `mockups/style.html`) for the settled visual design system — read it before any visual/layout work; see "Visual design" below.
+See ARCHITECTURE.md for the data flow and component overview. See PLAN.md for future work (the phased build plan was squashed after release; its history is in git). See `mockups/STYLE.md` (or `mockups/style.html`) for the settled visual design system — read it before any visual/layout work; see "Visual design" below.
 ## Content formats
 
 See `FORMAT.md` for the recipe specification and `FORMAT-ESSAYS.md` for the essay specification.
@@ -21,6 +21,7 @@ See `FORMAT.md` for the full specification. Key points:
 - Multi-component recipes: one `## ComponentName` heading per component, each containing its ingredients list and prose method
 - Optional sections: `## To serve`, `## Variations`, `## Notes`
 - Cross-references use wiki links: `[[Pizza sauce]]`, `[[Basic pie crust]]`
+- Optional ```` ```formula ```` block draws a stated ratio as a row of icons (`FORMAT.md` §Formula diagrams); it illustrates the sentence, never replaces it
 - Canadian English; metric units with optional imperial in parentheses
 
 ## Content sources
@@ -35,22 +36,27 @@ This repo (`/Users/mx/writing/not-a-chef`) is now the Obsidian vault itself — 
 
 The index is current after any `hugo` build. If `public/` is stale, run `hugo --quiet` to regenerate.
 
-## Migration tools
+## Tools
 
-`tools/migrate.py` — migrates personal recipes from the vault to `content/recipes/`. Normalizes frontmatter; does not touch body content.
+- `tools/frontmatter.py` — check, get, set, and unset frontmatter across content (stdlib only)
+- `tools/drafts.py` — list everything marked `draft: true` (`make drafts`)
+- `tools/add-image.sh` — process a photo for the site (used by `/image-add`)
+- `tools/preview.sh`, `tools/publish.sh`, `tools/deploy.sh` — dev server, build + check, rsync deploy
+- `tools/migrate.py` — retired with the two-vault workflow (see Content sources); kept for history, not part of any current flow
 
-See DESIGN.md for the full CLI interface.
+See DESIGN.md for the CLI interfaces.
 
 ## Claude Code commands
 
-Project slash commands are in `.claude/commands/`. See DESIGN.md for descriptions. Commands planned:
+Project slash commands are in `.claude/commands/`. See DESIGN.md for descriptions.
 
-- `/migrate` — run tools/migrate.py for personal recipes
 - `/recipe-new` — create a new recipe stub
 - `/lint` — validate recipe frontmatter
 - `/preview` — start Hugo dev server
 - `/publish` — build and deploy
 - `/food-log-summary` — write or refresh a Food Log month's opening summary paragraph (the card intro on the listing page and homepage)
+- `/image-add` — add photos to a recipe, essay, or Food Log page
+- `/migrate` — retired; ran `tools/migrate.py` for the old two-vault workflow
 
 ## Hugo site
 
@@ -63,7 +69,7 @@ Blowfish theme as a git submodule. Wiki links require a render hook in `layouts/
 
 ## Visual design
 
-`mockups/STYLE.md` (full visual mock: `mockups/style.html`) is the settled design system for the site — color tokens, type system, the ratified component list, and spacing, derived from warpedvisions.org's accent palette (same five hues, re-ordered to lead with orange/red) and set in Libre Franklin (headings/UI), Lora (body), and IBM Plex Mono (quantities/data). `mockups/COMPONENTS.md` (full visual mock: `mockups/components.html`) is the full component inventory across every mockup round ever built — broader than STYLE.md's ratified list, it includes candidates not yet promoted and every place two mockup rounds solved the same problem two different ways (shown side by side in `components.html`); check it before building a new component that might already exist in some form, and before a quality/consolidation pass.
+`mockups/STYLE.md` (full visual mock: `mockups/style.html`) is the settled design system for the site — color tokens, type system, the ratified component list, and spacing, derived from warpedvisions.org's accent palette (same five hues, re-ordered to lead with orange/red) and set in Libre Franklin (headings/UI), Lora (body), and IBM Plex Mono (quantities/data). `mockups/COMPONENTS.md` (full visual mock: `mockups/components.html`) is the full component inventory from the four original mockup rounds (later single-purpose mockups went straight into STYLE.md and are listed in `mockups/README.md`) — broader than STYLE.md's ratified list, it includes candidates not yet promoted and every place two mockup rounds solved the same problem two different ways (shown side by side in `components.html`); check it before building a new component that might already exist in some form, and before a quality/consolidation pass.
 
 **Read `mockups/STYLE.md` (or `mockups/style.html`) before starting any new visual mockup or layout work for this site.** These are living records, not one-offs — update them (and their `.html` mocks to match) when a decision lands. `mockups/README.md` explains what's in the folder. The four original mockup rounds (`style-guide.html`, `recipe-spec-sheet.html`, `homepage.html`, `landing-page-alt.html`) now live under `mockups/archived/` — reference only, not the working copies; don't build new work against them directly.
 

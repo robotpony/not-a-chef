@@ -32,7 +32,9 @@ in a browser — no build step.
   diagram of a recipe's ratio (`+`, `:`, `→`), written as a fenced
   `formula` block and drawn by a Hugo render hook from a shared icon kit,
   after Scorekeep's rules-page diagrams. Veg patties is the worked example.
-  Not built yet.
+  Built 2026-10-06 (`render-codeblock-formula.html`, `partials/formula-slot.html`,
+  `assets/icons/formula/`); `STYLE.md`'s Formula diagram entry describes it.
+  The recipe card strip (§5) is not built; see `PLAN.md`.
 
 - **`recipe-card-v2.html`** — the recipe card redesign (2026-09-23) with
   real recipe data: before/after, homepage row, and recipes list grid.

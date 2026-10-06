@@ -1,6 +1,8 @@
 # Copy this file to tools/config.toml and set paths for your machine.
 # tools/config.toml is gitignored — do not commit it.
 
+# [vault] is only read by tools/migrate.py, retired with the two-vault
+# workflow (this repo is the Obsidian vault now). Safe to leave out.
 [vault]
 recipes = "~/writing/me/recipes"
 

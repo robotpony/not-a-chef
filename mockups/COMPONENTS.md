@@ -15,6 +15,8 @@ subset; this one includes everything, including near-duplicates, one-offs,
 and mockup-only chrome, so nothing found during the mockup rounds gets lost
 before a quality pass decides what survives.
 
+**Scope:** only the four original rounds. Components from later single-purpose mockups (recipe card v2, reading sidebar, photos, win-the-fridge, food-log homepage, formula diagrams) were designed against the settled system from the start, so they went straight into `STYLE.md`'s Components list; each mockup is listed in `README.md`.
+
 See `components.html` for this same inventory as a full visual mock — every
 row rendered at real scale, with duplicates shown side by side.
 

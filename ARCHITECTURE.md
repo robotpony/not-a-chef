@@ -2,83 +2,61 @@
 
 ## Overview
 
-This repo is the source of truth for recipes. New recipes are drafted in the Obsidian vault and pulled in one-way through a Python migration tool; once content lands in `content/`, this repo owns it. The family archive (Google Docs export) was fully migrated in and its local copy deleted, so it no longer feeds the build; anything still needed from it gets moved in by hand.
+This repo is the source of truth for recipes, and it is also the Obsidian vault: recipes, essays, reference pages, and the Food Log are drafted and edited here directly, in `content/`. The family archive (Google Docs export) was fully migrated in and its local copy deleted, so it no longer feeds the build; anything still needed from it gets moved in by hand.
 
 ```
-Obsidian vault (~/writing/me/)
+Obsidian (this repo, edited in place)
   │
-  └── recipes/               (drafting/staging area)
+  └── content/  recipes/  essays/  reference/  the-food-log/
           │
-          └── migrate.py ──────────────────────────────→ content/recipes/
-                                                                    │
-                                                writing/essays/ ──(manual)──→ content/essays/
-                                                                    │
-                                                            Hugo + Blowfish build
-                                                                    │
-                                                            public/ (static HTML)
-                                                                    │
-                                                            self-hosted server (rsync/deploy script)
+          Hugo + Blowfish build
+            ├── render hooks: wiki links, headings, images, tables, formula diagrams
+            ├── list.json.json → public/recipes/index.json
+            └── assets/js: ingredients.js, automagic-sidebar.js, search.js (client-side, no build step)
+          │
+          public/ (static HTML)
+          │
+          self-hosted server (tools/publish.sh → tools/deploy.sh, rsync)
 ```
+
+Until 2026-09 recipes were drafted in a separate vault (`~/writing/me/recipes/`) and copied in one-way by `tools/migrate.py` (`/migrate`). That workflow is retired; the tool is still in `tools/` for history.
 
 ## Components
 
-### tools/migrate.py
+### tools/
 
-Migrates personal recipes from `~/writing/me/recipes/` to `content/recipes/`.
+- `frontmatter.py` — check, get, set, and unset frontmatter across content; stdlib only
+- `drafts.py` — list everything marked `draft: true`
+- `add-image.sh` — strip metadata, fix rotation, and size a photo for `static/images/`
+- `preview.sh`, `publish.sh`, `deploy.sh` — dev server; build and check for dev-server output; rsync to the host
+- `config.toml` (gitignored, from `config.toml.example`) — machine-specific deploy target (and the retired vault path)
+- `migrate.py` — retired (see Overview)
 
-Responsibilities:
-- Parse YAML frontmatter and validate required fields (`title`, `tags`)
-- Normalize minor inconsistencies (ensure tags are plain strings, strip stray `#` prefixes, etc.)
-- Add Hugo-specific fields if missing (`draft: false`)
-- Write normalized file to `content/recipes/{slug}.md`
-- Report: files migrated, skipped (already current), errors
-
-Does not rewrite body content. The body format from the vault is already correct.
-
-**Incremental sync.** The script is safe to re-run at any time. Each run compares source files against existing content and acts accordingly:
-
-| Condition | Action |
-|---|---|
-| Title not in `content/recipes/` | Migrate (new) |
-| Title exists, source newer than dest | Re-migrate (updated in vault) |
-| Title exists, source not newer | Skip (unchanged) |
-| Title in `content/` but not in vault | Warn only — never auto-delete |
-
-A `--force` flag re-migrates all files regardless of mtime. Use this after changing the migration logic itself.
-
-### tools/config.toml
-
-The vault path is machine-specific and must not be hardcoded or committed. `tools/migrate.py` reads it from a local config file.
-
-`tools/config.toml` (gitignored):
-```toml
-[vault]
-recipes = "~/writing/me/recipes"
-```
-
-`tools/config.toml.example` (committed) — the template new contributors copy.
-
-**Resolution order** (first match wins):
-1. CLI flag (`--source PATH`)
-2. Environment variable (`VAULT_RECIPES_PATH`)
-3. `tools/config.toml`
-4. Error — the tool exits with a clear message rather than using a silent default
-
-Parsed with `tomllib` (Python 3.11+ stdlib). No extra dependency.
+CLI details are in DESIGN.md.
 
 ### Hugo site
 
 Standard Hugo site with Blowfish as the theme (git submodule). Three content sections:
 
-| Section | Path | Source |
-|---|---|---|
-| Recipes | `content/recipes/` | migrate.py |
-| Essays | `content/essays/` | manual migration from vault |
-| Reference | `content/reference/` | manual |
+Standard Hugo site with Blowfish as the theme (git submodule), heavily overridden: the settled design (`mockups/STYLE.md`) didn't match any Blowfish layout. Four content sections, all written by hand in this repo:
 
-Custom layouts needed:
+| Section | Path |
+|---|---|
+| Recipes | `content/recipes/` |
+| Essays | `content/essays/` |
+| Reference | `content/reference/` |
+| The Food Log | `content/the-food-log/` |
 
-- `layouts/_default/_markup/render-link.html` — render hook that converts `[[Recipe Name]]` wiki links to proper Hugo internal links at build time. Resolves by matching the `title` field in target page frontmatter.
+Custom layouts:
+
+- `layouts/index.html` — the homepage
+- `layouts/<section>/list.html` — card-grid listings for each section; `layouts/recipes/list.json.json` builds `public/recipes/index.json`
+- `layouts/_default/single.html` — every single page (rewrites `[[wiki links]]` in `.RawContent` to standard links before goldmark parses them), with the recipe sidebar or the reading sidebar
+- `layouts/_default/term.html` — tag and cuisine pages, including principle tags
+- `layouts/_default/_markup/` — render hooks: `render-link.html` (wiki links, glossary links), `render-heading.html` (flags ingredient and sidebar sections), `render-image.html` (Photos module), `render-table.html` (scroll wrapper), `render-codeblock-formula.html` (formula diagrams)
+- `assets/css/custom.css` — the design system's CSS; `assets/icons/formula/` — the formula diagram icon kit
+
+Client-side JS (`assets/js/`) is plain, dependency-free, and progressive: `ingredients.js` (check-off, scaling, unit conversion), `automagic-sidebar.js` (moves Mechanic/To serve/Notes/photos into the sidebar, photo viewer), `search.js` (Fuse.js search, pinned results first). With JS off every page still reads and prints.
 
 ### .claude/commands/
 
@@ -86,14 +64,12 @@ Project-specific Claude Code slash commands. These are markdown files in `.claud
 
 ## Key Design Decisions
 
-**Copy-on-migrate, not live reference.** The Hugo content directory is not a symlink into the vault. This keeps the two repos independent: the vault can reorganize files without breaking the Hugo build, and the Hugo content can accumulate Hugo-specific metadata (SEO descriptions, featured images, custom slugs) without polluting Obsidian.
+**One repo, edited in place.** The repo is the vault: no copy step, no second source to drift. This replaced the earlier copy-on-migrate design (separate vault, one-way `migrate.py`), retired 2026-09.
 
-**Wiki links resolved at build time, not migration time.** The `[[Recipe Name]]` syntax stays intact in migrated files. A Hugo render hook converts them during the build. This means migrated files remain Obsidian-compatible (usable as a portable corpus) and cross-references don't require knowing file paths.
+**Obsidian syntax stays in the source; Hugo translates at build time.** `[[Recipe Name]]` wiki links and ```` ```formula ```` blocks stay as written, so files remain Obsidian-compatible and readable as plain text; render hooks turn them into links and diagrams during the build. Cross-references don't require knowing file paths.
 
-**Config over convention for vault paths.** Vault paths are machine-specific. A committed `config.toml.example` plus a gitignored `config.toml` keeps setup explicit without making the tools fragile on a different machine. The resolution order (CLI flag → env var → config file → error) supports both interactive use and CI/automation.
+**Config over convention for machine paths.** The deploy target is machine-specific. A committed `config.toml.example` plus a gitignored `config.toml` keeps setup explicit without making the tools fragile on a different machine.
 
-**Re-runnable migrations as the primary workflow.** The tools are designed to be run repeatedly, not just once. As new recipes are added to the vault, a single `/migrate` run pulls them in without touching already-migrated content. This removes the need for manual tracking of what's been migrated.
+**Python and shell for tooling.** The tools are simple file processors (`frontmatter.py` and `drafts.py` are stdlib only) — no need for a build system or Node ecosystem.
 
-**Python for tooling.** `python-frontmatter` provides clean YAML+markdown parsing. `click` gives a proper CLI. The tools are simple file processors — no need for a build system or Node ecosystem.
-
-**No CMS.** Obsidian is the authoring environment; there is no web-based editor. Publishing is a deliberate act (run migrate.py, build, deploy). This keeps the content in plain files and avoids CMS lock-in.
+**No CMS.** Obsidian is the authoring environment; there is no web-based editor. Publishing is a deliberate act (`/publish`: build, check, deploy). This keeps the content in plain files and avoids CMS lock-in.
