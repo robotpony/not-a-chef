@@ -5,7 +5,7 @@
  * there's no build step this project runs, so Tailwind's `--font-*`
  * theme variables can't be changed at the config level). Hugo concatenates
  * this file after the color scheme and Blowfish's compiled main.css
- * (see layouts/partials/head.html), and because these rules aren't inside
+ * (see themes/fugu/layouts/partials/head.html), and because these rules aren't inside
  * Tailwind's `@layer theme`, they win the cascade regardless of source
  * order — so overriding the same custom properties here is enough; no
  * Tailwind rebuild required.
@@ -346,7 +346,7 @@ main > header + section {
 .glossary-term-chip-compact .glossary-pop, .glossary-term-chip-compact::after { left: 0; right: 0; width: auto; }
 
 /* Ingredient list (check), sub-head, and sub-note, from mockups/style.html
- * §3. Applied client-side by assets/js/ingredients.js, not by Hugo — see
+ * §3. Applied client-side by themes/fugu/assets/js/ingredients.js, not by Hugo — see
  * render-heading.html and PLAN.md 6.2b for why (no list render hook
  * exists). Real markup is <ul class="ing-list"><li class="ing"> (the
  * mockup used bare <div>s since it had no real markdown to render), so
@@ -408,7 +408,7 @@ li.ing {
 .ing label {
   cursor: pointer;
 }
-/* %-based ingredient table (assets/js/ingredients.js's enhanceTable) — a
+/* %-based ingredient table (themes/fugu/assets/js/ingredients.js's enhanceTable) — a
  * <tr> gets the same "ing" class a <ul>'s <li> does, so it picks up the
  * checkbox appearance and checked-state rules above for free (those are
  * plain .ing/.ing selectors, not li.ing-scoped). What's added here is only
@@ -454,7 +454,7 @@ li.ing {
   vertical-align: top;
 }
 /* overflow-x does nothing on a table box, so the scrolling happens on the
- * wrapper from layouts/_default/_markup/render-table.html instead. */
+ * wrapper from themes/fugu/layouts/_default/_markup/render-table.html instead. */
 .article-content .table-scroll {
   max-width: 100%;
   overflow-x: auto;
@@ -465,7 +465,7 @@ li.ing {
 .article-content table .ing-check-cell {
   min-width: 0;
 }
-/* .qty also appears outside .ing rows — assets/js/ingredients.js wraps
+/* .qty also appears outside .ing rows — themes/fugu/assets/js/ingredients.js wraps
  * unit-bearing quantities and temperatures it finds in Directions/Method
  * prose the same way. The subtle accent wash marks these as the numbers
  * the units toggle actually acts on — same --accent the toggle's active
@@ -509,7 +509,7 @@ h4.ing-subhead {
 }
 
 /* Ingredient config menu (scale recipe / change units) — injected by
- * assets/js/ingredients.js next to the recipe's first Ingredients heading.
+ * themes/fugu/assets/js/ingredients.js next to the recipe's first Ingredients heading.
  * A plain <details>/<summary> disclosure, the same pattern the nav's
  * mega-menu dropdowns use (.nav-drop below) — no open/close JS needed.
  * Its option pills reuse .filter-pill's "neutral outline, accent-soft fill
@@ -819,7 +819,7 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
 .listing-search { display: flex; margin-bottom: 24px; }
 
 /* Definition callout and reference list (mockups/win-the-fridge.html) —
- * only used on /tags/win-the-fridge/ (layouts/_default/term.html, gated
+ * only used on /tags/win-the-fridge/ (themes/fugu/layouts/_default/term.html, gated
  * on the term's own `principle: true` frontmatter), not the plain term
  * template every other tag uses. */
 /* margin-top 18px on top of .listing-head's own 6px margin-bottom makes
@@ -882,7 +882,7 @@ a.principle-chip:hover, a.principle-chip:focus-visible { box-shadow: inset 0 0 0
 .pin-icon { display: inline-flex; align-items: center; color: var(--ink-faint); flex: none; opacity: .7; }
 .pin-icon svg { width: 11px; height: 11px; }
 
-/* Label above the desktop sticky recipe/essay TOC (layouts/partials/toc.html
+/* Label above the desktop sticky recipe/essay TOC (themes/fugu/layouts/partials/toc.html
  * override) — matches .mega-col-label's small-caps treatment, the site's
  * existing pattern for an unobtrusive section label. */
 .toc-jump-label { font-size: .65rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-faint); padding-top: 6px; margin-bottom: -2px; }
@@ -975,7 +975,7 @@ footer.pt-8.max-w-prose { padding-top: 0; }
 .prose hr + * { margin-top: 0; }
 
 /* Related recipes, at the end of a recipe/essay's prose column
- * (layouts/partials/related.html overrides Blowfish's to add these
+ * (themes/fugu/layouts/partials/related.html overrides Blowfish's to add these
  * wrapping classes). Same divider language as .article-pagination right
  * below it — border-top + padding-top + margin-top — so this reads as
  * content past the recipe rather than one more section within it.
@@ -1059,9 +1059,9 @@ article > footer {
 }
 
 /* Recipe sidebar prototype (recipe-sidebar-prototype branch) — replaces the
- * generic jump-to TOC on recipe pages (layouts/_default/single.html).
+ * generic jump-to TOC on recipe pages (themes/fugu/layouts/_default/single.html).
  * Mechanic / To serve / Notes are relocated here client-side by
- * assets/js/automagic-sidebar.js (moveSidebarSections); slots start `hidden`
+ * themes/fugu/assets/js/automagic-sidebar.js (moveSidebarSections); slots start `hidden`
  * in markup and are only revealed once populated. Scale/Units stay with
  * the ingredient list instead (the popup gear, unchanged) — tried Units
  * alone here for a round, cut once Scale left. Not yet in
@@ -1069,7 +1069,7 @@ article > footer {
  * any of it to the ratified component list. */
 /* Mobile: the sidebar starts collapsed behind `.recipe-sidebar-toggle`
  * (a real button, not a native <details> — see single.html's comment for
- * why); assets/js/automagic-sidebar.js's initSidebarToggle flips
+ * why); themes/fugu/assets/js/automagic-sidebar.js's initSidebarToggle flips
  * `.recipe-sidebar-wrap.is-open` and the button's aria-expanded together.
  * Desktop: always visible regardless of that state — the media query
  * below wins over the base mobile-collapsed rule by appearing later in
@@ -1268,7 +1268,7 @@ a.comp-card:hover { border-color: var(--accent); }
 a.comp-card:hover .comp-card-label { color: var(--accent-strong); }
 
 /* Reading sidebar (mockups/reading-sidebar.html) — essays, reference,
- * the Food Log, and About (layouts/partials/reading-sidebar.html, placed
+ * the Food Log, and About (themes/fugu/layouts/partials/reading-sidebar.html, placed
  * by _default/single.html). Reuses .search-box, .browse-list, and
  * .section-caveat. Content column is 18.6rem, as in
  * the mockup (10% narrower than the recipe sidebar there, since these
@@ -1432,7 +1432,7 @@ a.comp-card:hover .comp-card-label { color: var(--accent-strong); }
   .photo-thumb:hover img { transform: none; }
 }
 
-/* 404 — a small text-adventure bit (layouts/404.html). Reuses .hero-eyebrow
+/* 404 — a small text-adventure bit (themes/fugu/layouts/404.html). Reuses .hero-eyebrow
  * for the "404" label; the terminal card is the one place IBM Plex Mono
  * carries prose instead of just quantities/data, since it's standing in
  * for a game/terminal voice rather than the site's normal body copy. */

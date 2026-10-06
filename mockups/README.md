@@ -38,8 +38,8 @@ in a browser — no build step.
 
 - **`recipe-card-v2.html`** — the recipe card redesign (2026-09-23) with
   real recipe data: before/after, homepage row, and recipes list grid.
-  Built into `layouts/partials/recipe-card.html` and
-  `layouts/recipes/list.html`; `STYLE.md`'s Recipe card entry describes it.
+  Built into `themes/fugu/layouts/partials/recipe-card.html` and
+  `themes/fugu/layouts/recipes/list.html`; `STYLE.md`'s Recipe card entry describes it.
 
 - **`reading-sidebar.html`**: proposed sidebar for essay, reference,
   Food Log, and About pages (2026-09-24). Not built yet. Also published as
@@ -57,9 +57,9 @@ in a browser — no build step.
   (2026-09-27): the green principle chip, the glossary popover mechanism,
   the `/tags/win-the-fridge/` definition-callout term page, and the new
   reference-essay format. Built into `assets/css/custom.css`,
-  `layouts/partials/principle-chip.html`, `layouts/partials/recipe-card.html`,
-  `layouts/partials/article-meta/basic.html`, `layouts/_default/term.html`,
-  `layouts/_default/_markup/render-link.html`, `content/reference/glossary.md`,
+  `themes/fugu/layouts/partials/principle-chip.html`, `themes/fugu/layouts/partials/recipe-card.html`,
+  `themes/fugu/layouts/partials/article-meta/basic.html`, `themes/fugu/layouts/_default/term.html`,
+  `themes/fugu/layouts/_default/_markup/render-link.html`, `content/reference/glossary.md`,
   and `content/essays/reference-essays/win-the-fridge.md`; `STYLE.md`'s
   Principle chip, Glossary link, Definition callout, and Reference list
   entries describe it.

@@ -238,7 +238,7 @@
   <h2>How it would build</h2>
   <div class="notes"><ul>
     <li><b>Authoring stays the same.</b> Keep writing <code>![alt](/images/…)</code> in Obsidian, so the vault preview still shows photos inline.</li>
-    <li><b>A render-image hook</b> (<code>layouts/_default/_markup/render-image.html</code>, new) wraps each image in a <code>&lt;figure data-sidebar-photo&gt;</code> with an id and records the nearest heading for the "From" line.</li>
+    <li><b>A render-image hook</b> (<code>themes/fugu/layouts/_default/_markup/render-image.html</code>, new) wraps each image in a <code>&lt;figure data-sidebar-photo&gt;</code> with an id and records the nearest heading for the "From" line.</li>
     <li><b><code>automagic-sidebar.js</code></b> already moves Notes, Mechanic, and friends into <code>data-sidebar-slot</code> boxes. A <code>photos</code> slot gets the same treatment: gather the figures, build the grid, leave the marker behind. Without JS, photos stay inline where they were written.</li>
     <li><b>Print</b> hides the sidebar, so the inline figures should stay in the DOM, hidden on screen and shown in print.</li>
     <li><b>Open question: thumbnail weight.</b> Images live in <code>static/</code>, which Hugo can't resize; the soup photo is 4032×3024. Real thumbnails need the images moved to <code>assets/</code> (or page bundles) so the hook can call <code>.Fill "400x400"</code>. Until then the rail loads full-size files.</li>

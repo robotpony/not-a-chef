@@ -21,7 +21,7 @@ exactly one of them:
    history mechanism. This is the only layer a person edits directly.
 2. **Build-time enrichment** — data Hugo computes from the source (plus
    optional hand-maintained files under `data/`) at `hugo build` time and
-   writes out as static JSON, the same way `layouts/recipes/list.json.json`
+   writes out as static JSON, the same way `themes/fugu/layouts/recipes/list.json.json`
    already produces `public/recipes/index.json` today. No server, no
    database, no live API calls.
 3. **Client-time interactivity** — `recipe.js`, reading the rendered page
@@ -31,9 +31,9 @@ exactly one of them:
    off or failing, the page stays fully readable and printable.
 
 `recipe.js` is the spec's name for the client layer as a whole; it was
-never built as one file. What exists today is `assets/js/ingredients.js`
+never built as one file. What exists today is `themes/fugu/assets/js/ingredients.js`
 (portion scaling and measure conversion, 1a/1b below, plus ingredient
-check-off) and `assets/js/automagic-sidebar.js` (moves Mechanic, To serve,
+check-off) and `themes/fugu/assets/js/automagic-sidebar.js` (moves Mechanic, To serve,
 Notes and photos into the sidebar). Read `recipe.js` below as "the client
 layer", whichever file a feature lands in.
 
@@ -202,7 +202,7 @@ bar: yes                                    (optional, ratios only)
 - `swaps` is optional, comma-separated, up to three.
 - A block SHOULD have no more than five slots.
 
-Rendering is build-time only (`layouts/_default/_markup/render-codeblock-formula.html`);
+Rendering is build-time only (`themes/fugu/layouts/_default/_markup/render-codeblock-formula.html`);
 no client code reads it. Added in 0.2.0.
 
 ## 6. Global data files
@@ -249,8 +249,8 @@ one depends on.
 
 | # | Feature | Layer | Depends on |
 |---|---|---|---|
-| 1a | Portion scaling | client | §3 grammar. Built: `assets/js/ingredients.js` |
-| 1b | Measure conversion | client | §3 grammar + a unit-conversion factor table. Built: `assets/js/ingredients.js` |
+| 1a | Portion scaling | client | §3 grammar. Built: `themes/fugu/assets/js/ingredients.js` |
+| 1b | Measure conversion | client | §3 grammar + a unit-conversion factor table. Built: `themes/fugu/assets/js/ingredients.js` |
 | 1c | Nutrition data | **deferred** | future feature, no data model yet |
 | 1d | Quantity+unit auto-wrap (for styling) | build | Hugo render hook wraps `<span>`s at build time; simpler done once at build than repeatedly in JS |
 | 1e | Optional ingredients | build + client | §3 `(optional)` marker; static styling by default, client toggle to hide/show |

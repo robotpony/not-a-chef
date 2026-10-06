@@ -18,7 +18,7 @@ The post can be named by title ("Lazy tomato soup"), slug, or path. Photo conven
    - Food log: `<year>-<what-it-shows>.jpg` (`2025-stock-cooling-pan-in-pan.jpg`), year from the month page.
    - Extension: `.jpg` for photos (HEIC, JPEG, WebP), `.png` only for PNG sources.
    - If the name is taken in the folder, pick a more specific one; never overwrite.
-5. **Process and copy** each image with `tools/add-image.sh <source> <destination>`. It bakes EXIF rotation into the pixels, strips all metadata (GPS included), caps the long edge at 2000 px, and refuses to overwrite. Report its output. If it fails, stop and show the error.
+5. **Process and copy** each image with `themes/fugu/tools/add-image.sh <source> <destination>`. It bakes EXIF rotation into the pixels, strips all metadata (GPS included), caps the long edge at 2000 px, and refuses to overwrite. Report its output. If it fails, stop and show the error.
 6. **Check rotation.** Read the processed file and confirm it's upright. If it looks sideways (the camera's orientation tag was wrong), say so and offer to rotate it with `magick <file> -rotate 90 <file>` (or -90/180).
 7. **Choose placement.** Where the photo goes matters: on the site it becomes a sidebar thumbnail with a "Photo N" marker left in the text, and in print it stays inline. Use the obvious spot when there is one:
    - Recipe with one hero shot of the finished dish: after the intro/backstory blockquote, before the first `##` section (see `candied-cranberries-sugared-cranberries.md`), unless the post already puts photos at the end.
