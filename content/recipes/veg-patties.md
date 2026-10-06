@@ -12,9 +12,15 @@ draft: true
 
 ## Mechanic
 
-**Per can of beans: 1 cup cooked starch, 1 cup vegetables, ½ cup breadcrumbs, 1 egg.** The beans are the body, the starch makes the mix tacky, and the breadcrumbs and egg hold it together in the pan. Water is what breaks a veg patty, so every wet ingredient gets dried or cooked first: pat the beans dry, sauté the carrot and onion, and smash the peas so they don't roll loose. Swap any part within its slot (potato or quinoa for rice, corn or mushroom for carrot) and the ratio still holds.
+A veg patty is a formula, not a fixed recipe: **per can of beans, 1 cup cooked starch, 1 cup vegetables, ½ cup breadcrumbs, and 1 egg.** The beans are the body, the starch makes the mix tacky, and the binder holds it together in the pan. Water is what breaks a veg patty, so dry or cook every wet ingredient first: pat the beans dry, sauté the vegetables, and smash anything round so it can't roll loose. Swap freely within each slot and the ratio still holds.
 
-## Ingredients
+- Beans: black, pinto, kidney, or chickpeas (~250 g drained, one 540 ml can)
+- Starch: cooked rice, cold mashed potato, cooked quinoa, or cooked bulgur
+- Vegetables: grated carrot, peas, corn, diced mushroom, or grated beet, sautéed until dry
+- Binder: egg and breadcrumbs, or vital wheat gluten and oats for an egg-free, chewier patty (see [[Vegan burger]])
+- Seasoning: about 1 tbsp soy sauce and 2 tsp of dry spices per can of beans, plus salt
+
+## Bean and rice patties
 
 - 1 can (540 ml / 19 oz) black, pinto, or kidney beans, rinsed, drained, and patted very dry (~250 g)
 - 1 tbsp neutral oil, plus more for frying
@@ -29,8 +35,6 @@ draft: true
 - ½ tsp black pepper
 - 1 egg, beaten
 - 50 g (½ cup) dry breadcrumbs
-
-## Method
 
 Heat the oil in a frying pan over medium. Add the onion and carrot and cook until soft and the pan looks dry, about 5 minutes. Let cool slightly.
 
@@ -48,8 +52,9 @@ In buns with burger sauce and pickles, or over rice with a fried egg.
 
 **Potato instead of rice.** Use 1 cup cold mashed potato in place of the rice. Softer and creamier inside; dredge the patties in breadcrumbs before frying for a firmer crust.
 
+**Chewy and vegan.** [[Vegan burger]] is a heavier take on this pattern: two kinds of beans, mushrooms and nuts as the vegetables, and vital wheat gluten and oats as the binder. Denser and meatier; it holds together without egg.
+
 ## Notes
 
 - If the beans still feel wet after patting, spread them on a tray and bake at 160°C (325°F) for 15 minutes, until the skins split.
-- For an egg-free patty, use [[Vegan burger]]; the wheat gluten holds it together without egg.
 - Shaped patties freeze well between sheets of parchment. Cook from frozen over medium-low, about 7 minutes per side.
