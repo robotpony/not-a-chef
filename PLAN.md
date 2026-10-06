@@ -20,6 +20,15 @@ Show a recipe's formula diagram as a 24px strip on its card, so a recipe's shape
 - [ ] Grow the icon kit as recipes need it. A new key is one SVG in `assets/icons/formula/` drawn on the kit's rules (`mockups/STYLE.md` "Formula diagram"), plus a tile in the mockup's §6 kit gallery so the gallery stays the reference.
 - [ ] Ratio (`:`) and sequence (`→`) diagrams are built but unused on a real page; check them against real content the first time one is written.
 
+### Formula diagram: retest and open decisions
+
+Built and checked 2026-10-06 in Chrome, dark mode, desktop width only. Still to do:
+
+- [ ] Retest veg patties in light mode. The mockup was checked in both themes; the live page only in dark.
+- [ ] Retest on a phone-width viewport: the diagram is now in the intro (full size, body column) and should wrap with each operator staying attached to its slot.
+- [ ] Retest a formula inside Mechanic (compact, sidebar) on the live site, since veg patties no longer has one there.
+- [ ] Decide about the duplicate swaps on veg patties: the Mechanic bullets list the swaps for each slot, and the diagram's swap lines repeat them. Either trim the bullets to quantities and notes, or drop the fourth field from the block.
+
 ### Carried over from the old plan
 
 Unfinished items from the squashed Phases 7–9 (`git show e6346f4^:PLAN.md`). Items the code shows are done were dropped: the `.rcard` listings, heading-free card summaries, wiki-link styling and resolution, table scrolling, scaling and unit conversion, deploy, draft tooling (`drafts.py`, `frontmatter.py set`), and clean meta descriptions (`page-description.html`). Some of what's left may be partly done; check before starting.
