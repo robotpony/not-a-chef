@@ -2,7 +2,7 @@
 
 ### Diagrams #todo 
 
-- [ ] needs a diagramming tool like scorekeep, iconic, pen and ink style (veg-patties as an example, the "**Per can of beans: 1 cup cooked starch, 1 cup vegetables, ½ cup breadcrumbs, 1 egg.**" could be shown rather than explained)
+- [x] needs a diagramming tool like scorekeep, iconic, pen and ink style (veg-patties as an example, the "**Per can of beans: 1 cup cooked starch, 1 cup vegetables, ½ cup breadcrumbs, 1 egg.**" could be shown rather than explained)
 	- claude would call the tool, based on an annotation in the file or author request
 	- the diagram would be mostly horizontal (so only a few lines lost)
 	- it would look like
