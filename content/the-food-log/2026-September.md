@@ -9,7 +9,7 @@ Two more passes at goulash (oven-browned this time, versus the from-scratch vers
 
 ### Recipe hunt  #todo #p0
 
-- [ ] Vegetarian patty (peas, beans, potato, etc.) find a pattern here
+- [ ] Vegetarian patty (peas, beans, potato, etc.) find a pattern here [[Veg patties]]
 - [ ] Cornmeal-breaded chicken patty → *this needs research*
 
 
