@@ -31,7 +31,7 @@ Built and checked 2026-10-06 in Chrome, dark mode, desktop width only. Still to 
 
 ### Release hugo-theme-fugu, a cookbook theme for Blowfish
 
-Package the cookbook machinery as a general-purpose Hugo theme that other Blowfish users can drop in: recipe pages, scaling and unit conversion, formula diagrams, wiki links, recipe cards, and the tooling. It gets its own neutral design; the Not a Chef look stays in this repo as site-level overrides on top of it. Named **Fugu** (repo `hugo-theme-fugu`): fugu is the Japanese name for blowfish and a dish only licensed chefs may serve, which suits a theme born from a site called Not a Chef.
+Package the cookbook machinery as a general-purpose Hugo theme that other Blowfish users can drop in: recipe pages, scaling and unit conversion, formula diagrams, wiki links, recipe cards, and the tooling. It gets its own neutral design; the Not a Chef look stays in this repo as site-level overrides on top of it. Named **Fugu** (repo `hugo-theme-fugu`): fugu is the Japanese name for blowfish and a dish only licensed chefs may serve, which suits a theme born from a site called Not a Chef. Repo: https://github.com/robotpony/hugo-theme-fugu (created 2026-10-06, one initial commit on `main`, not yet added here as a submodule).
 
 **Shape.** A separate repo, used as a theme that sits on top of Blowfish rather than a fork of it: `theme = ["fugu", "blowfish"]`, or the same thing as Hugo modules. The theme holds only what it changes and Blowfish supplies everything else. This site then has three layers (site overrides → cookbook theme → Blowfish), with the theme added as a submodule the way Blowfish is now.
 
