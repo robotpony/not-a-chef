@@ -12,4 +12,4 @@ publish:
 	tools/publish.sh
 
 drafts:
-	python3 tools/drafts.py
+	python3 themes/fugu/tools/drafts.py

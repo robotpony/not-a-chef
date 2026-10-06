@@ -36,9 +36,13 @@ CLI details are in DESIGN.md.
 
 ### Hugo site
 
-Standard Hugo site with Blowfish as the theme (git submodule). Three content sections:
+Standard Hugo site with two stacked themes, both git submodules: `theme = ["fugu", "blowfish"]`. Hugo looks for each layout, partial and asset in this order:
 
-Standard Hugo site with Blowfish as the theme (git submodule), heavily overridden: the settled design (`mockups/STYLE.md`) didn't match any Blowfish layout. Four content sections, all written by hand in this repo:
+1. This repo (`layouts/`, `assets/`): the Not a Chef design and branding: `custom.css`, the `not-a-chef` colour scheme, the homepage, header, footer, favicons, and fonts (`layouts/partials/fonts.html`).
+2. Fugu (`themes/fugu/`, [hugo-theme-fugu](https://github.com/robotpony/hugo-theme-fugu)): the reusable cookbook theme: page templates, render hooks, recipe cards, sidebars, client JS, the formula icon kit, archetypes, and the content tools. See PLAN.md "Release hugo-theme-fugu".
+3. Blowfish (`themes/blowfish/`): everything neither of the above overrides.
+
+The settled design (`mockups/STYLE.md`) didn't match any Blowfish layout, so Fugu overrides much of it. Four content sections, all written by hand in this repo:
 
 | Section | Path |
 |---|---|
@@ -50,13 +54,13 @@ Standard Hugo site with Blowfish as the theme (git submodule), heavily overridde
 Custom layouts:
 
 - `layouts/index.html` — the homepage
-- `layouts/<section>/list.html` — card-grid listings for each section; `layouts/recipes/list.json.json` builds `public/recipes/index.json`
-- `layouts/_default/single.html` — every single page (rewrites `[[wiki links]]` in `.RawContent` to standard links before goldmark parses them), with the recipe sidebar or the reading sidebar
-- `layouts/_default/term.html` — tag and cuisine pages, including principle tags
-- `layouts/_default/_markup/` — render hooks: `render-link.html` (wiki links, glossary links), `render-heading.html` (flags ingredient and sidebar sections), `render-image.html` (Photos module), `render-table.html` (scroll wrapper), `render-codeblock-formula.html` (formula diagrams)
-- `assets/css/custom.css` — the design system's CSS; `assets/icons/formula/` — the formula diagram icon kit
+- `themes/fugu/layouts/<section>/list.html` — card-grid listings for each section; `themes/fugu/layouts/recipes/list.json.json` builds `public/recipes/index.json`
+- `themes/fugu/layouts/_default/single.html` — every single page (rewrites `[[wiki links]]` in `.RawContent` to standard links before goldmark parses them), with the recipe sidebar or the reading sidebar
+- `themes/fugu/layouts/_default/term.html` — tag and cuisine pages, including principle tags
+- `themes/fugu/layouts/_default/_markup/` — render hooks: `render-link.html` (wiki links, glossary links), `render-heading.html` (flags ingredient and sidebar sections), `render-image.html` (Photos module), `render-table.html` (scroll wrapper), `render-codeblock-formula.html` (formula diagrams)
+- `assets/css/custom.css` — the design system's CSS; `themes/fugu/assets/icons/formula/` — the formula diagram icon kit
 
-Client-side JS (`assets/js/`) is plain, dependency-free, and progressive: `ingredients.js` (check-off, scaling, unit conversion), `automagic-sidebar.js` (moves Mechanic/To serve/Notes/photos into the sidebar, photo viewer), `search.js` (Fuse.js search, pinned results first). With JS off every page still reads and prints.
+Client-side JS (`themes/fugu/assets/js/`) is plain, dependency-free, and progressive: `ingredients.js` (check-off, scaling, unit conversion), `automagic-sidebar.js` (moves Mechanic/To serve/Notes/photos into the sidebar, photo viewer), `search.js` (Fuse.js search, pinned results first). With JS off every page still reads and prints.
 
 ### .claude/commands/
 

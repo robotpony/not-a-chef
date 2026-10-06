@@ -1,4 +1,4 @@
-theme = "blowfish"
+theme = ["fugu", "blowfish"]
 baseURL = "https://bruce-loves-to-cook.warpedvisions.org/"
 defaultContentLanguage = "en"
 enableRobotsTXT = true
@@ -7,7 +7,7 @@ buildDrafts = false
 buildFuture = false
 enableEmoji = true
 # Page .Lastmod comes from each file's last git commit; the sidebars show
-# it as "Updated" (layouts/partials/sidebar/date-rows.html).
+# it as "Updated" (themes/fugu/layouts/partials/sidebar/date-rows.html).
 enableGitInfo = true
 
 [pagination]
@@ -34,7 +34,7 @@ enableGitInfo = true
     weight = 10
 
 # static/images is also mounted as assets/images so the image render hook
-# (layouts/_default/_markup/render-image.html) can resize photos into
+# (themes/fugu/layouts/_default/_markup/render-image.html) can resize photos into
 # thumbnails. Declaring any assets mount replaces Hugo's default one, so
 # the plain assets/ mount is restated first.
 [module]

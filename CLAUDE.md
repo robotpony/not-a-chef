@@ -38,9 +38,9 @@ The index is current after any `hugo` build. If `public/` is stale, run `hugo --
 
 ## Tools
 
-- `tools/frontmatter.py` — check, get, set, and unset frontmatter across content (stdlib only)
-- `tools/drafts.py` — list everything marked `draft: true` (`make drafts`)
-- `tools/add-image.sh` — process a photo for the site (used by `/image-add`)
+- `themes/fugu/tools/frontmatter.py` — check, get, set, and unset frontmatter across content (stdlib only)
+- `themes/fugu/tools/drafts.py` — list everything marked `draft: true` (`make drafts`)
+- `themes/fugu/tools/add-image.sh` — process a photo for the site (used by `/image-add`)
 - `tools/preview.sh`, `tools/publish.sh`, `tools/deploy.sh` — dev server, build + check, rsync deploy
 - `tools/migrate.py` — retired with the two-vault workflow (see Content sources); kept for history, not part of any current flow
 
@@ -60,12 +60,12 @@ Project slash commands are in `.claude/commands/`. See DESIGN.md for description
 
 ## Hugo site
 
-Blowfish theme as a git submodule. Wiki links require a render hook in `layouts/_default/_markup/render-link.html`. See DESIGN.md for layout and taxonomy decisions.
+Two stacked themes, both git submodules: `theme = ["fugu", "blowfish"]`. Fugu (`themes/fugu/`, [hugo-theme-fugu](https://github.com/robotpony/hugo-theme-fugu)) is the reusable cookbook theme: templates, render hooks, JS, icons, archetypes, and the content tools. This repo keeps the Not a Chef design and branding (`custom.css`, colour scheme, homepage, header, footer, favicons, fonts). Changes to templates are commits in the Fugu submodule. Wiki links require a render hook in `themes/fugu/layouts/_default/_markup/render-link.html`. See DESIGN.md for layout and taxonomy decisions.
 
 ## Pinned pages and tag reference pages
 
 - `pinned: true` in frontmatter (recipes, essays, or reference pages alike) floats a page to the top of its section's list, its term pages (tags/cuisine), and search results. Rare by design, not a general-purpose sort override. See DESIGN.md and SPEC.md.
-- A tag can carry its own `content/tags/<slug>/_index.md` with a `description`, and, when marked `principle: true`, `layouts/_default/term.html` swaps the plain description for a definition callout (the `_index.md` body) plus a "Reference & further reading" list of anything else on the tag that isn't a recipe. Only `win-the-fridge` uses this today (`content/tags/win-the-fridge/_index.md`); every other tag term page renders as before.
+- A tag can carry its own `content/tags/<slug>/_index.md` with a `description`, and, when marked `principle: true`, `themes/fugu/layouts/_default/term.html` swaps the plain description for a definition callout (the `_index.md` body) plus a "Reference & further reading" list of anything else on the tag that isn't a recipe. Only `win-the-fridge` uses this today (`content/tags/win-the-fridge/_index.md`); every other tag term page renders as before.
 
 ## Visual design
 
@@ -81,7 +81,7 @@ Essays in `content/essays/` include these formats specific to this project:
 - **Cooking reflections**: Lessons learned from technique, ingredients, or failure. Engineering-minded; ratio-based thinking and post-mortems welcome.
 - **Technique essays**: Deep dives on a single method or principle (brining, emulsification, stock-making). Reference material dressed as prose.
 - **Planning essays**: Meal prep philosophy, "winning the fridge" thinking, systems for weeknight cooking.
-- **Reference essays** (`content/essays/reference-essays/`): Full definitions for a concept, principle, or brand that deserves prose rather than a one-line glossary entry — e.g. `win-the-fridge.md`. Tag it with the term it defines so its own tag page (if the term has one, see `content/tags/win-the-fridge/_index.md`) can link straight to it as "the full essay". A term that doesn't warrant a whole essay gets a short entry in `content/reference/glossary.md` instead — see `layouts/_default/_markup/render-link.html` for how `[[Term]]` picks between the two.
+- **Reference essays** (`content/essays/reference-essays/`): Full definitions for a concept, principle, or brand that deserves prose rather than a one-line glossary entry — e.g. `win-the-fridge.md`. Tag it with the term it defines so its own tag page (if the term has one, see `content/tags/win-the-fridge/_index.md`) can link straight to it as "the full essay". A term that doesn't warrant a whole essay gets a short entry in `content/reference/glossary.md` instead — see `themes/fugu/layouts/_default/_markup/render-link.html` for how `[[Term]]` picks between the two.
 
 Voice for all food essays: engineering precision meets home cook practicality. Personal, honest about mistakes, practical takeaway at the end.
 
