@@ -9,8 +9,7 @@ prep_time: 20 min (plus 30 min chill)
 cook_time: 10 min
 draft: true
 ---
-
-## Mechanic
+These vegetable patties are quick to make and delicious. They're perfect when you're looking for a lighter sandwich or salad topping.
 
 ```formula
 can          | Beans   | 1 can         | black, pinto, chickpea
@@ -19,8 +18,11 @@ can          | Beans   | 1 can         | black, pinto, chickpea
 + crumbs egg | Binder  | ½ cup + 1 egg | or gluten + oats
 = patty      | Patties | 6
 ```
+## Mechanic
 
-A veg patty is a formula, not a fixed recipe: **per can of beans, 1 cup cooked starch, 1 cup vegetables, ½ cup breadcrumbs, and 1 egg.** The beans are the body, the starch makes the mix tacky, and the binder holds it together in the pan. Water is what breaks a veg patty, so dry or cook every wet ingredient first: pat the beans dry, sauté the vegetables, and smash anything round so it can't roll loose. Swap freely within each slot and the ratio still holds.
+A veg patty is a formula, not a fixed recipe: **per can of beans, 1 cup cooked starch, 1 cup vegetables, ½ cup breadcrumbs, and 1 egg.** 
+
+The beans are the body, the starch makes the mix tacky, and the binder holds it together in the pan. Swap freely within each slot and the ratio still holds.
 
 - Beans: black, pinto, kidney, or chickpeas (~250 g drained, one 540 ml can)
 - Starch: cooked rice, cold mashed potato, cooked quinoa, or cooked bulgur
@@ -66,5 +68,6 @@ In buns with burger sauce and pickles, or over rice with a fried egg.
 
 ## Notes
 
+- Water is what breaks a veg patty, so dry or cook every wet ingredient first: pat the beans dry, sauté the vegetables, and smash anything round so it can't roll loose. 
 - If the beans still feel wet after patting, spread them on a tray and bake at 160°C (325°F) for 15 minutes, until the skins split.
 - Shaped patties freeze well between sheets of parchment. Cook from frozen over medium-low, about 7 minutes per side.
