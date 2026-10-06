@@ -1,6 +1,6 @@
 ---
 title: Vegan burger
-tags: [mains, burgers]
+tags: [mains, burgers, vegan, vegetarian, dairy-free, make-ahead]
 source: family
 date: 2026-06-08
 cuisine: American

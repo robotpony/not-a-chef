@@ -46,11 +46,10 @@ In buns with burger sauce and pickles, or over rice with a fried egg.
 
 ## Variations
 
-**Vegan.** Replace the egg with a flax egg (1 tbsp ground flax and 3 tbsp water, rested 5 minutes). The patties are softer; chill for the full hour before cooking.
-
 **Potato instead of rice.** Use 1 cup cold mashed potato in place of the rice. Softer and creamier inside; dredge the patties in breadcrumbs before frying for a firmer crust.
 
 ## Notes
 
 - If the beans still feel wet after patting, spread them on a tray and bake at 160°C (325°F) for 15 minutes, until the skins split.
+- For an egg-free patty, use [[Vegan burger]]; the wheat gluten holds it together without egg.
 - Shaped patties freeze well between sheets of parchment. Cook from frozen over medium-low, about 7 minutes per side.
