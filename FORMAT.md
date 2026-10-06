@@ -204,6 +204,26 @@ Use wiki links to reference other recipes as ingredients or related reading:
 
 Wiki links resolve by matching `title` in frontmatter. They work natively in Obsidian and require a render hook in Hugo.
 
+## Formula diagrams
+
+A ratio stated in the text can also be drawn: a `formula` fenced block, one slot per line, `icon | label | quantity | swaps`, with the operator at the start of every line after the first.
+
+````markdown
+```formula
+can          | Beans   | 1 can         | black, pinto, chickpea
++ bowl       | Starch  | 1 cup         | rice, mash, quinoa
++ crumbs egg | Binder  | ½ cup + 1 egg | or gluten + oats
+= patty      | Patties | 6
+```
+````
+
+- One operator per block: `+` (parts that go together), `:` (a ratio; the quantity is the ratio number), or `→` (the shape of a method; a quantity that isn't a number prints as an italic note). An optional last `=` line names the result.
+- Icons are keys from `assets/icons/formula/` (one or two per slot). Labels are one short word. Swaps are optional, up to three, comma-separated. Keep it to five slots.
+- Optional trailing lines: `caption: <text>`, and `bar: yes` for a ratio's proportion bar.
+- The diagram illustrates the sentence; it never replaces it. Only draw a ratio the text already states.
+
+On the site it renders as a row of icons (compact in the recipe sidebar, where Mechanic sits). In Obsidian it reads as plain text.
+
 ## Photos
 
 Put photos in `static/images/<section>/` (`recipes`, `essays`, `food-log`) and embed them with standard markdown where they belong in the text:

@@ -31,7 +31,7 @@ This repo (`/Users/mx/writing/not-a-chef`) is now the Obsidian vault itself — 
 
 ## Recipe index
 
-`public/recipes/index.json` — a machine-readable index of all published recipes, generated automatically by `hugo`. Read this file first when answering questions about the recipe collection (coverage gaps, overlap, missing metadata, quality). It contains per-recipe: title, slug, date, tags, cuisine, servings, source, prep/cook time, word count, and whether Mechanic/Variations/Notes sections are present.
+`public/recipes/index.json` — a machine-readable index of all published recipes, generated automatically by `hugo`. Read this file first when answering questions about the recipe collection (coverage gaps, overlap, missing metadata, quality). It contains per-recipe: title, slug, date, tags, cuisine, servings, source, prep/cook time, word count, and whether Mechanic/Variations/Notes sections and a `formula` diagram block are present.
 
 The index is current after any `hugo` build. If `public/` is stale, run `hugo --quiet` to regenerate.
 

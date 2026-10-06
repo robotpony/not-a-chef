@@ -17,6 +17,7 @@
     "has_mechanic"   (strings.Contains $raw "## Mechanic")
     "has_variations" (strings.Contains $raw "## Variations")
     "has_notes"      (strings.Contains $raw "## Notes")
+    "has_formula"    (strings.Contains $raw "```formula")
   -}}
   {{- $recipes = $recipes | append $recipe -}}
 {{- end -}}

@@ -1499,3 +1499,55 @@ a.comp-card:hover .comp-card-label { color: var(--accent-strong); }
 @media (prefers-reduced-motion: reduce) {
   .terminal-card > * { opacity: 1; animation: none; }
 }
+
+/* ---------------------------------------------------------------------------
+ * Formula diagram (mockups/formula-diagrams.html, STYLE.md "Formula
+ * diagram"): a ```formula block drawn by render-codeblock-formula.html as
+ * one row of icons joined by +, : or →. Icons are inline SVG on a 48-unit
+ * grid, stroked in currentColor with one --accent-soft fill, so dark mode
+ * comes free. Full size in the body column; compact in the recipe sidebar,
+ * where Mechanic (and so most formulas) ends up.
+ * ------------------------------------------------------------------------- */
+.formula { margin: 1.25em 0; font-style: normal; }
+.formula .ic {
+  fill: none; stroke: currentColor; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round; overflow: visible;
+  width: 48px; height: 48px; flex: none;
+}
+.formula .ic-missing { color: var(--ink-faint); }
+.formula-row { display: flex; align-items: flex-start; flex-wrap: wrap; row-gap: 14px; }
+/* Each operator wraps together with the slot it introduces, so a row never ends on a stray + */
+.f-step { display: flex; align-items: flex-start; }
+.f-slot { display: flex; flex-direction: column; align-items: center; text-align: center; width: 96px; color: var(--ink); }
+.f-icons { display: flex; gap: 2px; height: 48px; align-items: center; }
+.f-pair .ic { width: 40px; height: 40px; }
+.f-label { font-family: 'Libre Franklin', sans-serif; font-size: .74rem; font-weight: 600; color: var(--ink); margin-top: 6px; line-height: 1.2; }
+.f-result .f-label { color: var(--ink-muted); }
+.f-qty { font-family: 'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums; font-size: .76rem; font-weight: 600; color: var(--accent-strong); line-height: 1.3; margin-top: 2px; }
+.f-sub, .f-or { font-family: 'Lora', serif; font-style: italic; font-size: .72rem; line-height: 1.3; margin-top: 3px; }
+.f-sub { color: var(--ink-muted); }
+.f-or { color: var(--ink-faint); }
+.f-or span { display: block; }
+.f-op { font-family: 'IBM Plex Mono', monospace; font-size: 1.25rem; font-weight: 500; color: var(--accent); width: 22px; text-align: center; line-height: 48px; flex: none; }
+.f-op.f-eq { color: var(--ink-faint); }
+.formula-seq .f-op { font-family: 'Libre Franklin', sans-serif; }
+.formula-ratio .f-num { font-family: 'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums; font-size: 1.5rem; font-weight: 600; color: var(--accent-strong); line-height: 1.1; margin-top: 4px; }
+.formula-ratio .f-op { font-size: 1.5rem; }
+.f-bar { display: flex; gap: 2px; height: 10px; max-width: 340px; margin-top: 16px; }
+.f-bar span { background: var(--accent-soft); border: 1px solid var(--accent); border-radius: 2px; }
+.f-cap { font-family: 'Libre Franklin', sans-serif; font-size: .74rem; color: var(--ink-faint); margin-top: 12px; }
+
+/* Compact: the recipe sidebar (~18.6rem) fits five slots */
+.recipe-sidebar-section .formula { margin: .9em 0 .6em; }
+.recipe-sidebar-section .f-slot { width: 50px; }
+.recipe-sidebar-section .formula .ic,
+.recipe-sidebar-section .f-icons { height: 34px; }
+.recipe-sidebar-section .formula .ic { width: 34px; }
+.recipe-sidebar-section .f-pair .ic { width: 22px; height: 22px; }
+.recipe-sidebar-section .f-op { width: 10px; font-size: 1rem; line-height: 34px; }
+.recipe-sidebar-section .f-label { font-size: .66rem; margin-top: 4px; }
+.recipe-sidebar-section .f-qty { font-size: .66rem; }
+.recipe-sidebar-section .f-sub,
+.recipe-sidebar-section .f-or { font-size: .62rem; }
+.recipe-sidebar-section .formula-ratio .f-num { font-size: 1.1rem; }
+.recipe-sidebar-section .formula-ratio .f-op { font-size: 1.1rem; }

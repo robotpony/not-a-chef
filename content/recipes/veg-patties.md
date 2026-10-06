@@ -12,6 +12,14 @@ draft: true
 
 ## Mechanic
 
+```formula
+can          | Beans   | 1 can         | black, pinto, chickpea
++ bowl       | Starch  | 1 cup         | rice, mash, quinoa
++ carrot     | Veg     | 1 cup         | carrot, peas, corn
++ crumbs egg | Binder  | ½ cup + 1 egg | or gluten + oats
+= patty      | Patties | 6
+```
+
 A veg patty is a formula, not a fixed recipe: **per can of beans, 1 cup cooked starch, 1 cup vegetables, ½ cup breadcrumbs, and 1 egg.** The beans are the body, the starch makes the mix tacky, and the binder holds it together in the pan. Water is what breaks a veg patty, so dry or cook every wet ingredient first: pat the beans dry, sauté the vegetables, and smash anything round so it can't roll loose. Swap freely within each slot and the ratio still holds.
 
 - Beans: black, pinto, kidney, or chickpeas (~250 g drained, one 540 ml can)
@@ -19,6 +27,8 @@ A veg patty is a formula, not a fixed recipe: **per can of beans, 1 cup cooked s
 - Vegetables: grated carrot, peas, corn, diced mushroom, or grated beet, sautéed until dry
 - Binder: egg and breadcrumbs, or vital wheat gluten and oats for an egg-free, chewier patty (see [[Vegan burger]])
 - Seasoning: about 1 tbsp soy sauce and 2 tsp of dry spices per can of beans, plus salt
+
+
 
 ## Bean and rice patties
 
