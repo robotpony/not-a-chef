@@ -1,5 +1,6 @@
 ---
 title: About
+stats: true
 date: 2026-09-18
 description: A family cookbook from someone who loves to cook.
 ---
