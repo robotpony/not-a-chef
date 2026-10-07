@@ -8,6 +8,7 @@
 	- it would look like
 		- (tin of beans) + (starch) + (veg) + (binders) #todone @2026-10-06
 		- each is an icon
+- [ ] Add methods concept and diagrams
 ### Friday, October 2nd
 
 - gyro beef pan flattened parchment (thin, roasted hot, sliced for pitas/salad/sandies)
