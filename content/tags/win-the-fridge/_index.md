@@ -1,6 +1,7 @@
 ---
 title: Win the fridge
 principle: true
+short: WTF
 description: "Recipes and reference material built around using every scrap before it's wasted."
 ---
 
