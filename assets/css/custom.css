@@ -801,6 +801,23 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
 .rcard-top:has(.glossary-term:hover, .glossary-term:focus-within) { overflow: visible; }
 .rcard-title { font-family: 'Libre Franklin', sans-serif; font-size: 1.02rem; font-weight: 700; line-height: 1.3; letter-spacing: -.005em; text-wrap: balance; color: var(--ink); }
 .rcard-intro { font-family: 'Lora', Georgia, serif; font-size: .84rem; line-height: 1.5; color: var(--ink-muted); display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
+/* Formula strip (formula-strip.html, STYLE.md "Formula diagram"): a 24px
+ * row of the recipe's formula icons. It takes the intro's third line, so a
+ * card with one is the same height as a card without. */
+.rcard.has-formula .rcard-intro { -webkit-line-clamp: 2; }
+.rcard-formula { display: flex; height: 24px; min-width: 0; overflow: hidden; }
+/* The strip's own link sits above .rcard-link::after so its slots' title
+ * tooltips show on hover; it points at the same page, so clicks still go
+ * through. Only as wide as its icons, so the rest of the row stays the card. */
+.rcard-formula-link { position: relative; z-index: 1; display: flex; align-items: center; gap: 2px; color: var(--ink); text-decoration: none; }
+.rcard-formula .slot { display: flex; align-items: center; gap: 2px; flex: none; }
+.rcard-formula .ic {
+  fill: none; stroke: currentColor; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round; overflow: visible;
+  width: 24px; height: 24px; flex: none;
+}
+.rcard-formula .op { font-family: 'IBM Plex Mono', monospace; font-size: .8rem; color: var(--accent); width: 12px; text-align: center; flex: none; }
+.rcard-formula .n { font-family: 'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums; font-size: .72rem; font-weight: 600; color: var(--accent-strong); margin-left: 1px; flex: none; }
 .rcard-stats { margin-top: auto; padding-top: 8px; border-top: 1px solid var(--border); display: flex; gap: 12px; white-space: nowrap; min-width: 0; overflow: hidden; }
 .rcard-stat { display: flex; align-items: baseline; gap: 4px; flex: none; }
 .rcard-stat:last-child { flex: 0 1 auto; min-width: 0; overflow: hidden; }

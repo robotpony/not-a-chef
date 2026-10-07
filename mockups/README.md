@@ -34,7 +34,7 @@ in a browser — no build step.
   after Scorekeep's rules-page diagrams. Veg patties is the worked example.
   Built 2026-10-06 (`render-codeblock-formula.html`, `partials/formula-slot.html`,
   `assets/icons/formula/`); `STYLE.md`'s Formula diagram entry describes it.
-  The recipe card strip (§5) is not built; see `PLAN.md`.
+  The recipe card strip (§5) was built on 2026-10-07 (`partials/formula-strip.html` in Fugu), with a hover tooltip per slot added.
 
 - **`recipe-card-v2.html`** — the recipe card redesign (2026-09-23) with
   real recipe data: before/after, homepage row, and recipes list grid.
