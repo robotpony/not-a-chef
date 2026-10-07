@@ -39,7 +39,8 @@ in a browser — no build step.
 - **`page-bottom-spacing.html`**: proposal (2026-10-07) to make 40px
   from the last content to the footer a page-level rule. Today every page
   borrows it from its last block, and About, which has none, runs into the
-  footer. Not built yet; see `PLAN.md` "Design changes".
+  footer. Built 2026-10-07 (option A, 40px); `STYLE.md`'s Spacing entry
+  describes it.
 
 - **`recipe-card-v2.html`** — the recipe card redesign (2026-09-23) with
   real recipe data: before/after, homepage row, and recipes list grid.

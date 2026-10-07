@@ -450,6 +450,7 @@ question). Roughly:
 
 - **Radius**: 3px (tags, stat steps) · 4–5px (checkbox, buttons, chip base) · 6px (cards) · 8px (mega-menu panel) · 14px (filter pill, full pill shape)
 - **Gaps**: 6–10px (chip rows, stat pairs) · 16–22px (card padding, grid gaps) · 26–32px (column gaps, section spacing)
+- **Page bottom**: 40px from the last thing on any page to the footer, at every width. Set once on `<main>` (`padding-bottom`), not by whichever block comes last; blocks that end a page carry no bottom space of their own (2026-10-07, `mockups/page-bottom-spacing.html`)
 - **Breakpoint**: 680px is the only one in use so far (nav → drawer, grids → 1 column)
 
 ## Where this lives

@@ -153,6 +153,13 @@ main {
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
+  /* Page bottom (STYLE.md "Spacing & radius"): 40px from the last thing on
+   * any page to the footer, owned here rather than borrowed from whichever
+   * block comes last, so the blocks below that used to supply it
+   * (.article-pagination, the last .home-section, .list-pagination-spacer)
+   * have no bottom space of their own. About, which has none of them, ran
+   * into the footer before this (mockups/page-bottom-spacing.html). */
+  padding-bottom: 40px;
 }
 
 /* The gap the comment above used to call "known, minor" turned out not to
@@ -764,7 +771,7 @@ html { overflow-x: hidden; }
 .stat-value { font-family: 'Libre Franklin', sans-serif; font-size: .85rem; color: var(--ink); max-width: 22ch; }
 
 .home-section { max-width: 1100px; margin: 0 auto; padding: 40px 20px; border-bottom: 1px solid var(--border); }
-.home-section:last-of-type { border-bottom: none; }
+.home-section:last-of-type { border-bottom: none; padding-bottom: 0; }
 .block-head { margin-bottom: 20px; display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
 .block-num { font-family: 'IBM Plex Mono', monospace; font-size: .72rem; color: var(--ink-faint); display: block; margin-bottom: 4px; }
 h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; margin-bottom: 6px; text-wrap: balance; }
@@ -914,6 +921,8 @@ a.principle-chip:hover, a.principle-chip:focus-visible { box-shadow: inset 0 0 0
 .toc-jump-label { font-size: .65rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-faint); padding-top: 6px; margin-bottom: -2px; }
 
 .browse-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px,1fr)); gap: 4px 28px; }
+/* terms.html's mb-8 would stack on <main>'s page-bottom 40px */
+.browse-grid.mb-8 { margin-bottom: 0; }
 .browse-list { display: flex; flex-direction: column; gap: 1px; }
 .browse-list a { display: flex; justify-content: space-between; gap: 14px; font-family: 'Libre Franklin', sans-serif; font-size: .88rem; color: var(--ink); text-decoration: none; padding: 6px 8px; border-radius: 4px; }
 .browse-list a:hover { background: var(--accent-soft); color: var(--accent-strong); }
@@ -1041,7 +1050,7 @@ article > footer {
 
 .article-pagination {
   display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap;
-  margin-top: 40px; margin-bottom: 40px; padding-top: 28px; border-top: 1px solid var(--border);
+  margin-top: 40px; margin-bottom: 0; padding-top: 28px; border-top: 1px solid var(--border);
   font-family: 'Libre Franklin', sans-serif;
 }
 .article-pagination-link {
@@ -1066,7 +1075,7 @@ article > footer {
  * empty spacer (single-page listing, no <ul> inside) still reserves the
  * gap instead of collapsing to nothing — see pagination.html. */
 .list-pagination-spacer {
-  padding: 40px 0;
+  padding: 40px 0 0;
 }
 .list-pagination {
   display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap;
@@ -1302,6 +1311,9 @@ a.comp-card:hover .comp-card-label { color: var(--accent-strong); }
  * throughout so they beat custom.css's own `.prose h2` rules; `not-prose`
  * on the wrapper opts out of Tailwind Typography's. */
 .reading-sidebar-wrap { border-top: 1px solid var(--border); padding-top: 24px; margin-bottom: 32px; }
+/* Last on the page (About: no previous/next links below it), <main>'s
+ * page-bottom 40px is the gap; this one would stack on it. */
+article:not(:has(.article-pagination)) .reading-sidebar-wrap { margin-bottom: 0; }
 @media (min-width: 1024px) {
   .reading-sidebar-wrap { flex: 0 0 20.6rem; max-width: 20.6rem; border-top: none; padding-top: 0; margin-bottom: 0; }
   /* Pinned like the recipe sidebar (single.html). Capped to the viewport
@@ -1462,7 +1474,7 @@ a.comp-card:hover .comp-card-label { color: var(--accent-strong); }
  * for the "404" label; the terminal card is the one place IBM Plex Mono
  * carries prose instead of just quantities/data, since it's standing in
  * for a game/terminal voice rather than the site's normal body copy. */
-.error-404 { max-width: 760px; margin: 0 auto; padding: 48px 20px 80px; }
+.error-404 { max-width: 760px; margin: 0 auto; padding: 48px 20px 40px; } /* + <main>'s 40px = the 80px it always had */
 .error-404-head { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 28px; }
 .error-404-num {
   font-family: 'Libre Franklin', sans-serif; font-weight: 700; letter-spacing: -.015em;
