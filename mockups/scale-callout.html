@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scaling callout</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  :root{
+    --bg:#F3F3EC; --surface:#FBFBF6; --surface-2:#EAEBDF;
+    --ink:#23241E; --ink-muted:#63645A; --ink-faint:#93948A;
+    --border:#DCDCCE; --border-strong:#C7C8B4;
+    --accent:#A67330; --accent-strong:#7C361D; --accent-soft:#F6EADA;
+    --highlight:#997F29; --highlight-soft:#F6F1D5;
+    --flag:#3D638F; --flag-soft:#E1EAF4;
+    --focus:#A67330;
+    --qty-bg:#E9E1CF;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+      --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+      --border:#383A2C; --border-strong:#4A4C3A;
+      --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+      --highlight:#DDCC88; --highlight-soft:#342D19;
+      --flag:#97B8D8; --flag-soft:#1D2835;
+      --focus:#D3A569;
+      --qty-bg:#3A3424;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+    --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+    --border:#383A2C; --border-strong:#4A4C3A;
+    --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+    --highlight:#DDCC88; --highlight-soft:#342D19;
+    --flag:#97B8D8; --flag-soft:#1D2835;
+    --focus:#D3A569;
+    --qty-bg:#3A3424;
+  }
+
+  *{box-sizing:border-box;}
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:'Lora',Georgia,serif; font-size:16px; line-height:1.5; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3,h4{ font-family:'Libre Franklin',system-ui,sans-serif; margin:0; }
+  p{ margin:0; }
+  code{ font-family:'IBM Plex Mono',monospace; font-size:.85em; background:var(--surface-2); padding:1px 5px; border-radius:3px; }
+  button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
+  :focus-visible{ outline:2px solid var(--focus); outline-offset:2px; }
+
+  .topbar{ position:sticky; top:0; z-index:30; background:var(--surface); border-bottom:1px solid var(--border-strong); }
+  .topbar-inner{ max-width:980px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+  .tb-title{ font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:.95rem; margin-right:auto; }
+  .tb-jump{ display:flex; gap:2px; flex-wrap:wrap; font-family:'Libre Franklin',sans-serif; }
+  .tb-jump a{ font-size:.76rem; font-weight:600; color:var(--ink-muted); text-decoration:none; padding:6px 9px; border-radius:4px; }
+  .tb-jump a:hover{ color:var(--ink); background:var(--surface-2); }
+  .theme-toggle{ font-family:'Libre Franklin',sans-serif; font-size:.75rem; font-weight:600; padding:7px 10px; border:1px solid var(--border-strong); border-radius:3px; color:var(--ink-muted); }
+  .theme-toggle:hover{ border-color:var(--accent); color:var(--ink); }
+
+  main{ max-width:980px; margin:0 auto; padding:8px 20px 100px; }
+  .hero{ padding:36px 0 30px; border-bottom:1px solid var(--border); margin-bottom:40px; }
+  .hero-eyebrow{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--accent-strong); margin-bottom:10px; display:block; }
+  .hero h1{ font-size:2rem; font-weight:700; letter-spacing:-.01em; margin-bottom:12px; }
+  .hero p{ max-width:66ch; color:var(--ink-muted); font-size:1.02rem; }
+  .hero p + p{ margin-top:10px; }
+
+  section.block{ margin-bottom:56px; }
+  .block-head{ margin-bottom:18px; }
+  .block-num{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--ink-faint); display:block; margin-bottom:4px; }
+  h2.block-title{ font-size:1.4rem; font-weight:700; margin-bottom:8px; }
+  .block-dek{ color:var(--ink-muted); max-width:68ch; font-size:.95rem; }
+  .frame-cap{ font-family:'IBM Plex Mono',monospace; font-size:.66rem; color:var(--ink-faint); margin-top:8px; }
+
+  .note-card{ display:flex; gap:12px; padding:14px 16px; background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--flag); border-radius:0 6px 6px 0; margin-top:16px; }
+  .note-mark{ font-family:'IBM Plex Mono',monospace; font-size:.75rem; font-weight:700; color:var(--flag); flex-shrink:0; }
+  .note-card p{ font-size:.9rem; color:var(--ink-muted); }
+  .note-card p + p{ margin-top:6px; }
+  .note-card strong{ color:var(--ink); font-weight:600; }
+  .qlist{ display:grid; gap:10px; }
+
+  table.spec{ width:100%; border-collapse:collapse; font-size:.86rem; background:var(--surface); border:1px solid var(--border); border-radius:6px; overflow:hidden; }
+  .spec th{ font-family:'Libre Franklin',sans-serif; font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-faint); text-align:left; padding:10px 14px; border-bottom:1px solid var(--border); }
+  .spec td{ padding:9px 14px; border-bottom:1px solid var(--border); vertical-align:top; color:var(--ink-muted); }
+  .spec tr:last-child td{ border-bottom:none; }
+  .spec td:first-child{ color:var(--ink); font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:.82rem; white-space:nowrap; }
+
+  /* ---------- the recipe context each frame sits in ---------- */
+  .row{ display:flex; gap:28px; flex-wrap:wrap; align-items:flex-start; }
+  .stage{ background:var(--bg); border:1px solid var(--border-strong); border-radius:6px; padding:22px 22px 26px; width:400px; max-width:100%; }
+  .stage.phone{ width:340px; }
+  .stage.tall{ min-height:330px; }
+  .ing-h{ position:relative; font-size:1.45rem; font-weight:700; padding-right:40px; margin-bottom:12px; }
+  .ing-list{ list-style:none; margin:0; padding:0; font-size:.92rem; }
+  .ing-list li{ padding:6px 0; border-bottom:1px solid var(--border); }
+  .q{ font-family:'IBM Plex Mono',monospace; font-size:.84rem; background:var(--qty-bg); padding:1px 5px; border-radius:3px; }
+
+  /* the gear (unchanged from the site's .ing-config > summary) */
+  .gear{ position:absolute; top:2px; right:0; width:28px; height:28px; display:flex; align-items:center; justify-content:center; border:1px solid var(--border-strong); border-radius:5px; background:var(--surface); color:var(--ink-muted); }
+  .gear svg{ width:15px; height:15px; }
+  .gear.open{ color:var(--accent-strong); border-color:var(--accent); }
+
+  /* ---------- TODAY: copy of the site's .ing-config-panel ---------- */
+  .old-panel{ position:absolute; top:calc(100% + 8px); right:0; z-index:20; width:240px; background:var(--surface); border:1px solid var(--border-strong); border-radius:6px; box-shadow:0 14px 40px rgba(0,0,0,.16); padding:16px; display:flex; flex-direction:column; gap:16px; font-family:'Libre Franklin',sans-serif; font-weight:400; }
+  .old-label{ font-size:.65rem; font-weight:700; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-faint); }
+  .old-group{ display:flex; flex-direction:column; gap:8px; }
+  .old-slider{ display:flex; align-items:center; gap:10px; }
+  .old-slider input{ flex:1; accent-color:var(--accent); }
+  .old-val{ font-family:'IBM Plex Mono',monospace; font-size:.85rem; font-weight:600; color:var(--accent-strong); min-width:34px; text-align:right; }
+  .old-row{ display:flex; flex-wrap:wrap; gap:6px; }
+  .old-btn{ font-size:.78rem; font-weight:600; padding:7px 12px; border:1px solid var(--border-strong); border-radius:5px; background:var(--surface); color:var(--ink-muted); }
+  .old-btn.on{ background:var(--accent-soft); border-color:var(--accent); color:var(--accent-strong); }
+
+  /* ---------- PROPOSED: the callout ---------- */
+  .callout{
+    position:absolute; top:calc(100% + 11px); right:-8px; z-index:20; width:256px;
+    background:var(--surface); border:1px solid var(--border-strong); border-radius:8px;
+    box-shadow:0 10px 30px rgba(0,0,0,.14);
+    padding:14px 16px 16px; font-family:'Libre Franklin',sans-serif; font-weight:400;
+    display:grid; gap:14px;
+  }
+  /* The ^ pointer: two stacked triangles (border colour, then surface)
+     centred under the gear. The gear is 28px wide at right:0 and the
+     callout sits 8px further right, so the tip is 8 + 14 = 22px in. */
+  .callout::before, .callout::after{ content:""; position:absolute; right:15px; border:7px solid transparent; border-top:0; }
+  .callout::before{ top:-8px; border-bottom:8px solid var(--border-strong); }
+  .callout::after{ top:-6.6px; border-bottom:8px solid var(--surface); }
+
+  .c-row{ display:grid; gap:8px; }
+  .c-head{ display:flex; align-items:baseline; justify-content:space-between; }
+  .c-label{ font-size:.66rem; font-weight:700; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-faint); }
+  .c-val{ font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums; font-size:.92rem; font-weight:600; color:var(--accent-strong); }
+  .c-sub{ font-family:'Lora',serif; font-style:italic; font-size:.76rem; color:var(--ink-muted); }
+
+  /* Slider: a real <input type=range>, restyled. Filled track up to the
+     thumb (--fill set from JS), tick marks at each whole step. */
+  .c-range{ -webkit-appearance:none; appearance:none; width:100%; height:20px; background:transparent; margin:0; cursor:pointer; }
+  .c-range::-webkit-slider-runnable-track{ height:6px; border-radius:3px; background:linear-gradient(to right, var(--accent) var(--fill,0%), var(--surface-2) var(--fill,0%)); border:1px solid var(--border); }
+  .c-range::-moz-range-track{ height:6px; border-radius:3px; background:var(--surface-2); border:1px solid var(--border); }
+  .c-range::-moz-range-progress{ height:6px; border-radius:3px; background:var(--accent); }
+  .c-range::-webkit-slider-thumb{ -webkit-appearance:none; width:18px; height:18px; margin-top:-7px; border-radius:50%; background:var(--surface); border:2px solid var(--accent); box-shadow:0 1px 3px rgba(0,0,0,.2); }
+  .c-range::-moz-range-thumb{ width:14px; height:14px; border-radius:50%; background:var(--surface); border:2px solid var(--accent); }
+  .c-range:focus-visible{ outline:none; }
+  .c-range:focus-visible::-webkit-slider-thumb{ outline:2px solid var(--focus); outline-offset:2px; }
+  .c-ticks{ display:flex; justify-content:space-between; padding:0 6px; margin-top:-2px; }
+  .c-ticks span{ font-family:'IBM Plex Mono',monospace; font-size:.6rem; color:var(--ink-faint); width:12px; text-align:center; }
+  .c-ticks span.on{ color:var(--accent-strong); font-weight:600; }
+
+  /* Units: a native <select>, restyled closed state; the open list is the
+     OS's own (best on phones: a wheel on iOS, a sheet on Android). */
+  .c-units{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
+  .c-select{ position:relative; flex:0 0 auto; }
+  .c-select select{
+    -webkit-appearance:none; appearance:none; font:inherit; font-size:.82rem; font-weight:600; color:var(--ink);
+    background:var(--surface); border:1px solid var(--border-strong); border-radius:5px;
+    padding:6px 30px 6px 11px; cursor:pointer; min-width:132px;
+  }
+  .c-select select:hover{ border-color:var(--accent); }
+  .c-select::after{ content:""; position:absolute; right:11px; top:50%; width:6px; height:6px; margin-top:-5px; border-right:1.5px solid var(--ink-muted); border-bottom:1.5px solid var(--ink-muted); transform:rotate(45deg); pointer-events:none; }
+
+  /* Alternative: segmented control, one row */
+  .seg{ display:grid; grid-template-columns:repeat(3,1fr); border:1px solid var(--border-strong); border-radius:5px; overflow:hidden; }
+  .seg button{ font-size:.74rem; font-weight:600; padding:6px 4px; color:var(--ink-muted); background:var(--surface); border-left:1px solid var(--border-strong); }
+  .seg button:first-child{ border-left:0; }
+  .seg button.on{ background:var(--accent-soft); color:var(--accent-strong); }
+
+  .c-sep{ border:0; border-top:1px solid var(--border); margin:0; }
+
+  /* fake open native list, for the "list open" frame only */
+  .fake-list{ position:absolute; right:16px; top:calc(100% - 14px); width:150px; background:var(--surface); border:1px solid var(--border-strong); border-radius:6px; box-shadow:0 8px 22px rgba(0,0,0,.18); padding:4px; font-size:.8rem; font-weight:500; z-index:25; }
+  .fake-list div{ padding:6px 9px; border-radius:4px; color:var(--ink); }
+  .fake-list div.sel{ background:var(--accent-soft); color:var(--accent-strong); font-weight:600; }
+  .fake-list div.sel::before{ content:"✓ "; }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="gear" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1.03 1.56V21a2 2 0 1 1-4 0v-.09A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.56-1.03H3a2 2 0 1 1 0-4h.09A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1.03-1.56V3a2 2 0 1 1 4 0v.09A1.7 1.7 0 0 0 15 4.6a1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9a1.7 1.7 0 0 0 1.56 1.03H21a2 2 0 1 1 0 4h-.09A1.7 1.7 0 0 0 19.4 15z"/></g></symbol>
+</svg>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <span class="tb-title">Scaling callout</span>
+    <nav class="tb-jump">
+      <a href="#today">Today</a>
+      <a href="#proposed">Proposed</a>
+      <a href="#units">Units: list or segments</a>
+      <a href="#states">States &amp; phone</a>
+      <a href="#build">Build</a>
+      <a href="#open">Open questions</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle">Theme: <span id="themeLabel">System</span></button>
+  </div>
+</div>
+
+<main>
+  <header class="hero">
+    <span class="hero-eyebrow">Mockup · component redesign · 2026-10-07</span>
+    <h1>Scaling callout</h1>
+    <p>The gear beside a recipe's Ingredients heading opens the scale and units controls. Today it opens a plain box set a little apart from the gear: a wide slider, then three unit buttons that don't fit on one line, so "Imperial" wraps onto a line by itself.</p>
+    <p>The proposal: a callout with a small <code>^</code> pointer up to the gear, so it reads as coming from that button; a tidier slider with its whole-number steps marked; and units as one drop list.</p>
+  </header>
+
+  <!-- 1 -->
+  <section class="block" id="today">
+    <div class="block-head">
+      <span class="block-num">§1</span>
+      <h2 class="block-title">Today</h2>
+      <p class="block-dek">A copy of the live panel (<code>.ing-config-panel</code>), on veg patties' first ingredient heading.</p>
+    </div>
+    <div class="stage tall">
+      <h3 class="ing-h">Bean and rice patties
+        <span class="gear open"><svg><use href="#gear"/></svg></span>
+        <div class="old-panel">
+          <div class="old-group"><span class="old-label">Scale recipe</span><div class="old-slider"><input type="range" min="1" max="5" step=".5" value="1"><span class="old-val">1×</span></div></div>
+          <div class="old-group"><span class="old-label">Units</span><div class="old-row"><span class="old-btn on">As written</span><span class="old-btn">Metric</span><span class="old-btn">Imperial</span></div></div>
+        </div>
+      </h3>
+      <ul class="ing-list"><li><span class="q">1 can</span> black, pinto, or kidney beans</li><li><span class="q">1 tbsp</span> neutral oil</li><li><span class="q">½</span> small onion, finely diced</li><li><span class="q">1</span> medium carrot, finely grated</li></ul>
+    </div>
+    <p class="frame-cap">today · 240px box, 8px below the gear, nothing joining them · "Imperial" wraps</p>
+  </section>
+
+  <!-- 2 -->
+  <section class="block" id="proposed">
+    <div class="block-head">
+      <span class="block-num">§2</span>
+      <h2 class="block-title">Proposed</h2>
+      <p class="block-dek">Same surface, border and shadow family as the glossary popover, so the site has one popover look. The pointer's tip sits under the gear's centre. Each control gets one row: label and current value on top, the control under it. Live: drag the slider and change the list.</p>
+    </div>
+    <div class="row">
+      <div>
+        <div class="stage tall">
+          <h3 class="ing-h">Bean and rice patties
+            <span class="gear open"><svg><use href="#gear"/></svg></span>
+            <div class="callout" data-live>
+              <div class="c-row">
+                <div class="c-head"><span class="c-label">Scale</span><span class="c-val" data-out>1×</span></div>
+                <input class="c-range" type="range" min="1" max="5" step=".5" value="1" aria-label="Scale recipe">
+                <div class="c-ticks"><span class="on">1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>
+                <span class="c-sub" data-yield>Serves 3–4 · 6 patties</span>
+              </div>
+              <hr class="c-sep">
+              <div class="c-units">
+                <span class="c-label">Units</span>
+                <span class="c-select"><select aria-label="Units"><option>As written</option><option>Metric</option><option>Imperial</option></select></span>
+              </div>
+            </div>
+          </h3>
+          <ul class="ing-list"><li><span class="q" data-q="1" data-u="can">1 can</span> black, pinto, or kidney beans</li><li><span class="q" data-q="1" data-u="tbsp">1 tbsp</span> neutral oil</li><li><span class="q" data-q=".5" data-u="">½</span> small onion, finely diced</li><li><span class="q" data-q="1" data-u="">1</span> medium carrot, finely grated</li></ul>
+        </div>
+        <p class="frame-cap">proposed · 256px callout, pointer under the gear · drop list for units</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section class="block" id="units">
+    <div class="block-head">
+      <span class="block-num">§3</span>
+      <h2 class="block-title">Units: drop list or segments</h2>
+      <p class="block-dek">Both fix the wrap. The drop list is the cleaner of the two and leaves room if Kelvin (the site's joke option, off by default) is ever turned on. A segmented control shows all three at once, one tap to switch, but a fourth option wouldn't fit.</p>
+    </div>
+    <div class="row">
+      <div>
+        <div class="stage" style="width:300px;padding-top:6px">
+          <div class="callout" style="position:relative;top:12px;right:auto">
+            <div class="c-units"><span class="c-label">Units</span><span class="c-select"><select aria-label="Units"><option>As written</option><option>Metric</option><option>Imperial</option></select></span></div>
+          </div>
+        </div>
+        <p class="frame-cap">A · drop list (recommended)</p>
+      </div>
+      <div>
+        <div class="stage" style="width:300px;padding-top:6px">
+          <div class="callout" style="position:relative;top:12px;right:auto">
+            <div class="c-row"><span class="c-label">Units</span><div class="seg" data-seg><button class="on">As written</button><button>Metric</button><button>Imperial</button></div></div>
+          </div>
+        </div>
+        <p class="frame-cap">B · segmented control</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section class="block" id="states">
+    <div class="block-head">
+      <span class="block-num">§4</span>
+      <h2 class="block-title">States &amp; phone</h2>
+      <p class="block-dek">The drop list's open state is the browser's own: a menu on desktop, a picker wheel or sheet on phones, which is a big part of why a native list beats custom buttons here. Keyboard: Tab from the gear goes slider → list, arrow keys work on both, Escape closes the callout.</p>
+    </div>
+    <div class="row">
+      <div>
+        <div class="stage tall" style="min-height:300px">
+          <h3 class="ing-h">Dal
+            <span class="gear open"><svg><use href="#gear"/></svg></span>
+            <div class="callout">
+              <div class="c-row">
+                <div class="c-head"><span class="c-label">Scale</span><span class="c-val">2×</span></div>
+                <input class="c-range" type="range" min="1" max="5" step=".5" value="2" style="--fill:25%" tabindex="-1" aria-hidden="true">
+                <div class="c-ticks"><span>1</span><span class="on">2</span><span>3</span><span>4</span><span>5</span></div>
+                <span class="c-sub">Serves 8</span>
+              </div>
+              <hr class="c-sep">
+              <div class="c-units" style="position:relative">
+                <span class="c-label">Units</span>
+                <span class="c-select"><select tabindex="-1" aria-hidden="true" style="border-color:var(--accent)"><option>Metric</option></select></span>
+                <div class="fake-list"><div>As written</div><div class="sel">Metric</div><div>Imperial</div></div>
+              </div>
+            </div>
+          </h3>
+        </div>
+        <p class="frame-cap">desktop · scaled to 2× · list open (drawn here; the real one is the browser's)</p>
+      </div>
+      <div>
+        <div class="stage phone tall" style="min-height:300px">
+          <h3 class="ing-h" style="font-size:1.25rem">Bean and rice patties
+            <span class="gear open"><svg><use href="#gear"/></svg></span>
+            <div class="callout" style="width:min(256px, calc(100vw - 40px))">
+              <div class="c-row">
+                <div class="c-head"><span class="c-label">Scale</span><span class="c-val">1.5×</span></div>
+                <input class="c-range" type="range" min="1" max="5" step=".5" value="1.5" style="--fill:12.5%" tabindex="-1" aria-hidden="true">
+                <div class="c-ticks"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>
+                <span class="c-sub">Serves 4–6 · 9 patties</span>
+              </div>
+              <hr class="c-sep">
+              <div class="c-units"><span class="c-label">Units</span><span class="c-select"><select tabindex="-1" aria-hidden="true"><option>As written</option></select></span></div>
+            </div>
+          </h3>
+        </div>
+        <p class="frame-cap">phone · 340px · same callout, right edge on the gutter, pointer still under the gear</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 -->
+  <section class="block" id="build">
+    <div class="block-head">
+      <span class="block-num">§5</span>
+      <h2 class="block-title">Build</h2>
+      <p class="block-dek">Split between Fugu (markup) and this site (look).</p>
+    </div>
+    <table class="spec">
+      <thead><tr><th>Where</th><th>Change</th></tr></thead>
+      <tbody>
+        <tr><td>Fugu · <code>ingredients.js</code></td><td><code>buildControlSurface</code> builds a <code>&lt;select&gt;</code> instead of the unit buttons (Kelvin is one more <code>&lt;option&gt;</code> when enabled), the scale value moves into the label row, tick labels under the slider, and the optional yield line. The controller listens for <code>change</code> on the list instead of button clicks; <code>localStorage</code> keys stay the same, so readers keep their setting. Escape closes the <code>&lt;details&gt;</code>. Coordinate with whoever's in Fugu.</td></tr>
+        <tr><td>Site · <code>custom.css</code></td><td>The callout box and its <code>::before</code>/<code>::after</code> pointer, the slider restyle (filled track via a <code>--fill</code> custom property the JS sets), and the closed-list style. <code>.ing-btn</code> goes away.</td></tr>
+        <tr><td>Docs</td><td>STYLE.md gets a "Scaling callout" component entry, and the popover look (surface, border-strong, 8px radius, pointer) becomes the shared popover rule.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 6 -->
+  <section class="block" id="open">
+    <div class="block-head">
+      <span class="block-num">§6</span>
+      <h2 class="block-title">Open questions</h2>
+    </div>
+    <div class="qlist">
+      <div class="note-card" style="margin:0"><span class="note-mark">1</span><div><p><strong>Drop list or segments?</strong> The drop list (A) is recommended, as you suggested; segments (B) is one tap but can't take a fourth option.</p></div></div>
+      <div class="note-card" style="margin:0"><span class="note-mark">2</span><div><p><strong>Yield line under the slider?</strong> "Serves 3–4 · 6 patties" updating as you drag, from the recipe's <code>servings</code> and <code>portions</code>. The sidebar's Serves row already scales; this puts the answer next to the control. Hidden on recipes with neither field.</p></div></div>
+      <div class="note-card" style="margin:0"><span class="note-mark">3</span><div><p><strong>Tick labels 1–5?</strong> They make half steps readable (the thumb between 1 and 2 is 1.5×) at the cost of one small line.</p></div></div>
+      <div class="note-card" style="margin:0"><span class="note-mark">4</span><div><p><strong>One popover look site-wide?</strong> If this lands, the glossary popover could take the pointer too.</p></div></div>
+    </div>
+  </section>
+</main>
+<script>
+(function(){
+  // Live demo in §2: slider fill, value, ticks, yield, and quantities.
+  var live = document.querySelector('[data-live]');
+  var frac = { '0.5':'½', '1.5':'1½', '2.5':'2½', '0.25':'¼', '0.75':'¾' };
+  function fmt(n){ var s = String(n); if (frac[s]) return frac[s]; return Number.isInteger(n) ? String(n) : n.toFixed(1); }
+  function fill(r){ r.style.setProperty('--fill', ((r.value - r.min) / (r.max - r.min) * 100) + '%'); }
+  document.querySelectorAll('.c-range').forEach(function(r){ if (!r.style.getPropertyValue('--fill')) fill(r); });
+  if (live){
+    var r = live.querySelector('.c-range'), out = live.querySelector('[data-out]'), y = live.querySelector('[data-yield]');
+    var ticks = live.querySelectorAll('.c-ticks span');
+    r.addEventListener('input', function(){
+      var s = parseFloat(r.value); fill(r);
+      out.textContent = (Number.isInteger(s) ? s : s.toFixed(1)) + '×';
+      ticks.forEach(function(t, i){ t.classList.toggle('on', i + 1 === s); });
+      var lo = Math.round(3 * s), hi = Math.round(4 * s);
+      y.textContent = 'Serves ' + lo + '–' + hi + ' · ' + Math.round(6 * s) + ' patties';
+      document.querySelectorAll('.q[data-q]').forEach(function(q){
+        var n = parseFloat(q.dataset.q) * s; q.textContent = fmt(n) + (q.dataset.u ? ' ' + q.dataset.u : '');
+      });
+    });
+  }
+  document.querySelectorAll('[data-seg]').forEach(function(seg){
+    seg.addEventListener('click', function(e){ var b = e.target.closest('button'); if (!b) return;
+      seg.querySelectorAll('button').forEach(function(x){ x.classList.toggle('on', x === b); }); });
+  });
+  var root = document.documentElement, label = document.getElementById('themeLabel');
+  var order = ['system','light','dark'], current = 'system';
+  try{ var s = localStorage.getItem('nac-style-theme'); if(order.indexOf(s) !== -1) current = s; }catch(e){}
+  function apply(m){ if(m==='system') root.removeAttribute('data-theme'); else root.setAttribute('data-theme', m);
+    label.textContent = m.charAt(0).toUpperCase()+m.slice(1); try{ localStorage.setItem('nac-style-theme', m); }catch(e){} }
+  apply(current);
+  document.getElementById('themeToggle').addEventListener('click', function(){ current = order[(order.indexOf(current)+1)%order.length]; apply(current); });
+})();
+</script>
+</body>
+</html>
