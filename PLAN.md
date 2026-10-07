@@ -20,6 +20,13 @@ Built and checked 2026-10-06 in Chrome, dark mode, desktop width only. Still to 
 - [ ] Retest a formula inside Mechanic (compact, sidebar) on the live site, since veg patties no longer has one there.
 - [ ] Decide about the duplicate swaps on veg patties: the Mechanic bullets list the swaps for each slot, and the diagram's swap lines repeat them. Either trim the bullets to quantities and notes, or drop the fourth field from the block.
 
+### Design changes (mock first)
+
+Queued 2026-10-07. Each needs a mockup in `mockups/` (checked against `mockups/STYLE.md`) before it's built, and STYLE.md updated when it lands.
+
+- [ ] **Scaling menu as a callout.** The ingredient options popover (gear button on each ingredients heading) is an oddly shaped box: a wide slider row, then three unit buttons that wrap onto two lines ("Imperial" alone on the second). Redraw it as a comic-style callout with a small `^` pointer up to the gear, and replace the unit buttons with a drop list (As written / Metric / Imperial), which also fixes the wrap. Markup is built in Fugu's `assets/js/ingredients.js` (config menu, ~line 734), so the drop list is a Fugu change (coordinate with whoever's working there); the look is `custom.css` (`.ing-scale-*` and the menu rules around it). Mock in light and dark, at desktop and phone widths, including keyboard focus and the open/closed states.
+- [ ] **Space above the footer on reading pages.** About (and other pages with the reading sidebar) run straight into the footer: on About, the last row of photo markers sits on the footer's top border. Recipes don't, because the share/related block follows the body. Give every page a standard gap above the footer, from the spacing scale in STYLE.md, rather than fixing About alone. Likely `custom.css`: at desktop width `.reading-sidebar-wrap` drops its `margin-bottom` (`custom.css:1306`) and the article column has none. Mock the bottom of About, an essay, and the Food Log at desktop and phone widths.
+
 ### Fugu theme
 
 The cookbook templates, render hooks, JS, icons, archetypes, and content tools moved into the Fugu theme (`themes/fugu`, https://github.com/robotpony/hugo-theme-fugu) on 2026-10-06; see ARCHITECTURE.md for the three layers. Theme work (making it generic, its own design, docs, example site, release) and the template and JS features below it are tracked in **`themes/fugu/PLAN.md`**. This list is only what has to happen on the Not a Chef side.
