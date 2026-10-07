@@ -86,3 +86,7 @@ mainSections = ["recipes"]
   # Feeds <meta name="author"> and the JSON-LD author. Not shown on pages:
   # article.showAuthor is off, and the homepage is a custom layout.
   name = "Bruce Alderson"
+
+[fugu]
+  # Recipe sidebar boxes, top to bottom (Fugu's default puts notes last).
+  recipeSidebar = ["photos", "to-serve", "mechanic", "notes", "variations", "equipment"]
