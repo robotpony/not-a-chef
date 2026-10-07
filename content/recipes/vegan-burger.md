@@ -1,11 +1,19 @@
 ---
 title: Vegan burger
-tags: [mains, burgers, vegan, vegetarian, dairy-free, make-ahead]
+tags:
+  - mains
+  - burgers
+  - vegan
+  - vegetarian
+  - dairy-free
+  - make-ahead
 source: family
 date: 2026-06-08
 cuisine: American
-aliases: [/recipes/vegan-burger-savoury-chew-gluten/]
+aliases:
+  - /recipes/vegan-burger-savoury-chew-gluten/
 draft: false
+prep_time: ~10 min
 ---
 
 A hearty bean, nut, and mushroom burger. The vital wheat gluten gives it a savoury chew, so it holds together in the pan instead of crumbling.
