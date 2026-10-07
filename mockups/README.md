@@ -36,6 +36,11 @@ in a browser — no build step.
   `assets/icons/formula/`); `STYLE.md`'s Formula diagram entry describes it.
   The recipe card strip (§5) was built on 2026-10-07 (`partials/formula-strip.html` in Fugu), with a hover tooltip per slot added.
 
+- **`page-bottom-spacing.html`**: proposal (2026-10-07) to make 40px
+  from the last content to the footer a page-level rule. Today every page
+  borrows it from its last block, and About, which has none, runs into the
+  footer. Not built yet; see `PLAN.md` "Design changes".
+
 - **`recipe-card-v2.html`** — the recipe card redesign (2026-09-23) with
   real recipe data: before/after, homepage row, and recipes list grid.
   Built into `themes/fugu/layouts/partials/recipe-card.html` and
