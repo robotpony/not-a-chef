@@ -805,7 +805,7 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
  * row of the recipe's formula icons. It takes the intro's third line, so a
  * card with one is the same height as a card without. */
 .rcard.has-formula .rcard-intro { -webkit-line-clamp: 2; }
-.rcard-formula { display: flex; height: 24px; min-width: 0; overflow: hidden; }
+.rcard-formula { display: flex; justify-content: center; height: 24px; min-width: 0; overflow: hidden; }
 /* The strip's own link sits above .rcard-link::after so its slots' title
  * tooltips show on hover; it points at the same page, so clicks still go
  * through. Only as wide as its icons, so the rest of the row stays the card. */
@@ -1532,7 +1532,7 @@ a.comp-card:hover .comp-card-label { color: var(--accent-strong); }
   width: 48px; height: 48px; flex: none;
 }
 .formula .ic-missing { color: var(--ink-faint); }
-.formula-row { display: flex; align-items: flex-start; flex-wrap: wrap; row-gap: 14px; }
+.formula-row { display: flex; align-items: flex-start; justify-content: center; flex-wrap: wrap; row-gap: 14px; }
 /* Each operator wraps together with the slot it introduces, so a row never ends on a stray + */
 .f-step { display: flex; align-items: flex-start; }
 .f-slot { display: flex; flex-direction: column; align-items: center; text-align: center; width: 96px; color: var(--ink); }
@@ -1550,9 +1550,9 @@ a.comp-card:hover .comp-card-label { color: var(--accent-strong); }
 .formula-seq .f-op { font-family: 'Libre Franklin', sans-serif; }
 .formula-ratio .f-num { font-family: 'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums; font-size: 1.5rem; font-weight: 600; color: var(--accent-strong); line-height: 1.1; margin-top: 4px; }
 .formula-ratio .f-op { font-size: 1.5rem; }
-.f-bar { display: flex; gap: 2px; height: 10px; max-width: 340px; margin-top: 16px; }
+.f-bar { display: flex; gap: 2px; height: 10px; max-width: 340px; margin: 16px auto 0; }
 .f-bar span { background: var(--accent-soft); border: 1px solid var(--accent); border-radius: 2px; }
-.f-cap { font-family: 'Libre Franklin', sans-serif; font-size: .74rem; color: var(--ink-faint); margin-top: 12px; }
+.f-cap { font-family: 'Libre Franklin', sans-serif; font-size: .74rem; color: var(--ink-faint); margin-top: 12px; text-align: center; }
 
 /* Compact: the recipe sidebar (~18.6rem) fits five slots */
 .recipe-sidebar-section .formula { margin: .9em 0 .6em; }
