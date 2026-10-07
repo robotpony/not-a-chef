@@ -17,6 +17,7 @@ cuisine: American
 ---
 These vegetable patties are quick to make and delicious. They're perfect when you're looking for a lighter sandwich or salad topping.
 
+### The formula is simple:
 ```formula
 can          | Beans   | 1 can         | black, pinto, chickpea
 + bowl       | Starch  | 1 cup         | rice, mash, quinoa
@@ -34,9 +35,7 @@ The beans are the body, the starch makes the mix tacky, and the binder holds it 
 - Starch: cooked rice, cold mashed potato, cooked quinoa, or cooked bulgur
 - Vegetables: grated carrot, peas, corn, diced mushroom, or grated beet, sautéed until dry
 - Binder: egg and breadcrumbs, or vital wheat gluten and oats for an egg-free, chewier patty (see [[Vegan burger]])
-- Seasoning: about 1 tbsp soy sauce and 2 tsp of dry spices per can of beans, plus salt
-
-
+- Seasoning: about 1 tbsp soy sauce and 2 tsp of dry spices per can of beans, plus salt (aiming for 1-1.5% by weight)
 
 ## Bean and rice patties
 
