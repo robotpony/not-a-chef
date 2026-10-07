@@ -15,8 +15,8 @@ Content-side only. The formula strip on cards, the `/lint` formula check, and gr
 
 Built and checked 2026-10-06 in Chrome, dark mode, desktop width only. Still to do:
 
-- [ ] Retest veg patties in light mode. The mockup was checked in both themes; the live page only in dark.
-- [ ] Retest on a phone-width viewport: the diagram is now in the intro (full size, body column) and should wrap with each operator staying attached to its slot.
+- [x] Retest veg patties in light mode. *Done 2026-10-07: checked in Chrome, light and dark.*
+- [x] Retest on a phone-width viewport: the diagram is now in the intro (full size, body column) and should wrap with each operator staying attached to its slot. *Done 2026-10-07 at 300px and 400px: it wraps with operators attached. The card strip was clipping at both ends on phones (cards two across, ~136px of room), so its icons shrink to 18px below 480px.*
 - [ ] Retest a formula inside Mechanic (compact, sidebar) on the live site, since veg patties no longer has one there.
 - [ ] Decide about the duplicate swaps on veg patties: the Mechanic bullets list the swaps for each slot, and the diagram's swap lines repeat them. Either trim the bullets to quantities and notes, or drop the fourth field from the block.
 
@@ -29,7 +29,7 @@ The cookbook templates, render hooks, JS, icons, archetypes, and content tools m
 - [ ] When Fugu gets its own CSS (Fugu PLAN.md §5), cut `assets/css/custom.css` down to the Not a Chef look only, and check every page against the current build.
 - [ ] When Fugu renames params (Fugu PLAN.md §2), update `config/_default/params.toml` in the same step.
 - [ ] When Fugu's docs exist (Fugu PLAN.md §7), decide whether `FORMAT.md`, `FORMAT-ESSAYS.md`, and `SPEC.md` stay here as house style on top of Fugu's docs or are replaced by links.
-- [ ] Possibly move `layouts/404.html` back here from Fugu: its text is a Not a Chef joke.
+- [x] Possibly move `layouts/404.html` back here from Fugu: its text is a Not a Chef joke. *Done in `2951dca`.*
 
 ### Carried over from the old plan
 
