@@ -85,7 +85,7 @@ Queued 2026-10-07. A careful review of the code on both sides of the split, now 
 - [ ] **Site layouts.** This repo's `layouts/` (homepage, header, footer, favicons, fonts, 404): what Fugu now does better, and anything that shadows a Fugu file by accident.
 - [ ] **CSS.** `assets/css/custom.css` is one large file that styles every class Fugu emits. Find rules for classes nothing emits any more (grep the built `public/` for each selector), duplicated rules, and colours outside the tokens. This overlaps Fugu PLAN.md §5 (Fugu's own CSS); decide which rules move before cutting.
 - [ ] **Accessibility and markup.** Popovers (glossary, principle chip, test kitchen card mark) and their ARIA, focus order, landmark use, heading levels in templates, alt text handling in `render-image.html`.
-- [ ] Known suspects to check first: the test kitchen card mark's 8px hover bridge (`.dev-mark::after`) sits over the card link and may eat clicks; the mark's SVG is inlined twice per draft card; recipe-page tags still use Blowfish's badge (see Site polish above).
+- [ ] Known suspects to check first: `.rcard-top` now clips with `clip-path` and sits at `z-index: 2` above the card link (for popovers), so clicks in the gaps between its chips no longer reach the card; the test kitchen mark's SVG is inlined twice per draft card; recipe-page tags still use Blowfish's badge (see Site polish above); popovers are hover/focus only, so check tapping on a phone.
 
 ### Doc review
 

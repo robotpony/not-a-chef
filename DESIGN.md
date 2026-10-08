@@ -108,7 +108,7 @@ A key left out of `params.toml` falls back to Fugu's default ("In development" a
 
 **Turning it off:** `showDraftLabel = false` under `[article]` in `params.toml` hides the banner (the card chip stays; it follows `.Draft`). `buildDrafts = false` in `hugo.toml` stops publishing drafts at all, and the explainer's list then shows `empty`.
 
-**Look:** `assets/css/custom.css`, the "Test kitchen" block (`.dev-strip`, `.dev-chip`, `.dev-pop`, `.dev-icon`). The strip is as wide as the body column (65ch of 16px Lora), not the page header.
+**Look:** `assets/css/custom.css`, the "Test kitchen" block (`.dev-strip`, `.dev-chip`, `.dev-icon`); the card popover is the shared Popover component (`.pop`, `.pop-dev`). The strip is as wide as the body column (65ch of 16px Lora), not the page header.
 
 ### URL structure
 
