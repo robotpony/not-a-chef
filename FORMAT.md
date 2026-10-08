@@ -19,6 +19,8 @@ prep_time: 10 min
 cook_time: 25 min
 total_time: 35 min
 cuisine: Indian
+draft: true                          # in the Test kitchen; remove when it's a keeper
+working_on: Less cumin, more tadka   # optional, shown under the banner
 ---
 ```
 
