@@ -979,7 +979,12 @@ a.principle-chip:hover, a.principle-chip:focus-visible { box-shadow: inset 0 0 0
  * body text. The header's own max-w-prose is 65ch of 18px Franklin,
  * ~160px wider, which put the strip into the sidebar's lane. The font
  * is set here only to size the ch; the text sets its own below. */
-.dev-strip { display: flex; gap: 10px; align-items: flex-start; max-width: 65ch; font: 16px/1 'Lora', Georgia, serif; background: var(--flag-soft); border: 1px solid var(--flag); border-radius: 4px; padding: 10px 14px; margin: -8px 0 26px; }
+.dev-strip { display: flex; gap: 10px; align-items: flex-start; max-width: 65ch; font: 16px/1 'Lora', Georgia, serif; background: var(--flag-soft); border: 1px solid var(--flag); border-radius: 4px; padding: 10px 14px; margin: -4px 0 20px; }
+/* 20px above (the meta row's 24px bottom margin, less 4) and 20px below,
+ * at every width. Below lg the recipe sidebar's "Recipe notes" toggle
+ * comes next, inside a flex column, so its own 20px top margin would add
+ * to the strip's instead of collapsing into it (46px); drop it here. */
+#single_header:has(.dev-strip) + section .recipe-sidebar-toggle { margin-top: 0; }
 .dev-strip-body { font-family: 'Libre Franklin', sans-serif; font-size: .9rem; line-height: 1.5; }
 .dev-strip .dev-icon { margin-top: 1px; }
 .dev-strip .dev-dot { margin-top: 8px; }
