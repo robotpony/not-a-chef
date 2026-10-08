@@ -47,7 +47,8 @@ in a browser — no build step.
   on the page (stock sentence from config, optional per-recipe
   `working_on` note, link to an explainer page), a labelled mark on cards
   with a hover/tap popover, Fugu's "In development / Canon" wording, and
-  four kitchen-flavoured options for Not a Chef, switchable live. Not built.
+  four kitchen-flavoured options for Not a Chef, switchable live. Strip chosen 2026-10-07 (with a dotted line above the
+  note), banner sentence in config, essays included. Not built.
 
 - **`page-bottom-spacing.html`**: proposal (2026-10-07) to make 40px
   from the last content to the footer a page-level rule. Today every page

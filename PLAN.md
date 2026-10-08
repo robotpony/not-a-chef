@@ -59,7 +59,15 @@ Unfinished items from the squashed Phases 7–9 (`git show e6346f4^:PLAN.md`). T
 Started 2026-10-07 (`mockups/in-development.html`). The draft badge on a page now links to `content/essays/reference-essays/recipes-in-development.md` (`params.fugu.developmentPage`), which explains the idea and lists every draft. Still open:
 
 - [ ] Decide whether drafts go live. `buildDrafts` is still `false`, so on the live site the badge never shows and the list says "Nothing is in development right now". Turning it on publishes the four current drafts (veg patties, two essays, a reference page) and needs `tools/publish.sh`'s draft-build guard changed.
-- [ ] Pick the banner shape (strip or callout) and Not a Chef's wording from the mockup, then build the banner, the optional `working_on` note, and the card mark with its popover.
+- [x] Banner shape: the strip (option A), above the title, with a dotted line between the stock sentence and the `working_on` note. *Decided 2026-10-07: the colour and size pull it out of the flow of the content, so it reads as special.*
+- [x] Where the banner sentence lives: config (`[params.development]` in Fugu, overridden in `params.toml`). *Decided 2026-10-07.*
+- [x] Essays and reference pages get the same strip for now; test it and see how it feels. *Decided 2026-10-07.*
+- [ ] Pick Not a Chef's wording from the mockup (On the stove, Still simmering, Test kitchen, Still tinkering); Fugu's default stays In development / Canon.
+- [ ] Build the strip, the optional `working_on` note, and the card mark with its popover.
+
+### Behind the scenes
+
+- [ ] *Deferred (noted 2026-10-07).* Publish `mockups/` as a special subfolder of the site, to show some of the behind-the-scenes design work. Needs a decision on what's in it (all mocks, or only current ones, not `archived/`), how it's linked (footer, About), and how it's kept out of search and the sitemap or not. The mocks are standalone HTML with their own fonts and tokens, so they'd be copied as static files rather than rendered by Hugo.
 
 ### Docs
 

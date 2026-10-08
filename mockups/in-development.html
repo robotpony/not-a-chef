@@ -152,7 +152,9 @@
   .dev-strip-label{ font-weight:700; color:var(--flag); margin-right:4px; }
   .dev-strip-msg{ color:var(--ink-muted); }
   .dev-strip .dev-link{ margin-left:4px; }
-  .dev-strip-note{ display:block; margin-top:3px; font-family:'Lora',serif; font-style:italic; color:var(--ink); }
+  /* Dotted divider between the stock sentence and the recipe's own note,
+     the same as the callout's (chosen 2026-10-07). */
+  .dev-strip-note{ display:block; margin-top:7px; padding-top:6px; border-top:1px dashed color-mix(in srgb, var(--flag) 45%, transparent); font-family:'Lora',serif; font-style:italic; color:var(--ink); }
 
   /* B · callout: the Mechanic/Definition callout shape, in flag blue.
      Sits under the stat rail, before the intro. */
@@ -366,7 +368,7 @@
           <p class="intro">These vegetable patties are quick to make and delicious. They're perfect when you're looking for a lighter sandwich or salad topping.</p>
           <div class="fade"></div>
         </div>
-        <p class="frame-cap"><b>A · Strip.</b> The archived <code>.draft-banner</code>, warmed up, above the title. Reads first, like a sign on the door. It's compact, but it sits on top of the recipe's identity.</p>
+        <p class="frame-cap"><b>A · Strip.</b> <span class="rec">Chosen</span> The archived <code>.draft-banner</code>, warmed up, above the title. Reads first, like a sign on the door. The colour and size pull it out of the flow of the content, so it reads as special. Dotted line added between the sentence and the note (2026-10-07).</p>
       </div>
 
       <div class="frame">
@@ -388,7 +390,7 @@
           <p class="intro">These vegetable patties are quick to make and delicious. They're perfect when you're looking for a lighter sandwich or salad topping.</p>
           <div class="fade"></div>
         </div>
-        <p class="frame-cap"><b>B · Callout.</b> <span class="rec">Recommended</span> The Mechanic/Definition callout shape, in flag blue, between the stat rail and the intro. Title stays the title. There's room for the note to read like a sentence, which is where the friendliness lives.</p>
+        <p class="frame-cap"><b>B · Callout.</b> Not chosen. The Mechanic/Definition callout shape, in flag blue, between the stat rail and the intro. Title stays the title. There's room for the note to read like a sentence, which is where the friendliness lives.</p>
       </div>
 
       <div class="frame phone">
@@ -415,7 +417,7 @@
     <div class="note-card">
       <span class="note-mark">?</span>
       <div>
-        <p><strong>What happens to the old draft badge in the tag row?</strong> It goes. The callout replaces it, so the page doesn't say "draft" twice in two different colours of voice. On essays and reference pages the same callout sits under the title and date.</p>
+        <p><strong>What happens to the old draft badge in the tag row?</strong> It goes. The strip replaces it, so the page doesn't say "draft" twice in two different colours of voice. Essays and reference pages get the same strip above their title.</p>
       </div>
     </div>
   </section>
@@ -557,10 +559,10 @@ working_on: Getting them to hold without the egg. Chickpea flour next.   # optio
 
     <h3 style="font-size:1rem;margin:24px 0 10px;">Open questions</h3>
     <ol class="qs">
-      <li><b>Strip or callout?</b> I'd go with B, the callout.</li>
-      <li><b>Where does the banner sentence live?</b> In config (simple, but not editable in Obsidian), or in the explainer page's <code>summary</code> (one file, editable in Obsidian, but the banner then depends on a page existing). I'd use config with the page as an optional override.</li>
+      <li><b>Strip or callout?</b> <i>Decided 2026-10-07: A, the strip, with a dotted line above the note.</i></li>
+      <li><b>Where does the banner sentence live?</b> In config (simple, but not editable in Obsidian), or in the explainer page's <code>summary</code> (one file, editable in Obsidian, but the banner then depends on a page existing). <i>Decided 2026-10-07: config.</i></li>
       <li><b>The four current drafts.</b> They all go live on the next publish. Is each one fit to show, or should any of them be moved to <code>build: never</code> first?</li>
-      <li><b>Essays too?</b> The flag is generic, so essays and reference pages would get the same callout. That's probably right for the two draft essays, but "On the stove" reads oddly on a reference page. A per-section label is possible if needed.</li>
+      <li><b>Essays too?</b> The flag is generic, so essays and reference pages would get the same callout. That's probably right for the two draft essays, but "On the stove" reads oddly on a reference page. <i>Decided 2026-10-07: keep it on essays for now, test it, and see how it feels.</i></li>
     </ol>
   </section>
 </main>
