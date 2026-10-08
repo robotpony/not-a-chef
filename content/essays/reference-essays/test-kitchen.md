@@ -29,5 +29,3 @@ When a recipe stops changing, the banner comes off. Nothing else announces it, b
 ## Run your own test kitchen
 
 A keeper doesn't mean finished for you. Every recipe here is a starting point. Cook it, taste it, change one thing, and write down what you changed. That's how all of these got here.
-
-## In the test kitchen now

@@ -102,5 +102,6 @@ mainSections = ["recipes"]
     note    = "Working on"
     page    = "essays/reference-essays/test-kitchen"
     more    = "How the test kitchen works"
+    heading = "In the test kitchen now"
     empty   = "Nothing is in the test kitchen right now."
     icon    = "icons/development/pot-steam.svg"

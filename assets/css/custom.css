@@ -1011,8 +1011,8 @@ a.principle-chip:hover, a.principle-chip:focus-visible { box-shadow: inset 0 0 0
 .dev-pop-note { color: var(--ink-muted); font-style: italic; }
 .dev-pop .dev-link { position: relative; z-index: 1; justify-self: start; font-size: .74rem; }
 /* The list of drafts at the end of the test kitchen page
- * (partials/development/list.html). */
-.development-list { margin-top: 16px; }
+ * (partials/development/list.html) takes the Related section's place and
+ * its .related-section styles; nothing extra needed. */
 /* Pin icon (partials/recipe-card.html) — marks a pinned page (frontmatter
  * `pinned: true`, see DESIGN.md). Unlinked, minimal-contrast, sits at the
  * end of the top row after tags/+N. */

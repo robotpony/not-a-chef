@@ -95,14 +95,15 @@ working_on: Getting them to hold without the egg. Chickpea flour next.   # optio
 | `message` | The banner's sentence, after the label | We're still testing this one. Cook it, change it, … |
 | `hover` | The card popover's text | Still being tested. It works, but … |
 | `note` | The label before a page's `working_on` line ("Working on: …") | Working on |
-| `page` | The explainer page the banner and popover link to, which also lists every draft after its own text. A path as `site.GetPage` takes it; `""` drops the link and the list | `essays/reference-essays/test-kitchen` |
+| `page` | The explainer page the banner and popover link to, which also lists every draft in place of its Related section. A path as `site.GetPage` takes it; `""` drops the link and the list | `essays/reference-essays/test-kitchen` |
 | `more` | The text of that link (an arrow is added) | How the test kitchen works |
+| `heading` | The heading over that list | In the test kitchen now |
 | `empty` | What the explainer page's list says when there are no drafts | Nothing is in the test kitchen right now. |
 | `icon` | An SVG under `assets/`, inlined in the banner, chip, and popover; `""` draws a dot instead | `icons/development/pot-steam.svg` |
 
 A key left out of `params.toml` falls back to Fugu's default ("In development" and so on).
 
-**The explainer page** is `content/essays/reference-essays/test-kitchen.md`, edited like any essay. Its `description` is its card intro. The list of drafts is appended after its last line, so keep its last heading as the list's introduction ("In the test kitchen now").
+**The explainer page** is `content/essays/reference-essays/test-kitchen.md`, edited like any essay. Its `description` is its card intro. The list of drafts replaces its Related section at the bottom of the page, under `heading`; there's nothing to add to the file for it.
 
 **Turning it off:** `showDraftLabel = false` under `[article]` in `params.toml` hides the banner (the card chip stays; it follows `.Draft`). `buildDrafts = false` in `hugo.toml` stops publishing drafts at all, and the explainer's list then shows `empty`.
 
