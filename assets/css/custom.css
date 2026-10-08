@@ -851,8 +851,8 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
 .rcard-link::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
 .rcard-link:focus-visible { outline: none; }
 .rcard a.cuisine-chip, .rcard a.principle-chip { position: relative; z-index: 1; }
-.rcard-top { display: flex; gap: 4px; flex-wrap: nowrap; overflow: hidden; min-width: 0; }
-.rcard-top > * { font-size: .62rem; padding: 2px 5px; flex: none; white-space: nowrap; }
+.rcard-top { display: flex; align-items: center; gap: 4px; flex-wrap: nowrap; overflow: hidden; min-width: 0; }
+.rcard-top > * { flex: none; white-space: nowrap; }
 .rcard-top > .tag:not(.tag-more) { flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
 /* The principle chip's glossary popover (principle-chip.html) needs room
  * above the card's cramped top row, which otherwise clips it via the
@@ -1001,7 +1001,7 @@ a.principle-chip:hover, a.principle-chip:focus-visible { box-shadow: inset 0 0 0
  * stretched link. Hover/focus opens a popover in the shared look; at card
  * width it spans the card and drops the pointer, like the compact
  * glossary popover. */
-.rcard-top > .dev-mark { position: static; flex: none; display: inline-flex; padding: 0; }
+.rcard-top > .dev-mark { position: static; flex: none; display: inline-flex; }
 /* Bridges the 8px gap down to the popover, so it stays open on the way. */
 .dev-mark::after { content: ""; position: absolute; left: 0; right: 0; top: 100%; height: 8px; }
 .dev-chip { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 4px; font-family: 'Libre Franklin', sans-serif; font-size: .62rem; font-weight: 600; line-height: inherit; color: var(--flag); background: var(--flag-soft); border: 1px solid color-mix(in srgb, var(--flag) 45%, transparent); border-radius: 3px; padding: 1px 5px; cursor: help; white-space: nowrap; }
@@ -1015,6 +1015,21 @@ a.principle-chip:hover, a.principle-chip:focus-visible { box-shadow: inset 0 0 0
 .dev-pop-text, .dev-pop-note { font-family: 'Lora', Georgia, serif; font-size: .82rem; line-height: 1.45; color: var(--ink); }
 .dev-pop-note { color: var(--ink-muted); font-style: italic; }
 .dev-pop .dev-link { position: relative; z-index: 1; justify-self: start; font-size: .74rem; }
+/* Card top row: one box for every chip (test kitchen, cuisine, principle,
+ * tags, +N), so their labels share a baseline and the row is one height.
+ * Same size, line height, and padding everywhere, and a 1px border on
+ * each (transparent where the chip is a fill), centred in the row. Before
+ * this (2026-10-07), cuisine had no border so its text sat 1px above the
+ * tags'; the principle chip's wrapper (.glossary-term) took the row's
+ * padding, which made that row 2px taller and dropped the chip and the
+ * card's title; and the test kitchen chip was .62rem beside .7rem.
+ * Tags stay display:block so a long one can still end in an ellipsis. */
+.rcard-top > .glossary-term { display: inline-flex; padding: 0; }
+.rcard-top .cuisine-chip, .rcard-top .tag, .rcard-top .principle-chip, .rcard-top .dev-chip { box-sizing: border-box; font-size: .7rem; line-height: 1.5; padding: 3px 7px; border: 1px solid transparent; }
+.rcard-top .principle-chip, .rcard-top .dev-chip { display: inline-flex; align-items: center; gap: 4px; }
+.rcard-top .tag { border-color: var(--border-strong); }
+.rcard-top .tag-more { border-style: dashed; }
+.rcard-top .dev-chip { border-color: color-mix(in srgb, var(--flag) 45%, transparent); }
 /* The list of drafts at the end of the test kitchen page
  * (partials/development/list.html) takes the Related section's place and
  * its .related-section styles; nothing extra needed. */
