@@ -1008,14 +1008,26 @@ a.principle-chip:hover, a.principle-chip:focus-visible { box-shadow: inset 0 0 0
  * width it spans the card and drops the pointer, like the compact
  * glossary popover. */
 .rcard-top > .dev-mark { position: static; flex: none; display: inline-flex; }
-/* Bridges the 8px gap down to the popover, so it stays open on the way. */
-.dev-mark::after { content: ""; position: absolute; left: 0; right: 0; top: 100%; height: 8px; }
+/* Bridges the 8px gap down to the popover, so it stays open on the way.
+ * Only while open, and above the card's stretched link (.rcard-link::after),
+ * which otherwise sits on top of the gap and takes the hover away. */
+.dev-mark:hover::after, .dev-mark:focus-within::after { content: ""; position: absolute; z-index: 5; left: 0; right: 0; top: 100%; height: 10px; }
 .dev-chip { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 4px; font-family: 'Libre Franklin', sans-serif; font-size: .62rem; font-weight: 600; line-height: inherit; color: var(--flag); background: var(--flag-soft); border: 1px solid color-mix(in srgb, var(--flag) 45%, transparent); border-radius: 3px; padding: 1px 5px; cursor: help; white-space: nowrap; }
 .dev-chip:hover, .dev-chip:focus-visible { box-shadow: inset 0 0 0 1px var(--flag); outline: none; }
 .dev-chip .dev-icon { width: 12px; height: 12px; }
 .dev-chip .dev-dot { width: 5px; height: 5px; }
-.dev-pop { position: absolute; left: 0; right: 0; top: calc(100% + 8px); z-index: 5; display: grid; gap: 6px; background: var(--surface); border: 1px solid var(--border-strong); border-radius: 8px; padding: 11px 13px; box-shadow: 0 6px 20px rgba(0, 0, 0, .12); opacity: 0; visibility: hidden; transform: translateY(-4px); transition: opacity .12s, transform .12s, visibility .12s; white-space: normal; text-align: left; }
-.dev-mark:hover .dev-pop, .dev-mark:focus-within .dev-pop { opacity: 1; visibility: visible; transform: translateY(0); }
+/* Closes after a short pause (the delays below), so a crooked path from
+ * the chip down to the link doesn't drop it; opens at once. */
+.dev-pop { position: absolute; left: 0; right: 0; top: calc(100% + 8px); z-index: 5; display: grid; gap: 6px; background: var(--surface); border: 1px solid var(--border-strong); border-radius: 8px; padding: 11px 13px; box-shadow: 0 6px 20px rgba(0, 0, 0, .12); opacity: 0; visibility: hidden; transform: translateY(-4px); transition: opacity .12s .25s, transform .12s .25s, visibility 0s .37s; white-space: normal; text-align: left; }
+.dev-mark:hover .dev-pop, .dev-mark:focus-within .dev-pop { opacity: 1; visibility: visible; transform: translateY(0); transition-delay: 0s; }
+/* The shared popover pointer (STYLE.md "Scaling callout"). The popover
+ * spans the card, but the chip always leads the row, so the ^ can sit
+ * under its centre: "Testing" with the pot is ~72px wide, centre 36px,
+ * less the pointer's 7px half-width and the popover's 1px border and
+ * the 1px it measures off (27px, checked in Chrome). */
+.dev-pop::before, .dev-pop::after { content: ""; position: absolute; left: 27px; border: 7px solid transparent; border-top: 0; }
+.dev-pop::before { top: -8px; border-bottom: 8px solid var(--border-strong); }
+.dev-pop::after { top: -6.6px; border-bottom: 8px solid var(--surface); }
 .dev-pop-head { display: flex; align-items: center; gap: 6px; font-family: 'Libre Franklin', sans-serif; font-size: .66rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--flag); }
 .dev-pop-head .dev-icon { width: 15px; height: 15px; }
 .dev-pop-text, .dev-pop-note { font-family: 'Lora', Georgia, serif; font-size: .82rem; line-height: 1.45; color: var(--ink); }
