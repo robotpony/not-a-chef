@@ -971,12 +971,18 @@ a.principle-chip:hover, a.principle-chip:focus-visible { box-shadow: inset 0 0 0
 .dev-icon .dev-icon-body { fill: var(--surface); }
 .dev-icon .dev-icon-lid { fill: var(--flag-soft); }
 .dev-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--flag); flex: none; }
-/* The strip above a draft's title. Its colour and size take it out of the
- * flow of the content; the page's `working_on` note sits under a dotted
- * line. */
-.dev-strip { display: flex; gap: 10px; align-items: flex-start; background: var(--flag-soft); border: 1px solid var(--flag); border-radius: 4px; padding: 9px 12px; margin: 4px 0 18px; font-family: 'Libre Franklin', sans-serif; font-size: .82rem; line-height: 1.45; }
-.dev-strip .dev-icon { margin-top: -1px; }
-.dev-strip .dev-dot { margin-top: 6px; }
+/* The strip under a draft's title and tags (the end of #single_header).
+ * Its colour takes it out of the flow of the content; the page's
+ * `working_on` note sits under a dotted line.
+ * Width: the body column's own measure, 65ch of Lora at 16px (Tailwind's
+ * max-w-prose on .article-content), so its right edge lines up with the
+ * body text. The header's own max-w-prose is 65ch of 18px Franklin,
+ * ~160px wider, which put the strip into the sidebar's lane. The font
+ * is set here only to size the ch; the text sets its own below. */
+.dev-strip { display: flex; gap: 10px; align-items: flex-start; max-width: 65ch; font: 16px/1 'Lora', Georgia, serif; background: var(--flag-soft); border: 1px solid var(--flag); border-radius: 4px; padding: 10px 14px; margin: -8px 0 26px; }
+.dev-strip-body { font-family: 'Libre Franklin', sans-serif; font-size: .9rem; line-height: 1.5; }
+.dev-strip .dev-icon { margin-top: 1px; }
+.dev-strip .dev-dot { margin-top: 8px; }
 .dev-strip-body { min-width: 0; }
 .dev-strip-label { font-weight: 700; color: var(--flag); margin-right: 4px; }
 .dev-strip-msg { color: var(--ink-muted); }
