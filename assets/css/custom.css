@@ -436,6 +436,13 @@ li.ing {
   text-decoration: line-through;
   text-decoration-color: var(--border-strong);
 }
+/* Done items in a plain Markdown task list (`- [x]`, mostly the Food
+ * Log) get the same struck, faded look, matching how Obsidian shows them. */
+li:has(> input[type="checkbox"]:checked) {
+  color: var(--ink-faint);
+  text-decoration: line-through;
+  text-decoration-color: var(--border-strong);
+}
 .ing label {
   cursor: pointer;
 }
