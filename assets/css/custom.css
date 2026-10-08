@@ -311,7 +311,7 @@ main > header + section {
 .glossary-link:hover, .glossary-link:focus-visible { text-decoration-color: var(--ink); color: var(--ink); }
 .glossary-pop {
   position: absolute; left: 0; bottom: calc(100% + 8px); z-index: 5; width: 260px;
-  background: var(--surface); border: 1px solid var(--border-strong); border-radius: 6px;
+  background: var(--surface); border: 1px solid var(--border-strong); border-radius: 8px;
   padding: 11px 13px; box-shadow: 0 6px 20px rgba(0, 0, 0, .12);
   opacity: 0; visibility: hidden; transform: translateY(4px);
   transition: opacity .12s, transform .12s, visibility .12s;
@@ -327,6 +327,16 @@ main > header + section {
 .glossary-term::after { content: ""; position: absolute; left: 0; bottom: 100%; width: 260px; height: 8px; }
 .glossary-term:hover .glossary-pop, .glossary-term:focus-within .glossary-pop { opacity: 1; visibility: visible; transform: translateY(0); }
 .glossary-pop-term { display: block; font-family: 'Libre Franklin', sans-serif; font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--ink); margin-bottom: 4px; }
+/* The shared popover pointer (STYLE.md "Scaling callout"): a small ^ or v
+ * on the edge facing the term, 14px in from the left where the popover
+ * starts. Prose popovers open upward, so theirs points down; chip
+ * popovers (below) open downward and flip it. */
+.glossary-pop::before, .glossary-pop::after {
+  content: ""; position: absolute; left: 14px;
+  border: 7px solid transparent; border-bottom: 0;
+}
+.glossary-pop::before { bottom: -8px; border-top: 8px solid var(--border-strong); }
+.glossary-pop::after { bottom: -6.6px; border-top: 8px solid var(--surface); }
 .glossary-pop a { font-family: 'Libre Franklin', sans-serif; font-size: .74rem; font-weight: 600; color: var(--accent-strong); text-decoration: none; display: inline-block; margin-top: 6px; }
 .glossary-pop a:hover { text-decoration: underline; }
 
@@ -338,6 +348,10 @@ main > header + section {
 .glossary-term-chip .glossary-pop { bottom: auto; top: calc(100% + 8px); transform: translateY(-4px); }
 .glossary-term-chip:hover .glossary-pop, .glossary-term-chip:focus-within .glossary-pop { transform: translateY(0); }
 .glossary-term-chip::after { bottom: auto; top: 100%; }
+.glossary-term-chip .glossary-pop::before,
+.glossary-term-chip .glossary-pop::after { bottom: auto; border-top: 0; border-bottom: 8px solid; border-top-color: transparent; }
+.glossary-term-chip .glossary-pop::before { top: -8px; border-bottom-color: var(--border-strong); }
+.glossary-term-chip .glossary-pop::after { top: -6.6px; border-bottom-color: var(--surface); }
 
 /* Compact form (recipe/essay cards): the popover's fixed 260px width is
  * wider than a grid card, so anchoring it left:0 off the chip let it
@@ -351,6 +365,10 @@ main > header + section {
 .rcard-top { position: relative; }
 .glossary-term-chip-compact { position: static; }
 .glossary-term-chip-compact .glossary-pop, .glossary-term-chip-compact::after { left: 0; right: 0; width: auto; }
+/* Spanning the card, the popover no longer starts at the chip, so a
+ * pointer 14px in would point at whatever's left of it. No pointer here. */
+.glossary-term-chip-compact .glossary-pop::before,
+.glossary-term-chip-compact .glossary-pop::after { display: none; }
 
 /* Ingredient list (check), sub-head, and sub-note, from mockups/style.html
  * §3. Applied client-side by themes/fugu/assets/js/ingredients.js, not by Hugo — see
@@ -519,8 +537,8 @@ h4.ing-subhead {
  * themes/fugu/assets/js/ingredients.js next to the recipe's first Ingredients heading.
  * A plain <details>/<summary> disclosure, the same pattern the nav's
  * mega-menu dropdowns use (.nav-drop below) — no open/close JS needed.
- * Its option pills reuse .filter-pill's "neutral outline, accent-soft fill
- * when active" language rather than inventing a new selected-state look. */
+ * Its unit segments reuse .filter-pill's accent-soft fill for the active
+ * option rather than inventing a new selected-state look. */
 /* Reserves room so a long heading's text can't run under the button. */
 h2:has(> .ing-config) {
   padding-right: 40px;
@@ -549,58 +567,94 @@ h2:has(> .ing-config) {
 .ing-config[open] > summary { color: var(--accent-strong); border-color: var(--accent); }
 .ing-config > summary svg { width: 15px; height: 15px; }
 
+/* The scale callout (mockups/scale-callout.html, STYLE.md "Scaling
+ * callout"): the shared popover look (surface, border-strong, 8px radius)
+ * with a ^ pointer up to the gear. The gear is 28px wide at right:0 and
+ * the callout sits 8px further right, so the pointer's tip (right: 15px +
+ * its 7px half-width) lands 22px in: the gear's centre. */
 .ing-config-panel {
   position: absolute;
-  top: calc(100% + 8px);
-  right: 0;
+  top: calc(100% + 11px);
+  right: -8px;
   z-index: 20;
-  width: 240px;
+  width: 256px;
+  max-width: calc(100vw - 32px);
   background: var(--surface);
   border: 1px solid var(--border-strong);
-  border-radius: 6px;
-  box-shadow: 0 14px 40px rgba(0,0,0,.16);
-  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.14);
+  padding: 14px 16px 16px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
   font-family: 'Libre Franklin', sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
 }
+.ing-config-panel::before,
+.ing-config-panel::after {
+  content: ""; position: absolute; right: 15px;
+  border: 7px solid transparent; border-top: 0;
+}
+.ing-config-panel::before { top: -8px; border-bottom: 8px solid var(--border-strong); }
+.ing-config-panel::after { top: -6.6px; border-bottom: 8px solid var(--surface); }
 .ing-config-group { display: flex; flex-direction: column; gap: 8px; }
-.ing-config-label { font-size: .65rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-faint); }
-.ing-config-row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.ing-config-group--units { padding-top: 14px; border-top: 1px solid var(--border); }
+.ing-config-head { display: flex; align-items: baseline; justify-content: space-between; }
+.ing-config-label { font-size: .66rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-faint); }
+.ing-scale-value { font-size: .92rem; font-weight: 600; color: var(--accent-strong); }
 
-/* Unit options are real buttons (square-ish 5px radius, the "checkbox,
- * buttons, chip base" bucket in STYLE.md's spacing guide), not the 14px
- * pill shape .filter-pill uses — deliberately distinct from a filter, this
- * is a settings choice. Active state still borrows .filter-pill's
- * accent-soft-fill language, just with the squared-off shape. */
+/* Slider: the real <input type=range>, restyled. The track fills up to
+ * the thumb from --fill, which ingredients.js sets on every change. */
+.ing-scale-range {
+  -webkit-appearance: none; appearance: none;
+  width: 100%; height: 20px; margin: 0; background: transparent; cursor: pointer;
+}
+.ing-scale-range::-webkit-slider-runnable-track {
+  height: 6px; border-radius: 3px; border: 1px solid var(--border);
+  background: linear-gradient(to right, var(--accent) var(--fill, 0%), var(--surface-2) var(--fill, 0%));
+}
+.ing-scale-range::-moz-range-track { height: 6px; border-radius: 3px; border: 1px solid var(--border); background: var(--surface-2); }
+.ing-scale-range::-moz-range-progress { height: 6px; border-radius: 3px; background: var(--accent); }
+.ing-scale-range::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 18px; height: 18px; margin-top: -7px; border-radius: 50%;
+  background: var(--surface); border: 2px solid var(--accent); box-shadow: 0 1px 3px rgba(0,0,0,.2);
+}
+.ing-scale-range::-moz-range-thumb { width: 14px; height: 14px; border-radius: 50%; background: var(--surface); border: 2px solid var(--accent); }
+.ing-scale-range:focus-visible { outline: none; }
+.ing-scale-range:focus-visible::-webkit-slider-thumb { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ing-scale-range:focus-visible::-moz-range-thumb { outline: 2px solid var(--accent); outline-offset: 2px; }
+/* One label per whole step, centred under where the thumb sits at it (the
+ * 18px thumb travels 9px in from each end). */
+.ing-scale-ticks { display: flex; justify-content: space-between; padding: 0 3px; margin-top: -4px; font-size: .6rem; color: var(--ink-faint); }
+.ing-scale-ticks span { width: 12px; text-align: center; }
+.ing-scale-ticks span.is-current { color: var(--accent-strong); font-weight: 600; }
+.ing-yield { margin: 0; font-family: 'Lora', Georgia, serif; font-style: italic; font-size: .76rem; color: var(--ink-muted); }
+
+/* Units: a segmented control, every option on one row. Square-ish 5px
+ * corners (STYLE.md's "checkbox, buttons, chip base" bucket), not the
+ * 14px pill a filter uses: this is a setting, not a filter. The active
+ * segment borrows .filter-pill's accent-soft fill. */
+.ing-units {
+  display: grid; grid-auto-flow: column; grid-auto-columns: 1fr;
+  border: 1px solid var(--border-strong); border-radius: 5px; overflow: hidden;
+}
 .ing-btn {
   font-family: 'Libre Franklin', sans-serif;
-  font-size: .78rem;
+  font-size: .74rem;
   font-weight: 600;
-  padding: 7px 12px;
-  border: 1px solid var(--border-strong);
-  border-radius: 5px;
+  padding: 6px 4px;
+  border: 0;
+  border-left: 1px solid var(--border-strong);
   background: var(--surface);
   color: var(--ink-muted);
   cursor: pointer;
+  white-space: nowrap;
 }
-.ing-btn:hover { border-color: var(--accent); color: var(--ink); }
-.ing-btn.active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-strong); }
-
-.ing-scale-slider { display: flex; align-items: center; gap: 10px; }
-.ing-scale-slider input[type="range"] {
-  flex: 1;
-  accent-color: var(--accent);
-  cursor: pointer;
-}
-.ing-scale-value {
-  font-size: .85rem;
-  font-weight: 600;
-  color: var(--accent-strong);
-  min-width: 34px;
-  text-align: right;
-}
+.ing-btn:first-child { border-left: 0; }
+.ing-btn:hover { color: var(--ink); background: var(--surface-2); }
+.ing-btn.active { background: var(--accent-soft); color: var(--accent-strong); text-decoration: none; } /* Blowfish underlines any .active (its nav) */
+.ing-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
 
 .mono {
   font-family: 'IBM Plex Mono', ui-monospace, monospace;

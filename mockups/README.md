@@ -39,7 +39,8 @@ in a browser — no build step.
 - **`scale-callout.html`**: proposal (2026-10-07) to redraw the recipe
   scale/units menu as a callout with a `^` pointer to the gear, a restyled
   slider with step labels, and units as a drop list (segmented control
-  shown as the alternative). Not built yet; see `PLAN.md` "Design changes".
+  shown as the alternative). Built 2026-10-07 with the segmented control;
+  `STYLE.md`'s Scaling callout entry describes it.
 
 - **`page-bottom-spacing.html`**: proposal (2026-10-07) to make 40px
   from the last content to the footer a page-level rule. Today every page
