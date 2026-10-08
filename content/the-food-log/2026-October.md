@@ -2,17 +2,17 @@
 title: October 2026
 date: 2026-10-01
 ---
-Early October is mostly trip notes: a tabbouleh worth learning, a subtly sweet red cabbage, an onion jam on a double smash burger, and a German dinner of roulade and pork tenderloin with apple. At home, gyro beef pressed flat on parchment and roasted hot for slicing into pitas and salads. The diagram tool for stated ratios is done (veg patties first); a methods concept with its own diagrams is next.
+Early October is mostly trip notes: a tabbouleh worth learning, a subtly sweet red cabbage, an onion jam on a double smash burger, and a German dinner of roulade and pork tenderloin with apple.   
 
-### Tuesday, October 6th
+### Week of October 6th
 
 ### Diagrams #todo 
 
-- [x] needs a diagramming tool like scorekeep, iconic, pen and ink style (veg-patties as an example, the "**Per can of beans: 1 cup cooked starch, 1 cup vegetables, ½ cup breadcrumbs, 1 egg.**" could be shown rather than explained) #todone @2026-10-06
-- [ ] Add methods concept and diagrams
+- [x] add a diagramming tool like scorekeep, iconic, pen and ink style (veg-patties as an example, the "**Per can of beans: 1 cup cooked starch, 1 cup vegetables, ½ cup breadcrumbs, 1 egg.**" could be shown rather than explained) #todone @2026-10-06
+- [ ] Add methods concept and diagrams → e.g., best burger / sandwhich order, or reasoning behind it (slippage, glue, protection, flavour stacking)
 ### Friday, October 2nd
 
-- gyro beef pan flattened parchment (thin, roasted hot, sliced for pitas/salad/sandies)
+- research + testing for a gyro beef pan flattened parchment (thin, roasted hot, sliced for pitas/salad/sandies)
 
 ### Monday, October 5th
 
@@ -24,3 +24,7 @@ Food notes from our trip.
 - Ann had a chicken sandwich at the hotel that was lovely
 - German dinner: roulade, pork tenderloin/apple were both great
 - Bolognese/simple hit the spot
+
+Addition food ideas:
+
+- photo of lightly breaded minced chicken patties
