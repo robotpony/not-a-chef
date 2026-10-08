@@ -27,4 +27,4 @@ Food notes from our trip.
 
 Addition food ideas:
 
-- photo of lightly breaded minced chicken patties
+- Recipe based on that photo of lightly breaded minced chicken patties (similar to fast food, but more like schnitzel).
