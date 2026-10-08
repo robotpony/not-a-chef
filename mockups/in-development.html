@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recipes in development</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  :root{
+    --bg:#F3F3EC; --surface:#FBFBF6; --surface-2:#EAEBDF;
+    --ink:#23241E; --ink-muted:#63645A; --ink-faint:#93948A;
+    --border:#DCDCCE; --border-strong:#C7C8B4;
+    --accent:#A67330; --accent-strong:#7C361D; --accent-soft:#F6EADA;
+    --highlight:#997F29; --highlight-soft:#F6F1D5;
+    --flag:#3D638F; --flag-soft:#E1EAF4;
+    --focus:#A67330;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+      --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+      --border:#383A2C; --border-strong:#4A4C3A;
+      --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+      --highlight:#DDCC88; --highlight-soft:#342D19;
+      --flag:#97B8D8; --flag-soft:#1D2835;
+      --focus:#D3A569;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+    --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+    --border:#383A2C; --border-strong:#4A4C3A;
+    --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+    --highlight:#DDCC88; --highlight-soft:#342D19;
+    --flag:#97B8D8; --flag-soft:#1D2835;
+    --focus:#D3A569;
+  }
+
+  *{box-sizing:border-box;}
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:'Lora',Georgia,serif; font-size:16px; line-height:1.5; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3,h4{ font-family:'Libre Franklin',system-ui,sans-serif; margin:0; }
+  p{ margin:0; }
+  a{ color:inherit; }
+  code{ font-family:'IBM Plex Mono',monospace; font-size:.85em; background:var(--surface-2); padding:1px 5px; border-radius:3px; }
+  pre{ font-family:'IBM Plex Mono',monospace; font-size:.78rem; background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:12px 14px; overflow-x:auto; margin:0; line-height:1.55; }
+  button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
+  :focus-visible{ outline:2px solid var(--focus); outline-offset:2px; }
+
+  .topbar{ position:sticky; top:0; z-index:30; background:var(--surface); border-bottom:1px solid var(--border-strong); }
+  .topbar-inner{ max-width:1020px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+  .tb-title{ font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:.95rem; margin-right:auto; }
+  .tb-jump{ display:flex; gap:2px; flex-wrap:wrap; font-family:'Libre Franklin',sans-serif; }
+  .tb-jump a{ font-size:.76rem; font-weight:600; color:var(--ink-muted); text-decoration:none; padding:6px 9px; border-radius:4px; }
+  .tb-jump a:hover{ color:var(--ink); background:var(--surface-2); }
+  .theme-toggle{ font-family:'Libre Franklin',sans-serif; font-size:.75rem; font-weight:600; padding:7px 10px; border:1px solid var(--border-strong); border-radius:3px; color:var(--ink-muted); }
+  .theme-toggle:hover{ border-color:var(--accent); color:var(--ink); }
+
+  main{ max-width:1020px; margin:0 auto; padding:8px 20px 100px; }
+  .hero{ padding:36px 0 30px; border-bottom:1px solid var(--border); margin-bottom:40px; }
+  .hero-eyebrow{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--accent-strong); margin-bottom:10px; display:block; }
+  .hero h1{ font-size:2rem; font-weight:700; letter-spacing:-.01em; margin-bottom:12px; }
+  .hero p{ max-width:68ch; color:var(--ink-muted); font-size:1.02rem; }
+  .hero p + p{ margin-top:10px; }
+
+  section.block{ margin-bottom:60px; scroll-margin-top:70px; }
+  .block-head{ margin-bottom:18px; }
+  .block-num{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--ink-faint); display:block; margin-bottom:4px; }
+  h2.block-title{ font-size:1.4rem; font-weight:700; margin-bottom:8px; }
+  .block-dek{ color:var(--ink-muted); max-width:70ch; font-size:.95rem; }
+  .block-dek + .block-dek{ margin-top:8px; }
+  .frame-cap{ font-family:'IBM Plex Mono',monospace; font-size:.66rem; color:var(--ink-faint); margin-top:8px; }
+  .frame-cap b{ color:var(--ink-muted); font-weight:600; }
+
+  .note-card{ display:flex; gap:12px; padding:14px 16px; background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--accent); border-radius:0 6px 6px 0; margin-top:16px; }
+  .note-mark{ font-family:'IBM Plex Mono',monospace; font-size:.75rem; font-weight:700; color:var(--accent-strong); flex-shrink:0; }
+  .note-card p{ font-size:.9rem; color:var(--ink-muted); }
+  .note-card p + p{ margin-top:6px; }
+  .note-card strong{ color:var(--ink); font-weight:600; }
+
+  table.spec{ width:100%; border-collapse:collapse; font-size:.86rem; background:var(--surface); border:1px solid var(--border); border-radius:6px; overflow:hidden; }
+  .spec th{ font-family:'Libre Franklin',sans-serif; font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-faint); text-align:left; padding:10px 14px; border-bottom:1px solid var(--border); }
+  .spec td{ padding:9px 14px; border-bottom:1px solid var(--border); vertical-align:top; color:var(--ink-muted); }
+  .spec tr:last-child td{ border-bottom:none; }
+  .spec td:first-child{ color:var(--ink); font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:.82rem; white-space:nowrap; }
+  .table-wrap{ overflow-x:auto; }
+
+  /* ---------- §1 lifecycle ---------- */
+  .ladder{ display:grid; grid-template-columns:1fr auto 1fr auto 1fr; gap:10px; align-items:stretch; }
+  .rung{ background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:14px 16px; }
+  .rung.dev{ border-color:var(--flag); background:var(--flag-soft); }
+  .rung-k{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--ink-faint); display:block; margin-bottom:4px; }
+  .rung h3{ font-size:1rem; margin-bottom:6px; }
+  .rung.dev h3{ color:var(--flag); }
+  .rung p{ font-size:.86rem; color:var(--ink-muted); }
+  .rung-arrow{ align-self:center; font-family:'IBM Plex Mono',monospace; color:var(--accent); font-size:1.1rem; }
+  .rung.gone{ opacity:.55; border-style:dashed; }
+  @media (max-width:760px){ .ladder{ grid-template-columns:1fr; } .rung-arrow{ transform:rotate(90deg); justify-self:center; } }
+
+  /* ---------- §2 wording switcher ---------- */
+  .wording{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px; }
+  .w-pill{ font-family:'Libre Franklin',sans-serif; font-size:.8rem; font-weight:600; padding:7px 13px; border:1px solid var(--border-strong); border-radius:14px; color:var(--ink-muted); background:var(--surface); }
+  .w-pill:hover{ border-color:var(--accent); color:var(--ink); }
+  .w-pill[aria-pressed="true"]{ background:var(--accent-soft); border-color:var(--accent); color:var(--accent-strong); }
+  .w-pill small{ font-weight:500; color:var(--ink-faint); margin-left:4px; }
+  .w-sticky{ position:sticky; top:59px; z-index:20; background:var(--bg); padding:10px 0 6px; margin-top:-6px; border-bottom:1px solid var(--border); margin-bottom:18px; }
+  .w-sticky .wording{ margin-bottom:0; }
+  .w-sticky-label{ font-family:'Libre Franklin',sans-serif; font-size:.66rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-faint); margin-bottom:6px; display:block; }
+  tr.w-row{ cursor:pointer; }
+  tr.w-row:hover td{ background:var(--surface-2); }
+  tr.w-row.on td{ background:var(--accent-soft); }
+  tr.w-row.on td:first-child{ color:var(--accent-strong); }
+
+  /* ---------- recipe page frame ---------- */
+  .frames{ display:flex; gap:28px; flex-wrap:wrap; align-items:flex-start; }
+  .frame{ flex:1 1 440px; min-width:0; }
+  .frame.phone{ flex:0 1 360px; }
+  .page{ background:var(--bg); border:1px solid var(--border-strong); border-radius:6px; padding:26px 26px 22px; }
+  .frame.phone .page{ padding:20px 16px; }
+  .page-crumb{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; color:var(--ink-faint); margin-bottom:8px; }
+  .rtitle{ font-size:2rem; font-weight:700; letter-spacing:-.015em; line-height:1.15; margin-bottom:10px; }
+  .frame.phone .rtitle{ font-size:1.65rem; }
+  .tags-row{ display:flex; gap:6px; flex-wrap:wrap; align-items:center; margin-bottom:14px; }
+  .cuisine-chip{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; font-weight:600; text-transform:uppercase; letter-spacing:.05em; background:var(--highlight-soft); color:var(--highlight); padding:3px 7px; border-radius:3px; text-decoration:none; }
+  .tag{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; border:1px solid var(--border-strong); color:var(--ink-muted); padding:2px 7px; border-radius:3px; }
+  .stat-rail{ display:flex; gap:22px; flex-wrap:wrap; padding:10px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); margin-bottom:16px; }
+  .stat{ display:flex; flex-direction:column; gap:1px; }
+  .stat-label{ font-family:'Libre Franklin',sans-serif; font-size:.6rem; font-weight:600; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-faint); }
+  .stat-value{ font-family:'IBM Plex Mono',monospace; font-size:.82rem; font-weight:600; color:var(--accent-strong); }
+  .intro{ font-size:.98rem; }
+  .fade{ height:40px; margin-top:10px; background:repeating-linear-gradient(var(--border) 0 1px, transparent 1px 12px); opacity:.6; border-radius:2px; }
+
+  /* The pot-and-steam mark. Flag-blue stroke, flag-soft body. */
+  .devmark{ width:22px; height:22px; flex:none; color:var(--flag); }
+  .devmark.sm{ width:13px; height:13px; }
+  .devmark .body{ fill:var(--flag-soft); }
+  .devmark .lid{ fill:var(--surface); }
+  .rung.dev .devmark .body{ fill:var(--surface); }
+  .devdot{ width:7px; height:7px; border-radius:50%; background:var(--flag); flex:none; }
+  [data-mark="dot"] .devmark{ display:none; }
+  [data-mark="pot"] .devdot{ display:none; }
+
+  .dev-link{ font-family:'Libre Franklin',sans-serif; font-weight:600; color:var(--flag); text-decoration:none; white-space:nowrap; border-bottom:1.5px solid color-mix(in srgb, var(--flag) 35%, transparent); }
+  .dev-link:hover{ border-bottom-color:var(--flag); }
+  .dev-link::after{ content:" →"; }
+
+  /* A · strip: the archived .draft-banner, warmed up. Above the title. */
+  .dev-strip{ display:flex; gap:10px; align-items:flex-start; background:var(--flag-soft); border:1px solid var(--flag); border-radius:4px; padding:9px 12px; margin-bottom:18px; font-family:'Libre Franklin',sans-serif; font-size:.8rem; line-height:1.45; }
+  .dev-strip .devmark{ width:18px; height:18px; margin-top:-1px; }
+  .dev-strip .devmark .body{ fill:var(--surface); }
+  .dev-strip .devdot{ margin-top:6px; }
+  .dev-strip-label{ font-weight:700; color:var(--flag); margin-right:4px; }
+  .dev-strip-msg{ color:var(--ink-muted); }
+  .dev-strip .dev-link{ margin-left:4px; }
+  .dev-strip-note{ display:block; margin-top:3px; font-family:'Lora',serif; font-style:italic; color:var(--ink); }
+
+  /* B · callout: the Mechanic/Definition callout shape, in flag blue.
+     Sits under the stat rail, before the intro. */
+  .dev-callout{ display:grid; grid-template-columns:auto 1fr; column-gap:12px; row-gap:6px; background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--flag); border-radius:0 6px 6px 0; padding:14px 16px; margin-bottom:18px; }
+  .dev-callout .devmark{ width:26px; height:26px; grid-row:span 3; margin-top:1px; }
+  .dev-callout .devdot{ grid-row:span 3; margin-top:7px; }
+  .dev-callout-label{ font-family:'Libre Franklin',sans-serif; font-size:.66rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--flag); }
+  .dev-callout-msg{ font-size:.94rem; color:var(--ink); }
+  .dev-callout-msg .dev-link{ font-size:.84rem; margin-left:2px; }
+  .dev-callout-note{ font-size:.88rem; color:var(--ink-muted); border-top:1px dashed var(--border-strong); padding-top:7px; margin-top:2px; }
+  .dev-callout-note b{ font-family:'Libre Franklin',sans-serif; font-size:.74rem; font-weight:700; color:var(--ink); margin-right:4px; }
+  .no-note .dev-callout-note, .no-note .dev-strip-note{ display:none; }
+
+  /* C · badge only, the current .draft-badge with a popover */
+  .draft-badge{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; font-weight:600; border:1px solid var(--flag); color:var(--flag); background:var(--flag-soft); padding:3px 7px; border-radius:3px; display:inline-flex; gap:5px; align-items:center; }
+
+  /* ---------- cards ---------- */
+  .rgrid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:14px; }
+  .rcard{ position:relative; background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:14px 16px 12px; display:flex; flex-direction:column; gap:8px; min-width:0; min-height:196px; }
+  .rcard:hover, .rcard:focus-within{ border-color:var(--accent); }
+  .rcard-link{ color:inherit; text-decoration:none; }
+  .rcard-link::after{ content:""; position:absolute; inset:0; border-radius:inherit; }
+  .rcard-top{ display:flex; gap:4px; flex-wrap:nowrap; align-items:center; min-width:0; position:relative; z-index:2; }
+  .rcard-top > .cuisine-chip, .rcard-top > .tag, .rcard-top .card-dev{ font-size:.62rem; padding:2px 5px; flex:none; white-space:nowrap; }
+  .rcard-title{ font-family:'Libre Franklin',sans-serif; font-size:1.02rem; font-weight:700; line-height:1.3; }
+  .rcard-intro{ font-size:.84rem; line-height:1.5; color:var(--ink-muted); display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; overflow:hidden; }
+  .rcard-stats{ margin-top:auto; padding-top:8px; border-top:1px solid var(--border); display:flex; gap:12px; white-space:nowrap; }
+  .rcard-stat{ display:flex; align-items:baseline; gap:4px; }
+  .rcard-stat b{ font-family:'Libre Franklin',sans-serif; font-size:.56rem; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); }
+  .rcard-stat span{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; font-weight:600; color:var(--accent-strong); }
+
+  /* The card's dev mark: a button above the stretched link, so hover,
+     focus, and tap open the explanation instead of following the card. */
+  .card-dev{ position:relative; z-index:2; display:inline-flex; align-items:center; gap:4px; font-family:'Libre Franklin',sans-serif; font-weight:600; color:var(--flag); background:var(--flag-soft); border:1px solid color-mix(in srgb, var(--flag) 45%, transparent); border-radius:3px; cursor:help; }
+  .card-dev.icon-only{ padding:2px 4px !important; margin-left:auto; }
+  .card-dev .devdot{ width:5px; height:5px; }
+
+  /* Popover: the shared look from the scaling callout (STYLE.md). */
+  .pop-host{ position:relative; display:inline-flex; }
+  .pop-host.end{ margin-left:auto; }
+  .dev-pop{ position:absolute; top:calc(100% + 10px); left:-10px; z-index:40; width:262px; background:var(--surface); border:1px solid var(--border-strong); border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,.14); padding:12px 14px 13px; display:none; gap:7px; text-align:left; white-space:normal; cursor:auto; }
+  .pop-host.end .dev-pop{ left:auto; right:-10px; }
+  .dev-pop::before, .dev-pop::after{ content:""; position:absolute; left:16px; border:7px solid transparent; border-top:0; }
+  .pop-host.end .dev-pop::before, .pop-host.end .dev-pop::after{ left:auto; right:16px; }
+  .dev-pop::before{ top:-8px; border-bottom:8px solid var(--border-strong); }
+  .dev-pop::after{ top:-6.6px; border-bottom:8px solid var(--surface); }
+  .pop-host:hover .dev-pop, .pop-host:focus-within .dev-pop, .pop-host.open .dev-pop{ display:grid; }
+  .dev-pop-head{ display:flex; align-items:center; gap:7px; font-family:'Libre Franklin',sans-serif; font-size:.66rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--flag); }
+  .dev-pop-head .devmark{ width:16px; height:16px; }
+  .dev-pop p{ font-family:'Lora',serif; font-size:.82rem; line-height:1.5; color:var(--ink); font-weight:400; text-transform:none; letter-spacing:0; }
+  .dev-pop .dev-pop-note{ color:var(--ink-muted); font-style:italic; }
+  .dev-pop .dev-link{ font-size:.76rem; justify-self:start; }
+  .card-sub{ font-family:'Libre Franklin',sans-serif; font-size:.74rem; font-weight:700; color:var(--ink-muted); margin:22px 0 10px; }
+  .card-sub:first-child{ margin-top:0; }
+
+  /* ---------- §5 explainer page ---------- */
+  .explainer{ max-width:640px; }
+  .explainer h1{ font-size:1.9rem; letter-spacing:-.015em; margin-bottom:12px; }
+  .explainer h3{ font-size:1.05rem; margin:20px 0 6px; }
+  .explainer p{ margin-bottom:10px; }
+  .explainer .lede{ font-size:1.05rem; color:var(--ink-muted); }
+  .state-row{ display:flex; gap:10px; align-items:flex-start; padding:10px 0; border-top:1px solid var(--border); }
+  .state-row:last-of-type{ border-bottom:1px solid var(--border); margin-bottom:14px; }
+  .state-row .devmark{ margin-top:2px; }
+  .state-canon{ width:22px; height:22px; flex:none; display:flex; align-items:center; justify-content:center; color:var(--accent); font-family:'IBM Plex Mono',monospace; font-weight:700; }
+  .state-row b{ font-family:'Libre Franklin',sans-serif; font-size:.88rem; display:block; }
+  .state-row span{ font-size:.9rem; color:var(--ink-muted); }
+
+  .rec{ display:inline-block; font-family:'Libre Franklin',sans-serif; font-size:.62rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--accent-strong); background:var(--accent-soft); padding:2px 6px; border-radius:3px; margin-left:6px; vertical-align:2px; }
+  ol.qs{ padding-left:20px; margin:0; display:grid; gap:10px; max-width:72ch; }
+  ol.qs li{ font-size:.92rem; color:var(--ink-muted); }
+  ol.qs li b{ color:var(--ink); font-family:'Libre Franklin',sans-serif; font-size:.86rem; }
+
+  @media (max-width:560px){
+    .page{ padding:18px 14px; }
+    .rtitle{ font-size:1.6rem; }
+    .w-sticky{ top:0; position:static; }
+  }
+</style>
+</head>
+<body>
+
+<!-- one SVG symbol, reused everywhere: the formula kit's pot, plus steam -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="pot-steam" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path class="body" d="M8 25h32v12c0 2.8-2.2 5-5 5H13c-2.8 0-5-2.2-5-5z"/>
+    <path class="lid" d="M6 25c0-4.4 8-7.5 18-7.5S42 20.6 42 25z"/>
+    <path d="M21.5 17.5v-2.5h5v2.5M8 29H4M40 29h4"/>
+    <path d="M15 12c-2-2 2-3.5 0-6M33 12c-2-2 2-3.5 0-6"/>
+  </symbol>
+</svg>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <span class="tb-title">Recipes in development</span>
+    <nav class="tb-jump">
+      <a href="#model">1 Model</a>
+      <a href="#wording">2 Wording</a>
+      <a href="#banner">3 Banner</a>
+      <a href="#cards">4 Cards</a>
+      <a href="#explainer">5 Explainer</a>
+      <a href="#build">6 Build</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle">Theme: <span id="themeLabel">System</span></button>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <span class="hero-eyebrow">Proposal · 2026-10-07</span>
+    <h1>Recipes in development</h1>
+    <p>A recipe here isn't finished when it's written down. It gets cooked, adjusted, argued about, and cooked again, and only after a while does it settle into the version the family makes without thinking. This proposal makes that visible: a published recipe can say, in a friendly way, that it's still changing.</p>
+    <p>It reuses <code>draft: true</code> instead of adding a new field. A draft now ships to the live site with a banner on its page and a small mark on its card. Removing <code>draft</code> makes it canon, and nothing is shown. The words come from config, so Fugu says one thing and Not a Chef says another.</p>
+  </div>
+
+  <!-- ================= 1 · MODEL ================= -->
+  <section class="block" id="model">
+    <div class="block-head">
+      <span class="block-num">§1</span>
+      <h2 class="block-title">One flag, two states</h2>
+      <p class="block-dek">Today <code>draft: true</code> means hidden: <code>buildDrafts = false</code> keeps it off the site, and the existing <code>.draft-badge</code> only ever appears in local preview. Under this proposal the same flag means "live, and still changing".</p>
+    </div>
+    <div class="ladder">
+      <div class="rung gone">
+        <span class="rung-k">today · draft: true</span>
+        <h3>Hidden draft</h3>
+        <p>Never built. Only you see it, in <code>make preview</code>. Goes away as a state.</p>
+      </div>
+      <span class="rung-arrow">→</span>
+      <div class="rung dev">
+        <span class="rung-k">draft: true</span>
+        <h3 style="display:flex;gap:8px;align-items:center"><svg class="devmark"><use href="#pot-steam"/></svg><span data-w="label">In development</span></h3>
+        <p>Published. Banner on the page, mark on the card, optional <code>working_on</code> note. Cookable, but expect it to move.</p>
+      </div>
+      <span class="rung-arrow">→</span>
+      <div class="rung">
+        <span class="rung-k">no draft key</span>
+        <h3><span data-w="canon">Canon</span></h3>
+        <p>The settled version. No banner, no mark. Silence is the signal, so most of the site stays quiet.</p>
+      </div>
+    </div>
+    <div class="note-card">
+      <span class="note-mark">!</span>
+      <div>
+        <p><strong>Cost: no more private drafts.</strong> Four pages carry <code>draft: true</code> today, and two are essays (<code>meal-planning-bruces-take</code>, <code>tips-and-tricks-for-cooking-on-the-road</code>) plus a reference page. They'd all go live with the banner.</p>
+        <p>If something truly needs to stay private, Hugo's <code>build: { render: never, list: never }</code> still hides a page, or it can live outside <code>content/</code>. That's rare enough not to need its own state.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 2 · WORDING ================= -->
+  <section class="block" id="wording">
+    <div class="block-head">
+      <span class="block-num">§2</span>
+      <h2 class="block-title">Wording</h2>
+      <p class="block-dek">Fugu ships the neutral pair, <b>In development / Canon</b>. Not a Chef overrides it with something from the kitchen. Pick a row (or a pill in the bar below) and every frame on this page changes to match.</p>
+    </div>
+    <div class="table-wrap">
+      <table class="spec" id="wordTable">
+        <thead><tr><th>Option</th><th>Banner sentence</th><th>Card hover</th><th>Settled state</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="note-card">
+      <span class="note-mark">→</span>
+      <div>
+        <p><strong>My pick for Not a Chef: "On the stove".</strong> It's concrete, it's a place rather than a judgment, and "still cooking" is exactly the feeling: it's edible now and it isn't done. "Test kitchen" sounds like somebody else's lab, and "Still tinkering" puts the focus on the writer instead of the dish.</p>
+        <p>The settled word only shows up on the explainer page, since canon recipes carry no mark. "Settled" pairs with the stove. "Canon" stays the Fugu term.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="w-sticky">
+    <span class="w-sticky-label">Wording in the frames below</span>
+    <div class="wording" id="wordPills"></div>
+  </div>
+
+  <!-- ================= 3 · BANNER ================= -->
+  <section class="block" id="banner">
+    <div class="block-head">
+      <span class="block-num">§3</span>
+      <h2 class="block-title">On the recipe page</h2>
+      <p class="block-dek">The brief is a clear banner, not just metadata. Two shapes, both in the reserved <code>--flag</code> blue ("unreviewed, not error"). Each shows the stock sentence from config, plus the recipe's own <code>working_on</code> note when there is one, and a link to the explainer page.</p>
+      <p class="block-dek">
+        <label style="font-family:'Libre Franklin',sans-serif;font-size:.8rem;"><input type="checkbox" id="noteToggle" checked> Recipe has a <code>working_on</code> note</label>
+        &nbsp;&nbsp;
+        <label style="font-family:'Libre Franklin',sans-serif;font-size:.8rem;"><input type="checkbox" id="markToggle" checked> Pot icon (off: Fugu's plain dot)</label>
+      </p>
+    </div>
+
+    <div class="frames demo-root" data-mark="pot">
+      <div class="frame">
+        <div class="page">
+          <div class="page-crumb">Recipes › Mains</div>
+          <div class="dev-strip">
+            <svg class="devmark"><use href="#pot-steam"/></svg><span class="devdot"></span>
+            <div>
+              <span class="dev-strip-label" data-w="label">On the stove</span>
+              <span class="dev-strip-msg" data-w="msg"></span>
+              <a class="dev-link" href="#explainer" data-w="more">How recipes grow here</a>
+              <span class="dev-strip-note">Working on: <span data-w="note"></span></span>
+            </div>
+          </div>
+          <h1 class="rtitle">Veg patties</h1>
+          <div class="tags-row"><span class="cuisine-chip">American</span><span class="tag">mains</span><span class="tag">vegetarian</span><span class="tag">burgers</span><span class="tag">make-ahead</span></div>
+          <div class="stat-rail">
+            <div class="stat"><span class="stat-label">Serves</span><span class="stat-value">3–4</span></div>
+            <div class="stat"><span class="stat-label">Prep</span><span class="stat-value">20 min</span></div>
+            <div class="stat"><span class="stat-label">Cook</span><span class="stat-value">10 min</span></div>
+          </div>
+          <p class="intro">These vegetable patties are quick to make and delicious. They're perfect when you're looking for a lighter sandwich or salad topping.</p>
+          <div class="fade"></div>
+        </div>
+        <p class="frame-cap"><b>A · Strip.</b> The archived <code>.draft-banner</code>, warmed up, above the title. Reads first, like a sign on the door. It's compact, but it sits on top of the recipe's identity.</p>
+      </div>
+
+      <div class="frame">
+        <div class="page">
+          <div class="page-crumb">Recipes › Mains</div>
+          <h1 class="rtitle">Veg patties</h1>
+          <div class="tags-row"><span class="cuisine-chip">American</span><span class="tag">mains</span><span class="tag">vegetarian</span><span class="tag">burgers</span><span class="tag">make-ahead</span></div>
+          <div class="stat-rail">
+            <div class="stat"><span class="stat-label">Serves</span><span class="stat-value">3–4</span></div>
+            <div class="stat"><span class="stat-label">Prep</span><span class="stat-value">20 min</span></div>
+            <div class="stat"><span class="stat-label">Cook</span><span class="stat-value">10 min</span></div>
+          </div>
+          <div class="dev-callout">
+            <svg class="devmark"><use href="#pot-steam"/></svg><span class="devdot"></span>
+            <span class="dev-callout-label" data-w="label">On the stove</span>
+            <p class="dev-callout-msg"><span data-w="msg"></span> <a class="dev-link" href="#explainer" data-w="more">How recipes grow here</a></p>
+            <p class="dev-callout-note"><b>Working on</b><span data-w="note"></span></p>
+          </div>
+          <p class="intro">These vegetable patties are quick to make and delicious. They're perfect when you're looking for a lighter sandwich or salad topping.</p>
+          <div class="fade"></div>
+        </div>
+        <p class="frame-cap"><b>B · Callout.</b> <span class="rec">Recommended</span> The Mechanic/Definition callout shape, in flag blue, between the stat rail and the intro. Title stays the title. There's room for the note to read like a sentence, which is where the friendliness lives.</p>
+      </div>
+
+      <div class="frame phone">
+        <div class="page">
+          <h1 class="rtitle">Veg patties</h1>
+          <div class="tags-row"><span class="cuisine-chip">American</span><span class="tag">mains</span><span class="tag">burgers</span></div>
+          <div class="stat-rail">
+            <div class="stat"><span class="stat-label">Serves</span><span class="stat-value">3–4</span></div>
+            <div class="stat"><span class="stat-label">Prep</span><span class="stat-value">20 min</span></div>
+            <div class="stat"><span class="stat-label">Cook</span><span class="stat-value">10 min</span></div>
+          </div>
+          <div class="dev-callout">
+            <svg class="devmark"><use href="#pot-steam"/></svg><span class="devdot"></span>
+            <span class="dev-callout-label" data-w="label">On the stove</span>
+            <p class="dev-callout-msg"><span data-w="msg"></span> <a class="dev-link" href="#explainer" data-w="more">How recipes grow here</a></p>
+            <p class="dev-callout-note"><b>Working on</b><span data-w="note"></span></p>
+          </div>
+          <p class="intro">These vegetable patties are quick to make and delicious.</p>
+        </div>
+        <p class="frame-cap"><b>B at 360px.</b> Same block, full column width.</p>
+      </div>
+    </div>
+
+    <div class="note-card">
+      <span class="note-mark">?</span>
+      <div>
+        <p><strong>What happens to the old draft badge in the tag row?</strong> It goes. The callout replaces it, so the page doesn't say "draft" twice in two different colours of voice. On essays and reference pages the same callout sits under the title and date.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 4 · CARDS ================= -->
+  <section class="block" id="cards">
+    <div class="block-head">
+      <span class="block-num">§4</span>
+      <h2 class="block-title">On the card</h2>
+      <p class="block-dek">The draft mark carries it on cards. Hover it, focus it, or tap it to get the longer explanation in the shared popover look (surface, strong border, 8px radius, pointer toward the mark). The rest of the card still links to the recipe.</p>
+    </div>
+
+    <div class="demo-root" data-mark="pot">
+      <p class="card-sub">i · Labelled mark, takes a top-row slot</p>
+      <div class="rgrid">
+        <article class="rcard">
+          <div class="rcard-top">
+            <span class="pop-host">
+              <button class="card-dev" aria-describedby="pop1"><svg class="devmark sm"><use href="#pot-steam"/></svg><span class="devdot"></span><span data-w="label">On the stove</span></button>
+              <span class="dev-pop" role="tooltip" id="pop1">
+                <span class="dev-pop-head"><svg class="devmark"><use href="#pot-steam"/></svg><span data-w="label">On the stove</span></span>
+                <p data-w="hover"></p>
+                <p class="dev-pop-note">Working on: <span data-w="note"></span></p>
+                <a class="dev-link" href="#explainer" data-w="more">How recipes grow here</a>
+              </span>
+            </span>
+            <span class="cuisine-chip">American</span>
+          </div>
+          <a class="rcard-link" href="#banner"><span class="rcard-title">Veg patties</span></a>
+          <p class="rcard-intro">These vegetable patties are quick to make and delicious. They're perfect when you're looking for a lighter sandwich or salad topping.</p>
+          <div class="rcard-stats"><span class="rcard-stat"><b>Prep</b><span>20m</span></span><span class="rcard-stat"><b>Cook</b><span>10m</span></span><span class="rcard-stat"><b>Serves</b><span>3–4</span></span></div>
+        </article>
+        <article class="rcard">
+          <div class="rcard-top"><span class="cuisine-chip">Italian</span><span class="tag">mains</span><span class="tag">pasta</span></div>
+          <a class="rcard-link" href="#cards"><span class="rcard-title">Slick spaghetti</span></a>
+          <p class="rcard-intro">The weeknight spaghetti that started as a childhood favourite and is now the house standard.</p>
+          <div class="rcard-stats"><span class="rcard-stat"><b>Prep</b><span>10m</span></span><span class="rcard-stat"><b>Cook</b><span>25m</span></span><span class="rcard-stat"><b>Serves</b><span>4</span></span></div>
+        </article>
+        <article class="rcard">
+          <div class="rcard-top"><span class="tag">bases</span><span class="tag">make-ahead</span></div>
+          <a class="rcard-link" href="#cards"><span class="rcard-title">Pizza sauce</span></a>
+          <p class="rcard-intro">An uncooked sauce: good tomatoes, salt, a little oil. The oven does the rest.</p>
+          <div class="rcard-stats"><span class="rcard-stat"><b>Prep</b><span>5m</span></span><span class="rcard-stat"><b>Serves</b><span>2 pizzas</span></span></div>
+        </article>
+      </div>
+      <p class="frame-cap"><b>i.</b> <span class="rec">Recommended</span> Leads the row and takes one of the two slots, like cuisine and the principle chip. You can read it without hovering, and it's the same blue as the page banner, so the two feel connected.</p>
+
+      <p class="card-sub">ii · Icon only, at the end of the row (like the pin)</p>
+      <div class="rgrid">
+        <article class="rcard">
+          <div class="rcard-top">
+            <span class="cuisine-chip">American</span><span class="tag">mains</span>
+            <span class="pop-host end">
+              <button class="card-dev icon-only" aria-describedby="pop2"><svg class="devmark sm"><use href="#pot-steam"/></svg><span class="devdot"></span><span class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)" data-w="label">On the stove</span></button>
+              <span class="dev-pop" role="tooltip" id="pop2">
+                <span class="dev-pop-head"><svg class="devmark"><use href="#pot-steam"/></svg><span data-w="label">On the stove</span></span>
+                <p data-w="hover"></p>
+                <p class="dev-pop-note">Working on: <span data-w="note"></span></p>
+                <a class="dev-link" href="#explainer" data-w="more">How recipes grow here</a>
+              </span>
+            </span>
+          </div>
+          <a class="rcard-link" href="#banner"><span class="rcard-title">Veg patties</span></a>
+          <p class="rcard-intro">These vegetable patties are quick to make and delicious. They're perfect when you're looking for a lighter sandwich or salad topping.</p>
+          <div class="rcard-stats"><span class="rcard-stat"><b>Prep</b><span>20m</span></span><span class="rcard-stat"><b>Cook</b><span>10m</span></span><span class="rcard-stat"><b>Serves</b><span>3–4</span></span></div>
+        </article>
+      </div>
+      <p class="frame-cap"><b>ii.</b> Costs no slot, but a pot icon alone means nothing until you hover, and touch users won't know to tap it. Fine with the plain dot as Fugu's fallback, weaker as Not a Chef's main signal.</p>
+    </div>
+  </section>
+
+  <!-- ================= 5 · EXPLAINER ================= -->
+  <section class="block" id="explainer">
+    <div class="block-head">
+      <span class="block-num">§5</span>
+      <h2 class="block-title">The explainer page</h2>
+      <p class="block-dek">Every banner and popover links here. It's a normal reference page (<code>content/reference/how-recipes-grow.md</code>), so it's edited in Obsidian like everything else. Draft copy below.</p>
+    </div>
+    <div class="page demo-root" data-mark="pot">
+      <div class="explainer">
+        <div class="page-crumb">Reference</div>
+        <h1>How recipes grow here</h1>
+        <p class="lede">None of these recipes started out finished. Each one began as something we cooked once, wrote down roughly, and then changed every time we made it.</p>
+        <p>Some of them have stopped changing. Others haven't yet, and we'd rather show you those than hide them until they're perfect. A recipe still in progress is usually good to cook. It just hasn't settled.</p>
+        <div class="state-row">
+          <svg class="devmark"><use href="#pot-steam"/></svg><span class="devdot" style="margin:7px 7px 0"></span>
+          <div><b data-w="label">On the stove</b><span>Still changing. Cook it, adjust it, and expect the next version to be a little different. If there's a "working on" note, that's what we're trying next.</span></div>
+        </div>
+        <div class="state-row">
+          <span class="state-canon">✓</span>
+          <div><b data-w="canon">Settled</b><span>The version we make without looking. No label, because most of the book should read this way.</span></div>
+        </div>
+        <h3>Change it anyway</h3>
+        <p>Settled doesn't mean finished for you. Every recipe here is a starting point: swap the beans, cut the sugar, write your changes in the margin. That's how these got here.</p>
+      </div>
+    </div>
+    <p class="frame-cap">The settled row shows a check here only. On real pages, canon recipes stay unmarked.</p>
+  </section>
+
+  <!-- ================= 6 · BUILD ================= -->
+  <section class="block" id="build">
+    <div class="block-head">
+      <span class="block-num">§6</span>
+      <h2 class="block-title">How it would be built</h2>
+      <p class="block-dek">The theme does the generic part. This repo sets the words and the icon.</p>
+    </div>
+
+    <h3 style="font-size:1rem;margin-bottom:8px;">Frontmatter (per recipe)</h3>
+<pre>draft: true
+working_on: Getting them to hold without the egg. Chickpea flour next.   # optional</pre>
+
+    <h3 style="font-size:1rem;margin:18px 0 8px;">Fugu defaults (<code>themes/fugu/config</code> / theme params)</h3>
+<pre>[params.development]
+  label   = "In development"
+  canon   = "Canon"
+  message = "This recipe is still changing. Cook it, change it, and expect it to move before it becomes canon."
+  hover   = "Published while it's still being worked out. It works, but the next version will be a little different."
+  more    = "How recipes grow"
+  page    = ""         # explainer page; no link when empty
+  icon    = "dot"      # or the name of an icon in assets/icons/</pre>
+
+    <h3 style="font-size:1rem;margin:18px 0 8px;">Not a Chef overrides (<code>config/_default/params.toml</code>)</h3>
+<pre id="ncConfig"></pre>
+
+    <div class="table-wrap" style="margin-top:18px">
+    <table class="spec">
+      <thead><tr><th>Piece</th><th>Change</th></tr></thead>
+      <tbody>
+        <tr><td>Build</td><td><code>buildDrafts = true</code> in <code>config/_default/hugo.toml</code>. <code>tools/publish.sh</code> currently refuses a draft build, so that guard changes to check the dev-server <code>baseURL</code> only.</td></tr>
+        <tr><td>Page banner</td><td>New <code>partials/development-banner.html</code> in Fugu, called from <code>single.html</code> after the stat rail (recipes) or the meta row (essays, reference). Replaces <code>.draft-badge</code> in <code>article-meta/basic.html</code>.</td></tr>
+        <tr><td>Card mark</td><td><code>partials/recipe-card.html</code>: when <code>.Draft</code>, the mark takes the first top-row slot (<code>$room</code> drops by one) and carries the popover. It's a button, so tapping it opens the popover rather than following the card link.</td></tr>
+        <tr><td>Index</td><td><code>index.json</code> gains <code>draft</code> and <code>working_on</code>, so "what's still on the stove?" is a one-line query.</td></tr>
+        <tr><td>Explainer</td><td><code>content/reference/how-recipes-grow.md</code>. If <code>page</code> points at it, its <code>summary</code> could replace <code>message</code>, so all the copy lives in one Obsidian file (open question 2).</td></tr>
+        <tr><td>Docs</td><td><code>FORMAT.md</code> (the <code>working_on</code> key), <code>STYLE.md</code> (Draft state entry: callout + card mark + popover), <code>DESIGN.md</code> (draft now means live).</td></tr>
+        <tr><td>Search, sitemap, feeds</td><td>Drafts appear like any other page. No extra filtering.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 style="font-size:1rem;margin:24px 0 10px;">Open questions</h3>
+    <ol class="qs">
+      <li><b>Strip or callout?</b> I'd go with B, the callout.</li>
+      <li><b>Where does the banner sentence live?</b> In config (simple, but not editable in Obsidian), or in the explainer page's <code>summary</code> (one file, editable in Obsidian, but the banner then depends on a page existing). I'd use config with the page as an optional override.</li>
+      <li><b>The four current drafts.</b> They all go live on the next publish. Is each one fit to show, or should any of them be moved to <code>build: never</code> first?</li>
+      <li><b>Essays too?</b> The flag is generic, so essays and reference pages would get the same callout. That's probably right for the two draft essays, but "On the stove" reads oddly on a reference page. A per-section label is possible if needed.</li>
+    </ol>
+  </section>
+</main>
+
+<script>
+  const NOTE = "Getting them to hold without the egg. Chickpea flour is the next try.";
+  const W = [
+    { id:"fugu", name:"In development", tag:"Fugu default", label:"In development", canon:"Canon",
+      msg:"This recipe is still changing. Cook it, change it, and expect it to move before it becomes canon.",
+      hover:"Published while it's still being worked out. It works, but the next version will be a little different.",
+      more:"How recipes grow", icon:"dot" },
+    { id:"stove", name:"On the stove", tag:"pick", label:"On the stove", canon:"Settled",
+      msg:"Still cooking. We change this one a little every time we make it, so cook it, tweak it, and make it yours.",
+      hover:"This one is still cooking. It's good to make now, and it changes a little every time we make it.",
+      more:"How recipes grow here", icon:"pot" },
+    { id:"simmer", name:"Still simmering", tag:"", label:"Still simmering", canon:"Settled",
+      msg:"Not done yet. It's good now and it keeps getting better, so expect a few changes before it settles.",
+      hover:"Good to cook, still being adjusted. Expect a few changes before it settles.",
+      more:"How recipes grow here", icon:"pot" },
+    { id:"test", name:"Test kitchen", tag:"", label:"Test kitchen", canon:"Keeper",
+      msg:"We're still testing this one. Cook it, change it, and tell us what worked.",
+      hover:"Still being tested. It works, but it hasn't earned keeper status yet.",
+      more:"How recipes grow here", icon:"pot" },
+    { id:"tinker", name:"Still tinkering", tag:"", label:"Still tinkering", canon:"House recipe",
+      msg:"This one's still changing. Expect it to move a little before it becomes a house recipe.",
+      hover:"We're still adjusting this one. The next version will be a little different.",
+      more:"How recipes grow here", icon:"pot" },
+  ];
+  let cur = W[1];
+
+  const tbody = document.querySelector('#wordTable tbody');
+  const pills = document.getElementById('wordPills');
+  W.forEach(w => {
+    const tr = document.createElement('tr');
+    tr.className = 'w-row'; tr.dataset.id = w.id;
+    tr.innerHTML = `<td>${w.name}${w.tag ? `<span class="rec">${w.tag}</span>` : ''}</td><td>${w.msg}</td><td>${w.hover}</td><td>${w.canon}</td>`;
+    tr.addEventListener('click', () => set(w));
+    tbody.appendChild(tr);
+    const b = document.createElement('button');
+    b.className = 'w-pill'; b.dataset.id = w.id;
+    b.innerHTML = w.name + (w.id === 'fugu' ? '<small>Fugu</small>' : '');
+    b.addEventListener('click', () => set(w));
+    pills.appendChild(b);
+  });
+
+  const markToggle = document.getElementById('markToggle');
+  function set(w){
+    cur = w;
+    document.querySelectorAll('[data-w]').forEach(el => {
+      const k = el.dataset.w;
+      el.textContent = k === 'note' ? NOTE : w[k];
+    });
+    document.querySelectorAll('.w-row').forEach(r => r.classList.toggle('on', r.dataset.id === w.id));
+    document.querySelectorAll('.w-pill').forEach(p => p.setAttribute('aria-pressed', p.dataset.id === w.id));
+    markToggle.checked = w.icon === 'pot';
+    applyMark();
+    const q = s => s.replace(/"/g, '\\"');
+    document.getElementById('ncConfig').textContent = w.id === 'fugu'
+      ? '# nothing: Fugu defaults apply\n[params.development]\n  page = "/reference/how-recipes-grow/"'
+      : `[params.development]\n  label   = "${q(w.label)}"\n  canon   = "${q(w.canon)}"\n  message = "${q(w.msg)}"\n  hover   = "${q(w.hover)}"\n  more    = "${q(w.more)}"\n  page    = "/reference/how-recipes-grow/"\n  icon    = "pot-steam"`;
+  }
+  function applyMark(){
+    document.querySelectorAll('.demo-root').forEach(r => r.dataset.mark = markToggle.checked ? 'pot' : 'dot');
+  }
+  markToggle.addEventListener('change', applyMark);
+  document.getElementById('noteToggle').addEventListener('change', e => {
+    document.querySelectorAll('.demo-root').forEach(r => r.classList.toggle('no-note', !e.target.checked));
+    document.querySelectorAll('.dev-pop-note').forEach(n => n.style.display = e.target.checked ? '' : 'none');
+  });
+
+  // Tap support for the card mark: toggle the popover, close on outside tap / Esc.
+  document.querySelectorAll('.card-dev').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      const host = btn.closest('.pop-host');
+      const was = host.classList.contains('open');
+      document.querySelectorAll('.pop-host.open').forEach(h => h.classList.remove('open'));
+      if (!was) host.classList.add('open');
+    });
+  });
+  document.addEventListener('click', e => { if (!e.target.closest('.pop-host')) document.querySelectorAll('.pop-host.open').forEach(h => h.classList.remove('open')); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') document.querySelectorAll('.pop-host.open').forEach(h => h.classList.remove('open')); });
+
+  set(cur);
+
+  // Theme toggle: system → light → dark
+  const root = document.documentElement, lab = document.getElementById('themeLabel');
+  const modes = ['system','light','dark']; let m = 0;
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    m = (m + 1) % 3;
+    if (modes[m] === 'system') root.removeAttribute('data-theme'); else root.dataset.theme = modes[m];
+    lab.textContent = modes[m][0].toUpperCase() + modes[m].slice(1);
+  });
+</script>
+</body>
+</html>

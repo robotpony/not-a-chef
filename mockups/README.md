@@ -42,6 +42,13 @@ in a browser — no build step.
   shown as the alternative). Built 2026-10-07 with the segmented control;
   `STYLE.md`'s Scaling callout entry describes it.
 
+- **`in-development.html`**: proposal (2026-10-07) to make `draft: true`
+  mean "published, still changing" instead of hidden. A flag-blue callout
+  on the page (stock sentence from config, optional per-recipe
+  `working_on` note, link to an explainer page), a labelled mark on cards
+  with a hover/tap popover, Fugu's "In development / Canon" wording, and
+  four kitchen-flavoured options for Not a Chef, switchable live. Not built.
+
 - **`page-bottom-spacing.html`**: proposal (2026-10-07) to make 40px
   from the last content to the footer a page-level rule. Today every page
   borrows it from its last block, and About, which has none, runs into the
