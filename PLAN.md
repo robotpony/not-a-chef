@@ -43,7 +43,7 @@ The cookbook templates, render hooks, JS, icons, archetypes, and content tools m
 Unfinished items from the squashed Phases 7–9 (`git show e6346f4^:PLAN.md`). The template, JS, and tooling items moved to `themes/fugu/PLAN.md` on 2026-10-07 (formula strip, validator, build-time enrichment, cooking-time features, listing filters); what's left here is content and site checks. Items the code shows are done were dropped: the `.rcard` listings, heading-free card summaries, wiki-link styling and resolution, table scrolling, scaling and unit conversion, deploy, draft tooling (`drafts.py`, `frontmatter.py set`), and clean meta descriptions (`page-description.html`). Some of what's left may be partly done; check before starting.
 
 **Site polish**
-- [ ] Tags on recipe headers and related cards: neutral outline per `mockups/STYLE.md` ("Tag — never colored"). They still render with an accent border (seen on veg patties, 2026-10-06).
+- [ ] Tags on recipe headers and related cards: neutral outline per `mockups/STYLE.md` ("Tag — never colored"). They still render with an accent border (seen on veg patties, 2026-10-06). They also have no hover state, though they're links and the cuisine chip beside them has one (an inset ring, `custom.css` `a.cuisine-chip:hover`); noted 2026-10-07. The header tags come from Blowfish's `partials/badge.html` (Tailwind `border-primary-400` classes) inside a bare `<a class="relative">` in Fugu's `article-meta/basic.html`, so the fix is to emit `<a class="tag">` there (a Fugu change) and give `a.tag` a hover in `custom.css`.
 - [ ] Tag cleanup: drop tags that repeat the cuisine; merge near-duplicates (Bread/Breads, Dressing/Dressings).
 - [ ] Check Fuse.js search relevance against real titles, tags, and ingredient text.
 - [ ] Phone-while-cooking check: large touch targets, no accidental nav taps.
@@ -53,6 +53,13 @@ Unfinished items from the squashed Phases 7–9 (`git show e6346f4^:PLAN.md`). T
 
 **Recipe format and validator** (`SPEC.md`; the validator itself is in Fugu's plan)
 - [ ] Once Fugu's validator exists, run it against all published recipes as a baseline; file each discrepancy as a spec bug or a content bug.
+
+### Recipes in development
+
+Started 2026-10-07 (`mockups/in-development.html`). The draft badge on a page now links to `content/essays/reference-essays/recipes-in-development.md` (`params.fugu.developmentPage`), which explains the idea and lists every draft. Still open:
+
+- [ ] Decide whether drafts go live. `buildDrafts` is still `false`, so on the live site the badge never shows and the list says "Nothing is in development right now". Turning it on publishes the four current drafts (veg patties, two essays, a reference page) and needs `tools/publish.sh`'s draft-build guard changed.
+- [ ] Pick the banner shape (strip or callout) and Not a Chef's wording from the mockup, then build the banner, the optional `working_on` note, and the card mark with its popover.
 
 ### Docs
 

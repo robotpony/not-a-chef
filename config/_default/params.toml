@@ -90,3 +90,5 @@ mainSections = ["recipes"]
 [fugu]
   # Recipe sidebar boxes, top to bottom (Fugu's default puts notes last).
   recipeSidebar = ["photos", "to-serve", "mechanic", "notes", "variations", "equipment"]
+  # The draft badge links here, and the page lists every draft after its text.
+  developmentPage = "essays/reference-essays/recipes-in-development"
