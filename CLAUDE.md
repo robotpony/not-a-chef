@@ -62,6 +62,10 @@ Project slash commands are in `.claude/commands/`. See DESIGN.md for description
 
 Two stacked themes, both git submodules: `theme = ["fugu", "blowfish"]`. Fugu (`themes/fugu/`, [hugo-theme-fugu](https://github.com/robotpony/hugo-theme-fugu)) is the reusable cookbook theme: templates, render hooks, JS, icons, archetypes, and the content tools. This repo keeps the Not a Chef design and branding (`custom.css`, colour scheme, homepage, header, footer, favicons, fonts). Changes to templates are commits in the Fugu submodule. Wiki links require a render hook in `themes/fugu/layouts/_default/_markup/render-link.html`. See DESIGN.md for layout and taxonomy decisions.
 
+## Test kitchen (drafts)
+
+`draft: true` publishes a page as **Test kitchen**: a banner under the title and a mark on its card, plus an optional one-line `working_on` frontmatter note. The banner's words live in `config/_default/params.toml` `[fugu.development]`. DESIGN.md "Test kitchen (drafts)" maps each key to where it shows and says how to turn it off.
+
 ## Pinned pages and tag reference pages
 
 - `pinned: true` in frontmatter (recipes, essays, or reference pages alike) floats a page to the top of its section's list, its term pages (tags/cuisine), and search results. Rare by design, not a general-purpose sort override. See DESIGN.md and SPEC.md.

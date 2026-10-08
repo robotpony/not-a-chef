@@ -36,7 +36,7 @@ cuisine: Indian
 | `cook_time`  | string           | Active cooking time.                                                  |
 | `total_time` | string           | Total elapsed time if different from prep + cook.                     |
 | `cuisine`    | string           | Region or cuisine (e.g., "Indian", "Italian").                        |
-| `draft`      | boolean          | `true` puts the recipe in the **Test kitchen**: published, with a banner above the title and a mark on its card saying it's still being tested. Remove it when the recipe is a keeper. See `content/essays/reference-essays/test-kitchen.md`. |
+| `draft`      | boolean          | `true` puts the recipe in the **Test kitchen**: published, with a banner under the title and tags and a mark on its card saying it's still being tested. Remove it when the recipe is a keeper. See `content/essays/reference-essays/test-kitchen.md`. |
 | `working_on` | string           | Optional, for drafts. One line on what's being tried next ("Getting them to hold without the egg"), shown under the banner and in the card's popover. |
 | `pinned`     | boolean          | Rare. Floats this recipe to the top of the recipes list, its term pages, and search. See DESIGN.md. |
 

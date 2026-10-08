@@ -74,6 +74,40 @@ A ```` ```formula ```` fenced block (`FORMAT.md` §Formula diagrams, `SPEC.md` �
 - `themes/fugu/layouts/recipes/list.json.json` sets `has_formula` per recipe in `public/recipes/index.json`.
 - Design and the icon kit gallery: `mockups/formula-diagrams.html`; component spec: `mockups/STYLE.md` "Formula diagram". The card strip in that mockup's §5 isn't built (see `PLAN.md`).
 
+### Test kitchen (drafts)
+
+A page with `draft: true` is published (`buildDrafts = true` in `config/_default/hugo.toml`) as a **Test kitchen** page: still being tested, cookable, expected to change. It gets a banner under its title and tags, and a mark leading the top row of its card. Taking `draft` out makes it a keeper, and both go away. Built in Fugu (`themes/fugu/layouts/partials/development/`); designed in `mockups/in-development.html`; component spec in `mockups/STYLE.md` "Draft state".
+
+**Per page** (frontmatter, any section):
+
+```yaml
+draft: true
+working_on: Getting them to hold without the egg. Chickpea flour next.   # optional
+```
+
+`working_on` is one line on what's being tried next. It shows under a dotted line in the banner, in the card's popover, and in `public/recipes/index.json`. Leave it out and nothing is shown.
+
+**Site-wide words** (`config/_default/params.toml`, `[fugu.development]`; Fugu's defaults and comments are in `themes/fugu/hugo.toml`):
+
+| Key | Where it shows | Ours |
+|---|---|---|
+| `label` | Bold, at the start of the banner; the card chip; the popover heading | Test kitchen |
+| `message` | The banner's sentence, after the label | We're still testing this one. Cook it, change it, … |
+| `hover` | The card popover's text | Still being tested. It works, but … |
+| `note` | The label before a page's `working_on` line ("Working on: …") | Working on |
+| `page` | The explainer page the banner and popover link to, which also lists every draft after its own text. A path as `site.GetPage` takes it; `""` drops the link and the list | `essays/reference-essays/test-kitchen` |
+| `more` | The text of that link (an arrow is added) | How the test kitchen works |
+| `empty` | What the explainer page's list says when there are no drafts | Nothing is in the test kitchen right now. |
+| `icon` | An SVG under `assets/`, inlined in the banner, chip, and popover; `""` draws a dot instead | `icons/development/pot-steam.svg` |
+
+A key left out of `params.toml` falls back to Fugu's default ("In development" and so on).
+
+**The explainer page** is `content/essays/reference-essays/test-kitchen.md`, edited like any essay. Its `description` is its card intro. The list of drafts is appended after its last line, so keep its last heading as the list's introduction ("In the test kitchen now").
+
+**Turning it off:** `showDraftLabel = false` under `[article]` in `params.toml` hides the banner (the card chip stays; it follows `.Draft`). `buildDrafts = false` in `hugo.toml` stops publishing drafts at all, and the explainer's list then shows `empty`.
+
+**Look:** `assets/css/custom.css`, the "Test kitchen" block (`.dev-strip`, `.dev-chip`, `.dev-pop`, `.dev-icon`). The strip is as wide as the body column (65ch of 16px Lora), not the page header.
+
 ### URL structure
 
 ```
