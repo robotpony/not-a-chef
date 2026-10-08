@@ -91,8 +91,9 @@ working_on: Getting them to hold without the egg. Chickpea flour next.   # optio
 
 | Key | Where it shows | Ours |
 |---|---|---|
-| `label` | Bold, at the start of the banner; the card chip; the popover heading | Test kitchen |
+| `label` | Bold, at the start of the banner; the popover heading | Test kitchen |
 | `message` | The banner's sentence, after the label | We're still testing this one. Cook it, change it, … |
+| `short` | The card chip only, where "Test kitchen" crowded the top row (the popover and banner keep `label`) | Testing |
 | `hover` | The card popover's text | Still being tested. It works, but … |
 | `note` | The label before a page's `working_on` line ("Working on: …") | Working on |
 | `page` | The explainer page the banner and popover link to, which also lists every draft in place of its Related section. A path as `site.GetPage` takes it; `""` drops the link and the list | `essays/reference-essays/test-kitchen` |

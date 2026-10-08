@@ -97,6 +97,7 @@ mainSections = ["recipes"]
   # are "In development" / canon.
   [fugu.development]
     label   = "Test kitchen"
+    short   = "Testing"
     message = "We're still testing this one. Cook it, change it, and expect it to move before it becomes a keeper."
     hover   = "Still being tested. It works, but it hasn't earned keeper status yet."
     note    = "Working on"
