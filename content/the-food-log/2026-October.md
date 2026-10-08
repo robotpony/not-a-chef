@@ -1,3 +1,9 @@
+---
+title: October 2026
+date: 2026-10-01
+---
+Early October is mostly trip notes: a tabbouleh worth learning, a subtly sweet red cabbage, an onion jam on a double smash burger, and a German dinner of roulade and pork tenderloin with apple. At home, gyro beef pressed flat on parchment and roasted hot for slicing into pitas and salads. The diagram tool for stated ratios is done (veg patties first); a methods concept with its own diagrams is next.
+
 ### Tuesday, October 6th
 
 ### Diagrams #todo 
