@@ -58,6 +58,10 @@ Project slash commands are in `.claude/commands/`. See DESIGN.md for description
 - `/image-add` — add photos to a recipe, essay, or Food Log page
 - `/migrate` — retired; ran `tools/migrate.py` for the old two-vault workflow
 
+## Commits
+
+Don't add Claude as a co-author or a "Generated with Claude Code" line. A PreToolUse hook (`.claude/hooks/check-commit-message.sh`, the same one Fugu has) refuses a commit whose message does.
+
 ## Hugo site
 
 Two stacked themes, both git submodules: `theme = ["fugu", "blowfish"]`. Fugu (`themes/fugu/`, [hugo-theme-fugu](https://github.com/robotpony/hugo-theme-fugu)) is the reusable cookbook theme: templates, render hooks, JS, icons, archetypes, and the content tools. This repo keeps the Not a Chef design and branding (`custom.css`, colour scheme, homepage, header, footer, favicons, fonts). Changes to templates are commits in the Fugu submodule. Wiki links require a render hook in `themes/fugu/layouts/_default/_markup/render-link.html`. See DESIGN.md for layout and taxonomy decisions.
