@@ -2,7 +2,7 @@
 title: September 2026
 date: 2026-09-01
 ---
-Two more passes at goulash (oven-browned this time, versus the from-scratch version a week earlier), a freezer-marinated chicken Milanese, and a growing backlog of curries and recipe sites to work through.
+Two goulash tests: a first-principles pork version on the 14th that came out better than expected, then a v2 on the 29th with oven-roasted pork, soaked dried mushrooms and smoked paprika. Alongside it, chicken Milanese from freezer-marinated cutlets, a more acidic batch of sweet pickled red onions, and the start of research into a cornmeal-breaded chicken patty. The backlog is mostly curries (butternut squash, Japanese, Instant Pot chicken thigh) plus a list of recipe sites to work through.
 
 
 ## Wednesday, September 30th
