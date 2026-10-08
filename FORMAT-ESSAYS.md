@@ -22,7 +22,8 @@ description: "AI hasn't changed the fundamentals of software development as much
 |---|---|---|
 | `title` | string | Essay title. Sentence case. |
 | `date` | string | ISO 8601 (YYYY-MM-DD). Publication date. Required. "Updated" comes from git. |
-| `draft` | boolean | `true` while in progress; `false` to publish. Default: `false`. |
+| `draft` | boolean | `true` publishes the essay in the Test kitchen: live, with a banner saying it's still changing (same as recipes, see `FORMAT.md`). Default: `false`. |
+| `working_on` | string | Optional, for drafts: one line on what's changing next, shown under the banner. |
 | `tags` | string[] | Optional. Plain strings, no `#` prefix. Topic tags for browsing. |
 | `description` | string | Optional. 1–2 sentences for SEO and listing cards. |
 | `pinned` | boolean | Rare. Floats this essay to the top of the essays list and search — e.g. `win-the-fridge.md`. See DESIGN.md. |

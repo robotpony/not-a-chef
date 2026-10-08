@@ -60,7 +60,8 @@ Supersedes the informal table in `FORMAT.md` §Frontmatter.
 | `cook_time` | MAY | string | |
 | `total_time` | MAY | string | |
 | `cuisine` | MAY | string | |
-| `draft` | MUST | boolean | Hugo publish gate. |
+| `draft` | MUST | boolean | `true` marks a page that's published but still changing (the Test kitchen on Not a Chef): the site builds drafts, and Fugu gives them a banner and a card mark. |
+| `working_on` | MAY | string | For drafts: one line on what's being tried next, shown under the banner and in the card popover. |
 | `cost_note` | MAY | string | Free-text author commentary on cost ("expensive because of saffron"). Not a number — the computed estimate lives in build-time data, §6. |
 | `pinned` | MAY | boolean | Floats the page to the top of its section's listing, its term pages, and search results. Rare by design — not a general-purpose sort override. Applies to recipes, essays, and reference pages alike; see DESIGN.md. |
 

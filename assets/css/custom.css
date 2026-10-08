@@ -859,7 +859,7 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
  * overflow: hidden above (load-bearing for the tag-ellipsis/+N layout,
  * so it can't just come off). Lifting the clip only while the popover is
  * actually open keeps the row's normal layout untouched otherwise. */
-.rcard-top:has(.glossary-term:hover, .glossary-term:focus-within) { overflow: visible; }
+.rcard-top:has(.glossary-term:hover, .glossary-term:focus-within, .dev-mark:hover, .dev-mark:focus-within) { overflow: visible; }
 .rcard-title { font-family: 'Libre Franklin', sans-serif; font-size: 1.02rem; font-weight: 700; line-height: 1.3; letter-spacing: -.005em; text-wrap: balance; color: var(--ink); }
 .rcard-intro { font-family: 'Lora', Georgia, serif; font-size: .84rem; line-height: 1.5; color: var(--ink-muted); display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
 /* Formula strip (formula-strip.html, STYLE.md "Formula diagram"): a 24px
@@ -962,13 +962,50 @@ a.cuisine-chip:hover, a.cuisine-chip:focus-visible { box-shadow: inset 0 0 0 1px
 .principle-chip svg { width: 10px; height: 10px; flex: none; }
 a.principle-chip { text-decoration: none; }
 a.principle-chip:hover, a.principle-chip:focus-visible { box-shadow: inset 0 0 0 1px var(--principle); outline: none; }
-.draft-badge { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; font-weight: 600; border: 1px solid var(--flag); color: var(--flag); background: var(--flag-soft); padding: 3px 7px; border-radius: 3px; display: inline-block; }
-/* Linked when params.fugu.developmentPage names the page that explains
- * drafts. Hover thickens the border to 2px (an inset ring on top of it),
- * the same move as the cuisine and principle chips, in the flag colour. */
-a.draft-badge { text-decoration: none; }
-a.draft-badge:hover, a.draft-badge:focus-visible { box-shadow: inset 0 0 0 1px var(--flag); outline: none; }
-/* The draft list at the end of that page (Fugu partials/development/list.html). */
+/* Test kitchen: drafts, published while they're still changing (Fugu
+ * partials/development/, params.toml [fugu.development],
+ * mockups/in-development.html). The flag blue is reserved for this. */
+/* The mark: an inlined SVG (assets/icons/development/pot-steam.svg) or,
+ * without one, a dot. */
+.dev-icon { width: 18px; height: 18px; flex: none; color: var(--flag); }
+.dev-icon .dev-icon-body { fill: var(--surface); }
+.dev-icon .dev-icon-lid { fill: var(--flag-soft); }
+.dev-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--flag); flex: none; }
+/* The strip above a draft's title. Its colour and size take it out of the
+ * flow of the content; the page's `working_on` note sits under a dotted
+ * line. */
+.dev-strip { display: flex; gap: 10px; align-items: flex-start; background: var(--flag-soft); border: 1px solid var(--flag); border-radius: 4px; padding: 9px 12px; margin: 4px 0 18px; font-family: 'Libre Franklin', sans-serif; font-size: .82rem; line-height: 1.45; }
+.dev-strip .dev-icon { margin-top: -1px; }
+.dev-strip .dev-dot { margin-top: 6px; }
+.dev-strip-body { min-width: 0; }
+.dev-strip-label { font-weight: 700; color: var(--flag); margin-right: 4px; }
+.dev-strip-msg { color: var(--ink-muted); }
+.dev-link { font-family: 'Libre Franklin', sans-serif; font-weight: 600; color: var(--flag); text-decoration: none; white-space: nowrap; border-bottom: 1.5px solid color-mix(in srgb, var(--flag) 35%, transparent); }
+.dev-link:hover, .dev-link:focus-visible { border-bottom-color: var(--flag); }
+.dev-link::after { content: " \2192"; }
+.dev-strip .dev-link { margin-left: 4px; }
+.dev-strip-note { display: block; margin-top: 7px; padding-top: 6px; border-top: 1px dashed color-mix(in srgb, var(--flag) 45%, transparent); font-family: 'Lora', Georgia, serif; font-style: italic; color: var(--ink); }
+.dev-strip-note b { font-family: 'Libre Franklin', sans-serif; font-style: normal; font-weight: 600; font-size: .78rem; margin-right: 2px; }
+/* The card mark: a chip that leads the top row, lifted above the card's
+ * stretched link. Hover/focus opens a popover in the shared look; at card
+ * width it spans the card and drops the pointer, like the compact
+ * glossary popover. */
+.rcard-top > .dev-mark { position: static; flex: none; display: inline-flex; padding: 0; }
+/* Bridges the 8px gap down to the popover, so it stays open on the way. */
+.dev-mark::after { content: ""; position: absolute; left: 0; right: 0; top: 100%; height: 8px; }
+.dev-chip { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 4px; font-family: 'Libre Franklin', sans-serif; font-size: .62rem; font-weight: 600; line-height: inherit; color: var(--flag); background: var(--flag-soft); border: 1px solid color-mix(in srgb, var(--flag) 45%, transparent); border-radius: 3px; padding: 1px 5px; cursor: help; white-space: nowrap; }
+.dev-chip:hover, .dev-chip:focus-visible { box-shadow: inset 0 0 0 1px var(--flag); outline: none; }
+.dev-chip .dev-icon { width: 12px; height: 12px; }
+.dev-chip .dev-dot { width: 5px; height: 5px; }
+.dev-pop { position: absolute; left: 0; right: 0; top: calc(100% + 8px); z-index: 5; display: grid; gap: 6px; background: var(--surface); border: 1px solid var(--border-strong); border-radius: 8px; padding: 11px 13px; box-shadow: 0 6px 20px rgba(0, 0, 0, .12); opacity: 0; visibility: hidden; transform: translateY(-4px); transition: opacity .12s, transform .12s, visibility .12s; white-space: normal; text-align: left; }
+.dev-mark:hover .dev-pop, .dev-mark:focus-within .dev-pop { opacity: 1; visibility: visible; transform: translateY(0); }
+.dev-pop-head { display: flex; align-items: center; gap: 6px; font-family: 'Libre Franklin', sans-serif; font-size: .66rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--flag); }
+.dev-pop-head .dev-icon { width: 15px; height: 15px; }
+.dev-pop-text, .dev-pop-note { font-family: 'Lora', Georgia, serif; font-size: .82rem; line-height: 1.45; color: var(--ink); }
+.dev-pop-note { color: var(--ink-muted); font-style: italic; }
+.dev-pop .dev-link { position: relative; z-index: 1; justify-self: start; font-size: .74rem; }
+/* The list of drafts at the end of the test kitchen page
+ * (partials/development/list.html). */
 .development-list { margin-top: 16px; }
 /* Pin icon (partials/recipe-card.html) — marks a pinned page (frontmatter
  * `pinned: true`, see DESIGN.md). Unlinked, minimal-contrast, sits at the
@@ -1607,7 +1644,13 @@ article:not(:has(.article-pagination)) .reading-sidebar-wrap { margin-bottom: 0;
  * comes free. Full size in the body column; compact in the recipe sidebar,
  * where Mechanic (and so most formulas) ends up.
  * ------------------------------------------------------------------------- */
-.formula { margin: 1.25em 0; font-style: normal; }
+/* A figure, spaced like a table rather than a paragraph: 28px from the
+ * text around it, and 48px (up from the heading's own 36px) to a heading
+ * after it, since its ragged, light bottom edge (italic swap lines, short
+ * and centred) reads closer than a full-width paragraph would
+ * (2026-10-07). rem, not em: on a heading, em is the heading's own size. */
+.formula { margin: 1.75rem 0; font-style: normal; }
+.article-content .formula + :is(h2, h3) { margin-top: 3rem; }
 .formula .ic {
   fill: none; stroke: currentColor; stroke-width: 2;
   stroke-linecap: round; stroke-linejoin: round; overflow: visible;

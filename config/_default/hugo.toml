@@ -3,7 +3,8 @@ baseURL = "https://bruce-loves-to-cook.warpedvisions.org/"
 defaultContentLanguage = "en"
 enableRobotsTXT = true
 summaryLength = 30
-buildDrafts = false
+# Drafts are published as Test kitchen recipes (params.toml [fugu.development]).
+buildDrafts = true
 buildFuture = false
 enableEmoji = true
 # Page .Lastmod comes from each file's last git commit; the sidebars show

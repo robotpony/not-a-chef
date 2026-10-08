@@ -90,5 +90,16 @@ mainSections = ["recipes"]
 [fugu]
   # Recipe sidebar boxes, top to bottom (Fugu's default puts notes last).
   recipeSidebar = ["photos", "to-serve", "mechanic", "notes", "variations", "equipment"]
-  # The draft badge links here, and the page lists every draft after its text.
-  developmentPage = "essays/reference-essays/recipes-in-development"
+
+  # Drafts are published as "Test kitchen" recipes: a banner above the
+  # title and a mark on the card (mockups/in-development.html). Fugu's
+  # own words are "In development" / canon.
+  [fugu.development]
+    label   = "Test kitchen"
+    message = "We're still testing this one. Cook it, change it, and expect it to move before it becomes a keeper."
+    hover   = "Still being tested. It works, but it hasn't earned keeper status yet."
+    note    = "Working on"
+    page    = "essays/reference-essays/test-kitchen"
+    more    = "How the test kitchen works"
+    empty   = "Nothing is in the test kitchen right now."
+    icon    = "icons/development/pot-steam.svg"

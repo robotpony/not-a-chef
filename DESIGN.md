@@ -39,7 +39,7 @@ Superseded by the mockups — see `mockups/STYLE.md`/`mockups/style.html`, `mock
 Hugo needs a few fields not in the recipe vault format:
 
 ```yaml
-draft: false          # set to true during review; false = published
+draft: false          # true = published in the Test kitchen (banner + card mark); see FORMAT.md
 description: ""       # optional short blurb for SEO and cards
 ```
 
