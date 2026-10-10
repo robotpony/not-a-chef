@@ -52,6 +52,7 @@ Unfinished items from the squashed Phases 7–9 (`git show e6346f4^:PLAN.md`). T
 - [ ] Phone-while-cooking check: large touch targets, no accidental nav taps.
 - [ ] Check the homepage against real content, and the footer's Tags/Cuisines links end to end.
 - [ ] Cross-link essays and reference pages to related recipes where it makes sense.
+- [ ] Test the RSS feeds. *Noted 2026-10-09.* Hugo builds `index.xml` for the home page, essays, reference, the food log, tags, and cuisine (`hugo.toml` `[outputs]`), but recipes has none: `content/recipes/_index.md` sets `outputs: [HTML, JSON]`, so the biggest section has no feed. The site feed (`public/index.xml`) had only one `<item>` in the 2026-10-09 build. Check what each feed holds and how many items, whether drafts (now built, `buildDrafts = true`) leak into feeds, absolute links and image URLs, the `<link rel="alternate">` in the page head, and that a real reader (e.g. NetNewsWire) subscribes and renders posts cleanly. Then decide whether recipes get a feed and whether the site feed should cover every section.
 - [ ] Check that Hugo's related content (`partials/related.html`, keyed on tags and cuisine) gives reasonable suggestions before considering a manual `related:` field.
 
 **Recipe format and validator** (`SPEC.md`; the validator itself is in Fugu's plan)
