@@ -4,13 +4,20 @@ date: 2026-10-01
 ---
 Early October is mostly trip notes: a tabbouleh worth learning, a subtly sweet red cabbage, an onion jam on a double smash burger, and a German dinner of roulade and pork tenderloin with apple.   
 
-### Week of October 6th
+## Week of Friday, October 9th
 
-### Friday, October 2nd
+On the list:
+
+- research poke: Hawaiian style, garlic style, shoyu. These are great on rice or with salad.
+- research crab salad (like salmon salad), but with cabbage and carrot. This was surprisingly excellent.
+
+## Week of October 6th
+
+### Week of October 2nd
+
+On the list:
 
 - research + testing for a gyro beef pan flattened parchment (thin, roasted hot, sliced for pitas/salad/sandies)
-
-### Monday, October 5th
 
 Food notes from our trip.
 
