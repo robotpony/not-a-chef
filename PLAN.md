@@ -33,7 +33,7 @@ Queued 2026-10-07. Each needs a mockup in `mockups/` (checked against `mockups/S
 
 The cookbook templates, render hooks, JS, icons, archetypes, and content tools moved into the Fugu theme (`themes/fugu`, https://github.com/robotpony/hugo-theme-fugu) on 2026-10-06; see ARCHITECTURE.md for the three layers. Theme work (making it generic, its own design, docs, example site, release) and the template and JS features below it are tracked in **`themes/fugu/PLAN.md`**. This list is only what has to happen on the Not a Chef side.
 
-- [ ] Test `/publish` (`tools/publish.sh`, then `dry-run` first) now that the site builds with two stacked themes. Not yet run since the split was merged (2026-10-06). The build output was identical locally, and the publish scripts don't reference theme paths, but nothing has been deployed from the new layout. On any machine other than this one, run `git submodule update --init` first so `themes/fugu` is populated.
+- [x] Test `/publish` (`tools/publish.sh`, then `dry-run` first) now that the site builds with two stacked themes. On any machine other than this one, run `git submodule update --init` first so `themes/fugu` is populated. *Done 2026-10-09: published from the two-theme layout with Fugu at the 2026-10-08 bump (`3091808`).*
 - [ ] After each Fugu change lands, bump the submodule here (`git -C themes/fugu pull`, then commit `themes/fugu`) and check the site still renders the same.
 - [ ] When Fugu gets its own CSS (Fugu PLAN.md §5), cut `assets/css/custom.css` down to the Not a Chef look only, and check every page against the current build.
 - [ ] When Fugu renames params (Fugu PLAN.md §2), update `config/_default/params.toml` in the same step.
