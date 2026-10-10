@@ -1,5 +1,5 @@
 ---
 title: Recipes
 description: The recipes we actually cook.
-outputs: [HTML, JSON]
+outputs: [HTML, RSS, JSON]
 ---

@@ -44,6 +44,13 @@
           <div class="heading">About</div>
           <a href="{{ "about" | relURL }}">About this cookbook</a>
         </div>
+        <div>
+          <div class="heading">Subscribe</div>
+          <a href="{{ "index.xml" | relURL }}" type="application/rss+xml">Everything (RSS)</a>
+          <a href="{{ "recipes/index.xml" | relURL }}" type="application/rss+xml">Recipes</a>
+          <a href="{{ "essays/index.xml" | relURL }}" type="application/rss+xml">Essays</a>
+          <a href="{{ "the-food-log/index.xml" | relURL }}" type="application/rss+xml">The food log</a>
+        </div>
       </div>
       <button id="appearance-switcher" aria-label="Dark mode switcher" type="button" class="theme-toggle">
         <span class="tt-light">{{ partial "icon.html" "moon" }}</span>

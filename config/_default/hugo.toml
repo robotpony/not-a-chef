@@ -21,6 +21,11 @@ ignoreFiles = ['/[A-Z][A-Z0-9_-]*\.md$']
   tag = "tags"
   cuisine = "cuisine"
 
+# Newest items per feed (every feed, not only the site one). Without it the
+# site feed carried all ~290 pages, so a new subscriber got the whole archive.
+[services.rss]
+  limit = 50
+
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
