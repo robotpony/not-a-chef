@@ -1,11 +1,11 @@
 ---
 title: Chicken sandwich, crispy, mall style
 date: 2026-10-08
-draft: true
-working_on: "Pinning down the toppings, and testing crusts until one tastes right."
-tags: [food-memory]
+draft: false
+working_on: Pinning down the toppings, and testing crusts until one tastes right.
+tags:
+  - food-memory
 ---
-
 In high school I worked in a string of fast food and fast casual restaurants, often on split shifts. A split shift leaves you with a few hours in the middle of the day, not enough time to go home, and not much money to spend. I spent most of those hours at the mall, in a food court that sat next to a big arcade.
 
 Most of the food court was chains. One counter wasn't. It was a one-off shop that sold chicken burgers, and if it sold anything else, I don't remember it. I only ever ordered the chicken burger.
