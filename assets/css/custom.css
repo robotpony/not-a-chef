@@ -966,6 +966,9 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
 .tags-row { gap: 8px; }
 .tag { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; border: 1px solid var(--border-strong); color: var(--ink-muted); padding: 3px 7px; border-radius: 3px; display: inline-block; }
 .tag-more { color: var(--ink-faint); border-style: dashed; }
+/* Header tags are links (article-meta/basic.html); hover as .filter-pill. */
+a.tag { text-decoration: none; }
+a.tag:hover { border-color: var(--accent); color: var(--ink); }
 .cuisine-chip { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; background: var(--highlight-soft); color: var(--highlight); padding: 3px 7px; border-radius: 3px; display: inline-block; }
 /* Linked chip (cards and recipe pages): same yellow, an inset --highlight
  * ring on hover rather than an accent colour, so it stays cuisine-only. */

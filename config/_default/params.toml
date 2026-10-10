@@ -88,6 +88,9 @@ mainSections = ["recipes"]
   name = "Bruce Alderson"
 
 [fugu]
+  # Fugu's basic styles off: custom.css styles every class Fugu emits.
+  styles = false
+
   # Recipe sidebar boxes, top to bottom (Fugu's default puts notes last).
   recipeSidebar = ["photos", "to-serve", "mechanic", "notes", "variations", "equipment"]
 
