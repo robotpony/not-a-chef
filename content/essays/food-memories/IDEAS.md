@@ -16,7 +16,7 @@ More food memory essay ideas, not yet drafted.
 - [ ] Turkey sandwiches, with extra crunch
 - [ ] bad turkey is still turkey
 - [ ] A mall hot dog
-- [ ] Chicken sandwich, crispy, mall style (owner stole stuff)
+- [x] Chicken sandwich, crispy, mall style (owner stole stuff)
 - [ ] A hamburger with no condiments
 - [ ] A first beer
 - [ ] A first margarita

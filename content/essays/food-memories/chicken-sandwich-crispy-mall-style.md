@@ -2,7 +2,6 @@
 title: Chicken sandwich, crispy, mall style
 date: 2026-10-08
 draft: false
-working_on: Pinning down the toppings, and testing crusts until one tastes right.
 tags:
   - food-memory
 ---
