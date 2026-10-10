@@ -10,6 +10,9 @@ enableEmoji = true
 # Page .Lastmod comes from each file's last git commit; the sidebars show
 # it as "Updated" (themes/fugu/layouts/partials/sidebar/date-rows.html).
 enableGitInfo = true
+# ALL-CAPS markdown files (IDEAS.md, TODO.md, ...) are working notes that sit
+# beside the content they're about; never publish them.
+ignoreFiles = ['/[A-Z][A-Z0-9_-]*\.md$']
 
 [pagination]
   pagerSize = 12
