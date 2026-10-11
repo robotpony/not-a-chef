@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methods icon</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  /* Tokens from STYLE.md: neutrals, accent, highlight, flag, principle. No new hue. */
+  :root{
+    --bg:#F3F3EC; --surface:#FBFBF6; --surface-2:#EAEBDF;
+    --ink:#23241E; --ink-muted:#63645A; --ink-faint:#93948A;
+    --border:#DCDCCE; --border-strong:#C7C8B4;
+    --accent:#A67330; --accent-strong:#7C361D; --accent-soft:#F6EADA;
+    --highlight:#997F29; --highlight-soft:#F6F1D5;
+    --flag:#3D638F; --flag-soft:#E1EAF4;
+    --principle:#247B50; --principle-strong:#1D6743; --principle-soft:#DBF5E8;
+    --focus:#A67330;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+      --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+      --border:#383A2C; --border-strong:#4A4C3A;
+      --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+      --highlight:#DDCC88; --highlight-soft:#342D19;
+      --flag:#97B8D8; --flag-soft:#1D2835;
+      --principle:#8ED7B4; --principle-strong:#A7E2C4; --principle-soft:#1B3428;
+      --focus:#D3A569;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+    --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+    --border:#383A2C; --border-strong:#4A4C3A;
+    --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+    --highlight:#DDCC88; --highlight-soft:#342D19;
+    --flag:#97B8D8; --flag-soft:#1D2835;
+    --principle:#8ED7B4; --principle-strong:#A7E2C4; --principle-soft:#1B3428;
+    --focus:#D3A569;
+  }
+
+  *{box-sizing:border-box;}
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:'Lora',Georgia,serif; font-size:16px; line-height:1.5; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3{ font-family:'Libre Franklin',system-ui,sans-serif; margin:0; }
+  p{ margin:0; }
+  code{ font-family:'IBM Plex Mono',monospace; font-size:.85em; background:var(--surface-2); padding:1px 5px; border-radius:3px; }
+  button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
+  :focus-visible{ outline:2px solid var(--focus); outline-offset:2px; }
+
+  .topbar{ position:sticky; top:0; z-index:30; background:var(--surface); border-bottom:1px solid var(--border-strong); }
+  .topbar-inner{ max-width:1020px; margin:0 auto; padding:14px 16px; display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+  .tb-title{ font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:.95rem; margin-right:auto; }
+  .theme-toggle{ font-family:'Libre Franklin',sans-serif; font-size:.75rem; font-weight:600; padding:7px 10px; border:1px solid var(--border-strong); border-radius:3px; color:var(--ink-muted); }
+  .theme-toggle:hover{ border-color:var(--accent); color:var(--ink); }
+
+  main{ max-width:1020px; margin:0 auto; padding:8px 16px 100px; }
+  .hero{ padding:36px 0 28px; border-bottom:1px solid var(--border); margin-bottom:36px; }
+  .eyebrow{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--accent-strong); display:block; margin-bottom:10px; }
+  .hero h1{ font-size:2rem; line-height:1.15; margin-bottom:12px; }
+  .lede{ color:var(--ink-muted); max-width:65ch; }
+  .lede + .lede{ margin-top:10px; }
+
+  section.block{ margin-bottom:52px; }
+  .block-title{ font-family:'Libre Franklin',sans-serif; font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-muted); padding-bottom:8px; border-bottom:1px solid var(--border); margin-bottom:18px; }
+  .note{ color:var(--ink-muted); font-size:.92rem; max-width:65ch; margin-bottom:18px; }
+
+  /* Existing marks, for scale */
+  .existing{ display:flex; gap:28px; flex-wrap:wrap; }
+  .ex{ display:flex; align-items:center; gap:14px; }
+  .ex-big{ width:64px; height:64px; border-radius:8px; display:grid; place-items:center; }
+  .ex-big svg{ width:44px; height:44px; }
+  .ex-label{ font-family:'Libre Franklin',sans-serif; font-size:.82rem; font-weight:600; }
+  .ex-label span{ display:block; font-weight:400; color:var(--ink-muted); font-size:.78rem; }
+
+  /* Candidates */
+  .cands{ display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:16px; }
+  .cand{ background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:16px; display:flex; flex-direction:column; gap:12px; }
+  .cand.rec{ border-color:var(--accent); box-shadow:inset 0 0 0 1px var(--accent); }
+  .cand-head{ display:flex; align-items:baseline; justify-content:space-between; gap:8px; }
+  .cand-name{ font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:.95rem; }
+  .cand-tag{ font-family:'Libre Franklin',sans-serif; font-size:.66rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--accent-strong); }
+  .sizes{ display:flex; align-items:flex-end; gap:16px; color:var(--accent-strong); }
+  .sizes .s48 svg{ width:48px; height:48px; }
+  .sizes .s24 svg{ width:24px; height:24px; }
+  .sizes .s16 svg{ width:16px; height:16px; }
+  .sizes .s12 svg{ width:12px; height:12px; }
+  .sizes small{ display:block; font-family:'IBM Plex Mono',monospace; font-size:.62rem; color:var(--ink-faint); text-align:center; margin-top:4px; }
+  .cand p{ font-size:.86rem; color:var(--ink-muted); }
+
+  /* Chips, as custom.css draws them on a card's top row */
+  .chip{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; line-height:1.5; font-weight:600; padding:3px 7px; border-radius:3px; border:1px solid transparent; display:inline-flex; align-items:center; gap:4px; white-space:nowrap; text-decoration:none; }
+  .chip svg{ width:12px; height:12px; flex:none; }
+  .chip-cuisine{ background:var(--highlight-soft); color:var(--highlight); text-transform:uppercase; letter-spacing:.05em; }
+  .chip-principle{ background:var(--principle-soft); color:var(--principle-strong); }
+  .chip-principle svg{ width:10px; height:10px; }
+  .chip-dev{ background:var(--flag-soft); color:var(--flag); border-color:color-mix(in srgb, var(--flag) 45%, transparent); }
+  .chip-method{ background:var(--accent-soft); color:var(--accent-strong); }
+  .chip-method.neutral{ background:transparent; color:var(--ink); border-color:var(--ink-faint); }
+  .chip-plant{ background:var(--principle-soft); color:var(--principle-strong); }
+  .chip-tag{ color:var(--ink-muted); border-color:var(--border-strong); }
+
+  /* Card mock */
+  .cards{ display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:16px; }
+  .rcard{ background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:14px; display:flex; flex-direction:column; gap:8px; min-height:170px; }
+  .rcard-top{ display:flex; gap:4px; align-items:center; overflow:hidden; }
+  .rcard h3{ font-size:1.02rem; line-height:1.25; }
+  .rcard p{ font-size:.84rem; color:var(--ink-muted); display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+  .rcard .stat{ margin-top:auto; font-family:'Libre Franklin',sans-serif; font-size:.72rem; color:var(--ink-faint); }
+  .rcard .stat b{ font-family:'IBM Plex Mono',monospace; color:var(--accent-strong); }
+
+  .row{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:12px; }
+  .row-label{ font-family:'Libre Franklin',sans-serif; font-size:.74rem; font-weight:600; color:var(--ink-faint); width:130px; flex:none; }
+
+  .two{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  @media (max-width:640px){ .two{ grid-template-columns:1fr; } .row-label{ width:100%; } }
+  .opt{ background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:16px; }
+  .opt h3{ font-size:.92rem; margin-bottom:6px; }
+  .opt p{ font-size:.86rem; color:var(--ink-muted); margin-bottom:12px; }
+
+  .callout{ border-left:3px solid var(--accent); background:var(--surface); padding:14px 16px; border-radius:0 6px 6px 0; max-width:70ch; }
+  .callout p{ font-size:.92rem; }
+  .callout p + p{ margin-top:8px; }
+</style>
+</head>
+<body>
+<header class="topbar"><div class="topbar-inner">
+  <span class="tb-title">Methods icon</span>
+  <button class="theme-toggle" id="tt" type="button">Toggle dark</button>
+</div></header>
+
+<main>
+  <div class="hero">
+    <span class="eyebrow">Proposal · 2026-10-10</span>
+    <h1>An icon for methods</h1>
+    <p class="lede">Methods get a concept page like Win the fridge and Test kitchen (<code>docs/METHODS.md</code>), so they need a mark that sits next to those two on a card's top row without looking like either.</p>
+    <p class="lede">Every candidate here is drawn the way <code>pot-steam.svg</code> is: a 48-unit grid, round 2.4 strokes in <code>currentColor</code>. Each one is shown at chip size (12px), where it has to work.</p>
+  </div>
+
+  <section class="block">
+    <h2 class="block-title">1 · What it has to sit next to</h2>
+    <div class="existing">
+      <div class="ex"><div class="ex-big" style="background:var(--principle-soft);color:var(--principle-strong)" data-icon="wtf"></div><div class="ex-label">Win the fridge<span>principle · green · cycle arrows</span></div></div>
+      <div class="ex"><div class="ex-big" style="background:var(--flag-soft);color:var(--flag)" data-icon="pot"></div><div class="ex-label">Test kitchen<span>status · blue · pot and steam</span></div></div>
+      <div class="ex"><div class="ex-big" style="background:var(--principle-soft);color:var(--principle-strong)" data-icon="leaf"></div><div class="ex-label">Plant-based (later)<span>principle? · green · leaf</span></div></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2 class="block-title">2 · Candidates</h2>
+    <p class="note">A method is the pattern behind many dishes, so the best marks say "one way, many results" or "built in layers" rather than "cooking" in general. A whisk or a knife would fit any page on the site.</p>
+    <div class="cands" id="cands"></div>
+  </section>
+
+  <section class="block">
+    <h2 class="block-title">3 · Colour</h2>
+    <p class="note">The palette has five hues and four are spoken for: orange→red (accent), yellow (cuisine), blue (test kitchen), green (principle). STYLE.md rules out a sixth. Two ways to colour the chip without one:</p>
+    <div class="two">
+      <div class="opt">
+        <h3>A · Accent (recommended)</h3>
+        <p>STYLE.md says the accent means "interactive, or teaches you something." A method is the part of the site that teaches. Fill <code>--accent-soft</code>, text <code>--accent-strong</code>.</p>
+        <div class="row" id="optA"></div>
+      </div>
+      <div class="opt">
+        <h3>B · Neutral outline</h3>
+        <p>No hue at all: ink text, a faint outline, the icon does the work. Quieter, but it sits close to the plain tag chips.</p>
+        <div class="row" id="optB"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2 class="block-title">4 · On cards</h2>
+    <p class="note">The card's top row has two slots before <code>+N</code>. A method page is an essay, so its card has no cuisine chip; the method chip takes the first slot. Shown with each candidate, accent colour.</p>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <section class="block">
+    <h2 class="block-title">5 · All the marks together</h2>
+    <p class="note">The full set once plant-based arrives, as they'd appear in a recipe page's tag row. Recommended candidate shown.</p>
+    <div class="row" id="together"></div>
+  </section>
+
+  <section class="block">
+    <h2 class="block-title">6 · Recommendation</h2>
+    <div class="callout">
+      <p><b>Fan-out, in the accent colour.</b> One source branching to three results is the definition of a method in one picture, it reads at 12px, and it's unlike the cycle arrows and the pot. Layers is the runner-up; it ties to the stack diagrams, but it's close to a generic "layers" UI icon and overlaps with burgers specifically.</p>
+      <p><b>Plant-based, for the later task:</b> green is taken by principle, and there's no sixth hue. Plant-based is a value like Win the fridge, so it can share the principle green and be told apart by the leaf. That makes green mean "a value this recipe holds," not "Win the fridge" alone, which STYLE.md would need to say.</p>
+    </div>
+  </section>
+</main>
+
+<script>
+  const I = {
+    wtf: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8a5 5 0 0 1 8.5-3.5M13 8a5 5 0 0 1-8.5 3.5"/><path d="M11 2v2.5H8.5M5 14v-2.5h2.5"/></svg>',
+    pot: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 25h32v12c0 2.8-2.2 5-5 5H13c-2.8 0-5-2.2-5-5z"/><path d="M6 25c0-4.4 8-7.5 18-7.5S42 20.6 42 25z"/><path d="M21.5 17.5v-2.5h5v2.5M8 29H4M40 29h4"/><path d="M15 12c-2-2 2-3.5 0-6M33 12c-2-2 2-3.5 0-6"/></svg>',
+    leaf: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 38C10 20 22 9 40 8c0 18-11 30-30 30z"/><path d="M10 38l17-17"/></svg>',
+    fan: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="24" r="5.5"/><path d="M16.5 24H26M26 24l10-12M26 24h10M26 24l10 12"/><circle cx="39" cy="10" r="3"/><circle cx="40" cy="24" r="3"/><circle cx="39" cy="38" r="3"/></svg>',
+    layers: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="8" width="34" height="8" rx="3"/><rect x="11" y="20" width="26" height="8" rx="3"/><rect x="7" y="32" width="34" height="8" rx="3"/></svg>',
+    square: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 39V9l30 30z"/><path d="M15 33v-9.5l9.5 9.5z"/><path d="M9 15h4M9 21h3M9 27h4"/></svg>',
+    scale: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 9v30M16 40h16M9 14h30"/><path d="M9 14l-5 12h10zM39 14l-5 12h10z"/></svg>',
+    whisk: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 30C13 22 15 6 24 6s11 16 0 24z"/><path d="M24 30c-4-6-4-18 0-24 4 6 4 18 0 24z"/><path d="M24 30v12"/></svg>'
+  };
+  const cands = [
+    { k:'fan', name:'Fan-out', rec:true, why:'One method, many dishes. The definition of a method in one picture; reads as a diagram, which suits the engineering voice.' },
+    { k:'layers', name:'Layers', why:'Ties to the stack diagrams and dish families. Risk: it is the generic "layers" icon from every design tool.' },
+    { k:'square', name:'Set square', why:'Engineering precision: measure, then build. Says "how it\'s made" but not "many dishes".' },
+    { k:'scale', name:'Balance', why:'Ratios and proportion. Strong for ratio methods, weak for techniques and families.' },
+    { k:'whisk', name:'Whisk', why:'Plainly "cooking technique." Too general: it would fit any recipe on the site.' }
+  ];
+  const chip = (k, label, cls='') => `<span class="chip chip-method ${cls}">${I[k]}${label}</span>`;
+
+  document.querySelectorAll('[data-icon]').forEach(el => el.innerHTML = I[el.dataset.icon]);
+
+  document.getElementById('cands').innerHTML = cands.map(c => `
+    <div class="cand${c.rec ? ' rec' : ''}">
+      <div class="cand-head"><span class="cand-name">${c.name}</span>${c.rec ? '<span class="cand-tag">Recommended</span>' : ''}</div>
+      <div class="sizes">
+        <div class="s48">${I[c.k]}<small>48</small></div>
+        <div class="s24">${I[c.k]}<small>24</small></div>
+        <div class="s16">${I[c.k]}<small>16</small></div>
+        <div class="s12">${I[c.k]}<small>12</small></div>
+      </div>
+      <div>${chip(c.k, 'Method')}</div>
+      <p>${c.why}</p>
+    </div>`).join('');
+
+  document.getElementById('optA').innerHTML = cands.slice(0,3).map(c => chip(c.k, 'Method')).join('');
+  document.getElementById('optB').innerHTML = cands.slice(0,3).map(c => chip(c.k, 'Method', 'neutral')).join('') + '<span class="chip chip-tag">burgers</span>';
+
+  const essays = [
+    ['Burger assembly', 'Cold crunch, something sharp, and a patty that brings the salt and fat. Every build that works follows the same order.', 'Read', '6m'],
+    ['Stock', 'Stock is a savoury tea: pick ingredients that extract well, pull the solids, reduce, then strain.', 'Read', '5m'],
+    ['Reverse cooking', 'Cook gently first, then brown at the end. The gentle phase controls doneness; the hot phase is only for crust.', 'Read', '4m']
+  ];
+  document.getElementById('cards').innerHTML = cands.map((c, i) => {
+    const e = essays[i % essays.length];
+    return `<div class="rcard"><div class="rcard-top">${chip(c.k, 'Method')}<span class="chip chip-tag">burgers</span><span class="chip chip-tag" style="border-style:dashed">+2</span></div><h3>${e[0]}</h3><p>${e[1]}</p><div class="stat">${e[2]} <b>${e[3]}</b> · ${c.name}</div></div>`;
+  }).join('') + `<div class="rcard"><div class="rcard-top"><span class="chip chip-dev">${I.pot}Testing</span><span class="chip chip-principle">${I.wtf}WTF</span><span class="chip chip-tag" style="border-style:dashed">+3</span></div><h3>For comparison: a recipe</h3><p>The two marks that already exist, as they sit on a card today.</p><div class="stat">Prep <b>15m</b> Cook <b>1h</b></div></div>`;
+
+  document.getElementById('together').innerHTML =
+    `<span class="chip chip-cuisine">Canadian</span>` +
+    `<span class="chip chip-principle">${I.wtf}Win the fridge</span>` +
+    `<span class="chip chip-plant">${I.leaf}Plant-based</span>` +
+    `<span class="chip chip-method">${I.fan}Method</span>` +
+    `<span class="chip chip-dev">${I.pot}Test kitchen</span>` +
+    `<span class="chip chip-tag">burgers</span><span class="chip chip-tag">weeknight</span>`;
+
+  const tt = document.getElementById('tt'), root = document.documentElement;
+  const dark = () => root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  const sync = () => tt.textContent = dark() ? 'Toggle light' : 'Toggle dark';
+  tt.onclick = () => { root.dataset.theme = dark() ? 'light' : 'dark'; sync(); };
+  sync();
+</script>
+</body>
+</html>
