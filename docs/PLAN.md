@@ -18,16 +18,17 @@ Spec: `docs/METHODS.md` (decided 2026-10-10). Template work is Fugu's, handed to
 
 **Phase 2: concept pages (Fugu handoff)**
 
-Mocked 2026-10-10 in `mockups/methods-pages.html`; the template work is queued in `themes/fugu/PLAN.md` Features, "Concept pages: principle, status, method" (and "Extra taxonomies in the page header's tags row"). Fugu commits `b7bf0fe`, `83dbc04`, not pushed yet.
+Mocked 2026-10-10 in `mockups/methods-pages.html`; the template work is queued in `themes/fugu/PLAN.md` Features, "Concept pages: principle, status, method" (and "Extra taxonomies in the page header's tags row"). Built by the Fugu agent 2026-10-10 (Fugu `944dec2`, pushed; settings in `[params.fugu.methods]`).
 
 - [x] Pick the methods icon. *Done 2026-10-10: fan-out, accent colour (`mockups/methods-icon.html`, STYLE.md Method chip, `assets/icons/methods/fan-out.svg`).*
 - [x] Mock the methods and blueprint pages against `mockups/STYLE.md` first. *Done 2026-10-10: methods page, blueprint page, method page header and part navigation, cards, and what the three concept kinds share.*
 - [x] Add builds and options to the model and the mock. *Done 2026-10-10: builds are their own method pages (`build_name`, `profile` as free text, `picks`), options are an `## Options` table in a part's method; docs/METHODS.md "Inside a blueprint".*
 - [x] Settle the mock's open choices (its §7). *Done 2026-10-10: all eight as proposed (alternatives kept in the mock); recorded in STYLE.md (Definition callout, Blueprint chip, Methods and blueprint pages) and `style.html`.*
-- [ ] Fugu: shared concept partials with a `kind`; principle and test kitchen render the same after.
-- [ ] Fugu: the method chip, the methods list, the blueprint page (builds, picks compared, parts with options, recipes by build), the build page, the blueprint chip, part and build navigation, and `blueprint`/`part`/`build_name` in `index.json`.
-- [ ] When the blueprint chip lands, remove the stopgap rule in `custom.css` (`.tags-row > a[href*="/blueprint/"]`).
-- [ ] Bump the `themes/fugu` submodule and check every page type in Chrome, light and dark, desktop and phone.
+- [x] Fugu: shared concept partials with a `kind`; principle and test kitchen render the same after. *Done 2026-10-10, `944dec2`.*
+- [x] Fugu: the method chip, the methods list, the blueprint page (builds, picks compared, parts with options, recipes by build), the build page, the blueprint chip, part and build navigation, and `blueprint`/`part`/`build_name` in `index.json`. *Done 2026-10-10, `944dec2`. Build pages render Picks and "Recipes in this build" from front matter, so build bodies don't repeat them.*
+- [x] When the blueprint chip lands, remove the stopgap rule in `custom.css` (`.tags-row > a[href*="/blueprint/"]`). *Done 2026-10-10, `41ec5ee`.*
+- [x] Bump the `themes/fugu` submodule. *Done 2026-10-10, `353cfc3`.*
+- [ ] Check every page type in Chrome, light and dark, desktop and phone: the methods list, the burgers blueprint, a build page, a part's method, and that Win the fridge and Test kitchen look unchanged.
 
 **Phase 3: first methods**
 
