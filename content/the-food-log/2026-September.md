@@ -13,14 +13,9 @@ Two goulash tests: a first-principles pork version on the 14th that came out bet
 - [ ] Cornmeal-breaded chicken patty → *this needs research*
 
 
-### Warped commands project bugs #todo 
-
-- [ ] Help doc needs a setting so it doesn't re-appear
-- [ ] Projects view doesn't work as a default (mess in other vaults)
-
 ### Bruce loves to cook site #todo 
 
-- [ ] Image thingy doesn't swipe on mobile
+- [x] Image thingy doesn't swipe on mobile #todone @2026-10-10
 
 ## Tuesday, September 29th
 
