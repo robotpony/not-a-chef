@@ -128,7 +128,9 @@ blueprint: [burgers]
 build_name: Deluxe griddle
 ```
 
-A build page reads like any method: the principle of the build first (why these picks go together), then the picks with links to each part's method, how it fails, its variations, and the recipes that are instances of it. Its stack diagram (see Diagrams) is the clearest picture of a build: each layer's role adds up to the profile.
+A build page reads like any method: the principle of the build first (why these picks go together), then why the picks go together, how it fails, its variations, and the recipes that are instances of it. Its stack diagram (see Diagrams) is the clearest picture of a build: each layer's role adds up to the profile.
+
+Don't repeat the picks or the recipe list in a build page's body: the template draws a Picks list from `picks` (each part linking to its method) before the body, and "Recipes in this build" cards (recipes with the same `build_name`) after it.
 
 Why not nested blueprints ("burgers → deluxe")? Builds share nearly every part and differ only in their picks; a child blueprint would repeat all the parts. Clusters of builds (rich, fresh, sweet) are builds grouped by profile, not a separate level; add one only if a blueprint ever has more builds than its page can show.
 

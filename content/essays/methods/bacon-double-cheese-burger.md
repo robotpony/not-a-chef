@@ -8,23 +8,15 @@ blueprint: [burgers]
 build_name: Bacon double cheese
 profile: Salty, sweet, and rich; little crunch.
 picks:
-  - "Patty construction: two thin patties, 75 g each, double-ground"
+  - "Patty construction: Two thin patties, 75 g each, double-ground"
   - "Patty seasoning: 4:2:1 salt, MSG, and pepper, after cooking"
-  - "Cooking: griddle from frozen, cheese melted on after the flip"
-  - "Assembly: processed cheese between the patties, crisp bacon, pickle, onion"
-  - "Sauces: ketchup and mustard, 5:1"
+  - "Cooking: From frozen on a hot griddle, cheese on after the flip"
+  - "Assembly: Half a slice of processed cheese between the patties, crisp bacon, thin pickles, onion, on a small bun pressed a little flat"
+  - "Sauces: Ketchup and mustard, 5:1"
 description: "The bacon double cheese burger: two thin patties with melted processed cheese and crisp bacon, where salt and fat are the point."
 ---
 
 This is the rich build. Where the deluxe is all contrast, this one leans into salt and fat: two thin patties, a slice of processed cheese melted between them, and crisp bacon. Pickles, ketchup, mustard, and onion keep it from going heavy. It's the one case where cheese earns its place on a burger: a thin slice of Kraft Deluxe on a McDouble or a Quarter Pounder.
-
-## Picks
-
-- **Patty:** two thin, double-ground patties, 75 g each (see [[Burger patties]]).
-- **Seasoning:** the 4:2:1 salt, MSG, and pepper blend, after cooking (see [[Burger seasoning]]).
-- **Cooking:** from frozen on a hot griddle; cheese on one patty after the flip (see [[Burger cooking]]).
-- **Assembly:** half a slice of processed cheese between the patties, crisp bacon, thin pickles, and onion, on a small bun pressed a little flat (see [[Burger assembly]]).
-- **Sauce:** ketchup and mustard, 5:1 (see [[Burger sauces]]).
 
 ## Why these picks
 
@@ -38,8 +30,8 @@ This is the rich build. Where the deluxe is all contrast, this one leans into sa
 - **Heavy:** no pickle or mustard to cut the fat.
 - **Chewy:** the bacon wasn't crisp.
 
-## Recipes
+## Notes
 
-[[McDouble]] is this build without the bacon.
+- [[McDouble]] is this build without the bacon.
 
 <!-- TODO: is "bacon double cheese" one build with the McDouble, or should the McDouble be its own "double cheese" build? Set `build_name:` on the McDouble once decided. -->

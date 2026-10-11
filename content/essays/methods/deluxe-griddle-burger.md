@@ -8,23 +8,15 @@ blueprint: [burgers]
 build_name: Deluxe griddle
 profile: Cold crunch and sharp against a salty patty.
 picks:
-  - "Patty construction: thin, 140 g"
-  - "Patty seasoning: after cooking"
-  - "Cooking: griddle, flip once"
-  - "Assembly: lettuce, tomato, raw and fried onion, double-sour pickle"
-  - "Sauces: ketchup and mustard, kept separate"
+  - "Patty construction: One thin patty, 140 g, not mixed"
+  - "Patty seasoning: Salt and pepper after cooking"
+  - "Cooking: Griddled hot, flipped once"
+  - "Assembly: Shredded lettuce, thin tomato, paper-thin raw purple onion, onion sautéed in the beef fat, double-sour pickles, cracked pepper, on a toasted bun"
+  - "Sauces: Ketchup and mustard, kept separate"
 description: "The deluxe griddle burger: a thin, griddled patty under cold lettuce, tomato, two kinds of onion, and sour pickles."
 ---
 
 Deluxe means lettuce and tomato (it's [[White Spot burgers]] language). The build works because everything above the patty is cold, crunchy, sharp, or sour, and the patty below brings the salt, fat, and savoury depth. Every part is there because the alternative was tried and lost.
-
-## Picks
-
-- **Patty:** one thin patty, 140 g, not mixed (see [[Burger patties]]).
-- **Seasoning:** salt and pepper after cooking, never in the meat (see [[Burger seasoning]]).
-- **Cooking:** griddled on a hot flat-top or heavy pan, flipped once (see [[Burger cooking]]).
-- **Assembly:** shredded lettuce, thin-sliced tomato, paper-thin raw purple onion, onion sautéed in the beef fat, double-sour pickles, and a crack of black pepper, on a toasted bun (see [[Burger assembly]]).
-- **Sauce:** ketchup and mustard, kept separate (see [[Burger sauces]]).
 
 ## Why these picks
 
@@ -42,7 +34,3 @@ Deluxe means lettuce and tomato (it's [[White Spot burgers]] language). The buil
 
 - **BC burger:** add cheddar and bacon (White Spot's name for it).
 - **Blended sauce:** swap the ketchup and mustard for [[Bruce's burger sauce]].
-
-## Recipes
-
-[[White Spot burgers]].

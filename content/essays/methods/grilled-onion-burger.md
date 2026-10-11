@@ -8,23 +8,15 @@ blueprint: [burgers]
 build_name: Grilled onion
 profile: Sweet and savoury; one soft, even texture.
 picks:
-  - "Patty construction: paper thin, smashed"
-  - "Patty seasoning: after cooking"
-  - "Cooking: smash, with the onion cooked in the beef fat"
-  - "Assembly: lots of cooked onion, maybe a pickle"
-  - "Sauces: yellow mustard"
+  - "Patty construction: Paper thin, smashed"
+  - "Patty seasoning: After cooking"
+  - "Cooking: Smashed on a hot griddle, onion cooked in the rendered fat"
+  - "Assembly: A pile of cooked onion, a pickle for the only sharp note"
+  - "Sauces: Yellow mustard"
 description: "The grilled onion burger: a smashed patty and a pile of onion cooked sweet in the beef fat."
 ---
 
 This build is about one ingredient: onion, cooked down in the beef fat until it's sweet. Where the deluxe gets its contrast from cold crunch, this one is sweet and savoury with one soft, even texture.
-
-## Picks
-
-- **Patty:** paper thin, smashed (see [[Burger patties]]).
-- **Seasoning:** after cooking (see [[Burger seasoning]]).
-- **Cooking:** smashed on a hot griddle, with the onion cooking in the rendered fat (see [[Burger cooking]]).
-- **Assembly:** a pile of cooked onion; a pickle for the only sharp note (see [[Burger assembly]]).
-- **Sauce:** yellow mustard (see [[Burger sauces]]).
 
 ## Notes
 

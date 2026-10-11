@@ -323,7 +323,7 @@ Use `##` headings only when sections are long enough that a reader needs navigat
 
 A reference essay (`content/essays/reference-essays/`) defines one concept and is tagged with that term, so the term's tag page can link to it. A term that doesn't need a whole essay gets a glossary entry in `content/reference/glossary.md` instead.
 
-A part's method lists its choices under `## Options`, as a table with `Option`, `Pick it when`, and `Changes` columns; options aren't pages. A build is a method page with `build_name`, `profile`, and `picks` (docs/METHODS.md, Inside a blueprint).
+A part's method lists its choices under `## Options`, as a table with `Option`, `Pick it when`, and `Changes` columns; options aren't pages. A build is a method page with `build_name`, `profile`, and `picks` (docs/METHODS.md, Inside a blueprint). Its body doesn't repeat the picks or list its recipes; the template renders both from front matter.
 
 A method (`content/essays/methods/`) explains how a kind of food or a cooking process works in general: the principle first, then the variables, the stages, why each one is there, how it fails, and the recipes that use it. The folder decides what's a method. Each page MUST carry the `method` tag: the essays `_index.md` cascades it to a method page with no `tags`, but a page that sets its own `tags` replaces the cascade, so list `method` there. What counts as a method, and how methods relate to blueprints, recipes, and stories, is in docs/METHODS.md.
 
