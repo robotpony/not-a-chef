@@ -103,6 +103,8 @@ Blueprint (burgers)
 | `build_name` | recipe | Which build the recipe is an instance of: the same name as the build page's `build_name` |
 | `profile` | build page | Free text, one line: what it tastes and feels like (`Cold crunch and sharp against a salty patty`). Free text for now; a fixed vocabulary can come later if builds need comparing by it. |
 | `picks` | build page | One pick per part, as a list of `"Part: pick"` strings in the blueprint's part order. A list, not a map, because the content tools read flat frontmatter (`frontmatter.py`). |
+| `origin` | build page | Optional. Free text, short: where and when the build comes from (`Drive-in, 1960s`). Shown under the build's title on its card and page. |
+| `era` | build page | Optional. A year (`1960`) that places the build on the blueprint's lineage timeline. Free-text `origin` can't be sorted, so the two travel together. |
 
 ```yaml
 ---
@@ -132,9 +134,19 @@ A build page reads like any method: the principle of the build first (why these 
 
 Don't repeat the picks or the recipe list in a build page's body: the template draws a Picks list from `picks` (each part linking to its method) before the body, and "Recipes in this build" cards (recipes with the same `build_name`) after it.
 
+**History.** A build is often a historical style, and its picks are the constraints of the kitchen it came from. A 1960s drive-in cooked fast on a flat-top with ingredients it could buy reliably, so its burger has a thin patty, bottled condiments, a soft bun, and shredded iceberg. That's why build pages carry their history (decided 2026-10-10):
+
+- **`origin` and `era`** in front matter (above), for the card, the page header, and the timeline.
+- **A `## Where it comes from` section** in the body: the era, the place, and the kind of kitchen, then the constraints and the picks each one explains, as a two-column table (`Constraint`, `Pick it explains`). This is the part that teaches: knowing why a pick exists tells you which ones matter when you change something.
+- **Facts are sourced or attributed.** Dates and origin stories come from Bruce or a cited source; where accounts disagree, the page says so, as [[White Spot burgers]] does.
+
+A recipe that's a real, specific instance of a build (White Spot burgers, the McDouble) keeps its own specifics, like the Triple O name and its sauces; the build page has the general history of the style.
+
+The blueprint page shows a **lineage timeline**: builds placed by `era`, with names and origins, so the page shows how the dish changed over time. A blueprint's `_index.md` can list builds nobody has written yet as `planned: ["1985: Pub burger", "2010: Smash burger"]`; they show faint, like unwritten parts. Builds with no `era` are left off the timeline. The clusters noted below are mostly lineages: rich, fresh, and sweet builds tend to follow era and kitchen.
+
 Why not nested blueprints ("burgers → deluxe")? Builds share nearly every part and differ only in their picks; a child blueprint would repeat all the parts. Clusters of builds (rich, fresh, sweet) are builds grouped by profile, not a separate level; add one only if a blueprint ever has more builds than its page can show.
 
-The blueprint page shows builds as cards (name, profile, recipe count) and a table comparing their picks part by part (`mockups/methods-pages.html`).
+The blueprint page shows a lineage timeline, then builds as cards (name, origin, profile, recipe count, compact diagram) and a table comparing their picks part by part (`mockups/methods-pages.html`).
 
 The same shape fits other blueprints:
 

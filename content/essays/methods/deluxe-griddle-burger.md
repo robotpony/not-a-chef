@@ -7,6 +7,8 @@ tags: [method, burgers]
 blueprint: [burgers]
 build_name: Deluxe griddle
 profile: Cold crunch and sharp against a salty patty.
+origin: Drive-in, 1960s
+era: 1960
 picks:
   - "Patty construction: One thin patty, 140 g, not mixed"
   - "Patty seasoning: Salt and pepper after cooking"
@@ -17,6 +19,21 @@ description: "The deluxe griddle burger: a thin, griddled patty under cold lettu
 ---
 
 Deluxe means lettuce and tomato (it's [[White Spot burgers]] language). The build works because everything above the patty is cold, crunchy, sharp, or sour, and the patty below brings the salt, fat, and savoury depth. Every part is there because the alternative was tried and lost.
+
+## Where it comes from
+
+This is the diner and drive-in burger of the 1960s, the burger [[White Spot burgers]] still makes: built from ingredients a drive-in could buy reliably and cooked fast on a flat-top. Most of the picks are that kitchen's constraints.
+
+| Constraint | Pick it explains |
+|---|---|
+| A flat-top griddle and fast service | A thin patty, smashed, flipped once |
+| Ingredients bought in bulk | Bottled ketchup, mustard, and relish; iceberg lettuce |
+| Eaten in the car, from paper | A soft bun, wrapped so it steams |
+| "Deluxe" as an add-on | Lettuce and tomato |
+
+The sauces and builds have changed over the decades, and accounts of the details disagree; [[White Spot burgers]] has the stories behind its Triple O name.
+
+<!-- TODO: check the era and the constraint table against what you know of 1960s drive-ins. -->
 
 ## Why these picks
 

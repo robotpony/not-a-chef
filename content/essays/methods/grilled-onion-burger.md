@@ -7,6 +7,7 @@ tags: [method, burgers, onion]
 blueprint: [burgers]
 build_name: Grilled onion
 profile: Sweet and savoury; one soft, even texture.
+# TODO: origin and era once the build is settled
 picks:
   - "Patty construction: Paper thin, smashed"
   - "Patty seasoning: After cooking"

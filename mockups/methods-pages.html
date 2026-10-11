@@ -264,6 +264,36 @@
   .thumb{ display:flex; justify-content:center; padding:4px 0; }
   .thumb svg.dia{ width:150px; height:auto; overflow:visible; }
   svg.dia{ display:block; width:100%; height:auto; overflow:visible; }
+
+  /* NEW: origin line and lineage timeline (history, 2026-10-10) */
+  .origin{ font-family:'IBM Plex Mono',monospace; font-size:.7rem; color:var(--ink-faint); letter-spacing:.02em; margin:0; }
+  .timeline{ position:relative; margin:8px 0 34px; padding:44px 0 0; }
+  .tl-track{ position:relative; height:2px; background:var(--border-strong); margin:0 6px; }
+  .tl-tick{ position:absolute; top:8px; transform:translateX(-50%); font-family:'IBM Plex Mono',monospace; font-size:.66rem; color:var(--ink-faint); }
+  .tl-tick::before{ content:""; position:absolute; left:50%; top:-12px; width:1px; height:6px; background:var(--border-strong); }
+  .tl-mark{ position:absolute; bottom:-6px; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; text-decoration:none; color:var(--ink); }
+  .tl-dot{ width:12px; height:12px; border-radius:50%; background:var(--accent); border:2px solid var(--surface); box-shadow:0 0 0 1px var(--accent); order:2; }
+  .tl-name{ font-family:'Libre Franklin',sans-serif; font-size:.78rem; font-weight:600; white-space:nowrap; margin-bottom:6px; order:1; }
+  .tl-mark.alt .tl-name{ margin-bottom:24px; }
+  .tl-mark.alt .tl-name::after{ content:""; display:block; width:1px; height:16px; background:var(--border-strong); margin:2px auto 0; }
+  .tl-mark.todo .tl-dot{ background:var(--surface); box-shadow:0 0 0 1px var(--ink-faint); }
+  .tl-mark.todo .tl-name{ color:var(--ink-faint); font-weight:500; }
+  .tl-ticks{ position:relative; height:28px; margin:0 6px; }
+  .tl-note{ font-size:.78rem; color:var(--ink-faint); font-style:italic; }
+  @media (max-width:640px){
+    .timeline{ padding:0; }
+    .tl-ticks{ display:none; }
+    .tl-track{ height:auto; background:none; margin:0 0 30px; }
+    .tl-note{ margin-top:0 !important; }
+    .tl-list{ display:flex; flex-direction:column; gap:0; border-left:2px solid var(--border-strong); margin-left:6px; }
+    .tl-mark{ position:static; transform:none; flex-direction:row; align-items:center; gap:10px; padding:6px 0 6px 0; margin-left:-7px; }
+    .tl-mark .tl-dot{ order:0; }
+    .tl-mark .tl-name, .tl-mark.alt .tl-name{ margin:0; }
+    .tl-mark.alt .tl-name::after{ display:none; }
+    .tl-mark .tl-year{ display:inline; }
+  }
+  .tl-year{ display:none; font-family:'IBM Plex Mono',monospace; font-size:.68rem; color:var(--ink-faint); }
+  .history{ margin-top:28px; }
 </style>
 </head>
 <body class="fstyle">
@@ -277,7 +307,7 @@
 
 <main>
   <div class="hero">
-    <span class="eyebrow">Decided 2026-10-10 · METHODS phase 2 · builds added</span>
+    <span class="eyebrow">Decided 2026-10-10 · METHODS phase 2 · builds added · history proposed</span>
     <h1>Methods and blueprint pages</h1>
     <p class="lede">The concept pages for methods (<code>docs/METHODS.md</code>): the methods list, a blueprint's page, and how a method page and its card show where they belong. They reuse the principle page's parts (header, definition callout, card grid, reference list) in the accent colour, plus one new component, the ordered parts list.</p>
     <p class="lede">Content is illustrative: only reverse cooking and food ratios exist as methods today, and none of the burger parts are written yet.</p>
@@ -337,11 +367,19 @@
         <a class="read-essay" href="#methods">All methods →</a>
       </div>
 
+      <h3 class="subsection-title">Lineage</h3>
+      <div class="timeline" aria-label="Burger builds by era">
+        <div class="tl-track"><div class="tl-list"><a class="tl-mark " href="#" style="left:5.5%" title="1920s–30s, Depression lunch counters"><span class="tl-name">Grilled onion <span class="tl-year">· 1920s–30s, Depression lunch counters</span></span><span class="tl-dot"></span></a><a class="tl-mark alt" href="#" style="left:31.8%" title="1950s on, fast-food chains"><span class="tl-name">Fast-food double <span class="tl-year">· 1950s on, fast-food chains</span></span><span class="tl-dot"></span></a><a class="tl-mark " href="#build" style="left:38.2%" title="1960s, drive-ins"><span class="tl-name">Deluxe griddle <span class="tl-year">· 1960s, drive-ins</span></span><span class="tl-dot"></span></a><a class="tl-mark alt todo" href="#" style="left:59.1%" title="1980s on, pubs and grills; not written yet"><span class="tl-name">Pub burger <span class="tl-year">· 1980s on, pubs and grills; not written yet</span></span><span class="tl-dot"></span></a><a class="tl-mark  todo" href="#" style="left:83.6%" title="2010s, the smash revival; not written yet"><span class="tl-name">Smash burger <span class="tl-year">· 2010s, the smash revival; not written yet</span></span><span class="tl-dot"></span></a></div></div>
+        <div class="tl-ticks"><span class="tl-tick" style="left:0.0%">1920s</span><span class="tl-tick" style="left:9.1%">1930s</span><span class="tl-tick" style="left:18.2%">1940s</span><span class="tl-tick" style="left:27.3%">1950s</span><span class="tl-tick" style="left:36.4%">1960s</span><span class="tl-tick" style="left:45.5%">1970s</span><span class="tl-tick" style="left:54.5%">1980s</span><span class="tl-tick" style="left:63.6%">1990s</span><span class="tl-tick" style="left:72.7%">2000s</span><span class="tl-tick" style="left:81.8%">2010s</span><span class="tl-tick" style="left:90.9%">2020s</span></div>
+      </div>
+      <p class="tl-note" style="margin:-22px 0 30px">Placed by each build's <code>era</code> year. Faint dots are builds the blueprint expects but nobody has written yet. Dates here are illustrative until the build pages source them.</p>
+
       <h3 class="subsection-title">Builds<span class="n">3</span></h3>
       <div class="build-grid">
         <a class="bcard" href="#build" style="text-decoration:none;color:inherit">
           <div class="rcard-top"><span class="chip method-chip"><span data-icon="fan"></span>Build</span></div>
           <div class="bcard-title">Deluxe griddle</div>
+          <p class="origin">Drive-in · 1960s</p>
           <p class="profile">Cold crunch and sharp against a salty patty.</p>
           <div class="thumb" data-build="deluxe" aria-hidden="true"></div>
           <div class="rcard-stats"><span class="rcard-stat"><b>Recipes</b><span>2</span></span><span class="rcard-stat"><b>Read</b><span>5m</span></span></div>
@@ -349,6 +387,7 @@
         <div class="bcard">
           <div class="rcard-top"><span class="chip method-chip"><span data-icon="fan"></span>Build</span></div>
           <div class="bcard-title">Bacon double cheese</div>
+          <p class="origin">Fast food · 1950s on</p>
           <p class="profile">Salty, sweet, and rich; little crunch.</p>
           <div class="thumb" data-build="bacon" aria-hidden="true"></div>
           <div class="rcard-stats"><span class="rcard-stat"><b>Recipes</b><span>1</span></span><span class="rcard-stat"><b>Read</b><span>4m</span></span></div>
@@ -356,6 +395,7 @@
         <div class="bcard">
           <div class="rcard-top"><span class="chip method-chip"><span data-icon="fan"></span>Build</span></div>
           <div class="bcard-title">Grilled onion</div>
+          <p class="origin">Lunch counter · 1920s–30s</p>
           <p class="profile">Sweet and savoury; one soft, even texture.</p>
           <div class="thumb" data-build="onion" aria-hidden="true"></div>
           <div class="rcard-stats"><span class="rcard-stat"><b>Recipes</b><span>0</span></span><span class="rcard-stat"><b>Read</b><span>3m</span></span></div>
@@ -426,6 +466,7 @@
         <a class="chip tag" href="#">burgers</a>
       </div>
       <p class="profile" style="margin-top:16px;font-size:1.05rem">Cold crunch and sharp against a salty patty.</p>
+      <p class="origin" style="margin-top:8px">Drive-in · 1960s</p>
 
       <div class="two-col" style="margin-top:24px">
         <div>
@@ -439,6 +480,19 @@
           </dl>
           <div class="body-col" style="margin-top:0">
             <p>Deluxe means lettuce and tomato. The build works because every layer above the patty is cold, crunchy, or sharp, and the patty below brings the salt and fat. Skip the cold crunch and it's one note…</p>
+            <div class="history">
+              <h3 class="subsection-title">Where it comes from</h3>
+              <p>A 1960s drive-in burger, made from ingredients the kitchen could buy reliably and cooked fast on a flat-top. Most of the picks are the kitchen's constraints:</p>
+              <div class="tablewrap" style="margin-top:12px"><table class="matrix" style="min-width:0">
+                <thead><tr><th>Constraint</th><th>Pick it explains</th></tr></thead>
+                <tbody>
+                  <tr><th>Flat-top griddle, fast service</th><td>Thin patty, smashed, flipped once</td></tr>
+                  <tr><th>Bought in bulk</th><td>Bottled ketchup, mustard, relish; iceberg</td></tr>
+                  <tr><th>Eaten in the car, from paper</th><td>Soft bun, wrapped and steamed</td></tr>
+                  <tr><th>"Deluxe" as an add-on</th><td>Lettuce and tomato</td></tr>
+                </tbody>
+              </table></div>
+            </div>
           </div>
         </div>
         <div class="stack-big">

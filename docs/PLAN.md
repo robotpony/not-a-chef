@@ -37,6 +37,10 @@ Mocked 2026-10-10 in `mockups/methods-pages.html`; the template work is queued i
 - [ ] Stock method, from Why ingredients matter in stock and the four stock recipes.
 - [ ] Foil packets method, from Camp cooking.
 
+- [x] History on builds (decided 2026-10-10): `origin` and `era` front matter, a `## Where it comes from` section with a constraint / pick table, and a lineage timeline on the blueprint page (`mockups/methods-pages.html`). The deluxe griddle has its history; the other two builds have TODOs.
+- [ ] Fugu: show `origin` on build cards and pages, and the lineage timeline (builds by `era`, plus the blueprint's `planned` builds, faint).
+- [ ] Rename the builds by lineage, once Bruce picks names.
+
 **Phase 4: stack diagrams**
 
 - [x] Mock the ` ```stack ` block in `mockups/` and settle it in `mockups/STYLE.md` and `style.html`. *Done 2026-10-10: exploded view in the formula icons' style, labels on the right, no assembled view (`mockups/exploded-builds.html`, STYLE.md "Exploded build diagram"). Accepted as v1; refinement is phase 6.*

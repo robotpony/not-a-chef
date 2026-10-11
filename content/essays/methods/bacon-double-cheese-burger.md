@@ -7,6 +7,7 @@ tags: [method, burgers]
 blueprint: [burgers]
 build_name: Bacon double cheese
 profile: Salty, sweet, and rich; little crunch.
+# TODO: origin and era (fast food, 1950s on?), sourced
 picks:
   - "Patty construction: Two thin patties, 75 g each, double-ground"
   - "Patty seasoning: 4:2:1 salt, MSG, and pepper, after cooking"
