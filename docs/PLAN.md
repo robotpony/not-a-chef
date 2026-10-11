@@ -20,7 +20,8 @@ Spec: `docs/METHODS.md` (decided 2026-10-10). Template work is Fugu's, handed to
 
 - [ ] Hand off: generalize `principle/term.html`, `principle-chip.html`, and `development/*` into shared concept partials with a `kind` (principle, status, method).
 - [ ] Hand off: methods listing grouped by family, and a family term page that lists parts in the `_index.md` order, then recipes, then stories.
-- [ ] Pick the methods icon; mock the methods and family pages against `mockups/STYLE.md` first.
+- [x] Pick the methods icon. *Done 2026-10-10: fan-out, accent colour (`mockups/methods-icon.html`, STYLE.md Method chip, `assets/icons/methods/fan-out.svg`).*
+- [ ] Mock the methods and family pages against `mockups/STYLE.md` first.
 - [ ] Check win-the-fridge and test kitchen render the same after the change.
 
 **Phase 3: first methods**

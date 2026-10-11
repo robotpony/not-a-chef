@@ -87,6 +87,8 @@ Today principle and status are built separately (`principle/term.html` and `prin
 
 What stays per kind is how membership is decided and the body layout: a flat recipe grid for a principle, a draft list for status, parts in order for a family.
 
+The method chip is the fan-out icon (`assets/icons/methods/fan-out.svg`) in the accent colour, decided 2026-10-10 (`mockups/STYLE.md` Method chip, `mockups/methods-icon.html`).
+
 The shared templates are Fugu work (`themes/fugu`), handed to the Fugu agent. This repo supplies the `_index.md` files, icons, and config.
 
 ## Ontology
@@ -147,4 +149,3 @@ Shapes to cover first: sandwich construction, burger construction, lasagne layer
 
 - Should recipe frontmatter have a `method:` field, or are wiki links enough to connect a recipe to its methods?
 - Do methods use `formula` blocks for their ratios, the way recipes do? (Likely yes; nothing stops it.)
-- What icon does the methods concept get?

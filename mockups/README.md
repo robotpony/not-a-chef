@@ -45,7 +45,8 @@ in a browser — no build step.
 - **`methods-icon.html`**: proposal (2026-10-10) for the methods concept
   mark (`docs/METHODS.md`): five icon candidates at 48/24/16/12px, two
   ways to colour the chip without a sixth hue, the chips on cards, and the
-  full set with the later plant-based leaf. Not decided yet.
+  full set with the later plant-based leaf. Decided 2026-10-10: fan-out in
+  the accent colour (`STYLE.md` Method chip).
 
 - **`in-development.html`**: proposal (2026-10-07) to make `draft: true`
   mean "published, still changing" instead of hidden. A flag-blue callout

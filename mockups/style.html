@@ -132,6 +132,8 @@
   /* ---- real components, full scale ---- */
   .tag{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; border:1px solid var(--border-strong); color:var(--ink-muted); padding:3px 7px; border-radius:3px; display:inline-block; }
   .cuisine-chip{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; font-weight:600; background:var(--highlight-soft); color:var(--highlight); padding:3px 7px; border-radius:3px; display:inline-block; }
+  .method-chip{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; font-weight:600; background:var(--accent-soft); color:var(--accent-strong); padding:3px 7px; border-radius:3px; display:inline-flex; align-items:center; gap:4px; }
+  .method-chip svg{ width:12px; height:12px; flex:none; }
   .filter-pill{ font-family:'Libre Franklin',sans-serif; font-size:.74rem; font-weight:500; padding:5px 10px; border:1px solid var(--border-strong); border-radius:14px; color:var(--ink-muted); display:inline-block; }
   .filter-pill.on{ background:var(--accent-soft); border-color:var(--accent); color:var(--accent-strong); font-weight:600; }
   .badge-tag{ font-family:'Libre Franklin',sans-serif; font-size:.68rem; font-weight:600; color:var(--flag); background:var(--flag-soft); border-radius:2px; padding:1px 5px; }
@@ -440,6 +442,14 @@
           <span class="cuisine-chip">indian</span><span class="tag">soups</span><span class="tag">weeknight</span><span class="tag">vegetarian</span>
         </div>
         <p class="comp-card-note">Cuisine is filled yellow, one per recipe, always the same color regardless of which cuisine. Tags stay neutral outline — never colored.</p>
+      </div>
+
+      <div class="comp-card">
+        <span class="comp-card-label">Method chip</span>
+        <div class="comp-demo" style="display:flex;gap:6px;flex-wrap:wrap;">
+          <span class="method-chip"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="24" r="5.5"/><path d="M16.5 24H26M26 24l10-12M26 24h10M26 24l10 12"/><circle cx="39" cy="10" r="3"/><circle cx="40" cy="24" r="3"/><circle cx="39" cy="38" r="3"/></svg>Method</span><span class="tag">burgers</span>
+        </div>
+        <p class="comp-card-note">Accent fill, fan-out icon ("one method, many dishes"). Marks method pages; a concept chip like principle and test kitchen. Decided 2026-10-10, not built yet.</p>
       </div>
 
       <div class="comp-card">
