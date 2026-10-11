@@ -60,8 +60,10 @@ in a browser — no build step.
   an exploded view (layers pulled apart, each drawn as the thing, leader
   lines to labels and roles) instead of flat bars: the layer kit, the three
   burger builds labelled and on cards, patty options, lasagne with a repeat
-  bracket, a BLT, and the `stack` source. Food colours are fixed light
-  palette values in both themes. Not decided yet.
+  bracket, a BLT, and the `stack` source. Round 2 (2026-10-10) redraws it
+  in the formula icons' style (one ink line, `--accent-soft` bodies,
+  `--surface` tops, theme tokens); the round 1 colour version is a toggle.
+  Labels on the right, decided; no assembled view for now.
 
 - **`in-development.html`**: proposal (2026-10-07) to make `draft: true`
   mean "published, still changing" instead of hidden. A flag-blue callout

@@ -38,8 +38,8 @@ Mocked 2026-10-10 in `mockups/methods-pages.html`; the template work is queued i
 
 **Phase 4: stack diagrams**
 
-- [ ] Mock the ` ```stack ` block in `mockups/` and settle it in `mockups/STYLE.md` and `style.html`. *Proposed 2026-10-10: exploded view, `mockups/exploded-builds.html`; decide, then record in STYLE.md.*
-- [ ] Draw the layer kit (`assets/icons/layers/`): the 20 layers in `mockups/exploded-builds.html` §2, as SVG files at a common width with their own heights, food colours fixed across themes.
+- [ ] Mock the ` ```stack ` block in `mockups/` and settle it in `mockups/STYLE.md` and `style.html`. *Proposed 2026-10-10: exploded view in the formula icons' style, labels on the right, `mockups/exploded-builds.html`; decide, then record in STYLE.md.*
+- [ ] Draw the layer kit (`assets/icons/layers/`): the 20 layers in `mockups/exploded-builds.html` §2, as SVG files at a common width with their own heights, in the formula icons' style (theme tokens, two fills).
 - [ ] Hand off: `render-codeblock-stack.html`, with `repeat:` and the unknown-icon warning.
 - [ ] First diagrams: burger construction, sandwich construction, lasagne layering.
 

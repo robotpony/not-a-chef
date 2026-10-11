@@ -76,8 +76,9 @@
   svg.dia{ display:block; width:100%; height:auto; overflow:visible; }
 
   /* Before / after */
-  .ba{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-  @media (max-width:560px){ .ba{ grid-template-columns:1fr; } }
+  .ba3{ display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:16px; }
+  .icon-row{ display:flex; gap:6px; justify-content:center; align-items:center; font-family:'IBM Plex Mono',monospace; color:var(--accent); }
+  .icon-row svg{ width:40px; height:40px; color:var(--ink); }
   .bars{ display:flex; flex-direction:column; gap:3px; padding:8px 0; }
   .bar{ height:7px; border-radius:3px; background:var(--surface-2); border:1px solid var(--border-strong); }
   .bar.bun{ background:var(--accent-soft); border-color:var(--accent); height:9px; }
@@ -129,62 +130,87 @@
     --f-highlight:#997F29; --f-highlight-soft:#F6F1D5;
     --f-principle:#247B50; --f-principle-strong:#1D6743; --f-principle-soft:#DBF5E8;
     --f-surface:#FBFBF6; --f-ink:#23241E; --f-ink-faint:#93948A; }
-  .s{ stroke-width:1.4; stroke-linejoin:round; stroke-linecap:round; }
-  .bun{ fill:var(--f-accent-soft); stroke:var(--f-accent); }
-  .bun-dark{ fill:color-mix(in srgb, var(--f-accent) 35%, var(--f-accent-soft)); stroke:var(--f-accent); }
-  .crumb{ fill:var(--f-surface); stroke:var(--f-accent); }
-  .seed{ fill:var(--f-surface); stroke:var(--f-accent); stroke-width:.8; }
-  .leaf{ fill:var(--f-principle-soft); stroke:var(--f-principle); }
-  .leaf-vein{ fill:none; stroke:var(--f-principle); stroke-width:.8; opacity:.7; }
-  .tom{ fill:color-mix(in srgb, var(--f-accent-strong) 30%, var(--f-surface)); stroke:var(--f-accent-strong); }
-  .tom-side{ fill:color-mix(in srgb, var(--f-accent-strong) 55%, var(--f-surface)); stroke:var(--f-accent-strong); }
-  .tom-in{ fill:color-mix(in srgb, var(--f-highlight) 30%, var(--f-surface)); stroke:var(--f-accent-strong); stroke-width:.8; }
-  .ring{ fill:none; stroke:var(--f-accent-strong); stroke-width:3.2; opacity:.55; }
-  .ring-in{ fill:none; stroke:var(--f-accent-strong); stroke-width:.8; }
-  .pick{ fill:color-mix(in srgb, var(--f-principle) 30%, var(--f-surface)); stroke:var(--f-principle-strong); }
-  .pick-side{ fill:color-mix(in srgb, var(--f-principle) 60%, var(--f-surface)); stroke:var(--f-principle-strong); }
-  .pick-seed{ fill:var(--f-principle-strong); opacity:.5; }
-  .cheese{ fill:color-mix(in srgb, var(--f-highlight) 45%, var(--f-surface)); stroke:var(--f-highlight); }
-  .cheese-side{ fill:color-mix(in srgb, var(--f-highlight) 75%, var(--f-surface)); stroke:var(--f-highlight); }
-  .meat{ fill:color-mix(in srgb, var(--f-accent-strong) 80%, var(--f-ink)); stroke:color-mix(in srgb, var(--f-accent-strong) 60%, var(--f-ink)); }
-  .meat-top{ fill:var(--f-accent-strong); stroke:color-mix(in srgb, var(--f-accent-strong) 60%, var(--f-ink)); }
-  .meat-dot{ fill:color-mix(in srgb, var(--f-accent-strong) 50%, var(--f-ink)); opacity:.7; }
-  .bacon{ fill:color-mix(in srgb, var(--f-accent-strong) 45%, var(--f-accent-soft)); stroke:var(--f-accent-strong); }
-  .bacon-fat{ fill:none; stroke:var(--f-accent-soft); stroke-width:2.2; }
-  .sauce-red{ fill:color-mix(in srgb, var(--f-accent-strong) 70%, var(--f-surface)); stroke:var(--f-accent-strong); }
-  .sauce-yel{ fill:color-mix(in srgb, var(--f-highlight) 70%, var(--f-surface)); stroke:var(--f-highlight); }
-  .sauce-pink{ fill:color-mix(in srgb, var(--f-accent) 45%, var(--f-surface)); stroke:var(--f-accent); }
-  .fried{ fill:none; stroke:color-mix(in srgb, var(--f-accent) 80%, var(--f-highlight)); stroke-width:2; }
-  .fried-pad{ fill:color-mix(in srgb, var(--f-highlight) 25%, var(--f-surface)); stroke:none; }
-  .pasta{ fill:color-mix(in srgb, var(--f-highlight) 30%, var(--f-surface)); stroke:var(--f-highlight); }
-  .ragu{ fill:color-mix(in srgb, var(--f-accent-strong) 60%, var(--f-surface)); stroke:var(--f-accent-strong); }
-  .bech{ fill:var(--f-surface); stroke:var(--f-ink-faint); }
+  .cstyle .s{ stroke-width:1.4; stroke-linejoin:round; stroke-linecap:round; }
+  .cstyle .bun{ fill:var(--f-accent-soft); stroke:var(--f-accent); }
+  .cstyle .bun-dark{ fill:color-mix(in srgb, var(--f-accent) 35%, var(--f-accent-soft)); stroke:var(--f-accent); }
+  .cstyle .crumb{ fill:var(--f-surface); stroke:var(--f-accent); }
+  .cstyle .seed{ fill:var(--f-surface); stroke:var(--f-accent); stroke-width:.8; }
+  .cstyle .leaf{ fill:var(--f-principle-soft); stroke:var(--f-principle); }
+  .cstyle .leaf-vein{ fill:none; stroke:var(--f-principle); stroke-width:.8; opacity:.7; }
+  .cstyle .tom{ fill:color-mix(in srgb, var(--f-accent-strong) 30%, var(--f-surface)); stroke:var(--f-accent-strong); }
+  .cstyle .tom-side{ fill:color-mix(in srgb, var(--f-accent-strong) 55%, var(--f-surface)); stroke:var(--f-accent-strong); }
+  .cstyle .tom-in{ fill:color-mix(in srgb, var(--f-highlight) 30%, var(--f-surface)); stroke:var(--f-accent-strong); stroke-width:.8; }
+  .cstyle .ring{ fill:none; stroke:var(--f-accent-strong); stroke-width:3.2; opacity:.55; }
+  .cstyle .ring-in{ fill:none; stroke:var(--f-accent-strong); stroke-width:.8; }
+  .cstyle .pick{ fill:color-mix(in srgb, var(--f-principle) 30%, var(--f-surface)); stroke:var(--f-principle-strong); }
+  .cstyle .pick-side{ fill:color-mix(in srgb, var(--f-principle) 60%, var(--f-surface)); stroke:var(--f-principle-strong); }
+  .cstyle .pick-seed{ fill:var(--f-principle-strong); opacity:.5; }
+  .cstyle .cheese{ fill:color-mix(in srgb, var(--f-highlight) 45%, var(--f-surface)); stroke:var(--f-highlight); }
+  .cstyle .cheese-side{ fill:color-mix(in srgb, var(--f-highlight) 75%, var(--f-surface)); stroke:var(--f-highlight); }
+  .cstyle .meat{ fill:color-mix(in srgb, var(--f-accent-strong) 80%, var(--f-ink)); stroke:color-mix(in srgb, var(--f-accent-strong) 60%, var(--f-ink)); }
+  .cstyle .meat-top{ fill:var(--f-accent-strong); stroke:color-mix(in srgb, var(--f-accent-strong) 60%, var(--f-ink)); }
+  .cstyle .meat-dot{ fill:color-mix(in srgb, var(--f-accent-strong) 50%, var(--f-ink)); opacity:.7; }
+  .cstyle .bacon{ fill:color-mix(in srgb, var(--f-accent-strong) 45%, var(--f-accent-soft)); stroke:var(--f-accent-strong); }
+  .cstyle .bacon-fat{ fill:none; stroke:var(--f-accent-soft); stroke-width:2.2; }
+  .cstyle .sauce-red{ fill:color-mix(in srgb, var(--f-accent-strong) 70%, var(--f-surface)); stroke:var(--f-accent-strong); }
+  .cstyle .sauce-yel{ fill:color-mix(in srgb, var(--f-highlight) 70%, var(--f-surface)); stroke:var(--f-highlight); }
+  .cstyle .sauce-pink{ fill:color-mix(in srgb, var(--f-accent) 45%, var(--f-surface)); stroke:var(--f-accent); }
+  .cstyle .fried{ fill:none; stroke:color-mix(in srgb, var(--f-accent) 80%, var(--f-highlight)); stroke-width:2; }
+  .cstyle .fried-pad{ fill:color-mix(in srgb, var(--f-highlight) 25%, var(--f-surface)); stroke:none; }
+  .cstyle .pasta{ fill:color-mix(in srgb, var(--f-highlight) 30%, var(--f-surface)); stroke:var(--f-highlight); }
+  .cstyle .ragu{ fill:color-mix(in srgb, var(--f-accent-strong) 60%, var(--f-surface)); stroke:var(--f-accent-strong); }
+  .cstyle .bech{ fill:var(--f-surface); stroke:var(--f-ink-faint); }
+
+  /* ---- Formula style: the formula icons' rules. One ink line colour,
+     --accent-soft on bodies and sides, --surface on top faces, detail as a
+     few strokes. Theme tokens, so it follows dark mode like the icons. ---- */
+  .fstyle .s{ stroke:var(--ink); stroke-width:1.8; stroke-linejoin:round; stroke-linecap:round; }
+  .fstyle :is(.bun, .leaf-back, .tom-side, .pick-side, .cheese-side, .meat, .bacon, .sauce-red, .sauce-yel, .sauce-pink, .ragu){ fill:var(--accent-soft); }
+  .fstyle :is(.crumb, .leaf, .tom, .pick, .cheese, .meat-top, .bech, .pasta){ fill:var(--surface); }
+  .fstyle .leaf-back{ fill:var(--accent-soft); opacity:1; }
+  .fstyle .seed{ fill:var(--surface); stroke:var(--ink); stroke-width:1; }
+  .fstyle .leaf-vein{ fill:none; stroke:var(--ink); stroke-width:1.2; }
+  .fstyle .tom-in{ fill:none; stroke:var(--ink); stroke-width:1.1; }
+  .fstyle .ring{ fill:none; stroke:var(--ink); stroke-width:1.8; }
+  .fstyle .ring-in{ display:none; }
+  .fstyle .pick-seed{ fill:var(--ink); }
+  .fstyle .meat-dot{ display:none; }
+  .fstyle .only-f{ fill:none; stroke:var(--ink); stroke-width:1.8; stroke-linecap:round; }
+  .fstyle .bacon-fat{ fill:none; stroke:var(--surface); stroke-width:2.4; }
+  .fstyle .fried{ fill:none; stroke:var(--ink); stroke-width:1.5; }
+  .fstyle .fried-pad{ fill:var(--accent-soft); }
+  .fstyle .crust{ display:none; }
+  .cstyle .only-f{ display:none; }
 </style>
 </head>
 <body>
 <header class="topbar"><div class="topbar-inner">
   <span class="tb-title">Exploded builds</span>
   <nav class="tb-jump"><a href="#why">Why</a><a href="#kit">Layer kit</a><a href="#builds">Builds</a><a href="#cards">Cards</a><a href="#options">Options</a><a href="#beyond">Beyond burgers</a><a href="#syntax">Syntax</a><a href="#rec">Recommendation</a></nav>
+  <button class="theme-toggle" id="st" type="button">Show colour version</button>
   <button class="theme-toggle" id="tt" type="button">Toggle dark</button>
 </div></header>
 
 <main>
   <div class="hero">
-    <span class="eyebrow">Proposal · 2026-10-10 · METHODS phase 4</span>
+    <span class="eyebrow">Proposal · 2026-10-10 · METHODS phase 4 · round 2: formula style</span>
     <h1>Exploded build diagrams</h1>
     <p class="lede">The layer bars in <code>methods-pages.html</code> were abstract, and full-width bars don't look like a burger. This draws a build the way a technical manual draws an assembly: each layer as the thing itself, seen from a three-quarter angle, pulled apart vertically, with leader lines to its name and its role.</p>
-    <p class="lede">Every colour is a palette value or a mix of two, so no new hue comes in; food colours stay fixed across themes (§8). Line weight and simplicity follow the formula icons (round strokes, flat fills, no shading or hand wobble).</p>
+    <p class="lede">Round 2 draws the same shapes in the formula icons' style, and that's what sections 2 to 6 show. The first round's colour version is a click away in the top bar, for comparison.</p>
   </div>
 
   <section class="block" id="why">
-    <h2 class="block-title">1 · Bars vs. exploded</h2>
-    <p class="note">The same deluxe griddle build. The bars only work once you've learned the colour code; the exploded view reads as a burger at a glance, and its width stays in proportion to its height.</p>
-    <div class="ba">
-      <div class="panel"><div class="panel-label">Bars (methods-pages.html)</div><div class="bars"><div class="bar bun top"></div><div class="bar green"></div><div class="bar onion"></div><div class="bar green" style="background:var(--surface)"></div><div class="bar patty"></div><div class="bar bun"></div></div></div>
-      <div class="panel"><div class="panel-label">Exploded</div><div class="thumb" id="ba-ex"></div></div>
+    <h2 class="block-title">1 · Bars, colour, formula style</h2>
+    <p class="note">The same deluxe griddle build three ways. The bars only work once you've learned a colour code. The colour version (first round) reads as food but sits apart from the formula icons. The formula style uses the icons' own rules: one ink line, <code>--accent-soft</code> on bodies and sides, <code>--surface</code> on tops, detail as a few strokes. It follows dark mode like the icons do. The last panel puts it beside three real formula icons.</p>
+    <div class="ba3">
+      <div class="panel"><div class="panel-label">Bars</div><div class="bars"><div class="bar bun top"></div><div class="bar green"></div><div class="bar onion"></div><div class="bar green" style="background:var(--surface)"></div><div class="bar patty"></div><div class="bar bun"></div></div></div>
+      <div class="panel cstyle"><div class="panel-label">Colour (round 1)</div><div class="thumb" id="ba-c"></div></div>
+      <div class="panel fstyle"><div class="panel-label">Formula style</div><div class="thumb" id="ba-ex"></div></div>
+      <div class="panel fstyle"><div class="panel-label">Beside formula icons</div><div class="icon-row" id="ba-icons"></div><div class="thumb" id="ba-ex2" style="margin-top:8px"></div></div>
     </div>
   </section>
 
+  <div id="styled" class="fstyle">
   <section class="block" id="kit">
     <h2 class="block-title">2 · Layer kit</h2>
     <p class="note">One drawing per layer, keyed like the formula icons. Each is drawn at a common width with its own height, so a renderer can stack any sequence of them. Each one has to be recognizable on its own.</p>
@@ -193,7 +219,7 @@
 
   <section class="block" id="builds">
     <h2 class="block-title">3 · Three builds, exploded and labelled</h2>
-    <p class="note">The build page version: full size, a leader line from each layer to its label and role. Put side by side, the three profiles are visible before you read a word: deluxe is tall with green and red, bacon double cheese is meat and cheese, grilled onion is short and plain.</p>
+    <p class="note">The build page version: full size, a leader line from each layer to its label and role. Labels on the right (decided). Side by side, the builds differ by silhouette before you read a word: the deluxe is tall and varied, the bacon double cheese is a stack of patties and cheese, the grilled onion is short and plain.</p>
     <div class="grid3" id="build-grid"></div>
   </section>
 
@@ -215,6 +241,8 @@
     <div class="grid2" id="beyond-grid"></div>
   </section>
 
+  </div>
+
   <section class="block" id="syntax">
     <h2 class="block-title">7 · Source</h2>
     <p class="note">Still the <code>stack</code> block from <code>docs/METHODS.md</code>, top to bottom, one layer per line. The first column names a layer drawing (<code>assets/icons/layers/</code>, a separate kit from the formula icons, since layers are wider than tall and stack). <code>view: exploded</code> is the default; <code>view: stacked</code> could draw the assembled burger later.</p>
@@ -234,13 +262,13 @@ caption: Deluxe griddle
   <section class="block" id="rec">
     <h2 class="block-title">8 · Recommendation and open questions</h2>
     <div class="callout">
-      <p><b>Use the exploded view for builds</b>, labelled on build pages and compact on cards. It's recognizable, it keeps a burger's proportions, and the leader lines carry the roles, so the diagram explains the profile instead of decorating it.</p>
+      <p><b>Use the exploded view for builds, in the formula style</b>, labelled on build pages (labels on the right, decided 2026-10-10) and compact on cards. It reads as a burger, keeps its proportions, and now sits in the same family as the formula icons: one ink line, two fills, theme tokens, so dark mode follows without special colours.</p>
       <ul>
-        <li><b>Food keeps its colours in dark mode.</b> The drawings use fixed values from the light palette (<code>--f-*</code>), not the theme tokens: with theme tokens a patty went pink and a bun went chocolate brown. Labels and leader lines still follow the theme. The raw onion rings are the weakest layer on a dark background.</li>
-        <li><b>Labels left or right?</b> Right here; on phones they shrink with the drawing. Below 400px they could move under the drawing as a numbered key.</li>
-        <li><b>How much detail?</b> These are a little more detailed than the formula icons (seeds, veins, rings). At card size the detail drops out on its own; worth checking at 1× on a real screen.</li>
-        <li><b>Draw by hand or generate?</b> Shown here generated from a few shape functions (disc, dome, wavy disc, slab). As SVG files in a kit they'd be drawn once each and stacked by the render hook.</li>
-        <li><b>Assembled view?</b> A small assembled burger next to the exploded one would help recognition further; leave it for later.</li>
+        <li><b>What the formula style gives up.</b> Lettuce, tomato, and pickles are told apart by shape alone, not green and red. The shapes carry it at full size; check the compact card version in particular.</li>
+        <li><b>How much detail?</b> Detail is strokes only now (patty slashes, leaf veins, onion rings, tomato chambers), like the icons. Seeds on the bun are the one dotted texture left.</li>
+        <li><b>Draw by hand or generate?</b> Generated here from a few shape functions (disc, dome, wavy disc, slab). As SVG files in a kit they'd be drawn once each and stacked by the render hook.</li>
+        <li><b>Colour version.</b> If it's ever wanted, it needs fixed food colours (<code>--f-*</code>), since theme tokens turn a patty pink in dark mode.</li>
+        <li><b>Assembled view:</b> not needed for now.</li>
       </ul>
     </div>
   </section>
@@ -278,7 +306,7 @@ const L = {
   },
   'lettuce'(cx, y, rx){
     const R = rx*1.1, ry = R*K, cy = y+ry+3;
-    let s = `<path class="s leaf" d="${wavyEllipse(cx, cy+3, R, ry, .07, 11, 1)}" opacity=".9"/>`;
+    let s = `<path class="s leaf leaf-back" d="${wavyEllipse(cx, cy+3, R, ry, .07, 11, 1)}" opacity=".9"/>`;
     s += `<path class="s leaf" d="${wavyEllipse(cx, cy, R*0.96, ry*0.96, .06, 9)}"/>`;
     for (const a of [-.5, 0, .45]) s += `<path class="leaf-vein" d="M${f(cx+a*R*0.3)},${f(cy+ry*0.2)}Q${f(cx+a*R*0.8)},${f(cy-ry*0.3)} ${f(cx+a*R*1.2)},${f(cy-ry*0.1)}"/>`;
     return {svg:s, h:2*ry+9, edge:R};
@@ -325,6 +353,7 @@ const L = {
     } else {
       s += disc(cx, cy, rx, t, 'meat', 'meat-top');
     }
+    s += `<path class="only-f" d="M${f(cx-rx*.5)},${f(cy+ry*.1)}l${f(rx*.22)},${f(-ry*.38)}M${f(cx-rx*.12)},${f(cy+ry*.42)}l${f(rx*.34)},${f(-ry*.6)}M${f(cx+rx*.3)},${f(cy+ry*.2)}l${f(rx*.2)},${f(-ry*.36)}"/>`;
     const r = rng(Math.round(rx*t));
     for (let i=0;i<26;i++){ const a=r()*Math.PI*2, d=Math.sqrt(r())*.82; s += `<circle class="meat-dot" cx="${f(cx+Math.cos(a)*rx*d)}" cy="${f(cy+Math.sin(a)*ry*d)}" r="${f(.7+r()*.8)}"/>`; }
     return {svg:s, h:2*ry+t, edge:rx*(lacy?1.08:1)};
@@ -385,7 +414,7 @@ const L = {
         if (sn < 0) py *= 1 + .4*Math.pow(-sn, 3);
         d += (i?'L':'M') + f(cx+px) + ',' + f(cy+py+oy); }
       return d + 'Z'; };
-    const svg = `<path class="s bun" d="${shape(t)}"/><path class="s bun" d="M${f(cx-W)},${f(cy)}L${f(cx-W)},${f(cy+t)}M${f(cx+W)},${f(cy)}L${f(cx+W)},${f(cy+t)}"/><path class="s crumb" d="${shape(0)}"/><path class="s bun" d="${shape(0)}" style="fill:none;stroke-width:2.6;opacity:.55"/>`;
+    const svg = `<path class="s bun" d="${shape(t)}"/><path class="s bun" d="M${f(cx-W)},${f(cy)}L${f(cx-W)},${f(cy+t)}M${f(cx+W)},${f(cy)}L${f(cx+W)},${f(cy+t)}"/><path class="s crumb" d="${shape(0)}"/><path class="s bun crust" d="${shape(0)}" style="fill:none;stroke-width:2.6;opacity:.55"/>`;
     return {svg, h: ry*2.4 + t, edge:W};
   },
   'mayo'(cx, y, rx){ return L.sauce(cx+4, y, rx*1.05, 'bech'); },
@@ -455,6 +484,18 @@ const BUILDS = {
 };
 
 document.getElementById('ba-ex').innerHTML = compose(BUILDS.deluxe.layers, {rx:56, gap:6, labels:false});
+document.getElementById('ba-c').innerHTML = compose(BUILDS.deluxe.layers, {rx:56, gap:6, labels:false});
+document.getElementById('ba-ex2').innerHTML = compose([{k:'bun-top'},{k:'cheese'},{k:'patty-thin'},{k:'bun-base'}], {rx:44, gap:5, labels:false});
+// Real formula icons, copied from Fugu's assets/icons/formula/ (patty, cheese, onion).
+document.getElementById('ba-icons').innerHTML = [
+ '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path style="fill:var(--accent-soft)" d="M7 21v8c0 3.6 7.6 6.5 17 6.5S41 32.6 41 29v-8"/><ellipse style="fill:var(--surface)" cx="24" cy="21" rx="17" ry="6.5"/><path d="M14 21l6-3M20.5 24l8-4.2M29 23.5l5.5-3"/></svg>',
+ '<span>+</span>',
+ '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path style="fill:var(--accent-soft)" d="M5 31l30-15 8 4v14H5z"/><path style="fill:var(--surface)" d="M5 31l30-15 8 4-30 11z"/><path d="M13 31v3M18 36.5h.01M30 30.5a2.2 2.2 0 1 0 0 .01"/></svg>',
+ '<span>+</span>',
+ '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path style="fill:var(--accent-soft)" d="M24 11c-9 5.5-14 12.5-14 19.5C10 37 16.3 42 24 42s14-5 14-11.5C38 23.5 33 16.5 24 11z"/><path d="M24 11V5M24 11c-4 6.5-6 13-5 21M24 11c4 6.5 6 13 5 21M20 42l-1.5 3M24 42v3.2M28 42l1.5 3"/></svg>'
+].join('');
+const st = document.getElementById('st'), styled = document.getElementById('styled');
+st.onclick = () => { const on = styled.classList.toggle('fstyle'); styled.classList.toggle('cstyle', !on); st.textContent = on ? 'Show colour version' : 'Show formula style'; };
 
 const kitKeys = [['bun-top','Bun top'],['lettuce','Lettuce'],['tomato','Tomato'],['onion-raw','Raw onion'],['onion-fried','Fried onion'],['pickle','Pickles'],['cheese','Cheese slice'],['bacon','Bacon'],['patty-thin','Thin patty'],['patty-thick','Thick patty'],['patty-smash','Smashed patty'],['sauce-ketchup-mustard','Ketchup, mustard'],['sauce-burger','Burger sauce'],['mustard','Mustard'],['bun-base','Bun base'],['bread','Bread slice'],['pasta','Pasta sheet'],['ragu','Ragù'],['bechamel','Béchamel'],['cheese-top','Cheese, baked']];
 document.getElementById('kit-grid').innerHTML = kitKeys.map(([k, n]) => `<div class="kit-cell">${compose([{k}], {rx:52, gap:0, labels:false})}<span class="panel-label" style="font-size:.8rem;margin:0">${n}</span><span class="kit-key">${k}</span></div>`).join('');
