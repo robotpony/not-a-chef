@@ -212,7 +212,7 @@ caption: Deluxe griddle build, top to bottom
 - It reuses the formula icon set (`assets/icons/formula/`), with the same unknown-icon warning and the same Obsidian fallback (plain text).
 - Layering needs new icons: bun halves, lettuce, onion, tomato, pickle, cheese slice, sauce, patty, pasta sheet, ragù, béchamel, bread slice, and so on.
 - A later `pairing` block (a texture-by-flavour grid) could cover flavour combinations. `stack` comes first.
-- The look gets mocked and settled in `mockups/STYLE.md` and `style.html` before it's built.
+- The look gets mocked and settled in `mockups/STYLE.md` and `style.html` before it's built. Proposed 2026-10-10 (`mockups/exploded-builds.html`): an **exploded view**, each layer drawn as the thing from a three-quarter angle, pulled apart vertically, with leader lines to its label and role; compact without labels on build cards. Layers come from their own kit (`assets/icons/layers/`), separate from the formula icons. Food keeps its light-palette colours in dark mode.
 
 Shapes to cover first: sandwich construction, burger construction, lasagne layering. On a blueprint, each build gets its own stack.
 

@@ -56,6 +56,13 @@ in a browser — no build step.
   picks comparison on the blueprint page, options as pills, a build page,
   and recipes grouped by build. Queued for Fugu; its §7 choices are open.
 
+- **`exploded-builds.html`**: proposal (2026-10-10) for drawing a build as
+  an exploded view (layers pulled apart, each drawn as the thing, leader
+  lines to labels and roles) instead of flat bars: the layer kit, the three
+  burger builds labelled and on cards, patty options, lasagne with a repeat
+  bracket, a BLT, and the `stack` source. Food colours are fixed light
+  palette values in both themes. Not decided yet.
+
 - **`in-development.html`**: proposal (2026-10-07) to make `draft: true`
   mean "published, still changing" instead of hidden. A flag-blue callout
   on the page (stock sentence from config, optional per-recipe

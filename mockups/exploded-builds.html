@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exploded builds</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  /* Tokens from STYLE.md. Every food colour below is a token or a mix of two. */
+  :root{
+    --bg:#F3F3EC; --surface:#FBFBF6; --surface-2:#EAEBDF;
+    --ink:#23241E; --ink-muted:#63645A; --ink-faint:#93948A;
+    --border:#DCDCCE; --border-strong:#C7C8B4;
+    --accent:#A67330; --accent-strong:#7C361D; --accent-soft:#F6EADA;
+    --highlight:#997F29; --highlight-soft:#F6F1D5;
+    --flag:#3D638F; --flag-soft:#E1EAF4;
+    --principle:#247B50; --principle-strong:#1D6743; --principle-soft:#DBF5E8;
+    --focus:#A67330;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+      --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+      --border:#383A2C; --border-strong:#4A4C3A;
+      --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+      --highlight:#DDCC88; --highlight-soft:#342D19;
+      --flag:#97B8D8; --flag-soft:#1D2835;
+      --principle:#8ED7B4; --principle-strong:#A7E2C4; --principle-soft:#1B3428;
+      --focus:#D3A569;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+    --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+    --border:#383A2C; --border-strong:#4A4C3A;
+    --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+    --highlight:#DDCC88; --highlight-soft:#342D19;
+    --flag:#97B8D8; --flag-soft:#1D2835;
+    --principle:#8ED7B4; --principle-strong:#A7E2C4; --principle-soft:#1B3428;
+    --focus:#D3A569;
+  }
+
+  *{box-sizing:border-box;}
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:'Lora',Georgia,serif; font-size:16px; line-height:1.5; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3{ font-family:'Libre Franklin',system-ui,sans-serif; margin:0; }
+  p{ margin:0; }
+  code{ font-family:'IBM Plex Mono',monospace; font-size:.85em; background:var(--surface-2); padding:1px 5px; border-radius:3px; }
+  pre{ font-family:'IBM Plex Mono',monospace; font-size:.76rem; background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:12px 14px; overflow-x:auto; margin:0; line-height:1.55; }
+  button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
+  :focus-visible{ outline:2px solid var(--focus); outline-offset:2px; }
+
+  .topbar{ position:sticky; top:0; z-index:30; background:var(--surface); border-bottom:1px solid var(--border-strong); }
+  .topbar-inner{ max-width:1100px; margin:0 auto; padding:12px 16px; display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+  .tb-title{ font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:.95rem; margin-right:auto; }
+  .tb-jump{ display:flex; gap:2px; flex-wrap:wrap; font-family:'Libre Franklin',sans-serif; }
+  .tb-jump a{ font-size:.76rem; font-weight:600; color:var(--ink-muted); text-decoration:none; padding:6px 9px; border-radius:4px; }
+  .tb-jump a:hover{ color:var(--ink); background:var(--surface-2); }
+  .theme-toggle{ font-family:'Libre Franklin',sans-serif; font-size:.75rem; font-weight:600; padding:7px 10px; border:1px solid var(--border-strong); border-radius:3px; color:var(--ink-muted); }
+  main{ max-width:1100px; margin:0 auto; padding:8px 16px 100px; }
+  .hero{ padding:34px 0 26px; border-bottom:1px solid var(--border); margin-bottom:34px; }
+  .eyebrow{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--accent-strong); display:block; margin-bottom:10px; }
+  .hero h1{ font-size:2rem; line-height:1.15; margin-bottom:12px; }
+  .lede{ color:var(--ink-muted); max-width:68ch; }
+  .lede + .lede{ margin-top:10px; }
+  section.block{ margin-bottom:56px; }
+  .block-title{ font-family:'Libre Franklin',sans-serif; font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-muted); padding-bottom:8px; border-bottom:1px solid var(--border); margin-bottom:8px; }
+  .note{ color:var(--ink-muted); font-size:.9rem; max-width:72ch; margin:8px 0 18px; }
+
+  .panel{ background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:16px; }
+  .panel-label{ font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:.95rem; margin-bottom:2px; }
+  .panel-sub{ font-style:italic; font-size:.86rem; color:var(--ink-muted); margin-bottom:10px; }
+  .grid3{ display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:16px; }
+  .grid2{ display:grid; grid-template-columns:repeat(auto-fill,minmax(420px,1fr)); gap:16px; }
+  @media (max-width:520px){ .grid2{ grid-template-columns:1fr; } }
+  svg.dia{ display:block; width:100%; height:auto; overflow:visible; }
+
+  /* Before / after */
+  .ba{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  @media (max-width:560px){ .ba{ grid-template-columns:1fr; } }
+  .bars{ display:flex; flex-direction:column; gap:3px; padding:8px 0; }
+  .bar{ height:7px; border-radius:3px; background:var(--surface-2); border:1px solid var(--border-strong); }
+  .bar.bun{ background:var(--accent-soft); border-color:var(--accent); height:9px; }
+  .bar.bun.top{ border-radius:10px 10px 3px 3px; }
+  .bar.patty{ background:var(--accent-strong); border-color:var(--accent-strong); height:8px; }
+  .bar.green{ background:var(--principle-soft); border-color:var(--principle); height:5px; }
+  .bar.onion{ background:var(--surface); border-style:dashed; border-color:var(--accent); height:5px; }
+
+  /* Kit */
+  .kit{ display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:12px; }
+  .kit-cell{ background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:10px 10px 8px; display:flex; flex-direction:column; align-items:center; gap:6px; }
+  .kit-cell svg{ width:100%; max-width:130px; height:auto; overflow:visible; }
+  .kit-key{ font-family:'IBM Plex Mono',monospace; font-size:.68rem; color:var(--ink-faint); }
+
+  /* Card mock */
+  .cards{ display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:16px; }
+  .bcard{ background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:14px 16px 12px; display:flex; flex-direction:column; gap:8px; }
+  .bcard:hover{ border-color:var(--accent); }
+  .chip{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; line-height:1.5; font-weight:600; padding:3px 7px; border-radius:3px; display:inline-flex; align-items:center; gap:4px; background:var(--accent-soft); color:var(--accent-strong); align-self:flex-start; }
+  .chip svg{ width:12px; height:12px; }
+  .bcard-title{ font-family:'Libre Franklin',sans-serif; font-size:1.02rem; font-weight:700; line-height:1.3; }
+  .profile{ font-style:italic; font-size:.9rem; padding-left:10px; border-left:2px solid var(--accent); }
+  .thumb{ display:flex; justify-content:center; padding:4px 0; }
+  .thumb svg{ width:150px; height:auto; overflow:visible; }
+  .stats{ margin-top:auto; padding-top:8px; border-top:1px solid var(--border); display:flex; gap:12px; font-family:'Libre Franklin',sans-serif; font-size:.56rem; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); }
+  .stats span{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--accent-strong); text-transform:none; letter-spacing:0; margin-left:4px; }
+
+  .options{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  @media (max-width:560px){ .options{ grid-template-columns:1fr; } }
+  .options .panel{ text-align:center; }
+  .options svg{ max-width:200px; margin:0 auto; }
+
+  .callout{ border-left:3px solid var(--accent); background:var(--surface); padding:14px 16px; border-radius:0 6px 6px 0; max-width:74ch; }
+  .callout p{ font-size:.92rem; }
+  .callout p + p{ margin-top:8px; }
+  .callout ul{ margin:8px 0 0; padding-left:20px; font-size:.92rem; }
+
+  /* ---- Layer drawing styles: tokens only ---- */
+  .dia text{ font-family:'Libre Franklin',sans-serif; }
+  .lbl{ font-size:12px; font-weight:600; fill:var(--ink); }
+  .role{ font-family:'Lora',Georgia,serif !important; font-style:italic; font-size:11px; fill:var(--ink-muted); }
+  .lead{ stroke:var(--ink-faint); stroke-width:.8; stroke-dasharray:2 2; fill:none; }
+  .lead-dot{ fill:var(--ink-faint); }
+  .bracket{ stroke:var(--accent); stroke-width:1.2; fill:none; }
+  .bracket-t{ font-family:'IBM Plex Mono',monospace !important; font-size:11px; fill:var(--accent-strong); }
+:root{ /* Food colours: the light palette's values, fixed in both themes, so a
+     bun stays a bun and a patty stays brown in dark mode. Same five hues. */
+    --f-accent:#A67330; --f-accent-strong:#7C361D; --f-accent-soft:#F6EADA;
+    --f-highlight:#997F29; --f-highlight-soft:#F6F1D5;
+    --f-principle:#247B50; --f-principle-strong:#1D6743; --f-principle-soft:#DBF5E8;
+    --f-surface:#FBFBF6; --f-ink:#23241E; --f-ink-faint:#93948A; }
+  .s{ stroke-width:1.4; stroke-linejoin:round; stroke-linecap:round; }
+  .bun{ fill:var(--f-accent-soft); stroke:var(--f-accent); }
+  .bun-dark{ fill:color-mix(in srgb, var(--f-accent) 35%, var(--f-accent-soft)); stroke:var(--f-accent); }
+  .crumb{ fill:var(--f-surface); stroke:var(--f-accent); }
+  .seed{ fill:var(--f-surface); stroke:var(--f-accent); stroke-width:.8; }
+  .leaf{ fill:var(--f-principle-soft); stroke:var(--f-principle); }
+  .leaf-vein{ fill:none; stroke:var(--f-principle); stroke-width:.8; opacity:.7; }
+  .tom{ fill:color-mix(in srgb, var(--f-accent-strong) 30%, var(--f-surface)); stroke:var(--f-accent-strong); }
+  .tom-side{ fill:color-mix(in srgb, var(--f-accent-strong) 55%, var(--f-surface)); stroke:var(--f-accent-strong); }
+  .tom-in{ fill:color-mix(in srgb, var(--f-highlight) 30%, var(--f-surface)); stroke:var(--f-accent-strong); stroke-width:.8; }
+  .ring{ fill:none; stroke:var(--f-accent-strong); stroke-width:3.2; opacity:.55; }
+  .ring-in{ fill:none; stroke:var(--f-accent-strong); stroke-width:.8; }
+  .pick{ fill:color-mix(in srgb, var(--f-principle) 30%, var(--f-surface)); stroke:var(--f-principle-strong); }
+  .pick-side{ fill:color-mix(in srgb, var(--f-principle) 60%, var(--f-surface)); stroke:var(--f-principle-strong); }
+  .pick-seed{ fill:var(--f-principle-strong); opacity:.5; }
+  .cheese{ fill:color-mix(in srgb, var(--f-highlight) 45%, var(--f-surface)); stroke:var(--f-highlight); }
+  .cheese-side{ fill:color-mix(in srgb, var(--f-highlight) 75%, var(--f-surface)); stroke:var(--f-highlight); }
+  .meat{ fill:color-mix(in srgb, var(--f-accent-strong) 80%, var(--f-ink)); stroke:color-mix(in srgb, var(--f-accent-strong) 60%, var(--f-ink)); }
+  .meat-top{ fill:var(--f-accent-strong); stroke:color-mix(in srgb, var(--f-accent-strong) 60%, var(--f-ink)); }
+  .meat-dot{ fill:color-mix(in srgb, var(--f-accent-strong) 50%, var(--f-ink)); opacity:.7; }
+  .bacon{ fill:color-mix(in srgb, var(--f-accent-strong) 45%, var(--f-accent-soft)); stroke:var(--f-accent-strong); }
+  .bacon-fat{ fill:none; stroke:var(--f-accent-soft); stroke-width:2.2; }
+  .sauce-red{ fill:color-mix(in srgb, var(--f-accent-strong) 70%, var(--f-surface)); stroke:var(--f-accent-strong); }
+  .sauce-yel{ fill:color-mix(in srgb, var(--f-highlight) 70%, var(--f-surface)); stroke:var(--f-highlight); }
+  .sauce-pink{ fill:color-mix(in srgb, var(--f-accent) 45%, var(--f-surface)); stroke:var(--f-accent); }
+  .fried{ fill:none; stroke:color-mix(in srgb, var(--f-accent) 80%, var(--f-highlight)); stroke-width:2; }
+  .fried-pad{ fill:color-mix(in srgb, var(--f-highlight) 25%, var(--f-surface)); stroke:none; }
+  .pasta{ fill:color-mix(in srgb, var(--f-highlight) 30%, var(--f-surface)); stroke:var(--f-highlight); }
+  .ragu{ fill:color-mix(in srgb, var(--f-accent-strong) 60%, var(--f-surface)); stroke:var(--f-accent-strong); }
+  .bech{ fill:var(--f-surface); stroke:var(--f-ink-faint); }
+</style>
+</head>
+<body>
+<header class="topbar"><div class="topbar-inner">
+  <span class="tb-title">Exploded builds</span>
+  <nav class="tb-jump"><a href="#why">Why</a><a href="#kit">Layer kit</a><a href="#builds">Builds</a><a href="#cards">Cards</a><a href="#options">Options</a><a href="#beyond">Beyond burgers</a><a href="#syntax">Syntax</a><a href="#rec">Recommendation</a></nav>
+  <button class="theme-toggle" id="tt" type="button">Toggle dark</button>
+</div></header>
+
+<main>
+  <div class="hero">
+    <span class="eyebrow">Proposal · 2026-10-10 · METHODS phase 4</span>
+    <h1>Exploded build diagrams</h1>
+    <p class="lede">The layer bars in <code>methods-pages.html</code> were abstract, and full-width bars don't look like a burger. This draws a build the way a technical manual draws an assembly: each layer as the thing itself, seen from a three-quarter angle, pulled apart vertically, with leader lines to its name and its role.</p>
+    <p class="lede">Every colour is a palette value or a mix of two, so no new hue comes in; food colours stay fixed across themes (§8). Line weight and simplicity follow the formula icons (round strokes, flat fills, no shading or hand wobble).</p>
+  </div>
+
+  <section class="block" id="why">
+    <h2 class="block-title">1 · Bars vs. exploded</h2>
+    <p class="note">The same deluxe griddle build. The bars only work once you've learned the colour code; the exploded view reads as a burger at a glance, and its width stays in proportion to its height.</p>
+    <div class="ba">
+      <div class="panel"><div class="panel-label">Bars (methods-pages.html)</div><div class="bars"><div class="bar bun top"></div><div class="bar green"></div><div class="bar onion"></div><div class="bar green" style="background:var(--surface)"></div><div class="bar patty"></div><div class="bar bun"></div></div></div>
+      <div class="panel"><div class="panel-label">Exploded</div><div class="thumb" id="ba-ex"></div></div>
+    </div>
+  </section>
+
+  <section class="block" id="kit">
+    <h2 class="block-title">2 · Layer kit</h2>
+    <p class="note">One drawing per layer, keyed like the formula icons. Each is drawn at a common width with its own height, so a renderer can stack any sequence of them. Each one has to be recognizable on its own.</p>
+    <div class="kit" id="kit-grid"></div>
+  </section>
+
+  <section class="block" id="builds">
+    <h2 class="block-title">3 · Three builds, exploded and labelled</h2>
+    <p class="note">The build page version: full size, a leader line from each layer to its label and role. Put side by side, the three profiles are visible before you read a word: deluxe is tall with green and red, bacon double cheese is meat and cheese, grilled onion is short and plain.</p>
+    <div class="grid3" id="build-grid"></div>
+  </section>
+
+  <section class="block" id="cards">
+    <h2 class="block-title">4 · On build cards</h2>
+    <p class="note">The blueprint page's build cards, with a compact exploded view: no labels, tighter gaps, about 150px wide. A card gets taller, but a burger is a tall thing.</p>
+    <div class="cards" id="card-grid"></div>
+  </section>
+
+  <section class="block" id="options">
+    <h2 class="block-title">5 · Options, drawn</h2>
+    <p class="note">The same kit draws a part's options. On the Burger patties method, the Options table can lead with the three patties side by side.</p>
+    <div class="options" id="opt-grid"></div>
+  </section>
+
+  <section class="block" id="beyond">
+    <h2 class="block-title">6 · Beyond burgers</h2>
+    <p class="note">Square layers use the same approach with a slab instead of a disc. Lasagne shows <code>repeat:</code> as a bracket; the BLT shows a sandwich.</p>
+    <div class="grid2" id="beyond-grid"></div>
+  </section>
+
+  <section class="block" id="syntax">
+    <h2 class="block-title">7 · Source</h2>
+    <p class="note">Still the <code>stack</code> block from <code>docs/METHODS.md</code>, top to bottom, one layer per line. The first column names a layer drawing (<code>assets/icons/layers/</code>, a separate kit from the formula icons, since layers are wider than tall and stack). <code>view: exploded</code> is the default; <code>view: stacked</code> could draw the assembled burger later.</p>
+<pre>```stack
+bun-top      | Toasted bun          | soft, toasted
+lettuce      | Shredded lettuce     | cold crunch
+tomato       | Tomato               | juicy, acid
+onion-raw    | Raw onion            | sharp
+pickle       | Pickles              | sour
+patty-thin   | Thin patty, 140 g    | salt, fat, savoury
+sauce-ketchup-mustard | Ketchup, mustard | sweet, sharp
+bun-base     | Toasted bun          | barrier
+caption: Deluxe griddle
+```</pre>
+  </section>
+
+  <section class="block" id="rec">
+    <h2 class="block-title">8 · Recommendation and open questions</h2>
+    <div class="callout">
+      <p><b>Use the exploded view for builds</b>, labelled on build pages and compact on cards. It's recognizable, it keeps a burger's proportions, and the leader lines carry the roles, so the diagram explains the profile instead of decorating it.</p>
+      <ul>
+        <li><b>Food keeps its colours in dark mode.</b> The drawings use fixed values from the light palette (<code>--f-*</code>), not the theme tokens: with theme tokens a patty went pink and a bun went chocolate brown. Labels and leader lines still follow the theme. The raw onion rings are the weakest layer on a dark background.</li>
+        <li><b>Labels left or right?</b> Right here; on phones they shrink with the drawing. Below 400px they could move under the drawing as a numbered key.</li>
+        <li><b>How much detail?</b> These are a little more detailed than the formula icons (seeds, veins, rings). At card size the detail drops out on its own; worth checking at 1× on a real screen.</li>
+        <li><b>Draw by hand or generate?</b> Shown here generated from a few shape functions (disc, dome, wavy disc, slab). As SVG files in a kit they'd be drawn once each and stacked by the render hook.</li>
+        <li><b>Assembled view?</b> A small assembled burger next to the exploded one would help recognition further; leave it for later.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<script>
+/* ---------- Shape kit. Every shape draws at centre cx, top y, base radius rx, and returns {svg, h, edge} ---------- */
+const K = 0.34;                 // perspective: ellipse height / width
+const f = n => Math.round(n*10)/10;
+function rng(seed){ let s = seed; return () => (s = (s*16807) % 2147483647) / 2147483647; }
+function wavyEllipse(cx, cy, rx, ry, amp, waves, phase=0){
+  let d = '';
+  for (let i=0;i<=96;i++){
+    const t = i/96*Math.PI*2, r = 1 + amp*Math.sin(waves*t+phase);
+    d += (i?'L':'M') + f(cx+Math.cos(t)*rx*r) + ',' + f(cy+Math.sin(t)*ry*r);
+  }
+  return d + 'Z';
+}
+function disc(cx, cy, rx, t, sideCls, topCls){
+  const ry = rx*K;
+  return `<path class="s ${sideCls}" d="M${f(cx-rx)},${f(cy)}L${f(cx-rx)},${f(cy+t)}A${f(rx)},${f(ry)} 0 0 0 ${f(cx+rx)},${f(cy+t)}L${f(cx+rx)},${f(cy)}Z"/>` +
+         `<ellipse class="s ${topCls}" cx="${f(cx)}" cy="${f(cy)}" rx="${f(rx)}" ry="${f(ry)}"/>`;
+}
+const L = {
+  'bun-top'(cx, y, rx){
+    const h = rx*0.55, ry = rx*K, cy = y+h;
+    let s = `<path class="s bun" d="M${f(cx-rx)},${f(cy)}C${f(cx-rx)},${f(cy-h*1.33)} ${f(cx+rx)},${f(cy-h*1.33)} ${f(cx+rx)},${f(cy)}A${f(rx)},${f(ry)} 0 0 1 ${f(cx-rx)},${f(cy)}Z"/>`;
+    const r = rng(7);
+    for (let i=0;i<11;i++){ const a=(r()-.5)*1.5*rx, b=y+h*0.25+r()*h*0.55; s += `<ellipse class="seed" cx="${f(cx+a)}" cy="${f(b)}" rx="2.2" ry="1.1" transform="rotate(${f((r()-.5)*60)} ${f(cx+a)} ${f(b)})"/>`; }
+    return {svg:s, h:h+ry, edge:rx};
+  },
+  'bun-base'(cx, y, rx){
+    const ry = rx*K, t = rx*0.16;
+    return {svg: disc(cx, y+ry, rx, t, 'bun', 'crumb'), h:2*ry+t, edge:rx};
+  },
+  'lettuce'(cx, y, rx){
+    const R = rx*1.1, ry = R*K, cy = y+ry+3;
+    let s = `<path class="s leaf" d="${wavyEllipse(cx, cy+3, R, ry, .07, 11, 1)}" opacity=".9"/>`;
+    s += `<path class="s leaf" d="${wavyEllipse(cx, cy, R*0.96, ry*0.96, .06, 9)}"/>`;
+    for (const a of [-.5, 0, .45]) s += `<path class="leaf-vein" d="M${f(cx+a*R*0.3)},${f(cy+ry*0.2)}Q${f(cx+a*R*0.8)},${f(cy-ry*0.3)} ${f(cx+a*R*1.2)},${f(cy-ry*0.1)}"/>`;
+    return {svg:s, h:2*ry+9, edge:R};
+  },
+  'tomato'(cx, y, rx){
+    const r = rx*0.52, ry = r*K, t = 4; let s = '';
+    for (const dx of [-rx*0.45, rx*0.45]){
+      const c = cx+dx, cy = y+ry+(dx<0?0:3);
+      s += disc(c, cy, r, t, 'tom-side', 'tom');
+      s += `<ellipse class="tom-in" cx="${f(c)}" cy="${f(cy)}" rx="${f(r*0.7)}" ry="${f(ry*0.7)}"/>`;
+      for (const a of [0, 2.1, 4.2]) s += `<ellipse class="tom" cx="${f(c+Math.cos(a)*r*0.38)}" cy="${f(cy+Math.sin(a)*ry*0.38)}" rx="${f(r*0.16)}" ry="${f(ry*0.22)}" style="stroke-width:.7"/>`;
+    }
+    return {svg:s, h:2*ry+t+3, edge:rx*0.97};
+  },
+  'onion-raw'(cx, y, rx){
+    let s = ''; const R = rx*0.55;
+    for (const [dx, dy, sc] of [[-rx*0.3, 2, 1], [rx*0.35, 5, .85]]){
+      const c = cx+dx, cy = y+R*K+dy;
+      for (const k of [1, .72, .46]) s += `<ellipse class="ring" cx="${f(c)}" cy="${f(cy)}" rx="${f(R*sc*k)}" ry="${f(R*sc*k*K)}"/><ellipse class="ring-in" cx="${f(c)}" cy="${f(cy)}" rx="${f(R*sc*k)}" ry="${f(R*sc*k*K)}"/>`;
+    }
+    return {svg:s, h:2*R*K+6, edge:rx*0.35+R*0.85};
+  },
+  'pickle'(cx, y, rx){
+    const r = rx*0.24, ry = r*K; let s = '';
+    for (const [dx, dy] of [[-rx*0.5, 3], [-rx*0.05, 0], [rx*0.45, 4], [rx*0.15, 9]]){
+      const c = cx+dx, cy = y+ry+dy;
+      s += disc(c, cy, r, 2.5, 'pick-side', 'pick');
+      for (const a of [0.6, 2.3, 4]) s += `<circle class="pick-seed" cx="${f(c+Math.cos(a)*r*0.45)}" cy="${f(cy+Math.sin(a)*ry*0.45)}" r=".9"/>`;
+    }
+    return {svg:s, h:2*ry+12, edge:rx*0.45+r};
+  },
+  'cheese'(cx, y, rx){
+    const s0 = rx*1.0, ry = s0*K, droop = 7;
+    const T = [cx, y], R = [cx+s0, y+ry+droop], B = [cx, y+2*ry], Lf = [cx-s0, y+ry+droop];
+    const svg = `<path class="s cheese-side" d="M${f(Lf[0])},${f(Lf[1])}L${f(B[0])},${f(B[1])}L${f(R[0])},${f(R[1])}L${f(R[0])},${f(R[1]+2.5)}L${f(B[0])},${f(B[1]+2.5)}L${f(Lf[0])},${f(Lf[1]+2.5)}Z"/>` +
+      `<path class="s cheese" d="M${f(T[0])},${f(T[1])}Q${f(cx+s0*0.6)},${f(y+ry*0.55)} ${f(R[0])},${f(R[1])}L${f(B[0])},${f(B[1])}L${f(Lf[0])},${f(Lf[1])}Q${f(cx-s0*0.6)},${f(y+ry*0.55)} ${f(T[0])},${f(T[1])}Z"/>`;
+    return {svg, h:2*ry+3, edge:s0};
+  },
+  patty(cx, y, rx, t, lacy){
+    const ry = rx*K, cy = y+ry; let s = '';
+    if (lacy){
+      s += `<path class="s meat" d="${wavyEllipse(cx, cy+t, rx*1.08, ry*1.08, .05, 17)}"/>`;
+      s += `<path class="s meat-top" d="${wavyEllipse(cx, cy, rx*1.08, ry*1.08, .05, 17)}"/>`;
+    } else {
+      s += disc(cx, cy, rx, t, 'meat', 'meat-top');
+    }
+    const r = rng(Math.round(rx*t));
+    for (let i=0;i<26;i++){ const a=r()*Math.PI*2, d=Math.sqrt(r())*.82; s += `<circle class="meat-dot" cx="${f(cx+Math.cos(a)*rx*d)}" cy="${f(cy+Math.sin(a)*ry*d)}" r="${f(.7+r()*.8)}"/>`; }
+    return {svg:s, h:2*ry+t, edge:rx*(lacy?1.08:1)};
+  },
+  'patty-thin'(cx, y, rx){ return L.patty(cx, y, rx*0.98, rx*0.13, false); },
+  'patty-thick'(cx, y, rx){ return L.patty(cx, y, rx*0.88, rx*0.32, false); },
+  'patty-smash'(cx, y, rx){ return L.patty(cx, y, rx*1.02, rx*0.07, true); },
+  'bacon'(cx, y, rx){
+    let s = ''; const w = rx*1.12;
+    for (const [dy, ph] of [[0, 0], [rx*K*0.9, 1.6]]){
+      let top = '', bot = '', mid = '';
+      for (let i=0;i<=40;i++){
+        const x = cx-w+2*w*i/40, wave = Math.sin(i/40*Math.PI*4+ph)*3, yy = y+6+dy+wave+(i/40-.5)*6;
+        top += (i?'L':'M')+f(x)+','+f(yy); bot = 'L'+f(x)+','+f(yy+8)+bot; mid += (i?'L':'M')+f(x)+','+f(yy+4);
+      }
+      s += `<path class="s bacon" d="${top}${bot}Z"/><path class="bacon-fat" d="${mid}"/>`;
+    }
+    return {svg:s, h:rx*K*0.9+20, edge:w};
+  },
+  sauce(cx, y, rx, cls){
+    const R = rx*0.72, ry = R*K, cy = y+ry+2;
+    return {svg:`<path class="s ${cls}" d="${wavyEllipse(cx, cy, R, ry, .09, 6, .5)}"/>`, h:2*ry+5, edge:R};
+  },
+  'sauce-burger'(cx, y, rx){ return L.sauce(cx, y, rx, 'sauce-pink'); },
+  'mustard'(cx, y, rx){ return L.sauce(cx, y, rx*0.8, 'sauce-yel'); },
+  'sauce-ketchup-mustard'(cx, y, rx){
+    const a = L.sauce(cx-rx*0.18, y, rx*0.78, 'sauce-red'), b = L.sauce(cx+rx*0.25, y+3, rx*0.6, 'sauce-yel');
+    return {svg:a.svg+b.svg, h:Math.max(a.h, b.h+3), edge:rx*0.72};
+  },
+  'onion-fried'(cx, y, rx){
+    const R = rx*0.85, ry = R*K, cy = y+ry+2; let s = `<ellipse class="fried-pad" cx="${f(cx)}" cy="${f(cy)}" rx="${f(R)}" ry="${f(ry)}"/>`;
+    const r = rng(11);
+    for (let i=0;i<22;i++){ const a=r()*Math.PI*2, d=Math.sqrt(r())*.8, x=cx+Math.cos(a)*R*d, yy=cy+Math.sin(a)*ry*d, l=6+r()*7, o=r()*Math.PI;
+      s += `<path class="fried" d="M${f(x-Math.cos(o)*l)},${f(yy-Math.sin(o)*l*K)}Q${f(x)},${f(yy-3)} ${f(x+Math.cos(o)*l)},${f(yy+Math.sin(o)*l*K)}"/>`; }
+    return {svg:s, h:2*ry+5, edge:R};
+  },
+  /* Slabs for square layers */
+  slab(cx, y, rx, t, topCls, sideCls, wavy){
+    const W = rx*1.05, D = rx*0.42, dx = D*0.9;
+    const bl=[cx-W+dx,y], br=[cx+W+dx,y], fr=[cx+W-dx,y+D], fl=[cx-W-dx,y+D];
+    // Front edge from front-right back to front-left, rippled for pasta.
+    let front = '';
+    for (let i=1;i<=24;i++){ const x = fr[0]+(fl[0]-fr[0])*i/24; front += `L${f(x)},${f(fr[1]+(wavy ? Math.sin(i/24*Math.PI*6)*1.6 : 0))}`; }
+    let s = `<path class="s ${sideCls}" d="M${f(fl[0])},${f(fl[1])}L${f(fr[0])},${f(fr[1])}L${f(br[0])},${f(br[1])}L${f(br[0])},${f(br[1]+t)}L${f(fr[0])},${f(fr[1]+t)}L${f(fl[0])},${f(fl[1]+t)}Z"/>`;
+    s += `<path class="s ${topCls}" d="M${f(bl[0])},${f(bl[1])}L${f(br[0])},${f(br[1])}L${f(fr[0])},${f(fr[1])}${front}Z"/>`;
+    return {svg:s, h:D+t, edge:W+dx};
+  },
+  'pasta'(cx, y, rx){ return L.slab(cx, y, rx, 3, 'pasta', 'pasta', true); },
+  'ragu'(cx, y, rx){ const o = L.slab(cx, y, rx, 8, 'ragu', 'ragu'); const r = rng(5); let d=''; for (let i=0;i<24;i++){ d += `<circle class="meat-dot" cx="${f(cx+(r()-.5)*rx*1.7)}" cy="${f(y+3+r()*rx*0.36)}" r="${f(1+r()*1.2)}"/>`; } return {svg:o.svg+d, h:o.h, edge:o.edge}; },
+  'bechamel'(cx, y, rx){ return L.slab(cx, y, rx, 5, 'bech', 'bech'); },
+  'cheese-top'(cx, y, rx){ return L.slab(cx, y, rx, 4, 'cheese', 'cheese-side'); },
+  'bread'(cx, y, rx){
+    // A squircle seen from three-quarters, with the crown bulging at the back.
+    const W = rx*0.9, ry = W*K*1.05, t = 9, cy = y + ry*1.4;
+    const shape = (oy) => { let d = '';
+      for (let i=0;i<=96;i++){ const a = i/96*Math.PI*2, c = Math.cos(a), sn = Math.sin(a);
+        let px = Math.sign(c)*Math.pow(Math.abs(c), .45)*W, py = Math.sign(sn)*Math.pow(Math.abs(sn), .45)*ry;
+        if (sn < 0) py *= 1 + .4*Math.pow(-sn, 3);
+        d += (i?'L':'M') + f(cx+px) + ',' + f(cy+py+oy); }
+      return d + 'Z'; };
+    const svg = `<path class="s bun" d="${shape(t)}"/><path class="s bun" d="M${f(cx-W)},${f(cy)}L${f(cx-W)},${f(cy+t)}M${f(cx+W)},${f(cy)}L${f(cx+W)},${f(cy+t)}"/><path class="s crumb" d="${shape(0)}"/><path class="s bun" d="${shape(0)}" style="fill:none;stroke-width:2.6;opacity:.55"/>`;
+    return {svg, h: ry*2.4 + t, edge:W};
+  },
+  'mayo'(cx, y, rx){ return L.sauce(cx+4, y, rx*1.05, 'bech'); },
+};
+
+/* ---------- Composer ---------- */
+function compose(layers, {rx=70, gap=14, labels=true, cx, repeat, padLeft}={}){
+  const lx = labels ? (cx ?? rx*1.25) : null;
+  cx = cx ?? (labels ? rx*1.25 : rx*1.2);
+  const labelX = cx + rx*1.35 + 16;
+  let y = 8, placed = [];
+  layers.forEach((ly, i) => {
+    const o = L[ly.k](cx, y, rx);
+    placed.push({...ly, y, o});
+    y += o.h + gap;
+  });
+  const H = y - gap + 8;
+  let body = '';
+  for (let i=placed.length-1;i>=0;i--) body += `<g>${placed[i].o.svg}</g>`;
+  let ann = '';
+  if (labels){
+    placed.forEach(p => {
+      const my = p.y + p.o.h/2, ex = cx + p.o.edge + 4;
+      ann += `<circle class="lead-dot" cx="${f(ex)}" cy="${f(my)}" r="1.8"/><path class="lead" d="M${f(ex)},${f(my)}H${f(labelX-6)}"/>`;
+      ann += `<text class="lbl" x="${f(labelX)}" y="${f(my-1)}">${p.label}</text>`;
+      if (p.role) ann += `<text class="role" x="${f(labelX)}" y="${f(my+12)}">${p.role}</text>`;
+    });
+  }
+  if (repeat){
+    const a = placed[repeat.from], b = placed[repeat.to];
+    const x = cx - rx*1.55, y1 = a.y, y2 = b.y + b.o.h;
+    ann += `<path class="bracket" d="M${f(x+6)},${f(y1)}H${f(x)}V${f(y2)}H${f(x+6)}"/><text class="bracket-t" x="${f(x-4)}" y="${f((y1+y2)/2+4)}" text-anchor="end">× ${repeat.n}</text>`;
+  }
+  const minX = repeat || padLeft ? cx - rx*1.55 - 34 : 0;
+  const W = labels ? labelX + 150 : cx*2;
+  return `<svg class="dia" viewBox="${f(minX)} 0 ${f(W-minX)} ${f(H)}" role="img">${body}${ann}</svg>`;
+}
+
+/* ---------- Content ---------- */
+const BUILDS = {
+  deluxe: { name:'Deluxe griddle', profile:'Cold crunch and sharp against a salty patty.', layers:[
+    {k:'bun-top', label:'Toasted bun', role:'soft, toasted'},
+    {k:'lettuce', label:'Shredded lettuce', role:'cold crunch'},
+    {k:'tomato', label:'Tomato', role:'juicy, acid'},
+    {k:'onion-raw', label:'Raw onion', role:'sharp'},
+    {k:'pickle', label:'Pickles', role:'sour'},
+    {k:'patty-thin', label:'Thin patty, 140 g', role:'salt, fat, savoury'},
+    {k:'sauce-ketchup-mustard', label:'Ketchup, mustard', role:'sweet, sharp'},
+    {k:'bun-base', label:'Toasted bun', role:'barrier'} ]},
+  bacon: { name:'Bacon double cheese', profile:'Salty, sweet, and rich; little crunch.', layers:[
+    {k:'bun-top', label:'Toasted bun', role:'soft'},
+    {k:'sauce-burger', label:'Burger sauce', role:'sweet, tangy'},
+    {k:'bacon', label:'Bacon', role:'salt, smoke, crisp'},
+    {k:'cheese', label:'Cheese', role:'salt, fat'},
+    {k:'patty-thin', label:'Thin patty, 115 g', role:'savoury'},
+    {k:'cheese', label:'Cheese', role:'salt, fat'},
+    {k:'patty-thin', label:'Thin patty, 115 g', role:'savoury'},
+    {k:'pickle', label:'Pickles', role:'the only sour'},
+    {k:'bun-base', label:'Toasted bun', role:'barrier'} ]},
+  onion: { name:'Grilled onion', profile:'Sweet and savoury; one soft, even texture.', layers:[
+    {k:'bun-top', label:'Steamed bun', role:'soft'},
+    {k:'pickle', label:'Pickles', role:'sour, optional'},
+    {k:'onion-fried', label:'Onion, smashed in', role:'sweet'},
+    {k:'patty-smash', label:'Paper-thin patty', role:'lacy, crisp edge'},
+    {k:'mustard', label:'Yellow mustard', role:'sharp'},
+    {k:'bun-base', label:'Steamed bun', role:'soft'} ]},
+};
+
+document.getElementById('ba-ex').innerHTML = compose(BUILDS.deluxe.layers, {rx:56, gap:6, labels:false});
+
+const kitKeys = [['bun-top','Bun top'],['lettuce','Lettuce'],['tomato','Tomato'],['onion-raw','Raw onion'],['onion-fried','Fried onion'],['pickle','Pickles'],['cheese','Cheese slice'],['bacon','Bacon'],['patty-thin','Thin patty'],['patty-thick','Thick patty'],['patty-smash','Smashed patty'],['sauce-ketchup-mustard','Ketchup, mustard'],['sauce-burger','Burger sauce'],['mustard','Mustard'],['bun-base','Bun base'],['bread','Bread slice'],['pasta','Pasta sheet'],['ragu','Ragù'],['bechamel','Béchamel'],['cheese-top','Cheese, baked']];
+document.getElementById('kit-grid').innerHTML = kitKeys.map(([k, n]) => `<div class="kit-cell">${compose([{k}], {rx:52, gap:0, labels:false})}<span class="panel-label" style="font-size:.8rem;margin:0">${n}</span><span class="kit-key">${k}</span></div>`).join('');
+
+document.getElementById('build-grid').innerHTML = Object.values(BUILDS).map(b => `<div class="panel"><div class="panel-label">${b.name}</div><div class="panel-sub">${b.profile}</div>${compose(b.layers, {rx:62, gap:14})}</div>`).join('');
+
+const fan = '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="24" r="5.5"/><path d="M16.5 24H26M26 24l10-12M26 24h10M26 24l10 12"/><circle cx="39" cy="10" r="3"/><circle cx="40" cy="24" r="3"/><circle cx="39" cy="38" r="3"/></svg>';
+const counts = {deluxe:[2,'5m'], bacon:[1,'4m'], onion:[0,'3m']};
+document.getElementById('card-grid').innerHTML = Object.entries(BUILDS).map(([id, b]) => `<div class="bcard"><span class="chip">${fan}Build</span><div class="bcard-title">${b.name}</div><p class="profile">${b.profile}</p><div class="thumb">${compose(b.layers, {rx:56, gap:5, labels:false})}</div><div class="stats">Recipes<span>${counts[id][0]}</span>&nbsp; Read<span>${counts[id][1]}</span></div></div>`).join('');
+
+document.getElementById('opt-grid').innerHTML = [['patty-thick','Thick, 170 g+','Reverse sear or grill'],['patty-thin','Thin, 115–140 g','Griddle, flip once'],['patty-smash','Paper thin','Smash on a very hot griddle']].map(([k,n,c]) => `<div class="panel">${compose([{k}], {rx:70, gap:0, labels:false})}<div class="panel-label" style="margin-top:8px">${n}</div><div class="panel-sub" style="margin:0">${c}</div></div>`).join('');
+
+const lasagne = [
+  {k:'cheese-top', label:'Mozzarella, parmesan', role:'browned crust'},
+  {k:'bechamel', label:'Béchamel', role:'creamy, binds'},
+  {k:'pasta', label:'Pasta sheet', role:'structure'},
+  {k:'bechamel', label:'Béchamel', role:'creamy'},
+  {k:'ragu', label:'Ragù', role:'savoury, acid'},
+  {k:'pasta', label:'Pasta sheet', role:'structure'},
+  {k:'ragu', label:'Ragù, a thin smear', role:'keeps it from sticking'} ];
+const blt = [
+  {k:'bread', label:'Toasted bread', role:'crunch, barrier'},
+  {k:'mayo', label:'Mayo', role:'fat, binds'},
+  {k:'lettuce', label:'Lettuce', role:'cold crunch'},
+  {k:'tomato', label:'Tomato', role:'juicy, acid'},
+  {k:'bacon', label:'Bacon', role:'salt, smoke, crisp'},
+  {k:'mayo', label:'Mayo', role:'fat'},
+  {k:'bread', label:'Toasted bread', role:'crunch, barrier'} ];
+document.getElementById('beyond-grid').innerHTML =
+  `<div class="panel"><div class="panel-label">Lasagne</div><div class="panel-sub">Rich and creamy, set firm by resting.</div>${compose(lasagne, {rx:62, gap:12, repeat:{from:2, to:4, n:3}})}</div>` +
+  `<div class="panel"><div class="panel-label">BLT</div><div class="panel-sub">Salt and smoke against cold crunch.</div>${compose(blt, {rx:62, gap:12, padLeft:true})}</div>`;
+
+const tt = document.getElementById('tt'), root = document.documentElement;
+const dark = () => root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+const sync = () => tt.textContent = dark() ? 'Toggle light' : 'Toggle dark';
+tt.onclick = () => { root.dataset.theme = dark() ? 'light' : 'dark'; sync(); };
+sync();
+</script>
+</body>
+</html>
