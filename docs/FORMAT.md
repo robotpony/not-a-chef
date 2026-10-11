@@ -24,7 +24,7 @@ Recipes (`content/recipes/`), essays (`content/essays/`), reference pages (`cont
 | `source` | MAY | string | `original`, `family`, a URL, or a book title. SHOULD on recipes. |
 | `blueprint` | MAY | string[] | Blueprints (dish types made of parts) the page belongs to (`[burgers]`), a taxonomy like `cuisine`: the blueprint's page at `/blueprint/<slug>/` collects its methods, recipes, and stories. Its own `content/blueprint/<slug>/_index.md` holds its definition and the order of its parts. See docs/METHODS.md. |
 | `part` | MAY | string | On a method page in a blueprint: which part it covers (`Patty construction`), one of the blueprint's `parts`. |
-| `build` | MAY | string | On a build page (a method in a blueprint): the build's name (`Deluxe griddle`), unique within the blueprint. On a recipe: the build it's an instance of, the same name. |
+| `build_name` | MAY | string | On a build page (a method in a blueprint): the build's name (`Deluxe griddle`), unique within the blueprint. On a recipe: the build it's an instance of, the same name. |
 | `profile` | MAY | string | On a build page: one line of free text on what it tastes and feels like (`Cold crunch and sharp against a salty patty`). |
 | `picks` | MAY | string[] | On a build page: one `"Part: pick"` string per part, in the blueprint's part order (`"Patty construction: thin, 140 g"`). |
 
@@ -323,7 +323,7 @@ Use `##` headings only when sections are long enough that a reader needs navigat
 
 A reference essay (`content/essays/reference-essays/`) defines one concept and is tagged with that term, so the term's tag page can link to it. A term that doesn't need a whole essay gets a glossary entry in `content/reference/glossary.md` instead.
 
-A part's method lists its choices under `## Options`, as a table with `Option`, `Pick it when`, and `Changes` columns; options aren't pages. A build is a method page with `build`, `profile`, and `picks` (docs/METHODS.md, Inside a blueprint).
+A part's method lists its choices under `## Options`, as a table with `Option`, `Pick it when`, and `Changes` columns; options aren't pages. A build is a method page with `build_name`, `profile`, and `picks` (docs/METHODS.md, Inside a blueprint).
 
 A method (`content/essays/methods/`) explains how a kind of food or a cooking process works in general: the principle first, then the variables, the stages, why each one is there, how it fails, and the recipes that use it. The folder decides what's a method. Each page MUST carry the `method` tag: the essays `_index.md` cascades it to a method page with no `tags`, but a page that sets its own `tags` replaces the cascade, so list `method` there. What counts as a method, and how methods relate to blueprints, recipes, and stories, is in docs/METHODS.md.
 
@@ -350,7 +350,7 @@ What a checker can rely on. `/lint` checks the first group today, and the build 
 - `date` is YYYY-MM-DD; `draft` is a boolean if present; `tags` is a list of plain strings, no `#`.
 - A recipe has at least one ingredients list and one method.
 - Formula blocks use known icon keys, one operator, and at most five slots.
-- Every page in `content/essays/methods/` carries the `method` tag; a `part` names one of its blueprint's `parts`; a recipe's `build` matches a build page's `build` in the same blueprint.
+- Every page in `content/essays/methods/` carries the `method` tag; a `part` names one of its blueprint's `parts`; a recipe's `build_name` matches a build page's `build_name` in the same blueprint.
 
 **For the validator**
 - Frontmatter types match the tables above.

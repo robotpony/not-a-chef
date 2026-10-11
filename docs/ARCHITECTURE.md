@@ -92,7 +92,7 @@ The site is a small ontology: a few kinds of page, and a few relations between t
 | Story | An essay that gives the reason for a method | `content/essays/<type>/` |
 | Method | A general pattern: technique, ratio, or part of a blueprint | `content/essays/methods/` |
 | Blueprint | A dish type made of parts | `blueprint` taxonomy, `content/blueprint/<slug>/_index.md` |
-| Build | A named combination of one pick per part, with a profile | A method page with `build`, `profile`, `picks` |
+| Build | A named combination of one pick per part, with a profile | A method page with `build_name`, `profile`, `picks` |
 | Option | A choice within a part (thick, thin, paper thin) | A row under `## Options` in the part's method |
 | Concept | A named idea with a definition, icon, chip, essay, and list | tag `_index.md` (principle), `[fugu.development]` (status), the `method` tag and blueprint terms (method) |
 | Glossary term | A definition only | `content/reference/glossary.md` |
@@ -102,7 +102,7 @@ The site is a small ontology: a few kinds of page, and a few relations between t
 | Recipe uses method | Wiki link in the recipe |
 | Method is part of blueprint | `blueprint` + `part` frontmatter |
 | Build picks an option per part | `picks` on the build page |
-| Recipe is an instance of build | `build` on the recipe, matching the build page's `build` |
+| Recipe is an instance of build | `build_name` on the recipe, matching the build page's `build_name` |
 | Method builds on technique method | Wiki link |
 | Story motivates method or blueprint | `blueprint` on the story; wiki link |
 | Principle applies to recipe | The principle's tag |

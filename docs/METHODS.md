@@ -99,8 +99,8 @@ Blueprint (burgers)
 | Field | On | Meaning |
 |---|---|---|
 | `blueprint` | build, recipe | The blueprint it belongs to (`[burgers]`) |
-| `build` | build page | The build's name (`Deluxe griddle`). Unique within its blueprint. |
-| `build` | recipe | Which build the recipe is an instance of: the same name as the build page's `build` |
+| `build_name` | build page | The build's name (`Deluxe griddle`). Unique within its blueprint. Not `build`: Hugo reserves that key for its own build options, and the site fails to build. |
+| `build_name` | recipe | Which build the recipe is an instance of: the same name as the build page's `build_name` |
 | `profile` | build page | Free text, one line: what it tastes and feels like (`Cold crunch and sharp against a salty patty`). Free text for now; a fixed vocabulary can come later if builds need comparing by it. |
 | `picks` | build page | One pick per part, as a list of `"Part: pick"` strings in the blueprint's part order. A list, not a map, because the content tools read flat frontmatter (`frontmatter.py`). |
 
@@ -110,7 +110,7 @@ title: Deluxe griddle burger
 date: 2026-10-10
 tags: [method, burgers]
 blueprint: [burgers]
-build: Deluxe griddle
+build_name: Deluxe griddle
 profile: Cold crunch and sharp against a salty patty
 picks:
   - "Patty construction: thin, 140 g"
@@ -125,7 +125,7 @@ And on a recipe that's an instance of it:
 
 ```yaml
 blueprint: [burgers]
-build: Deluxe griddle
+build_name: Deluxe griddle
 ```
 
 A build page reads like any method: the principle of the build first (why these picks go together), then the picks with links to each part's method, how it fails, its variations, and the recipes that are instances of it. Its stack diagram (see Diagrams) is the clearest picture of a build: each layer's role adds up to the profile.
@@ -184,9 +184,9 @@ The shared templates are Fugu work (`themes/fugu`), handed to the Fugu agent. Th
 |---|---|
 | Recipe **uses** method | Wiki link in the recipe; optional `method:` field (open) |
 | Method **is part of** blueprint | `blueprint` taxonomy + `part` |
-| Build **belongs to** blueprint | `blueprint` taxonomy + `build` on the build page |
+| Build **belongs to** blueprint | `blueprint` taxonomy + `build_name` on the build page |
 | Build **picks** an option per part | `picks` on the build page |
-| Recipe **is an instance of** build | `build` on the recipe, matching the build page's `build` |
+| Recipe **is an instance of** build | `build_name` on the recipe, matching the build page's `build_name` |
 | Method **builds on** technique method | Wiki link |
 | Story **motivates** method or blueprint | `blueprint` taxonomy on the story; wiki link |
 | Principle **applies to** recipe | Principle tag |
