@@ -4,7 +4,7 @@ Add one or more photos to a recipe, essay, or food log page.
 
 Usage: /image-add <image path(s)> <post title or file>
 
-The post can be named by title ("Lazy tomato soup"), slug, or path. Photo conventions live in FORMAT.md §Photos.
+The post can be named by title ("Lazy tomato soup"), slug, or path. Photo conventions live in docs/FORMAT.md §Photos.
 
 1. **Find the post.** Match by `title` in frontmatter, then by filename, under `content/`. If more than one post matches, or none, ask. Don't guess.
 2. **Pick the section folder** from the post's location:

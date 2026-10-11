@@ -28,8 +28,8 @@ Style guide should be pulled + updated from the Obsidian source.
 
 ## Site features
 
-- **Pinning** — any recipe, essay, or reference page can set `pinned: true` in its frontmatter to float to the top of its section's list, its tag/cuisine term pages, and search results. Rare by design, not a general-purpose sort override. See DESIGN.md.
-- **Formula diagrams** — a ```` ```formula ```` block in a recipe draws its ratio as a row of icons (beans + starch + veg + binder), at build time. See FORMAT.md §Formula diagrams and DESIGN.md.
+- **Pinning** — any recipe, essay, or reference page can set `pinned: true` in its frontmatter to float to the top of its section's list, its tag/cuisine term pages, and search results. Rare by design, not a general-purpose sort override. See docs/DESIGN.md.
+- **Formula diagrams** — a ```` ```formula ```` block in a recipe draws its ratio as a row of icons (beans + starch + veg + binder), at build time. See docs/FORMAT.md §Formula diagrams and docs/DESIGN.md.
 - **Tag reference pages** — a tag can carry its own `content/tags/<slug>/_index.md` for a description, and, when marked `principle: true`, a definition callout plus a "Reference & further reading" list pulled from anything else tagged with it that isn't a recipe (used today for `win-the-fridge`). See `themes/fugu/layouts/_default/term.html`.
 
 ## Setup (per machine)

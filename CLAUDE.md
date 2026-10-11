@@ -6,14 +6,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A family cookbook built as a Hugo static site (Blowfish theme), edited in Obsidian. Three content types: recipes, food essays, and reference pages (technique guides, glossaries, appendices).
 
-See ARCHITECTURE.md for the data flow and component overview. See PLAN.md for future work (the phased build plan was squashed after release; its history is in git). See `mockups/STYLE.md` (or `mockups/style.html`) for the settled visual design system — read it before any visual/layout work; see "Visual design" below.
+See docs/ARCHITECTURE.md for the data flow and component overview. See docs/PLAN.md for future work (the phased build plan was squashed after release; its history is in git). See `mockups/STYLE.md` (or `mockups/style.html`) for the settled visual design system — read it before any visual/layout work; see "Visual design" below.
 ## Content formats
 
-See `FORMAT.md` for the recipe specification and `FORMAT-ESSAYS.md` for the essay specification.
+See `docs/FORMAT.md` for the recipe specification and `docs/FORMAT-ESSAYS.md` for the essay specification.
 
 ## Recipe format
 
-See `FORMAT.md` for the full specification. Key points:
+See `docs/FORMAT.md` for the full specification. Key points:
 
 - YAML frontmatter with `title` (required, sentence case: first word and proper nouns only) and `tags` (required, plain strings — no `#` prefix)
 - Optional `## Mechanic` section explaining the key ratio or technique
@@ -21,7 +21,7 @@ See `FORMAT.md` for the full specification. Key points:
 - Multi-component recipes: one `## ComponentName` heading per component, each containing its ingredients list and prose method
 - Optional sections: `## To serve`, `## Variations`, `## Notes`
 - Cross-references use wiki links: `[[Pizza sauce]]`, `[[Basic pie crust]]`
-- Optional ```` ```formula ```` block draws a stated ratio as a row of icons (`FORMAT.md` §Formula diagrams); it illustrates the sentence, never replaces it
+- Optional ```` ```formula ```` block draws a stated ratio as a row of icons (`docs/FORMAT.md` §Formula diagrams); it illustrates the sentence, never replaces it
 - Canadian English; metric units with optional imperial in parentheses
 
 ## Content sources
@@ -44,11 +44,11 @@ The index is current after any `hugo` build. If `public/` is stale, run `hugo --
 - `tools/preview.sh`, `tools/publish.sh`, `tools/deploy.sh` — dev server, build + check, rsync deploy
 - `tools/migrate.py` — retired with the two-vault workflow (see Content sources); kept for history, not part of any current flow
 
-See DESIGN.md for the CLI interfaces.
+See docs/DESIGN.md for the CLI interfaces.
 
 ## Claude Code commands
 
-Project slash commands are in `.claude/commands/`. See DESIGN.md for descriptions.
+Project slash commands are in `.claude/commands/`. See docs/DESIGN.md for descriptions.
 
 - `/recipe-new` — create a new recipe stub
 - `/lint` — validate recipe frontmatter
@@ -64,15 +64,15 @@ Don't add Claude as a co-author or a "Generated with Claude Code" line. A PreToo
 
 ## Hugo site
 
-Two stacked themes, both git submodules: `theme = ["fugu", "blowfish"]`. Fugu (`themes/fugu/`, [hugo-theme-fugu](https://github.com/robotpony/hugo-theme-fugu)) is the reusable cookbook theme: templates, render hooks, JS, icons, archetypes, and the content tools. This repo keeps the Not a Chef design and branding (`custom.css`, colour scheme, homepage, header, footer, favicons, fonts). Changes to templates are commits in the Fugu submodule. Wiki links require a render hook in `themes/fugu/layouts/_default/_markup/render-link.html`. See DESIGN.md for layout and taxonomy decisions.
+Two stacked themes, both git submodules: `theme = ["fugu", "blowfish"]`. Fugu (`themes/fugu/`, [hugo-theme-fugu](https://github.com/robotpony/hugo-theme-fugu)) is the reusable cookbook theme: templates, render hooks, JS, icons, archetypes, and the content tools. This repo keeps the Not a Chef design and branding (`custom.css`, colour scheme, homepage, header, footer, favicons, fonts). Changes to templates are commits in the Fugu submodule. Wiki links require a render hook in `themes/fugu/layouts/_default/_markup/render-link.html`. See docs/DESIGN.md for layout and taxonomy decisions.
 
 ## Test kitchen (drafts)
 
-`draft: true` publishes a page as **Test kitchen**: a banner under the title and a mark on its card, plus an optional one-line `working_on` frontmatter note. The banner's words live in `config/_default/params.toml` `[fugu.development]`. DESIGN.md "Test kitchen (drafts)" maps each key to where it shows and says how to turn it off.
+`draft: true` publishes a page as **Test kitchen**: a banner under the title and a mark on its card, plus an optional one-line `working_on` frontmatter note. The banner's words live in `config/_default/params.toml` `[fugu.development]`. docs/DESIGN.md "Test kitchen (drafts)" maps each key to where it shows and says how to turn it off.
 
 ## Pinned pages and tag reference pages
 
-- `pinned: true` in frontmatter (recipes, essays, or reference pages alike) floats a page to the top of its section's list, its term pages (tags/cuisine), and search results. Rare by design, not a general-purpose sort override. See DESIGN.md and SPEC.md.
+- `pinned: true` in frontmatter (recipes, essays, or reference pages alike) floats a page to the top of its section's list, its term pages (tags/cuisine), and search results. Rare by design, not a general-purpose sort override. See docs/DESIGN.md and docs/SPEC.md.
 - A tag can carry its own `content/tags/<slug>/_index.md` with a `description`, and, when marked `principle: true`, `themes/fugu/layouts/_default/term.html` swaps the plain description for a definition callout (the `_index.md` body) plus a "Reference & further reading" list of anything else on the tag that isn't a recipe. Only `win-the-fridge` uses this today (`content/tags/win-the-fridge/_index.md`); every other tag term page renders as before.
 
 ## Visual design

@@ -96,7 +96,7 @@ mainSections = ["recipes"]
 
   # Drafts are published as "Test kitchen" recipes: a banner under the
   # title and tags, and a mark on the card. What each key changes, and how
-  # to turn it off: DESIGN.md "Test kitchen (drafts)". Fugu's own words
+  # to turn it off: docs/DESIGN.md "Test kitchen (drafts)". Fugu's own words
   # are "In development" / canon.
   [fugu.development]
     label   = "Test kitchen"

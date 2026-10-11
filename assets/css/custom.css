@@ -378,7 +378,7 @@ main > header + section {
 
 /* Ingredient list (check), sub-head, and sub-note, from mockups/style.html
  * §3. Applied client-side by themes/fugu/assets/js/ingredients.js, not by Hugo — see
- * render-heading.html and PLAN.md 6.2b for why (no list render hook
+ * render-heading.html and docs/PLAN.md 6.2b for why (no list render hook
  * exists). Real markup is <ul class="ing-list"><li class="ing"> (the
  * mockup used bare <div>s since it had no real markdown to render), so
  * these target real list elements instead of the mockup's divs. */
@@ -517,7 +517,7 @@ li:has(> input[type="checkbox"]:checked) {
   border-radius: 3px;
   padding: 0 3px;
 }
-/* Sub-note: a tab-indented sub-item under an ingredient (FORMAT.md's
+/* Sub-note: a tab-indented sub-item under an ingredient (docs/FORMAT.md's
  * "add split peas for more texture" example) — non-checkable, no checkbox
  * at all (enhanceSubRow never adds one) and no list marker (list-style:
  * none comes from .ing-list; these are real <li> siblings of it, not a
@@ -531,7 +531,7 @@ li:has(> input[type="checkbox"]:checked) {
   color: var(--ink-muted);
 }
 /* Ingredient sub-head: a "#### Dry" / "#### Wet" label inside an
- * Ingredients section (FORMAT.md's grouping convention). Compound selector
+ * Ingredients section (docs/FORMAT.md's grouping convention). Compound selector
  * (element + class) so this beats Tailwind Typography's own h3/h4 rules —
  * those are written with :where() specifically to make them easy to
  * override, but only if the overriding selector is at least as specific. */
@@ -1044,7 +1044,7 @@ a.principle-chip:hover, a.principle-chip:focus-visible { box-shadow: inset 0 0 0
  * (partials/development/list.html) takes the Related section's place and
  * its .related-section styles; nothing extra needed. */
 /* Pin icon (partials/recipe-card.html) — marks a pinned page (frontmatter
- * `pinned: true`, see DESIGN.md). Unlinked, minimal-contrast, sits at the
+ * `pinned: true`, see docs/DESIGN.md). Unlinked, minimal-contrast, sits at the
  * end of the top row after tags/+N. */
 .pin-icon { display: inline-flex; align-items: center; color: var(--ink-faint); flex: none; opacity: .7; }
 .pin-icon svg { width: 11px; height: 11px; }
@@ -1077,7 +1077,7 @@ a.principle-chip:hover, a.principle-chip:focus-visible { box-shadow: inset 0 0 0
 
 /* Article prev/next (recipe, essay, reference single pages) — no mockup
  * ever covered this, since those pages are still Blowfish's default layout
- * (PLAN.md Phase 6.2). Restyled to match the rest of the system rather than
+ * (docs/PLAN.md Phase 6.2). Restyled to match the rest of the system rather than
  * leave Blowfish's bare, unpadded default in an otherwise designed page. */
 /* Three separate, uncoordinated margins were stacking before the divider —
  * Blowfish's own `mb-20` (80px) on .article-content, its own `pt-8` (32px)
@@ -1320,7 +1320,7 @@ article > footer {
 }
 .recipe-sidebar-section h2 .anchor,
 .recipe-sidebar-section h2 a[href^="#"] { display: none; }
-/* Variation blocks (FORMAT.md's "## Variations" -> "### <name>" per
+/* Variation blocks (docs/FORMAT.md's "## Variations" -> "### <name>" per
  * variation) carry an h3 per variation — unstyled by default at this
  * width, so it needs the same compact treatment as the section h2 above,
  * one notch smaller/lighter since it's a subheading within the section. */
