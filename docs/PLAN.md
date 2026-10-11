@@ -42,6 +42,13 @@ Spec: `docs/METHODS.md` (decided 2026-10-10). Template work is Fugu's, handed to
 - [ ] `README.md`: a short reader-facing version.
 - [ ] `docs/FORMAT-ESSAYS.md`: the method format; `CLAUDE.md`: methods under "Food essay types".
 
+### Plant-based tag
+
+A concept tag for plant-based food: green, leaf icon. Green is the principle hue and there's no sixth (`mockups/STYLE.md`), so it likely shares the principle tokens and is told apart by the leaf; STYLE.md would then say green means "a value this recipe holds," not Win the fridge alone. Sketched in `mockups/methods-icon.html` §5. Builds on the shared concept partials (Methods, phase 2).
+
+- [ ] Decide principle-green or another treatment; mock the chip and tag page.
+- [ ] `content/tags/plant-based/_index.md`, the leaf icon, and tagging the recipes.
+
 ### Formula diagram follow-ups
 
 Content-side only. The formula strip on cards, the `/lint` formula check, and growing the icon kit moved to `themes/fugu/PLAN.md` (Features).
