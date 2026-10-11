@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methods pages</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  /* Tokens from STYLE.md. No new hue: methods use the accent. */
+  :root{
+    --bg:#F3F3EC; --surface:#FBFBF6; --surface-2:#EAEBDF;
+    --ink:#23241E; --ink-muted:#63645A; --ink-faint:#93948A;
+    --border:#DCDCCE; --border-strong:#C7C8B4;
+    --accent:#A67330; --accent-strong:#7C361D; --accent-soft:#F6EADA;
+    --highlight:#997F29; --highlight-soft:#F6F1D5;
+    --flag:#3D638F; --flag-soft:#E1EAF4;
+    --principle:#247B50; --principle-strong:#1D6743; --principle-soft:#DBF5E8;
+    --focus:#A67330;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+      --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+      --border:#383A2C; --border-strong:#4A4C3A;
+      --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+      --highlight:#DDCC88; --highlight-soft:#342D19;
+      --flag:#97B8D8; --flag-soft:#1D2835;
+      --principle:#8ED7B4; --principle-strong:#A7E2C4; --principle-soft:#1B3428;
+      --focus:#D3A569;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+    --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+    --border:#383A2C; --border-strong:#4A4C3A;
+    --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+    --highlight:#DDCC88; --highlight-soft:#342D19;
+    --flag:#97B8D8; --flag-soft:#1D2835;
+    --principle:#8ED7B4; --principle-strong:#A7E2C4; --principle-soft:#1B3428;
+    --focus:#D3A569;
+  }
+
+  *{box-sizing:border-box;}
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:'Lora',Georgia,serif; font-size:16px; line-height:1.5; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3{ font-family:'Libre Franklin',system-ui,sans-serif; margin:0; }
+  p{ margin:0; }
+  a{ color:inherit; }
+  code{ font-family:'IBM Plex Mono',monospace; font-size:.85em; background:var(--surface-2); padding:1px 5px; border-radius:3px; }
+  button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
+  :focus-visible{ outline:2px solid var(--focus); outline-offset:2px; }
+
+  /* Mockup chrome */
+  .topbar{ position:sticky; top:0; z-index:30; background:var(--surface); border-bottom:1px solid var(--border-strong); }
+  .topbar-inner{ max-width:1100px; margin:0 auto; padding:12px 16px; display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+  .tb-title{ font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:.95rem; margin-right:auto; }
+  .tb-jump{ display:flex; gap:2px; flex-wrap:wrap; font-family:'Libre Franklin',sans-serif; }
+  .tb-jump a{ font-size:.76rem; font-weight:600; color:var(--ink-muted); text-decoration:none; padding:6px 9px; border-radius:4px; }
+  .tb-jump a:hover{ color:var(--ink); background:var(--surface-2); }
+  .theme-toggle{ font-family:'Libre Franklin',sans-serif; font-size:.75rem; font-weight:600; padding:7px 10px; border:1px solid var(--border-strong); border-radius:3px; color:var(--ink-muted); }
+  main{ max-width:1100px; margin:0 auto; padding:8px 16px 100px; }
+  .hero{ padding:34px 0 26px; border-bottom:1px solid var(--border); margin-bottom:34px; }
+  .eyebrow{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--accent-strong); display:block; margin-bottom:10px; }
+  .hero h1{ font-size:2rem; line-height:1.15; margin-bottom:12px; }
+  .lede{ color:var(--ink-muted); max-width:68ch; }
+  .lede + .lede{ margin-top:10px; }
+  .mock{ margin-bottom:60px; }
+  .mock-label{ font-family:'Libre Franklin',sans-serif; font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-muted); padding-bottom:8px; border-bottom:1px solid var(--border); margin-bottom:6px; }
+  .mock-note{ color:var(--ink-muted); font-size:.9rem; max-width:72ch; margin:8px 0 18px; }
+  .frame{ border:1px dashed var(--border-strong); border-radius:10px; padding:28px 24px 32px; background:var(--bg); }
+  @media (max-width:640px){ .frame{ padding:20px 12px 24px; } }
+  .ann{ font-family:'IBM Plex Mono',monospace; font-size:.66rem; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.04em; display:block; margin:0 0 6px; }
+
+  /* ---- Site components, values from custom.css ---- */
+  .listing-head{ display:flex; align-items:baseline; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:6px; }
+  .ltitle{ font-family:'Libre Franklin',sans-serif; font-size:2.1rem; font-weight:700; line-height:1.1; letter-spacing:-.01em; }
+  .ltitle-kind{ color:var(--accent-strong); }
+  .listing-count{ font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums; font-size:.78rem; color:var(--ink-faint); }
+  .subsection-title{ font-family:'Libre Franklin',sans-serif; font-size:1rem; font-weight:700; margin:0 0 12px; }
+  .subsection-title .n{ font-family:'IBM Plex Mono',monospace; font-weight:500; font-size:.74rem; color:var(--ink-faint); margin-left:6px; }
+  .gap-top{ margin-top:36px; }
+
+  /* Definition callout, shared by every concept kind; the kind sets --k / --k-strong */
+  .definition-callout{ --k:var(--principle); --k-strong:var(--principle-strong); background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--k); border-radius:0 6px 6px 0; padding:20px 22px; display:flex; flex-direction:column; gap:10px; margin-top:18px; margin-bottom:32px; }
+  .definition-callout.k-method{ --k:var(--accent); --k-strong:var(--accent-strong); }
+  .definition-callout.k-status{ --k:var(--flag); --k-strong:var(--flag); }
+  .definition-callout-label{ font-family:'Libre Franklin',sans-serif; font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--k-strong); display:inline-flex; align-items:center; gap:6px; }
+  .definition-callout-label svg{ width:14px; height:14px; }
+  .definition-callout p{ max-width:72ch; font-size:1rem; line-height:1.5; }
+  .read-essay{ font-family:'Libre Franklin',sans-serif; font-size:.82rem; font-weight:600; color:var(--k-strong); text-decoration:none; }
+  .read-essay:hover{ text-decoration:underline; }
+
+  /* Chips */
+  .chip{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; line-height:1.5; font-weight:600; padding:3px 7px; border-radius:3px; border:1px solid transparent; display:inline-flex; align-items:center; gap:4px; white-space:nowrap; text-decoration:none; }
+  .chip svg{ width:12px; height:12px; flex:none; }
+  .method-chip{ background:var(--accent-soft); color:var(--accent-strong); }
+  .blueprint-chip{ color:var(--accent-strong); border-color:color-mix(in srgb, var(--accent) 55%, transparent); }
+  .blueprint-chip .part{ font-weight:500; color:var(--ink-muted); }
+  .cuisine-chip{ background:var(--highlight-soft); color:var(--highlight); text-transform:uppercase; letter-spacing:.05em; }
+  .tag{ color:var(--ink-muted); border-color:var(--border-strong); font-weight:400; }
+  .tag-more{ border-style:dashed; color:var(--ink-faint); }
+  a.chip:hover{ box-shadow:inset 0 0 0 1px var(--accent); }
+
+  /* Cards */
+  .rgrid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:16px; }
+  .rcard{ background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:14px 16px 12px; display:flex; flex-direction:column; gap:8px; min-width:0; }
+  .rcard:hover{ border-color:var(--accent); }
+  .rcard-top{ display:flex; gap:4px; align-items:center; min-width:0; overflow:hidden; }
+  .rcard-title{ font-family:'Libre Franklin',sans-serif; font-size:1.02rem; font-weight:700; line-height:1.3; }
+  .rcard-intro{ font-size:.84rem; line-height:1.5; color:var(--ink-muted); display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; overflow:hidden; }
+  .rcard-stats{ margin-top:auto; padding-top:8px; border-top:1px solid var(--border); display:flex; gap:12px; white-space:nowrap; }
+  .rcard-stat b{ font-family:'Libre Franklin',sans-serif; font-size:.56rem; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); margin-right:4px; }
+  .rcard-stat span{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; font-weight:600; color:var(--accent-strong); }
+
+  /* Reference list */
+  .ref-list{ display:flex; flex-direction:column; gap:2px; }
+  .ref-row{ display:flex; align-items:baseline; gap:10px; padding:9px 0; border-bottom:1px solid var(--border); font-family:'Libre Franklin',sans-serif; font-size:.86rem; }
+  .ref-row a{ color:var(--ink); text-decoration:none; font-weight:600; }
+  .ref-row a:hover{ color:var(--accent-strong); }
+  .ref-kind{ font-family:'IBM Plex Mono',monospace; font-size:.66rem; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.04em; flex:none; width:6.5em; }
+
+  /* NEW: blueprint block on the methods page */
+  .bp-list{ display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:16px; }
+  @media (max-width:420px){ .bp-list{ grid-template-columns:1fr; } }
+  .bp{ background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:16px 18px 14px; display:flex; flex-direction:column; gap:10px; }
+  .bp:hover{ border-color:var(--accent); }
+  .bp-head{ display:flex; align-items:baseline; justify-content:space-between; gap:10px; }
+  .bp-name{ font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:1.15rem; text-decoration:none; color:var(--ink); display:inline-flex; align-items:center; gap:8px; }
+  .bp-name svg{ width:16px; height:16px; color:var(--accent-strong); }
+  .bp-count{ font-family:'IBM Plex Mono',monospace; font-size:.7rem; color:var(--ink-faint); white-space:nowrap; }
+  .bp-desc{ font-size:.86rem; color:var(--ink-muted); }
+
+  /* NEW: ordered parts list (methods page compact, blueprint page full) */
+  .parts{ list-style:none; margin:0; padding:0; counter-reset:part; display:flex; flex-direction:column; }
+  .parts li{ counter-increment:part; display:grid; grid-template-columns:28px 1fr; gap:2px 10px; padding:9px 0; border-top:1px solid var(--border); align-items:baseline; }
+  .parts li::before{ content:counter(part, decimal-leading-zero); font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--accent); grid-row:span 2; }
+  .part-name{ font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:.88rem; }
+  .part-name a{ color:var(--ink); text-decoration:none; }
+  .part-name a:hover{ color:var(--accent-strong); }
+  .part-methods{ font-size:.84rem; color:var(--ink-muted); }
+  .part-methods a{ color:var(--ink); text-decoration-color:var(--accent); text-underline-offset:2px; }
+  .parts li.todo .part-name{ color:var(--ink-faint); font-weight:500; }
+  .parts li.todo::before{ color:var(--ink-faint); }
+  .parts li.todo .part-methods{ font-style:italic; color:var(--ink-faint); }
+  .parts.compact li{ padding:6px 0; grid-template-columns:24px 1fr; }
+  .parts.compact .part-name{ font-size:.82rem; }
+  .parts.compact .part-methods{ display:none; }
+  .parts.full li{ padding:14px 0; grid-template-columns:36px 1fr; }
+  .parts.full .part-name{ font-size:1rem; }
+  .parts.full .part-methods{ font-size:.9rem; margin-top:2px; }
+
+  /* Placeholder for the phase 4 stack diagram */
+  .slot{ border:1px dashed var(--border-strong); border-radius:6px; padding:18px; text-align:center; font-family:'Libre Franklin',sans-serif; font-size:.78rem; color:var(--ink-faint); margin-bottom:32px; }
+
+  /* Method page header */
+  .crumb{ font-family:'Libre Franklin',sans-serif; font-size:.9rem; color:var(--ink-muted); margin-bottom:4px; }
+  .crumb span{ color:var(--accent); }
+  .page-title{ font-family:'Libre Franklin',sans-serif; font-size:2.1rem; font-weight:700; line-height:1.1; margin-bottom:10px; }
+  .tags-row{ display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+  .body-col{ max-width:65ch; margin-top:22px; font-size:1rem; }
+  .part-nav{ display:flex; justify-content:space-between; gap:16px; margin-top:28px; padding-top:14px; border-top:1px solid var(--border); font-family:'Libre Franklin',sans-serif; font-size:.84rem; flex-wrap:wrap; }
+  .part-nav a{ text-decoration:none; color:var(--ink); font-weight:600; }
+  .part-nav a small{ display:block; font-weight:500; font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); }
+  .part-nav a:hover{ color:var(--accent-strong); }
+  .part-nav .next{ text-align:right; margin-left:auto; }
+
+  /* Decisions */
+  .decisions{ display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:14px; }
+  .dec{ background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:14px 16px; }
+  .dec h3{ font-size:.9rem; margin-bottom:6px; }
+  .dec p{ font-size:.86rem; color:var(--ink-muted); }
+  .dec p + p{ margin-top:6px; }
+  table.share{ width:100%; border-collapse:collapse; font-family:'Libre Franklin',sans-serif; font-size:.82rem; }
+  table.share th, table.share td{ text-align:left; padding:8px 10px; border-bottom:1px solid var(--border); vertical-align:top; }
+  table.share th{ font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-muted); }
+  .tablewrap{ overflow-x:auto; }
+</style>
+</head>
+<body>
+<header class="topbar"><div class="topbar-inner">
+  <span class="tb-title">Methods pages</span>
+  <nav class="tb-jump">
+    <a href="#methods">Methods page</a><a href="#blueprint">Blueprint page</a><a href="#method">Method page</a><a href="#cards">Cards</a><a href="#shared">Shared parts</a><a href="#decisions">Decisions</a>
+  </nav>
+  <button class="theme-toggle" id="tt" type="button">Toggle dark</button>
+</div></header>
+
+<main>
+  <div class="hero">
+    <span class="eyebrow">Proposal · 2026-10-10 · METHODS phase 2</span>
+    <h1>Methods and blueprint pages</h1>
+    <p class="lede">The concept pages for methods (<code>docs/METHODS.md</code>): the methods list, a blueprint's page, and how a method page and its card show where they belong. They reuse the principle page's parts (header, definition callout, card grid, reference list) in the accent colour, plus one new component, the ordered parts list.</p>
+    <p class="lede">Content is illustrative: only reverse cooking and food ratios exist as methods today, and none of the burger parts are written yet.</p>
+  </div>
+
+  <!-- 1. Methods page -->
+  <section class="mock" id="methods">
+    <h2 class="mock-label">1 · Methods page <code>/tags/method/</code></h2>
+    <p class="mock-note">Blueprints first, each with its parts in order, so the page reads as a map. Methods that belong to no blueprint (techniques and ratios) follow as cards. Written parts link; unwritten ones are listed faintly, so a blueprint shows its whole shape from the start.</p>
+    <div class="frame">
+      <header class="listing-head">
+        <h1 class="ltitle">Methods</h1>
+        <span class="listing-count">2 methods · 1 blueprint</span>
+      </header>
+      <div class="definition-callout k-method">
+        <span class="definition-callout-label"><span data-icon="fan"></span>Method</span>
+        <p>A method is the pattern behind many dishes. A recipe is one specific dish; a method explains how that kind of food works, which variables matter, why each step is there, and how it fails, so you can cook something that isn't written down anywhere on this site.</p>
+      </div>
+
+      <h3 class="subsection-title">Blueprints<span class="n">1</span></h3>
+      <div class="bp-list">
+        <div class="bp">
+          <div class="bp-head"><a class="bp-name" href="#blueprint"><span data-icon="fan"></span>Burgers</a><span class="bp-count">2 of 7 parts · 10 recipes</span></div>
+          <p class="bp-desc">A burger is a patty and a build: how each part is made, and the recipes and stories behind them.</p>
+          <ol class="parts compact">
+            <li><span class="part-name"><a href="#method">Patty construction</a></span><span class="part-methods"></span></li>
+            <li class="todo"><span class="part-name">Patty seasoning</span><span class="part-methods"></span></li>
+            <li><span class="part-name"><a href="#">Cooking</a></span><span class="part-methods"></span></li>
+            <li class="todo"><span class="part-name">Assembly</span><span class="part-methods"></span></li>
+            <li class="todo"><span class="part-name">Sauces</span><span class="part-methods"></span></li>
+            <li class="todo"><span class="part-name">Major variations</span><span class="part-methods"></span></li>
+            <li class="todo"><span class="part-name">Not burgers</span><span class="part-methods"></span></li>
+          </ol>
+        </div>
+      </div>
+
+      <h3 class="subsection-title gap-top">Techniques and ratios<span class="n">2</span></h3>
+      <div class="rgrid">
+        <div class="rcard"><div class="rcard-top"><span class="chip method-chip"><span data-icon="fan"></span>Method</span><span class="chip tag">technique</span><span class="chip tag tag-more">+1</span></div><div class="rcard-title">Reverse cooking: reverse sear and water frying</div><p class="rcard-intro">Most recipes brown first and cook through second. Reverse methods swap the order: cook gently first, then brown at the end.</p><div class="rcard-stats"><span class="rcard-stat"><b>Read</b><span>4m</span></span></div></div>
+        <div class="rcard"><div class="rcard-top"><span class="chip method-chip"><span data-icon="fan"></span>Method</span><span class="chip tag">ratios</span><span class="chip tag tag-more">+1</span></div><div class="rcard-title">Food ratios for creating your own recipes</div><p class="rcard-intro">Most recipes can be boiled down to a ratio of their ingredients. There is an interesting range for many ingredients.</p><div class="rcard-stats"><span class="rcard-stat"><b>Read</b><span>4m</span></span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Blueprint page -->
+  <section class="mock" id="blueprint">
+    <h2 class="mock-label">2 · Blueprint page <code>/blueprint/burgers/</code></h2>
+    <p class="mock-note">The blueprint's <code>_index.md</code> body becomes the definition callout. Then the parts in the order its <code>parts</code> list gives, each with the methods that cover it; then every recipe on the blueprint as cards; then stories and reference pages as a list, the same "further reading" the principle page has. The stack diagram slot is for phase 4.</p>
+    <div class="frame">
+      <header class="listing-head">
+        <h1 class="ltitle">Burgers <span class="ltitle-kind">blueprint</span></h1>
+        <span class="listing-count">7 parts · 10 recipes · 3 stories</span>
+      </header>
+      <div class="definition-callout k-method">
+        <span class="definition-callout-label"><span data-icon="fan"></span>Blueprint</span>
+        <p>A burger is a stack of parts: a patty, how it's seasoned and cooked, and a build of cold crunch, something sharp, and a sauce, all on a toasted bun. Each part has its own method, and every burger recipe here is one combination of them.</p>
+        <a class="read-essay" href="#methods">All methods →</a>
+      </div>
+
+      <div class="slot">Stack diagram: burger construction (phase 4)</div>
+
+      <h3 class="subsection-title">Parts</h3>
+      <ol class="parts full">
+        <li><span class="part-name"><a href="#method">Patty construction</a></span><span class="part-methods"><a href="#method">Thin patties</a>: grind, fat ratio, weight, and why they aren't mixed or packed.</span></li>
+        <li class="todo"><span class="part-name">Patty seasoning</span><span class="part-methods">Not written yet.</span></li>
+        <li><span class="part-name"><a href="#">Cooking</a></span><span class="part-methods"><a href="#">Reverse cooking</a>: water frying for ground meat, reverse sear for thick patties.</span></li>
+        <li class="todo"><span class="part-name">Assembly</span><span class="part-methods">Not written yet.</span></li>
+        <li class="todo"><span class="part-name">Sauces</span><span class="part-methods">Not written yet.</span></li>
+        <li class="todo"><span class="part-name">Major variations</span><span class="part-methods">Not written yet.</span></li>
+        <li class="todo"><span class="part-name">Not burgers</span><span class="part-methods">Not written yet.</span></li>
+      </ol>
+
+      <h3 class="subsection-title gap-top">Recipes<span class="n">10</span></h3>
+      <div class="rgrid">
+        <div class="rcard"><div class="rcard-top"><span class="chip cuisine-chip">Canadian</span><span class="chip tag">mains</span><span class="chip tag tag-more">+1</span></div><div class="rcard-title">White Spot burgers</div><p class="rcard-intro">This is Bruce's take on the classic White Spot Triple "O" deluxe burger (lettuce and tomatoes make it deluxe).</p><div class="rcard-stats"><span class="rcard-stat"><b>Serves</b><span>4</span></span></div></div>
+        <div class="rcard"><div class="rcard-top"><span class="chip cuisine-chip">USA</span><span class="chip tag">mains</span><span class="chip tag tag-more">+3</span></div><div class="rcard-title">McDouble</div><p class="rcard-intro">A very cravable burger. This is the closest I've gotten to perfecting it, along with its little sibling.</p><div class="rcard-stats"><span class="rcard-stat"><b>Prep</b><span>10m</span></span><span class="rcard-stat"><b>Cook</b><span>5m</span></span></div></div>
+        <div class="rcard"><div class="rcard-top"><span class="chip cuisine-chip">Canadian</span><span class="chip tag">sauces</span><span class="chip tag tag-more">+2</span></div><div class="rcard-title">Bruce's burger sauce</div><p class="rcard-intro">This is a simple, classic burger sauce.</p><div class="rcard-stats"><span class="rcard-stat"><b>Prep</b><span>5m</span></span></div></div>
+        <div class="rcard"><div class="rcard-top"><span class="chip cuisine-chip">USA</span><span class="chip tag">mains</span><span class="chip tag tag-more">+3</span></div><div class="rcard-title">Chicken patties</div><p class="rcard-intro">I love chicken sandwiches. The ground chicken patties bread nicely, but are also great on their own.</p><div class="rcard-stats"><span class="rcard-stat"><b>Prep</b><span>20m</span></span><span class="rcard-stat"><b>Cook</b><span>15m</span></span></div></div>
+      </div>
+
+      <h3 class="subsection-title gap-top">Stories &amp; further reading</h3>
+      <div class="ref-list">
+        <div class="ref-row"><span class="ref-kind">Essay</span><a href="#">The quest for the perfect burger</a></div>
+        <div class="ref-row"><span class="ref-kind">Essay</span><a href="#">The impossible quest for the perfect chicken burger</a></div>
+        <div class="ref-row"><span class="ref-kind">Reference</span><a href="#">Burger night costing (2022)</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Method page -->
+  <section class="mock" id="method">
+    <h2 class="mock-label">3 · A method page's header and footer</h2>
+    <p class="mock-note">The tags row leads with the method chip, then a blueprint chip naming the part, which replaces the plain Blowfish badge hidden today. The same blueprint chip (without the part) goes on burger recipe and story pages. At the foot, previous and next part in the blueprint's order.</p>
+    <div class="frame">
+      <div class="crumb">Essays <span>/</span></div>
+      <h1 class="page-title">Thin patties</h1>
+      <div class="tags-row">
+        <a class="chip method-chip" href="#methods"><span data-icon="fan"></span>Method</a>
+        <a class="chip blueprint-chip" href="#blueprint">Burgers <span class="part">· Patty construction</span></a>
+        <a class="chip tag" href="#">burgers</a>
+        <a class="chip tag" href="#">technique</a>
+      </div>
+      <div class="body-col">
+        <p>A great burger patty is thin, loosely formed, and seasoned only after it hits the griddle. Everything else follows from the crust: the thinner the patty, the more of it is crust…</p>
+      </div>
+      <nav class="part-nav">
+        <a class="prev" href="#blueprint"><small>Burgers blueprint</small>← All parts</a>
+        <a class="next" href="#"><small>Part 2</small>Patty seasoning →</a>
+      </nav>
+    </div>
+    <p class="mock-note" style="margin-top:18px">On a recipe in the blueprint (White Spot burgers), the row becomes:</p>
+    <div class="frame">
+      <div class="tags-row">
+        <a class="chip cuisine-chip" href="#">Canadian</a>
+        <a class="chip blueprint-chip" href="#blueprint">Burgers</a>
+        <a class="chip tag" href="#">mains</a>
+        <a class="chip tag" href="#">burgers</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Cards -->
+  <section class="mock" id="cards">
+    <h2 class="mock-label">4 · Method cards elsewhere</h2>
+    <p class="mock-note">In the essays list and search, a method's card leads with the method chip where other essays show their folder ("cooking reflections"). Recipe cards don't get a blueprint chip: the top row has two slots, and cuisine and principle already use them.</p>
+    <div class="frame">
+      <div class="rgrid">
+        <div class="rcard"><div class="rcard-top"><span class="chip method-chip"><span data-icon="fan"></span>Method</span><span class="chip tag">technique</span><span class="chip tag tag-more">+1</span></div><div class="rcard-title">Reverse cooking: reverse sear and water frying</div><p class="rcard-intro">Most recipes brown first and cook through second. Reverse methods swap the order.</p><div class="rcard-stats"><span class="rcard-stat"><b>Read</b><span>4m</span></span></div></div>
+        <div class="rcard"><div class="rcard-top"><span class="chip tag">cooking reflections</span></div><div class="rcard-title">The quest for the perfect burger</div><p class="rcard-intro">What years of flipping, testing, and eating burgers taught me about the ratios and technique behind a great one.</p><div class="rcard-stats"><span class="rcard-stat"><b>Read</b><span>4m</span></span></div></div>
+        <div class="rcard"><div class="rcard-top"><span class="chip cuisine-chip">Canadian</span><span class="chip tag">mains</span><span class="chip tag tag-more">+1</span></div><div class="rcard-title">White Spot burgers</div><p class="rcard-intro">No blueprint chip on a recipe card; it shows on the recipe's page.</p><div class="rcard-stats"><span class="rcard-stat"><b>Serves</b><span>4</span></span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Shared parts -->
+  <section class="mock" id="shared">
+    <h2 class="mock-label">5 · What the three concept kinds share</h2>
+    <p class="mock-note">One set of partials, with the kind setting the colour and icon. The callouts below are the same component.</p>
+    <div class="tablewrap">
+      <table class="share">
+        <thead><tr><th>Part</th><th>Principle</th><th>Status</th><th>Method</th></tr></thead>
+        <tbody>
+          <tr><td>Colour</td><td>green <code>--principle</code></td><td>blue <code>--flag</code></td><td>accent</td></tr>
+          <tr><td>Icon</td><td>cycle arrows</td><td>pot and steam</td><td>fan-out</td></tr>
+          <tr><td>Header kind suffix</td><td>"principle"</td><td>(an essay page)</td><td>"blueprint" on blueprints</td></tr>
+          <tr><td>Definition callout</td><td>tag <code>_index.md</code> body</td><td>(the essay itself)</td><td>tag or blueprint <code>_index.md</code> body</td></tr>
+          <tr><td>Chip</td><td>"Win the fridge" / "WTF"</td><td>"Test kitchen" / "Testing"</td><td>"Method"; blueprint chip</td></tr>
+          <tr><td>Membership</td><td>tag</td><td><code>draft: true</code></td><td>folder; <code>blueprint</code> taxonomy</td></tr>
+          <tr><td>Body</td><td>recipe grid, then further reading</td><td>draft grid</td><td>blueprints with parts, then cards; parts, recipes, stories</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin-top:18px">
+      <div class="definition-callout" style="margin:0"><span class="definition-callout-label"><span data-icon="wtf"></span>Definition</span><p>Win the fridge is the practice of using every scrap of food before it goes to waste.</p><a class="read-essay" href="#">Read the full essay →</a></div>
+      <div class="definition-callout k-status" style="margin:0"><span class="definition-callout-label"><span data-icon="pot"></span>Test kitchen</span><p>Recipes still being tested: good to cook, not keepers yet.</p><a class="read-essay" href="#">How the test kitchen works →</a></div>
+      <div class="definition-callout k-method" style="margin:0"><span class="definition-callout-label"><span data-icon="fan"></span>Method</span><p>The pattern behind many dishes, so you can cook what isn't written down.</p><a class="read-essay" href="#">All methods →</a></div>
+    </div>
+  </section>
+
+  <!-- 6. Decisions -->
+  <section class="mock" id="decisions">
+    <h2 class="mock-label">6 · Decisions in this mock</h2>
+    <div class="decisions">
+      <div class="dec"><h3>Unwritten parts are shown</h3><p>A blueprint lists all of its parts, with the unwritten ones faint ("Not written yet"), so it shows its whole shape from the first method. The alternative is to list only written parts and a count.</p></div>
+      <div class="dec"><h3>The callout label takes the kind's icon</h3><p>"Method" and "Blueprint" carry the fan-out; principle and test kitchen would carry theirs, so the shared callout always says which kind it is.</p></div>
+      <div class="dec"><h3>Blueprint chip: accent outline</h3><p>Not filled, so it ranks below the method chip and the cuisine chip, and reads as "belongs to" rather than "is". The part name follows in muted text on method pages only.</p></div>
+      <div class="dec"><h3>No new page for the methods list</h3><p>It stays at <code>/tags/method/</code>, a term page with a kind, like Win the fridge. A <code>/methods/</code> alias can come later if the URL matters.</p></div>
+      <div class="dec"><h3>Blueprints before cards</h3><p>The methods page leads with blueprints because they're the map; standalone techniques and ratios follow. With many blueprints, this becomes a grid of blueprint blocks.</p></div>
+      <div class="dec"><h3>Part navigation</h3><p>Previous and next part in the blueprint's order, at the foot of a method page, in place of the date-ordered article pagination.</p></div>
+    </div>
+  </section>
+</main>
+
+<script>
+  const I = {
+    fan: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="24" r="5.5"/><path d="M16.5 24H26M26 24l10-12M26 24h10M26 24l10 12"/><circle cx="39" cy="10" r="3"/><circle cx="40" cy="24" r="3"/><circle cx="39" cy="38" r="3"/></svg>',
+    wtf: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8a5 5 0 0 1 8.5-3.5M13 8a5 5 0 0 1-8.5 3.5"/><path d="M11 2v2.5H8.5M5 14v-2.5h2.5"/></svg>',
+    pot: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 25h32v12c0 2.8-2.2 5-5 5H13c-2.8 0-5-2.2-5-5z"/><path d="M6 25c0-4.4 8-7.5 18-7.5S42 20.6 42 25z"/><path d="M21.5 17.5v-2.5h5v2.5M8 29H4M40 29h4"/><path d="M15 12c-2-2 2-3.5 0-6M33 12c-2-2 2-3.5 0-6"/></svg>'
+  };
+  document.querySelectorAll('[data-icon]').forEach(el => el.outerHTML = I[el.dataset.icon]);
+  const tt = document.getElementById('tt'), root = document.documentElement;
+  const dark = () => root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  const sync = () => tt.textContent = dark() ? 'Toggle light' : 'Toggle dark';
+  tt.onclick = () => { root.dataset.theme = dark() ? 'light' : 'dark'; sync(); };
+  sync();
+</script>
+</body>
+</html>

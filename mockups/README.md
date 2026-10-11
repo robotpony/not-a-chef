@@ -48,6 +48,12 @@ in a browser — no build step.
   full set with the later plant-based leaf. Decided 2026-10-10: fan-out in
   the accent colour (`STYLE.md` Method chip).
 
+- **`methods-pages.html`**: proposal (2026-10-10) for the methods concept
+  pages (`docs/METHODS.md`, PLAN.md Methods phase 2): the methods list at
+  `/tags/method/`, a blueprint's page with its parts in order, a method
+  page's chips and part navigation, method cards, and what principle,
+  status, and method share. Queued for Fugu; its §6 choices are open.
+
 - **`in-development.html`**: proposal (2026-10-07) to make `draft: true`
   mean "published, still changing" instead of hidden. A flag-blue callout
   on the page (stock sentence from config, optional per-recipe

@@ -18,14 +18,15 @@ Spec: `docs/METHODS.md` (decided 2026-10-10). Template work is Fugu's, handed to
 
 **Phase 2: concept pages (Fugu handoff)**
 
-- [ ] Hand off: generalize `principle/term.html`, `principle-chip.html`, and `development/*` into shared concept partials with a `kind` (principle, status, method).
-- [ ] Hand off: methods listing grouped by blueprint, and a blueprint term page that lists parts in the `_index.md` order, then recipes, then stories.
+Mocked 2026-10-10 in `mockups/methods-pages.html`; the template work is queued in `themes/fugu/PLAN.md` Features, "Concept pages: principle, status, method" (and "Extra taxonomies in the page header's tags row"). Fugu commits `b7bf0fe`, `83dbc04`, not pushed yet.
+
 - [x] Pick the methods icon. *Done 2026-10-10: fan-out, accent colour (`mockups/methods-icon.html`, STYLE.md Method chip, `assets/icons/methods/fan-out.svg`).*
-- [ ] Mock the methods and blueprint pages against `mockups/STYLE.md` first.
-- [ ] Hand off (queued in `themes/fugu/PLAN.md` Features, "Extra taxonomies in the page header's tags row", 2026-10-10): skip `blueprint` in `article-meta/basic.html`'s taxonomy loop (or give it a chip); it falls through to Blowfish's plain badge, beside the matching tag. Hidden by a stopgap rule in `custom.css` (`.tags-row > a[href*="/blueprint/"]`); remove it when this lands.
-- [ ] Hand off: add `blueprint` and `part` to `public/recipes/index.json`.
-- [ ] Hand off: emit `.method-chip` (fan-out icon, `assets/icons/methods/fan-out.svg`); its CSS is already in `custom.css`.
-- [ ] Check win-the-fridge and test kitchen render the same after the change.
+- [x] Mock the methods and blueprint pages against `mockups/STYLE.md` first. *Done 2026-10-10: methods page, blueprint page, method page header and part navigation, cards, and what the three concept kinds share.*
+- [ ] Settle the mock's open choices (its §6): unwritten parts shown faintly, the blueprint chip as an accent outline, the methods list staying at `/tags/method/`. Then record the components in STYLE.md and `style.html`.
+- [ ] Fugu: shared concept partials with a `kind`; principle and test kitchen render the same after.
+- [ ] Fugu: the method chip, the methods list, the blueprint page, the blueprint chip, part navigation, and `blueprint`/`part` in `index.json`.
+- [ ] When the blueprint chip lands, remove the stopgap rule in `custom.css` (`.tags-row > a[href*="/blueprint/"]`).
+- [ ] Bump the `themes/fugu` submodule and check every page type in Chrome, light and dark, desktop and phone.
 
 **Phase 3: first methods**
 
