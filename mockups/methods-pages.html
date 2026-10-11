@@ -216,6 +216,9 @@
   .decisions{ display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:14px; }
   .dec{ background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:14px 16px; }
   .dec h3{ font-size:.9rem; margin-bottom:6px; }
+  .dec-tag{ display:inline-block; font-family:'Libre Franklin',sans-serif; font-size:.62rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; padding:2px 6px; border-radius:3px; margin-bottom:6px; }
+  .dec-open{ background:var(--flag-soft); color:var(--flag); }
+  .dec-done{ background:var(--surface-2); color:var(--ink-muted); }
   .dec p{ font-size:.86rem; color:var(--ink-muted); }
   .dec p + p{ margin-top:6px; }
   table.share{ width:100%; border-collapse:collapse; font-family:'Libre Franklin',sans-serif; font-size:.82rem; }
@@ -499,17 +502,18 @@
 
   <!-- 6. Decisions -->
   <section class="mock" id="decisions">
-    <h2 class="mock-label">7 · Decisions in this mock</h2>
+    <h2 class="mock-label">7 · Open choices</h2>
+    <p class="mock-note">These are proposals, not decisions. Each card says what the mock shows and the main alternative. Only the last one is settled.</p>
     <div class="decisions">
-      <div class="dec"><h3>Unwritten parts are shown</h3><p>A blueprint lists all of its parts, with the unwritten ones faint ("Not written yet"), so it shows its whole shape from the first method. The alternative is to list only written parts and a count.</p></div>
-      <div class="dec"><h3>The callout label takes the kind's icon</h3><p>"Method" and "Blueprint" carry the fan-out; principle and test kitchen would carry theirs, so the shared callout always says which kind it is.</p></div>
-      <div class="dec"><h3>Blueprint chip: accent outline</h3><p>Not filled, so it ranks below the method chip and the cuisine chip, and reads as "belongs to" rather than "is". The part name follows in muted text on method pages only.</p></div>
-      <div class="dec"><h3>No new page for the methods list</h3><p>It stays at <code>/tags/method/</code>, a term page with a kind, like Win the fridge. A <code>/methods/</code> alias can come later if the URL matters.</p></div>
-      <div class="dec"><h3>Blueprints before cards</h3><p>The methods page leads with blueprints because they're the map; standalone techniques and ratios follow. With many blueprints, this becomes a grid of blueprint blocks.</p></div>
-      <div class="dec"><h3>Builds before parts</h3><p>On a blueprint page, builds come first: they're how people think about burgers ("a deluxe", "a bacon double cheese"). The comparison table shows how builds differ, part by part; the parts list after it is the reference.</p></div>
-      <div class="dec"><h3>Options are pills, not pages</h3><p>A part's options show as pills on the blueprint page and as a table on the part's method page. Builds' picks are free text that usually names an option.</p></div>
-      <div class="dec"><h3>Profile as a quote line</h3><p>The free-text profile sits under a build's title with an accent rule, on its card, its page, and the comparison table, so it reads as the build's one-line summary.</p></div>
-      <div class="dec"><h3>Part navigation</h3><p>Previous and next part in the blueprint's order, at the foot of a method page, in place of the date-ordered article pagination.</p></div>
+      <div class="dec"><span class="dec-tag dec-open">Open</span><h3>1 · Unwritten parts</h3><p><b>Proposed:</b> Every part of a blueprint is listed, including ones with no method yet, shown faint with "Not written yet". The page shows the blueprint's whole shape from day one.</p><p><b>Alternative:</b> List only the parts that have a method, plus a count ("2 of 6 parts"). Tidier, but the blueprint looks incomplete in a way readers can't see.</p></div>
+      <div class="dec"><span class="dec-tag dec-open">Open</span><h3>2 · Blueprint chip style</h3><p><b>Proposed:</b> An accent outline chip ("Burgers · Patty construction"), not filled, so it sits below the filled Method and cuisine chips and reads as "belongs to".</p><p><b>Alternative:</b> A filled chip like the others, or a plain text link under the title ("Part of the Burgers blueprint").</p></div>
+      <div class="dec"><span class="dec-tag dec-open">Open</span><h3>3 · Order on a blueprint page</h3><p><b>Proposed:</b> Builds first (cards, then the comparison table), then parts, then recipes, then stories. People think in builds ("a deluxe").</p><p><b>Alternative:</b> Parts first, then builds. Reads more like a reference: how a burger is made, then the ways to combine it.</p></div>
+      <div class="dec"><span class="dec-tag dec-open">Open</span><h3>4 · Methods page address</h3><p><b>Proposed:</b> Keep the methods list at <code>/tags/method/</code>, the tag's own page, like Win the fridge at <code>/tags/win-the-fridge/</code>. No new section.</p><p><b>Alternative:</b> A dedicated <code>/methods/</code> page (or an alias to it), which is a nicer URL to share and link from the nav.</p></div>
+      <div class="dec"><span class="dec-tag dec-open">Open</span><h3>5 · Order on the methods page</h3><p><b>Proposed:</b> Blueprints first (each with its parts listed), then standalone techniques and ratios as cards.</p><p><b>Alternative:</b> Everything as one grid of cards, blueprints mixed in.</p></div>
+      <div class="dec"><span class="dec-tag dec-open">Open</span><h3>6 · Callout label icon</h3><p><b>Proposed:</b> The definition callout's label carries the kind's icon (fan-out for methods and blueprints; the principle and test kitchen icons for theirs).</p><p><b>Alternative:</b> No icon in the label, as on the Win the fridge page today.</p></div>
+      <div class="dec"><span class="dec-tag dec-open">Open</span><h3>7 · Build profile style</h3><p><b>Proposed:</b> The free-text profile sits under a build's title as an italic line with an accent rule, the same on its card, its page, and the comparison table.</p><p><b>Alternative:</b> Plain body text, like a card's intro.</p></div>
+      <div class="dec"><span class="dec-tag dec-open">Open</span><h3>8 · Part navigation</h3><p><b>Proposed:</b> At the foot of a method in a blueprint: back to the blueprint, and next part in its order, replacing the usual date-ordered previous/next.</p><p><b>Alternative:</b> Keep the usual previous/next, and rely on the blueprint page for order.</p></div>
+      <div class="dec"><span class="dec-tag dec-done">Decided</span><h3>9 · Options aren't pages</h3><p><b>Proposed:</b> Decided 2026-10-10: a part's options (thick / thin / paper thin) are a table in the part's method, shown as pills on the blueprint page.</p></div>
     </div>
   </section>
 </main>
