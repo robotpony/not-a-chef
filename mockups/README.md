@@ -66,6 +66,8 @@ in a browser — no build step.
   Labels on the right, decided; no assembled view for now. Round 3: a
   detail pass in strokes (striped bacon, crinkle-cut pickles, a mustard
   zigzag, tomato chambers, a crust rim and open crumb on cut bread).
+  Accepted as v1 2026-10-10 (`STYLE.md` Exploded build diagram); a later
+  pass refines the drawings from reference examples (PLAN.md, phase 6).
 
 - **`in-development.html`**: proposal (2026-10-07) to make `draft: true`
   mean "published, still changing" instead of hidden. A flag-blue callout

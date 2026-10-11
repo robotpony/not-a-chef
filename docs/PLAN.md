@@ -38,7 +38,7 @@ Mocked 2026-10-10 in `mockups/methods-pages.html`; the template work is queued i
 
 **Phase 4: stack diagrams**
 
-- [ ] Mock the ` ```stack ` block in `mockups/` and settle it in `mockups/STYLE.md` and `style.html`. *Proposed 2026-10-10: exploded view in the formula icons' style, labels on the right, `mockups/exploded-builds.html`; decide, then record in STYLE.md.*
+- [x] Mock the ` ```stack ` block in `mockups/` and settle it in `mockups/STYLE.md` and `style.html`. *Done 2026-10-10: exploded view in the formula icons' style, labels on the right, no assembled view (`mockups/exploded-builds.html`, STYLE.md "Exploded build diagram"). Accepted as v1; refinement is phase 6.*
 - [ ] Draw the layer kit (`assets/icons/layers/`): the 20 layers in `mockups/exploded-builds.html` §2, as SVG files at a common width with their own heights, in the formula icons' style (theme tokens, two fills).
 - [ ] Hand off: `render-codeblock-stack.html`, with `repeat:` and the unknown-icon warning.
 - [ ] First diagrams: burger construction, sandwich construction, lasagne layering.
@@ -48,6 +48,14 @@ Mocked 2026-10-10 in `mockups/methods-pages.html`; the template work is queued i
 - [x] `docs/ARCHITECTURE.md`: a "Content model" section with the ontology and a diagram. *Done 2026-10-10.*
 - [x] `README.md`: a short reader-facing version. *Done 2026-10-10.*
 - [x] `docs/FORMAT.md` (essays merged into it): the method format and the `blueprint`/`part` fields; `CLAUDE.md`: methods under "Food essay types". *Done 2026-10-10.*
+
+**Phase 6: refine the layer drawings (later)**
+
+The v1 drawings are about 80% there: good enough to ship, but some layers don't yet look like what they are. Getting them right matters for readers, since the diagram is how a build is understood at a glance.
+
+- [ ] Bruce provides reference examples (photos, illustrations, or sketches) for the layers that read least well.
+- [ ] Redraw those layers from the examples in `mockups/exploded-builds.html`, staying in the formula icons' style (one ink line, two fills, detail as strokes), and check them at card size and full size, light and dark.
+- [ ] Update the layer kit SVGs in `assets/icons/layers/` and the STYLE.md entry; drop "v1" when it's settled.
 
 ### Plant-based tag
 
