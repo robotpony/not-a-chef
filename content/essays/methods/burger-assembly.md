@@ -15,7 +15,7 @@ The patty brings salt, fat, and savoury depth. Everything else on the burger is 
 
 - **The bun.** Soft and simple, not large or dense, and the same size as the patty (see [[Chef John's hamburger buns]]). Toast it, cut side down in a dry non-stick pan over medium heat, while the burger pan heats. For a fast-food burger, press the bun a little flat.
 - **Cold crunch.** Lots of finely shredded iceberg, loose rather than packed. Pickles, sliced thin or lengthwise.
-- **Sharp.** Raw onion, sliced paper thin: white, yellow, or purple. Onion is the most important topping on the burger. Two forms beat one: raw for sharpness, plus onion sautéed in the beef fat for sweetness.
+- **Sharp.** Raw onion, sliced paper thin: white, yellow, or purple. Onion is the most important topping on the burger. Two forms beat one: raw for sharpness, plus onion sautéed in the beef fat for sweetness. Rehydrated dried minced onion is a third form: mellower than raw, with a distinct flavour you notice right away (the fast-food double's onion).
 - **Sour.** Double-sour pickles. They're hard to buy and easy to make: sprinkle citric acid over ordinary dill pickles and let them sit.
 - **Juicy.** Ripe tomato, sliced thin. Skip it when tomatoes aren't good.
 - **Cheese and bacon.** Optional. A thin slice of processed cheese melts into a thin patty; bacon only if it's crisp, never chewy.

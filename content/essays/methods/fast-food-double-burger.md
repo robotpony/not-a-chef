@@ -12,7 +12,7 @@ picks:
   - "Patty construction: Two thin patties, 75 g each, double-ground"
   - "Patty seasoning: 4:2:1 salt, MSG, and pepper, after cooking"
   - "Cooking: From frozen on a hot griddle, cheese on after the flip"
-  - "Assembly: Half a slice of processed cheese between the patties, thin pickles, onion, on a small bun pressed a little flat"
+  - "Assembly: Half a slice of processed cheese between the patties, thin pickles, rehydrated dried minced onion, on a small bun pressed a little flat"
   - "Sauces: Ketchup and mustard, 5:1"
 description: "The fast-food double: two thin, soft patties with processed cheese melted between them, and the fast-food balance of ketchup, mustard, pickle, and onion."
 ---
@@ -24,6 +24,7 @@ This is the rich build. Where the drive-in deluxe is all contrast, this one lean
 - **Two thin patties, not one thick one.** Twice the crust, and the cheese melts between them.
 - **Double-ground beef.** It gives the soft, almost pillowy texture of a fast-food patty instead of a coarse, chewy one.
 - **Processed cheese.** It melts smooth into a thin patty. Use half a slice of Kraft Deluxe; a full one is too thick.
+- **Rehydrated dried onion.** Dried minced onion, soaked in water, instead of raw. It's a clever ruse: the flavour is mellower than raw onion and distinctly different, and it's very obvious when you taste it. Fresh white onion, diced, soaked in cold water, and drained, is the stand-in when there's no dried onion, but it isn't the same.
 - **5:1 ketchup to mustard.** The fast-food sweet-savoury balance.
 - **Pickle and mustard.** The only sharp and sour on the burger, so they can't be skipped.
 

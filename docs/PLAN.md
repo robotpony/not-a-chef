@@ -40,8 +40,8 @@ Mocked 2026-10-10 in `mockups/methods-pages.html`; the template work is queued i
 - [x] History on builds (decided 2026-10-10): `origin` and `era` front matter, a `## Where it comes from` section with a constraint / pick table, and a lineage timeline on the blueprint page (`mockups/methods-pages.html`). The drive-in deluxe has its history; the other two builds have TODOs.
 - [x] Fugu: show `origin` on build cards and pages, and the lineage timeline (builds by `era`, plus the blueprint's `planned` builds, faint). *Done 2026-10-10, Fugu `80921b6` + `df28246` here. Builds are now ordered by `era` everywhere they're listed, undated last. `origin`/`era` stay out of `recipes/index.json`, since it lists only recipes.*
 - [x] Rename the builds by lineage. *Done 2026-10-10: Drive-in deluxe (White Spot burgers) and Fast-food double (McDouble; bacon is now a variation).*
-- [ ] Grilled onion: decide whether it's the Oklahoma onion burger (onion smashed into the patty, 1920s–30s) or an onion smash burger (the October onion jam, 2010s smash lineage), then rename it.
-- [ ] Planned builds on the timeline (Pub burger, Smash burger): add to `content/blueprint/burgers/_index.md` as `planned:` if wanted.
+- [x] Grilled onion: decide which onion burger it is. *Decided 2026-10-10: both, as variations: grilled alongside (or as a jam) and smashed in, which is a shortcut that soaks up the griddle juices. Name stays.*
+- [x] Planned builds on the timeline. *Done 2026-10-10: Pub burger, Smash burger, and the McDouble (a fast-food double variant, with rehydrated dried onion), in `content/blueprint/burgers/_index.md`. Years are approximate until sourced.*
 
 **Phase 4: stack diagrams**
 
