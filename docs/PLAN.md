@@ -42,6 +42,7 @@ Mocked 2026-10-10 in `mockups/methods-pages.html`; the template work is queued i
 - [x] Rename the builds by lineage. *Done 2026-10-10: Drive-in deluxe (White Spot burgers) and Fast-food double (McDouble; bacon is now a variation).*
 - [x] Grilled onion: decide which onion burger it is. *Decided 2026-10-10: both, as variations: grilled alongside (or as a jam) and smashed in, which is a shortcut that soaks up the griddle juices. Name stays.*
 - [x] Planned builds on the timeline. *Done 2026-10-10: Pub burger, Smash burger, and the McDouble (a fast-food double variant, with rehydrated dried onion), in `content/blueprint/burgers/_index.md`. Years are approximate until sourced.*
+- [ ] Flags on the lineage timeline: context markers that aren't food (Burger King opens, a world's fair), styled apart from builds so they read as backdrop, not entries. Decide where they live (likely a `flags` list in the blueprint's `_index.md`, beside `planned`), mock them in `mockups/methods-pages.html`, then hand the template change to fugu-agent.
 
 **Phase 4: stack diagrams**
 
