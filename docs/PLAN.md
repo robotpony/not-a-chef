@@ -39,8 +39,9 @@ Mocked 2026-10-10 in `mockups/methods-pages.html`; the template work is queued i
 **Phase 4: stack diagrams**
 
 - [x] Mock the ` ```stack ` block in `mockups/` and settle it in `mockups/STYLE.md` and `style.html`. *Done 2026-10-10: exploded view in the formula icons' style, labels on the right, no assembled view (`mockups/exploded-builds.html`, STYLE.md "Exploded build diagram"). Accepted as v1; refinement is phase 6.*
-- [ ] Draw the layer kit (`assets/icons/layers/`): the 20 layers in `mockups/exploded-builds.html` §2, as SVG files at a common width with their own heights, in the formula icons' style (theme tokens, two fills).
-- [ ] Hand off: `render-codeblock-stack.html`, with `repeat:` and the unknown-icon warning.
+- [ ] Fugu: the layer kit (`themes/fugu/assets/icons/layers/`, beside the formula icons): the 20 layers in `mockups/exploded-builds.html` §2, as SVG files at a common width with their own heights, in the formula icons' style. *Sent to fugu-agent 2026-10-10 with the render hook.*
+- [ ] Fugu: `render-codeblock-stack.html` (labels on the right, `caption:`, `repeat:` as a `× n` bracket, the unknown-key warning) and a compact card partial like `formula-strip.html`. *Sent to fugu-agent 2026-10-10; the mockup's JS is the reference implementation.*
+- [ ] `docs/FORMAT.md`: document the ` ```stack ` block once Fugu settles the `repeat:` syntax.
 - [ ] First diagrams: burger construction, sandwich construction, lasagne layering.
 
 **Phase 5: documentation**
@@ -55,7 +56,7 @@ The v1 drawings are about 80% there: good enough to ship, but some layers don't 
 
 - [ ] Bruce provides reference examples (photos, illustrations, or sketches) for the layers that read least well.
 - [ ] Redraw those layers from the examples in `mockups/exploded-builds.html`, staying in the formula icons' style (one ink line, two fills, detail as strokes), and check them at card size and full size, light and dark.
-- [ ] Update the layer kit SVGs in `assets/icons/layers/` and the STYLE.md entry; drop "v1" when it's settled.
+- [ ] Update the layer kit SVGs (Fugu's `assets/icons/layers/`) and the STYLE.md entry; drop "v1" when it's settled.
 
 ### Plant-based tag
 
