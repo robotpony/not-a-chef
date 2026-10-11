@@ -14,7 +14,7 @@ aliases:
   - /recipes/vegan-burger-savoury-chew-gluten/
 draft: false
 prep_time: ~10 min
-family: [burgers]
+blueprint: [burgers]
 ---
 
 A hearty bean, nut, and mushroom burger. The vital wheat gluten gives it a savoury chew, so it holds together in the pan instead of crumbling.

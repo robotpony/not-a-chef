@@ -1,7 +1,7 @@
 ---
 title: Burgers
 description: "A burger is a patty and a build: how each part is made, and the recipes and stories behind them."
-# The order the family's parts are listed in (each method page sets `part`).
+# The order the blueprint's parts are listed in (each method page sets `part`).
 parts:
   - Patty construction
   - Patty seasoning

@@ -4,7 +4,7 @@ source: family
 draft: false
 tags: [reference, costing, burgers]
 date: 2026-06-08
-family: [burgers]
+blueprint: [burgers]
 ---
 
 Ingredient costs and menu pricing from a home burger night, 2022.

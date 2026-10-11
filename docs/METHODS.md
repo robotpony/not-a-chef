@@ -16,7 +16,7 @@ The test: after reading it, could you cook something that isn't written down any
    - Foil packets: getting things that cook at different speeds to finish together and share flavour, while keeping it simple
 2. **Ratio method.** A proportion you can scale or adjust, with its acceptable range.
    - Food ratios: dressings, mayo, brines
-3. **Dish family method.** A type of food broken into its parts, each of which is its own small method.
+3. **Blueprint method.** A type of food broken into its parts, each of which is its own small method.
    - Burgers: patty construction, patty seasoning, cooking methods, assembly, sauces, major variations, things that are not burgers
    - Each part can link to a technique method (e.g. patty cooking → reverse sear or water frying)
 
@@ -48,7 +48,7 @@ Method-like pages in `content/reference/` move into the folder, with `aliases:` 
 - `reverse-cooking-reverse-sear-and-water-frying.md`
 - `food-ratios-for-creating-your-own-recipes.md`
 
-## Folders, tags, and families
+## Folders, tags, and blueprints
 
 A folder is a forced tag with two extra effects:
 
@@ -61,12 +61,12 @@ A folder is a forced tag with two extra effects:
 
 Hugo's `cascade` makes the link literal: an `_index.md` can set a tag or taxonomy term on every page below it (tested on Hugo 0.166). So a folder can stand in for a tag, but a tag can't stand in for a folder, because a page can only be in one.
 
-That's why **families are a taxonomy, not folders**. Water frying belongs to burgers and to ground meat; a folder would force it to pick one.
+That's why **blueprints are a taxonomy, not folders**. (They were briefly called families; renamed 2026-10-10 because the existing `family` tag already means recipes that come from our family historically.) Water frying belongs to burgers and to ground meat; a folder would force it to pick one.
 
-- **`family`** is a taxonomy, set up like `cuisine`: `family: [burgers]` in frontmatter, with `content/family/burgers/_index.md` holding the family's definition and the order of its parts.
-- **`part`** is a frontmatter field on a method page naming which part of the family it covers (e.g. `part: Patty construction`).
-- Method pages, recipes, and stories all carry `family`, so the family page collects all three without any other wiring.
-- Folders can still group a family's method files on disk (`content/essays/methods/burgers/`), with `family: [burgers]` set on each page (or cascaded by path from `content/essays/_index.md`, never from an `_index.md` in the folder, for the reason above). A page that belongs to a second family lists both.
+- **`blueprint`** is a taxonomy, set up like `cuisine`: `blueprint: [burgers]` in frontmatter, with `content/blueprint/burgers/_index.md` holding the blueprint's definition and the order of its parts.
+- **`part`** is a frontmatter field on a method page naming which part of the blueprint it covers (e.g. `part: Patty construction`).
+- Method pages, recipes, and stories all carry `blueprint`, so the blueprint page collects all three without any other wiring.
+- Folders can still group a blueprint's method files on disk (`content/essays/methods/burgers/`), with `blueprint: [burgers]` set on each page (or cascaded by path from `content/essays/_index.md`, never from an `_index.md` in the folder, for the reason above). A page that belongs to a second blueprint lists both.
 
 ## Concept pages
 
@@ -76,7 +76,7 @@ A **concept page** is a named idea with a short definition, an icon, a chip on c
 |---|---|---|
 | Principle | Win the fridge | Tag |
 | Status | Test kitchen | `draft: true` |
-| Method | Methods, and each family | Folder (methods), taxonomy (families) |
+| Method | Methods, and each blueprint | Folder (methods), taxonomy (blueprints) |
 
 Today principle and status are built separately (`principle/term.html` and `principle-chip.html`; `development/*`). They should share:
 
@@ -85,11 +85,11 @@ Today principle and status are built separately (`principle/term.html` and `prin
 - the icon, chip, and popover
 - the "Reference & further reading" list
 
-What stays per kind is how membership is decided and the body layout: a flat recipe grid for a principle, a draft list for status, parts in order for a family.
+What stays per kind is how membership is decided and the body layout: a flat recipe grid for a principle, a draft list for status, parts in order for a blueprint.
 
 The method chip is the fan-out icon (`assets/icons/methods/fan-out.svg`) in the accent colour, decided 2026-10-10 (`mockups/STYLE.md` Method chip, `mockups/methods-icon.html`).
 
-The shared templates are Fugu work (`themes/fugu`), handed to the Fugu agent. This repo supplies the `_index.md` files, icons, and config. Until then the methods list is the `method` tag page (`/tags/method/`, described by `content/tags/method/_index.md`) and each family is a plain term page (`/family/burgers/`); the family's definition and part order are written but not shown yet.
+The shared templates are Fugu work (`themes/fugu`), handed to the Fugu agent. This repo supplies the `_index.md` files, icons, and config. Until then the methods list is the `method` tag page (`/tags/method/`, described by `content/tags/method/_index.md`) and each blueprint is a plain term page (`/blueprint/burgers/`); the blueprint's definition and part order are written but not shown yet.
 
 ## Ontology
 
@@ -97,17 +97,17 @@ The shared templates are Fugu work (`themes/fugu`), handed to the Fugu agent. Th
 |---|---|
 | Recipe | One dish with fixed quantities |
 | Story | An essay that gives the reason for a method |
-| Method | A general pattern (technique, ratio, or part of a family) |
-| Family | A dish type made of parts |
+| Method | A general pattern (technique, ratio, or part of a blueprint) |
+| Blueprint | A dish type made of parts |
 | Concept | A named idea with an icon and a list: principle, status, or method |
 | Glossary term | A definition only |
 
 | Relation | Carried by |
 |---|---|
 | Recipe **uses** method | Wiki link in the recipe; optional `method:` field (open) |
-| Method **is part of** family | `family` taxonomy + `part` |
+| Method **is part of** blueprint | `blueprint` taxonomy + `part` |
 | Method **builds on** technique method | Wiki link |
-| Story **motivates** method or family | `family` taxonomy on the story; wiki link |
+| Story **motivates** method or blueprint | `blueprint` taxonomy on the story; wiki link |
 | Principle **applies to** recipe | Principle tag |
 | Test kitchen **marks** any page | `draft: true` |
 
@@ -143,7 +143,7 @@ Shapes to cover first: sandwich construction, burger construction, lasagne layer
 | Food ratios | Ratio | `content/reference/food-ratios-for-creating-your-own-recipes.md` (draft), already a method; moves |
 | Stock | Technique + ratio | Why ingredients matter in stock, plus the four stock recipes |
 | Foil packets | Technique | Camp cooking |
-| Burgers | Dish family | The quest for the perfect burger, The impossible quest for the perfect chicken burger, White Spot burgers, the burger sauce recipes |
+| Burgers | Blueprint | The quest for the perfect burger, The impossible quest for the perfect chicken burger, White Spot burgers, the burger sauce recipes |
 
 ## Open questions
 

@@ -12,24 +12,24 @@ Spec: `docs/METHODS.md` (decided 2026-10-10). Template work is Fugu's, handed to
 
 - [x] Cascade the `method` tag onto `content/essays/methods/`. *Done 2026-10-10: from `content/essays/_index.md` by path, not an `_index.md` in the folder, which would make it a section and drop its pages from the essays list.*
 - [x] Move reverse cooking and food ratios from `content/reference/` into it, with `aliases:` for the old URLs. *Done 2026-10-10; the `reference` tag became `method`.*
-- [x] Add the `family` taxonomy to the site config, and `content/family/burgers/_index.md` with its definition and part order. *Done 2026-10-10, plus `content/tags/method/_index.md` so `/tags/method/` lists methods until phase 2.*
-- [x] Add `family` to the two burger essays and the burger recipes. *Done 2026-10-10: 10 recipes, both essays, and Burger night costing.*
-- [x] `/lint`: flag a page in `methods/` whose own `tags` drop `method`, or whose `part` isn't one of its family's `parts`. *Done 2026-10-10 (`.claude/commands/lint.md` rule 6).*
+- [x] Add the `blueprint` taxonomy to the site config, and `content/blueprint/burgers/_index.md` with its definition and part order. *Done 2026-10-10, plus `content/tags/method/_index.md` so `/tags/method/` lists methods until phase 2.*
+- [x] Add `blueprint` to the two burger essays and the burger recipes. *Done 2026-10-10: 10 recipes, both essays, and Burger night costing.*
+- [x] `/lint`: flag a page in `methods/` whose own `tags` drop `method`, or whose `part` isn't one of its blueprint's `parts`. *Done 2026-10-10 (`.claude/commands/lint.md` rule 6).*
 
 **Phase 2: concept pages (Fugu handoff)**
 
 - [ ] Hand off: generalize `principle/term.html`, `principle-chip.html`, and `development/*` into shared concept partials with a `kind` (principle, status, method).
-- [ ] Hand off: methods listing grouped by family, and a family term page that lists parts in the `_index.md` order, then recipes, then stories.
+- [ ] Hand off: methods listing grouped by blueprint, and a blueprint term page that lists parts in the `_index.md` order, then recipes, then stories.
 - [x] Pick the methods icon. *Done 2026-10-10: fan-out, accent colour (`mockups/methods-icon.html`, STYLE.md Method chip, `assets/icons/methods/fan-out.svg`).*
-- [ ] Mock the methods and family pages against `mockups/STYLE.md` first.
-- [ ] Hand off: skip `family` in `article-meta/basic.html`'s taxonomy loop (or give it a chip); it falls through to Blowfish's plain badge, beside the matching tag. Hidden by a stopgap rule in `custom.css` (`.tags-row > a[href*="/family/"]`); remove it when this lands.
-- [ ] Hand off: add `family` and `part` to `public/recipes/index.json`.
+- [ ] Mock the methods and blueprint pages against `mockups/STYLE.md` first.
+- [ ] Hand off (queued in `themes/fugu/PLAN.md` Features, "Extra taxonomies in the page header's tags row", 2026-10-10): skip `blueprint` in `article-meta/basic.html`'s taxonomy loop (or give it a chip); it falls through to Blowfish's plain badge, beside the matching tag. Hidden by a stopgap rule in `custom.css` (`.tags-row > a[href*="/blueprint/"]`); remove it when this lands.
+- [ ] Hand off: add `blueprint` and `part` to `public/recipes/index.json`.
 - [ ] Hand off: emit `.method-chip` (fan-out icon, `assets/icons/methods/fan-out.svg`); its CSS is already in `custom.css`.
 - [ ] Check win-the-fridge and test kitchen render the same after the change.
 
 **Phase 3: first methods**
 
-- [ ] Burgers family: write the parts (patty construction, seasoning, cooking, assembly, sauces, variations, not burgers), pulling from the two burger essays without gutting them.
+- [ ] Burgers blueprint: write the parts (patty construction, seasoning, cooking, assembly, sauces, variations, not burgers), pulling from the two burger essays without gutting them.
 - [ ] Stock method, from Why ingredients matter in stock and the four stock recipes.
 - [ ] Foil packets method, from Camp cooking.
 
@@ -44,7 +44,7 @@ Spec: `docs/METHODS.md` (decided 2026-10-10). Template work is Fugu's, handed to
 
 - [x] `docs/ARCHITECTURE.md`: a "Content model" section with the ontology and a diagram. *Done 2026-10-10.*
 - [x] `README.md`: a short reader-facing version. *Done 2026-10-10.*
-- [x] `docs/FORMAT.md` (essays merged into it): the method format and the `family`/`part` fields; `CLAUDE.md`: methods under "Food essay types". *Done 2026-10-10.*
+- [x] `docs/FORMAT.md` (essays merged into it): the method format and the `blueprint`/`part` fields; `CLAUDE.md`: methods under "Food essay types". *Done 2026-10-10.*
 
 ### Plant-based tag
 

@@ -74,12 +74,12 @@ The site is a small ontology: a few kinds of page, and a few relations between t
                     Concept (named idea + icon + list)
           ┌───────────────┼──────────────────┐
       Principle         Status             Method
-   (win-the-fridge)  (test kitchen)   (methods, families)
+   (win-the-fridge)  (test kitchen) (methods, blueprints)
           │               │                  │
        applies to       marks             is part of
           │               │                  │
           ▼               ▼                  ▼
-       Recipe ◄─── uses ─── Method ───► Family ◄── motivates ── Story
+       Recipe ◄─── uses ─── Method ───► Blueprint ◄── motivates ── Story
                               │
                           builds on
                               ▼
@@ -90,23 +90,23 @@ The site is a small ontology: a few kinds of page, and a few relations between t
 |---|---|---|
 | Recipe | One dish with fixed quantities | `content/recipes/` |
 | Story | An essay that gives the reason for a method | `content/essays/<type>/` |
-| Method | A general pattern: technique, ratio, or part of a family | `content/essays/methods/` |
-| Family | A dish type made of parts | `family` taxonomy, `content/family/<slug>/_index.md` |
-| Concept | A named idea with a definition, icon, chip, essay, and list | tag `_index.md` (principle), `[fugu.development]` (status), the `method` tag and family terms (method) |
+| Method | A general pattern: technique, ratio, or part of a blueprint | `content/essays/methods/` |
+| Blueprint | A dish type made of parts | `blueprint` taxonomy, `content/blueprint/<slug>/_index.md` |
+| Concept | A named idea with a definition, icon, chip, essay, and list | tag `_index.md` (principle), `[fugu.development]` (status), the `method` tag and blueprint terms (method) |
 | Glossary term | A definition only | `content/reference/glossary.md` |
 
 | Relation | Carried by |
 |---|---|
 | Recipe uses method | Wiki link in the recipe |
-| Method is part of family | `family` + `part` frontmatter |
+| Method is part of blueprint | `blueprint` + `part` frontmatter |
 | Method builds on technique method | Wiki link |
-| Story motivates method or family | `family` on the story; wiki link |
+| Story motivates method or blueprint | `blueprint` on the story; wiki link |
 | Principle applies to recipe | The principle's tag |
 | Test kitchen marks a page | `draft: true` |
 
-A folder is an exclusive, mandatory tag that also sets the URL and template; a tag or taxonomy is optional and many-to-many. So whatever a page can only be one of (recipe, essay type, method) is a folder, and whatever it can be several of (tags, cuisine, family) is a taxonomy. The essays `_index.md` cascades the `method` tag onto `methods/`, so the folder and the tag agree.
+A folder is an exclusive, mandatory tag that also sets the URL and template; a tag or taxonomy is optional and many-to-many. So whatever a page can only be one of (recipe, essay type, method) is a folder, and whatever it can be several of (tags, cuisine, blueprint) is a taxonomy. The essays `_index.md` cascades the `method` tag onto `methods/`, so the folder and the tag agree.
 
-Concept pages (principle, status, method) are meant to share one set of Fugu partials (docs/PLAN.md, Methods phase 2). Until then, principle pages use `term.html`'s `principle: true` branch, test kitchen uses `partials/development/`, and methods and families render as plain term pages.
+Concept pages (principle, status, method) are meant to share one set of Fugu partials (docs/PLAN.md, Methods phase 2). Until then, principle pages use `term.html`'s `principle: true` branch, test kitchen uses `partials/development/`, and methods and blueprints render as plain term pages.
 
 ## Key Design Decisions
 

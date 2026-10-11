@@ -6,7 +6,7 @@ date: 2026-06-08
 cuisine: American
 draft: false
 calories: 265 kcal per 140g/5oz
-family: [burgers]
+blueprint: [burgers]
 ---
 
 It can be difficult to make turkey into a great burger without some extra oomph. This recipe uses extras packed with flavour to add savouriness, improve texture, and help browning.

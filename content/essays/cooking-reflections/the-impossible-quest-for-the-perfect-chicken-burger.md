@@ -4,7 +4,7 @@ date: 2026-09-28
 draft: false
 tags: [cooking-reflection, food-memory, burgers, chicken]
 description: "Five textures, four builds, and forty years of chasing a sandwich that mostly exists in memory."
-family: [burgers]
+blueprint: [burgers]
 ---
 
 According to r/burgers, most chicken burgers are not burgers:

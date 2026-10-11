@@ -4,7 +4,7 @@ date: 2026-09-27
 draft: false
 tags: [cooking-reflection, food-memory, burgers]
 description: "What years of flipping, testing, and eating burgers taught me about the ratios and technique behind a great one."
-family: [burgers]
+blueprint: [burgers]
 ---
 
 My first restaurant job was flipping burgers, and I loved it. Not just the job, the food. Standing at a griddle all shift taught me what I actually wanted from a burger: crunchy, fresh veg, a thin patty, and flavours that didn't hide.

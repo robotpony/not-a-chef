@@ -964,10 +964,10 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
  * the title's own spacing above the row — `gap` only ever applies
  * between siblings, never before the first or after the last. */
 .tags-row { gap: 8px; }
-/* Stopgap: the `family` taxonomy (docs/METHODS.md) falls through to
+/* Stopgap: the `blueprint` taxonomy (docs/METHODS.md) falls through to
  * Blowfish's plain badge in article-meta/basic.html, beside the matching
  * tag ("Burgers" twice). Hidden until Fugu skips it or gives it a chip. */
-.tags-row > a[href*="/family/"]:not(.tag) { display: none; }
+.tags-row > a[href*="/blueprint/"]:not(.tag) { display: none; }
 /* The method chip (mockups/STYLE.md Method chip): a concept chip like
  * .principle-chip, in the accent. Fugu emits it once the concept partials
  * are shared (PLAN.md Methods, phase 2); the shape is ready for it. */

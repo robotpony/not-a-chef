@@ -22,8 +22,8 @@ Recipes (`content/recipes/`), essays (`content/essays/`), reference pages (`cont
 | `working_on` | MAY | string | For drafts: one line on what's being tried next ("Getting them to hold without the egg"), shown under the banner and in the card's popover. |
 | `pinned` | MAY | boolean | Floats the page to the top of its section's list, its term pages, and search. Rare by design, not a general sort override. See DESIGN.md. |
 | `source` | MAY | string | `original`, `family`, a URL, or a book title. SHOULD on recipes. |
-| `family` | MAY | string[] | Dish families the page belongs to (`[burgers]`), a taxonomy like `cuisine`: the family's page at `/family/<slug>/` collects its methods, recipes, and stories. The family's own `content/family/<slug>/_index.md` holds its definition and the order of its parts. Not the same thing as the existing `family` tag (`/tags/family/`) or `source: family`. See docs/METHODS.md. |
-| `part` | MAY | string | On a method page in a family: which part it covers (`Patty construction`), one of the family's `parts`. |
+| `blueprint` | MAY | string[] | Blueprints (dish types made of parts) the page belongs to (`[burgers]`), a taxonomy like `cuisine`: the blueprint's page at `/blueprint/<slug>/` collects its methods, recipes, and stories. Its own `content/blueprint/<slug>/_index.md` holds its definition and the order of its parts. See docs/METHODS.md. |
+| `part` | MAY | string | On a method page in a blueprint: which part it covers (`Patty construction`), one of the blueprint's `parts`. |
 
 Don't hand-maintain `lastmod`. Last-modified comes from git (`enableGitInfo`): both sidebars show **Date**, plus **Updated** from the file's last commit when that falls on a different day.
 
@@ -320,14 +320,14 @@ Use `##` headings only when sections are long enough that a reader needs navigat
 
 A reference essay (`content/essays/reference-essays/`) defines one concept and is tagged with that term, so the term's tag page can link to it. A term that doesn't need a whole essay gets a glossary entry in `content/reference/glossary.md` instead.
 
-A method (`content/essays/methods/`) explains how a kind of food or a cooking process works in general: the principle first, then the variables, the stages, why each one is there, how it fails, and the recipes that use it. The folder decides what's a method. Each page MUST carry the `method` tag: the essays `_index.md` cascades it to a method page with no `tags`, but a page that sets its own `tags` replaces the cascade, so list `method` there. What counts as a method, and how methods relate to families, recipes, and stories, is in docs/METHODS.md.
+A method (`content/essays/methods/`) explains how a kind of food or a cooking process works in general: the principle first, then the variables, the stages, why each one is there, how it fails, and the recipes that use it. The folder decides what's a method. Each page MUST carry the `method` tag: the essays `_index.md` cascades it to a method page with no `tags`, but a page that sets its own `tags` replaces the cascade, so list `method` there. What counts as a method, and how methods relate to blueprints, recipes, and stories, is in docs/METHODS.md.
 
 ```yaml
 ---
 title: Reverse cooking
 date: 2026-09-24
 tags: [method, technique, temperature]
-family: [burgers]
+blueprint: [burgers]
 part: Cooking
 ---
 ```
@@ -345,7 +345,7 @@ What a checker can rely on. `/lint` checks the first group today, and the build 
 - `date` is YYYY-MM-DD; `draft` is a boolean if present; `tags` is a list of plain strings, no `#`.
 - A recipe has at least one ingredients list and one method.
 - Formula blocks use known icon keys, one operator, and at most five slots.
-- Every page in `content/essays/methods/` carries the `method` tag; a `part` names one of its family's `parts`.
+- Every page in `content/essays/methods/` carries the `method` tag; a `part` names one of its blueprint's `parts`.
 
 **For the validator**
 - Frontmatter types match the tables above.

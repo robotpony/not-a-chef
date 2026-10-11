@@ -8,7 +8,7 @@ prep_time: 10 min
 total_time: 1 hr 10 min (mostly chilling)
 cuisine: American
 draft: false
-family: [burgers]
+blueprint: [burgers]
 ---
 
 Sometimes I'm craving a diner-style griddle burger with a classic hamburger sauce. This is a fairly close match to a popular burger chain that hasn't made it to our region yet.
