@@ -52,7 +52,9 @@ in a browser — no build step.
   pages (`docs/METHODS.md`, PLAN.md Methods phase 2): the methods list at
   `/tags/method/`, a blueprint's page with its parts in order, a method
   page's chips and part navigation, method cards, and what principle,
-  status, and method share. Queued for Fugu; its §6 choices are open.
+  status, and method share. Builds added 2026-10-10: build cards and a
+  picks comparison on the blueprint page, options as pills, a build page,
+  and recipes grouped by build. Queued for Fugu; its §7 choices are open.
 
 - **`in-development.html`**: proposal (2026-10-07) to make `draft: true`
   mean "published, still changing" instead of hidden. A flag-blue callout

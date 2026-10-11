@@ -16,8 +16,8 @@ The test: after reading it, could you cook something that isn't written down any
    - Foil packets: getting things that cook at different speeds to finish together and share flavour, while keeping it simple
 2. **Ratio method.** A proportion you can scale or adjust, with its acceptable range.
    - Food ratios: dressings, mayo, brines
-3. **Blueprint method.** A type of food broken into its parts, each of which is its own small method.
-   - Burgers: patty construction, patty seasoning, cooking methods, assembly, sauces, major variations, things that are not burgers
+3. **Blueprint method.** A type of food broken into its parts, each of which is its own small method, and the builds that combine them (see Inside a blueprint).
+   - Burgers: patty construction, patty seasoning, cooking, assembly, sauces, things that are not burgers; builds such as deluxe griddle, bacon double cheese, and grilled onion
    - Each part can link to a technique method (e.g. patty cooking → reverse sear or water frying)
 
 ## What a method contains
@@ -68,6 +68,81 @@ That's why **blueprints are a taxonomy, not folders**. (They were briefly called
 - Method pages, recipes, and stories all carry `blueprint`, so the blueprint page collects all three without any other wiring.
 - Folders can still group a blueprint's method files on disk (`content/essays/methods/burgers/`), with `blueprint: [burgers]` set on each page (or cascaded by path from `content/essays/_index.md`, never from an `_index.md` in the folder, for the reason above). A page that belongs to a second blueprint lists both.
 
+## Inside a blueprint: parts, options, and builds
+
+A blueprint varies in two different ways, and they're modelled separately (decided 2026-10-10).
+
+```
+Blueprint (burgers)
+ ├── Parts      patty construction, seasoning, cooking, assembly, sauces, not burgers
+ │    └── Options   thick / thin / paper thin           (inside the part's method)
+ └── Builds     deluxe griddle, bacon double cheese, grilled onion   (one page each)
+      └── Recipes   White Spot burgers = deluxe griddle, with quantities
+```
+
+**Parts** are the slots every dish of this type fills. Each part is covered by one or more method pages (`part: Patty construction`). A blueprint's `_index.md` lists its parts in order (`parts:`).
+
+**Options** are the choices within one part: a burger patty is thick, thin, or paper thin. An option isn't a page. It's a row in its part's method, under `## Options`, saying when to pick it and what it changes elsewhere, because options have knock-on effects: a thick patty needs a reverse sear or the grill, a thin one goes on the griddle, a paper-thin one gets smashed on a very hot surface.
+
+```markdown
+## Options
+
+| Option | Pick it when | Changes |
+|---|---|---|
+| Thick (170 g+) | You want a pink centre and a grill | Cooking: reverse sear or grill |
+| Thin (115–140 g) | Most of the time | Cooking: griddle, flip once |
+| Paper thin (smashed) | You want lacy, crisp edges | Cooking: smash on a very hot griddle |
+```
+
+**Builds** are named combinations: one pick per part that lands on a recognizable profile. Bacon double cheese is salty, sweet, and rich with little crunch; the deluxe griddle is cold crunch and sharp against a salty patty; the grilled onion burger is sweet and savoury with one soft, even texture. Builds can be very different and complex, so **each build is its own page**: a method page in `content/essays/methods/` (it's a general pattern, not a dish with quantities) with:
+
+| Field | On | Meaning |
+|---|---|---|
+| `blueprint` | build, recipe | The blueprint it belongs to (`[burgers]`) |
+| `build` | build page | The build's name (`Deluxe griddle`). Unique within its blueprint. |
+| `build` | recipe | Which build the recipe is an instance of: the same name as the build page's `build` |
+| `profile` | build page | Free text, one line: what it tastes and feels like (`Cold crunch and sharp against a salty patty`). Free text for now; a fixed vocabulary can come later if builds need comparing by it. |
+| `picks` | build page | One pick per part, as a list of `"Part: pick"` strings in the blueprint's part order. A list, not a map, because the content tools read flat frontmatter (`frontmatter.py`). |
+
+```yaml
+---
+title: Deluxe griddle burger
+date: 2026-10-10
+tags: [method, burgers]
+blueprint: [burgers]
+build: Deluxe griddle
+profile: Cold crunch and sharp against a salty patty
+picks:
+  - "Patty construction: thin, 140 g"
+  - "Patty seasoning: after cooking"
+  - "Cooking: griddle, flip once"
+  - "Assembly: lettuce, tomato, raw and fried onion, pickle"
+  - "Sauces: ketchup and mustard, kept separate"
+---
+```
+
+And on a recipe that's an instance of it:
+
+```yaml
+blueprint: [burgers]
+build: Deluxe griddle
+```
+
+A build page reads like any method: the principle of the build first (why these picks go together), then the picks with links to each part's method, how it fails, its variations, and the recipes that are instances of it. Its stack diagram (see Diagrams) is the clearest picture of a build: each layer's role adds up to the profile.
+
+Why not nested blueprints ("burgers → deluxe")? Builds share nearly every part and differ only in their picks; a child blueprint would repeat all the parts. Clusters of builds (rich, fresh, sweet) are builds grouped by profile, not a separate level; add one only if a blueprint ever has more builds than its page can show.
+
+The blueprint page shows builds as cards (name, profile, recipe count) and a table comparing their picks part by part (`mockups/methods-pages.html`).
+
+The same shape fits other blueprints:
+
+| Blueprint | Option example | Builds |
+|---|---|---|
+| Pizza | crust: thin / NY / pan | margherita, white, Detroit |
+| Tacos | tortilla: corn / flour; protein: grilled / braised | al pastor, fish, carnitas |
+| Lasagne | sauce: ragù / béchamel / both | Bolognese, veg, white |
+| Sandwiches | bread: soft / crusty / toasted | club, BLT, deli |
+
 ## Concept pages
 
 A **concept page** is a named idea with a short definition, an icon, a chip on cards, a full essay, and a list of what belongs to it. There are three kinds:
@@ -85,7 +160,7 @@ Today principle and status are built separately (`principle/term.html` and `prin
 - the icon, chip, and popover
 - the "Reference & further reading" list
 
-What stays per kind is how membership is decided and the body layout: a flat recipe grid for a principle, a draft list for status, parts in order for a blueprint.
+What stays per kind is how membership is decided and the body layout: a flat recipe grid for a principle, a draft list for status, parts and builds for a blueprint.
 
 The method chip is the fan-out icon (`assets/icons/methods/fan-out.svg`) in the accent colour, decided 2026-10-10 (`mockups/STYLE.md` Method chip, `mockups/methods-icon.html`).
 
@@ -99,6 +174,9 @@ The shared templates are Fugu work (`themes/fugu`), handed to the Fugu agent. Th
 | Story | An essay that gives the reason for a method |
 | Method | A general pattern (technique, ratio, or part of a blueprint) |
 | Blueprint | A dish type made of parts |
+| Part | A slot every dish of the type fills; covered by method pages |
+| Option | A choice within a part; a row in the part's method |
+| Build | A named combination of picks with a profile; its own page |
 | Concept | A named idea with an icon and a list: principle, status, or method |
 | Glossary term | A definition only |
 
@@ -106,6 +184,9 @@ The shared templates are Fugu work (`themes/fugu`), handed to the Fugu agent. Th
 |---|---|
 | Recipe **uses** method | Wiki link in the recipe; optional `method:` field (open) |
 | Method **is part of** blueprint | `blueprint` taxonomy + `part` |
+| Build **belongs to** blueprint | `blueprint` taxonomy + `build` on the build page |
+| Build **picks** an option per part | `picks` on the build page |
+| Recipe **is an instance of** build | `build` on the recipe, matching the build page's `build` |
 | Method **builds on** technique method | Wiki link |
 | Story **motivates** method or blueprint | `blueprint` taxonomy on the story; wiki link |
 | Principle **applies to** recipe | Principle tag |
@@ -123,7 +204,7 @@ lettuce   | Shredded lettuce | cold crunch
 onion     | Raw onion        | sharp
 patty     | Thin patty       | salt, fat, savoury
 bun-base  | Toasted bun      | barrier
-caption: Deluxe build, top to bottom
+caption: Deluxe griddle build, top to bottom
 ```
 
 - One layer per line: `icon | label | role`. Roles use the vocabulary the chicken burger essay established (cold crunch, sharp, fat, salt), so the diagram says why each layer is there.
@@ -133,7 +214,7 @@ caption: Deluxe build, top to bottom
 - A later `pairing` block (a texture-by-flavour grid) could cover flavour combinations. `stack` comes first.
 - The look gets mocked and settled in `mockups/STYLE.md` and `style.html` before it's built.
 
-Shapes to cover first: sandwich construction, burger construction, lasagne layering.
+Shapes to cover first: sandwich construction, burger construction, lasagne layering. On a blueprint, each build gets its own stack.
 
 ## Candidates already on the site
 
@@ -143,9 +224,10 @@ Shapes to cover first: sandwich construction, burger construction, lasagne layer
 | Food ratios | Ratio | `content/reference/food-ratios-for-creating-your-own-recipes.md` (draft), already a method; moves |
 | Stock | Technique + ratio | Why ingredients matter in stock, plus the four stock recipes |
 | Foil packets | Technique | Camp cooking |
-| Burgers | Blueprint | The quest for the perfect burger, The impossible quest for the perfect chicken burger, White Spot burgers, the burger sauce recipes |
+| Burgers | Blueprint, 3 builds to start | The quest for the perfect burger, The impossible quest for the perfect chicken burger, White Spot burgers, the burger sauce recipes |
 
 ## Open questions
 
 - Should recipe frontmatter have a `method:` field, or are wiki links enough to connect a recipe to its methods?
+- Should `picks` values link to the option rows (an anchor per option), or stay plain text?
 - Do methods use `formula` blocks for their ratios, the way recipes do? (Likely yes; nothing stops it.)

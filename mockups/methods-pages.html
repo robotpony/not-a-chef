@@ -149,6 +149,54 @@
   .parts.full .part-name{ font-size:1rem; }
   .parts.full .part-methods{ font-size:.9rem; margin-top:2px; }
 
+  /* NEW: options inside a part */
+  .opts{ display:flex; flex-wrap:wrap; gap:6px; margin-top:6px; }
+  .opt-pill{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; padding:2px 8px; border:1px solid var(--border-strong); border-radius:12px; color:var(--ink-muted); white-space:nowrap; }
+  .opt-pill b{ font-weight:600; color:var(--ink); }
+
+  /* NEW: build cards */
+  .build-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:16px; }
+  .bcard{ background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:14px 16px 12px; display:flex; flex-direction:column; gap:8px; }
+  .bcard:hover{ border-color:var(--accent); }
+  .bcard-title{ font-family:'Libre Franklin',sans-serif; font-size:1.02rem; font-weight:700; line-height:1.3; }
+  .profile{ font-style:italic; font-size:.9rem; color:var(--ink); padding-left:10px; border-left:2px solid var(--accent); }
+  .stack-thumb{ display:flex; flex-direction:column; gap:3px; padding:8px 0 2px; }
+  .layer{ height:7px; border-radius:3px; background:var(--surface-2); border:1px solid var(--border-strong); }
+  .layer.bun{ background:var(--accent-soft); border-color:var(--accent); height:9px; }
+  .layer.bun.top{ border-radius:10px 10px 3px 3px; }
+  .layer.patty{ background:var(--accent-strong); border-color:var(--accent-strong); height:8px; }
+  .layer.cheese{ background:var(--highlight-soft); border-color:var(--highlight); height:4px; }
+  .layer.green{ background:var(--principle-soft); border-color:var(--principle); height:5px; }
+  .layer.onion{ background:var(--surface); border-style:dashed; border-color:var(--accent); height:5px; }
+  .layer.bacon{ background:var(--accent-soft); border-color:var(--accent-strong); height:4px; }
+  .layer.fried{ background:var(--highlight-soft); border-color:var(--accent); height:6px; }
+
+  /* NEW: picks compared */
+  table.matrix{ width:100%; border-collapse:collapse; font-size:.86rem; min-width:620px; }
+  table.matrix th, table.matrix td{ text-align:left; padding:9px 10px; border-bottom:1px solid var(--border); vertical-align:top; }
+  table.matrix thead th{ font-family:'Libre Franklin',sans-serif; font-size:.82rem; font-weight:700; color:var(--ink); }
+  table.matrix thead th a{ color:inherit; text-decoration:none; }
+  table.matrix thead th a:hover{ color:var(--accent-strong); }
+  table.matrix tbody th{ font-family:'Libre Franklin',sans-serif; font-size:.78rem; font-weight:600; color:var(--ink-muted); white-space:nowrap; width:1%; }
+  table.matrix td{ color:var(--ink); }
+  table.matrix tr.profile-row td{ font-style:italic; color:var(--ink-muted); border-bottom:2px solid var(--border-strong); }
+
+  /* NEW: picks list on a build page */
+  .picks{ display:grid; grid-template-columns:auto 1fr; gap:0 16px; margin:0 0 28px; border-top:1px solid var(--border); }
+  .picks dt, .picks dd{ margin:0; padding:9px 0; border-bottom:1px solid var(--border); }
+  .picks dt{ font-family:'Libre Franklin',sans-serif; font-size:.82rem; font-weight:600; color:var(--ink-muted); white-space:nowrap; }
+  .picks dt a{ color:inherit; text-decoration-color:var(--accent); text-underline-offset:2px; }
+  .picks dd{ font-size:.95rem; }
+  @media (max-width:520px){ .picks{ grid-template-columns:1fr; } .picks dt{ border-bottom:none; padding-bottom:0; } }
+  .two-col{ display:grid; grid-template-columns:minmax(0,1fr) 220px; gap:28px; align-items:start; }
+  @media (max-width:760px){ .two-col{ grid-template-columns:1fr; } }
+  .stack-big{ background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:16px; }
+  .stack-big .stack-thumb{ gap:5px; }
+  .stack-big .layer{ height:12px; }
+  .stack-big .layer.bun{ height:16px; }
+  .stack-big .layer.patty{ height:14px; }
+  .stack-cap{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; color:var(--ink-faint); text-align:center; margin-top:10px; }
+
   /* Placeholder for the phase 4 stack diagram */
   .slot{ border:1px dashed var(--border-strong); border-radius:6px; padding:18px; text-align:center; font-family:'Libre Franklin',sans-serif; font-size:.78rem; color:var(--ink-faint); margin-bottom:32px; }
 
@@ -180,14 +228,14 @@
 <header class="topbar"><div class="topbar-inner">
   <span class="tb-title">Methods pages</span>
   <nav class="tb-jump">
-    <a href="#methods">Methods page</a><a href="#blueprint">Blueprint page</a><a href="#method">Method page</a><a href="#cards">Cards</a><a href="#shared">Shared parts</a><a href="#decisions">Decisions</a>
+    <a href="#methods">Methods page</a><a href="#blueprint">Blueprint page</a><a href="#build">Build page</a><a href="#method">Method page</a><a href="#cards">Cards</a><a href="#shared">Shared parts</a><a href="#decisions">Decisions</a>
   </nav>
   <button class="theme-toggle" id="tt" type="button">Toggle dark</button>
 </div></header>
 
 <main>
   <div class="hero">
-    <span class="eyebrow">Proposal · 2026-10-10 · METHODS phase 2</span>
+    <span class="eyebrow">Proposal · 2026-10-10 · METHODS phase 2 · builds added</span>
     <h1>Methods and blueprint pages</h1>
     <p class="lede">The concept pages for methods (<code>docs/METHODS.md</code>): the methods list, a blueprint's page, and how a method page and its card show where they belong. They reuse the principle page's parts (header, definition callout, card grid, reference list) in the accent colour, plus one new component, the ordered parts list.</p>
     <p class="lede">Content is illustrative: only reverse cooking and food ratios exist as methods today, and none of the burger parts are written yet.</p>
@@ -210,7 +258,7 @@
       <h3 class="subsection-title">Blueprints<span class="n">1</span></h3>
       <div class="bp-list">
         <div class="bp">
-          <div class="bp-head"><a class="bp-name" href="#blueprint"><span data-icon="fan"></span>Burgers</a><span class="bp-count">2 of 7 parts · 10 recipes</span></div>
+          <div class="bp-head"><a class="bp-name" href="#blueprint"><span data-icon="fan"></span>Burgers</a><span class="bp-count">2 of 6 parts · 3 builds</span></div>
           <p class="bp-desc">A burger is a patty and a build: how each part is made, and the recipes and stories behind them.</p>
           <ol class="parts compact">
             <li><span class="part-name"><a href="#method">Patty construction</a></span><span class="part-methods"></span></li>
@@ -218,9 +266,9 @@
             <li><span class="part-name"><a href="#">Cooking</a></span><span class="part-methods"></span></li>
             <li class="todo"><span class="part-name">Assembly</span><span class="part-methods"></span></li>
             <li class="todo"><span class="part-name">Sauces</span><span class="part-methods"></span></li>
-            <li class="todo"><span class="part-name">Major variations</span><span class="part-methods"></span></li>
             <li class="todo"><span class="part-name">Not burgers</span><span class="part-methods"></span></li>
           </ol>
+          <div class="opts"><span class="opt-pill"><b>Builds</b></span><a class="opt-pill" href="#build">Deluxe griddle</a><span class="opt-pill">Bacon double cheese</span><span class="opt-pill">Grilled onion</span></div>
         </div>
       </div>
 
@@ -235,37 +283,83 @@
   <!-- 2. Blueprint page -->
   <section class="mock" id="blueprint">
     <h2 class="mock-label">2 · Blueprint page <code>/blueprint/burgers/</code></h2>
-    <p class="mock-note">The blueprint's <code>_index.md</code> body becomes the definition callout. Then the parts in the order its <code>parts</code> list gives, each with the methods that cover it; then every recipe on the blueprint as cards; then stories and reference pages as a list, the same "further reading" the principle page has. The stack diagram slot is for phase 4.</p>
+    <p class="mock-note">The blueprint's <code>_index.md</code> body becomes the definition callout. Then <b>builds first</b>: a card per build page (its profile and a stack thumbnail), and a table comparing their picks part by part, so the differences between builds are the first thing you see. Then the parts in order, each with its method and its options. Then recipes grouped by build, then stories.</p>
     <div class="frame">
       <header class="listing-head">
         <h1 class="ltitle">Burgers <span class="ltitle-kind">blueprint</span></h1>
-        <span class="listing-count">7 parts · 10 recipes · 3 stories</span>
+        <span class="listing-count">6 parts · 3 builds · 10 recipes</span>
       </header>
       <div class="definition-callout k-method">
         <span class="definition-callout-label"><span data-icon="fan"></span>Blueprint</span>
-        <p>A burger is a stack of parts: a patty, how it's seasoned and cooked, and a build of cold crunch, something sharp, and a sauce, all on a toasted bun. Each part has its own method, and every burger recipe here is one combination of them.</p>
+        <p>A burger is a stack of parts: a patty, how it's seasoned and cooked, and a build of cold crunch, something sharp, and a sauce, all on a toasted bun. Each part has its own method. A build picks one option for each part and lands on a profile, and every burger recipe here is one build with quantities.</p>
         <a class="read-essay" href="#methods">All methods →</a>
       </div>
 
-      <div class="slot">Stack diagram: burger construction (phase 4)</div>
+      <h3 class="subsection-title">Builds<span class="n">3</span></h3>
+      <div class="build-grid">
+        <a class="bcard" href="#build" style="text-decoration:none;color:inherit">
+          <div class="rcard-top"><span class="chip method-chip"><span data-icon="fan"></span>Build</span></div>
+          <div class="bcard-title">Deluxe griddle</div>
+          <p class="profile">Cold crunch and sharp against a salty patty.</p>
+          <div class="stack-thumb" aria-hidden="true"><div class="layer bun top"></div><div class="layer green"></div><div class="layer onion"></div><div class="layer cheese" style="background:var(--surface);border-color:var(--principle)"></div><div class="layer patty"></div><div class="layer bun"></div></div>
+          <div class="rcard-stats"><span class="rcard-stat"><b>Recipes</b><span>2</span></span><span class="rcard-stat"><b>Read</b><span>5m</span></span></div>
+        </a>
+        <div class="bcard">
+          <div class="rcard-top"><span class="chip method-chip"><span data-icon="fan"></span>Build</span></div>
+          <div class="bcard-title">Bacon double cheese</div>
+          <p class="profile">Salty, sweet, and rich; little crunch.</p>
+          <div class="stack-thumb" aria-hidden="true"><div class="layer bun top"></div><div class="layer bacon"></div><div class="layer cheese"></div><div class="layer patty"></div><div class="layer cheese"></div><div class="layer patty"></div><div class="layer bun"></div></div>
+          <div class="rcard-stats"><span class="rcard-stat"><b>Recipes</b><span>1</span></span><span class="rcard-stat"><b>Read</b><span>4m</span></span></div>
+        </div>
+        <div class="bcard">
+          <div class="rcard-top"><span class="chip method-chip"><span data-icon="fan"></span>Build</span></div>
+          <div class="bcard-title">Grilled onion</div>
+          <p class="profile">Sweet and savoury; one soft, even texture.</p>
+          <div class="stack-thumb" aria-hidden="true"><div class="layer bun top"></div><div class="layer fried"></div><div class="layer patty"></div><div class="layer bun"></div></div>
+          <div class="rcard-stats"><span class="rcard-stat"><b>Recipes</b><span>0</span></span><span class="rcard-stat"><b>Read</b><span>3m</span></span></div>
+        </div>
+      </div>
 
-      <h3 class="subsection-title">Parts</h3>
+      <h3 class="subsection-title gap-top">Builds compared</h3>
+      <div class="tablewrap">
+        <table class="matrix">
+          <thead><tr><th></th><th><a href="#build">Deluxe griddle</a></th><th>Bacon double cheese</th><th>Grilled onion</th></tr></thead>
+          <tbody>
+            <tr class="profile-row"><th>Profile</th><td>Cold crunch and sharp against a salty patty</td><td>Salty, sweet, and rich; little crunch</td><td>Sweet and savoury; one soft, even texture</td></tr>
+            <tr><th>Patty construction</th><td>Thin, 140 g</td><td>2 × thin, 115 g</td><td>Paper thin, onion pressed in</td></tr>
+            <tr><th>Patty seasoning</th><td>After cooking</td><td>After cooking</td><td>Salt on the onion side</td></tr>
+            <tr><th>Cooking</th><td>Griddle, flip once</td><td>Griddle, cheese melted on</td><td>Smashed, onion side down</td></tr>
+            <tr><th>Assembly</th><td>Lettuce, tomato, raw and fried onion, pickle</td><td>Bacon, cheese, pickle</td><td>The onion, maybe a pickle</td></tr>
+            <tr><th>Sauces</th><td>Ketchup and mustard, kept separate</td><td>Burger sauce</td><td>Yellow mustard</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="subsection-title gap-top">Parts<span class="n">6</span></h3>
       <ol class="parts full">
-        <li><span class="part-name"><a href="#method">Patty construction</a></span><span class="part-methods"><a href="#method">Thin patties</a>: grind, fat ratio, weight, and why they aren't mixed or packed.</span></li>
+        <li><span class="part-name"><a href="#method">Patty construction</a></span><span class="part-methods"><a href="#method">Burger patties</a>: grind, fat ratio, weight, and why they aren't mixed or packed.<span class="opts"><span class="opt-pill"><b>Options</b></span><span class="opt-pill">Thick</span><span class="opt-pill">Thin</span><span class="opt-pill">Paper thin</span></span></span></li>
         <li class="todo"><span class="part-name">Patty seasoning</span><span class="part-methods">Not written yet.</span></li>
-        <li><span class="part-name"><a href="#">Cooking</a></span><span class="part-methods"><a href="#">Reverse cooking</a>: water frying for ground meat, reverse sear for thick patties.</span></li>
+        <li><span class="part-name"><a href="#">Cooking</a></span><span class="part-methods"><a href="#">Reverse cooking</a>: water frying for ground meat, reverse sear for thick patties.<span class="opts"><span class="opt-pill"><b>Options</b></span><span class="opt-pill">Griddle</span><span class="opt-pill">Smash</span><span class="opt-pill">Grill</span><span class="opt-pill">Reverse sear</span></span></span></li>
         <li class="todo"><span class="part-name">Assembly</span><span class="part-methods">Not written yet.</span></li>
         <li class="todo"><span class="part-name">Sauces</span><span class="part-methods">Not written yet.</span></li>
-        <li class="todo"><span class="part-name">Major variations</span><span class="part-methods">Not written yet.</span></li>
         <li class="todo"><span class="part-name">Not burgers</span><span class="part-methods">Not written yet.</span></li>
       </ol>
 
       <h3 class="subsection-title gap-top">Recipes<span class="n">10</span></h3>
+      <p class="ann" style="margin-top:4px">Deluxe griddle · 2</p>
       <div class="rgrid">
-        <div class="rcard"><div class="rcard-top"><span class="chip cuisine-chip">Canadian</span><span class="chip tag">mains</span><span class="chip tag tag-more">+1</span></div><div class="rcard-title">White Spot burgers</div><p class="rcard-intro">This is Bruce's take on the classic White Spot Triple "O" deluxe burger (lettuce and tomatoes make it deluxe).</p><div class="rcard-stats"><span class="rcard-stat"><b>Serves</b><span>4</span></span></div></div>
-        <div class="rcard"><div class="rcard-top"><span class="chip cuisine-chip">USA</span><span class="chip tag">mains</span><span class="chip tag tag-more">+3</span></div><div class="rcard-title">McDouble</div><p class="rcard-intro">A very cravable burger. This is the closest I've gotten to perfecting it, along with its little sibling.</p><div class="rcard-stats"><span class="rcard-stat"><b>Prep</b><span>10m</span></span><span class="rcard-stat"><b>Cook</b><span>5m</span></span></div></div>
-        <div class="rcard"><div class="rcard-top"><span class="chip cuisine-chip">Canadian</span><span class="chip tag">sauces</span><span class="chip tag tag-more">+2</span></div><div class="rcard-title">Bruce's burger sauce</div><p class="rcard-intro">This is a simple, classic burger sauce.</p><div class="rcard-stats"><span class="rcard-stat"><b>Prep</b><span>5m</span></span></div></div>
-        <div class="rcard"><div class="rcard-top"><span class="chip cuisine-chip">USA</span><span class="chip tag">mains</span><span class="chip tag tag-more">+3</span></div><div class="rcard-title">Chicken patties</div><p class="rcard-intro">I love chicken sandwiches. The ground chicken patties bread nicely, but are also great on their own.</p><div class="rcard-stats"><span class="rcard-stat"><b>Prep</b><span>20m</span></span><span class="rcard-stat"><b>Cook</b><span>15m</span></span></div></div>
+        <div class="rcard"><div class="rcard-top"><span class="chip cuisine-chip">Canadian</span><span class="chip tag">mains</span></div><div class="rcard-title">White Spot burgers</div><p class="rcard-intro">This is Bruce's take on the classic White Spot Triple "O" deluxe burger.</p><div class="rcard-stats"><span class="rcard-stat"><b>Serves</b><span>4</span></span></div></div>
+        <div class="rcard"><div class="rcard-top"><span class="chip cuisine-chip">USA</span><span class="chip tag">mains</span></div><div class="rcard-title">Turkey burgers</div><p class="rcard-intro">It can be difficult to make turkey into a great burger without some extra oomph.</p><div class="rcard-stats"><span class="rcard-stat"><b>Serves</b><span>4</span></span></div></div>
+      </div>
+      <p class="ann" style="margin-top:20px">Bacon double cheese · 1</p>
+      <div class="rgrid">
+        <div class="rcard"><div class="rcard-top"><span class="chip cuisine-chip">USA</span><span class="chip tag">mains</span></div><div class="rcard-title">McDouble</div><p class="rcard-intro">A very cravable burger. This is the closest I've gotten to perfecting it.</p><div class="rcard-stats"><span class="rcard-stat"><b>Prep</b><span>10m</span></span><span class="rcard-stat"><b>Cook</b><span>5m</span></span></div></div>
+      </div>
+      <p class="ann" style="margin-top:20px">No build yet · 7</p>
+      <div class="rgrid">
+        <div class="rcard"><div class="rcard-top"><span class="chip cuisine-chip">Canadian</span><span class="chip tag">mains</span></div><div class="rcard-title">Bruce's burger sauce</div><p class="rcard-intro">This is a simple, classic burger sauce.</p><div class="rcard-stats"><span class="rcard-stat"><b>Prep</b><span>5m</span></span></div></div>
+        <div class="rcard"><div class="rcard-top"><span class="chip cuisine-chip">USA</span><span class="chip tag">mains</span></div><div class="rcard-title">Chicken patties</div><p class="rcard-intro">I love chicken sandwiches. The ground chicken patties bread nicely.</p><div class="rcard-stats"><span class="rcard-stat"><b>Prep</b><span>20m</span></span></div></div>
+        <div class="rcard"><div class="rcard-top"><span class="chip cuisine-chip">USA</span><span class="chip tag">mains</span></div><div class="rcard-title">Vegan burger</div><p class="rcard-intro">A hearty bean, nut, and mushroom burger.</p><div class="rcard-stats"><span class="rcard-stat"><b>Prep</b><span>~10m</span></span></div></div>
       </div>
 
       <h3 class="subsection-title gap-top">Stories &amp; further reading</h3>
@@ -277,13 +371,60 @@
     </div>
   </section>
 
-  <!-- 3. Method page -->
-  <section class="mock" id="method">
-    <h2 class="mock-label">3 · A method page's header and footer</h2>
-    <p class="mock-note">The tags row leads with the method chip, then a blueprint chip naming the part, which replaces the plain Blowfish badge hidden today. The same blueprint chip (without the part) goes on burger recipe and story pages. At the foot, previous and next part in the blueprint's order.</p>
+  <!-- 3. Build page -->
+  <section class="mock" id="build">
+    <h2 class="mock-label">3 · Build page <code>/essays/methods/deluxe-griddle-burger/</code></h2>
+    <p class="mock-note">A build is a method page with <code>build</code>, <code>profile</code>, and <code>picks</code>. Its header says which blueprint it belongs to; the profile sits under the title; the picks read as a list, each part linking to its method. The stack diagram (phase 4) sits beside the picks on wide screens and below them on phones. Recipes that set <code>build: Deluxe griddle</code> follow, and the foot steps to the next build.</p>
     <div class="frame">
       <div class="crumb">Essays <span>/</span></div>
-      <h1 class="page-title">Thin patties</h1>
+      <h1 class="page-title">Deluxe griddle burger</h1>
+      <div class="tags-row">
+        <a class="chip method-chip" href="#methods"><span data-icon="fan"></span>Method</a>
+        <a class="chip blueprint-chip" href="#blueprint">Burgers <span class="part">· Build</span></a>
+        <a class="chip tag" href="#">burgers</a>
+      </div>
+      <p class="profile" style="margin-top:16px;font-size:1.05rem">Cold crunch and sharp against a salty patty.</p>
+
+      <div class="two-col" style="margin-top:24px">
+        <div>
+          <h3 class="subsection-title">Picks</h3>
+          <dl class="picks">
+            <dt><a href="#method">Patty construction</a></dt><dd>Thin, 140 g</dd>
+            <dt>Patty seasoning</dt><dd>After cooking</dd>
+            <dt><a href="#">Cooking</a></dt><dd>Griddle, flip once</dd>
+            <dt>Assembly</dt><dd>Lettuce, tomato, raw and fried onion, pickle</dd>
+            <dt>Sauces</dt><dd>Ketchup and mustard, kept separate</dd>
+          </dl>
+          <div class="body-col" style="margin-top:0">
+            <p>Deluxe means lettuce and tomato. The build works because every layer above the patty is cold, crunchy, or sharp, and the patty below brings the salt and fat. Skip the cold crunch and it's one note…</p>
+          </div>
+        </div>
+        <div class="stack-big">
+          <div class="stack-thumb" aria-hidden="true"><div class="layer bun top"></div><div class="layer green"></div><div class="layer onion"></div><div class="layer cheese" style="background:var(--surface);border-color:var(--principle)"></div><div class="layer patty"></div><div class="layer bun"></div></div>
+          <p class="stack-cap">Stack diagram (phase 4)</p>
+        </div>
+      </div>
+
+      <h3 class="subsection-title gap-top">Recipes in this build<span class="n">2</span></h3>
+      <div class="rgrid">
+        <div class="rcard"><div class="rcard-top"><span class="chip cuisine-chip">Canadian</span><span class="chip tag">mains</span><span class="chip tag tag-more">+1</span></div><div class="rcard-title">White Spot burgers</div><p class="rcard-intro">This is Bruce's take on the classic White Spot Triple "O" deluxe burger.</p><div class="rcard-stats"><span class="rcard-stat"><b>Serves</b><span>4</span></span></div></div>
+        <div class="rcard"><div class="rcard-top"><span class="chip cuisine-chip">USA</span><span class="chip tag">mains</span></div><div class="rcard-title">Turkey burgers</div><p class="rcard-intro">It can be difficult to make turkey into a great burger without some extra oomph.</p><div class="rcard-stats"><span class="rcard-stat"><b>Serves</b><span>4</span></span></div></div>
+      </div>
+
+      <nav class="part-nav">
+        <a class="prev" href="#blueprint"><small>Burgers blueprint</small>← All builds</a>
+        <a class="next" href="#"><small>Next build</small>Bacon double cheese →</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- 3. Method page -->
+  <section class="mock" id="method">
+    <h2 class="mock-label">4 · A method page's header and footer</h2>
+    <p class="mock-note">A part's method. The tags row leads with the method chip, then a blueprint chip naming the part, which replaces the plain Blowfish badge hidden today. The same blueprint chip (without the part) goes on burger recipe and story pages. The part's options are a table in its body (<code>## Options</code>), not pages. At the foot, previous and next part in the blueprint's order.</p>
+    <div class="frame">
+      <div class="crumb">Essays <span>/</span></div>
+      <h1 class="page-title">Burger patties</h1>
       <div class="tags-row">
         <a class="chip method-chip" href="#methods"><span data-icon="fan"></span>Method</a>
         <a class="chip blueprint-chip" href="#blueprint">Burgers <span class="part">· Patty construction</span></a>
@@ -291,18 +432,27 @@
         <a class="chip tag" href="#">technique</a>
       </div>
       <div class="body-col">
-        <p>A great burger patty is thin, loosely formed, and seasoned only after it hits the griddle. Everything else follows from the crust: the thinner the patty, the more of it is crust…</p>
+        <p>A burger patty is ground beef, loosely formed, and seasoned only after it hits the heat. Its thickness decides everything after it: how it cooks, how much of it is crust, and which builds it suits…</p>
+        <h3 class="subsection-title" style="margin-top:22px">Options</h3>
+        <div class="tablewrap"><table class="matrix" style="min-width:0">
+          <thead><tr><th>Option</th><th>Pick it when</th><th>Changes</th></tr></thead>
+          <tbody>
+            <tr><th>Thick, 170 g+</th><td>You want a pink centre</td><td>Cooking: reverse sear or grill</td></tr>
+            <tr><th>Thin, 115–140 g</th><td>Most of the time</td><td>Cooking: griddle, flip once</td></tr>
+            <tr><th>Paper thin</th><td>You want lacy, crisp edges</td><td>Cooking: smash on a very hot griddle</td></tr>
+          </tbody>
+        </table></div>
       </div>
       <nav class="part-nav">
         <a class="prev" href="#blueprint"><small>Burgers blueprint</small>← All parts</a>
         <a class="next" href="#"><small>Part 2</small>Patty seasoning →</a>
       </nav>
     </div>
-    <p class="mock-note" style="margin-top:18px">On a recipe in the blueprint (White Spot burgers), the row becomes:</p>
+    <p class="mock-note" style="margin-top:18px">On a recipe in the blueprint (White Spot burgers, <code>build: Deluxe griddle</code>), the chip names its build and links to the build page:</p>
     <div class="frame">
       <div class="tags-row">
         <a class="chip cuisine-chip" href="#">Canadian</a>
-        <a class="chip blueprint-chip" href="#blueprint">Burgers</a>
+        <a class="chip blueprint-chip" href="#build">Burgers <span class="part">· Deluxe griddle</span></a>
         <a class="chip tag" href="#">mains</a>
         <a class="chip tag" href="#">burgers</a>
       </div>
@@ -311,7 +461,7 @@
 
   <!-- 4. Cards -->
   <section class="mock" id="cards">
-    <h2 class="mock-label">4 · Method cards elsewhere</h2>
+    <h2 class="mock-label">5 · Method cards elsewhere</h2>
     <p class="mock-note">In the essays list and search, a method's card leads with the method chip where other essays show their folder ("cooking reflections"). Recipe cards don't get a blueprint chip: the top row has two slots, and cuisine and principle already use them.</p>
     <div class="frame">
       <div class="rgrid">
@@ -324,7 +474,7 @@
 
   <!-- 5. Shared parts -->
   <section class="mock" id="shared">
-    <h2 class="mock-label">5 · What the three concept kinds share</h2>
+    <h2 class="mock-label">6 · What the three concept kinds share</h2>
     <p class="mock-note">One set of partials, with the kind setting the colour and icon. The callouts below are the same component.</p>
     <div class="tablewrap">
       <table class="share">
@@ -349,13 +499,16 @@
 
   <!-- 6. Decisions -->
   <section class="mock" id="decisions">
-    <h2 class="mock-label">6 · Decisions in this mock</h2>
+    <h2 class="mock-label">7 · Decisions in this mock</h2>
     <div class="decisions">
       <div class="dec"><h3>Unwritten parts are shown</h3><p>A blueprint lists all of its parts, with the unwritten ones faint ("Not written yet"), so it shows its whole shape from the first method. The alternative is to list only written parts and a count.</p></div>
       <div class="dec"><h3>The callout label takes the kind's icon</h3><p>"Method" and "Blueprint" carry the fan-out; principle and test kitchen would carry theirs, so the shared callout always says which kind it is.</p></div>
       <div class="dec"><h3>Blueprint chip: accent outline</h3><p>Not filled, so it ranks below the method chip and the cuisine chip, and reads as "belongs to" rather than "is". The part name follows in muted text on method pages only.</p></div>
       <div class="dec"><h3>No new page for the methods list</h3><p>It stays at <code>/tags/method/</code>, a term page with a kind, like Win the fridge. A <code>/methods/</code> alias can come later if the URL matters.</p></div>
       <div class="dec"><h3>Blueprints before cards</h3><p>The methods page leads with blueprints because they're the map; standalone techniques and ratios follow. With many blueprints, this becomes a grid of blueprint blocks.</p></div>
+      <div class="dec"><h3>Builds before parts</h3><p>On a blueprint page, builds come first: they're how people think about burgers ("a deluxe", "a bacon double cheese"). The comparison table shows how builds differ, part by part; the parts list after it is the reference.</p></div>
+      <div class="dec"><h3>Options are pills, not pages</h3><p>A part's options show as pills on the blueprint page and as a table on the part's method page. Builds' picks are free text that usually names an option.</p></div>
+      <div class="dec"><h3>Profile as a quote line</h3><p>The free-text profile sits under a build's title with an accent rule, on its card, its page, and the comparison table, so it reads as the build's one-line summary.</p></div>
       <div class="dec"><h3>Part navigation</h3><p>Previous and next part in the blueprint's order, at the foot of a method page, in place of the date-ordered article pagination.</p></div>
     </div>
   </section>

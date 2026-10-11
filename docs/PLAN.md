@@ -22,15 +22,17 @@ Mocked 2026-10-10 in `mockups/methods-pages.html`; the template work is queued i
 
 - [x] Pick the methods icon. *Done 2026-10-10: fan-out, accent colour (`mockups/methods-icon.html`, STYLE.md Method chip, `assets/icons/methods/fan-out.svg`).*
 - [x] Mock the methods and blueprint pages against `mockups/STYLE.md` first. *Done 2026-10-10: methods page, blueprint page, method page header and part navigation, cards, and what the three concept kinds share.*
-- [ ] Settle the mock's open choices (its §6): unwritten parts shown faintly, the blueprint chip as an accent outline, the methods list staying at `/tags/method/`. Then record the components in STYLE.md and `style.html`.
+- [x] Add builds and options to the model and the mock. *Done 2026-10-10: builds are their own method pages (`build`, `profile` as free text, `picks`), options are an `## Options` table in a part's method; docs/METHODS.md "Inside a blueprint".*
+- [ ] Settle the mock's open choices (its §7): unwritten parts shown faintly, the blueprint chip as an accent outline, builds before parts on the blueprint page, the methods list staying at `/tags/method/`. Then record the components in STYLE.md and `style.html`.
 - [ ] Fugu: shared concept partials with a `kind`; principle and test kitchen render the same after.
-- [ ] Fugu: the method chip, the methods list, the blueprint page, the blueprint chip, part navigation, and `blueprint`/`part` in `index.json`.
+- [ ] Fugu: the method chip, the methods list, the blueprint page (builds, picks compared, parts with options, recipes by build), the build page, the blueprint chip, part and build navigation, and `blueprint`/`part`/`build` in `index.json`.
 - [ ] When the blueprint chip lands, remove the stopgap rule in `custom.css` (`.tags-row > a[href*="/blueprint/"]`).
 - [ ] Bump the `themes/fugu` submodule and check every page type in Chrome, light and dark, desktop and phone.
 
 **Phase 3: first methods**
 
-- [ ] Burgers blueprint: write the parts (patty construction, seasoning, cooking, assembly, sauces, variations, not burgers), pulling from the two burger essays without gutting them.
+- [ ] Burgers blueprint: write the parts (patty construction with thick/thin/paper thin options, seasoning, cooking, assembly, sauces, not burgers), pulling from the two burger essays without gutting them.
+- [ ] Burger builds: deluxe griddle, bacon double cheese, grilled onion, one page each; set `build` on the recipes that are instances (White Spot burgers → deluxe griddle).
 - [ ] Stock method, from Why ingredients matter in stock and the four stock recipes.
 - [ ] Foil packets method, from Camp cooking.
 
