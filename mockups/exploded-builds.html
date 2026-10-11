@@ -228,7 +228,7 @@
 
   <section class="block" id="why">
     <h2 class="block-title">1 · Bars, colour, formula style</h2>
-    <p class="note">The same deluxe griddle build three ways. The bars only work once you've learned a colour code. The colour version (first round) reads as food but sits apart from the formula icons. The formula style uses the icons' own rules: one ink line, <code>--accent-soft</code> on bodies and sides, <code>--surface</code> on tops, detail as a few strokes. It follows dark mode like the icons do. The last panel puts it beside three real formula icons.</p>
+    <p class="note">The same drive-in deluxe build three ways. The bars only work once you've learned a colour code. The colour version (first round) reads as food but sits apart from the formula icons. The formula style uses the icons' own rules: one ink line, <code>--accent-soft</code> on bodies and sides, <code>--surface</code> on tops, detail as a few strokes. It follows dark mode like the icons do. The last panel puts it beside three real formula icons.</p>
     <div class="ba3">
       <div class="panel"><div class="panel-label">Bars</div><div class="bars"><div class="bar bun top"></div><div class="bar green"></div><div class="bar onion"></div><div class="bar green" style="background:var(--surface)"></div><div class="bar patty"></div><div class="bar bun"></div></div></div>
       <div class="panel cstyle"><div class="panel-label">Colour (round 1)</div><div class="thumb" id="ba-c"></div></div>
@@ -246,7 +246,7 @@
 
   <section class="block" id="builds">
     <h2 class="block-title">3 · Three builds, exploded and labelled</h2>
-    <p class="note">The build page version: full size, a leader line from each layer to its label and role. Labels on the right (decided). Side by side, the builds differ by silhouette before you read a word: the deluxe is tall and varied, the bacon double cheese is a stack of patties and cheese, the grilled onion is short and plain.</p>
+    <p class="note">The build page version: full size, a leader line from each layer to its label and role. Labels on the right (decided). Side by side, the builds differ by silhouette before you read a word: the deluxe is tall and varied, the fast-food double is a stack of patties and cheese, the grilled onion is short and plain.</p>
     <div class="grid3" id="build-grid"></div>
   </section>
 
@@ -282,7 +282,7 @@ pickle       | Pickles              | sour
 patty-thin   | Thin patty, 140 g    | salt, fat, savoury
 sauce-ketchup-mustard | Ketchup, mustard | sweet, sharp
 bun-base     | Toasted bun          | barrier
-caption: Deluxe griddle
+caption: Drive-in deluxe
 ```</pre>
   </section>
 
@@ -510,7 +510,7 @@ function compose(layers, {rx=70, gap=14, labels=true, cx, repeat, padLeft}={}){
 
 /* ---------- Content ---------- */
 const BUILDS = {
-  deluxe: { name:'Deluxe griddle', profile:'Cold crunch and sharp against a salty patty.', layers:[
+  deluxe: { name:'Drive-in deluxe', profile:'Cold crunch and sharp against a salty patty.', layers:[
     {k:'bun-top', label:'Toasted bun', role:'soft, toasted'},
     {k:'lettuce', label:'Shredded lettuce', role:'cold crunch'},
     {k:'tomato', label:'Tomato', role:'juicy, acid'},
@@ -519,14 +519,13 @@ const BUILDS = {
     {k:'patty-thin', label:'Thin patty, 140 g', role:'salt, fat, savoury'},
     {k:'sauce-ketchup-mustard', label:'Ketchup, mustard', role:'sweet, sharp'},
     {k:'bun-base', label:'Toasted bun', role:'barrier'} ]},
-  bacon: { name:'Bacon double cheese', profile:'Salty, sweet, and rich; little crunch.', layers:[
+  bacon: { name:'Fast-food double', profile:'Salty, sweet, and rich; little crunch.', layers:[
     {k:'bun-top', label:'Toasted bun', role:'soft'},
-    {k:'sauce-burger', label:'Burger sauce', role:'sweet, tangy'},
-    {k:'bacon', label:'Bacon', role:'salt, smoke, crisp'},
+    {k:'sauce-ketchup-mustard', label:'Ketchup, mustard 5:1', role:'sweet, sharp'},
     {k:'cheese', label:'Cheese', role:'salt, fat'},
-    {k:'patty-thin', label:'Thin patty, 115 g', role:'savoury'},
+    {k:'patty-thin', label:'Thin patty, 75 g', role:'savoury'},
     {k:'cheese', label:'Cheese', role:'salt, fat'},
-    {k:'patty-thin', label:'Thin patty, 115 g', role:'savoury'},
+    {k:'patty-thin', label:'Thin patty, 75 g', role:'savoury'},
     {k:'pickle', label:'Pickles', role:'the only sour'},
     {k:'bun-base', label:'Toasted bun', role:'barrier'} ]},
   onion: { name:'Grilled onion', profile:'Sweet and savoury; one soft, even texture.', layers:[

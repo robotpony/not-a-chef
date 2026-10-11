@@ -33,13 +33,15 @@ Mocked 2026-10-10 in `mockups/methods-pages.html`; the template work is queued i
 **Phase 3: first methods**
 
 - [ ] Burgers blueprint: write the parts (patty construction with thick/thin/paper thin options, seasoning, cooking, assembly, sauces, not burgers), pulling from the two burger essays without gutting them. *Drafted 2026-10-10 as test kitchen pages (`burger-patties`, `burger-seasoning`, `burger-cooking`, `burger-assembly`, `burger-sauces`), with TODO comments where the sources ran out. "Not burgers" is left unwritten for Bruce. Waiting on review.*
-- [ ] Burger builds: deluxe griddle, bacon double cheese, grilled onion, one page each; set `build_name` on the recipes that are instances (White Spot burgers → deluxe griddle). *Drafted 2026-10-10; White Spot set. Bacon double cheese and grilled onion are thin on sources (TODOs); the McDouble's build is an open question.*
+- [ ] Burger builds: drive-in deluxe, fast-food double, grilled onion, one page each; set `build_name` on the recipes that are instances (White Spot burgers → drive-in deluxe). *Drafted 2026-10-10; White Spot set. Fast-food double and grilled onion are thin on sources (TODOs); the McDouble's build is an open question.*
 - [ ] Stock method, from Why ingredients matter in stock and the four stock recipes.
 - [ ] Foil packets method, from Camp cooking.
 
-- [x] History on builds (decided 2026-10-10): `origin` and `era` front matter, a `## Where it comes from` section with a constraint / pick table, and a lineage timeline on the blueprint page (`mockups/methods-pages.html`). The deluxe griddle has its history; the other two builds have TODOs.
+- [x] History on builds (decided 2026-10-10): `origin` and `era` front matter, a `## Where it comes from` section with a constraint / pick table, and a lineage timeline on the blueprint page (`mockups/methods-pages.html`). The drive-in deluxe has its history; the other two builds have TODOs.
 - [x] Fugu: show `origin` on build cards and pages, and the lineage timeline (builds by `era`, plus the blueprint's `planned` builds, faint). *Done 2026-10-10, Fugu `80921b6` + `df28246` here. Builds are now ordered by `era` everywhere they're listed, undated last. `origin`/`era` stay out of `recipes/index.json`, since it lists only recipes.*
-- [ ] Rename the builds by lineage, once Bruce picks names.
+- [x] Rename the builds by lineage. *Done 2026-10-10: Drive-in deluxe (White Spot burgers) and Fast-food double (McDouble; bacon is now a variation).*
+- [ ] Grilled onion: decide whether it's the Oklahoma onion burger (onion smashed into the patty, 1920s–30s) or an onion smash burger (the October onion jam, 2010s smash lineage), then rename it.
+- [ ] Planned builds on the timeline (Pub burger, Smash burger): add to `content/blueprint/burgers/_index.md` as `planned:` if wanted.
 
 **Phase 4: stack diagrams**
 

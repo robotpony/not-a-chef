@@ -1,11 +1,11 @@
 ---
-title: Deluxe griddle burger
+title: Drive-in deluxe burger
 date: 2026-10-10
 draft: true
 working_on: "First draft, from How I build mine in The quest for the perfect burger."
 tags: [method, burgers]
 blueprint: [burgers]
-build_name: Deluxe griddle
+build_name: Drive-in deluxe
 profile: Cold crunch and sharp against a salty patty.
 origin: Drive-in, 1960s
 era: 1960
@@ -15,7 +15,7 @@ picks:
   - "Cooking: Griddled hot, flipped once"
   - "Assembly: Shredded lettuce, thin tomato, paper-thin raw purple onion, onion sautéed in the beef fat, double-sour pickles, cracked pepper, on a toasted bun"
   - "Sauces: Ketchup and mustard, kept separate"
-description: "The deluxe griddle burger: a thin, griddled patty under cold lettuce, tomato, two kinds of onion, and sour pickles."
+description: "The drive-in deluxe burger: a thin, griddled patty under cold lettuce, tomato, two kinds of onion, and sour pickles."
 ---
 
 Deluxe means lettuce and tomato (it's [[White Spot burgers]] language). The build works because everything above the patty is cold, crunchy, sharp, or sour, and the patty below brings the salt, fat, and savoury depth. Every part is there because the alternative was tried and lost.

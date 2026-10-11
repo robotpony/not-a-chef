@@ -17,7 +17,7 @@ The test: after reading it, could you cook something that isn't written down any
 2. **Ratio method.** A proportion you can scale or adjust, with its acceptable range.
    - Food ratios: dressings, mayo, brines
 3. **Blueprint method.** A type of food broken into its parts, each of which is its own small method, and the builds that combine them (see Inside a blueprint).
-   - Burgers: patty construction, patty seasoning, cooking, assembly, sauces, things that are not burgers; builds such as deluxe griddle, bacon double cheese, and grilled onion
+   - Burgers: patty construction, patty seasoning, cooking, assembly, sauces, things that are not burgers; builds such as drive-in deluxe, fast-food double, and grilled onion
    - Each part can link to a technique method (e.g. patty cooking → reverse sear or water frying)
 
 ## What a method contains
@@ -76,8 +76,8 @@ A blueprint varies in two different ways, and they're modelled separately (decid
 Blueprint (burgers)
  ├── Parts      patty construction, seasoning, cooking, assembly, sauces, not burgers
  │    └── Options   thick / thin / paper thin           (inside the part's method)
- └── Builds     deluxe griddle, bacon double cheese, grilled onion   (one page each)
-      └── Recipes   White Spot burgers = deluxe griddle, with quantities
+ └── Builds     drive-in deluxe, fast-food double, grilled onion   (one page each)
+      └── Recipes   White Spot burgers = drive-in deluxe, with quantities
 ```
 
 **Parts** are the slots every dish of this type fills. Each part is covered by one or more method pages (`part: Patty construction`). A blueprint's `_index.md` lists its parts in order (`parts:`).
@@ -94,12 +94,12 @@ Blueprint (burgers)
 | Paper thin (smashed) | You want lacy, crisp edges | Cooking: smash on a very hot griddle |
 ```
 
-**Builds** are named combinations: one pick per part that lands on a recognizable profile. Bacon double cheese is salty, sweet, and rich with little crunch; the deluxe griddle is cold crunch and sharp against a salty patty; the grilled onion burger is sweet and savoury with one soft, even texture. Builds can be very different and complex, so **each build is its own page**: a method page in `content/essays/methods/` (it's a general pattern, not a dish with quantities) with:
+**Builds** are named combinations: one pick per part that lands on a recognizable profile. The fast-food double is salty, sweet, and rich with little crunch; the drive-in deluxe is cold crunch and sharp against a salty patty; the grilled onion burger is sweet and savoury with one soft, even texture. Builds can be very different and complex, so **each build is its own page**: a method page in `content/essays/methods/` (it's a general pattern, not a dish with quantities) with:
 
 | Field | On | Meaning |
 |---|---|---|
 | `blueprint` | build, recipe | The blueprint it belongs to (`[burgers]`) |
-| `build_name` | build page | The build's name (`Deluxe griddle`). Unique within its blueprint. Not `build`: Hugo reserves that key for its own build options, and the site fails to build. |
+| `build_name` | build page | The build's name (`Drive-in deluxe`). Unique within its blueprint. Not `build`: Hugo reserves that key for its own build options, and the site fails to build. |
 | `build_name` | recipe | Which build the recipe is an instance of: the same name as the build page's `build_name` |
 | `profile` | build page | Free text, one line: what it tastes and feels like (`Cold crunch and sharp against a salty patty`). Free text for now; a fixed vocabulary can come later if builds need comparing by it. |
 | `picks` | build page | One pick per part, as a list of `"Part: pick"` strings in the blueprint's part order. A list, not a map, because the content tools read flat frontmatter (`frontmatter.py`). |
@@ -108,11 +108,11 @@ Blueprint (burgers)
 
 ```yaml
 ---
-title: Deluxe griddle burger
+title: Drive-in deluxe burger
 date: 2026-10-10
 tags: [method, burgers]
 blueprint: [burgers]
-build_name: Deluxe griddle
+build_name: Drive-in deluxe
 profile: Cold crunch and sharp against a salty patty
 picks:
   - "Patty construction: thin, 140 g"
@@ -127,7 +127,7 @@ And on a recipe that's an instance of it:
 
 ```yaml
 blueprint: [burgers]
-build_name: Deluxe griddle
+build_name: Drive-in deluxe
 ```
 
 A build page reads like any method: the principle of the build first (why these picks go together), then why the picks go together, how it fails, its variations, and the recipes that are instances of it. Its stack diagram (see Diagrams) is the clearest picture of a build: each layer's role adds up to the profile.
@@ -218,7 +218,7 @@ lettuce   | Shredded lettuce | cold crunch
 onion     | Raw onion        | sharp
 patty     | Thin patty       | salt, fat, savoury
 bun-base  | Toasted bun      | barrier
-caption: Deluxe griddle build, top to bottom
+caption: Drive-in deluxe build, top to bottom
 ```
 
 - One layer per line: `icon | label | role`. Roles use the vocabulary the chicken burger essay established (cold crunch, sharp, fat, salt), so the diagram says why each layer is there.

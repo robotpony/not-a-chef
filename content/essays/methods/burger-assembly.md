@@ -31,7 +31,7 @@ Bottom up, with the sauce against the bread so it soaks into the bun, not the le
 4. Tomato, lettuce
 5. Sauce or mayo on the top bun, then the top bun
 
-The exact order changes by build (see [[Deluxe griddle burger]], [[Bacon double cheese burger]], [[Grilled onion burger]]).
+The exact order changes by build (see [[Drive-in deluxe burger]], [[Fast-food double burger]], [[Grilled onion burger]]).
 
 ## Rest it in paper
 

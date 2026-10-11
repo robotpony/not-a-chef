@@ -24,7 +24,7 @@ Recipes (`content/recipes/`), essays (`content/essays/`), reference pages (`cont
 | `source` | MAY | string | `original`, `family`, a URL, or a book title. SHOULD on recipes. |
 | `blueprint` | MAY | string[] | Blueprints (dish types made of parts) the page belongs to (`[burgers]`), a taxonomy like `cuisine`: the blueprint's page at `/blueprint/<slug>/` collects its methods, recipes, and stories. Its own `content/blueprint/<slug>/_index.md` holds its definition and the order of its parts. See docs/METHODS.md. |
 | `part` | MAY | string | On a method page in a blueprint: which part it covers (`Patty construction`), one of the blueprint's `parts`. |
-| `build_name` | MAY | string | On a build page (a method in a blueprint): the build's name (`Deluxe griddle`), unique within the blueprint. On a recipe: the build it's an instance of, the same name. |
+| `build_name` | MAY | string | On a build page (a method in a blueprint): the build's name (`Drive-in deluxe`), unique within the blueprint. On a recipe: the build it's an instance of, the same name. |
 | `profile` | MAY | string | On a build page: one line of free text on what it tastes and feels like (`Cold crunch and sharp against a salty patty`). |
 | `origin` | MAY | string | On a build page: where and when it comes from, short free text (`Drive-in, 1960s`). |
 | `era` | MAY | int | On a build page: a year that places it on the blueprint's lineage timeline (`1960`). |
