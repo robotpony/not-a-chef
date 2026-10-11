@@ -6,7 +6,7 @@ This repository contains two distinct types of material, each under a different 
 
 ## Content (recipes, essays, reference pages)
 
-Copyright © Bruce Alderson. All rights reserved except as noted below.
+Copyright © 1995-2026 Bruce Alderson. All rights reserved except as noted below.
 
 The content in `content/` — recipes, essays, and reference pages — is licensed under the
 **Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)**.
@@ -27,7 +27,7 @@ Full license text: https://creativecommons.org/licenses/by-sa/4.0/legalcode
 
 ## Code (Hugo templates, migration tools, configuration)
 
-Copyright © Bruce Alderson.
+Copyright © 2026 Bruce Alderson.
 
 The source code in this repository — Hugo layouts, templates, Python migration tools,
 and configuration files — is provided under the **MIT License**:
