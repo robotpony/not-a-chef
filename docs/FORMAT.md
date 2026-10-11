@@ -1,12 +1,78 @@
-# Recipe Format
+# Content format
 
-Standard Markdown with YAML frontmatter. Files use the `.md` extension. Recipes should read naturally as plain text, render in Obsidian and Hugo, and be parseable by automated tools.
+Every page on the site is standard Markdown with YAML frontmatter, in a `.md` file under `content/`. Pages should read naturally as plain text, render in Obsidian and Hugo, and be parseable by tools.
 
-See `SPEC.md` for the normative version of this document — exact frontmatter types, the full ingredient line grammar, and validation rules a linter checks against. This file stays the readable guide; `SPEC.md` wins on any disagreement.
+This is the one format doc for all content: what every page shares, then what recipes and essays add, then what a validator checks. Requirement language (MUST / SHOULD / MAY) follows RFC 2119 and is used only where a tool or template depends on the rule; everything else is house style.
 
-## Frontmatter
+Format version **0.2.0** (0.2.0 added the formula block). Bump minor for an additive change (a new optional field or section; existing pages stay valid), major only when a previously valid page could fail validation.
 
-Required fields: `title`, `tags`, `date`. Everything else is optional but encouraged.
+## All pages
+
+Recipes (`content/recipes/`), essays (`content/essays/`), reference pages (`content/reference/`), Food Log months (`content/the-food-log/`), and About.
+
+### Shared frontmatter
+
+| Field | Required | Type | Notes |
+|---|---|---|---|
+| `title` | MUST | string | Sentence case (see Typography). A recipe title MUST be unique in the collection: wiki links resolve by it. |
+| `date` | MUST | string | ISO 8601 (YYYY-MM-DD), the day the page was added. Food Log months use the first of the month; season files use the month the log sorts them by. |
+| `tags` | MUST on recipes, MAY elsewhere | string[] | Plain strings, no `#` prefix. |
+| `description` | MAY | string | 1–2 sentences for SEO and listing cards. Mostly essays and reference pages; recipe cards use the opening text. |
+| `draft` | MAY | boolean | `true` publishes the page in the **Test kitchen**: live, with a banner under the title and a mark on its card saying it's still changing. Remove it when the page is a keeper. See DESIGN.md "Test kitchen (drafts)" and `content/essays/reference-essays/test-kitchen.md`. |
+| `working_on` | MAY | string | For drafts: one line on what's being tried next ("Getting them to hold without the egg"), shown under the banner and in the card's popover. |
+| `pinned` | MAY | boolean | Floats the page to the top of its section's list, its term pages, and search. Rare by design, not a general sort override. See DESIGN.md. |
+| `source` | MAY | string | `original`, `family`, a URL, or a book title. SHOULD on recipes. |
+
+Don't hand-maintain `lastmod`. Last-modified comes from git (`enableGitInfo`): both sidebars show **Date**, plus **Updated** from the file's last commit when that falls on a different day.
+
+Approximate values MUST use a leading `~`, not "about", "approx." or "roughly": `portions: ~500 ml`, `cook_time: ~2 hr`. Keep the space between number and unit. A range (`4–6`, `20–30 min`) needs no `~`.
+
+The schema is open. Unknown fields MUST be preserved and MUST NOT fail validation; tools ignore them. Don't add `difficulty`, `diet`, or `license` without a reason.
+
+### File naming
+
+Kebab-case, one page per file, matching the title: `dal-tadka.md` for "Dal tadka". Replace special characters with a plain equivalent or drop them. No date prefix: `date` is the record.
+
+ALL-CAPS files under `content/` (`IDEAS.md`, `TODO.md`) are working notes. Hugo ignores them (`ignoreFiles` in `config/_default/hugo.toml`), so they never publish.
+
+### Cross-references
+
+Use wiki links to point at other pages, as an ingredient or as related reading:
+
+```markdown
+- 1 cup [[Pizzeria pizza sauce]]
+- 1 batch [[Basic pie crust]], blind-baked
+```
+
+Wiki links resolve by matching `title`. They work natively in Obsidian; in Hugo a render hook resolves them (`themes/fugu/layouts/_default/_markup/render-link.html`), and a `[[Term]]` with no page of its own links to its glossary entry.
+
+### Photos
+
+Put photos in `static/images/<section>/` (`recipes`, `essays`, `food-log`) and embed them with standard Markdown where they belong in the text (`/image-add` does both):
+
+```markdown
+![Lazy tomato soup](/images/recipes/lazy-tomato-soup.jpg)
+```
+
+The alt text doubles as the caption, so describe what's in the photo. On the site, photos move out of the text into the sidebar as thumbnails that open a viewer, with a small "Photo N" marker left in their place. In Obsidian, and in print, they stay inline.
+
+### Language
+
+Canadian English. British spellings (colour, favour, behaviour, flavour, grey) with American -ize endings (realize, organize, optimize), and Canadian centre and litre. Preferred spellings: chili (plural chilies; "chile" only in proper names), yogurt, Sichuan, aluminum, green onion. Metric units with optional imperial in parentheses: "180°C (350°F)", "250 ml (1 cup)".
+
+### Typography
+
+Titles and headings use sentence case: capitalize the first word and proper nouns only (places, people, nationalities, brands). "Red Thai curry", "Chef John’s hamburger buns", "Instant Pot chicken thigh curry"; not "Red Thai Curry". Dish names borrowed from other languages are not proper nouns: "Dal tadka", "Salsa verde", "Pad kra pao moo saap".
+
+Avoid em-dashes.
+
+## Recipes
+
+Instructional voice, not storytelling; the full style guide is the `recipe-writing` skill (`~/.claude/skills/recipe-writing/SKILL.md`).
+
+### Recipe frontmatter
+
+Required: `title`, `tags`, `date`. Everything else is optional but encouraged.
 
 ```yaml
 ---
@@ -24,31 +90,23 @@ working_on: Less cumin, more tadka   # optional, shown under the banner
 ---
 ```
 
-| Field        | Type             | Notes                                                                 |
-| ------------ | ---------------- | --------------------------------------------------------------------- |
-| `title`      | string           | Recipe name, sentence case. Must be unique in the collection.         |
-| `tags`       | string[]         | Plain strings, no `#` prefix. Category and descriptive tags.          |
-| `source`     | string           | `original`, `family`, a URL, or a book title.                         |
-| `author`     | string           | Only when different from the collection author.                       |
-| `date`       | string           | ISO 8601 (YYYY-MM-DD). Date added. Required. "Updated" comes from git. |
-| `aka`        | string           | Alternative names.                                                    |
-| `servings`   | string or number | People it feeds: "4", "4–6", "12+ (people)".                         |
-| `portions`   | string           | What the batch makes, when that isn't people: "2 pans", "1 loaf", "~500 ml". |
-| `prep_time`  | string           | Parenthetical notes are fine: "20 min (plus 24–48 hr cold ferment)".  |
-| `cook_time`  | string           | Active cooking time.                                                  |
-| `total_time` | string           | Total elapsed time if different from prep + cook.                     |
-| `cuisine`    | string           | Region or cuisine (e.g., "Indian", "Italian").                        |
-| `draft`      | boolean          | `true` puts the recipe in the **Test kitchen**: published, with a banner under the title and tags and a mark on its card saying it's still being tested. Remove it when the recipe is a keeper. See `content/essays/reference-essays/test-kitchen.md`. |
-| `working_on` | string           | Optional, for drafts. One line on what's being tried next ("Getting them to hold without the egg"), shown under the banner and in the card's popover. |
-| `pinned`     | boolean          | Rare. Floats this recipe to the top of the recipes list, its term pages, and search. See DESIGN.md. |
+On top of the shared fields:
 
-Approximate values use a leading `~`, not "about": `portions: ~500 ml`, `cook_time: ~2 hr`. It's shorter, and it fits the compact metadata on cards and in the sidebar. Ranges (`4–6`, `20–30 min`) don't need it.
+| Field | Required | Type | Notes |
+|---|---|---|---|
+| `servings` | SHOULD | string or number | People it feeds: "4", "4–6", "12+ (people)". Feeds `recipeYield` in schema.org output. |
+| `portions` | MAY | string | What the batch makes, when that isn't people: "2 pans", "1 loaf", "~500 ml". |
+| `prep_time` | MAY | string | Parenthetical notes are fine: "20 min (plus 24–48 hr cold ferment)". |
+| `cook_time` | MAY | string | Active cooking time. |
+| `total_time` | MAY | string | Total elapsed time, if different from prep + cook. |
+| `cuisine` | MAY | string | Region or cuisine ("Indian", "Italian"). |
+| `author` | MAY | string | Only when different from the collection author. |
+| `aka` | MAY | string | Alternative names, comma-separated. |
+| `cost_note` | MAY | string | Free-text note on cost ("expensive because of saffron"). Not a number; a computed estimate would be build-time data. |
 
-Every page on the site carries `date`, not just recipes: essays (`FORMAT-ESSAYS.md`), reference guides, Food Log months (first of the month; season files use the month the log sorts them by), and About. Both sidebars show it as **Date**, plus **Updated** from the file's last git commit when that falls on a different day.
+There's no `related` field. Related recipes are computed at build time from `tags` and `cuisine` (Hugo related content); add a manual override only if those suggestions prove weak.
 
-The schema is open. Unknown fields are preserved and ignored by tools. Don't add `difficulty`, `diet`, or `license` unless there's a reason.
-
-## Mechanic section
+### Mechanic
 
 Optional. One paragraph explaining the ratio, technique, or principle that drives the dish. Use **bold** for the key ratio or technique.
 
@@ -67,7 +125,7 @@ producing a chewier crumb and stronger structure. Low yeast (0.1%) and a long co
 ferment develop flavour.
 ```
 
-## Simple recipes
+### Simple recipes
 
 For single-component recipes, use `## Ingredients` and `## Method`.
 
@@ -85,13 +143,13 @@ For single-component recipes, use `## Ingredients` and `## Method`.
 
 Combine water, cloves, and cardamom. Bring to a boil. Simmer 2–3 minutes.
 
-Add tea and simmer 5 minutes. Add milk. Bring to a boil — the moment it foams and
+Add tea and simmer 5 minutes. Add milk. Bring to a boil. The moment it foams and
 rises, remove from heat and stir back down. Repeat three times.
 
 Strain and serve.
 ```
 
-Method is prose, not an ordered list. One action per sentence. Sensory cues first, time second: "until golden, about 3 minutes" not "cook 3 minutes."
+Method is prose, not an ordered list. One action per sentence, imperative and present tense: "Add the lentils", not "You should add the lentils". No passive voice. Sensory cues first, time second: "until golden, about 3 minutes", not "cook 3 minutes".
 
 Ingredients can have tab-indented sub-items for notes:
 
@@ -100,7 +158,7 @@ Ingredients can have tab-indented sub-items for notes:
     - add split peas for more texture (+10 min cook time)
 ```
 
-## Multi-component recipes
+### Multi-component recipes
 
 When a recipe has distinct components (dal + tadka, dough + filling), give each component its own `## Heading` containing both its ingredients and its method prose. No `###` subheadings needed.
 
@@ -126,7 +184,9 @@ Melt ghee over medium-high. Add cumin seeds. When they sizzle, add onion and gar
 Fry until golden, about 3–4 minutes. Pour over the dal.
 ```
 
-To group ingredients within a single component's list (dry vs. wet, for a recipe that doesn't otherwise split into components), use a `####` label directly above each run of list items. This is a label, not a new component — it carries no separate method:
+### Ingredient groups
+
+To group ingredients within one list (dry vs. wet, in a recipe that doesn't otherwise split into components), put a `####` label directly above each run of list items:
 
 ```markdown
 ## Ingredients
@@ -140,7 +200,23 @@ To group ingredients within a single component's list (dry vs. wet, for a recipe
 - 240ml buttermilk
 ```
 
-## Optional sections
+`####` is reserved for this. It's a label, not a component: it MUST appear only inside an ingredients block, MUST be followed directly by list items, and carries no method of its own.
+
+### Ingredient lines
+
+```
+[quantity] [unit] ingredient name [, preparation note] [(optional)]
+```
+
+- **Quantity**: whole numbers, fractions (`1/2`, `½`), mixed numbers (`1 1/2`), decimals (`.5`), ranges (`2–3`), or descriptive (`a pinch of`).
+- **Unit**: standard cooking units, full or abbreviated. Metric preferred, imperial in parentheses where helpful. A noise "of" between unit and name is fine: "½ teaspoon of salt".
+- **Ingredient name**: free text up to the first comma or the optional marker.
+- **Preparation note**: free text after a comma: "3 apples, peeled and sliced".
+- **Optional marker**: a line MAY end with the literal `(optional)` (any case), after any preparation note: "1 jalapeño, halved (optional)". A parser MUST read a trailing `(optional)` as the marker, not as part of the note.
+
+This is the one grammar every ingredient feature parses: scaling, unit conversion, quantity styling, and anything later (shopping lists, pantry matching, substitutions). There MUST NOT be a second, slightly different grammar growing in the JS. When a validator exists, it SHOULD emit its parsed output as a JSON fixture the JS tests assert against, so the two parsers can't drift apart.
+
+### Optional sections
 
 **To serve**: one line or a few words. What it goes with.
 
@@ -150,7 +226,7 @@ To group ingredients within a single component's list (dry vs. wet, for a recipe
 Warm basmati rice, plain raita, lime pickle.
 ```
 
-**Variations**: only for meaningfully different methods or outcomes. Prose, one paragraph per variation. Include the source link when adapted.
+**Variations**: only for meaningfully different methods or outcomes. Prose, one `###` per variation. Include the source link when adapted.
 
 ```markdown
 ## Variations
@@ -168,7 +244,7 @@ Use yellow split peas instead of masoor ...
 - Leftovers thicken considerably. Loosen with water when reheating.
 ```
 
-**Equipment**: freeform bullet list of anything beyond standard kitchen kit. `## Special equipment` (and the legacy `## Hardware`) is accepted as the same section. On the site it moves into the recipe sidebar, above Notes.
+**Equipment**: a flat bullet list (no nesting) of anything beyond standard kitchen kit. `## Special equipment` and the legacy `## Hardware` are the same section. On the site it moves into the recipe sidebar, above Notes.
 
 ```markdown
 ## Equipment
@@ -177,7 +253,7 @@ Use yellow split peas instead of masoor ...
 - Instant-read thermometer
 ```
 
-**Substitutions**: structured, one swap per line, separated by an arrow (`→`). See `SPEC.md` §5 for the exact grammar; this is what lets a swap be handled programmatically instead of buried in prose.
+**Substitutions**: one swap per line, `- <ingredient> → <alternative(s)>[, <note>]`. The arrow (`→`, U+2192) is a required delimiter; it's what lets a swap be handled by code instead of buried in prose. The left side should match a line in the ingredients, though that's a best-effort text match.
 
 ```markdown
 ## Substitutions
@@ -186,7 +262,7 @@ Use yellow split peas instead of masoor ...
 - Fish sauce → soy sauce, for a vegetarian version
 ```
 
-**Tables**: use for timing or ratio reference when there are multiple variables.
+**Tables**: for timing or ratio reference when there are several variables.
 
 ```markdown
 ## Timing
@@ -197,18 +273,7 @@ Use yellow split peas instead of masoor ...
 | 2 whole chickens | 30 min | 20 min |
 ```
 
-## Cross-references
-
-Use wiki links to reference other recipes as ingredients or related reading:
-
-```markdown
-- 1 cup [[Pizzeria pizza sauce]]
-- 1 batch [[Basic pie crust]], blind-baked
-```
-
-Wiki links resolve by matching `title` in frontmatter. They work natively in Obsidian and require a render hook in Hugo.
-
-## Formula diagrams
+### Formula diagrams
 
 A ratio stated in the text can also be drawn: a `formula` fenced block, one slot per line, `icon | label | quantity | swaps`, with the operator at the start of every line after the first.
 
@@ -221,50 +286,60 @@ can          | Beans   | 1 can         | black, pinto, chickpea
 ```
 ````
 
-- One operator per block: `+` (parts that go together), `:` (a ratio; the quantity is the ratio number), or `→` (the shape of a method; a quantity that isn't a number prints as an italic note). An optional last `=` line names the result.
-- Icons are keys from `assets/icons/formula/` (one or two per slot). Labels are one short word. Swaps are optional, up to three, comma-separated. Keep it to five slots.
+- One operator per block: `+` (parts that go together), `:` (a ratio; the quantity is the ratio number), or `→` (the shape of a method; a quantity that isn't a number prints as an italic note). `->` is accepted for `→`. An optional last `=` line names the result.
+- Icons are keys from `assets/icons/formula/`, one or two per slot. An unknown key renders a placeholder and warns. Labels are one short word. Swaps are optional, up to three, comma-separated. Keep it to five slots.
 - Optional trailing lines: `caption: <text>`, and `bar: yes` for a ratio's proportion bar.
-- The diagram illustrates the sentence; it never replaces it. Only draw a ratio the text already states.
+- The diagram illustrates the sentence; it MUST NOT replace it. Only draw a ratio the text already states.
 
-On the site it renders as a row of icons (compact in the recipe sidebar, where Mechanic sits). In Obsidian it reads as plain text.
+It renders at build time (`render-codeblock-formula.html`) as a row of icons, compact in the recipe sidebar where Mechanic sits. In Obsidian it reads as plain text.
 
-## Photos
+## Essays
 
-Put photos in `static/images/<section>/` (`recipes`, `essays`, `food-log`) and embed them with standard markdown where they belong in the text:
+Essays live in `content/essays/<type>/` and are finished prose, not outlines or notes. Draft them in place, with `draft: true` while they're still changing. The types (one folder each) and the voice are described in CLAUDE.md "Food essay types"; for shared language rules see the `blog-writing` skill.
 
-```markdown
-![Lazy tomato soup](/images/recipes/lazy-tomato-soup.jpg)
+Frontmatter is the shared set. `title` and `date` are required; `tags` and `description` are encouraged. Essays don't use the recipe fields (`servings`, `cuisine`, times).
+
+```yaml
+---
+title: Win the fridge
+date: 2026-09-27
+tags: [win-the-fridge]
+description: "Win the fridge is the practice of using every scrap of food before it goes to waste."
+---
 ```
 
-The alt text doubles as the caption, so describe what's in the photo. On the site, photos move out of the text into the sidebar as thumbnails that open a viewer, with a small "Photo N" marker left in their place. In Obsidian, and in print, they stay inline.
+No required sections. A typical shape, varying by type:
 
-## File naming
+1. Opening: a specific observation, scenario, or image that grounds the piece
+2. Body: the argument, narrative, or exploration; one idea per section
+3. Close: a landing point; actionable, reflective, or a restatement of the opening with new weight
 
-Kebab-case. One recipe per file. Match the title: `dal-tadka.md` for "Dal tadka". Special characters should be replaced by their equivalent or removed, e.g., 
+Use `##` headings only when sections are long enough that a reader needs navigation. Short pieces (under 1000 words) rarely need them.
 
-## Ingredient line format
+A reference essay (`content/essays/reference-essays/`) defines one concept and is tagged with that term, so the term's tag page can link to it. A term that doesn't need a whole essay gets a glossary entry in `content/reference/glossary.md` instead.
 
-```
-[quantity] [unit] ingredient name [, preparation note]
-```
+## Reference pages and the Food Log
 
-- Quantities: whole numbers, fractions (`1/2`, `½`), mixed numbers (`1 1/2`), decimals (`.5`), ranges (`2–3`), descriptive (`a pinch of`)
-- Units: standard cooking units in full or abbreviated form. Metric preferred with imperial in parentheses where helpful.
-- Noise word "of" between unit and name is fine: "½ teaspoon of salt"
-- Preparation notes after a comma: "3 apples, peeled and sliced"
-- Optional ingredients: end the line with `(optional)`, after any preparation note: "1 jalapeño, halved (optional)". This exact marker is machine-detectable — see `SPEC.md` §3.
+Shared frontmatter only, no required sections. Reference pages are technique guides, research notes, and appendices, written as reference rather than narrative. Food Log months need only `title` and `date`; the opening paragraph is the month's card summary (`/food-log-summary`).
 
-## Language
+## Validation
 
-Canadian English. British spellings (colour, favour, behaviour, flavour, grey) with American -ize endings (realize, organize, optimize), and Canadian centre and litre. Preferred spellings: chili (plural chilies; "chile" only in proper names), yogurt, Sichuan, aluminum, green onion. Metric units with optional imperial in parentheses: "180°C (350°F)", "250 ml (1 cup)".
+What a checker can rely on. `/lint` checks the first group today, and the build warns on formula blocks; the rest waits on Fugu's validator (`themes/fugu/PLAN.md`, "Recipe format and validator").
 
-Imperative, present tense in method steps: "Add the lentils" not "You should add the lentils." No passive voice.
+**Checked now**
+- Required frontmatter present: `title`, `date` on every page; `tags` on recipes.
+- `date` is YYYY-MM-DD; `draft` is a boolean if present; `tags` is a list of plain strings, no `#`.
+- A recipe has at least one ingredients list and one method.
+- Formula blocks use known icon keys, one operator, and at most five slots.
 
-## Typography and layout conventions
+**For the validator**
+- Frontmatter types match the tables above.
+- Ingredient-line parse rate: report every line that doesn't parse cleanly. Every ingredient feature depends on it, so a silent failure is worth surfacing before any one feature needs it.
+- `## Substitutions` lines contain the `→` delimiter.
+- `## Equipment` is a flat list.
+- `####` labels appear only inside an ingredients block and are followed directly by list items.
 
-Titles use sentence case: capitalize the first word and proper nouns only (places, people, nationalities, brands). "Red Thai curry", "Chef John’s hamburger buns", "Instant Pot chicken thigh curry"; not "Red Thai Curry". Dish names borrowed from other languages are not proper nouns: "Dal tadka", "Salsa verde", "Pad kra pao moo saap". This applies to every content type (recipes, essays, reference pages) and to headings within them.
-
-Avoid em-dashes. 
+Essays, reference pages, and the Food Log have no structural body checks.
 
 ## Why these choices
 
@@ -272,8 +347,8 @@ Avoid em-dashes.
 
 **Freeform heading names.** Real recipes use wildly different heading names. "Ingredients", "What you need", and "For the sauce" are all valid if they precede an ingredient list. Requiring specific heading names forces authors to restructure their recipes.
 
-**Wiki links for cross-references.** Obsidian compatibility. Wiki links use the recipe title as the reference, so they survive file renames and reorganization. Standard Markdown links require knowing file paths.
+**Wiki links for cross-references.** Obsidian compatibility. Wiki links use the title as the reference, so they survive file renames and reorganization. Standard Markdown links require knowing file paths.
 
-**Open frontmatter schema.** Different recipes need different metadata. Rejecting unknown fields frustrates authors. Validate known fields; preserve and ignore the rest.
+**Open frontmatter schema.** Different pages need different metadata. Rejecting unknown fields frustrates authors. Validate known fields; preserve and ignore the rest.
 
 **Tags as plain strings.** Tags match Obsidian's native tag convention without the `#` prefix required in YAML values. Consistent with how tags appear everywhere else in the vault.

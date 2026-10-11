@@ -9,7 +9,7 @@ A family cookbook built as a Hugo static site (Blowfish theme), edited in Obsidi
 See docs/ARCHITECTURE.md for the data flow and component overview. See docs/PLAN.md for future work (the phased build plan was squashed after release; its history is in git). See `mockups/STYLE.md` (or `mockups/style.html`) for the settled visual design system — read it before any visual/layout work; see "Visual design" below.
 ## Content formats
 
-See `docs/FORMAT.md` for the recipe specification and `docs/FORMAT-ESSAYS.md` for the essay specification.
+See `docs/FORMAT.md` for the content format: shared frontmatter, recipes, essays, and validation.
 
 ## Recipe format
 
@@ -72,7 +72,7 @@ Two stacked themes, both git submodules: `theme = ["fugu", "blowfish"]`. Fugu (`
 
 ## Pinned pages and tag reference pages
 
-- `pinned: true` in frontmatter (recipes, essays, or reference pages alike) floats a page to the top of its section's list, its term pages (tags/cuisine), and search results. Rare by design, not a general-purpose sort override. See docs/DESIGN.md and docs/SPEC.md.
+- `pinned: true` in frontmatter (recipes, essays, or reference pages alike) floats a page to the top of its section's list, its term pages (tags/cuisine), and search results. Rare by design, not a general-purpose sort override. See docs/DESIGN.md and docs/FORMAT.md.
 - A tag can carry its own `content/tags/<slug>/_index.md` with a `description`, and, when marked `principle: true`, `themes/fugu/layouts/_default/term.html` swaps the plain description for a definition callout (the `_index.md` body) plus a "Reference & further reading" list of anything else on the tag that isn't a recipe. Only `win-the-fridge` uses this today (`content/tags/win-the-fridge/_index.md`); every other tag term page renders as before.
 
 ## Visual design

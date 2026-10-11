@@ -66,7 +66,7 @@ All in `layouts/_default/_markup/`:
 
 ### Formula diagrams
 
-A ```` ```formula ```` fenced block (`FORMAT.md` §Formula diagrams, `SPEC.md` §5) is drawn at build time as one row of icons joined by `+`, `:` or `→`, with a label, quantity, and optional swaps under each icon. No client JS.
+A ```` ```formula ```` fenced block (`FORMAT.md` §Formula diagrams) is drawn at build time as one row of icons joined by `+`, `:` or `→`, with a label, quantity, and optional swaps under each icon. No client JS.
 
 - `render-codeblock-formula.html` parses the block: one slot per line, fields split on `|`, operator at the start of each later line, optional `caption:` and `bar:` lines. It warns at build time on an unknown icon key (drawing a dashed placeholder), mixed operators, or more than five slots. The figure gets an `aria-label` built from the slot text; the icons are `aria-hidden`.
 - `themes/fugu/layouts/partials/formula-slot.html` draws one slot. Icons come from `assets/icons/formula/<key>.svg` via `resources.Get` and are inlined, not `<img>`, so `currentColor` and the theme tokens apply and dark mode works.

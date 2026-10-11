@@ -37,7 +37,7 @@ The cookbook templates, render hooks, JS, icons, archetypes, and content tools m
 - [ ] After each Fugu change lands, bump the submodule here (`git -C themes/fugu pull`, then commit `themes/fugu`) and check the site still renders the same.
 - [ ] When Fugu gets its own CSS (Fugu PLAN.md §5), cut `assets/css/custom.css` down to the Not a Chef look only, and check every page against the current build.
 - [ ] When Fugu renames params (Fugu PLAN.md §2), update `config/_default/params.toml` in the same step.
-- [ ] When Fugu's docs exist (Fugu PLAN.md §7), decide whether `FORMAT.md`, `FORMAT-ESSAYS.md`, and `SPEC.md` stay here as house style on top of Fugu's docs or are replaced by links.
+- [ ] When Fugu's docs exist (Fugu PLAN.md §7), decide whether `FORMAT.md` stays here as house style on top of Fugu's docs or are replaced by links.
 - [x] Possibly move `layouts/404.html` back here from Fugu: its text is a Not a Chef joke. *Done in `2951dca`.*
 
 ### Carried over from the old plan
@@ -57,8 +57,14 @@ Unfinished items from the squashed Phases 7–9 (`git show e6346f4^:PLAN.md`). T
 - [ ] Subscribe in a real reader (e.g. NetNewsWire) and check how posts render, and look at the new footer column in Chrome at desktop and phone widths, light and dark (Chrome extension wasn't connected 2026-10-09).
 - [ ] Check that Hugo's related content (`partials/related.html`, keyed on tags and cuisine) gives reasonable suggestions before considering a manual `related:` field.
 
-**Recipe format and validator** (`SPEC.md`; the validator itself is in Fugu's plan)
+**Recipe format and validator** (`FORMAT.md` §Validation; the validator itself is in Fugu's plan)
 - [ ] Once Fugu's validator exists, run it against all published recipes as a baseline; file each discrepancy as a spec bug or a content bug.
+
+The old `SPEC.md` (merged into `FORMAT.md` 2026-10-10; full text in git) also sketched two data files for Fugu's build-time enrichment items, kept here until those land:
+
+- `data/ingredient_prices.yaml`: ingredient → rough unit price, joined at build time into an estimated total and per-serving cost in the recipe index. Prices go stale, so the file carries a top-level `updated:` date, and the feature only claims "roughly which recipes are cheap or expensive".
+- `data/departments.yaml`: grocery departments ordered the way you walk a store (produce and deli, centre aisles, frozen), plus ingredient → department. Orders the shopping list and doubles as the ingredient vocabulary for the pantry (win-the-fridge) tool.
+- Both key on the canonical ingredient name parsed from a line (`"450g butternut squash, peeled and diced"` → `butternut squash`). Many-to-one matching (squash vs. butternut, plurals, brands) is the fragile part; prototype it against real recipes before settling either file's shape.
 
 ### Test kitchen (recipes in development)
 
@@ -95,9 +101,9 @@ Queued 2026-10-07. A careful review of the code on both sides of the split, now 
 
 Queued 2026-10-07. Now that Fugu has been split out, the docs in this repo describe three things at once: the theme, this site's house style, and history. Sort each one out. Do it after the code review, and before Fugu PLAN.md §7 (Fugu's own docs), since this decides what moves there.
 
-- [ ] **Inventory.** Here: `README.md`, `CLAUDE.md`, `ARCHITECTURE.md`, `DESIGN.md`, `SPEC.md`, `FORMAT.md`, `FORMAT-ESSAYS.md`, `LIBRARIES.md`, `PLAN.md`, `REVIEW.md`, and `mockups/README.md`, `STYLE.md`, `COMPONENTS.md`. In Fugu: `README.md`, `CLAUDE.md`, `PLAN.md`, `CHANGELOG.md`. For each, decide: keep (this site's own), move or link (it's really about Fugu), merge (two docs saying the same thing), or delete (history git already has).
-- [ ] **Stale facts.** Check every path, command, and claim against the code. Known suspects: `README.md`'s tech plan says the tools are in `tools/` (most moved to Fugu); `DESIGN.md` says the preview runs `hugo server -D` (drafts are now on in config); `SPEC.md` calls itself a draft and gives `draft` a MUST; `CLAUDE.md` says only `win-the-fridge` is a principle tag and names `term.html` paths that may have moved.
-- [ ] **Overlap.** `FORMAT.md`, `SPEC.md`, and `DESIGN.md` each describe the frontmatter; pick one to own it and have the others link. Same for the tools' CLIs (`DESIGN.md` vs Fugu's `--help`).
+- [ ] **Inventory.** Here: `README.md`, `CLAUDE.md`, `ARCHITECTURE.md`, `DESIGN.md`, `FORMAT.md`, `LIBRARIES.md`, `PLAN.md`, `REVIEW.md`, and `mockups/README.md`, `STYLE.md`, `COMPONENTS.md`. In Fugu: `README.md`, `CLAUDE.md`, `PLAN.md`, `CHANGELOG.md`. For each, decide: keep (this site's own), move or link (it's really about Fugu), merge (two docs saying the same thing), or delete (history git already has).
+- [ ] **Stale facts.** Check every path, command, and claim against the code. Known suspects: `README.md`'s tech plan says the tools are in `tools/` (most moved to Fugu); `DESIGN.md` says the preview runs `hugo server -D` (drafts are now on in config); `CLAUDE.md` says only `win-the-fridge` is a principle tag and names `term.html` paths that may have moved.
+- [ ] **Overlap.** `FORMAT.md` now owns the frontmatter (SPEC.md and FORMAT-ESSAYS.md merged into it, 2026-10-10); `DESIGN.md` "Hugo frontmatter additions" still repeats `draft`, `description`, and `pinned`, so cut it to a link. Same for the tools' CLIs (`DESIGN.md` vs Fugu's `--help`).
 - [ ] **Voice and rules.** Run `/mx:content-check` over the docs for the writing rules (Canadian spelling, em-dash restraint, no filler).
 - [ ] **CLAUDE.md last.** Once the rest is settled, cut both CLAUDE.md files down to what an agent needs to start work, pointing at the docs instead of repeating them.
-- [ ] `FORMAT-ESSAYS.md` says essays are outlined in a vault at `writing/essays/` and migrated by hand. Confirm whether that's still true now that this repo is the vault, and update it.
+- [x] `FORMAT-ESSAYS.md` described a retired vault-outline workflow. *Done 2026-10-10: merged into `FORMAT.md`, which says essays are drafted in place.*

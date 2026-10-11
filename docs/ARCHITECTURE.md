@@ -72,6 +72,14 @@ Project-specific Claude Code slash commands. These are markdown files in `.claud
 
 **Obsidian syntax stays in the source; Hugo translates at build time.** `[[Recipe Name]]` wiki links and ```` ```formula ```` blocks stay as written, so files remain Obsidian-compatible and readable as plain text; render hooks turn them into links and diagrams during the build. Cross-references don't require knowing file paths.
 
+**Three layers, and no fourth.** Every feature lives in exactly one of these:
+
+1. **Source**: Markdown and YAML frontmatter in `content/` (format in FORMAT.md), plus optional hand-maintained lookup tables under `data/`. The only layer a person edits; git is the only history.
+2. **Build time**: whatever Hugo can compute from the source and write out as static HTML or JSON (`public/recipes/index.json`, render hooks, related content). No server, database, or live API calls.
+3. **Client time**: the JS in `themes/fugu/assets/js/`, reading the rendered page and the build output to do what a static page can't (scaling, unit conversion, check-off). Every client feature must degrade safely: with JS off or failing, the page stays readable and printable.
+
+A live backend (accounts, shared server-side state) was considered for saved recipes, personal notes, ratings, and reader-side change tracking, and deferred rather than designed around a guess: anything shared across family members or devices breaks the static-site decision. Author-side change tracking already exists as git history.
+
 **Config over convention for machine paths.** The deploy target is machine-specific. A committed `config.toml.example` plus a gitignored `config.toml` keeps setup explicit without making the tools fragile on a different machine.
 
 **Python and shell for tooling.** The tools are simple file processors (`frontmatter.py` and `drafts.py` are stdlib only) — no need for a build system or Node ecosystem.

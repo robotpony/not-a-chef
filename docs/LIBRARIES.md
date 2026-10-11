@@ -54,7 +54,7 @@ pip install rich
 
 ## No Node.js dependency
 
-recipe-book (deprecated) used Node.js and TypeScript for the parser/CLI. This project does not. Hugo handles Markdown natively; the Python tools handle file transformation. Client-side features (scaling, unit conversion, the sidebar, search) are plain JS in `assets/js/`, served as-is with no build step or package manager. If a validator is needed later (`SPEC.md` §8), it can be a standalone Python tool.
+recipe-book (deprecated) used Node.js and TypeScript for the parser/CLI. This project does not. Hugo handles Markdown natively; the Python tools handle file transformation. Client-side features (scaling, unit conversion, the sidebar, search) are plain JS in `assets/js/`, served as-is with no build step or package manager. If a validator is needed later (`FORMAT.md` §Validation), it can be a standalone Python tool.
 
 ## Deployment
 
