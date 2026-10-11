@@ -4,6 +4,44 @@ The phased build plan was squashed after release (2026-09-25, `e6346f4`); its hi
 
 ## Future
 
+### Methods
+
+Spec: `docs/METHODS.md` (decided 2026-10-10). Template work is Fugu's, handed to the Fugu agent; this list is the site side plus the handoffs.
+
+**Phase 1: content and structure**
+
+- [ ] Create `content/essays/methods/_index.md`, cascading the `method` tag.
+- [ ] Move reverse cooking and food ratios from `content/reference/` into it, with `aliases:` for the old URLs.
+- [ ] Add the `family` taxonomy to the site config, and `content/family/burgers/_index.md` with its definition and part order.
+- [ ] Add `family` to the two burger essays and the burger recipes.
+- [ ] `/lint`: flag a page in `methods/` whose own `tags` drop `method`.
+
+**Phase 2: concept pages (Fugu handoff)**
+
+- [ ] Hand off: generalize `principle/term.html`, `principle-chip.html`, and `development/*` into shared concept partials with a `kind` (principle, status, method).
+- [ ] Hand off: methods listing grouped by family, and a family term page that lists parts in the `_index.md` order, then recipes, then stories.
+- [ ] Pick the methods icon; mock the methods and family pages against `mockups/STYLE.md` first.
+- [ ] Check win-the-fridge and test kitchen render the same after the change.
+
+**Phase 3: first methods**
+
+- [ ] Burgers family: write the parts (patty construction, seasoning, cooking, assembly, sauces, variations, not burgers), pulling from the two burger essays without gutting them.
+- [ ] Stock method, from Why ingredients matter in stock and the four stock recipes.
+- [ ] Foil packets method, from Camp cooking.
+
+**Phase 4: stack diagrams**
+
+- [ ] Mock the ` ```stack ` block in `mockups/` and settle it in `mockups/STYLE.md` and `style.html`.
+- [ ] Draw the new layer icons (bun halves, lettuce, onion, tomato, pickle, cheese, sauce, patty, pasta sheet, ragù, béchamel, bread slice), in the formula icon style.
+- [ ] Hand off: `render-codeblock-stack.html`, with `repeat:` and the unknown-icon warning.
+- [ ] First diagrams: burger construction, sandwich construction, lasagne layering.
+
+**Phase 5: documentation**
+
+- [ ] `docs/ARCHITECTURE.md`: a "Content model" section with the ontology and a diagram.
+- [ ] `README.md`: a short reader-facing version.
+- [ ] `docs/FORMAT-ESSAYS.md`: the method format; `CLAUDE.md`: methods under "Food essay types".
+
 ### Formula diagram follow-ups
 
 Content-side only. The formula strip on cards, the `/lint` formula check, and growing the icon kit moved to `themes/fugu/PLAN.md` (Features).
