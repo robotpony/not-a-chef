@@ -38,7 +38,7 @@ Mocked 2026-10-10 in `mockups/methods-pages.html`; the template work is queued i
 - [ ] Foil packets method, from Camp cooking.
 
 - [x] History on builds (decided 2026-10-10): `origin` and `era` front matter, a `## Where it comes from` section with a constraint / pick table, and a lineage timeline on the blueprint page (`mockups/methods-pages.html`). The deluxe griddle has its history; the other two builds have TODOs.
-- [ ] Fugu: show `origin` on build cards and pages, and the lineage timeline (builds by `era`, plus the blueprint's `planned` builds, faint).
+- [x] Fugu: show `origin` on build cards and pages, and the lineage timeline (builds by `era`, plus the blueprint's `planned` builds, faint). *Done 2026-10-10, Fugu `80921b6` + `df28246` here. Builds are now ordered by `era` everywhere they're listed, undated last. `origin`/`era` stay out of `recipes/index.json`, since it lists only recipes.*
 - [ ] Rename the builds by lineage, once Bruce picks names.
 
 **Phase 4: stack diagrams**
