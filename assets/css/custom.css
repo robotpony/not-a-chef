@@ -964,6 +964,17 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
  * the title's own spacing above the row — `gap` only ever applies
  * between siblings, never before the first or after the last. */
 .tags-row { gap: 8px; }
+/* Stopgap: the `family` taxonomy (docs/METHODS.md) falls through to
+ * Blowfish's plain badge in article-meta/basic.html, beside the matching
+ * tag ("Burgers" twice). Hidden until Fugu skips it or gives it a chip. */
+.tags-row > a[href*="/family/"]:not(.tag) { display: none; }
+/* The method chip (mockups/STYLE.md Method chip): a concept chip like
+ * .principle-chip, in the accent. Fugu emits it once the concept partials
+ * are shared (PLAN.md Methods, phase 2); the shape is ready for it. */
+.method-chip { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; font-weight: 600; background: var(--accent-soft); color: var(--accent-strong); padding: 3px 7px; border-radius: 3px; display: inline-flex; align-items: center; gap: 4px; }
+.method-chip svg { width: 12px; height: 12px; flex: none; }
+a.method-chip { text-decoration: none; }
+a.method-chip:hover, a.method-chip:focus-visible { box-shadow: inset 0 0 0 1px var(--accent); outline: none; }
 .tag { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; border: 1px solid var(--border-strong); color: var(--ink-muted); padding: 3px 7px; border-radius: 3px; display: inline-block; }
 .tag-more { color: var(--ink-faint); border-style: dashed; }
 /* Header tags are links (article-meta/basic.html); hover as .filter-pill. */

@@ -10,6 +10,7 @@ total_time: 15 min
 cuisine: American
 aliases: [/recipes/mcburgers/]
 draft: false
+family: [burgers]
 ---
 
 A very cravable burger. This is the closest I've gotten to perfecting it, along with its little sibling, the single drive-thru hamburger.

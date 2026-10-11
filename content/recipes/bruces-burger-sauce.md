@@ -8,6 +8,7 @@ prep_time: 5 min
 total_time: 5 min
 cuisine: Canadian
 draft: false
+family: [burgers]
 ---
 
 This is a simple, classic burger sauce.

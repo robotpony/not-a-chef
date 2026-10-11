@@ -6,6 +6,7 @@ date: 2026-06-08
 servings: 4
 cuisine: Canadian
 draft: false
+family: [burgers]
 ---
 
 This is Bruce’s take on the classic White Spot Triple “O” deluxe burger (lettuce and tomatoes make it deluxe; cheddar and bacon make it a “BC” burger).

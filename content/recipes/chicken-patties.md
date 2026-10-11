@@ -9,6 +9,7 @@ cook_time: 15 min
 total_time: 35 min (plus brine)
 cuisine: American
 draft: false
+family: [burgers]
 ---
 
 I love chicken sandwiches. The ground chicken patties bread nicely, but are also great on their own.

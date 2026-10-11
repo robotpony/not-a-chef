@@ -20,6 +20,8 @@ ignoreFiles = ['/[A-Z][A-Z0-9_-]*\.md$']
 [taxonomies]
   tag = "tags"
   cuisine = "cuisine"
+  # Dish families for methods (docs/METHODS.md): burgers, and later others.
+  family = "family"
 
 # Newest items per feed (every feed, not only the site one). Without it the
 # site feed carried all ~290 pages, so a new subscriber got the whole archive.

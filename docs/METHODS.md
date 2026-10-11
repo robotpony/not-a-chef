@@ -41,7 +41,7 @@ The test: after reading it, could you cook something that isn't written down any
 
 ## Where methods live
 
-**The folder decides.** Methods live in `content/essays/methods/`, next to `reference-essays/`. A page in that folder is a method; a page outside it isn't, whatever its tags say. The folder's `_index.md` cascades the `method` tag to everything in it, so the tag can't drift from the folder. `/lint` flags a page in the folder that overrides `tags` without `method` (a page's own `tags` replaces the cascaded value rather than adding to it).
+**The folder decides.** Methods live in `content/essays/methods/`, next to `reference-essays/`. A page in that folder is a method; a page outside it isn't, whatever its tags say. `content/essays/_index.md` cascades the `method` tag onto `/essays/methods/**`. The folder has no `_index.md` of its own: one would make it a Hugo section, and its pages would drop out of the essays list (the same reason `reference-essays/` has none). A page's own `tags` replaces the cascaded value rather than adding to it, and nearly every essay sets `tags`, so each method lists `method` itself; the cascade is the backstop and `/lint` checks the rest.
 
 Method-like pages in `content/reference/` move into the folder, with `aliases:` for their old URLs:
 
@@ -59,14 +59,14 @@ A folder is a forced tag with two extra effects:
 | Sets the URL | Yes | No |
 | Picks the template | Yes | No (term pages only) |
 
-Hugo's `cascade` makes the link literal: a folder's `_index.md` can set a tag or taxonomy term on every page below it (tested on Hugo 0.166). So a folder can stand in for a tag, but a tag can't stand in for a folder, because a page can only be in one.
+Hugo's `cascade` makes the link literal: an `_index.md` can set a tag or taxonomy term on every page below it (tested on Hugo 0.166). So a folder can stand in for a tag, but a tag can't stand in for a folder, because a page can only be in one.
 
 That's why **families are a taxonomy, not folders**. Water frying belongs to burgers and to ground meat; a folder would force it to pick one.
 
 - **`family`** is a taxonomy, set up like `cuisine`: `family: [burgers]` in frontmatter, with `content/family/burgers/_index.md` holding the family's definition and the order of its parts.
 - **`part`** is a frontmatter field on a method page naming which part of the family it covers (e.g. `part: Patty construction`).
 - Method pages, recipes, and stories all carry `family`, so the family page collects all three without any other wiring.
-- Folders can still group a family's method files on disk (`content/essays/methods/burgers/`), and that folder's `_index.md` can cascade `family: [burgers]`. A page in it that belongs to a second family lists both.
+- Folders can still group a family's method files on disk (`content/essays/methods/burgers/`), with `family: [burgers]` set on each page (or cascaded by path from `content/essays/_index.md`, never from an `_index.md` in the folder, for the reason above). A page that belongs to a second family lists both.
 
 ## Concept pages
 
@@ -89,7 +89,7 @@ What stays per kind is how membership is decided and the body layout: a flat rec
 
 The method chip is the fan-out icon (`assets/icons/methods/fan-out.svg`) in the accent colour, decided 2026-10-10 (`mockups/STYLE.md` Method chip, `mockups/methods-icon.html`).
 
-The shared templates are Fugu work (`themes/fugu`), handed to the Fugu agent. This repo supplies the `_index.md` files, icons, and config.
+The shared templates are Fugu work (`themes/fugu`), handed to the Fugu agent. This repo supplies the `_index.md` files, icons, and config. Until then the methods list is the `method` tag page (`/tags/method/`, described by `content/tags/method/_index.md`) and each family is a plain term page (`/family/burgers/`); the family's definition and part order are written but not shown yet.
 
 ## Ontology
 
