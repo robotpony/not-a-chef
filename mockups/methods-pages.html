@@ -188,7 +188,7 @@
   .picks dt a{ color:inherit; text-decoration-color:var(--accent); text-underline-offset:2px; }
   .picks dd{ font-size:.95rem; }
   @media (max-width:520px){ .picks{ grid-template-columns:1fr; } .picks dt{ border-bottom:none; padding-bottom:0; } }
-  .two-col{ display:grid; grid-template-columns:minmax(0,1fr) 220px; gap:28px; align-items:start; }
+  .two-col{ display:grid; grid-template-columns:minmax(0,1fr) 340px; gap:28px; align-items:start; }
   @media (max-width:760px){ .two-col{ grid-template-columns:1fr; } }
   .stack-big{ background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:16px; }
   .stack-big .stack-thumb{ gap:5px; }
@@ -225,9 +225,48 @@
   table.share th, table.share td{ text-align:left; padding:8px 10px; border-bottom:1px solid var(--border); vertical-align:top; }
   table.share th{ font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-muted); }
   .tablewrap{ overflow-x:auto; }
+
+  /* Exploded build diagrams: the kit from mockups/exploded-builds.html, formula style */
+  .dia text{ font-family:'Libre Franklin',sans-serif; }
+  .lbl{ font-size:12px; font-weight:600; fill:var(--ink); }
+  .role{ font-family:'Lora',Georgia,serif !important; font-style:italic; font-size:11px; fill:var(--ink-muted); }
+  .lead{ stroke:var(--ink-faint); stroke-width:.8; stroke-dasharray:2 2; fill:none; }
+  .lead-dot{ fill:var(--ink-faint); }
+  .bracket{ stroke:var(--accent); stroke-width:1.2; fill:none; }
+  .bracket-t{ font-family:'IBM Plex Mono',monospace !important; font-size:11px; fill:var(--accent-strong); }
+  .fstyle .s{ stroke:var(--ink); stroke-width:1.8; stroke-linejoin:round; stroke-linecap:round; }
+  .fstyle :is(.bun, .leaf-back, .tom-side, .pick-side, .cheese-side, .meat, .bacon, .sauce-red, .sauce-yel, .sauce-pink, .ragu){ fill:var(--accent-soft); }
+  .fstyle :is(.crumb, .leaf, .tom, .pick, .cheese, .meat-top, .bech, .pasta){ fill:var(--surface); }
+  .fstyle .leaf-back{ fill:var(--accent-soft); opacity:1; }
+  .fstyle .seed{ fill:var(--surface); stroke:var(--ink); stroke-width:1; }
+  .fstyle .leaf-vein{ fill:none; stroke:var(--ink); stroke-width:1.2; }
+  .fstyle .tom-in{ fill:none; stroke:var(--ink); stroke-width:1.1; }
+  .fstyle .ring{ fill:none; stroke:var(--ink); stroke-width:1.8; }
+  .fstyle .ring-in{ display:none; }
+  .fstyle .pick-seed{ fill:var(--ink); }
+  .fstyle .meat-dot{ display:none; }
+  .fstyle .only-f{ fill:none; stroke:var(--ink); stroke-width:1.8; stroke-linecap:round; }
+  .fstyle .bacon-fat{ fill:none; stroke:var(--surface); stroke-width:2.4; }
+  .fstyle .fried{ fill:none; stroke:var(--ink); stroke-width:1.5; }
+  .fstyle .fried-pad{ fill:var(--accent-soft); }
+  .fstyle .crust{ display:none; }
+  .fstyle .tom-wall, .fstyle .crumb-hole, .fstyle .gloss{ fill:none; stroke:var(--ink); stroke-width:1; stroke-linecap:round; }
+  .fstyle .tom-seed, .fstyle .pick-pip{ fill:var(--surface); stroke:var(--ink); stroke-width:.8; }
+  .fstyle .pick-ring{ fill:none; stroke:var(--ink); stroke-width:.7; }
+  .fstyle .pore{ fill:var(--accent-soft); stroke:var(--ink); stroke-width:.7; }
+  .fstyle .rim{ fill:none; stroke:var(--ink); stroke-width:1; }
+  .fstyle .crust-line{ fill:none; stroke:var(--ink); stroke-width:1; stroke-linecap:round; }
+  .fstyle .bacon-stripe{ fill:var(--surface); stroke:var(--ink); stroke-width:.9; }
+  .fstyle .squeeze-out{ fill:none; stroke:var(--ink); stroke-width:5.2; stroke-linecap:round; stroke-linejoin:round; }
+  .fstyle .squeeze-in{ fill:none; stroke:var(--accent-soft); stroke-width:2.6; stroke-linecap:round; stroke-linejoin:round; }
+  .fstyle .chunk{ fill:var(--surface); stroke:var(--ink); stroke-width:.9; }
+  .fstyle .bubble{ fill:var(--accent-soft); stroke:var(--ink); stroke-width:.8; }
+  .thumb{ display:flex; justify-content:center; padding:4px 0; }
+  .thumb svg.dia{ width:150px; height:auto; overflow:visible; }
+  svg.dia{ display:block; width:100%; height:auto; overflow:visible; }
 </style>
 </head>
-<body>
+<body class="fstyle">
 <header class="topbar"><div class="topbar-inner">
   <span class="tb-title">Methods pages</span>
   <nav class="tb-jump">
@@ -286,7 +325,7 @@
   <!-- 2. Blueprint page -->
   <section class="mock" id="blueprint">
     <h2 class="mock-label">2 · Blueprint page <code>/blueprint/burgers/</code></h2>
-    <p class="mock-note">The blueprint's <code>_index.md</code> body becomes the definition callout. Then <b>builds first</b>: a card per build page (its profile and a stack thumbnail), and a table comparing their picks part by part, so the differences between builds are the first thing you see. Then the parts in order, each with its method and its options. Then recipes grouped by build, then stories.</p>
+    <p class="mock-note">The blueprint's <code>_index.md</code> body becomes the definition callout. Then <b>builds first</b>: a card per build page (its profile and a compact exploded diagram), and a table comparing their picks part by part, so the differences between builds are the first thing you see. Then the parts in order, each with its method and its options. Then recipes grouped by build, then stories.</p>
     <div class="frame">
       <header class="listing-head">
         <h1 class="ltitle">Burgers <span class="ltitle-kind">blueprint</span></h1>
@@ -304,21 +343,21 @@
           <div class="rcard-top"><span class="chip method-chip"><span data-icon="fan"></span>Build</span></div>
           <div class="bcard-title">Deluxe griddle</div>
           <p class="profile">Cold crunch and sharp against a salty patty.</p>
-          <div class="stack-thumb" aria-hidden="true"><div class="layer bun top"></div><div class="layer green"></div><div class="layer onion"></div><div class="layer cheese" style="background:var(--surface);border-color:var(--principle)"></div><div class="layer patty"></div><div class="layer bun"></div></div>
+          <div class="thumb" data-build="deluxe" aria-hidden="true"></div>
           <div class="rcard-stats"><span class="rcard-stat"><b>Recipes</b><span>2</span></span><span class="rcard-stat"><b>Read</b><span>5m</span></span></div>
         </a>
         <div class="bcard">
           <div class="rcard-top"><span class="chip method-chip"><span data-icon="fan"></span>Build</span></div>
           <div class="bcard-title">Bacon double cheese</div>
           <p class="profile">Salty, sweet, and rich; little crunch.</p>
-          <div class="stack-thumb" aria-hidden="true"><div class="layer bun top"></div><div class="layer bacon"></div><div class="layer cheese"></div><div class="layer patty"></div><div class="layer cheese"></div><div class="layer patty"></div><div class="layer bun"></div></div>
+          <div class="thumb" data-build="bacon" aria-hidden="true"></div>
           <div class="rcard-stats"><span class="rcard-stat"><b>Recipes</b><span>1</span></span><span class="rcard-stat"><b>Read</b><span>4m</span></span></div>
         </div>
         <div class="bcard">
           <div class="rcard-top"><span class="chip method-chip"><span data-icon="fan"></span>Build</span></div>
           <div class="bcard-title">Grilled onion</div>
           <p class="profile">Sweet and savoury; one soft, even texture.</p>
-          <div class="stack-thumb" aria-hidden="true"><div class="layer bun top"></div><div class="layer fried"></div><div class="layer patty"></div><div class="layer bun"></div></div>
+          <div class="thumb" data-build="onion" aria-hidden="true"></div>
           <div class="rcard-stats"><span class="rcard-stat"><b>Recipes</b><span>0</span></span><span class="rcard-stat"><b>Read</b><span>3m</span></span></div>
         </div>
       </div>
@@ -377,7 +416,7 @@
   <!-- 3. Build page -->
   <section class="mock" id="build">
     <h2 class="mock-label">3 · Build page <code>/essays/methods/deluxe-griddle-burger/</code></h2>
-    <p class="mock-note">A build is a method page with <code>build</code>, <code>profile</code>, and <code>picks</code>. Its header says which blueprint it belongs to; the profile sits under the title; the picks read as a list, each part linking to its method. The stack diagram (phase 4) sits beside the picks on wide screens and below them on phones. Recipes that set <code>build: Deluxe griddle</code> follow, and the foot steps to the next build.</p>
+    <p class="mock-note">A build is a method page with <code>build</code>, <code>profile</code>, and <code>picks</code>. Its header says which blueprint it belongs to; the profile sits under the title; the picks read as a list, each part linking to its method. The exploded diagram, labelled, sits beside the picks on wide screens and below them on phones. Recipes that set <code>build: Deluxe griddle</code> follow, and the foot steps to the next build.</p>
     <div class="frame">
       <div class="crumb">Essays <span>/</span></div>
       <h1 class="page-title">Deluxe griddle burger</h1>
@@ -403,8 +442,8 @@
           </div>
         </div>
         <div class="stack-big">
-          <div class="stack-thumb" aria-hidden="true"><div class="layer bun top"></div><div class="layer green"></div><div class="layer onion"></div><div class="layer cheese" style="background:var(--surface);border-color:var(--principle)"></div><div class="layer patty"></div><div class="layer bun"></div></div>
-          <p class="stack-cap">Stack diagram (phase 4)</p>
+          <div data-build="deluxe" data-labels="1"></div>
+          <p class="stack-cap">Deluxe griddle, exploded</p>
         </div>
       </div>
 
@@ -524,6 +563,241 @@
     wtf: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8a5 5 0 0 1 8.5-3.5M13 8a5 5 0 0 1-8.5 3.5"/><path d="M11 2v2.5H8.5M5 14v-2.5h2.5"/></svg>',
     pot: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 25h32v12c0 2.8-2.2 5-5 5H13c-2.8 0-5-2.2-5-5z"/><path d="M6 25c0-4.4 8-7.5 18-7.5S42 20.6 42 25z"/><path d="M21.5 17.5v-2.5h5v2.5M8 29H4M40 29h4"/><path d="M15 12c-2-2 2-3.5 0-6M33 12c-2-2 2-3.5 0-6"/></svg>'
   };
+/* ---------- Shape kit. Every shape draws at centre cx, top y, base radius rx, and returns {svg, h, edge} ---------- */
+const K = 0.34;                 // perspective: ellipse height / width
+const f = n => Math.round(n*10)/10;
+function rng(seed){ let s = seed; return () => (s = (s*16807) % 2147483647) / 2147483647; }
+function wavyEllipse(cx, cy, rx, ry, amp, waves, phase=0){
+  let d = '';
+  for (let i=0;i<=96;i++){
+    const t = i/96*Math.PI*2, r = 1 + amp*Math.sin(waves*t+phase);
+    d += (i?'L':'M') + f(cx+Math.cos(t)*rx*r) + ',' + f(cy+Math.sin(t)*ry*r);
+  }
+  return d + 'Z';
+}
+function zigzag(cx, cy, w, h, n){
+  let d = '';
+  for (let i=0;i<=n;i++){ const x = cx-w+2*w*i/n, y = cy+(i%2 ? h : -h)+(i/n-.5)*h*1.2; d += (i?'L':'M')+f(x)+','+f(y); }
+  return d;
+}
+function squeeze(d){ return `<path class="squeeze-out" d="${d}"/><path class="squeeze-in" d="${d}"/>`; }
+function gloss(cx, cy, r){ return `<path class="gloss" d="M${f(cx-r*.55)},${f(cy-r*K*.15)}Q${f(cx-r*.3)},${f(cy-r*K*.55)} ${f(cx+r*.05)},${f(cy-r*K*.55)}"/>`; }
+function crumbs(cx, cy, rx, ry, n, seed){
+  // Open crumb: pores of mixed sizes, a few torn arcs, kept off the crust rim.
+  const r = rng(seed); let pores = '', tears = '';
+  for (let i=0;i<n;i++){
+    const a = r()*Math.PI*2, q = Math.sqrt(r())*.72, x = cx+Math.cos(a)*rx*q, y = cy+Math.sin(a)*ry*q;
+    if (i % 6 === 5){ const l = 2+r()*2.5; tears += `M${f(x-l)},${f(y)}q${f(l)},${f(-l*.6)} ${f(2*l)},0`; }
+    else { const p = 1.5+r()*r()*3; pores += `<ellipse class="pore" cx="${f(x)}" cy="${f(y)}" rx="${f(p)}" ry="${f(p*.72)}"/>`; }
+  }
+  return pores + `<path class="crumb-hole" d="${tears}"/>`;
+}
+function disc(cx, cy, rx, t, sideCls, topCls){
+  const ry = rx*K;
+  return `<path class="s ${sideCls}" d="M${f(cx-rx)},${f(cy)}L${f(cx-rx)},${f(cy+t)}A${f(rx)},${f(ry)} 0 0 0 ${f(cx+rx)},${f(cy+t)}L${f(cx+rx)},${f(cy)}Z"/>` +
+         `<ellipse class="s ${topCls}" cx="${f(cx)}" cy="${f(cy)}" rx="${f(rx)}" ry="${f(ry)}"/>`;
+}
+const L = {
+  'bun-top'(cx, y, rx){
+    const h = rx*0.55, ry = rx*K, cy = y+h;
+    let s = `<path class="s bun" d="M${f(cx-rx)},${f(cy)}C${f(cx-rx)},${f(cy-h*1.33)} ${f(cx+rx)},${f(cy-h*1.33)} ${f(cx+rx)},${f(cy)}A${f(rx)},${f(ry)} 0 0 1 ${f(cx-rx)},${f(cy)}Z"/>`;
+    // The pale ring where the bun rose in the oven: a line parallel to the bottom lip.
+    s += `<path class="crust-line" d="M${f(cx-rx*.93)},${f(cy-h*.22)}Q${f(cx)},${f(cy+ry*.55)} ${f(cx+rx*.93)},${f(cy-h*.22)}"/>`;
+    const r = rng(7);
+    for (let i=0;i<11;i++){ const a=(r()-.5)*1.5*rx, b=y+h*0.25+r()*h*0.55; s += `<ellipse class="seed" cx="${f(cx+a)}" cy="${f(b)}" rx="2.2" ry="1.1" transform="rotate(${f((r()-.5)*60)} ${f(cx+a)} ${f(b)})"/>`; }
+    return {svg:s, h:h+ry, edge:rx};
+  },
+  'bun-base'(cx, y, rx){
+    const ry = rx*K, t = rx*0.16;
+    const rim = `<ellipse class="rim" cx="${f(cx)}" cy="${f(y+ry)}" rx="${f(rx*.9)}" ry="${f(ry*.86)}"/>`;
+    return {svg: disc(cx, y+ry, rx, t, 'bun', 'crumb') + rim + crumbs(cx, y+ry, rx*.95, ry*.95, 20, 3), h:2*ry+t, edge:rx};
+  },
+  'lettuce'(cx, y, rx){
+    const R = rx*1.1, ry = R*K, cy = y+ry+3;
+    let s = `<path class="s leaf leaf-back" d="${wavyEllipse(cx, cy+3, R, ry, .07, 11, 1)}" opacity=".9"/>`;
+    s += `<path class="s leaf" d="${wavyEllipse(cx, cy, R*0.96, ry*0.96, .06, 9)}"/>`;
+    s += `<path class="leaf-vein" d="${wavyEllipse(cx, cy, R*0.62, ry*0.62, .08, 7, 2)}"/>`;
+    for (const a of [-.5, 0, .45]) s += `<path class="leaf-vein" d="M${f(cx+a*R*0.3)},${f(cy+ry*0.2)}Q${f(cx+a*R*0.8)},${f(cy-ry*0.3)} ${f(cx+a*R*1.2)},${f(cy-ry*0.1)}"/>`;
+    return {svg:s, h:2*ry+9, edge:R};
+  },
+  'tomato'(cx, y, rx){
+    const r = rx*0.52, ry = r*K, t = 4; let s = '';
+    for (const dx of [-rx*0.45, rx*0.45]){
+      const c = cx+dx, cy = y+ry+(dx<0?0:3);
+      s += disc(c, cy, r, t, 'tom-side', 'tom');
+      s += `<ellipse class="tom-in" cx="${f(c)}" cy="${f(cy)}" rx="${f(r*0.7)}" ry="${f(ry*0.7)}"/>`;
+      for (const a of [0.4, 2.5, 4.6]) s += `<path class="tom-wall" d="M${f(c)},${f(cy)}L${f(c+Math.cos(a)*r*0.7)},${f(cy+Math.sin(a)*ry*0.7)}"/>`;
+      for (const a of [1.45, 3.55, 5.65]) for (const q of [.32, .5]) s += `<ellipse class="tom-seed" cx="${f(c+Math.cos(a+q-.4)*r*q)}" cy="${f(cy+Math.sin(a+q-.4)*ry*q)}" rx="1.4" ry=".8"/>`;
+    }
+    return {svg:s, h:2*ry+t+3, edge:rx*0.97};
+  },
+  'onion-raw'(cx, y, rx){
+    let s = ''; const R = rx*0.55;
+    for (const [dx, dy, sc] of [[-rx*0.3, 2, 1], [rx*0.35, 5, .85]]){
+      const c = cx+dx, cy = y+R*K+dy;
+      for (const k of [1, .72, .46]) s += `<ellipse class="ring" cx="${f(c)}" cy="${f(cy)}" rx="${f(R*sc*k)}" ry="${f(R*sc*k*K)}"/><ellipse class="ring-in" cx="${f(c)}" cy="${f(cy)}" rx="${f(R*sc*k)}" ry="${f(R*sc*k*K)}"/>`;
+    }
+    return {svg:s, h:2*R*K+6, edge:rx*0.35+R*0.85};
+  },
+  'pickle'(cx, y, rx){
+    const r = rx*0.28, ry = r*K; let s = '';
+    for (const [dx, dy] of [[-rx*0.52, 3], [-rx*0.02, 0], [rx*0.5, 4], [rx*0.2, 10]]){
+      const c = cx+dx, cy = y+ry+dy;
+      s += `<path class="s pick-side" d="${wavyEllipse(c, cy+2.5, r, ry, .05, 12)}"/><path class="s pick" d="${wavyEllipse(c, cy, r, ry, .05, 12)}"/>`;
+      s += `<ellipse class="pick-ring" cx="${f(c)}" cy="${f(cy)}" rx="${f(r*.62)}" ry="${f(ry*.62)}"/>`;
+      for (const a of [0.5, 2.6, 4.7]) s += `<ellipse class="pick-pip" cx="${f(c+Math.cos(a)*r*0.4)}" cy="${f(cy+Math.sin(a)*ry*0.4)}" rx="1.3" ry=".75"/>`;
+    }
+    return {svg:s, h:2*ry+13, edge:rx*0.5+r};
+  },
+  'cheese'(cx, y, rx){
+    const s0 = rx*1.0, ry = s0*K, droop = 7;
+    const T = [cx, y], R = [cx+s0, y+ry+droop], B = [cx, y+2*ry], Lf = [cx-s0, y+ry+droop];
+    const svg = `<path class="s cheese-side" d="M${f(Lf[0])},${f(Lf[1])}L${f(B[0])},${f(B[1])}L${f(R[0])},${f(R[1])}L${f(R[0])},${f(R[1]+2.5)}L${f(B[0])},${f(B[1]+2.5)}L${f(Lf[0])},${f(Lf[1]+2.5)}Z"/>` +
+      `<path class="s cheese" d="M${f(T[0])},${f(T[1])}Q${f(cx+s0*0.6)},${f(y+ry*0.55)} ${f(R[0])},${f(R[1])}L${f(B[0])},${f(B[1])}L${f(Lf[0])},${f(Lf[1])}Q${f(cx-s0*0.6)},${f(y+ry*0.55)} ${f(T[0])},${f(T[1])}Z"/>`;
+    return {svg, h:2*ry+3, edge:s0};
+  },
+  patty(cx, y, rx, t, lacy){
+    const ry = rx*K, cy = y+ry; let s = '';
+    if (lacy){
+      s += `<path class="s meat" d="${wavyEllipse(cx, cy+t, rx*1.08, ry*1.08, .05, 17)}"/>`;
+      s += `<path class="s meat-top" d="${wavyEllipse(cx, cy, rx*1.08, ry*1.08, .05, 17)}"/>`;
+    } else {
+      s += disc(cx, cy, rx, t, 'meat', 'meat-top');
+    }
+    s += `<path class="only-f" d="M${f(cx-rx*.5)},${f(cy+ry*.1)}l${f(rx*.22)},${f(-ry*.38)}M${f(cx-rx*.12)},${f(cy+ry*.42)}l${f(rx*.34)},${f(-ry*.6)}M${f(cx+rx*.3)},${f(cy+ry*.2)}l${f(rx*.2)},${f(-ry*.36)}"/>`;
+    const r = rng(Math.round(rx*t));
+    for (let i=0;i<26;i++){ const a=r()*Math.PI*2, d=Math.sqrt(r())*.82; s += `<circle class="meat-dot" cx="${f(cx+Math.cos(a)*rx*d)}" cy="${f(cy+Math.sin(a)*ry*d)}" r="${f(.7+r()*.8)}"/>`; }
+    return {svg:s, h:2*ry+t, edge:rx*(lacy?1.08:1)};
+  },
+  'patty-thin'(cx, y, rx){ return L.patty(cx, y, rx*0.98, rx*0.13, false); },
+  'patty-thick'(cx, y, rx){ return L.patty(cx, y, rx*0.88, rx*0.32, false); },
+  'patty-smash'(cx, y, rx){ return L.patty(cx, y, rx*1.02, rx*0.07, true); },
+  'bacon'(cx, y, rx){
+    let s = ''; const w = rx*1.12, H = 10;
+    const line = (dy, ph, off) => { const pts = []; for (let i=0;i<=40;i++){ const x = cx-w+2*w*i/40, yy = y+6+dy+Math.sin(i/40*Math.PI*4+ph)*3+(i/40-.5)*6+off; pts.push([x, yy]); } return pts; };
+    const band = (a, b) => 'M'+a.map(p=>f(p[0])+','+f(p[1])).join('L')+'L'+b.slice().reverse().map(p=>f(p[0])+','+f(p[1])).join('L')+'Z';
+    for (const [dy, ph] of [[0, 0], [rx*K*0.9, 1.6]]){
+      const t = line(dy, ph, 0), b = line(dy, ph, H);
+      s += `<path class="s bacon" d="${band(t, b)}"/>`;
+      s += `<path class="bacon-stripe" d="${band(line(dy, ph, 3.6), line(dy, ph, 6.6))}"/>`;
+    }
+    return {svg:s, h:rx*K*0.9+22, edge:w};
+  },
+  sauce(cx, y, rx, cls){
+    const R = rx*0.72, ry = R*K, cy = y+ry+2;
+    return {svg:`<path class="s ${cls}" d="${wavyEllipse(cx, cy, R, ry, .09, 6, .5)}"/>${gloss(cx, cy, R)}`, h:2*ry+5, edge:R};
+  },
+  'sauce-burger'(cx, y, rx){ return L.sauce(cx, y, rx, 'sauce-pink'); },
+  'mustard'(cx, y, rx){
+    const w = rx*0.6, h = rx*K*0.35, cy = y+h+5;
+    return {svg: squeeze(zigzag(cx, cy, w, h, 7)), h:2*h+12, edge:w+3};
+  },
+  'sauce-ketchup-mustard'(cx, y, rx){
+    const a = L.sauce(cx, y, rx*0.85, 'sauce-red');
+    const w = rx*0.45, h = rx*K*0.22, cy = y+a.h/2;
+    return {svg:a.svg+squeeze(zigzag(cx, cy, w, h, 6)), h:a.h, edge:rx*0.62};
+  },
+  'onion-fried'(cx, y, rx){
+    const R = rx*0.85, ry = R*K, cy = y+ry+2; let s = `<ellipse class="fried-pad" cx="${f(cx)}" cy="${f(cy)}" rx="${f(R)}" ry="${f(ry)}"/>`;
+    const r = rng(11);
+    for (let i=0;i<22;i++){ const a=r()*Math.PI*2, d=Math.sqrt(r())*.8, x=cx+Math.cos(a)*R*d, yy=cy+Math.sin(a)*ry*d, l=6+r()*7, o=r()*Math.PI;
+      s += `<path class="fried" d="M${f(x-Math.cos(o)*l)},${f(yy-Math.sin(o)*l*K)}Q${f(x)},${f(yy-3)} ${f(x+Math.cos(o)*l)},${f(yy+Math.sin(o)*l*K)}"/>`; }
+    return {svg:s, h:2*ry+5, edge:R};
+  },
+  /* Slabs for square layers */
+  slab(cx, y, rx, t, topCls, sideCls, wavy){
+    const W = rx*1.05, D = rx*0.42, dx = D*0.9;
+    const bl=[cx-W+dx,y], br=[cx+W+dx,y], fr=[cx+W-dx,y+D], fl=[cx-W-dx,y+D];
+    // Front edge from front-right back to front-left, rippled for pasta.
+    let front = '';
+    for (let i=1;i<=24;i++){ const x = fr[0]+(fl[0]-fr[0])*i/24; front += `L${f(x)},${f(fr[1]+(wavy ? Math.sin(i/24*Math.PI*6)*1.6 : 0))}`; }
+    let s = `<path class="s ${sideCls}" d="M${f(fl[0])},${f(fl[1])}L${f(fr[0])},${f(fr[1])}L${f(br[0])},${f(br[1])}L${f(br[0])},${f(br[1]+t)}L${f(fr[0])},${f(fr[1]+t)}L${f(fl[0])},${f(fl[1]+t)}Z"/>`;
+    s += `<path class="s ${topCls}" d="M${f(bl[0])},${f(bl[1])}L${f(br[0])},${f(br[1])}L${f(fr[0])},${f(fr[1])}${front}Z"/>`;
+    return {svg:s, h:D+t, edge:W+dx};
+  },
+  'pasta'(cx, y, rx){ return L.slab(cx, y, rx, 3, 'pasta', 'pasta', true); },
+  'ragu'(cx, y, rx){ const o = L.slab(cx, y, rx, 8, 'ragu', 'ragu'); const r = rng(5); let d=''; for (let i=0;i<24;i++){ d += `<circle class="meat-dot" cx="${f(cx+(r()-.5)*rx*1.7)}" cy="${f(y+3+r()*rx*0.36)}" r="${f(1+r()*1.2)}"/>`; }
+    for (let i=0;i<9;i++){ const x = cx+(r()-.5)*rx*1.5, yy = y+4+r()*rx*0.3, q = 2.2+r()*1.6; d += `<path class="chunk" d="M${f(x-q)},${f(yy)}q${f(q*.4)},${f(-q)} ${f(q*1.4)},${f(-q*.3)}q${f(q*.8)},${f(q*.6)} ${f(-q*.2)},${f(q*.9)}z"/>`; }
+    return {svg:o.svg+d, h:o.h, edge:o.edge}; },
+  'bechamel'(cx, y, rx){ const o = L.slab(cx, y, rx, 5, 'bech', 'bech'); return {svg:o.svg+`<path class="gloss" d="M${f(cx-rx*.6)},${f(y+rx*.25)}q${f(rx*.25)},${f(-rx*.1)} ${f(rx*.5)},0M${f(cx+rx*.1)},${f(y+rx*.14)}q${f(rx*.2)},${f(-rx*.08)} ${f(rx*.4)},0"/>`, h:o.h, edge:o.edge}; },
+  'cheese-top'(cx, y, rx){ const o = L.slab(cx, y, rx, 4, 'cheese', 'cheese-side'); const r = rng(13); let d=''; for (let i=0;i<8;i++){ const x = cx+(r()-.5)*rx*1.5, yy = y+3+r()*rx*0.32, q = 1.6+r()*2.2; d += `<ellipse class="bubble" cx="${f(x)}" cy="${f(yy)}" rx="${f(q)}" ry="${f(q*.55)}"/>`; } return {svg:o.svg+d, h:o.h, edge:o.edge}; },
+  'bread'(cx, y, rx){
+    // A squircle seen from three-quarters, with the crown bulging at the back.
+    const W = rx*0.9, ry = W*K*1.05, t = 9, cy = y + ry*1.4;
+    const shape = (oy, k=1) => { let d = '';
+      for (let i=0;i<=96;i++){ const a = i/96*Math.PI*2, c = Math.cos(a), sn = Math.sin(a);
+        let px = Math.sign(c)*Math.pow(Math.abs(c), .45)*W*k, py = Math.sign(sn)*Math.pow(Math.abs(sn), .45)*ry*k;
+        if (sn < 0) py *= 1 + .4*Math.pow(-sn, 3);
+        d += (i?'L':'M') + f(cx+px) + ',' + f(cy+py+oy); }
+      return d + 'Z'; };
+    const svg = `<path class="s bun" d="${shape(t)}"/><path class="s bun" d="M${f(cx-W)},${f(cy)}L${f(cx-W)},${f(cy+t)}M${f(cx+W)},${f(cy)}L${f(cx+W)},${f(cy+t)}"/><path class="s crumb" d="${shape(0)}"/><path class="s bun crust" d="${shape(0)}" style="fill:none;stroke-width:2.6;opacity:.55"/><path class="rim" d="${shape(0, .88)}"/>` + crumbs(cx, cy, W*.9, ry*.9, 22, 9);
+    return {svg, h: ry*2.4 + t, edge:W};
+  },
+  'mayo'(cx, y, rx){ return L.sauce(cx+4, y, rx*1.05, 'bech'); },
+};
+
+/* ---------- Composer ---------- */
+function compose(layers, {rx=70, gap=14, labels=true, cx, repeat, padLeft}={}){
+  const lx = labels ? (cx ?? rx*1.25) : null;
+  cx = cx ?? (labels ? rx*1.25 : rx*1.2);
+  const labelX = cx + rx*1.35 + 16;
+  let y = 8, placed = [];
+  layers.forEach((ly, i) => {
+    const o = L[ly.k](cx, y, rx);
+    placed.push({...ly, y, o});
+    y += o.h + gap;
+  });
+  const H = y - gap + 8;
+  let body = '';
+  for (let i=placed.length-1;i>=0;i--) body += `<g>${placed[i].o.svg}</g>`;
+  let ann = '';
+  if (labels){
+    placed.forEach(p => {
+      const my = p.y + p.o.h/2, ex = cx + p.o.edge + 4;
+      ann += `<circle class="lead-dot" cx="${f(ex)}" cy="${f(my)}" r="1.8"/><path class="lead" d="M${f(ex)},${f(my)}H${f(labelX-6)}"/>`;
+      ann += `<text class="lbl" x="${f(labelX)}" y="${f(my-1)}">${p.label}</text>`;
+      if (p.role) ann += `<text class="role" x="${f(labelX)}" y="${f(my+12)}">${p.role}</text>`;
+    });
+  }
+  if (repeat){
+    const a = placed[repeat.from], b = placed[repeat.to];
+    const x = cx - rx*1.55, y1 = a.y, y2 = b.y + b.o.h;
+    ann += `<path class="bracket" d="M${f(x+6)},${f(y1)}H${f(x)}V${f(y2)}H${f(x+6)}"/><text class="bracket-t" x="${f(x-4)}" y="${f((y1+y2)/2+4)}" text-anchor="end">× ${repeat.n}</text>`;
+  }
+  const minX = repeat || padLeft ? cx - rx*1.55 - 34 : 0;
+  const W = labels ? labelX + 150 : cx*2;
+  return `<svg class="dia" viewBox="${f(minX)} 0 ${f(W-minX)} ${f(H)}" role="img">${body}${ann}</svg>`;
+}
+
+const BUILDS = {
+  deluxe: { name:'Deluxe griddle', profile:'Cold crunch and sharp against a salty patty.', layers:[
+    {k:'bun-top', label:'Toasted bun', role:'soft, toasted'},
+    {k:'lettuce', label:'Shredded lettuce', role:'cold crunch'},
+    {k:'tomato', label:'Tomato', role:'juicy, acid'},
+    {k:'onion-raw', label:'Raw onion', role:'sharp'},
+    {k:'pickle', label:'Pickles', role:'sour'},
+    {k:'patty-thin', label:'Thin patty, 140 g', role:'salt, fat, savoury'},
+    {k:'sauce-ketchup-mustard', label:'Ketchup, mustard', role:'sweet, sharp'},
+    {k:'bun-base', label:'Toasted bun', role:'barrier'} ]},
+  bacon: { name:'Bacon double cheese', profile:'Salty, sweet, and rich; little crunch.', layers:[
+    {k:'bun-top', label:'Toasted bun', role:'soft'},
+    {k:'sauce-burger', label:'Burger sauce', role:'sweet, tangy'},
+    {k:'bacon', label:'Bacon', role:'salt, smoke, crisp'},
+    {k:'cheese', label:'Cheese', role:'salt, fat'},
+    {k:'patty-thin', label:'Thin patty, 115 g', role:'savoury'},
+    {k:'cheese', label:'Cheese', role:'salt, fat'},
+    {k:'patty-thin', label:'Thin patty, 115 g', role:'savoury'},
+    {k:'pickle', label:'Pickles', role:'the only sour'},
+    {k:'bun-base', label:'Toasted bun', role:'barrier'} ]},
+  onion: { name:'Grilled onion', profile:'Sweet and savoury; one soft, even texture.', layers:[
+    {k:'bun-top', label:'Steamed bun', role:'soft'},
+    {k:'pickle', label:'Pickles', role:'sour, optional'},
+    {k:'onion-fried', label:'Onion, smashed in', role:'sweet'},
+    {k:'patty-smash', label:'Paper-thin patty', role:'lacy, crisp edge'},
+    {k:'mustard', label:'Yellow mustard', role:'sharp'},
+    {k:'bun-base', label:'Steamed bun', role:'soft'} ]},
+};
+document.querySelectorAll('[data-build]').forEach(el => { const b = BUILDS[el.dataset.build]; el.innerHTML = el.dataset.labels ? compose(b.layers, {rx:58, gap:12}) : compose(b.layers, {rx:56, gap:5, labels:false}); });
   document.querySelectorAll('[data-icon]').forEach(el => el.outerHTML = I[el.dataset.icon]);
   const tt = document.getElementById('tt'), root = document.documentElement;
   const dark = () => root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
