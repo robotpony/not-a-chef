@@ -63,7 +63,9 @@ in a browser — no build step.
   bracket, a BLT, and the `stack` source. Round 2 (2026-10-10) redraws it
   in the formula icons' style (one ink line, `--accent-soft` bodies,
   `--surface` tops, theme tokens); the round 1 colour version is a toggle.
-  Labels on the right, decided; no assembled view for now.
+  Labels on the right, decided; no assembled view for now. Round 3: a
+  detail pass in strokes (striped bacon, crinkle-cut pickles, a mustard
+  zigzag, tomato chambers, a crust rim and open crumb on cut bread).
 
 - **`in-development.html`**: proposal (2026-10-07) to make `draft: true`
   mean "published, still changing" instead of hidden. A flag-blue callout
