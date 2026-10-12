@@ -28,7 +28,7 @@ Mocked 2026-10-10 in `mockups/methods-pages.html`; the template work is queued i
 - [x] Fugu: the method chip, the methods list, the blueprint page (builds, picks compared, parts with options, recipes by build), the build page, the blueprint chip, part and build navigation, and `blueprint`/`part`/`build_name` in `index.json`. *Done 2026-10-10, `944dec2`. Build pages render Picks and "Recipes in this build" from front matter, so build bodies don't repeat them.*
 - [x] When the blueprint chip lands, remove the stopgap rule in `custom.css` (`.tags-row > a[href*="/blueprint/"]`). *Done 2026-10-10, `41ec5ee`.*
 - [x] Bump the `themes/fugu` submodule. *Done 2026-10-10, `353cfc3`.*
-- [ ] Check every page type in Chrome, light and dark, desktop and phone: the methods list, the burgers blueprint, a build page, a part's method, and that Win the fridge and Test kitchen look unchanged.
+- [x] Check every page type in Chrome, light and dark, desktop and phone: the methods list, the burgers blueprint, a build page, a part's method, and that Win the fridge and Test kitchen look unchanged. *Done 2026-10-11 in headless Chrome (the extension wasn't connected), at 1280px and 390px, light and dark: all render as mocked. On phones the lineage becomes a list and the Builds compared table scrolls sideways. One nit, not new: a wiki link right before a closing bracket leaves a space, "(see Burger seasoning → )." (Fugu's render hook).*
 
 **Phase 3: first methods**
 
