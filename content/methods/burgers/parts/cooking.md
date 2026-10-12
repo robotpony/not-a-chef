@@ -1,5 +1,5 @@
 ---
-title: cooking
+title: Cooking patties
 date: 2026-10-10
 draft: true
 working_on: First draft. The grill and thick-patty options need your notes.
