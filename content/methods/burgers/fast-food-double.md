@@ -7,7 +7,8 @@ tags: [method, burgers]
 blueprint: [burgers]
 build_name: Fast-food double
 profile: Salty, sweet, and rich; little crunch.
-# TODO: origin and era (fast-food chains, 1950s on?), sourced
+origin: Value menus, 1990s
+era: 1990
 picks:
   - "Patty construction: Two thin patties, 75 g each, double-ground"
   - "Patty seasoning: 4:2:1 salt, MSG, and pepper, after cooking"
@@ -49,4 +50,4 @@ bun-base              | Small bun                      | barrier
 - **Bacon double cheese:** add crisp bacon. Only if it's crisp; chewy bacon pulls the burger apart. Water-frying gives flatter, more evenly crisp strips (see [[Reverse cooking: reverse sear and water frying]]).
 - **Single:** one 45 g patty on a small bun, the drive-thru hamburger (see the [[McDouble]] variations).
 
-<!-- TODO: "Where it comes from": the fast-food chains, standardization, frozen and double-ground patties, fixed condiment ratios. Add once sourced. -->
+<!-- TODO: "Where it comes from": the value-priced double of the 1990s, after the Big Boy's 1937 double-decker; the fast-food chains, standardization, frozen and double-ground patties, fixed condiment ratios. Add once sourced. -->

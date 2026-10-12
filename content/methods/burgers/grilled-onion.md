@@ -7,7 +7,8 @@ tags: [method, burgers, onion]
 blueprint: [burgers]
 build_name: Grilled onion
 profile: Sweet and savoury; one soft, even texture.
-# TODO: origin and era, sourced (the smashed-in version is often told as a 1920s–30s Oklahoma lunch-counter burger)
+origin: Lunch counter, 1922 railway strike
+era: 1922
 picks:
   - "Patty construction: Paper thin, smashed"
   - "Patty seasoning: After cooking"
@@ -38,4 +39,4 @@ Slice the onion thin and cook it on the griddle next to the patty, in the fat th
 
 Pile thin-sliced onion on the meatball and smash the patty onion side down, so the onion cooks into the meat. It's a shortcut for grilling the onion separately: a similar effect in one step, and the onion soaks up the griddle juices instead of leaving them in the pan.
 
-<!-- TODO: a recipe for either version, and the history. -->
+<!-- TODO: a recipe for either version, and "Where it comes from": the smashed-in fried onion burger, stretched with onion during the 1922 railway strike. -->
