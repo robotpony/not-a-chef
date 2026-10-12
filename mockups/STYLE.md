@@ -113,6 +113,16 @@ with an open question about a vegetarian/vegan role. Claimed 2026-09-27
 tag only, not a general mechanism. If a veg/vegan marker is wanted later it
 has to compete for space inside this same 5-hue family; there's no 6th hue.
 
+### 5 · Sear, layer kit only (`--sear`)
+
+| Token | Light | Dark | Use |
+|---|---|---|---|
+| `--sear` | `#6B4128` | `#5C3A26` | a seared top face in the exploded build diagrams (patties) |
+| `--sear-fleck` | `#D9B48C` | `#24170F` | speckle and pits on a seared face |
+| `--sear-char` | `#23241E` | `#121310` | grill marks, which stay dark in dark mode where `--ink` turns light |
+
+Added 2026-10-11 (`mockups/patty-sear.html`): the kit's two fills gave a patty's top `--surface`, near-white in light mode, so it read raw. `--sear` is `--accent-strong`'s rust pulled toward brown and darkened, so it stays in the orange→red hue; it's a third fill for the diagram kit only, not a UI colour. Option B (sear fill, normal speckle) or D (sear fill, four times the speckle) is still to pick.
+
 ### Where the palette comes from
 
 All five hues share one saturation/lightness

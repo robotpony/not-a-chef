@@ -60,6 +60,12 @@
   --principle: #247B50;
   --principle-strong: #1D6743;
   --principle-soft: #DBF5E8;
+
+  /* Sear (STYLE.md §5, mockups/patty-sear.html): a third fill for the
+   * exploded build diagrams' seared faces, not a UI colour. */
+  --sear: #6B4128;
+  --sear-fleck: #D9B48C;
+  --sear-char: #23241E;
 }
 
 .dark {
@@ -86,6 +92,10 @@
   --principle: #8ED7B4;
   --principle-strong: #A7E2C4;
   --principle-soft: #1B3428;
+
+  --sear: #5C3A26;
+  --sear-fleck: #24170F;
+  --sear-char: #121310;
 }
 
 /* Blowfish's <body> tag (themes/blowfish/layouts/_default/baseof.html) is

@@ -100,6 +100,14 @@ in a browser — no build step.
   Decided 2026-10-11: sidebar, intro, three across, as recommended
   (`STYLE.md` Definition callout). Template half is Fugu's.
 
+- **`patty-sear.html`**: proposal (2026-10-11) for a darker seared top on
+  the layer kit's patties, which `--surface` left near-white in light mode.
+  Four options side by side in light and dark: current, a `--sear` fill,
+  stipple only, and sear plus heavy stipple. The `--sear` tokens are in
+  `STYLE.md` §5 and `custom.css`; B or D is still to pick, then the patty's
+  fills change in `exploded-builds.html` and `export-layers.mjs` re-exports
+  the kit for Fugu.
+
 - **`exploded-builds.html`**: proposal (2026-10-10) for drawing a build as
   an exploded view (layers pulled apart, each drawn as the thing, leader
   lines to labels and roles) instead of flat bars: the layer kit, the three
