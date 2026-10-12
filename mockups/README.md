@@ -108,6 +108,14 @@ in a browser — no build step.
   fills change in `exploded-builds.html` and `export-layers.mjs` re-exports
   the kit for Fugu.
 
+- **`blueprint-lineage-sidebar.html`**: proposal (2026-10-11) for where a
+  blueprint's lineage goes now that the page has a sidebar and the track is
+  cramped in the body column. Switches between two sidebar forms kept
+  horizontal (a dot strip with a row per build under it; angled labels on
+  the track), a full-width band under the definition, and today's. Phone
+  width keeps the body's vertical list. Recommends the strip and rows,
+  desktop only.
+
 - **`exploded-builds.html`**: proposal (2026-10-10) for drawing a build as
   an exploded view (layers pulled apart, each drawn as the thing, leader
   lines to labels and roles) instead of flat bars: the layer kit, the three
