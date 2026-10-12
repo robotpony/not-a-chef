@@ -1870,3 +1870,21 @@ a.tl-name:hover { color: var(--accent-strong); }
 @media (max-width: 520px) { .picks { grid-template-columns: 1fr; } .picks dt { border-bottom: none; padding-bottom: 0; } }
 .build-recipes { margin-bottom: 40px; }
 
+/* Stack diagram (STYLE.md "Exploded build diagram"): a ```stack block
+ * drawn by Fugu's partials/stack/draw.html. The layers carry their own
+ * ink and fills; this sets the labels, leaders and bracket in the site's
+ * type and tokens. Full size in a page, beside the picks on a build page,
+ * about 150px wide and unlabelled on a build card. */
+.stack { margin: 1.75rem auto; max-width: 420px; color: var(--ink); }
+.stack-svg { display: block; width: 100%; height: auto; overflow: visible; }
+.stack-label { font-family: 'Libre Franklin', sans-serif; font-weight: 600; fill: var(--ink); }
+.stack-role { font-family: 'Lora', Georgia, serif; font-style: italic; fill: var(--ink-muted); fill-opacity: 1; }
+.stack-lead { stroke: var(--ink-faint); stroke-opacity: 1; }
+.stack-dot { fill: var(--ink-faint); fill-opacity: 1; }
+.stack-bracket { stroke: var(--accent); }
+.stack-times { font-family: 'IBM Plex Mono', monospace; fill: var(--accent-strong); }
+.stack-missing { stroke: var(--ink-faint); }
+.stack-cap { font-family: 'Libre Franklin', sans-serif; font-size: .74rem; color: var(--ink-faint); margin-top: 12px; text-align: center; }
+.build-diagram .stack { margin: 0; max-width: none; }
+.build-card .stack { width: 150px; margin: 4px auto 0; }
+
