@@ -15,6 +15,8 @@ const INK = 'stroke="currentColor"';
 // tokens first (as the formula icons use), then Fugu's (fugu.css).
 const SOFT = 'var(--accent-soft, var(--fugu-accent-soft))', SURF = 'var(--surface, var(--fugu-surface))';
 const soft = `style="fill:${SOFT}"`, surf = `style="fill:${SURF}"`;
+// A patty's seared top (mockups/patty-sear.html): Fugu's fallbacks in fugu.css.
+const SEAR = 'var(--sear, var(--fugu-sear))', FLECK = 'var(--sear-fleck, var(--fugu-sear-fleck))', CHAR = 'var(--sear-char, var(--fugu-sear-char))';
 // The mockup's .fstyle rules as attributes, so a file needs no stylesheet.
 const S = (w) => `stroke-width="${w}"`;
 const style = {
@@ -41,7 +43,11 @@ const style = {
   tx: `${INK} ${S(.9)}`, 'tx-fine': `${INK} ${S(.6)}`, 'tx-bold': `${INK} ${S(1.5)}`,
   'tx-hatch': `${INK} ${S(.5)} stroke-opacity=".55"`,
   stip: 'fill="currentColor"',
-  char: `fill="currentColor" ${INK} ${S(.4)}`,
+  char: `style="fill:${CHAR};stroke:${CHAR}" ${S(.4)}`,
+  'char-spat': `style="fill:${CHAR}"`,
+  'sear-stip': `style="fill:${FLECK}"`,
+  'sear-pit': `style="stroke:${FLECK}" ${S(.6)}`,
+  sear: `style="fill:${SEAR}" ${INK} ${S(1.8)}`,
   seed2: `${surf} ${INK} ${S(.85)}`,
   jelly: `${soft} ${INK} ${S(.9)}`,
   'strand-out': `${INK} ${S(3.4)}`, 'swirl-out': `${INK} ${S(3.4)}`,
@@ -49,7 +55,7 @@ const style = {
   'swirl-in-light': `style="stroke:${SURF}" ${S(1.6)}`,
 };
 const bodies = ['onion-side','bun','leaf-back','tom-side','pick-side','cheese-side','meat','bacon','sauce-red','sauce-yel','sauce-pink','ragu'];
-const tops = ['onion','crumb','leaf','tom','pick','cheese','meat-top','bech','pasta'];
+const tops = ['onion','crumb','leaf','tom','pick','cheese','bech','pasta'];
 const hidden = ['ring-in','meat-dot','crust'];
 
 function attrs(cls){
@@ -58,6 +64,7 @@ function attrs(cls){
   if (c[0] === 's'){
     const w = a => c.includes('thin') ? a.replace(S(1.8), S(1.2)) : a;
     if (c.includes('leaf-back')) return style.body;
+    if (c.includes('meat-top')) return w(style.sear);
     if (bodies.some(k => c.includes(k))) return w(style.body);
     if (tops.some(k => c.includes(k))) return w(style.top);
     throw new Error('unstyled ' + cls);

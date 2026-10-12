@@ -17,6 +17,7 @@
     --flag:#3D638F; --flag-soft:#E1EAF4;
     --principle:#247B50; --principle-strong:#1D6743; --principle-soft:#DBF5E8;
     --focus:#A67330;
+    --sear:#8E5E3D; --sear-fleck:#D9B48C; --sear-char:#23241E;
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
@@ -27,7 +28,7 @@
       --highlight:#DDCC88; --highlight-soft:#342D19;
       --flag:#97B8D8; --flag-soft:#1D2835;
       --principle:#8ED7B4; --principle-strong:#A7E2C4; --principle-soft:#1B3428;
-      --focus:#D3A569;
+      --focus:#D3A569; --sear:#5C3A26; --sear-fleck:#24170F; --sear-char:#121310;
     }
   }
   :root[data-theme="dark"]{
@@ -38,7 +39,7 @@
     --highlight:#DDCC88; --highlight-soft:#342D19;
     --flag:#97B8D8; --flag-soft:#1D2835;
     --principle:#8ED7B4; --principle-strong:#A7E2C4; --principle-soft:#1B3428;
-    --focus:#D3A569;
+    --focus:#D3A569; --sear:#5C3A26; --sear-fleck:#24170F; --sear-char:#121310;
   }
 
   *{box-sizing:border-box;}
@@ -168,6 +169,12 @@
   .fstyle :is(.bun, .leaf-back, .tom-side, .pick-side, .cheese-side, .meat, .bacon, .sauce-red, .sauce-yel, .sauce-pink, .ragu){ fill:var(--accent-soft); }
   .fstyle :is(.crumb, .leaf, .tom, .pick, .cheese, .meat-top, .bech, .pasta){ fill:var(--surface); }
   .fstyle .leaf-back{ fill:var(--accent-soft); opacity:1; }
+  /* Sear (2026-10-11, patty-sear.html option D): a patty's top is a third fill,
+     with its speckle, pits, grill marks and spatter coloured for it. */
+  .fstyle .meat-top{ fill:var(--sear); }
+  .fstyle .sear-stip{ fill:var(--sear-fleck); }
+  .fstyle .sear-pit{ fill:none; stroke:var(--sear-fleck); stroke-width:.6; stroke-linecap:round; }
+  .fstyle .char-spat{ fill:var(--sear-char); }
   .fstyle .seed{ fill:var(--surface); stroke:var(--ink); stroke-width:1; }
   .fstyle .leaf-vein{ fill:none; stroke:var(--ink); stroke-width:1.2; }
   .fstyle .tom-in{ fill:none; stroke:var(--ink); stroke-width:1.1; }
@@ -213,7 +220,7 @@
   .fstyle .tx-hatch{ fill:none; stroke:var(--ink); stroke-width:.5; stroke-opacity:.55; }
   .fstyle .tx-bold{ fill:none; stroke:var(--ink); stroke-width:1.5; stroke-linecap:round; }
   .fstyle .stip{ fill:var(--ink); }
-  .fstyle .char{ fill:var(--ink); stroke:var(--ink); stroke-width:.4; stroke-linejoin:round; }
+  .fstyle .char{ fill:var(--sear-char); stroke:var(--sear-char); stroke-width:.4; stroke-linejoin:round; }
   .fstyle .seed2{ fill:var(--surface); stroke:var(--ink); stroke-width:.85; }
   .fstyle .jelly{ fill:var(--accent-soft); stroke:var(--ink); stroke-width:.9; stroke-linejoin:round; }
   .fstyle .s.thin{ stroke-width:1.2; }
@@ -502,6 +509,8 @@ const EP = (cx, cy, rx, ry, a, q=1) => [cx+Math.cos(a)*rx*q, cy+Math.sin(a)*ry*q
 const P = p => `${f(p[0])},${f(p[1])}`;
 function noise(seed){ const r = rng(seed); const p = [r(), r(), r(), r()].map(v => v*6.283);
   return t => .45*Math.sin(5*t+p[0]) + .3*Math.sin(11*t+p[1]) + .15*Math.sin(23*t+p[2]) + .1*Math.sin(41*t+p[3]); }
+// A seared face's speckle: four times the usual count, in --sear-fleck (patty-sear.html, option D).
+const sear = svg => svg.replaceAll('class="stip"', 'class="sear-stip"');
 function stipple(cx, cy, rx, ry, n, seed, {maxq=.88, rim=0}={}){
   const r = rng(seed); let s = '';
   for (let i=0;i<n;i++){
@@ -712,16 +721,16 @@ const L2 = {...L1,
           top.push(at(c-w/2*taper*(1+.35*jag(u*9+k)), u)); bot.push(at(c+w/2*taper*(1+.35*jag(u*7+k+3)), u));
         }
         marks += pts2d(top)+pts2d(bot.reverse()).replace('M', 'L')+'Z';
-        for (let i=0;i<14;i++){ const u = (r()*2-1)*um*.95, side = r() < .5 ? -1 : 1, p = at(c+side*w*(.62+r()*.5), u); spat += `<circle class="stip" cx="${f(p[0])}" cy="${f(p[1])}" r="${f(.35+r()*.3)}"/>`; }
+        for (let i=0;i<14;i++){ const u = (r()*2-1)*um*.95, side = r() < .5 ? -1 : 1, p = at(c+side*w*(.62+r()*.5), u); spat += `<circle class="char-spat" cx="${f(p[0])}" cy="${f(p[1])}" r="${f(.35+r()*.3)}"/>`; }
       }
-      s += stipple(cx, cy, rx, ry, 46, seed+3, {maxq:.88}) + `<path class="char" d="${marks}"/>` + spat;
+      s += sear(stipple(cx, cy, rx, ry, 184, seed+3, {maxq:.88})) + `<path class="char" d="${marks}"/>` + spat;
     } else {
       // Griddled: no marks, a seared crust instead.
-      s += stipple(cx, cy, rx, ry, smash ? 30 : 46, seed+3, {maxq:.88});
+      s += sear(stipple(cx, cy, rx, ry, smash ? 120 : 184, seed+3, {maxq:.88}));
     }
     let pits = '';
     for (let i=0;i<(smash ? 14 : 9);i++){ const p = EP(cx, cy, rx, ry, r()*Math.PI*2, Math.sqrt(r())*.72); pits += `M${f(p[0]-1.5)},${f(p[1])}q1.5,1 3,0`; }
-    s += `<path class="tx-fine" d="${pits}"/>`;
+    s += `<path class="sear-pit" d="${pits}"/>`;
     if (smash) for (let i=0;i<10;i++){ const p = EP(cx, cy, rx, ry, r()*Math.PI*2, .86+r()*.06), w = 1.2+r()*1.4; s += `<ellipse class="pore" cx="${f(p[0])}" cy="${f(p[1])}" rx="${f(w)}" ry="${f(w*.55)}"/>`; }
     return {svg:s, h:2*ry*1.08+t+2, edge:rx*(1+amp)};
   },
