@@ -56,6 +56,14 @@ in a browser — no build step.
   picks comparison on the blueprint page, options as pills, a build page,
   and recipes grouped by build. Queued for Fugu; its §7 choices are open.
 
+- **`methods-top-level.html`**: proposal (2026-10-11, PLAN.md Phase 7) for
+  methods as a top-level section: the folder and URL move to
+  `content/methods/` (before, now, proposed), the redirect question, the
+  six-item nav at desktop, 700px and phone widths (it overflows at 700px),
+  and the homepage with a methods band in three arrangements (A: added as
+  a band, B: one essay row, C: essays as two side-by-side lists), each with
+  its measured height. Open.
+
 - **`exploded-builds.html`**: proposal (2026-10-10) for drawing a build as
   an exploded view (layers pulled apart, each drawn as the thing, leader
   lines to labels and roles) instead of flat bars: the layer kit, the three

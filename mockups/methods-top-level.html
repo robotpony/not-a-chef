@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methods as a top-level section</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  /* Tokens from STYLE.md, byte-identical to the other mockups. */
+  :root{
+    --bg:#F3F3EC; --surface:#FBFBF6; --surface-2:#EAEBDF;
+    --ink:#23241E; --ink-muted:#63645A; --ink-faint:#93948A;
+    --border:#DCDCCE; --border-strong:#C7C8B4;
+    --accent:#A67330; --accent-strong:#7C361D; --accent-soft:#F6EADA;
+    --highlight:#997F29; --highlight-soft:#F6F1D5;
+    --flag:#3D638F; --flag-soft:#E1EAF4;
+    --principle:#247B50; --principle-strong:#1D6743; --principle-soft:#DBF5E8;
+    --focus:#A67330;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+      --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+      --border:#383A2C; --border-strong:#4A4C3A;
+      --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+      --highlight:#DDCC88; --highlight-soft:#342D19;
+      --flag:#97B8D8; --flag-soft:#1D2835;
+      --principle:#8ED7B4; --principle-strong:#A7E2C4; --principle-soft:#1B3428;
+      --focus:#D3A569;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+    --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+    --border:#383A2C; --border-strong:#4A4C3A;
+    --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+    --highlight:#DDCC88; --highlight-soft:#342D19;
+    --flag:#97B8D8; --flag-soft:#1D2835;
+    --principle:#8ED7B4; --principle-strong:#A7E2C4; --principle-soft:#1B3428;
+    --focus:#D3A569;
+  }
+
+  *{box-sizing:border-box;}
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:'Lora',Georgia,serif; font-size:16px; line-height:1.5; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3,h4{ font-family:'Libre Franklin',system-ui,sans-serif; margin:0; }
+  p{ margin:0; }
+  a{ color:inherit; }
+  code{ font-family:'IBM Plex Mono',monospace; font-size:.85em; background:var(--surface-2); padding:1px 5px; border-radius:3px; }
+  button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
+  :focus-visible{ outline:2px solid var(--focus); outline-offset:2px; }
+
+  /* ---------- Mockup chrome ---------- */
+  .topbar{ position:sticky; top:0; z-index:30; background:var(--surface); border-bottom:1px solid var(--border-strong); }
+  .topbar-inner{ max-width:1100px; margin:0 auto; padding:12px 16px; display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+  .tb-title{ font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:.95rem; margin-right:auto; }
+  .tb-jump{ display:flex; gap:2px; flex-wrap:wrap; font-family:'Libre Franklin',sans-serif; }
+  .tb-jump a{ font-size:.76rem; font-weight:600; color:var(--ink-muted); text-decoration:none; padding:6px 9px; border-radius:4px; }
+  .tb-jump a:hover{ color:var(--ink); background:var(--surface-2); }
+  .theme-toggle{ font-family:'Libre Franklin',sans-serif; font-size:.75rem; font-weight:600; padding:7px 10px; border:1px solid var(--border-strong); border-radius:3px; color:var(--ink-muted); }
+  main{ max-width:1100px; margin:0 auto; padding:8px 16px 100px; }
+  .intro{ padding:34px 0 26px; border-bottom:1px solid var(--border); margin-bottom:34px; }
+  .eyebrow{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--accent-strong); display:block; margin-bottom:10px; }
+  .intro h1{ font-size:2rem; line-height:1.15; margin-bottom:12px; }
+  .lede{ color:var(--ink-muted); max-width:70ch; }
+  .lede + .lede{ margin-top:10px; }
+  .mock{ margin-bottom:64px; scroll-margin-top:70px; }
+  .mock-label{ font-family:'Libre Franklin',sans-serif; font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-muted); padding-bottom:8px; border-bottom:1px solid var(--border); margin-bottom:6px; }
+  .mock-note{ color:var(--ink-muted); font-size:.92rem; max-width:74ch; margin:8px 0 18px; }
+  .mock-note + .mock-note{ margin-top:-8px; }
+  .frame{ border:1px dashed var(--border-strong); border-radius:10px; background:var(--bg); overflow:hidden; }
+  .ann{ font-family:'IBM Plex Mono',monospace; font-size:.66rem; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.04em; display:block; margin:0 0 6px; }
+  .new-mark{ font-family:'IBM Plex Mono',monospace; font-size:.6rem; font-weight:600; text-transform:uppercase; letter-spacing:.05em; color:var(--accent-strong); background:var(--accent-soft); border-radius:3px; padding:1px 5px; vertical-align:middle; }
+
+  .ask{ background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--flag); border-radius:0 6px 6px 0; padding:16px 20px; margin-top:20px; max-width:80ch; }
+  .ask-label{ font-family:'Libre Franklin',sans-serif; font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--flag); display:block; margin-bottom:6px; }
+  .ask p{ font-size:.92rem; }
+  .ask p + p, .ask ul{ margin-top:8px; }
+  .ask ul{ padding-left:20px; font-size:.9rem; }
+
+  .seg{ display:inline-flex; border:1px solid var(--border-strong); border-radius:5px; overflow:hidden; font-family:'Libre Franklin',sans-serif; }
+  .seg button{ font-size:.78rem; font-weight:600; padding:7px 12px; color:var(--ink-muted); border-right:1px solid var(--border-strong); }
+  .seg button:last-child{ border-right:none; }
+  .seg button[aria-pressed="true"]{ background:var(--accent-soft); color:var(--accent-strong); }
+  .seg button .h{ font-family:'IBM Plex Mono',monospace; font-weight:500; font-size:.68rem; color:var(--ink-faint); margin-left:6px; }
+  .controls{ display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-bottom:14px; }
+
+  /* ---------- §1 folder layout ---------- */
+  .trees{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+  @media (max-width:860px){ .trees{ grid-template-columns:1fr; } }
+  .tree{ background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:14px 16px; }
+  .tree.pick{ border-color:var(--accent); }
+  .tree h3{ font-size:.92rem; margin-bottom:2px; }
+  .tree .sub{ font-family:'Libre Franklin',sans-serif; font-size:.74rem; color:var(--ink-faint); margin-bottom:10px; display:block; }
+  .tree pre{ margin:0; font-family:'IBM Plex Mono',monospace; font-size:.74rem; line-height:1.6; color:var(--ink-muted); white-space:pre; overflow-x:auto; }
+  .tree pre b{ color:var(--accent-strong); font-weight:600; }
+  .tree pre i{ color:var(--ink-faint); font-style:normal; }
+  .tw{ overflow-x:auto; margin-top:18px; }
+  table.cmp{ width:100%; border-collapse:collapse; font-size:.86rem; min-width:720px; }
+  table.cmp th, table.cmp td{ text-align:left; vertical-align:top; padding:9px 10px; border-bottom:1px solid var(--border); }
+  table.cmp thead th{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); }
+  table.cmp tbody th{ font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:.82rem; white-space:nowrap; }
+  table.cmp td code{ font-size:.76rem; }
+  table.cmp td.pick{ background:var(--accent-soft); }
+  .crumb{ font-family:'Libre Franklin',sans-serif; font-size:.8rem; color:var(--ink-muted); }
+  .crumb span{ color:var(--accent); padding:0 4px; }
+
+  /* ---------- Site nav, values from assets/css/custom.css ---------- */
+  .site-nav{ border-bottom:1px solid var(--border); background:var(--surface); font-family:'Libre Franklin',sans-serif; }
+  .site-nav-inner{ max-width:1100px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; gap:22px; }
+  .site-logo{ display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:1.05rem; letter-spacing:-.01em; margin-right:auto; text-decoration:none; white-space:nowrap; color:var(--ink); }
+  .site-logo .dot{ width:26px; height:26px; border-radius:50%; border:2px solid #D58167; background:var(--surface); display:inline-flex; align-items:center; justify-content:center; color:var(--accent-strong); font-size:.8rem; }
+  .brand-loves{ color:var(--accent-strong); }
+  .site-nav-links{ display:flex; align-items:center; gap:2px; }
+  .nav-link{ font-size:.86rem; font-weight:600; color:var(--ink-muted); padding:8px 10px; border-radius:4px; text-decoration:none; display:flex; align-items:center; gap:5px; white-space:nowrap; }
+  .nav-link:hover{ color:var(--ink); background:var(--surface-2); }
+  .nav-link.drop::after{ content:''; width:6px; height:6px; border:solid currentColor; border-width:0 1.5px 1.5px 0; transform:rotate(45deg); margin-top:-3px; opacity:.6; }
+  .nav-link.is-new{ color:var(--accent-strong); background:var(--accent-soft); }
+  .nav-at{ margin-bottom:22px; }
+  .nav-at .frame{ max-width:var(--w,100%); }
+  .burger{ width:34px; height:34px; border:1px solid var(--border-strong); border-radius:5px; display:none; align-items:center; justify-content:center; color:var(--ink-muted); }
+  .phones{ display:flex; gap:24px; flex-wrap:wrap; align-items:flex-start; }
+  .phone{ width:300px; border:1px dashed var(--border-strong); border-radius:14px; overflow:hidden; background:var(--bg); }
+  .phone .site-nav-links{ display:none; }
+  .phone .burger{ display:inline-flex; }
+  .phone .site-nav-inner{ padding:12px 14px; }
+  .phone .site-logo{ font-size:.95rem; }
+  .drawer{ padding:14px 16px 20px; font-family:'Libre Franklin',sans-serif; }
+  .drawer-link{ display:flex; justify-content:space-between; align-items:center; font-size:.95rem; font-weight:600; color:var(--ink); text-decoration:none; padding:12px 4px; border-bottom:1px solid var(--border); }
+  .drawer-link.plus::after{ content:'+'; color:var(--ink-faint); font-weight:400; }
+  .drawer-link.is-new{ color:var(--accent-strong); }
+
+  /* ---------- Homepage, values from assets/css/custom.css ---------- */
+  .hp{ margin:0 auto; transition:max-width .2s; }
+  .hp.phone-w{ max-width:390px; }
+  .hero{ padding:40px 20px 32px; border-bottom:1px solid var(--border); }
+  .hero-eyebrow{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--accent-strong); margin-bottom:12px; display:block; }
+  .hero h1{ font-size:clamp(2.1rem,4.2vw,2.9rem); font-weight:700; letter-spacing:-.015em; line-height:1.08; margin-bottom:16px; max-width:16ch; }
+  .hero .lede{ max-width:56ch; font-size:1.08rem; line-height:1.6; margin-bottom:24px; }
+  .search-row{ display:flex; flex-wrap:wrap; align-items:center; gap:12px 32px; }
+  .search-box{ flex:0 1 340px; height:40px; border:1px solid var(--border-strong); border-radius:5px; background:var(--surface); font-family:'Libre Franklin',sans-serif; font-size:.86rem; color:var(--ink-faint); display:flex; align-items:center; padding:0 12px; }
+  .filter-row{ display:flex; gap:6px; flex-wrap:wrap; flex:1 1 320px; }
+  .filter-pill{ font-family:'Libre Franklin',sans-serif; font-size:.78rem; font-weight:500; padding:6px 12px; border:1px solid var(--border-strong); border-radius:14px; color:var(--ink-muted); text-decoration:none; }
+
+  .home-section{ padding:28px 20px; border-bottom:1px solid var(--border); }
+  .home-section:last-child{ border-bottom:none; }
+  .home-section.is-new{ background:color-mix(in srgb, var(--accent-soft) 35%, transparent); }
+  .block-head{ margin-bottom:20px; display:flex; justify-content:space-between; align-items:flex-end; gap:16px; flex-wrap:wrap; }
+  .block-num{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--ink-faint); display:block; margin-bottom:4px; }
+  .block-title{ font-size:1.35rem; font-weight:700; letter-spacing:-.005em; margin:0 0 6px; }
+  .block-dek{ color:var(--ink-muted); max-width:60ch; font-size:.92rem; }
+  .block-dek a{ color:var(--accent-strong); text-decoration:none; font-weight:500; }
+  .mega-viewall{ font-family:'Libre Franklin',sans-serif; font-size:.85rem; font-weight:600; color:var(--accent-strong); text-decoration:none; white-space:nowrap; }
+
+  .rgrid{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; }
+  .hp.phone-w .rgrid{ grid-template-columns:1fr; }
+  @media (max-width:820px){ .rgrid{ grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; } }
+  @media (max-width:520px){ .rgrid{ grid-template-columns:1fr; } }
+  .rcard{ background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:14px 16px 12px; display:flex; flex-direction:column; gap:8px; min-width:0; text-decoration:none; }
+  .rcard:hover{ border-color:var(--accent); }
+  .rcard-top{ display:flex; gap:4px; flex-wrap:nowrap; overflow:hidden; min-width:0; }
+  .chip{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; line-height:1.5; padding:3px 7px; border-radius:3px; border:1px solid transparent; white-space:nowrap; flex:none; display:inline-flex; align-items:center; gap:4px; }
+  .chip svg{ width:12px; height:12px; }
+  .cuisine-chip{ background:var(--highlight-soft); color:var(--highlight); text-transform:uppercase; letter-spacing:.05em; font-weight:600; }
+  .principle-chip{ background:var(--principle-soft); color:var(--principle-strong); font-weight:600; }
+  .method-chip{ background:var(--accent-soft); color:var(--accent-strong); font-weight:600; }
+  .tag{ color:var(--ink-muted); border-color:var(--border-strong); }
+  .rcard-title{ font-size:1.02rem; font-weight:700; line-height:1.3; letter-spacing:-.005em; text-wrap:balance; }
+  .rcard-intro{ font-size:.84rem; line-height:1.5; color:var(--ink-muted); display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; overflow:hidden; }
+  .rcard-stats{ margin-top:auto; padding-top:8px; border-top:1px solid var(--border); display:flex; gap:12px; white-space:nowrap; }
+  .rcard-stat{ display:flex; align-items:baseline; gap:4px; }
+  .rcard-stat b{ font-family:'Libre Franklin',sans-serif; font-size:.56rem; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); }
+  .rcard-stat span{ font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums; font-size:.72rem; font-weight:600; color:var(--accent-strong); }
+
+  /* Methods band (option A): the blueprint block from methods-pages.html,
+     with the parts run inline so the band stays about one card row tall,
+     beside the standalone techniques as reference rows. */
+  .mband{ display:grid; grid-template-columns:minmax(0,1.35fr) minmax(0,1fr); gap:16px; align-items:start; }
+  .hp.phone-w .mband{ grid-template-columns:1fr; }
+  @media (max-width:820px){ .mband{ grid-template-columns:1fr; } }
+  .bp{ background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:16px 18px 14px; display:flex; flex-direction:column; gap:10px; }
+  .bp:hover{ border-color:var(--accent); }
+  .bp-head{ display:flex; align-items:baseline; justify-content:space-between; gap:10px; }
+  .bp-name{ font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:1.15rem; text-decoration:none; color:var(--ink); display:inline-flex; align-items:center; gap:8px; }
+  .bp-name svg{ width:16px; height:16px; color:var(--accent-strong); }
+  .bp-count{ font-family:'IBM Plex Mono',monospace; font-size:.7rem; color:var(--ink-faint); white-space:nowrap; }
+  .bp-desc{ font-size:.86rem; color:var(--ink-muted); }
+  .parts-inline{ list-style:none; margin:0; padding:8px 0 0; border-top:1px solid var(--border); display:flex; flex-wrap:wrap; gap:4px 14px; font-family:'Libre Franklin',sans-serif; font-size:.82rem; font-weight:600; }
+  .parts-inline li{ display:inline-flex; gap:5px; align-items:baseline; }
+  .parts-inline li i{ font-style:normal; font-family:'IBM Plex Mono',monospace; font-size:.68rem; font-weight:500; color:var(--accent); }
+  .parts-inline a{ text-decoration:none; }
+  .parts-inline a:hover{ color:var(--accent-strong); }
+  .parts-inline li.todo{ color:var(--ink-faint); font-weight:500; }
+  .parts-inline li.todo i{ color:var(--ink-faint); }
+  .opts{ display:flex; flex-wrap:wrap; gap:6px; }
+  .opt-pill{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; padding:2px 8px; border:1px solid var(--border-strong); border-radius:12px; color:var(--ink-muted); white-space:nowrap; text-decoration:none; }
+  .opt-pill b{ font-weight:600; color:var(--ink); }
+  .tech{ display:flex; flex-direction:column; }
+  .tech-label{ font-family:'Libre Franklin',sans-serif; font-size:.65rem; font-weight:700; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-faint); margin-bottom:4px; }
+  .tech-row{ display:block; padding:10px 0; border-bottom:1px solid var(--border); text-decoration:none; }
+  .tech-row:first-of-type{ border-top:1px solid var(--border); }
+  .tech-row strong{ font-family:'Libre Franklin',sans-serif; font-size:.92rem; display:block; }
+  .tech-row:hover strong{ color:var(--accent-strong); }
+  .tech-row span{ font-size:.84rem; color:var(--ink-muted); display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:1; overflow:hidden; }
+
+  /* Essay lists (option C): two columns of title + one-line intro rows */
+  .elists{ display:grid; grid-template-columns:1fr 1fr; gap:16px 40px; }
+  .hp.phone-w .elists{ grid-template-columns:1fr; }
+  @media (max-width:820px){ .elists{ grid-template-columns:1fr; } }
+  .elist h3{ font-size:.65rem; font-weight:700; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-faint); margin-bottom:4px; display:flex; justify-content:space-between; align-items:baseline; }
+  .elist h3 a{ font-size:.78rem; text-transform:none; letter-spacing:0; color:var(--accent-strong); text-decoration:none; }
+  .erow{ display:grid; grid-template-columns:1fr auto; gap:0 12px; padding:9px 0; border-bottom:1px solid var(--border); text-decoration:none; }
+  .erow:first-of-type{ border-top:1px solid var(--border); }
+  .erow strong{ font-family:'Libre Franklin',sans-serif; font-size:.92rem; }
+  .erow:hover strong{ color:var(--accent-strong); }
+  .erow em{ font-style:normal; font-family:'IBM Plex Mono',monospace; font-size:.7rem; font-weight:600; color:var(--accent-strong); align-self:baseline; }
+  .erow span{ grid-column:1 / -1; font-size:.84rem; color:var(--ink-muted); display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:1; overflow:hidden; }
+
+  .summary{ margin-top:14px; font-size:.9rem; max-width:80ch; }
+  .summary li{ margin:5px 0; }
+  .hgt{ font-family:'IBM Plex Mono',monospace; font-size:.74rem; color:var(--ink-faint); margin:0 0 10px; }
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="topbar-inner">
+  <span class="tb-title">Methods as a top-level section</span>
+  <nav class="tb-jump">
+    <a href="#folders">1 · Folders &amp; URLs</a>
+    <a href="#nav">2 · Nav</a>
+    <a href="#home">3 · Homepage</a>
+    <a href="#open">4 · Decisions</a>
+  </nav>
+  <button class="theme-toggle" id="tt" type="button">Theme: system</button>
+</div></div>
+
+<main>
+<section class="intro">
+  <span class="eyebrow">Proposal · 2026-10-11 · PLAN.md Phase 7</span>
+  <h1>Methods as a top-level section</h1>
+  <p class="lede">The essays list skewed to methods: 10 of its first 12 cards were burger parts and builds. Commit <code>3b6248a</code> (built before this mock) took methods off the essays list and added a Methods nav link to the existing methods page. This mock covers what that left open: whether the folders and URLs should follow, how the nav holds six items, and how methods get onto the homepage without making it longer.</p>
+  <p class="lede">Real content throughout: today's essays, the burgers blueprint, and the four newest recipes.</p>
+</section>
+
+<!-- ================= 1 ================= -->
+<section class="mock" id="folders">
+  <div class="mock-label">1 · Folders and URLs</div>
+  <p class="mock-note">Three states. "Now" is what's committed: methods are separate on the site but still filed under essays, so their URLs and breadcrumbs say "Essays". "Proposed" moves the folder up so the files, the URLs, and the nav all agree.</p>
+  <div class="trees">
+    <div class="tree">
+      <h3>Before</h3><span class="sub">until this morning</span>
+<pre>content/
+  recipes/
+  essays/
+    _index.md   <i># cascades method tag</i>
+    cooking-reflections/
+    food-memories/
+    methods/    <i># no _index.md</i>
+    planning-essays/
+    reference-essays/
+    technique-essays/
+  the-food-log/
+  reference/
+  tags/method/_index.md</pre>
+    </div>
+    <div class="tree">
+      <h3>Now</h3><span class="sub">commit 3b6248a</span>
+<pre>content/
+  recipes/
+  essays/
+    cooking-reflections/
+    food-memories/
+    methods/
+      <b>_index.md</b>  <i># own section,</i>
+                 <i># cascades method tag,</i>
+                 <i># page not rendered</i>
+    planning-essays/
+    reference-essays/
+    technique-essays/
+  the-food-log/
+  reference/
+  tags/method/_index.md</pre>
+    </div>
+    <div class="tree pick">
+      <h3>Proposed</h3><span class="sub">files match the nav</span>
+<pre>content/
+  recipes/
+  <b>methods/</b>
+    <b>_index.md</b>    <i># the methods page</i>
+    burger-patties.md
+    drive-in-deluxe-burger.md
+    food-ratios-…md
+    …
+  essays/
+    cooking-reflections/
+    food-memories/
+    planning-essays/
+    reference-essays/
+    technique-essays/
+  the-food-log/
+  reference/</pre>
+    </div>
+  </div>
+
+  <div class="tw">
+  <table class="cmp">
+    <thead><tr><th></th><th>Before</th><th>Now</th><th>Proposed</th></tr></thead>
+    <tbody>
+      <tr><th>A method's URL</th><td><code>/essays/methods/burger-patties/</code></td><td><code>/essays/methods/burger-patties/</code></td><td class="pick"><code>/methods/burger-patties/</code></td></tr>
+      <tr><th>Its breadcrumb</th><td><span class="crumb">Essays<span>/</span>Burger patties</span></td><td><span class="crumb">Essays<span>/</span>Methods<span>/</span>Burger patties</span></td><td class="pick"><span class="crumb">Methods<span>/</span>Burger patties</span></td></tr>
+      <tr><th>The methods page</th><td><code>/tags/method/</code>, not in the nav</td><td><code>/tags/method/</code>, in the nav</td><td class="pick"><code>/methods/</code>, in the nav</td></tr>
+      <tr><th>On the essays list</th><td>yes, 10 of 25 cards</td><td>no</td><td class="pick">no</td></tr>
+      <tr><th>The <code>method</code> tag page</th><td>is the methods page</td><td>is the methods page</td><td class="pick">a plain tag page, or kept as the methods page (§4)</td></tr>
+      <tr><th>Fugu work</th><td>none</td><td>none</td><td class="pick">yes: <code>method/is.html</code> and <code>method/all.html</code> look for methods inside the essay section, and the methods page needs a section list layout</td></tr>
+      <tr><th>Site work</th><td></td><td></td><td class="pick">move 10 files, move the cascade, nav link to <code>/methods/</code>, <code>/lint</code> rule 6 path, CLAUDE.md, METHODS.md, FORMAT.md, ARCHITECTURE.md</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="ask">
+    <span class="ask-label">Redirects: your call</span>
+    <p>I checked the deployed site. None of the <code>/essays/methods/…</code> URLs are live, and neither is <code>/tags/method/</code>, so the move needs no redirects for any of them.</p>
+    <p>Two methods were published earlier, under Reference, and already carry redirects from those old URLs:</p>
+    <ul>
+      <li><code>/reference/food-ratios-for-creating-your-own-recipes/</code></li>
+      <li><code>/reference/reverse-cooking-reverse-sear-and-water-frying/</code></li>
+    </ul>
+    <p>Those two would keep their redirects, now pointing at <code>/methods/…</code>. And the redirects I added this morning without asking (<code>/methods/</code> and <code>/essays/methods/</code> to <code>/tags/method/</code>) come out either way: <code>/methods/</code> becomes the real page. Keep the two Reference redirects, or drop them too?</p>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section class="mock" id="nav">
+  <div class="mock-label">2 · Nav with six items</div>
+  <p class="mock-note">Methods sits second, after Recipes. STYLE.md's core message puts Method second (Love, Method, Heritage), and a method is the step between a recipe and cooking without one. A plain link, no caret: STYLE.md keeps dropdowns for sections with enough content to categorize. The new item is tinted here only so it's easy to find.</p>
+  <div class="nav-at">
+    <span class="ann">Desktop, 1100px</span>
+    <div class="frame">
+      <div class="site-nav"><div class="site-nav-inner">
+        <a class="site-logo" href="#"><span class="dot">♥</span><span>Bruce <span class="brand-loves">loves</span> to cook.</span></a>
+        <div class="site-nav-links">
+          <a class="nav-link drop" href="#">Recipes</a>
+          <a class="nav-link is-new" href="#">Methods</a>
+          <a class="nav-link" href="#">Essays</a>
+          <a class="nav-link" href="#">The Food Log</a>
+          <a class="nav-link drop" href="#">Reference</a>
+          <a class="nav-link" href="#">About</a>
+        </div>
+      </div></div>
+    </div>
+  </div>
+  <div class="nav-at" style="--w:700px">
+    <span class="ann">Narrowest desktop, 700px (the drawer takes over at 680px)</span>
+    <div class="frame">
+      <div class="site-nav"><div class="site-nav-inner">
+        <a class="site-logo" href="#"><span class="dot">♥</span><span>Bruce <span class="brand-loves">loves</span> to cook.</span></a>
+        <div class="site-nav-links">
+          <a class="nav-link drop" href="#">Recipes</a>
+          <a class="nav-link is-new" href="#">Methods</a>
+          <a class="nav-link" href="#">Essays</a>
+          <a class="nav-link" href="#">The Food Log</a>
+          <a class="nav-link drop" href="#">Reference</a>
+          <a class="nav-link" href="#">About</a>
+        </div>
+      </div></div>
+    </div>
+    <p class="hgt" id="navfit"></p>
+  </div>
+  <div class="phones">
+    <div>
+      <span class="ann">Phone, drawer open</span>
+      <div class="phone">
+        <div class="site-nav"><div class="site-nav-inner">
+          <a class="site-logo" href="#"><span class="dot">♥</span><span>Bruce <span class="brand-loves">loves</span> to cook.</span></a>
+          <span class="burger">☰</span>
+        </div></div>
+        <div class="drawer">
+          <a class="drawer-link plus" href="#">Recipes</a>
+          <a class="drawer-link is-new" href="#">Methods</a>
+          <a class="drawer-link" href="#">Essays</a>
+          <a class="drawer-link" href="#">The Food Log</a>
+          <a class="drawer-link plus" href="#">Reference</a>
+          <a class="drawer-link" href="#">About</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section class="mock" id="home">
+  <div class="mock-label">3 · Homepage</div>
+  <p class="mock-note">The full homepage below the hero, switchable. <b>Current</b> is today's four card rows. <b>A</b> adds a methods band shaped like the methods page's blueprint block, not a card row. <b>B</b> adds that band and merges the two essay rows into one. <b>C</b> adds that band and turns the two essay rows into two lists side by side. Each button shows the variant's height at the chosen width, measured live.</p>
+  <p class="mock-note">The methods band sits second, after Recently added, for the same reason as the nav. New bands are tinted.</p>
+  <div class="controls">
+    <div class="seg" id="variant" role="group" aria-label="Homepage variant">
+      <button type="button" data-v="cur" aria-pressed="false">Current<span class="h"></span></button>
+      <button type="button" data-v="a" aria-pressed="false">A · methods band<span class="h"></span></button>
+      <button type="button" data-v="b" aria-pressed="false">B · one essay row<span class="h"></span></button>
+      <button type="button" data-v="c" aria-pressed="true">C · essay lists<span class="h"></span></button>
+    </div>
+    <div class="seg" id="width" role="group" aria-label="Width">
+      <button type="button" data-w="desk" aria-pressed="true">Desktop</button>
+      <button type="button" data-w="phone" aria-pressed="false">Phone</button>
+    </div>
+  </div>
+  <div class="frame"><div class="hp" id="hp"></div></div>
+  <div id="measure" style="position:absolute; left:-9999px; top:0; width:1100px; visibility:hidden"></div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section class="mock" id="open">
+  <div class="mock-label">4 · Decisions</div>
+  <ol class="summary">
+    <li><b>Folder move</b> to <code>content/methods/</code>, so methods get <code>/methods/…</code> URLs and a Methods-only breadcrumb. It needs the Fugu change first (fugu-agent), then the move. Recommended.</li>
+    <li><b>Redirects</b>: none needed for <code>/essays/methods/…</code> (never published). Keep or drop the two old Reference redirects (§1)?</li>
+    <li><b>The methods page</b> becomes <code>/methods/</code> (the section's own page) and the <code>method</code> tag page goes back to a plain tag list. Alternative: keep <code>/tags/method/</code> as the methods page and point the nav there. Recommended: <code>/methods/</code>, so the URL matches the nav.</li>
+    <li><b>Nav fit</b>: six items overflow by about 40px at 700px, so anywhere from 680px to about 740px wide (§2). Fixes, smallest first: label it "Food Log" in the nav (drops "The"); trim link padding from 10px to 8px; or move the drawer breakpoint up to 760px. Recommended: "Food Log", since the page title can keep "The".</li>
+    <li><b>Nav order</b>: Recipes · Methods · Essays · The Food Log · Reference · About. Alternative: Methods after Essays, beside Reference.</li>
+    <li><b>Homepage</b>: A, B, or C. Measured at desktop width below the hero: A is about 365px taller than today, B about 20px shorter, C about 20px taller. My pick is <b>C</b>: it adds methods at today's height and keeps food memories visible as their own list, which B gives up. Essay intros read fine as one line in a list. B is the fallback if the page has to get shorter.</li>
+    <li><b>Methods band shape</b>: a blueprint block with its parts inline (the methods page's block, made shorter) beside the techniques as rows. When a second blueprint lands, it takes a second block and the techniques move under them.</li>
+  </ol>
+</section>
+</main>
+
+<template id="icon-fan"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="24" r="5.5"/><path d="M16.5 24H26M26 24l10-12M26 24h10M26 24l10 12"/><circle cx="39" cy="10" r="3"/><circle cx="40" cy="24" r="3"/><circle cx="39" cy="38" r="3"/></svg></template>
+
+<script>
+const fan = document.getElementById('icon-fan').innerHTML;
+
+const recipes = [
+  { t:'Veg patties', c:'USA', tags:['mains'], i:"These vegetable patties are quick to make and delicious. They're perfect when you're looking for a lighter sandwich or salad topping.", s:[['Prep','20m'],['Cook','10m'],['Serves','3–4']] },
+  { t:'Chicken Milanese', c:'Italian', tags:['mains'], i:'This is a lighter version of Milanese, with no egg or breadcrumbs. Crispy chicken and a pan sauce pairs nicely with fresh sides.', s:[['Prep','5m'],['Cook','10m'],['Serves','2']] },
+  { t:'Lazy tomato soup', c:'Canadian', wtf:true, i:'A warm bowl of soup on a fall day is a wondrous thing. This is a classic fridge magnet recipe that I use to clean up old veg.', s:[['Prep','~10m'],['Cook','~15m'],['Serves','4–6']] },
+  { t:'Mayo marinade', c:'USA', tags:['bases'], i:"This is a quick and effective way to marinate chicken and pork. The mayo ensures spices don't burn, and it adheres to the cut surprisingly well.", s:[['Prep','5m'],['Serves','2']] },
+];
+const memories = [
+  ['Chicken sandwich, crispy, mall style','In high school I worked in a string of fast food and fast casual restaurants, often on split shifts.','3m'],
+  ['Camp cooking',"I remember learning to make foil camp packets at a kids' camp. The recipe was simple.",'2m'],
+  ['Garbage plates','My dad only knew how to cook a few dishes, but he was proud of each one.','1m'],
+  ['Slick spaghetti with a hint of oregano','I remember an old cast aluminum pot, handed down from my grandparents.','2m'],
+];
+const others = [
+  ['The food log','technique essay','Why a running kitchen log, not just notes scribbled into a recipe, is what actually makes iteration work.','4m'],
+  ['The impossible quest for the perfect chicken burger','cooking reflection','Five textures, four builds, and forty years of chasing a sandwich that mostly exists in memory.','6m'],
+  ['Test kitchen','reference essay',"Some recipes here are still being tested. They're good to cook, but they haven't become keepers yet.",'2m'],
+  ['How to find great recipes','technique essay','You have probably noticed that most recipes are hot garbage.','6m'],
+];
+const logs = [
+  ['October 2026','Early October is mostly trip notes: a tabbouleh worth learning, a subtly sweet red cabbage, an onion jam on a double smash burger, and a German dinner.',[['Days','4'],['Read','3m']]],
+  ['September 2026','Two goulash tests: a first-principles pork version on the 14th that came out better than expected, then a v2 with oven-roasted pork.',[['Days','5'],['Read','4m']]],
+  ['May 2026','A fajita chicken marinade and bowl format built out and tested, a lemon chicken marinade and a crisp topping recipe finalized.',[['Days','6'],['Read','5m']]],
+];
+
+const stats = s => `<div class="rcard-stats">${s.map(([k,v])=>`<div class="rcard-stat"><b>${k}</b><span>${v}</span></div>`).join('')}</div>`;
+const rcard = r => `<a class="rcard" href="#"><div class="rcard-top"><span class="chip cuisine-chip">${r.c}</span>${r.wtf?'<span class="chip principle-chip">WTF</span>':''}${(r.tags||[]).map(t=>`<span class="chip tag">${t}</span>`).join('')}</div><h3 class="rcard-title">${r.t}</h3><p class="rcard-intro">${r.i}</p>${stats(r.s)}</a>`;
+const ecard = (t,fmt,i,m) => `<a class="rcard" href="#"><div class="rcard-top"><span class="chip tag">${fmt}</span></div><h3 class="rcard-title">${t}</h3><p class="rcard-intro">${i}</p>${stats([['Read',m]])}</a>`;
+const head = (n,title,dek,link,isNew) => `<div class="block-head"><div><span class="block-num">${n}</span><h2 class="block-title">${title}${isNew?' <span class="new-mark">new</span>':''}</h2><p class="block-dek">${dek}</p></div>${link?`<a class="mega-viewall" href="#">${link} &rarr;</a>`:''}</div>`;
+
+const hero = `<section class="hero"><span class="hero-eyebrow">Our family cookbook</span><h1>Bruce <span class="brand-loves">loves</span> to cook.</h1><p class="lede">Recipes we actually cook, with ratios, timings, and notes.</p><div class="search-row"><div class="search-box">Search 219 recipes…</div><nav class="filter-row">${['mains','bases','quick','make-ahead','sauces','dairy-free','desserts'].map(t=>`<a class="filter-pill" href="#">${t}</a>`).join('')}</nav></div></section>`;
+
+const bRecent = n => `<section class="home-section">${head(n,'Recently added','The latest recipes to make it into the book.','View all 219 recipes')}<div class="rgrid">${recipes.map(rcard).join('')}</div></section>`;
+const bMemories = n => `<section class="home-section">${head(n,'Food memories','Where the cooking started: the kitchens I grew up in, and the meals that changed how I eat. <a href="#">More about me &rarr;</a>','All essays')}<div class="rgrid">${memories.map(([t,i,m])=>ecard(t,'food memories',i,m)).join('')}</div></section>`;
+const bOthersOld = n => `<section class="home-section">${head(n,'Technique &amp; reflections','The rest of the essays: lessons from the stove, planning, and a few long obsessions.','All essays')}<div class="rgrid">${others.map(o=>ecard(...o)).join('')}</div></section>`;
+const bLog = n => `<section class="home-section">${head(n,'From the food log',"The running, unfiltered version of what's cooking: tests, ideas, and the odd recipe-site rabbit hole.",'Read the log')}<div class="rgrid">${logs.map(([t,i,s])=>`<a class="rcard" href="#"><div class="rcard-top"></div><h3 class="rcard-title">${t}</h3><p class="rcard-intro">${i}</p>${stats(s)}</a>`).join('')}</div></section>`;
+
+const bMethods = n => `<section class="home-section is-new">${head(n,'Methods',"How a kind of food works, so you can cook the dishes that aren't written down.",'All methods',true)}
+  <div class="mband">
+    <div class="bp">
+      <div class="bp-head"><a class="bp-name" href="#">${fan}Burgers</a><span class="bp-count">5 of 6 parts · 3 builds</span></div>
+      <p class="bp-desc">A burger is a patty and a build: how each part is made, and the recipes and stories behind them.</p>
+      <ol class="parts-inline">
+        <li><i>01</i><a href="#">Patty construction</a></li>
+        <li><i>02</i><a href="#">Patty seasoning</a></li>
+        <li><i>03</i><a href="#">Cooking</a></li>
+        <li><i>04</i><a href="#">Assembly</a></li>
+        <li><i>05</i><a href="#">Sauces</a></li>
+        <li class="todo"><i>06</i>Not burgers</li>
+      </ol>
+      <div class="opts"><span class="opt-pill"><b>Builds</b></span><a class="opt-pill" href="#">Drive-in deluxe</a><a class="opt-pill" href="#">Fast-food double</a><a class="opt-pill" href="#">Grilled onion</a></div>
+    </div>
+    <div class="tech">
+      <span class="tech-label">Techniques and ratios</span>
+      <a class="tech-row" href="#"><strong>Food ratios for creating your own recipes</strong><span>Most recipes can be boiled down to a ratio of their ingredients.</span></a>
+      <a class="tech-row" href="#"><strong>Reverse cooking: reverse sear and water frying</strong><span>Most recipes brown first and cook through second. Reverse methods swap the order.</span></a>
+    </div>
+  </div></section>`;
+
+const bEssaysOne = n => {
+  const cards = [ecard(memories[0][0],'food memories',memories[0][1],memories[0][2]), ecard(...others[0]), ecard(memories[1][0],'food memories',memories[1][1],memories[1][2]), ecard(...others[1])];
+  return `<section class="home-section is-new">${head(n,'Essays','Where the cooking started, and what it taught me: memories, lessons from the stove, and a few long obsessions. <a href="#">More about me &rarr;</a>','All 15 essays',true)}<div class="rgrid">${cards.join('')}</div></section>`;
+};
+const bEssayLists = n => `<section class="home-section is-new">${head(n,'Essays','Where the cooking started, and what it taught me. <a href="#">More about me &rarr;</a>','All 15 essays',true)}
+  <div class="elists">
+    <div class="elist"><h3>Food memories <a href="#">6 &rarr;</a></h3>${memories.map(([t,i,m])=>`<a class="erow" href="#"><strong>${t}</strong><em>${m}</em><span>${i}</span></a>`).join('')}</div>
+    <div class="elist"><h3>Technique &amp; reflections <a href="#">9 &rarr;</a></h3>${others.map(([t,f,i,m])=>`<a class="erow" href="#"><strong>${t}</strong><em>${m}</em><span>${i}</span></a>`).join('')}</div>
+  </div></section>`;
+
+const variants = {
+  cur: () => hero + bRecent('01') + bMemories('02') + bOthersOld('03') + bLog('04'),
+  a:   () => hero + bRecent('01') + bMethods('02') + bMemories('03') + bOthersOld('04') + bLog('05'),
+  b:   () => hero + bRecent('01') + bMethods('02') + bEssaysOne('03') + bLog('04'),
+  c:   () => hero + bRecent('01') + bMethods('02') + bEssayLists('03') + bLog('04'),
+};
+
+const hp = document.getElementById('hp'), measure = document.getElementById('measure');
+let cur = 'c', phone = false;
+function render(){
+  hp.innerHTML = variants[cur]();
+  hp.classList.toggle('phone-w', phone);
+  document.querySelectorAll('#variant button').forEach(b => b.setAttribute('aria-pressed', b.dataset.v === cur));
+  document.querySelectorAll('#width button').forEach(b => b.setAttribute('aria-pressed', (b.dataset.w === 'phone') === phone));
+  // Measure every variant at the chosen width, below the hero.
+  measure.style.width = phone ? '390px' : '1100px';
+  let base = null;
+  for (const v of ['cur','a','b','c']){
+    measure.innerHTML = `<div class="hp${phone?' phone-w':''}">${variants[v]()}</div>`;
+    const h = Math.round(measure.firstElementChild.getBoundingClientRect().height - measure.querySelector('.hero').getBoundingClientRect().height);
+    if (base === null) base = h;
+    const d = h - base;
+    document.querySelector(`#variant [data-v="${v}"] .h`).textContent = v === 'cur' ? `${h}px` : `${h}px ${d>=0?'+':'−'}${Math.abs(d)}`;
+  }
+  measure.innerHTML = '';
+}
+document.getElementById('variant').addEventListener('click', e => { const b = e.target.closest('button'); if (b){ cur = b.dataset.v; render(); } });
+document.getElementById('width').addEventListener('click', e => { const b = e.target.closest('button'); if (b){ phone = b.dataset.w === 'phone'; render(); } });
+document.fonts.ready.then(render); render();
+
+// Does the six-item nav fit at 700px?
+function navFit(){
+  const at = document.querySelectorAll('.nav-at')[1], inner = at.querySelector('.site-nav-inner');
+  const over = inner.scrollWidth - inner.clientWidth;
+  document.getElementById('navfit').textContent = over > 0 ? `Overflows by ${over}px at this width: needs a fix (§4).` : `Fits: ${Math.round(inner.clientWidth - [...inner.children].reduce((s,c)=>s+c.getBoundingClientRect().width,0) - 22)}px to spare.`;
+}
+document.fonts.ready.then(navFit);
+
+const tt = document.getElementById('tt'), modes = ['system','light','dark']; let mi = 0;
+tt.addEventListener('click', () => {
+  mi = (mi + 1) % 3; const m = modes[mi];
+  if (m === 'system') document.documentElement.removeAttribute('data-theme');
+  else document.documentElement.setAttribute('data-theme', m);
+  tt.textContent = 'Theme: ' + m;
+});
+</script>
+</body>
+</html>
