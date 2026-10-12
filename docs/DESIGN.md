@@ -185,6 +185,7 @@ Builds the site and deploys to the self-hosted server.
 ```
 
 - Runs `tools/publish.sh`: builds with `hugo --minify --cleanDestinationDir`, refuses to ship a `public/` containing dev-server output (localhost URLs, livereload), then runs `tools/deploy.sh` (rsync)
+- Each real deploy refuses uncommitted changes, writes `public/version.txt` (tag and commit), and tags the deployed commit `deploy-YYYY-MM-DD` (`-2` for a second that day). `git log deploy-A..deploy-B` is the changelog; tags stay local until `git push --tags`
 - Reports build output and any errors
 - `tools/publish.sh dry-run` shows what rsync would change without deploying; `build`, `check`, and `deploy` run the steps individually
 

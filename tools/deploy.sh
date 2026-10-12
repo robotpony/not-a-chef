@@ -62,7 +62,23 @@ if [[ " ${RSYNC_FLAGS[*]} " == *" --dry-run "* ]]; then
   rsync "${RSYNC_FLAGS[@]}" public/ "${HOST}:${REMOTE_PATH}/"
   echo "Dry run complete."
 else
-  echo "Deploying public/ -> ${HOST}:${REMOTE_PATH}"
+  # Each deploy is tagged deploy-YYYY-MM-DD (-2, -3 for later ones that
+  # day), so the tag has to match what ships: refuse uncommitted work.
+  if [[ -n "$(git status --porcelain)" ]]; then
+    echo "error: uncommitted changes; commit them before deploying." >&2
+    git status --short >&2
+    exit 1
+  fi
+  TAG="deploy-$(date +%F)"
+  n=1
+  while git rev-parse -q --verify "refs/tags/$TAG" >/dev/null; do
+    n=$((n + 1))
+    TAG="deploy-$(date +%F)-$n"
+  done
+  printf '%s %s\n' "$TAG" "$(git rev-parse --short HEAD)" > public/version.txt
+
+  echo "Deploying public/ -> ${HOST}:${REMOTE_PATH} as $TAG"
   rsync "${RSYNC_FLAGS[@]}" public/ "${HOST}:${REMOTE_PATH}/"
-  echo "Deploy complete."
+  git tag "$TAG"
+  echo "Deploy complete; tagged $TAG (push tags with 'git push --tags')."
 fi
