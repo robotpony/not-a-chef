@@ -23,12 +23,12 @@ Tall, creamy, and sweet; soft crunch on every deck.
 ```stack
 bun-top       | Sesame bun               | soft, toasted
 patty-thin    | Thin patty               | salt, fat
-lettuce       | Shredded iceberg         | cool crunch
+lettuce-shredded | Shredded iceberg       | cool crunch
 sauce-burger  | Red relish sauce         | sweet, creamy
 bun-base      | Middle bun               | the second deck
 cheese        | American cheese          | melt
 patty-thin    | Thin patty               | salt, fat
-lettuce       | Shredded iceberg         | cool crunch
+lettuce-shredded | Shredded iceberg       | cool crunch
 sauce-burger  | Red relish sauce         | sweet, creamy
 bun-base      | Bottom bun               | barrier
 ```

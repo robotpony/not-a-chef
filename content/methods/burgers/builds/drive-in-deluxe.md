@@ -22,7 +22,7 @@ Cold crunch and sharp against a salty patty.
 
 ```stack
 bun-top               | Toasted bun                   | soft, toasted
-lettuce               | Shredded lettuce              | cold crunch
+lettuce-shredded      | Shredded lettuce              | cold crunch
 tomato                | Thin tomato                   | juicy, acid
 onion-raw             | Raw purple onion              | sharp
 pickle                | Double-sour pickles           | sour
