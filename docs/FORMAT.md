@@ -327,6 +327,25 @@ A reference essay (`content/essays/reference-essays/`) defines one concept and i
 
 A part's method lists its choices under `## Options`, as a table with `Option`, `Pick it when`, and `Changes` columns; options aren't pages. A build is a method page with `build_name`, `profile`, and `picks` (docs/METHODS.md, Inside a blueprint). Its body doesn't repeat the picks or list its recipes; the template renders both from front matter. A build page may add `## Where it comes from`: its era and kitchen, then a `Constraint` / `Pick it explains` table.
 
+### Stack diagrams
+
+A build made of layers (a burger, a sandwich, a lasagne) can be drawn as an exploded view: a `stack` fenced block, one layer per line, top first, `layer | label | role`.
+
+````markdown
+```stack
+bun-top    | Toasted bun       | soft, toasted
+lettuce    | Shredded lettuce  | cold crunch
+patty-thin | Thin patty, 140 g | salt, fat, savoury
+bun-base   | Toasted bun       | barrier
+```
+````
+
+- Layers are keys from Fugu's `assets/icons/layers/` (the full list is in Fugu's `docs/recipe-format.md`, "Stack diagrams"; drawn in `mockups/exploded-builds.html` and exported with `mockups/export-layers.mjs`). An unknown key draws a dashed placeholder and warns during the build.
+- The label says what the layer is, with the pick's quantity when there is one; the role says what it does for the whole. Keep both short.
+- Patties are griddled unless the key says `-grilled`; only a grilled patty shows grill marks.
+- Optional lines: `caption: <text>`, and `repeat: <from>-<to> x<n>` to mark layers as repeated (`repeat: 3-5 x3` draws a `× 3` bracket beside layers 3 to 5; `×` works for `x`, a single layer works, as in `repeat: 4 x2`, and a block can have several `repeat:` lines).
+- On a build page the first `stack` block is drawn beside the picks, wherever it's written, and a small unlabelled copy goes on the build's card on its blueprint page. Its layers MUST follow the picks. In Obsidian it reads as plain text.
+
 A method (`content/essays/methods/`) explains how a kind of food or a cooking process works in general: the principle first, then the variables, the stages, why each one is there, how it fails, and the recipes that use it. The folder decides what's a method. Each page MUST carry the `method` tag: the essays `_index.md` cascades it to a method page with no `tags`, but a page that sets its own `tags` replaces the cascade, so list `method` there. What counts as a method, and how methods relate to blueprints, recipes, and stories, is in docs/METHODS.md.
 
 ```yaml

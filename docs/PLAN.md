@@ -47,10 +47,10 @@ Mocked 2026-10-10 in `mockups/methods-pages.html`; the template work is queued i
 **Phase 4: stack diagrams**
 
 - [x] Mock the ` ```stack ` block in `mockups/` and settle it in `mockups/STYLE.md` and `style.html`. *Done 2026-10-10: exploded view in the formula icons' style, labels on the right, no assembled view (`mockups/exploded-builds.html`, STYLE.md "Exploded build diagram"). Accepted as v1; refinement is phase 6.*
-- [ ] Fugu: the layer kit (`themes/fugu/assets/icons/layers/`, beside the formula icons): the 20 layers in `mockups/exploded-builds.html` §2, as SVG files at a common width with their own heights, in the formula icons' style. *Sent to fugu-agent 2026-10-10 with the render hook.*
-- [ ] Fugu: `render-codeblock-stack.html` (labels on the right, `caption:`, `repeat:` as a `× n` bracket, the unknown-key warning) and a compact card partial, `partials/stack-strip.html`. *Queued in Fugu PLAN.md Features, "Stack diagrams (exploded builds)" (`84b1d50`, 2026-10-10), after the concept pages; the mockup's JS is the reference implementation.*
-- [ ] `docs/FORMAT.md`: document the ` ```stack ` block once Fugu settles the `repeat:` syntax.
-- [ ] First diagrams: burger construction, sandwich construction, lasagne layering.
+- [x] Fugu: the layer kit (`themes/fugu/assets/icons/layers/`, beside the formula icons): the 20 layers in `mockups/exploded-builds.html` §2, as SVG files at a common width with their own heights, in the formula icons' style. *Done 2026-10-11, Fugu `e513c2f` (v1 drawings), exported by `mockups/export-layers.mjs`; round 4 re-exported in Fugu `8a05f4d`. Not pushed yet; bump the submodule once it is. `onion-minced` (added for the fast-food double after that export) still needs exporting.*
+- [x] Fugu: `render-codeblock-stack.html` (labels on the right, `caption:`, `repeat:` as a `× n` bracket, the unknown-key warning) and a compact card partial, `partials/stack-strip.html`. *Done 2026-10-11, Fugu `e513c2f`; `.stack` styles in `custom.css` (`b48985b`).* *Queued in Fugu PLAN.md Features, "Stack diagrams (exploded builds)" (`84b1d50`, 2026-10-10), after the concept pages; the mockup's JS is the reference implementation.*
+- [x] `docs/FORMAT.md`: document the ` ```stack ` block once Fugu settles the `repeat:` syntax. *Done 2026-10-11, "Stack diagrams" under Essays.*
+- [ ] First diagrams: burger construction, sandwich construction, lasagne layering. *Burgers done 2026-10-11: a `stack` block on each of the three builds, following its picks (the fast-food double in McDouble order). Check them on the site once the submodule is bumped. Sandwich and lasagne wait for a blueprint or recipe to put them on.*
 
 **Phase 5: documentation**
 

@@ -20,6 +20,18 @@ description: "The drive-in deluxe burger: a thin, griddled patty under cold lett
 
 Deluxe means lettuce and tomato (it's [[White Spot burgers]] language). The build works because everything above the patty is cold, crunchy, sharp, or sour, and the patty below brings the salt, fat, and savoury depth. Every part is there because the alternative was tried and lost.
 
+```stack
+bun-top               | Toasted bun                   | soft, toasted
+lettuce               | Shredded lettuce              | cold crunch
+tomato                | Thin tomato                   | juicy, acid
+onion-raw             | Paper-thin raw purple onion   | sharp
+pickle                | Double-sour pickles           | sour
+onion-fried           | Onion sautéed in the beef fat | sweet
+patty-thin            | Thin patty, 140 g             | salt, fat, savoury
+sauce-ketchup-mustard | Ketchup and mustard           | sweet, sharp
+bun-base              | Toasted bun                   | barrier
+```
+
 ## Where it comes from
 
 This is the diner and drive-in burger of the 1960s, the burger [[White Spot burgers]] still makes: built from ingredients a drive-in could buy reliably and cooked fast on a flat-top. Most of the picks are that kitchen's constraints.

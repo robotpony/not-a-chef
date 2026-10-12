@@ -19,6 +19,17 @@ description: "The fast-food double: two thin, soft patties with processed cheese
 
 This is the rich build. Where the drive-in deluxe is all contrast, this one leans into salt and fat: two thin, soft patties with a slice of processed cheese melted between them. Pickles, ketchup, mustard, and onion keep it from going heavy. It's the one case where cheese earns its place on a burger: a thin slice of Kraft Deluxe on a McDouble or a Quarter Pounder.
 
+```stack
+bun-top               | Small bun, pressed flat        | soft
+sauce-ketchup-mustard | Ketchup and mustard, 5:1       | sweet, sharp
+onion-minced          | Rehydrated dried onion         | mellow, sharp
+pickle                | Thin pickles                   | the only sour
+patty-thin            | Thin patty, 75 g               | savoury
+cheese                | Processed cheese, half a slice | salt, fat
+patty-thin            | Thin patty, 75 g               | savoury
+bun-base              | Small bun                      | barrier
+```
+
 ## Why these picks
 
 - **Two thin patties, not one thick one.** Twice the crust, and the cheese melts between them.

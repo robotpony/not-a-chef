@@ -19,6 +19,15 @@ description: "The grilled onion burger: a smashed patty and a pile of onion cook
 
 This build is about one ingredient: onion, cooked down in the beef fat until it's sweet. Where the drive-in deluxe gets its contrast from cold crunch, this one is sweet and savoury with one soft, even texture.
 
+```stack
+bun-top     | Soft bun                  | soft
+pickle      | Pickle                    | the only sour
+onion-fried | Grilled onion, piled on   | sweet
+patty-smash | Paper-thin patty, smashed | lacy, crisp edge
+mustard     | Yellow mustard            | sharp
+bun-base    | Soft bun                  | soft
+```
+
 There are two ways to get the onion there. Both are variations on the same idea.
 
 ## Grilled alongside
