@@ -5,7 +5,7 @@ draft: true
 working_on: "A stub for the timeline: Bob's Big Boy, the first double-decker. Era from Bruce."
 tags: [method, burgers]
 era: 1937
-description: ""
+description: "Bob's Big Boy, 1937: the first double-decker. Not written yet."
 ---
 
 <!-- TODO: what this build is, in a paragraph. -->

@@ -59,12 +59,12 @@
 {{ $essayCount := add (len $memories) (len $otherEssays) }}
 {{ $methods := partialCached "method/all.html" "all" "all" }}
 {{ $methodsList := partialCached "method/list-page.html" . "list" }}
-{{ $bpTaxonomy := site.Params.fugu.methods.taxonomy | default "" }}
-{{ $blueprints := slice }}
-{{ with and $bpTaxonomy (site.GetPage (printf "/%s" $bpTaxonomy)) }}{{ $blueprints = .Pages.ByTitle }}{{ end }}
+{{/* Blueprints are folders under methods (docs/METHODS.md); a technique
+  is a method in none of them. */}}
+{{ $blueprints := partialCached "blueprint/all.html" "all" "all" }}
 {{ $techniques := slice }}
 {{ range $methods }}
-  {{ if not (and $bpTaxonomy (index .Params $bpTaxonomy)) }}{{ $techniques = $techniques | append . }}{{ end }}
+  {{ if not (partial "blueprint/of.html" .) }}{{ $techniques = $techniques | append . }}{{ end }}
 {{ end }}
 
 <section class="hero">
@@ -116,19 +116,18 @@
           <section class="bp">
             <div class="bp-head">
               <a class="bp-name" href="{{ .RelPermalink }}">{{ partialCached "method/icon.html" . "icon" | safeHTML }}{{ .Title }}</a>
-              <span class="bp-count">{{ with $info.parts }}{{ $info.written }} of {{ len . }} parts{{ else }}{{ len $info.recipes }} recipes{{ end }}{{ with $info.builds }} · {{ len . }} {{ cond (eq (len .) 1) "build" "builds" }}{{ end }}</span>
+              <span class="bp-count">{{ with $info.parts }}{{ len . }} {{ cond (eq (len .) 1) "part" "parts" }}{{ end }}{{ with $info.builds }}{{ if $info.parts }} · {{ end }}{{ len . }} {{ cond (eq (len .) 1) "build" "builds" }}{{ end }}</span>
             </div>
             {{ with .Description }}<p class="bp-desc">{{ . }}</p>{{ end }}
             {{ with $info.parts }}
               <ol class="parts-inline">
                 {{ range . }}
-                  {{ $part := . }}
-                  <li{{ if not .methods }} class="todo"{{ end }}><i>{{ printf "%02d" .n }}</i>{{ with .methods }}<a href="{{ (index . 0).RelPermalink }}">{{ $part.name }}</a>{{ else }}{{ .name }}{{ end }}</li>
+                  <li><i>{{ printf "%02d" .n }}</i><a href="{{ .page.RelPermalink }}">{{ .name }}</a></li>
                 {{ end }}
               </ol>
             {{ end }}
             {{ with $info.builds }}
-              <div class="opts"><span class="opt-pill"><b>Builds</b></span>{{ range . }}<a class="opt-pill" href="{{ .RelPermalink }}">{{ .Params.build_name }}</a>{{ end }}</div>
+              <div class="opts"><span class="opt-pill"><b>Builds</b></span>{{ range . }}<a class="opt-pill" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}</div>
             {{ end }}
           </section>
         {{ end }}

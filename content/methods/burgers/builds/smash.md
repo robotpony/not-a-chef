@@ -5,7 +5,7 @@ draft: true
 working_on: "A stub for the timeline: the smash burger. Era approximate."
 tags: [method, burgers]
 era: 2010
-description: ""
+description: "The smash burger, from the 2010s. Not written yet."
 ---
 
 <!-- TODO: what this build is, in a paragraph. -->
