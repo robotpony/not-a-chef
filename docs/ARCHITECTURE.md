@@ -91,24 +91,25 @@ The site is a small ontology: a few kinds of page, and a few relations between t
 | Recipe | One dish with fixed quantities | `content/recipes/` |
 | Story | An essay that gives the reason for a method | `content/essays/<type>/` |
 | Method | A general pattern: technique, ratio, or part of a blueprint | `content/methods/` |
-| Blueprint | A dish type made of parts | `blueprint` taxonomy, `content/blueprint/<slug>/_index.md` |
-| Build | A named combination of one pick per part, with a profile | A method page with `build_name`, `profile`, `picks` |
+| Blueprint | A dish type made of parts | A folder under methods, `content/methods/<slug>/_index.md` |
+| Part | A slot every dish of the type fills | A page in `content/methods/<slug>/parts/`, ordered by `weight` |
+| Build | A named combination of one pick per part, with a profile | A page in `content/methods/<slug>/builds/`, with `era` and a `## Picks` section |
 | Option | A choice within a part (thick, thin, paper thin) | A row under `## Options` in the part's method |
-| Concept | A named idea with a definition, icon, chip, essay, and list | tag `_index.md` (principle), `[fugu.development]` (status), the `method` tag and blueprint terms (method) |
+| Concept | A named idea with a definition, icon, chip, essay, and list | tag `_index.md` (principle), `[fugu.development]` (status), the `method` tag and blueprint folders (method) |
 | Glossary term | A definition only | `content/reference/glossary.md` |
 
 | Relation | Carried by |
 |---|---|
 | Recipe uses method | Wiki link in the recipe |
-| Method is part of blueprint | `blueprint` + `part` frontmatter |
-| Build picks an option per part | `picks` on the build page |
-| Recipe is an instance of build | `build_name` on the recipe, matching the build page's `build_name` |
+| Part or build is in a blueprint | Folder: `<slug>/parts/`, `<slug>/builds/` |
+| Build picks an option per part | `## Picks` in the build's body |
+| Recipe is an instance of build | Wiki link in the build's `## Recipes` |
 | Method builds on technique method | Wiki link |
-| Story motivates method or blueprint | `blueprint` on the story; wiki link |
+| Story motivates method or blueprint | Wiki link (the blueprint's `## Further reading`) |
 | Principle applies to recipe | The principle's tag |
 | Test kitchen marks a page | `draft: true` |
 
-A folder is an exclusive, mandatory tag that also sets the URL and template; a tag or taxonomy is optional and many-to-many. So whatever a page can only be one of (recipe, essay type, method) is a folder, and whatever it can be several of (tags, cuisine, blueprint) is a taxonomy. `content/methods/_index.md` cascades the `method` tag onto its pages, so the folder and the tag agree.
+A folder is an exclusive, mandatory tag that also sets the URL and template; a tag or taxonomy is optional and many-to-many. So whatever a page can only be one of (recipe, essay type, method, a blueprint's part or build) is a folder, and whatever it can be several of (tags, cuisine) is a taxonomy. Relationships are folders or wiki links; frontmatter holds only metadata. `content/methods/_index.md` cascades the `method` tag onto its pages, so the folder and the tag agree.
 
 Concept pages (principle, status, method) are meant to share one set of Fugu partials (docs/PLAN.md, Methods phase 2). Until then, principle pages use `term.html`'s `principle: true` branch, test kitchen uses `partials/development/`, and methods and blueprints render as plain term pages.
 

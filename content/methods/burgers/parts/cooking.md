@@ -4,8 +4,7 @@ date: 2026-10-10
 draft: true
 working_on: "First draft. The grill and thick-patty options need your notes."
 tags: [method, burgers, beef, technique]
-blueprint: [burgers]
-part: Cooking
+weight: 3
 description: "Cooking a burger patty is about crust: a hot surface, a thin patty, one flip, and leaving it alone in between."
 ---
 A burger patty cooks for its crust. The surface has to be hot enough to brown the meat before the thin patty overcooks, so the pan is hotter than for almost anything else, and the patty stays still until it's ready to flip. Done is medium to medium-well, never tough.

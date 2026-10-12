@@ -1,6 +1,6 @@
 ---
 title: Chicken patties
-tags: [mains, bases, weeknight, dairy-free]
+tags: [mains, bases, weeknight, dairy-free, burgers]
 source: original
 date: 2023-01-01
 servings: 4
@@ -9,7 +9,6 @@ cook_time: 15 min
 total_time: 35 min (plus brine)
 cuisine: American
 draft: false
-blueprint: [burgers]
 ---
 
 I love chicken sandwiches. The ground chicken patties bread nicely, but are also great on their own.

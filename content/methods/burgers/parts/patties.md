@@ -4,8 +4,7 @@ date: 2026-10-10
 draft: true
 working_on: "First draft, pulled together from the burger recipes and the Food Log."
 tags: [method, burgers, beef]
-blueprint: [burgers]
-part: Patty construction
+weight: 1
 description: "How to make a burger patty: the grind, the fat, the weight, and the one rule that matters most, which is to leave the meat alone."
 ---
 A burger patty is ground meat, portioned and shaped, and almost nothing else. Its texture comes from how little you handle it, and its size decides everything after it: how it cooks, how much of it ends up as crust, and which bun it fits. Most burgers here use thin patties, because a thin patty is mostly crust and a burger is mostly about crust.
@@ -49,4 +48,4 @@ Lean meats need help. Turkey and chicken don't have the fat to brown and stay ju
 
 ## Recipes
 
-[[White Spot burgers]] (smashed), [[McDouble]] (double-ground, pressed and frozen), [[Turkey burgers]] (pressed thin).
+[[White Spot burgers]] (smashed), [[McDouble]] (double-ground, pressed and frozen), [[Turkey burgers]] (pressed thin). Other meats and plants: [[Chicken patties]], [[Pan-fried chicken burger]], [[Veg patties]], [[Vegan burger]].

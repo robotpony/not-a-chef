@@ -1,14 +1,12 @@
 ---
 title: Chef John’s hamburger buns
-tags: [breads]
+tags: [breads, burgers]
 source: family
 date: 2026-06-08
 servings: 8 buns
 cook_time: 15–18 min
 cuisine: American
 draft: false
-blueprint: [burgers]
-part: Assembly
 ---
 
 Based on a recipe from [Fooooood Wishes Dot Com](https://www.allrecipes.com/recipe/233652/homemade-hamburger-buns/). If you didn’t sing that in your head, go find John’s videos on YouTube and watch them until you do.

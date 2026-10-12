@@ -4,8 +4,7 @@ date: 2026-10-10
 draft: true
 working_on: "First draft, mostly from The quest for the perfect burger."
 tags: [method, burgers]
-blueprint: [burgers]
-part: Assembly
+weight: 4
 description: "Building a burger: a toasted bun that fits the patty, something cold and crunchy, something sharp, and a few minutes wrapped in paper."
 ---
 
@@ -46,6 +45,6 @@ Wrap the finished burger in burger paper or parchment, or cover it in a pan with
 
 ## Recipes
 
-[[White Spot burgers]], [[McDouble]], [[Turkey burgers]].
+[[White Spot burgers]], [[McDouble]], [[Turkey burgers]]. The bun: [[Chef John's hamburger buns]].
 
 <!-- TODO: does the order above match how you build at home? White Spot puts lettuce on top and the patty low; McDouble puts the condiments on the patty. -->

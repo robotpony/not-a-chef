@@ -14,7 +14,6 @@ prep_time: 20 min (plus 30 min chill)
 cook_time: 10 min
 draft: true
 cuisine: American
-blueprint: [burgers]
 ---
 These vegetable patties are quick to make and delicious. They're perfect when you're looking for a lighter sandwich or salad topping.
 

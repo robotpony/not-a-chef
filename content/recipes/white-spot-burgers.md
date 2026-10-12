@@ -6,8 +6,6 @@ date: 2026-06-08
 servings: 4
 cuisine: Canadian
 draft: false
-blueprint: [burgers]
-build_name: Drive-in deluxe
 ---
 
 This is Bruce’s take on the classic White Spot Triple “O” deluxe burger (lettuce and tomatoes make it deluxe; cheddar and bacon make it a “BC” burger).

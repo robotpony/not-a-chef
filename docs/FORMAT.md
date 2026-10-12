@@ -22,13 +22,7 @@ Recipes (`content/recipes/`), essays (`content/essays/`), reference pages (`cont
 | `working_on` | MAY | string | For drafts: one line on what's being tried next ("Getting them to hold without the egg"), shown under the banner and in the card's popover. |
 | `pinned` | MAY | boolean | Floats the page to the top of its section's list, its term pages, and search. Rare by design, not a general sort override. See DESIGN.md. |
 | `source` | MAY | string | `original`, `family`, a URL, or a book title. SHOULD on recipes. |
-| `blueprint` | MAY | string[] | Blueprints (dish types made of parts) the page belongs to (`[burgers]`), a taxonomy like `cuisine`: the blueprint's page at `/blueprint/<slug>/` collects its methods, recipes, and stories. Its own `content/blueprint/<slug>/_index.md` holds its definition and the order of its parts. See docs/METHODS.md. |
-| `part` | MAY | string | On a method page in a blueprint: which part it covers (`Patty construction`), one of the blueprint's `parts`. On a recipe in a blueprint: which part it makes (`Sauces`), so it's listed beside that part on the blueprint's page. A whole dish uses `build_name` instead. |
-| `build_name` | MAY | string | On a build page (a method in a blueprint): the build's name (`Drive-in deluxe`), unique within the blueprint. On a recipe: the build it's an instance of, the same name. |
-| `profile` | MAY | string | On a build page: one line of free text on what it tastes and feels like (`Cold crunch and sharp against a salty patty`). |
-| `origin` | MAY | string | On a build page: where and when it comes from, short free text (`Drive-in, 1960s`). |
-| `era` | MAY | int | On a build page: a year that places it on the blueprint's lineage timeline (`1960`). |
-| `picks` | MAY | string[] | On a build page: one `"Part: pick"` string per part, in the blueprint's part order (`"Patty construction: thin, 140 g"`). |
+| `era` | MAY | int | On a build page (`content/methods/<blueprint>/builds/`): a year that places it on the blueprint's lineage timeline (`1960`). |
 
 Don't hand-maintain `lastmod`. Last-modified comes from git (`enableGitInfo`): both sidebars show **Date**, plus **Updated** from the file's last commit when that falls on a different day.
 
@@ -325,7 +319,7 @@ Use `##` headings only when sections are long enough that a reader needs navigat
 
 A reference essay (`content/essays/reference-essays/`) defines one concept and is tagged with that term, so the term's tag page can link to it. A term that doesn't need a whole essay gets a glossary entry in `content/reference/glossary.md` instead.
 
-A part's method lists its choices under `## Options`, as a table with `Option`, `Pick it when`, and `Changes` columns; options aren't pages. A build is a method page with `build_name`, `profile`, and `picks` (docs/METHODS.md, Inside a blueprint). Its body doesn't repeat the picks or list its recipes; the template renders both from front matter. A build page may add `## Where it comes from`: its era and kitchen, then a `Constraint` / `Pick it explains` table.
+A blueprint is a folder under methods (`content/methods/burgers/`): its `_index.md` is the blueprint's page, its parts are the pages in `parts/`, ordered by `weight`, and its builds are the pages in `builds/`, placed on the timeline by `era` (docs/METHODS.md, Inside a blueprint). A part lists its choices under `## Options`, as a table with `Option`, `Pick it when`, and `Changes` columns; options aren't pages. A build's body has, in order: an opening paragraph, `## Picks` (the profile in one line, then `- **Part:** pick` per part, in the parts' order, then its `stack` block), `## Where it comes from` (its era and kitchen, then a `Constraint` / `Pick it explains` table), `## Why these picks`, `## How it fails`, `## Variations`, and `## Recipes` (wiki links to the recipes that are this build). Recipes carry no blueprint fields; the method lists them.
 
 ### Stack diagrams
 
@@ -344,7 +338,7 @@ bun-base   | Toasted bun       | barrier
 - The label says what the layer is, with the pick's quantity when there is one; the role says what it does for the whole. Keep both short.
 - Patties are griddled unless the key says `-grilled`; only a grilled patty shows grill marks.
 - Optional lines: `caption: <text>`, and `repeat: <from>-<to> x<n>` to mark layers as repeated (`repeat: 3-5 x3` draws a `× 3` bracket beside layers 3 to 5; `×` works for `x`, a single layer works, as in `repeat: 4 x2`, and a block can have several `repeat:` lines).
-- On a build page the first `stack` block is drawn beside the picks, wherever it's written, and a small unlabelled copy goes on the build's card on its blueprint page. Its layers MUST follow the picks. In Obsidian it reads as plain text.
+- On a build page the first `stack` block goes under `## Picks`, and a small unlabelled copy goes on the build's card on its blueprint page. Its layers MUST follow the picks. In Obsidian it reads as plain text.
 
 A method (`content/methods/`) explains how a kind of food or a cooking process works in general: the principle first, then the variables, the stages, why each one is there, how it fails, and the recipes that use it. The folder decides what's a method. Each page MUST carry the `method` tag: the folder's own `_index.md` cascades it to a method page with no `tags`, but a page that sets its own `tags` replaces the cascade, so list `method` there. What counts as a method, and how methods relate to blueprints, recipes, and stories, is in docs/METHODS.md.
 
@@ -353,8 +347,6 @@ A method (`content/methods/`) explains how a kind of food or a cooking process w
 title: Reverse cooking
 date: 2026-09-24
 tags: [method, technique, temperature]
-blueprint: [burgers]
-part: Cooking
 ---
 ```
 
@@ -371,7 +363,7 @@ What a checker can rely on. `/lint` checks the first group today, and the build 
 - `date` is YYYY-MM-DD; `draft` is a boolean if present; `tags` is a list of plain strings, no `#`.
 - A recipe has at least one ingredients list and one method.
 - Formula blocks use known icon keys, one operator, and at most five slots.
-- Every page in `content/methods/` carries the `method` tag; a `part` (on a method or a recipe) names one of its blueprint's `parts`; a recipe's `build_name` matches a build page's `build_name` in the same blueprint.
+- Every page in `content/methods/` carries the `method` tag; every part in a blueprint's `parts/` has a `weight`; a build in `builds/` has a `## Picks` section whose bullets each start with a part's name.
 
 **For the validator**
 - Frontmatter types match the tables above.

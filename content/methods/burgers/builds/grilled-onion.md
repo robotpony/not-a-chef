@@ -4,21 +4,21 @@ date: 2026-10-10
 draft: true
 working_on: "First draft. Needs a recipe behind it, and its history."
 tags: [method, burgers, onion]
-blueprint: [burgers]
-build_name: Grilled onion
-profile: Sweet and savoury; one soft, even texture.
-origin: Lunch counter, 1922 railway strike
 era: 1922
-picks:
-  - "Patty construction: Paper thin, smashed"
-  - "Patty seasoning: After cooking"
-  - "Cooking: Onion grilled in the beef fat alongside the patty, or smashed into it"
-  - "Assembly: A pile of cooked onion, a pickle for the only sharp note"
-  - "Sauces: Yellow mustard"
 description: "The grilled onion burger: a smashed patty and a pile of onion cooked sweet in the beef fat."
 ---
 
 This build is about one ingredient: onion, cooked down in the beef fat until it's sweet. Where the drive-in deluxe gets its contrast from cold crunch, this one is sweet and savoury with one soft, even texture.
+
+## Picks
+
+Sweet and savoury; one soft, even texture.
+
+- **Patty construction:** Paper thin, smashed
+- **Patty seasoning:** After cooking
+- **Cooking:** Onion grilled in the beef fat alongside the patty, or smashed into it
+- **Assembly:** A pile of cooked onion, a pickle for the only sharp note
+- **Sauces:** Yellow mustard
 
 ```stack
 bun-top     | Soft bun                  | soft
@@ -39,4 +39,12 @@ Slice the onion thin and cook it on the griddle next to the patty, in the fat th
 
 Pile thin-sliced onion on the meatball and smash the patty onion side down, so the onion cooks into the meat. It's a shortcut for grilling the onion separately: a similar effect in one step, and the onion soaks up the griddle juices instead of leaving them in the pan.
 
-<!-- TODO: a recipe for either version, and "Where it comes from": the smashed-in fried onion burger, stretched with onion during the 1922 railway strike. -->
+## Where it comes from
+
+Lunch counter, 1922 railway strike.
+
+<!-- TODO: the smashed-in fried onion burger, stretched with onion during the 1922 railway strike. -->
+
+## Recipes
+
+<!-- TODO: a recipe for either version. -->

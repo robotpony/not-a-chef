@@ -1,6 +1,6 @@
 ---
 title: In-N-Out burger spread
-tags: [sauces, american, quick, make-ahead]
+tags: [sauces, american, quick, make-ahead, burgers]
 source: original
 date: 2026-07-07
 portions: about 1 cup (250 ml)
@@ -8,8 +8,6 @@ prep_time: 10 min
 total_time: 1 hr 10 min (mostly chilling)
 cuisine: American
 draft: false
-blueprint: [burgers]
-part: Sauces
 ---
 
 Sometimes I'm craving a diner-style griddle burger with a classic hamburger sauce. This is a fairly close match to a popular burger chain that hasn't made it to our region yet.

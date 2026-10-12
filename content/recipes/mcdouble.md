@@ -10,8 +10,6 @@ total_time: 15 min
 cuisine: American
 aliases: [/recipes/mcburgers/]
 draft: false
-blueprint: [burgers]
-build_name: McDouble
 ---
 
 A very cravable burger. This is the closest I've gotten to perfecting it, along with its little sibling, the single drive-thru hamburger.

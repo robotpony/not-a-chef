@@ -4,8 +4,7 @@ date: 2026-10-10
 draft: true
 working_on: "First draft. Needs a word on onion powder and on seasoning chicken and plant patties."
 tags: [method, burgers, seasoning]
-blueprint: [burgers]
-part: Patty seasoning
+weight: 2
 description: "Salt goes on the outside of a burger patty, never in it, and the best time is as it comes off the heat."
 ---
 

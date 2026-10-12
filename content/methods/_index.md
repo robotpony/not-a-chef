@@ -4,11 +4,13 @@ description: "How a kind of food or a cooking process works in general, so you c
 # Everything in this folder is a method (docs/METHODS.md). This tags a
 # method page that has no tags of its own; a page that sets `tags`
 # replaces it, so list `method` there yourself (/lint checks).
-# The target keeps it off this page itself, which would otherwise show up
-# as a card on the method tag page.
+# The target keeps it off this page and the blueprint pages
+# (content/methods/<blueprint>/_index.md), which would otherwise show up as
+# cards on the method tag page.
 cascade:
   - target:
       path: "/methods/**"
+      kind: page
     tags: [method]
 ---
 
