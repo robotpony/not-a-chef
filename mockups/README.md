@@ -80,7 +80,9 @@ in a browser — no build step.
   (`table-layout: fixed`), and the parts list's full-width lines answered
   with recipes beside the parts, as a sticky sidebar (option A) or a
   per-part column fed by a new `part` field on recipes (option B,
-  recommended). Open; not yet built.
+  recommended). Decided 2026-10-11: §1 and option B; the empty state
+  stays, since recipes for the empty parts are coming. Built the same day
+  (`STYLE.md` Methods and blueprint pages).
 
 - **`exploded-builds.html`**: proposal (2026-10-10) for drawing a build as
   an exploded view (layers pulled apart, each drawn as the thing, leader
