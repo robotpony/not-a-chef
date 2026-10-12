@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blueprint page parts</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  /* Tokens from STYLE.md, byte-identical to the other mockups. */
+  :root{
+    --bg:#F3F3EC; --surface:#FBFBF6; --surface-2:#EAEBDF;
+    --ink:#23241E; --ink-muted:#63645A; --ink-faint:#93948A;
+    --border:#DCDCCE; --border-strong:#C7C8B4;
+    --accent:#A67330; --accent-strong:#7C361D; --accent-soft:#F6EADA;
+    --highlight:#997F29; --highlight-soft:#F6F1D5;
+    --flag:#3D638F; --flag-soft:#E1EAF4;
+    --principle:#247B50; --principle-strong:#1D6743; --principle-soft:#DBF5E8;
+    --focus:#A67330;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+      --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+      --border:#383A2C; --border-strong:#4A4C3A;
+      --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+      --highlight:#DDCC88; --highlight-soft:#342D19;
+      --flag:#97B8D8; --flag-soft:#1D2835;
+      --principle:#8ED7B4; --principle-strong:#A7E2C4; --principle-soft:#1B3428;
+      --focus:#D3A569;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+    --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+    --border:#383A2C; --border-strong:#4A4C3A;
+    --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+    --highlight:#DDCC88; --highlight-soft:#342D19;
+    --flag:#97B8D8; --flag-soft:#1D2835;
+    --principle:#8ED7B4; --principle-strong:#A7E2C4; --principle-soft:#1B3428;
+    --focus:#D3A569;
+  }
+
+  *{box-sizing:border-box;}
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:'Lora',Georgia,serif; font-size:16px; line-height:1.5; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3,h4{ font-family:'Libre Franklin',system-ui,sans-serif; margin:0; }
+  p{ margin:0; }
+  a{ color:inherit; }
+  code{ font-family:'IBM Plex Mono',monospace; font-size:.85em; background:var(--surface-2); padding:1px 5px; border-radius:3px; }
+  button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
+  :focus-visible{ outline:2px solid var(--focus); outline-offset:2px; }
+
+  /* ---------- Mockup chrome (same as methods-top-level.html) ---------- */
+  .topbar{ position:sticky; top:0; z-index:30; background:var(--surface); border-bottom:1px solid var(--border-strong); }
+  .topbar-inner{ max-width:1180px; margin:0 auto; padding:12px 16px; display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+  .tb-title{ font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:.95rem; margin-right:auto; }
+  .tb-jump{ display:flex; gap:2px; flex-wrap:wrap; font-family:'Libre Franklin',sans-serif; }
+  .tb-jump a{ font-size:.76rem; font-weight:600; color:var(--ink-muted); text-decoration:none; padding:6px 9px; border-radius:4px; }
+  .tb-jump a:hover{ color:var(--ink); background:var(--surface-2); }
+  .theme-toggle{ font-family:'Libre Franklin',sans-serif; font-size:.75rem; font-weight:600; padding:7px 10px; border:1px solid var(--border-strong); border-radius:3px; color:var(--ink-muted); }
+  main{ max-width:1180px; margin:0 auto; padding:8px 16px 100px; }
+  .intro{ padding:34px 0 26px; border-bottom:1px solid var(--border); margin-bottom:34px; }
+  .eyebrow{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--accent-strong); display:block; margin-bottom:10px; }
+  .intro h1{ font-size:2rem; line-height:1.15; margin-bottom:12px; }
+  .lede{ color:var(--ink-muted); max-width:72ch; }
+  .lede + .lede{ margin-top:10px; }
+  .mock{ margin-bottom:64px; scroll-margin-top:70px; }
+  .mock-label{ font-family:'Libre Franklin',sans-serif; font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-muted); padding-bottom:8px; border-bottom:1px solid var(--border); margin-bottom:6px; }
+  .mock-note{ color:var(--ink-muted); font-size:.92rem; max-width:76ch; margin:8px 0 18px; }
+  .frame{ border:1px dashed var(--border-strong); border-radius:10px; background:var(--bg); padding:28px 24px; margin:0 auto; transition:max-width .2s; }
+  .frame.phone-w{ max-width:390px; padding:20px 16px; }
+  .ann{ font-family:'IBM Plex Mono',monospace; font-size:.66rem; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.04em; display:block; margin:0 0 8px; }
+  .ask{ background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--flag); border-radius:0 6px 6px 0; padding:16px 20px; margin-top:20px; max-width:80ch; }
+  .ask-label{ font-family:'Libre Franklin',sans-serif; font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--flag); display:block; margin-bottom:6px; }
+  .ask p, .ask li{ font-size:.92rem; }
+  .ask p + p, .ask ul{ margin-top:8px; }
+  .ask ul{ padding-left:20px; }
+  .seg{ display:inline-flex; border:1px solid var(--border-strong); border-radius:5px; overflow:hidden; font-family:'Libre Franklin',sans-serif; }
+  .seg button{ font-size:.78rem; font-weight:600; padding:7px 12px; color:var(--ink-muted); border-right:1px solid var(--border-strong); }
+  .seg button:last-child{ border-right:none; }
+  .seg button[aria-pressed="true"]{ background:var(--accent-soft); color:var(--accent-strong); }
+  .controls{ display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-bottom:14px; }
+
+
+  /* ---------- Site values (assets/css/custom.css) ---------- */
+  .subsection-title{ font-size:1.25rem; font-weight:700; margin:0 0 14px; }
+  .subsection-count{ font-family:'IBM Plex Mono',monospace; font-weight:400; font-size:.78rem; color:var(--ink-faint); margin-left:6px; }
+  .ann + .ann{ margin-top:-4px; }
+
+  /* Builds compared */
+  .table-scroll{ overflow-x:auto; }
+  .bc{ width:100%; border-collapse:collapse; font-size:.86rem; min-width:620px; }
+  .bc th, .bc td{ text-align:left; padding:9px 10px; border-bottom:1px solid var(--border); vertical-align:top; }
+  .bc thead th{ font-family:'Libre Franklin',sans-serif; font-size:.82rem; font-weight:700; }
+  .bc tbody th{ font-family:'Libre Franklin',sans-serif; font-size:.78rem; font-weight:600; color:var(--ink-muted); white-space:nowrap; width:1%; }
+  .bc .profile-row td{ border-bottom:2px solid var(--border-strong); }
+  .build-profile{ display:block; font-style:italic; padding-left:10px; border-left:2px solid var(--accent); }
+  .bc.fixed{ table-layout:fixed; }
+  .bc.fixed col.lab{ width:10.5rem; }
+  .bc.fixed tbody th{ width:auto; white-space:normal; }
+  .bc.fixed .profile-row th{ border-bottom:2px solid var(--border-strong); }
+  .bc.fixed .lab-head{ font-family:'IBM Plex Mono',monospace; font-weight:400; font-size:.66rem; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.05em; }
+
+  /* Parts, full */
+  .parts{ list-style:none; margin:0; padding:0; counter-reset:part; }
+  .parts > li{ counter-increment:part; display:grid; grid-template-columns:36px 1fr; gap:2px 10px; padding:14px 0; border-top:1px solid var(--border); align-items:baseline; }
+  .parts > li::before{ content:counter(part, decimal-leading-zero); font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--accent); grid-row:span 3; }
+  .part-name{ font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:1rem; }
+  .part-name a{ text-decoration:none; }
+  .part-method{ display:block; font-size:.92rem; color:var(--ink-muted); margin-top:2px; }
+  .part-method > a{ color:var(--ink); text-decoration:underline; text-decoration-color:var(--accent); text-underline-offset:2px; }
+  .opts{ display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+  .opt-pill{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; padding:2px 8px; border:1px solid var(--border-strong); border-radius:12px; color:var(--ink-muted); white-space:nowrap; }
+  .opt-pill b{ font-weight:600; color:var(--ink); }
+  .parts > li.todo .part-name{ color:var(--ink-faint); font-weight:500; }
+  .parts > li.todo::before{ color:var(--ink-faint); }
+  .parts > li.todo .part-method{ font-style:italic; color:var(--ink-faint); }
+
+  /* Option A: parts + a sticky recipes sidebar */
+  .with-side{ display:grid; grid-template-columns:minmax(0,1fr) 17rem; gap:40px; align-items:start; }
+  .phone-w .with-side{ grid-template-columns:1fr; gap:24px; }
+  @media (max-width:900px){ .with-side{ grid-template-columns:1fr; gap:24px; } }
+  .with-side .part-method{ max-width:62ch; }
+  .side{ position:sticky; top:76px; display:flex; flex-direction:column; gap:18px; }
+  .side-box{ border-top:2px solid var(--ink); padding-top:10px; }
+  .side-h{ font-family:'Libre Franklin',sans-serif; font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--ink); display:flex; justify-content:space-between; margin-bottom:6px; }
+  .side-h span{ font-family:'IBM Plex Mono',monospace; font-weight:400; color:var(--ink-faint); letter-spacing:0; }
+  .side-g{ font-family:'Libre Franklin',sans-serif; font-size:.64rem; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); margin:12px 0 2px; }
+  .side-g a{ color:var(--accent-strong); text-decoration:none; }
+  .srow{ display:flex; justify-content:space-between; align-items:baseline; gap:10px; padding:6px 0; border-bottom:1px solid var(--border); text-decoration:none; color:var(--ink); font-family:'Libre Franklin',sans-serif; font-size:.84rem; font-weight:600; }
+  .srow:hover{ color:var(--accent-strong); }
+  .srow i{ font-style:normal; font-family:'IBM Plex Mono',monospace; font-weight:500; font-size:.68rem; color:var(--accent-strong); white-space:nowrap; }
+  .srow .p{ font-family:'IBM Plex Mono',monospace; font-weight:400; font-size:.64rem; color:var(--ink-faint); }
+
+  /* Option B: each part row carries its own recipes */
+  .parts.split > li{ grid-template-columns:36px minmax(0,1fr) 15rem; column-gap:24px; }
+  .parts.split > li::before{ grid-row:span 3; }
+  .parts.split .pr{ grid-column:3; grid-row:1 / span 3; align-self:start; border-left:1px solid var(--border); padding-left:16px; }
+  .phone-w .parts.split > li{ grid-template-columns:36px minmax(0,1fr); }
+  .phone-w .parts.split .pr{ grid-column:2; grid-row:auto; border-left:none; padding-left:0; margin-top:8px; }
+  @media (max-width:820px){ .parts.split > li{ grid-template-columns:36px minmax(0,1fr); } .parts.split .pr{ grid-column:2; grid-row:auto; border-left:none; padding-left:0; margin-top:8px; } }
+  .pr-h{ font-family:'Libre Franklin',sans-serif; font-size:.62rem; font-weight:700; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-faint); display:block; margin-bottom:2px; }
+  .pr .srow{ font-size:.8rem; padding:4px 0; }
+  .pr .srow:last-child{ border-bottom:none; }
+  .pr.none .pr-h{ font-weight:500; text-transform:none; letter-spacing:0; font-family:'Lora',serif; font-style:italic; font-size:.8rem; }
+  .new-field{ font-family:'IBM Plex Mono',monospace; font-size:.6rem; font-weight:600; text-transform:uppercase; color:var(--flag); background:var(--flag-soft); border-radius:3px; padding:1px 5px; }
+</style>
+</head>
+<body>
+<div class="topbar"><div class="topbar-inner">
+  <span class="tb-title">Blueprint page: table and parts</span>
+  <nav class="tb-jump"><a href="#table">1 Table</a><a href="#a">2 Sidebar</a><a href="#b">3 Per part</a><a href="#ask">4 Choices</a></nav>
+  <button class="theme-toggle" id="theme">Theme</button>
+</div></div>
+<main>
+<section class="intro">
+  <span class="eyebrow">Proposal · 2026-10-11 · /blueprint/burgers/</span>
+  <h1>Blueprint page: even columns, and recipes beside the parts</h1>
+  <p class="lede">Two fixes to the blueprint page (<code>partials/blueprint/page.html</code>). The builds comparison sizes its columns by how much text each happens to have, and the parts list runs its descriptions the full page width, about 150 characters a line.</p>
+</section>
+
+<section class="mock" id="table">
+  <h2 class="mock-label">1 · Builds compared: equal columns</h2>
+  <p class="mock-note">The table is auto-sized, so each column takes as much width as its longest text: the deluxe's long assembly line wins, the grilled onion squeezes. Proposed: <code>table-layout: fixed</code>, the label column at a set width, and the builds splitting the rest evenly. Every build is the same kind of thing, so each gets the same width. Also: the profile row's heavier rule now runs under its label too (it stopped short), and the empty corner says <i>Part</i>.</p>
+  <div class="frame"><span class="ann">Now</span><div class="table-scroll"><table class="bc"><thead><tr><th></th><th><a href="#">Drive-in deluxe</a></th><th><a href="#">Fast-food double</a></th><th><a href="#">Grilled onion</a></th></tr></thead><tbody><tr class="profile-row"><th>Profile</th><td><span class="build-profile">Cold crunch and sharp against a salty patty.</span></td><td><span class="build-profile">Salty, sweet, and rich; little crunch.</span></td><td><span class="build-profile">Sweet and savoury; one soft, even texture.</span></td></tr><tr><th>Patty construction</th><td>One thin patty, 140 g, not mixed</td><td>Two thin patties, 75 g each, double-ground</td><td>Paper thin, smashed</td></tr><tr><th>Patty seasoning</th><td>Salt and pepper after cooking</td><td>4:2:1 salt, MSG, and pepper, after cooking</td><td>After cooking</td></tr><tr><th>Cooking</th><td>Griddled hot, flipped once</td><td>From frozen on a hot griddle, cheese on after the flip</td><td>Onion grilled in the beef fat alongside the patty, or smashed into it</td></tr><tr><th>Assembly</th><td>Shredded lettuce, thin tomato, paper-thin raw purple onion, onion sautéed in the beef fat, double-sour pickles, cracked pepper, on a toasted bun</td><td>Half a slice of processed cheese between the patties, thin pickles, rehydrated dried minced onion, on a small bun pressed a little flat</td><td>A pile of cooked onion, a pickle for the only sharp note</td></tr><tr><th>Sauces</th><td>Ketchup and mustard, kept separate</td><td>Ketchup and mustard, 5:1</td><td>Yellow mustard</td></tr></tbody></table></div><div style="height:28px"></div><span class="ann">Proposed</span><div class="table-scroll"><table class="bc fixed"><colgroup><col class="lab"><col><col><col></colgroup><thead><tr><th><span class=lab-head>Part</span></th><th><a href="#">Drive-in deluxe</a></th><th><a href="#">Fast-food double</a></th><th><a href="#">Grilled onion</a></th></tr></thead><tbody><tr class="profile-row"><th>Profile</th><td><span class="build-profile">Cold crunch and sharp against a salty patty.</span></td><td><span class="build-profile">Salty, sweet, and rich; little crunch.</span></td><td><span class="build-profile">Sweet and savoury; one soft, even texture.</span></td></tr><tr><th>Patty construction</th><td>One thin patty, 140 g, not mixed</td><td>Two thin patties, 75 g each, double-ground</td><td>Paper thin, smashed</td></tr><tr><th>Patty seasoning</th><td>Salt and pepper after cooking</td><td>4:2:1 salt, MSG, and pepper, after cooking</td><td>After cooking</td></tr><tr><th>Cooking</th><td>Griddled hot, flipped once</td><td>From frozen on a hot griddle, cheese on after the flip</td><td>Onion grilled in the beef fat alongside the patty, or smashed into it</td></tr><tr><th>Assembly</th><td>Shredded lettuce, thin tomato, paper-thin raw purple onion, onion sautéed in the beef fat, double-sour pickles, cracked pepper, on a toasted bun</td><td>Half a slice of processed cheese between the patties, thin pickles, rehydrated dried minced onion, on a small bun pressed a little flat</td><td>A pile of cooked onion, a pickle for the only sharp note</td></tr><tr><th>Sauces</th><td>Ketchup and mustard, kept separate</td><td>Ketchup and mustard, 5:1</td><td>Yellow mustard</td></tr></tbody></table></div></div>
+</section>
+
+<section class="mock" id="a">
+  <h2 class="mock-label">2 · Option A: a recipes sidebar beside the parts</h2>
+  <p class="mock-note">The parts take the main column, capped at a reading width, and a sticky sidebar lists all of the blueprint's recipes as compact rows: whole burgers under their build, then recipes for a part, then the not-burgers. It uses data the site already has, apart from the middle group, which the mock sorts by hand (see §4). On a phone it falls under the parts. The card grid of recipes further down could go, since the sidebar now covers it.</p>
+  <div class="controls"><div class="seg" data-target="fa"><button aria-pressed="true">Desktop</button><button aria-pressed="false" data-w="phone-w">Phone</button></div></div>
+  <div class="frame" id="fa">
+    <h3 class="subsection-title">Parts<span class="subsection-count">6</span></h3>
+    <div class="with-side"><ol class="parts"><li><span class="part-name"><a href=#>Patty construction</a></span><span class="part-method"><a href="#">Burger patties</a> How to make a burger patty: the grind, the fat, the weight, and the one rule that matters most, which is to leave the meat alone.</span><span class="opts"><span class="opt-pill"><b>Options</b></span><span class="opt-pill">Thin, pressed</span><span class="opt-pill">Paper thin, smashed</span><span class="opt-pill">Thick</span></span></li><li><span class="part-name"><a href=#>Patty seasoning</a></span><span class="part-method"><a href="#">Burger seasoning</a> Salt goes on the outside of a burger patty, never in it, and the best time is as it comes off the heat.</span><span class="opts"><span class="opt-pill"><b>Options</b></span><span class="opt-pill">Salt and pepper, after cooking</span><span class="opt-pill">Salt, pepper, and MSG</span><span class="opt-pill">Season the top, then smash</span></span></li><li><span class="part-name"><a href=#>Cooking</a></span><span class="part-method"><a href="#">Burger cooking</a> Cooking a burger patty is about crust: a hot surface, a thin patty, one flip, and leaving it alone in between.</span><span class="opts"><span class="opt-pill"><b>Options</b></span><span class="opt-pill">Smash</span><span class="opt-pill">Griddle from frozen</span><span class="opt-pill">Grill</span><span class="opt-pill">Reverse sear</span></span></li><li><span class="part-name"><a href=#>Assembly</a></span><span class="part-method"><a href="#">Burger assembly</a> Building a burger: a toasted bun that fits the patty, something cold and crunchy, something sharp, and a few minutes wrapped in paper.</span></li><li><span class="part-name"><a href=#>Sauces</a></span><span class="part-method"><a href="#">Burger sauces</a> Burger sauce is sweet, sour, and sharp in some ratio: ketchup and mustard kept apart, or blended with mayo and pickle into one spread.</span><span class="opts"><span class="opt-pill"><b>Options</b></span><span class="opt-pill">Ketchup and mustard, separate</span><span class="opt-pill">Bruce’s burger sauce</span><span class="opt-pill">In-N-Out burger spread</span><span class="opt-pill">Red sauce and sweet mayo</span><span class="opt-pill">Mayo and mustard</span></span></li><li class=todo><span class="part-name">Not burgers</span><span class="part-method">Not written yet.</span></li></ol><aside class="side">
+  <div class="side-box">
+    <div class="side-h">Recipes <span>10</span></div>
+    <div class="side-g">Builds</div>
+    <a class="srow" href="#">White Spot burgers <span class="p">Drive-in deluxe</span></a>
+    <a class="srow" href="#">McDouble <span class="p">Fast-food double</span></a>
+    <div class="side-g">For a part</div>
+    <a class="srow" href="#">Bruce’s burger sauce <i>5m</i></a>
+    <a class="srow" href="#">In-N-Out burger spread <i>10m</i></a>
+    <a class="srow" href="#">Chef John’s hamburger buns <i>18m</i></a>
+    <div class="side-g">Not burgers</div>
+    <a class="srow" href="#">Chicken patties <i>35m</i></a>
+    <a class="srow" href="#">Veg patties <i>30m</i></a>
+    <a class="srow" href="#">Pan-fried chicken burger</a>
+    <a class="srow" href="#">Turkey burgers</a>
+    <a class="srow" href="#">Vegan burger <i>10m</i></a>
+  </div>
+</aside></div>
+  </div>
+</section>
+
+<section class="mock" id="b">
+  <h2 class="mock-label">3 · Option B: each part carries its recipes</h2>
+  <p class="mock-note">No separate sidebar: each part row gets a right-hand column with the recipes that make that part. The sauces sit next to the sauce method, the buns next to assembly, the chicken and veg patties next to <i>Not burgers</i>. It answers "what do I actually cook for this part" in place, and the long lines shrink as a side effect. Whole-burger recipes (White Spot, McDouble) stay with their builds further up. On a phone the recipes fall under each part.</p>
+  <p class="mock-note">It needs one new field: <span class="new-field">part</span> on a recipe (<code>part: Sauces</code>), the same field method pages already use. Seven recipes would get it.</p>
+  <div class="controls"><div class="seg" data-target="fb"><button aria-pressed="true">Desktop</button><button aria-pressed="false" data-w="phone-w">Phone</button></div></div>
+  <div class="frame" id="fb">
+    <h3 class="subsection-title">Parts<span class="subsection-count">6</span></h3>
+    <ol class="parts split"><li><span class="part-name"><a href=#>Patty construction</a></span><span class="part-method"><a href="#">Burger patties</a> How to make a burger patty: the grind, the fat, the weight, and the one rule that matters most, which is to leave the meat alone.</span><span class="opts"><span class="opt-pill"><b>Options</b></span><span class="opt-pill">Thin, pressed</span><span class="opt-pill">Paper thin, smashed</span><span class="opt-pill">Thick</span></span><div class="pr none"><span class="pr-h">No recipes for this part yet.</span></div></li><li><span class="part-name"><a href=#>Patty seasoning</a></span><span class="part-method"><a href="#">Burger seasoning</a> Salt goes on the outside of a burger patty, never in it, and the best time is as it comes off the heat.</span><span class="opts"><span class="opt-pill"><b>Options</b></span><span class="opt-pill">Salt and pepper, after cooking</span><span class="opt-pill">Salt, pepper, and MSG</span><span class="opt-pill">Season the top, then smash</span></span><div class="pr none"><span class="pr-h">No recipes for this part yet.</span></div></li><li><span class="part-name"><a href=#>Cooking</a></span><span class="part-method"><a href="#">Burger cooking</a> Cooking a burger patty is about crust: a hot surface, a thin patty, one flip, and leaving it alone in between.</span><span class="opts"><span class="opt-pill"><b>Options</b></span><span class="opt-pill">Smash</span><span class="opt-pill">Griddle from frozen</span><span class="opt-pill">Grill</span><span class="opt-pill">Reverse sear</span></span><div class="pr none"><span class="pr-h">No recipes for this part yet.</span></div></li><li><span class="part-name"><a href=#>Assembly</a></span><span class="part-method"><a href="#">Burger assembly</a> Building a burger: a toasted bun that fits the patty, something cold and crunchy, something sharp, and a few minutes wrapped in paper.</span><div class="pr"><span class="pr-h">Recipes · 1</span><a class="srow" href="#">Chef John’s hamburger buns<i>18m</i></a></div></li><li><span class="part-name"><a href=#>Sauces</a></span><span class="part-method"><a href="#">Burger sauces</a> Burger sauce is sweet, sour, and sharp in some ratio: ketchup and mustard kept apart, or blended with mayo and pickle into one spread.</span><span class="opts"><span class="opt-pill"><b>Options</b></span><span class="opt-pill">Ketchup and mustard, separate</span><span class="opt-pill">Bruce’s burger sauce</span><span class="opt-pill">In-N-Out burger spread</span><span class="opt-pill">Red sauce and sweet mayo</span><span class="opt-pill">Mayo and mustard</span></span><div class="pr"><span class="pr-h">Recipes · 2</span><a class="srow" href="#">Bruce’s burger sauce<i>5m</i></a><a class="srow" href="#">In-N-Out burger spread<i>10m</i></a></div></li><li class=todo><span class="part-name">Not burgers</span><span class="part-method">Not written yet.</span><div class="pr"><span class="pr-h">Recipes · 5</span><a class="srow" href="#">Chicken patties<i>35m</i></a><a class="srow" href="#">Veg patties<i>30m</i></a><a class="srow" href="#">Pan-fried chicken burger<i></i></a><a class="srow" href="#">Turkey burgers<i></i></a><a class="srow" href="#">Vegan burger<i>10m</i></a></div></li></ol>
+  </div>
+</section>
+
+<section class="mock" id="ask">
+  <h2 class="mock-label">4 · Choices</h2>
+  <div class="ask">
+    <span class="ask-label">Recommendation</span>
+    <p><b>§1 regardless.</b> It's a CSS change plus a <code>colgroup</code>.</p>
+    <p><b>Option B for the parts.</b> A blueprint's point is that a burger is made of parts. Putting each recipe next to the part it makes keeps that structure, where a sidebar just lists the recipes again in another place. A is the faster win, since it needs no new data, but its middle group ("for a part") can't be sorted without the same <code>part</code> field anyway. Without it, A is just "No build yet · 8", which is what the page says now.</p>
+    <ul>
+      <li><b>Recipes section at the bottom:</b> with B it shrinks to the whole-burger recipes by build, or folds into the build cards (each already counts its recipes).</li>
+      <li><b>Not burgers:</b> it's still an unwritten part, but it already has five recipes. B shows them anyway, which is a nudge to write the method.</li>
+      <li><b>Where it lands:</b> templates and base CSS are Fugu's (fugu-agent); the <code>part</code> field on recipes, the colours, and the docs (<code>docs/METHODS.md</code>, <code>FORMAT.md</code>) are this site's.</li>
+    </ul>
+  </div>
+</section>
+</main>
+<script>
+  (function(){
+    var root=document.documentElement;
+    document.getElementById('theme').addEventListener('click',function(){
+      var dark=root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+      root.dataset.theme=dark?'light':'dark';
+    });
+    document.querySelectorAll('.seg').forEach(function(seg){
+      var frame=document.getElementById(seg.dataset.target);
+      seg.querySelectorAll('button').forEach(function(b){
+        b.addEventListener('click',function(){
+          seg.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed','false');});
+          b.setAttribute('aria-pressed','true');
+          frame.classList.toggle('phone-w',b.dataset.w==='phone-w');
+        });
+      });
+    });
+    document.querySelectorAll('a[href="#"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();});});
+  })();
+</script>
+</body>
+</html>

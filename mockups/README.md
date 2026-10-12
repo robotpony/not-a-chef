@@ -75,6 +75,13 @@ in a browser — no build step.
   since each build is its own page and so gets its own card, and A holds up
   better on a phone. Built the same day (`STYLE.md` Methods and blueprint pages).
 
+- **`blueprint-page-parts.html`**: proposal (2026-10-11) for the
+  blueprint page: the builds comparison at equal column widths
+  (`table-layout: fixed`), and the parts list's full-width lines answered
+  with recipes beside the parts, as a sticky sidebar (option A) or a
+  per-part column fed by a new `part` field on recipes (option B,
+  recommended). Open; not yet built.
+
 - **`exploded-builds.html`**: proposal (2026-10-10) for drawing a build as
   an exploded view (layers pulled apart, each drawn as the thing, leader
   lines to labels and roles) instead of flat bars: the layer kit, the three
