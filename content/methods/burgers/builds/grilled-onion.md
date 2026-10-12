@@ -2,7 +2,7 @@
 title: Grilled onion burger
 date: 2026-10-10
 draft: true
-working_on: "First draft. Needs a recipe behind it, and its history."
+working_on: "First draft. Its history needs a source."
 tags: [method, burgers, onion]
 era: 1922
 description: "The grilled onion burger: a smashed patty and a pile of onion cooked sweet in the beef fat."
@@ -41,10 +41,19 @@ Pile thin-sliced onion on the meatball and smash the patty onion side down, so t
 
 ## Where it comes from
 
-Lunch counter, 1922 railway strike.
+The lunch counter of the 1920s, in railway towns on the southern plains. The usual story puts it in El Reno, Oklahoma, around the 1922 railway strike or the Depression that followed (accounts differ), when beef was dear and onions were cheap: a cook could stretch a small ball of beef with a big handful of onion and smash them together on the griddle. The same counters gave the slider its shape, a small, thin patty cooked on a bed of onion with the bun steaming on top.
 
-<!-- TODO: the smashed-in fried onion burger, stretched with onion during the 1922 railway strike. -->
+| Constraint | Pick it explains |
+|---|---|
+| Beef was expensive, onions cheap | Onion as half the filling, not a topping |
+| One flat-top griddle, no fryer | Patty and onion cooked together, in the beef fat |
+| A small ball of beef had to look like a burger | Smashed paper thin, to the edges of the bun |
+| No time or space for a toaster | Soft bun, steamed over the patty |
+
+This is the root of the griddled burger: griddle, pressed, simple. The slider, the drive-in deluxe, the fast-food double, and the smash burger all keep its thin patty, its flat-top, and its soft bun, and change what goes on top.
+
+<!-- TODO: check the El Reno and 1922 railway strike story against a source, and cite it. -->
 
 ## Recipes
 
-<!-- TODO: a recipe for either version. -->
+[[Oklahoma fried onion burger]] is the smashed-in version.
