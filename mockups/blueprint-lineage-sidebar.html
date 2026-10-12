@@ -188,16 +188,44 @@
   .ang-axis{ position:absolute; left:6px; right:0; bottom:0; height:14px; }
   .ang-axis span{ position:absolute; transform:translateX(-50%); font-family:'IBM Plex Mono',monospace; font-size:.64rem; color:var(--ink-faint); }
 
+  /* ---------- V · Vertical, to scale: a spine down the sidebar, oldest at the top,
+     each dot placed by year (3px a year), decades on the left, names on the right,
+     nudged down with a leader where dots crowd ---------- */
+  .vt{ position:relative; }
+  .vt-spine{ position:absolute; left:52px; top:0; bottom:0; width:2px; background:var(--border-strong); }
+  .vt-dec{ position:absolute; left:0; width:58px; display:flex; align-items:center; gap:6px; transform:translateY(-50%); font-family:'IBM Plex Mono',monospace; font-size:.64rem; color:var(--ink-faint); }
+  .vt-dec::after{ content:""; margin-left:auto; width:8px; height:1px; background:var(--border-strong); margin-right:3px; }
+  .vt .ln-dot{ left:53px; top:auto; transform:translateY(-50%); margin-left:-6px; }
+  .vt .ln-dot.on{ transform:translateY(-50%) scale(1.35); }
+  .vt-lead{ position:absolute; left:60px; height:1px; background:var(--border-strong); transform-origin:0 50%; }
+  .vt-name{ position:absolute; left:80px; right:0; transform:translateY(-50%); display:flex; justify-content:space-between; gap:8px; align-items:baseline; padding:2px 8px; margin-left:-8px; border-radius:4px; text-decoration:none; font-family:'Libre Franklin',sans-serif; font-size:.86rem; font-weight:600; line-height:1.2; white-space:nowrap; }
+  .vt-name .y{ font-family:'IBM Plex Mono',monospace; font-size:.7rem; font-weight:400; color:var(--ink-faint); }
+  .vt-name:hover, .vt-name.on{ background:var(--accent-soft); color:var(--accent-strong); }
+
+  /* ---------- VL · Vertical, list: one row per build down a spine, year on the
+     left; the gap above a row grows with the years since the last one (capped) ---------- */
+  .vl{ list-style:none; margin:0; padding:0; position:relative; }
+  .vl::before{ content:""; position:absolute; left:52px; top:10px; bottom:10px; width:2px; background:var(--border-strong); }
+  .vl li{ position:relative; }
+  .vl a{ display:grid; grid-template-columns:44px 14px 1fr; gap:0 10px; align-items:center; padding:3px 8px; margin:0 -8px; border-radius:4px; text-decoration:none; font-family:'Libre Franklin',sans-serif; font-size:.86rem; font-weight:600; }
+  .vl .y{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; font-weight:400; color:var(--ink-faint); text-align:right; }
+  .vl .d{ position:relative; width:12px; height:12px; margin-left:1px; border-radius:50%; background:var(--accent); border:2px solid var(--bg); box-shadow:0 0 0 1px var(--accent); }
+  .vl a:hover{ background:var(--accent-soft); color:var(--accent-strong); }
+  .vl a:hover .y{ color:var(--accent-strong); }
+  .vl a:hover .d{ border-color:var(--accent-soft); }
+  .vl .gap{ position:absolute; left:44px; top:0; transform:translateY(-50%); font-family:'IBM Plex Mono',monospace; font-size:.6rem; color:var(--ink-faint); background:var(--bg); padding:0 0 0 18px; }
+
   /* ---------- Which version shows ---------- */
-  .lin-body, .lin-side-a, .lin-side-b, .lin-band{ display:none; }
+  .lin-body, .lin-side-a, .lin-side-b, .lin-side-v, .lin-side-vl, .lin-band{ display:none; }
+  [data-lin="v"] .lin-side-v, [data-lin="vl"] .lin-side-vl{ display:block; }
   [data-lin="today"] .lin-body{ display:block; }
   [data-lin="a"] .lin-side-a{ display:block; }
   [data-lin="b"] .lin-side-b{ display:block; }
   [data-lin="band"] .lin-band{ display:block; }
   /* On phones the sidebar drops below the page, so a sidebar lineage would
      land at the very bottom. These keep the body's vertical list there. */
-  .phone-w[data-lin="a"] .lin-body, .phone-w[data-lin="b"] .lin-body, .phone-w[data-lin="band"] .lin-body{ display:block; }
-  .phone-w .lin-side-a, .phone-w .lin-side-b, .phone-w .lin-band{ display:none !important; }
+  .phone-w[data-lin="v"] .lin-body, .phone-w[data-lin="vl"] .lin-body, .phone-w[data-lin="a"] .lin-body, .phone-w[data-lin="b"] .lin-body, .phone-w[data-lin="band"] .lin-body{ display:block; }
+  .phone-w .lin-side-v, .phone-w .lin-side-vl, .phone-w .lin-side-a, .phone-w .lin-side-b, .phone-w .lin-band{ display:none !important; }
   /* Band: the intro goes full width above it, so the order stays title, definition, lineage. */
   .lin-band{ grid-column:1 / -1; }
   .band-track{ padding:14px 0 6px; border-top:1px solid var(--border); border-bottom:1px solid var(--border); margin-bottom:28px; }
@@ -217,19 +245,19 @@
 <section class="intro">
   <span class="eyebrow">Mockup · 2026-10-11</span>
   <h1>Where the burgers lineage goes</h1>
-  <p class="lede">Since the blueprint page moved onto the reading layout, the lineage track lives in a 700px body column. It still fits, but its labels already stack two rows deep, and the 1980s and 2000s pairs crowd each other. This mock tries it in the sidebar, kept horizontal, two ways. It also shows a full-width band above both columns and today's version, for comparison.</p>
+  <p class="lede">Since the blueprint page moved onto the reading layout, the lineage track lives in a 700px body column. It still fits, but its labels already stack two rows deep, and the 1980s and 2000s pairs crowd each other. This mock tries it in the sidebar, running down the page two ways and across it two ways. It also shows a full-width band above both columns and today's version, for comparison.</p>
   <p class="lede">Below the definition either way, as decided. The builds and dates are the real ones (era 1922 to 2010, so the track runs 1910 to 2020). Parts and build cards are trimmed to placeholders.</p>
 </section>
 
 <section class="mock" id="mock">
   <h2 class="mock-label">1 · The page</h2>
-  <p class="mock-note"><b>Strip and rows</b>: a dot strip as wide as the sidebar, with a row per build under it (year, then name). Hover a row and its dot lights up; hover a dot and its row does. <b>Angled labels</b>: the track itself, with each name slanted up from its dot and nudged apart where dots crowd. <b>Band</b>: today's track, but across the full 1100px above both columns. <b>Today</b>: as built. On <b>Phone</b> the sidebar drops below the page, so the sidebar versions fall back to the body's vertical list.</p>
+  <p class="mock-note"><b>Vertical: to scale</b>: a spine down the sidebar, oldest at the top, each build placed by its year (3px a year), decades on the left, name and year on the right; where dots crowd, names are nudged down with a short leader. <b>Vertical: list</b>: a row per build down a spine, evenly spaced, with the gap above a row growing with the years since the last (capped), and the long gaps labelled. <b>Strip and rows</b>: a dot strip as wide as the sidebar, with a row per build under it (year, then name). Hover a row and its dot lights up; hover a dot and its row does. <b>Angled labels</b>: the track itself, with each name slanted up from its dot and nudged apart where dots crowd. <b>Band</b>: today's track, but across the full 1100px above both columns. <b>Today</b>: as built. On <b>Phone</b> the sidebar drops below the page, so the sidebar versions fall back to the body's vertical list.</p>
   <div class="controls" data-for="f1">
-    <div class="ctl"><span class="ctl-label">Lineage</span><div class="seg" data-attr="lin"><button aria-pressed="true" data-v="a">Sidebar: strip and rows</button><button aria-pressed="false" data-v="b">Sidebar: angled labels</button><button aria-pressed="false" data-v="band">Band</button><button aria-pressed="false" data-v="today">Today</button></div></div>
+    <div class="ctl"><span class="ctl-label">Lineage</span><div class="seg" data-attr="lin"><button aria-pressed="true" data-v="v">Vertical: to scale</button><button aria-pressed="false" data-v="vl">Vertical: list</button><button aria-pressed="false" data-v="a">Sidebar: strip and rows</button><button aria-pressed="false" data-v="b">Sidebar: angled labels</button><button aria-pressed="false" data-v="band">Band</button><button aria-pressed="false" data-v="today">Today</button></div></div>
     <div class="ctl"><span class="ctl-label">Width</span><div class="seg" data-attr="width"><button aria-pressed="true" data-v="">Desktop</button><button aria-pressed="false" data-v="phone-w">Phone</button></div></div>
   </div>
 
-  <div class="frame" id="f1" data-lin="a">
+  <div class="frame" id="f1" data-lin="v">
     <div class="page">
       <header class="page-head">
         <h1 class="ltitle">Burgers <span class="kind">blueprint</span></h1>
@@ -276,6 +304,16 @@
           <ol class="ln-rows" data-rows></ol>
         </div>
 
+        <div class="lin-side-v">
+          <span class="rs-label">Lineage</span>
+          <div class="vt" data-vt></div>
+        </div>
+
+        <div class="lin-side-vl">
+          <span class="rs-label">Lineage <span class="n">1922–2010</span></span>
+          <ol class="vl" data-vl></ol>
+        </div>
+
         <div class="lin-side-b">
           <span class="rs-label">Lineage</span>
           <div class="ang" data-ang></div>
@@ -292,8 +330,10 @@
   <h2 class="mock-label">2 · Choices</h2>
   <div class="ask">
     <span class="ask-label">Recommendation</span>
-    <p><b>Sidebar: strip and rows.</b> 330px is too narrow for names along a track, so this splits the job. The strip shows the shape: two early builds, one mid-century, then a cluster from the eighties on. The rows carry the names, one per line, so no label ever collides. It sits in the sidebar's own voice (a label, a mono year column, Franklin rows like Further reading), and hovering connects the two.</p>
+    <p><b>Vertical: to scale.</b> The sidebar is narrow but tall, so the timeline runs down it, oldest first, the way the page reads. It keeps what the track is for, the shape of the history (two early builds, one mid-century, a cluster from the eighties on), and every name sits level and unslanted beside its dot. It's about 350px tall for a century of builds, about what the parts list takes in the body. Hover a name and its dot lights up.</p>
+    <p><b>Vertical: list</b> is the compact fallback: shorter, simpler markup, and close to the phone list as built, but the spacing only hints at the gaps. It's the better fit if a blueprint's builds span a few centuries, where to scale would run long.</p>
     <ul>
+      <li><b>Strip and rows</b> is the horizontal pick: the strip shows the shape and the rows carry the names, but the eye has to go between the two.</li>
       <li><b>Angled labels</b> is the literal version: a real track with names on it. Even at 60° it needs about 56px of right margin so "Smash burger" doesn't run out of the sidebar, which shortens the track, and the 2008 and 2010 dots are 6px apart, so their labels have to be pushed apart with leader lines. It reads, but it's busy for a sidebar, and slanted text is slower to read.</li>
       <li><b>Band</b> gives today's track the full 1100px, which is the most room it can get. But it pushes the parts and the sidebar down, and it's the only thing on the page that breaks the two-column frame.</li>
       <li><b>Phones and tablets:</b> under 1024px the sidebar drops below the page, so a sidebar lineage would end up at the bottom, after the builds. I'd keep the body's vertical list there (as on phones today) and show the sidebar version only on desktop, the same way "On this page" is desktop only.</li>
@@ -348,6 +388,32 @@
       el.addEventListener('focus',function(){ light(el.dataset.i,true); });
       el.addEventListener('blur',function(){ light(el.dataset.i,false); });
     });
+
+    // V: vertical, to scale.
+    (function(){
+      var vt=document.querySelector('[data-vt]'), k=3, top=8;
+      function y(yr){ return top+(yr-start)*k; }
+      var h='<div class="vt-spine"></div>';
+      for(var d=start; d<=end; d+=10){ h+='<span class="vt-dec" style="top:'+y(d)+'px">'+d+'s</span>'; }
+      var last=-100;
+      builds.forEach(function(b,i){
+        var dy=y(b[1]), ly=Math.max(dy,last+22); last=ly;
+        h+='<span class="ln-dot" data-i="'+i+'" style="top:'+dy+'px"></span>';
+        if(ly>dy+.5){ var dx=14, ddy=ly-dy, len=Math.sqrt(dx*dx+ddy*ddy), a=Math.atan2(ddy,dx)*180/Math.PI; h+='<span class="vt-lead" style="top:'+dy+'px;width:'+len+'px;transform:rotate('+a+'deg)"></span>'; }
+        h+='<a class="vt-name" href="#" data-i="'+i+'" style="top:'+ly+'px"><span>'+b[0]+'</span><span class="y">'+b[1]+'</span></a>';
+      });
+      vt.innerHTML=h; vt.style.height=(Math.max(y(end),last+14)+8)+'px';
+      vt.querySelectorAll('[data-i]').forEach(function(el){
+        function on(v){ vt.querySelectorAll('[data-i="'+el.dataset.i+'"]').forEach(function(x){ x.classList.toggle('on',v); }); }
+        el.addEventListener('mouseenter',function(){on(true);}); el.addEventListener('mouseleave',function(){on(false);});
+      });
+    })();
+
+    // VL: vertical list; the gap above each row is 0.6px a year, at most 28px.
+    document.querySelector('[data-vl]').innerHTML=builds.map(function(b,i){
+      var g=i?b[1]-builds[i-1][1]:0, m=i?Math.min(Math.round(g*.6),28):0;
+      return '<li style="margin-top:'+m+'px">'+(m>=14?'<span class="gap" style="top:-'+(m/2)+'px">'+g+' yrs</span>':'')+'<a href="#"><span class="y">'+b[1]+'</span><span class="d"></span>'+b[0]+'</a></li>';
+    }).join('');
 
     // B: angled labels. Each label starts at its dot unless that's closer
     // than 17px to the last one (a label's height across the slant at 60°),

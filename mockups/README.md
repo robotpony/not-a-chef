@@ -113,8 +113,8 @@ in a browser — no build step.
   cramped in the body column. Switches between two sidebar forms kept
   horizontal (a dot strip with a row per build under it; angled labels on
   the track), a full-width band under the definition, and today's. Phone
-  width keeps the body's vertical list. Recommends the strip and rows,
-  desktop only.
+  width keeps the body's vertical list. Round 2 (2026-10-11) adds two vertical forms: a spine to scale, and an
+  evenly spaced list. Recommends vertical to scale, desktop only.
 
 - **`exploded-builds.html`**: proposal (2026-10-10) for drawing a build as
   an exploded view (layers pulled apart, each drawn as the thing, leader
