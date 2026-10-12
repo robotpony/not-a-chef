@@ -114,7 +114,8 @@ in a browser — no build step.
   horizontal (a dot strip with a row per build under it; angled labels on
   the track), a full-width band under the definition, and today's. Phone
   width keeps the body's vertical list. Round 2 (2026-10-11) adds two vertical forms: a spine to scale, and an
-  evenly spaced list. Recommends vertical to scale, desktop only.
+  evenly spaced list. Decided 2026-10-11: vertical to scale, desktop only
+  (`STYLE.md` Methods and blueprint pages). Template half is Fugu's.
 
 - **`exploded-builds.html`**: proposal (2026-10-10) for drawing a build as
   an exploded view (layers pulled apart, each drawn as the thing, leader
