@@ -1776,13 +1776,14 @@ article:not(:has(.article-pagination)) .reading-sidebar-wrap { margin-bottom: 0;
  * and blueprint pages"; Fugu partials/method/ and partials/blueprint/):
  * the methods list at /methods/, a blueprint's page, and a build
  * page's profile, picks, and recipes. */
-.bp-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 16px; }
-.bp { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 16px 18px 14px; display: flex; flex-direction: column; gap: 10px; }
-.bp:hover, .bp:focus-within { border-color: var(--accent); }
+.bp-list { display: flex; flex-direction: column; gap: 24px; }
+.bp { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 16px 18px 14px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
 .bp-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
 .bp-name { font-family: 'Libre Franklin', sans-serif; font-weight: 700; font-size: 1.15rem; text-decoration: none; color: var(--ink); display: inline-flex; align-items: center; gap: 8px; }
 .bp-name svg { width: 16px; height: 16px; color: var(--accent-strong); }
 .bp-name:hover { color: var(--accent-strong); }
+.bp-name .go { font-weight: 500; font-size: .9rem; color: var(--accent-strong); opacity: 0; transform: translateX(-4px); transition: opacity .12s, transform .12s; }
+.bp-name:hover .go, .bp-name:focus-visible .go { opacity: 1; transform: none; }
 .bp-count { font-family: 'IBM Plex Mono', monospace; font-size: .7rem; color: var(--ink-faint); white-space: nowrap; }
 .bp-desc { font-family: 'Lora', Georgia, serif; font-size: .86rem; color: var(--ink-muted); }
 
@@ -1804,6 +1805,49 @@ article:not(:has(.article-pagination)) .reading-sidebar-wrap { margin-bottom: 0;
 .parts li.todo .part-methods { font-style: italic; color: var(--ink-faint); }
 .parts-compact li { padding: 6px 0; grid-template-columns: 24px 1fr; }
 .parts-compact .part-name { font-size: .82rem; }
+
+/* The methods list (mockups/methods-list-builds.html §1): the blueprint
+ * block holds links but isn't one, so it doesn't react; each written part
+ * row does, with a soft fill and a → sliding in. Unwritten parts say
+ * "to come" instead. */
+.parts-compact li:has(.part-row) { display: block; padding: 0; }
+.part-row { display: grid; grid-template-columns: 24px 1fr auto; gap: 10px; align-items: baseline; margin: 0 -8px; padding: 6px 8px; border-radius: 4px; font-family: 'Libre Franklin', sans-serif; font-weight: 600; font-size: .82rem; color: var(--ink); text-decoration: none; transition: background .12s; }
+.parts-compact li:has(.part-row)::before { content: none; }
+.part-row::before { content: counter(part, decimal-leading-zero); font-family: 'IBM Plex Mono', monospace; font-weight: 400; font-size: .72rem; color: var(--accent); }
+a.part-row::after { content: '→'; font-weight: 500; color: var(--accent-strong); opacity: 0; transform: translateX(-6px); transition: opacity .12s, transform .12s; }
+a.part-row:hover, a.part-row:focus-visible { background: var(--accent-soft); color: var(--accent-strong); outline: none; }
+a.part-row:hover::after, a.part-row:focus-visible::after { opacity: 1; transform: none; }
+.parts li.todo .part-row { color: var(--ink-faint); font-weight: 500; }
+.parts li.todo .part-row::before { color: var(--ink-faint); }
+.parts li.todo .part-row::after { content: 'to come'; font-family: 'IBM Plex Mono', monospace; font-weight: 400; font-size: .64rem; color: var(--ink-faint); }
+
+/* A blueprint's builds beside it as tiles (methods-list-builds.html
+ * Option A): each build is its own page, so its own card. Stacks share
+ * one scale (fixed width, bottom-aligned) so their heights compare.
+ * Under 820px the tiles drop under the blueprint and scroll sideways. */
+.bp-row { display: grid; grid-template-columns: minmax(300px, 360px) minmax(0, 1fr); gap: 16px; align-items: stretch; }
+.bp-builds { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.bp-builds-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; font-family: 'Libre Franklin', sans-serif; font-size: .65rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-faint); }
+.bp-builds-head a { text-transform: none; letter-spacing: 0; font-size: .76rem; font-weight: 600; color: var(--accent-strong); text-decoration: none; }
+.bp-builds-head a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.build-tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; flex: 1; }
+.build-tile { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; min-width: 0; transition: border-color .12s; }
+.build-tile:hover, .build-tile:focus-within { border-color: var(--accent); }
+.build-tile .rcard-top { position: absolute; top: 10px; left: 10px; }
+.build-tile-art { height: 150px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 8px; margin-bottom: 4px; border-bottom: 1px solid var(--border); color: var(--ink); }
+.build-tile-art .stack { width: 58px; margin: 0; }
+.build-tile-name { font-family: 'Libre Franklin', sans-serif; font-weight: 700; font-size: .98rem; line-height: 1.25; margin: 0; }
+.build-tile-name a { display: flex; justify-content: space-between; gap: 6px; }
+.build-tile-name a::before { content: '→'; order: 1; font-weight: 500; color: var(--accent-strong); opacity: 0; transition: opacity .12s; }
+.build-tile:hover .build-tile-name a { color: var(--accent-strong); }
+.build-tile:hover .build-tile-name a::before { opacity: 1; }
+.build-origin.is-missing { font-style: italic; }
+.build-tile-profile { font-family: 'Lora', Georgia, serif; font-size: .82rem; line-height: 1.45; color: var(--ink-muted); margin: 0; }
+@media (max-width: 820px) {
+  .bp-row { grid-template-columns: 1fr; }
+  .build-tiles { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; }
+  .build-tile { flex: 0 0 72%; scroll-snap-align: start; }
+}
 .parts-full li { padding: 14px 0; grid-template-columns: 36px 1fr; }
 .parts-full .part-name { font-size: 1rem; }
 

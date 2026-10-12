@@ -71,7 +71,9 @@ in a browser — no build step.
   link) onto its part rows and name, with a soft fill and a `→`; and the
   builds shown beside the blueprint with their stack drawings, as tiles
   (option A) or a bottom-aligned lineup in one panel (option B,
-  recommended). Open; not yet built.
+  recommended in the mock). Decided 2026-10-11: §1 hover and option A,
+  since each build is its own page and so gets its own card, and A holds up
+  better on a phone. Built the same day (`STYLE.md` Methods and blueprint pages).
 
 - **`exploded-builds.html`**: proposal (2026-10-10) for drawing a build as
   an exploded view (layers pulled apart, each drawn as the thing, leader
