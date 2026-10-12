@@ -73,7 +73,7 @@ Art direction (Bruce, 2026-10-11): still no colour, line art. v1 is close but la
 
 Across the kit: loose overlapping pieces instead of single perfect discs, real edge thickness on slices, cheese that drapes.
 
-- [ ] Decide whether v1's `--accent-soft` body fill stays, or the drawings go ink line on `--surface` only, with texture as strokes.
+- [x] Decide whether v1's `--accent-soft` body fill stays, or the drawings go ink line on `--surface` only, with texture as strokes. *Decided 2026-10-11: the fill stays, since it matches the formula diagrams; "no colour" means no full colour. Texture goes on top as strokes. Fugu builds the kit from v1 now and swaps the drawings in when the redraw settles.*
 - [ ] Redraw those layers from the examples in `mockups/exploded-builds.html`, staying in the formula icons' style (one ink line, two fills, detail as strokes), and check them at card size and full size, light and dark.
 - [ ] Update the layer kit SVGs (Fugu's `assets/icons/layers/`) and the STYLE.md entry; drop "v1" when it's settled.
 
