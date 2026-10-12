@@ -8,7 +8,6 @@ blueprint: [burgers]
 part: Patty construction
 description: "How to make a burger patty: the grind, the fat, the weight, and the one rule that matters most, which is to leave the meat alone."
 ---
-
 A burger patty is ground meat, portioned and shaped, and almost nothing else. Its texture comes from how little you handle it, and its size decides everything after it: how it cooks, how much of it ends up as crust, and which bun it fits. Most burgers here use thin patties, because a thin patty is mostly crust and a burger is mostly about crust.
 
 ## The variables

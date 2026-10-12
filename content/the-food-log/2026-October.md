@@ -6,13 +6,28 @@ Early October is mostly trip notes: a tabbouleh worth learning, a subtly sweet r
 
 ## Week of Friday, October 16th
 
-### Site features #todo 
+Essay topic: 
 
-- [ ] Methods feature
+- toasting methods → dry, dry/smooth, oil, whole vs. surface
 
-#### Cooking methods, spec
+On the list:
 
-1. A post tagged with "Method" gets a unique category (in essays), stored in its own folder.
+- oh-no with cocunut cream cerveche
+- bananas (Apple bananas, ice cream bananas) → delicious
+- https://www.pukadog.com/ → the relishes were great, but the bun + toasting technique were the real MVP.
+
+Food memories:
+
+- American Grill in Cottonwood mall? this is a guess from some research, either that or Boardwalk burgers.
+### Methods and blueprints #todo
+
+I'm adding a section to explain how anyone can develop recipes, by showing methods for making things, blueprints, and talking about their lineages. 
+
+- [x] Settle the eight open choices in the methods pages mock (`mockups/methods-pages.html` §7, each card shows the proposal and its alternative) #todone @2026-10-10
+- [x] Start a Fugu session to take phase 2 (concept pages, blueprint and build pages, the `stack` render hook), and push its four queued commits #todone @2026-10-10
+- [x] Review the burger method drafts (6 parts, 3 builds) for voice and accuracy #todone @2026-10-10
+- [ ] Gather reference examples for the layer drawings that read least well (bacon, pickles, bread, etc.), for the phase 6 redraw
+
 
 ## Week of Friday, October 9th
 

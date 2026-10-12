@@ -8,7 +8,6 @@ blueprint: [burgers]
 part: Sauces
 description: "Burger sauce is sweet, sour, and sharp in some ratio: ketchup and mustard kept apart, or blended with mayo and pickle into one spread."
 ---
-
 A burger sauce adds sweetness, acid, and sharpness, and sometimes fat. There are two ways to get there: keep the condiments separate and let them meet on the burger, or blend them into one spread. Either way, the sauce sits against the bread, where it soaks in, and it shouldn't drown the onion and pickle.
 
 ## The variables
@@ -20,14 +19,15 @@ A burger sauce adds sweetness, acid, and sharpness, and sometimes fat. There are
 
 ## Options
 
-| Option | Pick it when | Ratio |
-|---|---|---|
-| Ketchup and mustard, separate | Deluxe and fast-food burgers | 5:1 ketchup to mustard |
-| [[Bruce's burger sauce]] | Swiss, mozza, or deluxe burgers | 1:1:1 mayo, diced pickle, mustard |
-| [[In-N-Out burger spread]] | Diner-style griddle burgers | Mayo-based, with ketchup, relish, and a little vinegar and sugar |
-| Red sauce and sweet mayo | [[White Spot burgers]] | Red: 2:3 red relish to chili sauce. Mayo: Hellmann's, egg yolk, paprika, honey, cider vinegar |
-| Mayo and mustard | When ketchup is too sweet | A tiny bit of ketchup, if any |
+| Option                        | Pick it when                    | Ratio                                                                                         |
+| ----------------------------- | ------------------------------- | --------------------------------------------------------------------------------------------- |
+| Ketchup and mustard, separate | Deluxe and fast-food burgers    | 5:1 ketchup to mustard                                                                        |
+| [[Bruce's burger sauce]]      | Swiss, mozza, or deluxe burgers | 1:1:1 mayo, diced pickle, mustard                                                             |
+| [[In-N-Out burger spread]]    | Diner-style griddle burgers     | Mayo-based, with ketchup, relish, and a little vinegar and sugar                              |
+| Red sauce and sweet mayo      | [[White Spot burgers]]          | Red: 2:3 red relish to chili sauce. Mayo: Hellmann's, egg yolk, paprika, honey, cider vinegar |
+| Mayo and mustard              | When ketchup is too sweet       | A tiny bit of ketchup, if any                                                                 |
 
+<!-- TODO: MSG, powered acid, spices, commercial sauces -->
 ## How it fails
 
 - **Harsh:** too much mustard. A squeeze of ketchup or a splash of pickle brine softens it.

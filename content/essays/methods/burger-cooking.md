@@ -8,7 +8,6 @@ blueprint: [burgers]
 part: Cooking
 description: "Cooking a burger patty is about crust: a hot surface, a thin patty, one flip, and leaving it alone in between."
 ---
-
 A burger patty cooks for its crust. The surface has to be hot enough to brown the meat before the thin patty overcooks, so the pan is hotter than for almost anything else, and the patty stays still until it's ready to flip. Done is medium to medium-well, never tough.
 
 ## The variables
