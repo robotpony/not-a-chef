@@ -207,6 +207,20 @@
   .cstyle .squeeze-out{ fill:none; stroke:var(--f-highlight); stroke-width:5; stroke-linecap:round; stroke-linejoin:round; }
   .cstyle .squeeze-in{ fill:none; stroke:color-mix(in srgb, var(--f-highlight) 55%, var(--f-surface)); stroke-width:2.6; stroke-linecap:round; stroke-linejoin:round; }
   .cstyle .chunk{ fill:color-mix(in srgb, var(--f-accent-strong) 80%, var(--f-ink)); stroke:none; }
+  /* Round 4 texture (2026-10-11): strokes and stipple on top of the same two fills */
+  .fstyle .tx{ fill:none; stroke:var(--ink); stroke-width:.9; stroke-linecap:round; stroke-linejoin:round; }
+  .fstyle .tx-fine{ fill:none; stroke:var(--ink); stroke-width:.6; stroke-linecap:round; stroke-linejoin:round; }
+  .fstyle .tx-hatch{ fill:none; stroke:var(--ink); stroke-width:.5; stroke-opacity:.55; }
+  .fstyle .tx-bold{ fill:none; stroke:var(--ink); stroke-width:1.5; stroke-linecap:round; }
+  .fstyle .stip{ fill:var(--ink); }
+  .fstyle .seed2{ fill:var(--surface); stroke:var(--ink); stroke-width:.85; }
+  .fstyle .jelly{ fill:var(--accent-soft); stroke:var(--ink); stroke-width:.9; stroke-linejoin:round; }
+  .fstyle .s.thin{ stroke-width:1.2; }
+  .fstyle .onion{ fill:var(--surface); }
+  .fstyle .onion-side{ fill:var(--accent-soft); }
+  .fstyle .strand-out, .fstyle .swirl-out{ fill:none; stroke:var(--ink); stroke-width:3.4; stroke-linecap:round; stroke-linejoin:round; }
+  .fstyle .strand-in, .fstyle .swirl-in{ fill:none; stroke:var(--accent-soft); stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+  .fstyle .swirl-in-light{ fill:none; stroke:var(--surface); stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
   .cstyle .bubble{ fill:color-mix(in srgb, var(--f-accent) 50%, var(--f-highlight-soft)); stroke:none; }
 </style>
 </head>
@@ -214,16 +228,16 @@
 <header class="topbar"><div class="topbar-inner">
   <span class="tb-title">Exploded builds</span>
   <nav class="tb-jump"><a href="#why">Why</a><a href="#kit">Layer kit</a><a href="#builds">Builds</a><a href="#cards">Cards</a><a href="#options">Options</a><a href="#beyond">Beyond burgers</a><a href="#syntax">Syntax</a><a href="#rec">Recommendation</a></nav>
-  <button class="theme-toggle" id="st" type="button">Show colour version</button>
+  <button class="theme-toggle" id="st" type="button">Show round 3</button>
   <button class="theme-toggle" id="tt" type="button">Toggle dark</button>
 </div></header>
 
 <main>
   <div class="hero">
-    <span class="eyebrow">Proposal · 2026-10-10 · METHODS phase 4 · round 3: formula style, more detail</span>
+    <span class="eyebrow">Proposal · 2026-10-11 · METHODS phase 6 · round 4: texture and detail</span>
     <h1>Exploded build diagrams</h1>
     <p class="lede">The layer bars in <code>methods-pages.html</code> were abstract, and full-width bars don't look like a burger. This draws a build the way a technical manual draws an assembly: each layer as the thing itself, seen from a three-quarter angle, pulled apart vertically, with leader lines to its name and its role.</p>
-    <p class="lede">Round 2 draws the same shapes in the formula icons' style, and that's what sections 2 to 6 show. The first round's colour version is a click away in the top bar, for comparison.</p>
+    <p class="lede">Round 2 drew the same shapes in the formula icons' style. Round 4 (2026-10-11) keeps that style and its two fills and adds texture as strokes, after Bruce's references (a patent drawing, an engraving, a colouring book): sesame seeds as open ovals over the dome, stipple on cut bread and patty sides, a craggy patty edge, veined and ruffled lettuce, tomato chambers with seeds, onion as loose rings, crinkle-cut pickles with a seed ring, and a hatched cheese slice draped at the corners. Ketchup and mustard are swirls sized by share (the large one 2/3, the small one 1/3); mayo and burger sauce are spreads, so the two never look alike. Sections 2 to 6 show round 4; round 3 is a click away in the top bar.</p>
   </div>
 
   <section class="block" id="why">
@@ -232,7 +246,8 @@
     <div class="ba3">
       <div class="panel"><div class="panel-label">Bars</div><div class="bars"><div class="bar bun top"></div><div class="bar green"></div><div class="bar onion"></div><div class="bar green" style="background:var(--surface)"></div><div class="bar patty"></div><div class="bar bun"></div></div></div>
       <div class="panel cstyle"><div class="panel-label">Colour (round 1)</div><div class="thumb" id="ba-c"></div></div>
-      <div class="panel fstyle"><div class="panel-label">Formula style</div><div class="thumb" id="ba-ex"></div></div>
+      <div class="panel fstyle"><div class="panel-label">Formula style (round 3)</div><div class="thumb" id="ba-ex"></div></div>
+      <div class="panel fstyle"><div class="panel-label">Texture and detail (round 4)</div><div class="thumb" id="ba-ex4"></div></div>
       <div class="panel fstyle"><div class="panel-label">Beside formula icons</div><div class="icon-row" id="ba-icons"></div><div class="thumb" id="ba-ex2" style="margin-top:8px"></div></div>
     </div>
   </section>
@@ -292,7 +307,8 @@ caption: Drive-in deluxe
       <p><b>Use the exploded view for builds, in the formula style</b>, labelled on build pages (labels on the right, decided 2026-10-10) and compact on cards. It reads as a burger, keeps its proportions, and now sits in the same family as the formula icons: one ink line, two fills, theme tokens, so dark mode follows without special colours.</p>
       <ul>
         <li><b>What the formula style gives up.</b> Lettuce, tomato, and pickles are told apart by shape alone, not green and red. The shapes carry it at full size; check the compact card version in particular.</li>
-        <li><b>How much detail?</b> Detail is strokes only now (patty slashes, leaf veins, onion rings, tomato chambers), like the icons. Seeds on the bun are the one dotted texture left.</li>
+        <li><b>How much detail?</b> Round 4: moderate, not realistic. Texture is strokes and stipple on top of the two fills; no shading fills, no colour. Check the compact card size in particular, where stipple can go grey.</li>
+        <li><b>Swirls and spreads.</b> A swirl's size is its share of the pair, not its exact ratio: 2/3 and 1/3 even when the recipe says 5:1. The label carries the number.</li>
         <li><b>Draw by hand or generate?</b> Generated here from a few shape functions (disc, dome, wavy disc, slab). As SVG files in a kit they'd be drawn once each and stacked by the render hook.</li>
         <li><b>Colour version.</b> If it's ever wanted, it needs fixed food colours (<code>--f-*</code>), since theme tokens turn a patty pink in dark mode.</li>
         <li><b>Assembled view:</b> not needed for now.</li>
@@ -336,7 +352,7 @@ function disc(cx, cy, rx, t, sideCls, topCls){
   return `<path class="s ${sideCls}" d="M${f(cx-rx)},${f(cy)}L${f(cx-rx)},${f(cy+t)}A${f(rx)},${f(ry)} 0 0 0 ${f(cx+rx)},${f(cy+t)}L${f(cx+rx)},${f(cy)}Z"/>` +
          `<ellipse class="s ${topCls}" cx="${f(cx)}" cy="${f(cy)}" rx="${f(rx)}" ry="${f(ry)}"/>`;
 }
-const L = {
+const L1 = {
   'bun-top'(cx, y, rx){
     const h = rx*0.55, ry = rx*K, cy = y+h;
     let s = `<path class="s bun" d="M${f(cx-rx)},${f(cy)}C${f(cx-rx)},${f(cy-h*1.33)} ${f(cx+rx)},${f(cy-h*1.33)} ${f(cx+rx)},${f(cy)}A${f(rx)},${f(ry)} 0 0 1 ${f(cx-rx)},${f(cy)}Z"/>`;
@@ -408,9 +424,9 @@ const L = {
     for (let i=0;i<26;i++){ const a=r()*Math.PI*2, d=Math.sqrt(r())*.82; s += `<circle class="meat-dot" cx="${f(cx+Math.cos(a)*rx*d)}" cy="${f(cy+Math.sin(a)*ry*d)}" r="${f(.7+r()*.8)}"/>`; }
     return {svg:s, h:2*ry+t, edge:rx*(lacy?1.08:1)};
   },
-  'patty-thin'(cx, y, rx){ return L.patty(cx, y, rx*0.98, rx*0.13, false); },
-  'patty-thick'(cx, y, rx){ return L.patty(cx, y, rx*0.88, rx*0.32, false); },
-  'patty-smash'(cx, y, rx){ return L.patty(cx, y, rx*1.02, rx*0.07, true); },
+  'patty-thin'(cx, y, rx){ return L1.patty(cx, y, rx*0.98, rx*0.13, false); },
+  'patty-thick'(cx, y, rx){ return L1.patty(cx, y, rx*0.88, rx*0.32, false); },
+  'patty-smash'(cx, y, rx){ return L1.patty(cx, y, rx*1.02, rx*0.07, true); },
   'bacon'(cx, y, rx){
     let s = ''; const w = rx*1.12, H = 10;
     const line = (dy, ph, off) => { const pts = []; for (let i=0;i<=40;i++){ const x = cx-w+2*w*i/40, yy = y+6+dy+Math.sin(i/40*Math.PI*4+ph)*3+(i/40-.5)*6+off; pts.push([x, yy]); } return pts; };
@@ -426,13 +442,13 @@ const L = {
     const R = rx*0.72, ry = R*K, cy = y+ry+2;
     return {svg:`<path class="s ${cls}" d="${wavyEllipse(cx, cy, R, ry, .09, 6, .5)}"/>${gloss(cx, cy, R)}`, h:2*ry+5, edge:R};
   },
-  'sauce-burger'(cx, y, rx){ return L.sauce(cx, y, rx, 'sauce-pink'); },
+  'sauce-burger'(cx, y, rx){ return L1.sauce(cx, y, rx, 'sauce-pink'); },
   'mustard'(cx, y, rx){
     const w = rx*0.6, h = rx*K*0.35, cy = y+h+5;
     return {svg: squeeze(zigzag(cx, cy, w, h, 7)), h:2*h+12, edge:w+3};
   },
   'sauce-ketchup-mustard'(cx, y, rx){
-    const a = L.sauce(cx, y, rx*0.85, 'sauce-red');
+    const a = L1.sauce(cx, y, rx*0.85, 'sauce-red');
     const w = rx*0.45, h = rx*K*0.22, cy = y+a.h/2;
     return {svg:a.svg+squeeze(zigzag(cx, cy, w, h, 6)), h:a.h, edge:rx*0.62};
   },
@@ -454,12 +470,12 @@ const L = {
     s += `<path class="s ${topCls}" d="M${f(bl[0])},${f(bl[1])}L${f(br[0])},${f(br[1])}L${f(fr[0])},${f(fr[1])}${front}Z"/>`;
     return {svg:s, h:D+t, edge:W+dx};
   },
-  'pasta'(cx, y, rx){ return L.slab(cx, y, rx, 3, 'pasta', 'pasta', true); },
-  'ragu'(cx, y, rx){ const o = L.slab(cx, y, rx, 8, 'ragu', 'ragu'); const r = rng(5); let d=''; for (let i=0;i<24;i++){ d += `<circle class="meat-dot" cx="${f(cx+(r()-.5)*rx*1.7)}" cy="${f(y+3+r()*rx*0.36)}" r="${f(1+r()*1.2)}"/>`; }
+  'pasta'(cx, y, rx){ return L1.slab(cx, y, rx, 3, 'pasta', 'pasta', true); },
+  'ragu'(cx, y, rx){ const o = L1.slab(cx, y, rx, 8, 'ragu', 'ragu'); const r = rng(5); let d=''; for (let i=0;i<24;i++){ d += `<circle class="meat-dot" cx="${f(cx+(r()-.5)*rx*1.7)}" cy="${f(y+3+r()*rx*0.36)}" r="${f(1+r()*1.2)}"/>`; }
     for (let i=0;i<9;i++){ const x = cx+(r()-.5)*rx*1.5, yy = y+4+r()*rx*0.3, q = 2.2+r()*1.6; d += `<path class="chunk" d="M${f(x-q)},${f(yy)}q${f(q*.4)},${f(-q)} ${f(q*1.4)},${f(-q*.3)}q${f(q*.8)},${f(q*.6)} ${f(-q*.2)},${f(q*.9)}z"/>`; }
     return {svg:o.svg+d, h:o.h, edge:o.edge}; },
-  'bechamel'(cx, y, rx){ const o = L.slab(cx, y, rx, 5, 'bech', 'bech'); return {svg:o.svg+`<path class="gloss" d="M${f(cx-rx*.6)},${f(y+rx*.25)}q${f(rx*.25)},${f(-rx*.1)} ${f(rx*.5)},0M${f(cx+rx*.1)},${f(y+rx*.14)}q${f(rx*.2)},${f(-rx*.08)} ${f(rx*.4)},0"/>`, h:o.h, edge:o.edge}; },
-  'cheese-top'(cx, y, rx){ const o = L.slab(cx, y, rx, 4, 'cheese', 'cheese-side'); const r = rng(13); let d=''; for (let i=0;i<8;i++){ const x = cx+(r()-.5)*rx*1.5, yy = y+3+r()*rx*0.32, q = 1.6+r()*2.2; d += `<ellipse class="bubble" cx="${f(x)}" cy="${f(yy)}" rx="${f(q)}" ry="${f(q*.55)}"/>`; } return {svg:o.svg+d, h:o.h, edge:o.edge}; },
+  'bechamel'(cx, y, rx){ const o = L1.slab(cx, y, rx, 5, 'bech', 'bech'); return {svg:o.svg+`<path class="gloss" d="M${f(cx-rx*.6)},${f(y+rx*.25)}q${f(rx*.25)},${f(-rx*.1)} ${f(rx*.5)},0M${f(cx+rx*.1)},${f(y+rx*.14)}q${f(rx*.2)},${f(-rx*.08)} ${f(rx*.4)},0"/>`, h:o.h, edge:o.edge}; },
+  'cheese-top'(cx, y, rx){ const o = L1.slab(cx, y, rx, 4, 'cheese', 'cheese-side'); const r = rng(13); let d=''; for (let i=0;i<8;i++){ const x = cx+(r()-.5)*rx*1.5, yy = y+3+r()*rx*0.32, q = 1.6+r()*2.2; d += `<ellipse class="bubble" cx="${f(x)}" cy="${f(yy)}" rx="${f(q)}" ry="${f(q*.55)}"/>`; } return {svg:o.svg+d, h:o.h, edge:o.edge}; },
   'bread'(cx, y, rx){
     // A squircle seen from three-quarters, with the crown bulging at the back.
     const W = rx*0.9, ry = W*K*1.05, t = 9, cy = y + ry*1.4;
@@ -472,17 +488,305 @@ const L = {
     const svg = `<path class="s bun" d="${shape(t)}"/><path class="s bun" d="M${f(cx-W)},${f(cy)}L${f(cx-W)},${f(cy+t)}M${f(cx+W)},${f(cy)}L${f(cx+W)},${f(cy+t)}"/><path class="s crumb" d="${shape(0)}"/><path class="s bun crust" d="${shape(0)}" style="fill:none;stroke-width:2.6;opacity:.55"/><path class="rim" d="${shape(0, .88)}"/>` + crumbs(cx, cy, W*.9, ry*.9, 22, 9);
     return {svg, h: ry*2.4 + t, edge:W};
   },
-  'mayo'(cx, y, rx){ return L.sauce(cx+4, y, rx*1.05, 'bech'); },
+  'mayo'(cx, y, rx){ return L1.sauce(cx+4, y, rx*1.05, 'bech'); },
 };
 
+/* ---------- Round 4 (2026-10-11): texture and detail, after Bruce's references (a patent
+   drawing, an engraving, a colouring book). Same fills as round 3; texture is strokes on top:
+   seed ovals, stipple on cut faces and patty sides, vein hatching, crinkle edges, hatched
+   cheese. Ketchup and mustard are swirls sized by share (2/3, 1/3); mayo and burger sauce are
+   spreads. Elements stay flat (no groups or clip paths) for mockups/export-layers.mjs. ---------- */
+const pts2d = ps => ps.map((p, i) => (i ? 'L' : 'M') + f(p[0]) + ',' + f(p[1])).join('');
+const EP = (cx, cy, rx, ry, a, q=1) => [cx+Math.cos(a)*rx*q, cy+Math.sin(a)*ry*q];
+const P = p => `${f(p[0])},${f(p[1])}`;
+function noise(seed){ const r = rng(seed); const p = [r(), r(), r(), r()].map(v => v*6.283);
+  return t => .45*Math.sin(5*t+p[0]) + .3*Math.sin(11*t+p[1]) + .15*Math.sin(23*t+p[2]) + .1*Math.sin(41*t+p[3]); }
+function stipple(cx, cy, rx, ry, n, seed, {maxq=.88, rim=0}={}){
+  const r = rng(seed); let s = '';
+  for (let i=0;i<n;i++){
+    const a = r()*Math.PI*2, q = i < n*rim ? maxq*(.84+r()*.16) : Math.sqrt(r())*maxq;
+    s += `<circle class="stip" cx="${f(cx+Math.cos(a)*rx*q)}" cy="${f(cy+Math.sin(a)*ry*q)}" r="${f(.4+r()*.35)}"/>`;
+  }
+  return s;
+}
+function bez(p0, p1, p2, p3, t){ const u = 1-t; return [0, 1].map(i => u*u*u*p0[i]+3*u*u*t*p1[i]+3*u*t*t*p2[i]+t*t*t*p3[i]); }
+function qpts(p0, c, p1, n){ const o = []; for (let i=0;i<=n;i++){ const t = i/n, u = 1-t; o.push([0, 1].map(k => u*u*p0[k]+2*u*t*c[k]+t*t*p1[k])); } return o; }
+// Hatch lines clipped to a polygon by hand, since the exported files can't nest a clipPath.
+function clipLines(poly, lines, inset=1.2){
+  let d = '';
+  for (const [x1, y1, x2, y2] of lines){
+    const ts = [], dx = x2-x1, dy = y2-y1, len = Math.hypot(dx, dy);
+    for (let i=0;i<poly.length;i++){
+      const [ax, ay] = poly[i], [bx, by] = poly[(i+1) % poly.length], ex = bx-ax, ey = by-ay, den = dx*ey-dy*ex;
+      if (Math.abs(den) < 1e-9) continue;
+      const t = ((ax-x1)*ey-(ay-y1)*ex)/den, u = ((ax-x1)*dy-(ay-y1)*dx)/den;
+      if (u >= 0 && u < 1 && t >= 0 && t <= 1) ts.push(t);
+    }
+    ts.sort((a, b) => a-b);
+    for (let i=0;i+1<ts.length;i+=2){
+      const a = ts[i]+inset/len, b = ts[i+1]-inset/len; if ((b-a)*len < 2) continue;
+      d += `M${f(x1+dx*a)},${f(y1+dy*a)}L${f(x1+dx*b)},${f(y1+dy*b)}`;
+    }
+  }
+  return d;
+}
+// A squeeze-bottle swirl: a spiral ribbon, seen from three-quarters.
+function swirl(cx, cy, R, turns, light){
+  const ps = [], n = Math.round(turns*36);
+  for (let i=0;i<=n;i++){ const t = i/n, a = t*turns*Math.PI*2 + .6, q = .12 + .88*t; ps.push(EP(cx, cy, R, R*K, a, q)); }
+  const d = pts2d(ps);
+  return `<path class="swirl-out" d="${d}"/><path class="${light ? 'swirl-in-light' : 'swirl-in'}" d="${d}"/>`;
+}
+// A spread: a thin, flat smear with knife marks.
+function spread(cx, y, rx, cls, seed){
+  const R = rx*.86, ry = R*K, cy = y+ry*1.06+1, ph = seed*.7;
+  const edge = (oy) => { const ps = []; for (let i=0;i<=96;i++){ const t = i/96*Math.PI*2, q = 1 + .045*Math.sin(6*t+ph) + .02*Math.sin(13*t); ps.push([cx+Math.cos(t)*R*q, cy+oy+Math.sin(t)*ry*q]); } return pts2d(ps)+'Z'; };
+  let s = `<path class="s ${cls}" d="${edge(1.6)}"/><path class="s thin ${cls}" d="${edge(0)}"/>`;
+  let d = '';
+  for (const [v, w] of [[-.42, .55], [-.08, .78], [.3, .62]]){
+    const a = [cx-R*w, cy+v*ry], b = [cx+R*w, cy+(v+.12)*ry], c = [cx, cy+(v-.3)*ry];
+    d += `M${P(a)}Q${P(c)} ${P(b)}`;
+  }
+  s += `<path class="tx-fine" d="${d}"/>`;
+  return {s, R, ry, cy, h: ry*2.12+4};
+}
+
+const L2 = {...L1,
+  'bun-top'(cx, y, rx){
+    const h = rx*.55, ry = rx*K, cy = y+h;
+    const P0 = [cx-rx, cy], P1 = [cx-rx, cy-h*1.33], P2 = [cx+rx, cy-h*1.33], P3 = [cx+rx, cy];
+    let s = `<path class="s bun" d="M${P(P0)}C${P(P1)} ${P(P2)} ${P(P3)}A${f(rx)},${f(ry)} 0 0 1 ${P(P0)}Z"/>`;
+    s += `<path class="tx" d="M${f(cx-rx*.93)},${f(cy-h*.22)}Q${f(cx)},${f(cy+ry*.55)} ${f(cx+rx*.93)},${f(cy-h*.22)}"/>`;
+    // Shading: contour hatching inside the right flank, as an engraving would.
+    let hatch = '';
+    for (const [k, t0] of [[.93, .6], [.86, .67], [.79, .74]]){
+      const ps = []; for (let i=0;i<=14;i++){ const p = bez(P0, P1, P2, P3, t0+(.9-t0)*i/14); ps.push([cx+(p[0]-cx)*k, cy+(p[1]-cy)*k]); }
+      hatch += pts2d(ps);
+    }
+    s += `<path class="tx-fine" d="${hatch}"/>`;
+    // Sesame seeds as open ovals over the whole dome, turned with the curve.
+    const r = rng(17), seeds = [];
+    for (let i=0;i<500 && seeds.length<26;i++){
+      const v = .2+r()*.72, yy = cy-h*v, w = rx*Math.sqrt(1-v*v)*.88, xx = cx+(r()*2-1)*w;
+      if (seeds.some(([a, b]) => Math.hypot(a-xx, (b-yy)*1.7) < 8.5)) continue;
+      seeds.push([xx, yy]);
+    }
+    for (const [xx, yy] of seeds){
+      const u = (xx-cx)/rx, v = (cy-yy)/h;
+      s += `<ellipse class="seed2" cx="${f(xx)}" cy="${f(yy)}" rx="${f(2.5*(1-.4*Math.abs(u)))}" ry="${f(1.2+.35*v)}" transform="rotate(${f(u*40+(r()-.5)*36)} ${f(xx)} ${f(yy)})"/>`;
+    }
+    return {svg:s, h:h+ry, edge:rx};
+  },
+  'bun-base'(cx, y, rx){
+    const ry = rx*K, t = rx*.16, cy = y+ry;
+    let s = disc(cx, cy, rx, t, 'bun', 'crumb'), d = '';
+    for (let i=0;i<8;i++){ const c = .95-i*.075, x = cx+c*rx, top = cy+Math.sqrt(1-c*c)*ry; d += `M${f(x)},${f(top+1.8)}V${f(top+t-1.6)}`; }
+    s += `<path class="tx-fine" d="${d}"/>`;
+    s += `<ellipse class="tx" cx="${f(cx)}" cy="${f(cy)}" rx="${f(rx*.9)}" ry="${f(ry*.86)}"/>`;
+    s += stipple(cx, cy, rx*.9, ry*.86, 170, 3, {maxq:.96, rim:.3});
+    const r = rng(29);
+    for (let i=0;i<7;i++){ const a = r()*Math.PI*2, q = Math.sqrt(r())*.6, p = 1.4+r()*1.6; s += `<ellipse class="pore" cx="${f(cx+Math.cos(a)*rx*q)}" cy="${f(cy+Math.sin(a)*ry*q)}" rx="${f(p)}" ry="${f(p*.65)}"/>`; }
+    return {svg:s, h:2*ry+t, edge:rx};
+  },
+  'lettuce'(cx, y, rx){
+    const R = rx*1.12, ry = R*K, cy = y+ry*1.1+1, ph = 1.3;
+    const edge = (oy, k) => { const ps = []; for (let i=0;i<=160;i++){ const t = i/160*Math.PI*2, q = k*(1 + .055*Math.sin(9*t+ph) + .025*Math.sin(20*t) + .012*Math.sin(37*t+1)); ps.push([cx+Math.cos(t)*R*q, cy+oy+Math.sin(t)*ry*q]); } return pts2d(ps)+'Z'; };
+    let s = `<path class="s leaf-back" d="${edge(4, 1)}"/><path class="s leaf" d="${edge(0, .97)}"/>`;
+    // Ruffles: a fold in from the edge at each trough along the front.
+    let folds = '';
+    for (let k=0;k<9;k++){
+      const t = ((1.5*Math.PI - ph + 2*Math.PI*k)/9) % (2*Math.PI);
+      if (Math.sin(t) < .1) continue;
+      const a = EP(cx, cy, R, ry, t, .9), c = EP(cx, cy, R, ry, t-.05, .82), b = EP(cx, cy, R, ry, t+.08, .74);
+      folds += `M${P(a)}Q${P(c)} ${P(b)}`;
+    }
+    // Veins: a midrib and long branches, worked out in the unit disc and mapped.
+    const U = (u, v) => [cx+u*R, cy+v*ry];
+    const m0 = [-.72, -.4], m1 = [-.05, .22], m2 = [.74, .3];
+    const q = s => { const u = 1-s; return [0, 1].map(i => u*u*m0[i]+2*u*s*m1[i]+s*s*m2[i]); };
+    const tq = s => { const d = [0, 1].map(i => 2*(1-s)*(m1[i]-m0[i])+2*s*(m2[i]-m1[i])), l = Math.hypot(...d); return [d[0]/l, d[1]/l]; };
+    let veins = '';
+    for (const sv of [.14, .3, .46, .62, .78]) for (const side of [1, -1]){
+      const p = q(sv), tg = tq(sv), n = [-tg[1]*side, tg[0]*side], L0 = .55;
+      let e = [p[0]+n[0]*L0+tg[0]*L0*.5, p[1]+n[1]*L0+tg[1]*L0*.5];
+      const el = Math.hypot(...e); if (el > .84) e = [e[0]*.84/el, e[1]*.84/el];
+      const c = [p[0]+n[0]*L0*.3+tg[0]*L0*.12, p[1]+n[1]*L0*.3+tg[1]*L0*.12];
+      veins += `M${P(U(...p))}Q${P(U(...c))} ${P(U(...e))}`;
+    }
+    s += `<path class="tx" d="M${P(U(...m0))}Q${P(U(...m1))} ${P(U(...m2))}"/><path class="tx-fine" d="${veins}${folds}"/>`;
+    return {svg:s, h:ry*2.2+6, edge:R};
+  },
+  'tomato'(cx, y, rx){
+    const r = rx*.56, ry = r*K, t = 5; let s = '';
+    for (const [dx, dy, off] of [[-rx*.36, 0, .3], [rx*.36, 4, 1.1]]){
+      const c = cx+dx, cyy = y+ry+dy;
+      s += disc(c, cyy, r, t, 'tom-side', 'tom');
+      s += `<ellipse class="tx" cx="${f(c)}" cy="${f(cyy)}" rx="${f(r*.88)}" ry="${f(ry*.88)}"/>`;
+      for (let k=0;k<4;k++){
+        const a = off+k*Math.PI/2, ps = [];
+        for (let i=0;i<=28;i++){ const w = i/28*Math.PI*2; ps.push(EP(c, cyy, r, ry, a+.52*Math.cos(w), .53+.21*Math.sin(w))); }
+        s += `<path class="jelly" d="${pts2d(ps)}Z"/>`;
+        for (const j of [-.24, 0, .24]){ const p = EP(c, cyy, r, ry, a+j, j ? .52 : .6); s += `<ellipse class="seed2" cx="${f(p[0])}" cy="${f(p[1])}" rx="1.5" ry=".85"/>`; }
+      }
+      s += `<ellipse class="tx" cx="${f(c)}" cy="${f(cyy)}" rx="${f(r*.14)}" ry="${f(ry*.14)}"/>`;
+    }
+    return {svg:s, h:2*ry+t+4, edge:rx*.36+r};
+  },
+  'onion-raw'(cx, y, rx){
+    const R = rx*.55; let s = '';
+    const ring = (c, cy, ro, ri) => `M${f(c-ro)},${f(cy)}a${f(ro)},${f(ro*K)} 0 1 0 ${f(2*ro)},0a${f(ro)},${f(ro*K)} 0 1 0 ${f(-2*ro)},0ZM${f(c-ri)},${f(cy)}a${f(ri)},${f(ri*K)} 0 1 0 ${f(2*ri)},0a${f(ri)},${f(ri*K)} 0 1 0 ${f(-2*ri)},0Z`;
+    // Sides first, then tops, so a ring's thickness only shows in the gap inside the next one out.
+    const slice = (c, cy, sc, rings) => {
+      const bands = rings.map(k => { const ro = R*sc*k; return [ro, ro-R*sc*.15]; });
+      for (const [ro, ri] of bands) s += `<path class="s thin onion-side" fill-rule="evenodd" d="${ring(c, cy+2, ro, ri)}"/>`;
+      for (const [ro, ri] of bands) s += `<path class="s thin onion" fill-rule="evenodd" d="${ring(c, cy, ro, ri)}"/>`;
+    };
+    slice(cx+rx*.06, y+R*.5*K+1, .5, [1]);      // a loose ring, fallen out
+    slice(cx-rx*.32, y+R*K+3, 1, [1, .72, .44]);
+    slice(cx+rx*.36, y+R*K+7, .86, [1, .7]);
+    return {svg:s, h:2*R*K+10, edge:rx*.36+R*.86};
+  },
+  'pickle'(cx, y, rx){
+    const r0 = rx*.27, t = 3; let s = '';
+    const crinkle = (c, cy, r) => { const ps = []; for (let i=0;i<=112;i++){ const a = i/112*Math.PI*2, w = Math.sin(16*a), q = 1+.05*Math.sign(w)*Math.sqrt(Math.abs(w)); ps.push([c+Math.cos(a)*r*q, cy+Math.sin(a)*r*K*q]); } return pts2d(ps)+'Z'; };
+    for (const [dx, dy, sc] of [[-rx*.52, 3, 1], [-rx*.02, 0, 1.05], [rx*.5, 4, .95], [rx*.2, 10, 1]]){
+      const c = cx+dx, r = r0*sc, ry = r*K, cy = y+ry+dy;
+      s += `<path class="s thin pick-side" d="${crinkle(c, cy+t, r)}"/><path class="s thin pick" d="${crinkle(c, cy, r)}"/>`;
+      // Ridges down the side at each crinkle, a skin ring, and the seed ring.
+      let d = ''; for (let i=0;i<16;i++){ const a = (i+.25)/16*Math.PI*2; if (Math.sin(a) < .25) continue; const x = c+Math.cos(a)*r*1.04, yy = cy+Math.sin(a)*ry*1.04; d += `M${f(x)},${f(yy+.6)}V${f(yy+t-.2)}`; }
+      s += `<path class="tx-fine" d="${d}"/><ellipse class="tx-fine" cx="${f(c)}" cy="${f(cy)}" rx="${f(r*.8)}" ry="${f(ry*.8)}"/>`;
+      for (let i=0;i<6;i++){ const p = EP(c, cy, r, ry, i/6*Math.PI*2+.3, .46); s += `<ellipse class="seed2" cx="${f(p[0])}" cy="${f(p[1])}" rx="1.2" ry=".7"/>`; }
+    }
+    return {svg:s, h:2*r0*1.05*K+16, edge:rx*.5+r0*.95};
+  },
+  'cheese'(cx, y, rx){
+    // A square slice with edge thickness, corners draped down over the patty's rim.
+    const s0 = rx*1.02, ry = s0*K, th = 3.2;
+    const T = [cx, y+1], R = [cx+s0, y+ry+9], B = [cx+2, y+2*ry+7], Lf = [cx-s0, y+ry+10];
+    const mid = (a, b, lift) => [(a[0]+b[0])/2, (a[1]+b[1])/2-lift];
+    const c1 = mid(T, R, 5), c2 = mid(R, B, 6), c3 = mid(B, Lf, 6), c4 = mid(Lf, T, 5), dn = p => [p[0], p[1]+th];
+    const top = `M${P(T)}Q${P(c1)} ${P(R)}Q${P(c2)} ${P(B)}Q${P(c3)} ${P(Lf)}Q${P(c4)} ${P(T)}Z`;
+    const side = `M${P(Lf)}Q${P(c3)} ${P(B)}Q${P(c2)} ${P(R)}L${P(dn(R))}Q${P(dn(c2))} ${P(dn(B))}Q${P(dn(c3))} ${P(dn(Lf))}Z`;
+    const poly = [...qpts(T, c1, R, 12), ...qpts(R, c2, B, 12).slice(1), ...qpts(B, c3, Lf, 12).slice(1), ...qpts(Lf, c4, T, 12).slice(1, -1)];
+    const dl = Math.hypot(R[0]-T[0], R[1]-T[1]), ux = (R[0]-T[0])/dl, uy = (R[1]-T[1])/dl, lines = [];
+    for (let k=-16;k<=16;k++){ const ox = cx-uy*k*3.6, oy = y+ry+4+ux*k*3.6; lines.push([ox-ux*s0*1.6, oy-uy*s0*1.6, ox+ux*s0*1.6, oy+uy*s0*1.6]); }
+    const fold = []; for (let i=0;i<=20;i++) fold.push(EP(cx, y+ry+3, s0*.8, ry*.8, .7+i/20*(Math.PI-1.4)));
+    const svg = `<path class="s cheese-side" d="${side}"/><path class="s cheese" d="${top}"/>` +
+      `<path class="tx-hatch" d="${clipLines(poly, lines)}"/><path class="tx-fine" d="${pts2d(fold)}"/>`;
+    return {svg, h:B[1]+th-y+1, edge:s0};
+  },
+  patty(cx, y, rx, t, kind){
+    // A smooth top and a craggy, stippled side; grill marks on a thick patty, a lacy edge on a smashed one.
+    const ry = rx*K, cy = y+ry*1.08, seed = Math.round(rx*10+t*7)+1, nz = noise(seed), nz2 = noise(seed+5), r = rng(seed+11);
+    const smash = kind === 'smash', amp = smash ? .06 : .022;
+    const rr = a => 1 + amp*nz(a) + (smash ? .035*Math.sin(19*a) : 0);
+    const topPts = [], fTop = [], fBot = [];
+    for (let i=0;i<=120;i++){ const a = i/120*Math.PI*2; topPts.push(EP(cx, cy, rx, ry, a, rr(a))); }
+    for (let i=0;i<=60;i++){ const a = i/60*Math.PI, p = EP(cx, cy, rx, ry, a, rr(a)); fTop.push(p); fBot.push([p[0], p[1]+t+(smash ? .5 : 1.3)*nz2(a*1.7)]); }
+    let s = `<path class="s meat" d="${pts2d(fTop)}${pts2d(fBot.reverse()).replace('M', 'L')}Z"/><path class="s meat-top" d="${pts2d(topPts)}Z"/>`;
+    let crag = '';
+    if (!smash) for (let i=0;i<12;i++){ const a = .2+i/11*(Math.PI-.4)+(r()-.5)*.1, p = EP(cx, cy, rx, ry, a, rr(a)), l = t*(.3+r()*.4); crag += `M${f(p[0])},${f(p[1]+t-l)}l${f((r()-.5)*1.5)},${f(l-.8)}`; }
+    if (crag) s += `<path class="tx-fine" d="${crag}"/>`;
+    const n = Math.round(rx*t*(smash ? .06 : .11));
+    for (let i=0;i<n;i++){ const a = .08+r()*(Math.PI-.16), p = EP(cx, cy, rx, ry, a, rr(a)); s += `<circle class="stip" cx="${f(p[0])}" cy="${f(p[1]+1.2+r()*Math.max(t-2.4, .4))}" r="${f(.4+r()*.35)}"/>`; }
+    if (kind === 'thick'){
+      let g = '';
+      for (const b of [-.42, 0, .42]) for (const o of [0, .075]){
+        const m = .5, bb = b+o, R0 = .8, A = 1+m*m, Bq = 2*m*bb, C = bb*bb-R0*R0, D = Bq*Bq-4*A*C;
+        if (D <= 0) continue;
+        const u1 = (-Bq-Math.sqrt(D))/(2*A), u2 = (-Bq+Math.sqrt(D))/(2*A);
+        g += `M${f(cx+u1*rx)},${f(cy+(m*u1+bb)*ry)}L${f(cx+u2*rx)},${f(cy+(m*u2+bb)*ry)}`;
+      }
+      s += `<path class="tx-bold" d="${g}"/>`;
+    } else if (!smash){
+      s += `<path class="only-f" d="M${f(cx-rx*.5)},${f(cy+ry*.1)}l${f(rx*.22)},${f(-ry*.38)}M${f(cx-rx*.12)},${f(cy+ry*.42)}l${f(rx*.34)},${f(-ry*.6)}M${f(cx+rx*.3)},${f(cy+ry*.2)}l${f(rx*.2)},${f(-ry*.36)}"/>`;
+    }
+    let pits = '';
+    for (let i=0;i<(smash ? 14 : 9);i++){ const p = EP(cx, cy, rx, ry, r()*Math.PI*2, Math.sqrt(r())*.72); pits += `M${f(p[0]-1.5)},${f(p[1])}q1.5,1 3,0`; }
+    s += `<path class="tx-fine" d="${pits}"/>`;
+    if (smash) for (let i=0;i<10;i++){ const p = EP(cx, cy, rx, ry, r()*Math.PI*2, .86+r()*.06), w = 1.2+r()*1.4; s += `<ellipse class="pore" cx="${f(p[0])}" cy="${f(p[1])}" rx="${f(w)}" ry="${f(w*.55)}"/>`; }
+    return {svg:s, h:2*ry*1.08+t+2, edge:rx*(1+amp)};
+  },
+  'patty-thin'(cx, y, rx){ return L2.patty(cx, y, rx*.98, rx*.13, 'thin'); },
+  'patty-thick'(cx, y, rx){ return L2.patty(cx, y, rx*.88, rx*.32, 'thick'); },
+  'patty-smash'(cx, y, rx){ return L2.patty(cx, y, rx*1.02, rx*.07, 'smash'); },
+  'bacon'(cx, y, rx){
+    let s = ''; const w = rx*1.12, H = 10;
+    const line = (dy, ph, off) => { const pts = []; for (let i=0;i<=40;i++){ const x = cx-w+2*w*i/40, yy = y+6+dy+Math.sin(i/40*Math.PI*4+ph)*3+(i/40-.5)*6+off; pts.push([x, yy]); } return pts; };
+    const band = (a, b) => pts2d(a)+pts2d(b.slice().reverse()).replace('M', 'L')+'Z';
+    for (const [dy, ph] of [[0, 0], [rx*K*.9, 1.6]]){
+      s += `<path class="s bacon" d="${band(line(dy, ph, 0), line(dy, ph, H))}"/>`;
+      s += `<path class="bacon-stripe" d="${band(line(dy, ph, 3.6), line(dy, ph, 6.6))}"/>`;
+      s += `<path class="tx-fine" d="${pts2d(line(dy, ph, 1.8))}${pts2d(line(dy, ph, 8.3))}"/>`;
+    }
+    return {svg:s, h:rx*K*.9+22, edge:w};
+  },
+  // Ketchup and mustard as swirls, sized by share: the large one is 2/3, the small one 1/3.
+  'sauce-ketchup-mustard'(cx, y, rx){
+    const R1 = rx*.56, R2 = rx*.3, cy = y+R1*K*1.02+2;
+    return {svg: swirl(cx-rx*.2, cy, R1, 2.2, false) + swirl(cx+rx*.52, cy+R1*K*.35, R2, 1.4, true), h:R1*K*2.1+6, edge:rx*.52+R2};
+  },
+  'mustard'(cx, y, rx){
+    const R = rx*.46, cy = y+R*K+3;
+    return {svg: swirl(cx, cy, R, 2, true), h:R*K*2+7, edge:R};
+  },
+  // Mayo and burger sauce as spreads, so they never read as the swirled condiments.
+  'mayo'(cx, y, rx){ const o = spread(cx, y, rx, 'bech', 1); return {svg:o.s, h:o.h, edge:o.R}; },
+  'sauce-burger'(cx, y, rx){
+    const o = spread(cx, y, rx, 'sauce-pink', 2), r = rng(23); let bits = '';
+    for (let i=0;i<10;i++){ const p = EP(cx, o.cy, o.R, o.ry, r()*Math.PI*2, Math.sqrt(r())*.72), b = 1.3+r()*.8; bits += `<rect class="chunk" x="${f(p[0]-b)}" y="${f(p[1]-b*.6)}" width="${f(2*b)}" height="${f(b*1.2)}" rx=".5" transform="rotate(${f((r()-.5)*50)} ${f(p[0])} ${f(p[1])})"/>`; }
+    return {svg:o.s+bits, h:o.h, edge:o.R};
+  },
+  'onion-fried'(cx, y, rx){
+    const R = rx*.85, ry = R*K, cy = y+ry+2, r = rng(11); let d = '';
+    for (let i=0;i<20;i++){
+      const a = r()*Math.PI*2, q = Math.sqrt(r())*.78, x = cx+Math.cos(a)*R*q, yy = cy+Math.sin(a)*ry*q, l = 6+r()*7, o = r()*Math.PI, ox = Math.cos(o)*l, oy = Math.sin(o)*l*K;
+      d += `M${f(x-ox)},${f(yy-oy)}C${f(x-ox*.3)},${f(yy-oy*.3-3)} ${f(x+ox*.3)},${f(yy+oy*.3+3)} ${f(x+ox)},${f(yy+oy)}`;
+    }
+    return {svg:`<ellipse class="fried-pad" cx="${f(cx)}" cy="${f(cy)}" rx="${f(R)}" ry="${f(ry)}"/><path class="strand-out" d="${d}"/><path class="strand-in" d="${d}"/>` + stipple(cx, cy, R, ry, 26, 31, {maxq:.8}), h:2*ry+5, edge:R};
+  },
+  'bread'(cx, y, rx){
+    const W = rx*.9, ry = W*K*1.05, t = 9, cy = y+ry*1.4;
+    const shape = (oy, k=1) => { let d = '';
+      for (let i=0;i<=96;i++){ const a = i/96*Math.PI*2, c = Math.cos(a), sn = Math.sin(a);
+        let px = Math.sign(c)*Math.pow(Math.abs(c), .45)*W*k, py = Math.sign(sn)*Math.pow(Math.abs(sn), .45)*ry*k;
+        if (sn < 0) py *= 1+.4*Math.pow(-sn, 3);
+        d += (i ? 'L' : 'M')+f(cx+px)+','+f(cy+py+oy); }
+      return d+'Z'; };
+    let svg = `<path class="s bun" d="${shape(t)}"/><path class="s bun" d="M${f(cx-W)},${f(cy)}L${f(cx-W)},${f(cy+t)}M${f(cx+W)},${f(cy)}L${f(cx+W)},${f(cy+t)}"/><path class="s crumb" d="${shape(0)}"/><path class="tx" d="${shape(0, .88)}"/>`;
+    svg += stipple(cx, cy, W*.86, ry*.86, 150, 9, {maxq:.98, rim:.25});
+    const r = rng(41); for (let i=0;i<6;i++){ const a = r()*Math.PI*2, q = Math.sqrt(r())*.6, p = 1.4+r()*1.6; svg += `<ellipse class="pore" cx="${f(cx+Math.cos(a)*W*q)}" cy="${f(cy+Math.sin(a)*ry*q)}" rx="${f(p)}" ry="${f(p*.65)}"/>`; }
+    return {svg, h:ry*2.4+t, edge:W};
+  },
+  'pasta'(cx, y, rx){
+    const o = L1.slab(cx, y, rx, 3, 'pasta', 'pasta', true), W = rx*1.05, D = rx*.42, dx = D*.9;
+    let d = '';
+    for (const inset of [2.6, 5]){ const ps = []; for (let i=2;i<=22;i++){ const x = cx+W-dx+(-2*W)*i/24 - inset*.9; ps.push([x, y+D-inset+Math.sin(i/24*Math.PI*6)*1.6*(1-inset/8)]); } d += pts2d(ps); }
+    return {svg:o.svg+`<path class="tx-fine" d="${d}"/>`, h:o.h, edge:o.edge};
+  },
+  'ragu'(cx, y, rx){
+    const o = L1.ragu(cx, y, rx), D = rx*.42, dx = D*.9, W = rx*1.05, r = rng(37); let s = '';
+    for (let i=0;i<70;i++){ const u = .06+r()*.88, v = .1+r()*.8; s += `<circle class="stip" cx="${f(cx-W+dx+u*2*W-v*2*dx)}" cy="${f(y+v*D)}" r="${f(.4+r()*.35)}"/>`; }
+    return {svg:o.svg.replace(/<circle class="meat-dot"[^>]*\/>/g, '')+s, h:o.h, edge:o.edge};
+  },
+  'cheese-top'(cx, y, rx){
+    const o = L1['cheese-top'](cx, y, rx), D = rx*.42; let s = '';
+    for (const [u, v, k] of [[-.4, .35, 1], [.3, .55, 1.3], [.05, .2, .8]]) s += stipple(cx+u*rx, y+v*D, rx*.14*k, D*.22*k, 16, 50+Math.round(k*10), {maxq:1});
+    return {svg:o.svg+s, h:o.h, edge:o.edge};
+  },
+};
+const L = L2;   // the current kit, read by mockups/export-layers.mjs
+
 /* ---------- Composer ---------- */
-function compose(layers, {rx=70, gap=14, labels=true, cx, repeat, padLeft}={}){
+let KIT = L2;
+function compose(layers, {rx=70, gap=14, labels=true, cx, repeat, padLeft, kit}={}){
+  kit = kit || KIT;
   const lx = labels ? (cx ?? rx*1.25) : null;
   cx = cx ?? (labels ? rx*1.25 : rx*1.2);
   const labelX = cx + rx*1.35 + 16;
   let y = 8, placed = [];
   layers.forEach((ly, i) => {
-    const o = L[ly.k](cx, y, rx);
+    const o = kit[ly.k](cx, y, rx);
     placed.push({...ly, y, o});
     y += o.h + gap;
   });
@@ -537,8 +841,9 @@ const BUILDS = {
     {k:'bun-base', label:'Steamed bun', role:'soft'} ]},
 };
 
-document.getElementById('ba-ex').innerHTML = compose(BUILDS.deluxe.layers, {rx:56, gap:6, labels:false});
-document.getElementById('ba-c').innerHTML = compose(BUILDS.deluxe.layers, {rx:56, gap:6, labels:false});
+document.getElementById('ba-ex').innerHTML = compose(BUILDS.deluxe.layers, {rx:56, gap:6, labels:false, kit:L1});
+document.getElementById('ba-ex4').innerHTML = compose(BUILDS.deluxe.layers, {rx:56, gap:6, labels:false, kit:L2});
+document.getElementById('ba-c').innerHTML = compose(BUILDS.deluxe.layers, {rx:56, gap:6, labels:false, kit:L1});
 document.getElementById('ba-ex2').innerHTML = compose([{k:'bun-top'},{k:'cheese'},{k:'patty-thin'},{k:'bun-base'}], {rx:44, gap:5, labels:false});
 // Real formula icons, copied from Fugu's assets/icons/formula/ (patty, cheese, onion).
 document.getElementById('ba-icons').innerHTML = [
@@ -548,9 +853,8 @@ document.getElementById('ba-icons').innerHTML = [
  '<span>+</span>',
  '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path style="fill:var(--accent-soft)" d="M24 11c-9 5.5-14 12.5-14 19.5C10 37 16.3 42 24 42s14-5 14-11.5C38 23.5 33 16.5 24 11z"/><path d="M24 11V5M24 11c-4 6.5-6 13-5 21M24 11c4 6.5 6 13 5 21M20 42l-1.5 3M24 42v3.2M28 42l1.5 3"/></svg>'
 ].join('');
-const st = document.getElementById('st'), styled = document.getElementById('styled');
-st.onclick = () => { const on = styled.classList.toggle('fstyle'); styled.classList.toggle('cstyle', !on); st.textContent = on ? 'Show colour version' : 'Show formula style'; };
 
+function render(){
 const kitKeys = [['bun-top','Bun top'],['lettuce','Lettuce'],['tomato','Tomato'],['onion-raw','Raw onion'],['onion-fried','Fried onion'],['pickle','Pickles'],['cheese','Cheese slice'],['bacon','Bacon'],['patty-thin','Thin patty'],['patty-thick','Thick patty'],['patty-smash','Smashed patty'],['sauce-ketchup-mustard','Ketchup, mustard'],['sauce-burger','Burger sauce'],['mustard','Mustard'],['bun-base','Bun base'],['bread','Bread slice'],['pasta','Pasta sheet'],['ragu','Ragù'],['bechamel','Béchamel'],['cheese-top','Cheese, baked']];
 document.getElementById('kit-grid').innerHTML = kitKeys.map(([k, n]) => `<div class="kit-cell">${compose([{k}], {rx:52, gap:0, labels:false})}<span class="panel-label" style="font-size:.8rem;margin:0">${n}</span><span class="kit-key">${k}</span></div>`).join('');
 
@@ -581,6 +885,11 @@ const blt = [
 document.getElementById('beyond-grid').innerHTML =
   `<div class="panel"><div class="panel-label">Lasagne</div><div class="panel-sub">Rich and creamy, set firm by resting.</div>${compose(lasagne, {rx:62, gap:12, repeat:{from:2, to:4, n:3}})}</div>` +
   `<div class="panel"><div class="panel-label">BLT</div><div class="panel-sub">Salt and smoke against cold crunch.</div>${compose(blt, {rx:62, gap:12, padLeft:true})}</div>`;
+
+}
+render();
+const st = document.getElementById('st');
+st.onclick = () => { KIT = KIT === L2 ? L1 : L2; st.textContent = KIT === L2 ? 'Show round 3' : 'Show round 4'; render(); };
 
 const tt = document.getElementById('tt'), root = document.documentElement;
 const dark = () => root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;

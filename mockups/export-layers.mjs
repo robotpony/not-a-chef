@@ -37,18 +37,28 @@ const style = {
   'squeeze-in': `style="stroke:${SOFT}" ${S(2.6)}`,
   chunk: `${surf} ${INK} ${S(.9)}`,
   bubble: `${soft} ${INK} ${S(.8)}`,
+  // Round 4 texture (2026-10-11)
+  tx: `${INK} ${S(.9)}`, 'tx-fine': `${INK} ${S(.6)}`, 'tx-bold': `${INK} ${S(1.5)}`,
+  'tx-hatch': `${INK} ${S(.5)} stroke-opacity=".55"`,
+  stip: 'fill="currentColor"',
+  seed2: `${surf} ${INK} ${S(.85)}`,
+  jelly: `${soft} ${INK} ${S(.9)}`,
+  'strand-out': `${INK} ${S(3.4)}`, 'swirl-out': `${INK} ${S(3.4)}`,
+  'strand-in': `style="stroke:${SOFT}" ${S(1.6)}`, 'swirl-in': `style="stroke:${SOFT}" ${S(1.6)}`,
+  'swirl-in-light': `style="stroke:${SURF}" ${S(1.6)}`,
 };
-const bodies = ['bun','leaf-back','tom-side','pick-side','cheese-side','meat','bacon','sauce-red','sauce-yel','sauce-pink','ragu'];
-const tops = ['crumb','leaf','tom','pick','cheese','meat-top','bech','pasta'];
+const bodies = ['onion-side','bun','leaf-back','tom-side','pick-side','cheese-side','meat','bacon','sauce-red','sauce-yel','sauce-pink','ragu'];
+const tops = ['onion','crumb','leaf','tom','pick','cheese','meat-top','bech','pasta'];
 const hidden = ['ring-in','meat-dot','crust'];
 
 function attrs(cls){
   const c = cls.split(/\s+/);
   if (c.some(k => hidden.includes(k))) return null;
   if (c[0] === 's'){
+    const w = a => c.includes('thin') ? a.replace(S(1.8), S(1.2)) : a;
     if (c.includes('leaf-back')) return style.body;
-    if (bodies.some(k => c.includes(k))) return style.body;
-    if (tops.some(k => c.includes(k))) return style.top;
+    if (bodies.some(k => c.includes(k))) return w(style.body);
+    if (tops.some(k => c.includes(k))) return w(style.top);
     throw new Error('unstyled ' + cls);
   }
   const a = style[c[0]];
