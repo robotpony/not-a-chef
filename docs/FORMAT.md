@@ -328,7 +328,7 @@ A build made of layers (a burger, a sandwich, a lasagne) can be drawn as an expl
 ````markdown
 ```stack
 bun-top    | Toasted bun       | soft, toasted
-lettuce    | Shredded lettuce  | cold crunch
+lettuce-shredded | Shredded lettuce | cold crunch
 patty-thin | Thin patty, 140 g | salt, fat, savoury
 bun-base   | Toasted bun       | barrier
 ```
@@ -339,6 +339,8 @@ bun-base   | Toasted bun       | barrier
 - Patties are griddled unless the key says `-grilled`; only a grilled patty shows grill marks.
 - Optional lines: `caption: <text>`, and `repeat: <from>-<to> x<n>` to mark layers as repeated (`repeat: 3-5 x3` draws a `× 3` bracket beside layers 3 to 5; `×` works for `x`, a single layer works, as in `repeat: 4 x2`, and a block can have several `repeat:` lines).
 - On a build page the first `stack` block goes under `## Picks`, and a small unlabelled copy goes on the build's card on its blueprint page. Its layers MUST follow the picks. In Obsidian it reads as plain text.
+- Pick the layer that matches the label: `lettuce` is a single leaf, `lettuce-shredded` a heap of shreds.
+- A build that isn't layered (a one-pan pasta) has no `stack` block, and its card goes without a drawing.
 
 A method (`content/methods/`) explains how a kind of food or a cooking process works in general: the principle first, then the variables, the stages, why each one is there, how it fails, and the recipes that use it. The folder decides what's a method. Each page MUST carry the `method` tag: the folder's own `_index.md` cascades it to a method page with no `tags`, but a page that sets its own `tags` replaces the cascade, so list `method` there. What counts as a method, and how methods relate to blueprints, recipes, and stories, is in docs/METHODS.md.
 

@@ -73,7 +73,9 @@ in a browser — no build step.
   (option A) or a bottom-aligned lineup in one panel (option B,
   recommended in the mock). Decided 2026-10-11: §1 hover and option A,
   since each build is its own page and so gets its own card, and A holds up
-  better on a phone. Built the same day (`STYLE.md` Methods and blueprint pages).
+  better on a phone. Built the same day (`STYLE.md` Methods and blueprint pages);
+  superseded 2026-10-12 by `methods-list-and-blueprint.html`, which moves the
+  builds off the list.
 
 - **`blueprint-page-parts.html`**: proposal (2026-10-11) for the
   blueprint page: the builds comparison at equal column widths
@@ -91,7 +93,8 @@ in a browser — no build step.
   or in the sidebar), the builds (a scrolling rail, a wrapping grid, or a
   list), and 3 or 6 builds. §3 keeps the full width for comparison.
   Decided 2026-10-11: sidebar, lede, rail, as recommended (`STYLE.md`
-  Methods and blueprint pages). Template half is Fugu's.
+  Methods and blueprint pages). Built 2026-10-11; the builds rail was
+  superseded 2026-10-12 (`methods-list-and-blueprint.html`).
 
 - **`methods-list-and-blueprint.html`**: proposal (2026-10-12) to stop the
   methods list and a blueprint's page showing the same build cards. The list
@@ -102,7 +105,9 @@ in a browser — no build step.
   it. Switches for builds on the list (names, small drawings, count, cards) and
   parts on the blueprint (compact, compact with options, long); combining the
   pages is written up and not proposed. Decided 2026-10-12: names, compact, and
-  one-pan pasta added as test kitchen pages. Template half is Fugu's.
+  one-pan pasta added as test kitchen pages. Built the same day (Fugu `e6dee79`,
+  with a lead line over the blueprint page's parts in `e8a76b1`), plus build
+  cards two across on desktop.
 
 - **`principle-page-sidebar.html`**: proposal (2026-10-11) giving the
   win-the-fridge principle page the methods list's frame: a review of the
@@ -140,6 +145,9 @@ in a browser — no build step.
   zigzag, tomato chambers, a crust rim and open crumb on cut bread).
   Accepted as v1 2026-10-10 (`STYLE.md` Exploded build diagram); a later
   pass refines the drawings from reference examples (PLAN.md, phase 6).
+  2026-10-12: a `lettuce-shredded` layer (a heap of flat ribbons), and the
+  leaf lettuce, mayo, and burger sauce report their real reach (`data-edge`)
+  so leader dots clear them.
 
 - **`in-development.html`**: proposal (2026-10-07) to make `draft: true`
   mean "published, still changing" instead of hidden. A flag-blue callout
