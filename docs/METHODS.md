@@ -64,7 +64,7 @@ Hugo's `cascade` makes the link literal: an `_index.md` can set a tag or taxonom
 That's why **blueprints are a taxonomy, not folders**. (They were briefly called families; renamed 2026-10-10 because the existing `family` tag already means recipes that come from our family historically.) Water frying belongs to burgers and to ground meat; a folder would force it to pick one.
 
 - **`blueprint`** is a taxonomy, set up like `cuisine`: `blueprint: [burgers]` in frontmatter, with `content/blueprint/burgers/_index.md` holding the blueprint's definition and the order of its parts.
-- **`part`** is a frontmatter field on a method page naming which part of the blueprint it covers (e.g. `part: Patty construction`).
+- **`part`** is a frontmatter field on a method page naming which part of the blueprint it covers (e.g. `part: Patty construction`). A recipe can carry it too, naming the part it makes (`part: Sauces`).
 - Method pages, recipes, and stories all carry `blueprint`, so the blueprint page collects all three without any other wiring.
 - Folders can still group a blueprint's method files on disk (`content/methods/burgers/`), with `blueprint: [burgers]` set on each page (or cascaded from `content/methods/_index.md` by path). A page that belongs to a second blueprint lists both.
 
@@ -101,6 +101,7 @@ Blueprint (burgers)
 | `blueprint` | build, recipe | The blueprint it belongs to (`[burgers]`) |
 | `build_name` | build page | The build's name (`Drive-in deluxe`). Unique within its blueprint. Not `build`: Hugo reserves that key for its own build options, and the site fails to build. |
 | `build_name` | recipe | Which build the recipe is an instance of: the same name as the build page's `build_name` |
+| `part` | recipe | Which part the recipe makes (`Sauces`, `Assembly`), for a recipe that's a component rather than a whole dish: a sauce, a bun, a patty. The blueprint's page lists it beside that part. A recipe with neither `part` nor `build_name` goes under "No build yet". |
 | `profile` | build page | Free text, one line: what it tastes and feels like (`Cold crunch and sharp against a salty patty`). Free text for now; a fixed vocabulary can come later if builds need comparing by it. |
 | `picks` | build page | One pick per part, as a list of `"Part: pick"` strings in the blueprint's part order. A list, not a map, because the content tools read flat frontmatter (`frontmatter.py`). |
 | `origin` | build page | Optional. Free text, short: where and when the build comes from (`Drive-in, 1960s`). Shown under the build's title on its card and page. |

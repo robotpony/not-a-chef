@@ -1848,7 +1848,13 @@ a.part-row:hover::after, a.part-row:focus-visible::after { opacity: 1; transform
   .build-tiles { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; }
   .build-tile { flex: 0 0 72%; scroll-snap-align: start; }
 }
-.parts-full li { padding: 14px 0; grid-template-columns: 36px 1fr; }
+.parts-full li { padding: 14px 0; grid-template-columns: 36px minmax(0, 1fr) 15rem; column-gap: 24px; }
+.parts-full li::before { grid-row: span 3; }
+.parts-full .part-recipes { grid-column: 3; grid-row: 1 / span 3; align-self: start; border-left: 1px solid var(--border); padding-left: 16px; }
+@media (max-width: 820px) {
+  .parts-full li { grid-template-columns: 36px minmax(0, 1fr); }
+  .parts-full .part-recipes { grid-column: 2; grid-row: auto; border-left: none; padding-left: 0; margin-top: 8px; }
+}
 .parts-full .part-name { font-size: 1rem; }
 
 /* A part's options, and a blueprint's builds, as pills */
@@ -1908,6 +1914,21 @@ a.tl-name:hover { color: var(--accent-strong); }
 .builds-compared td { color: var(--ink); }
 .builds-compared .profile-row td { border-bottom: 2px solid var(--border-strong); }
 .builds-compared .build-profile { display: block; font-size: inherit; }
+.builds-compared { table-layout: fixed; }
+.builds-compared col.bc-label { width: 10.5rem; }
+.builds-compared tbody th { width: auto; white-space: normal; }
+.builds-compared .profile-row th { border-bottom: 2px solid var(--border-strong); }
+.bc-corner { font-family: 'IBM Plex Mono', monospace; font-weight: 400; font-size: .66rem; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-faint); }
+
+/* A part's recipes, beside it on the blueprint page
+ * (mockups/blueprint-page-parts.html option B): Franklin rows, the time
+ * in mono on the right. Empty parts say so, in faint italic Lora. */
+.part-recipes-head { display: block; font-family: 'Libre Franklin', sans-serif; font-size: .62rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-faint); margin-bottom: 2px; }
+.part-recipes.is-empty .part-recipes-head { font-family: 'Lora', Georgia, serif; font-style: italic; font-weight: 400; font-size: .8rem; text-transform: none; letter-spacing: 0; }
+.part-recipe { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; padding: 4px 0; border-bottom: 1px solid var(--border); font-family: 'Libre Franklin', sans-serif; font-size: .8rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+.part-recipe:last-child { border-bottom: none; }
+.part-recipe:hover { color: var(--accent-strong); }
+.part-recipe-time { font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: .68rem; color: var(--accent-strong); white-space: nowrap; }
 
 /* Recipes grouped by build, on a blueprint's page */
 .recipe-group { font-family: 'IBM Plex Mono', monospace; font-size: .66rem; font-weight: 500; color: var(--ink-faint); text-transform: uppercase; letter-spacing: .04em; margin: 20px 0 8px; }

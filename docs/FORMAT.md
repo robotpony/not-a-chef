@@ -23,7 +23,7 @@ Recipes (`content/recipes/`), essays (`content/essays/`), reference pages (`cont
 | `pinned` | MAY | boolean | Floats the page to the top of its section's list, its term pages, and search. Rare by design, not a general sort override. See DESIGN.md. |
 | `source` | MAY | string | `original`, `family`, a URL, or a book title. SHOULD on recipes. |
 | `blueprint` | MAY | string[] | Blueprints (dish types made of parts) the page belongs to (`[burgers]`), a taxonomy like `cuisine`: the blueprint's page at `/blueprint/<slug>/` collects its methods, recipes, and stories. Its own `content/blueprint/<slug>/_index.md` holds its definition and the order of its parts. See docs/METHODS.md. |
-| `part` | MAY | string | On a method page in a blueprint: which part it covers (`Patty construction`), one of the blueprint's `parts`. |
+| `part` | MAY | string | On a method page in a blueprint: which part it covers (`Patty construction`), one of the blueprint's `parts`. On a recipe in a blueprint: which part it makes (`Sauces`), so it's listed beside that part on the blueprint's page. A whole dish uses `build_name` instead. |
 | `build_name` | MAY | string | On a build page (a method in a blueprint): the build's name (`Drive-in deluxe`), unique within the blueprint. On a recipe: the build it's an instance of, the same name. |
 | `profile` | MAY | string | On a build page: one line of free text on what it tastes and feels like (`Cold crunch and sharp against a salty patty`). |
 | `origin` | MAY | string | On a build page: where and when it comes from, short free text (`Drive-in, 1960s`). |
@@ -371,7 +371,7 @@ What a checker can rely on. `/lint` checks the first group today, and the build 
 - `date` is YYYY-MM-DD; `draft` is a boolean if present; `tags` is a list of plain strings, no `#`.
 - A recipe has at least one ingredients list and one method.
 - Formula blocks use known icon keys, one operator, and at most five slots.
-- Every page in `content/methods/` carries the `method` tag; a `part` names one of its blueprint's `parts`; a recipe's `build_name` matches a build page's `build_name` in the same blueprint.
+- Every page in `content/methods/` carries the `method` tag; a `part` (on a method or a recipe) names one of its blueprint's `parts`; a recipe's `build_name` matches a build page's `build_name` in the same blueprint.
 
 **For the validator**
 - Frontmatter types match the tables above.

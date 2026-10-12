@@ -9,6 +9,7 @@ total_time: 5 min
 cuisine: Canadian
 draft: false
 blueprint: [burgers]
+part: Sauces
 ---
 
 This is a simple, classic burger sauce.

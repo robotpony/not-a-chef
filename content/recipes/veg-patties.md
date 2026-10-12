@@ -15,6 +15,7 @@ cook_time: 10 min
 draft: true
 cuisine: American
 blueprint: [burgers]
+part: Not burgers
 ---
 These vegetable patties are quick to make and delicious. They're perfect when you're looking for a lighter sandwich or salad topping.
 
