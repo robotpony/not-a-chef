@@ -2,7 +2,7 @@
 title: Grilled onion burger
 date: 2026-10-10
 draft: true
-working_on: "First draft. Its history needs a source."
+working_on: "First draft."
 tags: [method, burgers, onion]
 era: 1922
 description: "The grilled onion burger: a smashed patty and a pile of onion cooked sweet in the beef fat."
@@ -41,7 +41,7 @@ Pile thin-sliced onion on the meatball and smash the patty onion side down, so t
 
 ## Where it comes from
 
-The lunch counter of the 1920s, in railway towns on the southern plains. The usual story puts it in El Reno, Oklahoma, around the 1922 railway strike or the Depression that followed (accounts differ), when beef was dear and onions were cheap: a cook could stretch a small ball of beef with a big handful of onion and smash them together on the griddle. The same counters gave the slider its shape, a small, thin patty cooked on a bed of onion with the bun steaming on top.
+A lunch counter in El Reno, Oklahoma, a railway town on Route 66. The [fried onion burger](https://en.wikipedia.org/wiki/Fried_onion_burger) was made there in the 1920s by Homer and Ross Davis, a father and son, at the Hamburger Inn, to feed striking workers cheaply during the Great Railroad Strike of 1922. Beef was dear and onions were cheap, so a small ball of beef was pressed flat under a pile of onion on the griddle. They called it the Depression Burger and sold it for five cents, and it spread across western Oklahoma through the Depression. Stretching beef with onion was older than that: an 1883 Boston cookbook already mashed onion into ground beef.
 
 | Constraint | Pick it explains |
 |---|---|
@@ -51,8 +51,6 @@ The lunch counter of the 1920s, in railway towns on the southern plains. The usu
 | No time or space for a toaster | Soft bun, steamed over the patty |
 
 This is the root of the griddled burger: griddle, pressed, simple. The slider, the drive-in deluxe, the fast-food double, and the smash burger all keep its thin patty, its flat-top, and its soft bun, and change what goes on top.
-
-<!-- TODO: check the El Reno and 1922 railway strike story against a source, and cite it. -->
 
 ## Recipes
 

@@ -54,3 +54,7 @@ Two 75 g patties, one onion pile each, cheese on one, stacked on one bun. More c
 - Salting the sliced onion and squeezing it in a towel takes out water, so it browns faster and doesn't steam the crust off the beef.
 - A burger press, a heavy pot, or a second spatula stacked on the first all work. Thin spatulas bend.
 - Don't oil the griddle. The beef renders enough fat for the onion.
+
+## Research
+
+- [Fried onion burger](https://en.wikipedia.org/wiki/Fried_onion_burger) on Wikipedia
