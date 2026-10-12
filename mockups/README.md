@@ -93,6 +93,12 @@ in a browser — no build step.
   Decided 2026-10-11: sidebar, lede, rail, as recommended (`STYLE.md`
   Methods and blueprint pages). Template half is Fugu's.
 
+- **`principle-page-sidebar.html`**: proposal (2026-10-11) giving the
+  win-the-fridge principle page the methods list's frame: a review of the
+  page as built, then a mock switching between as built and the sidebar
+  version (definition as intro or callout, cards two or three across).
+  Recommended: sidebar, intro, three across. Not decided yet.
+
 - **`exploded-builds.html`**: proposal (2026-10-10) for drawing a build as
   an exploded view (layers pulled apart, each drawn as the thing, leader
   lines to labels and roles) instead of flat bars: the layer kit, the three

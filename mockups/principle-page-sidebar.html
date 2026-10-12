@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Principle page sidebar</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  /* Tokens from STYLE.md, byte-identical to the other mockups. */
+  :root{
+    --bg:#F3F3EC; --surface:#FBFBF6; --surface-2:#EAEBDF;
+    --ink:#23241E; --ink-muted:#63645A; --ink-faint:#93948A;
+    --border:#DCDCCE; --border-strong:#C7C8B4;
+    --accent:#A67330; --accent-strong:#7C361D; --accent-soft:#F6EADA;
+    --highlight:#997F29; --highlight-soft:#F6F1D5;
+    --flag:#3D638F; --flag-soft:#E1EAF4;
+    --principle:#247B50; --principle-strong:#1D6743; --principle-soft:#DBF5E8;
+    --focus:#A67330;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+      --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+      --border:#383A2C; --border-strong:#4A4C3A;
+      --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+      --highlight:#DDCC88; --highlight-soft:#342D19;
+      --flag:#97B8D8; --flag-soft:#1D2835;
+      --principle:#8ED7B4; --principle-strong:#A7E2C4; --principle-soft:#1B3428;
+      --focus:#D3A569;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+    --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+    --border:#383A2C; --border-strong:#4A4C3A;
+    --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+    --highlight:#DDCC88; --highlight-soft:#342D19;
+    --flag:#97B8D8; --flag-soft:#1D2835;
+    --principle:#8ED7B4; --principle-strong:#A7E2C4; --principle-soft:#1B3428;
+    --focus:#D3A569;
+  }
+
+  *{box-sizing:border-box;}
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:'Lora',Georgia,serif; font-size:16px; line-height:1.5; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3,h4{ font-family:'Libre Franklin',system-ui,sans-serif; margin:0; }
+  p{ margin:0; }
+  a{ color:inherit; }
+  code{ font-family:'IBM Plex Mono',monospace; font-size:.85em; background:var(--surface-2); padding:1px 5px; border-radius:3px; }
+  button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
+  :focus-visible{ outline:2px solid var(--focus); outline-offset:2px; }
+
+  /* ---------- Mockup chrome (same as methods-list-builds.html) ---------- */
+  .topbar{ position:sticky; top:0; z-index:30; background:var(--surface); border-bottom:1px solid var(--border-strong); }
+  .topbar-inner{ max-width:1240px; margin:0 auto; padding:12px 16px; display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+  .tb-title{ font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:.95rem; margin-right:auto; }
+  .tb-jump{ display:flex; gap:2px; flex-wrap:wrap; font-family:'Libre Franklin',sans-serif; }
+  .tb-jump a{ font-size:.76rem; font-weight:600; color:var(--ink-muted); text-decoration:none; padding:6px 9px; border-radius:4px; }
+  .tb-jump a:hover{ color:var(--ink); background:var(--surface-2); }
+  .theme-toggle{ font-family:'Libre Franklin',sans-serif; font-size:.75rem; font-weight:600; padding:7px 10px; border:1px solid var(--border-strong); border-radius:3px; color:var(--ink-muted); }
+  main{ max-width:1240px; margin:0 auto; padding:8px 16px 100px; }
+  .intro{ padding:34px 0 26px; border-bottom:1px solid var(--border); margin-bottom:34px; }
+  .eyebrow{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--accent-strong); display:block; margin-bottom:10px; }
+  .intro h1{ font-size:2rem; line-height:1.15; margin-bottom:12px; }
+  .lede{ color:var(--ink-muted); max-width:76ch; }
+  .lede + .lede{ margin-top:10px; }
+  .mock{ margin-bottom:64px; scroll-margin-top:70px; }
+  .mock-label{ font-family:'Libre Franklin',sans-serif; font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-muted); padding-bottom:8px; border-bottom:1px solid var(--border); margin-bottom:6px; }
+  .mock-note{ color:var(--ink-muted); font-size:.92rem; max-width:80ch; margin:8px 0 18px; }
+  .mock-note + .mock-note{ margin-top:-8px; }
+  .frame{ border:1px dashed var(--border-strong); border-radius:10px; background:var(--bg); padding:32px 20px; margin:0 auto; max-width:1142px; }
+  .frame.phone-w{ max-width:390px; padding:20px 16px; }
+  .ask{ background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--flag); border-radius:0 6px 6px 0; padding:16px 20px; margin-top:20px; max-width:84ch; }
+  .ask-label{ font-family:'Libre Franklin',sans-serif; font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--flag); display:block; margin-bottom:6px; }
+  .ask p, .ask li{ font-size:.92rem; }
+  .ask p + p, .ask ul{ margin-top:8px; }
+  .ask ul{ padding-left:20px; }
+  .ask li + li{ margin-top:4px; }
+  .controls{ display:flex; gap:10px 18px; flex-wrap:wrap; align-items:center; margin-bottom:14px; position:sticky; top:53px; z-index:20; background:var(--bg); padding:8px 0; }
+  .ctl{ display:flex; align-items:center; gap:8px; }
+  .ctl-label{ font-family:'Libre Franklin',sans-serif; font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-faint); }
+  .seg{ display:inline-flex; border:1px solid var(--border-strong); border-radius:5px; overflow:hidden; font-family:'Libre Franklin',sans-serif; }
+  .seg button{ font-size:.78rem; font-weight:600; padding:6px 11px; color:var(--ink-muted); border-right:1px solid var(--border-strong); }
+  .seg button:last-child{ border-right:none; }
+  .seg button[aria-pressed="true"]{ background:var(--accent-soft); color:var(--accent-strong); }
+
+  /* ---------- Page shell: the reading/recipe layout (1100px, 20.6rem sidebar) ---------- */
+  .page{ display:grid; grid-template-columns:minmax(0,1fr) 20.6rem; gap:0 2.5rem; align-items:start; }
+  .page-head{ grid-column:1 / -1; margin-bottom:22px; }
+  .body-col{ min-width:0; }
+  .side{ min-width:0; display:flex; flex-direction:column; gap:24px; }
+  .phone-w .page{ grid-template-columns:minmax(0,1fr); }
+  .phone-w .side{ border-top:1px solid var(--border); padding-top:24px; margin-top:32px; }
+  @media (max-width:1023px){
+    .page{ grid-template-columns:minmax(0,1fr); }
+    .side{ border-top:1px solid var(--border); padding-top:24px; margin-top:32px; }
+  }
+  .ltitle{ font-size:2.6rem; font-weight:700; line-height:1.1; letter-spacing:-.015em; }
+  .phone-w .ltitle{ font-size:2.1rem; }
+
+  /* Sidebar, in the recipe sidebar's voice */
+  .search{ display:flex; align-items:center; gap:10px; border:1px solid var(--border-strong); border-radius:6px; padding:11px 12px; font-family:'Libre Franklin',sans-serif; font-size:.88rem; color:var(--ink-faint); background:var(--bg); }
+  .search svg{ width:15px; height:15px; flex:none; }
+  .search kbd{ margin-left:auto; font-family:'IBM Plex Mono',monospace; font-size:.7rem; border:1px solid var(--border-strong); border-radius:3px; padding:0 5px; }
+  .rs-label{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-muted); display:block; margin-bottom:8px; }
+  .meta{ display:grid; grid-template-columns:auto 1fr; gap:6px 16px; font-family:'IBM Plex Mono',monospace; font-size:.82rem; padding-bottom:20px; border-bottom:1px solid var(--border); }
+  .meta dt{ font-family:'Libre Franklin',sans-serif; font-size:.66rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-faint); padding-top:3px; }
+  .meta dd{ margin:0; }
+  .meta dd span:not(.n3):not(.n6){ color:var(--ink-faint); }
+  .side-def p{ font-style:italic; font-size:.92rem; line-height:1.55; }
+  .side-def p + p{ margin-top:8px; }
+  .toc{ display:flex; flex-direction:column; font-family:'Libre Franklin',sans-serif; }
+  .toc a{ display:flex; justify-content:space-between; font-size:.88rem; font-weight:600; padding:4px 0; text-decoration:none; }
+  .toc a:hover{ color:var(--accent-strong); }
+  .toc a span{ font-family:'IBM Plex Mono',monospace; font-weight:400; font-size:.72rem; color:var(--ink-faint); }
+  .toc a.sub{ font-weight:500; font-size:.82rem; color:var(--ink-muted); padding-left:12px; border-left:1px solid var(--border); }
+  .further a{ display:block; text-decoration:none; font-family:'Libre Franklin',sans-serif; font-size:.86rem; font-weight:600; padding:5px 0; }
+  .further a:hover{ color:var(--accent-strong); }
+  .further small{ display:block; font-family:'Lora',serif; font-weight:400; font-size:.8rem; color:var(--ink-muted); }
+
+  /* Definition, three ways */
+  .def-lede{ font-size:1.08rem; line-height:1.6; max-width:65ch; margin-bottom:30px; }
+  .definition-callout{ background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--accent); border-radius:0 6px 6px 0; padding:20px 22px; display:flex; flex-direction:column; gap:10px; margin-bottom:32px; }
+  .definition-callout-label{ display:inline-flex; align-items:center; gap:6px; font-family:'Libre Franklin',sans-serif; font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--accent-strong); }
+  .definition-callout p{ font-size:1rem; line-height:1.5; }
+  [data-def="lede"] .definition-callout, [data-def="lede"] .side-def, [data-def="lede"] .def-short,
+  [data-def="callout"] .def-lede, [data-def="callout"] .side-def, [data-def="callout"] .def-short,
+  [data-def="side"] .definition-callout, [data-def="side"] .def-lede{ display:none; }
+  .def-short{ font-size:1.08rem; line-height:1.6; max-width:65ch; margin-bottom:30px; color:var(--ink-muted); }
+  .mi{ width:16px; height:16px; color:var(--accent-strong); flex:none; }
+  .mi-sm{ width:12px; height:12px; }
+
+  /* Section heads */
+  .subsection-title{ font-size:1.15rem; font-weight:700; margin:0 0 12px; scroll-margin-top:120px; }
+  .subsection-count{ font-family:'IBM Plex Mono',monospace; font-weight:400; font-size:.72rem; color:var(--ink-faint); margin-left:6px; }
+  .subsection-gap{ margin-top:40px; }
+
+  
+  /* ---------- Principle page ---------- */
+  .ltitle-kind{ color:var(--principle-strong); }
+  .wide-head{ display:flex; align-items:baseline; justify-content:space-between; gap:12px; }
+  .wide-count{ font-family:'IBM Plex Mono',monospace; font-size:.82rem; color:var(--ink-faint); }
+  .definition-callout{ border-left-color:var(--principle); }
+  .definition-callout-label{ color:var(--principle-strong); }
+  .definition-callout p{ max-width:72ch; }
+  .definition-callout p + p{ margin-top:10px; }
+  .read-essay{ font-family:'Libre Franklin',sans-serif; font-size:.86rem; font-weight:600; color:var(--principle-strong); text-decoration:none; display:inline-block; }
+  .read-essay:hover{ text-decoration:underline; text-underline-offset:3px; }
+  .def-lede p + p{ margin-top:14px; }
+  .def-lede .read-essay{ margin-top:14px; }
+  .pi{ width:12px; height:12px; flex:none; }
+  .search-wide{ max-width:26rem; margin-bottom:18px; }
+
+  .rgrid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(var(--card-min,240px),1fr)); gap:16px; }
+  .rcard{ background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:14px 16px 12px; display:flex; flex-direction:column; gap:8px; min-width:0; text-decoration:none; color:var(--ink); transition:border-color .12s; }
+  .rcard:hover{ border-color:var(--accent); }
+  .rcard-top{ display:flex; gap:4px; align-items:center; overflow:hidden; }
+  .rcard-top > *{ flex:none; white-space:nowrap; }
+  .cuisine-chip{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; font-weight:600; text-transform:uppercase; letter-spacing:.05em; background:var(--highlight-soft); color:var(--highlight); padding:3px 7px; border-radius:3px; }
+  .principle-chip{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; font-weight:600; background:var(--principle-soft); color:var(--principle-strong); padding:3px 7px; border-radius:3px; display:inline-flex; align-items:center; gap:4px; }
+  .tag-more{ font-family:'Libre Franklin',sans-serif; font-size:.68rem; color:var(--ink-faint); border:1px dashed var(--border-strong); padding:2px 6px; border-radius:3px; }
+  .rcard h4{ font-size:1.02rem; line-height:1.25; }
+  .rcard p{ font-size:.86rem; color:var(--ink-muted); line-height:1.45; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+  .rcard-meta{ margin-top:auto; border-top:1px solid var(--border); padding-top:8px; display:flex; gap:12px; font-family:'IBM Plex Mono',monospace; font-size:.74rem; color:var(--accent-strong); font-weight:500; }
+  .rcard-meta b{ font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:.6rem; letter-spacing:.07em; color:var(--ink-faint); margin-right:4px; }
+
+  .ref-list{ display:flex; flex-direction:column; }
+  .ref-row{ display:flex; gap:12px; align-items:baseline; padding:8px 0; border-bottom:1px solid var(--border); font-family:'Libre Franklin',sans-serif; font-size:.9rem; }
+  .ref-row a{ font-weight:600; text-decoration:none; } .ref-row a:hover{ color:var(--accent-strong); }
+  .ref-kind{ font-size:.64rem; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--ink-faint); width:5.5rem; flex:none; }
+  .chip-row dd{ font-family:'Lora',serif; }
+
+  /* Layout switch: now (full width) vs sidebar */
+  [data-layout="now"] .page{ grid-template-columns:minmax(0,1fr); }
+  [data-layout="now"] .side, [data-layout="now"] .def-lede, [data-layout="sidebar"] .only-now{ display:none !important; }
+  [data-layout="sidebar"][data-def="lede"] .definition-callout{ display:none; }
+  [data-layout="sidebar"][data-def="callout"] .def-lede{ display:none; }
+  [data-layout="now"] .definition-callout{ max-width:none; }
+  [data-cards="3"] .rgrid{ --card-min:200px; }
+  .phone-w .rgrid{ --card-min:200px; }
+  .ctl.dim{ opacity:.4; pointer-events:none; }
+</style>
+</head>
+<body>
+<div class="topbar"><div class="topbar-inner">
+  <span class="tb-title">Principle page: sidebar</span>
+  <nav class="tb-jump"><a href="#review">1 Review</a><a href="#mock">2 Mock</a><a href="#ask">3 Choices</a></nav>
+  <button class="theme-toggle" id="theme">Theme</button>
+</div></div>
+<main>
+<section class="intro">
+  <span class="eyebrow">Proposal · 2026-10-11 · /tags/win-the-fridge/</span>
+  <h1>Principle page: the same sidebar as the methods list</h1>
+  <p class="lede">Follows <code>methods-list-sidebar.html</code> (decided: sidebar, intro text instead of a callout, builds rail). The win-the-fridge tag page is the other concept page that opens with a definition, and it should match, so concept pages share one frame with recipes and essays.</p>
+</section>
+
+<section class="mock" id="review">
+  <h2 class="mock-label">1 · Review of the page as built</h2>
+  <p class="mock-note"><b>What works:</b> a full-width grid of cards gives it a right edge, so it never felt as lopsided as the methods list did. The green "principle" in the title and the green callout make the kind clear.</p>
+  <p class="mock-note"><b>What doesn't:</b> the callout stops at 72ch and leaves about a quarter of the width empty beside it. The search box sits under "Recipes that follow this principle" but searches the whole site (219 recipes), so it reads as filtering five cards when it doesn't. "Reference &amp; further reading" sits at the bottom, under the pagination once there are more than 16 recipes. And the full essay is reachable only from the callout's link.</p>
+  <p class="mock-note"><b>With the sidebar:</b> search goes where it is on every recipe and essay page (top of the sidebar), so it stops looking like a filter. The counts and the chip as it appears on cards ("On cards") explain the WTF mark you see in the grid. Further reading moves up beside the definition, with the full essay first. The definition becomes the page's intro, as on the methods list. The cost: the grid drops from four cards across to two or three.</p>
+</section>
+
+<section class="mock" id="mock">
+  <h2 class="mock-label">2 · Mock</h2>
+  <p class="mock-note"><b>Layout</b> switches between the page as built and the sidebar version. <b>Definition</b> and <b>Cards</b> apply to the sidebar version: three across needs the card minimum dropped from 240px to 200px (the related-recipes grid already uses 200px).</p>
+  <div class="controls" data-for="fp">
+    <div class="ctl"><span class="ctl-label">Layout</span><div class="seg" data-attr="layout"><button aria-pressed="false" data-v="now">As built</button><button aria-pressed="true" data-v="sidebar">Sidebar</button></div></div>
+    <div class="ctl" data-dep><span class="ctl-label">Definition</span><div class="seg" data-attr="def"><button aria-pressed="true" data-v="lede">Intro</button><button aria-pressed="false" data-v="callout">Callout</button></div></div>
+    <div class="ctl" data-dep><span class="ctl-label">Cards</span><div class="seg" data-attr="cards"><button aria-pressed="false" data-v="2">2 across</button><button aria-pressed="true" data-v="3">3 across</button></div></div>
+    <div class="ctl"><span class="ctl-label">Width</span><div class="seg" data-attr="width"><button aria-pressed="true" data-v="">Desktop</button><button aria-pressed="false" data-v="phone-w">Phone</button></div></div>
+  </div>
+  <div class="frame" id="fp" data-layout="sidebar" data-def="lede" data-cards="3">
+    <div class="page">
+  <header class="page-head wide-head"><h1 class="ltitle">Win the fridge <span class="ltitle-kind">principle</span></h1><span class="wide-count only-now">5 recipes</span></header>
+  <div class="body-col">
+    <div class="definition-callout"><span class="definition-callout-label"><svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14.3-4.9L4 8"/><path d="M4 3v5h5"/><path d="M4 13a8 8 0 0 0 14.3 4.9L20 16"/><path d="M20 21v-5h-5"/></svg>Definition</span><p>Win the fridge is the practice of using every scrap of food before it goes to waste — working through the fridge, freezer, and pantry regularly instead of letting things quietly expire. It’s a frugal habit and an ethical one: food waste is avoidable, and being well-fed is a privilege worth not squandering.</p><p>It extends nose-to-tail and root-to-stem thinking to everyday cooking — every cut from a butchered animal, every part of a vegetable (stalks, leaves, peels), and anything else that would otherwise be thrown out but is still delicious and nourishing.</p><a class="read-essay" href="#">Read the full essay →</a></div>
+    <div class="def-lede"><p>Win the fridge is the practice of using every scrap of food before it goes to waste — working through the fridge, freezer, and pantry regularly instead of letting things quietly expire. It’s a frugal habit and an ethical one: food waste is avoidable, and being well-fed is a privilege worth not squandering.</p><p>It extends nose-to-tail and root-to-stem thinking to everyday cooking — every cut from a butchered animal, every part of a vegetable (stalks, leaves, peels), and anything else that would otherwise be thrown out but is still delicious and nourishing.</p><a class="read-essay" href="#">Read the full essay →</a></div>
+    <h3 class="subsection-title">Recipes that follow this principle</h3>
+    <div class="only-now"><div class="search search-wide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>Search 219 recipes, tags, cuisines…<kbd>/</kbd></div></div>
+    <div class="rgrid"><a class="rcard" href="#"><div class="rcard-top"><span class="cuisine-chip">Canadian</span><span class="principle-chip"><svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14.3-4.9L4 8"/><path d="M4 3v5h5"/><path d="M4 13a8 8 0 0 0 14.3 4.9L20 16"/><path d="M20 21v-5h-5"/></svg>WTF</span><span class="tag-more">+5</span></div><h4>Lazy tomato soup</h4><p>A warm bowl of soup on a fall day is a wondrous thing. This is a classic fridge magnet recipe that comes together from what is already on hand.</p><div class="rcard-meta"><span><b>PREP</b>~10m</span><span><b>COOK</b>~15m</span><span><b>SERVES</b>4–6</span></div></a><a class="rcard" href="#"><div class="rcard-top"><span class="cuisine-chip">Japanese</span><span class="principle-chip"><svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14.3-4.9L4 8"/><path d="M4 3v5h5"/><path d="M4 13a8 8 0 0 0 14.3 4.9L20 16"/><path d="M20 21v-5h-5"/></svg>WTF</span><span class="tag-more">+1</span></div><h4>Basic chicken ramen stock</h4><p>This is the basic chicken ramen stock I use for my lunch ramen (when working). It’s a hybrid of a few styles.</p><div class="rcard-meta"><span><b>COOK</b>3–4h</span></div></a><a class="rcard" href="#"><div class="rcard-top"><span class="cuisine-chip">French</span><span class="principle-chip"><svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14.3-4.9L4 8"/><path d="M4 3v5h5"/><path d="M4 13a8 8 0 0 0 14.3 4.9L20 16"/><path d="M20 21v-5h-5"/></svg>WTF</span><span class="tag-more">+2</span></div><h4>Beef stock</h4><p>This is a rich stock that uses the bones left over when buying and breaking down whole cuts.</p><div class="rcard-meta"><span><b>PREP</b>20m</span><span><b>COOK</b>~2h</span></div></a><a class="rcard" href="#"><div class="rcard-top"><span class="cuisine-chip">World</span><span class="principle-chip"><svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14.3-4.9L4 8"/><path d="M4 3v5h5"/><path d="M4 13a8 8 0 0 0 14.3 4.9L20 16"/><path d="M20 21v-5h-5"/></svg>WTF</span><span class="tag-more">+1</span></div><h4>Chicken or turkey stock</h4><p>This is a rich chicken or turkey stock that uses the bones left over from breaking down whole birds.</p><div class="rcard-meta"><span><b>PREP</b>45m</span><span><b>COOK</b>45m</span></div></a><a class="rcard" href="#"><div class="rcard-top"><span class="cuisine-chip">Canadian</span><span class="principle-chip"><svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14.3-4.9L4 8"/><path d="M4 3v5h5"/><path d="M4 13a8 8 0 0 0 14.3 4.9L20 16"/><path d="M20 21v-5h-5"/></svg>WTF</span><span class="tag-more">+2</span></div><h4>Nine bean soup mix</h4><p>A ham-hock bean soup built on a mix of nine dried beans.</p><div class="rcard-meta"><span><b>PREP</b>5m</span><span><b>COOK</b>~3h</span></div></a></div>
+    <div class="only-now"><h3 class="subsection-title subsection-gap">Reference &amp; further reading</h3><div class="ref-list"><div class="ref-row"><span class="ref-kind">Essay</span><a href="#">Planning meals is like planning dishes, but bigger</a></div></div></div>
+  </div>
+  <aside class="side">
+    <div class="search "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>Search recipes, essays, guides…<kbd>/</kbd></div>
+    <dl class="meta"><dt>Recipes</dt><dd>5</dd><dt>Essays</dt><dd>2</dd><dt>On cards</dt><dd><span class="principle-chip"><svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14.3-4.9L4 8"/><path d="M4 3v5h5"/><path d="M4 13a8 8 0 0 0 14.3 4.9L20 16"/><path d="M20 21v-5h-5"/></svg>WTF</span></dd></dl>
+    <div class="further"><span class="rs-label">Further reading</span><a href="#">Win the fridge<small>The full essay: what it is, and how the recipes tagged with it use it.</small></a><a href="#">Planning meals is like planning dishes, but bigger<small>Pair the meals first, let them pick the dishes, and let the dishes pick what gets prepped.</small></a></div>
+  </aside>
+</div>
+  </div>
+</section>
+
+<section class="mock" id="ask">
+  <h2 class="mock-label">3 · Choices</h2>
+  <div class="ask">
+    <span class="ask-label">Recommendation</span>
+    <p><b>Sidebar, intro, three across.</b> The same frame and intro as the methods list. Three across at 200px keeps the grid feeling like a grid; two across makes the cards rows of two, and a principle with 16 recipes on a page runs eight rows deep. The cost at 200px: a card with three times (prep, cook, serves) wraps its last value, as on Lazy tomato soup here; the meta row would need a tighter gap or to drop serves at that width.</p>
+    <ul>
+      <li><b>The green stays:</b> "principle" in the title, the "Read the full essay →" link, and the chip in the sidebar. Without the callout there's no green box, but the title already names the kind.</li>
+      <li><b>Further reading</b> lists the full essay first (it's excluded from the list today because the callout links it), then everything else on the tag that isn't a recipe. The link under the intro stays too, since that's where you finish reading the definition.</li>
+      <li><b>Search</b> is the sidebar's site-wide box, the same as on recipe pages. The per-page "Search 219 recipes" box goes.</li>
+      <li><b>Scope:</b> only principle terms (<code>principle: true</code>) change. Plain tag and cuisine pages are recipe listings and stay full width, like the recipes list. The rule: concept pages that open with a definition (the methods list, principles) get the sidebar; listings don't. The blueprint page is left alone for now: its parts already have their own right-hand column of recipes.</li>
+      <li><b>Where it lands:</b> the template side is Fugu's <code>_default/term.html</code> principle branch (fugu-agent), and can share the methods list's sidebar pieces. The card minimum is this site's <code>custom.css</code>.</li>
+    </ul>
+  </div>
+</section>
+</main>
+<script>
+  (function(){
+    var root=document.documentElement;
+    document.getElementById('theme').addEventListener('click',function(){
+      var dark=root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+      root.dataset.theme=dark?'light':'dark';
+    });
+    document.querySelectorAll('.controls').forEach(function(c){
+      var frame=document.getElementById(c.dataset.for);
+      function deps(){ c.querySelectorAll('[data-dep]').forEach(function(d){ d.classList.toggle('dim', frame.dataset.layout==='now'); }); }
+      c.querySelectorAll('.seg').forEach(function(seg){
+        seg.querySelectorAll('button').forEach(function(btn){
+          btn.addEventListener('click',function(){
+            seg.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed','false');});
+            btn.setAttribute('aria-pressed','true');
+            var a=seg.dataset.attr;
+            if(a==='width'){ frame.classList.toggle('phone-w',btn.dataset.v==='phone-w'); }
+            else { frame.dataset[a]=btn.dataset.v; }
+            deps();
+          });
+        });
+      });
+      deps();
+    });
+    document.querySelectorAll('a[href="#"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();});});
+  })();
+</script>
+</body>
+</html>
