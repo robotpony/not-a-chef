@@ -346,7 +346,7 @@ bun-base   | Toasted bun       | barrier
 - Optional lines: `caption: <text>`, and `repeat: <from>-<to> x<n>` to mark layers as repeated (`repeat: 3-5 x3` draws a `× 3` bracket beside layers 3 to 5; `×` works for `x`, a single layer works, as in `repeat: 4 x2`, and a block can have several `repeat:` lines).
 - On a build page the first `stack` block is drawn beside the picks, wherever it's written, and a small unlabelled copy goes on the build's card on its blueprint page. Its layers MUST follow the picks. In Obsidian it reads as plain text.
 
-A method (`content/essays/methods/`) explains how a kind of food or a cooking process works in general: the principle first, then the variables, the stages, why each one is there, how it fails, and the recipes that use it. The folder decides what's a method. Each page MUST carry the `method` tag: the essays `_index.md` cascades it to a method page with no `tags`, but a page that sets its own `tags` replaces the cascade, so list `method` there. What counts as a method, and how methods relate to blueprints, recipes, and stories, is in docs/METHODS.md.
+A method (`content/essays/methods/`) explains how a kind of food or a cooking process works in general: the principle first, then the variables, the stages, why each one is there, how it fails, and the recipes that use it. The folder decides what's a method. Each page MUST carry the `method` tag: the folder's own `_index.md` cascades it to a method page with no `tags`, but a page that sets its own `tags` replaces the cascade, so list `method` there. What counts as a method, and how methods relate to blueprints, recipes, and stories, is in docs/METHODS.md.
 
 ```yaml
 ---

@@ -81,9 +81,10 @@ Across the kit: loose overlapping pieces instead of single perfect discs, real e
 
 The essays list now skews heavily to methods: 10 of the first 12 cards on `/essays/` are methods (the burger blueprint's parts and builds), so the essays themselves (memories, reflections, technique, planning) sink to the bottom and onto page 2. Methods read as a reference shelf, not essays, and they'll keep growing as blueprints are added.
 
-- [ ] Decide the shape. Leaning: methods become their own top-level section (a nav item beside Recipes and Essays), with the essays list back to essays only. Alternatives: keep them under essays but leave them out of the essays list (reached from the methods list and blueprint pages); or group the essays list by format with methods as one collapsed group. Mock it against `mockups/STYLE.md` first, including the nav (STYLE.md "Nav item with mega-menu") and the homepage bands.
-- [ ] If methods move to `content/methods/`: `aliases:` for every old `/essays/methods/...` URL, move the `method` tag cascade out of `content/essays/_index.md`, and check `/tags/method/`, the blueprint pages, `index.json`, search, and `/lint` rule 6, which all assume the current path. Update CLAUDE.md "Food essay types", docs/METHODS.md, and docs/FORMAT.md.
-- [ ] Fugu: a list layout for the new section (or the essays list filtering methods out), handed to the Fugu agent.
+- [x] Decide the shape. *Done 2026-10-11: methods are a top-level nav item (Recipes · Methods · Essays), pointing at the existing methods map (`/tags/method/`, with `/methods/` as an alias). `content/essays/methods/_index.md` makes the folder a subsection, so its pages leave the essays list (25 cards to 15) with no Fugu change and no URL changes; it also carries the `method` cascade now. The homepage "Technique & reflections" band skips methods too.*
+- [ ] Visual check in Chrome: the desktop nav with six items, and the mobile drawer. Not done 2026-10-11 (browser extension wasn't connected); the built HTML was checked instead.
+- [ ] Breadcrumbs on a method page still read Essays / Methods (the folder's place). Fine while the URLs stay under `/essays/methods/`; revisit if methods move.
+- [ ] Later, if methods earn their own URLs: move to `content/methods/` with `aliases:` for every `/essays/methods/...` URL. Fugu's `method/is.html` and `method/all.html` assume methods sit inside the essay section, so that's a Fugu change for the Fugu agent first.
 - [ ] While in there: whether reference essays (Win the fridge, Test kitchen) belong in the essays list either, or with Reference.
 
 ### Plant-based tag

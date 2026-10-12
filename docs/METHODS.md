@@ -41,7 +41,7 @@ The test: after reading it, could you cook something that isn't written down any
 
 ## Where methods live
 
-**The folder decides.** Methods live in `content/essays/methods/`, next to `reference-essays/`. A page in that folder is a method; a page outside it isn't, whatever its tags say. `content/essays/_index.md` cascades the `method` tag onto `/essays/methods/**`. The folder has no `_index.md` of its own: one would make it a Hugo section, and its pages would drop out of the essays list (the same reason `reference-essays/` has none). A page's own `tags` replaces the cascaded value rather than adding to it, and nearly every essay sets `tags`, so each method lists `method` itself; the cascade is the backstop and `/lint` checks the rest.
+**The folder decides.** Methods live in `content/essays/methods/`, next to `reference-essays/`. A page in that folder is a method; a page outside it isn't, whatever its tags say. The folder has its own `_index.md`, which makes it a Hugo subsection: its pages stay out of the essays list (methods are a top-level nav item, beside Recipes and Essays) and it cascades the `method` tag onto every page in it. The section page itself isn't rendered (`build.render: link`); the methods list is the `method` tag page, which takes `/essays/methods/` and `/methods/` as aliases, so the breadcrumb on a method page lands on it. Other essay folders (`reference-essays/`, `food-memories/`) have no `_index.md`, which is what keeps their pages in the essays list. A page's own `tags` replaces the cascaded value rather than adding to it, and nearly every essay sets `tags`, so each method lists `method` itself; the cascade is the backstop and `/lint` checks the rest.
 
 Method-like pages in `content/reference/` move into the folder, with `aliases:` for their old URLs:
 
@@ -66,7 +66,7 @@ That's why **blueprints are a taxonomy, not folders**. (They were briefly called
 - **`blueprint`** is a taxonomy, set up like `cuisine`: `blueprint: [burgers]` in frontmatter, with `content/blueprint/burgers/_index.md` holding the blueprint's definition and the order of its parts.
 - **`part`** is a frontmatter field on a method page naming which part of the blueprint it covers (e.g. `part: Patty construction`).
 - Method pages, recipes, and stories all carry `blueprint`, so the blueprint page collects all three without any other wiring.
-- Folders can still group a blueprint's method files on disk (`content/essays/methods/burgers/`), with `blueprint: [burgers]` set on each page (or cascaded by path from `content/essays/_index.md`, never from an `_index.md` in the folder, for the reason above). A page that belongs to a second blueprint lists both.
+- Folders can still group a blueprint's method files on disk (`content/essays/methods/burgers/`), with `blueprint: [burgers]` set on each page (or cascaded from `content/essays/methods/_index.md` by path). A page that belongs to a second blueprint lists both.
 
 ## Inside a blueprint: parts, options, and builds
 

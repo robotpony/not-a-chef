@@ -35,7 +35,8 @@
 {{ range $essays }}
   {{ if strings.HasPrefix .File.Path "essays/food-memories/" }}
     {{ $memories = $memories | append . }}
-  {{ else }}
+  {{/* Methods have their own nav item and list (/tags/method/), not an essay band. */}}
+  {{ else if not (partial "method/is.html" .) }}
     {{ $otherEssays = $otherEssays | append . }}
   {{ end }}
 {{ end }}
@@ -102,7 +103,7 @@
     <div>
       <span class="block-num">03</span>
       <h2 class="block-title">Technique &amp; reflections</h2>
-      <p class="block-dek">The rest of the essays: lessons from the stove, ratios worth knowing, and a few long obsessions.</p>
+      <p class="block-dek">The rest of the essays: lessons from the stove, planning, and a few long obsessions.</p>
     </div>
     {{ if gt (len $otherEssays) 4 }}
       <a class="mega-viewall" href="{{ "essays" | relURL }}">All essays &rarr;</a>
