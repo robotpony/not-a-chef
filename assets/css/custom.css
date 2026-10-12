@@ -1877,6 +1877,10 @@ a.part-row:hover::after, a.part-row:focus-visible::after { opacity: 1; transform
 .opt-pill .y { font-family: 'IBM Plex Mono', monospace; font-size: .64rem; color: var(--ink-faint); margin-left: 5px; }
 /* A blueprint page's parts: the list's block without its head. */
 .bp.bp-parts-only { padding: 6px 18px 8px; }
+/* With a lead line above the parts (Fugu's params.fugu.methods.partsLead,
+ * 2026-10-12), the box gets the list block's top padding, and the row rule
+ * under the line has something to sit under. */
+.bp.bp-parts-only:has(> .bp-desc) { padding-top: 16px; gap: 10px; }
 
 /* A part's options, and a blueprint's builds, as pills */
 .opts { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
