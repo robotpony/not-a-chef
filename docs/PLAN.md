@@ -34,6 +34,8 @@ Mocked 2026-10-10 in `mockups/methods-pages.html`; the template work is queued i
 
 - [ ] Burgers blueprint: write the parts (patty construction with thick/thin/paper thin options, seasoning, cooking, assembly, sauces), pulling from the two burger essays without gutting them. *Drafted 2026-10-10 as test kitchen pages (`content/methods/burgers/`: `patties`, `seasoning`, `cooking`, `assembly`, `sauces`), with TODO comments where the sources ran out. Waiting on review.*
 - [ ] Burger builds: drive-in deluxe, fast-food double, grilled onion, one page each; set `build_name` on the recipes that are instances (White Spot burgers → drive-in deluxe). *Drafted 2026-10-10; White Spot set. Fast-food double and grilled onion are thin on sources (TODOs). 2026-10-11: eras set (grilled onion 1922, fast-food double 1990); the McDouble recipe moved to its own McDouble build; Big Boy, Pub, McDouble, and Smash are stubs.*
+- [ ] One-pan pasta blueprint. *Drafted 2026-10-12 as test kitchen pages (`content/methods/one-pan-pasta/`): four parts and two builds (American bolognese, cherry tomato and garlic), with TODOs for water amounts, the fresh-sauce pan, and a source for the technique.*
+- [ ] Builds only on the blueprint page (decided 2026-10-12, `mockups/methods-list-and-blueprint.html`): the methods list shows a blueprint's builds as name pills in its block, and the blueprint page swaps its long parts list for the compact block. Fugu: `partials/method/list.html` and `partials/blueprint/page.html`; handed to fugu-agent. Then drop the site CSS for the list's build tiles if nothing else uses it.
 - [ ] Stock method, from Why ingredients matter in stock and the four stock recipes.
 - [ ] Foil packets method, from Camp cooking.
 

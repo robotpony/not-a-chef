@@ -143,7 +143,7 @@ The blueprint page shows a **lineage timeline**: builds placed by `era`, so the 
 
 Why not nested blueprints ("burgers → deluxe")? Builds share nearly every part and differ only in their picks; a child blueprint would repeat all the parts. Clusters of builds (rich, fresh, sweet) are builds grouped by profile, not a separate level; add one only if a blueprint ever has more builds than its page can show.
 
-The blueprint page shows the definition, the parts in order (each with its options), the lineage timeline, and the builds as cards (`mockups/methods-pages.html`). A table comparing builds part by part is set aside for now (PLAN.md, Methods phase 8): it would need the picks as data, parsed from each build's `## Picks` list.
+The blueprint page shows the definition, the parts in order (the methods list's compact block; each part's options are on its own page), the lineage timeline, and the builds as cards (`mockups/methods-pages.html`). The methods list shows each blueprint's parts and only the names of its builds, so the cards are on one page, not two (decided 2026-10-12, `mockups/methods-list-and-blueprint.html`). A table comparing builds part by part is set aside for now (PLAN.md, Methods phase 8): it would need the picks as data, parsed from each build's `## Picks` list.
 
 The same shape fits other blueprints:
 
@@ -236,6 +236,7 @@ Shapes to cover first: sandwich construction, burger construction, lasagne layer
 | Stock | Technique + ratio | Why ingredients matter in stock, plus the four stock recipes |
 | Foil packets | Technique | Camp cooking |
 | Burgers | Blueprint, 7 builds (3 drafted, 4 stubs) | The quest for the perfect burger, The impossible quest for the perfect chicken burger, White Spot burgers, the burger sauce recipes |
+| One-pan pasta | Blueprint, 4 parts, 2 builds (stubs) | Drafted 2026-10-12 from Bruce's description; the parts are stages, and the builds have no `era` or stack |
 
 ## Open questions
 

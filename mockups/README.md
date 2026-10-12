@@ -93,6 +93,17 @@ in a browser — no build step.
   Decided 2026-10-11: sidebar, lede, rail, as recommended (`STYLE.md`
   Methods and blueprint pages). Template half is Fugu's.
 
+- **`methods-list-and-blueprint.html`**: proposal (2026-10-12) to stop the
+  methods list and a blueprint's page showing the same build cards. The list
+  becomes the map (each blueprint's block: description, compact parts, and its
+  builds as a line of name pills, drafts dashed) and the blueprint page the
+  shelf (the build cards, only there), with the list's compact parts block in
+  place of its long one. One-pan pasta is added as a second blueprint to test
+  it. Switches for builds on the list (names, small drawings, count, cards) and
+  parts on the blueprint (compact, compact with options, long); combining the
+  pages is written up and not proposed. Decided 2026-10-12: names, compact, and
+  one-pan pasta added as test kitchen pages. Template half is Fugu's.
+
 - **`principle-page-sidebar.html`**: proposal (2026-10-11) giving the
   win-the-fridge principle page the methods list's frame: a review of the
   page as built, then a mock switching between as built and the sidebar
