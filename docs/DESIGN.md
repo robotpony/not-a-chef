@@ -85,22 +85,21 @@ draft: true
 working_on: Getting them to hold without the egg. Chickpea flour next.   # optional
 ```
 
-`working_on` is one line on what's being tried next. It shows under a dotted line in the banner, in the card's popover, and in `public/recipes/index.json`. Leave it out and nothing is shown.
+`working_on` is one line on what's being tried next. It shows under a dotted line in the banner and in `public/recipes/index.json`. Leave it out and nothing is shown.
 
 **Site-wide words** (`config/_default/params.toml`, `[fugu.development]`; Fugu's defaults and comments are in `themes/fugu/hugo.toml`):
 
 | Key | Where it shows | Ours |
 |---|---|---|
-| `label` | Bold, at the start of the banner; the popover heading | Test kitchen |
+| `label` | Bold, at the start of the banner | Test kitchen |
 | `message` | The banner's sentence, after the label | We're still testing this one. Cook it, change it, … |
-| `short` | The card chip only, where "Test kitchen" crowded the top row (the popover and banner keep `label`) | Testing |
-| `hover` | The card popover's text | Still being tested. It works, but … |
+| `short` | The card chip only, where "Test kitchen" crowded the top row (the banner keeps `label`) | Testing |
 | `note` | The label before a page's `working_on` line ("Working on: …") | Working on |
-| `page` | The explainer page the banner and popover link to, which also lists every draft in place of its Related section. A path as `site.GetPage` takes it; `""` drops the link and the list | `essays/reference-essays/test-kitchen` |
+| `page` | The explainer page the banner and card chip link to, which also lists every draft in place of its Related section. A path as `site.GetPage` takes it; `""` drops the link and the list | `essays/reference-essays/test-kitchen` |
 | `more` | The text of that link (an arrow is added) | How the test kitchen works |
 | `heading` | The heading over that list | In the test kitchen now |
 | `empty` | What the explainer page's list says when there are no drafts | Nothing is in the test kitchen right now. |
-| `icon` | An SVG under `assets/`, inlined in the banner, chip, and popover; `""` draws a dot instead | `icons/development/pot-steam.svg` |
+| `icon` | An SVG under `assets/`, inlined in the banner and chip; `""` draws a dot instead | `icons/development/pot-steam.svg` |
 
 A key left out of `params.toml` falls back to Fugu's default ("In development" and so on).
 
@@ -108,7 +107,7 @@ A key left out of `params.toml` falls back to Fugu's default ("In development" a
 
 **Turning it off:** `showDraftLabel = false` under `[article]` in `params.toml` hides the banner (the card chip stays; it follows `.Draft`). `buildDrafts = false` in `hugo.toml` stops publishing drafts at all, and the explainer's list then shows `empty`.
 
-**Look:** `assets/css/custom.css`, the "Test kitchen" block (`.dev-strip`, `.dev-chip`, `.dev-icon`); the card popover is the shared Popover component (`.pop`, `.pop-dev`). The strip is as wide as the body column (65ch of 16px Lora), not the page header.
+**Look:** `assets/css/custom.css`, the "Test kitchen" block (`.dev-strip`, `.dev-chip`, `.dev-icon`). The card chip is a plain link, no popover (2026-10-11). The strip is as wide as the body column (65ch of 16px Lora), not the page header.
 
 ### URL structure
 

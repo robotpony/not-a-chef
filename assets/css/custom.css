@@ -309,8 +309,9 @@ main > header + section {
 .glossary-link { text-decoration: underline dotted; text-decoration-thickness: 1.5px; text-underline-offset: 3px; text-decoration-color: var(--ink-faint); color: inherit; cursor: help; }
 .glossary-link:hover, .glossary-link:focus-visible { text-decoration-color: var(--ink); color: var(--ink); }
 
-/* Popover — one component for glossary terms in prose, principle chips,
- * and the test kitchen chip on cards (Fugu: .pop-host wraps a trigger and
+/* Popover — one component for glossary terms in prose and the concept
+ * chips in a page's tags row; never on cards (2026-10-11: a card's chips
+ * are plain links to the page that explains them) (Fugu: .pop-host wraps a trigger and
  * its .pop; assets/js/popover.js). The shared look from STYLE.md
  * ("Scaling callout"): --surface, --border-strong, 8px radius, soft
  * shadow, a 7px pointer on the side facing the trigger. Behaviour, the
@@ -318,18 +319,14 @@ main > header + section {
  * - Opens on hover or focus of the host, at once; closes 0.25s after
  *   both leave, so a crooked path to the link inside doesn't drop it.
  * - A bridge (.pop-host::after, only while open) covers the 8px gap to
- *   the popover, above a card's stretched link, which otherwise sits on
- *   the gap and takes the hover away.
+ *   the popover, so the hover survives the trip to its link.
  * - The pointer sits at --pop-x, which popover.js sets to the trigger's
  *   centre (default 21px, near the left edge, without JS).
  * - Opens down by default; .pop-up opens up (prose, where a term sits
  *   mid-paragraph); popover.js adds .pop-flip to reverse either when the
  *   window has no room on that side.
- * - .pop-card spans a card's top row (.rcard-top) instead of a fixed
- *   260px, which would bleed into the next card.
  * Kind classes set the heading and link colour: --pop-accent. */
 .pop-host { position: relative; --pop-accent: var(--accent-strong); --pop-head: var(--ink); }
-.pop-dev { --pop-accent: var(--flag); --pop-head: var(--flag); }
 .pop {
   position: absolute; left: 0; top: calc(100% + 8px); z-index: 5; width: 260px;
   display: grid; gap: 5px; text-align: left; white-space: normal;
@@ -364,17 +361,6 @@ main > header + section {
 .pop-host:hover::after, .pop-host:focus-within::after { content: ""; position: absolute; z-index: 5; left: 0; width: 260px; top: 100%; height: 10px; }
 .pop-host:has(> .pop-up:not(.pop-flip), > .pop-flip:not(.pop-up)):hover::after,
 .pop-host:has(> .pop-up:not(.pop-flip), > .pop-flip:not(.pop-up)):focus-within::after { top: auto; bottom: 100%; }
-/* On a card: span the top row. The host drops its positioning so .pop
- * and the bridge measure from .rcard-top (position: relative, below). */
-.pop-card { position: static; }
-.pop-card > .pop, .pop-card:hover::after, .pop-card:focus-within::after { left: 0; right: 0; width: auto; }
-/* The card's top row clips chips that don't fit (it never wraps). A
- * clip-path rather than overflow: hidden, so it can let an open popover
- * out and wait the same 0.25s before closing in again. A clip-path makes
- * the row its own stacking context, so it takes z-index 2 to stay above
- * the card's stretched link (.rcard-link::after) with its popover. */
-.rcard-top { position: relative; z-index: 2; clip-path: inset(0); transition: clip-path 0s .37s; }
-.rcard-top:has(.pop-host:hover, .pop-host:focus-within) { clip-path: inset(-100vh -100vw -100vh 0); transition-delay: 0s; }
 
 /* Ingredient list (check), sub-head, and sub-note, from mockups/style.html
  * §3. Applied client-side by themes/fugu/assets/js/ingredients.js, not by Hugo — see
@@ -870,15 +856,11 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
 .rcard-link::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
 .rcard-link:focus-visible { outline: none; }
 .rcard a.cuisine-chip, .rcard a.principle-chip { position: relative; z-index: 1; }
-.rcard-top { display: flex; align-items: center; gap: 4px; flex-wrap: nowrap; min-width: 0; }
+.rcard-top { position: relative; z-index: 2; display: flex; align-items: center; gap: 4px; flex-wrap: nowrap; min-width: 0; overflow: hidden; }
 .rcard-top > * { flex: none; white-space: nowrap; }
 .rcard-top > .tag:not(.tag-more) { flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
-/* The principle chip's glossary popover (principle-chip.html) needs room
- * above the card's cramped top row, which otherwise clips it via the
- * overflow: hidden above (load-bearing for the tag-ellipsis/+N layout,
- * so it can't just come off). Lifting the clip only while the popover is
- * actually open keeps the row's normal layout untouched otherwise. */
-/* (Popovers open past this clip: see "Popover" below.) */
+/* The row clips chips that don't fit (it never wraps), and sits above the
+ * card's stretched link (.rcard-link::after) so its tag links take clicks. */
 .rcard-title { font-family: 'Libre Franklin', sans-serif; font-size: 1.02rem; font-weight: 700; line-height: 1.3; letter-spacing: -.005em; text-wrap: balance; color: var(--ink); }
 .rcard-intro { font-family: 'Lora', Georgia, serif; font-size: .84rem; line-height: 1.5; color: var(--ink-muted); display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
 /* Formula strip (formula-strip.html, STYLE.md "Formula diagram"): a 24px
@@ -1047,11 +1029,10 @@ a.principle-chip:hover, a.principle-chip:focus-visible { box-shadow: inset 0 0 0
 .dev-strip .dev-link { margin-left: 4px; }
 .dev-strip-note { display: block; margin-top: 7px; padding-top: 6px; border-top: 1px dashed color-mix(in srgb, var(--flag) 45%, transparent); font-family: 'Lora', Georgia, serif; font-style: italic; color: var(--ink); }
 .dev-strip-note b { font-family: 'Libre Franklin', sans-serif; font-style: normal; font-weight: 600; font-size: .78rem; margin-right: 2px; }
-/* The card's test kitchen chip: a button, lifted above the card's
- * stretched link, that opens the popover (see Popover). */
-.rcard-top > .pop-host { display: inline-flex; flex: none; padding: 0; }
-.dev-chip { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 4px; font-family: 'Libre Franklin', sans-serif; font-weight: 600; color: var(--flag); background: var(--flag-soft); border-radius: 3px; cursor: help; white-space: nowrap; }
-.dev-chip:hover, .dev-chip:focus-visible { box-shadow: inset 0 0 0 1px var(--flag); outline: none; }
+/* The card's test kitchen chip: a link to the explainer, lifted above
+ * the card's stretched link. */
+.dev-chip { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 4px; font-family: 'Libre Franklin', sans-serif; font-weight: 600; color: var(--flag); background: var(--flag-soft); border-radius: 3px; text-decoration: none; white-space: nowrap; }
+a.dev-chip:hover, a.dev-chip:focus-visible { box-shadow: inset 0 0 0 1px var(--flag); outline: none; }
 .dev-chip .dev-icon { width: 12px; height: 12px; }
 .dev-chip .dev-dot { width: 5px; height: 5px; }
 /* Card top row: one box for every chip (test kitchen, cuisine, principle,
