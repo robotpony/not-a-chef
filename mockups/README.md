@@ -84,6 +84,14 @@ in a browser — no build step.
   stays, since recipes for the empty parts are coming. Built the same day
   (`STYLE.md` Methods and blueprint pages).
 
+- **`methods-list-sidebar.html`**: proposal (2026-10-11) for the methods
+  list's page balance: the page moves onto the recipe/reading layout (body
+  column plus the 20.6rem sidebar, holding search, counts, "On this page",
+  and further reading), with switches for the definition (lede, callout,
+  or in the sidebar), the builds (a scrolling rail, a wrapping grid, or a
+  list), and 3 or 6 builds. §3 keeps the full width for comparison.
+  Recommended in the mock: sidebar, lede, rail. Not decided yet.
+
 - **`exploded-builds.html`**: proposal (2026-10-10) for drawing a build as
   an exploded view (layers pulled apart, each drawn as the thing, leader
   lines to labels and roles) instead of flat bars: the layer kit, the three
