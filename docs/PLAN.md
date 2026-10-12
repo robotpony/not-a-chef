@@ -32,7 +32,7 @@ Mocked 2026-10-10 in `mockups/methods-pages.html`; the template work is queued i
 
 **Phase 3: first methods**
 
-- [ ] Burgers blueprint: write the parts (patty construction with thick/thin/paper thin options, seasoning, cooking, assembly, sauces, not burgers), pulling from the two burger essays without gutting them. *Drafted 2026-10-10 as test kitchen pages (`burger-patties`, `burger-seasoning`, `burger-cooking`, `burger-assembly`, `burger-sauces`), with TODO comments where the sources ran out. "Not burgers" is left unwritten for Bruce. Waiting on review.*
+- [ ] Burgers blueprint: write the parts (patty construction with thick/thin/paper thin options, seasoning, cooking, assembly, sauces, not burgers), pulling from the two burger essays without gutting them. *Drafted 2026-10-10 as test kitchen pages (`content/methods/burgers/`: `patties`, `seasoning`, `cooking`, `assembly`, `sauces`), with TODO comments where the sources ran out. "Not burgers" is left unwritten for Bruce. Waiting on review.*
 - [ ] Burger builds: drive-in deluxe, fast-food double, grilled onion, one page each; set `build_name` on the recipes that are instances (White Spot burgers → drive-in deluxe). *Drafted 2026-10-10; White Spot set. Fast-food double and grilled onion are thin on sources (TODOs); the McDouble's build is an open question.*
 - [ ] Stock method, from Why ingredients matter in stock and the four stock recipes.
 - [ ] Foil packets method, from Camp cooking.

@@ -66,7 +66,7 @@ That's why **blueprints are a taxonomy, not folders**. (They were briefly called
 - **`blueprint`** is a taxonomy, set up like `cuisine`: `blueprint: [burgers]` in frontmatter, with `content/blueprint/burgers/_index.md` holding the blueprint's definition and the order of its parts.
 - **`part`** is a frontmatter field on a method page naming which part of the blueprint it covers (e.g. `part: Patty construction`). A recipe can carry it too, naming the part it makes (`part: Sauces`).
 - Method pages, recipes, and stories all carry `blueprint`, so the blueprint page collects all three without any other wiring.
-- Folders can still group a blueprint's method files on disk (`content/methods/burgers/`), with `blueprint: [burgers]` set on each page (or cascaded from `content/methods/_index.md` by path). A page that belongs to a second blueprint lists both.
+- A blueprint's method files are grouped in a subfolder named for it (`content/methods/burgers/`, since 2026-10-11), parts and builds together, without the blueprint's name repeated in the filename (`patties.md`, `drive-in-deluxe.md`). The subfolder has no `_index.md`: one would make it a Hugo section with its own list page at `/methods/burgers/`, repeating `/blueprint/burgers/`. The folder is for tidiness only; `blueprint: [burgers]` is still set on each page, and that is what makes it part of the blueprint. A page that belongs to a second blueprint lists both, and lives in the folder of the one it belongs to most.
 
 ## Inside a blueprint: parts, options, and builds
 
