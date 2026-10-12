@@ -62,7 +62,18 @@ Mocked 2026-10-10 in `mockups/methods-pages.html`; the template work is queued i
 
 The v1 drawings are about 80% there: good enough to ship, but some layers don't yet look like what they are. Getting them right matters for readers, since the diagram is how a build is understood at a glance.
 
-- [ ] Bruce provides reference examples (photos, illustrations, or sketches) for the layers that read least well.
+- [x] Bruce provides reference examples (photos, illustrations, or sketches) for the layers that read least well. *Done 2026-10-11, shared in a Fugu session (the images themselves weren't kept; described below).*
+
+Art direction (Bruce, 2026-10-11): still no colour, line art. v1 is close but lacks texture and detail; aim for moderate detail, not realistic, but enough that each ingredient reads as what it is. Texture as strokes, not fills or shading.
+
+- Best match: a patent-drawing burger (FIG. 1, numbered leaders). Sesame seeds as small open ovals over the whole bun dome; tomato slices with rim and seed-chamber detail; lettuce as one ruffled sheet with long vein hatching; onion as concentric rings; pickles as small crinkle-edged discs with a seed ring; cheese as a square slab with fine parallel hatching and visible edge thickness; patty with a smooth top and a craggy, stippled side edge; the base bun's cut face stippled, with sauce as a double-line ribbon.
+- An engraving-style burger, labels on the right: seeds plus a couple of crack lines on the top bun, two overlapping tomato slices, draped cheese with a soft fold, grill marks and a rough edge on the patty, sauce as separate blobs, shading by hatching only.
+- A colouring-book drawing, the lower bound of detail that still reads: clean outlines, seed dots, lettuce frill peeking from under the bun, Swiss cheese with holes, a crumbly bumpy patty edge.
+- Colour references (blueprint, chalkboard, the "UP Burger" poster, a German infographic), for shape and composition only. The common moves: two overlapping tomato slices, onion as two loose rings, cheese draping over the patty's edge, lettuce wider than the bun, grill lines on the patty.
+
+Across the kit: loose overlapping pieces instead of single perfect discs, real edge thickness on slices, cheese that drapes.
+
+- [ ] Decide whether v1's `--accent-soft` body fill stays, or the drawings go ink line on `--surface` only, with texture as strokes.
 - [ ] Redraw those layers from the examples in `mockups/exploded-builds.html`, staying in the formula icons' style (one ink line, two fills, detail as strokes), and check them at card size and full size, light and dark.
 - [ ] Update the layer kit SVGs (Fugu's `assets/icons/layers/`) and the STYLE.md entry; drop "v1" when it's settled.
 
