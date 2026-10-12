@@ -237,7 +237,7 @@
     <span class="eyebrow">Proposal · 2026-10-11 · METHODS phase 6 · round 4: texture and detail</span>
     <h1>Exploded build diagrams</h1>
     <p class="lede">The layer bars in <code>methods-pages.html</code> were abstract, and full-width bars don't look like a burger. This draws a build the way a technical manual draws an assembly: each layer as the thing itself, seen from a three-quarter angle, pulled apart vertically, with leader lines to its name and its role.</p>
-    <p class="lede">Round 2 drew the same shapes in the formula icons' style. Round 4 (2026-10-11) keeps that style and its two fills and adds texture as strokes, after Bruce's references (a patent drawing, an engraving, a colouring book): sesame seeds as open ovals over the dome, stipple on cut bread and patty sides, a craggy patty edge, veined and ruffled lettuce, tomato chambers with seeds, onion as loose rings, crinkle-cut pickles with a seed ring, and a hatched cheese slice draped at the corners. Ketchup and mustard are swirls sized by share (the large one 2/3, the small one 1/3); mayo and burger sauce are spreads, so the two never look alike. Sections 2 to 6 show round 4; round 3 is a click away in the top bar.</p>
+    <p class="lede">Round 2 drew the same shapes in the formula icons' style. Round 4 (2026-10-11) keeps that style and its two fills and adds texture as strokes, after Bruce's references (a patent drawing, an engraving, a colouring book): sesame seeds as open ovals over the dome, stipple on cut bread and patty sides, a craggy patty edge, veined and ruffled lettuce, tomato chambers with seeds, onion as loose rings, crinkle-cut pickle chips with ridges and a seed ring, bacon lying flat in the same three-quarter view, and a hatched cheese slice draped at the corners. Ketchup and mustard are layered swirls sized by share (ketchup the large one, 2/3; mustard the small one on top, 1/3, in the bun's fill); mayo and burger sauce are spreads, so the two never look alike. Sections 2 to 6 show round 4; round 3 is a click away in the top bar.</p>
   </div>
 
   <section class="block" id="why">
@@ -647,17 +647,22 @@ const L2 = {...L1,
     return {svg:s, h:2*R*K+10, edge:rx*.36+R*.86};
   },
   'pickle'(cx, y, rx){
-    const r0 = rx*.27, t = 3; let s = '';
-    const crinkle = (c, cy, r) => { const ps = []; for (let i=0;i<=112;i++){ const a = i/112*Math.PI*2, w = Math.sin(16*a), q = 1+.05*Math.sign(w)*Math.sqrt(Math.abs(w)); ps.push([c+Math.cos(a)*r*q, cy+Math.sin(a)*r*K*q]); } return pts2d(ps)+'Z'; };
-    for (const [dx, dy, sc] of [[-rx*.52, 3, 1], [-rx*.02, 0, 1.05], [rx*.5, 4, .95], [rx*.2, 10, 1]]){
-      const c = cx+dx, r = r0*sc, ry = r*K, cy = y+ry+dy;
-      s += `<path class="s thin pick-side" d="${crinkle(c, cy+t, r)}"/><path class="s thin pick" d="${crinkle(c, cy, r)}"/>`;
-      // Ridges down the side at each crinkle, a skin ring, and the seed ring.
-      let d = ''; for (let i=0;i<16;i++){ const a = (i+.25)/16*Math.PI*2; if (Math.sin(a) < .25) continue; const x = c+Math.cos(a)*r*1.04, yy = cy+Math.sin(a)*ry*1.04; d += `M${f(x)},${f(yy+.6)}V${f(yy+t-.2)}`; }
-      s += `<path class="tx-fine" d="${d}"/><ellipse class="tx-fine" cx="${f(c)}" cy="${f(cy)}" rx="${f(r*.8)}" ry="${f(ry*.8)}"/>`;
-      for (let i=0;i<6;i++){ const p = EP(c, cy, r, ry, i/6*Math.PI*2+.3, .46); s += `<ellipse class="seed2" cx="${f(p[0])}" cy="${f(p[1])}" rx="1.2" ry=".7"/>`; }
+    // Crinkle-cut chips: ridges run front to back, so the outline and the front edge ripple.
+    const r0 = rx*.31, t = 3, A = .8, g = u => Math.cos(u*Math.PI*3); let s = '';
+    const outline = (c, cy, r, oy) => { const ps = []; for (let i=0;i<=112;i++){ const a = i/112*Math.PI*2, u = Math.cos(a); ps.push([c+u*r, cy+oy+Math.sin(a)*r*K-A*g(u)]); } return pts2d(ps)+'Z'; };
+    for (const [dx, dy, sc] of [[-rx*.5, 3, 1], [-rx*.02, 0, 1.05], [rx*.48, 4, .95], [rx*.2, 11, 1]]){
+      const c = cx+dx, r = r0*sc, ry = r*K, cy = y+ry+dy+A;
+      s += `<path class="s thin pick-side" d="${outline(c, cy, r, t)}"/><path class="s thin pick" d="${outline(c, cy, r, 0)}"/>`;
+      let d = '', side = '';
+      for (const u of [-2/3, -1/3, 0, 1/3, 2/3]){
+        const x = c+u*r, h = Math.sqrt(1-u*u)*ry, lift = A*g(u);
+        if (Math.abs(g(u)) > .9 && g(u) > 0) d += `M${f(x)},${f(cy-h-lift+1)}L${f(x)},${f(cy+h-lift-1)}`;
+        side += `M${f(x)},${f(cy+h-lift+.7)}V${f(cy+h-lift+t-.3)}`;
+      }
+      s += `<path class="tx-fine" d="${d}${side}"/>`;
+      for (let i=0;i<6;i++){ const p = EP(c, cy, r, ry, i/6*Math.PI*2+.3, .46); s += `<ellipse class="seed2" cx="${f(p[0])}" cy="${f(p[1]-A*g(Math.cos(i/6*Math.PI*2+.3)*.46))}" rx="1.2" ry=".7"/>`; }
     }
-    return {svg:s, h:2*r0*1.05*K+16, edge:rx*.5+r0*.95};
+    return {svg:s, h:2*r0*1.05*K+16+2*A, edge:rx*.5+r0*.95};
   },
   'cheese'(cx, y, rx){
     // A square slice with edge thickness, corners draped down over the patty's rim.
@@ -711,24 +716,27 @@ const L2 = {...L1,
   'patty-thick'(cx, y, rx){ return L2.patty(cx, y, rx*.88, rx*.32, 'thick'); },
   'patty-smash'(cx, y, rx){ return L2.patty(cx, y, rx*1.02, rx*.07, 'smash'); },
   'bacon'(cx, y, rx){
-    let s = ''; const w = rx*1.12, H = 10;
-    const line = (dy, ph, off) => { const pts = []; for (let i=0;i<=40;i++){ const x = cx-w+2*w*i/40, yy = y+6+dy+Math.sin(i/40*Math.PI*4+ph)*3+(i/40-.5)*6+off; pts.push([x, yy]); } return pts; };
+    // Two strips lying flat on the burger, seen from three-quarters like the discs: a thin top
+    // face that rises and falls, a sliver of front edge, and the fat stripe down the middle.
+    let s = ''; const W = rx*1.1, k = Math.PI*4/(2*W), Hs = rx*.15, th = 2.4;
     const band = (a, b) => pts2d(a)+pts2d(b.slice().reverse()).replace('M', 'L')+'Z';
-    for (const [dy, ph] of [[0, 0], [rx*K*.9, 1.6]]){
-      s += `<path class="s bacon" d="${band(line(dy, ph, 0), line(dy, ph, H))}"/>`;
-      s += `<path class="bacon-stripe" d="${band(line(dy, ph, 3.6), line(dy, ph, 6.6))}"/>`;
-      s += `<path class="tx-fine" d="${pts2d(line(dy, ph, 1.8))}${pts2d(line(dy, ph, 8.3))}"/>`;
+    for (const [z0, z1, ph] of [[0, .22, 0], [.92, 1.12, 2.2]]){
+      const at = off => { const ps = []; for (let i=0;i<=48;i++){ const tt = i/48, x = cx-W+2*W*tt, w = k*(x-cx)+ph, H = Hs*(1+.35*Math.cos(w)), yc = y+7+(z0+(z1-z0)*tt)*rx*K-1.6*Math.sin(w); ps.push([x, yc+off*H]); } return ps; };
+      const front = at(.5);
+      s += `<path class="s bacon" d="${band(front, front.map(([x, yy]) => [x, yy+th]))}"/>`;
+      s += `<path class="s bacon" d="${band(at(-.5), front)}"/>`;
+      s += `<path class="bacon-stripe" d="${band(at(-.1), at(.12))}"/>`;
     }
-    return {svg:s, h:rx*K*.9+22, edge:w};
+    return {svg:s, h:7+rx*K*1.12+Hs*.68+1.6+th+3, edge:W};
   },
-  // Ketchup and mustard as swirls, sized by share: the large one is 2/3, the small one 1/3.
   'sauce-ketchup-mustard'(cx, y, rx){
-    const R1 = rx*.56, R2 = rx*.3, cy = y+R1*K*1.02+2;
-    return {svg: swirl(cx-rx*.2, cy, R1, 2.2, false) + swirl(cx+rx*.52, cy+R1*K*.35, R2, 1.4, true), h:R1*K*2.1+6, edge:rx*.52+R2};
+    // Layered, not side by side: the ketchup swirl, and a smaller mustard swirl on top of it, in the bun's fill.
+    const R1 = rx*.6, R2 = rx*.34, cy = y+R1*K*1.02+3;
+    return {svg: swirl(cx, cy, R1, 2.2, true) + swirl(cx+rx*.05, cy-5, R2, 1.5, false), h:R1*K*2.1+7, edge:R1};
   },
   'mustard'(cx, y, rx){
     const R = rx*.46, cy = y+R*K+3;
-    return {svg: swirl(cx, cy, R, 2, true), h:R*K*2+7, edge:R};
+    return {svg: swirl(cx, cy, R, 2, false), h:R*K*2+7, edge:R};
   },
   // Mayo and burger sauce as spreads, so they never read as the swirled condiments.
   'mayo'(cx, y, rx){ const o = spread(cx, y, rx, 'bech', 1); return {svg:o.s, h:o.h, edge:o.R}; },
