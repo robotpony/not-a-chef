@@ -1931,5 +1931,8 @@ a.tl-name:hover { color: var(--accent-strong); }
 .stack-missing { stroke: var(--ink-faint); }
 .stack-cap { font-family: 'Libre Franklin', sans-serif; font-size: .74rem; color: var(--ink-faint); margin-top: 12px; text-align: center; }
 .build-diagram .stack { margin: 0; max-width: none; }
-.build-card .stack { width: 150px; margin: 4px auto 0; }
+.build-card .stack { width: 150px; margin: auto; padding: 4px 0; }
+/* Centre the diagram in the space between the intro and the stats, since
+ * cards in a row stretch to the tallest stack. */
+.build-card .rcard-stats { margin-top: 0; }
 
