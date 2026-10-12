@@ -1855,43 +1855,10 @@ a.part-row:hover::after, a.part-row:focus-visible::after { opacity: 1; transform
 }
 .reading-sidebar .rs-toc-top .n { font-family: 'IBM Plex Mono', monospace; font-weight: 400; font-size: .72rem; color: var(--ink-faint); }
 
-/* A blueprint's builds as tiles in a rail (methods-list-builds.html option
- * A; methods-list-sidebar.html): each build is its own page, so its own
- * card. Stacks share one scale (fixed width, bottom-aligned) so their
- * heights compare. Three fill the column; with more, Fugu's builds-rail.js
- * sets .is-overflowing, the tiles shrink so the next one peeks under a
- * fade, and the ‹ › buttons and dots appear. 72% tiles on phones. */
+/* A blueprint's builds on the methods list: a small label, then the same
+ * build cards as the blueprint page (.rgrid.build-grid), wrapping. */
 .bp-builds { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
-.bp-builds-head { display: flex; align-items: center; gap: 14px; font-family: 'Libre Franklin', sans-serif; font-size: .65rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-faint); }
-.bp-builds-head > span { margin-right: auto; }
-.bp-rail-prev, .bp-rail-next { width: 28px; height: 28px; display: grid; place-items: center; border: 1px solid var(--border-strong); border-radius: 5px; background: none; color: var(--ink-muted); font-family: 'Libre Franklin', sans-serif; font-size: .95rem; line-height: 1; cursor: pointer; transition: border-color .12s, color .12s; }
-.bp-rail-prev { margin-right: -10px; }
-.bp-rail-prev:hover:not(:disabled), .bp-rail-next:hover:not(:disabled) { border-color: var(--accent); color: var(--accent-strong); }
-.bp-rail-prev:disabled, .bp-rail-next:disabled { opacity: .35; cursor: default; }
-.bp-builds:not(.is-overflowing) .bp-rail-prev, .bp-builds:not(.is-overflowing) .bp-rail-next { display: none; }
-.build-tiles { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 24px) / 3); gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; }
-.build-tiles::-webkit-scrollbar { display: none; }
-.is-overflowing .build-tiles { grid-auto-columns: calc((100% - 24px) / 3.25); -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 40px), transparent); }
-.is-overflowing.at-end .build-tiles { -webkit-mask-image: none; mask-image: none; }
-.build-tiles > .build-tile { scroll-snap-align: start; }
-.bp-rail-dots { display: none; justify-content: center; gap: 6px; margin-top: 2px; }
-.bp-rail-dots i { width: 6px; height: 6px; border-radius: 50%; background: var(--border-strong); }
-.bp-rail-dots i.on { background: var(--accent); }
-.is-overflowing .bp-rail-dots { display: flex; }
-@media (max-width: 680px) {
-  .build-tiles, .is-overflowing .build-tiles { grid-auto-columns: 72%; }
-}
-.build-tile { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; min-width: 0; transition: border-color .12s; }
-.build-tile:hover, .build-tile:focus-within { border-color: var(--accent); }
-.build-tile .rcard-top { position: absolute; top: 10px; left: 10px; }
-.build-tile-art { height: 150px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 8px; margin-bottom: 4px; border-bottom: 1px solid var(--border); color: var(--ink); }
-.build-tile-art .stack { width: 58px; margin: 0; }
-.build-tile-name { font-family: 'Libre Franklin', sans-serif; font-weight: 700; font-size: .98rem; line-height: 1.25; margin: 0; }
-.build-tile-name a { display: flex; justify-content: space-between; gap: 6px; }
-.build-tile-name a::before { content: '→'; order: 1; font-weight: 500; color: var(--accent-strong); opacity: 0; transition: opacity .12s; }
-.build-tile:hover .build-tile-name a { color: var(--accent-strong); }
-.build-tile:hover .build-tile-name a::before { opacity: 1; }
-.build-tile-profile { font-family: 'Lora', Georgia, serif; font-size: .82rem; line-height: 1.45; color: var(--ink-muted); margin: 0; }
+.bp-builds-head { font-family: 'Libre Franklin', sans-serif; font-size: .65rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-faint); }
 .parts-full li { padding: 14px 0; grid-template-columns: 36px minmax(0, 1fr); column-gap: 24px; }
 .parts-full li::before { grid-row: span 3; }
 .parts-full .part-name { font-size: 1rem; }
