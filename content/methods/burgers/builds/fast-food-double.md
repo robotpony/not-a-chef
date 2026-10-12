@@ -14,11 +14,11 @@ This is the rich build. Where the drive-in deluxe is all contrast, this one lean
 
 Salty, sweet, and rich; little crunch.
 
-- **Patty construction:** Two thin patties, 75 g each, double-ground
-- **Patty seasoning:** 4:2:1 salt, MSG, and pepper, after cooking
-- **Cooking:** From frozen on a hot griddle, cheese on after the flip
-- **Assembly:** Half a slice of processed cheese between the patties, thin pickles, rehydrated dried minced onion, on a small bun pressed a little flat
-- **Sauces:** Ketchup and mustard, 5:1
+- **Burger patties:** Two thin patties, 75 g each, double-ground
+- **Burger seasoning:** 4:2:1 salt, MSG, and pepper, after cooking
+- **Burger cooking:** From frozen on a hot griddle, cheese on after the flip
+- **Burger assembly:** Half a slice of processed cheese between the patties, thin pickles, rehydrated dried minced onion, on a small bun pressed a little flat
+- **Burger sauces:** Ketchup and mustard, 5:1
 
 ```stack
 bun-top               | Small bun, pressed flat        | soft

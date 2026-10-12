@@ -14,11 +14,11 @@ description: "Bob's Big Boy, 1937: the first double-decker. Not written yet."
 
 <!-- TODO: the profile in one line, then one pick per part. -->
 
-- **Patty construction:**
-- **Patty seasoning:**
-- **Cooking:**
-- **Assembly:**
-- **Sauces:**
+- **Burger patties:**
+- **Burger seasoning:**
+- **Burger cooking:**
+- **Burger assembly:**
+- **Burger sauces:**
 
 ## Where it comes from
 

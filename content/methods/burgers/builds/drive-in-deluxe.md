@@ -14,11 +14,11 @@ Deluxe means lettuce and tomato (it's [[White Spot burgers]] language). The buil
 
 Cold crunch and sharp against a salty patty.
 
-- **Patty construction:** One thin patty, 140 g, not mixed
-- **Patty seasoning:** Salt and pepper after cooking
-- **Cooking:** Griddled hot, flipped once
-- **Assembly:** Shredded lettuce, thin tomato, paper-thin raw purple onion, onion sautéed in the beef fat, double-sour pickles, cracked pepper, on a toasted bun
-- **Sauces:** Ketchup and mustard, kept separate
+- **Burger patties:** One thin patty, 140 g, not mixed
+- **Burger seasoning:** Salt and pepper after cooking
+- **Burger cooking:** Griddled hot, flipped once
+- **Burger assembly:** Shredded lettuce, thin tomato, paper-thin raw purple onion, onion sautéed in the beef fat, double-sour pickles, cracked pepper, on a toasted bun
+- **Burger sauces:** Ketchup and mustard, kept separate
 
 ```stack
 bun-top               | Toasted bun                   | soft, toasted
