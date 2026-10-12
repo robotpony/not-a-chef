@@ -4,6 +4,7 @@ date: 2026-10-01
 ---
 Early October is mostly trip notes: a tabbouleh worth learning, a subtly sweet red cabbage, an onion jam on a double smash burger, and a German dinner of roulade and pork tenderloin with apple.   
 
+Next: Leaf things, editing posts, version in about
 ## Week of Friday, October 16th
 
 Essay topic: 
