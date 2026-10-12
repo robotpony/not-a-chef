@@ -41,7 +41,7 @@ The test: after reading it, could you cook something that isn't written down any
 
 ## Where methods live
 
-**The folder decides.** Methods live in `content/essays/methods/`, next to `reference-essays/`. A page in that folder is a method; a page outside it isn't, whatever its tags say. The folder has its own `_index.md`, which makes it a Hugo subsection: its pages stay out of the essays list (methods are a top-level nav item, beside Recipes and Essays) and it cascades the `method` tag onto every page in it. The section page itself isn't rendered (`build.render: link`); the methods list is the `method` tag page, which takes `/essays/methods/` and `/methods/` as aliases, so the breadcrumb on a method page lands on it. Other essay folders (`reference-essays/`, `food-memories/`) have no `_index.md`, which is what keeps their pages in the essays list. A page's own `tags` replaces the cascaded value rather than adding to it, and nearly every essay sets `tags`, so each method lists `method` itself; the cascade is the backstop and `/lint` checks the rest.
+**The folder decides.** Methods live in `content/methods/`, their own top-level section (a nav item beside Recipes and Essays, since 2026-10-11; until then they sat in `content/essays/methods/`). A page in that folder, at any depth, is a method; a page outside it isn't, whatever its tags say. Fugu finds them through `methodSection = "methods"` in `config/_default/params.toml`. The section's page, `/methods/`, is the methods list: its `_index.md` holds the title, description, and the definition (the body), and cascades the `method` tag onto the pages under it (targeted at `/methods/**`, so the list page itself isn't tagged and doesn't show up on the tag page). A page's own `tags` replaces the cascaded value rather than adding to it, and nearly every method sets `tags`, so each lists `method` itself; the cascade is the backstop and `/lint` checks the rest. The `method` tag's own page (`/tags/method/`) is a plain tag list.
 
 Method-like pages in `content/reference/` move into the folder, with `aliases:` for their old URLs:
 
@@ -66,7 +66,7 @@ That's why **blueprints are a taxonomy, not folders**. (They were briefly called
 - **`blueprint`** is a taxonomy, set up like `cuisine`: `blueprint: [burgers]` in frontmatter, with `content/blueprint/burgers/_index.md` holding the blueprint's definition and the order of its parts.
 - **`part`** is a frontmatter field on a method page naming which part of the blueprint it covers (e.g. `part: Patty construction`).
 - Method pages, recipes, and stories all carry `blueprint`, so the blueprint page collects all three without any other wiring.
-- Folders can still group a blueprint's method files on disk (`content/essays/methods/burgers/`), with `blueprint: [burgers]` set on each page (or cascaded from `content/essays/methods/_index.md` by path). A page that belongs to a second blueprint lists both.
+- Folders can still group a blueprint's method files on disk (`content/methods/burgers/`), with `blueprint: [burgers]` set on each page (or cascaded from `content/methods/_index.md` by path). A page that belongs to a second blueprint lists both.
 
 ## Inside a blueprint: parts, options, and builds
 
@@ -94,7 +94,7 @@ Blueprint (burgers)
 | Paper thin (smashed) | You want lacy, crisp edges | Cooking: smash on a very hot griddle |
 ```
 
-**Builds** are named combinations: one pick per part that lands on a recognizable profile. The fast-food double is salty, sweet, and rich with little crunch; the drive-in deluxe is cold crunch and sharp against a salty patty; the grilled onion burger is sweet and savoury with one soft, even texture. Builds can be very different and complex, so **each build is its own page**: a method page in `content/essays/methods/` (it's a general pattern, not a dish with quantities) with:
+**Builds** are named combinations: one pick per part that lands on a recognizable profile. The fast-food double is salty, sweet, and rich with little crunch; the drive-in deluxe is cold crunch and sharp against a salty patty; the grilled onion burger is sweet and savoury with one soft, even texture. Builds can be very different and complex, so **each build is its own page**: a method page in `content/methods/` (it's a general pattern, not a dish with quantities) with:
 
 | Field | On | Meaning |
 |---|---|---|
@@ -178,7 +178,7 @@ What stays per kind is how membership is decided and the body layout: a flat rec
 
 The method chip is the fan-out icon (`assets/icons/methods/fan-out.svg`) in the accent colour, decided 2026-10-10 (`mockups/STYLE.md` Method chip, `mockups/methods-icon.html`).
 
-The shared templates are Fugu work (`themes/fugu`), handed to the Fugu agent. This repo supplies the `_index.md` files, icons, and config. Until then the methods list is the `method` tag page (`/tags/method/`, described by `content/tags/method/_index.md`) and each blueprint is a plain term page (`/blueprint/burgers/`); the blueprint's definition and part order are written but not shown yet.
+The shared templates are Fugu work (`themes/fugu`), handed to the Fugu agent. This repo supplies the `_index.md` files, icons, and config. The methods list is `/methods/` (`content/methods/_index.md`) and each blueprint is a plain term page (`/blueprint/burgers/`); the blueprint's definition and part order are written but not shown yet.
 
 ## Ontology
 

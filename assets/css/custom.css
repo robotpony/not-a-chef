@@ -1774,7 +1774,7 @@ article:not(:has(.article-pagination)) .reading-sidebar-wrap { margin-bottom: 0;
 
 /* Methods and blueprints (mockups/methods-pages.html, STYLE.md "Methods
  * and blueprint pages"; Fugu partials/method/ and partials/blueprint/):
- * the methods list at /tags/method/, a blueprint's page, and a build
+ * the methods list at /methods/, a blueprint's page, and a build
  * page's profile, picks, and recipes. */
 .bp-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 16px; }
 .bp { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 16px 18px 14px; display: flex; flex-direction: column; gap: 10px; }

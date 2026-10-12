@@ -94,6 +94,10 @@ mainSections = ["recipes"]
   # Recipe sidebar boxes, top to bottom (Fugu's default puts notes last).
   recipeSidebar = ["photos", "to-serve", "mechanic", "notes", "variations", "equipment"]
 
+  # Methods are their own top-level section, content/methods/, whose page
+  # (/methods/) is the methods list (docs/METHODS.md).
+  methodSection = "methods"
+
   # Drafts are published as "Test kitchen" recipes: a banner under the
   # title and tags, and a mark on the card. What each key changes, and how
   # to turn it off: docs/DESIGN.md "Test kitchen (drafts)". Fugu's own words
