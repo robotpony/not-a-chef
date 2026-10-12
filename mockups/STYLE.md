@@ -117,11 +117,11 @@ has to compete for space inside this same 5-hue family; there's no 6th hue.
 
 | Token | Light | Dark | Use |
 |---|---|---|---|
-| `--sear` | `#6B4128` | `#5C3A26` | a seared top face in the exploded build diagrams (patties) |
+| `--sear` | `#8E5E3D` | `#5C3A26` | a seared top face in the exploded build diagrams (patties) |
 | `--sear-fleck` | `#D9B48C` | `#24170F` | speckle and pits on a seared face |
 | `--sear-char` | `#23241E` | `#121310` | grill marks, which stay dark in dark mode where `--ink` turns light |
 
-Added 2026-10-11 (`mockups/patty-sear.html`): the kit's two fills gave a patty's top `--surface`, near-white in light mode, so it read raw. `--sear` is `--accent-strong`'s rust pulled toward brown and darkened, so it stays in the orange→red hue; it's a third fill for the diagram kit only, not a UI colour. Option B (sear fill, normal speckle) or D (sear fill, four times the speckle) is still to pick.
+Added 2026-10-11 (`mockups/patty-sear.html`): the kit's two fills gave a patty's top `--surface`, near-white in light mode, so it read raw. `--sear` is `--accent-strong`'s rust pulled toward brown and darkened, so it stays in the orange→red hue; it's a third fill for the diagram kit only, not a UI colour. Option D won: the sear fill with four times the speckle, the light-mode brown lightened to `#8E5E3D` so the ink outline and grill marks show against it.
 
 ### Where the palette comes from
 

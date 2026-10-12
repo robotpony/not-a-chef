@@ -104,7 +104,7 @@ in a browser — no build step.
   the layer kit's patties, which `--surface` left near-white in light mode.
   Four options side by side in light and dark: current, a `--sear` fill,
   stipple only, and sear plus heavy stipple. The `--sear` tokens are in
-  `STYLE.md` §5 and `custom.css`; B or D is still to pick, then the patty's
+  `STYLE.md` §5 and `custom.css`; D won (sear plus four times the speckle, with a lighter light-mode brown); next, the patty's
   fills change in `exploded-builds.html` and `export-layers.mjs` re-exports
   the kit for Fugu.
 

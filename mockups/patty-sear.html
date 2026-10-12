@@ -44,13 +44,13 @@
   
   /* Proposed (2026-10-11): a third fill for seared surfaces. Same five hues:
      --sear is --accent-strong's rust pulled toward brown and darkened. */
-  :root{ --sear:#6B4128; --sear-fleck:#D9B48C; --sear-char:#23241E; }
+  :root{ --sear:#8E5E3D; --sear-fleck:#D9B48C; --sear-char:#23241E; }
   @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --sear:#5C3A26; --sear-fleck:#24170F; --sear-char:#121310; } }
   :root[data-theme="dark"]{ --sear:#5C3A26; --sear-fleck:#24170F; --sear-char:#121310; }
 
   /* Each sheet pins its own mode, so light and dark sit side by side. */
   .theme-light{ --bg:#F3F3EC; --surface:#FBFBF6; --surface-2:#EAEBDF; --ink:#23241E; --ink-muted:#63645A; --ink-faint:#93948A; --border:#DCDCCE; --border-strong:#C7C8B4; --accent:#A67330; --accent-strong:#7C361D; --accent-soft:#F6EADA;
-    --sear:#6B4128; --sear-fleck:#D9B48C; --sear-char:#23241E; }
+    --sear:#8E5E3D; --sear-fleck:#D9B48C; --sear-char:#23241E; }
   .theme-dark{ --bg:#1B1C16; --surface:#212219; --surface-2:#17180F; --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A; --border:#383A2C; --border-strong:#4A4C3A; --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
     --sear:#5C3A26; --sear-fleck:#24170F; --sear-char:#121310; }
 
@@ -137,7 +137,7 @@
     <h2 style="font-size:1rem;margin-bottom:8px">Proposed tokens</h2>
     <table>
       <tr><th>Token</th><th>Light</th><th>Dark</th><th>Use</th></tr>
-      <tr><td><code>--sear</code></td><td><span class="sw" style="background:#6B4128"></span>#6B4128</td><td><span class="sw" style="background:#5C3A26"></span>#5C3A26</td><td>Seared top face: patties (bacon later, if it helps)</td></tr>
+      <tr><td><code>--sear</code></td><td><span class="sw" style="background:#8E5E3D"></span>#8E5E3D</td><td><span class="sw" style="background:#5C3A26"></span>#5C3A26</td><td>Seared top face: patties (bacon later, if it helps)</td></tr>
       <tr><td><code>--sear-fleck</code></td><td><span class="sw" style="background:#D9B48C"></span>#D9B48C</td><td><span class="sw" style="background:#24170F"></span>#24170F</td><td>Speckle and pits on a seared face</td></tr>
       <tr><td><code>--sear-char</code></td><td><span class="sw" style="background:#23241E"></span>#23241E</td><td><span class="sw" style="background:#121310"></span>#121310</td><td>Grill marks: stays dark in dark mode, where ink turns light</td></tr>
     </table>
