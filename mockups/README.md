@@ -66,6 +66,13 @@ in a browser — no build step.
   `/methods/` as the methods page, "Food Log" in the nav, homepage C.
   Built the same day: the nav and homepage (`STYLE.md` Homepage bands).
 
+- **`methods-list-builds.html`**: proposal (2026-10-11) for the methods
+  list before publish: hover moves off the blueprint block (which isn't a
+  link) onto its part rows and name, with a soft fill and a `→`; and the
+  builds shown beside the blueprint with their stack drawings, as tiles
+  (option A) or a bottom-aligned lineup in one panel (option B,
+  recommended). Open; not yet built.
+
 - **`exploded-builds.html`**: proposal (2026-10-10) for drawing a build as
   an exploded view (layers pulled apart, each drawn as the thing, leader
   lines to labels and roles) instead of flat bars: the layer kit, the three
