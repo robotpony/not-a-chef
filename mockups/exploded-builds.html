@@ -237,7 +237,7 @@
     <span class="eyebrow">Proposal · 2026-10-11 · METHODS phase 6 · round 4: texture and detail</span>
     <h1>Exploded build diagrams</h1>
     <p class="lede">The layer bars in <code>methods-pages.html</code> were abstract, and full-width bars don't look like a burger. This draws a build the way a technical manual draws an assembly: each layer as the thing itself, seen from a three-quarter angle, pulled apart vertically, with leader lines to its name and its role.</p>
-    <p class="lede">Round 2 drew the same shapes in the formula icons' style. Round 4 (2026-10-11) keeps that style and its two fills and adds texture as strokes, after Bruce's references (a patent drawing, an engraving, a colouring book): sesame seeds as open ovals over the dome, stipple on cut bread and patty sides, a craggy patty edge, veined and ruffled lettuce, tomato chambers with seeds, onion as loose rings, crinkle-cut pickle chips with ridges and a seed ring, bacon as three rippled strips laid across the patty's ellipse, and a hatched cheese slice draped at the corners. Ketchup and mustard are layered swirls sized by share (ketchup the large one, 2/3, as wide as the patty; mustard the small one on top, 1/3, in the bun's fill); mayo and burger sauce are spreads, so the two never look alike. Sections 2 to 6 show round 4; round 3 is a click away in the top bar.</p>
+    <p class="lede">Round 2 drew the same shapes in the formula icons' style. Round 4 (2026-10-11) keeps that style and its two fills and adds texture as strokes, after Bruce's references (a patent drawing, an engraving, a colouring book): sesame seeds as open ovals over the dome, stipple on cut bread and patty sides, a craggy patty edge, a seared top on griddled patties and edge-to-edge grill marks on grilled ones (two keys, <code>-grilled</code>), veined and ruffled lettuce, tomato chambers with seeds, onion as loose rings, crinkle-cut pickle chips with ridges and a seed ring, bacon as three rippled strips laid across the patty's ellipse, and a hatched cheese slice draped at the corners. Ketchup and mustard are layered swirls sized by share (ketchup the large one, 2/3, as wide as the patty; mustard the small one on top, 1/3, in the bun's fill); mayo and burger sauce are spreads, so the two never look alike. Sections 2 to 6 show round 4; round 3 is a click away in the top bar.</p>
   </div>
 
   <section class="block" id="why">
@@ -680,8 +680,8 @@ const L2 = {...L1,
       `<path class="tx-hatch" d="${clipLines(poly, lines)}"/><path class="tx-fine" d="${pts2d(fold)}"/>`;
     return {svg, h:B[1]+th-y+1, edge:s0};
   },
-  patty(cx, y, rx, t, kind){
-    // A smooth top and a craggy, stippled side; grill marks on a thick patty, a lacy edge on a smashed one.
+  patty(cx, y, rx, t, kind, grillCm){
+    // A smooth top and a craggy, stippled side; grill marks only when grilled, a lacy edge on a smashed one.
     const ry = rx*K, cy = y+ry*1.08, seed = Math.round(rx*10+t*7)+1, nz = noise(seed), nz2 = noise(seed+5), r = rng(seed+11);
     const smash = kind === 'smash', amp = smash ? .06 : .022;
     const rr = a => 1 + amp*nz(a) + (smash ? .035*Math.sin(19*a) : 0);
@@ -694,17 +694,27 @@ const L2 = {...L1,
     if (crag) s += `<path class="tx-fine" d="${crag}"/>`;
     const n = Math.round(rx*t*(smash ? .06 : .11));
     for (let i=0;i<n;i++){ const a = .08+r()*(Math.PI-.16), p = EP(cx, cy, rx, ry, a, rr(a)); s += `<circle class="stip" cx="${f(p[0])}" cy="${f(p[1]+1.2+r()*Math.max(t-2.4, .4))}" r="${f(.4+r()*.35)}"/>`; }
-    if (kind === 'thick'){
-      let g = '';
-      for (const b of [-.42, 0, .42]) for (const o of [0, .075]){
-        const m = .5, bb = b+o, R0 = .8, A = 1+m*m, Bq = 2*m*bb, C = bb*bb-R0*R0, D = Bq*Bq-4*A*C;
-        if (D <= 0) continue;
-        const u1 = (-Bq-Math.sqrt(D))/(2*A), u2 = (-Bq+Math.sqrt(D))/(2*A);
-        g += `M${f(cx+u1*rx)},${f(cy+(m*u1+bb)*ry)}L${f(cx+u2*rx)},${f(cy+(m*u2+bb)*ry)}`;
+    if (grillCm){
+      // Grill marks: char bands that run edge to edge, evenly spaced, scaled from real size
+      // (about 1.5 cm wide with 2 cm between them) against the patty's radius in cm.
+      const w = 1.5/grillCm, period = 3.5/grillCm, th0 = .62, nA = th0+Math.PI/2, R = .985;
+      const U = (a, q=1) => [cx+Math.cos(a)*rx*R*q, cy+Math.sin(a)*ry*R*q];
+      const n = Math.floor((2-w)/period)+1;
+      let outline = '', hatch = '';
+      for (let k=0;k<n;k++){
+        const c = (k-(n-1)/2)*period, lo = Math.max(c-w/2, -.97), hi = Math.min(c+w/2, .97);
+        if (hi-lo < .08) continue;   // a band the edge cuts off is drawn cut off
+        const ps = [], arc = (a0, a1) => { for (let i=0;i<=16;i++) ps.push(U(a0+(a1-a0)*i/16)); };
+        arc(nA+Math.acos(hi), nA+Math.acos(lo)); arc(nA-Math.acos(lo), nA-Math.acos(hi));
+        outline += pts2d(ps)+'Z';
+        const dx = Math.cos(th0), dy = Math.sin(th0), nx = -dy, ny = dx, lines = [];
+        for (const fr of [.2, .4, .6, .8]){ const o = lo+(hi-lo)*fr; lines.push([cx+(nx*o-dx*1.2)*rx*R, cy+(ny*o-dy*1.2)*ry*R, cx+(nx*o+dx*1.2)*rx*R, cy+(ny*o+dy*1.2)*ry*R]); }
+        hatch += clipLines(ps, lines, .8);
       }
-      s += `<path class="tx-bold" d="${g}"/>`;
-    } else if (!smash){
-      s += `<path class="only-f" d="M${f(cx-rx*.5)},${f(cy+ry*.1)}l${f(rx*.22)},${f(-ry*.38)}M${f(cx-rx*.12)},${f(cy+ry*.42)}l${f(rx*.34)},${f(-ry*.6)}M${f(cx+rx*.3)},${f(cy+ry*.2)}l${f(rx*.2)},${f(-ry*.36)}"/>`;
+      s += `<path class="tx-fine" d="${hatch}"/><path class="tx" d="${outline}"/>`;
+    } else {
+      // Griddled: no marks, a seared crust instead.
+      s += stipple(cx, cy, rx, ry, smash ? 30 : 46, seed+3, {maxq:.88});
     }
     let pits = '';
     for (let i=0;i<(smash ? 14 : 9);i++){ const p = EP(cx, cy, rx, ry, r()*Math.PI*2, Math.sqrt(r())*.72); pits += `M${f(p[0]-1.5)},${f(p[1])}q1.5,1 3,0`; }
@@ -712,8 +722,11 @@ const L2 = {...L1,
     if (smash) for (let i=0;i<10;i++){ const p = EP(cx, cy, rx, ry, r()*Math.PI*2, .86+r()*.06), w = 1.2+r()*1.4; s += `<ellipse class="pore" cx="${f(p[0])}" cy="${f(p[1])}" rx="${f(w)}" ry="${f(w*.55)}"/>`; }
     return {svg:s, h:2*ry*1.08+t+2, edge:rx*(1+amp)};
   },
+  // Griddled by default; the -grilled keys add grill marks. Real radii: thin 6 cm, thick 5 cm.
   'patty-thin'(cx, y, rx){ return L2.patty(cx, y, rx*.98, rx*.13, 'thin'); },
+  'patty-thin-grilled'(cx, y, rx){ return L2.patty(cx, y, rx*.98, rx*.13, 'thin', 6); },
   'patty-thick'(cx, y, rx){ return L2.patty(cx, y, rx*.88, rx*.32, 'thick'); },
+  'patty-thick-grilled'(cx, y, rx){ return L2.patty(cx, y, rx*.88, rx*.32, 'thick', 5); },
   'patty-smash'(cx, y, rx){ return L2.patty(cx, y, rx*1.02, rx*.07, 'smash'); },
   'bacon'(cx, y, rx){
     // Three strips laid across the patty's own ellipse, turned a little in the plane, each
@@ -871,7 +884,7 @@ document.getElementById('ba-icons').innerHTML = [
 ].join('');
 
 function render(){
-const kitKeys = [['bun-top','Bun top'],['lettuce','Lettuce'],['tomato','Tomato'],['onion-raw','Raw onion'],['onion-fried','Fried onion'],['pickle','Pickles'],['cheese','Cheese slice'],['bacon','Bacon'],['patty-thin','Thin patty'],['patty-thick','Thick patty'],['patty-smash','Smashed patty'],['sauce-ketchup-mustard','Ketchup, mustard'],['sauce-burger','Burger sauce'],['mustard','Mustard'],['bun-base','Bun base'],['bread','Bread slice'],['pasta','Pasta sheet'],['ragu','Ragù'],['bechamel','Béchamel'],['cheese-top','Cheese, baked']];
+const kitKeys = [['bun-top','Bun top'],['lettuce','Lettuce'],['tomato','Tomato'],['onion-raw','Raw onion'],['onion-fried','Fried onion'],['pickle','Pickles'],['cheese','Cheese slice'],['bacon','Bacon'],['patty-thin','Thin patty'],['patty-thin-grilled','Thin patty, grilled'],['patty-thick','Thick patty'],['patty-thick-grilled','Thick patty, grilled'],['patty-smash','Smashed patty'],['sauce-ketchup-mustard','Ketchup, mustard'],['sauce-burger','Burger sauce'],['mustard','Mustard'],['bun-base','Bun base'],['bread','Bread slice'],['pasta','Pasta sheet'],['ragu','Ragù'],['bechamel','Béchamel'],['cheese-top','Cheese, baked']];
 document.getElementById('kit-grid').innerHTML = kitKeys.map(([k, n]) => `<div class="kit-cell">${compose([{k}], {rx:52, gap:0, labels:false})}<span class="panel-label" style="font-size:.8rem;margin:0">${n}</span><span class="kit-key">${k}</span></div>`).join('');
 
 document.getElementById('build-grid').innerHTML = Object.values(BUILDS).map(b => `<div class="panel"><div class="panel-label">${b.name}</div><div class="panel-sub">${b.profile}</div>${compose(b.layers, {rx:62, gap:14})}</div>`).join('');
@@ -880,7 +893,7 @@ const fan = '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-w
 const counts = {deluxe:[2,'5m'], bacon:[1,'4m'], onion:[0,'3m']};
 document.getElementById('card-grid').innerHTML = Object.entries(BUILDS).map(([id, b]) => `<div class="bcard"><span class="chip">${fan}Build</span><div class="bcard-title">${b.name}</div><p class="profile">${b.profile}</p><div class="thumb">${compose(b.layers, {rx:56, gap:5, labels:false})}</div><div class="stats">Recipes<span>${counts[id][0]}</span>&nbsp; Read<span>${counts[id][1]}</span></div></div>`).join('');
 
-document.getElementById('opt-grid').innerHTML = [['patty-thick','Thick, 170 g+','Reverse sear or grill'],['patty-thin','Thin, 115–140 g','Griddle, flip once'],['patty-smash','Paper thin','Smash on a very hot griddle']].map(([k,n,c]) => `<div class="panel">${compose([{k}], {rx:70, gap:0, labels:false})}<div class="panel-label" style="margin-top:8px">${n}</div><div class="panel-sub" style="margin:0">${c}</div></div>`).join('');
+document.getElementById('opt-grid').innerHTML = [['patty-thick-grilled','Thick, 170 g+','Reverse sear or grill'],['patty-thin','Thin, 115–140 g','Griddle, flip once'],['patty-smash','Paper thin','Smash on a very hot griddle']].map(([k,n,c]) => `<div class="panel">${compose([{k}], {rx:70, gap:0, labels:false})}<div class="panel-label" style="margin-top:8px">${n}</div><div class="panel-sub" style="margin:0">${c}</div></div>`).join('');
 
 const lasagne = [
   {k:'cheese-top', label:'Mozzarella, parmesan', role:'browned crust'},
