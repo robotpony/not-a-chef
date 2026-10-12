@@ -1879,17 +1879,18 @@ a.part-row:hover::after, a.part-row:focus-visible::after { opacity: 1; transform
 .parts-full li::before { grid-row: span 3; }
 .parts-full .part-name { font-size: 1rem; }
 /* A blueprint page's part rows react like the methods list's (a soft fill,
- * a → sliding in after the name): the name's link stretches over the row,
- * as a card's does, its ::before carrying the fill under the row's text
- * (isolation keeps it above the page). The pills aren't links, so nothing
- * underneath is lost. */
-.parts-full li { position: relative; isolation: isolate; }
-.parts-full .part-name a::before { content: ""; position: absolute; inset: 1px -8px 0; z-index: -1; border-radius: 4px; transition: background .12s; }
+ * a → sliding in after the name), and the whole row is the part's link: the
+ * name's link stretches an invisible ::before over the row, above its text,
+ * as a card's does. The fill is the row's own background (hovering the
+ * overlay hovers the link), so it stops where the divider lines do. The
+ * pills aren't links, so nothing underneath is lost. */
+.parts-full li { position: relative; padding-left: 8px; padding-right: 8px; transition: background .12s; }
+.parts-full .part-name a::before { content: ""; position: absolute; inset: 0; z-index: 1; }
 .parts-full .part-name a::after { content: '→'; display: inline-block; margin-left: 8px; font-weight: 500; color: var(--accent-strong); opacity: 0; transform: translateX(-6px); transition: opacity .12s, transform .12s; }
 .parts-full .part-name a:hover, .parts-full .part-name a:focus-visible { color: var(--accent-strong); outline: none; }
-.parts-full .part-name a:hover::before, .parts-full .part-name a:focus-visible::before { background: var(--accent-soft); }
+.parts-full li:has(.part-name a:hover), .parts-full li:has(.part-name a:focus-visible) { background: var(--accent-soft); }
 .parts-full .part-name a:hover::after, .parts-full .part-name a:focus-visible::after { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) { .parts-full .part-name a::before, .parts-full .part-name a::after { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .parts-full li, .parts-full .part-name a::after { transition: none; } }
 
 /* A part's options, and a blueprint's builds, as pills */
 .opts { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
