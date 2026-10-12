@@ -62,7 +62,9 @@ in a browser — no build step.
   six-item nav at desktop, 700px and phone widths (it overflows at 700px),
   and the homepage with a methods band in three arrangements (A: added as
   a band, B: one essay row, C: essays as two side-by-side lists), each with
-  its measured height. Open.
+  its measured height. Decided 2026-10-11: folder move (pending Fugu),
+  `/methods/` as the methods page, "Food Log" in the nav, homepage C.
+  Built the same day: the nav and homepage (`STYLE.md` Homepage bands).
 
 - **`exploded-builds.html`**: proposal (2026-10-10) for drawing a build as
   an exploded view (layers pulled apart, each drawn as the thing, leader

@@ -24,6 +24,14 @@
   drifted from rcard's. comp-card is unused in real content now — it
   remains only in the style-guide gallery/mockups as a documented
   component (mockups/STYLE.md, mockups/COMPONENTS.md).
+
+  2026-10-11 (mockups/methods-top-level.html, option C): methods became a
+  top-level section, so they get band 02, right after recipes (Love,
+  Method, Heritage, mockups/STYLE.md "Core message"): each blueprint as the
+  methods page's block with its parts run inline, beside the techniques
+  that belong to no blueprint. The two essay card rows became one Essays
+  band of two lists side by side, which keeps the page about as long as it
+  was with four card rows.
 */}}
 {{ $recipes := where site.RegularPages "Section" "recipes" }}
 {{ $essays := where site.RegularPages "Section" "essays" }}
@@ -35,7 +43,7 @@
 {{ range $essays }}
   {{ if strings.HasPrefix .File.Path "essays/food-memories/" }}
     {{ $memories = $memories | append . }}
-  {{/* Methods have their own nav item and list (/tags/method/), not an essay band. */}}
+  {{/* Methods have their own band (02). */}}
   {{ else if not (partial "method/is.html" .) }}
     {{ $otherEssays = $otherEssays | append . }}
   {{ end }}
@@ -48,6 +56,16 @@
 {{ $recentLogs := first 0 $logs }}
 {{ range sort $logMonths "key" "desc" }}{{ $recentLogs = $recentLogs | append .page }}{{ end }}
 {{ $logIndex := site.GetPage "the-food-log" }}
+{{ $essayCount := add (len $memories) (len $otherEssays) }}
+{{ $methods := partialCached "method/all.html" "all" "all" }}
+{{ $methodsList := partialCached "method/list-page.html" . "list" }}
+{{ $bpTaxonomy := site.Params.fugu.methods.taxonomy | default "" }}
+{{ $blueprints := slice }}
+{{ with and $bpTaxonomy (site.GetPage (printf "/%s" $bpTaxonomy)) }}{{ $blueprints = .Pages.ByTitle }}{{ end }}
+{{ $techniques := slice }}
+{{ range $methods }}
+  {{ if not (and $bpTaxonomy (index .Params $bpTaxonomy)) }}{{ $techniques = $techniques | append . }}{{ end }}
+{{ end }}
 
 <section class="hero">
   <span class="hero-eyebrow">Our family cookbook</span>
@@ -80,38 +98,74 @@
   </div>
 </section>
 
-<section class="home-section" id="memories">
+{{ if $methods }}
+<section class="home-section" id="methods">
   <div class="block-head">
     <div>
       <span class="block-num">02</span>
-      <h2 class="block-title">Food memories</h2>
-      <p class="block-dek">Where the cooking started: the kitchens I grew up in, and the meals that changed how I eat. <a href="{{ "about" | relURL }}">More about me &rarr;</a></p>
+      <h2 class="block-title">Methods</h2>
+      <p class="block-dek">How a kind of food works, so you can cook the dishes that aren't written down.</p>
     </div>
-    {{ if gt (len $memories) 4 }}
-      <a class="mega-viewall" href="{{ "essays" | relURL }}">All essays &rarr;</a>
-    {{ end }}
+    {{ with $methodsList }}<a class="mega-viewall" href="{{ .RelPermalink }}">All methods &rarr;</a>{{ end }}
   </div>
-  <div class="rgrid home-row">
-    {{ range first 4 (sort $memories "Date" "desc") }}
-      {{ partial "recipe-card.html" . }}
+  <div class="home-methods{{ if not (and $blueprints $techniques) }} single{{ end }}">
+    {{ with $blueprints }}
+      <div class="home-bps">
+        {{ range . }}
+          {{ $info := partialCached "blueprint/info.html" . .Path }}
+          <section class="bp">
+            <div class="bp-head">
+              <a class="bp-name" href="{{ .RelPermalink }}">{{ partialCached "method/icon.html" . "icon" | safeHTML }}{{ .Title }}</a>
+              <span class="bp-count">{{ with $info.parts }}{{ $info.written }} of {{ len . }} parts{{ else }}{{ len $info.recipes }} recipes{{ end }}{{ with $info.builds }} · {{ len . }} {{ cond (eq (len .) 1) "build" "builds" }}{{ end }}</span>
+            </div>
+            {{ with .Description }}<p class="bp-desc">{{ . }}</p>{{ end }}
+            {{ with $info.parts }}
+              <ol class="parts-inline">
+                {{ range . }}
+                  {{ $part := . }}
+                  <li{{ if not .methods }} class="todo"{{ end }}><i>{{ printf "%02d" .n }}</i>{{ with .methods }}<a href="{{ (index . 0).RelPermalink }}">{{ $part.name }}</a>{{ else }}{{ .name }}{{ end }}</li>
+                {{ end }}
+              </ol>
+            {{ end }}
+            {{ with $info.builds }}
+              <div class="opts"><span class="opt-pill"><b>Builds</b></span>{{ range . }}<a class="opt-pill" href="{{ .RelPermalink }}">{{ .Params.build_name }}</a>{{ end }}</div>
+            {{ end }}
+          </section>
+        {{ end }}
+      </div>
+    {{ end }}
+    {{ with $techniques }}
+      <div class="home-list">
+        <h3 class="home-list-label">Techniques and ratios</h3>
+        {{ range . }}
+          <a class="home-row-link" href="{{ .RelPermalink }}"><strong>{{ .Title }}</strong><span>{{ partial "page-description.html" . }}</span></a>
+        {{ end }}
+      </div>
     {{ end }}
   </div>
 </section>
+{{ end }}
 
-<section class="home-section" id="more-essays">
+<section class="home-section" id="essays">
   <div class="block-head">
     <div>
-      <span class="block-num">03</span>
-      <h2 class="block-title">Technique &amp; reflections</h2>
-      <p class="block-dek">The rest of the essays: lessons from the stove, planning, and a few long obsessions.</p>
+      <span class="block-num">{{ cond (gt (len $methods) 0) "03" "02" }}</span>
+      <h2 class="block-title">Essays</h2>
+      <p class="block-dek">Where the cooking started, and what it taught me. <a href="{{ "about" | relURL }}">More about me &rarr;</a></p>
     </div>
-    {{ if gt (len $otherEssays) 4 }}
-      <a class="mega-viewall" href="{{ "essays" | relURL }}">All essays &rarr;</a>
-    {{ end }}
+    <a class="mega-viewall" href="{{ "essays" | relURL }}">All {{ $essayCount }} essays &rarr;</a>
   </div>
-  <div class="rgrid home-row">
-    {{ range first 4 (sort $otherEssays "Date" "desc") }}
-      {{ partial "recipe-card.html" . }}
+  <div class="home-essays">
+    {{ range slice (dict "label" "Food memories" "pages" $memories) (dict "label" "Technique & reflections" "pages" $otherEssays) }}
+      {{ $label := .label }}
+      {{ with .pages }}
+        <div class="home-list">
+          <h3 class="home-list-label">{{ $label }}</h3>
+          {{ range first 4 (sort . "Date" "desc") }}
+            <a class="home-row-link" href="{{ .RelPermalink }}"><strong>{{ .Title }}</strong><em title="{{ .ReadingTime }} min">{{ .ReadingTime }}m</em><span>{{ partial "page-description.html" . }}</span></a>
+          {{ end }}
+        </div>
+      {{ end }}
     {{ end }}
   </div>
 </section>
@@ -119,7 +173,7 @@
 <section class="home-section" id="food-log">
   <div class="block-head">
     <div>
-      <span class="block-num">04</span>
+      <span class="block-num">{{ cond (gt (len $methods) 0) "04" "03" }}</span>
       <h2 class="block-title">From the food log</h2>
       <p class="block-dek">{{ $logIndex.Description }}</p>
     </div>
