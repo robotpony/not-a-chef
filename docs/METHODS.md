@@ -84,7 +84,7 @@ Blueprint (burgers)
 
 **The blueprint** is the folder's `_index.md`: its title, description, and definition (the body). It may end with `## Further reading`, wiki links to the stories and reference pages behind it. Its parts and builds are found from the folders, not listed.
 
-**Parts** are the slots every dish of this type fills, one page each in `parts/`. A part's name is its title (`Burger patties`), which is also the label for its pick on a build (`- **Burger patties:** …`). They're ordered by `weight` (1, 2, 3...).
+**Parts** are the slots every dish of this type fills, one page each in `parts/`. A part's name is its title (`Forming burger patties`), which is also the label for its pick on a build (`- **Forming burger patties:** …`). They're ordered by `weight` (1, 2, 3...).
 
 **Options** are the choices within one part: a burger patty is thick, thin, or paper thin. An option isn't a page. It's a row in its part's page, under `## Options`, saying when to pick it and what it changes elsewhere, because options have knock-on effects: a thick patty needs a reverse sear or the grill, a thin one goes on the griddle, a paper-thin one gets smashed on a very hot surface.
 
@@ -123,8 +123,8 @@ Deluxe means lettuce and tomato. ...
 
 Cold crunch and sharp against a salty patty.
 
-- **Burger patties:** One thin patty, 140 g, not mixed
-- **Burger seasoning:** Salt and pepper after cooking
+- **Forming burger patties:** One thin patty, 140 g, not mixed
+- **Seasoning burgers:** Salt and pepper after cooking
 ...
 ```
 

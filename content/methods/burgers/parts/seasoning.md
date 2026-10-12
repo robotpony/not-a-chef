@@ -1,5 +1,5 @@
 ---
-title: Burger seasoning
+title: Seasoning burgers
 date: 2026-10-10
 draft: true
 working_on: "First draft. Needs a word on onion powder and on seasoning chicken and plant patties."

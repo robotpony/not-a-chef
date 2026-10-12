@@ -1,9 +1,13 @@
 ---
-title: Burger cooking
+title: Cooking patties
 date: 2026-10-10
 draft: true
-working_on: "First draft. The grill and thick-patty options need your notes."
-tags: [method, burgers, beef, technique]
+working_on: First draft. The grill and thick-patty options need your notes.
+tags:
+  - method
+  - burgers
+  - beef
+  - technique
 weight: 3
 description: "Cooking a burger patty is about crust: a hot surface, a thin patty, one flip, and leaving it alone in between."
 ---
@@ -15,7 +19,7 @@ A burger patty cooks for its crust. The surface has to be hot enough to brown th
 - **Fat.** A little oil in the pan. The patty adds its own as it renders.
 - **Flips.** One, once a deep crust has formed, for fresh patties. Frozen patties brown better if you flip them more often.
 - **Cheese.** On the patty after the flip, a minute or so before it comes off.
-- **Seasoning.** On the surface, in the pan or as it comes off (see [[Burger seasoning]]).
+- **Seasoning.** On the surface, in the pan or as it comes off (see [[Seasoning burgers]]).
 
 ## Options
 

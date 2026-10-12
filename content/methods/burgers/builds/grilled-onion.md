@@ -14,11 +14,11 @@ This build is about one ingredient: onion, cooked down in the beef fat until it'
 
 Sweet and savoury; one soft, even texture.
 
-- **Burger patties:** Paper thin, smashed
-- **Burger seasoning:** After cooking
-- **Burger cooking:** Onion grilled in the beef fat alongside the patty, or smashed into it
-- **Burger assembly:** A pile of cooked onion, a pickle for the only sharp note
-- **Burger sauces:** Yellow mustard
+- **Forming burger patties:** Paper thin, smashed
+- **Seasoning burgers:** After cooking
+- **Cooking patties:** Onion grilled in the beef fat alongside the patty, or smashed into it
+- **Assembling burgers:** A pile of cooked onion, a pickle for the only sharp note
+- **Sauces and condiments:** Yellow mustard
 
 ```stack
 bun-top     | Soft bun                  | soft

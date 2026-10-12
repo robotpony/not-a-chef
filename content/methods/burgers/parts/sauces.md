@@ -1,5 +1,5 @@
 ---
-title: Burger sauces
+title: Sauces and condiments
 date: 2026-10-10
 draft: true
 working_on: "First draft, from the four sauce recipes."

@@ -1,5 +1,5 @@
 ---
-title: Burger patties
+title: Forming burger patties
 date: 2026-10-10
 draft: true
 working_on: "First draft, pulled together from the burger recipes and the Food Log."
@@ -15,13 +15,13 @@ A burger patty is ground meat, portioned and shaped, and almost nothing else. It
 - **Grind.** Medium grind for a loose, crumbly bite. Double-ground for a soft, almost pillowy patty like a fast-food burger (see [[McDouble]]).
 - **Weight.** 115–140 g (4–5 oz) for a single, 75 g each for a double. Two thin patties beat one thick one.
 - **Size.** Press the patty 5–10% wider than the bun. It shrinks as it cooks, and a patty that matches the bun is the first rule of a navigable burger.
-- **Salt.** None in the meat. Salt mixed in early pulls out moisture and binds the proteins, which turns a loose patty into a dense, springy one. Season the outside, at the pan or after cooking (see [[Burger seasoning]]).
+- **Salt.** None in the meat. Salt mixed in early pulls out moisture and binds the proteins, which turns a loose patty into a dense, springy one. Season the outside, at the pan or after cooking (see [[Seasoning burgers]]).
 
 ## Shaping
 
 Portion the meat into loose balls by weight. Don't knead or pack them; some irregularity helps the crust form.
 
-For a smashed patty, keep the balls cold and smash them in the pan (see [[Burger cooking]]).
+For a smashed patty, keep the balls cold and smash them in the pan (see [[Cooking patties]]).
 
 For a pressed patty, set each ball between two squares of parchment, about 10 cm, and press it flat with a cutting board or the bottom of a pot to 5–7 mm (¼ inch). Tidy the edges with your fingers. Stack the patties with their parchment and freeze them, at least partly, before cooking. Freezing tightens the texture a little, in a good way, and the parchment peels off as the patty drops into the pan.
 

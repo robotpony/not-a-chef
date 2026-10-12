@@ -1,5 +1,5 @@
 ---
-title: Burger assembly
+title: Assembling burgers
 date: 2026-10-10
 draft: true
 working_on: "First draft, mostly from The quest for the perfect burger."

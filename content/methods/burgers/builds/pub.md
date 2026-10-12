@@ -14,11 +14,11 @@ description: "The pub burger, from the 1980s. Not written yet."
 
 <!-- TODO: the profile in one line, then one pick per part. -->
 
-- **Burger patties:**
-- **Burger seasoning:**
-- **Burger cooking:**
-- **Burger assembly:**
-- **Burger sauces:**
+- **Forming burger patties:**
+- **Seasoning burgers:**
+- **Cooking patties:**
+- **Assembling burgers:**
+- **Sauces and condiments:**
 
 ## Where it comes from
 
