@@ -90,7 +90,8 @@ in a browser — no build step.
   and further reading), with switches for the definition (lede, callout,
   or in the sidebar), the builds (a scrolling rail, a wrapping grid, or a
   list), and 3 or 6 builds. §3 keeps the full width for comparison.
-  Recommended in the mock: sidebar, lede, rail. Not decided yet.
+  Decided 2026-10-11: sidebar, lede, rail, as recommended (`STYLE.md`
+  Methods and blueprint pages). Template half is Fugu's.
 
 - **`exploded-builds.html`**: proposal (2026-10-10) for drawing a build as
   an exploded view (layers pulled apart, each drawn as the thing, leader
