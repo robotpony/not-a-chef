@@ -186,6 +186,9 @@
   .method-chip{background:var(--accent-soft);color:var(--accent-strong);}
   .dev-chip{background:var(--flag-soft);color:var(--flag);}
   .method-chip svg,.dev-chip svg{width:12px;height:12px;}
+  /* The blueprint page's builds: two across at desktop width (2026-10-12). */
+  .bp-page-builds{grid-template-columns:repeat(2,minmax(0,1fr));}
+  body.phone .bp-page-builds{grid-template-columns:minmax(0,1fr);}
   .build-card .stack{width:150px;margin:auto;padding:4px 0;}
   .stack{color:var(--ink);}
   .stack-svg{display:block;width:100%;height:auto;overflow:visible;}
@@ -441,7 +444,7 @@ function renderBp(){
     <h3 class="subsection-title">Parts<span class="subsection-count">${bp.parts.length}</span></h3>
     ${parts}
     <h3 class="subsection-title subsection-gap">Builds<span class="subsection-count">${bp.builds.length}</span></h3>
-    <div class="rgrid">${bp.builds.map(buildCard).join('')}</div>
+    <div class="rgrid bp-page-builds">${bp.builds.map(buildCard).join('')}</div>
   </section><aside class="side"><div class="reading-sidebar">
     <div class="search-box">Search recipes, methods…</div>
     <div class="recipe-meta">
