@@ -51,6 +51,9 @@ Immediately. These hold badly.
 ### Single hamburger
 The little drive-thru slider. Use one 45 g patty on a small bun (Dempster, 7.5 cm / 3 inch). Build it bottom up: bottom bun, a few drops of mustard, 2 tsp ketchup, pickles, onion, half a cheese slice (optional), patty, top bun. Steam it in its wrapper.
 
+### Bacon McDouble
+Cook 1 slice of bacon until crisp and cut it in half. Lay the two halves on the cheese before stacking the second patty.
+
 ## Notes
 
 - The 5:1 ketchup:mustard ratio gives that distinctive fast-food sweet-savoury balance.
