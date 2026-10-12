@@ -1913,7 +1913,9 @@ a.tl-name:hover { color: var(--accent-strong); }
 .vt { position: relative; }
 .vt-spine { position: absolute; left: 52px; top: 0; bottom: 0; width: 2px; background: var(--border-strong); }
 .vt-dec { position: absolute; left: 0; width: 58px; display: flex; align-items: center; gap: 6px; transform: translateY(-50%); font-family: 'IBM Plex Mono', monospace; font-size: .64rem; line-height: 1; color: var(--ink-faint); }
-.vt-dec::after { content: ""; width: 8px; height: 1px; margin-left: auto; margin-right: 3px; background: var(--border-strong); }
+/* The tick is 8px centred on the spine (52–54px, centre 53): it runs
+ * 49–57px, so it ends 1px inside the label's 58px box. */
+.vt-dec::after { content: ""; width: 8px; height: 1px; margin-left: auto; margin-right: 1px; background: var(--border-strong); }
 .vt-name { position: absolute; left: 72px; right: 0; display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 2px 8px; border-radius: 4px; transform: translateY(-50%); font-family: 'Libre Franklin', sans-serif; font-size: .86rem; font-weight: 600; line-height: 1.2; white-space: nowrap; color: var(--ink); text-decoration: none; }
 .vt-name > span:not(.ln-dot) { overflow: hidden; text-overflow: ellipsis; }
 .vt-name .y { flex: none; font-family: 'IBM Plex Mono', monospace; font-size: .7rem; font-weight: 400; color: var(--ink-faint); }
