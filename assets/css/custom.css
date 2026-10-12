@@ -1822,7 +1822,7 @@ a.part-row::after { content: '→'; font-weight: 500; color: var(--accent-strong
 a.part-row:hover, a.part-row:focus-visible { background: var(--accent-soft); color: var(--accent-strong); outline: none; }
 a.part-row:hover::after, a.part-row:focus-visible::after { opacity: 1; transform: none; }
 
-/* The methods list and principle pages on the reading layout
+/* The methods list, principle, and blueprint pages on the reading layout
  * (mockups/methods-list-sidebar.html, principle-page-sidebar.html, decided
  * 2026-10-11): a body column and the reading sidebar, so nothing
  * runs past the body column. The definition is the page's intro as plain
@@ -1833,19 +1833,19 @@ a.part-row:hover::after, a.part-row:focus-visible::after { opacity: 1; transform
 /* The layout owns the page width and gutter, so the sidebar shares it
  * (it sits outside .listing, and had no gutter on phones); the listing
  * inside is a plain column. */
-.method-list-layout, .principle-layout { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-.method-list-layout > .listing, .principle-layout > .listing { width: 100%; max-width: none; margin: 0; padding: 32px 0 0; }
+.method-list-layout, .principle-layout, .blueprint-layout { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.method-list-layout > .listing, .principle-layout > .listing, .blueprint-layout > .listing { width: 100%; max-width: none; margin: 0; padding: 32px 0 0; }
 @media (max-width: 1023px) {
-  .method-list-layout .reading-sidebar-wrap, .principle-layout .reading-sidebar-wrap { margin-top: 40px; }
+  .method-list-layout .reading-sidebar-wrap, .principle-layout .reading-sidebar-wrap, .blueprint-layout .reading-sidebar-wrap { margin-top: 40px; }
 }
 /* The sidebar's top lines up with the intro, not the title, as on the
  * reading pages: .listing's 32px top padding, the title, its 6px margin,
  * and the intro's 14px. */
 @media (min-width: 1024px) {
-  .method-list-layout .reading-sidebar-wrap, .principle-layout .reading-sidebar-wrap { padding-top: calc(32px + 2.1rem * 1.1 + 20px); }
+  .method-list-layout .reading-sidebar-wrap, .principle-layout .reading-sidebar-wrap, .blueprint-layout .reading-sidebar-wrap { padding-top: calc(32px + 2.1rem * 1.1 + 20px); }
 }
 /* Fits "Blueprints", the longest label here. */
-.method-list-layout .recipe-meta-label, .principle-layout .recipe-meta-label { flex-basis: 74px; }
+.method-list-layout .recipe-meta-label, .principle-layout .recipe-meta-label, .blueprint-layout .recipe-meta-label { flex-basis: 74px; }
 .principle-layout .recipe-meta-row:has(.principle-chip) { align-items: center; }
 /* Three cards across in the body column, as on related recipes. */
 .principle-page .rgrid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
@@ -1857,6 +1857,10 @@ a.part-row:hover::after, a.part-row:focus-visible::after { opacity: 1; transform
 .method-intro p + p, .principle-intro p + p { margin-top: 14px; }
 .principle-intro .read-essay { display: inline-block; margin-top: 14px; font-family: 'Libre Franklin', sans-serif; font-size: .86rem; font-weight: 600; color: var(--principle-strong); text-decoration: none; }
 .principle-intro .read-essay:hover { text-decoration: underline; text-underline-offset: 3px; }
+/* The blueprint's "All methods →" under its intro: the same link in the
+ * method accent. */
+.blueprint-intro .read-essay { display: inline-block; margin-top: 14px; font-family: 'Libre Franklin', sans-serif; font-size: .86rem; font-weight: 600; color: var(--accent-strong); text-decoration: none; }
+.blueprint-intro .read-essay:hover { text-decoration: underline; text-underline-offset: 3px; }
 .method-list .bp-row { display: flex; flex-direction: column; gap: 14px; }
 .method-list .bp-row + .bp-row { margin-top: 28px; }
 .method-list .parts-compact { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-flow: column; grid-template-rows: repeat(var(--rows, 3), auto); column-gap: 28px; }
