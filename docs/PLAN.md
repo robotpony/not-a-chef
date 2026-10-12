@@ -33,7 +33,7 @@ Mocked 2026-10-10 in `mockups/methods-pages.html`; the template work is queued i
 **Phase 3: first methods**
 
 - [ ] Burgers blueprint: write the parts (patty construction with thick/thin/paper thin options, seasoning, cooking, assembly, sauces), pulling from the two burger essays without gutting them. *Drafted 2026-10-10 as test kitchen pages (`content/methods/burgers/`: `patties`, `seasoning`, `cooking`, `assembly`, `sauces`), with TODO comments where the sources ran out. Waiting on review.*
-- [ ] Burger builds: drive-in deluxe, fast-food double, grilled onion, one page each; set `build_name` on the recipes that are instances (White Spot burgers → drive-in deluxe). *Drafted 2026-10-10; White Spot set. Fast-food double and grilled onion are thin on sources (TODOs); the McDouble's build is an open question.*
+- [ ] Burger builds: drive-in deluxe, fast-food double, grilled onion, one page each; set `build_name` on the recipes that are instances (White Spot burgers → drive-in deluxe). *Drafted 2026-10-10; White Spot set. Fast-food double and grilled onion are thin on sources (TODOs). 2026-10-11: eras set (grilled onion 1922, fast-food double 1990); the McDouble recipe moved to its own McDouble build; Big Boy, Pub, McDouble, and Smash are stubs.*
 - [ ] Stock method, from Why ingredients matter in stock and the four stock recipes.
 - [ ] Foil packets method, from Camp cooking.
 
@@ -42,7 +42,7 @@ Mocked 2026-10-10 in `mockups/methods-pages.html`; the template work is queued i
 - [x] Rename the builds by lineage. *Done 2026-10-10: Drive-in deluxe (White Spot burgers) and Fast-food double (McDouble; bacon is now a variation).*
 - [x] Grilled onion: decide which onion burger it is. *Decided 2026-10-10: both, as variations: grilled alongside (or as a jam) and smashed in, which is a shortcut that soaks up the griddle juices. Name stays.*
 - [x] Planned builds on the timeline. *Done 2026-10-10: Pub burger, Smash burger, and the McDouble (a fast-food double variant, with rehydrated dried onion), in `content/blueprint/burgers/_index.md`. Years are approximate until sourced.*
-- [ ] Flags on the lineage timeline: context markers that aren't food (Burger King opens, a world's fair), styled apart from builds so they read as backdrop, not entries. Decide where they live (likely a `flags` list in the blueprint's `_index.md`, beside `planned`), mock them in `mockups/methods-pages.html`, then hand the template change to fugu-agent.
+- [ ] Flags on the lineage timeline: context markers that aren't food (Burger King opens, a world's fair), styled apart from builds so they read as backdrop, not entries. Decide where they live (likely the blueprint's body, per Phase 8, or `flags` frontmatter if they need to sort by year), mock them in `mockups/methods-pages.html`, then hand the template change to fugu-agent.
 
 **Phase 4: stack diagrams**
 

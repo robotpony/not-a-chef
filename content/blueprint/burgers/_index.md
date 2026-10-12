@@ -2,8 +2,8 @@
 title: Burgers
 description: "A burger is a patty and a build: how each part is made, and the recipes and stories behind them."
 # The order the blueprint's parts are listed in (each method page sets `part`).
-# Variations aren't a part: each build (drive-in deluxe, fast-food double,
-# grilled onion) is its own method page with `build_name`, `profile`, and `picks`
+# Variations aren't a part: each build (drive-in deluxe, Big Boy, and the
+# rest) is its own method page with `build_name`, `profile`, and `picks`
 # (docs/METHODS.md, Inside a blueprint).
 parts:
   - Patty construction
