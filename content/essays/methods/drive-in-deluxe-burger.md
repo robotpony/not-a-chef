@@ -24,9 +24,9 @@ Deluxe means lettuce and tomato (it's [[White Spot burgers]] language). The buil
 bun-top               | Toasted bun                   | soft, toasted
 lettuce               | Shredded lettuce              | cold crunch
 tomato                | Thin tomato                   | juicy, acid
-onion-raw             | Paper-thin raw purple onion   | sharp
+onion-raw             | Raw purple onion              | sharp
 pickle                | Double-sour pickles           | sour
-onion-fried           | Onion sautéed in the beef fat | sweet
+onion-fried           | Onion sautéed in beef fat     | sweet
 patty-thin            | Thin patty, 140 g             | salt, fat, savoury
 sauce-ketchup-mustard | Ketchup and mustard           | sweet, sharp
 bun-base              | Toasted bun                   | barrier
