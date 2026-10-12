@@ -213,6 +213,7 @@
   .fstyle .tx-hatch{ fill:none; stroke:var(--ink); stroke-width:.5; stroke-opacity:.55; }
   .fstyle .tx-bold{ fill:none; stroke:var(--ink); stroke-width:1.5; stroke-linecap:round; }
   .fstyle .stip{ fill:var(--ink); }
+  .fstyle .char{ fill:var(--ink); stroke:var(--ink); stroke-width:.4; stroke-linejoin:round; }
   .fstyle .seed2{ fill:var(--surface); stroke:var(--ink); stroke-width:.85; }
   .fstyle .jelly{ fill:var(--accent-soft); stroke:var(--ink); stroke-width:.9; stroke-linejoin:round; }
   .fstyle .s.thin{ stroke-width:1.2; }
@@ -695,23 +696,25 @@ const L2 = {...L1,
     const n = Math.round(rx*t*(smash ? .06 : .11));
     for (let i=0;i<n;i++){ const a = .08+r()*(Math.PI-.16), p = EP(cx, cy, rx, ry, a, rr(a)); s += `<circle class="stip" cx="${f(p[0])}" cy="${f(p[1]+1.2+r()*Math.max(t-2.4, .4))}" r="${f(.4+r()*.35)}"/>`; }
     if (grillCm){
-      // Grill marks: char bands that run edge to edge, evenly spaced, scaled from real size
-      // (about 1.5 cm wide with 2 cm between them) against the patty's radius in cm.
-      const w = 1.5/grillCm, period = 3.5/grillCm, th0 = .62, nA = th0+Math.PI/2, R = .985;
-      const U = (a, q=1) => [cx+Math.cos(a)*rx*R*q, cy+Math.sin(a)*ry*R*q];
-      const n = Math.floor((2-w)/period)+1;
-      let outline = '', hatch = '';
+      // Grill marks: narrow char lines with ragged edges that run out to the edge, bowing a
+      // little with the domed top, over the same speckled sear. Spaced from real size: a mark
+      // about 0.6 cm wide with 2.4 cm of meat between marks, against the patty's radius in cm.
+      const w = .6/grillCm, period = 3/grillCm, th0 = .28, R = .99, bow = ry*.14;
+      const dx = Math.cos(th0), dy = Math.sin(th0), nx = -dy, ny = dx, jag = noise(seed+7);
+      const at = (c, u) => { const px = nx*c+dx*u, py = ny*c+dy*u; return [cx+px*rx*R, cy+py*ry*R-bow*(1-Math.min(1, px*px+py*py))]; };
+      const n = Math.floor((2-w)/period)+1; let marks = '', spat = '';
       for (let k=0;k<n;k++){
-        const c = (k-(n-1)/2)*period, lo = Math.max(c-w/2, -.97), hi = Math.min(c+w/2, .97);
-        if (hi-lo < .08) continue;   // a band the edge cuts off is drawn cut off
-        const ps = [], arc = (a0, a1) => { for (let i=0;i<=16;i++) ps.push(U(a0+(a1-a0)*i/16)); };
-        arc(nA+Math.acos(hi), nA+Math.acos(lo)); arc(nA-Math.acos(lo), nA-Math.acos(hi));
-        outline += pts2d(ps)+'Z';
-        const dx = Math.cos(th0), dy = Math.sin(th0), nx = -dy, ny = dx, lines = [];
-        for (const fr of [.2, .4, .6, .8]){ const o = lo+(hi-lo)*fr; lines.push([cx+(nx*o-dx*1.2)*rx*R, cy+(ny*o-dy*1.2)*ry*R, cx+(nx*o+dx*1.2)*rx*R, cy+(ny*o+dy*1.2)*ry*R]); }
-        hatch += clipLines(ps, lines, .8);
+        const c = (k-(n-1)/2)*period;
+        if (Math.abs(c) > .9) continue;
+        const um = Math.sqrt(1-c*c)*.985, top = [], bot = [];
+        for (let i=0;i<=40;i++){
+          const u = -um+2*um*i/40, taper = Math.min(1, (um-Math.abs(u))/(um*.12)+.35);
+          top.push(at(c-w/2*taper*(1+.35*jag(u*9+k)), u)); bot.push(at(c+w/2*taper*(1+.35*jag(u*7+k+3)), u));
+        }
+        marks += pts2d(top)+pts2d(bot.reverse()).replace('M', 'L')+'Z';
+        for (let i=0;i<14;i++){ const u = (r()*2-1)*um*.95, side = r() < .5 ? -1 : 1, p = at(c+side*w*(.62+r()*.5), u); spat += `<circle class="stip" cx="${f(p[0])}" cy="${f(p[1])}" r="${f(.35+r()*.3)}"/>`; }
       }
-      s += `<path class="tx-fine" d="${hatch}"/><path class="tx" d="${outline}"/>`;
+      s += stipple(cx, cy, rx, ry, 46, seed+3, {maxq:.88}) + `<path class="char" d="${marks}"/>` + spat;
     } else {
       // Griddled: no marks, a seared crust instead.
       s += stipple(cx, cy, rx, ry, smash ? 30 : 46, seed+3, {maxq:.88});

@@ -41,6 +41,7 @@ const style = {
   tx: `${INK} ${S(.9)}`, 'tx-fine': `${INK} ${S(.6)}`, 'tx-bold': `${INK} ${S(1.5)}`,
   'tx-hatch': `${INK} ${S(.5)} stroke-opacity=".55"`,
   stip: 'fill="currentColor"',
+  char: `fill="currentColor" ${INK} ${S(.4)}`,
   seed2: `${surf} ${INK} ${S(.85)}`,
   jelly: `${soft} ${INK} ${S(.9)}`,
   'strand-out': `${INK} ${S(3.4)}`, 'swirl-out': `${INK} ${S(3.4)}`,
