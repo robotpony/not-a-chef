@@ -12,4 +12,4 @@ cascade:
     tags: [method]
 ---
 
-A method is the pattern behind many dishes. A recipe is one specific dish; a method explains how that kind of food works, which variables matter, why each step is there, and how it fails, so you can cook something that isn't written down anywhere on this site.
+A *method* is the pattern behind many dishes. A recipe is one specific dish; a method explains how that kind of food works, which variables matter, why each step is there, and how it fails, so you can cook something that isn't written down anywhere on this site. A *blueprint* breaks one kind of food into its parts, each with its own method, and the builds that combine them.
