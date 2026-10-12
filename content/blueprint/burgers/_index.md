@@ -11,7 +11,6 @@ parts:
   - Cooking
   - Assembly
   - Sauces
-  - Not burgers
 # Builds the timeline expects but nobody has written yet, as "year: name".
 # Years are approximate until each build page sources its era.
 planned:

@@ -10,7 +10,6 @@ total_time: 35 min (plus brine)
 cuisine: American
 draft: false
 blueprint: [burgers]
-part: Not burgers
 ---
 
 I love chicken sandwiches. The ground chicken patties bread nicely, but are also great on their own.

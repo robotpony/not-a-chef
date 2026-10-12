@@ -32,7 +32,7 @@ Mocked 2026-10-10 in `mockups/methods-pages.html`; the template work is queued i
 
 **Phase 3: first methods**
 
-- [ ] Burgers blueprint: write the parts (patty construction with thick/thin/paper thin options, seasoning, cooking, assembly, sauces, not burgers), pulling from the two burger essays without gutting them. *Drafted 2026-10-10 as test kitchen pages (`content/methods/burgers/`: `patties`, `seasoning`, `cooking`, `assembly`, `sauces`), with TODO comments where the sources ran out. "Not burgers" is left unwritten for Bruce. Waiting on review.*
+- [ ] Burgers blueprint: write the parts (patty construction with thick/thin/paper thin options, seasoning, cooking, assembly, sauces), pulling from the two burger essays without gutting them. *Drafted 2026-10-10 as test kitchen pages (`content/methods/burgers/`: `patties`, `seasoning`, `cooking`, `assembly`, `sauces`), with TODO comments where the sources ran out. Waiting on review.*
 - [ ] Burger builds: drive-in deluxe, fast-food double, grilled onion, one page each; set `build_name` on the recipes that are instances (White Spot burgers → drive-in deluxe). *Drafted 2026-10-10; White Spot set. Fast-food double and grilled onion are thin on sources (TODOs); the McDouble's build is an open question.*
 - [ ] Stock method, from Why ingredients matter in stock and the four stock recipes.
 - [ ] Foil packets method, from Camp cooking.
@@ -87,6 +87,23 @@ The essays list now skews heavily to methods: 10 of the first 12 cards on `/essa
 - [x] Fugu: methods as their own section (Fugu `1269958`, 2026-10-11): `method/is.html` and `method/all.html` find methods in a methods section, `/methods/` gets the methods list layout, the method chip and blueprint pages link there, and method pages keep the essay page treatment.
 - [x] Then the move (2026-10-11): `content/essays/methods/` to `content/methods/`, its `_index.md` takes the description and body from `content/tags/method/_index.md` plus the cascade, the nav links to `/methods/`, `/lint` rule 6 path, CLAUDE.md, METHODS.md, FORMAT.md, ARCHITECTURE.md. `content/tags/method/_index.md` is a plain tag page now. Not pushed until Fugu `9ecb686` (with `1269958`) is pushed.
 - [ ] While in there: whether reference essays (Win the fridge, Test kitchen) belong in the essays list either, or with Reference.
+
+**Phase 8: blueprints as folders, content in the body (decided 2026-10-11)**
+
+Frontmatter had started carrying content and relationships (`picks`, `profile`, `origin`, `part`, `build_name`, `blueprint`, `parts:`, `planned:`), against how the rest of the site works: content in the body, headings for structure, frontmatter for true metadata. Decided with Bruce:
+
+- A blueprint is a folder under methods, its `_index.md` the blueprint page: `content/methods/burgers/` at `/methods/burgers/`, with `parts/` and `builds/` subfolders. The folder decides blueprint, part, and build. The `blueprint` taxonomy and `/blueprint/` go away.
+- The only blueprint metadata left: `era` on builds, `weight` on parts for their order.
+- `profile` becomes `description`; `origin` folds into `## Where it comes from`; picks become a `## Picks` list in the build's body.
+- Recipes don't carry `blueprint`, `part`, or `build_name`; method pages list their recipes by hand in `## Recipes` (the part pages already do). Recipes keep the `burgers` tag.
+- No Builds compared table for now (see below).
+- "Not burgers" is gone as a part (removed 2026-10-11); other meats stay in the patties page's `## Other meats`.
+
+- [ ] Decide what replaces `planned:` on the blueprint (three faint timeline entries).
+- [ ] Update METHODS.md and FORMAT.md to the new model, then mock the blueprint and build pages if they change visibly.
+- [ ] Fugu (handoff): `method/is.html` and the blueprint/build/part templates read the folder instead of frontmatter; drop the `blueprint` taxonomy, the Builds compared table, and recipe-side `part`/`build_name`; update `index.json` and `compare-builds.py`.
+- [ ] Move the files to `burgers/parts/` and `burgers/builds/`, move `content/blueprint/burgers/_index.md` to `content/methods/burgers/_index.md`, strip the relationship fields from methods and recipes, and add `## Recipes` lists to the builds. No redirects (never deployed).
+- [ ] Later, reconsider: a table comparing builds part by part on the blueprint page. It needs picks as data, so it would mean parsing a strict `## Picks` list (`- **Part:** pick`) from each build's body.
 
 ### Plant-based tag
 

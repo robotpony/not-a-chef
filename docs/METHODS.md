@@ -17,7 +17,7 @@ The test: after reading it, could you cook something that isn't written down any
 2. **Ratio method.** A proportion you can scale or adjust, with its acceptable range.
    - Food ratios: dressings, mayo, brines
 3. **Blueprint method.** A type of food broken into its parts, each of which is its own small method, and the builds that combine them (see Inside a blueprint).
-   - Burgers: patty construction, patty seasoning, cooking, assembly, sauces, things that are not burgers; builds such as drive-in deluxe, fast-food double, and grilled onion
+   - Burgers: patty construction, patty seasoning, cooking, assembly, sauces; builds such as drive-in deluxe, fast-food double, and grilled onion
    - Each part can link to a technique method (e.g. patty cooking → reverse sear or water frying)
 
 ## What a method contains
@@ -74,7 +74,7 @@ A blueprint varies in two different ways, and they're modelled separately (decid
 
 ```
 Blueprint (burgers)
- ├── Parts      patty construction, seasoning, cooking, assembly, sauces, not burgers
+ ├── Parts      patty construction, seasoning, cooking, assembly, sauces
  │    └── Options   thick / thin / paper thin           (inside the part's method)
  └── Builds     drive-in deluxe, fast-food double, grilled onion   (one page each)
       └── Recipes   White Spot burgers = drive-in deluxe, with quantities
