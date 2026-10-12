@@ -143,7 +143,7 @@ Don't repeat the picks or the recipe list in a build page's body: the template d
 
 A recipe that's a real, specific instance of a build (White Spot burgers, the McDouble) keeps its own specifics, like the Triple O name and its sauces; the build page has the general history of the style.
 
-The blueprint page shows a **lineage timeline**: builds placed by `era`, with names and origins, so the page shows how the dish changed over time. A blueprint's `_index.md` can list builds nobody has written yet as `planned: ["1985: Pub burger", "2010: Smash burger"]`; they show faint, like unwritten parts. Builds with no `era` are left off the timeline. The clusters noted below are mostly lineages: rich, fresh, and sweet builds tend to follow era and kitchen.
+The blueprint page shows a **lineage timeline**: builds placed by `era`, with names and origins, so the page shows how the dish changed over time. A build nobody has written yet is a test kitchen stub: a build page with its title, `era`, `draft: true`, and a `working_on` line, so the timeline has one source. (Until 2026-10-11 the blueprint's `_index.md` listed them as `planned:`.) Builds with no `era` are left off the timeline. The clusters noted below are mostly lineages: rich, fresh, and sweet builds tend to follow era and kitchen.
 
 Why not nested blueprints ("burgers → deluxe")? Builds share nearly every part and differ only in their picks; a child blueprint would repeat all the parts. Clusters of builds (rich, fresh, sweet) are builds grouped by profile, not a separate level; add one only if a blueprint ever has more builds than its page can show.
 

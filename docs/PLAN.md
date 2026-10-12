@@ -99,7 +99,7 @@ Frontmatter had started carrying content and relationships (`picks`, `profile`, 
 - No Builds compared table for now (see below).
 - "Not burgers" is gone as a part (removed 2026-10-11); other meats stay in the patties page's `## Other meats`.
 
-- [ ] Decide what replaces `planned:` on the blueprint (three faint timeline entries).
+- [x] Decide what replaces `planned:` on the blueprint. *Done 2026-10-11: test kitchen stubs with an `era` (Pub, Smash, McDouble build pages); `planned:` removed. The McDouble recipe moved from the fast-food double build to its own McDouble build.*
 - [ ] Update METHODS.md and FORMAT.md to the new model, then mock the blueprint and build pages if they change visibly.
 - [ ] Fugu (handoff): `method/is.html` and the blueprint/build/part templates read the folder instead of frontmatter; drop the `blueprint` taxonomy, the Builds compared table, and recipe-side `part`/`build_name`; update `index.json` and `compare-builds.py`.
 - [ ] Move the files to `burgers/parts/` and `burgers/builds/`, move `content/blueprint/burgers/_index.md` to `content/methods/burgers/_index.md`, strip the relationship fields from methods and recipes, and add `## Recipes` lists to the builds. No redirects (never deployed).

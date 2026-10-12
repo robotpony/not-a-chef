@@ -11,7 +11,7 @@ cuisine: American
 aliases: [/recipes/mcburgers/]
 draft: false
 blueprint: [burgers]
-build_name: Fast-food double
+build_name: McDouble
 ---
 
 A very cravable burger. This is the closest I've gotten to perfecting it, along with its little sibling, the single drive-thru hamburger.
