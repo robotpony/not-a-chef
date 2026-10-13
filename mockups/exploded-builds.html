@@ -823,7 +823,7 @@ const L2 = {...L1,
       if (h.l > 20) veins += pts2d(mid.slice(2, N-1));
     }
     s += `<path class="tx-fine" d="${veins}"/>`;
-    return {svg:s, h:cy+ry*1.02+4-y, edge:R*.98};
+    return {svg:s, h:cy+ry*1.02+4-y, edge:R*1.04};   // the heap's shreds reach past the pad (fugu-agent's measure, 73.5)
   },
   'lettuce-chunks'(cx, y, rx){
     // Torn or chopped iceberg (2026-10-12): the shredded heap's pad and mound, but fewer, wider
@@ -852,7 +852,7 @@ const L2 = {...L1,
       veins += `M${f(b.x-c*l)},${f(b.y-sn*l)}Q${f(b.x+sn*3)},${f(b.y-c*2)} ${f(b.x+c*l)},${f(b.y+sn*l)}`;
     }
     s += `<path class="tx-fine" d="${veins}"/>`;
-    return {svg:s, h:cy+ry*1.02+4-y, edge:R*.98};
+    return {svg:s, h:cy+ry*1.02+4-y, edge:R*1.07};   // torn pieces reach past the pad (76.5)
   },
   'bread'(cx, y, rx){
     const W = rx*.9, ry = W*K*1.05, t = 9, cy = y+ry*1.4;
