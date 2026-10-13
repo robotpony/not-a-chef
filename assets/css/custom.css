@@ -1838,6 +1838,13 @@ a.part-row:hover::after, a.part-row:focus-visible::after { opacity: 1; transform
  * 2026-10-12), the box gets the list block's top padding, and the row rule
  * under the line has something to sit under. */
 .bp.bp-parts-only:has(> .bp-desc) { padding-top: 16px; gap: 10px; }
+/* A lead from a blueprint's parts/lead.md or builds/lead.md (Fugu
+ * blueprint/lead.html, 2026-10-12) is block Markdown, so its paragraphs
+ * sit flush. The builds lead runs between the Builds heading and the
+ * cards, at reading width. */
+.bp-desc p { margin: 0; }
+.bp-desc p + p { margin-top: 6px; }
+.bp-builds-lead { max-width: 65ch; margin: 0 0 16px; }
 
 /* A part's options, and a blueprint's builds, as pills */
 .opts { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }

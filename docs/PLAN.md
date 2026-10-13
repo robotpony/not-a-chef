@@ -150,7 +150,7 @@ Queued 2026-10-07. Each needs a mockup in `mockups/` (checked against `mockups/S
 
 ### Blueprint leads
 
-- [ ] Lead paragraphs over a blueprint's builds and parts, from a headless `lead.md` in its `builds/` or `parts/` folder. *Asked of fugu-agent 2026-10-12. `content/methods/burgers/builds/lead.md` (the "burgers I know and love" caveat) is written and builds as headless, so nothing shows until Fugu reads it. When it lands: bump the submodule, check the burgers page at 1280px and 390px, and document `lead.md` in `docs/METHODS.md`.*
+- [x] Lead paragraphs over a blueprint's builds and parts, from a headless `lead.md` in its `builds/` or `parts/` folder. *Asked of fugu-agent 2026-10-12. `content/methods/burgers/builds/lead.md` (the "burgers I know and love" caveat) is written and builds as headless, so nothing showed until Fugu read it. Done 2026-10-12: Fugu `22e8cbc` (blueprint/lead.html), `.bp-builds-lead` spacing in `custom.css`, `lead.md` in `docs/METHODS.md`. Checked at 1280px; the 390px check didn't run (Chrome wouldn't resize).*
 
 ### Editing workflow
 
