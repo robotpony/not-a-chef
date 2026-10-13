@@ -33,7 +33,7 @@ bun-base     | Toasted soft bun        | barrier
 
 ## Where it comes from
 
-Older than it looks. Cooks in the 1880s smashed balls of beef onto hot flat-tops so factory workers and fairgoers could eat in two minutes instead of ten (George Motz's account). Diners kept the flat-top, the Depression kept smashing as a way to stretch beef, and the style got its name and its fame in the 2000s. ([Smash burger](https://en.wikipedia.org/wiki/Smash_burger), Wikipedia.)
+Older than it looks. Cooks in the 1880s smashed balls of beef onto hot flat-tops so factory workers and fairgoers could eat in two minutes instead of ten ([George Motz](https://en.wikipedia.org/wiki/George_Motz)'s account). Diners kept the flat-top, the Depression kept smashing as a way to stretch beef, and the style got its name and its fame in the 2000s. ([Smash burger](https://en.wikipedia.org/wiki/Smash_burger), Wikipedia.)
 
 | Constraint | Pick it explains |
 |---|---|
