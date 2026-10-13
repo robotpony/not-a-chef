@@ -86,7 +86,7 @@ function restyle(svg){
   });
 }
 
-const keys = ['bun-top','lettuce','lettuce-shredded','tomato','onion-raw','onion-fried','onion-minced','pickle','cheese','bacon','patty-thin','patty-thin-grilled','patty-thick','patty-thick-grilled','patty-smash','ketchup','sauce-ketchup-mustard','sauce-burger','mustard','bun-base','bread','pasta','ragu','bechamel','cheese-top','mayo'];
+const keys = ['bun-top','lettuce','lettuce-shredded','lettuce-chunks','tomato','onion-raw','onion-fried','onion-minced','pickle','cheese','bacon','patty-thin','patty-thin-grilled','patty-thick','patty-thick-grilled','patty-smash','ketchup','sauce-ketchup-mustard','sauce-burger','mustard','bun-base','bread','pasta','ragu','bechamel','cheese-top','mayo'];
 fs.mkdirSync(out, {recursive: true});
 for (const k of keys){
   const o = L[k](CX, 0, RX);
