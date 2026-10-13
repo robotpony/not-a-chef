@@ -767,6 +767,12 @@ const L2 = {...L1,
     const R1 = rx*.96, R2 = rx*.48, cy = y+R1*K*1.02+3;
     return {svg: swirl(cx, cy, R1, 3, true) + swirl(cx+rx*.06, cy-5, R2, 1.8, false), h:R1*K*2.1+7, edge:R1};
   },
+  'ketchup'(cx, y, rx){
+    // Ketchup alone (2026-10-12): the ketchup-and-mustard layer's large swirl, as wide as the patty, without the mustard.
+    // Many builds skip mustard (the Whopper; regions where it's uncommon).
+    const R = rx*.96, cy = y+R*K*1.02+3;
+    return {svg: swirl(cx, cy, R, 3, true), h:R*K*2.1+7, edge:R};
+  },
   'mustard'(cx, y, rx){
     const R = rx*.46, cy = y+R*K+3;
     return {svg: swirl(cx, cy, R, 2, false), h:R*K*2+7, edge:R};
@@ -929,7 +935,7 @@ document.getElementById('ba-icons').innerHTML = [
 ].join('');
 
 function render(){
-const kitKeys = [['bun-top','Bun top'],['lettuce','Lettuce'],['lettuce-shredded','Shredded lettuce'],['tomato','Tomato'],['onion-raw','Raw onion'],['onion-fried','Fried onion'],['onion-minced','Minced onion'],['pickle','Pickles'],['cheese','Cheese slice'],['bacon','Bacon'],['patty-thin','Thin patty'],['patty-thin-grilled','Thin patty, grilled'],['patty-thick','Thick patty'],['patty-thick-grilled','Thick patty, grilled'],['patty-smash','Smashed patty'],['sauce-ketchup-mustard','Ketchup, mustard'],['sauce-burger','Burger sauce'],['mustard','Mustard'],['bun-base','Bun base'],['bread','Bread slice'],['pasta','Pasta sheet'],['ragu','Ragù'],['bechamel','Béchamel'],['cheese-top','Cheese, baked']];
+const kitKeys = [['bun-top','Bun top'],['lettuce','Lettuce'],['lettuce-shredded','Shredded lettuce'],['tomato','Tomato'],['onion-raw','Raw onion'],['onion-fried','Fried onion'],['onion-minced','Minced onion'],['pickle','Pickles'],['cheese','Cheese slice'],['bacon','Bacon'],['patty-thin','Thin patty'],['patty-thin-grilled','Thin patty, grilled'],['patty-thick','Thick patty'],['patty-thick-grilled','Thick patty, grilled'],['patty-smash','Smashed patty'],['ketchup','Ketchup'],['sauce-ketchup-mustard','Ketchup, mustard'],['sauce-burger','Burger sauce'],['mustard','Mustard'],['bun-base','Bun base'],['bread','Bread slice'],['pasta','Pasta sheet'],['ragu','Ragù'],['bechamel','Béchamel'],['cheese-top','Cheese, baked']];
 document.getElementById('kit-grid').innerHTML = kitKeys.map(([k, n]) => `<div class="kit-cell">${compose([{k}], {rx:52, gap:0, labels:false})}<span class="panel-label" style="font-size:.8rem;margin:0">${n}</span><span class="kit-key">${k}</span></div>`).join('');
 
 document.getElementById('build-grid').innerHTML = Object.values(BUILDS).map(b => `<div class="panel"><div class="panel-label">${b.name}</div><div class="panel-sub">${b.profile}</div>${compose(b.layers, {rx:62, gap:14})}</div>`).join('');
