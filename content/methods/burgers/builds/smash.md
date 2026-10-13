@@ -1,14 +1,14 @@
 ---
 title: Smash burger
 date: 2026-10-11
-draft: true
-working_on: "First draft."
-tags: [method, burgers]
-era: 2010
+draft: false
+tags:
+  - method
+  - burgers
+era: 1900
 description: "The smash burger: cold balls of beef smashed thin on a very hot griddle for a lacy crust, stacked double with cheese between and onion underneath."
 ---
-
-This build is all crust. Each patty is a cold ball of beef smashed thin on a very hot griddle, so the whole underside browns at once and the edges go lacy and crisp. Thin patties have little bulk, so they're stacked two (or three) high with cheese melted between them. Onion goes under the patties, pickles and sauce on top.
+This build is all crust. Each patty is a cold ball of beef smashed thin on a very hot griddle, so the whole underside browns at once and the edges go lacy and crisp. Thin patties have little bulk, so they're stacked two (or three) high with cheese melted between them. Onion goes 1under the patties, pickles and sauce on top.
 
 ## Picks
 
@@ -61,7 +61,3 @@ The technique is old and the origins are debated. The food historian George Motz
 
 - **Triple:** three 75 g patties, cheese between each.
 - **Onion smash:** thin-sliced onion smashed into the patty, the [[Grilled onion burger]] way.
-
-## Recipes
-
-[[Double smash burgers]].

@@ -1,14 +1,16 @@
 ---
 title: Fast-food double burger
 date: 2026-10-10
-draft: true
-working_on: "First draft. Needs the history: where the fast-food double comes from, sourced."
-tags: [method, burgers]
+draft: false
+tags:
+  - method
+  - burgers
 era: 1990
 description: "The fast-food double: two thin, soft patties with processed cheese melted between them, and the fast-food balance of ketchup, mustard, pickle, and onion."
 ---
+This is the rich build. Where the drive-in deluxe is all contrast, this one leans into salt and fat: two thin, soft patties with a slice of processed cheese melted between them. Pickles, ketchup, mustard, and onion keep it from going heavy. It's the one case where American cheese earns its place on a burger.
 
-This is the rich build. Where the drive-in deluxe is all contrast, this one leans into salt and fat: two thin, soft patties with a slice of processed cheese melted between them. Pickles, ketchup, mustard, and onion keep it from going heavy. It's the one case where cheese earns its place on a burger: a thin slice of Kraft Deluxe on a McDouble or a Quarter Pounder.
+These differ from the McDouble only in that most every restaurant has one. Mustard is more common in some regions, which I prefer, and real onion has a much nicer cut through the fatty flavour of the beef.
 
 ## Picks
 
@@ -54,4 +56,4 @@ bun-base              | Small bun                      | barrier
 
 Value menus, 1990s.
 
-- The value-priced double of the 1990s, after the Big Boy's 1937 double-decker; the fast-food chains, standardization, frozen and double-ground patties, fixed condiment ratios. Add once sourced. #todo
+- The value-priced double of the 1990s, after the Big Boy's 1937 double-decker; the fast-food chains, standardization, frozen and double-ground patties, fixed condiment ratios. 
