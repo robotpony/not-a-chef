@@ -22,7 +22,7 @@ Smoky and fresh; big and cold on top.
 ```stack
 bun-top            | Sesame bun               | soft, toasted
 mayo               | Mayo                     | rich
-lettuce            | Iceberg                  | cool crunch
+lettuce-chunks     | Iceberg, torn            | cool crunch
 tomato             | Vine-ripe tomato         | juicy, acid
 ketchup            | Ketchup                  | sweet
 onion-raw          | White onion rings        | sharp
