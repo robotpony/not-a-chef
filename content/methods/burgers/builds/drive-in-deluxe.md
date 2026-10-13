@@ -9,7 +9,9 @@ tags:
 era: 1960
 description: 'The drive-in deluxe burger: a thin, griddled patty under cold lettuce, tomato, and sour pickles, with Triple “O” red sauce and sweet mayo.'
 ---
-Deluxe means lettuce and tomato (it's [[white-spot-burgers|White Spot burgers]] language). The build works because everything above the patty is cold, crunchy, sharp, or sour, and the patty below brings the salt, fat, and savoury depth. Every part is there because the alternative was tried and lost.
+This is a variation of the [[White Spot burger]].
+
+The build works because everything above the patty is cold, crunchy, sharp, or sour, and the patty below brings the salt, fat, and savoury depth. Every part is there because the alternative was tried and lost.
 
 ## Picks
 
@@ -45,7 +47,7 @@ This is the diner and drive-in burger of the 1960s, the burger they still make: 
 | Eaten in the car, from paper | A soft bun, wrapped so it steams |
 | "Deluxe" as an add-on | Lettuce and tomato |
 
-The Triple “O” name comes from the carhop order tickets: a customer who wanted extra sauce, relish, and mayonnaise got three “O”s marked on the slip, and the mark carried into White Spot's point-of-sale system as late as 2010. The sauces and builds have changed over the decades; [[white-spot-burgers|White Spot burgers]] has the closest home version of both sauces.
+The Triple “O” name comes from the carhop order tickets: a customer who wanted extra sauce, relish, and mayonnaise got three “O”s marked on the slip, and the mark carried into White Spot's point-of-sale system as late as 2010. The sauces and builds have changed over the decades; [[White Spot burger]] has the closest home version of both sauces.
 
 ## Why these picks
 
@@ -67,4 +69,4 @@ The Triple “O” name comes from the carhop order tickets: a customer who want
 
 ## Recipes
 
-[[white-spot-burgers|White Spot burgers]].
+[[White Spot burger]].
