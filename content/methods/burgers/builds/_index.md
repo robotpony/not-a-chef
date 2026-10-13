@@ -1,5 +1,5 @@
 ---
-title: Burger builds lead
+title: Burger builds
 build:
   render: never
   list: never

@@ -72,10 +72,10 @@ content/methods/burgers/
   parts/seasoning.md ...
   builds/drive-in-deluxe.md   a build: /methods/burgers/builds/drive-in-deluxe/
   builds/big-boy.md ...
-  builds/lead.md          the builds' lead: headless, shown under Builds
+  builds/_index.md        the builds' lead: headless, shown under Builds
 ```
 
-A `lead.md` in `parts/` or `builds/` is a short lead paragraph for that list on the blueprint page: the parts box's opening line (in place of Fugu's `partsLead` setting), or a line between the Builds heading and the cards. It's headless (`build: {render: never, list: never}` in its frontmatter), so it gets no page of its own and is never counted as a part or build. Never put an `_index.md` in `parts/` or `builds/`: it makes the folder a section, and its pages drop off the blueprint.
+An `_index.md` in `parts/` or `builds/` is a short lead paragraph for that list on the blueprint page: the parts box's opening line (in place of Fugu's `partsLead` setting), or a line between the Builds heading and the cards. Its title names the folder (`Burger builds`) and its body is the lead. It's headless (`build: {render: never, list: never}` in its frontmatter), so the folder gets no page or feed of its own, and the parts and builds in it still belong to the blueprint. A blueprint without one (one-pan pasta) works the same, with no lead.
 
 ```
 Blueprint (burgers)

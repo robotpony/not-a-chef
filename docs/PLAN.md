@@ -152,7 +152,7 @@ Queued 2026-10-07. Each needs a mockup in `mockups/` (checked against `mockups/S
 
 - [x] Lead paragraphs over a blueprint's builds and parts, from a headless `lead.md` in its `builds/` or `parts/` folder. *Asked of fugu-agent 2026-10-12. `content/methods/burgers/builds/lead.md` (the "burgers I know and love" caveat) is written and builds as headless, so nothing showed until Fugu read it. Done 2026-10-12: Fugu `22e8cbc` (blueprint/lead.html), `.bp-builds-lead` spacing in `custom.css`, `lead.md` in `docs/METHODS.md`. Checked at 1280px; the 390px check didn't run (Chrome wouldn't resize).*
 
-- [ ] Switch blueprint leads from `lead.md` to Hugo's standard `_index.md` (headless) in `parts/` and `builds/`. *Asked of fugu-agent 2026-10-12 (Bruce's call: the standard name over a Fugu-only one). When it lands: move `content/methods/burgers/builds/lead.md` to `builds/_index.md`, bump, check the burgers page, a build, and a part; update the `lead.md` paragraph in `docs/METHODS.md`.*
+- [x] Switch blueprint leads from `lead.md` to Hugo's standard `_index.md` (headless) in `parts/` and `builds/`. *Asked of fugu-agent 2026-10-12 (Bruce's call: the standard name over a Fugu-only one). When it lands: move `content/methods/burgers/builds/lead.md` to `builds/_index.md`, bump, check the burgers page, a build, and a part; update the `lead.md` paragraph in `docs/METHODS.md`. Done 2026-10-12: Fugu `a2cdb37`; the burgers page, a build, and a part checked (lead, counts, feed, nothing leaked).*
 
 ### Editing workflow
 
