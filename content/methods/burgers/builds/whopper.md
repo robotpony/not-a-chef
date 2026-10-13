@@ -1,5 +1,5 @@
 ---
-title: Whopper burger
+title: The Whopper
 date: 2026-10-12
 draft: true
 working_on: "First draft, from Bruce's build."
