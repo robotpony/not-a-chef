@@ -46,12 +46,12 @@ This is the diner and drive-in burger of the 1960s, the burger they still make: 
 | Eaten in the car, from paper | A soft bun, wrapped so it steams |
 | "Deluxe" as an add-on | Lettuce and tomato |
 
-The Triple “O” name comes from the carhop order tickets: a customer who wanted extra sauce, relish, and mayonnaise got three “O”s marked on the slip, and the mark carried into White Spot's point-of-sale system as late as 2010. The sauces and builds have changed over the decades; [[White Spot burger]] has the closest home version of both sauces.
+The Triple “O” name comes from the carhop order tickets: a customer who wanted extra sauce, relish, and mayonnaise got three “O”s marked on the slip, and the mark carried into White Spot's point-of-sale system as late as the 2010s. The sauces and builds have changed over the decades; [[White Spot burger]] has the closest home version of both sauces.
 
 ## Why these picks
 
 - **Two onions.** Raw for sharpness, sautéed in the beef fat for sweetness. Together they do more than either alone.
-- **Double-sour pickles.** The strongest sour on the burger. Make them with a sprinkle of citric acid powder over ordinary dill pickles.
+- **Double-sour pickles.** The strongest sour on the burger. Make them with a sprinkle of citric acid powder over ordinary dill pickle chips (round slices).
 - **Two sauces, apart.** The red sauce goes on the base, where it meets the hot patty; the mayo goes under the top bun with the cold layers. Each stays distinct instead of blending into one.
 - **Rest in paper.** A few minutes wrapped in burger paper steams the bun and settles the flavours.
 

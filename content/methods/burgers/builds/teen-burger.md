@@ -2,8 +2,10 @@
 title: Teen burger
 date: 2026-10-12
 draft: true
-working_on: "First draft. Needs a recipe behind it, and a home Teen sauce."
-tags: [method, burgers]
+working_on: First draft. Needs a recipe behind it, and a home Teen sauce.
+tags:
+  - method
+  - burgers
 era: 1963
 description: "A&W Canada's Teen burger: a seasoned-salt patty, cheddar, bacon, the full diner set of toppings, and Teen sauce on a toasted sesame bun."
 ---
