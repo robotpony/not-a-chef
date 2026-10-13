@@ -36,7 +36,7 @@ bun-base              | Toasted sesame bun       | barrier
 
 ## Where it comes from
 
-The Teen is one of the Burger Family, a line of burgers A&W introduced in the U.S. in the early 1960s and named after its 1963 mascots: Baby, Mama, Teen, and Papa. A&W came to Canada in 1956, with its first restaurant in Winnipeg, and the Canadian chain split from the American one in 1972. The U.S. chain mostly dropped the Burger Family in the 1980s; A&W Canada brought it back in the late 1990s, as part of a retro, 1950s-style revival aimed at baby boomers, and still sells it. The Teen is the Mama burger plus bacon, lettuce, tomato, and cheese.  ([A&W (Canada)](https://en.wikipedia.org/wiki/A%26W_(Canada)) and [The Burger Family](https://en.wikipedia.org/wiki/The_Burger_Family), Wikipedia.)
+The Teen is one of the Burger Family, a line of burgers A&W introduced in the U.S. in the early 1960s and named after its 1963 mascots: Baby, Mama, Teen, and Papa. A&W came to Canada in 1956, with its first restaurant in Winnipeg, and the Canadian chain split from the American one in 1972. The U.S. chain mostly dropped the Burger Family in the 1980s; A&W Canada brought it back in the late 1990s, as part of a retro, 1950s-style revival aimed at baby boomers, and still sells it. The Teen is the Mama burger plus bacon, lettuce, tomato, and cheese. ([A&W (Canada)](https://en.wikipedia.org/wiki/A%26W_(Canada)) and [The Burger Family](https://en.wikipedia.org/wiki/The_Burger_Family), Wikipedia.)
 
 | Constraint | Pick it explains |
 |---|---|
@@ -60,7 +60,3 @@ The Teen is one of the Burger Family, a line of burgers A&W introduced in the U.
 
 - **Double Teen:** two patties.
 - **Mama burger:** the Teen without the bacon, lettuce, tomato, and cheese.
-
-## Recipes
-
-- A recipe for this build, with a home Teen sauce. #todo

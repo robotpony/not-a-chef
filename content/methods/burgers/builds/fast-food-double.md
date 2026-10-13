@@ -33,6 +33,9 @@ patty-thin            | Thin patty, 75 g               | savoury
 bun-base              | Small bun                      | barrier
 ```
 
+## Where it comes from
+The value-menu double of the 1990s: frozen, double-ground patties and fixed condiment ratios, so it tastes the same at every chain.
+
 ## Why these picks
 
 - **Two thin patties, not one thick one.** Twice the crust, and the cheese melts between them.
@@ -52,7 +55,3 @@ bun-base              | Small bun                      | barrier
 - **Bacon double cheese:** add crisp bacon. Only if it's crisp; chewy bacon pulls the burger apart. Water-frying gives flatter, more evenly crisp strips (see [[Reverse cooking: reverse sear and water frying]]).
 - **Fresh onion:** diced white onion, soaked in cold water and drained, instead of the dried. Sharper, and less like the chain.
 - **Single:** one 45 g patty on a small bun, the drive-thru hamburger (see the [[McDouble]] variations).
-
-## Where it comes from
-
-The value-menu double of the 1990s: frozen, double-ground patties and fixed condiment ratios, so it tastes the same at every chain.
