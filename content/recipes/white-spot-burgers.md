@@ -11,7 +11,7 @@ This is Bruce’s take on the classic White Spot Triple “O” deluxe burger (l
 
 The White Spot burgers are something like a 70:30 beef blend on a soft bun. I believe they use preformed patties these days, but I’ve found that at home a smashed 115–140 g (4–5 oz) patty works better, as you can get a nice crust on it.
 
-The sauces and build of these burgers have changed a lot over the last 50 years, but if you turn back time they were a [drive-in](https://en.wikipedia.org/wiki/White_Spot) burger made from readily available ingredients. The Triple “O” name comes from the carhop order tickets: when a customer asked for extra sauce, relish, and mayonnaise, the carhop marked the slip with three “O”s. Accounts of the sauce itself disagree, but these days there are two: a red sauce that, in home testing, is close to the relish and chili sauce blend below, and a white sauce, an enriched, sweet mayo.
+The sauces and build of these burgers have changed a lot over the last 50 years, but if you turn back time they were a [drive-in](https://en.wikipedia.org/wiki/White_Spot) burger made from readily available ingredients. The Triple “O” name comes from the carhop order tickets: when a customer asked for extra sauce, relish, and mayonnaise, the carhop marked the slip with three “O”s. The mark lasted: it was still in White Spot's point-of-sale system as late as 2010. Accounts of the sauce itself disagree, but these days there are two: a red sauce that, in home testing, is close to the relish and chili sauce blend below, and a white sauce, an enriched, sweet mayo.
 
 ## Triple “O” (red) sauce
 
