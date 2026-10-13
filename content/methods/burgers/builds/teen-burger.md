@@ -8,7 +8,7 @@ tags:
 era: 1963
 description: "A&W Canada's Teen burger: a seasoned-salt patty, cheddar, bacon, the full diner set of toppings, and Teen sauce on a toasted sesame bun."
 ---
-The classic diner burger, as A&W Canada still makes it. One seasoned patty, real cheddar, and bacon, under every topping a diner offers: lettuce, tomato, onion, pickles, ketchup, mustard, and Teen sauce, a sweet, tangy mayo-style spread. The seasoning is what makes it taste like a Teen: Lawry's Seasoned Salt, not plain salt.
+The classic diner burger, as A&W Canada still makes it. One seasoned patty, real cheddar, and bacon, under every topping a diner offers: lettuce, tomato, onion, pickles, ketchup, mustard, and Teen sauce, a tangy, slightly sweet, savoury mayonnaise spread with mustard, sugar, and spices. The seasoning is what makes it taste like a Teen: Lawry's Seasoned Salt, not plain salt.
 
 ## Picks
 
@@ -22,7 +22,7 @@ Savoury and smoky, with everything on it.
 
 ```stack
 bun-top               | Toasted sesame bun       | soft, toasted
-mayo                  | Teen sauce               | sweet, tangy
+mayo                  | Teen sauce               | tangy, savoury
 lettuce               | Lettuce                  | cool crunch
 tomato                | Tomato                   | juicy, acid
 onion-raw             | Onion slice              | sharp
@@ -48,7 +48,7 @@ The Teen is one of the Burger Family, a line of burgers A&W introduced in the U.
 
 - **Seasoned salt.** Lawry's brings paprika, garlic, onion, and a little sugar along with the salt, so a plain patty tastes seasoned all the way through the bite.
 - **Real cheddar.** Sharper than American cheese, so it holds its own against the bacon.
-- **Teen sauce and the condiments.** The sweet mayo spread, ketchup, and mustard together give it the full sweet, tangy, sharp range of a diner burger.
+- **Teen sauce and the condiments.** Teen sauce is mayonnaise (soybean oil, egg yolk, and vinegar) seasoned with mustard, sugar, and spices. With ketchup and mustard alongside, it gives the burger the full sweet, tangy, sharp range of a diner burger.
 - **Everything on it.** Lettuce, tomato, onion, and pickles keep a bacon cheeseburger from getting heavy.
 
 ## How it fails

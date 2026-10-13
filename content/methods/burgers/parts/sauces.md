@@ -27,7 +27,7 @@ A burger sauce adds sweetness, acid, and sharpness, and sometimes fat. There are
 | [[In-N-Out burger spread]]    | Diner-style griddle burgers     | Mayo-based, with ketchup, relish, and a little vinegar and sugar                                  |
 | Red sauce and sweet mayo      | [[White Spot burger]]           | Red: 2:3 red relish to chili sauce. <br>Mayo: Hellmann's, egg yolk, paprika, honey, cider vinegar |
 | [[Mozza burger sauce]]        | [[Mozza burger]]                | Mayo, sweet pickle or red relish, chili sauce, a touch of Thousand Island or sugar                |
-| Teen sauce                    | [[Teen burger]]                 | Mayo-style: oil, egg yolk, vinegar, sugar, mustard, spices; with ketchup and mustard              |
+| Teen sauce                    | [[Teen burger]]                 | Mayo (soybean oil, egg yolk, vinegar) with mustard, sugar, and spices; served with ketchup and mustard |
 | Mayo and mustard              | When ketchup is too sweet       | A tiny bit of ketchup, if any                                                                     |
 
 - MSG, powdered acid, spices, commercial sauces. #todo
