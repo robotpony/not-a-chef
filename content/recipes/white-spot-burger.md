@@ -58,7 +58,7 @@ Flip each patty once a deep crust has formed. Add the cheese shortly before the 
 - Kosher garlic pickles, sliced lengthwise
 - Cheddar, sliced (real if you have it)
 
-Toast the buns in a non-stick pan over medium heat while the burger pan heats.
+Toast the cut sides of the buns in a dry non-stick pan over medium heat until golden, while the burger pan heats.
 
 Build from the bottom up: bottom bun, Triple “O” sauce, patty, cheese, pickles, tomato, lettuce, sweet mayo, top bun. For authenticity, lay the pickle over the bun and wrap.
 

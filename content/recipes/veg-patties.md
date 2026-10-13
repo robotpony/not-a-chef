@@ -63,7 +63,7 @@ Heat a thin layer of oil in a non-stick or cast-iron pan over medium. Cook the p
 
 ## To serve
 
-In buns with burger sauce and pickles, or over rice with a fried egg.
+In toasted buns with burger sauce and pickles (toast the cut sides in a dry non-stick pan over medium heat until golden), or over rice with a fried egg.
 
 ## Variations
 

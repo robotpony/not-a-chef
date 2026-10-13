@@ -27,7 +27,7 @@ A cold ball of beef is **smashed once, hard, as soon as it hits a very hot pan**
 - Dill pickle slices
 - Ketchup and mustard, or [[Bruce's burger sauce]]
 
-Toast the cut sides of the buns in a dry pan until golden, and set them aside. Put the diced onion on the bottom buns.
+Toast the cut sides of the buns in a dry non-stick pan over medium heat until golden, and set them aside. Put the diced onion on the bottom buns.
 
 Heat a cast iron pan or griddle over high until it just starts to smoke. Wipe it with the oil.
 

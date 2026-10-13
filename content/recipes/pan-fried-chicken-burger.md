@@ -60,7 +60,7 @@ Per sandwich:
 - Mayonnaise
 - Lettuce, tomato
 
-Toast your buns. Be proud of them. Spread a generous amount of mayonnaise on the buns and dress.
+Toast the cut sides of the buns in a dry non-stick pan over medium heat until golden. Be proud of them. Spread a generous amount of mayonnaise on the buns and dress.
 
 ## Variations
 

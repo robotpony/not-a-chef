@@ -45,7 +45,7 @@ Mix everything together. Taste and adjust. Set aside.
 
 ## To serve
 
-Buns toasted in a dry non-stick pan until browned, with the special sauce and any of: shredded iceberg or romaine, thinly sliced tomato, thinly sliced red onion, sliced pickles, mustard. The patties also work over salads, or on regular bread with sprouts.
+Buns, cut sides toasted in a dry non-stick pan over medium heat until golden, with the special sauce and any of: shredded iceberg or romaine, thinly sliced tomato, thinly sliced red onion, sliced pickles, mustard. The patties also work over salads, or on regular bread with sprouts.
 
 ## Notes
 

@@ -54,7 +54,7 @@ Cook in a non-stick pan over medium until browned and the centre reads 70°C (15
 
 ## To serve
 
-In brioche buns with burger sauce and pickles, or alongside roasted veg as a simple weeknight main.
+In toasted brioche buns with burger sauce and pickles (toast the cut sides in a dry non-stick pan over medium heat until golden), or alongside roasted veg as a simple weeknight main.
 
 ## Notes
 

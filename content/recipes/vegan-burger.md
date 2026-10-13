@@ -47,6 +47,10 @@ Combine everything in a large bowl and mix thoroughly. Rest 20 minutes so the oa
 
 Form into 6–8 patties. Fry in a little oil over medium heat until well browned and firm, 4–5 minutes a side.
 
+## To serve
+
+On toasted buns with the usual burger toppings. Toast the cut sides in a dry non-stick pan over medium heat until golden.
+
 ## Notes
 
 - Regular Worcestershire contains anchovy; use a vegan brand.

@@ -38,7 +38,7 @@ Cook from frozen on a hot griddle or cast iron pan, about 220°C (425°F) at the
 - 1 tsp dried minced onion, rehydrated (or fresh white onion, diced, soaked in cold water, and drained)
 - ½ slice Kraft Deluxe American cheese
 
-Stack the patties with the cheese between them. Add the ketchup, mustard, pickles, and onion. Close the bun.
+Toast the cut sides of the bun in a dry non-stick pan over medium heat until golden. Stack the patties with the cheese between them. Add the ketchup, mustard, pickles, and onion. Close the bun.
 
 Wrap in parchment or burger paper, or cover in a pan with a lid, for a minute to steam the burger slightly and soften the bun.
 
