@@ -1,15 +1,14 @@
 ---
 title: Drive-in deluxe burger
 date: 2026-10-10
-draft: true
-working_on: First draft, from How I build mine in The quest for the perfect burger.
+draft: false
 tags:
   - method
   - burgers
 era: 1960
-description: 'The drive-in deluxe burger: a thin, griddled patty under cold lettuce, tomato, and sour pickles, with Triple “O” red sauce and sweet mayo.'
+description: "The drive-in deluxe burger: a thin, griddled patty under cold lettuce, tomato, and sour pickles, with Triple “O” red sauce and sweet mayo."
 ---
-This is a variation of the [[White Spot burger]].
+This is a variation of the [[White Spot burger]], which is a specific drive-in/diner style burger that I grew up with. I love onions, so we include 2 types here.
 
 The build works because everything above the patty is cold, crunchy, sharp, or sour, and the patty below brings the salt, fat, and savoury depth. Every part is there because the alternative was tried and lost.
 

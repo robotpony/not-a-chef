@@ -22,6 +22,7 @@ Salt only ever touches the outside of a burger patty. Mixed into raw ground meat
 |---|---|---|
 | Salt and pepper, after cooking | Any burger; the default | Nothing |
 | Salt, pepper, and MSG (4:2:1) | You want the fast-food flavour | Nothing |
+| Lawry's Seasoned Salt | A&W-style burgers ([[Teen burger]], [[Mozza burger]]) | Nothing |
 | Season the top, then smash | Smashed patties | Cooking: season in the pan, before the smash |
 
 ## How it fails
