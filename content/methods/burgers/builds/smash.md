@@ -5,7 +5,7 @@ draft: false
 tags:
   - method
   - burgers
-era: 1900
+era: 1930
 description: "The smash burger: cold balls of beef smashed thin on a very hot griddle for a lacy crust, stacked double with cheese between and onion underneath."
 ---
 This build is all crust. Each patty is a cold ball of beef smashed thin on a very hot griddle, so the whole underside browns at once and the edges go lacy and crisp. Thin patties have little bulk, so they're stacked two (or three) high with cheese melted between them. Onion goes 1under the patties, pickles and sauce on top.

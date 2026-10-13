@@ -107,9 +107,9 @@ A build page's body, in order:
 
 1. **An opening paragraph:** why these picks go together.
 2. **`## Picks`:** the profile in one line, then one bullet per part in the parts' order, `- **Part:** pick`, then its ` ```stack ` diagram (see Diagrams), which is the clearest picture of a build.
-3. **`## Where it comes from`:** the era, the place, and the kind of kitchen, then the constraints and the picks each one explains, as a two-column table (`Constraint`, `Pick it explains`).
+3. **`## Where it comes from`** (optional): the era, the place, and the kind of kitchen, then the constraints and the picks each one explains, as a two-column table (`Constraint`, `Pick it explains`). Leave it out when the history doesn't explain the picks.
 4. **`## Why these picks`, `## How it fails`, `## Variations`.**
-5. **`## Recipes`:** wiki links to the recipes that are this build.
+5. **`## Recipes`** (optional): wiki links to the recipes that are this build. Leave it out when there's no recipe; a build with its picks and stack is enough to cook from.
 
 ```markdown
 ---
@@ -140,7 +140,7 @@ The only blueprint metadata:
 
 **Recipes** carry no blueprint fields. A method lists its recipes in `## Recipes`: a part lists the recipes that show it (and the component recipes that make it, like a sauce or a bun), a build lists the recipes that are instances of it. Recipes keep the blueprint's plain tag (`burgers`).
 
-**History.** A build is often a historical style, and its picks are the constraints of the kitchen it came from. A 1960s drive-in cooked fast on a flat-top with ingredients it could buy reliably, so its burger has a thin patty, bottled condiments, a soft bun, and shredded iceberg. That's what `## Where it comes from` teaches: knowing why a pick exists tells you which ones matter when you change something. Facts are sourced or attributed; dates and origin stories come from Bruce or a cited source, and where accounts disagree the page says so, as [[White Spot burger]] does. A recipe that's a real, specific instance of a build (White Spot burgers, the McDouble) keeps its own specifics, like the Triple O name and its sauces; the build page has the general history of the style.
+**History.** A build is often a historical style, and its picks are the constraints of the kitchen it came from. A 1960s drive-in cooked fast on a flat-top with ingredients it could buy reliably, so its burger has a thin patty, bottled condiments, a soft bun, and shredded iceberg. That's what `## Where it comes from` teaches: knowing why a pick exists tells you which ones matter when you change something. A source isn't always needed: dates and origin stories can come from Bruce's own knowledge, and a cited source (Wikipedia by default) is for the history that comes from elsewhere. Where accounts disagree the page says so, as [[White Spot burger]] does. A recipe that's a real, specific instance of a build (White Spot burgers, the McDouble) keeps its own specifics, like the Triple O name and its sauces; the build page has the general history of the style.
 
 The blueprint page shows a **lineage timeline**: builds placed by `era`, so the page shows how the dish changed over time. A build nobody has written yet is a test kitchen stub: a build page with its title, `era`, `draft: true`, a `working_on` line, and the section headings, so the timeline has one source.
 
