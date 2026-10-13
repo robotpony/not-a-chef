@@ -7,12 +7,11 @@ servings: 4
 cuisine: Canadian
 draft: false
 ---
-
 This is Bruce’s take on the classic White Spot Triple “O” deluxe burger (lettuce and tomatoes make it deluxe; cheddar and bacon make it a “BC” burger).
 
 The White Spot burgers are something like a 70:30 beef blend on a soft bun. I believe they use preformed patties these days, but I’ve found that at home a smashed 115–140 g (4–5 oz) patty works better, as you can get a nice crust on it.
 
-The sauces and build of these burgers have changed a lot over the last 50 years, but if you turn back time they were a drive-in burger made from readily available ingredients. Accounts of the name disagree. One says the triple “O” comes from the old drive-in order pads, which had a row of “O”s to check off for each condiment. Another says the three “O”s were the sauce choices on the early order sheets. These days they use two sauces: a red sauce (something relishy) and a white sauce (an enriched, sweet mayo).
+The sauces and build of these burgers have changed a lot over the last 50 years, but if you turn back time they were a [drive-in](https://en.wikipedia.org/wiki/White_Spot) burger made from readily available ingredients. The Triple “O” name comes from the carhop order tickets: when a customer asked for extra sauce, relish, and mayonnaise, the carhop marked the slip with three “O”s. Accounts of the sauce itself disagree, but these days there are two: a red sauce that, in home testing, is close to the relish and chili sauce blend below, and a white sauce, an enriched, sweet mayo.
 
 ## Triple “O” (red) sauce
 
