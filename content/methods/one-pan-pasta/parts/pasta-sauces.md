@@ -17,7 +17,7 @@ The sauce either comes from a base you made ahead, like a meat sauce or a marina
 | Built fresh | You want something light: cherry tomatoes, garlic, oil | Cook it in a second pan, or before the pasta and set aside |
 | Cream | You want it rich | Loose finish; add the cream off the heat or at a low simmer |
 
-<!-- TODO: does a fresh sauce go in a second pan, or before the pasta? -->
+- Does a fresh sauce go in a second pan, or before the pasta? #todo
 
 ## Recipes
 

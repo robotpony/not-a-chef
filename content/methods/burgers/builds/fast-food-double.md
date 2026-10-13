@@ -54,4 +54,4 @@ bun-base              | Small bun                      | barrier
 
 Value menus, 1990s.
 
-<!-- TODO: the value-priced double of the 1990s, after the Big Boy's 1937 double-decker; the fast-food chains, standardization, frozen and double-ground patties, fixed condiment ratios. Add once sourced. -->
+- The value-priced double of the 1990s, after the Big Boy's 1937 double-decker; the fast-food chains, standardization, frozen and double-ground patties, fixed condiment ratios. Add once sourced. #todo

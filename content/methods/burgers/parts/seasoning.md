@@ -28,7 +28,7 @@ Salt only ever touches the outside of a burger patty. Mixed into raw ground meat
 
 - **Springy, sausage-like patty:** salt went into the meat before shaping.
 
-<!-- TODO: other failures you've hit (under-seasoned, uneven)? -->
+- Other failures you've hit (under-seasoned, uneven)? #todo
 
 
 
@@ -36,4 +36,4 @@ Salt only ever touches the outside of a burger patty. Mixed into raw ground meat
 
 [[McDouble]] (4:2:1 blend, after cooking), [[White Spot burgers]] (salt, pepper, and Accent, in the pan before the smash).
 
-<!-- TODO: chicken and plant patties are seasoned in the mix, not after. Say so here, or leave them to their own recipes. -->
+- Chicken and plant patties are seasoned in the mix, not after. Say so here, or leave them to their own recipes. #todo

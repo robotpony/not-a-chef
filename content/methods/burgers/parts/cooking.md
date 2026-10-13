@@ -27,8 +27,11 @@ A burger patty cooks for its crust. The surface has to be hot enough to brown th
 |---|---|---|
 | Smash | Fresh, cold meatballs; you want the most crust | Season the ball, then smash it to 3–6 mm (⅛–¼ inch) with a spatula or press, with parchment between to stop sticking. Leave it until liquid pools on top, then flip once. |
 | Griddle from frozen | Pressed, frozen patties | Peel off the top parchment, flip the patty onto the pan, peel off the bottom sheet. Cook until well browned, 2–3 minutes; flip; another minute. A bacon press helps them brown. |
-| Grill | <!-- TODO: your grill notes --> | |
-| Reverse sear | Thick patties | Cook gently first, then sear (see [[Reverse cooking: reverse sear and water frying]]). <!-- TODO: confirm, or cut with the thick option --> |
+| Grill | | |
+| Reverse sear | Thick patties | Cook gently first, then sear (see [[Reverse cooking: reverse sear and water frying]]). |
+
+- Grill: add your grill notes. #todo
+- Reverse sear: confirm, or cut with the thick option. #todo
 
 Pre-smashed frozen patties work fine on high heat with a bacon press. Fresh patties still come out slightly better.
 

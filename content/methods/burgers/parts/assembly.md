@@ -47,4 +47,4 @@ Wrap the finished burger in burger paper or parchment, or cover it in a pan with
 
 [[White Spot burgers]], [[McDouble]], [[Turkey burgers]]. The bun: [[Chef John's hamburger buns]].
 
-<!-- TODO: does the order above match how you build at home? White Spot puts lettuce on top and the patty low; McDouble puts the condiments on the patty. -->
+- Does the order above match how you build at home? White Spot puts lettuce on top and the patty low; McDouble puts the condiments on the patty. #todo

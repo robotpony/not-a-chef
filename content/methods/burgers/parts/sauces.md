@@ -26,13 +26,14 @@ A burger sauce adds sweetness, acid, and sharpness, and sometimes fat. There are
 | Red sauce and sweet mayo      | [[White Spot burgers]]          | Red: 2:3 red relish to chili sauce. Mayo: Hellmann's, egg yolk, paprika, honey, cider vinegar |
 | Mayo and mustard              | When ketchup is too sweet       | A tiny bit of ketchup, if any                                                                 |
 
-<!-- TODO: MSG, powered acid, spices, commercial sauces -->
+- MSG, powdered acid, spices, commercial sauces. #todo
+
 ## How it fails
 
 - **Harsh:** too much mustard. A squeeze of ketchup or a splash of pickle brine softens it.
 - **Too mild:** lean more pickle for brightness.
 
-<!-- TODO: other ways a sauce goes wrong for you? -->
+- Other ways a sauce goes wrong for you? #todo
 
 ## Recipes
 

@@ -36,6 +36,8 @@ Kebab-case, one page per file, matching the title: `dal-tadka.md` for "Dal tadka
 
 ALL-CAPS files under `content/` (`IDEAS.md`, `TODO.md`) are working notes. Hugo ignores them (`ignoreFiles` in `config/_default/hugo.toml`), so they never publish.
 
+A to-do inside a page is a visible list item ending in `#todo` (`- Which sauces? #todo`), never an HTML comment. Obsidian's tag pane collects them, and they render on the page, so an editor has to deal with them rather than skip past. A to-do inside a table cell goes in a list right after the table. HTML comments are only for private links that mustn't publish (`<!-- Private worksheet (to import): … -->`).
+
 ### Cross-references
 
 Use wiki links to point at other pages, as an ingredient or as related reading:

@@ -33,7 +33,7 @@ For a pressed patty, set each ball between two squares of parchment, about 10 cm
 | Paper thin, smashed (3–6 mm) | You want the most crust and lacy edges | Cooking: smash on a hot griddle, flip once |
 | Thick (170 g and up) | You want a pink centre | Cooking: grill or reverse sear |
 
-<!-- TODO: the thick option isn't from any recipe here yet. Keep it, cut it, or link the recipe it comes from. -->
+- The thick option isn't from any recipe here yet. Keep it, cut it, or link the recipe it comes from. #todo
 
 ## How it fails
 

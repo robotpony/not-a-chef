@@ -64,4 +64,4 @@ The pub burger came in with pub food that took itself seriously. Pubs were tradi
 
 ## Recipes
 
-<!-- TODO: a recipe for this build. -->
+- A recipe for this build. #todo

@@ -50,4 +50,4 @@ Form into 6–8 patties. Fry in a little oil over medium heat until well browned
 ## Notes
 
 - Regular Worcestershire contains anchovy; use a vegan brand.
-<!-- When Veg patties is published, add: "- This is one build of the [[Veg patties]] pattern; start there for a quicker weeknight patty from pantry staples." -->
+- When Veg patties is published, add: "This is one build of the Veg patties pattern; start there for a quicker weeknight patty from pantry staples." #todo

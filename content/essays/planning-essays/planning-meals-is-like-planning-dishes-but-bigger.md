@@ -8,13 +8,13 @@ description: "How I plan a week of meals: pair the meals first, let them pick th
 aliases: [/essays/planning-essays/meal-planning-bruces-take/]
 ---
 
-<!-- TODO hook: a specific scene to open on. -->
+- Hook: open on a specific scene. #todo
 
 I plan a week of meals by picking proteins and vegetables, stocking the pantry and fridge, and planning base sauces and preparations that can be used in several different ways. I [[Win the fridge|win the fridge]] when I use up all of the perishable ingredients, either in meals or in foods I can freeze for lazier days.
 
 ## Bites, dishes, meals
 
-<!-- Draft of the Remy idea, rework in your own words. -->
+- Draft of the Remy idea; rework in your own words. #todo
 
 In *Ratatouille*, Remy tastes a strawberry and a piece of cheese together, and his head fills with colour and music. A single bite works like that. A dish is more so: several bites built to go together. A meal is more so again: dishes paired so they play off each other. Planning is dreaming in flavours and pairings, just at a bigger scale each step up.
 
@@ -34,7 +34,8 @@ Planning a week runs the same ladder from the top down. I plan the meals first, 
     - Salad greens and a few raw vegetables
     - 3–4 robust vegetables for roasting or steaming (broccoli, cauliflower, etc.)
     - 1–2 starches (rice, potatoes, noodles, bread)
-    - Spices and special sauces <!-- which sauces? -->
+    - Spices and special sauces
+        - Which sauces? #todo
     - Oils
 
 3. Pick one or two dinners for the week that share ingredients. Every other meal builds on the prep for those, so the week uses up what they leave behind without repeating the same dinner.
@@ -53,22 +54,25 @@ Sunday prep would typically look like:
 
     - Season lightly
     - Let cool and package up in meal-sized portions
-    - For [[Meat sauce (AKA American bolognese)|meat sauce]], taco beef, [[Canadian chili|chili]], dressed beans <!-- what are dressed beans? -->
+    - For [[Meat sauce (AKA American bolognese)|meat sauce]], taco beef, [[Canadian chili|chili]], dressed beans
+        - What are dressed beans? #todo
 
 - Cook the roast (oven or braise)
 
-    - Dry brine for 24 hours (often cooking 1–2 days later) <!-- clarify: started Saturday, or cooked midweek? -->
+    - Dry brine for 24 hours (often cooking 1–2 days later)
+        - Clarify: started Saturday, or cooked midweek? #todo
     - Slice and package up for lunches (sandwiches, soups)
     - Freeze the extra for sandwiches and snacks
 
-- Roast the vegetables, 2–3 days' worth at a time <!-- unfinished -->
+- Roast the vegetables, 2–3 days' worth at a time
+    - Unfinished. #todo
 
 ## The week
 
-<!-- TODO: Monday to Friday, showing which prep becomes which dinner. -->
+- Monday to Friday, showing which prep becomes which dinner. #todo
 
 ## When it goes wrong
 
-<!-- TODO: your examples of food waste and boring weeks. -->
+- Your examples of food waste and boring weeks. #todo
 
-<!-- TODO ending: the practical takeaway. -->
+- Ending: the practical takeaway. #todo

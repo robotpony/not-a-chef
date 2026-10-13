@@ -20,4 +20,4 @@ Bright, sweet, and garlicky, loose and oily.
 
 ## Recipes
 
-<!-- TODO: no recipe yet. -->
+- No recipe yet. #todo
