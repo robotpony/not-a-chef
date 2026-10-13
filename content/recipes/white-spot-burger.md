@@ -1,5 +1,5 @@
 ---
-title: White Spot burgers
+title: White Spot burger
 tags: [mains, burgers]
 source: family
 date: 2026-06-08

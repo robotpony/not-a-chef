@@ -34,6 +34,6 @@ Salt only ever touches the outside of a burger patty. Mixed into raw ground meat
 
 ## Recipes
 
-[[McDouble]] (4:2:1 blend, after cooking), [[White Spot burgers]] (salt, pepper, and Accent, in the pan before the smash).
+[[McDouble]] (4:2:1 blend, after cooking), [[White Spot burger]] (salt, pepper, and Accent, in the pan before the smash).
 
 - Chicken and plant patties are seasoned in the mix, not after. Say so here, or leave them to their own recipes. #todo

@@ -48,4 +48,4 @@ Lean meats need help. Turkey and chicken don't have the fat to brown and stay ju
 
 ## Recipes
 
-[[White Spot burgers]] (smashed), [[McDouble]] (double-ground, pressed and frozen), [[Turkey burgers]] (pressed thin). Other meats and plants: [[Chicken patties]], [[Pan-fried chicken burger]], [[Veg patties]], [[Vegan burger]].
+[[White Spot burger]] (smashed), [[McDouble]] (double-ground, pressed and frozen), [[Turkey burgers]] (pressed thin). Other meats and plants: [[Chicken patties]], [[Pan-fried chicken burger]], [[Veg patties]], [[Vegan burger]].

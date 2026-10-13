@@ -47,4 +47,4 @@ Ground beef is cooked through at 71°C (160°F) in the centre. Ground turkey and
 
 ## Recipes
 
-[[White Spot burgers]] (smash), [[McDouble]] (from frozen), [[Turkey burgers]] (pressed, from frozen).
+[[White Spot burger]] (smash), [[McDouble]] (from frozen), [[Turkey burgers]] (pressed, from frozen).

@@ -79,7 +79,7 @@ Blueprint (burgers)
  ├── Parts      patties, seasoning, cooking, assembly, sauces      (parts/)
  │    └── Options   thick / thin / paper thin           (a table in the part's page)
  └── Builds     grilled onion, Big Boy, drive-in deluxe, ...       (builds/)
-      └── Recipes   White Spot burgers is a drive-in deluxe, with quantities
+      └── Recipes   White Spot burger is a drive-in deluxe, with quantities
 ```
 
 **The blueprint** is the folder's `_index.md`: its title, description, and definition (the body). It may end with `## Further reading`, wiki links to the stories and reference pages behind it. Its parts and builds are found from the folders, not listed.
@@ -137,7 +137,7 @@ The only blueprint metadata:
 
 **Recipes** carry no blueprint fields. A method lists its recipes in `## Recipes`: a part lists the recipes that show it (and the component recipes that make it, like a sauce or a bun), a build lists the recipes that are instances of it. Recipes keep the blueprint's plain tag (`burgers`).
 
-**History.** A build is often a historical style, and its picks are the constraints of the kitchen it came from. A 1960s drive-in cooked fast on a flat-top with ingredients it could buy reliably, so its burger has a thin patty, bottled condiments, a soft bun, and shredded iceberg. That's what `## Where it comes from` teaches: knowing why a pick exists tells you which ones matter when you change something. Facts are sourced or attributed; dates and origin stories come from Bruce or a cited source, and where accounts disagree the page says so, as [[White Spot burgers]] does. A recipe that's a real, specific instance of a build (White Spot burgers, the McDouble) keeps its own specifics, like the Triple O name and its sauces; the build page has the general history of the style.
+**History.** A build is often a historical style, and its picks are the constraints of the kitchen it came from. A 1960s drive-in cooked fast on a flat-top with ingredients it could buy reliably, so its burger has a thin patty, bottled condiments, a soft bun, and shredded iceberg. That's what `## Where it comes from` teaches: knowing why a pick exists tells you which ones matter when you change something. Facts are sourced or attributed; dates and origin stories come from Bruce or a cited source, and where accounts disagree the page says so, as [[White Spot burger]] does. A recipe that's a real, specific instance of a build (White Spot burgers, the McDouble) keeps its own specifics, like the Triple O name and its sauces; the build page has the general history of the style.
 
 The blueprint page shows a **lineage timeline**: builds placed by `era`, so the page shows how the dish changed over time. A build nobody has written yet is a test kitchen stub: a build page with its title, `era`, `draft: true`, a `working_on` line, and the section headings, so the timeline has one source.
 
@@ -235,7 +235,7 @@ Shapes to cover first: sandwich construction, burger construction, lasagne layer
 | Food ratios | Ratio | `content/reference/food-ratios-for-creating-your-own-recipes.md` (draft), already a method; moves |
 | Stock | Technique + ratio | Why ingredients matter in stock, plus the four stock recipes |
 | Foil packets | Technique | Camp cooking |
-| Burgers | Blueprint, 7 builds (3 drafted, 4 stubs) | The quest for the perfect burger, The impossible quest for the perfect chicken burger, White Spot burgers, the burger sauce recipes |
+| Burgers | Blueprint, 7 builds (3 drafted, 4 stubs) | The quest for the perfect burger, The impossible quest for the perfect chicken burger, White Spot burger, the burger sauce recipes |
 | One-pan pasta | Blueprint, 4 parts, 2 builds (stubs) | Drafted 2026-10-12 from Bruce's description; the parts are stages, and the builds have no `era` or stack |
 
 ## Open questions

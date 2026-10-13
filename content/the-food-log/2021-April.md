@@ -29,7 +29,7 @@ We ordered some White Spot for dinner tonight. [White Spot](https://en.wikipedia
 
 Tonight we ordered a variety of burgers, including an all-veg patty, an impossible patty, and two beef patties. Food was good, though the green salad was disappointing. The fries, despite travelling for takeout, were quite good (waxy potato, double fried, nice and browned).
 
-I have a fairly accurate [White Spot burger recipe](https://docs.google.com/document/d/12YebYY6m_wGWr7SaApErUp_ZT-F8YgrfMoshwmsRihg/edit) that gets you close to their basic diner burger. → [[White Spot burgers]]
+I have a fairly accurate [White Spot burger recipe](https://docs.google.com/document/d/12YebYY6m_wGWr7SaApErUp_ZT-F8YgrfMoshwmsRihg/edit) that gets you close to their basic diner burger. → [[White Spot burger]]
 
 ### Quick proteins for #lunchramen
 
