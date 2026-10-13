@@ -33,7 +33,7 @@ bun-base     | Toasted soft bun        | barrier
 
 ## Where it comes from
 
-The smash burger is often taken for a new trend, but the technique is older than the preformed patty by 50 to 60 years. The hamburger historian George Motz traces it to the 1880s, when cooks shaped small balls of ground beef and smashed them straight onto a hot skillet or flat-top. A thick patty took about ten minutes; a smashed one took about two, so factory workers and fairgoers could eat and get back to work. The beef itself came from the German Hamburg steak, eaten off a plate with a knife and fork, which immigrants brought to the U.S.; it became a hamburger when cooks put it in bread or a bun. Small-town diners kept the flat-top because it cooked fast and browned the whole patty evenly. In hard times smashing was also a cheap way to stretch beef: the [[Grilled onion burger]], from 1922, presses a small ball flat under onion the same way. A widely told story credits Dairy Cheer, a diner in Ashland, Kentucky, where in the 1960s a cook pressed balls of beef onto the griddle with a bean can. The smash burger as a named style took off in the 2000s and 2010s, and grew again in the early 2020s. ([Smash burger](https://en.wikipedia.org/wiki/Smash_burger), Wikipedia.)
+Older than it looks. Cooks in the 1880s smashed balls of beef onto hot flat-tops so factory workers and fairgoers could eat in two minutes instead of ten (George Motz's account). Diners kept the flat-top, the Depression kept smashing as a way to stretch beef, and the style got its name and its fame in the 2000s. ([Smash burger](https://en.wikipedia.org/wiki/Smash_burger), Wikipedia.)
 
 | Constraint | Pick it explains |
 |---|---|
