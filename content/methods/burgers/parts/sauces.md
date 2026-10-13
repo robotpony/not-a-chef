@@ -39,9 +39,9 @@ The jarred and bottled condiments the builds use, on their own or as the base of
 
 | Condiment | What it brings | Used on |
 |---|---|---|
-| Ketchup | Sweet | [[McDouble burger]], [[Fast-food double burger]], [[Smash burger]], [[Teen burger]]; on the table for the [[Pub burger]] |
-| Yellow mustard | Sharp | The same burgers as ketchup, and alone on the [[Grilled onion burger]] |
-| Mayonnaise | Fat; carries a blended sauce | [[Pub burger]], [[Big Boy burger]]; the base of Triple “O” mayo, Mozza sauce, and Teen sauce |
+| Ketchup | Sweet | [[McDouble burger]], [[Fast-food double burger]], [[Smash burger]], [[Teen burger]], [[Whopper burger]]; on the table for the [[Pub burger]] |
+| Yellow mustard | Sharp | [[McDouble burger]], [[Fast-food double burger]], [[Smash burger]], [[Teen burger]]; on the table for the [[Pub burger]]; alone on the [[Grilled onion burger]] |
+| Mayonnaise | Fat; carries a blended sauce | [[Pub burger]], [[Big Boy burger]], [[Whopper burger]] (both buns); the base of Triple “O” mayo, Mozza sauce, and Teen sauce |
 | Red relish | Sweet, sour, texture | [[Big Boy burger]]; with chili sauce in Triple “O” sauce and Mozza sauce |
 | Chili sauce | Sweet, tangy tomato | Triple “O” sauce ([[Drive-in deluxe burger]]) and Mozza sauce ([[Mozza burger]]) |
 | Thousand Island | Sweet, creamy, tangy | [[Big Boy burger]], and a touch in Mozza sauce |
