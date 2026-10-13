@@ -54,7 +54,7 @@ A lunch counter in El Reno, Oklahoma, a railway town on Route 66. The [fried oni
 | A small ball of beef had to look like a burger | Smashed paper thin, to the edges of the bun |
 | No time or space for a toaster | Soft bun, steamed over the patty |
 
-This is the root of the griddled burger: griddle, pressed, simple. The slider, the drive-in deluxe, the fast-food double, and the smash burger all keep its thin patty, its flat-top, and its soft bun, and change what goes on top.
+It's one of the oldest griddled burgers still made, though not the first: cooks were smashing balls of beef on flat-tops from the 1880s (see [[Smash burger]]). The slider, the drive-in deluxe, and the fast-food double share its thin patty, its flat-top, and its soft bun, and change what goes on top.
 
 ## Recipes
 
