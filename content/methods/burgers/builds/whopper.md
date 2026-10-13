@@ -24,7 +24,7 @@ bun-top            | Sesame bun               | soft, toasted
 mayo               | Mayo                     | rich
 lettuce            | Iceberg                  | cool crunch
 tomato             | Vine-ripe tomato         | juicy, acid
-sauce-burger       | Ketchup                  | sweet
+ketchup            | Ketchup                  | sweet
 onion-raw          | White onion rings        | sharp
 pickle             | Dill pickle chips        | sour
 patty-thin-grilled | Flame-grilled patty, 115 g | smoke, salt
