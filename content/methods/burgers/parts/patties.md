@@ -13,7 +13,7 @@ A burger patty is ground meat, portioned and shaped, and almost nothing else. It
 
 - **Fat.** 70:30 (regular ground beef) for a smashed patty, 80:20 for a pressed or frozen one, 85:15 at the leanest.
 - **Grind.** Medium grind for a loose, crumbly bite. Double-ground for a soft, almost pillowy patty like a fast-food burger (see [[McDouble]]).
-- **Weight.** 115–140 g (4–5 oz) for a single, 75 g each for a double. Two thin patties beat one thick one.
+- **Weight.** 115–140 g (4–5 oz) for a single. For a double, 75 g each for a fast-food double, up to 115 g each for a smash burger. Two thin patties beat one thick one.
 - **Size.** Press the patty 5–10% wider than the bun. It shrinks as it cooks, and a patty that matches the bun is the first rule of a navigable burger.
 - **Salt.** None in the meat. Salt mixed in early pulls out moisture and binds the proteins, which turns a loose patty into a dense, springy one. Season the outside, at the pan or after cooking (see [[Seasoning burgers]]).
 
@@ -33,7 +33,7 @@ For a pressed patty, set each ball between two squares of parchment, about 10 cm
 | Paper thin, smashed (3–6 mm) | You want the most crust and lacy edges | Cooking: smash on a hot griddle, flip once |
 | Thick (170 g and up) | You want a pink centre | Cooking: grill or reverse sear |
 
-- The thick option isn't from any recipe here yet. Keep it, cut it, or link the recipe it comes from. #todo
+The thick option is the [[Pub burger]]'s patty.
 
 ## How it fails
 

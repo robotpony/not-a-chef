@@ -54,14 +54,14 @@ McDonald's used the McDouble name as early as 1964. The modern McDouble arrived 
 
 - **Heavy:** skimped on pickle or mustard.
 - **Dry bun:** served straight off the griddle, without the minute in paper.
-- **Thick, chewy patties:** too much beef per patty; at home, 45 g is hard to handle, so 75 g is the compromise (see [[McDouble]]).
+- **Thick, chewy patties:** pressed too thick. A 45 g patty is hard to handle at home, so the [[McDouble]] recipe uses 75 g, pressed thin.
 
 ## Variations
 
 - **Bacon McDouble:** two half slices of crisp bacon on the cheese.
 - **Deluxe:** the 1997 original. Lettuce, tomato, and mayonnaise instead of the cheese.
 - **Double cheeseburger:** a second slice of cheese, one on each patty.
-- **Cheeseburger:** a single patty, but otherwise the same build. These were 2 for $.99 for a long time in the 1990s.
+- **Cheeseburger:** a single patty, but otherwise the same build. These were two for $0.99 for a long time in the 1990s.
 
 ## Recipes
 

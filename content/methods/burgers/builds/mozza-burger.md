@@ -33,6 +33,7 @@ patty-thin   | Beef patty, 85 g     | salt, savoury
 sauce-burger | Mozza sauce          | creamy, tangy
 bun-base     | Toasted sesame bun   | barrier
 ```
+
 ## Where it comes from
 
 A&W Canada sells the Mozza burger alongside the Burger Family, though it isn't one of the family. The Canadian chain has been separate from the American A&W since 1972, and its menu has drifted far from the U.S. one; the Mozza is one of the burgers only Canada has, introduced in the 1980s. ([A&W (Canada)](https://en.wikipedia.org/wiki/A%26W_(Canada)), Wikipedia.)

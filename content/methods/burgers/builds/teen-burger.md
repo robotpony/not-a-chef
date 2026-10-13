@@ -7,7 +7,6 @@ tags:
   - burgers
 era: 1963
 description: "A&W Canada's Teen burger: a seasoned-salt patty, cheddar, bacon, the full diner set of toppings, and Teen sauce on a toasted sesame bun."
-working_on: First draft. Needs a recipe behind it, and a home Teen sauce.
 ---
 The classic diner burger, as A&W Canada still makes it. One seasoned patty, real cheddar, and bacon, under every topping a diner offers: lettuce, tomato, onion, pickles, ketchup, mustard, and Teen sauce, a sweet, tangy mayo-style spread. The seasoning is what makes it taste like a Teen: Lawry's Seasoned Salt, not plain salt.
 

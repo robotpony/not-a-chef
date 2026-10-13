@@ -31,8 +31,6 @@ Salt only ever touches the outside of a burger patty. Mixed into raw ground meat
 
 - Other failures you've hit (under-seasoned, uneven)? #todo
 
-
-
 ## Recipes
 
 [[McDouble]] (4:2:1 blend, after cooking), [[White Spot burger]] (salt, pepper, and Accent, in the pan before the smash).

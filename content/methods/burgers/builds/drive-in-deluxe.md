@@ -8,13 +8,13 @@ tags:
 era: 1960
 description: "The drive-in deluxe burger: a thin, griddled patty under cold lettuce, tomato, and sour pickles, with Triple “O” red sauce and sweet mayo."
 ---
-This is a variation of the [[White Spot burger]], which is a specific drive-in/diner style burger that I grew up with. I love onions, so we include 2 types here.
+This is a variation of the [[White Spot burger]], which is a specific drive-in/diner style burger that I grew up with. I love onions, so we include two types here.
 
 The build works because everything above the patty is cold, crunchy, sharp, or sour, and the patty below brings the salt, fat, and savoury depth. Every part is there because the alternative was tried and lost.
 
 ## Picks
 
-Cold crunch and sharp against a salty patty. Often served as a sandwich slice over the bun, so it's optional.
+Cold crunch and sharp against a salty patty.
 
 - **Forming burger patties:** One thin patty, 140 g, not mixed
 - **Seasoning burgers:** Salt and pepper after cooking
@@ -41,7 +41,7 @@ This is the diner and drive-in burger of the 1960s, the burger they still make: 
 
 | Constraint | Pick it explains |
 |---|---|
-| A flat-top griddle and fast service | A thin patty, smashed, flipped once |
+| A flat-top griddle and fast service | A thin patty, griddled hot, flipped once |
 | Ingredients bought in bulk | Bottled relish, chili sauce, and mayo; iceberg lettuce |
 | Eaten in the car, from paper | A soft bun, wrapped so it steams |
 | "Deluxe" as an add-on | Lettuce and tomato |

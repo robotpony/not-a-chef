@@ -8,7 +8,6 @@ tags:
   - onion
 era: 1922
 description: "The grilled onion burger: a smashed patty and a pile of onion cooked sweet in the beef fat."
-working_on: First draft.
 ---
 This build is about one ingredient: onion, cooked down in the beef fat until it's sweet. Where the drive-in deluxe gets its contrast from cold crunch, this one is sweet and savoury with one soft, even texture. I make these occasionally, especially if I happen to be prepping [[French onion soup]].
 

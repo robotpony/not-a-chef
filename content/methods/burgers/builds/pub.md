@@ -7,7 +7,6 @@ tags:
   - burgers
 era: 1985
 description: "The pub burger: one thick, hand-formed patty, cooked juicy, on a toasted soft bun with simple, savoury toppings. A meal, not a snack."
-working_on: First draft. Needs a recipe behind it.
 ---
 This build is the opposite of the smash. Where the griddled burgers press a little beef thin for crust, the pub burger keeps a lot of beef thick for juice: one hand-formed patty, cooked so the centre stays moist, on a toasted soft bun that can hold it. The toppings stay simple and savoury so the beef leads. It's built to be a hearty meal on its own plate, with a knife beside it and chips on the side.
 

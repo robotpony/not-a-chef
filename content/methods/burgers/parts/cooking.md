@@ -2,7 +2,7 @@
 title: Cooking patties
 date: 2026-10-10
 draft: true
-working_on: First draft. The grill and thick-patty options need your notes.
+working_on: First draft. The reverse sear option needs your notes.
 tags:
   - method
   - burgers
@@ -27,10 +27,9 @@ A burger patty cooks for its crust. The surface has to be hot enough to brown th
 |---|---|---|
 | Smash | Fresh, cold meatballs; you want the most crust | Season the ball, then smash it to 3–6 mm (⅛–¼ inch) with a spatula or press, with parchment between to stop sticking. Leave it until liquid pools on top, then flip once. |
 | Griddle from frozen | Pressed, frozen patties | Peel off the top parchment, flip the patty onto the pan, peel off the bottom sheet. Cook until well browned, 2–3 minutes; flip; another minute. A bacon press helps them brown. |
-| Grill | | |
+| Grill | Wide, thin patties; you want char and smoke | Over a hot flame, flipped once. The fat drips away, so you get char instead of a fried crust. Move the patty off a flare-up before it blackens. |
 | Reverse sear | Thick patties | Cook gently first, then sear (see [[Reverse cooking: reverse sear and water frying]]). |
 
-- Grill: add your grill notes. #todo
 - Reverse sear: confirm, or cut with the thick option. #todo
 
 Pre-smashed frozen patties work fine on high heat with a bacon press. Fresh patties still come out slightly better.
@@ -47,4 +46,4 @@ Ground beef is cooked through at 71°C (160°F) in the centre. Ground turkey and
 
 ## Recipes
 
-[[White Spot burger]] (smash), [[McDouble]] (from frozen), [[Turkey burgers]] (pressed, from frozen).
+[[White Spot burger]] (smash), [[McDouble]] (from frozen), [[Turkey burgers]] (pressed, from frozen), [[Whopper]] (grilled).

@@ -38,7 +38,7 @@ bun-base              | Small bun                      | barrier
 - **Two thin patties, not one thick one.** Twice the crust, and the cheese melts between them.
 - **Double-ground beef.** It gives the soft, almost pillowy texture of a fast-food patty instead of a coarse, chewy one.
 - **Processed cheese.** It melts smooth into a thin patty. Use half a slice of Kraft Deluxe; a full one is too thick.
-- **Rehydrated dried onion.** Dried minced onion, soaked in water, instead of raw. It's a clever ruse: the flavour is mellower than raw onion and distinctly different, and it's very obvious when you taste it. Fresh white onion, diced, soaked in cold water, and drained, is the stand-in when there's no dried onion, but it isn't the same.
+- **Rehydrated dried onion.** Dried minced onion, soaked in water, instead of raw. It's a clever ruse: the flavour is mellower than raw onion and distinctly different, and it's very obvious when you taste it.
 - **5:1 ketchup to mustard.** The fast-food sweet-savoury balance.
 - **Pickle and mustard.** The only sharp and sour on the burger, so they can't be skipped.
 
@@ -55,6 +55,4 @@ bun-base              | Small bun                      | barrier
 
 ## Where it comes from
 
-Value menus, 1990s.
-
-- The value-priced double of the 1990s, after the Big Boy's 1937 double-decker; the fast-food chains, standardization, frozen and double-ground patties, fixed condiment ratios. 
+The value-menu double of the 1990s: frozen, double-ground patties and fixed condiment ratios, so it tastes the same at every chain.

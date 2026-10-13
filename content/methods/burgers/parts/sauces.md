@@ -8,7 +8,6 @@ tags:
   - sauces
 weight: 5
 description: "Burger sauce is sweet, sour, and sharp in some ratio: ketchup and mustard kept apart, or blended with mayo and pickle into one spread. Plus the condiments every build draws on, from ketchup to double-sour pickles."
-working_on: First draft, from the four sauce recipes.
 ---
 A burger sauce adds sweetness, acid, and sharpness, and sometimes fat. There are two ways to get there: keep the condiments separate and let them meet on the burger, or blend them into one spread. Either way, the sauce sits against the bread, where it soaks in, and it shouldn't drown the onion and pickle.
 
