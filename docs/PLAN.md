@@ -148,6 +148,14 @@ Queued 2026-10-07. Each needs a mockup in `mockups/` (checked against `mockups/S
 
 - [x] **Space around the formula diagram.** It was spaced like a paragraph (20px), with nothing extra before the next heading (36px). *Done 2026-10-07: spaced as a figure, like a table, at 28px, and 48px to a heading after it. `custom.css` `.formula`; adjust if needed.*
 
+### Editing workflow
+
+- [ ] Build an Obsidian plugin to coordinate edits between Obsidian and Claude Code. #todo *Noted 2026-10-12, from one session's friction:*
+    - *Obsidian resolves `[[Title]]` by filename, not title, so every title link (`[[White Spot burger]]` → `white-spot-burger.md`) is unresolved there, and clicking one creates an empty note in the vault root.*
+    - *Obsidian and Claude edit the same files at once. Neither knows which files the other has open or half-edited, so in-progress edits get swept into Claude's commits.*
+    - *Obsidian rewrites frontmatter on save (flow lists like `tags: [method, burgers]` become block lists), which makes diffs noisy.*
+    - *Start by deciding what the plugin owns: title-based link resolution, a "being edited" marker Claude can read, or both.*
+
 ### Fugu theme
 
 The cookbook templates, render hooks, JS, icons, archetypes, and content tools moved into the Fugu theme (`themes/fugu`, https://github.com/robotpony/hugo-theme-fugu) on 2026-10-06; see ARCHITECTURE.md for the three layers. Theme work (making it generic, its own design, docs, example site, release) and the template and JS features below it are tracked in **`themes/fugu/PLAN.md`**. This list is only what has to happen on the Not a Chef side.
