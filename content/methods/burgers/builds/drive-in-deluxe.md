@@ -51,7 +51,7 @@ The Triple “O” name comes from the carhop order tickets: a customer who want
 ## Why these picks
 
 - **Two onions.** Raw for sharpness, sautéed in the beef fat for sweetness. Together they do more than either alone.
-- **Double-sour pickles.** The strongest sour on the burger. Make them by sprinkling citric acid over ordinary dill pickles.
+- **Double-sour pickles.** The strongest sour on the burger. Make them with a sprinkle of citric acid powder over ordinary dill pickles.
 - **Two sauces, apart.** The red sauce goes on the base, where it meets the hot patty; the mayo goes under the top bun with the cold layers. Each stays distinct instead of blending into one.
 - **Rest in paper.** A few minutes wrapped in burger paper steams the bun and settles the flavours.
 

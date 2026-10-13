@@ -46,9 +46,9 @@ The jarred and bottled condiments the builds use, on their own or as the base of
 | Chili sauce | Sweet, tangy tomato | Triple “O” sauce ([[Drive-in deluxe burger]]) and Mozza sauce ([[Mozza burger]]) |
 | Thousand Island | Sweet, creamy, tangy | [[Big Boy burger]], and a touch in Mozza sauce |
 | Dill pickles | Sour, crunch | Most builds, sliced thin or lengthwise |
-| Double-sour pickles | The strongest sour | [[Drive-in deluxe burger]] |
+| Double-sour pickles | The strongest sour: dill pickles with a sprinkle of citric acid powder | [[Drive-in deluxe burger]] |
 
-Double-sour pickles are hard to buy and easy to make: sprinkle citric acid over ordinary sandwich-style dill pickles and let them sit. They get remarkably close to commercial double sours. On a fast-food double, non-kosher dills with a little citric acid or vinegar do the same job (see [[McDouble]]).
+Double-sour pickles are hard to buy and easy to make: add a sprinkle of citric acid powder to ordinary sandwich-style dill pickles and let them sit. They get remarkably close to commercial double sours. On a fast-food double, non-kosher dills with a little citric acid or vinegar do the same job (see [[McDouble]]).
 
 ## How it fails
 
