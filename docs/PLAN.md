@@ -148,6 +148,10 @@ Queued 2026-10-07. Each needs a mockup in `mockups/` (checked against `mockups/S
 
 - [x] **Space around the formula diagram.** It was spaced like a paragraph (20px), with nothing extra before the next heading (36px). *Done 2026-10-07: spaced as a figure, like a table, at 28px, and 48px to a heading after it. `custom.css` `.formula`; adjust if needed.*
 
+### Blueprint leads
+
+- [ ] Lead paragraphs over a blueprint's builds and parts, from a headless `lead.md` in its `builds/` or `parts/` folder. *Asked of fugu-agent 2026-10-12. `content/methods/burgers/builds/lead.md` (the "burgers I know and love" caveat) is written and builds as headless, so nothing shows until Fugu reads it. When it lands: bump the submodule, check the burgers page at 1280px and 390px, and document `lead.md` in `docs/METHODS.md`.*
+
 ### Editing workflow
 
 - [ ] Build an Obsidian plugin to coordinate edits between Obsidian and Claude Code. #todo *Noted 2026-10-12, from one session's friction:*
