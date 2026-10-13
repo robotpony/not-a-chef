@@ -10,7 +10,7 @@ description: "The fast-food double: two thin, soft patties with processed cheese
 ---
 This is the rich build. Where the drive-in deluxe is all contrast, this one leans into salt and fat: two thin, soft patties with a slice of processed cheese melted between them. Pickles, ketchup, mustard, and onion keep it from going heavy. It's the one case where American cheese earns its place on a burger.
 
-These differ from the McDouble only in that most every restaurant has one. Mustard is more common in some regions, which I prefer, and real onion has a much nicer cut through the fatty flavour of the beef.
+Most every chain sells one; the [[McDouble burger]] is one chain's version. Some regions lean harder on mustard, which I prefer, and I like the sharper cut of real onion through the fat (see Variations).
 
 ## Picks
 
@@ -50,6 +50,7 @@ bun-base              | Small bun                      | barrier
 ## Variations
 
 - **Bacon double cheese:** add crisp bacon. Only if it's crisp; chewy bacon pulls the burger apart. Water-frying gives flatter, more evenly crisp strips (see [[Reverse cooking: reverse sear and water frying]]).
+- **Fresh onion:** diced white onion, soaked in cold water and drained, instead of the dried. Sharper, and less like the chain.
 - **Single:** one 45 g patty on a small bun, the drive-thru hamburger (see the [[McDouble]] variations).
 
 ## Where it comes from

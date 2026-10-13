@@ -36,6 +36,7 @@ bun-base      | Bottom bun               | barrier
 ```
 
 There are a few variations on the construction of these, but this is one common take.
+
 ## Where it comes from
 
 Glendale, California. Bob Wian opened Bob's Pantry there in 1936, and in February 1937 a bass player from a band that ate there asked for something different. Wian made a double-decker, meant to look ridiculous, like a leaning tower. It was named for a boy who came in while Wian was looking for a name, whom he greeted with "Hello, Big Boy." The original was a quarter pound of fresh beef in two thin patties, with lettuce, American cheese, and mayonnaise with red relish (sweet pickle relish, ketchup, and chili sauce) on a three-layer sesame bun. In the late 1940s Wian licensed it to regional chains like Frisch's in Cincinnati, which sold it under their own restaurant names, and the sauce drifted: Frisch's used tartar sauce on a plain bun with pickles. ([Big Boy Restaurants](https://en.wikipedia.org/wiki/Big_Boy_Restaurants), Wikipedia.)

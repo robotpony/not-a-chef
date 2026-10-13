@@ -15,7 +15,7 @@ The [[Fast-food double burger]] as one chain fixed it, and the cheapest way to e
 Salty, sweet, and rich; the same every time.
 
 - **Forming burger patties:** Two thin patties, 45 g each (ten to the pound), cooked from frozen. These are likely double-ground to get a soft texture from cheap cuts.
-- **Seasoning burgers:** Salt and pepper (and MSG) on the griddle, after the sear
+- **Seasoning burgers:** Salt and pepper (and MSG), as they come off the heat
 - **Cooking patties:** On a hot flat-top, both sides at once in a clamshell griddle at the restaurant; one flip at home
 - **Assembling burgers:** One slice of American cheese between the patties, pickles, and rehydrated dried minced onion, on a small toasted bun; wrapped so it steams
 - **Sauces and condiments:** Ketchup and mustard

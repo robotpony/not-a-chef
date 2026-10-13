@@ -11,12 +11,13 @@ working_on: First draft. Needs a recipe behind it.
 ---
 This build is the opposite of the smash. Where the griddled burgers press a little beef thin for crust, the pub burger keeps a lot of beef thick for juice: one hand-formed patty, cooked so the centre stays moist, on a toasted soft bun that can hold it. The toppings stay simple and savoury so the beef leads. It's built to be a hearty meal on its own plate, with a knife beside it and chips on the side.
 
-I cook these medium to medium-well. In Canada, anything less is uncommon and feels , well, weird.
+I cook these medium to medium-well. In Canada, anything less is uncommon and feels, well, weird.
+
 ## Picks
 
 Beefy and juicy; a hearty meal.
 
-- **Forming burger patties:** One thick patty, 140–180 g, hand-formed loosely, with a thumbprint in the middle so it cooks flat
+- **Forming burger patties:** One thick patty, 170–180 g, hand-formed loosely, with a thumbprint in the middle so it cooks flat
 - **Seasoning burgers:** Salt and pepper on the outside, just before cooking
 - **Cooking patties:** Grilled or griddled over medium-high heat and turned once, or reverse seared; rested a couple of minutes
 - **Assembling burgers:** A soft bun, toasted; leaf lettuce, a thick slice of tomato, raw red onion, pickle; aged cheddar and crisp bacon if you want them
@@ -43,6 +44,7 @@ The pub burger came in with pub food that took itself seriously. Pubs were tradi
 | A sit-down meal, not something eaten from paper | One thick patty, on a plate, with a knife |
 | Food meant to stand with the beer | Simple, savoury toppings; the beef leads |
 | Cooked to order in a restaurant kitchen | A thick patty cooked juicy, on a grill or flat-top |
+
 ## Why these picks
 
 - **One thick patty.** Thickness is what keeps it juicy: the centre stays moist while the outside browns. It trades the crust of a thin patty for juice and beefiness.

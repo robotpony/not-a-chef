@@ -27,13 +27,14 @@ mayo                  | Teen sauce               | sweet, tangy
 lettuce               | Lettuce                  | cool crunch
 tomato                | Tomato                   | juicy, acid
 onion-raw             | Onion slice              | sharp
-pickle                | Pickles                  | sweet
+pickle                | Pickles                  | sour
 bacon                 | Bacon                    | smoke, salt
 cheese                | Cheddar                  | sharp, melt
 patty-thin            | Seasoned patty, 85 g     | salt, savoury
 sauce-ketchup-mustard | Ketchup and mustard      | sweet, sharp
 bun-base              | Toasted sesame bun       | barrier
 ```
+
 ## Where it comes from
 
 The Teen is one of the Burger Family, a line of burgers A&W introduced in the U.S. in the early 1960s and named after its 1963 mascots: Baby, Mama, Teen, and Papa. A&W came to Canada in 1956, with its first restaurant in Winnipeg, and the Canadian chain split from the American one in 1972. The U.S. chain mostly dropped the Burger Family in the 1980s; A&W Canada brought it back in the late 1990s, as part of a retro, 1950s-style revival aimed at baby boomers, and still sells it. The Teen is the Mama burger plus bacon, lettuce, tomato, and cheese.  ([A&W (Canada)](https://en.wikipedia.org/wiki/A%26W_(Canada)) and [The Burger Family](https://en.wikipedia.org/wiki/The_Burger_Family), Wikipedia.)
@@ -43,6 +44,7 @@ The Teen is one of the Burger Family, a line of burgers A&W introduced in the U.
 | A family of burgers built from one patty | The same 85 g patty as the Mama and Papa; the Teen adds the toppings |
 | A drive-in griddle and fast service | A thin patty, seasoned on the griddle |
 | One house spread across the whole line | Teen sauce on every Burger Family burger |
+
 ## Why these picks
 
 - **Seasoned salt.** Lawry's brings paprika, garlic, onion, and a little sugar along with the salt, so a plain patty tastes seasoned all the way through the bite.

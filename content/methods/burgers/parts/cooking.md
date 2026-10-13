@@ -17,7 +17,7 @@ A burger patty cooks for its crust. The surface has to be hot enough to brown th
 
 - **Heat.** A heavy pan, cast iron, or flat-top, heated through on medium-low and turned up to medium-high just before cooking. About 220°C (425°F) at the surface.
 - **Fat.** A little oil in the pan. The patty adds its own as it renders.
-- **Flips.** One, once a deep crust has formed, for fresh patties. Frozen patties brown better if you flip them more often.
+- **Flips.** One, once a deep crust has formed.
 - **Cheese.** On the patty after the flip, a minute or so before it comes off.
 - **Seasoning.** On the surface, in the pan or as it comes off (see [[Seasoning burgers]]).
 

@@ -8,14 +8,14 @@ tags:
 era: 1930
 description: "The smash burger: cold balls of beef smashed thin on a very hot griddle for a lacy crust, stacked double with cheese between and onion underneath."
 ---
-This build is all crust. Each patty is a cold ball of beef smashed thin on a very hot griddle, so the whole underside browns at once and the edges go lacy and crisp. Thin patties have little bulk, so they're stacked two (or three) high with cheese melted between them. Onion goes 1under the patties, pickles and sauce on top.
+This build is all crust. Each patty is a cold ball of beef smashed thin on a very hot griddle, so the whole underside browns at once and the edges go lacy and crisp. Thin patties have little bulk, so they're stacked two (or three) high with cheese melted between them. Onion goes under the patties, pickles and sauce on top.
 
 ## Picks
 
 Crisp, lacy, and savoury; crust in every bite.
 
 - **Forming burger patties:** Two cold balls, 90–115 g each, loosely packed; not formed into patties first
-- **Seasoning burgers:** Salt and pepper on top, right after the smash
+- **Seasoning burgers:** Salt and pepper on top of the ball, just before the smash
 - **Cooking patties:** Smashed once, hard, as soon as they hit a smoking-hot griddle; scraped up and flipped after about 2 minutes
 - **Assembling burgers:** A double, cheese between the patties, onion under them, pickles above, on a soft toasted bun
 - **Sauces and condiments:** Ketchup and mustard, or a burger sauce
