@@ -61,6 +61,7 @@ McDonald's used the McDouble name as early as 1964. The modern McDouble arrived 
 - **Bacon McDouble:** two half slices of crisp bacon on the cheese.
 - **Deluxe:** the 1997 original. Lettuce, tomato, and mayonnaise instead of the cheese.
 - **Double cheeseburger:** a second slice of cheese, one on each patty.
+- **Cheeseburger:** a single patty, but otherwise the same build. These were 2 for $.99 for a long time in the 1990s.
 
 ## Recipes
 
