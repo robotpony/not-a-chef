@@ -8,7 +8,9 @@ tags:
 era: 1937
 description: "The Big Boy double-decker: two thin patties on a three-part bun, each with its own deck of lettuce and red relish sauce."
 ---
-The first double-decker. A quarter pound of beef is split into two thin patties, and a middle slice of bun gives each one its own deck of sauce and lettuce. It's the same weight of beef as a single burger, but twice as tall and with twice the crust. Cool lettuce and a sweet, creamy sauce on both decks balance the salt and fat.
+I've never liked the Big Mac, but I once tried a Big Boy burger. It feels like an OG club sandwich style Big Mac-esque burger. It's closer to a diner style burger, so has real texture and sharpness. I admit I still don't get the middle bun, but when in Rome. 
+
+It's the first double-decker, historically speaking, that I know of. A quarter pound of beef is split into two thin patties, and a middle slice of bun gives each one its own deck of sauce and lettuce. It's the same weight of beef as a single burger, but twice as tall and with twice the crust. Cool lettuce and a sweet, creamy sauce on both decks balance the salt and fat.
 
 ## Picks
 

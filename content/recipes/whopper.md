@@ -1,12 +1,14 @@
 ---
 title: Whopper
-tags: [mains, burgers, american]
+tags:
+  - mains
+  - burgers
+  - american
 source: original
 date: 2026-10-12
 servings: 1
 cuisine: American
-draft: true
-working_on: "First draft, from Bruce's ingredient list and build."
+draft: false
 ---
 
 ## Mechanic
@@ -15,7 +17,7 @@ A wide, **flame-grilled** patty with every cold topping above it, and **mayo on 
 
 ## Burger
 
-- 1 large sesame seed bun
+- 1 large 13 cm (5") sesame seed bun
 - 115 g (4 oz) ground beef, 80:20 chuck
 - Salt and black pepper
 - 2–3 slices vine-ripe tomato
@@ -34,7 +36,16 @@ Spread mayo on both halves of the bun. Build from the bottom: bottom bun, patty,
 ## To serve
 
 Fries and a shake.
-
 ## Notes
 
 - No grill? A ridged grill pan over high heat gives the marks, but not the smoke.
+- I don't often grill these any more, rather I griddle them diner style as it's easier. 
+
+## Variations
+
+There were dozens of variations of the burger, but only a few of them stuck with me.
+
+- BBQ sauce (Bull's Eye is the one I remember), and additional onion rings or those fried onions you can buy at the grocery store.
+- With mustard, double pickle, double tomato. This was my go-to in my teens.
+
+I've never liked these with cheese. Do what you want, but this one stands strong without.

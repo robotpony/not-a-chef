@@ -1,14 +1,18 @@
 ---
 title: Grilled onion burger
 date: 2026-10-10
-draft: true
-working_on: "First draft."
-tags: [method, burgers, onion]
+draft: false
+tags:
+  - method
+  - burgers
+  - onion
 era: 1922
 description: "The grilled onion burger: a smashed patty and a pile of onion cooked sweet in the beef fat."
+working_on: First draft.
 ---
+This build is about one ingredient: onion, cooked down in the beef fat until it's sweet. Where the drive-in deluxe gets its contrast from cold crunch, this one is sweet and savoury with one soft, even texture. I make these occasionally, especially if I happen to be prepping [[French onion soup]].
 
-This build is about one ingredient: onion, cooked down in the beef fat until it's sweet. Where the drive-in deluxe gets its contrast from cold crunch, this one is sweet and savoury with one soft, even texture.
+I make them with pickles, as I love the crunch and acidity, but if you want to be true to the past skip them.
 
 ## Picks
 
