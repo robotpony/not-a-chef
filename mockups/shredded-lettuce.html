@@ -50,6 +50,8 @@
   <h1>Shredded lettuce redraw</h1>
   <p>The current <code>lettuce-shredded</code> layer reads as tiny bananas. Each shred is short (16 to 30 units), fat (3 to 5), bent into one curve, and tapered to a point at both ends: a crescent. Shredded iceberg (Bruce's two photos, 2026-10-14) is the opposite. The strands are long, thin, and cut square. They're mostly straight or gently curled, piled into a mound, and slope down its sides from the peak, with a few strays spilling past the edge.</p>
   <p><strong>Round 2 (2026-10-14).</strong> Round 1 (A strands on the mound, B a mound with strokes, C curls and frills) read as flat sticks with no pile; it's in git at <code>3fc1ba3</code>. Bruce's drawn reference (a cartoon heap of shredded lettuce) was closer, with shreds too large. A second reference (a painted mound of shredded lettuce) is closer too: a tall heap with a ruffled leaf edge, quiet inside, with fine pale strands running down its slopes. D follows the first, E the second, and F combines them. All three are drawn the way the references are, flat on the page: a lumpy mound outline, strands that follow its slopes, arches over the top, strays at the base. Each is about a quarter as high as it is wide, so it reads as a pile, not a disc.</p>
+  <p><strong>Round 3 (2026-10-14).</strong> D was closest. The mound goes (no fill, no outline, no plate pad), the strands get packed much denser, and the pile drops to about half D's height. Shred width stays the same. E and F are in git at <code>7831eb2</code>.</p>
+  <p><strong>Round 4 (2026-10-14).</strong> Shredded lettuce on a burger ends up like a bird's nest, but layered like a patty: the nest's tangle in a patty's flat, even shape. I and J lay the strands out on the bun's footprint, with a flat top and an even side band, instead of in a pile.</p>
   <p>Each option keeps the kit's rules: one ink line, <code>--accent-soft</code> on the body, <code>--surface</code> on top faces, and texture as strokes. All of them are drawn at full size, at card size, and on a bun base, in light and dark.</p>
   <div id="out"></div>
 </main>
@@ -166,6 +168,77 @@ function pile(cx, y, rx, o){
   return {svg:s, h:cy+ry+8-y};
 }
 
+// Round 3: no mound. The pile's shape comes from the strands alone: the same
+// lumpy-mound region only decides where strands start, nothing is filled or
+// outlined, and strands run past its edge. An optional under-layer of darker
+// strands (--accent-soft) packs the gaps, the way the drawn reference does.
+function strands(cx, y, rx, o){
+  const R = rx, ry = R*K, H = o.H, cy = y+H+6, r = rng(o.seed);
+  let s = '';
+  const stray = front => { const a = front ? .25+r()*(Math.PI-.5) : Math.PI+.2+r()*(Math.PI-.4), side = Math.cos(a), len = 10+r()*12, th = (side >= 0 ? 0 : Math.PI)+(side >= 0 ? 1 : -1)*(front ? .25 : -.15)+(r()-.5)*.5, bend = (r()-.5)*1.4, m = [];
+    let x = cx+Math.cos(a)*R*.9, yy = cy+Math.sin(a)*ry*.8;
+    for (let k=0;k<=8;k++){ const aa = th+bend*(k/8-.5); if (k){ x += Math.cos(aa)*len/8; yy += Math.sin(aa)*len/8; } m.push([x, yy]); }
+    return ribbon(m, o.w*(.8+r()*.4)); };
+  for (let i=0;i<o.back;i++) s += stray(false);
+  const U = []; for (let i=0;i<o.under;i++) U.push({m: strand(cx, cy, R*.97, ry, H, r, {len:o.len*(.6+r()*.8), bend:(r()-.5)*o.bend*.6}), w:o.w*(.9+r()*.5)});
+  U.sort((a, b) => a.m.y-b.m.y);
+  for (const h of U) s += ribbon(h.m, h.w, {cls:'s hair leaf-back'});
+  const T = []; for (let i=0;i<o.n;i++) T.push({m: strand(cx, cy, R*.95, ry, H, r, {len:o.len*(.6+r()*.8), bend:(r()-.5)*o.bend}), w:o.w*(.75+r()*.5), tw: r() < .3 ? .3+r()*.4 : -1});
+  T.sort((a, b) => a.m.y-b.m.y);
+  for (const h of T) s += ribbon(h.m, h.w, {twist:h.tw});
+  for (let i=0;i<o.arches;i++){ const x0 = (r()*1.4-.7)*R, span = 9+r()*10, up = 2+r()*2.5, m = [];
+    for (let k=0;k<=12;k++){ const t = k/12, x = x0+span*t, yt = cy-moundY(x, R, H); m.push([cx+x, yt+3-Math.sin(t*Math.PI)*(up+3)]); }
+    s += ribbon(m, o.w*.9); }
+  for (let i=0;i<o.front;i++) s += stray(true);
+  return {svg:s, h:cy+ry+8-y};
+}
+
+// Round 4: a bird's nest, layered like a patty. The footprint is the bun's
+// ellipse, the top is flat, and the side is an even band T deep. Tangled,
+// curling strands lie across the top face (laid out on the plate's plane and
+// projected); strands on the side wrap around the front edge, following the
+// ellipse; a few loops break the back rim and a few strays spill out.
+function nest(cx, y, rx, o){
+  const R = rx, ry = R*K, T = o.T, cy = y+ry+4, r = rng(o.seed);
+  let s = '';
+  const ell = (a, q=1) => [cx+Math.cos(a)*R*q, cy+Math.sin(a)*ry*q];
+  // Top face: a strand from a point in the disc, curling (bend), ends a little past the rim.
+  const topStrand = () => {
+    const a0 = r()*Math.PI*2, q0 = Math.sqrt(r())*.98; let x = Math.cos(a0)*q0, yy = Math.sin(a0)*q0, th = r()*Math.PI*2;
+    const len = o.len*(.6+r()*.8)/R, bend = (r()-.5)*o.bend, arch = r()*o.arch, N = 12, m = []; let zs = 0;
+    x -= Math.cos(th)*len/2; yy -= Math.sin(th)*len/2;
+    for (let i=0;i<=N;i++){ const t = i/N, a = th+bend*(t-.5)*2;
+      if (i){ x += Math.cos(a)*len/N; yy += Math.sin(a)*len/N; }
+      let q = Math.hypot(x, yy); const k = q > 1.04 ? 1.04/q : 1;
+      m.push([cx+x*k*R, cy+yy*k*ry-arch*Math.sin(t*Math.PI)+(q > 1 ? (q-1)*40 : 0)]); zs += yy*k; }
+    m.z = zs/(N+1); return m; };
+  // Side band: a strand that wraps along the front edge at some depth, wavy.
+  const sideStrand = () => {
+    const a0 = .05+r()*(Math.PI-.1), span = (o.len*(.6+r()*.8))/R*(r() < .5 ? 1 : -1), d = r()*T, wob = (r()-.5)*3, N = 12, m = [];
+    for (let i=0;i<=N;i++){ const t = i/N, [px, py] = ell(a0+span*t, 1.0+.03*Math.sin(t*5+a0)); m.push([px, py+d+wob*Math.sin(t*Math.PI)]); }
+    m.z = 2+d/T; return m; };
+  const S = [];
+  for (let i=0;i<o.n;i++){ const m = topStrand(); S.push({m, z:m.z, w:o.w*(.75+r()*.5), tw: r() < .3 ? .3+r()*.4 : -1}); }
+  // The side band sits in front of every top strand; its own strands go top to bottom.
+  const side = []; for (let i=0;i<o.side;i++){ const m = sideStrand(); side.push({m, z:m.z, w:o.w*(.8+r()*.4), tw:-1}); }
+  // Darker under-layer: the band's back fill, so the edge reads solid.
+  if (o.under){ for (let i=0;i<o.under;i++){ const m = sideStrand(); s += ribbon(m, o.w*1.1, {cls:'s hair leaf-back'}); } }
+  // Loops over the back rim.
+  for (let i=0;i<o.loops;i++){ const a0 = Math.PI*1.1+r()*Math.PI*.8, span = .12+r()*.15, up = 2+r()*3, m = [];
+    for (let k=0;k<=12;k++){ const t = k/12, [px, py] = ell(a0+span*t, .97); m.push([px, py-Math.sin(t*Math.PI)*up-1]); }
+    S.push({m, z:-2, w:o.w*.9, tw:-1}); }
+  S.sort((a, b) => a.z-b.z);
+  for (const h of S) s += ribbon(h.m, h.w, {twist:h.tw});
+  side.sort((a, b) => a.z-b.z);
+  for (const h of side) s += ribbon(h.m, h.w);
+  // Strays off the front edge.
+  for (let i=0;i<o.strays;i++){ const a = .2+r()*(Math.PI-.4), side_ = Math.cos(a), [px, py] = ell(a), len = 8+r()*10, th = (side_ >= 0 ? .3 : Math.PI-.3)+(r()-.5)*.6, bend = (r()-.5)*1.2, m = [];
+    let x = px, yy = py+T*(.3+r()*.6);
+    for (let k=0;k<=8;k++){ const aa = th+bend*(k/8-.5); if (k){ x += Math.cos(aa)*len/8; yy += Math.sin(aa)*len/8; } m.push([x, yy]); }
+    s += ribbon(m, o.w); }
+  return {svg:s, h:cy+ry+T+6-y};
+}
+
 const V = {
   // v1, as shipped (Fugu assets/icons/layers/lettuce-shredded.svg): for comparison.
   v1(cx, y, rx){
@@ -188,8 +261,9 @@ const V = {
   // (--surface) that curl and arch up off the pile, and strays spilling flat
   // past the rim. D, E, F are the same drawing at three shred sizes.
   D(cx, y, rx){ return pile(cx, y, rx, {H:34, lump:1.6, n:46, len:30, w:2.0, bend:3.2, ribs:0, arches:6, back:2, front:5, seed:11}); },
-  E(cx, y, rx){ return pile(cx, y, rx, {H:34, lump:2.6, n:48, len:34, w:1.4, bend:.7, ribs:26, arches:0, back:1, front:3, seed:23}); },
-  F(cx, y, rx){ return pile(cx, y, rx, {H:30, lump:2.0, n:40, len:32, w:1.8, bend:1.6, ribs:14, arches:3, back:2, front:4, seed:37}); },
+  G(cx, y, rx){ return strands(cx, y, rx, {H:18, n:110, under:0, len:28, w:2.0, bend:3.2, arches:6, back:2, front:6, seed:11}); },
+  I(cx, y, rx){ return nest(cx, y, rx, {T:8, n:170, side:44, under:0, len:26, w:2.0, bend:3.0, arch:1.5, loops:6, strays:5, seed:11}); },
+  J(cx, y, rx){ return nest(cx, y, rx, {T:8, n:160, side:40, under:30, len:26, w:2.0, bend:3.0, arch:1.5, loops:6, strays:5, seed:41}); },
 };
 
 function bunBase(cx, y, rx){
@@ -204,9 +278,9 @@ function svgFor(key, withBun){
 }
 const opts = [
   ['v1', 'v1, as shipped', 'For comparison. Short, fat, tapered crescents.'],
-  ['D', 'D: curls on a pile', 'After the drawn reference. A tall, lumpy pile packed with about 46 pale shreds that curl and loop, a few arching over the top, and strays spilling out at the base. Shreds narrower than the reference.'],
-  ['E', 'E: a lumpy mound', 'After the painted reference. A lumpier edge, and long, thin, nearly straight strands running down the slopes over fine ink ribs. Quietest at card size.'],
-  ['F', 'F: between them', 'A little lower, with medium shreds and a gentle curl, some ribs, three arches, and a few strays.'],
+  ['G', 'G, round 3', 'For comparison: D without the mound, denser and lower. Still pile-shaped.'],
+  ['I', 'I: a nest, layered like a patty', 'The bun’s footprint, a flat top, and an even edge 8 units deep. About 170 curling shreds tangled across the top, 44 wrapping round the front edge, loops breaking the back rim, a few strays.'],
+  ['J', 'J: I with a darker edge', 'The same, with darker shreds packed behind the edge band so the layer reads solid from the side, like the drawn reference’s under-layer.'],
 ];
 let html = '';
 for (const theme of ['', 'dark']){

@@ -155,7 +155,9 @@ in a browser — no build step.
   size, and on a bun base, light and dark. Round 2 (same day) replaces A to C,
   which read as flat sticks, with D to F after two drawn references: a lumpy
   mound drawn flat on the page, pale strands following its slopes, arches
-  over the top, strays at the base. The winner moves into
+  over the top, strays at the base. Round 3 drops the mound (G, H); round 4
+  (I, J) lays the strands out like a bird's nest pressed into a patty's
+  shape: the bun's footprint, a flat top, an even edge. The winner moves into
   `exploded-builds.html` for export.
 
 - **`in-development.html`**: proposal (2026-10-07) to make `draft: true`
