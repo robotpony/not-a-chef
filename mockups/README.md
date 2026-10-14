@@ -202,6 +202,14 @@ in a browser — no build step.
   Principle chip, Glossary link, Definition callout, and Reference list
   entries describe it.
 
+- **`spreads-and-colour.html`**: proposal (2026-10-14) for the layer kit:
+  knife marks on mayo and burger sauce that read as spread (from a photo of
+  mayo on toast), four ways to place a spread on the bun (its own layer, on
+  the base's cut face, the top bun opened toward you, bun-wide discs), and
+  three soft food colours (green for lettuce and pickles, red for tomato and
+  ketchup, yellow for mustard) as kit-only tokens. Reuses
+  `exploded-builds.html`'s kit code, copied in. Not decided yet.
+
 - **`icons.html`** and **`favicon-heart-pan.html`**: the favicon rounds
   (2026-09-22 to 09-24). `icons.html` was the first (fried egg colourways,
   then a pan on a tile); the shipped favicon is `favicon-heart-pan.html`
