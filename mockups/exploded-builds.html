@@ -755,19 +755,17 @@ const L2 = {...L1,
     return {svg:s, h:2*r0*1.05*K+16+2*A, edge:rx*.5+r0*.95};
   },
   'cheese'(cx, y, rx){
-    // A square slice with edge thickness, corners draped down over the patty's rim.
+    // A square slice with edge thickness, corners draped down over the patty's rim. The top face is
+    // plain: sliced cheese isn't textured (hatching removed 2026-10-14).
     const s0 = rx*1.02, ry = s0*K, th = 3.2;
     const T = [cx, y+1], R = [cx+s0, y+ry+9], B = [cx+2, y+2*ry+7], Lf = [cx-s0, y+ry+10];
     const mid = (a, b, lift) => [(a[0]+b[0])/2, (a[1]+b[1])/2-lift];
     const c1 = mid(T, R, 5), c2 = mid(R, B, 6), c3 = mid(B, Lf, 6), c4 = mid(Lf, T, 5), dn = p => [p[0], p[1]+th];
     const top = `M${P(T)}Q${P(c1)} ${P(R)}Q${P(c2)} ${P(B)}Q${P(c3)} ${P(Lf)}Q${P(c4)} ${P(T)}Z`;
     const side = `M${P(Lf)}Q${P(c3)} ${P(B)}Q${P(c2)} ${P(R)}L${P(dn(R))}Q${P(dn(c2))} ${P(dn(B))}Q${P(dn(c3))} ${P(dn(Lf))}Z`;
-    const poly = [...qpts(T, c1, R, 12), ...qpts(R, c2, B, 12).slice(1), ...qpts(B, c3, Lf, 12).slice(1), ...qpts(Lf, c4, T, 12).slice(1, -1)];
-    const dl = Math.hypot(R[0]-T[0], R[1]-T[1]), ux = (R[0]-T[0])/dl, uy = (R[1]-T[1])/dl, lines = [];
-    for (let k=-16;k<=16;k++){ const ox = cx-uy*k*3.6, oy = y+ry+4+ux*k*3.6; lines.push([ox-ux*s0*1.6, oy-uy*s0*1.6, ox+ux*s0*1.6, oy+uy*s0*1.6]); }
     const fold = []; for (let i=0;i<=20;i++) fold.push(EP(cx, y+ry+3, s0*.8, ry*.8, .7+i/20*(Math.PI-1.4)));
     const svg = `<path class="s cheese-side" d="${side}"/><path class="s cheese" d="${top}"/>` +
-      `<path class="tx-hatch" d="${clipLines(poly, lines)}"/><path class="tx-fine" d="${pts2d(fold)}"/>`;
+      `<path class="tx-fine" d="${pts2d(fold)}"/>`;
     return {svg, h:B[1]+th-y+1, edge:s0};
   },
   patty(cx, y, rx, t, kind, grillCm){
