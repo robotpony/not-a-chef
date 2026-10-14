@@ -9,7 +9,7 @@ era: 2026
 pinned: true
 description: "The Bruce burger: a thin, griddled patty seasoned after cooking, under cold lettuce, tomato, two onions, and double-sour pickles, with mayo and mustard."
 ---
-The burger I make at home. It starts from [[The Whopper]]: one wide patty with everything cold stacked on top. The technique comes from the [[White Spot burger]]: a thin griddled patty, seasoned after it cooks, built deluxe. Every part is there because I tested the alternative and it lost. 
+The burger I make at home. It starts from [[The Whopper]]: one wide patty with everything cold stacked on top. The technique comes from the [[White Spot burger]]: a thin griddled patty, seasoned after it cooks, built deluxe. Every part is there because I tested the alternatives and they lost. 
 
 The story of how it got here is in [[The quest for the perfect burger]].
 
