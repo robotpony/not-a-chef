@@ -66,6 +66,16 @@
   --sear: #8E5E3D;
   --sear-fleck: #D9B48C;
   --sear-char: #23241E;
+
+  /* Food colours (STYLE.md §6, mockups/spreads-and-colour.html): fills for
+   * lettuce, pickles, tomato, ketchup and mustard in the layer kit only. */
+  --kit-green: #A3DABD;
+  --kit-green-top: #CDEEDC;
+  --kit-green-ink: #4E9873;
+  --kit-red: #E9A994;
+  --kit-red-top: #F4CDC1;
+  --kit-yellow: #E3CC6C;
+  --kit-yellow-top: #F1E5B4;
 }
 
 .dark {
@@ -96,6 +106,14 @@
   --sear: #5C3A26;
   --sear-fleck: #24170F;
   --sear-char: #121310;
+
+  --kit-green: #25432F;
+  --kit-green-top: #1C2F23;
+  --kit-green-ink: #5FA982;
+  --kit-red: #4A2A21;
+  --kit-red-top: #33201A;
+  --kit-yellow: #45391A;
+  --kit-yellow-top: #2F2918;
 }
 
 /* Blowfish's <body> tag (themes/blowfish/layouts/_default/baseof.html) is

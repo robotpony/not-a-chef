@@ -17,6 +17,8 @@ const SOFT = 'var(--accent-soft, var(--fugu-accent-soft))', SURF = 'var(--surfac
 const soft = `style="fill:${SOFT}"`, surf = `style="fill:${SURF}"`;
 // A patty's seared top (mockups/patty-sear.html): Fugu's fallbacks in fugu.css.
 const SEAR = 'var(--sear, var(--fugu-sear))', FLECK = 'var(--sear-fleck, var(--fugu-sear-fleck))', CHAR = 'var(--sear-char, var(--fugu-sear-char))';
+// Food colours (mockups/spreads-and-colour.html, 2026-10-14): Fugu's fallbacks in fugu.css.
+const KIT = n => `var(--kit-${n}, var(--fugu-kit-${n}))`;
 // The mockup's .fstyle rules as attributes, so a file needs no stylesheet.
 const S = (w) => `stroke-width="${w}"`;
 const style = {
@@ -53,10 +55,33 @@ const style = {
   'strand-out': `${INK} ${S(3.4)}`, 'swirl-out': `${INK} ${S(3.4)}`,
   'strand-in': `style="stroke:${SOFT}" ${S(1.6)}`, 'swirl-in': `style="stroke:${SOFT}" ${S(1.6)}`,
   'swirl-in-light': `style="stroke:${SURF}" ${S(1.6)}`,
+  // Spreads (2026-10-14): swoop lips and their echoes.
+  ridge: 'fill="currentColor"',
+  'ridge-echo': `${INK} ${S(.5)} stroke-opacity=".7"`,
 };
 const bodies = ['onion-side','bun','leaf-back','tom-side','pick-side','cheese-side','meat','bacon','sauce-red','sauce-yel','sauce-pink','ragu'];
 const tops = ['onion','crumb','leaf','tom','pick','cheese','bech','pasta'];
 const hidden = ['ring-in','meat-dot','crust'];
+
+// The layers that take a food colour, and which of their parts change: bodies and sauce lines
+// the deeper value, top faces the paler one; tomato flesh deeper, its seed segments paler.
+const COLOUR = {'lettuce':'green', 'lettuce-shredded':'green', 'lettuce-chunks':'green', 'pickle':'green', 'tomato':'red', 'ketchup':'red', 'mustard':'yellow', 'sauce-ketchup-mustard':'km'};
+function tint(c, a, key){
+  const g = COLOUR[key], has = (...k) => k.some(x => c.includes(x));
+  if (!g || a === null) return a;
+  if (g === 'green'){
+    if (c.includes('hair') && c.includes('leaf')) return `style="fill:${KIT('green-ink')}" ${INK} ${S(.6)}`;
+    if (has('leaf-back', 'pick-side')) return a.replace(SOFT, KIT('green'));
+    if (has('leaf', 'pick')) return a.replace(SURF, KIT('green-top'));
+  }
+  if (g === 'red'){
+    if (has('tom-side', 'tom')) return a.replace(SOFT, KIT('red')).replace(SURF, KIT('red'));
+    if (has('jelly')) return a.replace(SOFT, KIT('red-top'));
+  }
+  if ((g === 'red' || g === 'km') && has('swirl-in-light')) return a.replace(SURF, KIT('red'));
+  if ((g === 'yellow' || g === 'km') && c[0] === 'swirl-in') return a.replace(SOFT, KIT('yellow'));
+  return a;
+}
 
 function attrs(cls){
   const c = cls.split(/\s+/);
@@ -74,24 +99,24 @@ function attrs(cls){
   return a;
 }
 
-function restyle(svg){
+function restyle(svg, key){
   // Elements are flat (no nesting), each self-closing or a single <path .../>.
   return svg.replace(/<(\w+)\s([^>]*?)\/>/g, (m, tag, body) => {
     const cls = (body.match(/class="([^"]*)"/) || [])[1];
     if (!cls) throw new Error('no class: ' + m);
-    const a = attrs(cls);
+    const a = tint(cls.split(/\s+/), attrs(cls), key);
     if (a === null) return '';
     body = body.replace(/\s*class="[^"]*"/, '').replace(/\s*opacity="[^"]*"/, '').replace(/\s*style="[^"]*"/, '');
     return `<${tag} ${a} ${body.trim()}/>`;
   });
 }
 
-const keys = ['bun-top','lettuce','lettuce-shredded','lettuce-chunks','tomato','onion-raw','onion-fried','onion-minced','pickle','cheese','bacon','patty-thin','patty-thin-grilled','patty-thick','patty-thick-grilled','patty-smash','ketchup','sauce-ketchup-mustard','sauce-burger','mustard','bun-base','bread','pasta','ragu','bechamel','cheese-top','mayo'];
+const keys = ['bun-top','lettuce','lettuce-shredded','lettuce-chunks','tomato','onion-raw','onion-fried','onion-minced','pickle','cheese','bacon','patty-thin','patty-thin-grilled','patty-thick','patty-thick-grilled','patty-smash','ketchup','sauce-ketchup-mustard','sauce-burger','mustard','bun-base','bun-top+mayo','bun-base+mayo','bun-top+sauce-burger','bun-base+sauce-burger','bread','pasta','ragu','bechamel','cheese-top','mayo'];
 fs.mkdirSync(out, {recursive: true});
 for (const k of keys){
   const o = L[k](CX, 0, RX);
   const h = Math.round(o.h*10)/10, edge = Math.round(o.edge*10)/10;
-  const body = restyle(o.svg.replace(/<\/?g>/g, '')).replace(/\/></g, '/>\n  <');
+  const body = restyle(o.svg.replace(/<\/?g>/g, ''), k).replace(/\/></g, '/>\n  <');
   fs.writeFileSync(`${out}/${k}.svg`,
     `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${h}" data-edge="${edge}" fill="none" stroke-linecap="round" stroke-linejoin="round" overflow="visible">\n  ${body}\n</svg>\n`);
   console.log(k, h, edge);

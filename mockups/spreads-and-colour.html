@@ -150,9 +150,10 @@
   .fstyle .k-green :is(.leaf-back, .pick-side){ fill:var(--kit-green); }
   .fstyle .k-green :is(.leaf, .pick, .chunk){ fill:var(--kit-green-top); }
   /* Shredded strands are too thin for a fill to show, so their line goes green instead of ink. */
-  .fstyle .k-green .s.hair.leaf{ stroke:none; fill:var(--kit-green-ink); }
+  /* Shredded strands: the kit's ink outline (white in dark mode) around a solid mid-green fill, the line thinned so the green shows. */
+  .fstyle .k-green .s.hair.leaf{ stroke:var(--ink); stroke-width:.6; fill:var(--kit-green-ink); }
+  .fstyle .shred-b .k-green .s.hair.leaf{ stroke:none; }
   .fstyle .shred-a .k-green .s.hair.leaf{ stroke:var(--kit-green-ink); fill:var(--kit-green); }
-  .fstyle .shred-c .k-green .s.hair.leaf{ stroke:var(--ink); stroke-width:.35; stroke-opacity:.6; fill:var(--kit-green-ink); }
   /* Tomato: the flesh takes the deeper red, the watery seed segments the paler one. */
   .fstyle .k-red :is(.tom-side, .tom){ fill:var(--kit-red); }
   .fstyle .k-red .jelly{ fill:var(--kit-red-top); }
@@ -198,7 +199,7 @@
     <h3 style="font-size:.95rem;margin:26px 0 8px">The coloured layers, light and dark</h3>
     <div id="kit-rows"></div>
     <h3 style="font-size:.95rem;margin:26px 0 8px">Shredded lettuce in colour</h3>
-    <p class="note">The strands are about 2px wide, so the outline is most of what you see. With a green line and a dark fill (first), dark mode shows hollow tubes: pale edges around nothing. Drawn as solid green ribbons with no outline (second), each strand is one mark of colour in both themes, the way the char lines on a grilled patty are solid ink. The third keeps a faint ink hairline around the solid ribbon, for separation where strands cross.</p>
+    <p class="note">The strands are about 2px wide, so the outline is most of what you see. With a green line and a dark fill (first), dark mode shows hollow tubes: pale edges around nothing. Drawn as solid green ribbons with no outline (second), each strand is one mark of colour in both themes, the way the char lines on a grilled patty are solid ink. The third, Bruce's pick (2026-10-14), keeps the kit's ink outline (white in dark mode) around the solid green, thinned to 0.6 so the green still shows.</p>
     <div id="shred-rows"></div>
     <h3 style="font-size:.95rem;margin:26px 0 8px">Three real builds</h3>
     <div id="build-rows"></div>
@@ -208,8 +209,8 @@
     <h2 class="block-title">4 · Recommendation</h2>
     <div class="callout" id="rec-text">
       <p><b>Texture:</b> Swoops. It's the toast photo's move (a long sweep that ends in a ridge where the knife lifted), it still reads at card size, and the tapered ink stroke matches the char lines on grilled patties. Scallops read as fish scales or stacked coins, and Lines gets lost at 150px.</p>
-      <p><b>Placement:</b> C, or B if the opened lid doesn't read. The base carrying its own spread (B) is simply true: the cut face is in view, the spread sits on it with a rim of crumb around it like the toast, and the separate layer goes away. The top bun can't show its underside from this angle, so the choice there is a cheat either way. C opens the lid toward you, the way burger photos are shot, and is the most honest picture of where the mayo is; it also saves the most height. D (your option 3) is a bun-wide disc seen from below, which shows the knife marks on the right face but asks the reader to switch viewpoints mid-stack.</p>
-      <p><b>Colour:</b> Fuller, in-family. Soft is too close to the bun's fill to read at card size. The mint cast of 151° green is noticeable on the leaf but fine on shredded lettuce and pickles, so it doesn't justify breaking the five-hue rule. Shredded lettuce is the one exception to "one ink line": its strands are about 2px wide, too thin for a fill inside an outline, so each is a solid green ribbon with no outline (<code>--kit-green-ink</code>, a mid green in both themes). In dark mode every colour drops to a dark tint, so nothing glows (round 1's full colour turned patties pink in dark mode; these leave the patty alone).</p>
+      <p><b>Placement:</b> C (Bruce's pick, 2026-10-14). The base carrying its own spread (B) is simply true: the cut face is in view, the spread sits on it with a rim of crumb around it like the toast, and the separate layer goes away. The top bun can't show its underside from this angle, so the choice there is a cheat either way. C opens the lid toward you, the way burger photos are shot, and is the most honest picture of where the mayo is; it also saves the most height. D (your option 3) is a bun-wide disc seen from below, which shows the knife marks on the right face but asks the reader to switch viewpoints mid-stack.</p>
+      <p><b>Colour:</b> Fuller, in-family. Soft is too close to the bun's fill to read at card size. The mint cast of 151° green is noticeable on the leaf but fine on shredded lettuce and pickles, so it doesn't justify breaking the five-hue rule. Shredded lettuce is the one exception to "one ink line": its strands are about 2px wide, too thin for a fill inside an outline, so each is a solid mid green (<code>--kit-green-ink</code>) inside a thinner ink outline (0.6), white in dark mode like every other line. In dark mode every colour drops to a dark tint, so nothing glows (round 1's full colour turned patties pink in dark mode; these leave the patty alone).</p>
       <p><b>Syntax, if B or C lands:</b> a modifier rather than new keys, so any spread can sit on any bun: <code>bun-base + mayo</code>, <code>bun-top + sauce-burger</code>. The build pages' stack blocks would then change (a content-agent edit), and Fugu's render hook learns the <code>+</code> (a fugu-agent handoff).</p>
     </div>
   </section>
@@ -1018,7 +1019,7 @@ function render(){
       <div class="grid">${Object.entries(BUILDS).map(([n, txt]) => { const ls = parse(txt).map(l => v === 'v-none' ? {...l, c:''} : l);
         return `<div><div class="cell" style="margin-bottom:6px">${n}</div>${compose(ls, {labels:false, gap:6}).svg}</div>`; }).join('')}</div></div></div>`).join('')}</div>`).join('');
   document.getElementById('shred-rows').innerHTML = `<div class="pair">${['theme-light','theme-dark'].map(t => `<div class="${t}"><div class="v-full"><div class="side-label">${t === 'theme-light' ? 'Light' : 'Dark'}</div>
-    <div class="grid-kit">${[['shred-a','Green line, dark fill'],['shred-b','Solid, no outline'],['shred-c','Solid, faint ink hairline']].map(([c, n]) => `<div class="cell ${c}">${one('lettuce-shredded', 70, 'k-green')}${n}${c === 'shred-b' ? ' (pick)' : ''}</div>`).join('')}</div></div></div>`).join('')}</div>`;
+    <div class="grid-kit">${[['shred-a','Green line, dark fill'],['shred-b','Solid, no outline'],['shred-d','Ink outline, solid green (pick)']].map(([c, n]) => `<div class="cell ${c}">${one('lettuce-shredded', 70, 'k-green')}${n}</div>`).join('')}</div></div></div>`).join('')}</div>`;
 }
 render();
 document.querySelectorAll('[data-tex]').forEach(b => b.addEventListener('click', () => {
