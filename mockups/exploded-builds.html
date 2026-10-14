@@ -246,6 +246,8 @@
   .fstyle .k-red .jelly{ fill:var(--kit-red-top); }
   .fstyle :is(.k-red, .k-km) .swirl-in-light{ stroke:var(--kit-red); }
   .fstyle :is(.k-yellow, .k-km) .swirl-in{ stroke:var(--kit-yellow); }
+  .fstyle .k-yellow .cheese-side{ fill:var(--kit-yellow); }
+  .fstyle .k-yellow .cheese{ fill:var(--kit-yellow-top); }
   .cstyle .bubble{ fill:color-mix(in srgb, var(--f-accent) 50%, var(--f-highlight-soft)); stroke:none; }
 </style>
 </head>
@@ -859,6 +861,8 @@ const L2 = {...L1,
   'mayo'(cx, y, rx){ const o = spread(cx, y, rx, 'bech', 1); return {svg:o.s, h:o.h, edge:o.R*1.06}; },   // the spread's lobes reach past R
   'sauce-burger'(cx, y, rx){ const o = spread(cx, y, rx, 'sauce-pink', 2); return {svg:o.s+relish(cx, o.cy, o.R, o.ry, 23), h:o.h, edge:o.R*1.06}; },
   // A spread on the bun, written `bun-top + mayo` in a stack block (2026-10-14, option C).
+  // American and processed cheese (2026-10-14): the slice in yellow. Mozzarella and cheddar stay `cheese`.
+  'cheese-american'(cx, y, rx){ return L2.cheese(cx, y, rx); },
   'bun-top+mayo'(cx, y, rx){ return bunTopOpen(cx, y, rx, 'bech', 2); },
   'bun-base+mayo'(cx, y, rx){ return bunBaseSpread(cx, y, rx, 'bech', 3); },
   'bun-top+sauce-burger'(cx, y, rx){ return bunTopOpen(cx, y, rx, 'sauce-pink', 4); },
@@ -988,7 +992,7 @@ const L = L2;   // the current kit, read by mockups/export-layers.mjs
 /* ---------- Composer ---------- */
 let KIT = L2;
 // Food colours (2026-10-14, mockups/spreads-and-colour.html): the layers that take one.
-const COLOUR = {'lettuce':'k-green', 'lettuce-shredded':'k-green', 'lettuce-chunks':'k-green', 'pickle':'k-green', 'tomato':'k-red', 'ketchup':'k-red', 'mustard':'k-yellow', 'sauce-ketchup-mustard':'k-km'};
+const COLOUR = {'lettuce':'k-green', 'lettuce-shredded':'k-green', 'lettuce-chunks':'k-green', 'pickle':'k-green', 'tomato':'k-red', 'ketchup':'k-red', 'mustard':'k-yellow', 'cheese-american':'k-yellow', 'sauce-ketchup-mustard':'k-km'};
 function compose(layers, {rx=70, gap=14, labels=true, cx, repeat, padLeft, kit}={}){
   kit = kit || KIT;
   const lx = labels ? (cx ?? rx*1.25) : null;
@@ -1065,7 +1069,7 @@ document.getElementById('ba-icons').innerHTML = [
 ].join('');
 
 function render(){
-const kitKeys = [['bun-top','Bun top'],['lettuce','Lettuce'],['lettuce-shredded','Shredded lettuce'],['lettuce-chunks','Lettuce, torn or chopped'],['tomato','Tomato'],['onion-raw','Raw onion'],['onion-fried','Fried onion'],['onion-minced','Minced onion'],['pickle','Pickles'],['cheese','Cheese slice'],['bacon','Bacon'],['patty-thin','Thin patty'],['patty-thin-grilled','Thin patty, grilled'],['patty-thick','Thick patty'],['patty-thick-grilled','Thick patty, grilled'],['patty-smash','Smashed patty'],['ketchup','Ketchup'],['sauce-ketchup-mustard','Ketchup, mustard'],['sauce-burger','Burger sauce'],['mustard','Mustard'],['bun-top+mayo','Bun top + mayo'],['bun-base+mayo','Bun base + mayo'],['bun-top+sauce-burger','Bun top + burger sauce'],['bun-base+sauce-burger','Bun base + burger sauce'],['bun-base','Bun base'],['bread','Bread slice'],['pasta','Pasta sheet'],['ragu','Ragù'],['bechamel','Béchamel'],['cheese-top','Cheese, baked']];
+const kitKeys = [['bun-top','Bun top'],['lettuce','Lettuce'],['lettuce-shredded','Shredded lettuce'],['lettuce-chunks','Lettuce, torn or chopped'],['tomato','Tomato'],['onion-raw','Raw onion'],['onion-fried','Fried onion'],['onion-minced','Minced onion'],['pickle','Pickles'],['cheese','Cheese slice'],['cheese-american','American cheese'],['bacon','Bacon'],['patty-thin','Thin patty'],['patty-thin-grilled','Thin patty, grilled'],['patty-thick','Thick patty'],['patty-thick-grilled','Thick patty, grilled'],['patty-smash','Smashed patty'],['ketchup','Ketchup'],['sauce-ketchup-mustard','Ketchup, mustard'],['sauce-burger','Burger sauce'],['mustard','Mustard'],['bun-top+mayo','Bun top + mayo'],['bun-base+mayo','Bun base + mayo'],['bun-top+sauce-burger','Bun top + burger sauce'],['bun-base+sauce-burger','Bun base + burger sauce'],['bun-base','Bun base'],['bread','Bread slice'],['pasta','Pasta sheet'],['ragu','Ragù'],['bechamel','Béchamel'],['cheese-top','Cheese, baked']];
 document.getElementById('kit-grid').innerHTML = kitKeys.map(([k, n]) => `<div class="kit-cell">${compose([{k}], {rx:52, gap:0, labels:false})}<span class="panel-label" style="font-size:.8rem;margin:0">${n}</span><span class="kit-key">${k}</span></div>`).join('');
 
 document.getElementById('build-grid').innerHTML = Object.values(BUILDS).map(b => `<div class="panel"><div class="panel-label">${b.name}</div><div class="panel-sub">${b.profile}</div>${compose(b.layers, {rx:62, gap:14})}</div>`).join('');
