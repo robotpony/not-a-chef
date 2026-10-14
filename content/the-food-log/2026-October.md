@@ -9,6 +9,7 @@ Early October is mostly trip notes: a tabbouleh worth learning, a subtly sweet r
 Essay topic: 
 
 - toasting methods → dry, dry/smooth, oil, whole vs. surface
+- add cheesey pasta (one pan) build or recipe #todo
 
 On the list:
 
