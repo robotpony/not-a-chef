@@ -15,7 +15,7 @@ The story of how it got here is in [[The quest for the perfect burger]].
 
 ## Picks
 
-Sharp, sour, and crunchy over a loose, salty patty.
+Sharp, sour, and crunchy veg sitting on a loose, seasoned patty.
 
 - **Forming burger patties:** One thin patty, 140 g, not mixed
 - **Seasoning burgers:** Salt and cracked black pepper, after cooking

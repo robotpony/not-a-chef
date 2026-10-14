@@ -1,15 +1,19 @@
 ---
 title: Mozza burger sauce
-tags: [sauces, quick, vegetarian, burgers]
+tags:
+  - sauces
+  - quick
+  - vegetarian
+  - burgers
 source: original
 date: 2026-10-12
 servings: makes about 200 ml (¾ cup)
 prep_time: 5 min
 total_time: 5 min
 cuisine: Canadian
-draft: true
-working_on: "First draft, from Bruce's ingredient list."
+draft: false
 ---
+The classic Canadian A&W Mozza burger has a sweet sauce.
 
 ## Mechanic
 

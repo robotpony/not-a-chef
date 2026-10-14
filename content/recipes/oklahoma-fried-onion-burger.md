@@ -1,6 +1,12 @@
 ---
 title: Oklahoma fried onion burger
-tags: [mains, burgers, american, onion, weeknight, quick]
+tags:
+  - mains
+  - burgers
+  - american
+  - onion
+  - weeknight
+  - quick
 source: synthesized
 date: 2026-10-11
 servings: 4
@@ -8,10 +14,9 @@ prep_time: 10 min
 cook_time: 10 min
 total_time: 20 min
 cuisine: American
-draft: true
-working_on: "Not cooked yet. Check the onion ratio and the steam."
+draft: false
 ---
-
+The fried onion burger is a classic diner burger; sweet, savoury, and simple.
 ## Mechanic
 
 The onion is smashed into the patty, not cooked beside it. A ball of beef goes on a hot griddle under a pile of paper-thin onion, and a heavy press drives the onion into the meat. The beef browns underneath while the onion steams in its juices on top; after the flip, the onion fries in the beef fat until it's sweet and browned at the edges. Use **about 2 parts beef to 1 part onion by weight**: less onion and it's a smash burger with a garnish, more and the patty won't hold together. The onion has to be sliced paper thin, or it won't cook through before the beef is done.
@@ -24,6 +29,8 @@ The onion is smashed into the patty, not cooked beside it. A ball of beef goes o
 - 4 slices American cheese
 - 4 soft hamburger buns or potato rolls, not toasted
 - Yellow mustard and dill pickle slices, to serve
+
+## Method
 
 Divide the beef into 4 loose balls, about 110 g each. Keep them cold until the griddle is ready.
 
@@ -54,7 +61,4 @@ Two 75 g patties, one onion pile each, cheese on one, stacked on one bun. More c
 - Salting the sliced onion and squeezing it in a towel takes out water, so it browns faster and doesn't steam the crust off the beef.
 - A burger press, a heavy pot, or a second spatula stacked on the first all work. Thin spatulas bend.
 - Don't oil the griddle. The beef renders enough fat for the onion.
-
-## Research
-
 - [Fried onion burger](https://en.wikipedia.org/wiki/Fried_onion_burger) on Wikipedia

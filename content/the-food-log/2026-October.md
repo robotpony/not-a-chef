@@ -2,9 +2,8 @@
 title: October 2026
 date: 2026-10-01
 ---
-Early October is mostly trip notes: a tabbouleh worth learning, a subtly sweet red cabbage, an onion jam on a double smash burger, and a German dinner of roulade and pork tenderloin with apple.   
+Early October is mostly trip notes: a tabbouleh worth learning, a subtly sweet red cabbage, an onion jam on a double smash burger, and a German dinner of roulade and pork tenderloin with apple.  Plus all of the Hawaii treats we have grown to love.
 
-Next: Leaf things, editing posts, version in about
 ## Week of Friday, October 16th
 
 Essay topic: 
@@ -16,6 +15,10 @@ On the list:
 - oh-no with cocunut cream cerveche
 - bananas (Apple bananas, ice cream bananas) → delicious
 - https://www.pukadog.com/ → the relishes were great, but the bun + toasting technique were the real MVP.
+- https://www.pukadog.com/ → sauces, bun
+- Real pineapple is amazing, ditto for all of the fruit we had.
+- Turkey dinner notes: it was surprisingly good for a scaled dinner
+- Tiki dinner was amazing!
 
 Food memories:
 

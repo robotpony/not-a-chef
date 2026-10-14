@@ -54,4 +54,3 @@ On toasted buns with the usual burger toppings. Toast the cut sides in a dry non
 ## Notes
 
 - Regular Worcestershire contains anchovy; use a vegan brand.
-- When Veg patties is published, add: "This is one build of the Veg patties pattern; start there for a quicker weeknight patty from pantry staples." #todo
