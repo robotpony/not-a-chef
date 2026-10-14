@@ -29,7 +29,7 @@ Once you start paying attention, the checklist is short:
 
 ## How I build mine
 
-The burger I make now is a 140-gram thin patty, griddled, seasoned after cooking, double sour pickles, built deluxe style: lettuce, tomato, onion, pickle, ketchup, mustard. It's sublime, and every part of it is there because I tested the alternative and it lost.
+The burger I make now is a 140-gram thin patty, griddled, seasoned after cooking, double sour pickles, built deluxe style: lettuce, tomato, onion, pickle, ketchup, mustard. It's sublime, and every part of it is there because I tested the alternative and it lost. The [[Bruce burger]] build has the picks and the stack.
 
 "Deluxe" is [[White Spot burger]] language: lettuce and tomato make it deluxe, and that recipe is where a lot of this technique actually comes from, down to the patty weight and the seasoning timing below. I keep ketchup and mustard separate rather than blending them, but [[Bruce's burger sauce]] and the [[In-N-Out burger spread]] are both good arguments for combining them into one sauce instead.
 

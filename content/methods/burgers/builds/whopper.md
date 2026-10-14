@@ -8,7 +8,7 @@ tags:
 era: 1957
 description: "The Whopper: a wide, flame-grilled patty under cold lettuce, tomato, onion, and pickles, with ketchup, and mayo on both buns."
 ---
-The big fast-food burger. One wide, flame-grilled patty, and above it everything cold: pickles, raw onion, ketchup, tomato, and lettuce, with mayo on both halves of a toasted sesame bun. The char from the grill is what sets it apart from the griddled burgers. I made these for about five years as a teen, and they're the base of the burger I make at home today (see [[The quest for the perfect burger]]).
+The big fast-food burger. One wide, flame-grilled patty, and above it everything cold: pickles, raw onion, ketchup, tomato, and lettuce, with mayo on both halves of a toasted sesame bun. The char from the grill is what sets it apart from the griddled burgers. I made these for about five years as a teen, and they're the base of the burger I make at home today, the [[Bruce burger]].
 
 ## Picks
 
