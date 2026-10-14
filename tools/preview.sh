@@ -6,6 +6,20 @@ cd "$(dirname "$0")/.."
 
 URL="http://localhost:1313/"
 
+# Restart, don't reuse: a hugo server left running from an earlier session
+# keeps serving stale theme templates after a Fugu submodule bump (it did on
+# 2026-10-14). Stop any hugo already listening on the port, then start fresh.
+for pid in $(lsof -ti tcp:1313 -sTCP:LISTEN 2>/dev/null || true); do
+  if [ "$(ps -o comm= -p "$pid" 2>/dev/null)" = "hugo" ]; then
+    echo "Stopping the hugo server already on :1313 (pid $pid)."
+    kill "$pid"
+  fi
+done
+for _ in $(seq 1 20); do
+  lsof -ti tcp:1313 -sTCP:LISTEN >/dev/null 2>&1 || break
+  sleep 0.25
+done
+
 open_browser() {
   # Wait for the server to actually answer before opening a tab on it.
   # Opens in Chrome specifically (not the system default browser) — the

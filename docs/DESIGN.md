@@ -173,6 +173,7 @@ Starts Hugo dev server locally.
 /preview
 ```
 
+- Stops any hugo server already on port 1313, so a stale one from an earlier session never serves old templates
 - Runs `hugo server -D` (includes drafts)
 - Reports the local URL
 
