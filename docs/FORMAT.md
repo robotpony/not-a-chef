@@ -47,7 +47,7 @@ Use wiki links to point at other pages, as an ingredient or as related reading:
 - 1 batch [[Basic pie crust]], blind-baked
 ```
 
-Wiki links resolve by matching `title`. They work natively in Obsidian; in Hugo a render hook resolves them (`themes/fugu/layouts/_default/_markup/render-link.html`), and a `[[Term]]` with no page of its own links to its glossary entry.
+Wiki links resolve by matching `title`, ignoring case and punctuation (`[[rich veg mushroom stock]]` finds "Rich veg/mushroom stock"). Filenames are kebab-case, so Obsidian can't match a title on its own: the warped-command plugin's "Resolve wiki links by page title" setting (Settings → Posts, on by default in a Hugo vault) does it, with the same rule. In Hugo a render hook resolves them (`themes/fugu/layouts/_default/_markup/render-link.html`), and a `[[Term]]` with no page of its own links to its glossary entry; those glossary-heading links resolve on the site only. Titles MUST be unique: with a duplicate, Obsidian and Hugo can pick different pages. Obsidian's link autocomplete inserts filenames, so type `[[Title]]` by hand.
 
 ### Photos
 
