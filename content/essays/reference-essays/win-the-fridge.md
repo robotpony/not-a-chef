@@ -18,7 +18,7 @@ I used to treat "don't waste food" as a discipline I kept failing at: a vague vi
 Two habits do most of the work:
 
 - **Shop against what's already there.** Before planning a week of meals, look at what's already open, cut, or about to turn; that's the starting ingredient list, not an afterthought bolted onto a shopping list built from scratch.
-- **Build a step that absorbs scraps.** A soup, a stir-fry, a stock, a frittata: something in the week's rotation that's genuinely improved by throwing in "whatever's around," not just tolerant of it. [[Lazy tomato soup]] is built exactly this way: the base recipe is fixed, but the last handful of vegetables in the method is a deliberate gap for whatever needs using.
+- **Build a step that absorbs scraps.** A soup, a stir-fry, a stock, a frittata: something in the week's rotation that's genuinely improved by throwing in "whatever's around," not just tolerant of it. [[Lazy tomato soup]] is built exactly this way: the base recipe is fixed, but the last handful of vegetables in the method is a deliberate gap for whatever needs using. [[Pasta sauces]] work the same way: half a container of sauce from the freezer, or the last of the cherry tomatoes and a few cloves of garlic, becomes dinner in the time the pasta takes.
 
 Both are things you set up once, not things you have to remember to do every single day. That's the engineering move: the unglamorous fix isn't more discipline, it's a system that makes the wasteful path the harder one.
 
