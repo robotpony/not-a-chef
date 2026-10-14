@@ -1,43 +1,43 @@
 ---
 title: Cherry tomato and garlic pasta
 date: 2026-10-12
-draft: true
-working_on: "Expanded from my notes; check it against the next cook."
-tags: [method, pasta]
-description: "Long pasta finished with whole cherry tomatoes burst in garlic oil, with basil, Parmesan, and good oil off the heat."
+draft: false
+tags:
+  - method
+  - pasta
+description: "A reverse sauce: long pasta, whole cherry tomatoes, and garlic cooked together in oily water until the tomatoes burst and the water boils off, with basil, Parmesan, and good oil off the heat."
 ---
 
-The fresh version: nothing made ahead, just cherry tomatoes, garlic, and oil cooked down in the pan before the pasta goes in. It's also the best way I know to use up the last of the cherry tomatoes.
+The fresh version: nothing made ahead, just cherry tomatoes, garlic, and oil cooked in the pan with the pasta. It's also the best way I know to use up the last of the cherry tomatoes.
 
 ## Picks
 
 Bright, sweet, and garlicky, loose and oily.
 
 - **Cooking pasta in the pan:** Long pasta, spaghetti or linguine
-- **Pasta sauces:** Built fresh: whole cherry tomatoes burst in olive oil with sliced garlic, chili flakes, and a spoonful of tomato paste
+- **Pasta sauces:** Built fresh, in the pasta water: whole cherry tomatoes and sliced garlic cooked with the pasta in oily water, chili flakes, and a spoonful of tomato paste at the end
 - **Finishing pasta in the sauce:** Loose
 - **Off the heat:** Oil and herbs: torn basil, Parmesan, a drizzle of good oil
 
+This is one of the few cases I recommend adding oil to the pasta water. The water boils off quickly, and the remaining contents fry gently in the oil.
+
 ## Why these picks
 
-- **Sauce first, in the same pan.** Garlic wants gentle heat and the tomatoes want high heat, and neither suits a pan of boiling pasta. Cooking the sauce first and scraping it into a bowl keeps one pan and keeps the garlic from burning.
-- **Whole tomatoes, burst.** They cook until the skins split, then half get pressed, so their juice becomes the sauce and the rest stay as sweet, whole bites.
-- **Tomato paste.** Fresh tomatoes don't get deep in 10 minutes; a spoonful of paste, darkened in the oil, adds the cooked-tomato depth.
-- **Long pasta, loose finish.** An oily sauce slides off short pasta; long strands catch it. Stopped while still saucy, it tightens on the plate instead of in the pan.
-- **Oil and basil off the heat.** Good oil loses its flavour over a flame, and basil goes dark.
+- **A reverse sauce.** Garlic wants gentle heat and the tomatoes want high heat. It turns out that steaming the tomatoes hastens bursting them, and the garlic survives the gentle heat of the water.
+- **Whole tomatoes, burst.** They cook until the skins split, then half get pressed, so their juice becomes the sauce and the rest stay as sweet, whole bites. Add a lid to speed this up, then remove it so the water evaporates.
+- **Tomato paste.** Fresh tomatoes don't get deep in 10 minutes; a spoonful of paste, darkened in the oil once the water is nearly gone, adds the cooked-tomato depth.
+- **Extra virgin olive oil and basil off the heat.** Good oil loses its flavour over a flame, and basil goes dark.
 
 ## How it fails
 
-- **Bitter:** the garlic browned. Start it in cool oil over medium-low and stop at pale gold.
-- **Oily, separated sauce:** not enough starch, or not tossed hard enough. Toss over high heat with a splash of the pasta water until it turns glossy.
+- **Oily, separated sauce:** not enough starch, or not tossed hard enough. Toss over high heat with a splash of water until it turns glossy.
 - **Watery:** too much water left with the pasta, or the tomatoes weren't cooked down. Keep tossing, then lean on the Parmesan.
+- **Bitter:** the garlic browned once the water was gone. Take it off the heat as soon as the sauce turns glossy.
 
 ## Variations
 
-- **Mushroom aglio e olio:** no tomatoes. Dried mushrooms soaked, fried with the garlic, and their soaking liquid used as part of the pasta water; olive oil drizzled in at the end to emulsify. This one stays in the pan the whole time.
+- **Mushroom aglio e olio:** no tomatoes. Dried mushrooms soaked, added with the garlic, and their soaking liquid used as part of the pasta water; olive oil drizzled in at the end to emulsify.
 - **Win the fridge:** mushrooms, thyme, and lemon alongside the last of the small tomatoes (see [[Win the fridge]]).
-
-Both are written up under the recipe's Variations.
 
 ## Recipes
 

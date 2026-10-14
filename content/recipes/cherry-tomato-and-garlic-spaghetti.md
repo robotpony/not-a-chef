@@ -9,38 +9,39 @@ cook_time: 20 min
 total_time: 25 min
 cuisine: Italian
 draft: true
-working_on: "Quantities from how I make it; check them against the next cook."
+working_on: "Quantities and timings from how I make it; check them against the next cook."
 ---
 
-Cherry tomatoes burst in garlic oil, then spaghetti cooked in the same pan in just enough water to cover. It's the [[Cherry tomato and garlic pasta]] build of one-pan pasta.
+Spaghetti, cherry tomatoes, and garlic cooked together in a little oily water, so the sauce makes itself as the water boils off. It's the [[Cherry tomato and garlic pasta]] build of one-pan pasta.
 
 ## Mechanic
 
-**The sauce cooks first, the pasta second, in the same pan.** The garlic needs gentle heat and the tomatoes need high heat to burst, neither of which suits boiling pasta, so the sauce waits in a bowl while the pasta cooks in a little salted water. That water ends up starchy, and it pulls the oil and tomato juice into a loose, glossy sauce when the two meet again.
+**Everything goes in the pan at once: a reverse sauce.** Under a lid, the water steams the tomatoes until they burst, while the garlic poaches gently and can't brown. With the lid off, the water boils down, turns starchy, and leaves the pasta, tomatoes, and garlic frying in the oil, and the starch pulls the oil and tomato juice into a loose, glossy sauce.
 
 ## Ingredients
 
-- 60 ml (¼ cup) olive oil, plus more to finish
+- 250 g spaghetti or linguine
+- 500 g (about 3 cups) cherry tomatoes, whole
 - 4 garlic cloves, sliced thin
 - ½ tsp chili flakes
-- 1 tbsp tomato paste
-- 500 g (about 3 cups) cherry tomatoes, whole
+- 45 ml (3 tbsp) olive oil
 - Salt
-- 250 g spaghetti or linguine
+- 1 tbsp tomato paste
 - A handful of basil leaves, torn
 - 30 g (½ cup) Parmesan, finely grated
+- Extra virgin olive oil, to finish
 
 ## Method
 
-Put the oil and garlic in a wide pan, about 33 cm (13 in), and set it over medium-low. Cook until the garlic sizzles and just turns pale gold at the edges, 2–3 minutes. Stir in the chili flakes and tomato paste and cook until the paste darkens, about 1 minute.
+Lay the pasta flat in a wide pan, about 33 cm (13 in). Scatter the tomatoes, garlic, and chili flakes over it, add the olive oil, and pour in salted water just to cover the pasta.
 
-Add the tomatoes and a pinch of salt and turn the heat to medium-high. Cook, shaking the pan now and then, until the skins split and the tomatoes slump, 6–8 minutes. Press about half of them with the back of a spoon to release their juice. Scrape the sauce into a bowl.
+Cover and bring to a boil over high heat. Cook, stirring once or twice, until most of the tomato skins split, about 5 minutes.
 
-Lay the pasta flat in the same pan and add salted water just to cover it. Bring it to a boil and cook, stirring regularly, until it's 2–3 minutes from the package time. Ladle some water out if it isn't reducing; add a splash if it runs dry.
+Uncover and keep boiling, stirring regularly so the pasta doesn't stick, until the water is nearly gone and the pasta is 2–3 minutes from the package time. Add a splash of water if it runs dry first; ladle some out if it isn't reducing.
 
-Tip the sauce back in and toss over high heat until the sauce turns glossy and coats the pasta but is still loose, 2–3 minutes.
+Stir in the tomato paste and press about half the tomatoes with the back of a spoon. Toss over high heat as the last of the water cooks off and the pasta fries in the oil, until the sauce turns glossy and coats the pasta but is still loose, 2–3 minutes.
 
-Take the pan off the heat. Stir in the basil, half the Parmesan, and a drizzle of olive oil.
+Take the pan off the heat. Stir in the basil, half the Parmesan, and a drizzle of extra virgin olive oil.
 
 ## To serve
 
@@ -50,13 +51,13 @@ Straight away, with the rest of the Parmesan on top.
 
 ### Mushroom aglio e olio
 
-No tomatoes; savoury and oily. Soak 15 g (½ oz) dried mushrooms in 250 ml (1 cup) hot water for 15 minutes, chop them roughly, and fry them in the oil until browned before the garlic goes in. Skip the tomato paste and tomatoes, and leave the mushrooms and garlic in the pan. Add the pasta with the mushroom soaking liquid as part of the water, topping up from the kettle until the pasta is close. As the water boils off, season with salt, pepper, and more chili flakes, and drizzle in olive oil as you stir so it emulsifies with the starchy water.
+No tomatoes; savoury and oily. Soak 15 g (½ oz) dried mushrooms in 250 ml (1 cup) hot water for 15 minutes, then chop them roughly. Skip the tomatoes and tomato paste, add the mushrooms with the garlic, and use the soaking liquid as part of the water, topping up from the kettle until the pasta is close. As the water boils off, season with salt, pepper, and more chili flakes, and drizzle in olive oil as you stir so it emulsifies with the starchy water.
 
 ### Win the fridge
 
-Uses up the last of the salad tomatoes and whatever else needs eating (see [[Win the fridge]]). Fry a handful of sliced mushrooms until browned before the garlic, and add a few sprigs of thyme with the tomatoes. Off the heat, finish with lemon zest and a squeeze of juice along with the Parmesan.
+Uses up the last of the salad tomatoes and whatever else needs eating (see [[Win the fridge]]). Add a handful of sliced mushrooms and a few sprigs of thyme with the tomatoes. Off the heat, finish with lemon zest and a squeeze of juice along with the Parmesan.
 
 ## Notes
 
-- Start the garlic in cool oil. Browned garlic turns bitter, and it keeps cooking once the tomato paste goes in.
+- The garlic can't brown while there's water in the pan. Once the water is gone it can, so take the pan off the heat as soon as the sauce turns glossy.
 - The sauce should look a little too loose in the pan; it tightens on the plate.
