@@ -224,6 +224,7 @@
   .fstyle .seed2{ fill:var(--surface); stroke:var(--ink); stroke-width:.85; }
   .fstyle .jelly{ fill:var(--accent-soft); stroke:var(--ink); stroke-width:.9; stroke-linejoin:round; }
   .fstyle .s.thin{ stroke-width:1.2; }
+  .fstyle .s.hair{ stroke-width:.9; }
   .fstyle .onion{ fill:var(--surface); }
   .fstyle .onion-side{ fill:var(--accent-soft); }
   .fstyle .strand-out, .fstyle .swirl-out{ fill:none; stroke:var(--ink); stroke-width:3.4; stroke-linecap:round; stroke-linejoin:round; }
@@ -800,30 +801,51 @@ const L2 = {...L1,
     return {svg:`<ellipse class="fried-pad" cx="${f(cx)}" cy="${f(cy)}" rx="${f(R)}" ry="${f(ry)}"/><path class="strand-out" d="${d}"/><path class="strand-in" d="${d}"/>` + stipple(cx, cy, R, ry, 26, 31, {maxq:.8}), h:2*ry+5, edge:R};
   },
   'lettuce-shredded'(cx, y, rx){
-    // Shredded iceberg (2026-10-12): a loose heap of thin ribbons on a soft pad, higher in the
-    // middle, back to front so nearer shreds lie over farther ones. Each ribbon gets a fine vein.
-    const R = rx*1.02, ry = R*K, heap = 9, cy = y+ry+heap+5, r = rng(61);
-    const pad = []; for (let i=0;i<=96;i++){ const t = i/96*Math.PI*2, q = .94*(1+.05*Math.sin(7*t+.8)+.025*Math.sin(17*t)); pad.push(EP(cx, cy+2, R, ry, t, q)); }
-    let s = `<path class="s thin leaf-back" d="${pts2d(pad)}Z"/>`;
-    const shreds = [];
-    for (let i=0;i<58;i++){
-      const a = r()*Math.PI*2, q = Math.sqrt(r())*.88, p = EP(cx, cy, R, ry, a, q);
-      // Shreds lie flat on the heap: mostly side to side, foreshortened front to back.
-      shreds.push({x:p[0], y:p[1]-heap*(1-q*q), l:16+r()*14, o:(r()-.5)*Math.PI*.8, w:3.2+r()*1.6, bend:(r()-.5)*7});
-    }
-    shreds.sort((a, b) => a.y-b.y);
-    let veins = '';
-    for (const h of shreds){
-      const ux = Math.cos(h.o), uy = Math.sin(h.o)*K, ul = Math.hypot(ux, uy), dx = ux/ul*h.l/2, dy = uy/ul*h.l/2, nx = -dy/(h.l/2), ny = dx/(h.l/2);
-      const mid = [], N = 8;
-      for (let i=0;i<=N;i++){ const t = i/N*2-1, b = (1-t*t)*h.bend; mid.push([h.x+dx*t+nx*b, h.y+dy*t+ny*b]); }
-      const half = i => h.w/2*(i === 0 || i === N ? .35 : 1);
-      const side1 = mid.map((m, i) => [m[0]+nx*half(i), m[1]+ny*half(i)]), side2 = mid.map((m, i) => [m[0]-nx*half(i), m[1]-ny*half(i)]).reverse();
-      s += `<path class="s thin leaf" d="${pts2d([...side1, ...side2])}Z"/>`;
-      if (h.l > 20) veins += pts2d(mid.slice(2, N-1));
-    }
-    s += `<path class="tx-fine" d="${veins}"/>`;
-    return {svg:s, h:cy+ry*1.02+4-y, edge:R*1.04};   // the heap's shreds reach past the pad (fugu-agent's measure, 73.5)
+    // Shredded iceberg, redrawn 2026-10-14 (mockups/shredded-lettuce.html, option G): no pad or
+    // mound. About 110 thin, square-cut ribbons that curl, packed into a low lumpy pile; the pile's
+    // shape comes from the strands alone. They run along its slopes, back to front, with loops
+    // arching over the top and strays spilling sideways at the base. Replaces v1's fat crescents.
+    const R = rx, ry = R*K, H = 18, cy = y+H+6, r = rng(11), w = 2.0, LEN = 28, BEND = 3.2;
+    const moundY = x => H*Math.max(0, 1-Math.abs(x/R)**2.4)**.75;
+    let reach = 0;
+    const ribbon = (mid, wd, twist=-1) => {
+      const N = mid.length-1, Lp = [], Rp = [];
+      for (let i=0;i<=N;i++){
+        const a = mid[Math.max(0, i-1)], b = mid[Math.min(N, i+1)], dx = b[0]-a[0], dy = b[1]-a[1], l = Math.hypot(dx, dy) || 1;
+        const nx = -dy/l, ny = dx/l, t = i/N, k = twist < 0 ? 1 : .2+.8*Math.abs(Math.cos((t-twist)*Math.PI*1.1));
+        Lp.push([mid[i][0]+nx*wd/2*k, mid[i][1]+ny*wd/2*k]); Rp.push([mid[i][0]-nx*wd/2*k, mid[i][1]-ny*wd/2*k]);
+        reach = Math.max(reach, mid[i][0]-cx+wd/2);
+      }
+      return `<path class="s hair leaf" d="${pts2d([...Lp, ...Rp.reverse()])}Z"/>`;
+    };
+    // A strand inside the pile: starts anywhere in it and runs along the local slope, with a bend.
+    const strand = (len, bend) => {
+      const Rs = R*.95; let px, py, ok = false;
+      for (let tries=0; !ok && tries<50; tries++){ px = (r()*2-1)*Rs*.95; const top = cy-moundY(px), bot = cy+Math.sqrt(Math.max(0, 1-(px/Rs)**2))*ry; py = top+(bot-top)*r(); ok = bot > top+2; }
+      const slope = (moundY(px+1)-moundY(px-1))/2, depth = Math.min(1, (py-(cy-moundY(px)))/(H+ry)*1.6);
+      let th = Math.atan2(-slope*.85*(1-depth*.7), 1)+(r()-.5)*.6;
+      if (r() < .5) th += Math.PI;
+      const N = 12, m = []; let x = px-Math.cos(th)*len/2, yy = py-Math.sin(th)*len/2;
+      for (let i=0;i<=N;i++){ const a = th+bend*(i/N-.5); if (i){ x += Math.cos(a)*len/N; yy += Math.sin(a)*len/N; } m.push([cx+x, yy]); }
+      m.y = py; return m;
+    };
+    const stray = front => {
+      const a = front ? .25+r()*(Math.PI-.5) : Math.PI+.2+r()*(Math.PI-.4), side = Math.cos(a), len = 10+r()*12;
+      const th = (side >= 0 ? 0 : Math.PI)+(side >= 0 ? 1 : -1)*(front ? .25 : -.15)+(r()-.5)*.5, bend = (r()-.5)*1.4, m = [];
+      let x = cx+Math.cos(a)*R*.9, yy = cy+Math.sin(a)*ry*.8;
+      for (let k=0;k<=8;k++){ const aa = th+bend*(k/8-.5); if (k){ x += Math.cos(aa)*len/8; yy += Math.sin(aa)*len/8; } m.push([x, yy]); }
+      return ribbon(m, w*(.8+r()*.4));
+    };
+    let s = '';
+    for (let i=0;i<2;i++) s += stray(false);
+    const T = []; for (let i=0;i<110;i++) T.push({m: strand(LEN*(.6+r()*.8), (r()-.5)*BEND), w:w*(.75+r()*.5), tw: r() < .3 ? .3+r()*.4 : -1});
+    T.sort((a, b) => a.m.y-b.m.y);
+    for (const h of T) s += ribbon(h.m, h.w, h.tw);
+    for (let i=0;i<6;i++){ const x0 = (r()*1.4-.7)*R, span = 9+r()*10, up = 2+r()*2.5, m = [];
+      for (let k=0;k<=12;k++){ const t = k/12, x = x0+span*t; m.push([cx+x, cy-moundY(x)+3-Math.sin(t*Math.PI)*(up+3)]); }
+      s += ribbon(m, w*.9); }
+    for (let i=0;i<6;i++) s += stray(true);
+    return {svg:s, h:cy+ry+8-y, edge:Math.round(reach*10)/10};
   },
   'lettuce-chunks'(cx, y, rx){
     // Torn or chopped iceberg (2026-10-12): the shredded heap's pad and mound, but fewer, wider
@@ -895,7 +917,7 @@ function compose(layers, {rx=70, gap=14, labels=true, cx, repeat, padLeft, kit}=
   const labelX = cx + rx*1.35 + 16;
   let y = 8, placed = [];
   layers.forEach((ly, i) => {
-    const o = kit[ly.k](cx, y, rx);
+    const o = (kit[ly.k] || L2[ly.k])(cx, y, rx);   // round 3's kit predates some layers; draw those from round 4
     placed.push({...ly, y, o});
     y += o.h + gap;
   });

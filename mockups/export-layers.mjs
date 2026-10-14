@@ -62,7 +62,7 @@ function attrs(cls){
   const c = cls.split(/\s+/);
   if (c.some(k => hidden.includes(k))) return null;
   if (c[0] === 's'){
-    const w = a => c.includes('thin') ? a.replace(S(1.8), S(1.2)) : a;
+    const w = a => c.includes('thin') ? a.replace(S(1.8), S(1.2)) : c.includes('hair') ? a.replace(S(1.8), S(.9)) : a;
     if (c.includes('leaf-back')) return style.body;
     if (c.includes('meat-top')) return w(style.sear);
     if (bodies.some(k => c.includes(k))) return w(style.body);
