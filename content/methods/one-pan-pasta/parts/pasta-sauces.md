@@ -6,6 +6,7 @@ tags:
   - method
   - pasta
   - sauces
+  - win-the-fridge
 weight: 2
 description: "Brought in from a base you made ahead, built fresh before the pasta goes in, or finished with cream: a meat sauce, a marinara, fresh tomatoes and garlic."
 ---
