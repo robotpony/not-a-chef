@@ -30,7 +30,7 @@ I'm adding a section to explain how anyone can develop recipes, by showing metho
 - [x] Settle the eight open choices in the methods pages mock (`mockups/methods-pages.html` §7, each card shows the proposal and its alternative) #todone @2026-10-10
 - [x] Start a Fugu session to take phase 2 (concept pages, blueprint and build pages, the `stack` render hook), and push its four queued commits #todone @2026-10-10
 - [x] Review the burger method drafts (6 parts, 3 builds) for voice and accuracy #todone @2026-10-10
-- [ ] Gather reference examples for the layer drawings that read least well (bacon, pickles, bread, etc.), for the phase 6 redraw
+- [x] Gather reference examples for the layer drawings that read least well (bacon, pickles, bread, etc.), for the phase 6 redraw #todone @2026-10-14
 
 
 ## Week of Friday, October 9th

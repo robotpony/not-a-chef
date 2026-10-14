@@ -18,6 +18,3 @@ Bright, sweet, and garlicky, loose and oily.
 - **Finishing pasta in the sauce:** Loose
 - **Off the heat:** Basil, Parmesan, a drizzle of good oil
 
-## Recipes
-
-- No recipe yet. #todo

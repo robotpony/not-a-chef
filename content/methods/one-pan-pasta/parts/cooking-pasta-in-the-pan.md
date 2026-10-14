@@ -17,8 +17,6 @@ The pasta cooks in the pan it'll be sauced in, in just enough salted water to co
 - **Salt.** Salt the water as you would a pot. It reduces as it cooks, so go a little lighter.
 - **Timing.** The pasta comes out 2–3 minutes short of the package time, because it finishes in the sauce (see [[Finishing pasta in the sauce]]).
 
-- Water per 100 g of pasta, and the pan size, from how I make it. #todo
-
 ## Options
 
 | Option                     | Pick it when                     | Changes                                              |
