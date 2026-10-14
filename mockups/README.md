@@ -49,14 +49,14 @@ in a browser — no build step.
   the accent colour (`STYLE.md` Method chip).
 
 - **`methods-pages.html`**: proposal (2026-10-10) for the methods concept
-  pages (`docs/METHODS.md`, PLAN.md Methods phase 2): the methods list at
+  pages (`docs/METHODS.md`, PLAN.md history, Methods phase 2): the methods list at
   `/tags/method/`, a blueprint's page with its parts in order, a method
   page's chips and part navigation, method cards, and what principle,
   status, and method share. Builds added 2026-10-10: build cards and a
   picks comparison on the blueprint page, options as pills, a build page,
   and recipes grouped by build. Queued for Fugu; its §7 choices are open.
 
-- **`methods-top-level.html`**: proposal (2026-10-11, PLAN.md Phase 7) for
+- **`methods-top-level.html`**: proposal (2026-10-11, PLAN.md history, Methods phase 7) for
   methods as a top-level section: the folder and URL move to
   `content/methods/` (before, now, proposed), the redirect question, the
   six-item nav at desktop, 700px and phone widths (it overflows at 700px),
@@ -144,7 +144,7 @@ in a browser — no build step.
   detail pass in strokes (striped bacon, crinkle-cut pickles, a mustard
   zigzag, tomato chambers, a crust rim and open crumb on cut bread).
   Accepted as v1 2026-10-10 (`STYLE.md` Exploded build diagram); a later
-  pass refines the drawings from reference examples (PLAN.md, phase 6).
+  pass refines the drawings from reference examples (PLAN.md history, Methods phase 6).
   2026-10-12: a `lettuce-shredded` layer (a heap of flat ribbons), and the
   leaf lettuce, mayo, and burger sauce report their real reach (`data-edge`)
   so leader dots clear them.

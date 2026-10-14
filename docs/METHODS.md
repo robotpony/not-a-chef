@@ -146,7 +146,7 @@ The blueprint page shows a **lineage timeline**: builds placed by `era`, so the 
 
 Why not nested blueprints ("burgers → deluxe")? Builds share nearly every part and differ only in their picks; a child blueprint would repeat all the parts. Clusters of builds (rich, fresh, sweet) are builds grouped by profile, not a separate level; add one only if a blueprint ever has more builds than its page can show.
 
-The blueprint page shows the definition, the parts in order (the methods list's compact block; each part's options are on its own page), the lineage timeline, and the builds as cards (`mockups/methods-pages.html`). The methods list shows each blueprint's parts and only the names of its builds, so the cards are on one page, not two (decided 2026-10-12, `mockups/methods-list-and-blueprint.html`). A table comparing builds part by part is set aside for now (PLAN.md, Methods phase 8): it would need the picks as data, parsed from each build's `## Picks` list.
+The blueprint page shows the definition, the parts in order (the methods list's compact block; each part's options are on its own page), the lineage timeline, and the builds as cards (`mockups/methods-pages.html`). The methods list shows each blueprint's parts and only the names of its builds, so the cards are on one page, not two (decided 2026-10-12, `mockups/methods-list-and-blueprint.html`). A table comparing builds part by part is set aside for now (PLAN.md, Methods "Blueprint pages"): it would need the picks as data, parsed from each build's `## Picks` list.
 
 The same shape fits other blueprints:
 
