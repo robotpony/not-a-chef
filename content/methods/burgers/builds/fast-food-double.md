@@ -23,14 +23,14 @@ Salty, sweet, and rich; little crunch.
 - **Sauces and condiments:** Ketchup and mustard, 5:1
 
 ```stack
-bun-top               | Small bun, pressed flat        | soft
-sauce-ketchup-mustard | Ketchup and mustard, 5:1       | sweet, sharp
-onion-minced          | Rehydrated dried onion         | mellow, sharp
-pickle                | Thin pickles                   | the only sour
-patty-thin            | Thin patty, 75 g               | savoury
-cheese                | Processed cheese, ½ slice      | salt, fat
-patty-thin            | Thin patty, 75 g               | savoury
-bun-base              | Small bun                      | barrier
+bun-top               | Small bun, pressed flat   | soft
+sauce-ketchup-mustard | Ketchup and mustard, 5:1  | sweet, sharp
+onion-minced          | Rehydrated dried onion    | mellow, sharp
+pickle                | Thin pickles              | the only sour
+patty-thin            | Thin patty, 75 g          | savoury
+cheese-american       | Processed cheese, ½ slice | salt, fat
+patty-thin            | Thin patty, 75 g          | savoury
+bun-base              | Small bun                 | barrier
 ```
 
 ## Where it comes from

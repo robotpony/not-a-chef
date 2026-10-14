@@ -27,7 +27,7 @@ bun-top                 | Sesame bun                   | soft, toasted
 patty-thin              | Thin patty                   | salt, fat
 lettuce-shredded        | Shredded iceberg             | cool crunch
 bun-base + sauce-burger | Middle bun, red relish sauce | sweet, creamy, the second deck
-cheese                  | American cheese              | melt
+cheese-american         | American cheese              | melt
 patty-thin              | Thin patty                   | salt, fat
 lettuce-shredded        | Shredded iceberg             | cool crunch
 bun-base + sauce-burger | Bottom bun, red relish sauce | sweet, barrier

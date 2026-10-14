@@ -21,14 +21,14 @@ Crisp, lacy, and savoury; crust in every bite.
 - **Sauces and condiments:** Ketchup and mustard, or a burger sauce
 
 ```stack
-bun-top      | Toasted soft bun        | soft
-pickle       | Pickles                 | sour
-sauce-burger | Sauce                   | sweet, sharp
-patty-smash  | Smashed patty           | lacy, crisp edge
-cheese       | American cheese         | melt
-patty-smash  | Smashed patty           | lacy, crisp edge
-onion-minced | Diced onion             | sharp
-bun-base     | Toasted soft bun        | barrier
+bun-top         | Toasted soft bun | soft
+pickle          | Pickles          | sour
+sauce-burger    | Sauce            | sweet, sharp
+patty-smash     | Smashed patty    | lacy, crisp edge
+cheese-american | American cheese  | melt
+patty-smash     | Smashed patty    | lacy, crisp edge
+onion-minced    | Diced onion      | sharp
+bun-base        | Toasted soft bun | barrier
 ```
 
 ## Where it comes from

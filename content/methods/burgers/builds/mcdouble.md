@@ -26,7 +26,7 @@ sauce-ketchup-mustard | Ketchup and mustard      | sweet, sharp
 onion-minced          | Rehydrated dried onion   | mellow, sharp
 pickle                | Pickles                  | the only sour
 patty-thin            | Thin patty, 45 g         | savoury
-cheese                | American cheese, 1 slice | salt, fat
+cheese-american       | American cheese, 1 slice | salt, fat
 patty-thin            | Thin patty, 45 g         | savoury
 bun-base              | Small bun                | barrier
 ```
