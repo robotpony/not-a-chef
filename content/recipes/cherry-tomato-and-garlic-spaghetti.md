@@ -51,7 +51,7 @@ Straight away, with the rest of the Parmesan on top.
 
 ### Mushroom aglio e olio
 
-No tomatoes; savoury and oily. Soak 15 g (½ oz) dried mushrooms in 250 ml (1 cup) hot water for 15 minutes, then chop them roughly. Skip the tomatoes and tomato paste, add the mushrooms with the garlic, and use the soaking liquid as part of the water, topping up from the kettle until the pasta is close. As the water boils off, season with salt, pepper, and more chili flakes, and drizzle in olive oil as you stir so it emulsifies with the starchy water.
+No tomatoes; savoury and oily. Soak 15 g (½ oz) dried mushrooms in hot water for 15 minutes, then chop them roughly. Add the mushrooms with the garlic, and use the soaking liquid as part of the water, topping up as needed. Season with salt, pepper, and more chili flakes, and drizzle in olive oil as you stir so it emulsifies with the starchy water.
 
 ### Win the fridge
 
