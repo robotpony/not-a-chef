@@ -19,9 +19,9 @@ When the pasta is 2–3 minutes from done, add the sauce to the pan and keep it 
 
 ## Notes
 
-- You can push the noodles hard; add oil to the pasta water and fry the noodles, adding the sauce bit by bit. Fry hard, add sauce, repeate. This is close to [Spaghetti all'Assassina](https://en.wikipedia.org/wiki/Spaghetti_all%27assassina).
+- You can push the noodles hard: let the water cook off, add oil, and fry the noodles, adding the sauce a bit at a time. Fry hard, add sauce, repeat. This is close to [Spaghetti all'Assassina](https://en.wikipedia.org/wiki/Spaghetti_all%27assassina).
 
 ## How it fails
 
-- **Watery:** the pasta water wasn't cooked down enough before the sauce went in.
+- **Watery or thin:** too much water, so the starch was diluted, or it wasn't cooked down before the sauce went in. Keep cooking it down, or thicken it with cheese off the heat. Cheese is almost always the answer.
 - **Dry or stuck:** it cooked too long. Loosen it with a splash of water.
