@@ -32,21 +32,15 @@
 
   /* Proposed kit-only food colours, like --sear: one hue each from the five-hue family
      (green 151°, red 14°, yellow 54°). Each has a side (bodies, sauce lines) and a top. */
-  :root, .theme-light{ --kit-green-ink:#2F6B4C; }
-  :root[data-theme="dark"], .theme-dark{ --kit-green-ink:#8ED7B4; }
-  .v-soft{ --kit-green:#C6E9D6; --kit-green-top:#E0F5EA; --kit-red:#F1C9BC; --kit-red-top:#F9E3DC; --kit-yellow:#EEDF9E; --kit-yellow-top:#F7F0D2; }
+  :root, .theme-light{ --kit-green-ink:#4E9873; }
+  :root[data-theme="dark"], .theme-dark{ --kit-green-ink:#5FA982; }
   .v-full{ --kit-green:#A3DABD; --kit-green-top:#CDEEDC; --kit-red:#E9A994; --kit-red-top:#F4CDC1; --kit-yellow:#E3CC6C; --kit-yellow-top:#F1E5B4; }
-  .v-off { --kit-green:#C3E0A6; --kit-green-top:#E1F0D0; --kit-red:#E9A994; --kit-red-top:#F4CDC1; --kit-yellow:#E3CC6C; --kit-yellow-top:#F1E5B4; }
   @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){ --kit-green-ink:#8ED7B4; }
-    :root:not([data-theme="light"]) .v-soft, :root:not([data-theme="light"]) .v-full{ --kit-green:#25432F; --kit-green-top:#1C2F23; --kit-red:#4A2A21; --kit-red-top:#33201A; --kit-yellow:#45391A; --kit-yellow-top:#2F2918; }
-    :root:not([data-theme="light"]) .v-off{ --kit-green:#34431F; --kit-green-top:#262F19; --kit-red:#4A2A21; --kit-red-top:#33201A; --kit-yellow:#45391A; --kit-yellow-top:#2F2918; }
+    :root:not([data-theme="light"]){ --kit-green-ink:#5FA982; }
+    :root:not([data-theme="light"]) .v-full{ --kit-green:#25432F; --kit-green-top:#1C2F23; --kit-red:#4A2A21; --kit-red-top:#33201A; --kit-yellow:#45391A; --kit-yellow-top:#2F2918; }
   }
-  :root[data-theme="dark"] .v-soft, :root[data-theme="dark"] .v-full, .theme-dark .v-soft, .theme-dark .v-full{ --kit-green:#25432F; --kit-green-top:#1C2F23; --kit-red:#4A2A21; --kit-red-top:#33201A; --kit-yellow:#45391A; --kit-yellow-top:#2F2918; }
-  :root[data-theme="dark"] .v-off, .theme-dark .v-off{ --kit-green:#34431F; --kit-green-top:#262F19; --kit-red:#4A2A21; --kit-red-top:#33201A; --kit-yellow:#45391A; --kit-yellow-top:#2F2918; }
-  .pair .theme-light .v-soft{ --kit-green:#C6E9D6; --kit-green-top:#E0F5EA; --kit-red:#F1C9BC; --kit-red-top:#F9E3DC; --kit-yellow:#EEDF9E; --kit-yellow-top:#F7F0D2; }
+  :root[data-theme="dark"] .v-full, .theme-dark .v-full{ --kit-green:#25432F; --kit-green-top:#1C2F23; --kit-red:#4A2A21; --kit-red-top:#33201A; --kit-yellow:#45391A; --kit-yellow-top:#2F2918; }
   .pair .theme-light .v-full{ --kit-green:#A3DABD; --kit-green-top:#CDEEDC; --kit-red:#E9A994; --kit-red-top:#F4CDC1; --kit-yellow:#E3CC6C; --kit-yellow-top:#F1E5B4; }
-  .pair .theme-light .v-off { --kit-green:#C3E0A6; --kit-green-top:#E1F0D0; --kit-red:#E9A994; --kit-red-top:#F4CDC1; --kit-yellow:#E3CC6C; --kit-yellow-top:#F1E5B4; }
 
   *{ box-sizing:border-box; }
   body{ margin:0; background:var(--bg); color:var(--ink); font-family:'Lora',Georgia,serif; font-size:16px; line-height:1.5; -webkit-font-smoothing:antialiased; }
@@ -156,7 +150,9 @@
   .fstyle .k-green :is(.leaf-back, .pick-side){ fill:var(--kit-green); }
   .fstyle .k-green :is(.leaf, .pick, .chunk){ fill:var(--kit-green-top); }
   /* Shredded strands are too thin for a fill to show, so their line goes green instead of ink. */
-  .fstyle .k-green .s.hair.leaf{ stroke:var(--kit-green-ink); fill:var(--kit-green); }
+  .fstyle .k-green .s.hair.leaf{ stroke:none; fill:var(--kit-green-ink); }
+  .fstyle .shred-a .k-green .s.hair.leaf{ stroke:var(--kit-green-ink); fill:var(--kit-green); }
+  .fstyle .shred-c .k-green .s.hair.leaf{ stroke:var(--ink); stroke-width:.35; stroke-opacity:.6; fill:var(--kit-green-ink); }
   .fstyle .k-red :is(.tom-side, .jelly){ fill:var(--kit-red); }
   .fstyle .k-red .tom{ fill:var(--kit-red-top); }
   .fstyle .k-red .swirl-in-light, .fstyle .k-km .swirl-in-light{ stroke:var(--kit-red); }
@@ -190,16 +186,19 @@
   <section class="block" id="placement">
     <h2 class="block-title">2 · Placement: the spread on the bun</h2>
     <p class="note">Mayo nearly always goes straight onto the bun: under the top bun or on the base (the Whopper, Bruce burger, drive-in deluxe, pub burger, Teen sauce; burger sauce too). The diagram looks down from about 20° above, so the base's cut face is in view and the top bun's isn't. Each option is the Whopper's real stack.</p>
-    <div class="grid-wide" id="place-grid"></div>
+    <div class="grid-wide v-full" id="place-grid"></div>
     <p class="note" style="margin-top:14px">Heights are the diagram's height at full size, labels included. Card size (150px) is below each.</p>
   </section>
 
   <section class="block" id="colour">
     <h2 class="block-title">3 · Food colours</h2>
-    <p class="note">Each colour is a pair, as the kit's fills are now: a deeper side (bodies, and the sauce line inside a swirl's ink) and a paler top. Lettuce and pickles are green, tomato and ketchup red, mustard yellow. Everything else (bun, onion, cheese, mayo, patty) keeps the kit's two fills and the sear. <b>Soft</b> sits at the level of the UI's soft fills; <b>Fuller</b> is a step deeper, so the colour survives at card size. <b>Fuller, lettuce green</b> moves only the green from 151° (the principle hue, which leans mint) to about 95°, which breaks STYLE.md's five-hue rule; it's here so you can see what the rule costs.</p>
+    <p class="note">Each colour is a pair, as the kit's fills are now: a deeper side (bodies, and the sauce line inside a swirl's ink) and a paler top. Lettuce and pickles are green, tomato and ketchup red, mustard yellow. Everything else (bun, onion, cheese, mayo, patty) keeps the kit's two fills and the sear. This is <b>Fuller</b> (2026-10-14: Soft was too close to the bun at card size, and a truer lettuce green would break STYLE.md's five-hue rule). The placement stacks above use it too.</p>
     <div id="swatches"></div>
     <h3 style="font-size:.95rem;margin:26px 0 8px">The coloured layers, light and dark</h3>
     <div id="kit-rows"></div>
+    <h3 style="font-size:.95rem;margin:26px 0 8px">Shredded lettuce in colour</h3>
+    <p class="note">The strands are about 2px wide, so the outline is most of what you see. With a green line and a dark fill (first), dark mode shows hollow tubes: pale edges around nothing. Drawn as solid green ribbons with no outline (second), each strand is one mark of colour in both themes, the way the char lines on a grilled patty are solid ink. The third keeps a faint ink hairline around the solid ribbon, for separation where strands cross.</p>
+    <div id="shred-rows"></div>
     <h3 style="font-size:.95rem;margin:26px 0 8px">Three real builds</h3>
     <div id="build-rows"></div>
   </section>
@@ -208,8 +207,8 @@
     <h2 class="block-title">4 · Recommendation</h2>
     <div class="callout" id="rec-text">
       <p><b>Texture:</b> Swoops. It's the toast photo's move (a long sweep that ends in a ridge where the knife lifted), it still reads at card size, and the tapered ink stroke matches the char lines on grilled patties. Scallops read as fish scales or stacked coins, and Lines gets lost at 150px.</p>
-      <p><b>Placement:</b> B, and C if the opened lid reads to you. The base carrying its own spread (B) is simply true: the cut face is in view, the spread sits on it with a rim of crumb around it like the toast, and the separate layer goes away. The top bun can't show its underside from this angle, so the choice there is a cheat either way. C opens the lid toward you, the way burger photos are shot, and is the most honest picture of where the mayo is; it also saves the most height. D (your option 3) is a bun-wide disc seen from below, which shows the knife marks on the right face but asks the reader to switch viewpoints mid-stack.</p>
-      <p><b>Colour:</b> Fuller, in-family. Soft is too close to the bun's fill to read at card size. The mint cast of 151° green is noticeable on the leaf but fine on shredded lettuce and pickles, so it doesn't justify breaking the five-hue rule. Shredded lettuce is the one exception to "one ink line": its strands are about 2px wide, so a fill can't show, and its line goes deep green instead (<code>--kit-green-ink</code>). In dark mode every colour drops to a dark tint, so nothing glows (round 1's full colour turned patties pink in dark mode; these leave the patty alone).</p>
+      <p><b>Placement:</b> C, or B if the opened lid doesn't read. The base carrying its own spread (B) is simply true: the cut face is in view, the spread sits on it with a rim of crumb around it like the toast, and the separate layer goes away. The top bun can't show its underside from this angle, so the choice there is a cheat either way. C opens the lid toward you, the way burger photos are shot, and is the most honest picture of where the mayo is; it also saves the most height. D (your option 3) is a bun-wide disc seen from below, which shows the knife marks on the right face but asks the reader to switch viewpoints mid-stack.</p>
+      <p><b>Colour:</b> Fuller, in-family. Soft is too close to the bun's fill to read at card size. The mint cast of 151° green is noticeable on the leaf but fine on shredded lettuce and pickles, so it doesn't justify breaking the five-hue rule. Shredded lettuce is the one exception to "one ink line": its strands are about 2px wide, too thin for a fill inside an outline, so each is a solid green ribbon with no outline (<code>--kit-green-ink</code>, a mid green in both themes). In dark mode every colour drops to a dark tint, so nothing glows (round 1's full colour turned patties pink in dark mode; these leave the patty alone).</p>
       <p><b>Syntax, if B or C lands:</b> a modifier rather than new keys, so any spread can sit on any bun: <code>bun-base + mayo</code>, <code>bun-top + sauce-burger</code>. The build pages' stack blocks would then change (a content-agent edit), and Fugu's render hook learns the <code>+</code> (a fugu-agent handoff).</p>
     </div>
   </section>
@@ -737,17 +736,16 @@ const L2 = {...L1,
     return {svg:s, h:cy+ry+8-y, edge:Math.round(reach*10)/10};
   },
   'lettuce-chunks'(cx, y, rx){
-    // Torn or chopped iceberg (2026-10-12): the shredded heap's pad and mound, but fewer, wider
-    // pieces, each an irregular torn shape lying flat (foreshortened), with a fine curved rib,
+    // Torn or chopped iceberg (2026-10-12): a low mound of wide pieces (no pad under them since
+    // 2026-10-14, spreads-and-colour.html: a flat disc under torn leaves made no sense), each an irregular torn shape lying flat (foreshortened), with a fine curved rib,
     // back to front so nearer pieces lie over farther ones. For builds that say torn or chopped,
     // so a single leaf isn't drawn where there isn't one (the Whopper).
     const R = rx*1.02, ry = R*K, heap = 10, cy = y+ry+heap+5, r = rng(83);
-    const pad = []; for (let i=0;i<=96;i++){ const t = i/96*Math.PI*2, q = .94*(1+.05*Math.sin(6*t+.4)+.025*Math.sin(15*t)); pad.push(EP(cx, cy+2, R, ry, t, q)); }
-    let s = `<path class="s thin leaf-back" d="${pts2d(pad)}Z"/>`;
+    let s = '';
     const bits = [];
-    for (let i=0;i<36;i++){
-      const a = r()*Math.PI*2, q = Math.sqrt(r())*.9, p = EP(cx, cy, R, ry, a, q);
-      bits.push({x:p[0], y:p[1]-heap*(1-q*q), w:10+r()*7, o:r()*Math.PI, seed:r()});
+    for (let i=0;i<58;i++){
+      const a = r()*Math.PI*2, q = Math.sqrt(r())*.86, p = EP(cx, cy, R, ry, a, q);
+      bits.push({x:p[0], y:p[1]-heap*(1-q*q), w:11+r()*7, o:r()*Math.PI, seed:r()});
     }
     bits.sort((a, b) => a.y-b.y);
     let veins = '';
@@ -763,7 +761,7 @@ const L2 = {...L1,
       veins += `M${f(b.x-c*l)},${f(b.y-sn*l)}Q${f(b.x+sn*3)},${f(b.y-c*2)} ${f(b.x+c*l)},${f(b.y+sn*l)}`;
     }
     s += `<path class="tx-fine" d="${veins}"/>`;
-    return {svg:s, h:cy+ry*1.02+4-y, edge:R*1.07};   // torn pieces reach past the pad (76.5)
+    return {svg:s, h:cy+ry*1.02+4-y, edge:R*1.07};   // torn pieces reach about 7% past R
   },
   'bread'(cx, y, rx){
     const W = rx*.9, ry = W*K*1.05, t = 9, cy = y+ry*1.4;
@@ -816,9 +814,9 @@ const S_SWOOPS = [
   [[-.40, .78], [-.08, .42], [ .28, .98], [ .52, .62]],
 ];
 const arcPts = ([u, v, r, a0, a1], N) => { const o = []; for (let i=0;i<=N;i++){ const a = (a0+(a1-a0)*i/N)*Math.PI/180; o.push([u+Math.cos(a)*r, v-Math.sin(a)*r]); } return o; };
-function spreadFace(cx, cy, R, ry, {seed=1, lip=1.6, tex=TEX.cur, side='bech', top='bech', scale=1}={}){
+function spreadFace(cx, cy, R, ry, {seed=1, lip=1.6, tex=TEX.cur, side='bech', top='bech', scale=1, wob=1}={}){
   const ph = seed*.7;
-  const edge = (oy) => { const ps = []; for (let i=0;i<=120;i++){ const t = i/120*Math.PI*2, q = .97 + .05*Math.sin(3*t+ph) + .025*Math.sin(7*t+2*ph) + .012*Math.sin(13*t); ps.push([cx+Math.cos(t)*R*q, cy+oy+Math.sin(t)*ry*q]); } return pts2d(ps)+'Z'; };
+  const edge = (oy) => { const ps = []; for (let i=0;i<=120;i++){ const t = i/120*Math.PI*2, q = 1 - .03*wob + wob*(.05*Math.sin(3*t+ph) + .025*Math.sin(7*t+2*ph) + .012*Math.sin(13*t)); ps.push([cx+Math.cos(t)*R*q, cy+oy+Math.sin(t)*ry*q]); } return pts2d(ps)+'Z'; };
   let s = lip ? `<path class="s ${side}" d="${edge(lip)}"/>` : '';
   s += `<path class="s thin ${top}" d="${edge(0)}"/>`;
   const U = ([u, v]) => [cx+u*R, cy+v*ry];
@@ -850,24 +848,34 @@ const NEW = {
   'mayo-now'(cx, y, rx){ return L2.mayo(cx, y, rx); },
   // A spread on its own layer, with the new marks.
   'mayo'(cx, y, rx){ const R = rx*.86, ry = R*K, cy = y+ry*1.06+1; return {svg: spreadFace(cx, cy, R, ry, {seed:1}), h: ry*2.12+4, edge: R*1.06}; },
-  // Option B: the base's cut face carries the spread, inside a rim of crumb.
+  // Option B: the base's cut face carries the spread, out to the crust.
   'bun-base+mayo'(cx, y, rx){
-    const o = L2['bun-base'](cx, y, rx), ry = rx*K, R = rx*.8;
-    return {svg: o.svg + spreadFace(cx, y+ry-1, R, R*K, {seed:3, lip:1.1}), h:o.h, edge:o.edge};
+    const o = L2['bun-base'](cx, y, rx), ry = rx*K, R = rx*.95;
+    return {svg: o.svg + spreadFace(cx, y+ry-.6, R, R*K, {seed:3, lip:1.1, wob:.35}), h:o.h, edge:o.edge};
   },
-  // Option C: the top bun opened toward the viewer, its cut face showing the spread.
+  // Option C: the top bun opened toward the viewer, its cut face at the same angle as the base's,
+  // so the two faces mirror each other, with the spread out to the crust.
   'bun-top-open+mayo'(cx, y, rx){
-    const hd = rx*.5, ryF = rx*.46, cyF = y+hd+ryF, ring = 3.2;
-    // The dome, behind the face, its crown showing above it.
-    const Lp = [cx-rx*.97, cyF-ryF*.2], Rp = [cx+rx*.97, cyF-ryF*.2];
-    let s = `<path class="s bun" d="M${P(Lp)}C${f(cx-rx*.92)},${f(y-hd*.15)} ${f(cx+rx*.92)},${f(y-hd*.15)} ${P(Rp)}Z"/>`;
-    const r = rng(17);
-    for (let i=0;i<16;i++){ const u = -.8+(i%8)*.23+(r()-.5)*.08, xx = cx+u*rx, top = y+hd*.12+Math.abs(u)**2*hd*.8, yy = top+3+(i<8 ? 0 : hd*.32)+r()*4; s += `<ellipse class="seed2" cx="${f(xx)}" cy="${f(yy)}" rx="2.5" ry="1.3" transform="rotate(${f(u*35)} ${f(xx)} ${f(yy)})"/>`; }
-    // The crust ring, then the crumb face, then the spread.
+    const hd = rx*.5, ryF = rx*K, cyF = y+hd+ryF, ring = 3;
+    // The dome, behind the face: a cubic from rim to rim whose crown is at y.
+    const yc = cyF-(cyF-y)/.75, D = [[cx-rx, cyF], [cx-rx*.98, yc], [cx+rx*.98, yc], [cx+rx, cyF]];
+    let s = `<path class="s bun" d="M${P(D[0])}C${P(D[1])} ${P(D[2])} ${P(D[3])}Z"/>`;
+    // Seeds only in the band of dome that shows between its outline and the face.
+    const dome = []; for (let i=0;i<=80;i++) dome.push(bez(...D, i/80));
+    const domeY = x => { let best = dome[0]; for (const p of dome) if (Math.abs(p[0]-x) < Math.abs(best[0]-x)) best = p; return best[1]; };
+    const r = rng(17), seeds = [];
+    for (let i=0;i<400 && seeds.length<18;i++){
+      const u = (r()*2-1)*.86, x = cx+u*rx, top = domeY(x)+3.2, bot = cyF-ryF*Math.sqrt(1-u*u)-3.2;
+      if (bot-top < 2.5) continue;
+      const yy = top+r()*(bot-top);
+      if (seeds.some(([a, b]) => Math.hypot(a-x, (b-yy)*1.8) < 8.5)) continue;
+      seeds.push([x, yy]);
+    }
+    for (const [x, yy] of seeds){ const u = (x-cx)/rx; s += `<ellipse class="seed2" cx="${f(x)}" cy="${f(yy)}" rx="${f(2.5*(1-.35*Math.abs(u)))}" ry="1.2" transform="rotate(${f(u*35)} ${f(x)} ${f(yy)})"/>`; }
+    // The crust ring, the crumb face, and the spread across it.
     s += `<ellipse class="s bun" cx="${f(cx)}" cy="${f(cyF)}" rx="${f(rx)}" ry="${f(ryF)}"/>`;
-    s += `<ellipse class="s thin crumb" cx="${f(cx)}" cy="${f(cyF)}" rx="${f(rx-ring)}" ry="${f(ryF-ring*.6)}"/>`;
-    s += stipple(cx, cyF, rx*.93, ryF*.9, 150, 5, {maxq:.97, rim:.3});
-    s += spreadFace(cx, cyF+1, rx*.8, ryF*.8, {seed:2, lip:0});
+    s += `<ellipse class="s thin crumb" cx="${f(cx)}" cy="${f(cyF)}" rx="${f(rx-ring)}" ry="${f(ryF-ring*K)}"/>`;
+    s += spreadFace(cx, cyF, rx*.95, ryF*.95, {seed:2, lip:0, wob:.35});
     return {svg:s, h:hd+2*ryF+2, edge:rx};
   },
   // Option D (Bruce's option 3): a bun-wide disc. Under the top bun it's seen from below: the face
@@ -957,13 +965,11 @@ function fold(ls, openTop){
   }
   return out;
 }
-const VARIANTS = [['v-soft','Soft'],['v-full','Fuller'],['v-off','Fuller, lettuce green (breaks the five-hue rule)']];
+const VARIANTS = [['v-full','Fuller']];
 const SW = {
-  'v-soft': [['#C6E9D6','#E0F5EA'],['#F1C9BC','#F9E3DC'],['#EEDF9E','#F7F0D2']],
   'v-full': [['#A3DABD','#CDEEDC'],['#E9A994','#F4CDC1'],['#E3CC6C','#F1E5B4']],
-  'v-off':  [['#C3E0A6','#E1F0D0'],['#E9A994','#F4CDC1'],['#E3CC6C','#F1E5B4']],
 };
-const DARK = { 'v-off': [['#34431F','#262F19']], base: [['#25432F','#1C2F23'],['#4A2A21','#33201A'],['#45391A','#2F2918']] };
+const DARK = { base: [['#25432F','#1C2F23'],['#4A2A21','#33201A'],['#45391A','#2F2918']] };
 
 function render(){
   const tex = TEX.cur;
@@ -980,7 +986,7 @@ function render(){
   const base = parse(WHOPPER);
   const heights = {};
   document.getElementById('place-grid').innerHTML = PLACEMENTS.map(p => {
-    const ls = p.map(base).map(l => ({...l, c:''})), full = compose(ls), card = compose(ls, {labels:false, gap:6});
+    const ls = p.map(base), full = compose(ls), card = compose(ls, {labels:false, gap:6});
     heights[p.id] = full.H;
     return `<div class="panel" id="pl-${p.id}"><div class="panel-label">${p.name}</div><div class="panel-sub">${p.sub}</div>${full.svg}
       <div class="card-size" style="margin-top:12px">${card.svg}</div>
@@ -989,7 +995,7 @@ function render(){
   for (const id of 'BCD') { const el = document.querySelector(`[data-h="${id}"]`), d = Math.round(heights.A - heights[id]); el.textContent += d > 0 ? ` · ${d} shorter than A` : d < 0 ? ` · ${-d} taller than A` : ''; }
   // 3 · Colour
   document.getElementById('swatches').innerHTML = `<div class="grid">` + VARIANTS.map(([v, name]) => {
-    const dk = v === 'v-off' ? [DARK['v-off'][0], ...DARK.base.slice(1)] : DARK.base;
+    const dk = DARK.base;
     const row = (vals, lbl) => `<div class="swatches">${vals.map((pr, i) => pr.map((c, j) => `<div class="sw"><i style="background:${c}"></i>${['green','red','yellow'][i]}${j ? ' top' : ''}<br>${c}</div>`).join('')).join('')}</div><div class="meta" style="margin-top:2px">${lbl}</div>`;
     return `<div class="panel"><div class="panel-label">${name}</div>${row(SW[v], 'light')}${row(dk, 'dark')}</div>`;
   }).join('') + `</div>`;
@@ -998,11 +1004,13 @@ function render(){
     <div class="panel-label" style="margin:16px 0 6px">${name}</div>
     <div class="pair">${['theme-light','theme-dark'].map(t => `<div class="${t}"><div class="${v}"><div class="side-label">${t === 'theme-light' ? 'Light' : 'Dark'}</div>
       <div class="grid-kit">${kitKeys.map(k => `<div class="cell">${one(k, 70, COLOUR[k])}${k}</div>`).join('')}</div></div></div>`).join('')}</div>`).join('');
-  document.getElementById('build-rows').innerHTML = VARIANTS.slice(1, 2).concat([['v-none','Today, no colour']]).map(([v, name]) => `
+  document.getElementById('build-rows').innerHTML = VARIANTS.concat([['v-none','Today, no colour']]).map(([v, name]) => `
     <div class="panel-label" style="margin:16px 0 6px">${name}</div>
     <div class="pair">${['theme-light','theme-dark'].map(t => `<div class="${t}"><div class="${v}"><div class="side-label">${t === 'theme-light' ? 'Light' : 'Dark'}</div>
       <div class="grid">${Object.entries(BUILDS).map(([n, txt]) => { const ls = parse(txt).map(l => v === 'v-none' ? {...l, c:''} : l);
         return `<div><div class="cell" style="margin-bottom:6px">${n}</div>${compose(ls, {labels:false, gap:6}).svg}</div>`; }).join('')}</div></div></div>`).join('')}</div>`).join('');
+  document.getElementById('shred-rows').innerHTML = `<div class="pair">${['theme-light','theme-dark'].map(t => `<div class="${t}"><div class="v-full"><div class="side-label">${t === 'theme-light' ? 'Light' : 'Dark'}</div>
+    <div class="grid-kit">${[['shred-a','Green line, dark fill'],['shred-b','Solid, no outline'],['shred-c','Solid, faint ink hairline']].map(([c, n]) => `<div class="cell ${c}">${one('lettuce-shredded', 70, 'k-green')}${n}${c === 'shred-b' ? ' (pick)' : ''}</div>`).join('')}</div></div></div>`).join('')}</div>`;
 }
 render();
 document.querySelectorAll('[data-tex]').forEach(b => b.addEventListener('click', () => {

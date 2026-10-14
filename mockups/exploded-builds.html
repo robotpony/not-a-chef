@@ -848,17 +848,16 @@ const L2 = {...L1,
     return {svg:s, h:cy+ry+8-y, edge:Math.round(reach*10)/10};
   },
   'lettuce-chunks'(cx, y, rx){
-    // Torn or chopped iceberg (2026-10-12): the shredded heap's pad and mound, but fewer, wider
-    // pieces, each an irregular torn shape lying flat (foreshortened), with a fine curved rib,
+    // Torn or chopped iceberg (2026-10-12): a low mound of wide pieces (no pad under them since
+    // 2026-10-14, spreads-and-colour.html: a flat disc under torn leaves made no sense), each an irregular torn shape lying flat (foreshortened), with a fine curved rib,
     // back to front so nearer pieces lie over farther ones. For builds that say torn or chopped,
     // so a single leaf isn't drawn where there isn't one (the Whopper).
     const R = rx*1.02, ry = R*K, heap = 10, cy = y+ry+heap+5, r = rng(83);
-    const pad = []; for (let i=0;i<=96;i++){ const t = i/96*Math.PI*2, q = .94*(1+.05*Math.sin(6*t+.4)+.025*Math.sin(15*t)); pad.push(EP(cx, cy+2, R, ry, t, q)); }
-    let s = `<path class="s thin leaf-back" d="${pts2d(pad)}Z"/>`;
+    let s = '';
     const bits = [];
-    for (let i=0;i<36;i++){
-      const a = r()*Math.PI*2, q = Math.sqrt(r())*.9, p = EP(cx, cy, R, ry, a, q);
-      bits.push({x:p[0], y:p[1]-heap*(1-q*q), w:10+r()*7, o:r()*Math.PI, seed:r()});
+    for (let i=0;i<58;i++){
+      const a = r()*Math.PI*2, q = Math.sqrt(r())*.86, p = EP(cx, cy, R, ry, a, q);
+      bits.push({x:p[0], y:p[1]-heap*(1-q*q), w:11+r()*7, o:r()*Math.PI, seed:r()});
     }
     bits.sort((a, b) => a.y-b.y);
     let veins = '';
@@ -874,7 +873,7 @@ const L2 = {...L1,
       veins += `M${f(b.x-c*l)},${f(b.y-sn*l)}Q${f(b.x+sn*3)},${f(b.y-c*2)} ${f(b.x+c*l)},${f(b.y+sn*l)}`;
     }
     s += `<path class="tx-fine" d="${veins}"/>`;
-    return {svg:s, h:cy+ry*1.02+4-y, edge:R*1.07};   // torn pieces reach past the pad (76.5)
+    return {svg:s, h:cy+ry*1.02+4-y, edge:R*1.07};   // torn pieces reach about 7% past R
   },
   'bread'(cx, y, rx){
     const W = rx*.9, ry = W*K*1.05, t = 9, cy = y+ry*1.4;
