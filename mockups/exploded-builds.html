@@ -608,6 +608,7 @@ function relish(cx, cy, R, ry, seed){
 }
 // A spread on a bun (2026-10-14, option C): the base's cut face carries it, and the top bun is
 // opened toward the viewer, its cut face at the base's angle, with the spread out to the crust.
+// Every top bun is drawn opened, bare crumb when nothing is spread on it, so all builds share one shape.
 function bunBaseSpread(cx, y, rx, cls, seed){
   const o = L2['bun-base'](cx, y, rx), ry = rx*K, R = rx*.93;
   let s = spreadFace(cx, y+ry, R, R*K, {seed, cls, lip:0, wob:1.6, clamp:(rx-1.5)/R});
@@ -636,37 +637,15 @@ function bunTopOpen(cx, y, rx, cls, seed){
   s += `<ellipse class="s thin crumb" cx="${f(cx)}" cy="${f(cyF)}" rx="${f(rx-ring)}" ry="${f(ryF-ring*K)}"/>`;
   s += stipple(cx, cyF, rx*.93, ryF*.9, 150, 5, {maxq:.97, rim:.3});
   const R = rx*.9;
-  s += spreadFace(cx, cyF, R, ryF*.9, {seed, cls, lip:0, wob:1.6, clamp:(rx-ring-.6)/R});
+  if (cls) s += spreadFace(cx, cyF, R, ryF*.9, {seed, cls, lip:0, wob:1.6, clamp:(rx-ring-.6)/R});
   if (cls === 'sauce-pink') s += relish(cx, cyF, R, ryF*.9, 29);
   return {svg:s, h:hd+2*ryF+2, edge:rx};
 }
 
 const L2 = {...L1,
-  'bun-top'(cx, y, rx){
-    const h = rx*.55, ry = rx*K, cy = y+h;
-    const P0 = [cx-rx, cy], P1 = [cx-rx, cy-h*1.33], P2 = [cx+rx, cy-h*1.33], P3 = [cx+rx, cy];
-    let s = `<path class="s bun" d="M${P(P0)}C${P(P1)} ${P(P2)} ${P(P3)}A${f(rx)},${f(ry)} 0 0 1 ${P(P0)}Z"/>`;
-    s += `<path class="tx" d="M${f(cx-rx*.93)},${f(cy-h*.22)}Q${f(cx)},${f(cy+ry*.55)} ${f(cx+rx*.93)},${f(cy-h*.22)}"/>`;
-    // Shading: contour hatching inside the right flank, as an engraving would.
-    let hatch = '';
-    for (const [k, t0] of [[.93, .6], [.86, .67], [.79, .74]]){
-      const ps = []; for (let i=0;i<=14;i++){ const p = bez(P0, P1, P2, P3, t0+(.9-t0)*i/14); ps.push([cx+(p[0]-cx)*k, cy+(p[1]-cy)*k]); }
-      hatch += pts2d(ps);
-    }
-    s += `<path class="tx-fine" d="${hatch}"/>`;
-    // Sesame seeds as open ovals over the whole dome, turned with the curve.
-    const r = rng(17), seeds = [];
-    for (let i=0;i<500 && seeds.length<26;i++){
-      const v = .2+r()*.72, yy = cy-h*v, w = rx*Math.sqrt(1-v*v)*.88, xx = cx+(r()*2-1)*w;
-      if (seeds.some(([a, b]) => Math.hypot(a-xx, (b-yy)*1.7) < 8.5)) continue;
-      seeds.push([xx, yy]);
-    }
-    for (const [xx, yy] of seeds){
-      const u = (xx-cx)/rx, v = (cy-yy)/h;
-      s += `<ellipse class="seed2" cx="${f(xx)}" cy="${f(yy)}" rx="${f(2.5*(1-.4*Math.abs(u)))}" ry="${f(1.2+.35*v)}" transform="rotate(${f(u*40+(r()-.5)*36)} ${f(xx)} ${f(yy)})"/>`;
-    }
-    return {svg:s, h:h+ry, edge:rx};
-  },
+  // Opened toward the viewer, bare crumb (2026-10-14, mockups/top-bun-open.html), the same shape as
+  // `bun-top + mayo`. The closed dome it replaced is in git.
+  'bun-top'(cx, y, rx){ return bunTopOpen(cx, y, rx, null, 2); },
   'bun-base'(cx, y, rx){
     const ry = rx*K, t = rx*.16, cy = y+ry;
     let s = disc(cx, cy, rx, t, 'bun', 'crumb'), d = '';
