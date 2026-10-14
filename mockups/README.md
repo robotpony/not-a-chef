@@ -148,6 +148,12 @@ in a browser — no build step.
   2026-10-12: a `lettuce-shredded` layer (a heap of flat ribbons), and the
   leaf lettuce, mayo, and burger sauce report their real reach (`data-edge`)
   so leader dots clear them.
+- **`shredded-lettuce.html`**: proposal (2026-10-14) to redraw the
+  `lettuce-shredded` layer, which reads as tiny bananas, from Bruce's two
+  photos of shredded iceberg. v1 beside three options (A strands on the
+  mound, B a mound with strokes, C wider frilly ribbons), at full size, card
+  size, and on a bun base, light and dark. The winner moves into
+  `exploded-builds.html` for export.
 
 - **`in-development.html`**: proposal (2026-10-07) to make `draft: true`
   mean "published, still changing" instead of hidden. A flag-blue callout
