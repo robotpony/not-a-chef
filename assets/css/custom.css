@@ -878,7 +878,8 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
 .parts-inline li i { font-style: normal; font-family: 'IBM Plex Mono', monospace; font-size: .68rem; font-weight: 500; color: var(--accent); }
 .parts-inline a { color: var(--ink); text-decoration: none; }
 .parts-inline a:hover { color: var(--accent-strong); }
-.home-methods .opts { margin-top: 0; }
+/* The builds row sits under its own hairline, like the parts row above it. */
+.home-methods .opts { margin-top: 0; padding-top: 10px; border-top: 1px solid var(--border); }
 .home-list-label { font-family: 'Libre Franklin', sans-serif; font-size: .65rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-faint); margin: 0 0 4px; }
 .home-row-link { display: grid; grid-template-columns: 1fr auto; gap: 0 12px; padding: 9px 0; border-bottom: 1px solid var(--border); text-decoration: none; color: var(--ink); }
 .home-list-label + .home-row-link { border-top: 1px solid var(--border); }
