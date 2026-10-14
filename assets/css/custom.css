@@ -1523,6 +1523,10 @@ article:not(:has(.article-pagination)) .reading-sidebar-wrap { margin-bottom: 0;
   font-family: 'Libre Franklin', sans-serif; font-size: .82rem; color: var(--ink-muted);
 }
 .reading-sidebar .rs-number:last-child { border-bottom: none; }
+/* Linked rows: the hover fill reaches 8px past each side with box-shadow,
+   so the text and dividers stay in line with the section label. */
+.reading-sidebar a.rs-number { text-decoration: none; }
+.reading-sidebar a.rs-number:hover { background: var(--accent-soft); color: var(--accent-strong); box-shadow: -8px 0 0 var(--accent-soft), 8px 0 0 var(--accent-soft); }
 .reading-sidebar .rs-number b { font-family: 'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums; font-weight: 600; color: var(--accent-strong); }
 
 /* Photos (mockups/sidebar-images.html). render-image.html renders each
