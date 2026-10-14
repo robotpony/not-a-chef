@@ -5,6 +5,7 @@ draft: false
 tags:
   - method
   - pasta
+  - win-the-fridge
 description: "A reverse sauce: long pasta, whole cherry tomatoes, and garlic cooked together in oily water until the tomatoes burst and the water boils off, with basil, Parmesan, and good oil off the heat."
 ---
 
