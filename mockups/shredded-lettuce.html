@@ -49,6 +49,7 @@
 <main>
   <h1>Shredded lettuce redraw</h1>
   <p>The current <code>lettuce-shredded</code> layer reads as tiny bananas. Each shred is short (16 to 30 units), fat (3 to 5), bent into one curve, and tapered to a point at both ends: a crescent. Shredded iceberg (Bruce's two photos, 2026-10-14) is the opposite. The strands are long, thin, and cut square. They're mostly straight or gently curled, piled into a mound, and slope down its sides from the peak, with a few strays spilling past the edge.</p>
+  <p><strong>Round 2 (2026-10-14).</strong> Round 1 (A strands on the mound, B a mound with strokes, C curls and frills) read as flat sticks with no pile; it's in git at <code>3fc1ba3</code>. Bruce's drawn reference (a cartoon heap of shredded lettuce) was closer, with shreds too large. A second reference (a painted mound of shredded lettuce) is closer too: a tall heap with a ruffled leaf edge, quiet inside, with fine pale strands running down its slopes. D follows the first, E the second, and F combines them. All three are drawn the way the references are, flat on the page: a lumpy mound outline, strands that follow its slopes, arches over the top, strays at the base. Each is about a quarter as high as it is wide, so it reads as a pile, not a disc.</p>
   <p>Each option keeps the kit's rules: one ink line, <code>--accent-soft</code> on the body, <code>--surface</code> on top faces, and texture as strokes. All of them are drawn at full size, at card size, and on a bun base, in light and dark.</p>
   <div id="out"></div>
 </main>
@@ -103,6 +104,68 @@ function planeStrand(cx, cy, R, ry, heap, r, {len=.5, bias=.3, curve=.5, wave=0,
   return m;
 }
 
+// Round 2 draws in screen space, the way both references are drawn: a lumpy
+// mound outline, strands that follow its slopes clipped inside it, a few
+// arches poking over the top, and strays at the base.
+let clipN = 0;
+// The mound's top edge at x (0 at the rim, H at the middle), broad on top.
+const moundY = (x, R, H) => H*Math.max(0, 1-Math.abs(x/R)**2.4)**.75;
+function mound(cx, cy, R, ry, H, r, lump){
+  // Top: a chain of irregular bumps, each a quadratic bulging outward.
+  const top = []; let x = -R;
+  top.push([cx-R, cy]);
+  while (x < R){
+    const step = Math.min(R-x, 5+r()*7), x1 = x+step, xm = x+step/2;
+    const y0 = cy-moundY(x, R, H), y1 = cy-moundY(x1, R, H), ym = cy-moundY(xm, R, H);
+    const dx = x1-x, dy = y1-y0, l = Math.hypot(dx, dy)||1, b = lump*(.5+r());
+    for (let k=1;k<=6;k++){ const t = k/6, bx = x+dx*t, by = y0+dy*t, bulge = 4*t*(1-t)*b; top.push([cx+bx+dy/l*bulge, by-dx/l*bulge]); }
+    x = x1;
+  }
+  // Front: the plate's near rim, right to left.
+  const bot = []; for (let i=0;i<=40;i++){ const t = i/40*Math.PI; bot.push([cx+Math.cos(t)*R, cy+Math.sin(t)*ry]); }
+  return pts2d([...top, ...bot])+'Z';
+}
+// A strand inside the mound: starts at a random point, runs along the local
+// slope (down the left side, across the top, down the right side), with a bend.
+function strand(cx, cy, R, ry, H, r, {len, bend, follow=.85}){
+  let px, py, ok = false;
+  for (let tries=0; !ok && tries<50; tries++){ px = (r()*2-1)*R*.95; const top = cy-moundY(px, R, H), bot = cy+Math.sqrt(Math.max(0, 1-(px/R)**2))*ry; py = top+(bot-top)*r(); ok = bot > top+2; }
+  const slope = (moundY(px+1, R, H)-moundY(px-1, R, H))/2;
+  // how far down the mound we are: the strands near the front lie flatter
+  const depth = Math.min(1, (py-(cy-moundY(px, R, H)))/(H+ry)*1.6);
+  let th = Math.atan2(-slope*follow*(1-depth*.7), 1) + (r()-.5)*.6;
+  if (r() < .5) th += Math.PI;
+  const N = 12, m = []; let x = px-Math.cos(th)*len/2, y = py-Math.sin(th)*len/2;
+  for (let i=0;i<=N;i++){ const a = th+bend*(i/N-.5); if (i){ x += Math.cos(a)*len/N; y += Math.sin(a)*len/N; } m.push([cx+x, y]); }
+  m.y = py; return m;
+}
+function pile(cx, y, rx, o){
+  const R = rx*1.0, ry = R*K, H = o.H, cy = y+H+4, r = rng(o.seed), id = 'ml'+(++clipN);
+  const outline = mound(cx, cy, R, ry, H, r, o.lump);
+  let s = `<defs><clipPath id="${id}"><path d="${outline}"/></clipPath></defs>`;
+  // Strays behind the mound, past the back rim.
+  const stray = (front) => { const a = front ? .25+r()*(Math.PI-.5) : Math.PI+.2+r()*(Math.PI-.4), side = Math.cos(a), len = 10+r()*12, th = (side >= 0 ? 0 : Math.PI)+(side >= 0 ? 1 : -1)*(front ? .25 : -.15)+(r()-.5)*.5, bend = (r()-.5)*1.4, m = [];
+    let x = cx+Math.cos(a)*R*.85, yy = cy+Math.sin(a)*ry*.85;
+    for (let k=0;k<=8;k++){ const aa = th+bend*(k/8-.5); if (k){ x += Math.cos(aa)*len/8; yy += Math.sin(aa)*len/8; } m.push([x, yy]); }
+    return ribbon(m, o.w*(.8+r()*.4)); };
+  for (let i=0;i<o.back;i++) s += stray(false);
+  s += `<path class="s thin leaf-back" d="${outline}"/>`;
+  // Inside, clipped: fine ink ribs first, then the pale strands back to front.
+  let inner = '', rib = '';
+  for (let i=0;i<o.ribs;i++) rib += pts2d(strand(cx, cy, R, ry, H, r, {len:14+r()*24, bend:(r()-.5)*o.bend*.6}));
+  inner += `<path class="tx-fine" d="${rib}"/>`;
+  const T = []; for (let i=0;i<o.n;i++) T.push({m: strand(cx, cy, R, ry, H, r, {len:o.len*(.6+r()*.8), bend:(r()-.5)*o.bend}), w:o.w*(.75+r()*.5), tw: r() < .3 ? .3+r()*.4 : -1});
+  T.sort((a, b) => a.m.y-b.m.y);
+  for (const h of T) inner += ribbon(h.m, h.w, {twist:h.tw});
+  s += `<g clip-path="url(#${id})">${inner}</g><path class="s thin" fill="none" d="${outline}"/>`;
+  // Arches: a few pale strands springing up over the top edge.
+  for (let i=0;i<o.arches;i++){ const x0 = (r()*1.4-.7)*R, span = 10+r()*12, up = 2.5+r()*3, m = [];
+    for (let k=0;k<=12;k++){ const t = k/12, x = x0+span*t, yt = cy-moundY(x, R, H); m.push([cx+x, yt+3-Math.sin(t*Math.PI)*(up+3)]); }
+    s += ribbon(m, o.w*.9); }
+  for (let i=0;i<o.front;i++) s += stray(true);
+  return {svg:s, h:cy+ry+8-y};
+}
+
 const V = {
   // v1, as shipped (Fugu assets/icons/layers/lettuce-shredded.svg): for comparison.
   v1(cx, y, rx){
@@ -120,53 +183,13 @@ const V = {
     }
     return {svg:s+`<path class="tx-fine" d="${veins}"/>`, h:cy+ry*1.02+4-y};
   },
-  // A: strands lying on the mound. Long, thin, square-cut ribbons in mixed
-  // directions, flatter toward the top and sloping off at the rim, back to front.
-  A(cx, y, rx){
-    const R = rx*1.02, ry = R*K, heap = 8, cy = y+ry+heap+5, r = rng(29);
-    let s = pad(cx, cy, R, ry, .8); const st = [];
-    for (let i=0;i<64;i++){
-      const m = planeStrand(cx, cy, R, ry, heap, r, {len:.35+r()*.35, bias:.35, curve:.5});
-      st.push({m, w:2+r()*1.2, z:m.z, twist: r() < .2 ? .3+r()*.4 : -1});
-    }
-    st.sort((a, b) => a.z-b.z);
-    for (const h of st) s += ribbon(h.m, h.w, {twist:h.twist});
-    return {svg:s, h:cy+ry*1.1+6-y};
-  },
-  // B: a mound with strokes. One soft heap silhouette, texture as single hair
-  // strokes lying across it, a few outlined ribbons on top, strays past the rim.
-  B(cx, y, rx){
-    const R = rx*1.02, ry = R*K, heap = 8, cy = y+ry+heap+5, r = rng(47);
-    let s = pad(cx, cy, R, ry, .3);
-    const out = [];
-    for (let i=0;i<=120;i++){ const t = i/120*Math.PI*2, q = .92+.025*Math.sin(13*t)+.015*Math.sin(29*t+1);
-      const p = EP(cx, cy, R, ry, t, q), lift = Math.sin(t) < 0 ? heap*1.6*(-Math.sin(t))**.6 : 0; out.push([p[0], p[1]-lift-1]); }
-    s += `<path class="s thin leaf" d="${pts2d(out)}Z"/>`;
-    let hair = '';
-    for (let i=0;i<70;i++){ const m = planeStrand(cx, cy, R, ry, heap, r, {len:.25+r()*.3, bias:.3, curve:.4, maxq:.86}); hair += pts2d(m); }
-    s += `<path class="strand" d="${hair}"/>`;
-    const top = [];
-    for (let i=0;i<12;i++){ const m = planeStrand(cx, cy, R, ry, heap, r, {len:.3+r()*.25, bias:.2, curve:.5, maxq:.7}); top.push({m, z:m.z}); }
-    top.sort((a, b) => a.z-b.z);
-    for (const h of top) s += ribbon(h.m, 2.4, {twist: r() < .4 ? .5 : -1});
-    for (let i=0;i<6;i++){ const a = .3+r()*2.5, p = EP(cx, cy, R, ry, a, .9), d = (r()-.5)*1.2;
-      const m = [0, 1, 2, 3, 4].map(k => [p[0]+Math.cos(a+d)*k*3.5, p[1]+Math.sin(a+d)*k*3.5*K+k*.6]); s += ribbon(m, 1.8); }
-    return {svg:s, h:cy+ry*1.15+6-y};
-  },
-  // C: wider frilly ribbons (the second photo). Fewer, broader strands with an
-  // S-bend and frequent twists, fine veins down the wide ones.
-  C(cx, y, rx){
-    const R = rx*1.02, ry = R*K, heap = 9, cy = y+ry+heap+5, r = rng(73);
-    let s = pad(cx, cy, R, ry, 1.4); const st = [];
-    for (let i=0;i<44;i++){
-      const m = planeStrand(cx, cy, R, ry, heap, r, {len:.3+r()*.35, bias:.25, curve:1.1, wave:.08});
-      st.push({m, w:3+r()*1.8, z:m.z, twist: r() < .45 ? .25+r()*.5 : -1});
-    }
-    st.sort((a, b) => a.z-b.z);
-    let hair = '';
-    for (const h of st){ s += ribbon(h.m, h.w, {twist:h.twist}); if (h.w > 3.6 && h.twist < 0) hair += pts2d(h.m.slice(2, -2)); }
-    return {svg:s+`<path class="tx-fine" d="${hair}"/>`, h:cy+ry*1.15+6-y};
-  },
+  // Round 2 (after Bruce's drawn reference): a real pile. A filled dome, a
+  // dense under-layer of darker shreds (--accent-soft), pale strands on top
+  // (--surface) that curl and arch up off the pile, and strays spilling flat
+  // past the rim. D, E, F are the same drawing at three shred sizes.
+  D(cx, y, rx){ return pile(cx, y, rx, {H:34, lump:1.6, n:46, len:30, w:2.0, bend:3.2, ribs:0, arches:6, back:2, front:5, seed:11}); },
+  E(cx, y, rx){ return pile(cx, y, rx, {H:34, lump:2.6, n:48, len:34, w:1.4, bend:.7, ribs:26, arches:0, back:1, front:3, seed:23}); },
+  F(cx, y, rx){ return pile(cx, y, rx, {H:30, lump:2.0, n:40, len:32, w:1.8, bend:1.6, ribs:14, arches:3, back:2, front:4, seed:37}); },
 };
 
 function bunBase(cx, y, rx){
@@ -181,9 +204,9 @@ function svgFor(key, withBun){
 }
 const opts = [
   ['v1', 'v1, as shipped', 'For comparison. Short, fat, tapered crescents.'],
-  ['A', 'A: strands on the mound', 'About 64 long, thin, square-cut ribbons lying in mixed directions, leaning outward near the rim, with a few that twist. The heap shape comes from the strands. Closest to the first photo.'],
-  ['B', 'B: a mound with strokes', 'One soft heap, texture as hair strokes lying across it, a few outlined ribbons on top, and strays past the rim. The most legible at card size, and the most like the patent and engraving references.'],
-  ['C', 'C: curls and frills', 'About 44 wider ribbons with an S-bend, many twisting, with a fine vein down the wide ones. Closest to the second photo; the busiest at card size.'],
+  ['D', 'D: curls on a pile', 'After the drawn reference. A tall, lumpy pile packed with about 46 pale shreds that curl and loop, a few arching over the top, and strays spilling out at the base. Shreds narrower than the reference.'],
+  ['E', 'E: a lumpy mound', 'After the painted reference. A lumpier edge, and long, thin, nearly straight strands running down the slopes over fine ink ribs. Quietest at card size.'],
+  ['F', 'F: between them', 'A little lower, with medium shreds and a gentle curl, some ribs, three arches, and a few strays.'],
 ];
 let html = '';
 for (const theme of ['', 'dark']){

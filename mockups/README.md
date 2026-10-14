@@ -152,7 +152,10 @@ in a browser — no build step.
   `lettuce-shredded` layer, which reads as tiny bananas, from Bruce's two
   photos of shredded iceberg. v1 beside three options (A strands on the
   mound, B a mound with strokes, C wider frilly ribbons), at full size, card
-  size, and on a bun base, light and dark. The winner moves into
+  size, and on a bun base, light and dark. Round 2 (same day) replaces A to C,
+  which read as flat sticks, with D to F after two drawn references: a lumpy
+  mound drawn flat on the page, pale strands following its slopes, arches
+  over the top, strays at the base. The winner moves into
   `exploded-builds.html` for export.
 
 - **`in-development.html`**: proposal (2026-10-07) to make `draft: true`
