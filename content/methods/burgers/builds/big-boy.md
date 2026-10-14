@@ -23,16 +23,14 @@ Tall, creamy, and sweet; soft crunch on every deck.
 - **Sauces and condiments:** Mayonnaise and red relish, or a Thousand Island special sauce
 
 ```stack
-bun-top       | Sesame bun               | soft, toasted
-patty-thin    | Thin patty               | salt, fat
-lettuce-shredded | Shredded iceberg       | cool crunch
-sauce-burger  | Red relish sauce         | sweet, creamy
-bun-base      | Middle bun               | the second deck
-cheese        | American cheese          | melt
-patty-thin    | Thin patty               | salt, fat
-lettuce-shredded | Shredded iceberg       | cool crunch
-sauce-burger  | Red relish sauce         | sweet, creamy
-bun-base      | Bottom bun               | barrier
+bun-top                 | Sesame bun                   | soft, toasted
+patty-thin              | Thin patty                   | salt, fat
+lettuce-shredded        | Shredded iceberg             | cool crunch
+bun-base + sauce-burger | Middle bun, red relish sauce | sweet, creamy, the second deck
+cheese                  | American cheese              | melt
+patty-thin              | Thin patty                   | salt, fat
+lettuce-shredded        | Shredded iceberg             | cool crunch
+bun-base + sauce-burger | Bottom bun, red relish sauce | sweet, barrier
 ```
 
 There are a few variations on the construction of these, but this is one common take.

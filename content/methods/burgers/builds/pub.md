@@ -23,15 +23,14 @@ Beefy and juicy; a hearty meal.
 - **Sauces and condiments:** Mayonnaise on the bun; ketchup and mustard on the table
 
 ```stack
-bun-top             | Toasted soft bun        | soft, toasted
-lettuce             | Leaf lettuce            | cool crunch
-tomato              | Thick tomato            | juicy, acid
-onion-raw           | Raw purple onion        | sharp
-cheese              | Aged cheddar            | sharp, salt
-patty-thick-grilled | Thick patty, 180 g      | juicy, beefy
-pickle              | Pickle                  | sour
-mayo                | Mayonnaise              | rich, barrier
-bun-base            | Toasted soft bun        | barrier
+bun-top             | Toasted soft bun             | soft, toasted
+lettuce             | Leaf lettuce                 | cool crunch
+tomato              | Thick tomato                 | juicy, acid
+onion-raw           | Raw purple onion             | sharp
+cheese              | Aged cheddar                 | sharp, salt
+patty-thick-grilled | Thick patty, 180 g           | juicy, beefy
+pickle              | Pickle                       | sour
+bun-base + mayo     | Toasted soft bun, mayonnaise | rich, barrier
 ```
 
 ## Where it comes from

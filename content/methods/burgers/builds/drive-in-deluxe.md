@@ -23,16 +23,14 @@ Cold crunch and sharp against a salty patty.
 - **Sauces and condiments:** Triple “O”: red relish sauce on the base, sweet enriched mayo under the top bun
 
 ```stack
-bun-top               | Toasted bun                   | soft, toasted
-mayo                  | Sweet mayo                    | rich, sweet
-lettuce-shredded      | Shredded lettuce              | cold crunch
-tomato                | Thin tomato                   | juicy, acid
-onion-raw             | Raw purple onion              | sharp
-pickle                | Double-sour pickles           | sour
-onion-fried           | Onion sautéed in beef fat     | sweet
-patty-thin            | Thin patty, 140 g             | salt, fat, savoury
-sauce-burger          | Red sauce                     | sweet, sharp
-bun-base              | Toasted bun                   | barrier
+bun-top + mayo          | Toasted bun, sweet mayo   | soft, rich, sweet
+lettuce-shredded        | Shredded lettuce          | cold crunch
+tomato                  | Thin tomato               | juicy, acid
+onion-raw               | Raw purple onion          | sharp
+pickle                  | Double-sour pickles       | sour
+onion-fried             | Onion sautéed in beef fat | sweet
+patty-thin              | Thin patty, 140 g         | salt, fat, savoury
+bun-base + sauce-burger | Toasted bun, red sauce    | sweet, sharp, barrier
 ```
 
 ## Where it comes from

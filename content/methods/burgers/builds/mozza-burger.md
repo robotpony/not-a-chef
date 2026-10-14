@@ -23,15 +23,13 @@ Creamy, tangy, and mild; the sauce leads.
 - **Sauces and condiments:** [[Mozza burger sauce]] on the top and bottom buns
 
 ```stack
-bun-top      | Toasted sesame bun   | soft, toasted
-sauce-burger | Mozza sauce          | creamy, tangy
-lettuce      | Lettuce              | cool crunch
-tomato       | Tomato               | juicy, acid
-bacon        | Bacon                | smoke, salt
-cheese       | Mozzarella           | mild, melt
-patty-thin   | Beef patty, 85 g     | salt, savoury
-sauce-burger | Mozza sauce          | creamy, tangy
-bun-base     | Toasted sesame bun   | barrier
+bun-top + sauce-burger  | Toasted sesame bun, Mozza sauce | creamy, tangy
+lettuce                 | Lettuce                         | cool crunch
+tomato                  | Tomato                          | juicy, acid
+bacon                   | Bacon                           | smoke, salt
+cheese                  | Mozzarella                      | mild, melt
+patty-thin              | Beef patty, 85 g                | salt, savoury
+bun-base + sauce-burger | Toasted sesame bun, Mozza sauce | tangy, barrier
 ```
 
 ## Where it comes from

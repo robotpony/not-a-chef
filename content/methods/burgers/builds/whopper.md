@@ -21,16 +21,14 @@ Smoky and fresh; big and cold on top.
 - **Sauces and condiments:** Mayo on both buns, ketchup over the onion
 
 ```stack
-bun-top            | Sesame bun               | soft, toasted
-mayo               | Mayo                     | rich
-lettuce-chunks     | Iceberg, torn            | cool crunch
-tomato             | Vine-ripe tomato         | juicy, acid
-ketchup            | Ketchup                  | sweet
-onion-raw          | White onion rings        | sharp
-pickle             | Dill pickle chips        | sour
+bun-top + mayo     | Sesame bun, mayo           | soft, rich
+lettuce-chunks     | Iceberg, torn              | cool crunch
+tomato             | Vine-ripe tomato           | juicy, acid
+ketchup            | Ketchup                    | sweet
+onion-raw          | White onion rings          | sharp
+pickle             | Dill pickle chips          | sour
 patty-thin-grilled | Flame-grilled patty, 115 g | smoke, salt
-mayo               | Mayo                     | barrier
-bun-base           | Sesame bun               | barrier
+bun-base + mayo    | Sesame bun, mayo           | rich, barrier
 ```
 
 ## Where it comes from

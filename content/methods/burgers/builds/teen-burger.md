@@ -21,17 +21,16 @@ Savoury and smoky, with everything on it.
 - **Sauces and condiments:** Teen sauce, with ketchup and mustard
 
 ```stack
-bun-top               | Toasted sesame bun       | soft, toasted
-mayo                  | Teen sauce               | tangy, savoury
-lettuce               | Lettuce                  | cool crunch
-tomato                | Tomato                   | juicy, acid
-onion-raw             | Onion slice              | sharp
-pickle                | Pickles                  | sour
-bacon                 | Bacon                    | smoke, salt
-cheese                | Cheddar                  | sharp, melt
-patty-thin            | Seasoned patty, 85 g     | salt, savoury
-sauce-ketchup-mustard | Ketchup and mustard      | sweet, sharp
-bun-base              | Toasted sesame bun       | barrier
+bun-top + mayo        | Toasted sesame bun, Teen sauce | tangy, savoury
+lettuce               | Lettuce                        | cool crunch
+tomato                | Tomato                         | juicy, acid
+onion-raw             | Onion slice                    | sharp
+pickle                | Pickles                        | sour
+bacon                 | Bacon                          | smoke, salt
+cheese                | Cheddar                        | sharp, melt
+patty-thin            | Seasoned patty, 85 g           | salt, savoury
+sauce-ketchup-mustard | Ketchup and mustard            | sweet, sharp
+bun-base              | Toasted sesame bun             | barrier
 ```
 
 ## Where it comes from

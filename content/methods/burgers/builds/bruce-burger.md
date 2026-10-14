@@ -24,17 +24,15 @@ Sharp, sour, and crunchy veg sitting on a loose, seasoned patty.
 - **Sauces and condiments:** Mayonnaise and mustard, kept separate
 
 ```stack
-bun-top          | Toasted bun                | soft, toasted
-mayo             | Mayo                       | rich
-lettuce-shredded | Shredded lettuce           | cold crunch
-tomato           | Thin tomato                | juicy, acid
-mustard          | Mustard                    | sharp
-pickle           | Double-sour pickles        | sour
-onion-fried      | Onion sautéed in beef fat  | sweet
-patty-thin       | Thin patty, 140 g          | salt, fat, savoury
-onion-raw        | Raw purple onion           | sharp
-mayo             | Mayo                       | rich
-bun-base         | Toasted bun                | barrier
+bun-top + mayo   | Toasted bun, mayo         | soft, rich
+lettuce-shredded | Shredded lettuce          | cold crunch
+tomato           | Thin tomato               | juicy, acid
+mustard          | Mustard                   | sharp
+pickle           | Double-sour pickles       | sour
+onion-fried      | Onion sautéed in beef fat | sweet
+patty-thin       | Thin patty, 140 g         | salt, fat, savoury
+onion-raw        | Raw purple onion          | sharp
+bun-base + mayo  | Toasted bun, mayo         | rich, barrier
 ```
 
 ## Why these picks
