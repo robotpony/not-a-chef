@@ -7,10 +7,10 @@ This repo is the source of truth for recipes, and it is also the Obsidian vault:
 ```
 Obsidian (this repo, edited in place)
   │
-  └── content/  recipes/  essays/  reference/  the-food-log/
+  └── content/  recipes/  essays/  methods/  reference/  the-food-log/
           │
           Hugo + Blowfish build
-            ├── render hooks: wiki links, headings, images, tables, formula diagrams
+            ├── render hooks: wiki links, headings, images, tables, formula and stack diagrams
             ├── list.json.json → public/recipes/index.json
             └── assets/js: ingredients.js, automagic-sidebar.js, search.js (client-side, no build step)
           │
@@ -23,12 +23,19 @@ Until 2026-09 recipes were drafted in a separate vault (`~/writing/me/recipes/`)
 
 ## Components
 
-### tools/
+### Tools
+
+The content tools ship with Fugu, in `themes/fugu/tools/`:
 
 - `frontmatter.py` — check, get, set, and unset frontmatter across content; stdlib only
 - `drafts.py` — list everything marked `draft: true`
 - `add-image.sh` — strip metadata, fix rotation, and size a photo for `static/images/`
-- `preview.sh`, `publish.sh`, `deploy.sh` — dev server; build and check for dev-server output; rsync to the host
+- `compare-builds.py` — diff two builds of a site, for theme work
+
+This site's own, in `tools/`:
+
+- `preview.sh`, `publish.sh`, `deploy.sh` — dev server (restarts any hugo already on :1313); build and check for dev-server output; rsync to the host
+- `social-card.html` — source for `assets/img/social-card.png`, the default Open Graph image; the regenerate command is in its header comment
 - `config.toml` (gitignored, from `config.toml.example`) — machine-specific deploy target (and the retired vault path)
 - `migrate.py` — retired (see Overview)
 
@@ -39,15 +46,16 @@ CLI details are in DESIGN.md.
 Standard Hugo site with two stacked themes, both git submodules: `theme = ["fugu", "blowfish"]`. Hugo looks for each layout, partial and asset in this order:
 
 1. This repo (`layouts/`, `assets/`): the Not a Chef design and branding: `custom.css`, the `not-a-chef` colour scheme, the homepage, header, footer, favicons, and fonts (`layouts/partials/fonts.html`).
-2. Fugu (`themes/fugu/`, [hugo-theme-fugu](https://github.com/robotpony/hugo-theme-fugu)): the reusable cookbook theme: page templates, render hooks, recipe cards, sidebars, client JS, the formula icon kit, archetypes, and the content tools. See PLAN.md "Release hugo-theme-fugu".
+2. Fugu (`themes/fugu/`, [hugo-theme-fugu](https://github.com/robotpony/hugo-theme-fugu)): the reusable cookbook theme: page templates, render hooks, recipe cards, sidebars, client JS, the formula icon kit, archetypes, and the content tools. Its own plan is `themes/fugu/PLAN.md`; the site side is PLAN.md "Fugu theme".
 3. Blowfish (`themes/blowfish/`): everything neither of the above overrides.
 
-The settled design (`mockups/STYLE.md`) didn't match any Blowfish layout, so Fugu overrides much of it. Four content sections, all written by hand in this repo:
+The settled design (`mockups/STYLE.md`) didn't match any Blowfish layout, so Fugu overrides much of it. Five content sections, all written by hand in this repo:
 
 | Section | Path |
 |---|---|
 | Recipes | `content/recipes/` |
 | Essays | `content/essays/` |
+| Methods | `content/methods/` |
 | Reference | `content/reference/` |
 | The Food Log | `content/the-food-log/` |
 
@@ -57,8 +65,8 @@ Custom layouts:
 - `themes/fugu/layouts/<section>/list.html` — card-grid listings for each section; `themes/fugu/layouts/recipes/list.json.json` builds `public/recipes/index.json`
 - `themes/fugu/layouts/_default/single.html` — every single page (rewrites `[[wiki links]]` in `.RawContent` to standard links before goldmark parses them), with the recipe sidebar or the reading sidebar
 - `themes/fugu/layouts/_default/term.html` — tag and cuisine pages, including principle tags
-- `themes/fugu/layouts/_default/_markup/` — render hooks: `render-link.html` (wiki links, glossary links), `render-heading.html` (flags ingredient and sidebar sections), `render-image.html` (Photos module), `render-table.html` (scroll wrapper), `render-codeblock-formula.html` (formula diagrams)
-- `assets/css/custom.css` — the design system's CSS; `themes/fugu/assets/icons/formula/` — the formula diagram icon kit
+- `themes/fugu/layouts/_default/_markup/` — render hooks: `render-link.html` (wiki links, glossary links), `render-heading.html` (flags ingredient and sidebar sections), `render-image.html` (Photos module), `render-table.html` (scroll wrapper), `render-codeblock-formula.html` (formula diagrams), `render-codeblock-stack.html` (stack diagrams)
+- `assets/css/custom.css` — the design system's CSS; `themes/fugu/assets/icons/formula/` and `themes/fugu/assets/icons/layers/` — the formula and stack diagram kits
 
 Client-side JS (`themes/fugu/assets/js/`) is plain, dependency-free, and progressive: `ingredients.js` (check-off, scaling, unit conversion), `automagic-sidebar.js` (moves Mechanic/To serve/Notes/photos into the sidebar, photo viewer), `search.js` (Fuse.js search, pinned results first). With JS off every page still reads and prints.
 
@@ -93,7 +101,7 @@ The site is a small ontology: a few kinds of page, and a few relations between t
 | Method | A general pattern: technique, ratio, or part of a blueprint | `content/methods/` |
 | Blueprint | A dish type made of parts | A folder under methods, `content/methods/<slug>/_index.md` |
 | Part | A slot every dish of the type fills | A page in `content/methods/<slug>/parts/`, ordered by `weight` |
-| Build | A named combination of one pick per part, with a profile | A page in `content/methods/<slug>/builds/`, with `era` and a `## Picks` section |
+| Build | A named combination of one pick per part, with a profile (its `description`) | A page in `content/methods/<slug>/builds/`, with `era` and a `## Picks` section |
 | Option | A choice within a part (thick, thin, paper thin) | A row under `## Options` in the part's method |
 | Concept | A named idea with a definition, icon, chip, essay, and list | tag `_index.md` (principle), `[fugu.development]` (status), the `method` tag and blueprint folders (method) |
 | Glossary term | A definition only | `content/reference/glossary.md` |
@@ -111,7 +119,7 @@ The site is a small ontology: a few kinds of page, and a few relations between t
 
 A folder is an exclusive, mandatory tag that also sets the URL and template; a tag or taxonomy is optional and many-to-many. So whatever a page can only be one of (recipe, essay type, method, a blueprint's part or build) is a folder, and whatever it can be several of (tags, cuisine) is a taxonomy. Relationships are folders or wiki links; frontmatter holds only metadata. `content/methods/_index.md` cascades the `method` tag onto its pages, so the folder and the tag agree.
 
-Concept pages (principle, status, method) share Fugu's `partials/concept/` (the icon and the popover); each opens with its definition as a plain intro on the reading layout, with further reading in the sidebar. Principle pages use `term.html`'s `principle: true` branch and test kitchen uses `partials/development/`. The methods list (`/methods/`) and each blueprint's page (`/methods/<slug>/`) come from `layouts/methods/list.html`, which hands off to `partials/method/list.html` or `partials/blueprint/page.html`: the list shows each blueprint's parts and the names of its builds, and the blueprint page shows its parts, lineage, and build cards.
+Concept pages (principle, status, method) share Fugu's `partials/concept/` (the icon and the popover); each opens with its definition as a plain intro on the reading layout, with further reading in the sidebar. Principle pages use `term.html`'s `principle: true` branch and test kitchen uses `partials/development/`. The methods list (`/methods/`) and each blueprint's page (`/methods/<slug>/`) come from Fugu's `layouts/methods/list.html`, which hands off to `partials/method/list.html` or `partials/blueprint/page.html`: the list shows each blueprint's parts and the names of its builds, and the blueprint page shows its parts, lineage, and build cards.
 
 ## Key Design Decisions
 

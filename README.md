@@ -20,7 +20,7 @@ This repo is now the source of truth for recipes, and it is the Obsidian vault: 
 
 - Hugo to provide the static website for recipes, food log, and reference pages
 - Obsidian for local editing
-- Small Python and shell tools in `tools/` (frontmatter checks, drafts list, image processing, deploy)
+- Small Python and shell tools: the content tools (frontmatter checks, drafts list, image processing) ship with the Fugu theme in `themes/fugu/tools/`; this site's own preview, publish, and deploy scripts are in `tools/`
 
 Hugo + Obsidian suggest Markdown + clear YAML front-matter.
 
@@ -28,7 +28,7 @@ Style guide should be pulled + updated from the Obsidian source.
 
 ## Site features
 
-- **Pinning** — any recipe, essay, or reference page can set `pinned: true` in its frontmatter to float to the top of its section's list, its tag/cuisine term pages, and search results. Rare by design, not a general-purpose sort override. See docs/DESIGN.md.
+- **Pinning** — any recipe, essay, method, or reference page can set `pinned: true` in its frontmatter to float to the top of its section's list, its tag/cuisine term pages, and search results (a pinned build also leads its blueprint's builds). Rare by design, not a general-purpose sort override. See docs/DESIGN.md.
 - **Formula diagrams** — a ```` ```formula ```` block in a recipe draws its ratio as a row of icons (beans + starch + veg + binder), at build time. See docs/FORMAT.md §Formula diagrams and docs/DESIGN.md.
 - **Methods and blueprints** — a method (`content/methods/`) explains how a kind of food or a process works in general, so you can cook what isn't written down; methods are listed at `/methods/`. A blueprint is a dish type made of parts, a folder under methods (`content/methods/burgers/`, at `/methods/burgers/`): its parts are in `parts/`, and its builds, named combinations of picks, are in `builds/`. How recipes, stories, methods, blueprints, and concepts relate is in docs/ARCHITECTURE.md §Content model and docs/METHODS.md.
 - **Tag reference pages** — a tag can carry its own `content/tags/<slug>/_index.md` for a description, and, when marked `principle: true`, a definition callout plus a "Reference & further reading" list pulled from anything else tagged with it that isn't a recipe (used today for `win-the-fridge`). See `themes/fugu/layouts/_default/term.html`.
@@ -66,4 +66,4 @@ The deploy target must be a plain static file host serving `public/` directly �
 
 ## License
 
-Content (recipes, essays, reference pages) is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — share and adapt with attribution, same license. The source code (Hugo templates, migration tools) is MIT. See [LICENSE](LICENSE) for full terms.
+Content (recipes, essays, reference pages) is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — share and adapt with attribution, same license. The source code (Hugo templates and tools) is MIT. See [LICENSE](LICENSE) for full terms.

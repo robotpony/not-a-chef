@@ -202,6 +202,16 @@ in a browser — no build step.
   Principle chip, Glossary link, Definition callout, and Reference list
   entries describe it.
 
+- **`icons.html`** and **`favicon-heart-pan.html`**: the favicon rounds
+  (2026-09-22 to 09-24). `icons.html` was the first (fried egg colourways,
+  then a pan on a tile); the shipped favicon is `favicon-heart-pan.html`
+  variant 08, "Enamel, no tile, filled". `STYLE.md`'s favicon section has
+  the history.
+
+- **`food-log-homepage.html`**: Food Log cards with real summaries, and two
+  new homepage bands (2026-09-29). Built; `STYLE.md`'s Recipe card entry
+  describes the Food Log card.
+
 ## `archived/` — reference only
 
 The four original mockup rounds `style.html`/`COMPONENTS.md` were built

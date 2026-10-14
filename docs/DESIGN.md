@@ -4,7 +4,7 @@
 
 ### Content sections
 
-Four sections, each with a list view and individual pages. Every listing uses the same recipe card (`.rcard`, `themes/fugu/layouts/partials/recipe-card.html`; see `mockups/STYLE.md` "Recipe card").
+Five sections, each with a list view and individual pages. Every listing uses the same recipe card (`.rcard`, `themes/fugu/layouts/partials/recipe-card.html`; see `mockups/STYLE.md` "Recipe card").
 
 **Recipes** (`/recipes/`, `themes/fugu/layouts/recipes/list.html`)
 - Listing: card grid (taxonomy row, title, intro, Prep/Cook/Serves)
@@ -19,6 +19,10 @@ Four sections, each with a list view and individual pages. Every listing uses th
 **Reference** (`/reference/`, `themes/fugu/layouts/reference/list.html`)
 - Listing: card grid, reading time in the stat line
 - Individual: article layout with the reading sidebar (technique guides, ratio tables, glossaries)
+
+**Methods** (`/methods/`, `themes/fugu/layouts/methods/list.html`)
+- Listing: the methods list, with each blueprint as a block of its parts and build names; a blueprint folder (`/methods/burgers/`) gets the blueprint page (parts, lineage, build cards)
+- Individual: essay page treatment, with part or build navigation inside a blueprint. Model and format: `docs/METHODS.md`
 
 **The Food Log** (`/the-food-log/`, `themes/fugu/layouts/the-food-log/list.html`)
 - Listing: one card per month, intro from the month's summary paragraph (`/food-log-summary`)
@@ -36,18 +40,9 @@ Superseded by the mockups — see `mockups/STYLE.md`/`mockups/style.html`, `mock
 
 ### Hugo frontmatter additions
 
-Hugo needs a few fields not in the recipe vault format:
+`draft`, `description`, `pinned`, and the rest of the frontmatter are specified in `docs/FORMAT.md`. Test kitchen (`draft`) is below.
 
-```yaml
-draft: false          # true = published in the Test kitchen (banner + card mark); see FORMAT.md
-description: ""       # optional short blurb for SEO and cards
-```
-
-```yaml
-pinned: true          # optional; floats this page to the top of its listings and search
-```
-
-(`featured` was considered — pin a recipe to the homepage card grid — but dropped 2026-09-17 building Phase 6.3: no recipe uses it, and "recently added" is real date-sorted data already. A real need showed up 2026-09-27: the win-the-fridge reference essay (`content/essays/reference-essays/win-the-fridge.md`) needed to surface ahead of everything else, so it came back as `pinned`, scoped wider than the original proposal — any page in any section, not just recipes on the homepage. It floats pinned pages to the top of `themes/fugu/layouts/recipes/list.html`, `themes/fugu/layouts/essays/list.html`, `themes/fugu/layouts/reference/list.html`, and `themes/fugu/layouts/_default/term.html` (a stable partition: pinned pages first, everything else keeps its existing order), and to the top of matching results in the Fuse.js search modal — `themes/fugu/layouts/_default/index.json` (project override of the theme's, adds a `pinned` field) feeds `themes/fugu/assets/js/search.js` (project override of the theme's, stable-sorts pinned matches first). It still doesn't touch the homepage's "recently added" row, which stays real date-sorted data per the original reasoning above.)
+(`featured`, pinning a recipe to the homepage card grid, was considered and dropped 2026-09-17: "recently added" is real date-sorted data already. It came back 2026-09-27 as `pinned`, scoped to any page in any section, when the win-the-fridge essay needed to surface first. Pinned pages lead their section's list, term pages, search results, and, for a build, its blueprint's builds; the homepage's "recently added" row stays date-sorted. Fugu's `docs/frontmatter.md` has the details.)
 
 ### Wiki link render hook
 
@@ -57,12 +52,13 @@ Unresolved wiki links fall back to plain text with a `broken-link` CSS class so 
 
 ### Other render hooks
 
-All in `layouts/_default/_markup/`:
+All in `themes/fugu/layouts/_default/_markup/`:
 
 - `render-heading.html` — flags each h2 as an ingredient section or a sidebar section (Mechanic, To serve, Notes, …) for the client-side walks in `ingredients.js` and `automagic-sidebar.js`
 - `render-image.html` — builds thumbnail and display copies for the Photos sidebar module (`FORMAT.md` §Photos)
 - `render-table.html` — wraps tables in a scroll container so wide ones don't push a phone page sideways
 - `render-codeblock-formula.html` — formula diagrams, below
+- `render-codeblock-stack.html` — stack diagrams (exploded builds), from the layer kit in `themes/fugu/assets/icons/layers/` (`FORMAT.md` §Stack diagrams)
 
 ### Formula diagrams
 
@@ -114,6 +110,7 @@ A key left out of `params.toml` falls back to Fugu's default ("In development" a
 ```
 /recipes/dal-tadka/
 /recipes/chai/
+/methods/burgers/builds/drive-in-deluxe/
 /essays/the-case-for-mise-en-place/
 /reference/meat-doneness/
 /tags/mains/
@@ -155,7 +152,7 @@ Creates a new recipe stub in the correct location.
 
 ### `/lint`
 
-Validates all recipe files in `content/recipes/` and `content/essays/` against FORMAT.md rules.
+Validates recipe files in `content/recipes/` (and `content/essays/` given a path) against FORMAT.md rules, and always checks `content/methods/` against docs/METHODS.md (the `method` tag, part weights, build picks, retired fields).
 
 ```
 /lint [path]
@@ -264,7 +261,7 @@ Output (human-readable):
 
 ## Frontmatter tool CLI
 
-`themes/fugu/tools/frontmatter.py` — no third-party dependencies (stdlib only). Reviews frontmatter across `content/recipes/`, `content/essays/`, and `content/reference/`, and provides get/set/unset for scripted edits (e.g. by Claude, across many files at once). It parses the constrained YAML subset this vault actually uses (flat scalars, flow lists, occasional block lists, folded long values) — not general YAML — so it never needs `pyyaml` installed.
+`themes/fugu/tools/frontmatter.py` — no third-party dependencies (stdlib only). Reviews frontmatter across `content/recipes/`, `content/essays/`, `content/methods/`, `content/reference/`, and `content/the-food-log/` (section folders come from the site's Fugu params), and provides get/set/unset for scripted edits (e.g. by Claude, across many files at once). It parses the constrained YAML subset this vault actually uses (flat scalars, flow lists, occasional block lists, folded long values) — not general YAML — so it never needs `pyyaml` installed.
 
 ```
 python themes/fugu/tools/frontmatter.py check [paths...] [--json]
@@ -281,10 +278,10 @@ python themes/fugu/tools/frontmatter.py unset <file> <field>
 
 ## Drafts tool CLI
 
-`themes/fugu/tools/drafts.py` — lists everything marked `draft: true` across `content/recipes/`, `content/essays/`, `content/reference/`, and `content/the-food-log/`. Reuses `frontmatter.py`'s parser directly (no separate frontmatter logic).
+`themes/fugu/tools/drafts.py` — lists everything marked `draft: true` across recipes, essays, methods, reference pages, and the Food Log. Reuses `frontmatter.py`'s parser directly (no separate frontmatter logic).
 
 ```
 python themes/fugu/tools/drafts.py [paths...] [--json]
 ```
 
-Groups results by content type (recipes, essays, reference pages, log entries) with title and path. `--json` prints a flat list of `{path, kind, title}` objects instead.
+Groups results by content type (recipes, essays, methods, reference pages, log entries) with title and path. `--json` prints a flat list of `{path, kind, title}` objects instead.
