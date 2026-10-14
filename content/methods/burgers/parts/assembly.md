@@ -1,9 +1,10 @@
 ---
 title: Assembling burgers
 date: 2026-10-10
-draft: true
-working_on: "First draft, mostly from The quest for the perfect burger."
-tags: [method, burgers]
+draft: false
+tags:
+  - method
+  - burgers
 weight: 4
 description: "Building a burger: a toasted bun that fits the patty, something cold and crunchy, something sharp, and a few minutes wrapped in paper."
 ---
@@ -18,7 +19,7 @@ The patty brings salt, fat, and savoury depth. Everything else on the burger is 
 - **Sour.** Double-sour pickles. They're hard to buy and easy to make: add a sprinkle of citric acid powder to ordinary dill pickles and let them sit.
 - **Juicy.** Ripe tomato, sliced thin. Skip it when tomatoes aren't good.
 - **Cheese and bacon.** Optional. A thin slice of processed cheese melts into a thin patty; bacon only if it's crisp, never chewy.
-- **Black pepper.** A crack over the top layer.
+- **Black pepper.** A crack or three over the tomatoes. Pepper, pepper, pepper!
 
 ## Order
 
@@ -30,9 +31,9 @@ Bottom up, with the sauce against the bread so it soaks into the bun, not the le
 4. Tomato, lettuce
 5. Sauce or mayo on the top bun, then the top bun
 
-The exact order changes by build (see [[Drive-in deluxe burger]], [[Fast-food double burger]], [[Grilled onion burger]]).
+The exact order changes by build (see [[Drive-in deluxe burger]], [[Fast-food double burger]], [[Grilled onion burger]]). Remember that sauces are the glue, as well as helping keep the buns from getting soggy. 
 
-## Rest it in paper
+## Steam it in paper
 
 Wrap the finished burger in burger paper or parchment, or cover it in a pan with a lid, and let it sit for a minute or a few. It steams gently, the bun softens, and the flavours settle. It tastes better than the same burger straight off the griddle. Then eat it right away; burgers hold badly after that.
 
@@ -42,6 +43,10 @@ Wrap the finished burger in burger paper or parchment, or cover it in a pan with
 - **One note:** no cold crunch.
 - **Heavy by the third bite:** nothing sharp. Add onion, mustard, or a sharper pickle.
 - **Falls apart, or can't be bitten:** too tall, or the patty and bun don't match. A burger has to be navigable.
+
+## Notes
+
+- There are 3 methods for toasting buns: dry (radiant heat), dry griddled, and butter/oil griddled. I prefer dry griddled, as it produces a dark, smooth surface (with some crunch, and caramelized flavours).
 
 ## Recipes
 

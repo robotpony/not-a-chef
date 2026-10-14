@@ -1,9 +1,11 @@
 ---
 title: Forming burger patties
 date: 2026-10-10
-draft: true
-working_on: "First draft, pulled together from the burger recipes and the Food Log."
-tags: [method, burgers, beef]
+draft: false
+tags:
+  - method
+  - burgers
+  - beef
 weight: 1
 description: "How to make a burger patty: the grind, the fat, the weight, and the one rule that matters most, which is to leave the meat alone."
 ---
@@ -21,7 +23,7 @@ A burger patty is ground meat, portioned and shaped, and almost nothing else. It
 
 Portion the meat into loose balls by weight. Don't knead or pack them; some irregularity helps the crust form.
 
-For a smashed patty, keep the balls cold and smash them in the pan (see [[Cooking patties]]).
+For a smashed patty, keep the balls cold and smash them in the pan.
 
 For a pressed patty, set each ball between two squares of parchment, about 10 cm, and press it flat with a cutting board or the bottom of a pot to 5–7 mm (¼ inch). Tidy the edges with your fingers. Stack the patties with their parchment and freeze them, at least partly, before cooking. Freezing tightens the texture a little, in a good way, and the parchment peels off as the patty drops into the pan.
 
@@ -48,4 +50,4 @@ Lean meats need help. Turkey and chicken don't have the fat to brown and stay ju
 
 ## Recipes
 
-[[White Spot burger]] (smashed), [[McDouble]] (double-ground, pressed and frozen), [[Turkey burgers]] (pressed thin). Other meats and plants: [[Chicken patties]], [[Pan-fried chicken burger]], [[Veg patties]], [[Vegan burger]].
+[[White Spot burger]] (griddled), [[McDouble]] (double-ground, pressed and frozen), [[Turkey burgers]] (pressed thin). Other meats and plants: [[Chicken patties]], [[Pan-fried chicken burger]], [[Veg patties]], [[Vegan burger]].

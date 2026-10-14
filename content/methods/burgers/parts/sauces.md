@@ -13,24 +13,23 @@ A burger sauce adds sweetness, acid, and sharpness, and sometimes fat. There are
 
 ## The variables
 
-- **Sweet to sharp.** Ketchup brings sweetness; mustard brings sharpness. **5:1 ketchup to mustard** is the fast-food balance (see [[McDouble]]).
-- **Fat.** Mayo carries a blended sauce and softens the mustard. Kewpie adds sweetness and acidity.
-- **Pickle.** Diced pickle or relish gives a spread its texture and sourness.
-- **Rest.** A blended spread with raw onion or pickle tastes better after an hour in the fridge, once the onion mellows.
+- **Sweet to sharp.** Ketchup brings sweetness; mustard brings sharpness. **11:1 ketchup to mustard** is the McBalance (see [[McDouble]]), but the King prefers **3:1**.
+- **Fat.** Mayo carries a blended sauce and softens the mustard. Kewpie adds sweetness and acidity. It also provides a protective layer and the glue for condiments like lettuce.
+- **Pickle.** Diced pickle or relish gives a spread its texture and sourness. Many fast food pickles are double-sour.
+- **Special sauces.** A blended spread with raw onion or pickle tastes better after an hour in the fridge, once the onion mellows.
 
 ## Options
 
-| Option                        | Pick it when                    | Ratio                                                                                             |
-| ----------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------- |
-| Ketchup and mustard, separate | Deluxe and fast-food burgers    | 5:1 ketchup to mustard                                                                            |
-| [[Bruce's burger sauce]]      | Swiss or deluxe burgers         | 1:1:1 mayo, diced pickle, mustard                                                                 |
-| [[In-N-Out burger spread]]    | Diner-style griddle burgers     | Mayo-based, with ketchup, relish, and a little vinegar and sugar                                  |
-| Red sauce and sweet mayo      | [[White Spot burger]]           | Red: 2:3 red relish to chili sauce. <br>Mayo: Hellmann's, egg yolk, paprika, honey, cider vinegar |
-| [[Mozza burger sauce]]        | [[Mozza burger]]                | Mayo, sweet pickle or red relish, chili sauce, a touch of Thousand Island or sugar                |
-| Teen sauce                    | [[Teen burger]]                 | Mayo (soybean oil, egg yolk, vinegar) with mustard, sugar, and spices; served with ketchup and mustard |
-| Mayo and mustard              | When ketchup is too sweet       | A tiny bit of ketchup, if any                                                                     |
+| Option                        | Pick it when                 | Ratio                                                                                                     |
+| ----------------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------- |
+| Ketchup and mustard, separate | Deluxe and fast-food burgers | Anywhere between 11:1 to 3:1 ketchup to mustard, or the reverse.                                          |
+| [[Bruce's burger sauce]]      | Swiss or deluxe burgers      | 1:1:1 mayo, diced pickle, mustard                                                                         |
+| [[In-N-Out burger spread]]    | Diner-style griddle burgers  | Mayo-based, with ketchup, relish, and a little vinegar and sugar                                          |
+| Red sauce and sweet mayo      | [[White Spot burger]]        | **Red:** 2:3 red relish to chili sauce. <br>**Mayo:** Hellmann's, egg yolk, paprika, honey, cider vinegar |
+| [[Mozza burger sauce]]        | [[Mozza burger]]             | Mayo, sweet pickle or red relish, chili sauce, a touch of Thousand Island or sugar                        |
+| Teen sauce                    | [[Teen burger]]              | Mayo (soybean oil, egg yolk, vinegar) with mustard, sugar, and spices; served with ketchup and mustard    |
+| Mayo and mustard              | When ketchup is too sweet    | Best with grilled onions, as the onions provide the sweetness.                                            |
 
-- MSG, powdered acid, spices, commercial sauces. #todo
 
 ## Condiments
 
@@ -47,14 +46,16 @@ The jarred and bottled condiments the builds use, on their own or as the base of
 | Dill pickles | Sour, crunch | Most builds, sliced thin or lengthwise |
 | Double-sour pickles | The strongest sour: dill pickles with a sprinkle of citric acid powder | [[Drive-in deluxe burger]] |
 
-Double-sour pickles are hard to buy and easy to make: add a sprinkle of citric acid powder to ordinary sandwich-style dill pickles and let them sit. They get remarkably close to commercial double sours. On a fast-food double, non-kosher dills with a little citric acid or vinegar do the same job (see [[McDouble]]).
+Double-sour pickles are difficult to buy in my region and easy to make: add a sprinkle of citric acid powder to ordinary sandwich-style dill pickles and let them sit. They get remarkably close to commercial double sours. On a fast-food double, non-kosher dills with a little citric acid or vinegar do the same job (see [[McDouble]]).
+
+## Notes
+
+- The ratio of sauces is especially important when using individual sauces like ketchup and mustard. Many restaurants use 3:1 ketchup:mustard, though for my tastes I reverse that.
 
 ## How it fails
 
 - **Harsh:** too much mustard. A squeeze of ketchup or a splash of pickle brine softens it.
-- **Too mild:** lean more pickle for brightness.
-
-- Other ways a sauce goes wrong for you? #todo
+- **Too mild:** lean towards more pickle for brightness.
 
 ## Recipes
 
