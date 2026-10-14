@@ -55,6 +55,19 @@ A lunch counter in El Reno, Oklahoma, a railway town on Route 66. The [fried oni
 
 It's one of the oldest griddled burgers still made, though not the first: cooks were smashing balls of beef on flat-tops from the 1880s (see [[Smash burger]]). The slider, the drive-in deluxe, and the fast-food double share its thin patty, its flat-top, and its soft bun, and change what goes on top.
 
+## Why these picks
+
+- **Onion cooked in the beef fat.** The fat browns it and the onion soaks up the beef flavour, so it tastes of the burger, not just of onion.
+- **A smashed patty.** Thin enough to cook in the time the onion takes to soften, with crisp edges against the soft onion.
+- **Yellow mustard.** The only sharp note under all that sweetness.
+- **A pickle.** Not traditional, but it adds the crunch and acid the soft onion can't.
+
+## How it fails
+
+- **Raw, sharp onion:** sliced too thick, or the heat was too low to soften it before the patty was done.
+- **Burnt onion:** the griddle was too hot or the onion sliced too thin. Pull it to a cooler spot once it browns.
+- **Cloying:** too much onion and nothing sharp. Don't skip the mustard.
+
 ## Recipes
 
 [[Oklahoma fried onion burger]] is the smashed-in version.

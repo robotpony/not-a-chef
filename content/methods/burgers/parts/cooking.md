@@ -18,7 +18,7 @@ A burger patty cooks for its crust. The surface has to be hot enough to brown th
 
 - **Heat.** A heavy pan, cast iron, or flat-top, heated through on medium-low and turned up to medium-high just before cooking. About 220°C (425°F) at the surface.
 - **Fat.** A little oil in the pan. The patty adds its own as it renders.
-- **Flips.** As many as you want, but I do 2-3. Ignore anyone who says it needs only a single flip.
+- **Flips.** As many as you want, but I do two or three. Ignore anyone who says it needs only a single flip.
 - **Cheese.** On the patty after the flip, a minute or so before it comes off.
 - **Seasoning.** On the surface, in the pan or as it comes off (see [[Seasoning burgers]]).
 
@@ -41,7 +41,7 @@ Pre-smashed frozen patties work fine on high heat with a bacon press. Fresh patt
 
 ## Safety
 
-Ground beef is cooked through at 71°C (160°F) in the centre, but a thin patty is difficult to undercook unless it starts from frozen (see [[Food safety: time and temperature]]).
+Ground beef is safe at 71°C (160°F) in the centre, which is past medium-well. A thin patty is difficult to undercook unless it starts from frozen (see [[Food safety: time and temperature]]).
 
 ## Recipes
 

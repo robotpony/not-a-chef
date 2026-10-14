@@ -18,15 +18,15 @@ Beefy and juicy; a hearty meal.
 
 - **Forming burger patties:** One thick patty, 170–180 g, hand-formed loosely, with a thumbprint in the middle so it cooks flat
 - **Seasoning burgers:** Salt and pepper on the outside, just before cooking
-- **Cooking patties:** Grilled or griddled over medium-high heat and turned once, or reverse seared; rested a couple of minutes
-- **Assembling burgers:** A soft bun, toasted; leaf lettuce, a thick slice of tomato, raw red onion, pickle; aged cheddar and crisp bacon if you want them
+- **Cooking patties:** Grilled or griddled over medium-high heat and turned two or three times, or reverse seared; rested a couple of minutes
+- **Assembling burgers:** A soft bun, toasted; leaf lettuce, a thick slice of tomato, raw purple onion, pickle; aged cheddar and crisp bacon if you want them
 - **Sauces and condiments:** Mayonnaise on the bun; ketchup and mustard on the table
 
 ```stack
 bun-top             | Toasted soft bun        | soft, toasted
 lettuce             | Leaf lettuce            | cool crunch
 tomato              | Thick tomato            | juicy, acid
-onion-raw           | Raw red onion           | sharp
+onion-raw           | Raw purple onion        | sharp
 cheese              | Aged cheddar            | sharp, salt
 patty-thick-grilled | Thick patty, 180 g      | juicy, beefy
 pickle              | Pickle                  | sour

@@ -34,6 +34,7 @@ bun-base              | Small bun                      | barrier
 ```
 
 ## Where it comes from
+
 The value-menu double of the 1990s: frozen, double-ground patties and fixed condiment ratios, so it tastes the same at every chain.
 
 ## Why these picks

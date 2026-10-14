@@ -18,7 +18,7 @@ Creamy, tangy, and mild; the sauce leads.
 
 - **Forming burger patties:** One regular patty, 85 g (3 oz)
 - **Seasoning burgers:** Lawry's Seasoned Salt, on the griddle
-- **Cooking patties:** Griddled, flipped once, mozzarella on after the flip
+- **Cooking patties:** Griddled, flipped two or three times, mozzarella on after the last flip
 - **Assembling burgers:** Real mozzarella, bacon, lettuce, and tomato, on a toasted sesame seed bun
 - **Sauces and condiments:** [[Mozza burger sauce]] on the top and bottom buns
 

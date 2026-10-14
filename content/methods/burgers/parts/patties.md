@@ -40,6 +40,7 @@ The thick option is the [[Pub burger]]'s patty.
 ## How it fails
 
 - **Dense and springy:** the meat was salted, mixed, or packed.
+- **Tough:** handled too much, pressed too hard, or the mince got warm. Keep it cold.
 - **Bigger than the bun, or lost in it:** the patty wasn't sized against the bun, or wasn't pressed wide enough to allow for shrinking.
 - **Balled up in the pan:** too thick in the middle. Press to an even thickness, or smash it.
 - **Dry and grey:** too lean, or too thick to brown before the centre overcooks.
@@ -50,4 +51,4 @@ Lean meats need help. Turkey and chicken don't have the fat to brown and stay ju
 
 ## Recipes
 
-[[White Spot burger]] (griddled), [[McDouble]] (double-ground, pressed and frozen), [[Turkey burgers]] (pressed thin). Other meats and plants: [[Chicken patties]], [[Pan-fried chicken burger]], [[Veg patties]], [[Vegan burger]].
+[[White Spot burger]] (smashed), [[McDouble]] (double-ground, pressed and frozen), [[Turkey burgers]] (pressed thin). Other meats and plants: [[Chicken patties]], [[Pan-fried chicken burger]], [[Veg patties]], [[Vegan burger]].

@@ -16,7 +16,7 @@ Salty, sweet, and rich; the same every time.
 
 - **Forming burger patties:** Two thin patties, 45 g each (ten to the pound), cooked from frozen. These are likely double-ground to get a soft texture from cheap cuts.
 - **Seasoning burgers:** Salt and pepper (and MSG), as they come off the heat
-- **Cooking patties:** On a hot flat-top, both sides at once in a clamshell griddle at the restaurant; one flip at home
+- **Cooking patties:** On a hot flat-top, both sides at once in a clamshell griddle at the restaurant; two or three flips at home
 - **Assembling burgers:** One slice of American cheese between the patties, pickles, and rehydrated dried minced onion, on a small toasted bun; wrapped so it steams
 - **Sauces and condiments:** Ketchup and mustard
 
@@ -33,7 +33,7 @@ bun-base              | Small bun                | barrier
 
 ## Where it comes from
 
-McDonald's used the McDouble name as early as 1964. The modern McDouble arrived in 1997, as a deluxe: two patties with lettuce, tomato, and mayonnaise instead of cheese. The version here, one slice of cheese with ketchup, mustard, pickles, and onion, is the 2008 relaunch for the value menu. It's one of the cheapest things the company sells, half the price of a Big Mac for the same amount of beef, and it's almost identical to the double cheeseburger, which has a second slice of cheese. A Bacon McDouble joined the U.S. Dollar Menu & More in 2013. 
+McDonald's used the McDouble name as early as 1964. The modern McDouble arrived in 1997, as a deluxe: two patties with lettuce, tomato, and mayonnaise instead of cheese. The version here, one slice of cheese with ketchup, mustard, pickles, and onion, is the value-menu burger it became. It's one of the cheapest things the company sells, half the price of a Big Mac for the same amount of beef, and it's almost identical to the double cheeseburger, which has a second slice of cheese. A Bacon McDouble joined the U.S. Dollar Menu & More in 2013. ([McDouble](https://en.wikipedia.org/wiki/McDouble), Wikipedia.)
 
 | Constraint | Pick it explains |
 |---|---|

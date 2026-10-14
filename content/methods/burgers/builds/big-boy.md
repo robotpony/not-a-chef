@@ -8,7 +8,7 @@ tags:
 era: 1937
 description: "The Big Boy double-decker: two thin patties on a three-part bun, each with its own deck of lettuce and red relish sauce."
 ---
-I've never liked the Big Mac, but I once tried a Big Boy burger. It feels like an OG club sandwich style Big Mac-esque burger. It's closer to a diner style burger, so has real texture and sharpness. I admit I still don't get the middle bun, but when in Rome. 
+I've never liked the Big Mac, but I once tried a Big Boy burger. It feels like an old-school, club-sandwich take on the Big Mac, but it's closer to a diner burger, so it has real texture and sharpness. I admit I still don't get the middle bun, but when in Rome.
 
 It's the first double-decker, historically speaking, that I know of. A quarter pound of beef is split into two thin patties, and a middle slice of bun gives each one its own deck of sauce and lettuce. It's the same weight of beef as a single burger, but twice as tall and with twice the crust. Cool lettuce and a sweet, creamy sauce on both decks balance the salt and fat.
 
@@ -18,7 +18,7 @@ Tall, creamy, and sweet; soft crunch on every deck.
 
 - **Forming burger patties:** Two thin patties, a quarter pound split in half, wider than the bun
 - **Seasoning burgers:** Salt and pepper on the griddle
-- **Cooking patties:** Griddled hot, flipped once, cheese on the lower patty after the flip
+- **Cooking patties:** Griddled hot, flipped two or three times, cheese on the lower patty after the last flip
 - **Assembling burgers:** A three-part sesame bun, toasted; shredded iceberg on both decks; one slice of American cheese
 - **Sauces and condiments:** Mayonnaise and red relish, or a Thousand Island special sauce
 

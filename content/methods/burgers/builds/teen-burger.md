@@ -16,7 +16,7 @@ Savoury and smoky, with everything on it.
 
 - **Forming burger patties:** One regular patty, 85 g (3 oz)
 - **Seasoning burgers:** Lawry's Seasoned Salt, on the griddle
-- **Cooking patties:** Griddled, flipped once, cheddar on after the flip
+- **Cooking patties:** Griddled, flipped two or three times, cheddar on after the last flip
 - **Assembling burgers:** Real cheddar, bacon, lettuce, tomato, a slice of onion, and pickles, on a toasted sesame seed bun
 - **Sauces and condiments:** Teen sauce, with ketchup and mustard
 
