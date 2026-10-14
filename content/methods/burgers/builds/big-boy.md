@@ -59,7 +59,3 @@ Glendale, California. Bob Wian opened Bob's Pantry there in 1936, and in Februar
 - **Leans or slides:** patties too thick, or too much sauce between the decks.
 - **Soggy middle:** the middle bun wasn't toasted on both sides.
 - **Bready:** the middle bun is too thick, so bun outweighs beef.
-
-## Recipes
-
-[[Big Boy double-decker]].

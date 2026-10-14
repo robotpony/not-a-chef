@@ -8,7 +8,7 @@ tags:
 era: 1957
 description: "The Whopper: a wide, flame-grilled patty under cold lettuce, tomato, onion, and pickles, with ketchup, and mayo on both buns."
 ---
-The big fast-food burger. One wide, flame-grilled patty, and above it everything cold: pickles, raw onion, ketchup, tomato, and lettuce, with mayo on both halves of a toasted sesame bun. The char from the grill is what sets it apart from the griddled burgers. I made these for about five years as a teen, and they're the base of the burger I make at home today, the [[Bruce burger]].
+The big fast-food burger. One wide, flame-grilled patty, and above it everything cold: pickles, raw onion, ketchup, tomato, and lettuce, with mayo on both halves of a toasted sesame bun. The char from the grill is what sets it apart from the griddled burgers. I made these for about five years as a teen, and they're the base of the burger I make at home today: [[The Bruce burger]].
 
 ## Picks
 
@@ -61,7 +61,3 @@ Burger King co-founder James McLamore created the Whopper in 1957, after noticin
 - **Whopper Jr.:** the same build on a small hamburger bun. It started in 1963 in Puerto Rico, when the Whopper buns hadn't arrived for an opening.
 - **Cheese or bacon:** American cheese on the patty, bacon above it.
 - **Double or triple:** two or three patties.
-
-## Recipes
-
-[[Whopper]].

@@ -45,4 +45,4 @@ Ground beef is cooked through at 71°C (160°F) in the centre, but a thin patty 
 
 ## Recipes
 
-[[White Spot burger]] (smash), [[McDouble]] (from frozen), [[Turkey burgers]] (pressed, from frozen), [[Whopper]] (grilled).
+[[White Spot burger]] (smash), [[McDouble]] (from frozen), and [[Turkey burgers]] (pressed, from frozen).
