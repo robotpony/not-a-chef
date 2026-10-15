@@ -126,6 +126,11 @@
   .foot-meta{ padding:16px 20px; background:var(--surface); border:1px solid var(--border); border-radius:8px; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; font-family:'Libre Franklin',sans-serif; font-size:.74rem; color:var(--ink-faint); }
   .foot-build{ font-family:'IBM Plex Mono',monospace; font-size:.7rem; }
   .done{ font-family:'Libre Franklin',sans-serif; font-size:.66rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--principle-strong); background:var(--principle-soft); padding:2px 6px; border-radius:3px; margin-left:8px; vertical-align:middle; }
+  .chip-pb-outline{ background:transparent; color:var(--principle-strong); border-color:color-mix(in srgb, var(--principle) 55%, transparent); }
+  .chip-wtf-outline{ background:transparent; color:var(--principle-strong); border-color:color-mix(in srgb, var(--principle) 55%, transparent); }
+  .chip-pb-bare{ background:transparent; color:var(--principle-strong); padding-inline:2px; }
+  .chip-pb-bare svg{ width:14px; height:14px; }
+  .chip.icon{ padding-inline:6px; } .chip.icon::after{ content:"\200b"; }
 </style>
 </head>
 <body>
@@ -174,6 +179,12 @@
   <textarea id="aout" readonly></textarea>
 </section>
 
+
+<section class="block">
+  <h2 class="block-title">6 · Telling the two principles apart</h2>
+  <p class="note">Built, the leaf and WTF read as one green pair. There's no sixth hue, so these vary the chip's weight, not its colour. The phone card (165px) shows what survives when the row is full.</p>
+  <div class="opts" id="colOpts"></div>
+</section>
 <section class="block">
   <h2 class="block-title">5 · Build number in the footer <span class="done">built</span></h2>
   <p class="note">The footer's meta line, as built. A full <code>tools/publish.sh</code> bumps <code>data/build.toml</code> and commits it after the deploy; <code>+</code> after the hash means uncommitted changes went out; the local server shows "Build dev".</p>
@@ -219,6 +230,16 @@ function out(){
   document.getElementById('aout').value='# cuisine changes\n'+lines.join('\n')+'\n\n# add plant-based tag\n'+pl.join('\n');
 }
 document.getElementById('atable').addEventListener('change',out); out();
+
+const pbI=(cls)=>`<span class="chip ${cls} icon" title="Plant-based">${LEAF}</span>`;
+const wtfC=(cls)=>`<span class="chip ${cls}" title="Win the fridge">${CYCLE}WTF</span>`;
+const COL=[
+ {n:'A · Both filled (built now)',d:'Same green fill; only the icon differs. Reads as one pair.',pb:pbI('chip-principle'),w:wtfC('chip-principle')},
+ {n:'B · Leaf as an outline',rec:true,d:'The leaf drops its fill for a green outline, like the blueprint chip ranks below the filled chips. WTF stays the filled, named principle; the leaf reads as a lighter mark.',pb:pbI('chip-pb-outline'),w:wtfC('chip-principle')},
+ {n:'C · WTF as an outline',d:'The reverse: the leaf keeps the fill, WTF goes to outline. Puts more weight on plant-based, which is on four times as many recipes.',pb:pbI('chip-principle'),w:wtfC('chip-wtf-outline')},
+ {n:'D · Bare leaf',d:'No chip box at all: a green leaf glyph in the row. Lightest, and the most clearly different, but the only mark on a card with no box around it.',pb:pbI('chip-pb-bare'),w:wtfC('chip-principle')},
+];
+document.getElementById('colOpts').innerHTML=COL.map(o=>`<div class="opt${o.rec?' rec':''}"><div class="opt-head"><span class="opt-name">${o.n}</span>${o.rec?'<span class="opt-tag">Recommended</span>':''}</div><p>${o.d}</p><div class="cards">${card(230,cu('Italian')+o.w+o.pb+more(3),'Cherry tomato and garlic spaghetti',L2,S)}${card(165,o.pb+tag('mains')+more(4),'Veg patties','These vegetable patties are quick to make and delicious.',S)}</div></div>`).join('');
 document.getElementById('tt').onclick=()=>{const r=document.documentElement;const dark=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;r.dataset.theme=dark?'light':'dark';};
 </script>
 </body>

@@ -1012,6 +1012,12 @@ a.cuisine-chip:hover, a.cuisine-chip:focus-visible { box-shadow: inset 0 0 0 1px
 .principle-chip { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; font-weight: 600; background: var(--principle-soft); color: var(--principle-strong); padding: 3px 7px; border-radius: 3px; display: inline-flex; align-items: center; gap: 4px; }
 .principle-chip svg { width: 10px; height: 10px; flex: none; }
 a.principle-chip { text-decoration: none; }
+/* Icon-only principle chip (a tag with card_label: false, e.g. plant-based):
+ * a zero-width character gives it the same text line as its labelled
+ * siblings, so it's as tall as they are; the icon at the method chip's 12px. */
+.principle-chip.is-icon, .rcard-top .principle-chip.is-icon { padding-inline: 6px; }
+.principle-chip.is-icon::after { content: "\200b"; }
+.principle-chip.is-icon svg { width: 12px; height: 12px; }
 a.principle-chip:hover, a.principle-chip:focus-visible { box-shadow: inset 0 0 0 1px var(--principle); outline: none; }
 /* Test kitchen: drafts, published while they're still changing (Fugu
  * partials/development/, params.toml [fugu.development],
