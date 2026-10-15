@@ -1,6 +1,13 @@
 ---
 title: Cherry tomato and garlic spaghetti
-tags: [pasta, mains, quick, weeknight, vegetarian, win-the-fridge, plant-based]
+tags:
+  - pasta
+  - mains
+  - quick
+  - weeknight
+  - vegetarian
+  - win-the-fridge
+  - plant-based
 source: original
 date: 2026-10-14
 servings: 2
@@ -8,8 +15,7 @@ prep_time: 5 min
 cook_time: 20 min
 total_time: 25 min
 cuisine: Italian
-draft: true
-working_on: "Quantities and timings from how I make it; check them against the next cook."
+draft: false
 ---
 
 Spaghetti, cherry tomatoes, and garlic cooked together in a little oily water, so the sauce makes itself as the water boils off. It's the [[Cherry tomato and garlic pasta]] build of one-pan pasta.
@@ -33,13 +39,13 @@ Spaghetti, cherry tomatoes, and garlic cooked together in a little oily water, s
 
 ## Method
 
-Lay the pasta flat in a wide pan, about 33 cm (13 in). Scatter the tomatoes, garlic, and chili flakes over it, add the olive oil, and pour in salted water just to cover the pasta.
+Lay the pasta flat in a wide pan, about 33 cm (13 in). Scatter the tomatoes, garlic, tomato paste, and chili flakes over it, add the olive oil, and pour in salted boiling water just to cover the pasta.
 
-Cover and bring to a boil over high heat. Cook, stirring once or twice, until most of the tomato skins split, about 5 minutes.
+Cover and boil over high heat. Cook, stirring once or twice, until most of the tomato skins split, about 5 minutes.
 
 Uncover and keep boiling, stirring regularly so the pasta doesn't stick, until the water is nearly gone and the pasta is 2–3 minutes from the package time. Add a splash of water if it runs dry first; ladle some out if it isn't reducing.
 
-Stir in the tomato paste and press about half the tomatoes with the back of a spoon. Toss over high heat as the last of the water cooks off and the pasta fries in the oil, until the sauce turns glossy and coats the pasta but is still loose, 2–3 minutes.
+Press about half the tomatoes with the back of a spoon. Toss over high heat as the last of the water cooks off and the pasta fries in the oil, until the sauce turns glossy and coats the pasta but is still loose, 2–3 minutes.
 
 Take the pan off the heat. Stir in the basil, half the Parmesan, and a drizzle of extra virgin olive oil.
 

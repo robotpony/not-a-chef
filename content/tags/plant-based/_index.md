@@ -10,4 +10,4 @@ Plant-based is a way of building a meal: start with vegetables, legumes, and gra
 
 It's a value, not a diet rule. Some of these recipes have butter, an egg, or a little meat for seasoning, and that's fine. A spoon of bacon fat in the cabbage still leaves the cabbage in charge. The vegan and vegetarian tags are the strict ones; this tag is about where the weight of the meal sits.
 
-The practical payoff is that plants are cheap, they keep, and they take seasoning well. Cooking this way most nights makes the grocery bill smaller and the fridge easier to win.
+The practical payoff is that plants are nutritionally dense, cheap, they keep, and they take seasoning well. Cooking this way most nights makes the grocery bill smaller and the fridge easier to win.
