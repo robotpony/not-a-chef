@@ -4,7 +4,7 @@ Open work only. Finished items are cut, not ticked; git history has them (`git l
 
 ## Site
 
-- [ ] Tag cleanup: near-duplicates (`gluten-free` / `gluten-free-optional`, `poultry` / `chicken`, `meat`, the one-recipe tags).
+- [ ] Tag cleanup round 2 (decided 2026-10-14): with the content agent. Specific proteins, `stocks` apart from `bases`, `dressings` and `condiments` applied properly, method and one-off dish-type tags dropped.
 - [ ] Checks against real content: Fuse.js search relevance, the homepage, footer Tags/Cuisines links, related content (`partials/related.html`), RSS in a real reader, phone-while-cooking touch targets.
 - [ ] Cross-link essays and reference pages to related recipes.
 - [ ] *Deferred.* Publish `mockups/` as a static subfolder (which mocks, how linked, kept out of search).
