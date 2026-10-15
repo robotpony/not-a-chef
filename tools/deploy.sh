@@ -64,7 +64,9 @@ if [[ " ${RSYNC_FLAGS[*]} " == *" --dry-run "* ]]; then
 else
   # Each deploy is tagged deploy-YYYY-MM-DD (-2, -3 for later ones that
   # day), so the tag has to match what ships: refuse uncommitted work.
-  if [[ -n "$(git status --porcelain)" ]]; then
+  # data/build.toml is the exception: publish.sh bumps it before the build
+  # and commits it once this deploy succeeds.
+  if [[ -n "$(git status --porcelain -- . ':!data/build.toml')" ]]; then
     echo "error: uncommitted changes; commit them before deploying." >&2
     git status --short >&2
     exit 1

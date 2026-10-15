@@ -73,7 +73,7 @@
            local server, which never counts. */}}
       <span class="foot-build">
         {{- if hugo.IsServer }}Build dev
-        {{- else }}Build {{ site.Data.build.number }}{{ with site.Params.buildhash }} · {{ . }}{{ end }}
+        {{- else }}Build {{ hugo.Data.build.number }}{{ with site.Params.buildhash }} · {{ . }}{{ end }}
         {{- end -}}
       </span>
     </div>
