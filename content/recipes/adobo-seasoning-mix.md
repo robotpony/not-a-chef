@@ -1,6 +1,6 @@
 ---
 title: Adobo seasoning mix
-tags: [bases, latin, quick, vegan, dairy-free]
+tags: [bases, quick, vegan, dairy-free]
 source: original
 date: 2023-11-01
 prep_time: 5 min

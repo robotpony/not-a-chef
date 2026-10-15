@@ -1,6 +1,6 @@
 ---
 title: Simple marinara
-tags: [sauces, italian, quick, vegan, dairy-free]
+tags: [sauces, quick, vegan, dairy-free]
 source: original
 date: 2024-10-01
 servings: 4

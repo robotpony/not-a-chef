@@ -1,6 +1,6 @@
 ---
 title: Breakfast sausage
-tags: [bases, american, make-ahead]
+tags: [bases, make-ahead]
 source: family
 date: 2025-09-19
 servings: scales to any quantity (percentages by weight)

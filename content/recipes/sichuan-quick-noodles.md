@@ -1,6 +1,6 @@
 ---
 title: Sichuan quick noodles
-tags: [mains, pasta, chinese, weeknight, quick]
+tags: [mains, pasta, weeknight, quick]
 source: original
 date: 2024-04-01
 servings: 1

@@ -1,6 +1,6 @@
 ---
 title: Ramen eggs (ajitsuke tamago)
-tags: [sides, japanese, make-ahead]
+tags: [sides, make-ahead]
 source: original
 date: 2023-09-01
 servings: 3–4

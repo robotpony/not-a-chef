@@ -1,6 +1,6 @@
 ---
 title: Focaccia
-tags: [breads, italian, vegan, dairy-free, family]
+tags: [breads, vegan, dairy-free, family]
 source: family
 date: 2026-06-18
 servings: 2–10 (people)

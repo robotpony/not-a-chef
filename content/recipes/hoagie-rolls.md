@@ -1,6 +1,6 @@
 ---
 title: Hoagie rolls
-tags: [breads, american]
+tags: [breads]
 source: https://www.cookwell.com/recipe/hoagie-rolls
 date: 2026-04-18
 servings: 4 rolls (double for 8)

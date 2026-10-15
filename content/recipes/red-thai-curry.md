@@ -1,6 +1,6 @@
 ---
 title: Red Thai curry
-tags: [mains, thai, weeknight]
+tags: [mains, weeknight]
 source: original
 date: 2022-09-01
 servings: 4

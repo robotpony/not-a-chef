@@ -1,6 +1,6 @@
 ---
 title: Kālua pig & cabbage
-tags: [mains, hawaiian, slow-cooker]
+tags: [mains, slow-cooker]
 source: https://www.delish.com/cooking/recipe-ideas/a41559636/kalua-pig-and-cabbage-recipe/
 date: 2026-04-18
 servings: 6–10

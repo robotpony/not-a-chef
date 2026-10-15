@@ -1,6 +1,6 @@
 ---
 title: Lime crema
-tags: [sauces, mexican, quick, vegetarian, gluten-free]
+tags: [sauces, quick, vegetarian, gluten-free]
 source: original
 date: 2025-04-01
 servings: 6

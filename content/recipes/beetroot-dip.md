@@ -1,6 +1,6 @@
 ---
 title: Beetroot dip
-tags: [sauces, mediterranean, quick, vegetarian, vegan, gluten-free]
+tags: [sauces, quick, vegetarian, vegan, gluten-free]
 source: original
 date: 2025-05-31
 servings: 6–8 (makes ~600 ml)

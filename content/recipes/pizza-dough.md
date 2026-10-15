@@ -1,6 +1,6 @@
 ---
 title: Pizza dough
-tags: [breads, italian, make-ahead]
+tags: [breads, make-ahead]
 source: original
 date: 2022-01-01
 servings: 8 individual pizzas (200 g each)

@@ -1,6 +1,6 @@
 ---
 title: Chai
-tags: [drinks, indian, quick]
+tags: [drinks, quick]
 source: original
 date: 2025-07-09
 servings: 2

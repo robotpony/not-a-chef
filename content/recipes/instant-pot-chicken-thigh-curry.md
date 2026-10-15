@@ -1,6 +1,6 @@
 ---
 title: Instant Pot chicken thigh curry
-tags: [mains, thai, curries, weeknight]
+tags: [mains, curries, weeknight]
 source: https://www.goodhousekeeping.com/food-recipes/a38867914/instant-pot-beef-curry-recipe/
 date: 2026-09-18
 servings: 6

@@ -1,6 +1,6 @@
 ---
 title: Pork dumpling bowls
-tags: [mains, weeknight, chinese]
+tags: [mains, weeknight]
 source: https://www.delish.com/cooking/recipe-ideas/a64411718/pork-dumpling-bowls-recipe/
 date: 2026-04-18
 servings: 4–6

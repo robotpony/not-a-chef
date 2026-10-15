@@ -1,6 +1,6 @@
 ---
 title: Gochujang wing sauce
-tags: [sauces, korean, quick]
+tags: [sauces, quick]
 source: original
 date: 2023-11-01
 servings: 2–4

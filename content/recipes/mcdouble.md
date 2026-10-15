@@ -1,6 +1,6 @@
 ---
 title: McDouble
-tags: [mains, burgers, american, weeknight, quick]
+tags: [mains, burgers, weeknight, quick]
 source: original
 date: 2024-10-01
 servings: 1

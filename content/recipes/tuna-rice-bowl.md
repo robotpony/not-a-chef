@@ -1,6 +1,6 @@
 ---
 title: Tuna rice bowl
-tags: [mains, japanese, weeknight, quick]
+tags: [mains, weeknight, quick]
 source: original
 date: 2025-12-05
 servings: 2

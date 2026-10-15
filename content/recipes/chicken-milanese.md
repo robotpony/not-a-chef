@@ -1,6 +1,6 @@
 ---
 title: Chicken Milanese
-tags: [mains, chicken, italian, weeknight, quick]
+tags: [mains, chicken, weeknight, quick]
 source: original
 date: 2026-09-29
 servings: 2

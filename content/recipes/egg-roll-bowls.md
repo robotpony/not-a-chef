@@ -1,6 +1,6 @@
 ---
 title: Egg roll bowls
-tags: [mains, weeknight, low-carb, quick, chinese]
+tags: [mains, weeknight, low-carb, quick]
 source: https://www.delish.com/cooking/recipe-ideas/a56236/egg-roll-bowls-recipe/
 date: 2026-04-18
 servings: 4

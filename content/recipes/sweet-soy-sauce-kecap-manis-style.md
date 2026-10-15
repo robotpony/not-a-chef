@@ -1,6 +1,6 @@
 ---
 title: Sweet soy sauce (kecap manis style)
-tags: [sauces, indonesian, quick, vegan, dairy-free]
+tags: [sauces, quick, vegan, dairy-free]
 source: original
 date: 2024-04-01
 prep_time: 5 min

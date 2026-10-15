@@ -1,6 +1,6 @@
 ---
 title: Arroz rojo (Mexican red rice)
-tags: [sides, mexican, stovetop, weeknight]
+tags: [sides, stovetop, weeknight]
 source: https://www.reddit.com/r/mexicanfood/comments/1tu7ti4/how_do_i_make_this_rice/
 date: 2026-06-01
 servings: 4

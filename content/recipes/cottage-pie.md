@@ -1,6 +1,6 @@
 ---
 title: Cottage pie
-tags: [mains, british, make-ahead, weeknight]
+tags: [mains, make-ahead, weeknight]
 source: original
 aka: Shepherd's pie
 date: 2025-09-10

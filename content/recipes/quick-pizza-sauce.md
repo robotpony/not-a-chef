@@ -1,6 +1,6 @@
 ---
 title: Quick pizza sauce
-tags: [sauces, italian, quick, vegan, dairy-free]
+tags: [sauces, quick, vegan, dairy-free]
 source: original
 date: 2024-07-01
 prep_time: 5 min

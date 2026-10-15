@@ -1,6 +1,6 @@
 ---
 title: Miso salmon
-tags: [mains, japanese, quick, make-ahead, dairy-free]
+tags: [mains, quick, make-ahead, dairy-free]
 source: original
 date: 2021-07-01
 servings: 4

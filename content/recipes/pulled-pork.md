@@ -1,6 +1,6 @@
 ---
 title: Pulled pork
-tags: [mains, pork, american, slow-cooker, make-ahead, bases]
+tags: [mains, pork, slow-cooker, make-ahead, bases]
 source: original
 date: 2026-08-20
 prep_time: 15 min (plus 12–24 hr rub rest)

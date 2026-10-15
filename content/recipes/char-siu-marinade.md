@@ -1,6 +1,6 @@
 ---
 title: Char siu marinade
-tags: [bases, chinese, make-ahead, dairy-free]
+tags: [bases, make-ahead, dairy-free]
 source: original
 date: 2022-03-01
 prep_time: 10 min

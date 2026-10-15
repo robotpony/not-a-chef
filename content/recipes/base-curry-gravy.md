@@ -1,6 +1,6 @@
 ---
 title: Base curry gravy
-tags: [bases, indian, make-ahead]
+tags: [bases, make-ahead]
 source: family
 date: 2026-06-18
 prep_time: 15 min

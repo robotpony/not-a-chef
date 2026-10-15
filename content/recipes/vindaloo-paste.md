@@ -1,6 +1,6 @@
 ---
 title: Vindaloo paste
-tags: [bases, indian, make-ahead, vegan, dairy-free]
+tags: [bases, make-ahead, vegan, dairy-free]
 source: original
 date: 2024-07-01
 prep_time: 15 min

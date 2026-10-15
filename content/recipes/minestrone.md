@@ -1,6 +1,6 @@
 ---
 title: Minestrone
-tags: [mains, soups, vegetarian, make-ahead, italian, family]
+tags: [mains, soups, vegetarian, make-ahead, family]
 source: https://www.allrecipes.com/recipe/223044/chef-johns-minestrone-soup/
 date: 2026-06-18
 servings: 6–8

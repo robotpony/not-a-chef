@@ -1,6 +1,6 @@
 ---
 title: Naan
-tags: [breads, indian]
+tags: [breads]
 source: original
 date: 2024-10-01
 servings: 4–6

@@ -1,6 +1,6 @@
 ---
 title: Pressure cooker Japanese curry
-tags: [mains, japanese, weeknight]
+tags: [mains, weeknight]
 source: https://www.justonecookbook.com/pressure-cooker-japanese-curry/
 date: 2026-09-18
 servings: 6

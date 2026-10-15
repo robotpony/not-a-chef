@@ -1,6 +1,6 @@
 ---
 title: Coconut lentils
-tags: [mains, soups, indian, weeknight, vegan, dairy-free, make-ahead]
+tags: [mains, soups, weeknight, vegan, dairy-free, make-ahead]
 source: original
 date: 2022-01-01
 servings: 4

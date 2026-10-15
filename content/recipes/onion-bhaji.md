@@ -1,6 +1,6 @@
 ---
 title: Onion bhaji
-tags: [sides, appetizers, indian, vegetarian, dairy-free]
+tags: [sides, appetizers, vegetarian, dairy-free]
 source: original
 date: 2021-11-01
 servings: 4–6

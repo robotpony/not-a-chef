@@ -1,6 +1,6 @@
 ---
 title: Goulash
-tags: [mains, hungarian, make-ahead]
+tags: [mains, make-ahead]
 source: original
 date: 2025-11-09
 servings: 6

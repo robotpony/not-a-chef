@@ -1,6 +1,6 @@
 ---
 title: Beetroot and chickpea hummus
-tags: [sauces, mediterranean, vegetarian, vegan, gluten-free]
+tags: [sauces, vegetarian, vegan, gluten-free]
 source: family
 date: 2026-06-08
 servings: makes ~750 ml

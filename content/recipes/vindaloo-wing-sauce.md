@@ -1,6 +1,6 @@
 ---
 title: Vindaloo wing sauce
-tags: [sauces, indian, quick]
+tags: [sauces, quick]
 source: original
 date: 2022-07-01
 servings: 2–4

@@ -1,6 +1,6 @@
 ---
 title: Dal tadka
-tags: [soups, indian, weeknight, vegetarian]
+tags: [soups, weeknight, vegetarian]
 source: original
 date: 2026-05-02
 servings: 4

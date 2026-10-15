@@ -1,6 +1,6 @@
 ---
 title: Chicken yakisoba
-tags: [mains, weeknight, japanese, dairy-free]
+tags: [mains, weeknight, dairy-free]
 source: https://www.delish.com/cooking/recipe-ideas/a35396705/chicken-yakisoba-recipe/
 date: 2026-04-18
 servings: 3–4

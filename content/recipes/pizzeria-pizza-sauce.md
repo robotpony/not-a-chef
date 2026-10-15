@@ -1,6 +1,6 @@
 ---
 title: Pizzeria pizza sauce
-tags: [sauces, italian, make-ahead, vegan, dairy-free]
+tags: [sauces, make-ahead, vegan, dairy-free]
 source: original
 date: 2021-12-01
 prep_time: 10 min
