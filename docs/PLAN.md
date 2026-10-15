@@ -5,7 +5,8 @@ Open work only. Finished items are cut, not ticked; git history has them (`git l
 ## Site
 
 - [ ] Tag cleanup: near-duplicates (`gluten-free` / `gluten-free-optional`, `poultry` / `chicken`, `meat`, the one-recipe tags).
-- [ ] American split and plant-based tag (decided 2026-10-14, `mockups/site-phase.html`): content landed in `11f5db4` (Bruce to read the plant-based definition); the per-principle `icon` and icon-only card chip (`card_label: false`) with fugu-agent. When both land, bump the submodule and check a card with cuisine, Win the fridge, and the leaf at 165px and 230px, light and dark.
+- [ ] Read the plant-based definition (`content/tags/plant-based/_index.md`) and adjust its wording.
+- [ ] Card top row clips: on phones (390px: Lazy tomato soup, veg patties; Chicken Milanese at 340px), and now on desktop when Testing or WTF plus a cuisine push the leaf off (Cherry tomato and garlic spaghetti). Options: a container query that drops `+N` first, one card per row on phones, or more `short` cuisine names. Decide on a real phone.
 - [ ] Checks against real content: Fuse.js search relevance, the homepage, footer Tags/Cuisines links, related content (`partials/related.html`), RSS in a real reader, phone-while-cooking touch targets.
 - [ ] Cross-link essays and reference pages to related recipes.
 - [ ] *Deferred.* Publish `mockups/` as a static subfolder (which mocks, how linked, kept out of search).
@@ -32,7 +33,6 @@ Spec: `docs/METHODS.md`.
 ## Test kitchen
 
 - [ ] Live with it: does "Test kitchen" read oddly on a reference page; is the card mark too loud on the Test kitchen list.
-- [ ] Card top row clips on phones (390px: Lazy tomato soup, veg patties; Chicken Milanese at 340px). Options: container query hiding `+N`, one card per row, or more `short` cuisine names. Decide on a real phone.
 - [ ] Add `working_on` lines to current drafts.
 
 ## Format and data
