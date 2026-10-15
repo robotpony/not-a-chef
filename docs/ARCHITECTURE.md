@@ -9,7 +9,7 @@ Obsidian (this repo, edited in place)
   │
   └── content/  recipes/  essays/  methods/  reference/  the-food-log/
           │
-          Hugo + Blowfish build
+          Hugo build (Fugu over Blowfish)
             ├── render hooks: wiki links, headings, images, tables, formula and stack diagrams
             ├── list.json.json → public/recipes/index.json
             └── assets/js: ingredients.js, automagic-sidebar.js, search.js (client-side, no build step)
@@ -46,7 +46,7 @@ CLI details are in DESIGN.md.
 Standard Hugo site with two stacked themes, both git submodules: `theme = ["fugu", "blowfish"]`. Hugo looks for each layout, partial and asset in this order:
 
 1. This repo (`layouts/`, `assets/`): the Not a Chef design and branding: `custom.css`, the `not-a-chef` colour scheme, the homepage, header, footer, favicons, and fonts (`layouts/partials/fonts.html`).
-2. Fugu (`themes/fugu/`, [hugo-theme-fugu](https://github.com/robotpony/hugo-theme-fugu)): the reusable cookbook theme: page templates, render hooks, recipe cards, sidebars, client JS, the formula icon kit, archetypes, and the content tools. Its own plan is `themes/fugu/PLAN.md`; the site side is PLAN.md "Fugu theme".
+2. Fugu (`themes/fugu/`, [hugo-theme-fugu](https://github.com/robotpony/hugo-theme-fugu)): the reusable cookbook theme: page templates, render hooks, recipe cards, sidebars, client JS, the formula icon kit, archetypes, and the content tools. Its own plan is `themes/fugu/PLAN.md`; the site side is PLAN.md "Fugu follow-through".
 3. Blowfish (`themes/blowfish/`): everything neither of the above overrides.
 
 The settled design (`mockups/STYLE.md`) didn't match any Blowfish layout, so Fugu overrides much of it. Five content sections, all written by hand in this repo:

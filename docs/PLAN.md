@@ -6,25 +6,25 @@ Open work only. Finished items are cut, not ticked; git history has them (`git l
 
 - [ ] Checks against real content: Fuse.js search relevance, the homepage, footer Tags/Cuisines links, related content (`partials/related.html`), RSS in a real reader, phone-while-cooking touch targets.
 - [ ] Cross-link essays and reference pages to related recipes.
+- [ ] Whether reference essays (Win the fridge, Test kitchen) belong in essays or Reference.
 - [ ] *Deferred.* Publish `mockups/` as a static subfolder (which mocks, how linked, kept out of search).
 
 ## Methods
 
 Spec: `docs/METHODS.md`.
 
-- [ ] One-pan pasta: the two builds (American bolognese, cherry tomato and garlic) are still test kitchen stubs.
+- [ ] One-pan pasta: the American bolognese build is still a test kitchen stub.
 - [ ] New methods: stock (from Why ingredients matter in stock and the four stock recipes); foil packets (from Camp cooking).
 - [ ] Timeline flags: non-food context markers (Burger King opens, a world's fair). Decide body vs `flags` frontmatter, mock in `mockups/methods-pages.html`, hand off to fugu-agent.
 - [ ] Blueprint and build pages: mock if they change visibly; check at phone width and light mode.
 - [ ] Later: a part-by-part build comparison table (needs a strict `## Picks` list to parse).
-- [ ] Whether reference essays (Win the fridge, Test kitchen) belong in essays or Reference.
-- [ ] Stack diagrams for sandwiches and lasagne, once there's a page for them. Drop "v1" from the layer kit in STYLE.md once Bruce calls it settled.
 
-## Formula diagrams
+## Diagrams
 
 - [ ] Diagram more Mechanics that already state a ratio (`FORMAT.md` §Formula diagrams).
 - [ ] Check ratio (`:`) and sequence (`→`) diagrams the first time real content uses one; retest a formula inside Mechanic on the live site.
 - [ ] Veg patties: swaps are listed in both the Mechanic bullets and the diagram; trim one.
+- [ ] Stack diagrams for sandwiches and lasagne, once there's a page for them. Drop "v1" from the layer kit in STYLE.md once Bruce calls it settled.
 
 ## Test kitchen
 

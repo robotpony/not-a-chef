@@ -1,6 +1,6 @@
 # Methods
 
-Draft spec. Defines what a method is, how it differs from a recipe or an essay, what one should contain, and how methods fit into the site. The build work is tracked in `PLAN.md` §Methods.
+Defines what a method is, how it differs from a recipe or an essay, what one should contain, and how methods fit into the site. The build work is tracked in `PLAN.md` §Methods.
 
 ## What a method is
 
@@ -43,10 +43,7 @@ The test: after reading it, could you cook something that isn't written down any
 
 **The folder decides.** Methods live in `content/methods/`, their own top-level section (a nav item beside Recipes and Essays, since 2026-10-11; until then they sat in `content/essays/methods/`). A page in that folder, at any depth, is a method; a page outside it isn't, whatever its tags say. Fugu finds them through `methodSection = "methods"` in `config/_default/params.toml`. The section's page, `/methods/`, is the methods list: its `_index.md` holds the title, description, and the definition (the body), and cascades the `method` tag onto the pages under it (targeted at `/methods/**`, so the list page itself isn't tagged and doesn't show up on the tag page). A page's own `tags` replaces the cascaded value rather than adding to it, and nearly every method sets `tags`, so each lists `method` itself; the cascade is the backstop and `/lint` checks the rest. The `method` tag's own page (`/tags/method/`) is a plain tag list.
 
-Method-like pages in `content/reference/` move into the folder, with `aliases:` for their old URLs:
-
-- `reverse-cooking-reverse-sear-and-water-frying.md`
-- `food-ratios-for-creating-your-own-recipes.md`
+Reverse cooking and food ratios began in `content/reference/` and moved into the folder, with `aliases:` for their old URLs.
 
 ## Content first: folders, headings, and a little metadata
 
@@ -146,7 +143,7 @@ The blueprint page shows a **lineage timeline**: builds placed by `era`, so the 
 
 Why not nested blueprints ("burgers → deluxe")? Builds share nearly every part and differ only in their picks; a child blueprint would repeat all the parts. Clusters of builds (rich, fresh, sweet) are builds grouped by profile, not a separate level; add one only if a blueprint ever has more builds than its page can show.
 
-The blueprint page shows the definition, the parts in order (the methods list's compact block; each part's options are on its own page), the lineage timeline, and the builds as cards (`mockups/methods-pages.html`). The methods list shows each blueprint's parts and only the names of its builds, so the cards are on one page, not two (decided 2026-10-12, `mockups/methods-list-and-blueprint.html`). A table comparing builds part by part is set aside for now (PLAN.md, Methods "Blueprint pages"): it would need the picks as data, parsed from each build's `## Picks` list.
+The blueprint page shows the definition, the parts in order (the methods list's compact block; each part's options are on its own page), the lineage timeline, and the builds as cards (`mockups/methods-pages.html`). The methods list shows each blueprint's parts and only the names of its builds, so the cards are on one page, not two (decided 2026-10-12, `mockups/methods-list-and-blueprint.html`). A table comparing builds part by part is set aside for now (PLAN.md, Methods): it would need the picks as data, parsed from each build's `## Picks` list.
 
 The same shape fits other blueprints:
 
@@ -167,14 +164,7 @@ A **concept page** is a named idea with a short definition, an icon, a chip on c
 | Status | Test kitchen | `draft: true` |
 | Method | Methods, and each blueprint | Folder |
 
-Today principle and status are built separately (`principle/term.html` and `principle-chip.html`; `development/*`). They should share:
-
-- the header with its kind suffix
-- the definition callout and the "Read the full essay" link
-- the icon, chip, and popover
-- the "Reference & further reading" list
-
-What stays per kind is how membership is decided and the body layout: a flat recipe grid for a principle, a draft list for status, parts and builds for a blueprint.
+All three share Fugu's `partials/concept/` (the icon and the popover). What stays per kind is how membership is decided and the body layout: a flat recipe grid for a principle, a draft list for status, parts and builds for a blueprint.
 
 The method chip is the fan-out icon (`assets/icons/methods/fan-out.svg`) in the accent colour, decided 2026-10-10 (`mockups/STYLE.md` Method chip, `mockups/methods-icon.html`).
 
@@ -196,7 +186,7 @@ The shared templates are Fugu work (`themes/fugu`), handed to the Fugu agent. Th
 
 | Relation | Carried by |
 |---|---|
-| Recipe **uses** method | Wiki link in the recipe; optional `method:` field (open) |
+| Recipe **uses** method | Wiki link in the recipe |
 | Part **is part of** blueprint | Folder: `<blueprint>/parts/` |
 | Build **belongs to** blueprint | Folder: `<blueprint>/builds/` |
 | Build **picks** an option per part | `## Picks` in the build's body |
@@ -223,10 +213,9 @@ caption: Drive-in deluxe build, top to bottom
 
 - One layer per line: `icon | label | role`. Roles use the vocabulary the chicken burger essay established (cold crunch, sharp, fat, salt), so the diagram says why each layer is there.
 - `repeat:` covers repeated layers (lasagne).
-- It reuses the formula icon set (`assets/icons/formula/`), with the same unknown-icon warning and the same Obsidian fallback (plain text).
-- Layering needs new icons: bun halves, lettuce, onion, tomato, pickle, cheese slice, sauce, patty, pasta sheet, ragù, béchamel, bread slice, and so on.
+- Layers come from their own kit in Fugu (`assets/icons/layers/`), with the same unknown-icon warning as formula blocks and the same Obsidian fallback (plain text).
 - A later `pairing` block (a texture-by-flavour grid) could cover flavour combinations. `stack` comes first.
-- The look gets mocked and settled in `mockups/STYLE.md` and `style.html` before it's built. Proposed 2026-10-10 (`mockups/exploded-builds.html`): an **exploded view**, each layer drawn as the thing from a three-quarter angle, pulled apart vertically, with leader lines to its label and role on the right (decided); compact without labels on build cards; no assembled view for now. Drawn in the formula icons' style (one ink line, `--accent-soft` on bodies and sides, `--surface` on tops, detail as strokes), so it follows dark mode like the icons. Layers come from their own kit in Fugu (`themes/fugu/assets/icons/layers/`, beside `formula/`), drawn by the ` ```stack ` render hook (handed to the Fugu agent 2026-10-10). Accepted as v1 (STYLE.md "Exploded build diagram"); the drawings get a refinement pass from reference examples later (PLAN.md, Methods phase 6).
+- The look gets mocked and settled in `mockups/STYLE.md` and `style.html` before it's built. Proposed 2026-10-10 (`mockups/exploded-builds.html`): an **exploded view**, each layer drawn as the thing from a three-quarter angle, pulled apart vertically, with leader lines to its label and role on the right (decided); compact without labels on build cards; no assembled view for now. Drawn in the formula icons' style (one ink line, `--accent-soft` on bodies and sides, `--surface` on tops, detail as strokes), so it follows dark mode like the icons. Layers come from their own kit in Fugu (`themes/fugu/assets/icons/layers/`, beside `formula/`), drawn by the ` ```stack ` render hook (handed to the Fugu agent 2026-10-10). Accepted as v1 (STYLE.md "Exploded build diagram"); the drawings have had refinement passes from reference examples since (STYLE.md has the current state).
 
 Shapes to cover first: sandwich construction, burger construction, lasagne layering. On a blueprint, each build gets its own stack.
 
@@ -234,15 +223,14 @@ Shapes to cover first: sandwich construction, burger construction, lasagne layer
 
 | Method | Kind | Source |
 |---|---|---|
-| Reverse cooking | Technique | `content/reference/reverse-cooking-reverse-sear-and-water-frying.md`, already a method; moves |
-| Food ratios | Ratio | `content/reference/food-ratios-for-creating-your-own-recipes.md` (draft), already a method; moves |
+| Reverse cooking | Technique | Moved from Reference; in `content/methods/` |
+| Food ratios | Ratio | Moved from Reference (test kitchen); in `content/methods/` |
 | Stock | Technique + ratio | Why ingredients matter in stock, plus the four stock recipes |
 | Foil packets | Technique | Camp cooking |
-| Burgers | Blueprint, 7 builds (3 drafted, 4 stubs) | The quest for the perfect burger, The impossible quest for the perfect chicken burger, White Spot burger, the burger sauce recipes |
-| One-pan pasta | Blueprint, 4 parts, 2 builds (stubs) | Drafted 2026-10-12 from Bruce's description; the parts are stages, and the builds have no `era` or stack |
+| Burgers | Blueprint, 12 builds, all written | The quest for the perfect burger, The impossible quest for the perfect chicken burger, White Spot burger, the burger sauce recipes |
+| One-pan pasta | Blueprint, 4 parts, 2 builds (American bolognese still a stub) | Drafted 2026-10-12 from Bruce's description; the parts are stages, and the builds have no `era` or stack |
 
 ## Open questions
 
-- Should recipe frontmatter have a `method:` field, or are wiki links enough to connect a recipe to its methods?
 - Should picks link to the option rows (an anchor per option), or stay plain text?
 - Do methods use `formula` blocks for their ratios, the way recipes do? (Likely yes; nothing stops it.)
