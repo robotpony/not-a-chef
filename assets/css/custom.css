@@ -1022,9 +1022,9 @@ a.principle-chip { text-decoration: none; }
  * plant-based, and Win the fridge takes the test kitchen's blue. Done by
  * re-pointing the --principle tokens in Win the fridge's chip and its tag
  * page's own header bits (not the page, whose cards carry green leaves).
- * Keyed on URLs until Fugu marks chips and pages with the tag's slug. */
-a.principle-chip[href$="/tags/win-the-fridge/"],
-.principle-page:has(a.read-essay[href*="/win-the-fridge/"]) :is(.ltitle-kind-principle, .read-essay) {
+ * Fugu marks chips and the tag page with `principle-<slug>`. */
+.principle-chip.principle-win-the-fridge,
+.principle-page.principle-win-the-fridge :is(.ltitle-kind-principle, .read-essay) {
   --principle: var(--flag); --principle-strong: var(--flag); --principle-soft: var(--flag-soft);
 }
 a.principle-chip:hover, a.principle-chip:focus-visible { box-shadow: inset 0 0 0 1px var(--principle); outline: none; }
