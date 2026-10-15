@@ -216,8 +216,8 @@ in a browser — no build step.
   per-recipe table for splitting the American cuisine, which writes out the
   changes for the content agent. Also shows the built footer build number.
   Decided 2026-10-14: the leaf alone on cards (option C), Bruce's recipe
-  ticks, the American split as edited in the table, and the leaf as an
-  outline (§6 B, so it reads apart from WTF's filled chip); recorded in
+  ticks, the American split as edited in the table, and (after §6)
+  green for plant-based alone, with Win the fridge moved to the flag blue; recorded in
   `STYLE.md` §4 and the Principle chip entry.
 
 - **`icons.html`** and **`favicon-heart-pan.html`**: the favicon rounds
