@@ -4,7 +4,7 @@ Open work only. Finished items are cut, not ticked; git history has them (`git l
 
 ## Site
 
-- [ ] Tag cleanup: exact cuisine repeats are with the content agent (2026-10-14; broader ones like `mediterranean` on Greek stay). Left: near-duplicates (`gluten-free` / `gluten-free-optional`, `poultry` / `chicken`, `meat`, the one-recipe tags).
+- [ ] Tag cleanup: near-duplicates (`gluten-free` / `gluten-free-optional`, `poultry` / `chicken`, `meat`, the one-recipe tags).
 - [ ] American split (decided 2026-10-14: American only for really-American dishes, regions where real, no cuisine for everyday cooking). Per-recipe proposal in `mockups/site-phase.html` §4; once Bruce picks, hand the list to the content agent, and add `content/cuisine/southern/_index.md` if Southern is used.
 - [ ] Plant-based tag (decided 2026-10-14: a second principle tag for plant-forward food, alongside vegan and vegetarian). Card label and recipe list in `mockups/site-phase.html` §1-3. Then fugu-agent adds a per-principle `icon` (the leaf); the content agent writes `content/tags/plant-based/_index.md` (`principle: true`, `short`) and tags the recipes; STYLE.md says green means "a value this recipe holds".
 - [ ] Checks against real content: Fuse.js search relevance, the homepage, footer Tags/Cuisines links, related content (`partials/related.html`), RSS in a real reader, phone-while-cooking touch targets.
