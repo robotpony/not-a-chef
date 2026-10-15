@@ -2,13 +2,13 @@
 
 Every page on the site is standard Markdown with YAML frontmatter, in a `.md` file under `content/`. Pages should read naturally as plain text, render in Obsidian and Hugo, and be parseable by tools.
 
-This is the one format doc for all content: what every page shares, then what recipes and essays add, then what a validator checks. Requirement language (MUST / SHOULD / MAY) follows RFC 2119 and is used only where a tool or template depends on the rule; everything else is house style.
+This is the one format doc for all content: what every page shares, then what recipes, essays, and methods add, then what a validator checks. Requirement language (MUST / SHOULD / MAY) follows RFC 2119 and is used only where a tool or template depends on the rule; everything else is house style.
 
-Format version **0.2.0** (0.2.0 added the formula block). Bump minor for an additive change (a new optional field or section; existing pages stay valid), major only when a previously valid page could fail validation.
+Format version **0.3.0** (0.2.0 added the formula block; 0.3.0 added methods, blueprints, `era`, and the stack block). Bump minor for an additive change (a new optional field or section; existing pages stay valid), major only when a previously valid page could fail validation.
 
 ## All pages
 
-Recipes (`content/recipes/`), essays (`content/essays/`), reference pages (`content/reference/`), Food Log months (`content/the-food-log/`), and About.
+Recipes (`content/recipes/`), essays (`content/essays/`), methods (`content/methods/`), reference pages (`content/reference/`), Food Log months (`content/the-food-log/`), and About.
 
 ### Shared frontmatter
 
@@ -22,7 +22,7 @@ Recipes (`content/recipes/`), essays (`content/essays/`), reference pages (`cont
 | `working_on` | MAY | string | For drafts: one line on what's being tried next ("Getting them to hold without the egg"), shown under the banner and in the card's popover. |
 | `pinned` | MAY | boolean | Floats the page to the top of its section's list, its term pages, and search. Rare by design, not a general sort override. See DESIGN.md. |
 | `source` | MAY | string | `original`, `family`, a URL, or a book title. SHOULD on recipes. |
-| `era` | MAY | int | On a build page (`content/methods/<blueprint>/builds/`): a year that places it on the blueprint's lineage timeline (`1960`). |
+| `era` | MAY | int | Builds only: a year that places the build on its blueprint's lineage timeline (`1960`). See Methods. |
 
 Don't hand-maintain `lastmod`. Last-modified comes from git (`enableGitInfo`): both sidebars show **Date**, plus **Updated** from the file's last commit when that falls on a different day.
 
@@ -321,7 +321,37 @@ Use `##` headings only when sections are long enough that a reader needs navigat
 
 A reference essay (`content/essays/reference-essays/`) defines one concept and is tagged with that term, so the term's tag page can link to it. A term that doesn't need a whole essay gets a glossary entry in `content/reference/glossary.md` instead.
 
-A blueprint is a folder under methods (`content/methods/burgers/`): its `_index.md` is the blueprint's page, its parts are the pages in `parts/`, ordered by `weight`, and its builds are the pages in `builds/`, placed on the timeline by `era` (docs/METHODS.md, Inside a blueprint). A part lists its choices under `## Options`, as a table with `Option`, `Pick it when`, and `Changes` columns; options aren't pages. A build's body has, in order: an opening paragraph, `## Picks` (the profile in one line, then `- **Part:** pick` per part, in the parts' order, then its `stack` block), `## Where it comes from` (optional: its era and kitchen, then a `Constraint` / `Pick it explains` table), `## Why these picks`, `## How it fails`, `## Variations`, and `## Recipes` (optional: wiki links to the recipes that are this build; a build's picks and stack are often enough to cook from). Recipes carry no blueprint fields; the method lists them.
+## Methods
+
+A method (`content/methods/`) explains how a kind of food or a cooking process works in general: the principle first, then the variables, the stages, why each one is there, how it fails, and the recipes that use it. The folder decides what's a method. Each page MUST carry the `method` tag: the folder's own `_index.md` cascades it to a method page with no `tags`, but a page that sets its own `tags` replaces the cascade, so list `method` there. What counts as a method, and how methods relate to blueprints, recipes, and stories, is in docs/METHODS.md.
+
+```yaml
+---
+title: Reverse cooking
+date: 2026-09-24
+tags: [method, technique, temperature]
+---
+```
+
+### Blueprints
+
+A blueprint is a dish type made of parts, as a folder under methods (`content/methods/burgers/`). The model and the reasons for it are in docs/METHODS.md, "Inside a blueprint".
+
+- **The blueprint** is the folder's `_index.md`: title, description, and its definition as the body. It MAY end with `## Further reading`.
+- **Parts** are the pages in `parts/`. Each MUST have a `weight` (1, 2, 3...), which orders them. A part's title is also its label on every build's picks.
+- **Options** are a part's choices (thick, thin, paper thin). They aren't pages: they're rows under the part's `## Options`, a table with `Option`, `Pick it when`, and `Changes` columns.
+- **Builds** are the pages in `builds/`. An `era` (a year) places one on the blueprint's lineage timeline; a build with no `era` is left off it.
+- An `_index.md` in `parts/` or `builds/` is an optional lead line for that list, headless (`build: {render: never, list: never}`).
+
+A build's body, in order:
+
+1. An opening paragraph: why these picks go together.
+2. `## Picks`: the profile in one line, then `- **Part:** pick` per part, in the parts' order, then its `stack` block. Each bullet MUST start with a part's title.
+3. `## Where it comes from` (optional): its era and kitchen, then a `Constraint` / `Pick it explains` table.
+4. `## Why these picks`, `## How it fails`, `## Variations`.
+5. `## Recipes` (optional): wiki links to the recipes that are this build. A build's picks and stack are often enough to cook from.
+
+Recipes carry no blueprint fields; the method lists them.
 
 ### Stack diagrams
 
@@ -343,16 +373,6 @@ bun-base   | Toasted bun       | barrier
 - On a build page the first `stack` block goes under `## Picks`, and a small unlabelled copy goes on the build's card on its blueprint page. Its layers MUST follow the picks. In Obsidian it reads as plain text.
 - Pick the layer that matches the label: `lettuce` is a single leaf, `lettuce-shredded` a heap of shreds.
 - A build that isn't layered (a one-pan pasta) has no `stack` block, and its card goes without a drawing.
-
-A method (`content/methods/`) explains how a kind of food or a cooking process works in general: the principle first, then the variables, the stages, why each one is there, how it fails, and the recipes that use it. The folder decides what's a method. Each page MUST carry the `method` tag: the folder's own `_index.md` cascades it to a method page with no `tags`, but a page that sets its own `tags` replaces the cascade, so list `method` there. What counts as a method, and how methods relate to blueprints, recipes, and stories, is in docs/METHODS.md.
-
-```yaml
----
-title: Reverse cooking
-date: 2026-09-24
-tags: [method, technique, temperature]
----
-```
 
 ## Reference pages and the Food Log
 
