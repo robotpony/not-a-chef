@@ -215,7 +215,9 @@ in a browser — no build step.
   header row and tag page, a tickable list of plant-based recipes, and a
   per-recipe table for splitting the American cuisine, which writes out the
   changes for the content agent. Also shows the built footer build number.
-  Not decided yet.
+  Decided 2026-10-14: the leaf alone on cards (option C), Bruce's recipe
+  ticks, and the American split as edited in the table; recorded in
+  `STYLE.md` §4 and the Principle chip entry.
 
 - **`icons.html`** and **`favicon-heart-pan.html`**: the favicon rounds
   (2026-09-22 to 09-24). `icons.html` was the first (fried egg colourways,
