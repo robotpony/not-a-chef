@@ -5,7 +5,7 @@ Open work only. Finished items are cut, not ticked; git history has them (`git l
 ## Site
 
 - [ ] Tag cleanup: near-duplicates (`gluten-free` / `gluten-free-optional`, `poultry` / `chicken`, `meat`, the one-recipe tags).
-- [ ] American split and plant-based tag (decided 2026-10-14, `mockups/site-phase.html`): retagging and `content/tags/plant-based/_index.md` are with the content agent; the per-principle `icon` and icon-only card chip (`card_label: false`) with fugu-agent. When both land, bump the submodule and check a card with cuisine, Win the fridge, and the leaf at 165px and 230px, light and dark.
+- [ ] American split and plant-based tag (decided 2026-10-14, `mockups/site-phase.html`): content landed in `11f5db4` (Bruce to read the plant-based definition); the per-principle `icon` and icon-only card chip (`card_label: false`) with fugu-agent. When both land, bump the submodule and check a card with cuisine, Win the fridge, and the leaf at 165px and 230px, light and dark.
 - [ ] Checks against real content: Fuse.js search relevance, the homepage, footer Tags/Cuisines links, related content (`partials/related.html`), RSS in a real reader, phone-while-cooking touch targets.
 - [ ] Cross-link essays and reference pages to related recipes.
 - [ ] *Deferred.* Publish `mockups/` as a static subfolder (which mocks, how linked, kept out of search).
