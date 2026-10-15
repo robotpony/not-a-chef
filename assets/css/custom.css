@@ -1018,6 +1018,13 @@ a.principle-chip { text-decoration: none; }
 .principle-chip.is-icon, .rcard-top .principle-chip.is-icon { padding-inline: 6px; }
 .principle-chip.is-icon::after { content: "\200b"; }
 .principle-chip.is-icon svg { width: 12px; height: 12px; }
+/* Plant-based is the outlined principle (STYLE.md Principle chip, 2026-10-14,
+ * mockups/site-phase.html §6 B): a green outline, no fill, so it reads apart
+ * from Win the fridge's filled chip. An inset ring, not a border, so it's no
+ * taller than its siblings. Keyed on the tag's URL, which every chip (card,
+ * header, tag page) links to. */
+a.principle-chip[href$="/tags/plant-based/"] { background: transparent; box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--principle) 55%, transparent); }
+a.principle-chip[href$="/tags/plant-based/"]:hover, a.principle-chip[href$="/tags/plant-based/"]:focus-visible { box-shadow: inset 0 0 0 1px var(--principle); }
 a.principle-chip:hover, a.principle-chip:focus-visible { box-shadow: inset 0 0 0 1px var(--principle); outline: none; }
 /* Test kitchen: drafts, published while they're still changing (Fugu
  * partials/development/, params.toml [fugu.development],
