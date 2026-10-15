@@ -721,6 +721,7 @@ html { overflow-x: hidden; }
 .foot-links a { display: block; font-size: .85rem; line-height: 1.5; color: var(--ink-muted); text-decoration: none; padding: 5px 0; }
 .foot-links a:hover { color: var(--accent-strong); }
 .foot-meta { padding-top: 16px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-family: 'Libre Franklin', sans-serif; font-size: .74rem; color: var(--ink-faint); }
+.foot-build { font-family: 'IBM Plex Mono', monospace; font-size: .7rem; }
 
 .theme-toggle {
   display: flex; align-items: center; gap: 6px; font-family: 'Libre Franklin', sans-serif; font-size: .75rem; font-weight: 600;

@@ -4,11 +4,9 @@ Open work only. Finished items are cut, not ticked; git history has them (`git l
 
 ## Site
 
-- [ ] **Build number in the footer**, so a stale cache or missed deploy is obvious. Count in `data/build.toml`; `tools/publish.sh` bumps it on the `all` path only and commits after a successful deploy; `layouts/partials/footer.html` shows `site.Data.build.number` in small mono (maybe the short hash in a `title`). `preview.sh` shows it, or "dev", and never bumps.
-- [ ] Tags on recipe headers: neutral outline per STYLE.md, hover like `a.cuisine-chip:hover`. Emit `<a class="tag">` in Fugu's `article-meta/basic.html` instead of Blowfish's badge, style `a.tag` in `custom.css`; that also matches the card chip size (20px vs 22.8px).
-- [ ] Tag cleanup: drop tags that repeat the cuisine; merge near-duplicates (Bread/Breads, Dressing/Dressings).
-- [ ] Rename the American cuisine (55 recipes, mostly everyday North American). Decide alongside Canadian and world; retag with `frontmatter.py set`, replace `content/cuisine/american/_index.md` (keep `short`).
-- [ ] Plant-based tag: green, leaf icon, likely sharing the principle tokens (sketch in `mockups/methods-icon.html` §5). Decide the treatment, mock chip and tag page, then add `content/tags/plant-based/_index.md` and tag recipes.
+- [ ] Tag cleanup: exact cuisine repeats are with the content agent (2026-10-14; broader ones like `mediterranean` on Greek stay). Left: near-duplicates (`gluten-free` / `gluten-free-optional`, `poultry` / `chicken`, `meat`, the one-recipe tags).
+- [ ] American split (decided 2026-10-14: American only for really-American dishes, regions where real, no cuisine for everyday cooking). Per-recipe proposal in `mockups/site-phase.html` §4; once Bruce picks, hand the list to the content agent, and add `content/cuisine/southern/_index.md` if Southern is used.
+- [ ] Plant-based tag (decided 2026-10-14: a second principle tag for plant-forward food, alongside vegan and vegetarian). Card label and recipe list in `mockups/site-phase.html` §1-3. Then fugu-agent adds a per-principle `icon` (the leaf); the content agent writes `content/tags/plant-based/_index.md` (`principle: true`, `short`) and tags the recipes; STYLE.md says green means "a value this recipe holds".
 - [ ] Checks against real content: Fuse.js search relevance, the homepage, footer Tags/Cuisines links, related content (`partials/related.html`), RSS in a real reader, phone-while-cooking touch targets.
 - [ ] Cross-link essays and reference pages to related recipes.
 - [ ] *Deferred.* Publish `mockups/` as a static subfolder (which mocks, how linked, kept out of search).

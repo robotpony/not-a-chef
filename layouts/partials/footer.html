@@ -68,6 +68,14 @@
       {{ if .Site.Params.footer.showThemeAttribution | default false }}
         <span>{{ i18n "footer.powered_by" (dict "Hugo" "Hugo" "Theme" "Blowfish") }}</span>
       {{ end }}
+      {{/* Which publish this page came from (tools/publish.sh bumps
+           data/build.toml and passes the commit hash); "dev" on the
+           local server, which never counts. */}}
+      <span class="foot-build">
+        {{- if hugo.IsServer }}Build dev
+        {{- else }}Build {{ site.Data.build.number }}{{ with site.Params.buildhash }} · {{ . }}{{ end }}
+        {{- end -}}
+      </span>
     </div>
   </div>
   {{ if not .Site.Params.disableImageZoom | default true }}

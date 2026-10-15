@@ -210,6 +210,13 @@ in a browser — no build step.
   ketchup, yellow for mustard) as kit-only tokens. Reuses
   `exploded-builds.html`'s kit code, copied in. Not decided yet.
 
+- **`site-phase.html`**: picks for PLAN.md's Site items (2026-10-14): the
+  plant-based principle chip's card label (full, "Plants", leaf only), its
+  header row and tag page, a tickable list of plant-based recipes, and a
+  per-recipe table for splitting the American cuisine, which writes out the
+  changes for the content agent. Also shows the built footer build number.
+  Not decided yet.
+
 - **`icons.html`** and **`favicon-heart-pan.html`**: the favicon rounds
   (2026-09-22 to 09-24). `icons.html` was the first (fried egg colourways,
   then a pan on a tile); the shipped favicon is `favicon-heart-pan.html`
