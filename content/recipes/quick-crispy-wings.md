@@ -1,6 +1,6 @@
 ---
 title: Quick crispy wings
-tags: [mains, poultry]
+tags: [mains, chicken]
 source: family
 date: 2026-06-08
 cuisine: American

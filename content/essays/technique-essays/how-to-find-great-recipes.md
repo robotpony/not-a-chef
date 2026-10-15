@@ -2,7 +2,7 @@
 title: How to find great recipes
 date: 2026-09-27
 draft: false
-tags: [technique, recipes]
+tags: [recipes]
 ---
 
 You have probably noticed that most recipes are hot garbage. I’m not just talking about those recipes that contain more story than method, or recipes that underestimate cooking times, temperatures, and ingredients, or recipes that are so poorly formatted that they’re difficult to read. I’m talking more about recipes that have no clear idea about what they are or why. And failing any semblance of self-awareness, most recipes fail to teach you much about the how either.

@@ -1,6 +1,6 @@
 ---
 title: Gina’s tomato salsa
-tags: [sauces]
+tags: [condiments]
 source: family
 date: 2026-06-08
 cuisine: Mexican

@@ -1,6 +1,6 @@
 ---
 title: "Reverse cooking: reverse sear and water frying"
-tags: [method, technique, temperature]
+tags: [method, temperature]
 aliases: [/reference/reverse-cooking-reverse-sear-and-water-frying/]
 source: family
 date: 2026-09-24

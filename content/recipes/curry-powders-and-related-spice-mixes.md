@@ -1,6 +1,6 @@
 ---
 title: Curry powders and related spice mixes
-tags: [bases, spices, blends]
+tags: [bases, blends]
 source: family
 date: 2026-06-08
 cuisine: Indian

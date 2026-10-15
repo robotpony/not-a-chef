@@ -1,6 +1,6 @@
 ---
 title: In-N-Out burger spread
-tags: [sauces, quick, make-ahead, burgers]
+tags: [sauces, quick, make-ahead, burgers, condiments]
 source: original
 date: 2026-07-07
 portions: about 1 cup (250 ml)

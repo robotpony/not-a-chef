@@ -2,7 +2,7 @@
 title: Why ingredients matter in stock
 date: 2026-09-27
 draft: false
-tags: [technique, stock]
+tags: [stock]
 ---
 
 My first dozen batches of stock were bad — unbalanced, weak, bitter, whatever else could go wrong. The worst one wasn't even a flavour problem. In the chaos of a working kitchen, I grabbed a colander instead of a fine strainer and poured an afternoon's worth of stock straight down the drain. I stood there for a second before it registered what I'd just done. It wasn't really a story about being careless; it was a reminder that I needed a method I could repeat, not instincts I could only trust on a good day.

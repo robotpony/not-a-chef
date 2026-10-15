@@ -1,6 +1,6 @@
 ---
 title: Asian slaw dressing
-tags: [salads, quick, vegan, dairy-free]
+tags: [salads, quick, vegan, dairy-free, dressings]
 source: original
 date: 2024-04-01
 servings: 6–8 (makes ~200 ml)

@@ -1,6 +1,6 @@
 ---
 title: Chicken or turkey stock
-tags: [bases, win-the-fridge]
+tags: [win-the-fridge, stocks]
 source: family
 date: 2026-06-08
 cuisine: world

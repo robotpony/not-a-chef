@@ -1,6 +1,6 @@
 ---
 title: Beef stew
-tags: [mains, make-ahead, dairy-free, family]
+tags: [mains, make-ahead, dairy-free, family, beef]
 source: family
 date: 2026-06-18
 servings: 4–6

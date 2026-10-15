@@ -2,7 +2,7 @@
 title: The food log
 date: 2026-09-29
 draft: false
-tags: [technique, food-log]
+tags: [food-log]
 description: "Why a running kitchen log, not just notes scribbled into a recipe, is what actually makes iteration work."
 ---
 

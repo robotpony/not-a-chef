@@ -1,6 +1,6 @@
 ---
 title: Boerenkool stamppot
-tags: [mains, mashes]
+tags: [mains]
 source: family
 date: 2026-06-08
 aka: brittacole, green potatoes, boerenkool met worst

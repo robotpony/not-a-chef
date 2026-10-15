@@ -1,6 +1,6 @@
 ---
 title: Apple, berry & almond scones
-tags: [breads, tea]
+tags: [breads]
 source: family
 date: 2026-06-08
 draft: false

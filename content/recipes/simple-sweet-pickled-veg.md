@@ -1,6 +1,6 @@
 ---
 title: Simple, sweet pickled veg
-tags: [sauces]
+tags: [condiments]
 source: family
 date: 2026-06-08
 draft: false

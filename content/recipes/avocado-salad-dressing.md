@@ -4,6 +4,7 @@ tags:
   - salads
   - quick
   - vegetarian
+  - dressings
 source: original
 date: 2026-03-24
 servings: 2–3

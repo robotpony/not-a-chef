@@ -1,6 +1,6 @@
 ---
 title: Sandwich sour pickles
-tags: [sauces, quick, vegan, dairy-free]
+tags: [quick, vegan, dairy-free, condiments]
 source: original
 date: 2024-10-01
 prep_time: 10 min

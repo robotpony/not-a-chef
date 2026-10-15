@@ -1,6 +1,6 @@
 ---
 title: Gyro base
-tags: [bases, beef, lamb, mediterranean, make-ahead, freezer-friendly]
+tags: [bases, beef, lamb, mediterranean, make-ahead]
 source: original
 date: 2026-07-19
 servings: 8 (125 g portions)

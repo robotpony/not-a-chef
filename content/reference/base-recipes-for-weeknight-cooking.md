@@ -1,6 +1,6 @@
 ---
 title: Base recipes for weeknight cooking
-tags: [bases, technique]
+tags: [bases]
 source: family
 date: 2026-06-08
 draft: false

@@ -1,6 +1,6 @@
 ---
 title: Greek Islands' creamy Greek dressing
-tags: [salads]
+tags: [salads, dressings]
 source: family
 date: 2026-06-08
 cuisine: Greek

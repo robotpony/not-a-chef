@@ -1,6 +1,6 @@
 ---
 title: Salsa verde
-tags: [sauces]
+tags: [sauces, condiments]
 source: family
 date: 2026-06-08
 cuisine: Mexican

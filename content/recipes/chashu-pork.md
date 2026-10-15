@@ -1,6 +1,6 @@
 ---
 title: Chashu pork
-tags: [bases, make-ahead]
+tags: [bases, make-ahead, pork]
 source: original
 date: 2026-01-11
 servings: 6–8 (as a topping or protein component)

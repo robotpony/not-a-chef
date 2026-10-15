@@ -1,6 +1,6 @@
 ---
 title: Rich veg/mushroom stock
-tags: [bases]
+tags: [stocks]
 source: family
 date: 2026-06-08
 cuisine: world

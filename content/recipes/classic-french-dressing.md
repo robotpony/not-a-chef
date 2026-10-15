@@ -1,6 +1,6 @@
 ---
 title: Classic French dressing
-tags: [salads, quick, make-ahead, dairy-free, gluten-free, family]
+tags: [salads, quick, make-ahead, dairy-free, gluten-free, family, dressings]
 source: family
 date: 2026-06-18
 servings: 4–6

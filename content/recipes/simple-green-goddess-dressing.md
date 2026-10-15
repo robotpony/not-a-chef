@@ -1,6 +1,6 @@
 ---
 title: Simple green goddess dressing
-tags: [salads, dressing]
+tags: [salads, dressings]
 source: family
 date: 2026-06-08
 draft: false

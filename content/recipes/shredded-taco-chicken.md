@@ -1,6 +1,6 @@
 ---
 title: Shredded taco chicken
-tags: [bases]
+tags: [bases, chicken]
 source: family
 date: 2026-06-08
 cuisine: Mexican

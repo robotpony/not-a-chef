@@ -1,6 +1,6 @@
 ---
 title: Beef stroganoff
-tags: [mains, stews, family]
+tags: [mains, family, beef]
 source: family
 date: 2026-06-18
 servings: 4

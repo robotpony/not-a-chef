@@ -1,6 +1,6 @@
 ---
 title: Jerk chicken
-tags: [mains, poultry, caribbean, make-ahead]
+tags: [mains, caribbean, make-ahead, chicken]
 source: family
 date: 2026-06-08
 cuisine: Jamaican

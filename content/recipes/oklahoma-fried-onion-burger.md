@@ -3,7 +3,6 @@ title: Oklahoma fried onion burger
 tags:
   - mains
   - burgers
-  - onion
   - weeknight
   - quick
 source: synthesized

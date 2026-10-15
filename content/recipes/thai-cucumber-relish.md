@@ -1,6 +1,6 @@
 ---
 title: Thai cucumber relish
-tags: [sauces, quick, vegan, dairy-free]
+tags: [quick, vegan, dairy-free, condiments]
 source: original
 date: 2024-04-01
 servings: 4 (makes ~300ml)

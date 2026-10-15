@@ -1,6 +1,6 @@
 ---
 title: Granola bars
-tags: [snacks, make-ahead, vegetarian]
+tags: [make-ahead, vegetarian]
 source: original
 date: 2026-02-02
 servings: 12–14 bars

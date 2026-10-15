@@ -1,6 +1,6 @@
 ---
 title: Baked oatmeal
-tags: [breakfast, make-ahead, oats, gluten-free-optional, vegetarian]
+tags: [breakfast, make-ahead, gluten-free, vegetarian]
 date: 2026-06-17
 servings: 6
 prep_time: 10 min
@@ -59,5 +59,6 @@ Skip the topping fruit. Press 1 sliced banana across the top before baking. Afte
 ## Notes
 
 - Mix and bake immediately. Oats absorb liquid fast; batter left to sit produces a dry, uneven result.
+- For gluten-free, use oats labelled gluten-free. Regular oats are often processed alongside wheat.
 - Keeps refrigerated 5 days. 
 - Frozen fruit works straight from the bag. Add 3–5 minutes to the bake time.

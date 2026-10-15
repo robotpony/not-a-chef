@@ -1,6 +1,6 @@
 ---
 title: Caesar dressing
-tags: [salads, quick, family]
+tags: [salads, quick, family, dressings]
 source: family
 date: 2026-06-18
 servings: 4–6

@@ -1,6 +1,6 @@
 ---
 title: Baguettes
-tags: [breads, technique]
+tags: [breads]
 source: family
 date: 2026-06-08
 draft: false

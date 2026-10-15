@@ -1,6 +1,6 @@
 ---
 title: Chicken patties
-tags: [mains, bases, weeknight, dairy-free, burgers]
+tags: [mains, bases, weeknight, dairy-free, burgers, chicken]
 source: original
 date: 2023-01-01
 servings: 4

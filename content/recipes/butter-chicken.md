@@ -1,6 +1,6 @@
 ---
 title: Butter chicken
-tags: [mains, curries, family]
+tags: [mains, curries, family, chicken]
 source: family
 date: 2026-06-18
 servings: 4

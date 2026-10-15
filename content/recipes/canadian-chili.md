@@ -1,6 +1,6 @@
 ---
 title: Canadian chili
-tags: [mains, stews]
+tags: [mains]
 source: family
 date: 2026-06-08
 cuisine: Canadian

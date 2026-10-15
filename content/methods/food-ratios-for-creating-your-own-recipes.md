@@ -1,6 +1,6 @@
 ---
 title: Food ratios for creating your own recipes
-tags: [method, ratios, technique]
+tags: [method, ratios]
 aliases: [/reference/food-ratios-for-creating-your-own-recipes/]
 source: family
 date: 2026-06-08

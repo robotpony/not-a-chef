@@ -1,6 +1,6 @@
 ---
 title: Pan-fried chicken burger
-tags: [mains, burgers]
+tags: [mains, burgers, chicken]
 source: family
 date: 2026-06-08
 servings: 9 burgers

@@ -1,6 +1,6 @@
 ---
 title: Homemade Baileys Irish cream
-tags: [drinks, christmas]
+tags: [drinks]
 source: https://aseasyasapplepie.com/homemade-baileys-irish-cream/
 date: 2026-09-11
 cuisine: Irish

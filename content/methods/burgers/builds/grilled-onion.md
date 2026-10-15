@@ -5,7 +5,6 @@ draft: false
 tags:
   - method
   - burgers
-  - onion
 era: 1922
 description: "The grilled onion burger: a smashed patty and a pile of onion cooked sweet in the beef fat."
 ---

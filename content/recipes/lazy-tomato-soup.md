@@ -1,7 +1,7 @@
 ---
 title: Lazy tomato soup
 aka: Pantry peeler
-tags: [mains, soups, win-the-fridge, pasta, one-pot, weeknight]
+tags: [mains, soups, win-the-fridge, pasta, weeknight]
 source: original
 date: 2026-09-27
 servings: 4–6

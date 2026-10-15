@@ -1,6 +1,6 @@
 ---
 title: Beef base
-tags: [bases, meat]
+tags: [bases, beef]
 source: family
 date: 2026-06-08
 cuisine: Canadian

@@ -1,6 +1,6 @@
 ---
 title: Hot Buffalo chicken dip
-tags: [appetizers, sides]
+tags: [appetizers, sides, chicken]
 source: family
 date: 2026-06-08
 cuisine: American

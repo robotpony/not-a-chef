@@ -6,7 +6,6 @@ tags:
   - method
   - burgers
   - beef
-  - technique
 weight: 3
 description: "Cooking a burger patty is about crust: a hot surface, a thin patty, some pressure, and a few flips."
 ---
