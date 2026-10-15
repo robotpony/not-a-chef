@@ -5,8 +5,6 @@ Open work only. Finished items are cut, not ticked; git history has them (`git l
 ## Site
 
 - [ ] Tag cleanup: near-duplicates (`gluten-free` / `gluten-free-optional`, `poultry` / `chicken`, `meat`, the one-recipe tags).
-- [ ] Read the plant-based definition (`content/tags/plant-based/_index.md`) and adjust its wording.
-- [ ] Card top row clips: on phones (390px: Lazy tomato soup, veg patties; Chicken Milanese at 340px), and now on desktop when Testing or WTF plus a cuisine push the leaf off (Cherry tomato and garlic spaghetti). Options: a container query that drops `+N` first, one card per row on phones, or more `short` cuisine names. Decide on a real phone.
 - [ ] Checks against real content: Fuse.js search relevance, the homepage, footer Tags/Cuisines links, related content (`partials/related.html`), RSS in a real reader, phone-while-cooking touch targets.
 - [ ] Cross-link essays and reference pages to related recipes.
 - [ ] *Deferred.* Publish `mockups/` as a static subfolder (which mocks, how linked, kept out of search).
@@ -15,7 +13,6 @@ Open work only. Finished items are cut, not ticked; git history has them (`git l
 
 Spec: `docs/METHODS.md`.
 
-- [ ] Burgers parts and eleven builds: close once Bruce signs off (review pass `d7620e2`). Check a build page light and dark with the spreads/American cheese kit.
 - [ ] One-pan pasta: the two builds (American bolognese, cherry tomato and garlic) are still test kitchen stubs.
 - [ ] New methods: stock (from Why ingredients matter in stock and the four stock recipes); foil packets (from Camp cooking).
 - [ ] Timeline flags: non-food context markers (Burger King opens, a world's fair). Decide body vs `flags` frontmatter, mock in `mockups/methods-pages.html`, hand off to fugu-agent.
@@ -47,7 +44,7 @@ Spec: `docs/METHODS.md`.
 
 ## Code review
 
-One area per pass with `/code-review high`; record each finding as fixed, won't fix (why), or moved to Fugu's plan. Template/CSS fixes get `python3 themes/fugu/tests/check.py --compare` plus Chrome at both widths, light and dark.
+*Deferred (2026-10-14).* One area per pass with `/code-review high`; record each finding as fixed, won't fix (why), or moved to Fugu's plan. Template/CSS fixes get `python3 themes/fugu/tests/check.py --compare` plus Chrome at both widths, light and dark.
 
 - [ ] Fugu templates and render hooks (empty sections, no cuisine, no date, drafts in card lists).
 - [ ] Fugu JS (`ingredients.js`, `automagic-sidebar.js`, `search.js`): JS off, keyboard, screen reader, double listeners.
@@ -55,11 +52,11 @@ One area per pass with `/code-review high`; record each finding as fixed, won't 
 - [ ] Site `layouts/`: what Fugu now does better, accidental shadowing.
 - [ ] `custom.css`: dead classes (grep `public/`), duplicates, off-token colours.
 - [ ] Accessibility: popover ARIA and tap behaviour, focus order, landmarks, headings, alt text.
-- [ ] Known suspects: test kitchen SVG inlined twice per draft card; recipe-header tags on Blowfish's badge.
+- [ ] Known suspect: test kitchen SVG inlined twice per draft card.
 
 ## Doc review
 
-After the code review, before Fugu's docs (§7).
+*Deferred, after the code review*, before Fugu's docs (§7).
 
 - [ ] Inventory every doc here and in Fugu: keep, move, merge, or delete.
 - [ ] Stale facts, line by line: FORMAT.md, METHODS.md beyond the blueprint section, STYLE.md, COMPONENTS.md, LIBRARIES.md.
