@@ -6,7 +6,6 @@ date: 2026-05-16
 servings: 1
 prep_time: 5 min
 total_time: 5 min
-cuisine: American
 draft: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Autumn glow salad with lemon dressing
-tags: [salads, vegan]
+tags: [salads, vegan, plant-based]
 source: https://pinchofyum.com/autumn-glow-salad-with-lemon-dressing
 date: 2026-06-08
 draft: false

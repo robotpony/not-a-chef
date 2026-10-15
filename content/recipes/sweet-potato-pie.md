@@ -3,7 +3,7 @@ title: Sweet potato pie
 tags: [desserts]
 source: Alton Brown, Food Network
 date: 2026-06-08
-cuisine: American
+cuisine: Southern
 draft: false
 ---
 

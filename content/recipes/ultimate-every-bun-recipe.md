@@ -4,7 +4,7 @@ tags: [breads]
 source: family
 date: 2026-06-08
 portions: 6 burger buns, 8 hot dog buns, or 9 dinner buns
-cuisine: American
+cuisine: Canadian
 draft: false
 ---
 

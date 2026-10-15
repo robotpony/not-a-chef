@@ -7,7 +7,7 @@ servings: 16 (three-layer cake)
 prep_time: 30 min
 cook_time: 60 min
 total_time: 90 min (plus overnight refrigeration before icing)
-cuisine: American
+cuisine: Canadian
 draft: false
 ---
 

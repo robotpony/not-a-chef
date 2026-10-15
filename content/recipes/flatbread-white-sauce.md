@@ -5,7 +5,6 @@ source: original
 date: 2024-04-01
 prep_time: 10 min
 total_time: 10 min
-cuisine: American
 draft: false
 ---
 

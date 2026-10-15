@@ -1,6 +1,6 @@
 ---
 title: Garlic broccoli
-tags: [sides, weeknight, quick, vegan, dairy-free]
+tags: [sides, weeknight, quick, vegan, dairy-free, plant-based]
 source: original
 date: 2026-01-10
 servings: 2–3 (side)

@@ -6,7 +6,6 @@ servings: 6
 prep_time: 10 min
 cook_time: 40 min
 total_time: 50 min
-cuisine: American
 draft: false
 ---
 

@@ -7,7 +7,6 @@ servings: about 1.5 L
 prep_time: 30 min
 cook_time: 10 min
 total_time: 50 min (plus steeping)
-cuisine: American
 draft: false
 ---
 

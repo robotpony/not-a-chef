@@ -1,6 +1,6 @@
 ---
 title: Cherry tomato and garlic spaghetti
-tags: [pasta, mains, quick, weeknight, vegetarian, win-the-fridge]
+tags: [pasta, mains, quick, weeknight, vegetarian, win-the-fridge, plant-based]
 source: original
 date: 2026-10-14
 servings: 2

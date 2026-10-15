@@ -1,6 +1,6 @@
 ---
 title: Tomato soup
-tags: [mains, soups, weeknight, vegetarian]
+tags: [mains, soups, weeknight, vegetarian, plant-based]
 source: original
 date: 2021-11-01
 servings: 2–4

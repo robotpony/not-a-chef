@@ -1,6 +1,6 @@
 ---
 title: Vegetarian lasagna
-tags: [mains, casseroles, vegetarian, make-ahead, family]
+tags: [mains, casseroles, vegetarian, make-ahead, family, plant-based]
 source: family
 date: 2026-06-18
 servings: 8–10

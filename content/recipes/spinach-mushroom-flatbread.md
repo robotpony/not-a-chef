@@ -1,9 +1,8 @@
 ---
 title: Spinach mushroom flatbread
-tags: [appetizers, sides]
+tags: [appetizers, sides, plant-based]
 source: family
 date: 2026-06-08
-cuisine: American
 draft: false
 ---
 

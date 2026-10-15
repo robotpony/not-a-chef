@@ -1,6 +1,6 @@
 ---
 title: Braised red cabbage
-tags: [sides, vegetarian, weeknight]
+tags: [sides, vegetarian, weeknight, plant-based]
 source: https://foodwishes.blogspot.com/2012/04/braised-red-cabbage-that-is-all.html
 date: 2026-08-29
 servings: 4–6

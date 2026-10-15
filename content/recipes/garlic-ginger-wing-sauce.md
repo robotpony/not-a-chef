@@ -7,7 +7,6 @@ servings: enough for about 1 kg wings
 prep_time: 10 min
 cook_time: 5 min
 total_time: 15 min
-cuisine: American
 draft: false
 ---
 

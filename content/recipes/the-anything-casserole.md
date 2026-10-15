@@ -3,7 +3,7 @@ title: The anything casserole
 tags: [mains, casseroles]
 source: family
 date: 2026-06-08
-cuisine: American
+cuisine: Canadian
 draft: false
 ---
 

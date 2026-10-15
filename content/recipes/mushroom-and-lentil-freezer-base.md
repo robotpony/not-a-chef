@@ -1,6 +1,6 @@
 ---
 title: Mushroom and lentil freezer base
-tags: [bases, vegetarian, vegan, make-ahead]
+tags: [bases, vegetarian, vegan, make-ahead, plant-based]
 source: original
 date: 2022-12-01
 servings: 8–10 (as a base for other dishes)

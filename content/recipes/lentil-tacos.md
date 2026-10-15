@@ -1,6 +1,6 @@
 ---
 title: Lentil tacos
-tags: [mains, vegetarian, vegan, dairy-free]
+tags: [mains, vegetarian, vegan, dairy-free, plant-based]
 source: original
 date: 2022-03-01
 servings: 4–6 (as taco filling)

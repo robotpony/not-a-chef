@@ -1,11 +1,10 @@
 ---
 title: Oven-roasted corn
-tags: [appetizers, sides]
+tags: [appetizers, sides, plant-based]
 source: family
 date: 2026-06-08
 prep_time: 20–60 min
 cook_time: 30 min
-cuisine: American
 draft: false
 ---
 

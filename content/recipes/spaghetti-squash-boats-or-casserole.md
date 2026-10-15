@@ -1,11 +1,10 @@
 ---
 title: Spaghetti squash boats (or casserole)
-tags: [mains, casseroles]
+tags: [mains, casseroles, plant-based]
 source: family
 date: 2026-06-08
 servings: 2
 cook_time: 30 min
-cuisine: American
 draft: false
 ---
 

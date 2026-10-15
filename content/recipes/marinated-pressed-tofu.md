@@ -1,6 +1,6 @@
 ---
 title: Marinated pressed tofu
-tags: [bases, japanese, make-ahead, vegetarian, vegan]
+tags: [bases, japanese, make-ahead, vegetarian, vegan, plant-based]
 source: original
 date: 2026-03-24
 servings: 4+ (as a protein component)

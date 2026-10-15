@@ -7,7 +7,6 @@ servings: 4 (about 12 pancakes)
 prep_time: 10 min
 cook_time: 20 min
 total_time: 30 min
-cuisine: American
 draft: false
 ---
 

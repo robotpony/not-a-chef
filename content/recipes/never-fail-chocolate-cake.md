@@ -7,7 +7,7 @@ servings: 4–8
 prep_time: 15 min
 cook_time: 32 min
 total_time: 50 min
-cuisine: American
+cuisine: Canadian
 draft: false
 ---
 

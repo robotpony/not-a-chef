@@ -3,7 +3,7 @@ title: Marshmallow squares
 tags: [desserts]
 source: family
 date: 2026-06-08
-cuisine: American
+cuisine: Canadian
 draft: false
 ---
 
