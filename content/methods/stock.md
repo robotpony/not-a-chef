@@ -1,9 +1,10 @@
 ---
 title: Stock
-tags: [method, stocks]
+tags:
+  - method
+  - stocks
 date: 2026-10-17
-draft: true
-working_on: "Extracted from the four stock recipes and two essays; first draft for review"
+draft: false
 description: "One method for every stock: roast, extract, lift out the solids, reduce, strain. Only the extraction time changes, and the bones set it."
 ---
 
