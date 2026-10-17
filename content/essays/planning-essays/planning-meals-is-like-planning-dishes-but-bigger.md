@@ -70,9 +70,9 @@ Sunday's prep turns into five dinners that don't feel like the same meal five ti
 | Day | Dinner | From Sunday's prep |
 |---|---|---|
 | Monday | Roast chicken plates with roast veg and rice | Chicken thighs and drumsticks, roast veg |
-| Tuesday | Meat sauce over pasta, with a green salad | Half the beef base, salad greens |
+| Tuesday | [[Meat sauce (AKA American bolognese)\|Meat sauce]] over pasta, with a green salad | Half the beef base, salad greens |
 | Wednesday | Chicken salad, or a casserole if it's cold out | Chicken breasts, the rest of the roast veg |
-| Thursday | Tacos or [[Canadian chili]] | The rest of the beef base |
+| Thursday | Tacos or [[Canadian chili\|chili]] | The rest of the beef base |
 | Friday | Wing night | The wings, while the tips and backbones simmer into stock |
 
 Each dinner leans on one or two bases and adds something fresh: a salad, a starch, a sauce. The bases do the slow work once; the weeknight cooking is assembly.
