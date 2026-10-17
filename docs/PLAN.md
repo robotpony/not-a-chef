@@ -7,6 +7,7 @@ Open work only. Finished items are cut, not ticked; git history has them (`git l
 - [ ] Checks against real content: Fuse.js search relevance, the homepage, footer Tags/Cuisines links, related content (`partials/related.html`), RSS in a real reader, phone-while-cooking touch targets.
 - [ ] Cross-link essays and reference pages to related recipes.
 - [ ] Whether reference essays (Win the fridge, Test kitchen) belong in essays or Reference.
+- [ ] Test kitchen, living with it: does the banner read oddly on a reference page; is the card mark too loud on the Test kitchen list.
 - [ ] *Deferred.* Publish `mockups/` as a static subfolder (which mocks, how linked, kept out of search).
 
 ## Methods
@@ -26,11 +27,6 @@ Spec: `docs/METHODS.md`.
 - [ ] Check ratio (`:`) and sequence (`→`) diagrams the first time real content uses one; retest a formula inside Mechanic on the live site.
 - [ ] Veg patties: swaps are listed in both the Mechanic bullets and the diagram; trim one.
 - [ ] Stack diagrams for sandwiches and lasagne, once there's a page for them. Drop "v1" from the layer kit in STYLE.md once Bruce calls it settled.
-
-## Test kitchen
-
-- [ ] Live with it: does "Test kitchen" read oddly on a reference page; is the card mark too loud on the Test kitchen list.
-- [ ] Add `working_on` lines to current drafts.
 
 ## Format and data
 
