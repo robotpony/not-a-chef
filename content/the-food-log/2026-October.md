@@ -10,6 +10,7 @@ Early October is mostly trip notes: a tabbouleh worth learning, a subtly sweet r
 
 - toasting methods → dry, dry/smooth, oil, whole vs. surface
 - add cheesey pasta (one pan) build or recipe 
+- research "national dish" dishes and consider adding (ramen, pizza, mole, tapas, [pot au feu](https://www.seriouseats.com/classic-pot-au-feu-french-boiled-beef-and-vegetables), borsch, pasta al pomodoro, rice, meze)
 
 ### On the list:
 
