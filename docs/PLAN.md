@@ -14,7 +14,8 @@ Open work only. Finished items are cut, not ticked; git history has them (`git l
 Spec: `docs/METHODS.md`.
 
 - [ ] One-pan pasta: the American bolognese build is still a test kitchen stub.
-- [ ] New methods: stock (from Why ingredients matter in stock and the four stock recipes); foil packets (from Camp cooking).
+- [ ] Stock method: drafted (`content/methods/stock.md`); Bruce reviews in a local preview before it comes out of the test kitchen.
+- [ ] New method: foil packets (from Camp cooking).
 - [ ] Timeline flags: non-food context markers (Burger King opens, a world's fair). Decide body vs `flags` frontmatter, mock in `mockups/methods-pages.html`, hand off to fugu-agent.
 - [ ] Blueprint and build pages: mock if they change visibly; check at phone width and light mode.
 - [ ] Later: a part-by-part build comparison table (needs a strict `## Picks` list to parse).

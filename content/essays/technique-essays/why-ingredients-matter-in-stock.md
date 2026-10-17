@@ -52,4 +52,4 @@ There are other ingredients that seem to make sense for stock but, based on the 
 
 None of this is really about any single ingredient. It's about having a method you trust before you're standing over a pot at the end of a long day, making decisions on autopilot. My method now stays at the cooktop instead of migrating to the sink, which is where the colander incident happened: fish the solids out with a spider into a bowl, pour the stock into a smaller pot to reduce, then strain the reduced stock through a fine mesh strainer. The ingredients stay simple and consistent too, the same short list batch after batch, so I'm not relearning the recipe under pressure.
 
-For the actual ratios, see [[Chicken or turkey stock]], [[Basic chicken ramen stock]], [[Beef stock]], and [[Rich veg/mushroom stock]].
+The whole process, step by step, is in [[Stock]]. For the actual ratios, see [[Chicken or turkey stock]], [[Basic chicken ramen stock]], [[Beef stock]], and [[Rich veg/mushroom stock]].
