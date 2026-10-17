@@ -10,6 +10,8 @@ Before I kept a log, my stock was flat. I'd made it a dozen times, tweaked it a 
 
 [The Food Log](/the-food-log/) is where I fixed that. It's an engineering log for the kitchen, the same thing I used to keep on paper for real engineering work: a running record of tests, research, half-formed ideas, and the TODOs that don't belong anywhere else yet. Before it existed as a section of this site, it was a stack of notebooks. The format changed; the job didn't.
 
+That cooking gets an engineering log isn't an accident. Cookery has always looked a lot like software design to me: tactical skills worth honing for their own sake, planning and execution that take years to master, and a whole way of thinking about how food works that feels like ontology and architecture. Problems that look like engineering deserve an engineering tool.
+
 ## Stateless is the whole point
 
 A good engineering log is stateless in a specific sense: you should be able to walk away from a problem entirely, forget everything you were holding in your head, and come back weeks later and pick up exactly where you left off. Not from memory, from the log. What did I try? What worked, what didn't, what was I about to try next?
