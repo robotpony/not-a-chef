@@ -1,10 +1,11 @@
 ---
 title: Pork loin sausage
 date: 2026-10-17
-draft: true
-tags: [pork, sausage]
-description: "Turning a sale-priced pork loin into breakfast sausage, with rules of thumb for seasoning and texture."
-working_on: "Imported from warpedvisions.org (2024); needs the result of the paddle-mixing test"
+draft: false
+tags:
+  - pork
+  - sausage
+description: Turning a sale-priced pork loin into breakfast sausage, with rules of thumb for seasoning and texture.
 ---
 
 Pork loin was on sale this week, packaged in half loins (roughly 3.5 kg). I picked one up and split it into four roasts. Loin usually ends up as chops, or brined and smoked as back bacon (Canadian bacon). It's a fairly lean cut, but cut right it has some marbling and a fat cap, and it makes great ground pork if you include the fat cap.
@@ -31,4 +32,7 @@ This test was about mixing. A Vienna sausage is double ground and mixed until ho
 
 These ranges are a starting point, not a recipe. [[Breakfast sausage]] is the tested version, a little saltier at 1.6% and with milk powder for binding. If you only take one thing from this, fry a test piece before you form the whole batch. It's the cheapest way to fix seasoning and texture while you still can.
 
-- How did the paddle-mixed patties cook up? #todo
+Paddle mixing works well with caveats:
+
+- don't over mix, as heat becomes the enemy (add ice instead of water, or place a second bowl of ice-water under the mixer bowl)
+- use the splash guard, unless you want to decorate your kitchen with pork

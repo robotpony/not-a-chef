@@ -65,9 +65,9 @@ Sunday prep would typically look like:
 
 ## The week
 
-- Monday to Friday, showing which prep becomes which dinner. #todo
+- Monday to Friday, showing which prep becomes which dinner. #todo #focus
 
 ## When it goes wrong
 
 - Your examples of food waste and boring weeks. #todo
-- Ending: the practical takeaway. #todo
+- Ending: the practical takeaway. #todo #focus

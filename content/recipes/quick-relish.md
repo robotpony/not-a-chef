@@ -1,11 +1,13 @@
 ---
 title: Quick relish
-tags: [condiments, quick, make-ahead]
+tags:
+  - condiments
+  - quick
+  - make-ahead
 source: original
 date: 2026-10-17
 servings: ~550 ml (2¼ cups)
-draft: true
-working_on: "Imported from warpedvisions.org (2024); needs a pass into the cookbook format"
+draft: false
 ---
 
 A quick, sweet-and-sour relish from the pickle shelf, for when a dish wants one.

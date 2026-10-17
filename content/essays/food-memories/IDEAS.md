@@ -5,7 +5,7 @@ This is an ongoing list that started in a Google Doc
 
 More food memory essay ideas, not yet drafted.
 
-### History essays #ideas
+### Ideas for food memories/history essays #ideas
 
 - [ ] Grandma P's French style minestrone w/ pepper
 - [ ] A house salad with a fresh vinaigrette, and my first medium rare steak (and learning how not to treat restaurant staff)

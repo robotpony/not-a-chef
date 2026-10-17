@@ -4,6 +4,11 @@ date: 2026-09-01
 ---
 Two goulash tests: a first-principles pork version on the 14th that came out better than expected, then a v2 on the 29th with oven-roasted pork, soaked dried mushrooms and smoked paprika. Alongside it, chicken Milanese from freezer-marinated cutlets, a more acidic batch of sweet pickled red onions, and the start of research into a cornmeal-breaded chicken patty. The backlog is mostly curries (butternut squash, Japanese, Instant Pot chicken thigh) plus a list of recipe sites to work through.
 
+## Saturday, October 17th
+
+### Old warped food posts #todo #p0 #focus 
+
+- [ ] Review drafts from warpedvisions, likely overlap
 
 ## Wednesday, September 30th
 

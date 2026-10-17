@@ -1,18 +1,17 @@
 ---
 title: Stir fry two ways
-tags: [pork, mains, weeknight]
+tags:
+  - pork
+  - mains
+  - weeknight
 source: original
 date: 2026-10-17
-draft: true
-working_on: "Imported from warpedvisions.org (2024); needs a pass into the cookbook format"
+draft: false
 ---
-
 Two pork stir fries from one method: lemongrass pork, and sweet ginger and garlic pork. Use a lean, tender cut like pork sirloin tip, which wants a fast cook. There's no deep frying, so both are much lighter than takeout.
-
 ## Mechanic
 
 **Baking soda and cornstarch** in the marinade tenderize and coat the pork, a shortcut to velveting. The pork stays tender and browns in a little oil instead of a deep fryer.
-
 ## Lemongrass pork
 
 - 500 g pork, silverskin removed, cubed

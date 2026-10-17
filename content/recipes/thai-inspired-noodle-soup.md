@@ -1,11 +1,14 @@
 ---
 title: Thai-inspired noodle soup
-tags: [soups, pork, mains, curries]
+tags:
+  - soups
+  - pork
+  - mains
+  - curries
 source: original
 date: 2026-10-17
 cuisine: Thai
-draft: true
-working_on: "Imported from warpedvisions.org (2024); needs a pass into the cookbook format"
+draft: false
 ---
 
 A coconut curry noodle soup built on quick-marinated pork, lemongrass, and whatever vegetables are on hand. Brown the pork fast and leave it underdone, so it finishes in the soup and stays tender.
@@ -38,6 +41,8 @@ Fry the mixture in a nonstick pan on medium, stirring or flipping regularly, unt
 - 500 ml (2 cups) partially condensed stock (unsalted and homemade is best; season carefully if using store-bought)
 - 4 cups broccoli, in bite-size pieces
 - 2–3 cups mild and medium peppers, sliced thin on the bias
+- 1-2 tsp crushed garlic
+- 2-3 tsp grated ginger
 - 1 pack noodles, par-cooked in boiling water if needed
 
 Heat some coconut oil in a large 5–6 L (5–6 qt) saucier on medium. If the coconut milk has separated, use its solids instead. Add the curry paste and stir until aromatic.
@@ -54,6 +59,3 @@ In large bowls.
 
 **Tofu.** Treat it exactly like the pork, and leave out the fish sauce.
 
-## Notes
-
-- Pin down the garlic and shallot quantities. #todo

@@ -1,12 +1,12 @@
 ---
-title: "Condensing recipes for freezer prep, or how I make things like beef stew"
+title: Condensing recipes for freezer prep, or how I make things like beef stew
 date: 2026-10-17
-draft: true
-tags: [make-ahead, bases]
-description: "Freezing the hard parts of a meal as a condensed base, so a full dinner is 20 minutes away."
-working_on: "Imported from warpedvisions.org (2024); needs a pass into the cookbook format"
+draft: false
+tags:
+  - make-ahead
+  - bases
+description: Freezing the hard parts of a meal as a condensed base, so a full dinner is 20 minutes away.
 ---
-
 I like to tell people that I'm proactively lazy. I like to cook when I have the energy and not cook when I'm lazy, and have great food either way. I also have limited freezer space, which has led me to prepare condensed versions of foods that can be defrosted and turned into full meals in under 20 minutes. [Condensing foods](https://en.wikipedia.org/wiki/Soup#Commercial_products) is an old technique that works well for home cooks today.
 
 ## What makes a good condensed base?
