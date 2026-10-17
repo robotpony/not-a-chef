@@ -2,6 +2,7 @@
 title: Tips and tricks for cooking on the road
 date: 2026-06-08
 draft: true
+working_on: "Gathering more road tips, and an ending"
 tags: [cooking-reflection, travel]
 ---
 
@@ -9,11 +10,7 @@ I occasionally cook on the road while staying in corporate apartments. These kit
 
 ## How do you fry ground beef without oil?
 
-I stayed at a corporate apartment with a nice little kitchen that had only stainless steel pots and pans. Normally this is a good thing, but when travelling I don’t usually bring oil or butter with me, and I don’t want to buy more oil than I need as I hate to throw out food (or pack it with me).
-
-You can use a variant of the reverse method with ground meat that works well: the meat starts in water, the fat renders as the water cooks off, and then the meat fries in its own fat (see [[Reverse cooking: reverse sear and water frying]]). Start by heating up enough water to cover the bottom of a pot (the high walls will prevent splatter) and heat until simmering. Add the beef to the water, and break it up and stir. The fats will start to render out as the water evaporates, and very little will stick to the pan. If anything does stick to the pan, you can add a bit of water (or wine) and deglaze.
-
-This might not work as well with ground chicken or turkey, as they tend not to have enough fat. For these, consider adding some sausage or salad dressing.
+Start it in a little simmering water instead of oil, and let it fry in its own fat once the water cooks off. The full method is in [[How do you fry ground beef without oil?]].
 
 ## How do you cook other foods without oil?
 

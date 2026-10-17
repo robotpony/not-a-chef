@@ -11,7 +11,7 @@ draft: false
 Two pork stir fries from one method: lemongrass pork, and sweet ginger and garlic pork. Use a lean, tender cut like pork sirloin tip, which wants a fast cook. There's no deep frying, so both are much lighter than takeout.
 ## Mechanic
 
-**Baking soda and cornstarch** in the marinade tenderize and coat the pork, a shortcut to velveting. The pork stays tender and browns in a little oil instead of a deep fryer.
+**Baking soda and cornstarch** in the marinade tenderize and coat the pork, a shortcut to [[Velveting (pork)|velveting]]. The pork stays tender and browns in a little oil instead of a deep fryer.
 ## Lemongrass pork
 
 - 500 g pork, silverskin removed, cubed
@@ -60,3 +60,5 @@ Over rice. Brown basmati cooked in chicken stock, with sunflower seeds and five-
 ## Variations
 
 **Tofu.** Press it dry, then treat it exactly like the pork.
+
+**Deeper lemongrass.** Marinate the pork overnight in [[Lemongrass marinade]] instead of the quick marinade, then fry it the same way. More flavour, but it needs planning a day ahead.

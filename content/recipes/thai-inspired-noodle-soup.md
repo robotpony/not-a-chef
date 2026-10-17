@@ -11,7 +11,7 @@ cuisine: Thai
 draft: false
 ---
 
-A coconut curry noodle soup built on quick-marinated pork, lemongrass, and whatever vegetables are on hand. Brown the pork fast and leave it underdone, so it finishes in the soup and stays tender.
+A coconut curry noodle soup built on quick-marinated pork (a shortcut to [[Velveting (pork)|velveting]]), lemongrass, and whatever vegetables are on hand. Brown the pork fast and leave it underdone, so it finishes in the soup and stays tender.
 
 ## Pork and mushrooms
 

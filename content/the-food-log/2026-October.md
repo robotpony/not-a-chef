@@ -6,6 +6,10 @@ Early October is mostly trip notes: a tabbouleh worth learning, a subtly sweet r
 
 ## Week of Friday, October 16th
 
+### Old warped food posts #p0
+
+- [x] Review drafts from warpedvisions, likely overlap #todone @2026-10-17
+
 ### Essay topics:  #ideas
 
 - toasting methods → dry, dry/smooth, oil, whole vs. surface

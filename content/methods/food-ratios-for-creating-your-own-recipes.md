@@ -5,6 +5,7 @@ aliases: [/reference/food-ratios-for-creating-your-own-recipes/]
 source: family
 date: 2026-06-08
 draft: true
+working_on: "Developing and testing ratios for breading, gravies, breads, and pickling brines"
 ---
 
 Most recipes can be boiled down to a ratio of their ingredients. There is an interesting range for many ingredients, and in the tables below a tilde (~) denotes a moderate difference, and explicit ranges are given for ingredients that matter more. You’ll find that the ranges can lean a recipe towards one set of flavours or another, or adjust for differences between ingredients like acids that can be stronger or weaker (or sweeter, saltier, etc.).

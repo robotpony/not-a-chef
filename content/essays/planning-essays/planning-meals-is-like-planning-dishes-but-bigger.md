@@ -2,7 +2,7 @@
 title: Planning meals is like planning dishes, but bigger
 date: 2026-06-08
 draft: true
-working_on: "Rambly and in progress: still needs a hook, the week laid out day by day, and an ending."
+working_on: "Still needs a hook and real examples of weeks that went wrong; the week and the ending are first drafts"
 tags: [planning, meal-prep, win-the-fridge]
 description: "How I plan a week of meals: pair the meals first, let them pick the dishes, and let the dishes pick what gets prepped on Sunday."
 aliases: [/essays/planning-essays/meal-planning-bruces-take/]
@@ -65,9 +65,24 @@ Sunday prep would typically look like:
 
 ## The week
 
-- Monday to Friday, showing which prep becomes which dinner. #todo #focus
+Sunday's prep turns into five dinners that don't feel like the same meal five times. The roast covers lunches all week.
+
+| Day | Dinner | From Sunday's prep |
+|---|---|---|
+| Monday | Roast chicken plates with roast veg and rice | Chicken thighs and drumsticks, roast veg |
+| Tuesday | Meat sauce over pasta, with a green salad | Half the beef base, salad greens |
+| Wednesday | Chicken salad, or a casserole if it's cold out | Chicken breasts, the rest of the roast veg |
+| Thursday | Tacos or [[Canadian chili]] | The rest of the beef base |
+| Friday | Wing night | The wings, while the tips and backbones simmer into stock |
+
+Each dinner leans on one or two bases and adds something fresh: a salad, a starch, a sauce. The bases do the slow work once; the weeknight cooking is assembly.
+
+- Swap in your real week if it differs. #todo
 
 ## When it goes wrong
 
 - Your examples of food waste and boring weeks. #todo
-- Ending: the practical takeaway. #todo #focus
+
+## The takeaway
+
+Plan from the top down, then cook from the bottom up. Pick the meals first, for pairing and variety, and let them decide the dishes and the Sunday prep. Then cook the bases once and spend the week assembling. If Thursday's fridge still holds half a bag of spinach and a container of beef, that isn't a failed plan; it's Friday's dinner, or something for the freezer. The week is won when the perishables are gone and nobody ate the same dinner twice.
