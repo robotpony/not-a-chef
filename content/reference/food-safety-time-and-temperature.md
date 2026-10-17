@@ -125,7 +125,7 @@ Use the no-hold column (74°C poultry, 71°C ground meat) when cooking for anyon
 - **Cooling:** get cooked food from 60°C to 21°C within 2 hours, then to 4°C within 4 more. Split big batches of stock, chili, or rice into shallow containers.
 - **Reheating:** bring leftovers to 74°C (165°F) all the way through.
 - **Fresh salsas and dressings** with raw onion, garlic, or herbs: 5–7 days in the fridge.
-- **Raw egg** (Caesar dressing, homemade mayo): use pasteurized eggs for vulnerable guests, and use it within a few days.
+- **Raw egg** ([[Caesar dressing]], homemade mayo): use pasteurized eggs for vulnerable guests, and use it within a few days.
 
 ## Thermometer check
 

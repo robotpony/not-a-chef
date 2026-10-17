@@ -13,7 +13,7 @@ I like to tell people that I'm proactively lazy. I like to cook when I have the 
 
 I think of condensing meals in terms of capturing the most difficult or time consuming steps into something that freezes well, while also taking up a minimum of space. The parts that are more easily cooked or don't freeze well are added when preparing the meal for service, so that you preserve texture, flavour, and nutrition of the more delicate components.
 
-A good example of this is beef stew. While it's possible to freeze carrots, peas, and other root vegetables in a stew, they are easy to add at service and keep their texture better when added later. And while it's possible to freeze condensed gravy, it usually changes texture and loosens up a bit after defrosting. So my approach to freezing stew is to capture the base of braising liquid, softened chuck roast, fond, and softened allium (onions, leeks, garlic), as well as the more key spices (rosemary, thyme, bay, and pepper).
+A good example of this is [[Beef stew|beef stew]]. While it's possible to freeze carrots, peas, and other root vegetables in a stew, they are easy to add at service and keep their texture better when added later. And while it's possible to freeze condensed gravy, it usually changes texture and loosens up a bit after defrosting. So my approach to freezing stew is to capture the base of braising liquid, softened chuck roast, fond, and softened allium (onions, leeks, garlic), as well as the more key spices (rosemary, thyme, bay, and pepper).
 
 My condensed stew takes about ½ of the storage space of the stew itself, and about ¼ the space of the stew and accompanying sides like potatoes and dumplings. A 500 ml container can generally be stretched to about 4 meals, if you include sides.
 
@@ -27,7 +27,7 @@ Most Indian restaurants (in our area at least) prep a number of bases and base g
 
 The same technique can be used for most cuisines. I make various condensed protein bases that can be used in a large number of dishes:
 
-- minced beef/mushroom mix (for meat sauces, cottage pie, soups, etc.)
+- minced beef/mushroom mix (for meat sauces, [[Cottage pie|cottage pie]], soups, etc.)
 - "taco" seasoning (simpler minced beef with chilis, great for burritos, tacos, salads, chili, hot dogs, etc.)
 - veg taco bases (lentils and seasoning)
 - soup bases (like French onion, phở, tonkotsu, chowders, etc.)
@@ -39,7 +39,7 @@ Condensed cooking can also be used to mop up the fridge, using up ingredients th
 
 Italian-style sauces are a great way to use up leftover herbs, proteins, and cheeses which freeze better when combined into thick sauces. And meatballs, fritters, and pasta can be a great way to use up extra eggs, meats, cheeses, grains, bread, and vegetables. I'll make a batch of ravioli every few months to mop up extra mince and eggs, adding older hard cheeses, spinach, and other foods that need to be used.
 
-I've found that freezing meatballs can result in disappointingly dry meatballs, but if you freeze them in sauce they tend not to suffer from freezer burn. I usually freeze meatballs in a classic red sauce (using pantry onions, garlic, and tinned tomatoes), or in their own juices and stock.
+I've found that freezing [[Meatballs|meatballs]] can result in disappointingly dry meatballs, but if you freeze them in sauce they tend not to suffer from freezer burn. I usually freeze meatballs in a classic red sauce (using pantry onions, garlic, and tinned tomatoes), or in their own juices and stock.
 
 ## Speeding up prep work
 
@@ -51,7 +51,7 @@ For minced meats and soup stocks a pressure cooker is more than twice as fast as
 
 Any protein that you can braise is also significantly faster to prepare in a pressure cooker. Cuts that braise well also tend to be cheaper, so roasts like chuck roast, pork shoulder/butt, chicken thighs, ribs, and such are easy to prep in under 45 minutes. Typically, a full pork shoulder will feed 4 people 10-15 meals. And don't forget that beans and lentils are braisable, and work well in a pressure cooker.
 
-Pressure cookers are also great for soups and stocks. Both French onion and mushroom soup bases can be made in under 30 minutes, and most clear stocks can be made in under 45. It's even possible to make longer simmering broths like tonkotsu in around an hour (though you do need to fast-release to emulsify the fats).
+Pressure cookers are also great for soups and stocks. Both [[French onion soup|French onion]] and [[Mushroom soup|mushroom soup]] bases can be made in under 30 minutes, and most clear stocks can be made in under 45. It's even possible to make longer simmering broths like tonkotsu in around an hour (though you do need to fast-release to emulsify the fats).
 
 Clear stocks work especially well in a pressure cooker, as long as you slow-release the pressure to avoid a full boil. The method is easy too, add stock ingredients (optionally roasted ahead of time), and cover with water. Add a bouquet garni (bag of herbs). I suggest avoiding plants in the brassicaceae family (cabbage, cauliflower, broccoli, etc.) and tender herbs, as they tend to add bitter notes with long (or high pressure) cooks. Also remember that flavours like garlic and celery are intensified by the process.
 

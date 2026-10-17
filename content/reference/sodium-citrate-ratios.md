@@ -15,7 +15,7 @@ Sodium citrate lets almost any cheese melt smoothly without splitting, from a fi
 | 0–35% | Firm to soft, sets when cool | Sliceable cheese, moulded cheese |
 | 35–85% | Thick and flowing | Dips and queso |
 | 50–90% | Dippable | Fondue and queso for chips |
-| 85–120% | Thin sauce | Mac and cheese, fondue for bread, cheese foam |
+| 85–120% | Thin sauce | [[Baked mac & cheese|Mac and cheese]], fondue for bread, cheese foam |
 | 120–175% | Soup | Cheese soup (heartier at 120%, thinner at 175%) |
 
 **Sodium citrate:** 2–3% of the combined weight of the cheese and liquid. It adds a salty, sour note, so stay near the low end and season to taste.

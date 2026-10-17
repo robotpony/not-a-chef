@@ -65,7 +65,7 @@ The [[Beef base]] is a great example and one of my favourites, as it can be tran
     - taco soup
     - taco pizza
     - (etc.)
-- A quick Canadian chili, adding the taco beef to a few cans of beans, some red sauce (or whole tinned tomatoes), great with
+- A quick [[Canadian chili]], adding the taco beef to a few cans of beans, some red sauce (or whole tinned tomatoes), great with
     - mac & cheese
     - over fries
     - over salad
