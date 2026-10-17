@@ -14,6 +14,13 @@ This is an improved dough tuned to work easily with a 6 L stand mixer. It's high
 
 This is a **high-hydration dough** (~67%), which trades easy handling for better ferment and lift. The **diastatic malt powder** supplies enzymes that break starches down into sugars, giving the yeast more to work with and helping the crust brown. If you can't find it (specialty baking stores and online sell it), replace it with the same weight of flour and give the dough a bit more ferment time.
 
+```formula
+flour   | Flour | 100
+: water | Water | 67
+caption: ~67% hydration, by weight
+bar: yes
+```
+
 I don't suggest 00 flour for this recipe unless you have a pizza steel or an oven that can reach 300°C (575°F) or more. All-purpose works better in a home oven, though kneading and cooking times are a bit longer.
 
 ## Ingredients

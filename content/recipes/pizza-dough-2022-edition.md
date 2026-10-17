@@ -17,6 +17,13 @@ This is another iteration of my pizza dough recipe, based on some experimentatio
 
 This dough runs at **~75% hydration**, with vital wheat gluten added to push the flour blend toward ~13–14% protein, closer to bread flour, for more structure and chew. Skipping the autolyse in favour of a long cold ferment (24 hours minimum, up to 5–6 days) develops flavour instead, while keeping the mixing itself to one pass.
 
+```formula
+flour   | Flour | 100
+: water | Water | 75
+caption: ~75% hydration, by weight
+bar: yes
+```
+
 ## Ingredients
 
 - 1000 g all-purpose flour

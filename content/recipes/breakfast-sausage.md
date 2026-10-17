@@ -17,6 +17,12 @@ These make great patties, sausages, or crumble, with no casings needed unless yo
 
 A **percentage-based spice formula**: salt runs **1.5–2% of the meat's weight**, and every other ingredient scales against the meat, so it's trivially scalable and easy to dial in. Milk powder improves binding and moisture and adds a subtle dairy richness. Cold water keeps the mix from emulsifying too far. <!-- Private worksheet (to import): https://docs.google.com/spreadsheets/d/1D9Ls2SRHtvSBeVAVhLJZC5CSqrhxuTvu3vb2kW5LvrU/edit?gid=2146379760#gid=2146379760 -->
 
+```formula
+patty  | Meat | 100
+: salt | Salt | 1.5–2
+caption: By weight; every other ingredient scales to the meat too
+```
+
 ## Ingredients
 
 - 1–2 kg ground pork shoulder (80/20 or 70/30); pork belly also works

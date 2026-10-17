@@ -16,6 +16,13 @@ Baguettes are a crusty, airy bread, perfect for snacking, sandwiches, and with s
 
 **75% hydration, a narrow shape, and steam** make the baguette. The wet dough gives an open crumb; the thin shape and a steamy oven let the crust set crisp and brown before the inside dries out. This is more of a method than a specific recipe: the same dough makes several similar breads by varying the rise and oven time.
 
+```formula
+flour   | Flour | 100
+: water | Water | 75
+caption: 75% hydration, by weight
+bar: yes
+```
+
 ## Ingredients
 
 - 10 g instant yeast

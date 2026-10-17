@@ -19,6 +19,13 @@ The fried onion burger is a classic diner burger; sweet, savoury, and simple.
 
 The onion is smashed into the patty, not cooked beside it. A ball of beef goes on a hot griddle under a pile of paper-thin onion, and a heavy press drives the onion into the meat. The beef browns underneath while the onion steams in its juices on top; after the flip, the onion fries in the beef fat until it's sweet and browned at the edges. Use **about 2 parts beef to 1 part onion by weight**: less onion and it's a smash burger with a garnish, more and the patty won't hold together. The onion has to be sliced paper thin, or it won't cook through before the beef is done.
 
+```formula
+patty   | Beef  | 2
+: onion | Onion | 1
+caption: By weight, onion sliced paper thin
+bar: yes
+```
+
 ## Burgers
 
 - 450 g (1 lb) ground beef, 80/20, cold

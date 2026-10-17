@@ -14,6 +14,13 @@ Some days I just want an easy pizza dough. I don’t want it 3 days from now, I 
 
 Every ingredient here is scaled as a **baker's percentage** against the flour weight, so the recipe holds up if you scale it up or down. At 70% hydration it's a medium-hydration dough, and the vital wheat gluten nudges standard Canadian AP flour (13.5% protein) toward bread-flour territory for more chew.
 
+```formula
+flour   | Flour | 100
+: water | Water | 70
+caption: 70% hydration, by weight
+bar: yes
+```
+
 This recipe uses weight measures as it’s simpler, assuming you have a decent scale. I just tare (reset) it between ingredients.
 
 ## Ingredients

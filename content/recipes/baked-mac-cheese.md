@@ -15,6 +15,13 @@ This is a classic baked mac and cheese. You can sub in pretty much any combo of 
 
 A **mornay** is a béchamel (roux plus milk) with cheese melted into it. A roux is flour and fat, 1:1. The sauce breaks and turns gritty if it overheats, so the cheese goes in off the heat and the bake stops at bubbling.
 
+```formula
+butter flour | Roux   | 1:1
++ cup        | Milk
++ cheese     | Cheese
+= pot        | Mornay
+```
+
 ## Crust
 
 - ¾ cup panko bread crumbs

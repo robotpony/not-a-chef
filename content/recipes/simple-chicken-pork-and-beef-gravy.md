@@ -13,6 +13,13 @@ Gravy is a simple sauce of meat drippings thickened with a roux.
 
 A roux is equal parts fat and flour by weight. Use about **1:5 roux to liquid** (for example, 50 g roux to 250 ml liquid). A darker roux tastes nuttier but thickens slightly less.
 
+```formula
+butter flour | Roux   | 1
+: water      | Liquid | 5
+caption: Roux is fat and flour, 1:1 by weight
+bar: yes
+```
+
 ## Ingredients
 
 - 25 g butter (or vegetable oil or rendered fat)

@@ -15,6 +15,12 @@ It takes about 3 hours (or about half that with a pressure cooker).
 
 The rich, sweet flavour and colour come mostly from **deeply browned vegetables**, sliced very thin so they roast dark. It works best at **2:3 veg to water**.
 
+```formula
+carrot onion | Veg   | 2
+: water      | Water | 3
+bar: yes
+```
+
 ## Ingredients
 
 - 2 large carrots

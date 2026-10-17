@@ -17,6 +17,12 @@ Making pasta by hand is easier than it looks. It takes about 20 minutes, plus a 
 
 **250g flour to 2 whole eggs plus 4 yolks** is the ratio. Extra yolks rather than whole eggs make the pasta richer, more golden, and silkier in texture. The 30-minute rest after kneading relaxes the gluten so the dough sheets smoothly without springing back.
 
+```formula
+flour | Flour | 250 g
++ egg | Eggs  | 2
++ egg | Yolks | 4
+```
+
 ## Ingredients
 
 - 250g (about 2 cups) AP flour, plus more for dusting
