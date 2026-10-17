@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Formula icons, round 2</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  :root{
+    --bg:#F3F3EC; --surface:#FBFBF6; --surface-2:#EAEBDF;
+    --ink:#23241E; --ink-muted:#63645A; --ink-faint:#93948A;
+    --border:#DCDCCE; --border-strong:#C7C8B4;
+    --accent:#A67330; --accent-strong:#7C361D; --accent-soft:#F6EADA;
+    --highlight:#997F29; --highlight-soft:#F6F1D5;
+    --flag:#3D638F; --flag-soft:#E1EAF4;
+    --focus:#A67330;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+      --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+      --border:#383A2C; --border-strong:#4A4C3A;
+      --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+      --highlight:#DDCC88; --highlight-soft:#342D19;
+      --flag:#97B8D8; --flag-soft:#1D2835;
+      --focus:#D3A569;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+    --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+    --border:#383A2C; --border-strong:#4A4C3A;
+    --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+    --highlight:#DDCC88; --highlight-soft:#342D19;
+    --flag:#97B8D8; --flag-soft:#1D2835;
+    --focus:#D3A569;
+  }
+
+  *{box-sizing:border-box;}
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:'Lora',Georgia,serif; font-size:16px; line-height:1.5; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3,h4{ font-family:'Libre Franklin',system-ui,sans-serif; margin:0; }
+  p{ margin:0; }
+  code, pre{ font-family:'IBM Plex Mono',monospace; }
+  code{ font-size:.85em; background:var(--surface-2); padding:1px 5px; border-radius:3px; }
+  button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
+  button:focus-visible{ outline:2px solid var(--focus); outline-offset:2px; }
+
+  .topbar{ position:sticky; top:0; z-index:10; background:var(--surface); border-bottom:1px solid var(--border-strong); }
+  .topbar-inner{ max-width:980px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+  .tb-title{ font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:.95rem; margin-right:auto; }
+  .tb-jump{ display:flex; gap:2px; flex-wrap:wrap; font-family:'Libre Franklin',sans-serif; }
+  .tb-jump a{ font-size:.76rem; font-weight:600; color:var(--ink-muted); text-decoration:none; padding:6px 9px; border-radius:4px; }
+  .tb-jump a:hover{ color:var(--ink); background:var(--surface-2); }
+  .theme-toggle{ font-family:'Libre Franklin',sans-serif; font-size:.75rem; font-weight:600; padding:7px 10px; border:1px solid var(--border-strong); border-radius:3px; color:var(--ink-muted); }
+  .theme-toggle:hover{ border-color:var(--accent); color:var(--ink); }
+
+  main{ max-width:980px; margin:0 auto; padding:8px 20px 100px; }
+  .hero{ padding:36px 0 30px; border-bottom:1px solid var(--border); margin-bottom:40px; }
+  .hero-eyebrow{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--accent-strong); margin-bottom:10px; display:block; }
+  .hero h1{ font-size:2rem; font-weight:700; letter-spacing:-.01em; margin-bottom:12px; }
+  .hero p{ max-width:66ch; color:var(--ink-muted); font-size:1.02rem; }
+  .hero p + p{ margin-top:10px; }
+
+  section.block{ margin-bottom:56px; }
+  .block-head{ margin-bottom:18px; }
+  .block-num{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--ink-faint); display:block; margin-bottom:4px; }
+  h2.block-title{ font-size:1.4rem; font-weight:700; margin-bottom:8px; }
+  .block-dek{ color:var(--ink-muted); max-width:68ch; font-size:.95rem; }
+  h3.sub-title{ font-size:.95rem; font-weight:700; margin:28px 0 6px; }
+  .sub-dek{ color:var(--ink-muted); font-size:.88rem; max-width:66ch; margin-bottom:14px; }
+
+  .stage{ background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:22px 24px; }
+  .stage + .stage{ margin-top:14px; }
+  .stage-label{ font-family:'Libre Franklin',sans-serif; font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-faint); margin-bottom:12px; display:block; }
+
+  .note-card{ display:flex; gap:12px; padding:14px 16px; background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--flag); border-radius:0 6px 6px 0; margin-top:16px; }
+  .note-mark{ font-family:'IBM Plex Mono',monospace; font-size:.75rem; font-weight:700; color:var(--flag); flex-shrink:0; }
+  .note-card p{ font-size:.9rem; color:var(--ink-muted); }
+  .note-card p + p{ margin-top:6px; }
+  .note-card strong{ color:var(--ink); font-weight:600; }
+
+  /* ---------- existing components, for context ---------- */
+  .mechanic{ background:var(--bg); border-left:3px solid var(--accent); border-radius:0 3px 3px 0; padding:12px 14px; font-family:'Lora',serif; font-size:1rem; }
+  .mechanic strong{ color:var(--accent-strong); }
+  .side-h{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:var(--ink-muted); margin-bottom:6px; }
+  .prose-h2{ font-size:1.5rem; font-weight:700; margin:0 0 8px; }
+  .prose p + p, .prose p + .formula, .prose .formula + p{ margin-top:16px; }
+
+  /* ---------- the new component: .formula ---------- */
+  .ic{ fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; overflow:visible; }
+
+  .formula{ margin:0; }
+  .formula-row{ display:flex; align-items:flex-start; justify-content:flex-start; flex-wrap:wrap; row-gap:14px; }
+  .f-slot{ display:flex; flex-direction:column; align-items:center; text-align:center; width:96px; }
+  .f-slot .ic{ width:48px; height:48px; color:var(--ink); }
+  .f-icons{ display:flex; gap:2px; height:48px; align-items:center; }
+  .f-icons.pair .ic{ width:40px; height:40px; }
+  .f-label{ font-family:'Libre Franklin',sans-serif; font-size:.74rem; font-weight:600; color:var(--ink); margin-top:6px; line-height:1.2; }
+  .f-qty{ font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums; font-size:.76rem; font-weight:600; color:var(--accent-strong); line-height:1.3; margin-top:2px; }
+  .f-sub{ font-family:'Lora',serif; font-style:italic; font-size:.72rem; color:var(--ink-muted); line-height:1.3; margin-top:3px; }
+  .f-op{ font-family:'IBM Plex Mono',monospace; font-size:1.25rem; font-weight:500; color:var(--accent); width:22px; text-align:center; line-height:48px; flex-shrink:0; }
+  .f-op.eq{ color:var(--ink-faint); }
+  .f-slot.result .f-label{ color:var(--ink-muted); }
+
+  /* swaps: the slot is a slot, not a fixed ingredient */
+  .f-or{ font-family:'Lora',serif; font-style:italic; font-size:.7rem; color:var(--ink-faint); line-height:1.3; margin-top:3px; }
+  .f-or span{ display:block; }
+  .formula.compact .f-or{ font-size:.62rem; }
+
+  /* ratio: the number is the point, so it leads */
+  .formula.ratio .f-num{ font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums; font-size:1.5rem; font-weight:600; color:var(--accent-strong); line-height:1.1; margin-top:4px; }
+  .formula.ratio .f-op{ font-size:1.5rem; line-height:48px; }
+  .f-bar{ display:flex; height:10px; margin-top:16px; border-radius:2px; overflow:hidden; max-width:340px; gap:2px; }
+  .f-bar span{ background:var(--accent-soft); border:1px solid var(--accent); border-radius:2px; }
+  .f-bar-key{ display:flex; max-width:340px; gap:2px; margin-top:4px; font-family:'IBM Plex Mono',monospace; font-size:.66rem; color:var(--ink-faint); }
+
+  /* sequence: arrows, and steps read left to right */
+  .formula.seq .f-op{ font-family:'Libre Franklin',sans-serif; }
+
+  /* each operator travels with the slot it introduces, so a wrap never strands a + at a line end */
+  .f-step{ display:flex; align-items:flex-start; }
+
+  /* caption: optional one-liner under the row */
+  .f-cap{ font-family:'Libre Franklin',sans-serif; font-size:.74rem; color:var(--ink-faint); margin-top:12px; }
+
+  /* compact density: the recipe sidebar (~18.6rem) */
+  .formula.compact .f-slot{ width:52px; }
+  .formula.compact .f-slot .ic, .formula.compact .f-icons{ width:34px; height:34px; }
+  .formula.compact .f-icons{ width:auto; }
+  .formula.compact .f-icons.pair .ic{ width:28px; height:28px; }
+  .formula.compact .f-op{ width:12px; font-size:1rem; line-height:34px; }
+  .formula.compact .f-label{ font-size:.66rem; margin-top:4px; }
+  .formula.compact .f-qty{ font-size:.66rem; }
+
+  /* ---------- recipe card (v2, from recipe-card-v2.html) + formula strip ---------- */
+  .tag{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; border:1px solid var(--border-strong); color:var(--ink-muted); padding:3px 7px; border-radius:3px; display:inline-block; white-space:nowrap; }
+  .tag-more{ color:var(--ink-faint); border-style:dashed; }
+  .rcard-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:16px; }
+  .rcard{ background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:14px 16px 12px; display:flex; flex-direction:column; gap:8px; min-width:0; text-decoration:none; color:inherit; }
+  .rcard:hover{ border-color:var(--accent); }
+  .rcard-top{ display:flex; gap:4px; flex-wrap:nowrap; overflow:hidden; min-width:0; }
+  .rcard-top > *{ font-size:.62rem; padding:2px 5px; flex:none; }
+  .rcard-title{ font-family:'Libre Franklin',sans-serif; font-size:1.02rem; font-weight:700; line-height:1.3; letter-spacing:-.005em; margin:0; }
+  .rcard-intro{ font-size:.84rem; line-height:1.5; color:var(--ink-muted); display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; overflow:hidden; }
+  .rcard.has-formula .rcard-intro{ -webkit-line-clamp:2; }
+  .rcard-formula{ display:flex; align-items:center; gap:2px; color:var(--ink); height:24px; }
+  .rcard-formula .ic{ width:24px; height:24px; flex:none; }
+  .rcard-formula .op{ font-family:'IBM Plex Mono',monospace; font-size:.8rem; color:var(--accent); width:12px; text-align:center; }
+  .rcard-formula .n{ font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums; font-size:.72rem; font-weight:600; color:var(--accent-strong); margin-left:1px; }
+  .rcard-stats{ margin-top:auto; padding-top:8px; border-top:1px solid var(--border); display:flex; gap:12px; white-space:nowrap; min-width:0; }
+  .rcard-stat{ display:flex; align-items:baseline; gap:4px; flex:none; }
+  .rcard-stat b{ font-family:'Libre Franklin',sans-serif; font-size:.56rem; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); }
+  .rcard-stat span{ font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums; font-size:.72rem; font-weight:600; color:var(--accent-strong); }
+
+  /* ---------- page furniture for the demos ---------- */
+  .split{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:760px){ .split{ grid-template-columns:1fr; } }
+  pre.src{ margin:0; background:var(--surface-2); border:1px solid var(--border); border-radius:4px; padding:12px 14px; font-size:.78rem; line-height:1.55; color:var(--ink); overflow-x:auto; }
+  pre.src .k{ color:var(--accent-strong); font-weight:600; }
+  pre.src .c{ color:var(--ink-faint); }
+
+  .frames{ display:flex; gap:22px; flex-wrap:wrap; align-items:flex-start; }
+  .frame{ border:1px solid var(--border-strong); border-radius:8px; background:var(--surface); padding:16px; }
+  .frame.sidebar{ width:calc(18.6rem + 32px); }
+  .frame.phone{ width:360px; max-width:100%; }
+  .frame-cap{ font-family:'IBM Plex Mono',monospace; font-size:.66rem; color:var(--ink-faint); margin-top:8px; }
+
+  .kit{ display:grid; grid-template-columns:repeat(auto-fill,minmax(104px,1fr)); gap:10px; }
+  .kit-cell{ background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:14px 8px 10px; display:flex; flex-direction:column; align-items:center; gap:6px; }
+  .kit-cell .ic{ width:48px; height:48px; }
+  .kit-key{ font-family:'IBM Plex Mono',monospace; font-size:.7rem; font-weight:600; }
+  .kit-use{ font-family:'Libre Franklin',sans-serif; font-size:.64rem; color:var(--ink-faint); text-align:center; line-height:1.3; }
+  .kit-sizes{ display:flex; gap:22px; align-items:flex-end; margin-top:18px; color:var(--ink); }
+  .kit-sizes figure{ margin:0; display:flex; flex-direction:column; align-items:center; gap:6px; }
+  .kit-sizes figcaption{ font-family:'IBM Plex Mono',monospace; font-size:.64rem; color:var(--ink-faint); }
+
+  .qlist{ display:flex; flex-direction:column; gap:10px; }
+  .spec{ width:100%; border-collapse:collapse; font-size:.86rem; }
+  .spec th, .spec td{ text-align:left; padding:8px 10px; border-bottom:1px solid var(--border); vertical-align:top; }
+  .spec th{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-muted); }
+  .spec td:first-child{ font-family:'IBM Plex Mono',monospace; color:var(--accent-strong); white-space:nowrap; }
+  @media (max-width:680px){ .stage{ padding:16px; } .f-slot{ width:84px; } }
+  .sizes-row{ display:flex; flex-wrap:wrap; gap:10px; align-items:center; color:var(--ink); margin-top:12px; }
+  .sizes-row .ic{ flex:none; }
+  .frames{ align-items:center; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-bowl" viewBox="0 0 48 48"><path d="M11 24c2-7 7-11 13-11s11 4 13 11"/>
+  <path d="M19 18.5l2-1M26 16.5l2 .8M31 20l1.8-1.2M22 21.5h2.2"/>
+  <path style="fill:var(--accent-soft)" d="M6 24h36c0 9-8 15.5-18 15.5S6 33 6 24z"/>
+  <path d="M18 39.5V43h12v-3.5"/></symbol>
+<symbol id="i-butter" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M6 23h28v14H6z"/>
+  <path style="fill:var(--surface)" d="M6 23l7-7h29l-8 7z"/>
+  <path d="M34 23l8-7v14l-8 7M15 23v14"/></symbol>
+<symbol id="i-can" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M12 11v26c0 2.2 5.4 4 12 4s12-1.8 12-4V11"/>
+  <ellipse style="fill:var(--surface)" cx="24" cy="11" rx="12" ry="4"/>
+  <ellipse cx="24" cy="11" rx="7.5" ry="2"/>
+  <path d="M12 19c0 2.2 5.4 4 12 4s12-1.8 12-4M12 30c0 2.2 5.4 4 12 4s12-1.8 12-4"/></symbol>
+<symbol id="i-carrot" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M27.5 13.5L9.5 40.5l26.5-18c1.5-5-3.5-10-8.5-9z"/>
+  <path d="M19 27.5l3.5 2.5M14.5 33.5l2.5 1.8M24 21l3.2 2.2"/>
+  <path d="M31 14l4-8.5M33 16l9-3.5M32 15l7.5-7.5"/></symbol>
+<symbol id="i-cheese" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M5 31l30-15 8 4v14H5z"/>
+  <path style="fill:var(--surface)" d="M5 31l30-15 8 4-30 11z"/>
+  <path d="M13 31v3M18 36.5h.01M30 30.5a2.2 2.2 0 1 0 0 .01"/></symbol>
+<symbol id="i-clock" viewBox="0 0 48 48"><circle style="fill:var(--accent-soft)" cx="24" cy="25" r="16"/>
+  <path d="M24 16v9l6 4M24 9v2.5M24 38.5V41M8 25h2.5M37.5 25H40M20 5h8"/></symbol>
+<symbol id="i-crumbs" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M9 37V21.5c-3 0-5-2.4-5-5.3C4 11.6 10.5 8.5 18.5 8.5S33 11.6 33 16.2c0 2.9-2 5.3-5 5.3V37z"/>
+  <path d="M13 21.5c0-3 2.5-5.5 5.5-5.5s5.5 2.5 5.5 5.5"/>
+  <path d="M37 33.5l2.5-.5.5 2.5-2.5.5zM41.5 39.5l2-1 1 2-2 1zM35.5 41l2.5.2-.2 2.4-2.4-.2z"/></symbol>
+<symbol id="i-cup" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M8 13h24v23c0 2.8-2.2 5-5 5H13c-2.8 0-5-2.2-5-5z"/>
+  <path d="M32 18h4.5c1.7 0 3 1.3 3 3v6c0 1.7-1.3 3-3 3H32M8 21h6M8 27h6M8 33h6"/></symbol>
+<symbol id="i-egg" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M24 6c-7.5 0-13.5 12.5-13.5 21.5a13.5 13.5 0 0 0 27 0C37.5 18.5 31.5 6 24 6z"/>
+  <path d="M17.5 24c.6-4 2.2-7.5 4.5-9.8"/></symbol>
+<symbol id="i-flame" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M23 5c2.5 6.5 11 10.5 11 21.5a10 10 0 0 1-20 0c0-5 2.5-8.5 5-11.5 0 4 1.5 6.5 4 7-1-6 0-12 0-17z"/>
+  <path d="M24 40.5a4 4 0 0 1-4-4c0-3.2 4-5.7 4-9 2 3 4 5 4 9a4 4 0 0 1-4 4z"/></symbol>
+<symbol id="i-flour" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M15 15c-3.5 6-6 14-6 20.5 0 4.5 2.5 7 6.5 7h17c4 0 6.5-2.5 6.5-7 0-6.5-2.5-14.5-6-20.5z"/>
+  <path d="M15 15h18M17 15l-2.5-7h19L31 15"/>
+  <path d="M24 25v12M24 29l-3-3M24 29l3-3M24 33l-3-3M24 33l3-3"/></symbol>
+<symbol id="i-oil" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M20 12v4l-4 5v19c0 1.7 1.3 3 3 3h10c1.7 0 3-1.3 3-3V21l-4-5v-4z"/>
+  <path d="M19.5 6h9v6h-9zM16 26h16v9H16z"/></symbol>
+<symbol id="i-onion" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M24 11c-9 5.5-14 12.5-14 19.5C10 37 16.3 42 24 42s14-5 14-11.5C38 23.5 33 16.5 24 11z"/>
+  <path d="M24 11V5M24 11c-4 6.5-6 13-5 21M24 11c4 6.5 6 13 5 21M20 42l-1.5 3M24 42v3.2M28 42l1.5 3"/></symbol>
+<symbol id="i-pan" viewBox="0 0 48 48"><circle style="fill:var(--accent-soft)" cx="19" cy="27" r="13"/>
+  <circle cx="19" cy="27" r="9"/>
+  <path stroke-width="4" d="M29.5 18.5l11-8.5"/></symbol>
+<symbol id="i-patty" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M7 21v8c0 3.6 7.6 6.5 17 6.5S41 32.6 41 29v-8"/>
+  <ellipse style="fill:var(--surface)" cx="24" cy="21" rx="17" ry="6.5"/>
+  <path d="M14 21l6-3M20.5 24l8-4.2M29 23.5l5.5-3"/></symbol>
+<symbol id="i-pot" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M8 21h32v15c0 2.8-2.2 5-5 5H13c-2.8 0-5-2.2-5-5z"/>
+  <path style="fill:var(--surface)" d="M6 21c0-5 8-8.5 18-8.5S42 16 42 21z"/>
+  <path d="M21.5 12.5V9h5v3.5M8 25H4M40 25h4"/></symbol>
+<symbol id="i-potato" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M8 27c0-9 8-15.5 17-15.5S40 16 40 24s-7.5 15-17 15S8 34.5 8 27z"/>
+  <path d="M19 21.5l1.4.6M30 27l1.2 1M22.5 32l1.4-.3M32 19.5l.8 1.2"/></symbol>
+<symbol id="i-salt" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M16.5 19c0-6.5 3.2-11 7.5-11s7.5 4.5 7.5 11v19.5c0 1.7-1.3 3-3 3h-9c-1.7 0-3-1.3-3-3z"/>
+  <path d="M16.5 19h15M21 13.2h.01M24 11.2h.01M27 13.2h.01"/></symbol>
+<symbol id="i-water" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M24 6S12 20.5 12 29.5a12 12 0 0 0 24 0C36 20.5 24 6 24 6z"/>
+  <path d="M18 30.5c0 3 1.8 5.3 4.2 6.2"/></symbol>
+<symbol id="i-lemon" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M5 27c3-1 4.5-3 6.5-6 3-5 7.5-8 12.5-8s9.5 3 12.5 8c2 3 3.5 5 6.5 6-3 1-4.5 3-6.5 6-3 5-7.5 8-12.5 8s-9.5-3-12.5-8c-2-3-3.5-5-6.5-6z"/>
+  <path style="fill:var(--surface)" d="M26 13c1.5-4 5.5-7 10-7-1 4.5-5 7.5-10 7z"/>
+  <path d="M17 24h.01M23 20.5h.01M30 24h.01M20 31h.01M27 32h.01"/></symbol>
+<symbol id="i-vinegar" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M21 17v5.5c-5 2-8.5 6-8.5 11 0 5.5 4.8 9 11.5 9s11.5-3.5 11.5-9c0-5-3.5-9-8.5-11V17z"/>
+  <circle style="fill:var(--surface)" cx="24" cy="11.5" r="3.5"/>
+  <path d="M20 17h8M13.5 31h21"/></symbol>
+<symbol id="i-soy" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M20 15h8c0 3 7.5 8 7.5 17v7c0 1.7-1.3 3-3 3h-17c-1.7 0-3-1.3-3-3v-7c0-9 7.5-14 7.5-17z"/>
+  <rect style="fill:var(--surface)" x="19" y="8" width="10" height="7" rx="1"/>
+  <path d="M29 10.5h4.5M19 10.5h-4.5M13 31h22"/></symbol>
+<symbol id="i-honey" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M11 22c0-3.5 5.8-6 13-6s13 2.5 13 6v13c0 4-5.8 7-13 7s-13-3-13-7z"/>
+  <ellipse style="fill:var(--surface)" cx="24" cy="22" rx="13" ry="4.5"/>
+  <path d="M30 20L38 6M17 26v5a1.6 1.6 0 0 0 3.2 0v-3.5"/></symbol>
+<symbol id="i-jar" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M11 17h26v20c0 2.8-2.2 5-5 5H16c-2.8 0-5-2.2-5-5z"/>
+  <rect style="fill:var(--surface)" x="10" y="9" width="28" height="8" rx="2"/>
+  <path d="M11 24h26M11 35h26M14 13h.01M19 13h.01"/></symbol>
+<symbol id="i-pickle" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M9.5 35c-2.5-3-1.5-7.5 2.5-10.5 5.5-4.5 11-9 17-13 4-2.5 8.5-1.5 10 1.5s0 6.5-3.5 9C29.5 26 23.5 31 18 35.5c-3 2.5-6.5 2-8.5-.5z"/>
+  <path d="M15.5 30h.01M21 26.5h.01M27 22h.01M33 17h.01M20 33h.01M30 25h.01M38 12l3-3.5"/></symbol>
+<symbol id="i-mustard" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M15 19h18v18c0 2.8-2.2 5-5 5h-8c-2.8 0-5-2.2-5-5z"/>
+  <path style="fill:var(--surface)" d="M15 19c0-3 3.5-5 9-5s9 2 9 5z"/>
+  <path d="M22.5 14l.8-8h1.4l.8 8M18 30l3-3 3 3 3-3 3 3"/></symbol>
+<symbol id="i-lentils" viewBox="0 0 48 48"><ellipse style="fill:var(--accent-soft)" cx="10.5" cy="40" rx="4.4" ry="2.8"/>
+  <ellipse style="fill:var(--accent-soft)" cx="19.5" cy="40" rx="4.4" ry="2.8"/>
+  <ellipse style="fill:var(--accent-soft)" cx="28.5" cy="40" rx="4.4" ry="2.8"/>
+  <ellipse style="fill:var(--accent-soft)" cx="37.5" cy="40" rx="4.4" ry="2.8"/>
+  <ellipse style="fill:var(--accent-soft)" cx="15" cy="34" rx="4.4" ry="2.8"/>
+  <ellipse style="fill:var(--accent-soft)" cx="24" cy="34" rx="4.4" ry="2.8"/>
+  <ellipse style="fill:var(--accent-soft)" cx="33" cy="34" rx="4.4" ry="2.8"/>
+  <ellipse style="fill:var(--accent-soft)" cx="19.5" cy="28" rx="4.4" ry="2.8"/>
+  <ellipse style="fill:var(--accent-soft)" cx="28.5" cy="28" rx="4.4" ry="2.8"/>
+  <ellipse style="fill:var(--accent-soft)" cx="24" cy="22" rx="4.4" ry="2.8"/></symbol>
+<symbol id="i-oats" viewBox="0 0 48 48"><path d="M24 43V7"/>
+  <ellipse style="fill:var(--accent-soft)" cx="19.5" cy="15" rx="2.3" ry="5.5" transform="rotate(-40 19.5 15)"/>
+  <ellipse style="fill:var(--accent-soft)" cx="28.5" cy="21" rx="2.3" ry="5.5" transform="rotate(40 28.5 21)"/>
+  <ellipse style="fill:var(--accent-soft)" cx="19.5" cy="27" rx="2.3" ry="5.5" transform="rotate(-40 19.5 27)"/>
+  <ellipse style="fill:var(--accent-soft)" cx="28.5" cy="33" rx="2.3" ry="5.5" transform="rotate(40 28.5 33)"/>
+  <ellipse style="fill:var(--accent-soft)" cx="24" cy="8.5" rx="2.3" ry="5.5" transform="rotate(0 24 8.5)"/></symbol>
+<symbol id="i-fruit" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M24 15c-3-2-7-3-10-1-4 2.5-6 8-5 14 1.5 7 6 13 11 13 2 0 3-1 4-1s2 1 4 1c5 0 9.5-6 11-13 1-6-1-11.5-5-14-3-2-7-1-10 1z"/>
+  <path style="fill:var(--surface)" d="M26.5 11c3-3 7-3.5 9.5-1.5-2.5 3-6.5 3.5-9.5 1.5z"/>
+  <path d="M24 15c0-4 1-7 2.5-9M16 22c-1.5 2-2 4-2 6"/></symbol>
+<symbol id="i-sugar" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M7 22h14v14H7z"/>
+  <path style="fill:var(--surface)" d="M7 22l5-5h14l-5 5z"/>
+  <path d="M21 22l5-5v14l-5 5"/>
+  <path style="fill:var(--accent-soft)" d="M25 29h12v12H25z"/>
+  <path style="fill:var(--surface)" d="M25 29l4-4h12l-4 4z"/>
+  <path d="M37 29l4-4v12l-4 4M10 41h.01M15 43h.01M19 40.5h.01"/></symbol>
+<symbol id="i-pepper" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M17.5 16h11l-2 12 2.5 11c0 1.7-1.3 3-3 3h-6c-1.7 0-3-1.3-3-3l2.5-11z"/>
+  <path style="fill:var(--surface)" d="M16 16c0-4.5 3.5-7 7-7s7 2.5 7 7z"/>
+  <path d="M23 9V6M20 28h6"/>
+  <circle style="fill:var(--accent-soft)" cx="37" cy="39" r="2.6"/>
+  <circle style="fill:var(--accent-soft)" cx="40.5" cy="33" r="2.6"/></symbol>
+<symbol id="i-herb" viewBox="0 0 48 48"><path d="M15 43c3-11 8-23 15-35"/>
+  <ellipse style="fill:var(--accent-soft)" cx="15.5" cy="34" rx="2.3" ry="5.5" transform="rotate(-35 15.5 34)"/>
+  <ellipse style="fill:var(--accent-soft)" cx="23" cy="35" rx="2.3" ry="5.5" transform="rotate(55 23 35)"/>
+  <ellipse style="fill:var(--accent-soft)" cx="19.5" cy="24" rx="2.3" ry="5.5" transform="rotate(-35 19.5 24)"/>
+  <ellipse style="fill:var(--accent-soft)" cx="27" cy="25" rx="2.3" ry="5.5" transform="rotate(55 27 25)"/>
+  <ellipse style="fill:var(--accent-soft)" cx="24.5" cy="15" rx="2.3" ry="5.5" transform="rotate(-30 24.5 15)"/>
+  <ellipse style="fill:var(--accent-soft)" cx="31" cy="15.5" rx="2.3" ry="5.5" transform="rotate(55 31 15.5)"/></symbol>
+<symbol id="i-strainer" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M6 18h26c0 8-5.8 14-13 14S6 26 6 18z"/>
+  <path d="M10.5 24h17M15 18v12M23 18v12M32 18h11M6 18H3M14 37l-.8 2.5M19 36.5v3M24 37l.8 2.5"/></symbol>
+<symbol id="i-oven" viewBox="0 0 48 48"><rect style="fill:var(--accent-soft)" x="7" y="7" width="34" height="35" rx="2"/>
+  <rect style="fill:var(--surface)" x="12" y="20" width="24" height="16" rx="1.5"/>
+  <path d="M7 16h34M12.5 11.5h.01M17.5 11.5h.01M22.5 11.5h.01M29 11.5h7M18 31c1.2-2-1.2-3 0-5M24 31c1.2-2-1.2-3 0-5M30 31c1.2-2-1.2-3 0-5"/></symbol>
+</defs></svg>
+<header class="topbar"><div class="topbar-inner"><span class="tb-title">Formula icons, round 2</span>
+<nav class="tb-jump"><a href="#new">New icons</a><a href="#kit">Beside the kit</a><a href="#rows">In use</a><a href="#questions">Questions</a></nav>
+<button class="theme-toggle" id="themeToggle">Theme: <span id="themeLabel">System</span></button></div></header>
+<main>
+<section class="hero"><span class="hero-eyebrow">Proposal &middot; 2026-10-17</span>
+<h1>Formula icons, round 2</h1>
+<p>Fifteen new icons for the formula kit, so the Mechanics that state a ratio but need ingredients the kit can't draw yet can get a diagram: dressings and marinades, soy braises, burger sauces, lentils, fruit, spice blends, and the stock and reverse cooking sequences.</p>
+<p>Same rules as the first kit (<code>STYLE.md</code>, Formula diagram): a 48-unit grid, 2-unit round strokes in <code>currentColor</code>, one <code>--accent-soft</code> fill on the body, <code>--surface</code> on lids and tops. Toggle the theme to check dark mode.</p></section>
+
+<section class="block" id="new"><div class="block-head"><span class="block-num">01</span><h2 class="block-title">The new icons</h2>
+<p class="block-dek">Each with its key and the recipes waiting on it.</p></div>
+<div class="kit"><div class="kit-cell"><svg class="ic" aria-hidden="true"><use href="#i-lemon"/></svg><span class="kit-key">lemon</span><span class="kit-use">Acid: Classic French dressing, Greek marinade, Lemon chicken marinade</span></div><div class="kit-cell"><svg class="ic" aria-hidden="true"><use href="#i-vinegar"/></svg><span class="kit-key">vinegar</span><span class="kit-use">Acid: Asian slaw dressing, Sandwich sour pickles, mirin and sake</span></div><div class="kit-cell"><svg class="ic" aria-hidden="true"><use href="#i-soy"/></svg><span class="kit-key">soy</span><span class="kit-use">Chashu pork, Ramen eggs, Sweet soy sauce, Teriyaki, Garlic ginger wing sauce</span></div><div class="kit-cell"><svg class="ic" aria-hidden="true"><use href="#i-honey"/></svg><span class="kit-key">honey</span><span class="kit-use">Garlic ginger wing sauce, Granola bars</span></div><div class="kit-cell"><svg class="ic" aria-hidden="true"><use href="#i-jar"/></svg><span class="kit-key">jar</span><span class="kit-use">Mayo: Bruce&#x27;s burger sauce, Mozza burger sauce, the Food ratios mayo</span></div><div class="kit-cell"><svg class="ic" aria-hidden="true"><use href="#i-pickle"/></svg><span class="kit-key">pickle</span><span class="kit-use">Bruce&#x27;s burger sauce, Mozza burger sauce (relish), Quick relish</span></div><div class="kit-cell"><svg class="ic" aria-hidden="true"><use href="#i-mustard"/></svg><span class="kit-key">mustard</span><span class="kit-use">Bruce&#x27;s burger sauce, the dressing emulsifier</span></div><div class="kit-cell"><svg class="ic" aria-hidden="true"><use href="#i-lentils"/></svg><span class="kit-key">lentils</span><span class="kit-use">Dal tadka, Coconut lentils, Basic beans and lentils</span></div><div class="kit-cell"><svg class="ic" aria-hidden="true"><use href="#i-oats"/></svg><span class="kit-key">oats</span><span class="kit-use">Baked oatmeal, Granola bars</span></div><div class="kit-cell"><svg class="ic" aria-hidden="true"><use href="#i-fruit"/></svg><span class="kit-key">fruit</span><span class="kit-use">Fruit compote, Fruit crisp, Strawberry-rhubarb compote</span></div><div class="kit-cell"><svg class="ic" aria-hidden="true"><use href="#i-sugar"/></svg><span class="kit-key">sugar</span><span class="kit-use">Fruit compote, Sweet soy sauce, Bruce&#x27;s poultry and pork rub</span></div><div class="kit-cell"><svg class="ic" aria-hidden="true"><use href="#i-pepper"/></svg><span class="kit-key">pepper</span><span class="kit-use">McDouble seasoning, Cottage pie spices</span></div><div class="kit-cell"><svg class="ic" aria-hidden="true"><use href="#i-herb"/></svg><span class="kit-key">herb</span><span class="kit-use">Cottage pie (coriander, rosemary), Greek marinade (oregano)</span></div><div class="kit-cell"><svg class="ic" aria-hidden="true"><use href="#i-strainer"/></svg><span class="kit-key">strainer</span><span class="kit-use">Stock (strain), Sandwich sour pickles</span></div><div class="kit-cell"><svg class="ic" aria-hidden="true"><use href="#i-oven"/></svg><span class="kit-key">oven</span><span class="kit-use">Stock (roast), Reverse sear (low oven), Roast poultry</span></div></div>
+<h3 class="sub-title">At each size</h3><p class="sub-dek">48px in the body, 34px in the recipe sidebar, 24px on a card strip.</p>
+<div class="stage"><div class="sizes-row"><svg class="ic" style="width:48px;height:48px" aria-hidden="true"><use href="#i-lemon"/></svg><svg class="ic" style="width:48px;height:48px" aria-hidden="true"><use href="#i-vinegar"/></svg><svg class="ic" style="width:48px;height:48px" aria-hidden="true"><use href="#i-soy"/></svg><svg class="ic" style="width:48px;height:48px" aria-hidden="true"><use href="#i-honey"/></svg><svg class="ic" style="width:48px;height:48px" aria-hidden="true"><use href="#i-jar"/></svg><svg class="ic" style="width:48px;height:48px" aria-hidden="true"><use href="#i-pickle"/></svg><svg class="ic" style="width:48px;height:48px" aria-hidden="true"><use href="#i-mustard"/></svg><svg class="ic" style="width:48px;height:48px" aria-hidden="true"><use href="#i-lentils"/></svg><svg class="ic" style="width:48px;height:48px" aria-hidden="true"><use href="#i-oats"/></svg><svg class="ic" style="width:48px;height:48px" aria-hidden="true"><use href="#i-fruit"/></svg><svg class="ic" style="width:48px;height:48px" aria-hidden="true"><use href="#i-sugar"/></svg><svg class="ic" style="width:48px;height:48px" aria-hidden="true"><use href="#i-pepper"/></svg><svg class="ic" style="width:48px;height:48px" aria-hidden="true"><use href="#i-herb"/></svg><svg class="ic" style="width:48px;height:48px" aria-hidden="true"><use href="#i-strainer"/></svg><svg class="ic" style="width:48px;height:48px" aria-hidden="true"><use href="#i-oven"/></svg></div><div class="sizes-row"><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-lemon"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-vinegar"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-soy"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-honey"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-jar"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-pickle"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-mustard"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-lentils"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-oats"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-fruit"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-sugar"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-pepper"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-herb"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-strainer"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-oven"/></svg></div><div class="sizes-row"><svg class="ic" style="width:24px;height:24px" aria-hidden="true"><use href="#i-lemon"/></svg><svg class="ic" style="width:24px;height:24px" aria-hidden="true"><use href="#i-vinegar"/></svg><svg class="ic" style="width:24px;height:24px" aria-hidden="true"><use href="#i-soy"/></svg><svg class="ic" style="width:24px;height:24px" aria-hidden="true"><use href="#i-honey"/></svg><svg class="ic" style="width:24px;height:24px" aria-hidden="true"><use href="#i-jar"/></svg><svg class="ic" style="width:24px;height:24px" aria-hidden="true"><use href="#i-pickle"/></svg><svg class="ic" style="width:24px;height:24px" aria-hidden="true"><use href="#i-mustard"/></svg><svg class="ic" style="width:24px;height:24px" aria-hidden="true"><use href="#i-lentils"/></svg><svg class="ic" style="width:24px;height:24px" aria-hidden="true"><use href="#i-oats"/></svg><svg class="ic" style="width:24px;height:24px" aria-hidden="true"><use href="#i-fruit"/></svg><svg class="ic" style="width:24px;height:24px" aria-hidden="true"><use href="#i-sugar"/></svg><svg class="ic" style="width:24px;height:24px" aria-hidden="true"><use href="#i-pepper"/></svg><svg class="ic" style="width:24px;height:24px" aria-hidden="true"><use href="#i-herb"/></svg><svg class="ic" style="width:24px;height:24px" aria-hidden="true"><use href="#i-strainer"/></svg><svg class="ic" style="width:24px;height:24px" aria-hidden="true"><use href="#i-oven"/></svg></div></div></section>
+
+<section class="block" id="kit"><div class="block-head"><span class="block-num">02</span><h2 class="block-title">Beside the existing kit</h2>
+<p class="block-dek">The first row is the current 19, the second the new 15, at sidebar size. They should read as one set: same weight, same fill, same scale.</p></div>
+<div class="stage"><div class="sizes-row"><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-bowl"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-butter"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-can"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-carrot"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-cheese"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-clock"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-crumbs"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-cup"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-egg"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-flame"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-flour"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-oil"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-onion"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-pan"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-patty"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-pot"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-potato"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-salt"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-water"/></svg></div><div class="sizes-row"><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-lemon"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-vinegar"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-soy"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-honey"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-jar"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-pickle"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-mustard"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-lentils"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-oats"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-fruit"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-sugar"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-pepper"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-herb"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-strainer"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-oven"/></svg></div></div></section>
+
+<section class="block" id="rows"><div class="block-head"><span class="block-num">03</span><h2 class="block-title">In use, from real Mechanics</h2>
+<p class="block-dek">Each row draws a ratio its recipe's text already states (quoted above it). Nothing here is on the site yet.</p></div>
+<div class="stage"><span class="stage-label">Classic French dressing</span>
+<p class="sub-dek"><em>Equal parts oil and lemon juice makes this sharper than a modern vinaigrette.</em></p>
+<div class="frames"><div><figure class="formula ratio"><div class="formula-row"><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-oil"/></svg></span><span class="f-num">1</span><span class="f-label">Oil</span></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-lemon"/></svg></span><span class="f-num">1</span><span class="f-label">Lemon</span></div></div></div><div class="f-bar"><span style="flex:1.0"></span><span style="flex:1.0"></span></div></figure><div class="frame-cap">body, 48px</div></div>
+<div class="frame sidebar"><figure class="formula ratio compact"><div class="formula-row"><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-oil"/></svg></span><span class="f-num">1</span><span class="f-label">Oil</span></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-lemon"/></svg></span><span class="f-num">1</span><span class="f-label">Lemon</span></div></div></div><div class="f-bar"><span style="flex:1.0"></span><span style="flex:1.0"></span></div></figure><div class="frame-cap">sidebar, 34px</div></div></div></div><div class="stage"><span class="stage-label">Lemon chicken marinade</span>
+<p class="sub-dek"><em>A 1.6:1 ratio of fat to acid (80 g oil : 50 g lemon juice).</em></p>
+<div class="frames"><div><figure class="formula ratio"><div class="formula-row"><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-oil"/></svg></span><span class="f-num">1.6</span><span class="f-label">Oil</span></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-lemon"/></svg></span><span class="f-num">1</span><span class="f-label">Lemon</span></div></div></div><div class="f-bar"><span style="flex:1.6"></span><span style="flex:1.0"></span></div><figcaption class="f-cap">By weight</figcaption></figure><div class="frame-cap">body, 48px</div></div>
+<div class="frame sidebar"><figure class="formula ratio compact"><div class="formula-row"><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-oil"/></svg></span><span class="f-num">1.6</span><span class="f-label">Oil</span></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-lemon"/></svg></span><span class="f-num">1</span><span class="f-label">Lemon</span></div></div></div><div class="f-bar"><span style="flex:1.6"></span><span style="flex:1.0"></span></div><figcaption class="f-cap">By weight</figcaption></figure><div class="frame-cap">sidebar, 34px</div></div></div></div><div class="stage"><span class="stage-label">Sandwich sour pickles</span>
+<p class="sub-dek"><em>Roughly 1.2:1 water to vinegar.</em></p>
+<div class="frames"><div><figure class="formula ratio"><div class="formula-row"><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-water"/></svg></span><span class="f-num">1.2</span><span class="f-label">Water</span></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-vinegar"/></svg></span><span class="f-num">1</span><span class="f-label">Vinegar</span></div></div></div><div class="f-bar"><span style="flex:1.2"></span><span style="flex:1.0"></span></div></figure><div class="frame-cap">body, 48px</div></div>
+<div class="frame sidebar"><figure class="formula ratio compact"><div class="formula-row"><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-water"/></svg></span><span class="f-num">1.2</span><span class="f-label">Water</span></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-vinegar"/></svg></span><span class="f-num">1</span><span class="f-label">Vinegar</span></div></div></div><div class="f-bar"><span style="flex:1.2"></span><span style="flex:1.0"></span></div></figure><div class="frame-cap">sidebar, 34px</div></div></div></div><div class="stage"><span class="stage-label">Chashu pork</span>
+<p class="sub-dek"><em>The 1:1:1 braise ratio (water : soy : mirin).</em></p>
+<div class="frames"><div><figure class="formula ratio"><div class="formula-row"><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-water"/></svg></span><span class="f-num">1</span><span class="f-label">Water</span></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-soy"/></svg></span><span class="f-num">1</span><span class="f-label">Soy</span></div></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-vinegar"/></svg></span><span class="f-num">1</span><span class="f-label">Mirin</span></div></div></div></figure><div class="frame-cap">body, 48px</div></div>
+<div class="frame sidebar"><figure class="formula ratio compact"><div class="formula-row"><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-water"/></svg></span><span class="f-num">1</span><span class="f-label">Water</span></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-soy"/></svg></span><span class="f-num">1</span><span class="f-label">Soy</span></div></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-vinegar"/></svg></span><span class="f-num">1</span><span class="f-label">Mirin</span></div></div></div></figure><div class="frame-cap">sidebar, 34px</div></div></div></div><div class="stage"><span class="stage-label">Bruce&#x27;s burger sauce</span>
+<p class="sub-dek"><em>A 1:1:1 ratio by volume: mayo, diced burger pickles, mustard.</em></p>
+<div class="frames"><div><figure class="formula ratio"><div class="formula-row"><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-jar"/></svg></span><span class="f-num">1</span><span class="f-label">Mayo</span></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-pickle"/></svg></span><span class="f-num">1</span><span class="f-label">Pickles</span></div></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-mustard"/></svg></span><span class="f-num">1</span><span class="f-label">Mustard</span></div></div></div><figcaption class="f-cap">By volume</figcaption></figure><div class="frame-cap">body, 48px</div></div>
+<div class="frame sidebar"><figure class="formula ratio compact"><div class="formula-row"><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-jar"/></svg></span><span class="f-num">1</span><span class="f-label">Mayo</span></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-pickle"/></svg></span><span class="f-num">1</span><span class="f-label">Pickles</span></div></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-mustard"/></svg></span><span class="f-num">1</span><span class="f-label">Mustard</span></div></div></div><figcaption class="f-cap">By volume</figcaption></figure><div class="frame-cap">sidebar, 34px</div></div></div></div><div class="stage"><span class="stage-label">Dal tadka</span>
+<p class="sub-dek"><em>1 cup lentils to 4–5 cups water.</em></p>
+<div class="frames"><div><figure class="formula ratio"><div class="formula-row"><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-lentils"/></svg></span><span class="f-num">1</span><span class="f-label">Lentils</span></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-water"/></svg></span><span class="f-num">4–5</span><span class="f-label">Water</span></div></div></div><div class="f-bar"><span style="flex:1.0"></span><span style="flex:4.0"></span></div><figcaption class="f-cap">1:4 thick, 1:5 looser</figcaption></figure><div class="frame-cap">body, 48px</div></div>
+<div class="frame sidebar"><figure class="formula ratio compact"><div class="formula-row"><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-lentils"/></svg></span><span class="f-num">1</span><span class="f-label">Lentils</span></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-water"/></svg></span><span class="f-num">4–5</span><span class="f-label">Water</span></div></div></div><div class="f-bar"><span style="flex:1.0"></span><span style="flex:4.0"></span></div><figcaption class="f-cap">1:4 thick, 1:5 looser</figcaption></figure><div class="frame-cap">sidebar, 34px</div></div></div></div><div class="stage"><span class="stage-label">Fruit compote</span>
+<p class="sub-dek"><em>10 parts fruit to 1 part sugar by weight.</em></p>
+<div class="frames"><div><figure class="formula ratio"><div class="formula-row"><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-fruit"/></svg></span><span class="f-num">10</span><span class="f-label">Fruit</span></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-sugar"/></svg></span><span class="f-num">1</span><span class="f-label">Sugar</span></div></div></div><div class="f-bar"><span style="flex:10.0"></span><span style="flex:1.0"></span></div><figcaption class="f-cap">By weight; sweeten to taste at the end</figcaption></figure><div class="frame-cap">body, 48px</div></div>
+<div class="frame sidebar"><figure class="formula ratio compact"><div class="formula-row"><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-fruit"/></svg></span><span class="f-num">10</span><span class="f-label">Fruit</span></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-sugar"/></svg></span><span class="f-num">1</span><span class="f-label">Sugar</span></div></div></div><div class="f-bar"><span style="flex:10.0"></span><span style="flex:1.0"></span></div><figcaption class="f-cap">By weight; sweeten to taste at the end</figcaption></figure><div class="frame-cap">sidebar, 34px</div></div></div></div><div class="stage"><span class="stage-label">McDouble</span>
+<p class="sub-dek"><em>A 4:2:1 ratio of salt, MSG, and black pepper by weight.</em></p>
+<div class="frames"><div><figure class="formula ratio"><div class="formula-row"><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-salt"/></svg></span><span class="f-num">4</span><span class="f-label">Salt</span></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-salt"/></svg></span><span class="f-num">2</span><span class="f-label">MSG</span></div></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-pepper"/></svg></span><span class="f-num">1</span><span class="f-label">Pepper</span></div></div></div><figcaption class="f-cap">By weight</figcaption></figure><div class="frame-cap">body, 48px</div></div>
+<div class="frame sidebar"><figure class="formula ratio compact"><div class="formula-row"><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-salt"/></svg></span><span class="f-num">4</span><span class="f-label">Salt</span></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-salt"/></svg></span><span class="f-num">2</span><span class="f-label">MSG</span></div></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-pepper"/></svg></span><span class="f-num">1</span><span class="f-label">Pepper</span></div></div></div><figcaption class="f-cap">By weight</figcaption></figure><div class="frame-cap">sidebar, 34px</div></div></div></div><div class="stage"><span class="stage-label">Cottage pie</span>
+<p class="sub-dek"><em>Equal parts salt, pepper, coriander, and rosemary.</em></p>
+<div class="frames"><div><figure class="formula ratio"><div class="formula-row"><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-salt"/></svg></span><span class="f-num">1</span><span class="f-label">Salt</span></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-pepper"/></svg></span><span class="f-num">1</span><span class="f-label">Pepper</span></div></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-herb"/></svg></span><span class="f-num">1</span><span class="f-label">Coriander</span></div></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-herb"/></svg></span><span class="f-num">1</span><span class="f-label">Rosemary</span></div></div></div></figure><div class="frame-cap">body, 48px</div></div>
+<div class="frame sidebar"><figure class="formula ratio compact"><div class="formula-row"><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-salt"/></svg></span><span class="f-num">1</span><span class="f-label">Salt</span></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-pepper"/></svg></span><span class="f-num">1</span><span class="f-label">Pepper</span></div></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-herb"/></svg></span><span class="f-num">1</span><span class="f-label">Coriander</span></div></div><div class="f-step"><span class="f-op" aria-hidden="true">:</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-herb"/></svg></span><span class="f-num">1</span><span class="f-label">Rosemary</span></div></div></div></figure><div class="frame-cap">sidebar, 34px</div></div></div></div><div class="stage"><span class="stage-label">Stock (method)</span>
+<p class="sub-dek"><em>Roast, extract, lift out the solids, reduce, strain.</em></p>
+<div class="frames"><div><figure class="formula seq"><div class="formula-row"><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-oven"/></svg></span><span class="f-label">Roast</span><span class="f-sub">deep brown</span></div><div class="f-step"><span class="f-op" aria-hidden="true">→</span><div class="f-slot"><span class="f-icons pair"><svg class="ic" aria-hidden="true"><use href="#i-pot"/></svg><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg></span><span class="f-label">Extract</span><span class="f-sub">bones set the time</span></div></div><div class="f-step"><span class="f-op" aria-hidden="true">→</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-bowl"/></svg></span><span class="f-label">Lift out</span><span class="f-sub">solids</span></div></div><div class="f-step"><span class="f-op" aria-hidden="true">→</span><div class="f-slot"><span class="f-icons pair"><svg class="ic" aria-hidden="true"><use href="#i-pot"/></svg><svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></span><span class="f-label">Reduce</span><span class="f-sub">by half</span></div></div><div class="f-step"><span class="f-op" aria-hidden="true">→</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-strainer"/></svg></span><span class="f-label">Strain</span></div></div></div></figure><div class="frame-cap">body, 48px</div></div>
+<div class="frame sidebar"><figure class="formula seq compact"><div class="formula-row"><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-oven"/></svg></span><span class="f-label">Roast</span><span class="f-sub">deep brown</span></div><div class="f-step"><span class="f-op" aria-hidden="true">→</span><div class="f-slot"><span class="f-icons pair"><svg class="ic" aria-hidden="true"><use href="#i-pot"/></svg><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg></span><span class="f-label">Extract</span><span class="f-sub">bones set the time</span></div></div><div class="f-step"><span class="f-op" aria-hidden="true">→</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-bowl"/></svg></span><span class="f-label">Lift out</span><span class="f-sub">solids</span></div></div><div class="f-step"><span class="f-op" aria-hidden="true">→</span><div class="f-slot"><span class="f-icons pair"><svg class="ic" aria-hidden="true"><use href="#i-pot"/></svg><svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></span><span class="f-label">Reduce</span><span class="f-sub">by half</span></div></div><div class="f-step"><span class="f-op" aria-hidden="true">→</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-strainer"/></svg></span><span class="f-label">Strain</span></div></div></div></figure><div class="frame-cap">sidebar, 34px</div></div></div></div><div class="stage"><span class="stage-label">Reverse cooking (method), with an oven</span>
+<p class="sub-dek"><em>Cook gently first, then brown at the end.</em></p>
+<div class="frames"><div><figure class="formula seq"><div class="formula-row"><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-oven"/></svg></span><span class="f-label">Gentle</span><span class="f-sub">doneness</span></div><div class="f-step"><span class="f-op" aria-hidden="true">→</span><div class="f-slot"><span class="f-icons pair"><svg class="ic" aria-hidden="true"><use href="#i-pan"/></svg><svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></span><span class="f-label">Hot</span><span class="f-sub">crust</span></div></div></div></figure><div class="frame-cap">body, 48px</div></div>
+<div class="frame sidebar"><figure class="formula seq compact"><div class="formula-row"><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-oven"/></svg></span><span class="f-label">Gentle</span><span class="f-sub">doneness</span></div><div class="f-step"><span class="f-op" aria-hidden="true">→</span><div class="f-slot"><span class="f-icons pair"><svg class="ic" aria-hidden="true"><use href="#i-pan"/></svg><svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></span><span class="f-label">Hot</span><span class="f-sub">crust</span></div></div></div></figure><div class="frame-cap">sidebar, 34px</div></div></div></div></section>
+
+<section class="block" id="questions"><div class="block-head"><span class="block-num">04</span><h2 class="block-title">Questions</h2></div>
+<div class="note-card"><span class="note-mark">Q1</span><div><p><strong>One acid icon or two?</strong> Lemon for citrus, the cruet for vinegar, mirin, and sake. Mirin on a vinegar bottle is a stretch; a label carries it, but a third "bottle" icon is the alternative.</p></div></div>
+<div class="note-card"><span class="note-mark">Q2</span><div><p><strong>MSG.</strong> Drawn with the salt shaker and its own label (McDouble). A separate icon would only serve one recipe today.</p></div></div>
+<div class="note-card"><span class="note-mark">Q3</span><div><p><strong>Nuts.</strong> Granola bars (dates : oats : nuts, 1:2.5:1) need a nut icon. Left out until a second recipe needs one.</p></div></div>
+<div class="note-card"><span class="note-mark">Q4</span><div><p><strong>Oven in the reverse sear.</strong> The live page uses the clock for the gentle phase; the oven says "low oven" more plainly. Swap it once the oven icon lands?</p></div></div>
+<div class="note-card"><span class="note-mark">Q5</span><div><p><strong>Classic French dressing.</strong> Its Mechanic states the 1:1 it uses and the 3:1 it isn't. Drawing the 1:1 only.</p></div></div>
+</section>
+</main>
+<script>
+(function(){
+  var root = document.documentElement, label = document.getElementById('themeLabel');
+  var order = ['system','light','dark'], current = 'system';
+  try{ var s = localStorage.getItem('nac-style-theme'); if(order.indexOf(s) !== -1) current = s; }catch(e){}
+  function apply(m){ if(m==='system') root.removeAttribute('data-theme'); else root.setAttribute('data-theme', m);
+    label.textContent = m.charAt(0).toUpperCase()+m.slice(1); try{ localStorage.setItem('nac-style-theme', m); }catch(e){} }
+  apply(current);
+  document.getElementById('themeToggle').addEventListener('click', function(){ current = order[(order.indexOf(current)+1)%order.length]; apply(current); });
+})();
+</script>
+</body>
+</html>

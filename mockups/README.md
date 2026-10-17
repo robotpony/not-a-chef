@@ -36,6 +36,12 @@ in a browser — no build step.
   `assets/icons/formula/`); `STYLE.md`'s Formula diagram entry describes it.
   The recipe card strip (§5) was built on 2026-10-07 (`partials/formula-strip.html` in Fugu), with a hover tooltip per slot added.
 
+- **`formula-icons-2.html`**: proposal (2026-10-17) for fifteen more
+  formula icons (lemon, vinegar, soy, honey, jar, pickle, mustard, lentils,
+  oats, fruit, sugar, pepper, herb, strainer, oven), drawn to the first
+  kit's rules, shown beside the kit at each size and in diagrams from real
+  Mechanics. Once settled, fugu-agent adds them to `assets/icons/formula/`.
+
 - **`scale-callout.html`**: proposal (2026-10-07) to redraw the recipe
   scale/units menu as a callout with a `^` pointer to the gear, a restyled
   slider with step labels, and units as a drop list (segmented control

@@ -9,26 +9,29 @@ Open work only. Finished items are cut, not ticked; git history has them (`git l
 
 ## Diagrams
 
-Formula diagrams (`FORMAT.md` §Formula diagrams) for Mechanics that already state a ratio. Only veg patties has one, so check the first ratio (`:`) and sequence (`→`) diagrams on the live site, and a formula inside a Mechanic. Icons exist today: bowl, butter, can, carrot, cheese, clock, crumbs, cup, egg, flame, flour, oil, onion, pan, patty, pot, potato, salt, water.
+Formula diagrams (`FORMAT.md` §Formula diagrams) for Mechanics that already state a ratio.
 
-Drawable with today's icons:
+**Review the first batch** (2026-10-17, drawn with today's icons; `hugo server -D`, then each page in Chrome at desktop and phone width, light and dark). On each: does the diagram match the sentence above it, does it sit well in the sidebar, and is the card strip on the recipe list readable?
 
-- [ ] Roux: Simple chicken, pork, and beef gravy (fat : flour 1:1, then roux : liquid 1:5); Baked mac & cheese (the same roux, plus cheese).
-- [ ] Dough hydration as flour : water: Baguettes (75%), Pizza dough 2021 (~67%), Lazy pizza dough 2022 (70%), Pizza dough 2022 (~75%), Ramen noodles (36%). One pattern for all of them, and for the pizza line in Food ratios.
-- [ ] Fresh egg pasta: 250 g flour : 2 eggs + 4 yolks.
-- [ ] Oklahoma fried onion burger: beef : onion 2:1 by weight.
-- [ ] Rich veg/mushroom stock: veg : water 2:3.
-- [ ] Breakfast sausage: salt at 1.5–2% of the meat.
-- [ ] Sequence, first one: Stock (roast → extract → lift out → reduce → strain), then Reverse cooking (low oven → hot pan).
+- [ ] Ratio with a bar, roux: [Simple chicken, pork, and beef gravy](http://localhost:1313/recipes/simple-chicken-pork-and-beef-gravy/) (roux : liquid 1:5). The two icons in the roux slot draw small in the sidebar; keep the pair or use butter alone?
+- [ ] Add, with a result: [Baked mac & cheese](http://localhost:1313/recipes/baked-mac-cheese/) (roux 1:1 + milk + cheese = mornay).
+- [ ] Hydration, one pattern on five pages (flour : water with a bar): [Baguettes](http://localhost:1313/recipes/baguettes/) 100:75, [Pizza dough 2021](http://localhost:1313/recipes/pizza-dough-2021-edition/) 100:67, [Lazy pizza dough 2022](http://localhost:1313/recipes/lazy-pizza-dough-2022/) 100:70, [Pizza dough 2022](http://localhost:1313/recipes/pizza-dough-2022-edition/) 100:75, [Ramen noodles](http://localhost:1313/recipes/ramen-noodles/) 100:36. Does "100" read as baker's percentage, or should it say so?
+- [ ] Add, no result: [Fresh egg pasta](http://localhost:1313/recipes/fresh-egg-pasta/) (250 g flour + 2 eggs + 4 yolks, both egg slots the same icon).
+- [ ] Ratio with a bar: [Oklahoma fried onion burger](http://localhost:1313/recipes/oklahoma-fried-onion-burger/) (beef : onion 2:1), [Rich veg/mushroom stock](http://localhost:1313/recipes/rich-vegmushroom-stock/) (veg : water 2:3).
+- [ ] Ratio without a bar: [Breakfast sausage](http://localhost:1313/recipes/breakfast-sausage/) (meat : salt 100 : 1.5–2). A range as the ratio number; the bar is left off because 1.5 of 100 is a sliver.
+- [ ] Sequence, the first one on the site, in a method's body rather than a sidebar: [Reverse cooking](http://localhost:1313/methods/reverse-cooking-reverse-sear-and-water-frying/) (gentle → hot, italic notes under each step).
+- [ ] Card strips: the [recipes list](http://localhost:1313/recipes/) now has formula strips on eleven more cards, across its pages (and the methods list has one); check the strips read at 24px and the intros clamp evenly beside cards without one.
+- [ ] Obsidian: open two of the recipes and check the block reads as plain text.
 
-Need new icons first (list them for fugu-agent as a batch):
+**New icons** (`mockups/formula-icons-2.html`, proposed 2026-10-17): lemon, vinegar, soy, honey, jar, pickle, mustard, lentils, oats, fruit, sugar, pepper, herb, strainer, oven. Once Bruce settles them, fugu-agent adds them to `assets/icons/formula/`, then these get diagrams:
 
-- [ ] Lemon or vinegar (acid): Classic French dressing (1:1), Greek marinade (1:1), Lemon chicken marinade (6:1), Asian slaw dressing (2:1), Sandwich sour pickles (water : vinegar 2:1), and the Food ratios dressing and mayo tables.
-- [ ] Bottle (soy and other liquid seasonings): Chashu pork (water : soy : mirin 1:1:1), Ramen eggs (1:1:½:½:½), Sweet soy sauce (soy : sugar), Teriyaki sauce, Garlic ginger wing sauce (soy : honey : hoisin 1:1:1).
-- [ ] Jar (mayo), pickle, mustard: Bruce's burger sauce (1:1:1), Mozza burger sauce (mayo : relish 2:1).
+- [ ] Acid: Classic French dressing (oil : lemon 1:1), Greek marinade (1:1), Lemon chicken marinade (1.6:1), Asian slaw dressing (2:1), Sandwich sour pickles (water : vinegar 1.2:1), and the Food ratios dressing and mayo tables.
+- [ ] Soy: Chashu pork (water : soy : mirin 1:1:1), Ramen eggs (1:1:½:½:½), Sweet soy sauce, Teriyaki sauce, Garlic ginger wing sauce (soy : honey : hoisin).
+- [ ] Jar, pickle, mustard: Bruce's burger sauce (1:1:1), Mozza burger sauce.
 - [ ] Lentils: Dal tadka (1:4–5), Coconut lentils (1:3), Basic beans and lentils.
-- [ ] Oats, fruit, sugar: Baked oatmeal (oats : milk : eggs), Fruit compote (fruit : sugar 10:1), Granola bars.
-- [ ] Spice: McDouble seasoning (salt : MSG : pepper 4:2:1), Cottage pie (1:1:1:1), Bruce's poultry and pork rub (salt : sugar 1:1).
+- [ ] Oats, fruit, sugar: Baked oatmeal, Fruit compote (10:1), Granola bars (needs a nut icon too).
+- [ ] Pepper, herb: McDouble seasoning (salt : MSG : pepper 4:2:1), Cottage pie (1:1:1:1), Bruce's poultry and pork rub (salt : sugar).
+- [ ] Oven, strainer: the Stock method sequence (roast → extract → lift out → reduce → strain); swap the clock for the oven in Reverse cooking.
 
 Stacks (the exploded layer kit):
 
