@@ -1,5 +1,5 @@
 theme = ["fugu", "blowfish"]
-baseURL = "https://bruce-loves-to-cook.warpedvisions.org/"
+baseURL = "https://bruce-loves-to-cook.ca/"
 defaultContentLanguage = "en"
 enableRobotsTXT = true
 summaryLength = 30

@@ -4,13 +4,10 @@ Open work only. Finished items are cut, not ticked; git history has them (`git l
 
 ## Domain move
 
-*Started 2026-10-18.* The site moves from `bruce-loves-to-cook.warpedvisions.org` to `https://bruce-loves-to-cook.ca`. Bruce is setting up DNS and the certificate; nothing below ships until the new domain serves over HTTPS.
+*Started 2026-10-18.* The site moves from `bruce-loves-to-cook.warpedvisions.org` to `https://bruce-loves-to-cook.ca`. DNS, the certificate (both names), and the old domain's 301 are live; `baseURL` is switched.
 
-- [ ] Bruce: DNS for `bruce-loves-to-cook.ca` (and `www`) points at the server, the certificate covers both, and the web server's vhost serves `remote_path` for the new name. `www` then redirects to the bare domain through the rule already in `static/.htaccess`; check it once the name resolves.
-- [ ] Check `remote_path` in `tools/config.toml` still matches the vhost root if it moved.
-- [ ] Set `baseURL` in `config/_default/hugo.toml` to `https://bruce-loves-to-cook.ca/`, build, and grep `public/` for the old host (canonical links, `sitemap.xml`, RSS, `index.json`).
-- [ ] Bruce: redirect `https://bruce-loves-to-cook.warpedvisions.org` to the new domain, 301, every path to the same path, so published links and search results carry over. Only once the new domain is live. If the old vhost keeps serving `remote_path`, this can be a second host rule in `static/.htaccess` (Claude can add it); otherwise it goes in the old vhost's config. Keep the old certificate valid, or HTTPS visitors hit a warning before the redirect.
-- [ ] `/publish`, then check the new domain in Chrome: home, a recipe, search, an image, the RSS feed.
+- [ ] Bruce: keep the old domain's certificate renewing (current one ends 2026-12-23), or HTTPS visitors to old links hit a warning before the redirect.
+- [ ] `/publish`, then check the new domain in Chrome: home, a recipe, search, an image, the RSS feed, and that `www` redirects to the bare domain.
 - [ ] Fugu's `exampleSite/content/about.md` links the old domain: fugu-agent's change.
 - [ ] Posts on warpedvisions.org that link the cookbook: the warped agent's change.
 
