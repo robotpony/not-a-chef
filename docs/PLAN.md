@@ -15,7 +15,6 @@ Formula diagrams (`FORMAT.md` §Formula diagrams) for Mechanics that already sta
 Spec: `docs/METHODS.md`.
 
 - [ ] New method: foil packets (from Camp cooking); then link Camp cooking to it.
-- [ ] Timeline flags: non-food context markers (Burger King opens, a world's fair). Decide body vs `flags` frontmatter, mock in `mockups/methods-pages.html`, hand off to fugu-agent.
 
 ## Fugu follow-through
 
