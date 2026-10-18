@@ -98,6 +98,12 @@ mainSections = ["recipes"]
   # (/methods/) is the methods list (docs/METHODS.md).
   methodSection = "methods"
 
+  # Reference essays (full definitions: Win the fridge, Test kitchen) live
+  # under Reference, so wiki links to them get the glossary popover and a
+  # principle tag finds its essay there. A subfolder, not "reference" itself,
+  # or every reference page would become a popover target.
+  referenceEssays = "reference/essays"
+
   # Drafts are published as "Test kitchen" recipes: a banner under the
   # title and tags, and a mark on the card. What each key changes, and how
   # to turn it off: docs/DESIGN.md "Test kitchen (drafts)". Fugu's own words
@@ -107,7 +113,7 @@ mainSections = ["recipes"]
     short   = "Testing"
     message = "We're still testing this one. Cook it, change it, and expect it to move before it becomes a keeper."
     note    = "Working on"
-    page    = "essays/reference-essays/test-kitchen"
+    page    = "reference/essays/test-kitchen"
     more    = "How the test kitchen works"
     heading = "In the test kitchen now"
     empty   = "Nothing is in the test kitchen right now."

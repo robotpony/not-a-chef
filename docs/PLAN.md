@@ -4,7 +4,6 @@ Open work only. Finished items are cut, not ticked; git history has them (`git l
 
 ## Next
 
-- [ ] Move the reference essays (Win the fridge, Test kitchen) to Reference (decided 2026-10-17). Both URLs are live under `/essays/reference-essays/`. Fugu ties the glossary popover (`render-link.html`) and a principle tag's essay (`principle/term.html`) to the essay section, so it needs a Fugu change first (fugu-agent). Then move the files and update `params.toml` `[fugu.development] page`, FORMAT.md, DESIGN.md, and CLAUDE.md. Redirects only if Bruce says so.
 - [ ] Cross-link, topical pass (the exact-title pass is done). Candidates: Slick spaghetti → Meat sauce (AKA American bolognese); Chicken sandwich, mall style → Pan-fried chicken burger or the chicken burger essay; Garbage plates → Baked mac & cheese; Chili costing (2022) → Canadian chili, if it's the same chili; Burger night costing (2022) → the burgers blueprint; Flour protein content ← the pizza doughs that add vital wheat gluten; Camp cooking → the foil packets method once it exists.
 
 ## Diagrams

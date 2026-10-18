@@ -18,7 +18,7 @@ Recipes (`content/recipes/`), essays (`content/essays/`), methods (`content/meth
 | `date` | MUST | string | ISO 8601 (YYYY-MM-DD), the day the page was added. Food Log months use the first of the month; season files use the month the log sorts them by. |
 | `tags` | MUST on recipes, MAY elsewhere | string[] | Plain strings, no `#` prefix. |
 | `description` | MAY | string | 1–2 sentences for SEO and listing cards. Mostly essays and reference pages; recipe cards use the opening text. |
-| `draft` | MAY | boolean | `true` publishes the page in the **Test kitchen**: live, with a banner under the title and a mark on its card saying it's still changing. Remove it when the page is a keeper. See DESIGN.md "Test kitchen (drafts)" and `content/essays/reference-essays/test-kitchen.md`. |
+| `draft` | MAY | boolean | `true` publishes the page in the **Test kitchen**: live, with a banner under the title and a mark on its card saying it's still changing. Remove it when the page is a keeper. See DESIGN.md "Test kitchen (drafts)" and `content/reference/essays/test-kitchen.md`. |
 | `working_on` | MAY | string | For drafts: one line on what's being tried next ("Getting them to hold without the egg"), shown under the banner and in the card's popover. |
 | `pinned` | MAY | boolean | Floats the page to the top of its section's list, its term pages, and search. Rare by design, not a general sort override. See DESIGN.md. |
 | `source` | MAY | string | `original`, `family`, a URL, or a book title. SHOULD on recipes. |
@@ -319,7 +319,7 @@ No required sections. A typical shape, varying by type:
 
 Use `##` headings only when sections are long enough that a reader needs navigation. Short pieces (under 1000 words) rarely need them.
 
-A reference essay (`content/essays/reference-essays/`) defines one concept and is tagged with that term, so the term's tag page can link to it. A term that doesn't need a whole essay gets a glossary entry in `content/reference/glossary.md` instead.
+A reference essay (`content/reference/essays/`) defines one concept and is tagged with that term, so the term's tag page can link to it. A term that doesn't need a whole essay gets a glossary entry in `content/reference/glossary.md` instead.
 
 ## Methods
 
