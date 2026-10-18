@@ -8,6 +8,7 @@ Open work only. Finished items are cut, not ticked; git history has them (`git l
 
 - [ ] Bruce: keep the old domain's certificate renewing (current one ends 2026-12-23), or HTTPS visitors to old links hit a warning before the redirect.
 - [ ] `/publish`, then check the new domain in Chrome: home, a recipe, search, an image, the RSS feed, and that `www` redirects to the bare domain.
+- [ ] Bruce: add the site to Google Search Console as a Domain property for `bruce-loves-to-cook.ca` (verified by a DNS TXT record; it covers `www` and `http` too), then submit `https://bruce-loves-to-cook.ca/sitemap.xml`. After the publish, so the sitemap carries the new domain. The old domain was never added, so there's no change of address to file.
 - [ ] Fugu's `exampleSite/content/about.md` links the old domain: fugu-agent's change.
 - [ ] Posts on warpedvisions.org that link the cookbook: the warped agent's change.
 
