@@ -36,7 +36,9 @@
   (function () {
     var el = document.getElementById('term-path');
     if (el && window.location.pathname && window.location.pathname !== '/') {
-      el.textContent = window.location.pathname;
+      var path = window.location.pathname;
+      try { path = decodeURIComponent(path); } catch (e) {}
+      el.textContent = path;
     }
   })();
 </script>

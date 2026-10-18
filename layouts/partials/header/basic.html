@@ -28,7 +28,7 @@
           <div class="mega-col">
             <span class="mega-col-label">By cuisine</span>
             {{ range first 8 $cuisines }}
-              <a href="{{ printf "cuisine/%s/" (.Name | urlize) | relURL }}">{{ .Name }} <span class="n">{{ .Count }}</span></a>
+              <a href="{{ .Page.RelPermalink }}">{{ .Name }} <span class="n">{{ .Count }}</span></a>
             {{ end }}
             {{ if gt (len $cuisines) 8 }}
               <a class="mega-more" href="{{ "cuisine" | relURL }}">All {{ len $cuisines }} cuisines &rarr;</a>
@@ -38,7 +38,7 @@
             <span class="mega-col-label">Quick filters</span>
             <div class="mega-chip-row">
               {{ range first 7 $tags }}
-                <a class="mega-chip" href="{{ printf "tags/%s/" (.Name | urlize) | relURL }}">{{ .Name }}</a>
+                <a class="mega-chip" href="{{ .Page.RelPermalink }}">{{ .Name }}</a>
               {{ end }}
             </div>
             <a class="mega-viewall" href="{{ "recipes" | relURL }}">View all {{ len $recipesSection }} recipes &rarr;</a>
@@ -90,13 +90,13 @@
           <div class="drawer-sub">
             <span class="mega-col-label">By cuisine</span>
             {{ range first 5 $cuisines }}
-              <a href="{{ printf "cuisine/%s/" (.Name | urlize) | relURL }}">{{ .Name }} <span class="n">{{ .Count }}</span></a>
+              <a href="{{ .Page.RelPermalink }}">{{ .Name }} <span class="n">{{ .Count }}</span></a>
             {{ end }}
             <a class="mega-more" href="{{ "cuisine" | relURL }}">All {{ len $cuisines }} cuisines &rarr;</a>
             <span class="mega-col-label">Quick filters</span>
             <div class="mega-chip-row">
               {{ range first 4 $tags }}
-                <a class="mega-chip" href="{{ printf "tags/%s/" (.Name | urlize) | relURL }}">{{ .Name }}</a>
+                <a class="mega-chip" href="{{ .Page.RelPermalink }}">{{ .Name }}</a>
               {{ end }}
             </div>
             <a class="mega-viewall" href="{{ "recipes" | relURL }}" style="margin-top:12px;">View all {{ len $recipesSection }} recipes &rarr;</a>

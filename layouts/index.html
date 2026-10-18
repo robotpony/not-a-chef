@@ -14,16 +14,10 @@
 
   Bands 03 ("Technique & reflections") and 04 ("From the food log") added
   2026-09-29 (mockups/food-log-homepage.html): essay rows sit next to each
-  other, the Food Log — newest, thinnest section — goes last. All four
-  homepage bands (01, 02, 03, 04) share the one rgrid/rcard component
-  (recipe-card.html) rather than inventing new ones.
-
-  All four bands moved onto rcard on 2026-09-29: the food memories and
-  "Technique & reflections" rows previously used comp-grid/comp-card, a
-  second, separately-tuned card component whose type scale and padding had
-  drifted from rcard's. comp-card is unused in real content now — it
-  remains only in the style-guide gallery/mockups as a documented
-  component (mockups/STYLE.md, mockups/COMPONENTS.md).
+  other, the Food Log — newest, thinnest section — goes last. Card bands
+  use the one rgrid/rcard component (recipe-card.html); comp-card is
+  unused in real content and remains only as a documented component
+  (mockups/STYLE.md, mockups/COMPONENTS.md).
 
   2026-10-11 (mockups/methods-top-level.html, option C): methods became a
   top-level section, so they get band 02, right after recipes (Love,
@@ -41,7 +35,7 @@
 {{ $memories := slice }}
 {{ $otherEssays := slice }}
 {{ range $essays }}
-  {{ if strings.HasPrefix .File.Path "essays/food-memories/" }}
+  {{ if strings.HasPrefix (replace .File.Path "\\" "/") "essays/food-memories/" }}
     {{ $memories = $memories | append . }}
   {{/* Methods have their own band (02). */}}
   {{ else if not (partial "method/is.html" .) }}
@@ -76,7 +70,7 @@
     {{ partial "search-box.html" (len $recipes) }}
     <nav class="filter-row" id="tonight" aria-label="Browse by tag">
       {{ range first 7 $tags }}
-        <a class="filter-pill" href="{{ printf "tags/%s/" (.Name | urlize) | relURL }}">{{ .Name }}</a>
+        <a class="filter-pill" href="{{ .Page.RelPermalink }}">{{ .Name }}</a>
       {{ end }}
     </nav>
   </div>
@@ -174,10 +168,10 @@
     <div>
       <span class="block-num">{{ cond (gt (len $methods) 0) "04" "03" }}</span>
       <h2 class="block-title">From the food log</h2>
-      <p class="block-dek">{{ $logIndex.Description }}</p>
+      {{ with $logIndex }}<p class="block-dek">{{ .Description }}</p>{{ end }}
     </div>
-    {{ if gt (len $recentLogs) 1 }}
-      <a class="mega-viewall" href="{{ "the-food-log" | relURL }}">Read the log &rarr;</a>
+    {{ with $logIndex }}
+      <a class="mega-viewall" href="{{ .RelPermalink }}">Read the log &rarr;</a>
     {{ end }}
   </div>
   <div class="rgrid home-row">
