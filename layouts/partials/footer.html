@@ -79,15 +79,9 @@
       </span>
     </div>
   </div>
-  {{ if not .Site.Params.disableImageZoom | default true }}
-    <script>
-      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
-        margin: 24,
-        background: "rgba(0,0,0,0.5)",
-        scrollOffset: 0,
-      });
-    </script>
-  {{ end }}
+  {{/* No image-zoom init here: Fugu's head.html loads the library and
+       js/medium-zoom.js, both deferred. An inline call here ran before the
+       library loaded and threw on every page. */}}
   {{ if templates.Exists "partials/extend-footer.html" }}
     {{ partialCached "extend-footer.html" . }}
   {{ end }}
