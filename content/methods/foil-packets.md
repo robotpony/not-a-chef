@@ -2,8 +2,7 @@
 title: Foil packets
 tags: [method, camping]
 date: 2026-10-17
-draft: true
-working_on: "First draft from general technique; needs Bruce's own times, fillings, and a test over the fire."
+draft: false
 description: "One sealed pouch, one heat source: cut each ingredient to the speed it cooks, so everything finishes together and shares one sauce."
 ---
 
