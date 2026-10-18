@@ -2,9 +2,9 @@
 
 Everything waiting on Bruce, in one place. Tick a box to approve it, or write "no" (or a change) after the item. Claude picks up the answers from here and clears what's done. `docs/PLAN.md` is the work list; this file is only the questions.
 
-Local links need the dev server (`/preview`).
+Local links need the dev server (`/preview`). Each open section's heading carries `#todo` for Bruce's todo tool; a section is removed once it's answered.
 
-## 1. Cross-links
+## 1. Cross-links #todo
 
 Topical links from essays and reference pages to recipes. The exact-title links are already in. Tick the ones to add.
 
@@ -16,7 +16,7 @@ Topical links from essays and reference pages to recipes. The exact-title links 
 - [ ] **Pizza dough 2022 edition** and **Lazy pizza dough 2022** → [[Flour protein content comparison]], where each Mechanic mentions vital wheat gluten.
 - [ ] **Camp cooking** → the foil packets method, once it's written (nothing to do yet).
 
-## 2. Formula diagrams, second batch
+## 2. Formula diagrams, second batch #todo
 
 Drawn 2026-10-17 with the fifteen new icons. Each one draws the ratio its Mechanic states. Tick the batch if it's fine, or note the page that isn't.
 
@@ -29,7 +29,7 @@ Drawn 2026-10-17 with the fifteen new icons. Each one draws the ratio its Mechan
 
 Not drawn: Teriyaki (its percentages aren't stated in the Mechanic), Basic beans and lentils (no single ratio), Granola bars (needs a nut icon).
 
-## 3. Pushing
+## 3. Pushing #todo
 
 - [ ] Go-ahead for fugu-agent to push Fugu (`80fb47c` reference essays, `1d8dbe6` icons, and its module-install work). Not a Chef can push after it; pushing doesn't deploy.
 
