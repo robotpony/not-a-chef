@@ -17,6 +17,13 @@ A comforting, lovely lentil stew. Or is it curry?
 
 **1 part lentils to 3 parts liquid** (coconut milk + broth combined) produces a thick, spoonable consistency. Red lentils break down fully; green or brown lentils hold their shape for a chunkier result, but need 35–45 minutes and a splash more broth. Freezes well and reheats without losing texture.
 
+```formula
+lentils     | Lentils | 1
+: can water | Liquid  | 3
+caption: Coconut milk and broth together
+bar: yes
+```
+
 ## Ingredients
 
 - 200 g red lentils (1 cup), rinsed

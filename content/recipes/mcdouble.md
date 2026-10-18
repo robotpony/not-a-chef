@@ -18,6 +18,13 @@ A very cravable burger. This is the closest I've gotten to perfecting it, along 
 
 The McDouble is built on two thin patties, a single slice of cheese between them, and a sharp dressing ratio. **Double-grinding** the beef (or triple-grinding, for softer still) is what gives the patty its soft, almost pillowy texture rather than a coarse, chewy one. The seasoning is a **4:2:1 ratio of salt, MSG, and black pepper** by weight, plus 0.25 parts onion powder if you like.
 
+```formula
+salt     | Salt   | 4
+: salt   | MSG    | 2
+: pepper | Pepper | 1
+caption: By weight
+```
+
 Smash-and-freeze before cooking locks the shape. Press between parchment sheets using two flat surfaces until 5–10% wider than your target bun, then par-freeze.
 
 ## Patties

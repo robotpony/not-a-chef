@@ -16,6 +16,13 @@ I developed this when trying to replicate a local Greek restaurant's roast chick
 
 Built on a roughly **1:1 olive oil to lemon juice base**, with red wine vinegar added for a sharper secondary acid. It needs more lemon than 1:1 suggests; start there and taste up.
 
+```formula
+oil     | Oil   | 1
+: lemon | Lemon | 1
+caption: Start here, then taste up the lemon
+bar: yes
+```
+
 ## Ingredients
 
 - 60 ml extra-virgin olive oil

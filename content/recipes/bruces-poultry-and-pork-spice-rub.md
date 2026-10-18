@@ -16,6 +16,13 @@ I use this spice blend a few times a week. It's perfect for grilled chicken or p
 
 The flavour comes from the **salt-to-sugar ratio of roughly 1:1.6 by weight** (270 g salt to 460 g combined sugar). Brown sugar adds depth and caramelization; white keeps it clean. MSG rounds out the savoury end without adding any single identifiable flavour. The lemon notes come from the coriander and poultry seasoning; the smoky notes come from the Tellicherry pepper (the brand I buy is smoky).
 
+```formula
+salt    | Salt  | 1
+: sugar | Sugar | 1.6
+caption: By weight, brown and white sugar together
+bar: yes
+```
+
 ## Ingredients
 
 - 270 g kosher salt

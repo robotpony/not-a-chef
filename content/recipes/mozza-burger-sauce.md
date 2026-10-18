@@ -19,6 +19,12 @@ The classic Canadian A&W Mozza burger has a sweet sauce.
 
 A **mayo base with roughly half as much red relish**, and a spoonful of Thousand Island to round it out. The relish brings the sweetness, sourness, and texture; the chili sauce in it gives the tomato tang that sets it apart from a plain relish mayo.
 
+```formula
+jar      | Mayo   | 2
+: pickle | Relish | 1
+bar: yes
+```
+
 ## Ingredients
 
 - 125 ml (½ cup) mayonnaise

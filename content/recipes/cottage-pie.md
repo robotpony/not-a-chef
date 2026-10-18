@@ -18,6 +18,13 @@ A comforting and simple meal, based on the classic 1950s Americanized version. E
 
 Built from a batch of pre-cooked frozen beef mince, so the cooking time is mostly about thickening the filling and building the potato topping. A **1:1 spice ratio** (equal parts salt, pepper, coriander, and rosemary) gives the beef a clear identity. Better than Bouillon and browning sauce add depth without a long braise.
 
+```formula
+salt     | Salt      | 1
+: pepper | Pepper    | 1
+: herb   | Coriander | 1
+: herb   | Rosemary  | 1
+```
+
 ## Topping
 
 - 700 g steaming potatoes (Yukon Gold or similar)

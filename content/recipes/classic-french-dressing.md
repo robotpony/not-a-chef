@@ -16,6 +16,12 @@ French dressing is a classic early restaurant memory for us. The emulsified vers
 
 Equal parts oil and lemon juice makes this sharper than a modern vinaigrette: the usual ratio is 3:1. The dry mustard emulsifies it. Garlic goes in split rather than crushed so it infuses gently over days rather than overwhelming the dressing immediately.
 
+```formula
+oil     | Oil   | 1
+: lemon | Lemon | 1
+bar: yes
+```
+
 ## Ingredients
 
 - 2 teaspoons dry mustard

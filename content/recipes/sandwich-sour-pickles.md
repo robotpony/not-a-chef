@@ -15,6 +15,12 @@ These are delicious little pickles, perfect for fresh roast beef sandwiches.
 
 A fast fridge pickle built for **max contrast** over sweetness. No sugar, no turmeric, no brightening agents: just sharp acid and mustard seed. The ratio is roughly 1.2:1 water to vinegar, which is milder than a straight vinegar pickle.
 
+```formula
+water     | Water   | 1.2
+: vinegar | Vinegar | 1
+bar: yes
+```
+
 ## Ingredients
 
 - 225g Kirby cucumbers (2 small), thinly sliced

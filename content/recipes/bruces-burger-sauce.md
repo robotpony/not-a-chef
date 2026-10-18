@@ -16,6 +16,13 @@ This is a simple, classic burger sauce.
 
 A **1:1:1 ratio** by volume: mayo, diced burger pickles, mustard. Kewpie in place of or alongside regular mayo adds sweetness and acidity.
 
+```formula
+jar        | Mayo    | 1
+: pickle   | Pickles | 1
+: mustard  | Mustard | 1
+caption: By volume
+```
+
 ## Ingredients
 
 - 2 tablespoons mayonnaise or Kewpie mayo (or 1 tablespoon each)

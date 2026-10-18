@@ -17,6 +17,14 @@ These savoury and jammy eggs are a perfect topping for ramen.
 
 The **1:1:½:½:½ marinade ratio** (water : sake : soy : mirin : sugar) produces a mildly sweet, balanced brine. The eggs are shocked in ice water and go into a cool marinade, so they don't cook further: the 7-minute boil sets the jammy yolk.
 
+```formula
+water     | Water | 1
+: vinegar | Sake  | 1
+: soy     | Soy   | ½
+: vinegar | Mirin | ½
+: sugar   | Sugar | ½
+```
+
 ## Ingredients
 
 - 6 large eggs

@@ -10,7 +10,7 @@ draft: false
 Most recipes brown first and cook through second. Reverse methods swap the order: cook gently first, then brown at the end. The gentle phase controls doneness; the hot phase is only for crust. Doing them in this order gives more even results and fewer burnt bits.
 
 ```formula
-clock       | Gentle | doneness
+oven        | Gentle | doneness
 → pan flame | Hot    | crust
 ```
 

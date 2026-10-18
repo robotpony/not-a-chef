@@ -10,6 +10,14 @@ description: "One method for every stock: roast, extract, lift out the solids, r
 
 Stock is a savoury tea. You extract flavour and gelatin from bones and vegetables into water, then concentrate it. Every stock on this site follows the same five steps: roast, extract, lift out the solids, reduce, strain. The roast sets the colour and depth, the reduction sets the strength, and the only step that really changes from one stock to the next is how long the extraction takes. Bones set that: the bigger and denser they are, the longer it takes to pull out their gelatin. No bones, no wait.
 
+```formula
+oven          | Roast    | deep brown
+→ pot clock   | Extract  | bones set the time
+→ bowl        | Lift out | the solids
+→ pot flame   | Reduce   | by half
+→ strainer    | Strain
+```
+
 ## The steps
 
 1. **Prep.** Wash the vegetables before peeling, and taste any peels before they go in. Cut roughly for a quick roast, or slice thin (a mandoline helps with the dense ones) for a darker, sweeter roast. The usual base is onion, carrot, celery, shallot, and garlic, with black peppercorns, bay, and thyme or rosemary.

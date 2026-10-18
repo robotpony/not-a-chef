@@ -16,6 +16,13 @@ This is a generic fruit compote, which I typically make with frozen or canned fr
 
 Compote is fruit reduced in its own juice with sugar. Start at **10 parts fruit to 1 part sugar by weight**, then sweeten to taste at the end; tart fruit can take more. Juicy or frozen fruit releases enough liquid on its own. Add water only for firm fruit like apples or pears. The flavouring should suit the fruit: citrus zest brightens berries, cinnamon and nutmeg suit apples and pears, and balsamic deepens red fruit.
 
+```formula
+fruit   | Fruit | 10
+: sugar | Sugar | 1
+caption: By weight; sweeten to taste at the end
+bar: yes
+```
+
 ## Ingredients
 
 - 500 g fresh or frozen berries or fruit (about 1 lb), chopped if large

@@ -16,6 +16,13 @@ This is a great glaze for pork or chicken, perfect for rice bowls.
 
 A **1:1.5 ratio** of soy sauce to brown sugar by volume. Heat is what makes this a glaze rather than just a sweetened soy: the sugar dissolves and begins to thicken as it reduces.
 
+```formula
+soy     | Soy   | 1
+: sugar | Sugar | 1.5
+caption: By volume, brown sugar
+bar: yes
+```
+
 ## Ingredients
 
 - 60ml soy sauce (¼ cup)

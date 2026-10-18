@@ -17,6 +17,13 @@ This is a warming, filling, vegetarian delight.
 
 Red lentils cook fast and dissolve into a creamy base. The ratio matters: **1 cup lentils to 4–5 cups water**. Less water (1:4) gives a thicker dal you can heap on rice; more (1:5) gives something looser.
 
+```formula
+lentils | Lentils | 1
+: water | Water   | 4–5
+caption: 1:4 for a thicker dal, 1:5 looser
+bar: yes
+```
+
 The tadka is not garnish. Hot fat with spices poured over at the end is the flavour. Don't skip it.
 
 ## Dal

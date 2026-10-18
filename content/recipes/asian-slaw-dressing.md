@@ -17,6 +17,13 @@ This is my approximation of an Asian slaw dressing, based on pantry ingredients.
 
 A **weight-based emulsified dressing** at 2:1 oil to acid. The Dijon acts as both flavour and emulsifier; the sesame oil is for aroma, not bulk.
 
+```formula
+oil       | Oil  | 2
+: vinegar | Acid | 1
+caption: By weight
+bar: yes
+```
+
 ## Ingredients
 
 - 90 g extra-virgin olive oil, or a lighter neutral oil

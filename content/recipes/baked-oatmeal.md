@@ -15,6 +15,12 @@ I grew up on oatmeal, and love it prepared pretty much any way, but baked is bes
 
 **2 cups oats to 1½ cups milk to 2 eggs** is the ratio that gives you a result creamy in the middle and firm enough to slice. Less milk makes it denser; more makes it spoonable. The butter matters: without some fat, the texture turns rubbery. Fruit goes on top rather than stirred in so it steams and softens while the oat base sets underneath.
 
+```formula
+oats  | Oats | 2 cups
++ cup | Milk | 1½ cups
++ egg | Eggs | 2
+```
+
 ## Ingredients
 
 - ½ cup pecans or walnuts, roughly chopped

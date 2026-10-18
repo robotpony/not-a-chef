@@ -16,6 +16,12 @@ Garlic and wings are a great combination. These lean sweet and savoury.
 
 **Equal parts soy, honey, and hoisin** form the base; sake or rice vinegar cuts the sweetness. Fresh-grated aromatics (not jarred paste) give this its character: the shallot in particular rounds out the garlic and ginger.
 
+```formula
+soy     | Soy    | 1
+: honey | Honey  | 1
+: jar   | Hoisin | 1
+```
+
 ## Ingredients
 
 - 80 ml soy sauce (⅓ cup)

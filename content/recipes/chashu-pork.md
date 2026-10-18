@@ -18,6 +18,12 @@ This is one of the best pork recipes I know; tender, savoury, and perfect on sou
 
 The **1:1:1 braise ratio** (water : soy : mirin) keeps the pork moist and seasoned through. Refrigerating in the liquid overnight firms the meat and deepens the flavour; slicing cold gives cleaner cuts. Pork belly (or shoulder) braises to 85–93°C for a yielding, fatty result; loin braises to 60°C for a leaner, cleaner slice.
 
+```formula
+water     | Water | 1
+: soy     | Soy   | 1
+: vinegar | Mirin | 1
+```
+
 ## Ingredients
 
 - 500 g pork belly, shoulder, or pork loin (towards the rib end)
