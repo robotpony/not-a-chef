@@ -5,7 +5,7 @@ draft: false
 tags: [food-memory]
 ---
 
-I remember learning to make foil camp packets at a kids' camp. The recipe was simple: a handful of cut-up veg, a potato cut into cubes, ¼ pound of beef, half a bouillon cube, and a pat of butter in a foil pouch (with some ground pepper). We cooked it over a fire until it smelled lovely.
+I remember learning to make [[Foil packets|foil camp packets]] at a kids' camp. The recipe was simple: a handful of cut-up veg, a potato cut into cubes, ¼ pound of beef, half a bouillon cube, and a pat of butter in a foil pouch (with some ground pepper). We cooked it over a fire until it smelled lovely.
 
 That first pouch I made was so flavourful. The beef and potatoes browned and were crunchy, and the veg tasted like the rest of the pack. I don’t think I realized it at the time, but I had a whiff of what simple pleasure food could be.
 

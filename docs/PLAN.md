@@ -10,12 +10,6 @@ Formula diagrams (`FORMAT.md` §Formula diagrams) for Mechanics that already sta
 - [ ] Food ratios tables, once that method leaves the test kitchen.
 - [ ] Stack diagrams for sandwiches and Vegetarian lasagna, once a build page needs one.
 
-## Methods
-
-Spec: `docs/METHODS.md`.
-
-- [ ] New method: foil packets (from Camp cooking); then link Camp cooking to it.
-
 ## Fugu follow-through
 
 - [ ] When Fugu's validator lands, run it over all recipes; file each discrepancy as a spec or content bug.
