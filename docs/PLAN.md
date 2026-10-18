@@ -9,33 +9,21 @@ Open work only. Finished items are cut, not ticked; git history has them (`git l
 
 ## Diagrams
 
-Formula diagrams (`FORMAT.md` §Formula diagrams) for Mechanics that already state a ratio.
+Formula diagrams (`FORMAT.md` §Formula diagrams) for Mechanics that already state a ratio. The first batch (twelve pages, today's icons) is reviewed.
 
-**Review the first batch** (2026-10-17, drawn with today's icons; `hugo server -D`, then each page in Chrome at desktop and phone width, light and dark). On each: does the diagram match the sentence above it, does it sit well in the sidebar, and is the card strip on the recipe list readable?
-
-- [ ] Ratio with a bar, roux: [Simple chicken, pork, and beef gravy](http://localhost:1313/recipes/simple-chicken-pork-and-beef-gravy/) (roux : liquid 1:5). The two icons in the roux slot draw small in the sidebar; keep the pair or use butter alone?
-- [ ] Add, with a result: [Baked mac & cheese](http://localhost:1313/recipes/baked-mac-cheese/) (roux 1:1 + milk + cheese = mornay).
-- [ ] Hydration, one pattern on five pages (flour : water with a bar): [Baguettes](http://localhost:1313/recipes/baguettes/) 100:75, [Pizza dough 2021](http://localhost:1313/recipes/pizza-dough-2021-edition/) 100:67, [Lazy pizza dough 2022](http://localhost:1313/recipes/lazy-pizza-dough-2022/) 100:70, [Pizza dough 2022](http://localhost:1313/recipes/pizza-dough-2022-edition/) 100:75, [Ramen noodles](http://localhost:1313/recipes/ramen-noodles/) 100:36. Does "100" read as baker's percentage, or should it say so?
-- [ ] Add, no result: [Fresh egg pasta](http://localhost:1313/recipes/fresh-egg-pasta/) (250 g flour + 2 eggs + 4 yolks, both egg slots the same icon).
-- [ ] Ratio with a bar: [Oklahoma fried onion burger](http://localhost:1313/recipes/oklahoma-fried-onion-burger/) (beef : onion 2:1), [Rich veg/mushroom stock](http://localhost:1313/recipes/rich-vegmushroom-stock/) (veg : water 2:3).
-- [ ] Ratio without a bar: [Breakfast sausage](http://localhost:1313/recipes/breakfast-sausage/) (meat : salt 100 : 1.5–2). A range as the ratio number; the bar is left off because 1.5 of 100 is a sliver.
-- [ ] Sequence, the first one on the site, in a method's body rather than a sidebar: [Reverse cooking](http://localhost:1313/methods/reverse-cooking-reverse-sear-and-water-frying/) (gentle → hot, italic notes under each step).
-- [ ] Card strips: the [recipes list](http://localhost:1313/recipes/) now has formula strips on eleven more cards, across its pages (and the methods list has one); check the strips read at 24px and the intros clamp evenly beside cards without one.
-- [ ] Obsidian: open two of the recipes and check the block reads as plain text.
-
-**New icons** (`mockups/formula-icons-2.html`, proposed 2026-10-17): lemon, vinegar, soy, honey, jar, pickle, mustard, lentils, oats, fruit, sugar, pepper, herb, strainer, oven. Once Bruce settles them, fugu-agent adds them to `assets/icons/formula/`, then these get diagrams:
+**New icons** (`mockups/formula-icons-2.html`, approved 2026-10-17, with its answers: mirin shares the vinegar bottle, MSG uses the salt shaker, no nut icon yet, French dressing draws its 1:1 only). With fugu-agent to add to `assets/icons/formula/` (SVGs in `mockups/formula-icons-2/`). When they land, bump Fugu and draw:
 
 - [ ] Acid: Classic French dressing (oil : lemon 1:1), Greek marinade (1:1), Lemon chicken marinade (1.6:1), Asian slaw dressing (2:1), Sandwich sour pickles (water : vinegar 1.2:1), and the Food ratios dressing and mayo tables.
 - [ ] Soy: Chashu pork (water : soy : mirin 1:1:1), Ramen eggs (1:1:½:½:½), Sweet soy sauce, Teriyaki sauce, Garlic ginger wing sauce (soy : honey : hoisin).
 - [ ] Jar, pickle, mustard: Bruce's burger sauce (1:1:1), Mozza burger sauce.
 - [ ] Lentils: Dal tadka (1:4–5), Coconut lentils (1:3), Basic beans and lentils.
-- [ ] Oats, fruit, sugar: Baked oatmeal, Fruit compote (10:1), Granola bars (needs a nut icon too).
+- [ ] Oats, fruit, sugar: Baked oatmeal, Fruit compote (10:1), Granola bars waits for a second recipe that needs a nut icon.
 - [ ] Pepper, herb: McDouble seasoning (salt : MSG : pepper 4:2:1), Cottage pie (1:1:1:1), Bruce's poultry and pork rub (salt : sugar).
 - [ ] Oven, strainer: the Stock method sequence (roast → extract → lift out → reduce → strain); swap the clock for the oven in Reverse cooking.
 
 Stacks (the exploded layer kit):
 
-- [ ] Stack diagrams for sandwiches and Vegetarian lasagna, once a build page needs one. Drop "v1" from the layer kit in STYLE.md once Bruce calls it settled.
+- [ ] Stack diagrams for sandwiches and Vegetarian lasagna, once a build page needs one.
 
 ## Methods
 

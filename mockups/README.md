@@ -40,7 +40,8 @@ in a browser — no build step.
   formula icons (lemon, vinegar, soy, honey, jar, pickle, mustard, lentils,
   oats, fruit, sugar, pepper, herb, strainer, oven), drawn to the first
   kit's rules, shown beside the kit at each size and in diagrams from real
-  Mechanics. Once settled, fugu-agent adds them to `assets/icons/formula/`.
+  Mechanics. Approved 2026-10-17; the SVGs are in `formula-icons-2/`
+  for fugu-agent to add to `assets/icons/formula/`.
 
 - **`scale-callout.html`**: proposal (2026-10-07) to redraw the recipe
   scale/units menu as a callout with a `^` pointer to the gear, a restyled
@@ -149,7 +150,7 @@ in a browser — no build step.
   Labels on the right, decided; no assembled view for now. Round 3: a
   detail pass in strokes (striped bacon, crinkle-cut pickles, a mustard
   zigzag, tomato chambers, a crust rim and open crumb on cut bread).
-  Accepted as v1 2026-10-10 (`STYLE.md` Exploded build diagram); a later
+  Accepted 2026-10-10, settled 2026-10-17 (`STYLE.md` Exploded build diagram); a later
   pass refines the drawings from reference examples (PLAN.md history, Methods phase 6).
   2026-10-12: a `lettuce-shredded` layer (a heap of flat ribbons), and the
   leaf lettuce, mayo, and burger sauce report their real reach (`data-edge`)
