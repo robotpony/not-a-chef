@@ -77,11 +77,11 @@ Sunday's prep turns into five dinners that don't feel like the same meal five ti
 
 Each dinner leans on one or two bases and adds something fresh: a salad, a starch, a sauce. The bases do the slow work once; the weeknight cooking is assembly.
 
-- Swap in your real week if it differs. #todo
-
 ## When it goes wrong
 
-- Your examples of food waste and boring weeks. #todo
+Some weeks go sideways. "Who wants sushi? How about Cantonese?" You order out, have leftovers, then your plans are delayed. What do you do?
+
+Take your plans, and make a base you can freeze. Some stew, curry, or just a casserole. Use up the bits for stock. This takes a few hours, but the alternative is both the material costs and opportunity costs of wasting a fridge full of food.
 
 ## The takeaway
 

@@ -9,6 +9,8 @@ source: original
 date: 2026-10-17
 cuisine: Thai
 draft: false
+prep_time: 15 min
+total_time: 25 min
 ---
 
 A coconut curry noodle soup built on quick-marinated pork (a shortcut to [[Velveting (pork)|velveting]]), lemongrass, and whatever vegetables are on hand. Brown the pork fast and leave it underdone, so it finishes in the soup and stays tender.
