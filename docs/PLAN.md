@@ -1,24 +1,16 @@
 # Plan
 
-Open work only. Finished items are cut, not ticked; git history has them (`git log -- docs/PLAN.md`). Theme work lives in `themes/fugu/PLAN.md`; template changes go to fugu-agent. Work on a single draft page lives in its `working_on` line (`make drafts`), not here.
+Open work only. Finished items are cut, not ticked; git history has them (`git log -- docs/PLAN.md`). Theme work lives in `themes/fugu/PLAN.md`; template changes go to fugu-agent. Work on a single draft page lives in its `working_on` line (`make drafts`), not here. Questions waiting on Bruce live in `docs/REVIEW.md`.
 
 ## Next
 
-- [ ] Cross-link, topical pass (the exact-title pass is done). Candidates: Slick spaghetti → Meat sauce (AKA American bolognese); Chicken sandwich, mall style → Pan-fried chicken burger or the chicken burger essay; Garbage plates → Baked mac & cheese; Chili costing (2022) → Canadian chili, if it's the same chili; Burger night costing (2022) → the burgers blueprint; Flour protein content ← the pizza doughs that add vital wheat gluten; Camp cooking → the foil packets method once it exists.
+- [ ] Cross-link, topical pass (the exact-title pass is done): candidates in `docs/REVIEW.md` §1; add the ones Bruce ticks.
 
 ## Diagrams
 
 Formula diagrams (`FORMAT.md` §Formula diagrams) for Mechanics that already state a ratio. The first batch (twelve pages, today's icons) is reviewed.
 
-**New icons** (`mockups/formula-icons-2.html`, approved 2026-10-17, with its answers: mirin shares the vinegar bottle, MSG uses the salt shaker, no nut icon yet, French dressing draws its 1:1 only). With fugu-agent to add to `assets/icons/formula/` (SVGs in `mockups/formula-icons-2/`). When they land, bump Fugu and draw:
-
-- [ ] Acid: Classic French dressing (oil : lemon 1:1), Greek marinade (1:1), Lemon chicken marinade (1.6:1), Asian slaw dressing (2:1), Sandwich sour pickles (water : vinegar 1.2:1), and the Food ratios dressing and mayo tables.
-- [ ] Soy: Chashu pork (water : soy : mirin 1:1:1), Ramen eggs (1:1:½:½:½), Sweet soy sauce, Teriyaki sauce, Garlic ginger wing sauce (soy : honey : hoisin).
-- [ ] Jar, pickle, mustard: Bruce's burger sauce (1:1:1), Mozza burger sauce.
-- [ ] Lentils: Dal tadka (1:4–5), Coconut lentils (1:3), Basic beans and lentils.
-- [ ] Oats, fruit, sugar: Baked oatmeal, Fruit compote (10:1), Granola bars waits for a second recipe that needs a nut icon.
-- [ ] Pepper, herb: McDouble seasoning (salt : MSG : pepper 4:2:1), Cottage pie (1:1:1:1), Bruce's poultry and pork rub (salt : sugar).
-- [ ] Oven, strainer: the Stock method sequence (roast → extract → lift out → reduce → strain); swap the clock for the oven in Reverse cooking.
+The second batch (eighteen recipes and the stock method, with the fifteen icons from Fugu `1d8dbe6`) is drawn and in review (`docs/REVIEW.md` §2). Still waiting: Teriyaki (state its percentages in the Mechanic first), Granola bars (a nut icon, once a second recipe needs one), and the Food ratios tables (once that method leaves the test kitchen).
 
 Stacks (the exploded layer kit):
 
