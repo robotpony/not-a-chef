@@ -6,7 +6,6 @@ Open work only. Finished items are cut, not ticked; git history has them (`git l
 
 Formula diagrams (`FORMAT.md` §Formula diagrams) for Mechanics that already state a ratio. The second batch is in review (`docs/REVIEW.md`).
 
-- [ ] Teriyaki, once its Mechanic states its percentages.
 - [ ] Granola bars, once a second recipe needs a nut icon.
 - [ ] Food ratios tables, once that method leaves the test kitchen.
 - [ ] Stack diagrams for sandwiches and Vegetarian lasagna, once a build page needs one.
