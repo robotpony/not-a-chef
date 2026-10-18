@@ -2,6 +2,18 @@
 
 Open work only. Finished items are cut, not ticked; git history has them (`git log -- docs/PLAN.md`). Theme work lives in `themes/fugu/PLAN.md` and goes to fugu-agent; after each Fugu change, bump the submodule and check the site renders the same. A single draft's work lives in its `working_on` line (`make drafts`). Questions waiting on Bruce live in `docs/REVIEW.md`.
 
+## Domain move
+
+*Started 2026-10-18.* The site moves from `bruce-loves-to-cook.warpedvisions.org` to `https://bruce-loves-to-cook.ca`. Bruce is setting up DNS and the certificate; nothing below ships until the new domain serves over HTTPS.
+
+- [ ] Bruce: DNS for `bruce-loves-to-cook.ca` (and `www`) points at the server, the certificate covers both, and the web server's vhost serves `remote_path` for the new name.
+- [ ] Check `remote_path` in `tools/config.toml` still matches the vhost root if it moved.
+- [ ] Set `baseURL` in `config/_default/hugo.toml` to `https://bruce-loves-to-cook.ca/`, build, and grep `public/` for the old host (canonical links, `sitemap.xml`, RSS, `index.json`).
+- [ ] Old domain: 301 every path to the same path on the new one, so published links and search results carry over (server config, Bruce's call).
+- [ ] `/publish`, then check the new domain in Chrome: home, a recipe, search, an image, the RSS feed.
+- [ ] Fugu's `exampleSite/content/about.md` links the old domain: fugu-agent's change.
+- [ ] Posts on warpedvisions.org that link the cookbook: the warped agent's change.
+
 ## Diagrams
 
 Formula diagrams (`FORMAT.md` §Formula diagrams) for Mechanics that already state a ratio.
