@@ -7,6 +7,7 @@ tags:
 source: original
 date: 2026-10-17
 draft: false
+prep_time: 15 min
 ---
 Two pork stir fries from one method: lemongrass pork, and sweet ginger and garlic pork. Use a lean, tender cut like pork sirloin tip, which wants a fast cook. There's no deep frying, so both are much lighter than takeout.
 ## Mechanic
