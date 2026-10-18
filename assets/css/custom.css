@@ -506,10 +506,16 @@ li:has(> input[type="checkbox"]:checked) {
   vertical-align: top;
 }
 /* overflow-x does nothing on a table box, so the scrolling happens on the
- * wrapper from themes/fugu/layouts/_default/_markup/render-table.html instead. */
+ * wrapper from themes/fugu/layouts/_default/_markup/render-table.html instead.
+ * A scrolling box clips at its padding edge, and the checkbox column sits
+ * flush against it, so the box's left border and its focus ring were cut
+ * off. The padding gives them room; the matching negative margin keeps
+ * the table where it was. */
 .article-content .table-scroll {
-  max-width: 100%;
+  max-width: calc(100% + 12px);
   overflow-x: auto;
+  padding: 6px;
+  margin: -6px;
 }
 .article-content table :is(th, td) {
   min-width: 5em;
