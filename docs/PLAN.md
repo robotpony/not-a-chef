@@ -4,7 +4,7 @@ Open work only. Finished items are cut, not ticked; git history has them (`git l
 
 ## Diagrams
 
-Formula diagrams (`FORMAT.md` §Formula diagrams) for Mechanics that already state a ratio. The second batch is in review (`docs/REVIEW.md`).
+Formula diagrams (`FORMAT.md` §Formula diagrams) for Mechanics that already state a ratio.
 
 - [ ] Granola bars, once a second recipe needs a nut icon.
 - [ ] Food ratios tables, once that method leaves the test kitchen.
