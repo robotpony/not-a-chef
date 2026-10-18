@@ -15,7 +15,7 @@ That pound of beef would cook down for half an hour or so, not to brown it, but 
 
 A small amount of salt and pepper was added once the beef was cooked, along with a tall pint can of store brand tomato sauce. On a good day, we used Hunt’s, usually after a case lot sale.
 
-We knew that the sauce was done when there was a thick slick of oil on top. By today’s standards this would be unappealing, and today I usually use leaner beef and emulsify the fat into the sauce. But back then, the fat was nutrition and normal, and the calories kept us fed and warm.
+We knew that the sauce was done when there was a thick slick of oil on top. By today’s standards this would be unappealing, and today I usually use leaner beef and [[Meat sauce (AKA American bolognese)|emulsify the fat into the sauce]]. But back then, the fat was nutrition and normal, and the calories kept us fed and warm.
 
 The sauce was then poured over overcooked house brand spaghetti, so that water pooled around it. We stirred it up and it was delicious for a hungry young boy, and it was cheap enough that I always had seconds. Occasionally we had shelf-stable parm to dust on top, which was heaven.
 

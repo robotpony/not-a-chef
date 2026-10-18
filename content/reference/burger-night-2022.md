@@ -6,7 +6,7 @@ tags: [reference, costing, burgers]
 date: 2026-06-08
 ---
 
-Ingredient costs and menu pricing from a home burger night, 2022.
+Ingredient costs and menu pricing from a home [burger night](/methods/burgers/), 2022.
 
 ## Ingredient costs
 

@@ -12,7 +12,7 @@ Some days I just want an easy pizza dough. I don’t want it 3 days from now, I 
 
 ## Mechanic
 
-Every ingredient here is scaled as a **baker's percentage** against the flour weight, so the recipe holds up if you scale it up or down. At 70% hydration it's a medium-hydration dough, and the vital wheat gluten nudges standard Canadian AP flour (13.5% protein) toward bread-flour territory for more chew.
+Every ingredient here is scaled as a **baker's percentage** against the flour weight, so the recipe holds up if you scale it up or down. At 70% hydration it's a medium-hydration dough, and the [[Flour protein content comparison|vital wheat gluten]] nudges standard Canadian AP flour (13.5% protein) toward bread-flour territory for more chew.
 
 ```formula
 flour   | Flour | 100

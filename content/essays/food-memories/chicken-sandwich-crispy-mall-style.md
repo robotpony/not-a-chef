@@ -21,4 +21,4 @@ He's one of the reasons I've never really wanted to open a restaurant. I've work
 
 I still crave that sandwich. The trouble is that my memory of it is fading, and the details I'd need to rebuild it are the ones going first. I know the crust was dark and thick and tasted of corn. I know the chicken was real, and the bun had some chew. I'm less sure about the rest.
 
-So I'm trying to rebuild it, one test at a time. The cornmeal-to-flour ratio, paprika or no paprika, how long it stays in the oil. Taste is a strange kind of memory: I can't describe that sandwich well, but I'm fairly sure I'll know it when I bite into it. Any version I make now will probably be better than his, and also not quite right, until one day it is.
+So I'm trying to [[The impossible quest for the perfect chicken burger|rebuild it]], one test at a time. The cornmeal-to-flour ratio, paprika or no paprika, how long it stays in the oil. Taste is a strange kind of memory: I can't describe that sandwich well, but I'm fairly sure I'll know it when I bite into it. Any version I make now will probably be better than his, and also not quite right, until one day it is.

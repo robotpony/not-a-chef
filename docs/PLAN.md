@@ -2,15 +2,11 @@
 
 Open work only. Finished items are cut, not ticked; git history has them (`git log -- docs/PLAN.md`). Theme work lives in `themes/fugu/PLAN.md`; template changes go to fugu-agent. Work on a single draft page lives in its `working_on` line (`make drafts`), not here. Questions waiting on Bruce live in `docs/REVIEW.md`.
 
-## Next
-
-- [ ] Cross-link, topical pass (the exact-title pass is done): candidates in `docs/REVIEW.md` §1; add the ones Bruce ticks.
-
 ## Diagrams
 
 Formula diagrams (`FORMAT.md` §Formula diagrams) for Mechanics that already state a ratio. The first batch (twelve pages, today's icons) is reviewed.
 
-The second batch (eighteen recipes and the stock method, with the fifteen icons from Fugu `1d8dbe6`) is drawn and in review (`docs/REVIEW.md` §2). Still waiting: Teriyaki (state its percentages in the Mechanic first), Granola bars (a nut icon, once a second recipe needs one), and the Food ratios tables (once that method leaves the test kitchen).
+The second batch (eighteen recipes and the stock method, with the fifteen icons from Fugu `1d8dbe6`) is drawn and in review (`docs/REVIEW.md`). Still waiting: Teriyaki (state its percentages in the Mechanic first), Granola bars (a nut icon, once a second recipe needs one), and the Food ratios tables (once that method leaves the test kitchen).
 
 Stacks (the exploded layer kit):
 
@@ -20,7 +16,7 @@ Stacks (the exploded layer kit):
 
 Spec: `docs/METHODS.md`.
 
-- [ ] New method: foil packets (from Camp cooking).
+- [ ] New method: foil packets (from Camp cooking); then link Camp cooking to it.
 - [ ] Timeline flags: non-food context markers (Burger King opens, a world's fair). Decide body vs `flags` frontmatter, mock in `mockups/methods-pages.html`, hand off to fugu-agent.
 
 ## Fugu follow-through

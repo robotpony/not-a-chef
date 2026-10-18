@@ -11,4 +11,4 @@ Dad would start by heating a few tablespoons of margarine in a tiny, janky alumi
 
 He served the macaroni with canned brown beans, which he spiced up with mustard and pepper, along with sliced wieners. He served the beans on the side, which I would immediately mix in with the mac as soon as the bowl hit the table. I would add generic branded catsup and preground black pepper, and would devour the bowl in a few minutes.
 
-I still make macaroni and cheese, with baked beans and sausage. My kids call it a garbage plate, and it has always been one of their favourite comfort meals. I think of my father every time I make it, and even now it brings equal parts joy and sadness. He tried so hard.
+I still make [[Baked mac & cheese|macaroni and cheese]], with baked beans and sausage. My kids call it a garbage plate, and it has always been one of their favourite comfort meals. I think of my father every time I make it, and even now it brings equal parts joy and sadness. He tried so hard.

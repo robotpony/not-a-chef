@@ -6,7 +6,7 @@ tags: [reference, costing, chili]
 date: 2026-06-08
 ---
 
-Cost breakdown for a large batch of chili. Total yield: 9.5L, 38 portions at 250ml each.
+Cost breakdown for a large batch of [[Canadian chili|chili]]. Total yield: 9.5L, 38 portions at 250ml each.
 
 ## Ingredient costs
 
