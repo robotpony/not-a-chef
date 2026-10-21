@@ -9,7 +9,7 @@ Two goulash tests: a first-principles pork version on the 14th that came out bet
 ### Recipe hunt  #todo #p0
 
 - [x] Vegetarian patty (peas, beans, potato, etc.) find a pattern here [[Veg patties]] #todone @2026-10-06
-- [ ] Cornmeal-breaded chicken patty → *this needs research*
+- [x] Cornmeal-breaded chicken patty → *this needs research* [[Cornmeal fried chicken]] #todone @2026-10-21
 
 
 ### Bruce loves to cook site #todo 

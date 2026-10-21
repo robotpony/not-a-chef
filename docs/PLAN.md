@@ -42,4 +42,4 @@ Formula diagrams (`FORMAT.md` §Formula diagrams) for Mechanics that already sta
 
 ## Deferred
 
-- [ ] Publish `mockups/` as a static subfolder (which mocks, how linked, kept out of search).
+- [x] Publish `mockups/` as a static subfolder (which mocks, how linked, kept out of search). #focus

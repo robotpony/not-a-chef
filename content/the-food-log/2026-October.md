@@ -4,6 +4,20 @@ date: 2026-10-01
 ---
 Early October is mostly trip notes: a tabbouleh worth learning, a subtly sweet red cabbage, an onion jam on a double smash burger, and a German dinner of roulade and pork tenderloin with apple.  Plus all of the Hawaii treats we have grown to love.
 
+## Week of Sunday, October 18th
+
+### Recipes to research #todo 
+
+- [ ] A method for pan sauces, diagrams, etc.
+- [ ] Pickled ginger!
+- [ ] Soy sauce recipe (for dipping), with bonito ← ratio?
+- [ ] Cornmeal fried chicken, a candidate for the dark, mealy, crunchy breading: [[Cornmeal fried chicken]] (test the pan-fry and the oven version)
+
+### Food wishes #ideas 
+
+- [ ] Dal (looser than I make)
+- [ ] Cauli curry (orange sauce)
+
 ## Week of Friday, October 16th
 
 ### Old warped food posts #p0
@@ -16,7 +30,7 @@ Early October is mostly trip notes: a tabbouleh worth learning, a subtly sweet r
 - add cheesey pasta (one pan) build or recipe 
 - research "national dish" dishes and consider adding (ramen, pizza, mole, tapas, [pot au feu](https://www.seriouseats.com/classic-pot-au-feu-french-boiled-beef-and-vegetables), borsch, pasta al pomodoro, rice, meze)
 
-### On the list:
+### Food wishes #ideas
 
 - oh-no with cocunut cream cerveche
 - bananas (Apple bananas, ice cream bananas) → delicious
