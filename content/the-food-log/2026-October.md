@@ -12,6 +12,7 @@ Early October is mostly trip notes: a tabbouleh worth learning, a subtly sweet r
 - [ ] Pickled ginger!
 - [ ] Soy sauce recipe (for dipping), with bonito ← ratio?
 - [ ] Cornmeal fried chicken, a candidate for the dark, mealy, crunchy breading: [[Cornmeal fried chicken]] (test the pan-fry and the oven version)
+- [ ] Muesli → better recipe, something like HAL 
 
 ### Food wishes #ideas 
 
