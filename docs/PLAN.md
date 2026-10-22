@@ -23,7 +23,7 @@ Formula diagrams (`FORMAT.md` §Formula diagrams) for Mechanics that already sta
 
 *Started 2026-10-22.* Two Markdown tools from the w42 theme (warpedvisions.org), shared so a block works the same on both sites. The w42 theme agent owns the spec and reference hook; fugu-agent ports them into Fugu (no shared files).
 
-- [ ] ```` ```timeline ```` fence: waiting on the w42 spec path. Cookbook needs sent 2026-10-22: labels via `RenderString` so wiki links work, decade ticks, narrow-screen list, namespaced classes (our lineage owns `.timeline` / `.tl-*`), room for decade and range entries later. Then hand to fugu-agent.
+- [ ] ```` ```timeline ```` fence: spec settled at `~/projects/sites/w42/themes/w42/docs/timeline.md` (w42 commit 0b5727a); reference hook `layouts/_default/_markup/render-codeblock-timeline.html`, CSS `assets/css/common/timeline.css` in the w42 theme. It covers all the cookbook's needs, and its `.tline-*` classes don't collide with our `.tl-*` lineage. Next: hand to fugu-agent to port (not running 2026-10-22), then map colours in `custom.css` and bump the submodule. Decades, ranges, and months are reserved forms; extending them needs both sites to agree.
 - [ ] Tabs: wait for the fenced microformat, not the `{{< tabs >}}` shortcode (noise in Obsidian). First use: a recipe's method beside its variation, like pan-fry and oven on Cornmeal fried chicken.
 
 ## Fugu follow-through
