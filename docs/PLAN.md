@@ -19,6 +19,13 @@ Formula diagrams (`FORMAT.md` §Formula diagrams) for Mechanics that already sta
 - [ ] Food ratios tables, once that method leaves the test kitchen.
 - [ ] Stack diagrams for sandwiches and Vegetarian lasagna, once a build page needs one.
 
+## Shared post tools with warpedvisions
+
+*Started 2026-10-22.* Two Markdown tools from the w42 theme (warpedvisions.org), shared so a block works the same on both sites. The w42 theme agent owns the spec and reference hook; fugu-agent ports them into Fugu (no shared files).
+
+- [ ] ```` ```timeline ```` fence: waiting on the w42 spec path. Cookbook needs sent 2026-10-22: labels via `RenderString` so wiki links work, decade ticks, narrow-screen list, namespaced classes (our lineage owns `.timeline` / `.tl-*`), room for decade and range entries later. Then hand to fugu-agent.
+- [ ] Tabs: wait for the fenced microformat, not the `{{< tabs >}}` shortcode (noise in Obsidian). First use: a recipe's method beside its variation, like pan-fry and oven on Cornmeal fried chicken.
+
 ## Fugu follow-through
 
 - [ ] For fugu-agent, from the `layouts/` review (no session was running to send them to):
