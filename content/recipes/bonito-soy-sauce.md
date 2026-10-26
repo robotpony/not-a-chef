@@ -1,6 +1,9 @@
 ---
 title: Bonito soy sauce
-tags: [sauces, condiments, make-ahead]
+tags:
+  - sauces
+  - condiments
+  - make-ahead
 source: a sushi chef
 date: 2026-10-26
 cuisine: Japanese
@@ -11,11 +14,6 @@ cook_time: 5 min
 total_time: 40 min
 aka:
 description: Soy sauce and mirin steeped with bonito flakes, for dipping sushi.
-# A new recipe starts in the test kitchen: published, with a banner saying
-# it's still changing. Delete `draft` when it's a keeper.
-draft: true
-# One line on what's being tried next, shown under the banner.
-working_on: First batch; testing a short steep against an overnight one.
 ---
 We discovered this dipping sauce on our travels recently: it adds a subtle, smoky depth to any sushi, and can be used over rice.
 ## Mechanic

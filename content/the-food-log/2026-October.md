@@ -2,7 +2,7 @@
 title: October 2026
 date: 2026-10-01
 ---
-Early October is mostly trip notes: a tabbouleh worth learning, a subtly sweet red cabbage, an onion jam on a double smash burger, and a German dinner of roulade and pork tenderloin with apple.  Plus all of the Hawaii treats we have grown to love.
+October trip notes: a tabbouleh worth learning, a subtly sweet red cabbage, an onion jam on a double smash burger, and a German dinner of roulade and pork tenderloin with apple.  Plus all of the Hawaii treats we have grown to love, and several other dishes we discovered.
 
 ## Week of Sunday, October 18th
 
