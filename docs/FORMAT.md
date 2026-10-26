@@ -276,6 +276,10 @@ Use yellow split peas instead of masoor ...
 | 2 whole chickens | 30 min | 20 min |
 ```
 
+### Keeping a section in the article
+
+Mechanic, To serve, Variations, Equipment, and Notes move to the recipe sidebar. To promote one, or any section, into the article where it's written, add `{.article}` to its `##` heading: `## Breading {.article}`. A marked section is never read as ingredients, never moves, and is never hidden, whatever its title. Hugo drops the marker from the page; Obsidian shows it. Use it rarely, for a section the cook needs in the reading flow, like the breading steps on [[Cornmeal fried chicken]].
+
 ### Formula diagrams
 
 A ratio stated in the text can also be drawn: a `formula` fenced block, one slot per line, `icon | label | quantity | swaps`, with the operator at the start of every line after the first.
