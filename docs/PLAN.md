@@ -27,6 +27,15 @@ Formula diagrams (`FORMAT.md` §Formula diagrams) for Mechanics that already sta
 - [ ] ```` ```flow ```` fence (a step-by-step row, no icons): spec at `~/projects/sites/w42/themes/w42/docs/flow.md` (w42 commit 8fd6d77, with parallel `row:` rows; implementation 4f395ab); hook `render-codeblock-flow.html`, CSS `assets/css/common/flow.css`, classes `.flow-*`. Port only when a page needs one; likely first uses are side-by-side rows, like conventional vs reverse sear or pan vs oven fried chicken. A formula `→` sequence becomes a flow by dropping its icon column.
 - [ ] Tabs: wait for the fenced microformat, not the `{{< tabs >}}` shortcode (noise in Obsidian). First use: a recipe's method beside its variation, like pan-fry and oven on Cornmeal fried chicken.
 
+## Standard diagram fences
+
+*Queued 2026-10-26, later work.* One diagramming technique that other sites (warpedvisions.org, Scorekeep) can use: a clear spec and tools, owned here. This moves spec ownership from the w42 theme (see "Shared post tools" above) to this repo. Coordinate with warped-agent (timeline, flow, tabs) and the Scorekeep content agent (its proposed ```` ```table ```` fence for card and score tables, read by both its iOS app and Hugo).
+
+- [ ] Gather each site's fences and needs from warped-agent and Scorekeep, alongside our `formula` and `stack`.
+- [ ] Write the shared spec: rows (pipe columns by position, `key: value` trailer lines), naming a block instance (`{name="…"}` attribute vs none), token columns (icon keys), bad-line handling (warn and skip, never fail the build), and backward-compatible extension.
+- [ ] Tools: a validator any site can run on its Markdown, replacing the build-time `warnf` checks and `/lint` item 5 as the source of truth, plus reference hooks to port.
+- [ ] Decide where the spec lives (in this repo or in Fugu) and how w42 and Scorekeep point at it; move `timeline.md` and `flow.md` across.
+
 ## Fugu follow-through
 
 - [ ] For fugu-agent, from the `layouts/` review (no session was running to send them to):
