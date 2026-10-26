@@ -69,7 +69,8 @@ Formula diagrams (`docs/fences/formula.md`) for Mechanics that already state a r
 - [ ] w42 replaces `themes/w42/docs/timeline.md` and `flow.md` with pointers to the spec's final home (waiting on the home decision).
 - [x] Scorekeep's pages: `table.md`, `reminders.md`, `placeholders.md` (drafted by the Scorekeep content agent, 2026-10-26).
 - [ ] Fugu's `docs/recipe-format.md` and `docs/features.md` point at `formula.md` and `stack.md` (fugu-agent).
-- [ ] Decide the spec's long-term home: stay here, its own repo, or warped.js.
+- [x] Home decided (Bruce, 2026-10-26): `~/projects/sites/hugo-warped`, owned by the hugo-warped agent, with scope wider than fences (the shared Markdown dialect and the Hugo plumbing that reads it). Handed off with branch `fences-export` (docs/fences history).
+- [ ] Once hugo-warped confirms the path: `docs/fences/` becomes a pointer, and CLAUDE.md, FORMAT.md, DESIGN.md and `/lint` point there; delete the `fences-export` branch; tell warped-agent and the Scorekeep content agent the path.
 
 ## Fugu follow-through
 
