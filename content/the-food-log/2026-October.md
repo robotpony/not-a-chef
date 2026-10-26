@@ -10,7 +10,7 @@ Early October is mostly trip notes: a tabbouleh worth learning, a subtly sweet r
 
 - [ ] A diagrammed method for pan sauces, diagrams, etc.
 - [x] Fresh pickled ginger! #focus 
-- [ ] Soy sauce recipe (for dipping), with bonito ← ratio?
+- [x] Soy sauce recipe (for dipping), with bonito ← ratio? [[Bonito soy sauce]]
 - [ ] Cornmeal fried chicken, a candidate for the dark, mealy, crunchy breading: [[Cornmeal fried chicken]] (test the pan-fry and the oven version)
 - [ ] Muesli → better recipe, something like HAL 
 - [ ] Knotty irishman: baileys frangelico, dead rabbit whisky, coffee, cream, nutmeg

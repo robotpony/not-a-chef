@@ -1,7 +1,7 @@
 ---
 title: Bonito soy sauce
 tags: [sauces, condiments, make-ahead]
-source:
+source: a sushi chef
 date: 2026-10-26
 cuisine: Japanese
 servings:
@@ -17,7 +17,7 @@ draft: true
 # One line on what's being tried next, shown under the banner.
 working_on: First batch; testing a short steep against an overnight one.
 ---
-
+We discovered this di
 ## Mechanic
 
 The base is **5 parts soy sauce to 3 parts mirin**. Boil the mirin first to cook off its alcohol, then only warm the soy; a hard boil dulls its flavour. The bonito steeps off the heat, like tea: a short steep gives a light, savoury sauce, and a full day gives a deeper smokiness.
@@ -57,3 +57,4 @@ As a dipping sauce for sushi and sashimi, with [[Pickled ginger (gari)]] on the 
 - Keeps in the fridge for up to 2 weeks.
 - Close to nikiri (the sweetened soy sauce brushed onto sushi) and tosa shoyu (soy sauce seasoned with bonito).
 - Halve the recipe for a smaller bottle; the ratio holds.
+- Adapted from a recipe a sushi chef shared with me.

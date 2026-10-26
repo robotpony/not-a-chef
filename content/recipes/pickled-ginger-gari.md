@@ -4,7 +4,7 @@ tags:
   - condiments
   - make-ahead
   - vegan
-source:
+source: a sushi chef
 date: 2026-10-26
 cuisine: Japanese
 servings:
