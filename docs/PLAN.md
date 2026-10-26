@@ -6,14 +6,14 @@ Open work only. Finished items are cut, not ticked; git history has them (`git l
 
 *Started 2026-10-18.* The site moves from `bruce-loves-to-cook.warpedvisions.org` to `https://bruce-loves-to-cook.ca`. Live and published 2026-10-18 (`deploy-2026-10-18`): DNS, certificate, `www` and old-domain 301s, new `baseURL`.
 
-- [ ] Bruce: keep the old domain's certificate renewing (current one ends 2026-12-23), or HTTPS visitors to old links hit a warning before the redirect.
+- [x] Bruce: keep the old domain's certificate renewing (current one ends 2026-12-23), or HTTPS visitors to old links hit a warning before the redirect.
 - [ ] Bruce: add the site to Google Search Console as a Domain property for `bruce-loves-to-cook.ca` (verified by a DNS TXT record; it covers `www` and `http` too), then submit `https://bruce-loves-to-cook.ca/sitemap.xml`. After the publish, so the sitemap carries the new domain. The old domain was never added, so there's no change of address to file.
 - [ ] Fugu's `exampleSite/content/about.md` links the old domain: fugu-agent's change.
 - [ ] Posts on warpedvisions.org that link the cookbook: the warped agent's change.
 
 ## Diagrams
 
-Formula diagrams (`FORMAT.md` §Formula diagrams) for Mechanics that already state a ratio.
+Formula diagrams (`docs/fences/formula.md`) for Mechanics that already state a ratio.
 
 - [ ] Granola bars, once a second recipe needs a nut icon.
 - [ ] Food ratios tables, once that method leaves the test kitchen.
@@ -27,17 +27,21 @@ Formula diagrams (`FORMAT.md` §Formula diagrams) for Mechanics that already sta
 - [ ] ```` ```flow ```` fence (a step-by-step row, no icons): spec at `~/projects/sites/w42/themes/w42/docs/flow.md` (w42 commit 8fd6d77, with parallel `row:` rows; implementation 4f395ab); hook `render-codeblock-flow.html`, CSS `assets/css/common/flow.css`, classes `.flow-*`. Port only when a page needs one; likely first uses are side-by-side rows, like conventional vs reverse sear or pan vs oven fried chicken. A formula `→` sequence becomes a flow by dropping its icon column.
 - [ ] Tabs: wait for the fenced microformat, not the `{{< tabs >}}` shortcode (noise in Obsidian). First use: a recipe's method beside its variation, like pan-fry and oven on Cornmeal fried chicken.
 
-## Standard diagram fences
+## Standard diagram fences #focus
 
 *Started 2026-10-26.* One diagramming technique that other sites (warpedvisions.org, Scorekeep) can use: a clear spec and tools, owned here. This moves spec ownership from the w42 theme (see "Shared post tools" above) to this repo. Coordinate with warped-agent (timeline, flow, tabs) and the Scorekeep content agent (`table`, `reminders`, and its placeholder fences). The draft is `docs/fences/README.md`; its open items are listed at its end.
 
 - [x] Gather each site's fences and needs from warped-agent and Scorekeep, alongside our `formula` and `stack` (2026-10-26).
 - [x] Draft the shared spec: kinds (diagram, data, placeholder), line grammar, cells and tokens, attributes (`name` unique per file, `draw`, `class`), bad lines, fallback, project extensions, extending a type (`docs/fences/README.md`).
-- [ ] Bruce reviews the draft (`docs/REVIEW.md`).
+- [ ] Bruce reviews the draft (its own `## Review #todo` block).
 - [ ] Tabs fence: design it (nested fences are the hard case), then w42's theme agent and fugu-agent build it.
 - [ ] w42: a block with no valid lines shows its source instead of nothing (for warped-agent and the w42 theme agent once the draft is approved).
 - [ ] Tools: a validator any site can run on its Markdown, replacing the build-time `warnf` checks and `/lint` item 5 as the source of truth, plus reference hooks to port.
-- [ ] Decide whether the type pages move here (w42's `timeline.md` and `flow.md`, `FORMAT.md`'s formula and stack sections), and point w42 and Scorekeep at `docs/fences/`.
+- [x] Every type's page in `docs/fences/` (Bruce, 2026-10-26): `timeline.md` and `flow.md` copied from w42, `formula.md` and `stack.md` moved out of `FORMAT.md`.
+- [ ] w42 replaces `themes/w42/docs/timeline.md` and `flow.md` with pointers here (warped-agent, then the w42 theme agent).
+- [ ] Scorekeep writes `table.md`, `reminders.md` and the placeholder pages here (Scorekeep content agent).
+- [ ] Fugu's `docs/recipe-format.md` and `docs/features.md` point at `formula.md` and `stack.md` (fugu-agent).
+- [ ] Decide the spec's long-term home: stay here, its own repo, or warped.js.
 
 ## Fugu follow-through
 

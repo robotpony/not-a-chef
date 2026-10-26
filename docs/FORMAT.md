@@ -282,23 +282,7 @@ Mechanic, To serve, Variations, Equipment, and Notes move to the recipe sidebar.
 
 ### Formula diagrams
 
-A ratio stated in the text can also be drawn: a `formula` fenced block, one slot per line, `icon | label | quantity | swaps`, with the operator at the start of every line after the first.
-
-````markdown
-```formula
-can          | Beans   | 1 can         | black, pinto, chickpea
-+ bowl       | Starch  | 1 cup         | rice, mash, quinoa
-+ crumbs egg | Binder  | ½ cup + 1 egg | or gluten + oats
-= patty      | Patties | 6
-```
-````
-
-- One operator per block: `+` (parts that go together), `:` (a ratio; the quantity is the ratio number), or `→` (the shape of a method; a quantity that isn't a number prints as an italic note). `->` is accepted for `→`. An optional last `=` line names the result.
-- Icons are keys from `assets/icons/formula/`, one or two per slot. An unknown key renders a placeholder and warns. A new icon file doesn't show in a running `/preview` until the server restarts; it keeps the placeholder it cached. Labels are one short word. Swaps are optional, up to three, comma-separated. Keep it to five slots.
-- Optional trailing lines: `caption: <text>`, and `bar: yes` for a ratio's proportion bar.
-- The diagram illustrates the sentence; it MUST NOT replace it. Only draw a ratio the text already states.
-
-It renders at build time (`render-codeblock-formula.html`) as a row of icons, compact in the recipe sidebar where Mechanic sits. In Obsidian it reads as plain text.
+A ratio stated in the text can also be drawn: a `formula` fenced block, one slot per line, `icon | label | quantity | swaps`, with an operator (`+`, `:` or `→`) starting every line after the first. It goes in `## Mechanic`, illustrates the sentence, and MUST NOT replace it. The full spec is `docs/fences/formula.md`; every fence type's is in `docs/fences/`.
 
 ## Essays
 
@@ -359,24 +343,7 @@ Recipes carry no blueprint fields; the method lists them.
 
 ### Stack diagrams
 
-A build made of layers (a burger, a sandwich, a lasagne) can be drawn as an exploded view: a `stack` fenced block, one layer per line, top first, `layer | label | role`.
-
-````markdown
-```stack
-bun-top    | Toasted bun       | soft, toasted
-lettuce-shredded | Shredded lettuce | cold crunch
-patty-thin | Thin patty, 140 g | salt, fat, savoury
-bun-base   | Toasted bun       | barrier
-```
-````
-
-- Layers are keys from Fugu's `assets/icons/layers/` (the full list is in Fugu's `docs/recipe-format.md`, "Stack diagrams"; drawn in `mockups/exploded-builds.html` and exported with `mockups/export-layers.mjs`). An unknown key draws a dashed placeholder and warns during the build.
-- The label says what the layer is, with the pick's quantity when there is one; the role says what it does for the whole. Keep both short.
-- Patties are griddled unless the key says `-grilled`; only a grilled patty shows grill marks.
-- Optional lines: `caption: <text>`, and `repeat: <from>-<to> x<n>` to mark layers as repeated (`repeat: 3-5 x3` draws a `× 3` bracket beside layers 3 to 5; `×` works for `x`, a single layer works, as in `repeat: 4 x2`, and a block can have several `repeat:` lines).
-- On a build page the first `stack` block goes under `## Picks`, and a small unlabelled copy goes on the build's card on its blueprint page. Its layers MUST follow the picks. In Obsidian it reads as plain text.
-- Pick the layer that matches the label: `lettuce` is a single leaf, `lettuce-shredded` a heap of shreds.
-- A build that isn't layered (a one-pan pasta) has no `stack` block, and its card goes without a drawing.
+A build made of layers (a burger, a sandwich, a lasagne) can be drawn as an exploded view: a `stack` fenced block, one layer per line, top first, `layer | label | role`. On a build page the first `stack` block goes under `## Picks`, and its layers MUST follow the picks. A build that isn't layered (a one-pan pasta) has no `stack` block, and its card goes without a drawing. The full spec is `docs/fences/stack.md`.
 
 ## Reference pages and the Food Log
 

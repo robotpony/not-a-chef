@@ -21,7 +21,7 @@ See `docs/FORMAT.md` for the full specification. Key points:
 - Multi-component recipes: one `## ComponentName` heading per component, each containing its ingredients list and prose method
 - Optional sections: `## To serve`, `## Variations`, `## Notes`
 - Cross-references use wiki links: `[[Pizza sauce]]`, `[[Basic pie crust]]`
-- Optional ```` ```formula ```` block draws a stated ratio as a row of icons (`docs/FORMAT.md` §Formula diagrams); it illustrates the sentence, never replaces it
+- Optional ```` ```formula ```` block draws a stated ratio as a row of icons (`docs/fences/formula.md`); it illustrates the sentence, never replaces it
 - Canadian English; metric units with optional imperial in parentheses
 
 ## Content sources
