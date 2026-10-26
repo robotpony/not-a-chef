@@ -1,4 +1,4 @@
-theme = ["fugu", "blowfish"]
+theme = ["fugu", "hugo-warped", "blowfish"]
 baseURL = "https://bruce-loves-to-cook.ca/"
 defaultContentLanguage = "en"
 enableRobotsTXT = true

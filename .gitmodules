@@ -6,3 +6,7 @@
 	path = themes/fugu
 	url = https://github.com/robotpony/hugo-theme-fugu.git
 	branch = main
+[submodule "themes/hugo-warped"]
+	path = themes/hugo-warped
+	url = https://github.com/robotpony/hugo-warped
+	branch = main
