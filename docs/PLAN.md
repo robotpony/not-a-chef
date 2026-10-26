@@ -29,12 +29,15 @@ Formula diagrams (`FORMAT.md` §Formula diagrams) for Mechanics that already sta
 
 ## Standard diagram fences
 
-*Queued 2026-10-26, later work.* One diagramming technique that other sites (warpedvisions.org, Scorekeep) can use: a clear spec and tools, owned here. This moves spec ownership from the w42 theme (see "Shared post tools" above) to this repo. Coordinate with warped-agent (timeline, flow, tabs) and the Scorekeep content agent (its proposed ```` ```table ```` fence for card and score tables, read by both its iOS app and Hugo).
+*Started 2026-10-26.* One diagramming technique that other sites (warpedvisions.org, Scorekeep) can use: a clear spec and tools, owned here. This moves spec ownership from the w42 theme (see "Shared post tools" above) to this repo. Coordinate with warped-agent (timeline, flow, tabs) and the Scorekeep content agent (`table`, `reminders`, and its placeholder fences). The draft is `docs/fences/README.md`; its open items are listed at its end.
 
-- [ ] Gather each site's fences and needs from warped-agent and Scorekeep, alongside our `formula` and `stack`.
-- [ ] Write the shared spec: rows (pipe columns by position, `key: value` trailer lines), naming a block instance (`{name="…"}` attribute vs none), token columns (icon keys), bad-line handling (warn and skip, never fail the build), and backward-compatible extension.
+- [x] Gather each site's fences and needs from warped-agent and Scorekeep, alongside our `formula` and `stack` (2026-10-26).
+- [x] Draft the shared spec: kinds (diagram, data, placeholder), line grammar, cells and tokens, attributes (`name` unique per file, `draw`, `class`), bad lines, fallback, project extensions, extending a type (`docs/fences/README.md`).
+- [ ] Bruce reviews the draft (`docs/REVIEW.md`).
+- [ ] Tabs fence: design it (nested fences are the hard case), then w42's theme agent and fugu-agent build it.
+- [ ] w42: a block with no valid lines shows its source instead of nothing (for warped-agent and the w42 theme agent once the draft is approved).
 - [ ] Tools: a validator any site can run on its Markdown, replacing the build-time `warnf` checks and `/lint` item 5 as the source of truth, plus reference hooks to port.
-- [ ] Decide where the spec lives (in this repo or in Fugu) and how w42 and Scorekeep point at it; move `timeline.md` and `flow.md` across.
+- [ ] Decide whether the type pages move here (w42's `timeline.md` and `flow.md`, `FORMAT.md`'s formula and stack sections), and point w42 and Scorekeep at `docs/fences/`.
 
 ## Fugu follow-through
 
