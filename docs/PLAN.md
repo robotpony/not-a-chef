@@ -39,7 +39,7 @@ Formula diagrams (`docs/fences/formula.md`) for Mechanics that already state a r
 - [ ] Tools: a validator any site can run on its Markdown, replacing the build-time `warnf` checks and `/lint` item 5 as the source of truth, plus reference hooks to port.
 - [x] Every type's page in `docs/fences/` (Bruce, 2026-10-26): `timeline.md` and `flow.md` copied from w42, `formula.md` and `stack.md` moved out of `FORMAT.md`.
 - [ ] w42 replaces `themes/w42/docs/timeline.md` and `flow.md` with pointers here (warped-agent, then the w42 theme agent).
-- [ ] Scorekeep writes `table.md`, `reminders.md` and the placeholder pages here (Scorekeep content agent).
+- [x] Scorekeep's pages: `table.md`, `reminders.md`, `placeholders.md` (drafted by the Scorekeep content agent, 2026-10-26).
 - [ ] Fugu's `docs/recipe-format.md` and `docs/features.md` point at `formula.md` and `stack.md` (fugu-agent).
 - [ ] Decide the spec's long-term home: stay here, its own repo, or warped.js.
 
