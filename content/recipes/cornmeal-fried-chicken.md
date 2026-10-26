@@ -26,16 +26,6 @@ caption: By volume, for the dredge
 bar: yes
 ```
 
-The breading goes soak, dredge, rest, fry. The buttermilk soak does two jobs: its acid and salt season and tenderize the meat, and its thickness leaves a tacky surface for the dredge to grab. A 10-minute rest after dredging lets the coating turn pasty so it holds in the fat. In the pan, cover partway through so the pieces steam through to the bone, then uncover so the crust dries and crisps again.
-
-```formula
-chicken buttermilk | Soak   | 4 hours to overnight
-→ cornmeal flour   | Dredge | press it on
-→ clock            | Rest   | 10 min
-→ pan flame        | Fry    | covered, then uncovered
-caption: The breading, start to finish
-```
-
 ## Ingredients
 
 - 500 ml (2 cups) buttermilk
@@ -64,6 +54,18 @@ Melt the shortening in a large, deep frying pan or Dutch oven over medium-high h
 Turn the pieces with tongs, cover the pan, and cook 10 minutes. Uncover, turn again, and fry until the crust is crisp and dark golden, about 10 minutes more. Breasts are done at 70°C (160°F), thighs and drumsticks at 80°C (175°F).
 
 Drain on a rack set over a baking sheet.
+
+## Breading steps
+
+The breading goes soak, dredge, rest, fry. The buttermilk soak does two jobs: its acid and salt season and tenderize the meat, and its thickness leaves a tacky surface for the dredge to grab. A 10-minute rest after dredging lets the coating turn pasty so it holds in the fat. In the pan, cover partway through so the pieces steam through to the bone, then uncover so the crust dries and crisps again.
+
+```formula
+chicken buttermilk | Soak   | 4 hours to overnight
+→ cornmeal flour   | Dredge | press it on
+→ clock            | Rest   | 10 min
+→ pan flame        | Fry    | covered, then uncovered
+caption: The breading, start to finish
+```
 
 ## To serve
 
