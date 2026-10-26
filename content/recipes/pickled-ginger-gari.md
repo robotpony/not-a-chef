@@ -54,5 +54,5 @@ With sushi, or alongside rice bowls and grilled fish.
 
 - Apple cider or white wine vinegar can stand in for rice vinegar.
 - With mature ginger, peel off the tougher skin and slice across the fibre instead of along it.
-- Link a konbu dashi recipe once there is one. #todo
+- Konbu dashi is a Japanese stock made by soaking konbu (kelp) in water for at least 3 hours.
 - Add the source this was adapted from. #todo
