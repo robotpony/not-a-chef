@@ -17,7 +17,24 @@ working_on: "First test: does salting the buttermilk and adding baking powder gi
 I'm currently working on this recipe to fulfill a food memory. It's a WIP and very untested.
 ## Mechanic
 
-**Equal parts cornmeal and flour** by volume. The flour sticks to the wet buttermilk and holds the coating on; the cornmeal stays in coarse grains that fry into a dark, gritty crunch. The buttermilk soak does two jobs: its acid and salt season and tenderize the meat, and its thickness leaves a tacky surface for the dredge to grab. In the pan, cover partway through so the pieces steam through to the bone, then uncover so the crust dries and crisps again.
+**Equal parts cornmeal and flour** by volume. The flour sticks to the wet buttermilk and holds the coating on; the cornmeal stays in coarse grains that fry into a dark, gritty crunch.
+
+```formula
+cornmeal | Cornmeal | 1
+: flour  | Flour    | 1
+caption: By volume, for the dredge
+bar: yes
+```
+
+The breading goes soak, dredge, rest, fry. The buttermilk soak does two jobs: its acid and salt season and tenderize the meat, and its thickness leaves a tacky surface for the dredge to grab. A 10-minute rest after dredging lets the coating turn pasty so it holds in the fat. In the pan, cover partway through so the pieces steam through to the bone, then uncover so the crust dries and crisps again.
+
+```formula
+chicken buttermilk | Soak   | 4 hours to overnight
+→ cornmeal flour   | Dredge | press it on
+→ clock            | Rest   | 10 min
+→ pan flame        | Fry    | covered, then uncovered
+caption: The breading, start to finish
+```
 
 ## Ingredients
 
