@@ -1,26 +1,32 @@
 ---
 title: Pickled ginger (gari)
-tags: [condiments, make-ahead, vegan]
+tags:
+  - condiments
+  - make-ahead
+  - vegan
 source:
 date: 2026-10-26
 cuisine: Japanese
 servings:
 portions: about 300 g (one jar)
-prep_time: 30 min
+prep_time: 10 min
 cook_time: 5 min
-total_time:
+total_time: 3.5 hours
 aka: gari
 description: Young ginger, shaved thin, blanched, and pickled in hot amazu.
-# A new recipe starts in the test kitchen: published, with a banner saying
-# it's still changing. Delete `draft` when it's a keeper.
-draft: true
-# One line on what's being tried next, shown under the banner.
-working_on: First batch with young ginger; checking slice thickness and sweetness.
+draft: false
 ---
 
 ## Mechanic
 
-Thin slices and a hot pickle do the work. Shave the ginger **0.5 mm (1/64 in), never more than 1 mm**, so it turns tender instead of fibrous. A one-minute blanch and the hot amazu poured over both soften the ginger's bite. Young ginger has pink tips that tint the whole jar pale pink in the vinegar; mature ginger stays yellow.
+Thin slices and a hot pickle do the work. Shave the ginger **0.5 mm (1/64 in), never more than 1 mm**, so it turns tender instead of fibrous. A one-minute blanch and the hot amazu poured over both soften the ginger's bite. Young ginger has pink tips that tint the whole jar pale pink in the vinegar; mature ginger stays yellow. The amazu is **equal parts konbu dashi and rice vinegar**, sweetened with 5 tbsp sugar per 240 ml (1 cup) of liquid.
+
+```formula
+water     | Dashi   | 1
+: vinegar | Vinegar | 1
+caption: Amazu, by volume; 5 tbsp sugar per 240 ml
+bar: yes
+```
 
 ## Ginger
 
@@ -55,4 +61,4 @@ With sushi, or alongside rice bowls and grilled fish.
 - Apple cider or white wine vinegar can stand in for rice vinegar.
 - With mature ginger, peel off the tougher skin and slice across the fibre instead of along it.
 - Konbu dashi is a Japanese stock made by soaking konbu (kelp) in water for at least 3 hours.
-- Add the source this was adapted from. #todo
+- Adapted from a recipe told to me by a kind sushi chef
