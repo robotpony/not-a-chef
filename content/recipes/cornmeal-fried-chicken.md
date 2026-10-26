@@ -12,7 +12,7 @@ portions: 8 pieces
 prep_time: 20 min (plus 4 hours to overnight soak)
 cook_time: 35 min
 draft: true
-working_on: "First test: does salting the buttermilk and adding baking powder give the dark, mealy, crunchy crust, and does the oven version hold up?"
+working_on: "First test: does salting the buttermilk and adding baking powder give the dark, mealy, crunchy crust? Next: a baked version that browns well."
 ---
 I'm currently working on this recipe to fulfill a food memory. It's a WIP and very untested.
 ## Mechanic
@@ -71,28 +71,8 @@ caption: The breading, start to finish
 
 Hot, at room temperature, or cold from the fridge the next day.
 
-## Variations
-
-**Oven-fried, boneless.** Lighter and faster, with less fat. Heat the oven to 210°C (410°F) with a dark baking sheet inside. Cut 900 g (2 lb) boneless, skinless breasts into 3–4 pieces each. Whisk 1 egg into 80 ml (⅓ cup) buttermilk. Coat each piece in the dredge, dip in the egg mix, then coat in the dredge again, pressing it on. Take out the hot sheet, melt 60 g (¼ cup) butter on it, and lay the chicken in the butter. Bake 10–12 minutes. Loosen each piece with a thin spatula before flipping, or the crust tears off. Bake 5–10 minutes more, then broil until golden and crisp.
-
-```flow
-row: Pan-fried
-Soak    | buttermilk, 4 hours+
-Dredge  | once
-Rest    | 10 min
-Fry     | 12 min, then covered 10
-Uncover | crisp, 10 min more
-row: Oven-fried
-Dredge  | boneless breasts
-Dip     | egg and buttermilk
-Dredge  | again
-Bake    | on hot butter, 10–12 min
-Broil   | after the flip, until crisp
-caption: One dredge, two ways to cook it
-```
-
 ## Notes
 
 - A rack keeps the bottom crust crisp; paper towels steam it soft.
 - The shortening keeps the oil temperature steadier and gives a drier crust than liquid oil. Strain and reuse it once or twice for more chicken.
-- Adapted from two sources: a classic buttermilk and shortening pan-fry, and a double-dredged oven version with butter on a hot sheet pan.
+- Adapted from a classic buttermilk and shortening pan-fry.

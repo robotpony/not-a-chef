@@ -53,7 +53,7 @@ Formula diagrams (`~/projects/sites/hugo-warped/fences/formula.md`) for Mechanic
 - [x] Bruce approved the spec, 2026-10-26, including `tab:` panel lines.
 - [x] Tabs fence drafted with warped-agent (`docs/fences/tabs.md`, 2026-10-26); a fence, not a callout, since clear source text in Obsidian is enough.
 - [x] Tabs in w42: the hook is in the w42 theme 0.6.0 (1051f16), and both manifesto blocks are migrated, with HTML identical to the live page apart from ids (`tabs-fence-N`). The shortcode's removal is next (w42 theme agent).
-- [x] ```` ```flow ```` in the cookbook (2026-10-26): Fugu 5f21797 (hook by fugu-agent), styled in `custom.css` and `mockups/STYLE.md`/`style.html`. First use: Cornmeal fried chicken's pan vs oven rows. Checked in Chrome in the 300px sidebar and at phone width.
+- [x] ```` ```flow ```` in the cookbook (2026-10-26): Fugu 5f21797 (hook by fugu-agent), styled in `custom.css` and `mockups/STYLE.md`/`style.html`. Checked in Chrome in the 300px sidebar and at phone width. Its first use, Cornmeal fried chicken's pan vs oven rows, went with the oven variation (Bruce, 2026-10-26: ovens bake, they don't fry).
 - [ ] ```` ```timeline ```` in the cookbook: fugu-agent ports w42's hook when a page needs one (`.tline-*` classes don't collide with our `.tl-*` lineage).
 - [ ] Tabs in the cookbook: fugu-agent ports the hook when a page needs one.
 - [x] w42: a block with no valid lines shows its source instead of nothing (theme 0.6.0).
