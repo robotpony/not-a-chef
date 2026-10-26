@@ -37,6 +37,7 @@ Formula diagrams (`docs/fences/formula.md`) for Mechanics that already state a r
 - [x] Tabs fence drafted with warped-agent (`docs/fences/tabs.md`, 2026-10-26); a fence, not a callout, since clear source text in Obsidian is enough.
 - [ ] Tabs, once approved: the w42 theme agent builds the hook (same HTML as the shortcode), w42 content migrates the manifesto's two blocks, then the shortcode goes; fugu-agent ports it for the cookbook.
 - [ ] w42: a block with no valid lines shows its source instead of nothing (for warped-agent and the w42 theme agent once the draft is approved).
+- [ ] `←` notes, once approved: each project's hooks drop them (w42 theme agent, fugu-agent, Scorekeep), and the validator knows them.
 - [ ] Tools: a validator any site can run on its Markdown, replacing the build-time `warnf` checks and `/lint` item 5 as the source of truth, plus reference hooks to port.
 - [x] Every type's page in `docs/fences/` (Bruce, 2026-10-26): `timeline.md` and `flow.md` copied from w42, `formula.md` and `stack.md` moved out of `FORMAT.md`.
 - [ ] w42 replaces `themes/w42/docs/timeline.md` and `flow.md` with pointers here (warped-agent, then the w42 theme agent).
