@@ -2,7 +2,7 @@
 title: October 2026
 date: 2026-10-01
 ---
-October trip notes: a tabbouleh worth learning, a subtly sweet red cabbage, an onion jam on a double smash burger, and a German dinner of roulade and pork tenderloin with apple.  Plus all of the Hawaii treats we have grown to love, and several other dishes we discovered.
+A month of travel eating turned into a research list: tabbouleh, a subtly sweet red cabbage, an onion jam on a double smash burger, a German roulade dinner, then Hawaii's poke, cabbage crab salad, Puka Dog's toasted bun, and a tiki dinner. Back home, fresh pickled ginger, a bonito soy dipping sauce, and cornmeal fried chicken made it into recipes, and the burger blueprint's parts and builds were reviewed and settled. Still on the list: a diagrammed pan sauce method, Indian curries and a looser dal, better muesli, and a run of "national dish" candidates.
 
 ## Week of Sunday, October 18th
 
