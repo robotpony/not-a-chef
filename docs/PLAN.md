@@ -33,6 +33,7 @@ Formula diagrams (`FORMAT.md` §Formula diagrams) for Mechanics that already sta
   - `tests/check.py` fails every fixture: Blowfish declares Hugo 0.163–0.166 and this machine runs 0.168, and `--panicOnWarning` turns that compatibility warning into a build failure.
   - `head.html` lines 167 and 200: `not .Site.Params.disableImageZoom | default true` pipes the `not` into `default`, so `disableImageZoom = true` can never turn zoom off.
   - The site header's script (`layouts/partials/header/basic.html`) closes Fugu's `details.ing-config` popup on outside clicks; that belongs with `ingredients.js`. Once Fugu does it, drop the selector here.
+- [ ] Article sections (asked of fugu-agent 2026-10-26): a deliberate way to keep a recipe section or diagram in the article instead of the sidebar. Today Cornmeal fried chicken's `## Breading steps` stays in the article only because "steps" is in `notIngredients`; convert it once Fugu settles the syntax.
 - [ ] When Fugu's validator lands, run it over all recipes; file each discrepancy as a spec or content bug.
 - [ ] When Fugu gets its own CSS (Fugu §5), cut `custom.css` to the Not a Chef look; when it renames params (§2), update `params.toml`; when its docs exist (§7), decide if `FORMAT.md` stays as house style.
 
@@ -40,7 +41,6 @@ Formula diagrams (`FORMAT.md` §Formula diagrams) for Mechanics that already sta
 
 *Deferred (2026-10-14).* Code, then docs, then Fugu's docs (§7). Code goes one area per pass with `/code-review high`, each finding fixed, won't fix (why), or moved to Fugu's plan; template/CSS fixes get `python3 themes/fugu/tests/check.py --compare` plus Chrome at both widths, light and dark.
 
-- [x] Site `layouts/`: what Fugu now does better, accidental shadowing. Done 2026-10-18: fixed the footer's zoom error, term links, the Food Log guard, and the 404 path; won't fix hand-typed section names (this site's sections are fixed) or caching the header (the build takes under a second); two questions in `REVIEW.md`, Fugu items queued under Fugu follow-through.
 - [ ] `custom.css`: dead classes (grep `public/`), duplicates, off-token colours.
 - [ ] `tools/*.sh` and the Makefile, from a fresh clone with the submodule uninitialised.
 - [ ] Accessibility on the built site: popover ARIA and tap behaviour, focus order, landmarks, headings, alt text.
@@ -48,6 +48,6 @@ Formula diagrams (`FORMAT.md` §Formula diagrams) for Mechanics that already sta
 - [ ] Stale facts, line by line: FORMAT.md, METHODS.md beyond the blueprint section, STYLE.md, COMPONENTS.md, LIBRARIES.md. Then `/mx:content-check`.
 - [ ] Last: cut CLAUDE.md to what an agent needs to start.
 
-## Deferred
+## Mockups
 
-- [x] Publish `mockups/` as a static subfolder (which mocks, how linked, kept out of search). #focus
+- [ ] Publish `mockups/` as a static subfolder (which mocks, how linked, kept out of search). Bruce ticked it on 2026-10-21 to bring it forward; not built yet (no `static/mockups/`). #focus

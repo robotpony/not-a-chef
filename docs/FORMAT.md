@@ -290,7 +290,7 @@ can          | Beans   | 1 can         | black, pinto, chickpea
 ````
 
 - One operator per block: `+` (parts that go together), `:` (a ratio; the quantity is the ratio number), or `→` (the shape of a method; a quantity that isn't a number prints as an italic note). `->` is accepted for `→`. An optional last `=` line names the result.
-- Icons are keys from `assets/icons/formula/`, one or two per slot. An unknown key renders a placeholder and warns. Labels are one short word. Swaps are optional, up to three, comma-separated. Keep it to five slots.
+- Icons are keys from `assets/icons/formula/`, one or two per slot. An unknown key renders a placeholder and warns. A new icon file doesn't show in a running `/preview` until the server restarts; it keeps the placeholder it cached. Labels are one short word. Swaps are optional, up to three, comma-separated. Keep it to five slots.
 - Optional trailing lines: `caption: <text>`, and `bar: yes` for a ratio's proportion bar.
 - The diagram illustrates the sentence; it MUST NOT replace it. Only draw a ratio the text already states.
 
