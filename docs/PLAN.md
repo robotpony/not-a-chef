@@ -53,11 +53,11 @@ Formula diagrams (`~/projects/sites/hugo-warped/fences/formula.md`) for Mechanic
 - [x] Bruce approved the spec, 2026-10-26, including `tab:` panel lines.
 - [x] Tabs fence drafted with warped-agent (`docs/fences/tabs.md`, 2026-10-26); a fence, not a callout, since clear source text in Obsidian is enough.
 - [x] Tabs in w42: the hook is in the w42 theme 0.6.0 (1051f16), and both manifesto blocks are migrated, with HTML identical to the live page apart from ids (`tabs-fence-N`). The shortcode's removal is next (w42 theme agent).
-- [ ] ```` ```flow ```` in the cookbook: first use is Cornmeal fried chicken's pan vs oven rows (under Variations, 2026-10-26). fugu-agent ports w42's hook (`render-codeblock-flow.html`, `assets/css/common/flow.css`, `.flow-*` classes), then map colours in `custom.css` and bump the submodule. Until then the block shows as source; the recipe is a draft.
+- [x] ```` ```flow ```` in the cookbook (2026-10-26): Fugu 5f21797 (hook by fugu-agent), styled in `custom.css` and `mockups/STYLE.md`/`style.html`. First use: Cornmeal fried chicken's pan vs oven rows. Checked in Chrome in the 300px sidebar and at phone width.
 - [ ] ```` ```timeline ```` in the cookbook: fugu-agent ports w42's hook when a page needs one (`.tline-*` classes don't collide with our `.tl-*` lineage).
 - [ ] Tabs in the cookbook: fugu-agent ports the hook when a page needs one.
 - [x] w42: a block with no valid lines shows its source instead of nothing (theme 0.6.0).
-- [ ] `←` notes: each project's hooks drop them. w42 is done (0.6.0); fugu-agent and Scorekeep are still to do, and so is the validator.
+- [ ] `←` notes: each project's hooks drop them. w42 (0.6.0) and Fugu are done; Scorekeep is still to do, and so is the validator.
 - [ ] Tools: a validator any site can run on its Markdown, replacing the build-time `warnf` checks and `/lint` item 5 as the source of truth, plus reference hooks to port.
 - [x] Every type's page in `docs/fences/` (Bruce, 2026-10-26): `timeline.md` and `flow.md` copied from w42, `formula.md` and `stack.md` moved out of `FORMAT.md`.
 - [ ] w42 replaces `themes/w42/docs/timeline.md` and `flow.md` with pointers to the spec's final home (waiting on the home decision).
