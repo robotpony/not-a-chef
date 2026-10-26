@@ -17,7 +17,7 @@ draft: true
 # One line on what's being tried next, shown under the banner.
 working_on: First batch; testing a short steep against an overnight one.
 ---
-We discovered this di
+We discovered this dipping sauce on our travels recently: it adds a subtle, smoky depth to any sushi, and can be used over rice.
 ## Mechanic
 
 The base is **5 parts soy sauce to 3 parts mirin**. Boil the mirin first to cook off its alcohol, then only warm the soy; a hard boil dulls its flavour. The bonito steeps off the heat, like tea: a short steep gives a light, savoury sauce, and a full day gives a deeper smokiness.

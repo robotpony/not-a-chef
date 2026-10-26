@@ -14,6 +14,7 @@ cook_time: 35 min
 draft: true
 working_on: "First test: does salting the buttermilk and adding baking powder give the dark, mealy, crunchy crust, and does the oven version hold up?"
 ---
+I'm currently working on this recipe to fulfill a food memory. It's a WIP and very untested.
 ## Mechanic
 
 **Equal parts cornmeal and flour** by volume. The flour sticks to the wet buttermilk and holds the coating on; the cornmeal stays in coarse grains that fry into a dark, gritty crunch. The buttermilk soak does two jobs: its acid and salt season and tenderize the meat, and its thickness leaves a tacky surface for the dredge to grab. In the pan, cover partway through so the pieces steam through to the bone, then uncover so the crust dries and crisps again.
