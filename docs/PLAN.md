@@ -19,17 +19,9 @@ Formula diagrams (`~/projects/sites/hugo-warped/fences/formula.md`) for Mechanic
 - [ ] Food ratios tables, once that method leaves the test kitchen.
 - [ ] Stack diagrams for sandwiches and Vegetarian lasagna, once a build page needs one.
 
-## Shared post tools with warpedvisions
+## Standard diagram fences
 
-*Started 2026-10-22.* Two Markdown tools from the w42 theme (warpedvisions.org), shared so a block works the same on both sites. The w42 theme agent owns the spec and reference hook; fugu-agent ports them into Fugu (no shared files).
-
-- [ ] ```` ```timeline ```` fence: spec settled at `~/projects/sites/w42/themes/w42/docs/timeline.md` (w42 commit 8fdf104); reference hook `layouts/_default/_markup/render-codeblock-timeline.html`, CSS `assets/css/common/timeline.css` in the w42 theme. It covers all the cookbook's needs, and its `.tline-*` classes don't collide with our `.tl-*` lineage. Next: hand to fugu-agent to port (not running 2026-10-22), then map colours in `custom.css` and bump the submodule. Decades, ranges, and months are reserved forms; extending them needs both sites to agree.
-- [ ] ```` ```flow ```` fence (a step-by-step row, no icons): spec at `~/projects/sites/w42/themes/w42/docs/flow.md` (w42 commit 8fd6d77, with parallel `row:` rows; implementation 4f395ab); hook `render-codeblock-flow.html`, CSS `assets/css/common/flow.css`, classes `.flow-*`. Port only when a page needs one; likely first uses are side-by-side rows, like conventional vs reverse sear or pan vs oven fried chicken. A formula `→` sequence becomes a flow by dropping its icon column.
-- [ ] Tabs: wait for the fenced microformat, not the `{{< tabs >}}` shortcode (noise in Obsidian). First use: a recipe's method beside its variation, like pan-fry and oven on Cornmeal fried chicken.
-
-## Standard diagram fences #focus
-
-*Started 2026-10-26.* One diagramming technique that other sites (warpedvisions.org, Scorekeep) can use: a clear spec and tools. Spec ownership moved from the w42 theme (see "Shared post tools" above) to this repo, then to hugo-warped (`~/projects/sites/hugo-warped`, the hugo-warped agent) on 2026-10-26. Coordinate with warped-agent (timeline, flow, tabs) and the Scorekeep content agent (`table`, `reminders`, and its placeholder fences). The spec is `~/projects/sites/hugo-warped/fences/README.md`. Its open items (fixtures, the validator, the Hugo module, charts) are tracked in hugo-warped's `PLAN.md`; only this site's items stay below.
+*Started 2026-10-26.* One diagramming technique that other sites (warpedvisions.org, Scorekeep) can use: a clear spec and tools. Spec ownership moved from the w42 theme to this repo, then to hugo-warped (`~/projects/sites/hugo-warped`, the hugo-warped agent) on 2026-10-26. Coordinate with warped-agent (timeline, flow, tabs) and the Scorekeep content agent (`table`, `reminders`, and its placeholder fences). The spec is `~/projects/sites/hugo-warped/fences/README.md`. Its open items (fixtures, the validator, the Hugo module, charts) are tracked in hugo-warped's `PLAN.md`; only this site's items stay below.
 
 ### Impact by site
 
@@ -61,6 +53,8 @@ Formula diagrams (`~/projects/sites/hugo-warped/fences/formula.md`) for Mechanic
 - [x] Bruce approved the spec, 2026-10-26, including `tab:` panel lines.
 - [x] Tabs fence drafted with warped-agent (`docs/fences/tabs.md`, 2026-10-26); a fence, not a callout, since clear source text in Obsidian is enough.
 - [x] Tabs in w42: the hook is in the w42 theme 0.6.0 (1051f16), and both manifesto blocks are migrated, with HTML identical to the live page apart from ids (`tabs-fence-N`). The shortcode's removal is next (w42 theme agent).
+- [ ] ```` ```flow ```` in the cookbook: first use is Cornmeal fried chicken's pan vs oven rows (under Variations, 2026-10-26). fugu-agent ports w42's hook (`render-codeblock-flow.html`, `assets/css/common/flow.css`, `.flow-*` classes), then map colours in `custom.css` and bump the submodule. Until then the block shows as source; the recipe is a draft.
+- [ ] ```` ```timeline ```` in the cookbook: fugu-agent ports w42's hook when a page needs one (`.tline-*` classes don't collide with our `.tl-*` lineage).
 - [ ] Tabs in the cookbook: fugu-agent ports the hook when a page needs one.
 - [x] w42: a block with no valid lines shows its source instead of nothing (theme 0.6.0).
 - [ ] `←` notes: each project's hooks drop them. w42 is done (0.6.0); fugu-agent and Scorekeep are still to do, and so is the validator.

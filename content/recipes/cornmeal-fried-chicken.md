@@ -75,6 +75,22 @@ Hot, at room temperature, or cold from the fridge the next day.
 
 **Oven-fried, boneless.** Lighter and faster, with less fat. Heat the oven to 210°C (410°F) with a dark baking sheet inside. Cut 900 g (2 lb) boneless, skinless breasts into 3–4 pieces each. Whisk 1 egg into 80 ml (⅓ cup) buttermilk. Coat each piece in the dredge, dip in the egg mix, then coat in the dredge again, pressing it on. Take out the hot sheet, melt 60 g (¼ cup) butter on it, and lay the chicken in the butter. Bake 10–12 minutes. Loosen each piece with a thin spatula before flipping, or the crust tears off. Bake 5–10 minutes more, then broil until golden and crisp.
 
+```flow
+row: Pan-fried
+Soak    | buttermilk, 4 hours+
+Dredge  | once
+Rest    | 10 min
+Fry     | 12 min, then covered 10
+Uncover | crisp, 10 min more
+row: Oven-fried
+Dredge  | boneless breasts
+Dip     | egg and buttermilk
+Dredge  | again
+Bake    | on hot butter, 10–12 min
+Broil   | after the flip, until crisp
+caption: One dredge, two ways to cook it
+```
+
 ## Notes
 
 - A rack keeps the bottom crust crisp; paper towels steam it soft.
