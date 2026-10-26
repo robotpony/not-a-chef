@@ -33,7 +33,7 @@ Formula diagrams (`docs/fences/formula.md`) for Mechanics that already state a r
 
 ### Impact by site
 
-*Checked 2026-10-26.* Nothing has changed on any site yet: the spec is docs only. A full build of this site gives the same 562 pages and no new warnings. Each line below is a change that waits on Bruce's approval. None of them changes how a block that's valid and live today renders.
+*Checked 2026-10-26.* Nothing has changed on any site yet: the spec is docs only. A full build of this site gives the same 562 pages and no new warnings. Each line below is approved (2026-10-26) and waits on its project's agent. None of them changes how a block that's valid and live today renders.
 
 - **bruce-loves-to-cook.ca** (this repo, Fugu; 37 `formula` and 11 `stack` blocks; fugu-agent):
   - The formula hook warns on a row with more than four cells. No live block has one, so no warnings.
@@ -58,7 +58,7 @@ Formula diagrams (`docs/fences/formula.md`) for Mechanics that already state a r
 
 - [x] Gather each site's fences and needs from warped-agent and Scorekeep, alongside our `formula` and `stack` (2026-10-26).
 - [x] Draft the shared spec: kinds (diagram, data, placeholder), line grammar, cells and tokens, attributes (`name` unique per file, `draw`, `class`), bad lines, fallback, project extensions, extending a type (`docs/fences/README.md`).
-- [ ] Bruce reviews the draft (its own `## Review #todo` block).
+- [x] Bruce approved the spec, 2026-10-26, including `tab:` panel lines.
 - [x] Tabs fence drafted with warped-agent (`docs/fences/tabs.md`, 2026-10-26); a fence, not a callout, since clear source text in Obsidian is enough.
 - [ ] Tabs, once approved: the w42 theme agent builds the hook (same HTML as the shortcode), w42 content migrates the manifesto's two blocks, then the shortcode goes; fugu-agent ports it for the cookbook.
 - [ ] w42: a block with no valid lines shows its source instead of nothing (for warped-agent and the w42 theme agent once the draft is approved).
