@@ -11,14 +11,14 @@ Early October is mostly trip notes: a tabbouleh worth learning, a subtly sweet r
 - [ ] A diagrammed method for pan sauces, diagrams, etc.
 - [x] Fresh pickled ginger! #focus 
 - [x] Soy sauce recipe (for dipping), with bonito ← ratio? [[Bonito soy sauce]]
-- [ ] Cornmeal fried chicken, a candidate for the dark, mealy, crunchy breading: [[Cornmeal fried chicken]] (test the pan-fry and the oven version)
+- [x] Cornmeal fried chicken, a candidate for the dark, mealy, crunchy breading: [[Cornmeal fried chicken]] (test the pan-fry and the oven version)
 - [ ] Muesli → better recipe, something like HAL 
 - [ ] Knotty irishman: baileys frangelico, dead rabbit whisky, coffee, cream, nutmeg
-- [ ] All of the indian curries: pea and corn, cabbage, and various chicken variations. so fantastic!
+- [ ] All of the Indian curries: pea and corn, cabbage, and various chicken variations. so fantastic!
 
 ### Food wishes #ideas 
 
-- [ ] Dal (looser than I make)
+- [ ] Dal (looser than I make, but lovely)
 - [ ] Cauli curry (orange sauce)
 
 ## Week of Friday, October 16th
