@@ -205,8 +205,8 @@ Documented in full in `docs/ARCHITECTURE.md` ("Content model", with a diagram), 
 ```stack
 bun-top   | Toasted bun      | soft, toasted
 lettuce-shredded | Shredded lettuce | cold crunch
-onion     | Raw onion        | sharp
-patty     | Thin patty       | salt, fat, savoury
+onion-raw | Raw onion        | sharp
+patty-thin | Thin patty       | salt, fat, savoury
 bun-base  | Toasted bun      | barrier
 caption: Drive-in deluxe build, top to bottom
 ```
