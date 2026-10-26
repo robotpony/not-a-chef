@@ -282,7 +282,7 @@ Mechanic, To serve, Variations, Equipment, and Notes move to the recipe sidebar.
 
 ### Formula diagrams
 
-A ratio stated in the text can also be drawn: a `formula` fenced block, one slot per line, `icon | label | quantity | swaps`, with an operator (`+`, `:` or `→`) starting every line after the first. It goes in `## Mechanic`, illustrates the sentence, and MUST NOT replace it. The full spec is `docs/fences/formula.md`; every fence type's is in `docs/fences/`.
+A ratio stated in the text can also be drawn: a `formula` fenced block, one slot per line, `icon | label | quantity | swaps`, with an operator (`+`, `:` or `→`) starting every line after the first. It goes in `## Mechanic`, illustrates the sentence, and MUST NOT replace it. The full spec is `~/projects/sites/hugo-warped/fences/formula.md`; every fence type's is in `~/projects/sites/hugo-warped/fences/`, the shared spec in hugo-warped.
 
 ## Essays
 
@@ -343,7 +343,7 @@ Recipes carry no blueprint fields; the method lists them.
 
 ### Stack diagrams
 
-A build made of layers (a burger, a sandwich, a lasagne) can be drawn as an exploded view: a `stack` fenced block, one layer per line, top first, `layer | label | role`. On a build page the first `stack` block goes under `## Picks`, and its layers MUST follow the picks. A build that isn't layered (a one-pan pasta) has no `stack` block, and its card goes without a drawing. The full spec is `docs/fences/stack.md`.
+A build made of layers (a burger, a sandwich, a lasagne) can be drawn as an exploded view: a `stack` fenced block, one layer per line, top first, `layer | label | role`. On a build page the first `stack` block goes under `## Picks`, and its layers MUST follow the picks. A build that isn't layered (a one-pan pasta) has no `stack` block, and its card goes without a drawing. The full spec is `~/projects/sites/hugo-warped/fences/stack.md`.
 
 ## Reference pages and the Food Log
 

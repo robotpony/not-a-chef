@@ -13,7 +13,7 @@ Open work only. Finished items are cut, not ticked; git history has them (`git l
 
 ## Diagrams
 
-Formula diagrams (`docs/fences/formula.md`) for Mechanics that already state a ratio.
+Formula diagrams (`~/projects/sites/hugo-warped/fences/formula.md`) for Mechanics that already state a ratio.
 
 - [ ] Granola bars, once a second recipe needs a nut icon.
 - [ ] Food ratios tables, once that method leaves the test kitchen.
@@ -29,7 +29,7 @@ Formula diagrams (`docs/fences/formula.md`) for Mechanics that already state a r
 
 ## Standard diagram fences #focus
 
-*Started 2026-10-26.* One diagramming technique that other sites (warpedvisions.org, Scorekeep) can use: a clear spec and tools, owned here. This moves spec ownership from the w42 theme (see "Shared post tools" above) to this repo. Coordinate with warped-agent (timeline, flow, tabs) and the Scorekeep content agent (`table`, `reminders`, and its placeholder fences). The draft is `docs/fences/README.md`; its open items are listed at its end.
+*Started 2026-10-26.* One diagramming technique that other sites (warpedvisions.org, Scorekeep) can use: a clear spec and tools. Spec ownership moved from the w42 theme (see "Shared post tools" above) to this repo, then to hugo-warped (`~/projects/sites/hugo-warped`, the hugo-warped agent) on 2026-10-26. Coordinate with warped-agent (timeline, flow, tabs) and the Scorekeep content agent (`table`, `reminders`, and its placeholder fences). The spec is `~/projects/sites/hugo-warped/fences/README.md`. Its open items (fixtures, the validator, the Hugo module, charts) are tracked in hugo-warped's `PLAN.md`; only this site's items stay below.
 
 ### Impact by site
 
@@ -40,7 +40,7 @@ Formula diagrams (`docs/fences/formula.md`) for Mechanics that already state a r
   - A block with no valid lines shows its source instead of nothing. No live block is affected.
   - Hooks drop `←` notes. No live block has one.
   - New: ports of `timeline`, `flow` and `tabs`, used only when a page needs one.
-  - Docs: Fugu's `docs/recipe-format.md` and `docs/features.md` point at `docs/fences/`.
+  - Docs: Fugu's `docs/recipe-format.md` and `docs/features.md` point at `~/projects/sites/hugo-warped/fences/`.
 - **warpedvisions.org** (w42 theme; 1 `timeline`, 1 `flow`, 1 page with 2 `{{< tabs >}}` blocks; w42 theme agent, then warped-agent):
   - `timeline` and `flow` show their source when no line is valid. Today they draw nothing.
   - Both drop `←` notes. None are live, and a timeline label is no longer "the whole rest of the line".
@@ -70,7 +70,7 @@ Formula diagrams (`docs/fences/formula.md`) for Mechanics that already state a r
 - [x] Scorekeep's pages: `table.md`, `reminders.md`, `placeholders.md` (drafted by the Scorekeep content agent, 2026-10-26).
 - [ ] Fugu's `docs/recipe-format.md` and `docs/features.md` point at `formula.md` and `stack.md` (fugu-agent).
 - [x] Home decided (Bruce, 2026-10-26): `~/projects/sites/hugo-warped`, owned by the hugo-warped agent, with scope wider than fences (the shared Markdown dialect and the Hugo plumbing that reads it). Handed off with branch `fences-export` (docs/fences history).
-- [ ] Once hugo-warped confirms the path: `docs/fences/` becomes a pointer, and CLAUDE.md, FORMAT.md, DESIGN.md and `/lint` point there; delete the `fences-export` branch; tell warped-agent and the Scorekeep content agent the path.
+- [x] Moved to `~/projects/sites/hugo-warped/fences/` (hugo-warped fe70da0, all 10 commits kept); `docs/fences/` is now a pointer, and CLAUDE.md, FORMAT.md, DESIGN.md and `/lint` point there. hugo-warped told warped-agent and the Scorekeep content agent.
 
 ## Fugu follow-through
 
