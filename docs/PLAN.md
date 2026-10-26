@@ -31,6 +31,31 @@ Formula diagrams (`docs/fences/formula.md`) for Mechanics that already state a r
 
 *Started 2026-10-26.* One diagramming technique that other sites (warpedvisions.org, Scorekeep) can use: a clear spec and tools, owned here. This moves spec ownership from the w42 theme (see "Shared post tools" above) to this repo. Coordinate with warped-agent (timeline, flow, tabs) and the Scorekeep content agent (`table`, `reminders`, and its placeholder fences). The draft is `docs/fences/README.md`; its open items are listed at its end.
 
+### Impact by site
+
+*Checked 2026-10-26.* Nothing has changed on any site yet: the spec is docs only. A full build of this site gives the same 562 pages and no new warnings. Each line below is a change that waits on Bruce's approval. None of them changes how a block that's valid and live today renders.
+
+- **bruce-loves-to-cook.ca** (this repo, Fugu; 37 `formula` and 11 `stack` blocks; fugu-agent):
+  - The formula hook warns on a row with more than four cells. No live block has one, so no warnings.
+  - A block with no valid lines shows its source instead of nothing. No live block is affected.
+  - Hooks drop `←` notes. No live block has one.
+  - New: ports of `timeline`, `flow` and `tabs`, used only when a page needs one.
+  - Docs: Fugu's `docs/recipe-format.md` and `docs/features.md` point at `docs/fences/`.
+- **warpedvisions.org** (w42 theme; 1 `timeline`, 1 `flow`, 1 page with 2 `{{< tabs >}}` blocks; w42 theme agent, then warped-agent):
+  - `timeline` and `flow` show their source when no line is valid. Today they draw nothing.
+  - Both drop `←` notes. None are live, and a timeline label is no longer "the whole rest of the line".
+  - A `tabs` hook replaces the shortcode, with identical HTML. The manifesto's two blocks are published, so they're migrated and checked against the live page before the shortcode is removed.
+  - Unchanged: the `formula` shown as source in the manifesto, and the `qgraph` sketches. Both are ordinary code blocks.
+  - Docs: `themes/w42/docs/timeline.md` and `flow.md` become pointers here.
+- **Scorekeep app and microsite** (11 rules files; Scorekeep content agent and SCOREKEEP). The biggest change:
+  - The `@` placeholders become fences: 12 `@diagram`, 5 `@example`, 9 `@sheet`, 8 `@house-rules`, 8 `@table`.
+  - `@bullets` becomes plain bullets in `@if` branches; `@aliases` and `@goal` go.
+  - The Swift `RulesDocument` parser is rewritten to the shared grammar, and `RulesDocumentTests` gates it.
+  - The microsite gets new hooks: `table`, `reminders` and the placeholders.
+  - Table names may shorten, `golf-card-values` to `card-values`, so the cheat sheet's lookups change with them.
+  - Docs: its rules README stops saying w42 owns the specs.
+- **space-command.ca, brucealderson.ca, robotpony.ca, w31, w32, warped-next**: unaffected. They hold only ordinary code blocks (spacecommand.ca has about 140: bash, json, sql), and the spec never warns about those. That rule was tightened today for exactly this case.
+
 - [x] Gather each site's fences and needs from warped-agent and Scorekeep, alongside our `formula` and `stack` (2026-10-26).
 - [x] Draft the shared spec: kinds (diagram, data, placeholder), line grammar, cells and tokens, attributes (`name` unique per file, `draw`, `class`), bad lines, fallback, project extensions, extending a type (`docs/fences/README.md`).
 - [ ] Bruce reviews the draft (its own `## Review #todo` block).
@@ -54,7 +79,7 @@ Formula diagrams (`docs/fences/formula.md`) for Mechanics that already state a r
 - [ ] When Fugu's validator lands, run it over all recipes; file each discrepancy as a spec or content bug.
 - [ ] When Fugu gets its own CSS (Fugu §5), cut `custom.css` to the Not a Chef look; when it renames params (§2), update `params.toml`; when its docs exist (§7), decide if `FORMAT.md` stays as house style.
 
-## Review
+## Review #focus
 
 *Deferred (2026-10-14).* Code, then docs, then Fugu's docs (§7). Code goes one area per pass with `/code-review high`, each finding fixed, won't fix (why), or moved to Fugu's plan; template/CSS fixes get `python3 themes/fugu/tests/check.py --compare` plus Chrome at both widths, light and dark.
 
