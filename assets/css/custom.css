@@ -951,6 +951,10 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
  * row of the recipe's formula icons. It takes the intro's third line, so a
  * card with one is the same height as a card without. */
 .rcard.has-formula .rcard-intro { -webkit-line-clamp: 2; }
+/* Drink cards: a small glass beside the title and intro (Fugu partials/drink/glass.html). */
+.rcard-drink { display: flex; align-items: flex-start; gap: 10px; min-width: 0; }
+.rcard-drink-text { display: flex; flex-direction: column; gap: 8px; flex: 1; min-width: 0; }
+.rcard-glass { flex: none; width: 56px; height: 72px; color: var(--ink); }
 .rcard-formula { display: flex; justify-content: safe center; height: 24px; min-width: 0; overflow: hidden; }
 /* The strip's own link sits above .rcard-link::after so its slots' title
  * tooltips show on hover; it points at the same page, so clicks still go

@@ -13,7 +13,16 @@ garnish: nutmeg
 
 ## Mechanic
 
-The cream floats only if it's whipped just enough to hold soft trails. Liquid cream sinks and mixes into the coffee; stiff cream sits on top in a lump. Pour it over the back of a spoon so it lands gently.
+The drink is **4 : 2 : 1 : 8** Baileys, whiskey, Frangelico, and coffee, in 15 ml (½ oz) parts, with the cream floated on top. The cream floats only if it's whipped just enough to hold soft trails: liquid cream sinks and mixes into the coffee, and stiff cream sits on top in a lump. Pour it over the back of a spoon so it lands gently.
+
+```formula
+bottle | Baileys    | 4
+: bottle | Whiskey  | 2
+: bottle | Frangelico | 1
+: mug  | Coffee     | 8
+caption: Parts of 15 ml (½ oz)
+bar: yes
+```
 
 ## Ingredients
 

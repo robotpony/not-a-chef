@@ -70,8 +70,9 @@ Formula diagrams (`~/projects/sites/hugo-warped/fences/formula.md`) for Mechanic
 
 Drinks got their own section on 2026-10-27 (`content/drinks/`, Fugu 356fad8). Diagrams picked from `mockups/drink-diagrams.html`: A and C, not B.
 
-- [ ] Glass thumbnails on drink cards, drawn from `glass`, `fill`, `ice`, `garnish` (`docs/FORMAT.md` "Drinks"; colours `STYLE.md` §7). With fugu-agent. All eight drinks have the fields.
-- [ ] Formula icons for drinks: `bottle`, `mug`, `wine`, `ice` (fugu-agent). Then give the Knotty Irishman its ratio, Baileys 4 : whiskey 2 : Frangelico 1 : coffee 8, stated in the Mechanic and drawn with a `formula` block; then sangria and lemon-lime iced tea's weight batch.
+- [x] Glass thumbnails on drink cards (Fugu efb6a23, 56×72), drawn from `glass`, `fill`, `ice`, `garnish` (`docs/FORMAT.md` "Drinks"; colours `STYLE.md` §7). With fugu-agent. All eight drinks have the fields.
+- [x] Formula icons for drinks (Fugu 45029e3) and the Knotty Irishman's 4 : 2 : 1 : 8.
+- [ ] Formula ratios for sangria and lemon-lime iced tea's weight batch.
 - [ ] Homepage: a drinks band, or drinks inside the recipes band.
 
 ## Fugu follow-through
