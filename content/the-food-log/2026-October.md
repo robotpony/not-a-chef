@@ -8,7 +8,7 @@ A month of travel eating turned into a research list: tabbouleh, a subtly sweet 
 
 ### Recipes to research #todo 
 
-- [ ] A diagrammed method for pan sauces, diagrams, etc.
+- [x] A diagrammed method for pan sauces, diagrams, etc.: [[Pan sauces]]
 - [x] Fresh pickled ginger! #focus 
 - [x] Soy sauce recipe (for dipping), with bonito ← ratio? [[Bonito soy sauce]]
 - [x] Cornmeal fried chicken, a candidate for the dark, mealy, crunchy breading: [[Cornmeal fried chicken]] (test the pan-fry and the oven version)
