@@ -13,6 +13,7 @@ prep_time: 20 min (plus 4 hours to overnight soak)
 cook_time: 35 min
 draft: false
 ---
+This is a crunchier version of a classic fried chicken, with a version for making patties that work especially well in sandwiches.
 ## Mechanic
 
 **Equal parts cornmeal and flour** by volume. The flour sticks to the wet buttermilk and holds the coating on; the cornmeal stays in coarse grains that fry into a dark, gritty crunch.
