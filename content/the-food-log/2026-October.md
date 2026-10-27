@@ -6,6 +6,10 @@ A month of travel eating turned into a research list: tabbouleh, a subtly sweet 
 
 ## Week of Sunday, October 18th
 
+## Methods/builds to work on #todo 
+
+- [ ] Chicken sandwhiches and burgers (reference patty recipes), then builds for simple, deluxe, etc.
+
 ### Recipes to research #todo 
 
 - [x] A diagrammed method for pan sauces, diagrams, etc.: [[Pan sauces]]

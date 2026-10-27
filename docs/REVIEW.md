@@ -17,6 +17,14 @@ From the job-search-tools session, which copied this preview pattern.
 
 - [ ] Only stop a Hugo server on :1313 if it was started from this repo. `tools/preview.sh` kills any `hugo` holding the port today, which would include another site's preview. The guard checks the process's working directory first: `cwd=$(lsof -a -p "$pid" -d cwd -Fn 2>/dev/null | sed -n 's/^n//p')`, and kills only when it matches the repo root. Other sessions' servers were holding :1316 and :1317 today, so ports are shared.
 
+## Chicken patty icons #todo
+
+From `mockups/formula-icons-3.html` (needs the mockup open in a browser). The patties section waits on these.
+
+- [ ] Pounding icon: the toothed meat mallet (A). Write "pounder" for the flat pounder (B) instead.
+- [ ] Trim draws a knife and a bun, so "bun + 15%" has something to measure against. Write "knife only" to drop the bun.
+- [ ] Section heading: "Patties for sandwiches and burgers". Write "Sandwich patties" for the short form.
+
 ## Deferred by Bruce
 
 Not questions for now, kept so they aren't lost: the drafts (`make drafts`). The cornmeal-breaded chicken patty research is now a test kitchen recipe, [[Cornmeal fried chicken]].

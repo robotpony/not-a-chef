@@ -14,6 +14,9 @@ cook_time: 35 min
 draft: true
 working_on: "First test: does salting the buttermilk and adding baking powder give the dark, mealy, crunchy crust? Next: a baked version that browns well."
 ---
+
+- [ ] Add diagrams #todo
+
 I'm currently working on this recipe to fulfill a food memory. It's a WIP and very untested.
 ## Mechanic
 
