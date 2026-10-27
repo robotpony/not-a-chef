@@ -43,6 +43,12 @@ in a browser — no build step.
   Mechanics. Approved 2026-10-17; the SVGs are in `formula-icons-2/`
   for fugu-agent to add to `assets/icons/formula/`.
 
+- **`formula-icons-3.html`**: proposal (2026-10-27) for three more
+  formula icons for a patties section on Cornmeal fried chicken (pound,
+  trim, soak, dredge, fry): a meat mallet (or a flat pounder, the
+  alternative), a chef's knife, and a sliced bun, shown at each size,
+  beside the kit, and in the section's diagram. SVGs in `formula-icons-3/`.
+
 - **`scale-callout.html`**: proposal (2026-10-07) to redraw the recipe
   scale/units menu as a callout with a `^` pointer to the gear, a restyled
   slider with step labels, and units as a drop list (segmented control

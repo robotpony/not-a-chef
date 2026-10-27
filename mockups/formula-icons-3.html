@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Formula icons, round 3</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  :root{
+    --bg:#F3F3EC; --surface:#FBFBF6; --surface-2:#EAEBDF;
+    --ink:#23241E; --ink-muted:#63645A; --ink-faint:#93948A;
+    --border:#DCDCCE; --border-strong:#C7C8B4;
+    --accent:#A67330; --accent-strong:#7C361D; --accent-soft:#F6EADA;
+    --highlight:#997F29; --highlight-soft:#F6F1D5;
+    --flag:#3D638F; --flag-soft:#E1EAF4;
+    --focus:#A67330;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+      --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+      --border:#383A2C; --border-strong:#4A4C3A;
+      --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+      --highlight:#DDCC88; --highlight-soft:#342D19;
+      --flag:#97B8D8; --flag-soft:#1D2835;
+      --focus:#D3A569;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+    --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+    --border:#383A2C; --border-strong:#4A4C3A;
+    --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+    --highlight:#DDCC88; --highlight-soft:#342D19;
+    --flag:#97B8D8; --flag-soft:#1D2835;
+    --focus:#D3A569;
+  }
+
+  *{box-sizing:border-box;}
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:'Lora',Georgia,serif; font-size:16px; line-height:1.5; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3,h4{ font-family:'Libre Franklin',system-ui,sans-serif; margin:0; }
+  p{ margin:0; }
+  code, pre{ font-family:'IBM Plex Mono',monospace; }
+  code{ font-size:.85em; background:var(--surface-2); padding:1px 5px; border-radius:3px; }
+  button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
+  button:focus-visible{ outline:2px solid var(--focus); outline-offset:2px; }
+
+  .topbar{ position:sticky; top:0; z-index:10; background:var(--surface); border-bottom:1px solid var(--border-strong); }
+  .topbar-inner{ max-width:980px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+  .tb-title{ font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:.95rem; margin-right:auto; }
+  .tb-jump{ display:flex; gap:2px; flex-wrap:wrap; font-family:'Libre Franklin',sans-serif; }
+  .tb-jump a{ font-size:.76rem; font-weight:600; color:var(--ink-muted); text-decoration:none; padding:6px 9px; border-radius:4px; }
+  .tb-jump a:hover{ color:var(--ink); background:var(--surface-2); }
+  .theme-toggle{ font-family:'Libre Franklin',sans-serif; font-size:.75rem; font-weight:600; padding:7px 10px; border:1px solid var(--border-strong); border-radius:3px; color:var(--ink-muted); }
+  .theme-toggle:hover{ border-color:var(--accent); color:var(--ink); }
+
+  main{ max-width:980px; margin:0 auto; padding:8px 20px 100px; }
+  .hero{ padding:36px 0 30px; border-bottom:1px solid var(--border); margin-bottom:40px; }
+  .hero-eyebrow{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--accent-strong); margin-bottom:10px; display:block; }
+  .hero h1{ font-size:2rem; font-weight:700; letter-spacing:-.01em; margin-bottom:12px; }
+  .hero p{ max-width:66ch; color:var(--ink-muted); font-size:1.02rem; }
+  .hero p + p{ margin-top:10px; }
+
+  section.block{ margin-bottom:56px; }
+  .block-head{ margin-bottom:18px; }
+  .block-num{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--ink-faint); display:block; margin-bottom:4px; }
+  h2.block-title{ font-size:1.4rem; font-weight:700; margin-bottom:8px; }
+  .block-dek{ color:var(--ink-muted); max-width:68ch; font-size:.95rem; }
+  h3.sub-title{ font-size:.95rem; font-weight:700; margin:28px 0 6px; }
+  .sub-dek{ color:var(--ink-muted); font-size:.88rem; max-width:66ch; margin-bottom:14px; }
+
+  .stage{ background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:22px 24px; }
+  .stage + .stage{ margin-top:14px; }
+  .stage-label{ font-family:'Libre Franklin',sans-serif; font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-faint); margin-bottom:12px; display:block; }
+
+  .note-card{ display:flex; gap:12px; padding:14px 16px; background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--flag); border-radius:0 6px 6px 0; margin-top:16px; }
+  .note-mark{ font-family:'IBM Plex Mono',monospace; font-size:.75rem; font-weight:700; color:var(--flag); flex-shrink:0; }
+  .note-card p{ font-size:.9rem; color:var(--ink-muted); }
+  .note-card p + p{ margin-top:6px; }
+  .note-card strong{ color:var(--ink); font-weight:600; }
+
+  /* ---------- existing components, for context ---------- */
+  .mechanic{ background:var(--bg); border-left:3px solid var(--accent); border-radius:0 3px 3px 0; padding:12px 14px; font-family:'Lora',serif; font-size:1rem; }
+  .mechanic strong{ color:var(--accent-strong); }
+  .side-h{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:var(--ink-muted); margin-bottom:6px; }
+  .prose-h2{ font-size:1.5rem; font-weight:700; margin:0 0 8px; }
+  .prose p + p, .prose p + .formula, .prose .formula + p{ margin-top:16px; }
+
+  /* ---------- the new component: .formula ---------- */
+  .ic{ fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; overflow:visible; }
+
+  .formula{ margin:0; }
+  .formula-row{ display:flex; align-items:flex-start; justify-content:flex-start; flex-wrap:wrap; row-gap:14px; }
+  .f-slot{ display:flex; flex-direction:column; align-items:center; text-align:center; width:96px; }
+  .f-slot .ic{ width:48px; height:48px; color:var(--ink); }
+  .f-icons{ display:flex; gap:2px; height:48px; align-items:center; }
+  .f-icons.pair .ic{ width:40px; height:40px; }
+  .f-label{ font-family:'Libre Franklin',sans-serif; font-size:.74rem; font-weight:600; color:var(--ink); margin-top:6px; line-height:1.2; }
+  .f-qty{ font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums; font-size:.76rem; font-weight:600; color:var(--accent-strong); line-height:1.3; margin-top:2px; }
+  .f-sub{ font-family:'Lora',serif; font-style:italic; font-size:.72rem; color:var(--ink-muted); line-height:1.3; margin-top:3px; }
+  .f-op{ font-family:'IBM Plex Mono',monospace; font-size:1.25rem; font-weight:500; color:var(--accent); width:22px; text-align:center; line-height:48px; flex-shrink:0; }
+  .f-op.eq{ color:var(--ink-faint); }
+  .f-slot.result .f-label{ color:var(--ink-muted); }
+
+  /* swaps: the slot is a slot, not a fixed ingredient */
+  .f-or{ font-family:'Lora',serif; font-style:italic; font-size:.7rem; color:var(--ink-faint); line-height:1.3; margin-top:3px; }
+  .f-or span{ display:block; }
+  .formula.compact .f-or{ font-size:.62rem; }
+
+  /* ratio: the number is the point, so it leads */
+  .formula.ratio .f-num{ font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums; font-size:1.5rem; font-weight:600; color:var(--accent-strong); line-height:1.1; margin-top:4px; }
+  .formula.ratio .f-op{ font-size:1.5rem; line-height:48px; }
+  .f-bar{ display:flex; height:10px; margin-top:16px; border-radius:2px; overflow:hidden; max-width:340px; gap:2px; }
+  .f-bar span{ background:var(--accent-soft); border:1px solid var(--accent); border-radius:2px; }
+  .f-bar-key{ display:flex; max-width:340px; gap:2px; margin-top:4px; font-family:'IBM Plex Mono',monospace; font-size:.66rem; color:var(--ink-faint); }
+
+  /* sequence: arrows, and steps read left to right */
+  .formula.seq .f-op{ font-family:'Libre Franklin',sans-serif; }
+
+  /* each operator travels with the slot it introduces, so a wrap never strands a + at a line end */
+  .f-step{ display:flex; align-items:flex-start; }
+
+  /* caption: optional one-liner under the row */
+  .f-cap{ font-family:'Libre Franklin',sans-serif; font-size:.74rem; color:var(--ink-faint); margin-top:12px; }
+
+  /* compact density: the recipe sidebar (~18.6rem) */
+  .formula.compact .f-slot{ width:52px; }
+  .formula.compact .f-slot .ic, .formula.compact .f-icons{ width:34px; height:34px; }
+  .formula.compact .f-icons{ width:auto; }
+  .formula.compact .f-icons.pair .ic{ width:28px; height:28px; }
+  .formula.compact .f-op{ width:12px; font-size:1rem; line-height:34px; }
+  .formula.compact .f-label{ font-size:.66rem; margin-top:4px; }
+  .formula.compact .f-qty{ font-size:.66rem; }
+
+  /* ---------- recipe card (v2, from recipe-card-v2.html) + formula strip ---------- */
+  .tag{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; border:1px solid var(--border-strong); color:var(--ink-muted); padding:3px 7px; border-radius:3px; display:inline-block; white-space:nowrap; }
+  .tag-more{ color:var(--ink-faint); border-style:dashed; }
+  .rcard-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:16px; }
+  .rcard{ background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:14px 16px 12px; display:flex; flex-direction:column; gap:8px; min-width:0; text-decoration:none; color:inherit; }
+  .rcard:hover{ border-color:var(--accent); }
+  .rcard-top{ display:flex; gap:4px; flex-wrap:nowrap; overflow:hidden; min-width:0; }
+  .rcard-top > *{ font-size:.62rem; padding:2px 5px; flex:none; }
+  .rcard-title{ font-family:'Libre Franklin',sans-serif; font-size:1.02rem; font-weight:700; line-height:1.3; letter-spacing:-.005em; margin:0; }
+  .rcard-intro{ font-size:.84rem; line-height:1.5; color:var(--ink-muted); display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; overflow:hidden; }
+  .rcard.has-formula .rcard-intro{ -webkit-line-clamp:2; }
+  .rcard-formula{ display:flex; align-items:center; gap:2px; color:var(--ink); height:24px; }
+  .rcard-formula .ic{ width:24px; height:24px; flex:none; }
+  .rcard-formula .op{ font-family:'IBM Plex Mono',monospace; font-size:.8rem; color:var(--accent); width:12px; text-align:center; }
+  .rcard-formula .n{ font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums; font-size:.72rem; font-weight:600; color:var(--accent-strong); margin-left:1px; }
+  .rcard-stats{ margin-top:auto; padding-top:8px; border-top:1px solid var(--border); display:flex; gap:12px; white-space:nowrap; min-width:0; }
+  .rcard-stat{ display:flex; align-items:baseline; gap:4px; flex:none; }
+  .rcard-stat b{ font-family:'Libre Franklin',sans-serif; font-size:.56rem; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); }
+  .rcard-stat span{ font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums; font-size:.72rem; font-weight:600; color:var(--accent-strong); }
+
+  /* ---------- page furniture for the demos ---------- */
+  .split{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:760px){ .split{ grid-template-columns:1fr; } }
+  pre.src{ margin:0; background:var(--surface-2); border:1px solid var(--border); border-radius:4px; padding:12px 14px; font-size:.78rem; line-height:1.55; color:var(--ink); overflow-x:auto; }
+  pre.src .k{ color:var(--accent-strong); font-weight:600; }
+  pre.src .c{ color:var(--ink-faint); }
+
+  .frames{ display:flex; gap:22px; flex-wrap:wrap; align-items:flex-start; }
+  .frame{ border:1px solid var(--border-strong); border-radius:8px; background:var(--surface); padding:16px; }
+  .frame.sidebar{ width:calc(18.6rem + 32px); }
+  .frame.phone{ width:360px; max-width:100%; }
+  .frame-cap{ font-family:'IBM Plex Mono',monospace; font-size:.66rem; color:var(--ink-faint); margin-top:8px; }
+
+  .kit{ display:grid; grid-template-columns:repeat(auto-fill,minmax(104px,1fr)); gap:10px; }
+  .kit-cell{ background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:14px 8px 10px; display:flex; flex-direction:column; align-items:center; gap:6px; }
+  .kit-cell .ic{ width:48px; height:48px; }
+  .kit-key{ font-family:'IBM Plex Mono',monospace; font-size:.7rem; font-weight:600; }
+  .kit-use{ font-family:'Libre Franklin',sans-serif; font-size:.64rem; color:var(--ink-faint); text-align:center; line-height:1.3; }
+  .kit-sizes{ display:flex; gap:22px; align-items:flex-end; margin-top:18px; color:var(--ink); }
+  .kit-sizes figure{ margin:0; display:flex; flex-direction:column; align-items:center; gap:6px; }
+  .kit-sizes figcaption{ font-family:'IBM Plex Mono',monospace; font-size:.64rem; color:var(--ink-faint); }
+
+  .qlist{ display:flex; flex-direction:column; gap:10px; }
+  .spec{ width:100%; border-collapse:collapse; font-size:.86rem; }
+  .spec th, .spec td{ text-align:left; padding:8px 10px; border-bottom:1px solid var(--border); vertical-align:top; }
+  .spec th{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-muted); }
+  .spec td:first-child{ font-family:'IBM Plex Mono',monospace; color:var(--accent-strong); white-space:nowrap; }
+  @media (max-width:680px){ .stage{ padding:16px; } .f-slot{ width:84px; } }
+  .sizes-row{ display:flex; flex-wrap:wrap; gap:10px; align-items:center; color:var(--ink); margin-top:12px; }
+  .sizes-row .ic{ flex:none; }
+  .frames{ align-items:center; }
+</style>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-chicken" viewBox="0 0 48 48"><g transform="rotate(-40 24 24)">
+    <path style="fill:var(--accent-soft)" d="M24 5c-7 0-12 5.5-12 12.5 0 5 3 8.5 6.5 11.5l3 3h5l3-3c3.5-3 6.5-6.5 6.5-11.5C36 10.5 31 5 24 5z"/>
+    <path d="M21.5 32v5.5M26.5 32v5.5M21.5 37.5a3 3 0 1 0 2.5 4.5 3 3 0 1 0 2.5-4.5M17 16c.5-2.5 2-4.5 4-5.5"/>
+  </g></symbol>
+<symbol id="i-buttermilk" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M11 20l8-8 8 8v22H11z"/>
+  <path d="M27 20l8-4v22l-8 4M19 12l8-4 8 8M19 12V8l8-4v4M15 30h8M15 34h5"/></symbol>
+<symbol id="i-clock" viewBox="0 0 48 48"><circle style="fill:var(--accent-soft)" cx="24" cy="25" r="16"/>
+  <path d="M24 16v9l6 4M24 9v2.5M24 38.5V41M8 25h2.5M37.5 25H40M20 5h8"/></symbol>
+<symbol id="i-cornmeal" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M24 6c-4.5 0-7 5-7 13v11c0 3 3 5 7 5s7-2 7-5V19c0-8-2.5-13-7-13z"/>
+  <path d="M24 8v26M17.5 15h13M17 21h14M17 27h14"/>
+  <path d="M24 43C15 41 10 33 10 22c4 4 7 9 9 14M24 43c9-2 14-10 14-21-4 4-7 9-9 14"/></symbol>
+<symbol id="i-flour" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M15 15c-3.5 6-6 14-6 20.5 0 4.5 2.5 7 6.5 7h17c4 0 6.5-2.5 6.5-7 0-6.5-2.5-14.5-6-20.5z"/>
+  <path d="M15 15h18M17 15l-2.5-7h19L31 15"/>
+  <path d="M24 25v12M24 29l-3-3M24 29l3-3M24 33l-3-3M24 33l3-3"/></symbol>
+<symbol id="i-pan" viewBox="0 0 48 48"><circle style="fill:var(--accent-soft)" cx="19" cy="27" r="13"/>
+  <circle cx="19" cy="27" r="9"/>
+  <path stroke-width="4" d="M29.5 18.5l11-8.5"/></symbol>
+<symbol id="i-flame" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M23 5c2.5 6.5 11 10.5 11 21.5a10 10 0 0 1-20 0c0-5 2.5-8.5 5-11.5 0 4 1.5 6.5 4 7-1-6 0-12 0-17z"/>
+  <path d="M24 40.5a4 4 0 0 1-4-4c0-3.2 4-5.7 4-9 2 3 4 5 4 9a4 4 0 0 1-4 4z"/></symbol>
+<symbol id="i-oil" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M20 12v4l-4 5v19c0 1.7 1.3 3 3 3h10c1.7 0 3-1.3 3-3V21l-4-5v-4z"/>
+  <path d="M19.5 6h9v6h-9zM16 26h16v9H16z"/></symbol>
+<symbol id="i-patty" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M7 21v8c0 3.6 7.6 6.5 17 6.5S41 32.6 41 29v-8"/>
+  <ellipse style="fill:var(--surface)" cx="24" cy="21" rx="17" ry="6.5"/>
+  <path d="M14 21l6-3M20.5 24l8-4.2M29 23.5l5.5-3"/></symbol>
+<symbol id="i-mallet" viewBox="0 0 48 48"><g transform="rotate(-35 24 24)">
+    <rect style="fill:var(--accent-soft)" x="10" y="7" width="28" height="12" rx="1.5"/>
+    <path d="M10 8.5l-3 1.75 3 1.75-3 1.75 3 1.75-3 1.75 3 1.75M38 8.5l3 1.75-3 1.75 3 1.75-3 1.75 3 1.75-3 1.75"/>
+    <rect x="21.5" y="19" width="5" height="25" rx="2.5"/>
+  </g></symbol>
+<symbol id="i-pounder" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M6 34v3c0 2.8 8 5 18 5s18-2.2 18-5v-3"/>
+  <ellipse style="fill:var(--surface)" cx="24" cy="34" rx="18" ry="5"/>
+  <path d="M21 33V12M27 33V12"/>
+  <rect style="fill:var(--accent-soft)" x="18" y="4" width="12" height="9" rx="4.5"/></symbol>
+<symbol id="i-knife" viewBox="0 0 48 48"><g transform="rotate(-35 24 24)">
+    <path style="fill:var(--accent-soft)" d="M30 15H12c-5 0-8 5-9.5 12 7 2 16 3 27.5 3z"/>
+    <path d="M30 14v17"/>
+    <rect x="30" y="19" width="15" height="7.5" rx="2.5"/>
+    <path d="M35 22.75h.01M40 22.75h.01"/>
+  </g></symbol>
+<symbol id="i-bun" viewBox="0 0 48 48"><path style="fill:var(--accent-soft)" d="M6 25c0-8.5 8-14 18-14s18 5.5 18 14z"/>
+  <path d="M17 17.5l1.8-1M24 15.5h2M30.5 18l1.6 1M21 21l1.6.8"/>
+  <path style="fill:var(--accent-soft)" d="M7 29h34v3.5c0 2.5-2 4.5-4.5 4.5h-25C9 37 7 35 7 32.5z"/></symbol>
+</defs></svg>
+<header class="topbar"><div class="topbar-inner"><span class="tb-title">Formula icons, round 3</span>
+<nav class="tb-jump"><a href="#new">New icons</a><a href="#kit">Beside the kit</a><a href="#use">In use</a><a href="#questions">Questions</a></nav>
+<button class="theme-toggle" id="themeToggle">Theme: <span id="themeLabel">System</span></button></div></header>
+<main>
+<section class="hero"><span class="hero-eyebrow">Proposal &middot; 2026-10-27</span>
+<h1>Formula icons, round 3</h1>
+<p>Cornmeal fried chicken is getting a patties section in its article, for sandwiches and burgers, with a method diagram: pound, trim, soak, dredge, fry. The kit has the soak, dredge and fry. Pounding and trimming need three new icons, drawn to the first kit’s rules: 48-unit grid, 2-unit round strokes in <code>currentColor</code>, one <code>--accent-soft</code> fill, <code>--surface</code> on top faces.</p>
+<p>Four drawings below: two candidates for pounding, plus a knife and a bun for trimming.</p></section>
+<section class="block" id="new"><div class="block-head"><span class="block-num">01</span><h2 class="block-title">The new icons</h2>
+<p class="block-dek">Mallet and pounder are alternatives; one gets kept.</p></div>
+<div class="kit"><div class="kit-cell"><svg class="ic" aria-hidden="true"><use href="#i-mallet"/></svg><span class="kit-key">mallet</span><span class="kit-use">Pound: a toothed, two-faced meat mallet, handle down</span></div><div class="kit-cell"><svg class="ic" aria-hidden="true"><use href="#i-pounder"/></svg><span class="kit-key">pounder</span><span class="kit-use">Pound (alternative): a flat meat pounder, disc and upright handle</span></div><div class="kit-cell"><svg class="ic" aria-hidden="true"><use href="#i-knife"/></svg><span class="kit-key">knife</span><span class="kit-use">Trim: a chef’s knife, edge down, tip left</span></div><div class="kit-cell"><svg class="ic" aria-hidden="true"><use href="#i-bun"/></svg><span class="kit-key">bun</span><span class="kit-use">Trim: a sliced bun, so “bun + 15%” has something to point at</span></div></div>
+<h3 class="sub-title">At each size</h3><p class="sub-dek">48px in the body, 34px in the recipe sidebar, 24px on a card strip, 16px for the record.</p>
+<div class="stage"><div class="sizes-row"><svg class="ic" style="width:48px;height:48px" aria-hidden="true"><use href="#i-mallet"/></svg><svg class="ic" style="width:48px;height:48px" aria-hidden="true"><use href="#i-pounder"/></svg><svg class="ic" style="width:48px;height:48px" aria-hidden="true"><use href="#i-knife"/></svg><svg class="ic" style="width:48px;height:48px" aria-hidden="true"><use href="#i-bun"/></svg><span style="width:18px"></span><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-mallet"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-pounder"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-knife"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-bun"/></svg><span style="width:18px"></span><svg class="ic" style="width:24px;height:24px" aria-hidden="true"><use href="#i-mallet"/></svg><svg class="ic" style="width:24px;height:24px" aria-hidden="true"><use href="#i-pounder"/></svg><svg class="ic" style="width:24px;height:24px" aria-hidden="true"><use href="#i-knife"/></svg><svg class="ic" style="width:24px;height:24px" aria-hidden="true"><use href="#i-bun"/></svg><span style="width:18px"></span><svg class="ic" style="width:16px;height:16px" aria-hidden="true"><use href="#i-mallet"/></svg><svg class="ic" style="width:16px;height:16px" aria-hidden="true"><use href="#i-pounder"/></svg><svg class="ic" style="width:16px;height:16px" aria-hidden="true"><use href="#i-knife"/></svg><svg class="ic" style="width:16px;height:16px" aria-hidden="true"><use href="#i-bun"/></svg><span style="width:18px"></span></div></div></section>
+<section class="block" id="kit"><div class="block-head"><span class="block-num">02</span><h2 class="block-title">Beside the existing kit</h2>
+<p class="block-dek">The new four among the icons they’ll sit next to, at sidebar size.</p></div>
+<div class="stage"><div class="sizes-row"><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-chicken"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-mallet"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-pounder"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-knife"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-bun"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-buttermilk"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-clock"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-cornmeal"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-flour"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-pan"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-patty"/></svg><svg class="ic" style="width:34px;height:34px" aria-hidden="true"><use href="#i-oil"/></svg></div></div></section>
+<section class="block" id="use"><div class="block-head"><span class="block-num">03</span><h2 class="block-title">In use: the patties section</h2>
+<p class="block-dek">The section goes in the article after Breading, marked <code>{.article}</code> so it stays in the reading flow. Its diagram sits in the body at full size. The diagram draws the steps the text already gives.</p></div>
+<div class="stage"><span class="stage-label">A · toothed mallet</span><figure class="formula seq"><div class="formula-row"><div class="f-slot"><span class="f-icons pair"><svg class="ic" aria-hidden="true"><use href="#i-chicken"/></svg><svg class="ic" aria-hidden="true"><use href="#i-mallet"/></svg></span><span class="f-label">Pound</span><span class="f-sub">1 cm thick</span></div><div class="f-step"><span class="f-op" aria-hidden="true">→</span><div class="f-slot"><span class="f-icons pair"><svg class="ic" aria-hidden="true"><use href="#i-knife"/></svg><svg class="ic" aria-hidden="true"><use href="#i-bun"/></svg></span><span class="f-label">Trim</span><span class="f-sub">bun + 15%</span></div></div><div class="f-step"><span class="f-op" aria-hidden="true">→</span><div class="f-slot"><span class="f-icons pair"><svg class="ic" aria-hidden="true"><use href="#i-buttermilk"/></svg><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg></span><span class="f-label">Soak</span><span class="f-sub">1 to 2 hours</span></div></div><div class="f-step"><span class="f-op" aria-hidden="true">→</span><div class="f-slot"><span class="f-icons pair"><svg class="ic" aria-hidden="true"><use href="#i-cornmeal"/></svg><svg class="ic" aria-hidden="true"><use href="#i-flour"/></svg></span><span class="f-label">Dredge</span><span class="f-sub">rest 10 min</span></div></div><div class="f-step"><span class="f-op" aria-hidden="true">→</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-pan"/></svg></span><span class="f-label">Fry</span><span class="f-sub">3 to 4 min a side</span></div></div></div><figcaption class="f-cap">Patties, start to finish</figcaption></figure></div>
+<div class="stage"><span class="stage-label">B · flat pounder</span><figure class="formula seq"><div class="formula-row"><div class="f-slot"><span class="f-icons pair"><svg class="ic" aria-hidden="true"><use href="#i-chicken"/></svg><svg class="ic" aria-hidden="true"><use href="#i-pounder"/></svg></span><span class="f-label">Pound</span><span class="f-sub">1 cm thick</span></div><div class="f-step"><span class="f-op" aria-hidden="true">→</span><div class="f-slot"><span class="f-icons pair"><svg class="ic" aria-hidden="true"><use href="#i-knife"/></svg><svg class="ic" aria-hidden="true"><use href="#i-bun"/></svg></span><span class="f-label">Trim</span><span class="f-sub">bun + 15%</span></div></div><div class="f-step"><span class="f-op" aria-hidden="true">→</span><div class="f-slot"><span class="f-icons pair"><svg class="ic" aria-hidden="true"><use href="#i-buttermilk"/></svg><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg></span><span class="f-label">Soak</span><span class="f-sub">1 to 2 hours</span></div></div><div class="f-step"><span class="f-op" aria-hidden="true">→</span><div class="f-slot"><span class="f-icons pair"><svg class="ic" aria-hidden="true"><use href="#i-cornmeal"/></svg><svg class="ic" aria-hidden="true"><use href="#i-flour"/></svg></span><span class="f-label">Dredge</span><span class="f-sub">rest 10 min</span></div></div><div class="f-step"><span class="f-op" aria-hidden="true">→</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-pan"/></svg></span><span class="f-label">Fry</span><span class="f-sub">3 to 4 min a side</span></div></div></div><figcaption class="f-cap">Patties, start to finish</figcaption></figure></div>
+<div class="stage"><span class="stage-label">Compact, for the record: four pairs overflow the sidebar, so the diagram belongs in the body</span><div class="frames"><div class="frame sidebar"><figure class="formula seq compact"><div class="formula-row"><div class="f-slot"><span class="f-icons pair"><svg class="ic" aria-hidden="true"><use href="#i-chicken"/></svg><svg class="ic" aria-hidden="true"><use href="#i-mallet"/></svg></span><span class="f-label">Pound</span><span class="f-sub">1 cm thick</span></div><div class="f-step"><span class="f-op" aria-hidden="true">→</span><div class="f-slot"><span class="f-icons pair"><svg class="ic" aria-hidden="true"><use href="#i-knife"/></svg><svg class="ic" aria-hidden="true"><use href="#i-bun"/></svg></span><span class="f-label">Trim</span><span class="f-sub">bun + 15%</span></div></div><div class="f-step"><span class="f-op" aria-hidden="true">→</span><div class="f-slot"><span class="f-icons pair"><svg class="ic" aria-hidden="true"><use href="#i-buttermilk"/></svg><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg></span><span class="f-label">Soak</span><span class="f-sub">1 to 2 hours</span></div></div><div class="f-step"><span class="f-op" aria-hidden="true">→</span><div class="f-slot"><span class="f-icons pair"><svg class="ic" aria-hidden="true"><use href="#i-cornmeal"/></svg><svg class="ic" aria-hidden="true"><use href="#i-flour"/></svg></span><span class="f-label">Dredge</span><span class="f-sub">rest 10 min</span></div></div><div class="f-step"><span class="f-op" aria-hidden="true">→</span><div class="f-slot"><span class="f-icons"><svg class="ic" aria-hidden="true"><use href="#i-pan"/></svg></span><span class="f-label">Fry</span><span class="f-sub">3 to 4 min a side</span></div></div></div></figure></div><div class="frame"><div class="rcard-formula"><svg class="ic" aria-hidden="true"><use href="#i-chicken"/></svg><svg class="ic" aria-hidden="true"><use href="#i-mallet"/></svg><span class="op">→</span><svg class="ic" aria-hidden="true"><use href="#i-knife"/></svg><svg class="ic" aria-hidden="true"><use href="#i-bun"/></svg><span class="op">→</span><svg class="ic" aria-hidden="true"><use href="#i-buttermilk"/></svg><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span class="op">→</span><svg class="ic" aria-hidden="true"><use href="#i-cornmeal"/></svg><svg class="ic" aria-hidden="true"><use href="#i-flour"/></svg><span class="op">→</span><svg class="ic" aria-hidden="true"><use href="#i-pan"/></svg></div><div class="frame-cap">card strip, for reference: the recipe’s card keeps the Mechanic ratio</div></div></div></div>
+<div class="split" style="margin-top:14px"><div><span class="stage-label">The fence</span><pre class="src">```formula
+chicken mallet       | Pound  | 1 cm thick
+→ knife bun          | Trim   | bun + 15%
+→ buttermilk clock   | Soak   | 1 to 2 hours
+→ cornmeal flour     | Dredge | rest 10 min
+→ pan                | Fry    | 3 to 4 min a side
+caption: Patties, start to finish
+```</pre></div><div><span class="stage-label">The section</span><pre class="src" style="white-space:pre-wrap">## Patties for sandwiches and burgers {.article}
+
+Thinner pieces cook faster, take the salt faster, and need less fat. Use 3 boneless, skinless chicken breasts in place of the whole chicken.
+
+Butterfly each breast, or pound it between two sheets of plastic wrap, to an even 1 cm (⅜ in). Cut each in half, or trim it to about 15% larger than the bread or bun; the patties shrink as they cook. Soak for 1 to 2 hours; thin pieces take on the salt quickly and turn ham-like if left overnight. Dredge and rest as above.
+
+Heat about 5 mm (¼ in) of fat in a large frying pan to 180°C (360°F). Fry uncovered until deep golden underneath, 3 to 4 minutes. Turn and fry until the second side matches and the center reaches 70°C (160°F), 3 to 4 minutes more.
+
+(formula block here)</pre></div></div>
+</section>
+<section class="block" id="questions"><div class="block-head"><span class="block-num">04</span><h2 class="block-title">Questions</h2></div>
+<div class="note-card"><span class="note-mark">Q1</span><div><p><strong>Mallet or pounder?</strong> The toothed mallet is the one most kitchens have and reads as “tool” at 24px. The flat pounder is closer to what the step does (flatten, not tenderize) but at small sizes it can read as a stamp or a plunger.</p></div></div>
+<div class="note-card"><span class="note-mark">Q2</span><div><p><strong>Knife and bun, or knife alone?</strong> The bun says what “15% larger” is measured against. Without it, Trim is a knife and the note carries the size.</p></div></div>
+<div class="note-card"><span class="note-mark">Q3</span><div><p><strong>Section name.</strong> “Patties for sandwiches and burgers” is long for an article heading. “Sandwich patties” is the short form.</p></div></div>
+</section>
+</main>
+<script>
+(function(){
+  var root = document.documentElement, label = document.getElementById('themeLabel');
+  var order = ['system','light','dark'], current = 'system';
+  try{ var s = localStorage.getItem('nac-style-theme'); if(order.indexOf(s) !== -1) current = s; }catch(e){}
+  function apply(m){ if(m==='system') root.removeAttribute('data-theme'); else root.setAttribute('data-theme', m);
+    label.textContent = m.charAt(0).toUpperCase()+m.slice(1); try{ localStorage.setItem('nac-style-theme', m); }catch(e){} }
+  apply(current);
+  document.getElementById('themeToggle').addEventListener('click', function(){ current = order[(order.indexOf(current)+1)%order.length]; apply(current); });
+})();
+</script>
+</body>
+</html>
+== pan
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle style="fill:var(--accent-soft)" cx="19" cy="27" r="13"/>
+  <circle cx="19" cy="27" r="9"/>
+  <path stroke-width="4" d="M29.5 18.5l11-8.5"/>
+</svg>
+== patty
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path style="fill:var(--accent-soft)" d="M7 21v8c0 3.6 7.6 6.5 17 6.5S41 32.6 41 29v-8"/>
+  <ellipse style="fill:var(--surface)" cx="24" cy="21" rx="17" ry="6.5"/>
+  <path d="M14 21l6-3M20.5 24l8-4.2M29 23.5l5.5-3"/>
+</svg>
+== oil
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path style="fill:var(--accent-soft)" d="M20 12v4l-4 5v19c0 1.7 1.3 3 3 3h10c1.7 0 3-1.3 3-3V21l-4-5v-4z"/>
+  <path d="M19.5 6h9v6h-9zM16 26h16v9H16z"/>
+</svg>
+== cornmeal
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path style="fill:var(--accent-soft)" d="M24 6c-4.5 0-7 5-7 13v11c0 3 3 5 7 5s7-2 7-5V19c0-8-2.5-13-7-13z"/>
+  <path d="M24 8v26M17.5 15h13M17 21h14M17 27h14"/>
+  <path d="M24 43C15 41 10 33 10 22c4 4 7 9 9 14M24 43c9-2 14-10 14-21-4 4-7 9-9 14"/>
+</svg>
+== buttermilk
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path style="fill:var(--accent-soft)" d="M11 20l8-8 8 8v22H11z"/>
+  <path d="M27 20l8-4v22l-8 4M19 12l8-4 8 8M19 12V8l8-4v4M15 30h8M15 34h5"/>
+</svg>
+== clock
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle style="fill:var(--accent-soft)" cx="24" cy="25" r="16"/>
+  <path d="M24 16v9l6 4M24 9v2.5M24 38.5V41M8 25h2.5M37.5 25H40M20 5h8"/>
+</svg>
+== flame
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path style="fill:var(--accent-soft)" d="M23 5c2.5 6.5 11 10.5 11 21.5a10 10 0 0 1-20 0c0-5 2.5-8.5 5-11.5 0 4 1.5 6.5 4 7-1-6 0-12 0-17z"/>
+  <path d="M24 40.5a4 4 0 0 1-4-4c0-3.2 4-5.7 4-9 2 3 4 5 4 9a4 4 0 0 1-4 4z"/>
+</svg>

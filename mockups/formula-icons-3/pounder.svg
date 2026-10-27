@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path style="fill:var(--accent-soft)" d="M6 34v3c0 2.8 8 5 18 5s18-2.2 18-5v-3"/>
+  <ellipse style="fill:var(--surface)" cx="24" cy="34" rx="18" ry="5"/>
+  <path d="M21 33V12M27 33V12"/>
+  <rect style="fill:var(--accent-soft)" x="18" y="4" width="12" height="9" rx="4.5"/>
+</svg>
