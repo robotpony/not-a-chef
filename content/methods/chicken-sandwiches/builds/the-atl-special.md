@@ -7,6 +7,7 @@ tags:
   - burgers
   - chicken
 description: "The ATL special: a cornmeal-fried chicken breast with sweet pickles, slaw, and a spicy maple mustard drizzle."
+era: 2020
 ---
 A sweet, hot, and crunchy build on the cornmeal-fried breast. Sweet pickles and maple bring the sweetness, the chilies and mustard bring the heat and sharpness, and the slaw is the cold crunch.
 

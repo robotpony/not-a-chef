@@ -6,10 +6,12 @@ tags:
   - method
   - burgers
   - chicken
-era: 2026
+era: 1991
 description: "The Bruce chicken sandwich: a cornmeal-fried chicken breast with mayo on both buns, shredded lettuce, tomato, thin red onion, sour pickles, and mustard."
 ---
 The chicken sandwich I make at home. It's the crunchy cornmeal crust I've been chasing since the mall food court, built like [[The Bruce burger]]: everything cold, sharp, and sour stacked over a hot patty, with mayo and mustard kept apart.
+
+I started building it this way in 1991, while I was working in restaurants. The home version settled around 2015, and the cornmeal patty arrived in 2026.
 
 ## Picks
 

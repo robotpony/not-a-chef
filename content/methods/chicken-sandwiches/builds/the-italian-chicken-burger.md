@@ -7,6 +7,7 @@ tags:
   - burgers
   - chicken
 description: "The Italian chicken burger: a breaded, pan-fried ground chicken patty with marinara and mozzarella, on buns toasted in olive oil, with shredded lettuce and basil."
+era: 1988
 ---
 A chicken parm on a bun. The breaded patty takes marinara and melted mozzarella, the buns are toasted in olive oil instead of spread with mayo, and shredded lettuce and basil add the cold crunch and freshness a parm doesn't usually have.
 
