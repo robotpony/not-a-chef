@@ -6,4 +6,4 @@ A burger is a stack of parts: a patty, how it's seasoned and cooked, and a build
 
 ## Further reading
 
-[[The quest for the perfect burger]], [[The impossible quest for the perfect chicken burger]], [[Burger night costing (2022)]].
+[[The quest for the perfect burger]], [[The impossible quest for the perfect chicken burger]], [[Burger night costing (2022)]]. For chicken, see [Chicken sandwiches and burgers](/methods/chicken-sandwiches/).
