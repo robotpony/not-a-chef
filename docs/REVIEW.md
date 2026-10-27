@@ -17,12 +17,6 @@ From the job-search-tools session, which copied this preview pattern.
 
 - [ ] Only stop a Hugo server on :1313 if it was started from this repo. `tools/preview.sh` kills any `hugo` holding the port today, which would include another site's preview. The guard checks the process's working directory first: `cwd=$(lsof -a -p "$pid" -d cwd -Fn 2>/dev/null | sed -n 's/^n//p')`, and kills only when it matches the repo root. Other sessions' servers were holding :1316 and :1317 today, so ports are shared.
 
-## Drinks section #todo
-
-The seven older drinks moved to `content/drinks/` (2026-10-27). All seven were live at `/recipes/<slug>/` on bruce-loves-to-cook.ca: chai, lemon-lime iced tea, prosecco sangria, Bruce's cold-brewed iced tea, Bruce's iced tea, homemade Baileys Irish cream, essence of cola.
-
-- [ ] Check the Knotty Irishman amounts: 2 shots Baileys, 1 whiskey, ½ shot Frangelico, 120 ml coffee, 60 ml cream, with a shot as 30 ml (1 oz).
-
 ## Deferred by Bruce
 
 Not questions for now, kept so they aren't lost: the drafts (`make drafts`). The cornmeal-breaded chicken patty research is now a test kitchen recipe, [[Cornmeal fried chicken]].
