@@ -1041,8 +1041,14 @@ function schnitzel(cx, y, rx){
   const pt = (a, q=1) => { const k = rr(a)*q, c = Math.cos(a); return [cx+c*R*k*(c < 0 ? .94 : 1), cy+Math.sin(a)*ry*k*(1+.3*c)-c*ry*.14]; };
   const topPts = [], fTop = [], fBot = [];
   for (let i=0;i<=180;i++) topPts.push(pt(i/180*Math.PI*2));
-  for (let i=0;i<=90;i++){ const a = i/90*Math.PI, p = pt(a), th = t*(.55+.45*(1+Math.cos(a))/2); fTop.push(p); fBot.push([p[0], p[1]+th+1.2*nz2(a*2.1)+.7*Math.abs(Math.sin(27*a))]); }
-  let s = `<path class="s meat" d="${pts2d(fTop)}${pts2d(fBot.slice().reverse()).replace('M', 'L')}Z"/><path class="s meat-top" d="${pts2d(topPts)}Z"/>`;
+  // The side runs between the top's real left and right extremes, not a fixed half-turn, and each end
+  // closes top to bottom with a short stroke bowed outward, so it reads as one cutlet, not two discs.
+  const far = (a0, a1, sign) => { let best = a0; for (let i=0;i<=120;i++){ const a = a0+(a1-a0)*i/120; if (sign*pt(a)[0] > sign*pt(best)[0]) best = a; } return best; };
+  const aR = far(-Math.PI/2, Math.PI/2, 1), aL = far(Math.PI/2, Math.PI*1.5, -1);
+  for (let i=0;i<=90;i++){ const a = aR+(aL-aR)*i/90, p = pt(a), th = t*(.55+.45*(1+Math.cos(a))/2); fTop.push(p); fBot.push([p[0], p[1]+th+1.2*nz2(a*2.1)+.7*Math.abs(Math.sin(27*a))]); }
+  const end = (from, to, dx) => `Q${f((from[0]+to[0])/2+dx)},${f((from[1]+to[1])/2)} ${P(to)}`, bow = 2.2;
+  const tl = fTop[fTop.length-1], bl = fBot[fBot.length-1];
+  let s = `<path class="s meat" d="${pts2d(fTop)}${end(tl, bl, -bow)}${pts2d(fBot.slice().reverse()).replace('M', 'L')}${end(fBot[0], fTop[0], bow)}Z"/><path class="s meat-top" d="${pts2d(topPts)}Z"/>`;
   // The side: grit, thinning with the side toward the narrow end.
   for (let i=0;i<70;i++){ const a = .08+r()*(Math.PI-.16), p = pt(a), th = t*(.55+.45*(1+Math.cos(a))/2); s += `<circle class="stip" cx="${f(p[0])}" cy="${f(p[1]+1.2+r()*Math.max(th-2.4, .4))}" r="${f(.35+r()*.3)}"/>`; }
   // The cornmeal crust: sear fleck, then ink grit, a few crumb bumps, and pits.
