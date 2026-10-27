@@ -48,6 +48,7 @@ in a browser — no build step.
   trim, soak, dredge, fry): a meat mallet (or a flat pounder, the
   alternative), a chef's knife, and a sliced bun, shown at each size,
   beside the kit, and in the section's diagram. SVGs in `formula-icons-3/`.
+  Pounder chosen 2026-10-27: solid column, teeth underneath.
 
 - **`scale-callout.html`**: proposal (2026-10-07) to redraw the recipe
   scale/units menu as a callout with a `^` pointer to the gear, a restyled

@@ -21,7 +21,6 @@ From the job-search-tools session, which copied this preview pattern.
 
 From `mockups/formula-icons-3.html` (needs the mockup open in a browser). The patties section waits on these.
 
-- [ ] Pounding icon: the toothed meat mallet (A). Write "pounder" for the flat pounder (B) instead.
 - [ ] Trim draws a knife and a bun, so "bun + 15%" has something to measure against. Write "knife only" to drop the bun.
 - [ ] Section heading: "Patties for sandwiches and burgers". Write "Sandwich patties" for the short form.
 

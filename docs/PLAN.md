@@ -84,7 +84,7 @@ Drinks got their own section on 2026-10-27 (`content/drinks/`, Fugu 356fad8). Di
 - [ ] When Fugu's validator lands, run it over all recipes; file each discrepancy as a spec or content bug.
 - [ ] When Fugu gets its own CSS (Fugu §5), cut `custom.css` to the Not a Chef look; when it renames params (§2), update `params.toml`; when its docs exist (§7), decide if `FORMAT.md` stays as house style.
 
-## Review #focus
+## Review
 
 *Deferred (2026-10-14).* Code, then docs, then Fugu's docs (§7). Code goes one area per pass with `/code-review high`, each finding fixed, won't fix (why), or moved to Fugu's plan; template/CSS fixes get `python3 themes/fugu/tests/check.py --compare` plus Chrome at both widths, light and dark.
 
@@ -97,4 +97,4 @@ Drinks got their own section on 2026-10-27 (`content/drinks/`, Fugu 356fad8). Di
 
 ## Mockups
 
-- [ ] Publish `mockups/` as a static subfolder (which mocks, how linked, kept out of search). Bruce ticked it on 2026-10-21 to bring it forward; not built yet (no `static/mockups/`). #focus
+- [ ] Publish `mockups/` as a static subfolder (which mocks, how linked, kept out of search). Bruce ticked it on 2026-10-21 to bring it forward; not built yet (no `static/mockups/`).
