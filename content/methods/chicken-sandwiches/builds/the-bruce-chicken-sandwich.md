@@ -27,7 +27,7 @@ tomato           | Thin tomato         | juicy, acid
 onion-raw        | Raw red onion       | sharp
 pickle           | Sour pickles        | sour
 mustard          | Mustard             | sharp
-patty-chicken    | Cornmeal-fried breast | crunch, salt, fat
+patty-chicken-breast    | Cornmeal-fried breast | crunch, salt, fat
 bun-base + mayo  | Toasted bun, mayo   | rich, barrier
 caption: The Bruce chicken sandwich, top to bottom
 ```

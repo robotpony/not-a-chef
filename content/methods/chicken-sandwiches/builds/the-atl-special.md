@@ -24,7 +24,7 @@ bun-top       | Toasted bun                 | soft
 slaw          | Slaw                        | cold crunch
 pickle        | Sweet pickles               | sweet, sour
 mustard       | Spicy maple mustard drizzle | sweet, hot, sharp
-patty-chicken | Cornmeal-fried breast       | crunch, salt, fat
+patty-chicken-breast | Cornmeal-fried breast       | crunch, salt, fat
 bun-base      | Toasted bun                 | barrier
 caption: The ATL special, top to bottom
 ```
