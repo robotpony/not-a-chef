@@ -8,6 +8,8 @@ prep_time: 30 min
 cook_time: 10 min
 total_time: 50 min (plus steeping)
 draft: false
+aliases:
+  - /recipes/essence-of-cola/
 glass: bottle
 fill: [cola]
 ---

@@ -6,6 +6,8 @@ date: 2026-06-08
 cuisine: Canadian
 prep_time: 7 min
 draft: false
+aliases:
+  - /recipes/bruces-iced-tea/
 glass: pitcher
 fill: [tea]
 ice: true

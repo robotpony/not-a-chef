@@ -6,6 +6,8 @@ date: 2026-06-08
 cuisine: Canadian
 prep_time: 3 min
 draft: false
+aliases:
+  - /recipes/bruces-cold-brewed-iced-tea/
 glass: pitcher
 fill: [tea]
 ---

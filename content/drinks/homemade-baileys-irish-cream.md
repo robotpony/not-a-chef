@@ -8,6 +8,8 @@ portions: about 1 L (4 cups)
 prep_time: 1 min
 total_time: 1 min
 draft: false
+aliases:
+  - /recipes/homemade-baileys-irish-cream/
 glass: bottle
 fill: [liqueur]
 ---

@@ -7,6 +7,8 @@ servings: 1
 prep_time: 5 min
 total_time: 5 min
 draft: false
+aliases:
+  - /recipes/lemon-lime-iced-tea/
 glass: highball
 fill: [tea]
 ice: true

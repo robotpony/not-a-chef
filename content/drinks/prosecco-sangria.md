@@ -5,6 +5,8 @@ source: family
 date: 2026-06-08
 cuisine: Spanish
 draft: false
+aliases:
+  - /recipes/prosecco-sangria/
 glass: wine
 fill: [wine, sparkling]
 garnish: fruit

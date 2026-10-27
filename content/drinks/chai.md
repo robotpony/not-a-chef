@@ -12,6 +12,7 @@ draft: false
 glass: mug
 fill: [latte]
 aliases:
+  - /recipes/chai/
   - /recipes/chai-masala-sweet-masala-spiced-milk-tea/
 ---
 
