@@ -46,7 +46,11 @@ ignoreFiles = ['/[A-Z][A-Z0-9_-]*\.md$']
 # (themes/fugu/layouts/_default/_markup/render-image.html) can resize photos into
 # thumbnails. Declaring any assets mount replaces Hugo's default one, so
 # the plain assets/ mount is restated first.
+#
+# Fugu imports hugo-warped as a Hugo module; this site has it as a submodule,
+# so the module path maps to themes/hugo-warped (relative to themesDir).
 [module]
+  replacements = "github.com/robotpony/hugo-warped -> hugo-warped"
   [[module.mounts]]
     source = "assets"
     target = "assets"
