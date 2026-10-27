@@ -64,7 +64,7 @@ Don't add Claude as a co-author or a "Generated with Claude Code" line. A PreToo
 
 ## Hugo site
 
-Two stacked themes, both git submodules: `theme = ["fugu", "blowfish"]`. Fugu (`themes/fugu/`, [hugo-theme-fugu](https://github.com/robotpony/hugo-theme-fugu)) is the reusable cookbook theme: templates, render hooks, JS, icons, archetypes, and the content tools. This repo keeps the Not a Chef design and branding (`custom.css`, colour scheme, homepage, header, footer, favicons, fonts). Changes to templates are commits in the Fugu submodule. Wiki links require a render hook in `themes/fugu/layouts/_default/_markup/render-link.html`. See docs/DESIGN.md for layout and taxonomy decisions.
+Two stacked themes, both git submodules: `theme = ["fugu", "blowfish"]`. A third submodule, `themes/hugo-warped/`, holds the shared fence spec and parse partials that Fugu imports as a module; spec changes go to the hugo-warped agent. Fugu (`themes/fugu/`, [hugo-theme-fugu](https://github.com/robotpony/hugo-theme-fugu)) is the reusable cookbook theme: templates, render hooks, JS, icons, archetypes, and the content tools. This repo keeps the Not a Chef design and branding (`custom.css`, colour scheme, homepage, header, footer, favicons, fonts). Changes to templates are commits in the Fugu submodule. Wiki links require a render hook in `themes/fugu/layouts/_default/_markup/render-link.html`. See docs/DESIGN.md for layout and taxonomy decisions.
 
 ## Test kitchen (drafts)
 

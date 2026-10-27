@@ -59,12 +59,15 @@ All in `themes/fugu/layouts/_default/_markup/`:
 - `render-table.html` — wraps tables in a scroll container so wide ones don't push a phone page sideways
 - `render-codeblock-formula.html` — formula diagrams, below
 - `render-codeblock-stack.html` — stack diagrams (exploded builds), from the layer kit in `themes/fugu/assets/icons/layers/` (`~/projects/sites/hugo-warped/fences/stack.md`)
+- `render-codeblock-flow.html` — flow diagrams, boxed steps joined by arrows (`~/projects/sites/hugo-warped/fences/flow.md`)
+
+Every fence hook reads its block with hugo-warped's `partials/hugo-warped/parse.html` and warns with `warn.html` (each warning carries the spec's code, e.g. `formula [unknown-token]:`), then draws what the parse kept. A block with nothing valid to draw shows its source.
 
 ### Formula diagrams
 
 A ```` ```formula ```` fenced block (`~/projects/sites/hugo-warped/fences/formula.md`) is drawn at build time as one row of icons joined by `+`, `:` or `→`, with a label, quantity, and optional swaps under each icon. No client JS.
 
-- `render-codeblock-formula.html` parses the block: one slot per line, fields split on `|`, operator at the start of each later line, optional `caption:` and `bar:` lines. It warns at build time on an unknown icon key (drawing a dashed placeholder), mixed operators, or more than five slots. The figure gets an `aria-label` built from the slot text; the icons are `aria-hidden`.
+- `render-codeblock-formula.html` takes the parsed block: one slot per line, fields split on `|`, operator at the start of each later line, an optional closing `=` result, optional `caption:` and `bar:` lines. An unknown icon key draws a dashed placeholder; what warns is in the spec, not here. The figure gets an `aria-label` built from the slot text; the icons are `aria-hidden`.
 - `themes/fugu/layouts/partials/formula-slot.html` draws one slot. Icons come from `assets/icons/formula/<key>.svg` via `resources.Get` and are inlined, not `<img>`, so `currentColor` and the theme tokens apply and dark mode works.
 - CSS is in `assets/css/custom.css` (the "Formula diagram" block). The compact size keys off `.recipe-sidebar-section`, so a formula inside Mechanic shrinks to fit the sidebar on its own; nothing for the author to set.
 - `themes/fugu/layouts/recipes/list.json.json` sets `has_formula` per recipe in `public/recipes/index.json`.

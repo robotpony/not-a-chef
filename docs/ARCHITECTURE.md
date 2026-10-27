@@ -43,7 +43,7 @@ CLI details are in DESIGN.md.
 
 ### Hugo site
 
-Standard Hugo site with two stacked themes, both git submodules: `theme = ["fugu", "blowfish"]`. Hugo looks for each layout, partial and asset in this order:
+Standard Hugo site with two stacked themes, both git submodules: `theme = ["fugu", "blowfish"]`. A third submodule, `themes/hugo-warped/` ([hugo-warped](https://github.com/robotpony/hugo-warped), the shared fence spec), isn't a theme: Fugu imports it as a Hugo module for its fence parse partials, and `config/_default/hugo.toml` maps the module path to that folder. Hugo looks for each layout, partial and asset in this order:
 
 1. This repo (`layouts/`, `assets/`): the Not a Chef design and branding: `custom.css`, the `not-a-chef` colour scheme, the homepage, header, footer, favicons, and fonts (`layouts/partials/fonts.html`).
 2. Fugu (`themes/fugu/`, [hugo-theme-fugu](https://github.com/robotpony/hugo-theme-fugu)): the reusable cookbook theme: page templates, render hooks, recipe cards, sidebars, client JS, the formula icon kit, archetypes, and the content tools. Its own plan is `themes/fugu/PLAN.md`; the site side is PLAN.md "Fugu follow-through".
@@ -65,7 +65,7 @@ Custom layouts:
 - `themes/fugu/layouts/<section>/list.html` — card-grid listings for each section; `themes/fugu/layouts/recipes/list.json.json` builds `public/recipes/index.json`
 - `themes/fugu/layouts/_default/single.html` — every single page (rewrites `[[wiki links]]` in `.RawContent` to standard links before goldmark parses them), with the recipe sidebar or the reading sidebar
 - `themes/fugu/layouts/_default/term.html` — tag and cuisine pages, including principle tags
-- `themes/fugu/layouts/_default/_markup/` — render hooks: `render-link.html` (wiki links, glossary links), `render-heading.html` (flags ingredient and sidebar sections), `render-image.html` (Photos module), `render-table.html` (scroll wrapper), `render-codeblock-formula.html` (formula diagrams), `render-codeblock-stack.html` (stack diagrams)
+- `themes/fugu/layouts/_default/_markup/` — render hooks: `render-link.html` (wiki links, glossary links), `render-heading.html` (flags ingredient and sidebar sections), `render-image.html` (Photos module), `render-table.html` (scroll wrapper), `render-codeblock-formula.html`, `render-codeblock-stack.html` and `render-codeblock-flow.html` (diagram fences, read by hugo-warped's `parse.html` and drawn by Fugu)
 - `assets/css/custom.css` — the design system's CSS; `themes/fugu/assets/icons/formula/` and `themes/fugu/assets/icons/layers/` — the formula and stack diagram kits
 
 Client-side JS (`themes/fugu/assets/js/`) is plain, dependency-free, and progressive: `ingredients.js` (check-off, scaling, unit conversion), `automagic-sidebar.js` (moves Mechanic/To serve/Notes/photos into the sidebar, photo viewer), `search.js` (Fuse.js search, pinned results first). With JS off every page still reads and prints.
