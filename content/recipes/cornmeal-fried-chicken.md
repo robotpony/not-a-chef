@@ -13,7 +13,6 @@ prep_time: 20 min (plus 4 hours to overnight soak)
 cook_time: 35 min
 draft: false
 ---
-I'm currently working on this recipe to fulfill a food memory. It's a WIP and very untested.
 ## Mechanic
 
 **Equal parts cornmeal and flour** by volume. The flour sticks to the wet buttermilk and holds the coating on; the cornmeal stays in coarse grains that fry into a dark, gritty crunch.
