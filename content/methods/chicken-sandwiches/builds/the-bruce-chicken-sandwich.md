@@ -56,7 +56,7 @@ caption: The Bruce chicken sandwich, top to bottom
 
 ## Variations
 
-- **Mall style:** mayo, lettuce, and tomato only, on a kaiser. The crust carries it (see [[Chicken sandwich, crispy, mall style]]).
+- **Mall style:** mayo, lettuce, and tomato only, on a kaiser (see [[Crispy, mall-style chicken sandwich]]).
 - **Ground patty:** swap the breast for a double-coated [[Pan-fried chicken burger]] patty.
 
 ## Recipes

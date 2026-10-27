@@ -24,8 +24,8 @@ New blueprint at [Chicken sandwiches](/methods/chicken-sandwiches/), from your f
 - [ ] [[Chicken sandwich sauces]]: the spicy maple mustard ratio, "About 2:2:1 mayo, mustard, maple syrup, with ground hot chilies to taste." My guess; give me yours.
 - [ ] [[The ATL special]]: what kind of slaw (creamy or vinegar), and what bun? It says "on a toasted bun" with no mayo, since the drizzle carries it.
 - [ ] [[The classic chicken burger]]: `era: 1979`, from BK's Specialty Sandwich launch (Wikipedia). Deluxe is a variation, not its own build; split it out?
+- [ ] [[Crispy, mall-style chicken sandwich]]: you said 1889; I set `era: 1989`, from the essay's high-school timing. Right?
 - [ ] [[The Bruce chicken sandwich]] `## Iterations`: I filled in 1991 from the essay (BK patty, Whopper style) and 2015 from the Pan-fried chicken burger's "The Bruce" variation (homemade patty, mustard instead of ketchup, extra pickles and onion). Right?
-- [ ] [[The Bruce chicken sandwich]]: I added a "Mall style" variation (mayo, lettuce, tomato on a kaiser) from the mall essay. Keep it?
 
 ## Deferred by Bruce
 
