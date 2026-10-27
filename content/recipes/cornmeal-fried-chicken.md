@@ -11,8 +11,7 @@ servings: 4
 portions: 8 pieces
 prep_time: 20 min (plus 4 hours to overnight soak)
 cook_time: 35 min
-draft: true
-working_on: "First test: does salting the buttermilk and adding baking powder give the dark, mealy, crunchy crust? Next: a baked version that browns well."
+draft: false
 ---
 I'm currently working on this recipe to fulfill a food memory. It's a WIP and very untested.
 ## Mechanic
@@ -71,14 +70,14 @@ caption: The breading, start to finish
 
 Thinner pieces cook faster, take the salt faster, and need less fat. Use 3 boneless, skinless chicken breasts in place of the whole chicken.
 
-Butterfly each breast, or pound it between two sheets of plastic wrap, to an even 1 cm (⅜ in). Cut each in half, or trim it to about 15% larger than the bread or bun; the patties shrink as they cook. Soak for 1 to 2 hours; thin pieces take on the salt quickly and turn ham-like if left overnight. Dredge and rest as above.
+Butterfly each breast, or pound it between two sheets of plastic wrap, to an even 1 cm (⅜ in). Cut each in half, or trim it to about 15% larger than the bread or bun; the patties shrink as they cook. Soak for 30 minutes to 1 hour; thin pieces take on the salt quickly and turn ham-like if left overnight. Dredge and rest as above.
 
 Heat about 5 mm (¼ in) of fat in a large frying pan to 180°C (360°F). Fry uncovered until deep golden underneath, 3 to 4 minutes. Turn and fry until the second side matches and the center reaches 70°C (160°F), 3 to 4 minutes more.
 
 ```formula
 breast pounder     | Pound  | 1 cm thick
 → knife bun        | Trim   | bun + 15%
-→ buttermilk clock | Soak   | 1 to 2 hours
+→ buttermilk clock | Soak   | 30 minutes to 1 hour
 → cornmeal flour   | Dredge | rest 10 min
 → pan              | Fry    | 3 to 4 min a side
 caption: Patties, start to finish
