@@ -47,7 +47,7 @@ The thick option is the [[Pub burger]]'s patty.
 
 ## Other meats
 
-Lean meats need help. Turkey and chicken don't have the fat to brown and stay juicy, so [[Turkey burgers]] adds roasted eggplant or mushrooms, soy, and Marmite for savouriness and browning, and presses the patties thin. Ground chicken worked until tacky becomes sausage-like, which is a different patty again (see [[Chicken patties]] and the texture scale in [[The impossible quest for the perfect chicken burger]]). Chicken has its own blueprint: [Chicken sandwiches and burgers](/methods/chicken-sandwiches/). Plant patties are their own method: [[Veg patties]], [[Vegan burger]].
+Lean meats need help. Turkey and chicken don't have the fat to brown and stay juicy, so [[Turkey burgers]] adds roasted eggplant or mushrooms, soy, and Marmite for savouriness and browning, and presses the patties thin. Ground chicken worked until tacky becomes sausage-like, which is a different patty again (see [[Chicken patties]] and the texture scale in [[The impossible quest for the perfect chicken burger]]). Chicken has its own blueprint: [[Chicken sandwiches]]. Plant patties are their own method: [[Veg patties]], [[Vegan burger]].
 
 ## Recipes
 

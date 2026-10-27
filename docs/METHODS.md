@@ -228,7 +228,7 @@ Shapes to cover first: sandwich construction, burger construction, lasagne layer
 | Stock | Technique + ratio | Why ingredients matter in stock, plus the four stock recipes |
 | Foil packets | Technique | Camp cooking |
 | Burgers | Blueprint, 12 builds, all written | The quest for the perfect burger, The impossible quest for the perfect chicken burger, White Spot burger, the burger sauce recipes |
-| Chicken sandwiches and burgers | Blueprint, 4 parts, 4 builds | Drafted 2026-10-27 from Bruce's builds; the patties are Cornmeal fried chicken and Pan-fried chicken burger; stacks use `patty-chicken`, `slaw`, and `marinara`, which Fugu doesn't draw yet |
+| Chicken sandwiches | Blueprint, 4 parts, 4 builds | Drafted 2026-10-27 from Bruce's builds; the patties are Cornmeal fried chicken and Pan-fried chicken burger |
 | One-pan pasta | Blueprint, 4 parts, 2 builds (American bolognese still a stub) | Drafted 2026-10-12 from Bruce's description; the parts are stages, and the builds have no `era` or stack |
 
 ## Open questions

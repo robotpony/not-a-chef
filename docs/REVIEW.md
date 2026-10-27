@@ -19,7 +19,7 @@ From the job-search-tools session, which copied this preview pattern.
 
 ## Chicken sandwich blueprint #todo
 
-New blueprint at [Chicken sandwiches and burgers](/methods/chicken-sandwiches/), from your four builds. A few things I filled in:
+New blueprint at [Chicken sandwiches](/methods/chicken-sandwiches/), from your four builds. A few things I filled in:
 
 - [ ] [[Chicken sandwich sauces]]: the spicy maple mustard ratio, "About 2:2:1 mayo, mustard, maple syrup, with ground hot chilies to taste." My guess; give me yours.
 - [ ] [[The ATL special]]: what kind of slaw (creamy or vinegar), and what bun? It says "on a toasted bun" with no mayo, since the drizzle carries it. Does it have a story or a year for the timeline (`era`)?
