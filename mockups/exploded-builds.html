@@ -870,6 +870,9 @@ const L2 = {...L1,
   'slaw'(cx, y, rx){ return shreds(cx, y, rx, 29, .17); },
   // A breaded, fried chicken patty (2026-10-27): a pounded breast or a breaded ground patty.
   'patty-chicken'(cx, y, rx){ return cutlet(cx, y, rx); },
+  // A cornmeal-fried whole breast (2026-10-27): pounded out like a schnitzel, so wider, flatter and
+  // less regular than the ground patty, which keeps the shape above.
+  'patty-chicken-breast'(cx, y, rx){ return schnitzel(cx, y, rx); },
   // A spoonful of marinara on the patty (2026-10-27): spooned, not spread, so no knife marks, and
   // chunky with tomato, so it reads apart from burger sauce and from ragù (meat).
   'marinara'(cx, y, rx){
@@ -1028,6 +1031,31 @@ function cutlet(cx, y, rx){
   const xs = topPts.map(p => p[0]-cx), ys = fBot.map(p => p[1]);
   return {svg:s, h:Math.max(...ys)-y+2, edge:Math.round(Math.max(...xs)*10)/10};
 }
+// A pounded breast, breaded in cornmeal: wider and flatter than the ground patty, with a lobed,
+// uneven outline, the left end narrower and ragged where it was pounded thinnest, a side that thins
+// toward that end, and a dark, gritty crust: dense ink grit and sear fleck over the fried top.
+function schnitzel(cx, y, rx){
+  const R = rx*1.12, t = rx*.1, ry = R*K*.8, cy = y+ry*1.4+3, nz = noise(91), nz2 = noise(94), r = rng(97);
+  const thin = a => Math.max(0, -Math.cos(a))**2;   // 1 at the narrow left end, 0 from the middle right
+  const rr = a => 1 + .07*nz(a) + .09*Math.sin(2*a+.9) + .06*Math.sin(3*a+2.2) + thin(a)*(.04*Math.sin(13*a)+.025*Math.sin(21*a+1)) + .04*Math.sin(5*a+.4) + .012*Math.abs(Math.sin(17*a));
+  const pt = (a, q=1) => { const k = rr(a)*q, c = Math.cos(a); return [cx+c*R*k*(c < 0 ? .94 : 1), cy+Math.sin(a)*ry*k*(1+.3*c)-c*ry*.14]; };
+  const topPts = [], fTop = [], fBot = [];
+  for (let i=0;i<=180;i++) topPts.push(pt(i/180*Math.PI*2));
+  for (let i=0;i<=90;i++){ const a = i/90*Math.PI, p = pt(a), th = t*(.55+.45*(1+Math.cos(a))/2); fTop.push(p); fBot.push([p[0], p[1]+th+1.2*nz2(a*2.1)+.7*Math.abs(Math.sin(27*a))]); }
+  let s = `<path class="s meat" d="${pts2d(fTop)}${pts2d(fBot.slice().reverse()).replace('M', 'L')}Z"/><path class="s meat-top" d="${pts2d(topPts)}Z"/>`;
+  // The side: grit, thinning with the side toward the narrow end.
+  for (let i=0;i<70;i++){ const a = .08+r()*(Math.PI-.16), p = pt(a), th = t*(.55+.45*(1+Math.cos(a))/2); s += `<circle class="stip" cx="${f(p[0])}" cy="${f(p[1]+1.2+r()*Math.max(th-2.4, .4))}" r="${f(.35+r()*.3)}"/>`; }
+  // The cornmeal crust: sear fleck, then ink grit, a few crumb bumps, and pits.
+  s += sear(stipple(cx, cy, R, ry*1.05, 240, 98, {maxq:.86}));
+  let grit = '';
+  for (let i=0;i<150;i++){ const p = pt(r()*Math.PI*2, Math.sqrt(r())*.86); grit += `<circle class="stip" cx="${f(p[0])}" cy="${f(p[1])}" r="${f(.3+r()*.3)}"/>`; }
+  let bumps = '', pits = '';
+  for (let i=0;i<26;i++){ const p = pt(r()*Math.PI*2, Math.sqrt(r())*.82), b = .9+r()*1.2; bumps += `M${f(p[0]-b)},${f(p[1])}q${f(b)},${f(-b*.9)} ${f(2*b)},0`; }
+  for (let i=0;i<12;i++){ const p = pt(r()*Math.PI*2, Math.sqrt(r())*.8); pits += `M${f(p[0]-1.4)},${f(p[1])}q1.4,1 2.8,0`; }
+  s += grit + `<path class="tx-fine" d="${bumps}"/><path class="sear-pit" d="${pits}"/>`;
+  const xs = topPts.map(p => p[0]-cx), ys = fBot.map(p => p[1]);
+  return {svg:s, h:Math.max(...ys)-y+2, edge:Math.round(Math.max(...xs)*10)/10};
+}
 const L = L2;   // the current kit, read by mockups/export-layers.mjs
 
 /* ---------- Composer ---------- */
@@ -1110,7 +1138,7 @@ document.getElementById('ba-icons').innerHTML = [
 ].join('');
 
 function render(){
-const kitKeys = [['bun-top','Bun top'],['lettuce','Lettuce'],['lettuce-shredded','Shredded lettuce'],['lettuce-chunks','Lettuce, torn or chopped'],['tomato','Tomato'],['onion-raw','Raw onion'],['onion-fried','Fried onion'],['onion-minced','Minced onion'],['pickle','Pickles'],['cheese','Cheese slice'],['cheese-american','American cheese'],['bacon','Bacon'],['patty-thin','Thin patty'],['patty-thin-grilled','Thin patty, grilled'],['patty-thick','Thick patty'],['patty-thick-grilled','Thick patty, grilled'],['patty-smash','Smashed patty'],['patty-chicken','Fried chicken patty'],['slaw','Slaw'],['marinara','Marinara'],['ketchup','Ketchup'],['sauce-ketchup-mustard','Ketchup, mustard'],['sauce-burger','Burger sauce'],['mustard','Mustard'],['bun-top+mayo','Bun top + mayo'],['bun-base+mayo','Bun base + mayo'],['bun-top+sauce-burger','Bun top + burger sauce'],['bun-base+sauce-burger','Bun base + burger sauce'],['bun-base','Bun base'],['bread','Bread slice'],['pasta','Pasta sheet'],['ragu','Ragù'],['bechamel','Béchamel'],['cheese-top','Cheese, baked']];
+const kitKeys = [['bun-top','Bun top'],['lettuce','Lettuce'],['lettuce-shredded','Shredded lettuce'],['lettuce-chunks','Lettuce, torn or chopped'],['tomato','Tomato'],['onion-raw','Raw onion'],['onion-fried','Fried onion'],['onion-minced','Minced onion'],['pickle','Pickles'],['cheese','Cheese slice'],['cheese-american','American cheese'],['bacon','Bacon'],['patty-thin','Thin patty'],['patty-thin-grilled','Thin patty, grilled'],['patty-thick','Thick patty'],['patty-thick-grilled','Thick patty, grilled'],['patty-smash','Smashed patty'],['patty-chicken','Fried chicken patty'],['patty-chicken-breast','Fried chicken breast'],['slaw','Slaw'],['marinara','Marinara'],['ketchup','Ketchup'],['sauce-ketchup-mustard','Ketchup, mustard'],['sauce-burger','Burger sauce'],['mustard','Mustard'],['bun-top+mayo','Bun top + mayo'],['bun-base+mayo','Bun base + mayo'],['bun-top+sauce-burger','Bun top + burger sauce'],['bun-base+sauce-burger','Bun base + burger sauce'],['bun-base','Bun base'],['bread','Bread slice'],['pasta','Pasta sheet'],['ragu','Ragù'],['bechamel','Béchamel'],['cheese-top','Cheese, baked']];
 document.getElementById('kit-grid').innerHTML = kitKeys.map(([k, n]) => `<div class="kit-cell">${compose([{k}], {rx:52, gap:0, labels:false})}<span class="panel-label" style="font-size:.8rem;margin:0">${n}</span><span class="kit-key">${k}</span></div>`).join('');
 
 document.getElementById('build-grid').innerHTML = Object.values(BUILDS).map(b => `<div class="panel"><div class="panel-label">${b.name}</div><div class="panel-sub">${b.profile}</div>${compose(b.layers, {rx:62, gap:14})}</div>`).join('');

@@ -116,7 +116,7 @@ function restyle(svg, key){
   });
 }
 
-const keys = ['bun-top','lettuce','lettuce-shredded','slaw','patty-chicken','marinara','lettuce-chunks','tomato','onion-raw','onion-fried','onion-minced','pickle','cheese','cheese-american','bacon','patty-thin','patty-thin-grilled','patty-thick','patty-thick-grilled','patty-smash','ketchup','sauce-ketchup-mustard','sauce-burger','mustard','bun-base','bun-top+mayo','bun-base+mayo','bun-top+sauce-burger','bun-base+sauce-burger','bread','pasta','ragu','bechamel','cheese-top','mayo'];
+const keys = ['bun-top','lettuce','lettuce-shredded','slaw','patty-chicken','patty-chicken-breast','marinara','lettuce-chunks','tomato','onion-raw','onion-fried','onion-minced','pickle','cheese','cheese-american','bacon','patty-thin','patty-thin-grilled','patty-thick','patty-thick-grilled','patty-smash','ketchup','sauce-ketchup-mustard','sauce-burger','mustard','bun-base','bun-top+mayo','bun-base+mayo','bun-top+sauce-burger','bun-base+sauce-burger','bread','pasta','ragu','bechamel','cheese-top','mayo'];
 fs.mkdirSync(out, {recursive: true});
 for (const k of keys){
   const o = L[k](CX, 0, RX);
