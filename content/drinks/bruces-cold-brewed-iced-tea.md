@@ -6,6 +6,8 @@ date: 2026-06-08
 cuisine: Canadian
 prep_time: 3 min
 draft: false
+glass: pitcher
+fill: [tea]
 ---
 
 This is my lazier iced tea recipe. The cold brew process gets a smoother overall flavour, though it takes an extra day or so to get there.

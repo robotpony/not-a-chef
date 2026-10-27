@@ -9,6 +9,8 @@ cook_time: 15 min
 total_time: 20 min
 cuisine: Indian
 draft: false
+glass: mug
+fill: [latte]
 aliases:
   - /recipes/chai-masala-sweet-masala-spiced-milk-tea/
 ---

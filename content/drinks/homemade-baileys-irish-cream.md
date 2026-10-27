@@ -8,6 +8,8 @@ portions: about 1 L (4 cups)
 prep_time: 1 min
 total_time: 1 min
 draft: false
+glass: bottle
+fill: [liqueur]
 ---
 
 We call this camping cream, but it's equally comforting around Christmas when the weather is miserable.

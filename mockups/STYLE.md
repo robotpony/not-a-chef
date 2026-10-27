@@ -145,6 +145,21 @@ Added 2026-10-11 (`mockups/patty-sear.html`): the kit's two fills gave a patty's
 
 Added 2026-10-14 (`mockups/spreads-and-colour.html`, "Fuller"): lettuce, pickles, tomato, ketchup, mustard, and American cheese (`cheese-american`, the slice drawing in yellow; mozzarella and cheddar stay `cheese`) take a soft colour; everything else in the kit (bun, onion, other cheese, mayo, patty, bacon) keeps `--accent-soft`/`--surface` and the sear. Like `--sear`, these are fills for the diagrams only, not UI colours, and they stay inside the five hues: green 151°, red 14°, yellow 54°. A truer lettuce green (about 95°) was mocked and turned down, since it breaks the rule below for a small gain. Each pair is a deeper value for bodies and sauce lines and a paler one for top faces, as the kit's two fills are; in dark mode both drop to dark tints, so nothing glows and the patty stays brown. The softer UI-level tints were too close to the bun's fill at card size. On 2026-10-14 the light-mode `--kit-green-ink` went from `#4E9873` to `#CDEEDC`: the deeper strands read as the darkest thing on the burger after the patty, darker than the pickles beside them.
 
+### 7 · Drink colours, glass thumbnails only (`--kit-*`)
+
+| Token | Light | Dark | Use |
+|---|---|---|---|
+| `--kit-liqueur` | `#E9D9BC` | `#4A3E2C` | cream liqueurs (Baileys) |
+| `--kit-cream` | `#FBFBF6` | `#8A8672` | a cream float or foam; stays pale in dark mode so it reads as cream |
+| `--kit-latte` | `#C49A72` | `#4B3524` | milky tea and coffee (chai) |
+| `--kit-tea` | `#D7A45C` | `#4E3618` | iced and hot tea |
+| `--kit-wine` | `#B4535A` | `#5A2428` | red wine, sangria |
+| `--kit-ice` | `#E6EEF1` | `#2A3236` | ice cubes, drawn at 75% over the drink |
+
+Coffee and cola use `--sear`, sparkling wine `--kit-yellow-top`, and fruit `--kit-red`/`--kit-yellow`.
+
+Added 2026-10-27 (`mockups/drink-diagrams.html`, option C): each drink's card on `/drinks/` carries a small unlabelled glass, its shape the kind of drink (mug, wine glass, highball, rocks, bottle, pitcher) and its fill the drink, set from frontmatter (`docs/FORMAT.md`, "Drinks"). The same pick took option A, the `formula` fence, for ratios on drink pages; option B, a labelled section through the glass, was dropped. Like §5 and §6, these are diagram fills, not UI colours. Wine sits a little past the red hue toward rose; ice is a near-neutral cool grey, not `--flag`, which stays reserved.
+
 ### Where the palette comes from
 
 All five hues share one saturation/lightness

@@ -6,6 +6,9 @@ date: 2026-06-08
 cuisine: Canadian
 prep_time: 7 min
 draft: false
+glass: pitcher
+fill: [tea]
+ice: true
 ---
 
 My working-day tea: sweet, tart, and calming.

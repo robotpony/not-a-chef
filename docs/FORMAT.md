@@ -109,6 +109,26 @@ On top of the shared fields:
 
 There's no `related` field. Related recipes are computed at build time from `tags` and `cuisine` (Hugo related content); add a manual override only if those suggestions prove weak.
 
+### Drinks
+
+Drinks are recipes in their own folder, `content/drinks/` (Fugu's `drinkSection`): same format, same fields, plus the `drinks` tag. Four more fields draw the small glass on the drink's card (`mockups/drink-diagrams.html`, option C):
+
+```yaml
+glass: mug                     # mug, wine, highball, rocks, bottle, pitcher
+fill: [liqueur, coffee, cream] # bottom to top, one to three
+ice: true                      # optional
+garnish: nutmeg                # optional: lemon, fruit, nutmeg
+```
+
+| Field | Required | Type | Notes |
+|---|---|---|---|
+| `glass` | SHOULD | string | The glass's shape, which says what kind of drink it is. |
+| `fill` | SHOULD | list | What's in it, bottom to top, in equal bands: `liqueur`, `coffee`, `cream`, `latte`, `tea`, `wine`, `sparkling`, `cola`. Colours in `mockups/STYLE.md` §7. |
+| `ice` | MAY | boolean | Draws ice cubes in the drink. |
+| `garnish` | MAY | string | One garnish on or over the rim. |
+
+The card drawing is a sketch, not a spec: the amounts live in the ingredients. A drink with a stated ratio can also draw it with a `formula` block (see Formula diagrams).
+
 ### Mechanic
 
 Optional. One paragraph explaining the ratio, technique, or principle that drives the dish. Use **bold** for the key ratio or technique.

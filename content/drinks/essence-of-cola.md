@@ -8,6 +8,8 @@ prep_time: 30 min
 cook_time: 10 min
 total_time: 50 min (plus steeping)
 draft: false
+glass: bottle
+fill: [cola]
 ---
 
 Who doesn't like cola? This is a great mixer or addition to a glaze.

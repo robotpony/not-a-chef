@@ -5,6 +5,9 @@ source: family
 date: 2026-06-08
 cuisine: Spanish
 draft: false
+glass: wine
+fill: [wine, sparkling]
+garnish: fruit
 ---
 
 The best sangria I’ve ever had was made by my Auntie Diane when Jay and I visited Calgary during a Junior Roller Derby trip and we were staying with the Pattersons. This is the way my Auntie Di made it, and it’s still one of the recipes I like best.

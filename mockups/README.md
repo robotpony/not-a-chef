@@ -240,9 +240,9 @@ in a browser — no build step.
 - **`drink-diagrams.html`**: ways to draw a drink (2026-10-27), shown with
   the Knotty Irishman: A, the existing `formula` fence as a ratio; B, a new
   `glass` fence (a section through the glass, bands to scale, as pour bands
-  or one band per mix); C, small glasses on the `/drinks/` cards. Proposes
-  drink-kit fills not yet in `STYLE.md`. Open; the pick is in
-  `docs/REVIEW.md`.
+  or one band per mix); C, small glasses on the `/drinks/` cards. Decided
+  2026-10-27: A on drink pages, C on cards, B dropped; the drink fills are
+  `STYLE.md` §7.
 
 ## `archived/` — reference only
 

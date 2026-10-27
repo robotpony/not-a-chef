@@ -6,6 +6,9 @@ cuisine: Irish
 portions: 1 drink
 prep_time: 5 min
 draft: false
+glass: mug
+fill: [liqueur, coffee, cream]
+garnish: nutmeg
 ---
 
 ## Mechanic

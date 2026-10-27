@@ -76,6 +76,15 @@
   --kit-red-top: #F4CDC1;
   --kit-yellow: #E3CC6C;
   --kit-yellow-top: #F1E5B4;
+
+  /* Drink colours (STYLE.md §7, mockups/drink-diagrams.html C): fills for
+   * the glass thumbnails on drink cards, not UI colours. */
+  --kit-liqueur: #E9D9BC;
+  --kit-cream: #FBFBF6;
+  --kit-latte: #C49A72;
+  --kit-tea: #D7A45C;
+  --kit-wine: #B4535A;
+  --kit-ice: #E6EEF1;
 }
 
 .dark {
@@ -114,6 +123,13 @@
   --kit-red-top: #33201A;
   --kit-yellow: #45391A;
   --kit-yellow-top: #2F2918;
+
+  --kit-liqueur: #4A3E2C;
+  --kit-cream: #8A8672;
+  --kit-latte: #4B3524;
+  --kit-tea: #4E3618;
+  --kit-wine: #5A2428;
+  --kit-ice: #2A3236;
 }
 
 /* Blowfish's <body> tag (themes/blowfish/layouts/_default/baseof.html) is

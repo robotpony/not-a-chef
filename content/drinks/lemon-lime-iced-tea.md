@@ -7,6 +7,9 @@ servings: 1
 prep_time: 5 min
 total_time: 5 min
 draft: false
+glass: highball
+fill: [tea]
+ice: true
 ---
 
 This is my favourite spring and summer drink.
