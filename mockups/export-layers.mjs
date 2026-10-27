@@ -58,6 +58,8 @@ const style = {
   // Spreads (2026-10-14): swoop lips and their echoes.
   ridge: 'fill="currentColor"',
   'ridge-echo': `${INK} ${S(.5)} stroke-opacity=".7"`,
+  // Slaw's carrot shreds (2026-10-27): round strands in the kit's red.
+  'carrot-out': `${INK} ${S(3)}`, carrot: `style="stroke:${KIT('red')}" ${S(1.6)}`,
 };
 const bodies = ['onion-side','bun','leaf-back','tom-side','pick-side','cheese-side','meat','bacon','sauce-red','sauce-yel','sauce-pink','ragu'];
 const tops = ['onion','crumb','leaf','tom','pick','cheese','bech','pasta'];
@@ -65,7 +67,7 @@ const hidden = ['ring-in','meat-dot','crust'];
 
 // The layers that take a food colour, and which of their parts change: bodies and sauce lines
 // the deeper value, top faces the paler one; tomato flesh deeper, its seed segments paler.
-const COLOUR = {'lettuce':'green', 'lettuce-shredded':'green', 'lettuce-chunks':'green', 'pickle':'green', 'tomato':'red', 'ketchup':'red', 'mustard':'yellow', 'cheese-american':'yellow', 'sauce-ketchup-mustard':'km'};
+const COLOUR = {'lettuce':'green', 'lettuce-shredded':'green', 'slaw':'green', 'marinara':'red', 'lettuce-chunks':'green', 'pickle':'green', 'tomato':'red', 'ketchup':'red', 'mustard':'yellow', 'cheese-american':'yellow', 'sauce-ketchup-mustard':'km'};
 function tint(c, a, key){
   const g = COLOUR[key], has = (...k) => k.some(x => c.includes(x));
   if (!g || a === null) return a;
@@ -77,6 +79,7 @@ function tint(c, a, key){
   if (g === 'red'){
     if (has('tom-side', 'tom')) return a.replace(SOFT, KIT('red')).replace(SURF, KIT('red'));
     if (has('jelly')) return a.replace(SOFT, KIT('red-top'));
+    if (has('sauce-red')) return a.replace(SOFT, KIT('red'));
   }
   if ((g === 'red' || g === 'km') && has('swirl-in-light')) return a.replace(SURF, KIT('red'));
   if (g === 'yellow' && has('cheese-side')) return a.replace(SOFT, KIT('yellow'));
@@ -113,7 +116,7 @@ function restyle(svg, key){
   });
 }
 
-const keys = ['bun-top','lettuce','lettuce-shredded','lettuce-chunks','tomato','onion-raw','onion-fried','onion-minced','pickle','cheese','cheese-american','bacon','patty-thin','patty-thin-grilled','patty-thick','patty-thick-grilled','patty-smash','ketchup','sauce-ketchup-mustard','sauce-burger','mustard','bun-base','bun-top+mayo','bun-base+mayo','bun-top+sauce-burger','bun-base+sauce-burger','bread','pasta','ragu','bechamel','cheese-top','mayo'];
+const keys = ['bun-top','lettuce','lettuce-shredded','slaw','patty-chicken','marinara','lettuce-chunks','tomato','onion-raw','onion-fried','onion-minced','pickle','cheese','cheese-american','bacon','patty-thin','patty-thin-grilled','patty-thick','patty-thick-grilled','patty-smash','ketchup','sauce-ketchup-mustard','sauce-burger','mustard','bun-base','bun-top+mayo','bun-base+mayo','bun-top+sauce-burger','bun-base+sauce-burger','bread','pasta','ragu','bechamel','cheese-top','mayo'];
 fs.mkdirSync(out, {recursive: true});
 for (const k of keys){
   const o = L[k](CX, 0, RX);
