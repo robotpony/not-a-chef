@@ -11,7 +11,7 @@ description: "The Bruce chicken sandwich: a cornmeal-fried chicken breast with m
 ---
 The chicken sandwich I make at home. It's the crunchy cornmeal crust I've been chasing since the mall food court, built like [[The Bruce burger]]: everything cold, sharp, and sour stacked over a hot patty, with mayo and mustard kept apart.
 
-I started building it this way in 1991, while I was working in restaurants. The home version settled around 2015, and the cornmeal patty arrived in 2026.
+It's had three versions, below.
 
 ## Picks
 
@@ -33,6 +33,14 @@ patty-chicken-breast    | Cornmeal-fried breast | crunch, salt, fat
 bun-base + mayo  | Toasted bun, mayo   | rich, barrier
 caption: The Bruce chicken sandwich, top to bottom
 ```
+
+## Iterations
+
+| Year | Version | What changed |
+|---|---|---|
+| 1991 | Behind the counter | A fast-food breaded patty, built [[The Whopper\|Whopper]] style: onion, pickle, tomato, ketchup, the works (see [[The impossible quest for the perfect chicken burger]]). |
+| 2015 | The home version | A homemade breaded patty ([[Pan-fried chicken burger]]), with mustard in place of the ketchup, and extra pickles and onion. |
+| 2026 | The cornmeal patty | A cornmeal-fried breast ([[Cornmeal fried chicken]]), the crust from the mall food court. The picks above are this version. |
 
 ## Why these picks
 
