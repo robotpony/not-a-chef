@@ -141,12 +141,10 @@
     if(el){ el.addEventListener('click', function(){ drawerToggle.open = false; }); }
   });
 
-  // Same gap for the desktop dropdowns and the ingredient gear popup
-  // (.ing-config, built later by themes/fugu/assets/js/ingredients.js, hence the
-  // document-level listener): a click anywhere outside an open one closes
-  // it. Clicks inside, including its own summary, are left to the browser.
+  // Same gap for the desktop dropdowns: a click anywhere outside an open one
+  // closes it. Clicks inside, including its own summary, are left to the browser.
   document.addEventListener('click', function(e){
-    document.querySelectorAll('details.nav-drop[open], details.ing-config[open]').forEach(function(d){
+    document.querySelectorAll('details.nav-drop[open]').forEach(function(d){
       if(!d.contains(e.target)){ d.open = false; }
     });
   });
