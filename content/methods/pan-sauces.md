@@ -5,7 +5,7 @@ tags:
   - sauces
   - quick
 date: 2026-10-27
-draft: true
+draft: false
 working_on: "First draft from notes; needs testing against more proteins and a few more recipes"
 description: "Sear, deglaze, reduce, mount: the browned bits left in the pan after searing become a sauce in the time the meat takes to rest."
 ---
