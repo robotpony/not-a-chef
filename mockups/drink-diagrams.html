@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drink diagrams</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  :root{
+    --bg:#F3F3EC; --surface:#FBFBF6; --surface-2:#EAEBDF;
+    --ink:#23241E; --ink-muted:#63645A; --ink-faint:#93948A;
+    --border:#DCDCCE; --border-strong:#C7C8B4;
+    --accent:#A67330; --accent-strong:#7C361D; --accent-soft:#F6EADA;
+    --highlight:#997F29; --highlight-soft:#F6F1D5;
+    /* layer kit (STYLE.md 5 and 6) */
+    --sear:#8E5E3D; --sear-char:#23241E;
+    --kit-red:#E9A994; --kit-yellow:#E3CC6C; --kit-yellow-top:#F1E5B4; --kit-green:#A3DABD;
+    /* candidates for a drink kit, not in STYLE.md yet */
+    --kit-liqueur:#E9D9BC; --kit-amber:#DDB070; --kit-nut:#C99A6A;
+    --kit-cream:#FBFBF6; --kit-latte:#C49A72; --kit-ice:#E6EEF1;
+    --kit-wine:#B4535A; --kit-tea:#D7A45C;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+      --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+      --border:#383A2C; --border-strong:#4A4C3A;
+      --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+      --highlight:#DDCC88; --highlight-soft:#342D19;
+      --sear:#5C3A26; --sear-char:#121310;
+      --kit-red:#4A2A21; --kit-yellow:#45391A; --kit-yellow-top:#2F2918; --kit-green:#25432F;
+      --kit-liqueur:#4A3E2C; --kit-amber:#5A3F1E; --kit-nut:#4E3624;
+      --kit-cream:#8A8672; --kit-latte:#4B3524; --kit-ice:#2A3236;
+      --kit-wine:#5A2428; --kit-tea:#4E3618;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+    --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+    --border:#383A2C; --border-strong:#4A4C3A;
+    --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+    --highlight:#DDCC88; --highlight-soft:#342D19;
+    --sear:#5C3A26; --sear-char:#121310;
+    --kit-red:#4A2A21; --kit-yellow:#45391A; --kit-yellow-top:#2F2918; --kit-green:#25432F;
+    --kit-liqueur:#4A3E2C; --kit-amber:#5A3F1E; --kit-nut:#4E3624;
+    --kit-cream:#8A8672; --kit-latte:#4B3524; --kit-ice:#2A3236;
+    --kit-wine:#5A2428; --kit-tea:#4E3618;
+  }
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Lora,Georgia,serif}
+  main{max-width:980px;margin:0 auto;padding:40px 16px 80px}
+  h1,h2,h3{font-family:"Libre Franklin",sans-serif;line-height:1.2}
+  h1{font-size:32px;margin:0 0 8px}
+  h2{font-size:22px;margin:56px 0 4px}
+  h3{font-size:15px;margin:0 0 8px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-muted)}
+  .lede{color:var(--ink-muted);max-width:65ch}
+  p{max-width:65ch}
+  code,pre{font-family:"IBM Plex Mono",monospace;font-size:13px}
+  pre{background:var(--surface-2);border:1px solid var(--border);border-radius:6px;padding:12px 14px;overflow-x:auto;margin:0}
+  .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:16px}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:18px}
+  .verdict{font-family:"Libre Franklin",sans-serif;font-size:14px;color:var(--ink-muted);margin-top:12px}
+  .verdict b{color:var(--accent-strong)}
+
+  svg.d{width:100%;height:auto;display:block}
+  svg.d .o{fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  svg.d .l{stroke:var(--ink-faint);stroke-width:1}
+  svg.d text{fill:var(--ink);font-family:"Libre Franklin",sans-serif;font-size:12px}
+  svg.d text.q{fill:var(--ink-muted);font-family:"IBM Plex Mono",monospace;font-size:11px}
+  svg.d text.cap{fill:var(--ink-muted);font-style:italic;font-family:Lora,serif}
+
+  /* formula row, after mockups/formula-diagrams.html */
+  .formula{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:8px}
+  .f-slot{display:flex;flex-direction:column;align-items:center;min-width:72px;text-align:center}
+  .f-slot svg{width:44px;height:44px;fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .f-label{font-family:"Libre Franklin",sans-serif;font-weight:600;font-size:13px}
+  .f-qty{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--accent-strong)}
+  .f-op{font-family:"IBM Plex Mono",monospace;font-size:20px;color:var(--ink-faint)}
+  .bar{display:flex;height:12px;border-radius:3px;overflow:hidden;border:1px solid var(--border-strong);margin-top:14px}
+  .bar span{display:block}
+  .f-cap{font-style:italic;color:var(--ink-muted);font-size:14px;margin-top:6px}
+
+  .thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .thumb{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px;text-align:center}
+  .thumb svg{width:70px;height:90px}
+  .thumb div{font-family:"Libre Franklin",sans-serif;font-weight:600;font-size:13px;margin-top:6px}
+  @media (max-width:560px){.thumbs{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<main>
+  <h1>Drink diagrams</h1>
+  <p class="lede">Three ways to draw a drink, shown with the Knotty Irishman. The working pick is B, the glass, with C as its card thumbnail. A is free today but says less.</p>
+
+  <!-- ===================== A ===================== -->
+  <h2>A · Formula ratio (exists today)</h2>
+  <p>The <code>formula</code> fence with the <code>:</code> operator and <code>bar: yes</code>. It needs only new icons (bottle, mug, glass, ice). It shows the spirit ratio but not the build: no glass, no float, no ice.</p>
+  <div class="row">
+    <div class="card">
+      <h3>Rendered</h3>
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+          <symbol id="i-bottle" viewBox="0 0 48 48">
+            <path style="fill:var(--accent-soft)" d="M19 4h10v8c0 2 6 5 6 11v18c0 1.7-1.3 3-3 3H16c-1.7 0-3-1.3-3-3V23c0-6 6-9 6-11z"/>
+            <path d="M13 26h22M13 36h22"/>
+          </symbol>
+          <symbol id="i-mug" viewBox="0 0 48 48">
+            <path style="fill:var(--accent-soft)" d="M8 13h24v23c0 2.8-2.2 5-5 5H13c-2.8 0-5-2.2-5-5z"/>
+            <path d="M32 18h4.5c1.7 0 3 1.3 3 3v6c0 1.7-1.3 3-3 3H32M14 4c-2 3 2 4 0 7M22 4c-2 3 2 4 0 7"/>
+          </symbol>
+        </defs>
+      </svg>
+      <div class="formula">
+        <div class="f-slot"><svg aria-hidden="true"><use href="#i-bottle"/></svg><span class="f-label">Baileys</span><span class="f-qty">4</span></div>
+        <span class="f-op">:</span>
+        <div class="f-slot"><svg aria-hidden="true"><use href="#i-bottle"/></svg><span class="f-label">Whiskey</span><span class="f-qty">2</span></div>
+        <span class="f-op">:</span>
+        <div class="f-slot"><svg aria-hidden="true"><use href="#i-bottle"/></svg><span class="f-label">Frangelico</span><span class="f-qty">1</span></div>
+        <span class="f-op">:</span>
+        <div class="f-slot"><svg aria-hidden="true"><use href="#i-mug"/></svg><span class="f-label">Coffee</span><span class="f-qty">8</span></div>
+      </div>
+      <div class="bar" aria-hidden="true">
+        <span style="flex:4;background:var(--kit-liqueur)"></span>
+        <span style="flex:2;background:var(--kit-amber)"></span>
+        <span style="flex:1;background:var(--kit-nut)"></span>
+        <span style="flex:8;background:var(--sear)"></span>
+      </div>
+      <div class="f-cap">Per 15 ml (½ oz) part</div>
+    </div>
+    <div class="card">
+      <h3>Source</h3>
+<pre>```formula
+bottle | Baileys    | 4
+: bottle | Whiskey  | 2
+: bottle | Frangelico | 1
+: mug  | Coffee     | 8
+caption: Per 15 ml (½ oz) part
+bar: yes
+```</pre>
+      <p class="verdict">The Mechanic would have to state <b>4 : 2 : 1 : 8</b> in words first (the fence never replaces the sentence). It suits ratio drinks (sours, sangria, iced tea) better than built drinks.</p>
+    </div>
+  </div>
+
+  <!-- ===================== B ===================== -->
+  <h2>B · The glass (new <code>glass</code> fence)</h2>
+  <p>A section through the glass with bands drawn to scale in pour order, labels on the right, a bracket for what gets stirred, and garnish on top. This is the classic bar spec card in the layer kit's line and fill style. Like <code>stack</code>, rows run top first.</p>
+
+  <div class="row">
+    <div class="card">
+      <h3>B1 · Hot, pour bands</h3>
+      <svg class="d" viewBox="0 0 400 270" role="img" aria-label="Knotty Irishman in a mug: Baileys, whiskey and Frangelico at the bottom, hot coffee above, stirred; lightly whipped cream floated on top; nutmeg grated over.">
+        <defs>
+          <clipPath id="mug-in"><path d="M70 40V226q0 12 12 12H178q12 0 12-12V40z"/></clipPath>
+        </defs>
+        <g clip-path="url(#mug-in)">
+          <rect x="60" y="198" width="140" height="42" style="fill:var(--kit-liqueur)"/>
+          <rect x="60" y="178" width="140" height="20" style="fill:var(--kit-amber)"/>
+          <rect x="60" y="168" width="140" height="10" style="fill:var(--kit-nut)"/>
+          <rect x="60" y="88"  width="140" height="80" style="fill:var(--sear)"/>
+          <path d="M60 88V52q15-6 30 0t30 0t30 0t30 0t30 0V88z" style="fill:var(--kit-cream)"/>
+          <path class="o" style="stroke-width:1.2" d="M60 52q15-6 30 0t30 0t30 0t30 0t30 0"/>
+          <path class="o" style="stroke-width:1;stroke:var(--ink-faint)" d="M70 88H190M70 168H190M70 178H190M70 198H190"/>
+        </g>
+        <g style="fill:var(--sear-char)">
+          <circle cx="96" cy="49" r="1.6"/><circle cx="112" cy="53" r="1.3"/><circle cx="131" cy="48" r="1.7"/>
+          <circle cx="150" cy="52" r="1.3"/><circle cx="166" cy="49" r="1.5"/><circle cx="104" cy="45" r="1.1"/><circle cx="142" cy="45" r="1.2"/>
+        </g>
+        <path class="o" d="M70 34V226q0 12 12 12H178q12 0 12-12V34"/>
+        <path class="o" d="M70 80H52q-14 0-14 14v52q0 14 14 14H70"/>
+        <path class="o" style="stroke-width:1.4" d="M202 92h6v144h-6"/>
+        <text x="205" y="252" class="q" style="font-style:italic">stirred</text>
+        <g>
+          <line class="l" x1="180" y1="46" x2="250" y2="34"/><text x="256" y="31">Nutmeg</text><text x="256" y="44" class="q">grated</text>
+          <line class="l" x1="180" y1="70" x2="250" y2="70"/><text x="256" y="67">Cream, whipped</text><text x="256" y="80" class="q">60 ml · float</text>
+          <line class="l" x1="180" y1="128" x2="250" y2="122"/><text x="256" y="119">Hot coffee</text><text x="256" y="132" class="q">120 ml</text>
+          <line class="l" x1="180" y1="173" x2="250" y2="162"/><text x="256" y="159">Frangelico</text><text x="256" y="172" class="q">15 ml</text>
+          <line class="l" x1="180" y1="188" x2="250" y2="194"/><text x="256" y="191">Irish whiskey</text><text x="256" y="204" class="q">30 ml</text>
+          <line class="l" x1="180" y1="219" x2="250" y2="226"/><text x="256" y="223">Baileys</text><text x="256" y="236" class="q">60 ml</text>
+        </g>
+        <text x="130" y="262" text-anchor="middle" class="cap">300 ml mug, warmed</text>
+      </svg>
+    </div>
+
+    <div class="card">
+      <h3>B2 · Over ice, one blended band</h3>
+      <svg class="d" viewBox="0 0 400 270" role="img" aria-label="Knotty Irishman over ice in a rocks glass: Baileys, whiskey, Frangelico and cold brew stirred together over ice, cream swirled on top, nutmeg over.">
+        <defs>
+          <clipPath id="rocks-in"><path d="M62 70L68 238H172L178 70z"/></clipPath>
+        </defs>
+        <g clip-path="url(#rocks-in)">
+          <rect x="50" y="128" width="140" height="112" style="fill:var(--kit-latte)"/>
+          <path d="M50 128V92q12-5 24 0t24 0t24 0t24 0t24 0t24 0V128z" style="fill:var(--kit-cream)"/>
+          <path class="o" style="stroke-width:1.1" d="M80 128q8-14 20-4t22-6M118 128q10-12 22-2t18-10" />
+          <path class="o" style="stroke-width:1.2" d="M50 92q12-5 24 0t24 0t24 0t24 0t24 0t24 0"/>
+          <g style="fill:var(--kit-ice);fill-opacity:.75">
+            <rect class="o" style="stroke-width:1.4" x="76" y="150" width="34" height="34" rx="5" transform="rotate(-8 93 167)"/>
+            <rect class="o" style="stroke-width:1.4" x="120" y="160" width="34" height="34" rx="5" transform="rotate(10 137 177)"/>
+            <rect class="o" style="stroke-width:1.4" x="92" y="196" width="34" height="34" rx="5" transform="rotate(4 109 213)"/>
+            <rect class="o" style="stroke-width:1.4" x="104" y="104" width="30" height="30" rx="5" transform="rotate(-14 119 119)"/>
+          </g>
+        </g>
+        <g style="fill:var(--sear-char)">
+          <circle cx="86" cy="89" r="1.5"/><circle cx="104" cy="93" r="1.3"/><circle cx="126" cy="88" r="1.6"/><circle cx="146" cy="92" r="1.3"/><circle cx="160" cy="88" r="1.4"/>
+        </g>
+        <path class="o" d="M58 62L66 238q0 6 6 6H168q6 0 6-6L182 62"/>
+        <g>
+          <line class="l" x1="172" y1="88" x2="250" y2="64"/><text x="256" y="61">Nutmeg</text><text x="256" y="74" class="q">grated</text>
+          <line class="l" x1="172" y1="110" x2="250" y2="104"/><text x="256" y="101">Cream</text><text x="256" y="114" class="q">60 ml · swirl</text>
+          <line class="l" x1="168" y1="200" x2="250" y2="168"/><text x="256" y="152">Baileys 60 · whiskey 30</text><text x="256" y="166">Frangelico 15</text><text x="256" y="180">cold brew 120</text><text x="256" y="193" class="q">ml · stirred over ice</text>
+        </g>
+        <text x="120" y="262" text-anchor="middle" class="cap">Rocks glass, full of ice</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="card">
+      <h3>Source (B1)</h3>
+<pre>```glass
+nutmeg   | Nutmeg          | grated
+cream    | Cream, whipped  | 60 ml | float
+coffee   | Hot coffee      | 120 ml
+liqueur  | Frangelico      | 15 ml
+whiskey  | Irish whiskey   | 30 ml
+liqueur  | Baileys         | 60 ml
+glass: mug 300 ml
+stir: 3-6
+caption: 300 ml mug, warmed
+```</pre>
+    </div>
+    <div class="card">
+      <h3>How it reads</h3>
+      <p style="font-size:15px">Rows run <code>fill | label | amount | note</code>, top first like <code>stack</code>. Band heights come from the amounts, scaled to <code>glass:</code> (mug, rocks, highball, wine, coupe, pitcher). <code>stir:</code> brackets the rows that mix; B2's single band is the same fence with all four in one row. A garnish row (nutmeg, lemon wheel, mint) draws above the rim instead of as a band, and <code>ice: yes</code> adds the cubes.</p>
+      <p class="verdict">Pick between <b>B1 pour bands</b> (shows the build order, but stirred drinks don't really stay layered) and <b>B2 one band per mix</b> (honest about the glass, loses the proportions). A middle option: pour bands with a <b>stir</b> bracket, as in B1.</p>
+    </div>
+  </div>
+
+  <!-- ===================== C ===================== -->
+  <h2>C · Glass thumbnails on the Drinks list</h2>
+  <p>An unlabelled copy of B on each drink's card, the way builds carry a small <code>stack</code> on the burgers blueprint. It gives <code>/drinks/</code> a look of its own rather than a wall of text cards.</p>
+  <div class="thumbs" style="margin-top:16px">
+    <div class="thumb">
+      <svg viewBox="0 0 70 90" aria-hidden="true">
+        <defs><clipPath id="t1"><path d="M18 18V74q0 4 4 4H48q4 0 4-4V18z"/></clipPath></defs>
+        <g clip-path="url(#t1)">
+          <rect x="10" y="62" width="50" height="20" style="fill:var(--kit-liqueur)"/>
+          <rect x="10" y="38" width="50" height="24" style="fill:var(--sear)"/>
+          <rect x="10" y="24" width="50" height="14" style="fill:var(--kit-cream)"/>
+        </g>
+        <path style="fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linejoin:round" d="M18 14V74q0 4 4 4H48q4 0 4-4V14M18 30h-6q-5 0-5 5v14q0 5 5 5h6"/>
+      </svg>
+      <div>Knotty Irishman</div>
+    </div>
+    <div class="thumb">
+      <svg viewBox="0 0 70 90" aria-hidden="true">
+        <defs><clipPath id="t2"><path d="M16 14h38q2 26-19 34q-21-8-19-34z"/></clipPath></defs>
+        <g clip-path="url(#t2)">
+          <rect x="10" y="24" width="50" height="30" style="fill:var(--kit-wine)"/>
+          <rect x="10" y="14" width="50" height="10" style="fill:var(--kit-yellow-top)"/>
+          <circle cx="28" cy="38" r="3" style="fill:var(--kit-red)"/><circle cx="40" cy="34" r="3" style="fill:var(--kit-yellow)"/><circle cx="34" cy="43" r="2.5" style="fill:var(--kit-red)"/>
+        </g>
+        <path style="fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round" d="M16 10q-2 30 19 38q21-8 19-38M35 48V78M24 80h22"/>
+      </svg>
+      <div>Prosecco sangria</div>
+    </div>
+    <div class="thumb">
+      <svg viewBox="0 0 70 90" aria-hidden="true">
+        <defs><clipPath id="t3"><path d="M20 14L22 80H48L50 14z"/></clipPath></defs>
+        <g clip-path="url(#t3)">
+          <rect x="10" y="20" width="50" height="64" style="fill:var(--kit-tea)"/>
+          <g style="fill:var(--kit-ice);stroke:var(--ink);stroke-width:1">
+            <rect x="24" y="26" width="14" height="14" rx="2" transform="rotate(-10 31 33)"/>
+            <rect x="32" y="44" width="14" height="14" rx="2" transform="rotate(12 39 51)"/>
+            <rect x="23" y="60" width="14" height="14" rx="2" transform="rotate(4 30 67)"/>
+          </g>
+        </g>
+        <circle cx="50" cy="16" r="8" style="fill:var(--kit-yellow);stroke:var(--ink);stroke-width:1.4"/>
+        <path style="fill:none;stroke:var(--ink);stroke-width:1" d="M50 9v14M43 16h14M45 11l10 10M55 11l-10 10"/>
+        <path style="fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linejoin:round" d="M20 10L22 80q0 2 2 2H46q2 0 2-2L50 10"/>
+      </svg>
+      <div>Iced tea</div>
+    </div>
+    <div class="thumb">
+      <svg viewBox="0 0 70 90" aria-hidden="true">
+        <defs><clipPath id="t4"><path d="M18 30V74q0 4 4 4H48q4 0 4-4V30z"/></clipPath></defs>
+        <g clip-path="url(#t4)"><rect x="10" y="36" width="50" height="46" style="fill:var(--kit-latte)"/></g>
+        <path style="fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round" d="M18 26V74q0 4 4 4H48q4 0 4-4V26M52 40h6q5 0 5 5v12q0 5-5 5h-6M28 8c-3 4 3 6 0 12M38 8c-3 4 3 6 0 12"/>
+      </svg>
+      <div>Chai</div>
+    </div>
+  </div>
+
+  <h2>Open questions</h2>
+  <ul style="max-width:65ch">
+    <li>B1 or B2 as the default for stirred drinks.</li>
+    <li>The drink kit needs fills that aren't in STYLE.md: liqueur, amber, nut, cream, latte, ice, wine, tea. Ice especially, since blue (<code>--flag</code>) is reserved.</li>
+    <li>Where it sits: under <code>## Mechanic</code>, as <code>formula</code> and <code>stack</code> do, or at the top of the page as the drink's spec.</li>
+    <li>The fence spec goes to hugo-warped and the drawing to Fugu, as for <code>stack</code>.</li>
+  </ul>
+</main>
+</body>
+</html>

@@ -98,6 +98,10 @@ mainSections = ["recipes"]
   # (/methods/) is the methods list (docs/METHODS.md).
   methodSection = "methods"
 
+  # Drinks are recipes in their own top-level section, content/drinks/:
+  # recipe pages, a drinks list, and entries in public/recipes/index.json.
+  drinkSection = "drinks"
+
   # Reference essays (full definitions: Win the fridge, Test kitchen) live
   # under Reference, so wiki links to them get the glossary popover and a
   # principle tag finds its essay there. A subfolder, not "reference" itself,

@@ -19,10 +19,10 @@ From the job-search-tools session, which copied this preview pattern.
 
 ## Drinks section #todo
 
-Drinks now have their own section, `content/drinks/` (`/drinks/`, in the nav). [[Knotty Irishman]] is the first page there. The seven older drinks are still in recipes and are all live at `/recipes/<slug>/` on bruce-loves-to-cook.ca: chai, lemon-lime iced tea, prosecco sangria, Bruce's cold-brewed iced tea, Bruce's iced tea, homemade Baileys Irish cream, essence of cola.
+The seven older drinks moved to `content/drinks/` (2026-10-27). All seven were live at `/recipes/<slug>/` on bruce-loves-to-cook.ca: chai, lemon-lime iced tea, prosecco sangria, Bruce's cold-brewed iced tea, Bruce's iced tea, homemade Baileys Irish cream, essence of cola.
 
-- [ ] Move the seven into `content/drinks/`. Their URLs change to `/drinks/<slug>/`.
 - [ ] Add `aliases:` redirects from the old `/recipes/<slug>/` URLs (all seven are published).
+- [ ] Drink diagrams: pick from `mockups/drink-diagrams.html` (A formula ratio, B glass fence with B1 pour bands or B2 one band per mix, C glass thumbnails on `/drinks/` cards).
 - [ ] Check the Knotty Irishman amounts: 2 shots Baileys, 1 whiskey, ½ shot Frangelico, 120 ml coffee, 60 ml cream, with a shot as 30 ml (1 oz).
 
 ## Deferred by Bruce

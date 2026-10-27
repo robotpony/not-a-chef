@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-A family cookbook built as a Hugo static site (Blowfish theme), edited in Obsidian. Three content types: recipes, food essays, and reference pages (technique guides, glossaries, appendices). Drinks are recipes in their own top-level section, `content/drinks/` (same format as recipes, `drinks` tag; started 2026-10-27, Fugu templates pending).
+A family cookbook built as a Hugo static site (Blowfish theme), edited in Obsidian. Three content types: recipes, food essays, and reference pages (technique guides, glossaries, appendices). Drinks are recipes in their own top-level section, `content/drinks/` (same format as recipes, `drinks` tag, `drinkSection` in `params.toml`; listed in the recipe index).
 
 See docs/ARCHITECTURE.md for the data flow and component overview. See docs/PLAN.md for future work (the phased build plan was squashed after release; its history is in git). See `mockups/STYLE.md` (or `mockups/style.html`) for the settled visual design system — read it before any visual/layout work; see "Visual design" below.
 ## Content formats
@@ -32,7 +32,7 @@ This repo (`/Users/mx/writing/not-a-chef`) is now the Obsidian vault itself — 
 
 ## Recipe index
 
-`public/recipes/index.json` — a machine-readable index of all published recipes, generated automatically by `hugo`. Read this file first when answering questions about the recipe collection (coverage gaps, overlap, missing metadata, quality). It contains per-recipe: title, slug, date, tags, cuisine, servings, source, prep/cook time, word count, and whether Mechanic/Variations/Notes sections and a `formula` diagram block are present.
+`public/recipes/index.json` — a machine-readable index of all published recipes, generated automatically by `hugo`. Read this file first when answering questions about the recipe collection (coverage gaps, overlap, missing metadata, quality). It contains per-recipe: section (`recipes` or `drinks`), title, slug, date, tags, cuisine, servings, source, prep/cook time, word count, and whether Mechanic/Variations/Notes sections and a `formula` diagram block are present.
 
 The index is current after any `hugo` build. If `public/` is stale, run `hugo --quiet` to regenerate.
 

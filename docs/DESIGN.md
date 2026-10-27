@@ -109,7 +109,7 @@ A key left out of `params.toml` falls back to Fugu's default ("In development" a
 
 ```
 /recipes/dal-tadka/
-/recipes/chai/
+/drinks/chai/
 /methods/burgers/builds/drive-in-deluxe/
 /essays/the-case-for-mise-en-place/
 /reference/meat-doneness/
