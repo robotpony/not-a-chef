@@ -81,6 +81,7 @@ Drinks got their own section on 2026-10-27 (`content/drinks/`, Fugu 356fad8). Di
   - `tests/check.py` fails every fixture: Blowfish declares Hugo 0.163–0.166 and this machine runs 0.168, and `--panicOnWarning` turns that compatibility warning into a build failure.
   - `head.html` lines 167 and 200: `not .Site.Params.disableImageZoom | default true` pipes the `not` into `default`, so `disableImageZoom = true` can never turn zoom off.
   - The site header's script (`layouts/partials/header/basic.html`) closes Fugu's `details.ing-config` popup on outside clicks; that belongs with `ingredients.js`. Once Fugu does it, drop the selector here.
+- [ ] For fugu-agent (2026-10-27, no session running): add the formula icons `breast`, `pounder`, `knife`, and `bun` from `mockups/formula-icons-3/` to Fugu's `assets/icons/formula/` (approved in `mockups/formula-icons-3.html`). They sit in this repo's `assets/icons/formula/` until then, for Cornmeal fried chicken's patties diagram; delete those copies after the submodule bump.
 - [ ] When Fugu's validator lands, run it over all recipes; file each discrepancy as a spec or content bug.
 - [ ] When Fugu gets its own CSS (Fugu §5), cut `custom.css` to the Not a Chef look; when it renames params (§2), update `params.toml`; when its docs exist (§7), decide if `FORMAT.md` stays as house style.
 
