@@ -89,6 +89,6 @@ Hot, at room temperature, or cold from the fridge the next day.
 
 ## Notes
 
-- A rack keeps the bottom crust crisp; paper towels steam it soft.
-- The shortening keeps the oil temperature steadier and gives a drier crust than liquid oil. Strain and reuse it once or twice for more chicken.
+- A rack for holding cooked patties keeps the bottom crust crisp; paper towels steam it soft.
+- The shortening keeps the oil temperature steadier and gives a drier crust than liquid oil. Strain and reuse it (lasts 1-2 months in the fridge if strained/sealed, or 5 days unsealed and minimally strained)
 - Adapted from a classic buttermilk and shortening pan-fry.

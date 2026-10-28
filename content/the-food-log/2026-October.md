@@ -6,19 +6,25 @@ A month of travel eating turned into a research list: tabbouleh, a subtly sweet 
 
 ## Week of Sunday, October 18th
 
-## Methods/builds to work on #todo 
+## Methods/builds to work on #todo
 
-- [ ] Chicken sandwhiches and burgers (reference patty recipes), then builds for simple, deluxe, etc.
+- [x] Chicken sandwhiches and burgers (reference patty recipes), then builds for simple, deluxe, etc.
 
+### Muesli research
+
+- Bircher Muesli (Swiss-Style): A wet, moist mixture where raw rolled oats and grains are soaked overnight in water, milk, or fruit juice, then mixed with freshly grated apples, lemon juice, and chopped nuts. [](https://en.wikipedia.org/wiki/Muesli)
+- Classic / Raw Untoasted Muesli: **Characteristics:** A loose, dry mixture of raw cereal flakes (such as oats, wheat, or barley), dried fruits (raisins, cranberries, apricots), and various seeds and nuts. It contains no added oils or sugars and is eaten cold with milk, yogurt, or juice
+- Crunchy Muesli (NA): My go-to. While technically a baked variant of muesli, crunchy muesli (or granola) involves tossing oat and grain flakes with oil and a sweetener (like honey or maple syrup) and baking them into crisp, clustered chunks.
+- Fruit and Nut / High-Fiber Muesli: Packed with a dense ratio of tropical or orchard dried fruits (papaya, apple, raisins) and nuts (almonds, walnuts). Regional spins in South Asia also incorporate indigenous millets like amaranth or chocolate-millet blends for extra protein and texture. [](https://www.gaiagoodhealth.com/types-of-muesli-you-should-try-for-a-healthier-you/)
 ### Recipes to research #todo 
 
+- [ ] All of the Indian curries: pea and corn, cabbage, and various chicken variations. so fantastic!
+- [x] Muesli → better recipe, something like HAL 
 - [x] A diagrammed method for pan sauces, diagrams, etc.: [[Pan sauces]]
 - [x] Fresh pickled ginger! #focus 
 - [x] Soy sauce recipe (for dipping), with bonito ← ratio? [[Bonito soy sauce]]
 - [x] Cornmeal fried chicken, a candidate for the dark, mealy, crunchy breading: [[Cornmeal fried chicken]] (test the pan-fry and the oven version)
-- [ ] Muesli → better recipe, something like HAL 
-- [ ] Knotty irishman: baileys frangelico, dead rabbit whisky, coffee, cream, nutmeg
-- [ ] All of the Indian curries: pea and corn, cabbage, and various chicken variations. so fantastic!
+- [x] Knotty irishman: baileys frangelico, dead rabbit whisky, coffee, cream, nutmeg
 
 ### Food wishes #ideas 
 
