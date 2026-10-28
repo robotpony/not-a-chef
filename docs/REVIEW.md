@@ -27,6 +27,17 @@ New blueprint at [Chicken sandwiches](/methods/chicken-sandwiches/), from your f
 - [x] [[Crispy, mall-style chicken sandwich]]: you said 1889; I set `era: 1989`, from the essay's high-school timing. Right?
 - [x] [[The BCS]] `## Iterations`: I filled in 1991 from the essay (BK patty, Whopper style) and 2015 from the Pan-fried chicken burger's "The Bruce" variation (homemade patty, mustard instead of ketchup, extra pickles and onion). Right?
 
+## Muesli blueprint #todo
+
+Ideation before drafting (from the October food log's muesli research). Shape proposed: a blueprint with four parts (grains, treatment, add-ins, liquid) and three or four builds.
+
+- [ ] What's "HAL" in "Muesli → better recipe, something like HAL"? A brand, a café, a person's mix?
+- [ ] Your go-to crunchy muesli: what's in it, and is it bought or made? It could be its own build, the way the Bruce burger is.
+- [ ] Crunchy muesli and granola: one build, or two? My read is that they're two (toasted loose vs. baked into clusters with more binder), with granola bars as the far end.
+- [ ] Fruit and nut: fold it into the add-ins part as an option rather than a build, since it's a classic muesli with a heavier fruit ratio. Agree?
+- [ ] Overnight oats as a modern build descended from Bircher, or leave it out?
+- [ ] Drop the South Asian millet line until there's a source to cite?
+
 ## Deferred by Bruce
 
 Not questions for now, kept so they aren't lost: the drafts (`make drafts`). The cornmeal-breaded chicken patty research is now a test kitchen recipe, [[Cornmeal fried chicken]].
