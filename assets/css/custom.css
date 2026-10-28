@@ -1866,9 +1866,18 @@ a.part-row:hover::after, a.part-row:focus-visible::after { opacity: 1; transform
  * tighter gaps fit all three. */
 .principle-page .rcard-stats { gap: 8px; }
 .principle-page .rcard-stat { gap: 3px; }
+/* Fugu sets the intro as prose (2026-10-28), so a heading, table or list
+ * in it matches a part page's body. The block keeps the page's own text
+ * colour (not prose's) and the column's width, and its links their weight. */
+.method-intro.prose, .principle-intro.prose { max-width: none; color: inherit; }
+.method-intro p a, .principle-intro p a { font-weight: inherit; }
+/* A table keeps a part page's measure, 65ch like the paragraphs (plus the
+ * scroll box's 6px padding each side). */
+.method-intro .table-scroll, .principle-intro .table-scroll { max-width: calc(65ch + 12px); }
 /* The intro is body text at the recipe body's size (prose: 1rem, 1.5), not
- * a lede (2026-10-11: 1.08rem read larger than a recipe beside it). */
-.method-intro p, .principle-intro p { font-family: 'Lora', Georgia, serif; font-size: 1rem; line-height: 1.5; max-width: 65ch; }
+ * a lede (2026-10-11: 1.08rem read larger than a recipe beside it), with
+ * no prose margins: 14px between paragraphs. */
+.method-intro p, .principle-intro p { margin: 0; font-family: 'Lora', Georgia, serif; font-size: 1rem; line-height: 1.5; max-width: 65ch; }
 .method-intro p + p, .principle-intro p + p { margin-top: 14px; }
 .principle-intro .read-essay { display: inline-block; margin-top: 14px; font-family: 'Libre Franklin', sans-serif; font-size: .86rem; font-weight: 600; color: var(--principle-strong); text-decoration: none; }
 .principle-intro .read-essay:hover { text-decoration: underline; text-underline-offset: 3px; }
