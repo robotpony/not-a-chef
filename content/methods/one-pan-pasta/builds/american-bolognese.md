@@ -1,10 +1,11 @@
 ---
 title: American bolognese pasta
 date: 2026-10-12
-draft: true
-working_on: "Expanded from my notes; check it against the next cook."
-tags: [method, pasta]
-description: "Spaghetti or linguine finished in meat sauce made from a frozen beef base, with Parmesan off the heat."
+draft: false
+tags:
+  - method
+  - pasta
+description: Spaghetti or linguine finished in meat sauce made from a frozen beef base, with Parmesan off the heat.
 ---
 
 The weeknight version of a meat-sauce pasta: the sauce is already made, so dinner is the time it takes the pasta to cook, about 10 minutes from a freezer full of previous laziness.
@@ -16,11 +17,11 @@ Rich and savoury, tight enough to cling.
 - **Cooking pasta in the pan:** Long pasta, spaghetti or linguine
 - **Pasta sauces:** From a base: meat sauce from the freezer, thawed
 - **Finishing pasta in the sauce:** Tight
-- **Off the heat:** Cheese: Parmesan, and basil if there is some
+- **Off the heat:** Cheese: Parmesan, and oregano or basil if there is some. If you're using dried oregano, grind it between your fingers as you add it to the pan.
 
 ## Why these picks
 
-- **Meat sauce from a base.** The long cook happened weeks ago, when the [[Beef base]] braised until tender and became a batch of meat sauce. Tonight it only needs heating through with the pasta.
+- **Meat sauce and canned tomatoes from a base.** The long cook happened weeks ago, when the [[Beef base]] braised until tender and became a batch of meat sauce. Tonight it only needs heating through with the pasta.
 - **Spaghetti or linguine.** It's how I make it most often, partly out of nostalgia. A thick sauce is harder on long pasta than short, so it needs stirring in the low water, but the starchy water loosens the sauce enough to coat every strand.
 - **Tight.** A meat sauce left loose pools under long pasta. Cooked down until nothing pools, it clings.
 - **Parmesan off the heat.** It salts the sauce and tightens it a little more, without going grainy.
