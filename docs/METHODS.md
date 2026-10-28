@@ -1,6 +1,6 @@
 # Methods
 
-Defines what a method is, how it differs from a recipe or an essay, what one should contain, and how methods fit into the site. The build work is tracked in `PLAN.md` §Methods.
+Defines what a method is, how it differs from a recipe or an essay, what one should contain, and how methods fit into the site. Open work is in `PLAN.md` (Diagrams) and Fugu's `themes/fugu/PLAN.md` (Features, "Methods and blueprints").
 
 ## What a method is
 
@@ -41,13 +41,13 @@ The test: after reading it, could you cook something that isn't written down any
 
 ## Where methods live
 
-**The folder decides.** Methods live in `content/methods/`, their own top-level section (a nav item beside Recipes and Essays, since 2026-10-11; until then they sat in `content/essays/methods/`). A page in that folder, at any depth, is a method; a page outside it isn't, whatever its tags say. Fugu finds them through `methodSection = "methods"` in `config/_default/params.toml`. The section's page, `/methods/`, is the methods list: its `_index.md` holds the title, description, and the definition (the body), and cascades the `method` tag onto the pages under it (targeted at `/methods/**`, so the list page itself isn't tagged and doesn't show up on the tag page). A page's own `tags` replaces the cascaded value rather than adding to it, and nearly every method sets `tags`, so each lists `method` itself; the cascade is the backstop and `/lint` checks the rest. The `method` tag's own page (`/tags/method/`) is a plain tag list.
+**The folder decides.** Methods live in `content/methods/`, their own top-level section (a nav item beside Recipes and Essays, since 2026-10-11; until then they sat in `content/essays/methods/`). A page in that folder, at any depth, is a method; a page outside it isn't, whatever its tags say. Fugu finds them through `methodSection = "methods"` in `config/_default/params.toml`. The section's page, `/methods/`, is the methods list: its `_index.md` holds the title, description, and the definition (the body), and cascades the `method` tag onto the pages under it (targeted at regular pages under `/methods/`, so the list page and the blueprint pages aren't tagged and don't show up on the tag page). A page's own `tags` replaces the cascaded value rather than adding to it, and nearly every method sets `tags`, so each lists `method` itself; the cascade is the backstop and `/lint` checks the rest. The `method` tag's own page (`/tags/method/`) is a plain tag list.
 
 Reverse cooking and food ratios began in `content/reference/` and moved into the folder, with `aliases:` for their old URLs.
 
 ## Content first: folders, headings, and a little metadata
 
-Methods follow the rest of the site (decided 2026-10-11): **content lives in the body, headings give it structure, and frontmatter holds only true metadata** (title, tags, date, description, draft, and the two blueprint fields below). Relationships are folders or wiki links, not frontmatter fields.
+Methods follow the rest of the site (decided 2026-10-11): **content lives in the body, headings give it structure, and frontmatter holds only true metadata** (title, tags, date, description, draft, working_on, and the blueprint fields below). Relationships are folders or wiki links, not frontmatter fields.
 
 A folder is a forced tag with two extra effects:
 
@@ -128,12 +128,13 @@ Cold crunch and sharp against a salty patty.
 ...
 ```
 
-The only blueprint metadata:
+The blueprint metadata:
 
 | Field | On | Meaning |
 |---|---|---|
 | `weight` | part | Its place in the blueprint's part order |
-| `era` | build | A year (`1960`) that places the build on the blueprint's lineage timeline. Builds with no `era` are left off it. |
+| `era` | build | A year (`1960`) that places the build on the blueprint's lineage timeline, or a list (`[1991, 2015, 2026]`) for a build with iterations, one dot each; the later dots link to its `## Iterations` section when it has one. Builds with no `era` are left off it. |
+| `linkTitle` | build | Optional short name for a later iteration's label in the sidebar lineage (`2015 BCS`). |
 
 **Recipes** carry no blueprint fields. A method lists its recipes in `## Recipes`: a part lists the recipes that show it (and the component recipes that make it, like a sauce or a bun), a build lists the recipes that are instances of it. Recipes keep the blueprint's plain tag (`burgers`).
 
@@ -143,7 +144,7 @@ The blueprint page shows a **lineage timeline**: builds placed by `era`, so the 
 
 Why not nested blueprints ("burgers → deluxe")? Builds share nearly every part and differ only in their picks; a child blueprint would repeat all the parts. Clusters of builds (rich, fresh, sweet) are builds grouped by profile, not a separate level; add one only if a blueprint ever has more builds than its page can show.
 
-The blueprint page shows the definition, the parts in order (the methods list's compact block; each part's options are on its own page), the lineage timeline, and the builds as cards (`mockups/methods-pages.html`). The methods list shows each blueprint's parts and only the names of its builds, so the cards are on one page, not two (decided 2026-10-12, `mockups/methods-list-and-blueprint.html`). A table comparing builds part by part is set aside for now (PLAN.md, Methods): it would need the picks as data, parsed from each build's `## Picks` list.
+The blueprint page shows the definition, the parts in order (the methods list's compact block; each part's options are on its own page), the lineage timeline, and the builds as cards (`mockups/methods-pages.html`). The methods list shows each blueprint's parts and only the names of its builds, so the cards are on one page, not two (decided 2026-10-12, `mockups/methods-list-and-blueprint.html`). A table comparing builds part by part is set aside for now (Fugu's PLAN.md, Features): it would need the picks as data, parsed from each build's `## Picks` list.
 
 The same shape fits other blueprints:
 
@@ -200,7 +201,7 @@ Documented in full in `docs/ARCHITECTURE.md` ("Content model", with a diagram), 
 
 ## Diagrams
 
-`formula` draws one horizontal row joined by operators: right for ratios, wrong for layers. Methods add a sibling block, ` ```stack `, drawn top to bottom:
+`formula` draws one horizontal row joined by operators: right for ratios, wrong for layers. Methods use it for their ratios too (stock, reverse cooking, pan sauces). For layers they add a sibling block, ` ```stack `, drawn top to bottom (spec: `~/projects/sites/hugo-warped/fences/stack.md`):
 
 ```stack
 bun-top   | Toasted bun      | soft, toasted
@@ -213,9 +214,9 @@ caption: Drive-in deluxe build, top to bottom
 
 - One layer per line: `icon | label | role`. Roles use the vocabulary the chicken burger essay established (cold crunch, sharp, fat, salt), so the diagram says why each layer is there.
 - `repeat:` covers repeated layers (lasagne).
-- Layers come from their own kit in Fugu (`assets/icons/layers/`), with the same unknown-icon warning as formula blocks and the same Obsidian fallback (plain text).
+- Layers come from their own kit in Fugu (`themes/fugu/assets/icons/layers/`, beside `formula/`), with the same unknown-icon warning as formula blocks and the same Obsidian fallback (plain text).
 - A later `pairing` block (a texture-by-flavour grid) could cover flavour combinations. `stack` comes first.
-- The look gets mocked and settled in `mockups/STYLE.md` and `style.html` before it's built. Proposed 2026-10-10 (`mockups/exploded-builds.html`): an **exploded view**, each layer drawn as the thing from a three-quarter angle, pulled apart vertically, with leader lines to its label and role on the right (decided); compact without labels on build cards; no assembled view for now. Drawn in the formula icons' style (one ink line, `--accent-soft` on bodies and sides, `--surface` on tops, detail as strokes), so it follows dark mode like the icons. Layers come from their own kit in Fugu (`themes/fugu/assets/icons/layers/`, beside `formula/`), drawn by the ` ```stack ` render hook (handed to the Fugu agent 2026-10-10). Accepted as v1 (STYLE.md "Exploded build diagram"); the drawings have had refinement passes from reference examples since (STYLE.md has the current state).
+- The look was mocked and settled in `mockups/STYLE.md` and `style.html` before it was built. Proposed 2026-10-10 (`mockups/exploded-builds.html`): an **exploded view**, each layer drawn as the thing from a three-quarter angle, pulled apart vertically, with leader lines to its label and role on the right (decided); compact without labels on build cards; no assembled view for now. Drawn in the formula icons' style (one ink line, `--accent-soft` on bodies and sides, `--surface` on tops, detail as strokes), so it follows dark mode like the icons. Drawn by Fugu's ` ```stack ` render hook (handed to the Fugu agent 2026-10-10). Accepted as v1 (STYLE.md "Exploded build diagram"); the drawings have had refinement passes from reference examples since (STYLE.md has the current state).
 
 Shapes to cover first: sandwich construction, burger construction, lasagne layering. On a blueprint, each build gets its own stack.
 
@@ -227,11 +228,12 @@ Shapes to cover first: sandwich construction, burger construction, lasagne layer
 | Food ratios | Ratio | Moved from Reference (test kitchen); in `content/methods/` |
 | Stock | Technique + ratio | Why ingredients matter in stock, plus the four stock recipes |
 | Foil packets | Technique | Camp cooking |
-| Burgers | Blueprint, 12 builds, all written | The quest for the perfect burger, The impossible quest for the perfect chicken burger, White Spot burger, the burger sauce recipes |
+| Burgers | Blueprint, 5 parts, 11 builds, all written | The quest for the perfect burger, The impossible quest for the perfect chicken burger, White Spot burger, the burger sauce recipes |
 | Chicken sandwiches | Blueprint, 4 parts, 5 builds | Drafted 2026-10-27 from Bruce's builds; the patties are Cornmeal fried chicken and Pan-fried chicken burger |
-| One-pan pasta | Blueprint, 4 parts, 2 builds (American bolognese still a stub) | Drafted 2026-10-12 from Bruce's description; the parts are stages, and the builds have no `era` or stack |
+| Muesli | Blueprint, 4 parts, 4 builds (test kitchen) | Drafted 2026-10-28; Bircher, classic, crunchy, and granola, on the timeline by `era` |
+| Pan sauces | Technique | Written 2026-10-27 from notes; a `working_on` line says what still needs testing |
+| One-pan pasta | Blueprint, 4 parts, 2 builds | Drafted 2026-10-12 from Bruce's description; the parts are stages, and the builds have no `era` or stack |
 
 ## Open questions
 
 - Should picks link to the option rows (an anchor per option), or stay plain text?
-- Do methods use `formula` blocks for their ratios, the way recipes do? (Likely yes; nothing stops it.)

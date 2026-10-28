@@ -7,12 +7,12 @@ This repo is the source of truth for recipes, and it is also the Obsidian vault:
 ```
 Obsidian (this repo, edited in place)
   │
-  └── content/  recipes/  essays/  methods/  reference/  the-food-log/
+  └── content/  recipes/  drinks/  essays/  methods/  reference/  the-food-log/
           │
           Hugo build (Fugu over Blowfish)
-            ├── render hooks: wiki links, headings, images, tables, formula and stack diagrams
+            ├── render hooks: wiki links, headings, images, tables, formula, stack and flow diagrams
             ├── list.json.json → public/recipes/index.json
-            └── assets/js: ingredients.js, automagic-sidebar.js, search.js (client-side, no build step)
+            └── assets/js: ingredients.js, automagic-sidebar.js, popover.js, search.js (client-side, no build step)
           │
           public/ (static HTML)
           │
@@ -49,14 +49,15 @@ Standard Hugo site with two stacked themes, both git submodules: `theme = ["fugu
 2. Fugu (`themes/fugu/`, [hugo-theme-fugu](https://github.com/robotpony/hugo-theme-fugu)): the reusable cookbook theme: page templates, render hooks, recipe cards, sidebars, client JS, the formula icon kit, archetypes, and the content tools. Its own plan is `themes/fugu/PLAN.md`; the site side is PLAN.md "Fugu follow-through".
 3. Blowfish (`themes/blowfish/`): everything neither of the above overrides.
 
-The settled design (`mockups/STYLE.md`) didn't match any Blowfish layout, so Fugu overrides much of it. Five content sections, all written by hand in this repo:
+The settled design (`mockups/STYLE.md`) didn't match any Blowfish layout, so Fugu overrides much of it. Six content sections, all written by hand in this repo:
 
 | Section | Path |
 |---|---|
 | Recipes | `content/recipes/` |
+| Drinks | `content/drinks/` (recipes in their own section) |
 | Essays | `content/essays/` |
 | Methods | `content/methods/` |
-| Reference | `content/reference/` |
+| Reference | `content/reference/` (reference essays in `content/reference/essays/`) |
 | The Food Log | `content/the-food-log/` |
 
 Custom layouts:
@@ -68,7 +69,7 @@ Custom layouts:
 - `themes/fugu/layouts/_default/_markup/` — render hooks: `render-link.html` (wiki links, glossary links), `render-heading.html` (flags ingredient and sidebar sections), `render-image.html` (Photos module), `render-table.html` (scroll wrapper), `render-codeblock-formula.html`, `render-codeblock-stack.html` and `render-codeblock-flow.html` (diagram fences, read by hugo-warped's `parse.html` and drawn by Fugu)
 - `assets/css/custom.css` — the design system's CSS; `themes/fugu/assets/icons/formula/` and `themes/fugu/assets/icons/layers/` — the formula and stack diagram kits
 
-Client-side JS (`themes/fugu/assets/js/`) is plain, dependency-free, and progressive: `ingredients.js` (check-off, scaling, unit conversion), `automagic-sidebar.js` (moves Mechanic/To serve/Notes/photos into the sidebar, photo viewer), `search.js` (Fuse.js search, pinned results first). With JS off every page still reads and prints.
+Client-side JS (`themes/fugu/assets/js/`) is plain, dependency-free, and progressive: `ingredients.js` (check-off, scaling, unit conversion), `automagic-sidebar.js` (moves Mechanic/To serve/Notes/photos into the sidebar, photo viewer), `popover.js` (places the shared glossary, principle and draft popovers), `search.js` (Fuse.js search, pinned results first). With JS off every page still reads and prints.
 
 ### .claude/commands/
 
@@ -96,7 +97,7 @@ The site is a small ontology: a few kinds of page, and a few relations between t
 
 | Entity | What it is | Where it lives |
 |---|---|---|
-| Recipe | One dish with fixed quantities | `content/recipes/` |
+| Recipe | One dish with fixed quantities | `content/recipes/` (drinks in `content/drinks/`) |
 | Story | An essay that gives the reason for a method | `content/essays/<type>/` |
 | Method | A general pattern: technique, ratio, or part of a blueprint | `content/methods/` |
 | Blueprint | A dish type made of parts | A folder under methods, `content/methods/<slug>/_index.md` |
@@ -125,7 +126,7 @@ Concept pages (principle, status, method) share Fugu's `partials/concept/` (the 
 
 **One repo, edited in place.** The repo is the vault: no copy step, no second source to drift. This replaced the earlier copy-on-migrate design (separate vault, one-way `migrate.py`), retired 2026-09.
 
-**Obsidian syntax stays in the source; Hugo translates at build time.** `[[Recipe Name]]` wiki links and ```` ```formula ```` blocks stay as written, so files remain Obsidian-compatible and readable as plain text; render hooks turn them into links and diagrams during the build. Cross-references don't require knowing file paths.
+**Obsidian syntax stays in the source; Hugo translates at build time.** `[[Recipe Name]]` wiki links and diagram fences (```` ```formula ````, `stack`, `flow`; specs in hugo-warped) stay as written, so files remain Obsidian-compatible and readable as plain text; render hooks turn them into links and diagrams during the build. Cross-references don't require knowing file paths.
 
 **Three layers, and no fourth.** Every feature lives in exactly one of these:
 

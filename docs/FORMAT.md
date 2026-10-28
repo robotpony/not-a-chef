@@ -4,7 +4,7 @@ Every page on the site is standard Markdown with YAML frontmatter, in a `.md` fi
 
 This is the one format doc for all content: what every page shares, then what recipes, essays, and methods add, then what a validator checks. Requirement language (MUST / SHOULD / MAY) follows RFC 2119 and is used only where a tool or template depends on the rule; everything else is house style.
 
-Format version **0.3.0** (0.2.0 added the formula block; 0.3.0 added methods, blueprints, `era`, and the stack block). Bump minor for an additive change (a new optional field or section; existing pages stay valid), major only when a previously valid page could fail validation.
+Format version **0.4.0** (0.2.0 added the formula block; 0.3.0 added methods, blueprints, `era`, and the stack block; 0.4.0 lets `era` be a list of years). Bump minor for an additive change (a new optional field or section; existing pages stay valid), major only when a previously valid page could fail validation.
 
 ## All pages
 
@@ -19,10 +19,11 @@ Recipes (`content/recipes/`), essays (`content/essays/`), methods (`content/meth
 | `tags` | MUST on recipes, MAY elsewhere | string[] | Plain strings, no `#` prefix. |
 | `description` | MAY | string | 1–2 sentences for SEO and listing cards. Mostly essays and reference pages; recipe cards use the opening text. |
 | `draft` | MAY | boolean | `true` publishes the page in the **Test kitchen**: live, with a banner under the title and a mark on its card saying it's still changing. Remove it when the page is a keeper. See DESIGN.md "Test kitchen (drafts)" and `content/reference/essays/test-kitchen.md`. |
-| `working_on` | MAY | string | For drafts: one line on what's being tried next ("Getting them to hold without the egg"), shown under the banner and in the card's popover. |
+| `working_on` | MAY | string | For drafts: one line on what's being tried next ("Getting them to hold without the egg"), shown in the banner under the title. |
 | `pinned` | MAY | boolean | Floats the page to the top of its section's list, its term pages, and search. Rare by design, not a general sort override. See DESIGN.md. |
 | `source` | MAY | string | `original`, `family`, a URL, or a book title. SHOULD on recipes. |
-| `era` | MAY | int | Builds only: a year that places the build on its blueprint's lineage timeline (`1960`). See Methods. |
+| `era` | MAY | int or int[] | Builds only: a year that places the build on its blueprint's lineage timeline (`1960`), or a list for a build with iterations (`[1991, 2015, 2026]`). See Methods. |
+| `aliases` | MAY | string[] | Old URLs that redirect here (Hugo). Only for a published URL that moved. |
 
 Don't hand-maintain `lastmod`. Last-modified comes from git (`enableGitInfo`): both sidebars show **Date**, plus **Updated** from the file's last commit when that falls on a different day.
 
@@ -348,7 +349,7 @@ A blueprint is a dish type made of parts, as a folder under methods (`content/me
 - **The blueprint** is the folder's `_index.md`: title, description, and its definition as the body. It MAY end with `## Further reading`.
 - **Parts** are the pages in `parts/`. Each MUST have a `weight` (1, 2, 3...), which orders them. A part's title is also its label on every build's picks.
 - **Options** are a part's choices (thick, thin, paper thin). They aren't pages: they're rows under the part's `## Options`, a table with `Option`, `Pick it when`, and `Changes` columns.
-- **Builds** are the pages in `builds/`. An `era` (a year) places one on the blueprint's lineage timeline; a build with no `era` is left off it.
+- **Builds** are the pages in `builds/`. An `era` (a year, or a list of years) places one on the blueprint's lineage timeline; a build with no `era` is left off it.
 - An `_index.md` in `parts/` or `builds/` is an optional lead line for that list, headless (`build: {render: never, list: never}`).
 
 A build's body, in order:
@@ -371,13 +372,13 @@ Shared frontmatter only, no required sections. Reference pages are technique gui
 
 ## Validation
 
-What a checker can rely on. `/lint` checks the first group today, and the build warns on formula blocks; the rest waits on Fugu's validator (`themes/fugu/PLAN.md`, "Recipe format and validator").
+What a checker can rely on. `/lint` and `frontmatter.py check` cover the first group today, and the build warns on fence blocks; the rest waits on Fugu's validator (`themes/fugu/PLAN.md`, Features, "Recipe format").
 
 **Checked now**
-- Required frontmatter present: `title`, `date` on every page; `tags` on recipes.
+- Required frontmatter present: `title`, `date` on every page; `tags` on recipes and drinks.
 - `date` is YYYY-MM-DD; `draft` is a boolean if present; `tags` is a list of plain strings, no `#`.
 - A recipe has at least one ingredients list and one method.
-- Formula blocks use known icon keys, one operator, and at most five slots.
+- Fence blocks (`formula`, `stack`, `flow`) pass hugo-warped's checker (`tools/check-fences.py`): known icon keys, and for formula one operator and at most five slots.
 - Every page in `content/methods/` carries the `method` tag; every part in a blueprint's `parts/` has a `weight`; a build in `builds/` has a `## Picks` section whose bullets each start with a part's name.
 
 **For the validator**

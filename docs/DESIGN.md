@@ -4,7 +4,7 @@
 
 ### Content sections
 
-Five sections, each with a list view and individual pages. Every listing uses the same recipe card (`.rcard`, `themes/fugu/layouts/partials/recipe-card.html`; see `mockups/STYLE.md` "Recipe card").
+Six sections, each with a list view and individual pages. Every listing uses the same recipe card (`.rcard`, `themes/fugu/layouts/partials/recipe-card.html`; see `mockups/STYLE.md` "Recipe card").
 
 **Recipes** (`/recipes/`, `themes/fugu/layouts/recipes/list.html`)
 - Listing: card grid (taxonomy row, title, intro, Prep/Cook/Serves)
@@ -12,13 +12,16 @@ Five sections, each with a list view and individual pages. Every listing uses th
 - Filterable by tag and cuisine (term pages, `themes/fugu/layouts/_default/term.html`)
 - Searchable via Fuse.js (Blowfish built-in, project override in `themes/fugu/assets/js/search.js`)
 
+**Drinks** (`/drinks/`, `themes/fugu/layouts/drinks/list.html`)
+- Recipes in their own section (`drinkSection` in `params.toml`): the same recipe page, a drinks list, and entries in `public/recipes/index.json`
+
 **Essays** (`/essays/`, `themes/fugu/layouts/essays/list.html`)
 - Listing: card grid; the card's top row is the essay's format from its folder, the stat line is reading time
 - Individual: article layout with the reading sidebar
 
 **Reference** (`/reference/`, `themes/fugu/layouts/reference/list.html`)
 - Listing: card grid, reading time in the stat line
-- Individual: article layout with the reading sidebar (technique guides, ratio tables, glossaries)
+- Individual: article layout with the reading sidebar (technique guides, ratio tables, glossaries); reference essays are in `content/reference/essays/` (`referenceEssays` in `params.toml`)
 
 **Methods** (`/methods/`, `themes/fugu/layouts/methods/list.html`)
 - Listing: the methods list, with each blueprint as a block of its parts and build names; a blueprint folder (`/methods/burgers/`) gets the blueprint page (parts, lineage, build cards)
@@ -71,7 +74,7 @@ A ```` ```formula ```` fenced block (`~/projects/sites/hugo-warped/fences/formul
 - `themes/fugu/layouts/partials/formula-slot.html` draws one slot. Icons come from `assets/icons/formula/<key>.svg` via `resources.Get` and are inlined, not `<img>`, so `currentColor` and the theme tokens apply and dark mode works.
 - CSS is in `assets/css/custom.css` (the "Formula diagram" block). The compact size keys off `.recipe-sidebar-section`, so a formula inside Mechanic shrinks to fit the sidebar on its own; nothing for the author to set.
 - `themes/fugu/layouts/recipes/list.json.json` sets `has_formula` per recipe in `public/recipes/index.json`.
-- Design and the icon kit gallery: `mockups/formula-diagrams.html`; component spec: `mockups/STYLE.md` "Formula diagram". The card strip in that mockup's §5 isn't built (see `PLAN.md`).
+- Design and the icon kit gallery: `mockups/formula-diagrams.html`; component spec: `mockups/STYLE.md` "Formula diagram". The card strip from that mockup's §5 is `themes/fugu/layouts/partials/formula-strip.html`, drawn on recipe cards.
 
 ### Test kitchen (drafts)
 
@@ -114,13 +117,14 @@ A key left out of `params.toml` falls back to Fugu's default ("In development" a
 /recipes/dal-tadka/
 /drinks/chai/
 /methods/burgers/builds/drive-in-deluxe/
-/essays/the-case-for-mise-en-place/
-/reference/meat-doneness/
+/essays/technique-essays/why-ingredients-matter-in-stock/
+/reference/flour-protein-content/
+/reference/essays/win-the-fridge/
 /tags/mains/
 /cuisine/indian/
 ```
 
-Slugs are derived from the filename (kebab-case). No date prefixes in recipe or essay URLs — recipes don't have publication dates in the way blog posts do.
+Slugs are derived from the filename (kebab-case), under the page's folders (an essay's type, a blueprint's `builds/`). No date prefixes in recipe or essay URLs — recipes don't have publication dates in the way blog posts do.
 
 ---
 
@@ -149,13 +153,13 @@ Creates a new recipe stub in the correct location.
 /recipe-new "Recipe Title"
 ```
 
-- Generates a file in `content/recipes/{slug}.md` with populated frontmatter template
-- Today's date pre-filled
-- Title set in sentence case
+- Generates `content/recipes/{slug}.md` from Fugu's archetype (`themes/fugu/archetypes/recipes.md`), today's date pre-filled
+- Title set in sentence case; at least one tag required
+- Starts in the Test kitchen (`draft: true`, optional `working_on`)
 
 ### `/lint`
 
-Validates recipe files in `content/recipes/` (and `content/essays/` given a path) against FORMAT.md rules, and always checks `content/methods/` against docs/METHODS.md (the `method` tag, part weights, build picks, retired fields).
+Validates recipe files in `content/recipes/` (and `content/essays/` given a path) against FORMAT.md rules, and always checks `content/methods/` against docs/METHODS.md (the `method` tag, part weights, build picks, retired fields) and every diagram fence with hugo-warped's `check-fences.py`.
 
 ```
 /lint [path]
@@ -174,7 +178,7 @@ Starts Hugo dev server locally.
 ```
 
 - Stops any hugo server already on port 1313, so a stale one from an earlier session never serves old templates
-- Runs `hugo server -D` (includes drafts)
+- Runs `tools/preview.sh`: `hugo server -D` (includes drafts), opened in Chrome once it answers
 - Reports the local URL
 
 ### `/publish`
@@ -264,7 +268,7 @@ Output (human-readable):
 
 ## Frontmatter tool CLI
 
-`themes/fugu/tools/frontmatter.py` — no third-party dependencies (stdlib only). Reviews frontmatter across `content/recipes/`, `content/essays/`, `content/methods/`, `content/reference/`, and `content/the-food-log/` (section folders come from the site's Fugu params), and provides get/set/unset for scripted edits (e.g. by Claude, across many files at once). It parses the constrained YAML subset this vault actually uses (flat scalars, flow lists, occasional block lists, folded long values) — not general YAML — so it never needs `pyyaml` installed.
+`themes/fugu/tools/frontmatter.py` — no third-party dependencies (stdlib only). Reviews frontmatter across `content/recipes/`, `content/drinks/`, `content/essays/`, `content/methods/`, `content/reference/`, and `content/the-food-log/` (section folders come from the site's Fugu params), and provides get/set/unset for scripted edits (e.g. by Claude, across many files at once). It parses the constrained YAML subset this vault actually uses (flat scalars, flow lists, occasional block lists, folded long values) — not general YAML — so it never needs `pyyaml` installed.
 
 ```
 python themes/fugu/tools/frontmatter.py check [paths...] [--json]
@@ -273,7 +277,7 @@ python themes/fugu/tools/frontmatter.py set <file> <field> <value> [--type str|i
 python themes/fugu/tools/frontmatter.py unset <file> <field>
 ```
 
-`check` validates required fields (`title`+`tags` for recipes, `title`+`date` for essays, `title` for reference), warns on missing recommended fields (`source`/`date`/`draft` for recipes, `tags`/`draft` for essays, `source`/`tags`/`draft` for reference), checks `tags`/`date`/`draft` types, and flags duplicate recipe titles. Exits non-zero only on errors (missing required fields, bad types) — missing recommended fields are warnings and don't fail the run. `_index.md` and dotfiles (scratch notes like `.ideas.md`) are skipped.
+`check` validates required fields (`title`+`tags`+`date` for recipes and drinks, `title`+`date` for everything else), warns on missing recommended fields (`source`/`draft` for recipes and drinks, `tags`/`draft` for essays and methods, `source`/`tags`/`draft` for reference), checks `tags`/`date`/`draft` types, and flags duplicate recipe titles. Exits non-zero only on errors (missing required fields, bad types) — missing recommended fields are warnings and don't fail the run. `_index.md` and dotfiles (scratch notes like `.ideas.md`) are skipped.
 
 `set` preserves the rest of the file untouched (comments, field order, other values) and inserts new fields in `FIELD_ORDER` position when the key doesn't already exist.
 
@@ -281,10 +285,10 @@ python themes/fugu/tools/frontmatter.py unset <file> <field>
 
 ## Drafts tool CLI
 
-`themes/fugu/tools/drafts.py` — lists everything marked `draft: true` across recipes, essays, methods, reference pages, and the Food Log. Reuses `frontmatter.py`'s parser directly (no separate frontmatter logic).
+`themes/fugu/tools/drafts.py` — lists everything marked `draft: true` across recipes, drinks, essays, methods, reference pages, and the Food Log. Reuses `frontmatter.py`'s parser directly (no separate frontmatter logic).
 
 ```
 python themes/fugu/tools/drafts.py [paths...] [--json]
 ```
 
-Groups results by content type (recipes, essays, methods, reference pages, log entries) with title and path. `--json` prints a flat list of `{path, kind, title}` objects instead.
+Groups results by content type (recipes, drinks, essays, methods, reference pages, log entries) with title and path. `--json` prints a flat list of `{path, kind, title}` objects instead.

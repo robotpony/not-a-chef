@@ -4,12 +4,9 @@ Open work only. Finished items are cut, not ticked; git history has them (`git l
 
 ## Domain move
 
-*Started 2026-10-18.* The site moves from `bruce-loves-to-cook.warpedvisions.org` to `https://bruce-loves-to-cook.ca`. Live and published 2026-10-18 (`deploy-2026-10-18`): DNS, certificate, `www` and old-domain 301s, new `baseURL`.
+*Live 2026-10-18* (`deploy-2026-10-18`): `https://bruce-loves-to-cook.ca`, with `www` and old-domain 301s. Search Console and the old domain's certificate renewal are set up, and warpedvisions.org's posts link the new domain.
 
-- [x] Bruce: keep the old domain's certificate renewing (current one ends 2026-12-23), or HTTPS visitors to old links hit a warning before the redirect.
-- [x] Bruce: add the site to Google Search Console as a Domain property for `bruce-loves-to-cook.ca` (verified by a DNS TXT record; it covers `www` and `http` too), then submit `https://bruce-loves-to-cook.ca/sitemap.xml`. After the publish, so the sitemap carries the new domain. The old domain was never added, so there's no change of address to file.
 - [ ] Fugu's `exampleSite/content/about.md` links the old domain: fugu-agent's change.
-- [ ] Posts on warpedvisions.org that link the cookbook: the warped agent's change.
 
 ## Diagrams
 
@@ -22,10 +19,8 @@ Diagrams are fences, specced in hugo-warped (`~/projects/sites/hugo-warped/fence
 
 ## Drinks
 
-Drinks got their own section on 2026-10-27 (`content/drinks/`, Fugu 356fad8). Diagrams picked from `mockups/drink-diagrams.html`: A and C, not B.
+Drinks got their own section on 2026-10-27 (`content/drinks/`, Fugu 356fad8). Diagrams picked from `mockups/drink-diagrams.html`: A and C, not B. Glass thumbnails on cards (Fugu efb6a23) and drink formula icons (Fugu 45029e3) are in.
 
-- [x] Glass thumbnails on drink cards (Fugu efb6a23, 56×72), drawn from `glass`, `fill`, `ice`, `garnish` (`docs/FORMAT.md` "Drinks"; colours `STYLE.md` §7). With fugu-agent. All eight drinks have the fields.
-- [x] Formula icons for drinks (Fugu 45029e3) and the Knotty Irishman's 4 : 2 : 1 : 8.
 - [ ] Formula ratios for sangria and lemon-lime iced tea's weight batch.
 - [ ] Homepage: a drinks band, or drinks inside the recipes band.
 
@@ -42,7 +37,7 @@ Drinks got their own section on 2026-10-27 (`content/drinks/`, Fugu 356fad8). Di
 - [ ] `tools/*.sh` and the Makefile, from a fresh clone with the submodule uninitialised.
 - [ ] Accessibility on the built site: popover ARIA and tap behaviour, focus order, landmarks, headings, alt text.
 - [ ] Docs inventory: keep, move to Fugu, merge, or delete. Tool CLIs in both `DESIGN.md` and Fugu's `--help` are the known overlap.
-- [ ] Stale facts, line by line: FORMAT.md, METHODS.md beyond the blueprint section, STYLE.md, COMPONENTS.md, LIBRARIES.md. Then `/mx:content-check`.
+- [ ] `/mx:content-check` over the docs. (The stale-facts pass over every doc in `docs/`, `mockups/*.md`, README and CLAUDE.md was done 2026-10-28.)
 - [ ] Last: cut CLAUDE.md to what an agent needs to start.
 
 ## Mockups

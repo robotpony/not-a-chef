@@ -40,8 +40,8 @@ in a browser — no build step.
   formula icons (lemon, vinegar, soy, honey, jar, pickle, mustard, lentils,
   oats, fruit, sugar, pepper, herb, strainer, oven), drawn to the first
   kit's rules, shown beside the kit at each size and in diagrams from real
-  Mechanics. Approved 2026-10-17; the SVGs are in `formula-icons-2/`
-  for fugu-agent to add to `assets/icons/formula/`.
+  Mechanics. Approved 2026-10-17; the SVGs in `formula-icons-2/` went
+  into Fugu's `assets/icons/formula/` the same day.
 
 - **`formula-icons-3.html`**: proposal (2026-10-27) for three more
   formula icons for a patties section on Cornmeal fried chicken (pound,
@@ -49,7 +49,8 @@ in a browser — no build step.
   alternative), a chef's knife, and a sliced bun, shown at each size,
   beside the kit, and in the section's diagram. SVGs in `formula-icons-3/`.
   Pounder chosen 2026-10-27: solid column, teeth underneath. A chicken
-  breast (`breast`) added the same day for the Pound step; approved.
+  breast (`breast`) added the same day for the Pound step; approved, and
+  all four (`pounder`, `knife`, `bun`, `breast`) are in Fugu's kit.
 
 - **`scale-callout.html`**: proposal (2026-10-07) to redraw the recipe
   scale/units menu as a callout with a `^` pointer to the gear, a restyled
@@ -69,7 +70,9 @@ in a browser — no build step.
   page's chips and part navigation, method cards, and what principle,
   status, and method share. Builds added 2026-10-10: build cards and a
   picks comparison on the blueprint page, options as pills, a build page,
-  and recipes grouped by build. Queued for Fugu; its §7 choices are open.
+  and recipes grouped by build. Built 2026-10-10 in Fugu and reshaped
+  since (`STYLE.md` Methods and blueprint pages); the list moved to
+  `/methods/` on 2026-10-11.
 
 - **`methods-top-level.html`**: proposal (2026-10-11, PLAN.md history, Methods phase 7) for
   methods as a top-level section: the folder and URL move to
@@ -77,9 +80,10 @@ in a browser — no build step.
   six-item nav at desktop, 700px and phone widths (it overflows at 700px),
   and the homepage with a methods band in three arrangements (A: added as
   a band, B: one essay row, C: essays as two side-by-side lists), each with
-  its measured height. Decided 2026-10-11: folder move (pending Fugu),
+  its measured height. Decided 2026-10-11: folder move,
   `/methods/` as the methods page, "Food Log" in the nav, homepage C.
-  Built the same day: the nav and homepage (`STYLE.md` Homepage bands).
+  Built the same day: the folder move, the nav, and the homepage
+  (`STYLE.md` Homepage bands).
 
 - **`methods-list-builds.html`**: proposal (2026-10-11) for the methods
   list before publish: hover moves off the blueprint block (which isn't a
@@ -99,7 +103,10 @@ in a browser — no build step.
   per-part column fed by a new `part` field on recipes (option B,
   recommended). Decided 2026-10-11: §1 and option B; the empty state
   stays, since recipes for the empty parts are coming. Built the same day
-  (`STYLE.md` Methods and blueprint pages).
+  (`STYLE.md` Methods and blueprint pages). The `part` field went
+  2026-10-11, when blueprints became folders and recipes stopped carrying
+  blueprint fields, and the comparison table is set aside
+  (`docs/METHODS.md`).
 
 - **`methods-list-sidebar.html`**: proposal (2026-10-11) for the methods
   list's page balance: the page moves onto the recipe/reading layout (body
@@ -135,8 +142,8 @@ in a browser — no build step.
   the layer kit's patties, which `--surface` left near-white in light mode.
   Four options side by side in light and dark: current, a `--sear` fill,
   stipple only, and sear plus heavy stipple. The `--sear` tokens are in
-  `STYLE.md` §5 and `custom.css`; D won (sear plus four times the speckle, with a lighter light-mode brown); next, the patty's
-  fills change in `exploded-builds.html` and `export-layers.mjs` re-exports
+  `STYLE.md` §5 and `custom.css`; D won (sear plus four times the speckle, with a lighter light-mode brown); the patty's
+  fills changed in `exploded-builds.html` and `export-layers.mjs` re-exported
   the kit for Fugu.
 
 - **`blueprint-lineage-sidebar.html`**: proposal (2026-10-11) for where a
@@ -172,8 +179,8 @@ in a browser — no build step.
   mound drawn flat on the page, pale strands following its slopes, arches
   over the top, strays at the base. Round 3 drops the mound (G, H); round 4
   (I, J) lays the strands out like a bird's nest pressed into a patty's
-  shape: the bun's footprint, a flat top, an even edge. The winner moves into
-  `exploded-builds.html` for export.
+  shape: the bun's footprint, a flat top, an even edge. G won (`STYLE.md`
+  Exploded build diagram) and moved into `exploded-builds.html` for export.
 
 - **`in-development.html`**: proposal (2026-10-07) to make `draft: true`
   mean "published, still changing" instead of hidden. A flag-blue callout
@@ -181,7 +188,8 @@ in a browser — no build step.
   `working_on` note, link to an explainer page), a labelled mark on cards
   with a hover/tap popover, Fugu's "In development / Canon" wording, and
   four kitchen-flavoured options for Not a Chef, switchable live. Strip chosen 2026-10-07 (with a dotted line above the
-  note), banner sentence in config, essays included. Not built.
+  note), banner sentence in config, essays included. Built 2026-10-07 as
+  the Test kitchen (`STYLE.md` Draft state).
 
 - **`page-bottom-spacing.html`**: proposal (2026-10-07) to make 40px
   from the last content to the footer a page-level rule. Today every page
@@ -195,8 +203,8 @@ in a browser — no build step.
   `themes/fugu/layouts/recipes/list.html`; `STYLE.md`'s Recipe card entry describes it.
 
 - **`reading-sidebar.html`**: proposed sidebar for essay, reference,
-  Food Log, and About pages (2026-09-24). Not built yet. Also published as
-  an artifact: https://claude.ai/artifact/Ga6iBFYqvHfFt1yki672pg
+  Food Log, and About pages (2026-09-24). Built (`STYLE.md` Reading
+  sidebar). Also published as an artifact: https://claude.ai/artifact/Ga6iBFYqvHfFt1yki672pg
 
 - **`sidebar-images.html`**: proposal (2026-09-28) to move recipe, essay,
   and Food Log images out of the body into a sidebar Photos module, with
@@ -213,7 +221,7 @@ in a browser — no build step.
   `themes/fugu/layouts/partials/principle-chip.html`, `themes/fugu/layouts/partials/recipe-card.html`,
   `themes/fugu/layouts/partials/article-meta/basic.html`, `themes/fugu/layouts/_default/term.html`,
   `themes/fugu/layouts/_default/_markup/render-link.html`, `content/reference/glossary.md`,
-  and `content/essays/reference-essays/win-the-fridge.md`; `STYLE.md`'s
+  and `content/reference/essays/win-the-fridge.md`; `STYLE.md`'s
   Principle chip, Glossary link, Definition callout, and Reference list
   entries describe it.
 
@@ -223,7 +231,14 @@ in a browser — no build step.
   the base's cut face, the top bun opened toward you, bun-wide discs), and
   three soft food colours (green for lettuce and pickles, red for tomato and
   ketchup, yellow for mustard) as kit-only tokens. Reuses
-  `exploded-builds.html`'s kit code, copied in. Not decided yet.
+  `exploded-builds.html`'s kit code, copied in. Decided 2026-10-14: the
+  "Fuller" colours (`STYLE.md` §6) and spreads drawn on the bun's cut face
+  (`bun-base + mayo`, `bun-top + mayo`).
+
+- **`top-bun-open.html`**: the plain `bun-top` redrawn opened toward the
+  viewer with bare crumb (2026-10-14), so every build's top bun has one
+  shape whether or not anything is spread on it. Built (`STYLE.md`
+  Exploded build diagram).
 
 - **`site-phase.html`**: picks for PLAN.md's Site items (2026-10-14): the
   plant-based principle chip's card label (full, "Plants", leaf only), its

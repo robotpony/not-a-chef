@@ -14,11 +14,11 @@ Static site generator. Builds the site from Markdown content and Go templates.
 
 ### Git
 
-Both themes are git submodules (`git submodule update --init` on a fresh clone), and `enableGitInfo` reads each page's last commit for its **Updated** date. A build from a tarball, without `.git`, loses those dates.
+Both themes and hugo-warped (the shared fence spec Fugu imports) are git submodules (`git submodule update --init` on a fresh clone), and `enableGitInfo` reads each page's last commit for its **Updated** date. A build from a tarball, without `.git`, loses those dates.
 
 ### Fugu
 
-The cookbook theme, a git submodule in `themes/fugu/` ([hugo-theme-fugu](https://github.com/robotpony/hugo-theme-fugu)). Page templates, render hooks (wiki links, formula and stack diagrams), recipe cards, sidebars, the client JS, the icon kits, archetypes, and the content tools. Its own docs are in `themes/fugu/docs/`.
+The cookbook theme, a git submodule in `themes/fugu/` ([hugo-theme-fugu](https://github.com/robotpony/hugo-theme-fugu)). Page templates, render hooks (wiki links, formula, stack and flow diagrams), recipe cards, sidebars, the client JS, the icon kits, archetypes, and the content tools. Its own docs are in `themes/fugu/docs/`.
 
 **Why a separate theme:** the cookbook parts are reusable; the Not a Chef look (`custom.css`, colour scheme, homepage, header, footer, fonts) stays in this repo. See ARCHITECTURE.md "Hugo site" for the lookup order.
 
@@ -30,7 +30,7 @@ The base theme under Fugu, a git submodule in `themes/blowfish/` ([docs](https:/
 
 Fuzzy search, vendored by Blowfish (`themes/blowfish/assets/lib/fuse/`, v7.5.0 at the pinned submodule). Fugu's `partials/head.html` loads it, and `themes/fugu/assets/js/search.js` searches the site's index with it, pinned pages first.
 
-The other client JS (`ingredients.js`, `automagic-sidebar.js`) is plain, dependency-free, and served with no build step.
+The other client JS (`ingredients.js`, `automagic-sidebar.js`, `popover.js`) is plain, dependency-free, and served with no build step.
 
 ### Google Fonts
 
@@ -45,7 +45,7 @@ Libre Franklin, Lora, and IBM Plex Mono, loaded from Google Fonts in `layouts/pa
 
 In `themes/fugu/tools/`. Python 3.11+, standard library only, no virtual environment.
 
-- `frontmatter.py`, `drafts.py`: frontmatter checks and edits, the drafts list.
+- `frontmatter.py`, `drafts.py`: frontmatter checks and edits, the drafts list. They read the site's section folders with `hugo config`, falling back to Fugu's defaults without Hugo.
 - `compare-builds.py`: diffs two builds of a site, for theme changes. Uses Hugo and Git.
 - `screenshots.py`: retakes Fugu's docs screenshots. Needs Google Chrome (headless).
 - `add-image.sh` (`/image-add`): needs **ImageMagick 7** (`magick`) and **exiftool** (`brew install imagemagick exiftool`).

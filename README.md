@@ -18,18 +18,16 @@ This repo is now the source of truth for recipes, and it is the Obsidian vault: 
 
 ## Tech plan
 
-- Hugo to provide the static website for recipes, food log, and reference pages
+- Hugo to provide the static website (https://bruce-loves-to-cook.ca) for recipes, drinks, essays, methods, reference pages, and the food log
 - Obsidian for local editing
 - Small Python and shell tools: the content tools (frontmatter checks, drafts list, image processing) ship with the Fugu theme in `themes/fugu/tools/`; this site's own preview, publish, and deploy scripts are in `tools/`
 
 Hugo + Obsidian suggest Markdown + clear YAML front-matter.
 
-Style guide should be pulled + updated from the Obsidian source.
-
 ## Site features
 
 - **Pinning** — any recipe, essay, method, or reference page can set `pinned: true` in its frontmatter to float to the top of its section's list, its tag/cuisine term pages, and search results (a pinned build also leads its blueprint's builds). Rare by design, not a general-purpose sort override. See docs/DESIGN.md.
-- **Formula diagrams** — a ```` ```formula ```` block in a recipe draws its ratio as a row of icons (beans + starch + veg + binder), at build time. See docs/FORMAT.md §Formula diagrams and docs/DESIGN.md.
+- **Formula diagrams** — a ```` ```formula ```` block in a recipe draws its ratio as a row of icons (beans + starch + veg + binder), at build time. Stack and flow diagrams work the same way; the fence specs live in hugo-warped (`themes/hugo-warped/fences/`). See docs/FORMAT.md §Formula diagrams and docs/DESIGN.md.
 - **Methods and blueprints** — a method (`content/methods/`) explains how a kind of food or a process works in general, so you can cook what isn't written down; methods are listed at `/methods/`. A blueprint is a dish type made of parts, a folder under methods (`content/methods/burgers/`, at `/methods/burgers/`): its parts are in `parts/`, and its builds, named combinations of picks, are in `builds/`. How recipes, stories, methods, blueprints, and concepts relate is in docs/ARCHITECTURE.md §Content model and docs/METHODS.md.
 - **Tag reference pages** — a tag can carry its own `content/tags/<slug>/_index.md` for a description, and, when marked `principle: true`, a definition callout plus a "Reference & further reading" list pulled from anything else tagged with it that isn't a recipe (used today for `win-the-fridge`). See `themes/fugu/layouts/_default/term.html`.
 
@@ -56,6 +54,7 @@ Then use that alias as `host` in `tools/config.toml`.
 - `make preview` — run the Hugo dev server locally (`/preview`)
 - `make build` — build the static site to `public/`
 - `make deploy` — build, then rsync `public/` to the server via `tools/deploy.sh` (`/publish`)
+- `make drafts` — list every page in the Test kitchen (`draft: true`)
 
 ### Server requirements
 

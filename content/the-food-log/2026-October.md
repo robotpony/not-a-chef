@@ -2,11 +2,11 @@
 title: October 2026
 date: 2026-10-01
 ---
-A month of travel eating turned into a research list: tabbouleh, a subtly sweet red cabbage, an onion jam on a double smash burger, a German roulade dinner, then Hawaii's poke, cabbage crab salad, Puka Dog's toasted bun, and a tiki dinner. Back home, fresh pickled ginger, a bonito soy dipping sauce, and cornmeal fried chicken made it into recipes, and the burger blueprint's parts and builds were reviewed and settled. Still on the list: a diagrammed pan sauce method, Indian curries and a looser dal, better muesli, and a run of "national dish" candidates.
+A month of travel eating turned into a research list: tabbouleh, a subtly sweet red cabbage, an onion jam on a double smash burger, a German roulade dinner, then Hawaii's poke, cabbage crab salad, Puka Dog's toasted bun, and a tiki dinner. Back home, fresh pickled ginger, a bonito soy dipping sauce, and cornmeal fried chicken made it into recipes, and the burger blueprint's parts and builds were reviewed and settled. A diagrammed pan sauce method and a muesli blueprint followed. Still on the list: Indian curries, a looser dal, and a run of "national dish" candidates.
 
 ## Week of Sunday, October 18th
 
-## Methods/builds to work on #todo
+## Methods/builds to work on
 
 - [x] Add a note about Transglutaminase #todone
 - [x] Chicken sandwhiches and burgers (reference patty recipes), then builds for simple, deluxe, etc.
@@ -57,7 +57,7 @@ A month of travel eating turned into a research list: tabbouleh, a subtly sweet 
 Food memories:
 
 - American Grill in Cottonwood mall? this is a guess from some research, either that or Boardwalk burgers.
-### Methods and blueprints #todo
+### Methods and blueprints
 
 I'm adding a section to explain how anyone can develop recipes, by showing methods for making things, blueprints, and talking about their lineages. 
 
