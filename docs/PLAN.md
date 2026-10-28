@@ -12,7 +12,6 @@ Open work only. Finished items are cut, not ticked; git history has them (`git l
 
 Diagrams are fences, specced in hugo-warped (`~/projects/sites/hugo-warped/fences/`, the hugo-warped agent; its open work is in its `PLAN.md`). Fugu reads every fence through hugo-warped's parse partials (module pinned at 4045b3f, taken here by submodule with the module replacement in `config/_default/hugo.toml`), and `/lint` runs its validator. The shared-spec project (2026-10-26 to 10-27) is in git: `git log -- docs/PLAN.md`.
 
-- [ ] Poke bowl formula: a `fish` icon, asked of fugu-agent 2026-10-28; until it lands, `content/methods/poke/parts/serving.md` warns in `/lint`.
 - [ ] Granola bars formula, once a second recipe needs a nut icon.
 - [ ] Food ratios tables, once that method leaves the test kitchen.
 - [ ] Stack diagrams for sandwiches and Vegetarian lasagna, once a build page needs one.
