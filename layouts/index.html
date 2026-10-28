@@ -26,6 +26,10 @@
   that belong to no blueprint. The two essay card rows became one Essays
   band of two lists side by side, which keeps the page about as long as it
   was with four card rows.
+
+  2026-10-27: only the newest blueprint shows, so the band stays about as
+  tall as the essay lists below it; it and the techniques beside it run
+  newest first, like the essays.
 */}}
 {{ $recipes := where site.RegularPages "Section" "recipes" }}
 {{ $essays := where site.RegularPages "Section" "essays" }}
@@ -105,7 +109,7 @@
   <div class="home-methods{{ if not (and $blueprints $techniques) }} single{{ end }}">
     {{ with $blueprints }}
       <div class="home-bps">
-        {{ range . }}
+        {{ range first 1 (sort . "Date" "desc") }}
           {{ $info := partialCached "blueprint/info.html" . .Path }}
           <section class="bp">
             <div class="bp-head">
@@ -130,7 +134,7 @@
     {{ with $techniques }}
       <div class="home-list">
         <h3 class="home-list-label">Techniques and ratios</h3>
-        {{ range . }}
+        {{ range sort . "Date" "desc" }}
           <a class="home-row-link" href="{{ .RelPermalink }}"><strong>{{ .Title }}</strong><span>{{ partial "page-description.html" . }}</span></a>
         {{ end }}
       </div>

@@ -1,5 +1,6 @@
 ---
 title: Chicken sandwiches
+date: 2026-10-27
 description: "A chicken sandwich is a salted, breaded, fried piece of chicken on a toasted bun, built with something cold and crunchy and something sharp. These are the ones I make."
 ---
 A chicken sandwich is the burger's lean cousin. Chicken doesn't have the fat to carry a sandwich the way a beef patty does, so the salt goes into the meat (a brine, or worked into mince) and the crust supplies the fat and the crunch. After that it's built like a burger: a toasted bun, something cold and crunchy, something sharp, and a sauce that sticks it together.
