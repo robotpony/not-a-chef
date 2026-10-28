@@ -28,7 +28,7 @@
           <div class="mega-col">
             <span class="mega-col-label">By cuisine</span>
             {{ range first 8 $cuisines }}
-              <a href="{{ .Page.RelPermalink }}">{{ .Name }} <span class="n">{{ .Count }}</span></a>
+              <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <span class="n">{{ .Count }}</span></a>
             {{ end }}
             {{ if gt (len $cuisines) 8 }}
               <a class="mega-more" href="{{ "cuisine" | relURL }}">All {{ len $cuisines }} cuisines &rarr;</a>
@@ -91,7 +91,7 @@
           <div class="drawer-sub">
             <span class="mega-col-label">By cuisine</span>
             {{ range first 5 $cuisines }}
-              <a href="{{ .Page.RelPermalink }}">{{ .Name }} <span class="n">{{ .Count }}</span></a>
+              <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <span class="n">{{ .Count }}</span></a>
             {{ end }}
             <a class="mega-more" href="{{ "cuisine" | relURL }}">All {{ len $cuisines }} cuisines &rarr;</a>
             <span class="mega-col-label">Quick filters</span>

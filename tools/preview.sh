@@ -8,11 +8,21 @@ URL="http://localhost:1313/"
 
 # Restart, don't reuse: a hugo server left running from an earlier session
 # keeps serving stale theme templates after a Fugu submodule bump (it did on
-# 2026-10-14). Stop any hugo already listening on the port, then start fresh.
+# 2026-10-14). Stop a hugo already listening on the port, then start fresh.
+# Only one started from this repo: other sites' sessions share these ports,
+# and their previews aren't ours to stop.
+ROOT="$(pwd -P)"
 for pid in $(lsof -ti tcp:1313 -sTCP:LISTEN 2>/dev/null || true); do
-  if [ "$(ps -o comm= -p "$pid" 2>/dev/null)" = "hugo" ]; then
-    echo "Stopping the hugo server already on :1313 (pid $pid)."
+  if [ "$(ps -o comm= -p "$pid" 2>/dev/null)" != "hugo" ]; then
+    continue
+  fi
+  cwd="$(lsof -a -p "$pid" -d cwd -Fn 2>/dev/null | sed -n 's/^n//p')"
+  if [ "$cwd" = "$ROOT" ]; then
+    echo "Stopping this repo's hugo server already on :1313 (pid $pid)."
     kill "$pid"
+  else
+    echo "Port 1313 is held by another site's hugo (pid $pid, ${cwd:-unknown dir}); stop it or use another port." >&2
+    exit 1
   fi
 done
 for _ in $(seq 1 20); do
