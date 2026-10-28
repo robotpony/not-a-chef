@@ -27,13 +27,6 @@ New blueprint at [Chicken sandwiches](/methods/chicken-sandwiches/), from your f
 - [x] [[Crispy, mall-style chicken sandwich]]: you said 1889; I set `era: 1989`, from the essay's high-school timing. Right?
 - [x] [[The BCS]] `## Iterations`: I filled in 1991 from the essay (BK patty, Whopper style) and 2015 from the Pan-fried chicken burger's "The Bruce" variation (homemade patty, mustard instead of ketchup, extra pickles and onion). Right?
 
-## Muesli blueprint #todo
-
-Drafted at [Muesli](/methods/muesli/), all Test kitchen. Holland America Line's muesli is now a variation of [[Bircher muesli]]; classic muesli has `era: 1959` and crunchy `era: 1980`, each with a short "Where it comes from".
-
-- [ ] I took the three open calls as proposed: fruit and nut is an option in [[Fruit, nuts, and seeds]] (and a variation on classic), overnight oats is a variation of Bircher (Wikipedia dates the name to the 2010s), and the South Asian millet line is left out. OK?
-- [ ] The numbers are cook's starting points, not tested: 160–175°C for 15–20 minutes for the grain, 8–10 for nuts, 3:1:1 grain to fruit to nuts by weight, and 8:1:1–1½ oats to oil to syrup for granola. Correct any from your batches.
-
 ## Deferred by Bruce
 
 Not questions for now, kept so they aren't lost: the drafts (`make drafts`). The cornmeal-breaded chicken patty research is now a test kitchen recipe, [[Cornmeal fried chicken]].
