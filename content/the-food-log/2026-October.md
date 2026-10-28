@@ -8,6 +8,7 @@ A month of travel eating turned into a research list: tabbouleh, a subtly sweet 
 
 ## Methods/builds to work on #todo
 
+- [x] Add a note about Transglutaminase #todo
 - [x] Chicken sandwhiches and burgers (reference patty recipes), then builds for simple, deluxe, etc.
 
 ### Muesli research

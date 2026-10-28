@@ -7,7 +7,7 @@ Open work only. Finished items are cut, not ticked; git history has them (`git l
 *Started 2026-10-18.* The site moves from `bruce-loves-to-cook.warpedvisions.org` to `https://bruce-loves-to-cook.ca`. Live and published 2026-10-18 (`deploy-2026-10-18`): DNS, certificate, `www` and old-domain 301s, new `baseURL`.
 
 - [x] Bruce: keep the old domain's certificate renewing (current one ends 2026-12-23), or HTTPS visitors to old links hit a warning before the redirect.
-- [ ] Bruce: add the site to Google Search Console as a Domain property for `bruce-loves-to-cook.ca` (verified by a DNS TXT record; it covers `www` and `http` too), then submit `https://bruce-loves-to-cook.ca/sitemap.xml`. After the publish, so the sitemap carries the new domain. The old domain was never added, so there's no change of address to file.
+- [x] Bruce: add the site to Google Search Console as a Domain property for `bruce-loves-to-cook.ca` (verified by a DNS TXT record; it covers `www` and `http` too), then submit `https://bruce-loves-to-cook.ca/sitemap.xml`. After the publish, so the sitemap carries the new domain. The old domain was never added, so there's no change of address to file.
 - [ ] Fugu's `exampleSite/content/about.md` links the old domain: fugu-agent's change.
 - [ ] Posts on warpedvisions.org that link the cookbook: the warped agent's change.
 
