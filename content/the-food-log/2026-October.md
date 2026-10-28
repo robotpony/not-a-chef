@@ -8,7 +8,7 @@ A month of travel eating turned into a research list: tabbouleh, a subtly sweet 
 
 ## Methods/builds to work on #todo
 
-- [x] Add a note about Transglutaminase #todo
+- [x] Add a note about Transglutaminase #todone
 - [x] Chicken sandwhiches and burgers (reference patty recipes), then builds for simple, deluxe, etc.
 
 ### Muesli research
@@ -16,7 +16,7 @@ A month of travel eating turned into a research list: tabbouleh, a subtly sweet 
 - Bircher Muesli (Swiss-Style): A wet, moist mixture where raw rolled oats and grains are soaked overnight in water, milk, or fruit juice, then mixed with freshly grated apples, lemon juice, and chopped nuts. [](https://en.wikipedia.org/wiki/Muesli)
 - Classic / Raw Untoasted Muesli: **Characteristics:** A loose, dry mixture of raw cereal flakes (such as oats, wheat, or barley), dried fruits (raisins, cranberries, apricots), and various seeds and nuts. It contains no added oils or sugars and is eaten cold with milk, yogurt, or juice
 - Crunchy Muesli (NA): My go-to. While technically a baked variant of muesli, crunchy muesli (or granola) involves tossing oat and grain flakes with oil and a sweetener (like honey or maple syrup) and baking them into crisp, clustered chunks.
-- Fruit and Nut / High-Fiber Muesli: Packed with a dense ratio of tropical or orchard dried fruits (papaya, apple, raisins) and nuts (almonds, walnuts). Regional spins in South Asia also incorporate indigenous millets like amaranth or chocolate-millet blends for extra protein and texture. [](https://www.gaiagoodhealth.com/types-of-muesli-you-should-try-for-a-healthier-you/)
+- Fruit and Nut / High-Fiber Muesli: Packed with a dense ratio of tropical or orchard dried fruits (papaya, apple, raisins) and nuts (almonds, walnuts). Regional spins in South Asia also incorporate indigenous millets like amaranth or chocolate-millet blends for extra protein and texture.
 ### Recipes to research #todo 
 
 - [ ] All of the Indian curries: pea and corn, cabbage, and various chicken variations. so fantastic!
