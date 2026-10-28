@@ -4,8 +4,93 @@ date: 2026-10-01
 ---
 A month of travel eating turned into a research list: tabbouleh, a subtly sweet red cabbage, an onion jam on a double smash burger, a German roulade dinner, then Hawaii's poke, cabbage crab salad, Puka Dog's toasted bun, and a tiki dinner. Back home, fresh pickled ginger, a bonito soy dipping sauce, and cornmeal fried chicken made it into recipes, and the burger blueprint's parts and builds were reviewed and settled. A diagrammed pan sauce method and a muesli blueprint followed. Still on the list: Indian curries, a looser dal, and a run of "national dish" candidates.
 
-## Week of Sunday, October 18th
+## Week of  Sunday,  October 25th
 
+### Mexican feast #todo 
+
+- [ ] Enchiladas and green sauce → carne, were fantastic
+- [ ] Chile rellenos
+- [ ] Guac (fresh) and habenaro hot sauce
+- [ ] Simple salad → shred, sliced tomat, onions → oil/vinegar simply
+
+## Hawaiian recipe research
+
+Links:
+
+- https://www.chefhui.org/recipes
+- https://onohawaiianrecipes.com/recipe-index/
+
+### Poke: 
+
+#### Traditional Ingredients:
+
+- **Fresh raw fish** (most often _ahi tuna_, but sometimes salmon, octopus, shrimp, or others)
+- **Shoyu (soy sauce)** – adds saltiness and umami
+- **Sesame oil** – for a rich, nutty flavor
+- **Hawaiian salt** (or sea salt) – enhances the natural taste of the fish
+- **Sweet Maui onions** (or any sweet onion) – for crunch and sweetness
+- **Green onions (scallions)** – fresh and zesty bite
+- **Limu** (Hawaiian seaweed) – adds ocean flavor and texture
+- **Chili pepper** (optional) – for a spicy kick
+- **Toasted sesame seeds** – nutty topping for flavor and texture
+
+#### Common Modern Add-ins:
+
+- **Avocado** – creamy texture
+- **Cucumber** – crisp and refreshing
+- **Edamame** – little pops of protein
+- **Masago** (fish roe) – tiny bursts of saltiness
+- **Furikake** (seaweed seasoning) – adds umami crunch
+- **Spicy mayo** – popular in spicy poke versions
+- **Sriracha** – more heat!
+- **Rice** – if you’re making a bowl
+
+ #### Notes and styles:
+ - mainland-style poke bowl is roughly 1 part protein to 1 part base to 1 part fresh toppings (a 1:1:1 volumetric ratio)
+ - Traditional Hawaiian style emphasizes a pupu (appetizer) ratio where the fish is 80–90% of the dish, seasoned strictly with sea salt, limu (seaweed), and inamona (kukui nut), served alongside rice rather than under a mountain of toppings.
+
+##### Classic Shoyu (Soy) Marinade — Ratio: 2:1
+
+• 2 parts Soy Sauce (Shoyu): ¼ cup (4 tbsp)
+• 1 part Toasted Sesame Oil: 2 tbsp
+• Aromatics: 1 tbsp rice vinegar, ¾ cup chopped green onions, and 1 tsp grated ginger.
+
+##### Spicy Mayo Sauce — Ratio: 3:1
+
+• 3 parts Kewpie Mayonnaise: 3 tbsp
+• 1 part Sriracha: 1 tbsp (adjust for heat)
+• Acid: ½ tsp of fresh lime juice or rice vinegar to cut through the fat
+
+
+##### Traditional Hawaiian Style (Pa'akai / Limu Poke)
+
+• Core Ingredients: Cubed raw ahi (yellowfin tuna) or he'e (octopus)
+• Flavor Profile: Minimal, natural, and ocean-forward.
+• Traditional Seasonings: Native Hawaiian sea salt (pa'akai), fresh seaweed (limu or ogo), green onions, Maui onions, and crushed roasted kukui nuts (inamona).
+
+##### Shoyu Ahi Poke (Classic Japanese-Hawaiian Fusion)
+
+• Core Ingredients: Cubed ahi tuna
+• Flavor Profile: Savory, umami-rich, and slightly nutty.
+• Traditional Seasonings: Soy sauce (shoyu), sesame oil, sweet Maui onions, green onions (scallions), and a sprinkle of toasted sesame seeds. This is one of the most ubiquitous styles found in local Hawaiian supermarkets.
+
+##### Limu Ahi Poke
+
+• Core Ingredients: Cubed ahi tuna
+• Flavor Profile: Earthy and briny with a crisp crunch.
+• Traditional Seasonings: Heavy emphasis on ocean-harvested limu (seaweed/ogo) combined with sea salt and roasted kukui nuts, celebrating native plant pairings.
+
+##### He'e (Tako) Poke
+
+• Core Ingredients: Cured or tenderized he'e (octopus)
+• Flavor Profile: Firm, chewy, and clean.
+• Traditional Seasonings: Often prepared in a simple Hawaiian style with sea salt, limu, and onions, or occasionally accented with a touch of sesame oil and chili.
+
+##### Common Classic Island Variations (Evolved Traditions)
+
+• Spicy Ahi Poke: Cubed tuna mixed with a creamy spicy sauce (like sriracha-infused mayo) and often finished with tobiko (fish roe).
+• Wasabi Poke: A sharper, sinus-clearing style incorporating wasabi into the shoyu or oil base.
+• Garlic / Onion Shoyu Poke: Marinated with garlic oil, shoyu, and a kick of local chili pepper.
 ## Methods/builds to work on
 
 - [x] Add a note about Transglutaminase #todone
@@ -17,6 +102,9 @@ A month of travel eating turned into a research list: tabbouleh, a subtly sweet 
 - Classic / Raw Untoasted Muesli: **Characteristics:** A loose, dry mixture of raw cereal flakes (such as oats, wheat, or barley), dried fruits (raisins, cranberries, apricots), and various seeds and nuts. It contains no added oils or sugars and is eaten cold with milk, yogurt, or juice
 - Crunchy Muesli (NA): My go-to. While technically a baked variant of muesli, crunchy muesli (or granola) involves tossing oat and grain flakes with oil and a sweetener (like honey or maple syrup) and baking them into crisp, clustered chunks.
 - Fruit and Nut / High-Fiber Muesli: Packed with a dense ratio of tropical or orchard dried fruits (papaya, apple, raisins) and nuts (almonds, walnuts). Regional spins in South Asia also incorporate indigenous millets like amaranth or chocolate-millet blends for extra protein and texture.
+- 
+## Week of Sunday, October 18th
+
 ### Recipes to research #todo 
 
 - [ ] All of the Indian curries: pea and corn, cabbage, and various chicken variations. so fantastic!
