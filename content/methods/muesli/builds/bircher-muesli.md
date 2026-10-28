@@ -44,4 +44,5 @@ Swiss physician Maximilian Bircher-Benner created it around 1900 for the patient
 ## Variations
 
 - **Overnight oats:** the modern version, sold as "overnight oats" since the 2010s. More oats, less apple, often soaked in yogurt and milk with berries on top.
+- **Cruise-ship Bircher:** the Holland America Line breakfast muesli is the Swiss style, soaked and loose, closer to a porridge than a cereal.
 - **Café Bircher:** apple or orange juice for the soak in place of lemon, with berries, pear, or vanilla.
