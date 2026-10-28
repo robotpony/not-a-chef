@@ -50,6 +50,8 @@ It took me years to understand why a homemade chicken breast on a bun never tast
 
 The Broiler's glued-together chunks are a salt trick. Salt draws a protein called myosin out of the muscle, and when you mix or tumble the meat, that protein turns sticky and binds the pieces together. When my recipes say "mix until the meat turns tacky," that's the same glue.
 
+The other common glue is an enzyme, [transglutaminase](https://en.wikipedia.org/wiki/Transglutaminase), sold as "meat glue." It cross-links proteins, so pieces pressed together set into one piece without salt or mixing. Processors use it for restructured meat and fish, and restaurant kitchens use it to bind trim into neat portions. I don't know whether any of these patties used it; salt and tumbling are enough to explain them.
+
 The juicy, slightly processed bite of the BK patty is a pH trick. Commercial patties use phosphates; at home, a little baking soda and some added water do the same job, raising the pH so the meat holds onto moisture. It's a dial. A little gives a juicy patty that still eats like chicken, which is where the BK classic sat. A lot, worked hard with salt, turns bouncy like a Vietnamese beef ball or a fish ball: good, but closer to sausage than burger.
 
 The brine is the third trick. The Broiler and the Subway chicken were both brined or injected, which is why they stayed salty and juicy all the way through.
