@@ -1,5 +1,6 @@
 ---
-title: The Bruce chicken sandwich
+title: The BCS
+linkTitle: BCS
 date: 2026-10-27
 draft: false
 tags:
@@ -7,9 +8,9 @@ tags:
   - burgers
   - chicken
 era: [1991, 2015, 2026]
-description: "The Bruce chicken sandwich: a cornmeal-fried chicken breast with mayo on both buns, shredded lettuce, tomato, thin red onion, sour pickles, and mustard."
+description: "The BCS (the Bruce chicken sandwich): a cornmeal-fried chicken breast with mayo on both buns, shredded lettuce, tomato, thin red onion, sour pickles, and mustard."
 ---
-The chicken sandwich I make at home. It's the crunchy cornmeal crust I've been chasing since the mall food court, built like [[The Bruce burger]]: everything cold, sharp, and sour stacked over a hot patty, with mayo and mustard kept apart.
+The BCS, short for the Bruce chicken sandwich, is the chicken sandwich I make at home. It's the crunchy cornmeal crust I've been chasing since the mall food court, built like [[The Bruce burger]]: everything cold, sharp, and sour stacked over a hot patty, with mayo and mustard kept apart.
 
 It's had three versions, below.
 
@@ -31,16 +32,16 @@ pickle           | Sour pickles        | sour
 mustard          | Mustard             | sharp
 patty-chicken-breast    | Cornmeal-fried breast | crunch, salt, fat
 bun-base + mayo  | Toasted bun, mayo   | rich, barrier
-caption: The Bruce chicken sandwich, top to bottom
+caption: The BCS, top to bottom
 ```
 
 ## Iterations
 
 | Year | Version | What changed |
 |---|---|---|
-| 1991 | Behind the counter | A fast-food breaded patty, built [[The Whopper\|Whopper]] style: onion, pickle, tomato, ketchup, the works (see [[The impossible quest for the perfect chicken burger]]). |
-| 2015 | The home version | A homemade breaded patty ([[Pan-fried chicken burger]]), with mustard in place of the ketchup, and extra pickles and onion. |
-| 2026 | The cornmeal patty | A cornmeal-fried breast ([[Cornmeal fried chicken]]), the crust from the mall food court. The picks above are this version. |
+| 1991 | The BCS, behind the counter | A fast-food breaded patty, built [[The Whopper\|Whopper]] style: onion, pickle, tomato, ketchup, the works (see [[The impossible quest for the perfect chicken burger]]). |
+| 2015 | The 2015 BCS: the home version | A homemade breaded patty ([[Pan-fried chicken burger]]), with mustard in place of the ketchup, and extra pickles and onion. |
+| 2026 | The 2026 BCS: the cornmeal patty | A cornmeal-fried breast ([[Cornmeal fried chicken]]), the crust from the mall food court. The picks above are this version. |
 
 ## Why these picks
 

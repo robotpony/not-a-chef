@@ -40,7 +40,7 @@ caption: Crispy, mall-style chicken sandwich, top to bottom
 ## How it fails
 
 - **Pale crust:** not fried long enough. It wants to be dark.
-- **Too much going on:** a full deluxe build buries the crust. That's [[The Bruce chicken sandwich]].
+- **Too much going on:** a full deluxe build buries the crust. That's [[The BCS]].
 
 ## Recipes
 
