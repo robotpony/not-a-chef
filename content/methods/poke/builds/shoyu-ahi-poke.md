@@ -2,7 +2,7 @@
 title: Shoyu ahi poke
 date: 2026-10-28
 draft: true
-working_on: "How much marinade per 450 g of fish, and how long it sits."
+working_on: "How much fish the marinade is for."
 tags:
   - method
   - appetizers
@@ -31,7 +31,7 @@ Chinese and Japanese plantation workers brought soy sauce and sesame oil to Hawa
 
 ## How it fails
 
-- **Too salty, dark, and firm:** it sat in the shoyu too long. Toss it just before serving.
+- **Too salty, dark, and firm:** it sat in the shoyu too long. Give it 15 minutes to an hour.
 - **Greasy:** too much sesame oil. Keep it to half the soy.
 
 ## Variations

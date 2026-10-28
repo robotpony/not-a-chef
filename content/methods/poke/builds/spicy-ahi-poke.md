@@ -2,13 +2,13 @@
 title: Spicy ahi poke
 date: 2026-10-28
 draft: true
-working_on: "When it started, and whether the mayo goes through the fish or over it."
+working_on: "Untested; drafted from research notes."
 tags:
   - method
   - appetizers
 description: "Ahi folded into a sriracha mayo and finished with fish roe: rich, creamy, and hot."
 ---
-Ahi folded through a spicy mayo, usually finished with tobiko or masago. It's rich and creamy, and the heat is the point. It's still an island poke, sold at the fish counter beside the shoyu.
+Ahi folded through a spicy mayo, usually finished with tobiko or masago. It's rich and creamy, and the heat is the point. It's still an island poke, sold at the fish counter beside the shoyu. The mayo is usually folded through the fish; drizzled over a bowl, it's a second sauce rather than the seasoning.
 
 ## Picks
 

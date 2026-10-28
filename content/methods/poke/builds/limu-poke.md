@@ -2,10 +2,11 @@
 title: Hawaiian limu poke
 date: 2026-10-28
 draft: true
-working_on: "Where it sits on the timeline, and what to use for limu and inamona at home."
+working_on: "What to use for limu and inamona at home."
 tags:
   - method
   - appetizers
+era: 1778
 description: "The old style: raw fish with sea salt, limu, and inamona, and sweet onion, ocean-forward and lightly seasoned."
 ---
 The oldest poke, and the plainest. Cubed fish, sea salt, chopped seaweed, and crushed roasted kukui nut, with sweet onion and green onion through it. It tastes of the fish and the sea, and not much else.
@@ -21,7 +22,7 @@ Briny, clean, and crunchy.
 
 ## Where it comes from
 
-Poke began as the cut-offs from a catch, eaten as a snack. Before contact, the fish was eaten raw with sea salt, inamona, and sometimes blood from the gills, and served with limu and poi ([Wikipedia](https://en.wikipedia.org/wiki/Poke_(dish))). Captain Cook's voyages brought onion seeds, and onions became a poke staple. Until the 1970s, home and fish-counter poke came in two flavours: onion or limu.
+Poke began as the cut-offs from a catch, eaten as a snack. Before contact, the fish was eaten raw with sea salt, inamona, and sometimes blood from the gills, and served with limu and poi ([Wikipedia](https://en.wikipedia.org/wiki/Poke_(dish))). Captain Cook's voyages brought onion seeds (he reached Hawaii in 1778, the year it sits at on the timeline), and onions became a poke staple. Until the 1970s, home and fish-counter poke came in two flavours: onion or limu.
 
 | Constraint | Pick it explains |
 |---|---|

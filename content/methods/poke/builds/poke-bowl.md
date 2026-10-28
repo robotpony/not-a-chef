@@ -2,7 +2,7 @@
 title: Mainland poke bowl
 date: 2026-10-28
 draft: true
-working_on: "Which rice, and a tested set of toppings."
+working_on: "A tested set of toppings."
 tags:
   - method
   - mains
@@ -18,7 +18,7 @@ Fresh, filling, and built to order.
 - **The fish:** Ahi or salmon
 - **The seasoning:** Shoyu and sesame oil on the fish, and spicy mayo over the bowl
 - **Onions, seaweed, and crunch:** Green onion, sesame seeds, and furikake
-- **How it's served:** A bowl, about 1:1:1 rice, fish, and toppings: avocado, cucumber, edamame, pickled ginger
+- **How it's served:** A bowl of seasoned rice, about 1:1:1 rice, fish, and toppings: avocado, cucumber, edamame, pickled ginger
 
 ## Where it comes from
 
@@ -37,7 +37,7 @@ Poke became popular across North America from 2012, and the number of Hawaiian r
 
 ## How it fails
 
-- **Bland rice:** unseasoned and under-sauced. Season the rice, or sauce the whole bowl.
+- **Bland rice:** unseasoned and under-sauced. Season the rice as for sushi, or sauce the whole bowl.
 - **Too much going on:** more than four or five toppings and the fish gets lost.
 
 ## Recipes

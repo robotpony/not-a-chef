@@ -14,8 +14,20 @@ This is the choice that names the poke. Salt is the oldest seasoning, and it's a
 
 - **Salt.** Hawaiian sea salt (pa'akai, or the red ʻalaea salt) or any coarse sea salt. Salt draws out a little moisture and firms the surface of the fish.
 - **Shoyu to sesame oil.** About 2 parts soy sauce to 1 part toasted sesame oil, by volume. A little rice vinegar and grated ginger brighten it.
+
+```formula
+soy | Shoyu      | 2
+: oil | Sesame oil | 1
+caption: By volume
+```
 - **Spicy mayo.** About 3 parts Kewpie mayonnaise to 1 part sriracha, with a few drops of lime juice or rice vinegar to cut the fat.
-- **Time.** Toss it just before serving, or up to an hour ahead in the fridge. Soy and salt start to cure the fish; much longer and it firms up and darkens.
+
+```formula
+jar | Kewpie mayo | 3
+: pepper | Sriracha | 1
+caption: By volume
+```
+- **Time.** 15 minutes to 1 hour in the fridge before serving. Soy and salt start to cure the fish; much longer and it firms up and darkens.
 - **Heat.** Chopped fresh chili, chili flakes, or wasabi, to taste.
 
 ## Options

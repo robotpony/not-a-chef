@@ -14,8 +14,8 @@ The mix-ins are small amounts of strong things. Before poke had shoyu, home and 
 
 - **Sweet onion.** Maui onion, or any sweet onion (Walla Walla, Vidalia), sliced thin. It's crunchy and mild enough to eat raw in quantity.
 - **Green onion.** Sliced thin, for a sharper, fresher bite.
-- **Limu.** Hawaiian seaweed, most often ogo, chopped. It's briny and crisp. Hard to find outside Hawaii; rehydrated seaweed salad mixes are the closest stand-in.
-- **Inamona.** Roasted kukui (candlenut), crushed with salt. Kukui can't be eaten raw, and it's rare outside Hawaii. Toasted, salted macadamia nuts are the usual stand-in.
+- **Limu.** Hawaiian seaweed, most often ogo, chopped. It's briny and crisp. Asian markets sometimes have it; otherwise, approximate it with other seaweeds (seaweed salad, or rehydrated wakame).
+- **Inamona.** Roasted kukui (candlenut), crushed with salt. Kukui can't be eaten raw, and it's rare outside Hawaii, though Asian markets sometimes carry inamona. Toasted, salted macadamia nuts are the usual stand-in.
 - **Toasted sesame seeds.** A spoonful, for crunch and a nutty finish.
 - **Amount.** Little enough that the fish stays most of the dish: a handful of onion and a spoonful of the rest per 450 g (1 lb) of fish.
 
