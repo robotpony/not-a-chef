@@ -56,8 +56,10 @@ in a browser — no build step.
   Design v2 "Soften the colour scheme", after the cookbook-site notes.
   Cards and a recipe excerpt three times: A as built, B with the five
   hues pulled toward the neutrals, C with B's tokens plus one accent and
-  text-only chips. Light, dark, and auto toggle. B's tokens are a first
-  guess and untested for contrast.
+  text-only chips. Light, dark, and auto toggle. A mixer below takes each
+  softening as a checkbox with a note, beside A, and copies the take to
+  the clipboard as requirements text. B's tokens are a first guess and
+  untested for contrast.
 
 - **`scale-callout.html`**: proposal (2026-10-07) to redraw the recipe
   scale/units menu as a callout with a `^` pointer to the gear, a restyled

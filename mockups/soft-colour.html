@@ -7,29 +7,27 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
-  /* Proposal (2026-10-30) for PLAN.md's Design v2 "Soften the colour scheme":
-   * three columns, each its own token set, over the same components.
-   *   A · Current  — STYLE.md's tokens as built.
-   *   B · Softer   — same five hues, same components; accents and chip
-   *                  fills pulled toward the neutrals (lower saturation,
-   *                  less contrast against --surface).
-   *   C · Quiet    — B's tokens, plus one accent: chips lose their fills
-   *                  and become coloured small text (Serious Eats' red
-   *                  bullets, Smitten Kitchen's small caps); stat numbers
-   *                  and tag outlines drop to ink. The accent keeps links,
-   *                  ratios, and quantities. */
+  /* Proposal (2026-10-30) for PLAN.md's Design v2 "Soften the colour scheme".
+   * Every softening is its own class on a column, so the mixer can turn
+   * them on one at a time:
+   *   .t-neutral  softer neutrals (ink a step lighter, borders nearer the bg)
+   *   .t-hue      the five hues pulled toward the neutrals
+   *   .q-cuisine, .q-dev, .q-concept, .q-tags   chips as text, no fill/outline
+   *   .q-stats    stat numbers in ink, not the accent
+   *   .q-banner   test kitchen banner as two rules, not a filled box
+   *   .q-callout  principle callout as a rule, no fill
+   *   .q-qty      quantities in accent text, no wash
+   * A = none, B = .t-neutral .t-hue, C = all of them. */
 
   /* Page chrome, outside the columns. */
-  :root {
-    --page-bg: #E9E9E0; --page-ink: #23241E; --page-muted: #63645A; --page-rule: #CFCFC0;
-  }
+  :root { --page-bg:#E9E9E0; --page-ink:#23241E; --page-muted:#63645A; --page-rule:#CFCFC0; --page-panel:#F3F3EC; --page-accent:#7C361D; }
   @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) { --page-bg: #121310; --page-ink: #ECEEE2; --page-muted: #A9AB99; --page-rule: #383A2C; }
+    :root:not([data-theme="light"]) { --page-bg:#121310; --page-ink:#ECEEE2; --page-muted:#A9AB99; --page-rule:#383A2C; --page-panel:#1B1C16; --page-accent:#E4AD95; }
   }
-  :root[data-theme="dark"] { --page-bg: #121310; --page-ink: #ECEEE2; --page-muted: #A9AB99; --page-rule: #383A2C; }
+  :root[data-theme="dark"] { --page-bg:#121310; --page-ink:#ECEEE2; --page-muted:#A9AB99; --page-rule:#383A2C; --page-panel:#1B1C16; --page-accent:#E4AD95; }
 
-  /* ---------- A · Current (STYLE.md) ---------- */
-  .v-current {
+  /* ---------- Tokens: current (STYLE.md) ---------- */
+  .col {
     --bg:#F3F3EC; --surface:#FBFBF6; --surface-2:#EAEBDF; --ink:#23241E; --ink-muted:#63645A; --ink-faint:#93948A;
     --border:#DCDCCE; --border-strong:#C7C8B4;
     --accent:#A67330; --accent-strong:#7C361D; --accent-soft:#F6EADA;
@@ -37,18 +35,15 @@
     --flag:#3D638F; --flag-soft:#E1EAF4;
     --principle:#247B50; --principle-strong:#1D6743; --principle-soft:#DBF5E8;
   }
-  /* ---------- B and C · Softer ---------- */
-  .v-soft, .v-quiet {
-    --bg:#F3F3EC; --surface:#FAFAF5; --surface-2:#ECECE2; --ink:#2B2C25; --ink-muted:#6A6B61; --ink-faint:#9A9B90;
-    --border:#E0E0D3; --border-strong:#CDCEBD;
+  .col.t-neutral { --surface:#FAFAF5; --surface-2:#ECECE2; --ink:#2B2C25; --ink-muted:#6A6B61; --ink-faint:#9A9B90; --border:#E0E0D3; --border-strong:#CDCEBD; }
+  .col.t-hue {
     --accent:#A8865A; --accent-strong:#8A4F37; --accent-soft:#F3ECE2;
     --highlight:#8E7C46; --highlight-soft:#F2EFE1;
     --flag:#56708E; --flag-soft:#E7EBEF;
     --principle:#4A7D62; --principle-strong:#3D6852; --principle-soft:#E4EEE8;
   }
-
   @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) .v-current {
+    :root:not([data-theme="light"]) .col {
       --bg:#1B1C16; --surface:#212219; --surface-2:#17180F; --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
       --border:#383A2C; --border-strong:#4A4C3A;
       --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
@@ -56,16 +51,15 @@
       --flag:#97B8D8; --flag-soft:#1D2835;
       --principle:#8ED7B4; --principle-strong:#A7E2C4; --principle-soft:#1B3428;
     }
-    :root:not([data-theme="light"]) .v-soft, :root:not([data-theme="light"]) .v-quiet {
-      --bg:#1B1C16; --surface:#202119; --surface-2:#18190F; --ink:#E2E4D8; --ink-muted:#A2A493; --ink-faint:#737468;
-      --border:#33352A; --border-strong:#45473A;
+    :root:not([data-theme="light"]) .col.t-neutral { --surface:#202119; --surface-2:#18190F; --ink:#E2E4D8; --ink-muted:#A2A493; --ink-faint:#737468; --border:#33352A; --border-strong:#45473A; }
+    :root:not([data-theme="light"]) .col.t-hue {
       --accent:#BF9D72; --accent-strong:#D6A992; --accent-soft:#2E2620;
       --highlight:#C9BC8A; --highlight-soft:#2B2820;
       --flag:#93A9C0; --flag-soft:#20252C;
       --principle:#8DBBA2; --principle-strong:#9FC7B1; --principle-soft:#1F2C25;
     }
   }
-  :root[data-theme="dark"] .v-current {
+  :root[data-theme="dark"] .col {
     --bg:#1B1C16; --surface:#212219; --surface-2:#17180F; --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
     --border:#383A2C; --border-strong:#4A4C3A;
     --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
@@ -73,9 +67,8 @@
     --flag:#97B8D8; --flag-soft:#1D2835;
     --principle:#8ED7B4; --principle-strong:#A7E2C4; --principle-soft:#1B3428;
   }
-  :root[data-theme="dark"] .v-soft, :root[data-theme="dark"] .v-quiet {
-    --bg:#1B1C16; --surface:#202119; --surface-2:#18190F; --ink:#E2E4D8; --ink-muted:#A2A493; --ink-faint:#737468;
-    --border:#33352A; --border-strong:#45473A;
+  :root[data-theme="dark"] .col.t-neutral { --surface:#202119; --surface-2:#18190F; --ink:#E2E4D8; --ink-muted:#A2A493; --ink-faint:#737468; --border:#33352A; --border-strong:#45473A; }
+  :root[data-theme="dark"] .col.t-hue {
     --accent:#BF9D72; --accent-strong:#D6A992; --accent-soft:#2E2620;
     --highlight:#C9BC8A; --highlight-soft:#2B2820;
     --flag:#93A9C0; --flag-soft:#20252C;
@@ -86,15 +79,16 @@
   body { margin: 0; background: var(--page-bg); color: var(--page-ink); font-family: 'Lora', Georgia, serif; }
   .wrap { max-width: 1320px; margin: 0 auto; padding: 28px 16px 64px; }
   .doc-h { font-family: 'Libre Franklin', sans-serif; font-size: 1.5rem; font-weight: 700; margin: 0 0 6px; }
+  .doc-h2 { font-family: 'Libre Franklin', sans-serif; font-size: 1.15rem; font-weight: 700; margin: 40px 0 6px; }
   .doc-p { font-size: .92rem; line-height: 1.55; color: var(--page-muted); max-width: 72ch; margin: 0 0 8px; }
   .toolbar { display: flex; gap: 6px; margin: 14px 0 22px; font-family: 'Libre Franklin', sans-serif; }
-  .toolbar button { font: inherit; font-size: .78rem; font-weight: 600; padding: 6px 12px; border-radius: 14px; border: 1px solid var(--page-rule); background: transparent; color: var(--page-ink); cursor: pointer; }
-  .toolbar button[aria-pressed="true"] { background: var(--page-ink); color: var(--page-bg); border-color: var(--page-ink); }
+  .pill { font: inherit; font-family: 'Libre Franklin', sans-serif; font-size: .78rem; font-weight: 600; padding: 6px 12px; border-radius: 14px; border: 1px solid var(--page-rule); background: transparent; color: var(--page-ink); cursor: pointer; }
+  .pill[aria-pressed="true"], .pill.primary { background: var(--page-ink); color: var(--page-bg); border-color: var(--page-ink); }
 
   .cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
   @media (max-width: 1000px) { .cols { grid-template-columns: minmax(0, 1fr); } }
 
-  /* ---------- A column: the site's own components ---------- */
+  /* ---------- Column and the site's own components ---------- */
   .col { background: var(--bg); color: var(--ink); border-radius: 8px; padding: 18px 16px 20px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
   .col-label { font-family: 'Libre Franklin', sans-serif; font-size: .65rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-faint); margin: 0; }
   .col-h { font-family: 'Libre Franklin', sans-serif; font-size: 1.1rem; font-weight: 700; margin: 2px 0 0; }
@@ -105,7 +99,6 @@
   .sw { flex: 1; height: 26px; border-radius: 3px; display: flex; }
   .sw i { flex: 1; } .sw i:first-child { border-radius: 3px 0 0 3px; } .sw i:last-child { border-radius: 0 3px 3px 0; }
 
-  /* Card (custom.css .rcard) */
   .rcard { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 14px 16px 12px; display: flex; flex-direction: column; gap: 8px; }
   .rcard:hover { border-color: var(--accent); }
   .rcard-top { display: flex; align-items: center; gap: 4px; flex-wrap: nowrap; overflow: hidden; }
@@ -117,7 +110,6 @@
   .rcard-stat b { font-family: 'Libre Franklin', sans-serif; font-size: .56rem; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-faint); }
   .rcard-stat span { font-family: 'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums; font-size: .72rem; font-weight: 600; color: var(--accent-strong); }
 
-  /* Chips (custom.css): one box for every chip in the top row */
   .chip { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; line-height: 1.5; padding: 3px 7px; border: 1px solid transparent; border-radius: 3px; display: inline-flex; align-items: center; gap: 4px; text-decoration: none; }
   .cuisine { font-weight: 600; text-transform: uppercase; letter-spacing: .05em; background: var(--highlight-soft); color: var(--highlight); }
   .tag { border-color: var(--border-strong); color: var(--ink-muted); }
@@ -128,7 +120,6 @@
   .method { font-weight: 600; background: var(--accent-soft); color: var(--accent-strong); }
   .chip svg { width: 11px; height: 11px; }
 
-  /* Recipe page excerpt */
   .page { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
   .draft-banner { display: flex; align-items: baseline; gap: 8px; font-family: 'Libre Franklin', sans-serif; font-size: .78rem; font-weight: 600; color: var(--flag); background: var(--flag-soft); border: 1px solid var(--flag); border-radius: 3px; padding: 8px 12px; }
   .draft-banner .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--flag); flex: none; }
@@ -150,22 +141,38 @@
   .callout { border-left: 3px solid var(--principle); background: var(--principle-soft); padding: 8px 12px; border-radius: 0 3px 3px 0; font-size: .86rem; line-height: 1.5; }
   .callout b { font-family: 'Libre Franklin', sans-serif; font-size: .62rem; text-transform: uppercase; letter-spacing: .07em; color: var(--principle-strong); display: block; margin-bottom: 2px; }
 
-  /* ---------- C · Quiet: one accent, chips as small text ---------- */
-  .v-quiet .rcard-top { gap: 10px; }
-  .v-quiet .chip { padding: 3px 0; background: none; border-color: transparent; }
-  .v-quiet .cuisine { color: var(--highlight); }
-  .v-quiet .dev { color: var(--flag); }
-  .v-quiet .principle, .v-quiet .method { color: var(--principle-strong); }
-  .v-quiet .method { color: var(--accent-strong); }
-  .v-quiet .tag { color: var(--ink-faint); font-weight: 500; }
-  .v-quiet .tag::before { content: "#"; opacity: .55; margin-right: 1px; }
-  .v-quiet .tag-more { color: var(--ink-faint); }
-  .v-quiet .p-chips { gap: 4px 12px; }
-  .v-quiet .rcard-stat span { color: var(--ink); }
-  .v-quiet .rcard { border-color: var(--border); }
-  .v-quiet .draft-banner { background: none; border: 0; border-top: 1px solid color-mix(in srgb, var(--flag) 45%, transparent); border-bottom: 1px solid color-mix(in srgb, var(--flag) 45%, transparent); border-radius: 0; padding: 7px 0; }
-  .v-quiet .callout { background: none; padding: 2px 0 2px 12px; }
-  .v-quiet .qty { background: none; color: var(--accent-strong); padding: 0; }
+  /* ---------- Component softenings, one class each ---------- */
+  .q-cuisine .cuisine { background: none; padding-inline: 0; }
+  .q-dev .dev { background: none; border-color: transparent; padding-inline: 0; }
+  .q-concept .principle, .q-concept .method { background: none; padding-inline: 0; }
+  .q-tags .tag, .q-tags .tag-more { border-color: transparent; padding-inline: 0; color: var(--ink-faint); font-weight: 500; }
+  .q-tags .tag:not(.tag-more)::before { content: "#"; opacity: .55; margin-right: 1px; }
+  .q-cuisine .rcard-top, .q-dev .rcard-top, .q-concept .rcard-top, .q-tags .rcard-top { gap: 8px; }
+  .q-cuisine .p-chips, .q-tags .p-chips { gap: 4px 10px; }
+  .q-stats .rcard-stat span { color: var(--ink); }
+  .q-banner .draft-banner { background: none; border: 0; border-top: 1px solid color-mix(in srgb, var(--flag) 45%, transparent); border-bottom: 1px solid color-mix(in srgb, var(--flag) 45%, transparent); border-radius: 0; padding: 7px 0; }
+  .q-callout .callout { background: none; padding: 2px 0 2px 12px; }
+  .q-qty .qty { background: none; color: var(--accent-strong); padding: 0; }
+
+  /* ---------- Mixer ---------- */
+  .mix { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+  @media (max-width: 1000px) { .mix { grid-template-columns: minmax(0, 1fr); } }
+  .panel { background: var(--page-panel); border-radius: 8px; padding: 18px 16px 20px; font-family: 'Libre Franklin', sans-serif; position: sticky; top: 12px; }
+  @media (max-width: 1000px) { .panel { position: static; } }
+  .panel h3 { font-size: 1.1rem; margin: 0 0 4px; }
+  .panel .hint { font-family: 'Lora', serif; font-size: .84rem; line-height: 1.5; color: var(--page-muted); margin: 0 0 12px; }
+  .presets { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+  .group { font-size: .65rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--page-muted); margin: 14px 0 6px; }
+  .item { border-top: 1px solid var(--page-rule); padding: 8px 0; }
+  .item label { display: grid; grid-template-columns: 18px 1fr; gap: 8px; align-items: start; cursor: pointer; }
+  .item input[type=checkbox] { margin: 2px 0 0; accent-color: var(--page-accent); width: 15px; height: 15px; }
+  .item .name { font-size: .86rem; font-weight: 600; }
+  .item .what { display: block; font-family: 'Lora', serif; font-size: .78rem; line-height: 1.45; color: var(--page-muted); margin-top: 1px; }
+  .item input[type=text] { margin: 6px 0 0 26px; width: calc(100% - 26px); font: inherit; font-family: 'Lora', serif; font-size: .8rem; padding: 4px 8px; border: 1px solid var(--page-rule); border-radius: 3px; background: transparent; color: var(--page-ink); }
+  .panel textarea { width: 100%; min-height: 96px; font: inherit; font-family: 'Lora', serif; font-size: .84rem; line-height: 1.5; padding: 8px; border: 1px solid var(--page-rule); border-radius: 3px; background: transparent; color: var(--page-ink); resize: vertical; }
+  .actions { display: flex; align-items: center; gap: 10px; margin-top: 12px; }
+  .status { font-size: .78rem; color: var(--page-muted); }
+  .out { margin-top: 12px; white-space: pre-wrap; font-family: 'IBM Plex Mono', monospace; font-size: .72rem; line-height: 1.5; color: var(--page-muted); border-top: 1px solid var(--page-rule); padding-top: 10px; max-height: 260px; overflow: auto; }
 
   .notes { margin-top: 28px; max-width: 76ch; }
   .notes h2 { font-family: 'Libre Franklin', sans-serif; font-size: 1rem; font-weight: 700; margin: 0 0 6px; }
@@ -178,14 +185,38 @@
 <div class="wrap">
   <h1 class="doc-h">Softer colour</h1>
   <p class="doc-p">A thinking mock for PLAN.md's Design v2 item "Soften the colour scheme". The same cards and recipe excerpt three times, each with its own tokens. The five hues stay in every column; what changes is how loud they are and how many get a filled shape.</p>
-  <p class="doc-p">B's tokens are a first guess, not tuned: saturation pulled roughly a third toward the neutrals, ink a step lighter, fills nearer the surface. C uses the same tokens as B and changes components, not colours.</p>
+  <p class="doc-p">B's tokens are a first guess, not tuned: saturation pulled roughly a third toward the neutrals, ink a step lighter, fills nearer the surface. C uses the same tokens as B and changes components, not colours. The mixer below takes each change separately.</p>
   <div class="toolbar" role="group" aria-label="Theme">
-    <button data-t="auto" aria-pressed="true">Auto</button>
-    <button data-t="light" aria-pressed="false">Light</button>
-    <button data-t="dark" aria-pressed="false">Dark</button>
+    <button class="pill" data-t="auto" aria-pressed="true">Auto</button>
+    <button class="pill" data-t="light" aria-pressed="false">Light</button>
+    <button class="pill" data-t="dark" aria-pressed="false">Dark</button>
   </div>
 
   <div class="cols" id="cols"></div>
+
+  <h2 class="doc-h2">Mix your own</h2>
+  <p class="doc-p">Tick a softening to apply it to the right-hand column; the middle column stays as built for comparison. Add a note on anything with an opinion, then copy your take. It goes to the clipboard as requirements text for the full mock.</p>
+  <div class="mix">
+    <div class="panel">
+      <h3>Softenings</h3>
+      <p class="hint">Your ticks and notes stay in this browser between visits.</p>
+      <div class="presets">
+        <button class="pill" data-preset="a">Start from A</button>
+        <button class="pill" data-preset="b">Start from B</button>
+        <button class="pill" data-preset="c">Start from C</button>
+      </div>
+      <div id="items"></div>
+      <p class="group">First take</p>
+      <textarea id="overall" placeholder="Overall: what feels right, what's lost, what the full mock should try."></textarea>
+      <div class="actions">
+        <button class="pill primary" id="copy">Copy take</button>
+        <span class="status" id="status" aria-live="polite"></span>
+      </div>
+      <div class="out" id="out"></div>
+    </div>
+    <div id="mix-ref"></div>
+    <div id="mix-col"></div>
+  </div>
 
   <section class="notes">
     <h2>What to look for</h2>
@@ -221,7 +252,7 @@
         <a class="chip dev" href="#"><span class="dot"></span>Testing</a>
         <a class="chip cuisine" href="#">Japanese</a>
         <a class="chip tag" href="#">cabbage</a>
-        <span class="chip tag-more">+2</span>
+        <span class="chip tag tag-more">+2</span>
       </div>
       <div class="rcard-title">Okonomiyaki</div>
       <p class="rcard-intro">A cabbage pancake held together with just enough batter, finished with sauce, mayonnaise, and bonito.</p>
@@ -271,28 +302,139 @@
 </template>
 
 <script>
-  const variants = [
-    { cls: 'v-current', label: 'A · Current', h: 'As built', note: 'STYLE.md’s tokens. Every chip a filled shape, the accent on every number.' },
-    { cls: 'v-soft', label: 'B · Softer', h: 'Same components, quieter tokens', note: 'Five hues kept, each pulled toward the neutrals. Fills sit closer to the card surface.' },
-    { cls: 'v-quiet', label: 'C · Quiet', h: 'One accent, text-only chips', note: 'B’s tokens. Chips become coloured small text, stat numbers go to ink, the draft box becomes rules.' },
+  const ITEMS = [
+    { group: 'Tokens', cls: 't-neutral', name: 'Softer neutrals', what: 'Ink a step lighter, borders and surfaces closer to the page.' },
+    { group: 'Tokens', cls: 't-hue', name: 'Softer hues', what: 'All five hues (accent, cuisine yellow, draft blue, principle green) pulled toward the neutrals, in light and dark.' },
+    { group: 'Chips', cls: 'q-cuisine', name: 'Cuisine chip as text', what: 'Yellow small caps, no fill.' },
+    { group: 'Chips', cls: 'q-dev', name: 'Test kitchen chip as text', what: 'Blue dot and label, no fill or outline.' },
+    { group: 'Chips', cls: 'q-concept', name: 'Principle and method chips as text', what: 'Green and rust labels, no fill.' },
+    { group: 'Chips', cls: 'q-tags', name: 'Tags as text', what: 'Faint #tag words, no outlines.' },
+    { group: 'Page', cls: 'q-stats', name: 'Stat numbers in ink', what: 'Card stats (serves, time) lose the accent.' },
+    { group: 'Page', cls: 'q-banner', name: 'Test kitchen banner as rules', what: 'Two hairlines instead of a filled blue box.' },
+    { group: 'Page', cls: 'q-callout', name: 'Principle callout without fill', what: 'Green rule on the left, no tint.' },
+    { group: 'Page', cls: 'q-qty', name: 'Quantities as accent text', what: 'Rust numbers instead of the orange wash behind them.' },
   ];
+  const PRESETS = {
+    a: [],
+    b: ['t-neutral', 't-hue'],
+    c: ITEMS.map(i => i.cls),
+  };
+  const KEY = 'soft-colour-mix-v1';
+
   const cols = document.getElementById('cols');
   const tpl = document.getElementById('col');
-  for (const v of variants) {
+  function makeCol(label, h, note, classes) {
     const node = tpl.content.firstElementChild.cloneNode(true);
-    node.classList.add(v.cls);
-    node.querySelector('[data-label]').textContent = v.label;
-    node.querySelector('[data-h]').textContent = v.h;
-    node.querySelector('[data-note]').textContent = v.note;
-    cols.appendChild(node);
+    classes.forEach(c => node.classList.add(c));
+    node.querySelector('[data-label]').textContent = label;
+    node.querySelector('[data-h]').textContent = h;
+    node.querySelector('[data-note]').textContent = note;
+    return node;
   }
-  document.querySelectorAll('.toolbar button').forEach(b => b.addEventListener('click', () => {
+  cols.append(
+    makeCol('A · Current', 'As built', 'STYLE.md’s tokens. Every chip a filled shape, the accent on every number.', PRESETS.a),
+    makeCol('B · Softer', 'Same components, quieter tokens', 'Five hues kept, each pulled toward the neutrals. Fills sit closer to the card surface.', PRESETS.b),
+    makeCol('C · Quiet', 'One accent, text-only chips', 'B’s tokens. Chips become coloured small text, stat numbers go to ink, the draft box becomes rules.', PRESETS.c),
+  );
+  document.getElementById('mix-ref').append(makeCol('A · Current', 'As built', 'For comparison.', []));
+  const mixCol = makeCol('Mix', 'Your mix', 'Whatever is ticked on the left.', []);
+  document.getElementById('mix-col').append(mixCol);
+
+  // State: { on: [cls], notes: {cls: text}, overall: text }
+  let state = { on: [], notes: {}, overall: '' };
+  try { const s = JSON.parse(localStorage.getItem(KEY)); if (s && Array.isArray(s.on)) state = { notes: {}, overall: '', ...s }; } catch (e) {}
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+
+  const itemsEl = document.getElementById('items');
+  let lastGroup = '';
+  for (const it of ITEMS) {
+    if (it.group !== lastGroup) {
+      const g = document.createElement('p'); g.className = 'group'; g.textContent = it.group; itemsEl.append(g); lastGroup = it.group;
+    }
+    const row = document.createElement('div'); row.className = 'item';
+    row.innerHTML = `<label><input type="checkbox"><span><span class="name"></span><span class="what"></span></span></label><input type="text" placeholder="Note (optional)">`;
+    row.querySelector('.name').textContent = it.name;
+    row.querySelector('.what').textContent = it.what;
+    const cb = row.querySelector('input[type=checkbox]');
+    const note = row.querySelector('input[type=text]');
+    cb.dataset.cls = it.cls; note.dataset.cls = it.cls;
+    cb.addEventListener('change', () => {
+      state.on = ITEMS.map(i => i.cls).filter(c => itemsEl.querySelector(`input[type=checkbox][data-cls="${c}"]`).checked);
+      apply(); save();
+    });
+    note.addEventListener('input', () => { state.notes[it.cls] = note.value; save(); render(); });
+    itemsEl.append(row);
+  }
+  const overall = document.getElementById('overall');
+  overall.addEventListener('input', () => { state.overall = overall.value; save(); render(); });
+
+  function apply() {
+    for (const it of ITEMS) mixCol.classList.toggle(it.cls, state.on.includes(it.cls));
+    render();
+  }
+  function sync() {
+    itemsEl.querySelectorAll('input[type=checkbox]').forEach(cb => cb.checked = state.on.includes(cb.dataset.cls));
+    itemsEl.querySelectorAll('input[type=text]').forEach(t => t.value = state.notes[t.dataset.cls] || '');
+    overall.value = state.overall || '';
+    apply();
+  }
+  document.querySelectorAll('[data-preset]').forEach(b => b.addEventListener('click', () => {
+    state.on = [...PRESETS[b.dataset.preset]]; sync(); save();
+  }));
+
+  function themeName() {
+    const t = document.documentElement.getAttribute('data-theme');
+    if (t) return t;
+    return matchMedia('(prefers-color-scheme: dark)').matches ? 'dark (auto)' : 'light (auto)';
+  }
+  function takeText() {
+    const today = new Date().toISOString().slice(0, 10);
+    const line = it => {
+      const n = (state.notes[it.cls] || '').trim();
+      return `- ${it.name}${n ? `: ${n}` : ''}`;
+    };
+    const keep = ITEMS.filter(i => state.on.includes(i.cls));
+    const leave = ITEMS.filter(i => !state.on.includes(i.cls));
+    const out = [
+      '␣⌘ Copy · in not-a-chef',
+      `Softer colour, first take (${today})`,
+      `From mockups/soft-colour.html, viewed in ${themeName()}.`,
+      '',
+      'Soften in the full mock:',
+      ...(keep.length ? keep.map(line) : ['- (none)']),
+      '',
+      'Leave as built:',
+      ...(leave.length ? leave.map(line) : ['- (none)']),
+    ];
+    const o = (state.overall || '').trim();
+    if (o) out.push('', 'Overall:', o);
+    return out.join('\n');
+  }
+  const outEl = document.getElementById('out');
+  function render() { outEl.textContent = takeText(); }
+
+  const status = document.getElementById('status');
+  document.getElementById('copy').addEventListener('click', async () => {
+    const text = takeText();
+    try { await navigator.clipboard.writeText(text); status.textContent = 'Copied.'; }
+    catch (e) {
+      const r = document.createRange(); r.selectNodeContents(outEl);
+      const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+      status.textContent = 'Couldn’t reach the clipboard; the text below is selected, press ⌘C.';
+    }
+    setTimeout(() => status.textContent = '', 4000);
+  });
+
+  document.querySelectorAll('.toolbar .pill').forEach(b => b.addEventListener('click', () => {
     const t = b.dataset.t;
     if (t === 'auto') document.documentElement.removeAttribute('data-theme');
     else document.documentElement.setAttribute('data-theme', t);
-    document.querySelectorAll('.toolbar button').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+    document.querySelectorAll('.toolbar .pill').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+    render();
   }));
   document.querySelectorAll('a[href="#"]').forEach(a => a.addEventListener('click', e => e.preventDefault()));
+
+  sync();
 </script>
 </body>
 </html>
