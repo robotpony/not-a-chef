@@ -28,7 +28,7 @@ The noodles cook in the sauce. Start them in **just enough water to cover** in a
 - 1–2 tsp Sichuan peppercorns, toasted and ground
 - 2 tsp Korean chili flakes (gochugaru)
 - 1 tbsp fresh ginger, minced
-- 1–2 g MSG (a small pinch)
+- 1–2 g [[MSG]] (a small pinch)
 - 150 g cabbage, shredded (about 2 cups)
 - soy sauce, sesame oil, and sake or rice wine, 1–2 tbsp each to taste
 - splash of rice vinegar
@@ -37,7 +37,7 @@ The noodles cook in the sauce. Start them in **just enough water to cover** in a
 
 Drop the noodles in a wide pan with just enough water to cover and bring to a simmer. Keep a cup of hot water nearby.
 
-When the noodles are halfway cooked by the package time, add the beef base, tofu, chili-garlic paste, tomato paste, Sichuan pepper, chili flakes, ginger, and [[MSG]]. Stir and cook until heated through and the liquid is reducing. Ramen and egg noodles cook faster; start them in less water.
+When the noodles are halfway cooked by the package time, add the beef base, tofu, chili-garlic paste, tomato paste, Sichuan pepper, chili flakes, ginger, and MSG. Stir and cook until heated through and the liquid is reducing. Ramen and egg noodles cook faster; start them in less water.
 
 Taste the liquid. Season with soy sauce, sesame oil, and sake. Test a noodle; if it's still firm and the pan is dry, add 1–2 tbsp water.
 

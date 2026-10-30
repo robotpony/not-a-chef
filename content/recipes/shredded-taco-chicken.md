@@ -24,7 +24,7 @@ Aim for a good crust and an internal temperature of **75–90°C (170–195°F)*
 - 2 tsp cumin
 - 2 tsp salt
 - 1 tsp black pepper
-- ½ tsp MSG (Accent) (optional)
+- ½ tsp [[MSG]] (Accent) (optional)
 
 ## Method
 

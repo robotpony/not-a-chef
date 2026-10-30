@@ -27,7 +27,7 @@ The key step is **heating the coconut cream alone until it splits** (the fat sep
 - 2 tins mixed additions: water chestnuts, mini corn, bamboo shoots (drained)
 - roasted veg (sweet potato, carrot, cauliflower, whatever you have)
 - protein: tofu, cooked chicken, or shrimp added at the end
-- fish sauce, sugar or maple syrup, soy sauce or MSG, lime juice (for balancing)
+- fish sauce, sugar or maple syrup, soy sauce or [[MSG]], lime juice (for balancing)
 
 ## Method
 

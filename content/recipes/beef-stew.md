@@ -35,7 +35,7 @@ Brown the beef in batches without [[Crowding the pan|crowding]]; you want a [[Se
 - Salt and pepper
 
 #### Flavour enhancers
-- 1 teaspoon MSG (Accent) (optional)
+- 1 teaspoon [[MSG]] (Accent) (optional)
 - 1–2 tablespoons soy sauce (optional)
 - 2–3 teaspoons fish sauce (optional)
 

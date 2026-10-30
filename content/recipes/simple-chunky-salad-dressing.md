@@ -16,7 +16,7 @@ This is a fridge-magnet recipe that is perfect to mop up old herbs and sour crea
 - 2 tablespoons white sugar
 - 2 teaspoons fresh thyme leaves, finely chopped
 - 1 teaspoon ground coriander
-- 1 teaspoon MSG
+- 1 teaspoon [[MSG]]
 - salt and pepper
 
 ## Method

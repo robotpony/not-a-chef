@@ -22,7 +22,7 @@ When we crave shake-and-bake, this is what we make. It hits the same notes with 
 - 3 g baking powder (1 teaspoon)
 - ½ teaspoon black pepper
 - ½ teaspoon ground coriander
-- ½ teaspoon MSG
+- ½ teaspoon [[MSG]]
 - 1 teaspoon mushroom powder (optional; use if serving with gravy)
 
 ## Method

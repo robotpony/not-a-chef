@@ -26,7 +26,7 @@ This is a mildly spicy, warm, and tangy wing sauce.
 - 2 teaspoons fresh ginger, minced or grated
 - 1 teaspoon cornstarch
 - ½ teaspoon granulated garlic
-- ½ teaspoon MSG
+- ½ teaspoon [[MSG]]
 - salt, to taste
 - water, to thin
 

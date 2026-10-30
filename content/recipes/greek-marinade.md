@@ -31,7 +31,7 @@ bar: yes
 - 1–2 cloves garlic, minced
 - ½ teaspoon dried oregano
 - ¼ teaspoon black pepper
-- ¼ teaspoon MSG
+- ¼ teaspoon [[MSG]]
 - salt to taste
 
 ## Method

@@ -24,7 +24,7 @@ Built on strained tomatoes rather than crushed, so the sauce is smooth without b
 - 6 g granulated garlic (2 teaspoons)
 - 1 g dried oregano
 - 1 g ground black pepper
-- 1 g MSG (optional)
+- 1 g [[MSG]] (optional)
 - 10 g sugar, or to taste
 - 10 g kosher salt, or to taste
 

@@ -20,11 +20,11 @@ This is a hacky white sauce recipe, for a mushroom flatbread snack.
 - 1–2 egg yolks
 - pinch dried oregano
 - pinch dried thyme
-- salt, black pepper, MSG
+- salt, black pepper, [[MSG]]
 
 ## Method
 
-Combine ricotta, garlic, shallot, olive oil, and cream in a bowl. Mix until smooth. Add egg yolks and season with salt, pepper, [[MSG]], oregano, and thyme. Stir to combine.
+Combine ricotta, garlic, shallot, olive oil, and cream in a bowl. Mix until smooth. Add egg yolks and season with salt, pepper, MSG, oregano, and thyme. Stir to combine.
 
 Spread on flatbread or pizza dough before adding toppings. The egg yolk sets as the flatbread bakes, thickening and enriching the sauce.
 

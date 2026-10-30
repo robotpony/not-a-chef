@@ -31,7 +31,7 @@ Based on 1 kg ground meat:
 - 25 g garlic, minced (2.5%)
 - 15 g fresh parsley, chopped (1.5%)
 - 13 g salt (1.25%)
-- 5 g MSG (0.5%)
+- 5 g [[MSG]] (0.5%)
 - 5 g dried oregano or thyme (0.5%)
 - 4 g black pepper (0.4%)
 - 3 g ground fennel (0.25%)

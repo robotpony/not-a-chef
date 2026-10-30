@@ -22,7 +22,7 @@ This is a sweet, barbecued Korean beef dish that is typically made with boneless
 - 4 tbsp soy sauce
 - 1 tbsp gochugaru
 - 2 tbsp brown sugar
-- ½ tsp MSG
+- ½ tsp [[MSG]]
 - Salt and pepper
 
 Stir everything together. Taste and adjust.

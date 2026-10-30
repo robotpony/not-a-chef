@@ -16,7 +16,7 @@ A very cravable burger. This is the closest I've gotten to perfecting it, along 
 
 ## Mechanic
 
-The McDouble is built on two thin patties, a single slice of cheese between them, and a sharp dressing ratio. **Double-grinding** the beef (or triple-grinding, for softer still) is what gives the patty its soft, almost pillowy texture rather than a coarse, chewy one. The seasoning is a **4:2:1 ratio of salt, [[MSG]], and black pepper** by weight, plus 0.25 parts onion powder if you like.
+The McDouble is built on two thin patties, a single slice of cheese between them, and a sharp dressing ratio. **Double-grinding** the beef (or triple-grinding, for softer still) is what gives the patty its soft, almost pillowy texture rather than a coarse, chewy one. The seasoning is a **4:2:1 ratio of salt, MSG, and black pepper** by weight, plus 0.25 parts onion powder if you like.
 
 ```formula
 salt     | Salt   | 4
@@ -30,7 +30,7 @@ Smash-and-freeze before cooking locks the shape. Press between parchment sheets 
 ## Patties
 
 - 150 g ground beef (80/20; a blend of chuck, top round, and sirloin is ideal), double-ground, for two 75 g patties
-- Seasoning: 4:2:1 salt, MSG, and black pepper by weight, plus 0.25 parts onion powder (optional)
+- Seasoning: 4:2:1 salt, [[MSG]], and black pepper by weight, plus 0.25 parts onion powder (optional)
 
 Form two balls of double-ground beef. Flatten into patties slightly larger than the bun (they will shrink). Freeze on a flat tray until firm, 20–30 minutes.
 

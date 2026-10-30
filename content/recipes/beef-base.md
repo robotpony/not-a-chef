@@ -22,7 +22,7 @@ The **cooking method sets the texture**. A hot pan reduces the stock quickly and
 - 1 shallot, diced
 - 4 garlic cloves, diced
 - Salt and pepper
-- 2 tsp MSG (Accent) (optional)
+- 2 tsp [[MSG]] (Accent) (optional)
 - 1.36 kg (3 lb) ground beef, or a mix of beef, veal, and pork
 - 250 ml chicken stock
 
@@ -41,7 +41,7 @@ The **cooking method sets the texture**. A hot pan reduces the stock quickly and
 
 Sauté the mushrooms until they go wet, then dry, then brown. Add the onion and sweat until translucent. Add the shallot and garlic and sweat again.
 
-Add the ground spices for the style you're making and heat until fragrant. Add salt, pepper, and [[MSG]].
+Add the ground spices for the style you're making and heat until fragrant. Add salt, pepper, and MSG.
 
 Add the beef and break it up with a wooden spoon or potato masher. Add half the chicken stock, and the bouquet garni if using.
 

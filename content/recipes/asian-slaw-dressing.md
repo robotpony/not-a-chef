@@ -32,7 +32,7 @@ bar: yes
 - 15 g toasted sesame oil
 - 10–15 g soy sauce
 - 10 g maple syrup
-- 2 g MSG (optional)
+- 2 g [[MSG]] (optional)
 - 2 g ginger, finely minced (optional; jarred is fine)
 
 ## Method

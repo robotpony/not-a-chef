@@ -26,7 +26,7 @@ The key is **frying the tofu separately** before it meets the sauce. A golden cr
 - neutral oil, enough to shallow-fry
 - 2 tablespoons lard
 - 1 teaspoon seasoning powder (Vietnamese hạt nêm, or chicken or mushroom bouillon powder)
-- ½ teaspoon MSG
+- ½ teaspoon [[MSG]]
 - 1 teaspoon sugar
 - a pinch of salt or a dash of fish sauce (to help the tomatoes soften)
 - 120 ml (½ cup) water
@@ -38,7 +38,7 @@ Rinse and pat the tofu dry.
 
 Heat a generous amount of oil in a pan over medium heat until shimmering. Add the tofu and fry undisturbed until golden on the first side, then flip and repeat. Remove and set aside.
 
-In a separate pot, heat the lard over medium heat. Add the shallots and cook until fragrant, about 1 minute. Add the tomatoes, seasoning powder, [[MSG]], sugar, and a pinch of salt or fish sauce. Stir and cook for about 3 minutes.
+In a separate pot, heat the lard over medium heat. Add the shallots and cook until fragrant, about 1 minute. Add the tomatoes, seasoning powder, MSG, sugar, and a pinch of salt or fish sauce. Stir and cook for about 3 minutes.
 
 Add the water. Cover and simmer on low, occasionally pressing the tomatoes with the back of a spoon until they break down and the sauce is sufficient to coat all the tofu, about 5 minutes. Add a splash more water if needed.
 

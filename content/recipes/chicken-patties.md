@@ -22,11 +22,11 @@ I love chicken sandwiches. The ground chicken patties bread nicely, but are also
 - 500 ml cold water
 - 500 ml white vinegar
 - 100 g kosher salt
-- 20 g MSG
+- 20 g [[MSG]]
 - 50 g sugar
 - Chicken breast fillets, pounded to an even thickness
 
-Stir the water, vinegar, salt, [[MSG]], and sugar until dissolved. Submerge the fillets and brine for 30 minutes in the fridge. Pat dry.
+Stir the water, vinegar, salt, MSG, and sugar until dissolved. Submerge the fillets and brine for 30 minutes in the fridge. Pat dry.
 
 Pan-fry in a lightly oiled pan over medium-high until golden on both sides and the centre reads 68°C (155°F), about 4 minutes per side depending on thickness.
 

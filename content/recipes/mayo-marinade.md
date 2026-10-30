@@ -25,7 +25,7 @@ For ~2 butterflied chicken breasts.
 - ~1g black pepper (10 cranks)
 - 1 teaspoon dried oregano
 - 3g kosher salt
-- 1g MSG
+- 1g [[MSG]]
 
 ## Method
 

@@ -25,7 +25,7 @@ A coconut curry noodle soup built on quick-marinated pork (a shortcut to [[Velve
 - 1 tbsp fish sauce
 - 1–2 tbsp cane sugar (or any sugar)
 - 1–2 tbsp cornstarch
-- 1 tsp MSG
+- 1 tsp [[MSG]]
 - 1 tsp baking soda
 - salt and pepper, to taste
 

@@ -30,7 +30,7 @@ This is a vegetarian analogue to [[Beef base]]. The **mushrooms must go through 
 - 2 large sprigs fresh rosemary
 - 1 tablespoon dried thyme
 - 2 tablespoons sweet paprika
-- 2 teaspoons MSG
+- 2 teaspoons [[MSG]]
 - 3 teaspoons granulated garlic
 - salt and black pepper
 
@@ -42,7 +42,7 @@ Add [[Soffritto|soffritto]] and continue cooking, stirring regularly. When the m
 
 Add lentils and stir to coat. Before the bottom burns, [[Deglaze|deglaze]] with sherry, scraping up the browned bits. Add stock.
 
-Add bay, rosemary, thyme, paprika, [[MSG]], and granulated garlic. Stir and taste. Simmer until thickened and the lentils are just beginning to soften, about 20 minutes. They finish cooking in whatever dish you use the base in. Season with salt and pepper.
+Add bay, rosemary, thyme, paprika, MSG, and granulated garlic. Stir and taste. Simmer until thickened and the lentils are just beginning to soften, about 20 minutes. They finish cooking in whatever dish you use the base in. Season with salt and pepper.
 
 If too liquid, add a cornstarch [[Slurry|slurry]]. If too dry, add water and adjust.
 

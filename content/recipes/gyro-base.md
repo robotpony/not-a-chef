@@ -14,7 +14,7 @@ Gyro beef or lamb is a great base for salads, pitas, sandwiches, and other prepa
 
 ## Mechanic
 
-This is the gyro spice-and-meat base, sized to **1 kg of ground meat** so it scales cleanly for freezing or batch cooking. The technique is sausage-making applied without a grinder: mixing with **cold water and a bread crumb [[Panade|panade]] until sticky** emulsifies the proteins, giving a snap and shape-holding bite whether you form it into dogs, patties, or kebabs. [[MSG]] rounds out the [[Umami|umami]] without adding more salt to the mix. Skipping the chill or under-mixing gives a crumbly result.
+This is the gyro spice-and-meat base, sized to **1 kg of ground meat** so it scales cleanly for freezing or batch cooking. The technique is sausage-making applied without a grinder: mixing with **cold water and a bread crumb [[Panade|panade]] until sticky** emulsifies the proteins, giving a snap and shape-holding bite whether you form it into dogs, patties, or kebabs. MSG rounds out the [[Umami|umami]] without adding more salt to the mix. Skipping the chill or under-mixing gives a crumbly result.
 
 ## Ingredients
 
@@ -27,7 +27,7 @@ This is the gyro spice-and-meat base, sized to **1 kg of ground meat** so it sca
 - 2 tbsp minced fresh parsley
 - 2¼ tsp dried oregano
 - 2¼ tsp kosher salt
-- ¾ tsp MSG
+- ¾ tsp [[MSG]]
 - 1 tsp black pepper, freshly ground
 - 1 tsp ground cumin
 - 1 tsp paprika

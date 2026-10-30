@@ -33,7 +33,7 @@ The marinade leans on toasted cumin and a cinnamon-forward spice blend as much a
 - 1 fresh red chili, minced (optional)
 - chili or sweet paprika to taste
 - 6g kosher salt (1 teaspoon)
-- 1g MSG (¼ teaspoon)
+- 1g [[MSG]] (¼ teaspoon)
 
 Toast the cumin in a dry pan until fragrant, about 2 minutes. Cool and grind.
 

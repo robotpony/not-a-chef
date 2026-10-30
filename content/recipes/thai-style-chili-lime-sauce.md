@@ -24,7 +24,7 @@ A bright, uncooked blender sauce of lime, fish sauce, and chili for wings, chick
 - 10 g ginger, finely minced
 - 2–4 red Thai chilies, seeds removed, roughly chopped
 - 1–2 cups cilantro (the top of a small bunch), roughly chopped
-- 5 g (about 1¼ tsp) Accent MSG
+- 5 g (about 1¼ tsp) Accent [[MSG]]
 - 10 g salt, to taste
 
 #### After puréeing

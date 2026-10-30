@@ -36,7 +36,7 @@ caption: By weight; every other ingredient scales to the meat too
 | Salt | 1.6% | 16 g | |
 | Sugar | 0.75% | 7.5 g | |
 | Brown sugar | 0.63% | 6.3 g | |
-| MSG | 0.5% | 5 g | |
+| [[MSG]] | 0.5% | 5 g | |
 | Black pepper | 0.4% | 4 g | Toast before grinding |
 | Dried sage | 0.3% | 3 g | |
 | Dried thyme | 0.3% | 3 g | |
@@ -62,7 +62,7 @@ Bake unwrapped at 200°C (400°F) until lightly browned, 15–25 minutes, or pan
 ## Variations
 
 ### Sage-forward
-A punchier, less sweet mix. Per 1 kg pork: 20 g salt (2%), 6 g dried sage, 4 g black pepper, 3 g each dried parsley, dried thyme, ground coriander, and minced garlic, 2 g each red pepper flakes, ground fennel, and [[MSG]], 40 g milk powder, and 100 g cold water. No sugar. Stir the dry ingredients into the water, then mix into the pork as above. Marjoram at 0.2–0.3% gives a softer, more floral version.
+A punchier, less sweet mix. Per 1 kg pork: 20 g salt (2%), 6 g dried sage, 4 g black pepper, 3 g each dried parsley, dried thyme, ground coriander, and minced garlic, 2 g each red pepper flakes, ground fennel, and MSG, 40 g milk powder, and 100 g cold water. No sugar. Stir the dry ingredients into the water, then mix into the pork as above. Marjoram at 0.2–0.3% gives a softer, more floral version.
 
 ## Notes
 

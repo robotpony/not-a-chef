@@ -50,12 +50,12 @@ Cook the noodles until 1–2 minutes short of [[Al dente|al dente]]; they finish
 - Splash of cider vinegar, to taste (usually around 25 ml)
 - Salt and pepper, to taste
 - 1 tsp paprika (optional)
-- MSG, 1.5% of the cheese weight (about 10 g) (optional)
+- [[MSG]], 1.5% of the cheese weight (about 10 g) (optional)
 - Sodium citrate, 3% of the cheese weight (about 20 g), an emulsifying salt for a smoother sauce (optional)
 
 <!-- Private worksheet (to import): https://docs.google.com/spreadsheets/d/1WioIgoLJITdosYp3fU7KlhytJqeXLdIpIVPg8ClIGTM/edit?gid=531465660#gid=531465660 -->
 
-Combine the grated cheeses and weigh them to work out the [[MSG]] and sodium citrate. Over low heat, stir the butter and flour into a blonde roux. Slowly whisk in the milk until you have a smooth, lightly thickened béchamel. Whisk in the sodium citrate, if using, until dissolved.
+Combine the grated cheeses and weigh them to work out the MSG and sodium citrate. Over low heat, stir the butter and flour into a blonde roux. Slowly whisk in the milk until you have a smooth, lightly thickened béchamel. Whisk in the sodium citrate, if using, until dissolved.
 
 Take the pot off the heat. Add most (not all) of the cheese a handful at a time, stirring until silky. Keep it off the heat so it doesn't break.
 

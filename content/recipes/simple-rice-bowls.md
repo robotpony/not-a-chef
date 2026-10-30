@@ -23,13 +23,13 @@ Per bowl:
 - 1 cup cooked basmati rice
 - 1 portion chicken, fish, or tofu
 - Bottled teriyaki sauce or [[Teriyaki sauce]]
-- Salt and MSG
+- Salt and [[MSG]]
 - 100 g bok choy, sautéed
 - 100 g cabbage, shredded
 - 100 g broccoli, steamed
 - Pickles and garnish
 
-Season the protein lightly with salt and [[MSG]]. Coat lightly with teriyaki sauce, keeping some back for halfway through and the rest for the bowl. Bake on parchment at 200°C (400°F) until browned at the edges, 15–25 minutes. Chicken is done when the centre reads 68°C (154°F); fish at 60–63°C (140–145°F).
+Season the protein lightly with salt and MSG. Coat lightly with teriyaki sauce, keeping some back for halfway through and the rest for the bowl. Bake on parchment at 200°C (400°F) until browned at the edges, 15–25 minutes. Chicken is done when the centre reads 68°C (154°F); fish at 60–63°C (140–145°F).
 
 Build the bowl on the rice with the vegetables, protein, reserved sauce, pickles, and garnish.
 

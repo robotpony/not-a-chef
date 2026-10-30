@@ -22,7 +22,7 @@ A fresh-tasting sauce, perfect for nachos, tacos, or over rice bowls.
 - ½ teaspoon kosher salt (adjust to taste)
 - 30 g fresh cilantro (½ cup loosely packed), finely chopped
 - ¼ teaspoon onion powder (or dehydrated or minced fresh onion)
-- 1–2 g MSG
+- 1–2 g [[MSG]]
 
 ## Method
 

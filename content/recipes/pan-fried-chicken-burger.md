@@ -23,10 +23,10 @@ This is a sort of copy-cat recipe of the BK classic chicken sandwich, which is a
 - 10g salt (1.25%)
 - 5g sugar (0.625%)
 - 2g baking soda (0.25%)
-- 4g MSG (0.5%)
+- 4g [[MSG]] (0.5%)
 - 2g spices (0.25%): white pepper, granulated garlic
 
-Dissolve the salt, sugar, baking soda, and [[MSG]] in the water, then mix thoroughly into the ground chicken along with the spices.
+Dissolve the salt, sugar, baking soda, and MSG in the water, then mix thoroughly into the ground chicken along with the spices.
 
 Form into patties about 1–2 cm wider than the buns you plan to use; this batch makes about 9 patties at ~90g each. Rest on lightly oiled parchment in the refrigerator (or freezer) for 20 minutes, or up to a few hours.
 

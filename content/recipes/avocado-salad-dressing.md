@@ -27,7 +27,7 @@ This is a fresh, quick, and tasty salad dressing. I make this a few times a mont
 - 2 g (½ teaspoon) garlic powder
 - 2 g salt
 - Black pepper, to taste
-- 1 g MSG
+- 1 g [[MSG]]
 - A big pinch of dried thyme
 - 15 ml chicken stock, drippings, or water (optional)
 

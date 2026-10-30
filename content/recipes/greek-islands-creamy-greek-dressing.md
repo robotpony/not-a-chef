@@ -18,7 +18,7 @@ Our version of the house dressing at Greek Islands, the one on every side salad.
 - 1–2 cloves garlic, grated or minced
 - 2 tsp dried oregano
 - 1 tsp dried basil
-- 1 dash Accent (MSG) (optional), or a dash of Bragg Liquid Aminos
+- 1 dash Accent ([[MSG]]) (optional), or a dash of Bragg Liquid Aminos
 - 1 tsp kosher salt
 - 1 tsp white sugar
 - 1 tsp freshly ground black pepper

@@ -54,7 +54,7 @@ This recipe exists in three versions; choose the protein and build accordingly. 
 - A splash of vodka, brandy, sherry, or dry white wine, for deglazing
 - 250 ml crème fraîche
 - 455 g (4 cups) wide egg noodles
-- Worcestershire sauce, fish sauce, soy sauce, or MSG
+- Worcestershire sauce, fish sauce, soy sauce, or [[MSG]]
 - Chives and fresh thyme or parsley, to finish
 - Salt and pepper
 
@@ -68,7 +68,7 @@ In the same pan, cook the mushrooms until they release their liquid and begin to
 
 Deglaze with the wine, vinegar and stock, or spirit, scraping up the browned bits. For the versions with stock, add half, reduce slightly, then add the rest.
 
-Simmer until tender: return ground beef for about 30 minutes, or chuck for about 1 hour. For the fancy version, simmer the sauce alone for about 20 minutes, seasoning it with Worcestershire, fish sauce, soy sauce, or [[MSG]].
+Simmer until tender: return ground beef for about 30 minutes, or chuck for about 1 hour. For the fancy version, simmer the sauce alone for about 20 minutes, seasoning it with Worcestershire, fish sauce, soy sauce, or MSG.
 
 Cook the egg noodles to [[Al dente|al dente]] per the package.
 

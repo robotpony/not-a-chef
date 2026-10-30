@@ -40,7 +40,7 @@ Steam the potatoes until a fork slides in easily, 25–30 minutes. Drain and mas
 - 500 g [[Beef base]] or other cooked beef mince, frozen
 - 1 tsp each kosher salt, black pepper, ground coriander, and dried rosemary or thyme
 - 1 tsp granulated garlic
-- 1 tsp MSG
+- 1 tsp [[MSG]]
 - 2 tbsp flour or cornstarch, adjusted for thickness
 - 1 tsp Better than Bouillon (beef or chicken)
 - 1 tsp browning sauce, to taste

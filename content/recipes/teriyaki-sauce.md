@@ -31,7 +31,7 @@ caption: % of shoyu; liquids by volume, sugar by weight
 | Mirin | 80–100% | 200–250 ml |
 | Sake | 50% | 125 ml |
 | Brown sugar | 40% | 100 g |
-| MSG | 1.5% | 3.8 g |
+| [[MSG]] | 1.5% | 3.8 g |
 | Sesame oil | 5% | 12.5 ml |
 | Ginger (optional) | 3% | 7.5 g |
 | Garlic (optional) | 3% | 7.5 g |
