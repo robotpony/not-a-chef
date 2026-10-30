@@ -42,7 +42,7 @@ Drinks got their own section on 2026-10-27 (`content/drinks/`, Fugu 356fad8). Di
 
 ## Concepts
 
-A glossary of the cookbook's concepts, with a quiet hover on the words in the text. Mock: `mockups/glossary.html`; decided 2026-10-30. The one open question, where the build pieces live, is in `docs/REVIEW.md`.
+A glossary of the cookbook's concepts, with a quiet hover on the words in the text. Mock: `mockups/glossary.html`; decided 2026-10-30. Where the pieces live (hugo-warped recommended) is in `docs/REVIEW.md`.
 
 - [ ] Source: one file per concept in `content/reference/glossary/` (`title`, `also:` for other forms, the body is the definition, and its first sentence is the hover). Entries build into the list only, with no page each. Move the Kewpie entry out of `glossary.md`.
 - [ ] Glossary page: A to Z under Reference, one `<dl>` per letter under a letter heading, each `<dt id>` holding a `<dfn>`, other forms, and "Used in" from the pages linking to it (a count past a handful). Reference essays (Win the fridge) are listed too, linking their essay. A search box at the top filters as you type over the term, its forms, and the definition; it shows only with JavaScript, and without it the page is the full list. Also `index.json` (term, also, def, url).
