@@ -42,14 +42,14 @@ Drinks got their own section on 2026-10-27 (`content/drinks/`, Fugu 356fad8). Di
 
 ## Concepts
 
-*Idea (2026-10-29).* A page, or a set of pages, explaining the cookbook's concepts (ratios, carryover, fond, winning the fridge), plus a script that finds those keywords in body text and gives them a hover. Today only an explicit `[[Term]]` gets a popover (render-link → `concept/pop.html`, `popover.js`, from the glossary or a reference essay); the script would cover plain mentions with no link.
+A glossary of the cookbook's concepts, with a quiet hover on the words in the text. Mock: `mockups/glossary.html`; decided 2026-10-30. The one open question, where the build pieces live, is in `docs/REVIEW.md`.
 
-Mock: `mockups/glossary.html` (2026-10-30); the open questions are in `docs/REVIEW.md`.
-
+- [ ] Source: one file per concept in `content/reference/glossary/` (`title`, `also:` for other forms, the body is the definition, and its first sentence is the hover). Entries build into the list only, with no page each. Move the Kewpie entry out of `glossary.md`.
+- [ ] Glossary page: A to Z under Reference, one `<dl>` per letter under a letter heading, each `<dt id>` holding a `<dfn>`, other forms, and "Used in" from the pages linking to it (a count past a handful). Reference essays (Win the fridge) are listed too, linking their essay. A search box at the top filters as you type over the term, its forms, and the definition; it shows only with JavaScript, and without it the page is the full list. Also `index.json` (term, also, def, url).
+- [ ] Marking in the text: a plain wiki link, `[[Deglaze|deglaze]]`, on the first prose mention per page, never in headings, links, ingredient lists, code or fences. The look is today's `.glossary-link` a little lighter (dotted 1.5px, `--ink-faint` at 65%, full `--ink` on hover). The popover is a `role="tooltip"` with the term and first sentence, no link, tied by `aria-describedby`; on a phone a tap goes to the entry. Hand-written and tool-written links look the same.
+- [ ] `glossary.py candidates`: words on 2+ pages, not in the glossary, rare in everyday English or already in italics; adds them to `docs/REVIEW.md`. `glossary.py link`: proposes each link as a diff and asks (yes, never on this page, skip); a "never" goes in `tools/glossary-skip.txt`. `/lint` reports unlinked first mentions; nothing writes on its own.
+- [ ] Footer: "Glossary" in Browse, after Reference.
 - [ ] Fugu bug found while mocking: on a phone, a popover on a word near the right edge runs off screen (`.pop` is `left: 0`, 260px wide, and `popover.js` only flips it up or down). fugu-agent's change: slide it left to stay inside the window, as the mock does.
-- [ ] Decide the home: grow `content/reference/glossary.md` and the reference essays, or a `concepts/` set with one page per concept.
-- [ ] Keyword hover: Hugo emits the term list (title, aliases, one-line definition, URL) as JSON; the script marks the first mention per page, skips headings, links, code and fences, and reuses the existing popover look.
-- [ ] Other sites could use it (w42), so it may belong in warped.js (`~/projects/sites/warped.js`) rather than Fugu. Its agent isn't running: take it there as a proposal (`docs/proposals/`) when it is.
 
 ## Mockups
 

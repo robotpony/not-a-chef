@@ -96,7 +96,7 @@
   .wikilink::after{ content:' \2192'; font-size:.85em; }
 
   /* A: today's .glossary-link, unchanged */
-  .g-a{ color:inherit; text-decoration:underline dotted; text-decoration-thickness:1.5px; text-underline-offset:3px; text-decoration-color:var(--ink-faint); cursor:help; }
+  .g-a{ color:inherit; text-decoration:underline dotted; text-decoration-thickness:1.5px; text-underline-offset:3px; text-decoration-color:color-mix(in srgb, var(--ink-faint) 65%, transparent); cursor:help; }
   .g-a:hover, .g-a:focus-visible{ color:var(--ink); text-decoration-color:var(--ink); }
   /* B: quieter, a 1px dotted rule in the border colour */
   .g-b{ color:inherit; text-decoration:underline dotted; text-decoration-thickness:1px; text-underline-offset:4px; text-decoration-color:var(--border-strong); cursor:help; }
@@ -144,7 +144,15 @@
   .crumbs a{ color:inherit; text-decoration:none; }
   .gp h1{ font-size:2rem; margin:0 0 8px; line-height:1.15; }
   .gp-lede{ color:var(--ink-muted); max-width:62ch; }
-  .letters{ display:flex; flex-wrap:wrap; gap:2px; margin:20px 0 8px; padding:8px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); font-family:'Libre Franklin',sans-serif; }
+  .gl-search{ margin:20px 0 0; position:relative; }
+  .gl-search input{ width:100%; font:inherit; font-family:'Libre Franklin',sans-serif; font-size:.92rem; color:var(--ink); background:var(--surface); border:1px solid var(--border-strong); border-radius:6px; padding:10px 12px 10px 36px; }
+  .gl-search input::placeholder{ color:var(--ink-faint); }
+  .gl-search input:focus{ outline:none; border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-soft); }
+  .gl-search svg{ position:absolute; left:12px; top:14px; width:16px; height:16px; color:var(--ink-faint); pointer-events:none; }
+  .gl-count{ display:block; min-height:1.2em; margin-top:6px; font-family:'Libre Franklin',sans-serif; font-size:.74rem; color:var(--ink-faint); }
+  .gl-none{ font-family:'Libre Franklin',sans-serif; font-size:.85rem; color:var(--ink-muted); margin:24px 0; }
+  .sr-only{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+  .letters{ display:flex; flex-wrap:wrap; gap:2px; margin:8px 0 8px; padding:8px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); font-family:'Libre Franklin',sans-serif; }
   .letters a, .letters span{ min-width:24px; text-align:center; font-size:.8rem; font-weight:600; padding:4px 0; border-radius:4px; text-decoration:none; }
   .letters a{ color:var(--accent-strong); }
   .letters a:hover{ background:var(--accent-soft); }
@@ -232,15 +240,15 @@
 
     <div class="options">
       <div class="opt rec">
-        <div class="opt-label">A <span class="badge">Recommended</span></div>
-        <h3>Today's glossary link</h3>
+        <div class="opt-label">A <span class="badge">Chosen 2026-10-30</span></div>
+        <h3>Today's glossary link, a little lighter</h3>
         <div class="prose stage">
           <p>Instead, I use a variant of <a class="wikilink" href="#">water frying</a> that works well with ground meat, and keep the <span class="pop-host"><a class="g-a" href="#g-fond" aria-describedby="tip-a2">fond</a><span class="pop" id="tip-a2" role="tooltip"><span class="pop-head">Fond</span><span>The browned, sticky bits left in a pan after searing. Most of a pan sauce's flavour.</span></span></span> with the softened <span class="pop-host"><a class="g-a" href="#g-allium" aria-describedby="tip-a3">allium</a><span class="pop" id="tip-a3" role="tooltip"><span class="pop-head">Allium</span><span>The onion family: onions, shallots, leeks, garlic, chives, and green onions.</span></span></span>.</p>
           <p>Add the beef, break it up, and stir. The fat renders out as the water evaporates, and very little sticks to the pan. If anything does stick, add a splash of water (or wine) and <span class="pop-host"><a class="g-a" href="#g-deglaze" aria-describedby="tip-a1">deglaze</a><span class="pop pop-down is-open" id="tip-a1" role="tooltip"><span class="pop-head">Deglaze</span><span>Pour a liquid into a hot pan and scrape, so the browned bits stuck to the bottom dissolve into it.</span></span></span>.</p>
         </div>
         <div class="opt-notes"><ul>
           <li>Already on the site for <code>[[Term]]</code> glossary links, so nothing new to learn.</li>
-          <li>Dotted <code>--ink-faint</code>, 1.5px. Text keeps its colour.</li>
+          <li>Dotted, 1.5px, <code>--ink-faint</code> at 65% (today's is 100%). Full <code>--ink</code> on hover or focus. Text keeps its colour.</li>
         </ul></div>
       </div>
 
@@ -308,6 +316,12 @@
       <h1>Glossary</h1>
       <p class="gp-lede">The words this cookbook leans on, in a sentence or two each. A dotted word in a recipe or essay links here.</p>
 
+      <div class="gl-search" role="search" hidden>
+        <label for="gl-q" class="sr-only">Search the glossary</label>
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="7" r="4.75"/><path d="m10.5 10.5 3.5 3.5" stroke-linecap="round"/></svg>
+        <input id="gl-q" type="search" placeholder="Search the glossary: a word, or what it does" autocomplete="off" spellcheck="false">
+        <span class="gl-count" id="gl-count" aria-live="polite"></span>
+      </div>
       <nav class="letters" aria-label="Jump to letter">
         <a href="#gl-a">A</a><span>B</span><span>C</span><a href="#gl-d">D</a><a href="#gl-e">E</a><a href="#gl-f">F</a><span>G</span><span>H</span><span>I</span><span>J</span><a href="#gl-k">K</a><span>L</span><a href="#gl-m">M</a><span>N</span><span>O</span><span>P</span><span>Q</span><a href="#gl-r">R</a><a href="#gl-s">S</a><span>T</span><span>U</span><span>V</span><a href="#gl-w">W</a><span>X</span><span>Y</span><span>Z</span>
       </nav>
@@ -377,8 +391,9 @@
         <dd><p>The practice of using every scrap of food before it goes to waste: the idea behind the recipes tagged with it across this cookbook.</p>
           <div class="used"><a class="essay-link" href="#">Read the full essay</a></div></dd>
       </dl>
+      <p class="gl-none" id="gl-none" hidden>No entry matches. Try a shorter word, or another form of it.</p>
     </div></div>
-    <p class="note">Each letter is a heading, so a screen reader can jump letter to letter. “Used in” comes from the build (pages linking to the entry), so it never needs writing by hand. Past a handful of pages it collapses to a count.</p>
+    <p class="note">The search box filters as you type, matching the term, its other forms, and the definition (so “thicken” finds roux and slurry); it shows only with JavaScript on, and without it the page is the full list. Letters with no matches fade. Each letter is a heading, so a screen reader can jump letter to letter. “Used in” comes from the build (pages linking to the entry), so it never needs writing by hand. Past a handful of pages it collapses to a count.</p>
   </section>
 
   <!-- 4 -->
@@ -541,6 +556,35 @@ essays/food-memories/camp-cooking.md:22
     place();
     window.addEventListener('resize', place);
     if (document.fonts) document.fonts.ready.then(place);
+
+    // Glossary search: filter entries by term, other forms, and definition.
+    var box = document.querySelector('.gl-search'), q = document.getElementById('gl-q');
+    var count = document.getElementById('gl-count'), none = document.getElementById('gl-none');
+    var gp = document.querySelector('.gp-inner');
+    var entries = [].map.call(gp.querySelectorAll('dl.glossary dt'), function (dt) {
+      return { dt: dt, dd: dt.nextElementSibling, text: (dt.textContent + ' ' + dt.nextElementSibling.querySelector('p').textContent).toLowerCase() };
+    });
+    box.hidden = false;
+    q.addEventListener('input', function () {
+      var words = q.value.toLowerCase().trim().split(/\s+/).filter(Boolean), shown = 0;
+      entries.forEach(function (e) {
+        var hit = words.every(function (w) { return e.text.indexOf(w) !== -1; });
+        e.dt.hidden = e.dd.hidden = !hit;
+        if (hit) shown++;
+      });
+      gp.querySelectorAll('dl.glossary').forEach(function (dl) {
+        var any = dl.querySelector('dt:not([hidden])');
+        dl.hidden = !any;
+        var h = dl.previousElementSibling;
+        if (h && h.classList.contains('gl-letter')) {
+          h.hidden = !any;
+          var a = gp.querySelector('.letters a[href="#' + h.id + '"]');
+          if (a) a.style.opacity = any ? '' : '.3';
+        }
+      });
+      none.hidden = shown > 0;
+      count.textContent = words.length ? shown + (shown === 1 ? ' entry' : ' entries') : '';
+    });
     // Escape closes, by moving focus off the word.
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && document.activeElement.closest('.pop-host')) document.activeElement.blur();
