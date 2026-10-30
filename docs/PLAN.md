@@ -81,6 +81,8 @@ Next week (from 2026-11-02). A visual pass over the site first, then the v2 chan
   - The principle callout loses its fill, if one is built (the site has none today).
   - Diagrams stay as built: the food colours (`--kit-*`, `--sear`) don't change. Formula icons, operators, the bun, and the timeline soften with the tokens.
   - Still open: a WCAG contrast check on the softer tokens (the yellow and `--ink-faint` are most at risk); text-chip hover (the mock underlines); Blowfish's ramp (`css/schemes/not-a-chef.css`) for header and prose colours; then `STYLE.md`, `style.html`, and the Fugu handoff for anything in its CSS.
+- [x] Softer colour mocks (2026-10-30): `mockups/soft-colour.html` (three schemes and a mixer with a copyable take) and `mockups/soft-colour-full.html` (the take over real built pages; `python3 mockups/serve.py`, then open `http://localhost:8765/mockups/soft-colour-full.html`).
+- [ ] Softer colour, next round: push the lighter backgrounds further (barely visible in the full mock), cover Blowfish's ramp, run the contrast check, then build from `mockups/soft-colour/soft.css`.
 - [ ] A thin line of images leading the page, under the header: Bruce's idea, to be worked out (which pages, where the images come from, height, how it sits with the sidebar photos).
 - [ ] Fold in the visual candidates above (lighter recipe header, bold step lead phrases) where they fit v2.
 
