@@ -47,6 +47,18 @@ A glossary of the cookbook's concepts, with a quiet hover on the words in the te
 - [ ] Link the 63 entries: `make glossary-link` (495 first mentions on 2026-10-30). Drafts by Claude, 54 approved by Bruce 2026-10-30; nine more in `docs/REVIEW.md`.
 - [ ] Bold step labels (Pan sauces' "**Deglaze.**") are offered as links; answer "never" per page, or ask hugo-warped to skip bold text at the start of a list item.
 
+## Candidates from other sites
+
+From a look at RecipeTin Eats (goulash), Serious Eats (homepage, cream slaw), and Smitten Kitchen (homepage, skillet pierogi) on 2026-10-30. Candidates, not decisions; ratings, nutrition labels, newsletter capture, and share rows were ruled out. Check-off, scaling, and unit conversion we already have.
+
+- [ ] Keep-screen-awake switch beside the scaling gear (Wake Lock API). RecipeTin and Serious Eats both have it. Fugu's change.
+- [ ] Bold lead phrase on each method step ("**Brown the beef.** …"), so prose scans mid-cook. A recipe-writing convention, not a template; some recipes do it already (see Concepts, above).
+- [ ] Passive time (chill, rest, rise, marinate) as its own frontmatter field beside prep and cook, as Serious Eats does. Needs `FORMAT.md`, Fugu's meta row, and the index.
+- [ ] Make-ahead and storage: an optional `## Make ahead` section in `FORMAT.md`, or a convention inside Notes.
+- [ ] "Previously" on Food Log months: the same month in earlier years, as Smitten Kitchen does for posts.
+- [ ] "Surprise me": a random recipe, from the recipe index.
+- [ ] Lighter recipe header: a hairline under the title and one small-caps meta line (servings · time · source), Smitten Kitchen's treatment, mocked against the current stat row.
+
 ## Mockups
 
 - [ ] Publish `mockups/` as a static subfolder (which mocks, how linked, kept out of search). Bruce ticked it on 2026-10-21 to bring it forward; not built yet (no `static/mockups/`).
