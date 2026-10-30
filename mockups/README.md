@@ -52,6 +52,13 @@ in a browser — no build step.
   breast (`breast`) added the same day for the Pound step; approved, and
   all four (`pounder`, `knife`, `bun`, `breast`) are in Fugu's kit.
 
+- **`soft-colour.html`**: thinking mock (2026-10-30) for PLAN.md's
+  Design v2 "Soften the colour scheme", after the cookbook-site notes.
+  Cards and a recipe excerpt three times: A as built, B with the five
+  hues pulled toward the neutrals, C with B's tokens plus one accent and
+  text-only chips. Light, dark, and auto toggle. B's tokens are a first
+  guess and untested for contrast.
+
 - **`scale-callout.html`**: proposal (2026-10-07) to redraw the recipe
   scale/units menu as a callout with a `^` pointer to the gear, a restyled
   slider with step labels, and units as a drop list (segmented control

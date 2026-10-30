@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Softer colour</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  /* Proposal (2026-10-30) for PLAN.md's Design v2 "Soften the colour scheme":
+   * three columns, each its own token set, over the same components.
+   *   A · Current  — STYLE.md's tokens as built.
+   *   B · Softer   — same five hues, same components; accents and chip
+   *                  fills pulled toward the neutrals (lower saturation,
+   *                  less contrast against --surface).
+   *   C · Quiet    — B's tokens, plus one accent: chips lose their fills
+   *                  and become coloured small text (Serious Eats' red
+   *                  bullets, Smitten Kitchen's small caps); stat numbers
+   *                  and tag outlines drop to ink. The accent keeps links,
+   *                  ratios, and quantities. */
+
+  /* Page chrome, outside the columns. */
+  :root {
+    --page-bg: #E9E9E0; --page-ink: #23241E; --page-muted: #63645A; --page-rule: #CFCFC0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --page-bg: #121310; --page-ink: #ECEEE2; --page-muted: #A9AB99; --page-rule: #383A2C; }
+  }
+  :root[data-theme="dark"] { --page-bg: #121310; --page-ink: #ECEEE2; --page-muted: #A9AB99; --page-rule: #383A2C; }
+
+  /* ---------- A · Current (STYLE.md) ---------- */
+  .v-current {
+    --bg:#F3F3EC; --surface:#FBFBF6; --surface-2:#EAEBDF; --ink:#23241E; --ink-muted:#63645A; --ink-faint:#93948A;
+    --border:#DCDCCE; --border-strong:#C7C8B4;
+    --accent:#A67330; --accent-strong:#7C361D; --accent-soft:#F6EADA;
+    --highlight:#997F29; --highlight-soft:#F6F1D5;
+    --flag:#3D638F; --flag-soft:#E1EAF4;
+    --principle:#247B50; --principle-strong:#1D6743; --principle-soft:#DBF5E8;
+  }
+  /* ---------- B and C · Softer ---------- */
+  .v-soft, .v-quiet {
+    --bg:#F3F3EC; --surface:#FAFAF5; --surface-2:#ECECE2; --ink:#2B2C25; --ink-muted:#6A6B61; --ink-faint:#9A9B90;
+    --border:#E0E0D3; --border-strong:#CDCEBD;
+    --accent:#A8865A; --accent-strong:#8A4F37; --accent-soft:#F3ECE2;
+    --highlight:#8E7C46; --highlight-soft:#F2EFE1;
+    --flag:#56708E; --flag-soft:#E7EBEF;
+    --principle:#4A7D62; --principle-strong:#3D6852; --principle-soft:#E4EEE8;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .v-current {
+      --bg:#1B1C16; --surface:#212219; --surface-2:#17180F; --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+      --border:#383A2C; --border-strong:#4A4C3A;
+      --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+      --highlight:#DDCC88; --highlight-soft:#342D19;
+      --flag:#97B8D8; --flag-soft:#1D2835;
+      --principle:#8ED7B4; --principle-strong:#A7E2C4; --principle-soft:#1B3428;
+    }
+    :root:not([data-theme="light"]) .v-soft, :root:not([data-theme="light"]) .v-quiet {
+      --bg:#1B1C16; --surface:#202119; --surface-2:#18190F; --ink:#E2E4D8; --ink-muted:#A2A493; --ink-faint:#737468;
+      --border:#33352A; --border-strong:#45473A;
+      --accent:#BF9D72; --accent-strong:#D6A992; --accent-soft:#2E2620;
+      --highlight:#C9BC8A; --highlight-soft:#2B2820;
+      --flag:#93A9C0; --flag-soft:#20252C;
+      --principle:#8DBBA2; --principle-strong:#9FC7B1; --principle-soft:#1F2C25;
+    }
+  }
+  :root[data-theme="dark"] .v-current {
+    --bg:#1B1C16; --surface:#212219; --surface-2:#17180F; --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+    --border:#383A2C; --border-strong:#4A4C3A;
+    --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+    --highlight:#DDCC88; --highlight-soft:#342D19;
+    --flag:#97B8D8; --flag-soft:#1D2835;
+    --principle:#8ED7B4; --principle-strong:#A7E2C4; --principle-soft:#1B3428;
+  }
+  :root[data-theme="dark"] .v-soft, :root[data-theme="dark"] .v-quiet {
+    --bg:#1B1C16; --surface:#202119; --surface-2:#18190F; --ink:#E2E4D8; --ink-muted:#A2A493; --ink-faint:#737468;
+    --border:#33352A; --border-strong:#45473A;
+    --accent:#BF9D72; --accent-strong:#D6A992; --accent-soft:#2E2620;
+    --highlight:#C9BC8A; --highlight-soft:#2B2820;
+    --flag:#93A9C0; --flag-soft:#20252C;
+    --principle:#8DBBA2; --principle-strong:#9FC7B1; --principle-soft:#1F2C25;
+  }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page-bg); color: var(--page-ink); font-family: 'Lora', Georgia, serif; }
+  .wrap { max-width: 1320px; margin: 0 auto; padding: 28px 16px 64px; }
+  .doc-h { font-family: 'Libre Franklin', sans-serif; font-size: 1.5rem; font-weight: 700; margin: 0 0 6px; }
+  .doc-p { font-size: .92rem; line-height: 1.55; color: var(--page-muted); max-width: 72ch; margin: 0 0 8px; }
+  .toolbar { display: flex; gap: 6px; margin: 14px 0 22px; font-family: 'Libre Franklin', sans-serif; }
+  .toolbar button { font: inherit; font-size: .78rem; font-weight: 600; padding: 6px 12px; border-radius: 14px; border: 1px solid var(--page-rule); background: transparent; color: var(--page-ink); cursor: pointer; }
+  .toolbar button[aria-pressed="true"] { background: var(--page-ink); color: var(--page-bg); border-color: var(--page-ink); }
+
+  .cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  @media (max-width: 1000px) { .cols { grid-template-columns: minmax(0, 1fr); } }
+
+  /* ---------- A column: the site's own components ---------- */
+  .col { background: var(--bg); color: var(--ink); border-radius: 8px; padding: 18px 16px 20px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+  .col-label { font-family: 'Libre Franklin', sans-serif; font-size: .65rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-faint); margin: 0; }
+  .col-h { font-family: 'Libre Franklin', sans-serif; font-size: 1.1rem; font-weight: 700; margin: 2px 0 0; }
+  .col-note { font-size: .84rem; line-height: 1.5; color: var(--ink-muted); margin: 0; }
+  .sec { font-family: 'Libre Franklin', sans-serif; font-size: .65rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-faint); margin: 6px 0 -4px; border-top: 1px solid var(--border); padding-top: 12px; }
+
+  .swatches { display: flex; gap: 4px; }
+  .sw { flex: 1; height: 26px; border-radius: 3px; display: flex; }
+  .sw i { flex: 1; } .sw i:first-child { border-radius: 3px 0 0 3px; } .sw i:last-child { border-radius: 0 3px 3px 0; }
+
+  /* Card (custom.css .rcard) */
+  .rcard { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 14px 16px 12px; display: flex; flex-direction: column; gap: 8px; }
+  .rcard:hover { border-color: var(--accent); }
+  .rcard-top { display: flex; align-items: center; gap: 4px; flex-wrap: nowrap; overflow: hidden; }
+  .rcard-top > * { flex: none; white-space: nowrap; }
+  .rcard-title { font-family: 'Libre Franklin', sans-serif; font-size: 1.02rem; font-weight: 700; line-height: 1.3; color: var(--ink); }
+  .rcard-intro { font-size: .84rem; line-height: 1.5; color: var(--ink-muted); margin: 0; }
+  .rcard-stats { padding-top: 8px; border-top: 1px solid var(--border); display: flex; gap: 12px; white-space: nowrap; }
+  .rcard-stat { display: flex; align-items: baseline; gap: 4px; }
+  .rcard-stat b { font-family: 'Libre Franklin', sans-serif; font-size: .56rem; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-faint); }
+  .rcard-stat span { font-family: 'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums; font-size: .72rem; font-weight: 600; color: var(--accent-strong); }
+
+  /* Chips (custom.css): one box for every chip in the top row */
+  .chip { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; line-height: 1.5; padding: 3px 7px; border: 1px solid transparent; border-radius: 3px; display: inline-flex; align-items: center; gap: 4px; text-decoration: none; }
+  .cuisine { font-weight: 600; text-transform: uppercase; letter-spacing: .05em; background: var(--highlight-soft); color: var(--highlight); }
+  .tag { border-color: var(--border-strong); color: var(--ink-muted); }
+  .tag-more { color: var(--ink-faint); border-style: dashed; border-color: var(--border-strong); }
+  .dev { font-weight: 600; color: var(--flag); background: var(--flag-soft); border-color: color-mix(in srgb, var(--flag) 45%, transparent); }
+  .dev .dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
+  .principle { font-weight: 600; background: var(--principle-soft); color: var(--principle-strong); }
+  .method { font-weight: 600; background: var(--accent-soft); color: var(--accent-strong); }
+  .chip svg { width: 11px; height: 11px; }
+
+  /* Recipe page excerpt */
+  .page { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+  .draft-banner { display: flex; align-items: baseline; gap: 8px; font-family: 'Libre Franklin', sans-serif; font-size: .78rem; font-weight: 600; color: var(--flag); background: var(--flag-soft); border: 1px solid var(--flag); border-radius: 3px; padding: 8px 12px; }
+  .draft-banner .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--flag); flex: none; }
+  .draft-banner .sub { font-weight: 400; color: var(--ink-muted); }
+  .p-title { font-family: 'Libre Franklin', sans-serif; font-size: 1.5rem; font-weight: 700; line-height: 1.2; margin: 0; letter-spacing: -.01em; }
+  .p-chips { display: flex; flex-wrap: wrap; gap: 4px; }
+  .p-h { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-faint); margin: 4px 0 -4px; }
+  .mechanic { font-style: italic; font-size: .88rem; line-height: 1.55; color: var(--ink-muted); margin: 0; }
+  .ratio { color: var(--accent-strong); font-weight: 600; font-style: normal; font-family: 'IBM Plex Mono', monospace; }
+  .body { font-size: .92rem; line-height: 1.6; margin: 0; }
+  .body a { color: var(--accent-strong); text-decoration-color: color-mix(in srgb, var(--accent) 55%, transparent); text-underline-offset: 2px; }
+  .gloss { color: inherit; text-decoration: underline dotted var(--ink-faint); text-underline-offset: 3px; }
+  .qty { color: var(--ink-muted); background: color-mix(in srgb, var(--accent) 25%, transparent); border-radius: 3px; padding: 0 3px; font-family: 'IBM Plex Mono', monospace; font-size: .82rem; }
+  .ing { list-style: none; padding: 0; margin: 0; font-size: .9rem; line-height: 1.5; display: flex; flex-direction: column; gap: 5px; }
+  .ing li { display: flex; gap: 10px; align-items: baseline; }
+  .box { width: 13px; height: 13px; border: 1px solid var(--border-strong); border-radius: 3px; flex: none; transform: translateY(2px); }
+  .ing li.done { color: var(--ink-faint); text-decoration: line-through; text-decoration-color: var(--accent); }
+  .ing li.done .box { background: var(--accent); border-color: var(--accent); }
+  .callout { border-left: 3px solid var(--principle); background: var(--principle-soft); padding: 8px 12px; border-radius: 0 3px 3px 0; font-size: .86rem; line-height: 1.5; }
+  .callout b { font-family: 'Libre Franklin', sans-serif; font-size: .62rem; text-transform: uppercase; letter-spacing: .07em; color: var(--principle-strong); display: block; margin-bottom: 2px; }
+
+  /* ---------- C · Quiet: one accent, chips as small text ---------- */
+  .v-quiet .rcard-top { gap: 10px; }
+  .v-quiet .chip { padding: 3px 0; background: none; border-color: transparent; }
+  .v-quiet .cuisine { color: var(--highlight); }
+  .v-quiet .dev { color: var(--flag); }
+  .v-quiet .principle, .v-quiet .method { color: var(--principle-strong); }
+  .v-quiet .method { color: var(--accent-strong); }
+  .v-quiet .tag { color: var(--ink-faint); font-weight: 500; }
+  .v-quiet .tag::before { content: "#"; opacity: .55; margin-right: 1px; }
+  .v-quiet .tag-more { color: var(--ink-faint); }
+  .v-quiet .p-chips { gap: 4px 12px; }
+  .v-quiet .rcard-stat span { color: var(--ink); }
+  .v-quiet .rcard { border-color: var(--border); }
+  .v-quiet .draft-banner { background: none; border: 0; border-top: 1px solid color-mix(in srgb, var(--flag) 45%, transparent); border-bottom: 1px solid color-mix(in srgb, var(--flag) 45%, transparent); border-radius: 0; padding: 7px 0; }
+  .v-quiet .callout { background: none; padding: 2px 0 2px 12px; }
+  .v-quiet .qty { background: none; color: var(--accent-strong); padding: 0; }
+
+  .notes { margin-top: 28px; max-width: 76ch; }
+  .notes h2 { font-family: 'Libre Franklin', sans-serif; font-size: 1rem; font-weight: 700; margin: 0 0 6px; }
+  .notes ul { margin: 0; padding-left: 20px; font-size: .9rem; line-height: 1.6; color: var(--page-muted); }
+  .notes li + li { margin-top: 4px; }
+  footer { margin-top: 36px; font-family: 'Libre Franklin', sans-serif; font-size: .75rem; color: var(--page-muted); display: flex; gap: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1 class="doc-h">Softer colour</h1>
+  <p class="doc-p">A thinking mock for PLAN.md's Design v2 item "Soften the colour scheme". The same cards and recipe excerpt three times, each with its own tokens. The five hues stay in every column; what changes is how loud they are and how many get a filled shape.</p>
+  <p class="doc-p">B's tokens are a first guess, not tuned: saturation pulled roughly a third toward the neutrals, ink a step lighter, fills nearer the surface. C uses the same tokens as B and changes components, not colours.</p>
+  <div class="toolbar" role="group" aria-label="Theme">
+    <button data-t="auto" aria-pressed="true">Auto</button>
+    <button data-t="light" aria-pressed="false">Light</button>
+    <button data-t="dark" aria-pressed="false">Dark</button>
+  </div>
+
+  <div class="cols" id="cols"></div>
+
+  <section class="notes">
+    <h2>What to look for</h2>
+    <ul>
+      <li>Card rows: in A, a test kitchen card with a cuisine shows three filled hues before the title. Does B quiet that enough, or does it take C's text-only chips?</li>
+      <li>Accent: A's rust on stat numbers, ratios, links, and quantity washes makes it everywhere. C keeps it for things that teach or click (ratios, links, quantities) and drops it from stat numbers.</li>
+      <li>Draft banner: C turns the filled blue box into two hairlines, Smitten Kitchen's rules instead of boxes.</li>
+      <li>Dark mode: A's dark accents are bright pastels; B pulls them down the most, since that's where the loudness shows.</li>
+      <li>Contrast: B's chip text and ink-faint need a WCAG check before anything lands; the softer yellow is the one at risk.</li>
+    </ul>
+  </section>
+  <footer><span>© 2026 Bruce Alderson</span><span>Built in Canada 🇨🇦</span></footer>
+</div>
+
+<template id="col">
+  <div class="col">
+    <div>
+      <p class="col-label" data-label></p>
+      <h2 class="col-h" data-h></h2>
+    </div>
+    <p class="col-note" data-note></p>
+    <div class="swatches">
+      <div class="sw"><i style="background:var(--accent-strong)"></i><i style="background:var(--accent)"></i><i style="background:var(--accent-soft)"></i></div>
+      <div class="sw"><i style="background:var(--highlight)"></i><i style="background:var(--highlight-soft)"></i></div>
+      <div class="sw"><i style="background:var(--flag)"></i><i style="background:var(--flag-soft)"></i></div>
+      <div class="sw"><i style="background:var(--principle-strong)"></i><i style="background:var(--principle-soft)"></i></div>
+      <div class="sw"><i style="background:var(--ink)"></i><i style="background:var(--ink-muted)"></i><i style="background:var(--surface)"></i></div>
+    </div>
+
+    <p class="sec">Cards</p>
+    <div class="rcard">
+      <div class="rcard-top">
+        <a class="chip dev" href="#"><span class="dot"></span>Testing</a>
+        <a class="chip cuisine" href="#">Japanese</a>
+        <a class="chip tag" href="#">cabbage</a>
+        <span class="chip tag-more">+2</span>
+      </div>
+      <div class="rcard-title">Okonomiyaki</div>
+      <p class="rcard-intro">A cabbage pancake held together with just enough batter, finished with sauce, mayonnaise, and bonito.</p>
+      <div class="rcard-stats">
+        <div class="rcard-stat"><b>Serves</b><span>4</span></div>
+        <div class="rcard-stat"><b>Time</b><span>35 min</span></div>
+        <div class="rcard-stat"><b>Words</b><span>640</span></div>
+      </div>
+    </div>
+    <div class="rcard">
+      <div class="rcard-top">
+        <a class="chip principle" href="#"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="1.5" width="8" height="9" rx="1"/><path d="M2 5h8"/></svg>Win the fridge</a>
+        <a class="chip method" href="#">Method</a>
+        <a class="chip tag" href="#">batch</a>
+      </div>
+      <div class="rcard-title">Weeknight grain bowls</div>
+      <p class="rcard-intro">One pot of grain on Sunday, three sauces, and whatever the crisper drawer is offering.</p>
+      <div class="rcard-stats">
+        <div class="rcard-stat"><b>Serves</b><span>6</span></div>
+        <div class="rcard-stat"><b>Time</b><span>1 h</span></div>
+      </div>
+    </div>
+
+    <p class="sec">Recipe page</p>
+    <div class="page">
+      <div class="draft-banner"><span class="dot"></span><span>Test kitchen <span class="sub">· still tuning the batter ratio</span></span></div>
+      <h3 class="p-title">Okonomiyaki</h3>
+      <div class="p-chips">
+        <a class="chip cuisine" href="#">Japanese</a>
+        <a class="chip tag" href="#">cabbage</a>
+        <a class="chip tag" href="#">pancakes</a>
+        <a class="chip tag" href="#">weeknight</a>
+      </div>
+      <p class="p-h">Mechanic</p>
+      <p class="mechanic">Cabbage is the dish; batter is the glue. Keep it near <span class="ratio">4 : 1</span> cabbage to batter by weight, or it turns into a cake with cabbage in it.</p>
+      <p class="p-h">Ingredients</p>
+      <ul class="ing">
+        <li class="done"><span class="box"></span><span><span class="qty">400 g</span> cabbage, finely shredded</span></li>
+        <li><span class="box"></span><span><span class="qty">100 g</span> flour</span></li>
+        <li><span class="box"></span><span>2 eggs</span></li>
+        <li><span class="box"></span><span><a class="gloss" href="#">Kewpie mayonnaise</a>, to finish</span></li>
+      </ul>
+      <p class="body">Fry in a <span class="qty">25 cm</span> pan over medium heat, then sauce it like <a href="#">Tonkatsu sauce</a> and serve straight away.</p>
+      <div class="callout"><b>Principle</b>Shred the whole cabbage once; the rest goes into slaw on Wednesday.</div>
+    </div>
+  </div>
+</template>
+
+<script>
+  const variants = [
+    { cls: 'v-current', label: 'A · Current', h: 'As built', note: 'STYLE.md’s tokens. Every chip a filled shape, the accent on every number.' },
+    { cls: 'v-soft', label: 'B · Softer', h: 'Same components, quieter tokens', note: 'Five hues kept, each pulled toward the neutrals. Fills sit closer to the card surface.' },
+    { cls: 'v-quiet', label: 'C · Quiet', h: 'One accent, text-only chips', note: 'B’s tokens. Chips become coloured small text, stat numbers go to ink, the draft box becomes rules.' },
+  ];
+  const cols = document.getElementById('cols');
+  const tpl = document.getElementById('col');
+  for (const v of variants) {
+    const node = tpl.content.firstElementChild.cloneNode(true);
+    node.classList.add(v.cls);
+    node.querySelector('[data-label]').textContent = v.label;
+    node.querySelector('[data-h]').textContent = v.h;
+    node.querySelector('[data-note]').textContent = v.note;
+    cols.appendChild(node);
+  }
+  document.querySelectorAll('.toolbar button').forEach(b => b.addEventListener('click', () => {
+    const t = b.dataset.t;
+    if (t === 'auto') document.documentElement.removeAttribute('data-theme');
+    else document.documentElement.setAttribute('data-theme', t);
+    document.querySelectorAll('.toolbar button').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+  }));
+  document.querySelectorAll('a[href="#"]').forEach(a => a.addEventListener('click', e => e.preventDefault()));
+</script>
+</body>
+</html>
