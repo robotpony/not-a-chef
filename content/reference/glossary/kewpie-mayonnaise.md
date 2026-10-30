@@ -1,5 +1,6 @@
 ---
 title: Kewpie mayonnaise
+kind: ingredient
 also: [Kewpie]
 date: 2026-09-27
 ---

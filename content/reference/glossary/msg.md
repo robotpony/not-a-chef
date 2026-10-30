@@ -1,5 +1,6 @@
 ---
 title: MSG
+kind: ingredient
 also: [monosodium glutamate]
 date: 2026-10-30
 ---

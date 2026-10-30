@@ -1,5 +1,6 @@
 ---
 title: Tare
+kind: ingredient
 date: 2026-10-30
 ---
 

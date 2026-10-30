@@ -1,5 +1,6 @@
 ---
 title: Kasuri methi
+kind: ingredient
 also: [methi, dried fenugreek leaves]
 date: 2026-10-30
 ---

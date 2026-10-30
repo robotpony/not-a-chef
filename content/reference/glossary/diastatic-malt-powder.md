@@ -1,5 +1,6 @@
 ---
 title: Diastatic malt powder
+kind: ingredient
 also: [diastatic malt]
 date: 2026-10-30
 ---

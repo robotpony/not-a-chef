@@ -1,5 +1,6 @@
 ---
 title: Transglutaminase
+kind: ingredient
 also: [meat glue]
 date: 2026-10-30
 ---

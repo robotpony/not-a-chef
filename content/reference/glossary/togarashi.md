@@ -1,5 +1,6 @@
 ---
 title: Togarashi
+kind: ingredient
 also: [shichimi togarashi, shichimi]
 date: 2026-10-30
 ---

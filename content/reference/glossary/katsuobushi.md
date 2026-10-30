@@ -1,5 +1,6 @@
 ---
 title: Katsuobushi
+kind: ingredient
 also: [bonito flakes, bonito]
 date: 2026-10-30
 ---

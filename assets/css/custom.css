@@ -353,6 +353,8 @@ main > header + section {
 /* Rule at 65% of --ink-faint, a shade under the full token (mockups/glossary.html, 2026-10-30), so a page of marked terms stays quiet. */
 .glossary-link { text-decoration: underline dotted; text-decoration-thickness: 1.5px; text-underline-offset: 3px; text-decoration-color: color-mix(in srgb, var(--ink-faint) 65%, transparent); color: inherit; cursor: help; }
 .glossary-link:hover, .glossary-link:focus-visible { text-decoration-color: var(--ink); color: var(--ink); }
+/* In the sidebar's smaller italic text the 65% rule all but vanished (2026-10-30), so it's full --ink-faint there. */
+.recipe-sidebar .glossary-link, .reading-sidebar .glossary-link { text-decoration-color: var(--ink-faint); }
 
 /* Popover — one component for glossary terms in prose and the concept
  * chips in a page's tags row; never on cards (2026-10-11: a card's chips

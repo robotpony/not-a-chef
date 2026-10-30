@@ -1,5 +1,6 @@
 ---
 title: Kecap manis
+kind: ingredient
 date: 2026-10-30
 ---
 

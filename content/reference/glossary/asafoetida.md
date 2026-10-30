@@ -1,5 +1,6 @@
 ---
 title: Asafoetida
+kind: ingredient
 also: [hing]
 date: 2026-10-30
 ---

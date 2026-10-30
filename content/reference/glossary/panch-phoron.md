@@ -1,5 +1,6 @@
 ---
 title: Panch phoron
+kind: ingredient
 date: 2026-10-30
 ---
 

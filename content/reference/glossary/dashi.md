@@ -1,5 +1,6 @@
 ---
 title: Dashi
+kind: ingredient
 date: 2026-10-30
 ---
 

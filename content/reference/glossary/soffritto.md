@@ -1,5 +1,6 @@
 ---
 title: Soffritto
+kind: ingredient
 also: [sofrito, sofregit]
 date: 2026-10-30
 ---

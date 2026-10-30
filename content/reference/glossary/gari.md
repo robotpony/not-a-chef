@@ -1,5 +1,6 @@
 ---
 title: Gari
+kind: ingredient
 date: 2026-10-30
 ---
 
