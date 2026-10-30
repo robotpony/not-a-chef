@@ -8,25 +8,10 @@ Local links need the dev server (`/preview`). Each open section's heading carrie
 
 Not questions for now, kept so they aren't lost: the drafts (`make drafts`). The cornmeal-breaded chicken patty research is now a test kitchen recipe, [[Cornmeal fried chicken]].
 
-## Glossary: drafts to review #todo
+## Glossary: nine more drafts #todo
 
-All entries in `content/reference/glossary/` now have a first-draft definition from Claude (2026-10-30), ingredients first as asked. The first sentence of each is its hover. Tick a group once you've read and fixed it; write a change after any term, or delete its file to drop it. **Don't publish until this is done**: drafted entries show on the glossary page.
+The first 54 drafts are approved (2026-10-30). These nine were the "left out" list, now drafted the same way. Tick once you've read them, or write a change after a term.
 
-When a group is done, `make glossary-link` offers its links; `make glossary-check` counts them (453 first mentions today, MSG 45, Deglaze 33, Brine 32).
-
-Ingredients, uncommon or specific to a cuisine:
-
-- [ ] Japanese: [[Katsuobushi]] (also *bonito flakes*, *bonito*) · [[Kombu]] · [[Dashi]] · [[Mirin]] · [[Shoyu]] · [[Miso]] · [[Togarashi]] · [[Furikake]] · [[Ponzu]] · [[Tobiko]] · [[Masago]]
-- [ ] Korean: [[Gochujang]] · [[Gochugaru]]
-- [ ] Hawaiian: [[Ahi]] · [[Aku]] · [[Limu]] · [[Inamona]] · [[Pa'akai]]
-- [ ] South Asian: [[Ghee]] · [[Garam masala]] · [[Kasuri methi]] (also *methi*) · [[Panch phoron]] · [[Asafoetida]] (also *hing*) · [[Tamarind]] · [[Paneer]]
-- [ ] Other: [[Passata]] · [[Diastatic malt powder]] · [[Transglutaminase]] (also *meat glue*) · [[Citric acid]] · [[MSG]]
-
-Concepts:
-
-- [ ] [[Al dente]] · [[Aromatics]] · [[Autolyse]] · [[Blanch]] · [[Braise]] · [[Brine]]
-- [ ] [[Crowding the pan]] · [[Deglaze]] · [[Doneness]] · [[Dredge]] · [[Emulsify]] · [[Fond]]
-- [ ] [[Hydration]] · [[Maillard reaction]] · [[Mise en place]] · [[Panade]] · [[Proofing]] · [[Roux]]
-- [ ] [[Sear]] · [[Slurry]] · [[Soffritto]] · [[Tadka]] · [[Umami]] · [[Velveting]]
-
-Left out, ask if you want them: tare, gari, chashu and kecap manis (each already has a recipe page); hoisin, kimchi, tahini and sriracha (common enough here); sofrito (the beef base uses it to mean soffritto, so it may be one entry; which did you mean?).
+- [ ] Recipe pages already exist, so each entry links its recipe: [[Tare]] ([[Chashu pork]]) · [[Gari]] · [[Chashu]] · [[Kecap manis]]
+- [ ] Common, defined anyway: [[Hoisin]] · [[Kimchi]] · [[Tahini]] · [[Sriracha]]
+- [ ] [[Sofrito]]: defined as the Spanish and Latin American base (onion, garlic, peppers, tomato). [[Mushroom and lentil freezer base]] uses "sofrito" as an ingredient. If you meant Italian soffritto there, say so, and I'll change the word in that recipe rather than link it.

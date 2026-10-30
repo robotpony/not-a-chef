@@ -44,8 +44,7 @@ Drinks got their own section on 2026-10-27 (`content/drinks/`, Fugu 356fad8). Di
 
 A glossary of the cookbook's concepts, with a quiet hover on the words in the text. Mock: `mockups/glossary.html`; decided 2026-10-30. Built 2026-10-30: hugo-warped holds the spec (`glossary/README.md`), partials and tools (4d260ae); Fugu draws the popover, the A to Z page with search, and `index.json` (de1505e); this repo has the entries in `content/reference/glossary/` (`list: local` cascade), the styles in `custom.css`, the footer link, `make glossary-candidates|link|check`, and `/lint` step 7. Empty entries are stubs, left off the site until written.
 
-- [ ] Bruce writes the 24 stub definitions (`docs/REVIEW.md`), then `make glossary-link` per term.
-- [ ] Ingredient terms, if Bruce ticks any in `docs/REVIEW.md`.
+- [ ] Link the 63 entries: `make glossary-link` (495 first mentions on 2026-10-30). Drafts by Claude, 54 approved by Bruce 2026-10-30; nine more in `docs/REVIEW.md`.
 - [ ] Bold step labels (Pan sauces' "**Deglaze.**") are offered as links; answer "never" per page, or ask hugo-warped to skip bold text at the start of a list item.
 
 ## Mockups
