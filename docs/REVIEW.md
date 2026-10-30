@@ -10,7 +10,7 @@ Not questions for now, kept so they aren't lost: the drafts (`make drafts`). The
 
 ## Glossary: definitions to write #todo
 
-Stub files are in `content/reference/glossary/`, one per term, with `title`, `also:` (other forms the tools match) and `date`, and no body yet. Write the definition as the body: the first sentence is the hover, the rest shows on the glossary page. Edit `also:` if a form is wrong or missing, and delete a file to drop the term. An empty stub stays off the site and out of `make glossary-check` (asked of hugo-warped 2026-10-30). Once a term has a definition, `make glossary-link` proposes its links one at a time.
+Stub files are in `content/reference/glossary/`, one per term, with `title`, `also:` (other forms the tools match) and `date`, and no body yet. Write the definition as the body: the first sentence is the hover, the rest shows on the glossary page. Edit `also:` if a form is wrong or missing, and delete a file to drop the term. An empty stub stays off the site and out of `make glossary-check` (hugo-warped 4d260ae). Once a term has a definition, `make glossary-link` proposes its links one at a time.
 
 Picked from `make glossary-candidates` (641 words) as cooking concepts, techniques and food science:
 
