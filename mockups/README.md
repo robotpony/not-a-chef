@@ -267,6 +267,13 @@ in a browser — no build step.
   2026-10-27: A on drink pages, C on cards, B dropped; the drink fills are
   `STYLE.md` §7.
 
+- **`glossary.html`**: proposal (2026-10-30) for a concepts glossary: a
+  glossary word in prose (three underline weights, A recommended: today's
+  `.glossary-link`), its popover as a plain tooltip with no link, the tap
+  on a phone, the A–Z glossary page (`<dl>`, other forms, "Used in"), the
+  footer link, one Obsidian file per concept, and the `candidates` and
+  `link` tools. The open questions are in `docs/REVIEW.md`.
+
 ## `archived/` — reference only
 
 The four original mockup rounds `style.html`/`COMPONENTS.md` were built

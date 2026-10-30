@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Concepts glossary</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  :root{
+    --bg:#F3F3EC; --surface:#FBFBF6; --surface-2:#EAEBDF;
+    --ink:#23241E; --ink-muted:#63645A; --ink-faint:#93948A;
+    --border:#DCDCCE; --border-strong:#C7C8B4;
+    --accent:#A67330; --accent-strong:#7C361D; --accent-soft:#F6EADA;
+    --flag:#3D638F; --flag-soft:#E1EAF4;
+    --principle:#247B50; --principle-soft:#DBF5E8;
+    --focus:#A67330;
+    --diff-add:#DBF5E8; --diff-del:#F6EADA;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+      --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+      --border:#383A2C; --border-strong:#4A4C3A;
+      --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+      --flag:#97B8D8; --flag-soft:#1D2835;
+      --principle:#8ED7B4; --principle-soft:#1B3428;
+      --focus:#D3A569;
+      --diff-add:#1B3428; --diff-del:#37261B;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
+    --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
+    --border:#383A2C; --border-strong:#4A4C3A;
+    --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
+    --flag:#97B8D8; --flag-soft:#1D2835;
+    --principle:#8ED7B4; --principle-soft:#1B3428;
+    --focus:#D3A569;
+    --diff-add:#1B3428; --diff-del:#37261B;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:'Lora',Georgia,'Times New Roman',serif;
+    font-size:16px; line-height:1.5; -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4,.ui{ font-family:'Libre Franklin',system-ui,-apple-system,'Segoe UI',sans-serif; }
+  .mono, code, pre{ font-family:'IBM Plex Mono',ui-monospace,'SF Mono',Menlo,monospace; font-variant-numeric:tabular-nums; }
+  p{ margin:0; }
+  :focus-visible{ outline:2px solid var(--focus); outline-offset:2px; border-radius:2px; }
+
+  /* ---- Mockup harness ---- */
+  .topbar{ position:sticky; top:0; z-index:20; background:var(--surface); border-bottom:1px solid var(--border-strong); }
+  .topbar-inner{ max-width:1040px; margin:0 auto; padding:12px 16px; display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+  .tb-title{ font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:.95rem; margin-right:auto; }
+  .tb-jump{ display:flex; gap:2px; flex-wrap:wrap; font-family:'Libre Franklin',sans-serif; }
+  .tb-jump a{ font-size:.76rem; font-weight:600; color:var(--ink-muted); text-decoration:none; padding:6px 8px; border-radius:4px; }
+  .tb-jump a:hover{ color:var(--ink); background:var(--surface-2); }
+  .tb-theme{ font-family:'Libre Franklin',sans-serif; font-size:.75rem; font-weight:600; padding:6px 10px; border:1px solid var(--border-strong); border-radius:3px; color:var(--ink-muted); background:transparent; cursor:pointer; }
+  .tb-theme:hover{ border-color:var(--accent); color:var(--ink); }
+
+  main{ max-width:1040px; margin:0 auto; padding:8px 16px 100px; }
+  .hero{ padding:32px 0 24px; border-bottom:1px solid var(--border); margin-bottom:40px; }
+  .eyebrow{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--accent-strong); display:block; margin-bottom:10px; }
+  .hero h1{ font-size:1.9rem; font-weight:700; letter-spacing:-.01em; margin:0 0 10px; line-height:1.15; }
+  .hero p{ max-width:70ch; color:var(--ink-muted); }
+  .hero p + p{ margin-top:8px; }
+
+  section.block{ margin-bottom:64px; scroll-margin-top:70px; }
+  .block-num{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--ink-faint); display:block; margin-bottom:4px; }
+  h2.block-title{ font-size:1.3rem; font-weight:700; margin:0 0 8px; line-height:1.25; }
+  .block-lede{ color:var(--ink-muted); max-width:72ch; margin-bottom:20px; }
+  .block-lede + .block-lede{ margin-top:-12px; }
+
+  .options{ display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:16px; }
+  .opt{ background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:18px 18px 20px; }
+  .opt.rec{ border-color:var(--accent); box-shadow:0 0 0 1px var(--accent) inset; }
+  .opt-label{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-faint); margin-bottom:4px; display:flex; gap:8px; align-items:center; }
+  .opt-label .badge{ color:var(--accent-strong); background:var(--accent-soft); padding:1px 6px; border-radius:3px; letter-spacing:.05em; }
+  .opt h3{ font-size:1rem; margin:0 0 12px; }
+  .opt-notes{ font-family:'Libre Franklin',sans-serif; font-size:.8rem; color:var(--ink-muted); margin-top:16px; padding-top:12px; border-top:1px solid var(--border); line-height:1.5; }
+  .opt-notes li{ margin:2px 0; }
+  .opt-notes ul{ margin:0; padding-left:18px; }
+
+  .card{ background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:22px 24px; }
+  .note{ font-family:'Libre Franklin',sans-serif; font-size:.78rem; color:var(--ink-faint); margin-top:10px; }
+
+  /* ---- Site: prose and links (from assets/css/custom.css) ---- */
+  .prose{ font-size:1.05rem; line-height:1.5; max-width:65ch; }
+  .prose p + p{ margin-top:1em; }
+  .wikilink{ color:inherit; text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:3px; text-decoration-color:color-mix(in srgb, var(--accent) 35%, transparent); transition:text-decoration-color .15s, color .15s; }
+  .wikilink:hover{ color:var(--accent-strong); text-decoration-color:var(--accent); }
+  .wikilink::after{ content:' \2192'; font-size:.85em; }
+
+  /* A: today's .glossary-link, unchanged */
+  .g-a{ color:inherit; text-decoration:underline dotted; text-decoration-thickness:1.5px; text-underline-offset:3px; text-decoration-color:var(--ink-faint); cursor:help; }
+  .g-a:hover, .g-a:focus-visible{ color:var(--ink); text-decoration-color:var(--ink); }
+  /* B: quieter, a 1px dotted rule in the border colour */
+  .g-b{ color:inherit; text-decoration:underline dotted; text-decoration-thickness:1px; text-underline-offset:4px; text-decoration-color:var(--border-strong); cursor:help; }
+  .g-b:hover, .g-b:focus-visible{ text-decoration-color:var(--ink-muted); }
+  /* C: nothing at rest; the rule shows on hover or focus */
+  .g-c{ color:inherit; text-decoration:underline dotted transparent; text-decoration-thickness:1.5px; text-underline-offset:3px; cursor:help; transition:text-decoration-color .15s; }
+  .g-c:hover, .g-c:focus-visible{ text-decoration-color:var(--ink-faint); }
+
+  /* Popover (custom.css .pop), here as a role="tooltip" with no link inside */
+  .pop-host{ position:relative; }
+  .pop{
+    position:absolute; left:0; bottom:calc(100% + 8px); z-index:5; width:260px;
+    display:grid; gap:4px; text-align:left; white-space:normal;
+    background:var(--surface); border:1px solid var(--border-strong); border-radius:8px;
+    padding:10px 12px; box-shadow:0 6px 20px rgba(0,0,0,.12);
+    font-family:'Lora',Georgia,serif; font-size:.84rem; font-style:normal; font-weight:400; line-height:1.45; color:var(--ink-muted);
+    opacity:0; visibility:hidden; transform:translateY(4px);
+    transition:opacity .12s .25s, transform .12s .25s, visibility 0s .37s;
+    pointer-events:none;
+  }
+  .pop-host:hover > .pop, .pop-host:focus-within > .pop, .pop.is-open{ opacity:1; visibility:visible; transform:translateY(0); transition-delay:0s; }
+  .pop-head{ font-family:'Libre Franklin',sans-serif; font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--ink); }
+  .pop-foot{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; color:var(--ink-faint); }
+  .pop::before, .pop::after{ content:""; position:absolute; left:calc(var(--pop-x,21px) - 7px); border:7px solid transparent; }
+  .pop::before{ bottom:-8px; border-bottom:0; border-top:8px solid var(--border-strong); }
+  .pop::after{ bottom:-6.6px; border-bottom:0; border-top:8px solid var(--surface); }
+  @media (prefers-reduced-motion: reduce){ .pop{ transition:none; } }
+
+  .stage{ padding-bottom:118px; }   /* room for the statically open popover */
+  .pop-down{ bottom:auto; top:calc(100% + 8px); }
+  .pop-down::before{ bottom:auto; top:-8px; border-top:0; border-bottom:8px solid var(--border-strong); }
+  .pop-down::after{ bottom:auto; top:-6.6px; border-top:0; border-bottom:8px solid var(--surface); }
+
+  /* ---- Phone frame ---- */
+  .phones{ display:flex; gap:24px; flex-wrap:wrap; align-items:flex-start; }
+  .phone{ width:360px; max-width:100%; background:var(--bg); border:1px solid var(--border-strong); border-radius:22px; padding:14px 16px 22px; box-shadow:0 2px 0 var(--border); }
+  .phone-cap{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-faint); margin-bottom:10px; }
+  .phone .prose{ font-size:1rem; }
+  .phone .pop{ width:calc(100vw - 64px); max-width:300px; }
+
+  /* ---- Glossary page ---- */
+  .gp{ background:var(--bg); border:1px solid var(--border-strong); border-radius:10px; overflow:hidden; }
+  .gp-inner{ max-width:760px; margin:0 auto; padding:28px 20px 36px; }
+  .crumbs{ font-family:'Libre Franklin',sans-serif; font-size:.75rem; color:var(--ink-faint); margin-bottom:8px; }
+  .crumbs a{ color:inherit; text-decoration:none; }
+  .gp h1{ font-size:2rem; margin:0 0 8px; line-height:1.15; }
+  .gp-lede{ color:var(--ink-muted); max-width:62ch; }
+  .letters{ display:flex; flex-wrap:wrap; gap:2px; margin:20px 0 8px; padding:8px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); font-family:'Libre Franklin',sans-serif; }
+  .letters a, .letters span{ min-width:24px; text-align:center; font-size:.8rem; font-weight:600; padding:4px 0; border-radius:4px; text-decoration:none; }
+  .letters a{ color:var(--accent-strong); }
+  .letters a:hover{ background:var(--accent-soft); }
+  .letters span{ color:var(--border-strong); }
+  .gl-letter{ font-weight:700;  font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:700; letter-spacing:.08em; color:var(--ink-faint); margin:28px 0 4px; line-height:1.2; }
+  dl.glossary{ margin:0; }
+  dl.glossary dt{ font-family:'Libre Franklin',sans-serif; font-size:1.05rem; font-weight:700; margin:18px 0 4px; scroll-margin-top:80px; display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 10px; }
+  dl.glossary dt:target{ background:var(--accent-soft); border-radius:4px; padding:2px 6px; margin-left:-6px; }
+  dl.glossary dfn{ font-style:normal; }
+  .also{ font-family:'Libre Franklin',sans-serif; font-size:.76rem; font-weight:500; color:var(--ink-faint); }
+  .also i{ font-style:italic; }
+  dl.glossary dd{ margin:0 0 0 0; max-width:62ch; }
+  dl.glossary dd p + p{ margin-top:.6em; }
+  .used{ font-family:'Libre Franklin',sans-serif; font-size:.76rem; color:var(--ink-faint); margin-top:6px; line-height:1.6; }
+  .used a{ color:var(--ink-muted); text-decoration:none; border-bottom:1px solid var(--border-strong); }
+  .used a:hover{ color:var(--accent-strong); border-bottom-color:var(--accent); }
+  .essay-link{ font-family:'Libre Franklin',sans-serif; font-size:.76rem; font-weight:600; color:var(--accent-strong); text-decoration:none; border-bottom:1.5px solid color-mix(in srgb, var(--accent-strong) 35%, transparent); }
+  .essay-link::after{ content:" \2192"; }
+
+  /* ---- Footer (custom.css .site-footer) ---- */
+  .site-footer{ border:1px solid var(--border); border-radius:10px; background:var(--surface-2); overflow:hidden; }
+  .site-footer-inner{ padding:28px 20px 36px; }
+  .foot-row{ display:flex; justify-content:space-between; align-items:flex-start; gap:24px; flex-wrap:wrap; margin-bottom:20px; }
+  .foot-brand{ font-family:'Libre Franklin',sans-serif; }
+  .foot-brand .name{ font-weight:700; font-size:.95rem; }
+  .brand-loves{ color:var(--accent-strong); }
+  .foot-brand p{ font-size:.82rem; color:var(--ink-muted); margin-top:6px; max-width:38ch; font-family:'Lora',serif; }
+  .foot-links{ display:flex; gap:40px; flex-wrap:wrap; font-family:'Libre Franklin',sans-serif; }
+  .foot-links .heading{ font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); margin-bottom:10px; }
+  .foot-links a{ display:block; font-size:.85rem; line-height:1.5; color:var(--ink-muted); text-decoration:none; padding:5px 0; }
+  .foot-links a:hover{ color:var(--accent-strong); }
+  .foot-links a.new{ color:var(--ink); }
+  .foot-links a.new::before{ content:"+ "; color:var(--principle); font-weight:700; }
+  .foot-meta{ padding-top:16px; border-top:1px solid var(--border); display:flex; gap:16px; flex-wrap:wrap; font-family:'Libre Franklin',sans-serif; font-size:.74rem; color:var(--ink-faint); }
+
+  /* ---- Source and terminal ---- */
+  .two{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; }
+  .src{ background:var(--surface); border:1px solid var(--border); border-radius:10px; overflow:hidden; }
+  .src-head{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:600; color:var(--ink-faint); padding:8px 14px; border-bottom:1px solid var(--border); background:var(--surface-2); }
+  pre{ margin:0; padding:14px; font-size:.78rem; line-height:1.6; white-space:pre-wrap; overflow-wrap:anywhere; color:var(--ink); }
+  pre .k{ color:var(--ink-faint); }
+  pre .wl{ color:var(--accent-strong); }
+  pre .add{ background:var(--diff-add); display:block; margin:0 -14px; padding:0 14px; }
+  pre .del{ background:var(--diff-del); display:block; margin:0 -14px; padding:0 14px; color:var(--ink-muted); }
+  pre .ask{ color:var(--accent-strong); font-weight:600; }
+  pre .dim{ color:var(--ink-faint); }
+
+  @media (max-width:600px){
+    .topbar{ position:static; }
+    .hero h1{ font-size:1.5rem; }
+    .card{ padding:18px 16px; }
+    .foot-links{ gap:24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="topbar-inner">
+  <span class="tb-title">Concepts glossary</span>
+  <nav class="tb-jump" aria-label="Sections">
+    <a href="#text">1 In the text</a>
+    <a href="#phone">2 Phone</a>
+    <a href="#page">3 Page</a>
+    <a href="#footer">4 Footer</a>
+    <a href="#source">5 Source</a>
+    <a href="#tools">6 Tools</a>
+    <a href="#markup">7 Markup</a>
+  </nav>
+  <button class="tb-theme" type="button" id="theme">Dark</button>
+</div></div>
+
+<main>
+  <header class="hero">
+    <span class="eyebrow">Proposal · 2026-10-30</span>
+    <h1>A glossary of concepts, linked from the text</h1>
+    <p>Bruce writes the definitions, one short file per concept. A tool finds words worth defining and turns the first mention on each page into an ordinary wiki link, after showing the change. Hugo does the rest at build: the glossary page, a <code>glossary.json</code>, and a quiet hover on every linked word. No marking script runs in the browser.</p>
+    <p>The examples are real paragraphs from the cookbook. The definitions are stand-ins for Bruce's own.</p>
+  </header>
+
+  <!-- 1 -->
+  <section class="block" id="text">
+    <span class="block-num">01</span>
+    <h2 class="block-title">A marked word in the text</h2>
+    <p class="block-lede">From <em>How do you fry ground beef without oil?</em> and <em>Condensing recipes for freezer prep</em>. A page link (“water frying →”) sits beside the glossary words, so the two can be told apart: a page link has a solid accent rule and an arrow, a term has a dotted rule and no arrow. Hover or tab to any marked word; the last in each card is shown open.</p>
+
+    <div class="options">
+      <div class="opt rec">
+        <div class="opt-label">A <span class="badge">Recommended</span></div>
+        <h3>Today's glossary link</h3>
+        <div class="prose stage">
+          <p>Instead, I use a variant of <a class="wikilink" href="#">water frying</a> that works well with ground meat, and keep the <span class="pop-host"><a class="g-a" href="#g-fond" aria-describedby="tip-a2">fond</a><span class="pop" id="tip-a2" role="tooltip"><span class="pop-head">Fond</span><span>The browned, sticky bits left in a pan after searing. Most of a pan sauce's flavour.</span></span></span> with the softened <span class="pop-host"><a class="g-a" href="#g-allium" aria-describedby="tip-a3">allium</a><span class="pop" id="tip-a3" role="tooltip"><span class="pop-head">Allium</span><span>The onion family: onions, shallots, leeks, garlic, chives, and green onions.</span></span></span>.</p>
+          <p>Add the beef, break it up, and stir. The fat renders out as the water evaporates, and very little sticks to the pan. If anything does stick, add a splash of water (or wine) and <span class="pop-host"><a class="g-a" href="#g-deglaze" aria-describedby="tip-a1">deglaze</a><span class="pop pop-down is-open" id="tip-a1" role="tooltip"><span class="pop-head">Deglaze</span><span>Pour a liquid into a hot pan and scrape, so the browned bits stuck to the bottom dissolve into it.</span></span></span>.</p>
+        </div>
+        <div class="opt-notes"><ul>
+          <li>Already on the site for <code>[[Term]]</code> glossary links, so nothing new to learn.</li>
+          <li>Dotted <code>--ink-faint</code>, 1.5px. Text keeps its colour.</li>
+        </ul></div>
+      </div>
+
+      <div class="opt">
+        <div class="opt-label">B</div>
+        <h3>Quieter rule</h3>
+        <div class="prose stage">
+          <p>Instead, I use a variant of <a class="wikilink" href="#">water frying</a> that works well with ground meat, and keep the <span class="pop-host"><a class="g-b" href="#g-fond" aria-describedby="tip-b2">fond</a><span class="pop" id="tip-b2" role="tooltip"><span class="pop-head">Fond</span><span>The browned, sticky bits left in a pan after searing. Most of a pan sauce's flavour.</span></span></span> with the softened <span class="pop-host"><a class="g-b" href="#g-allium" aria-describedby="tip-b3">allium</a><span class="pop" id="tip-b3" role="tooltip"><span class="pop-head">Allium</span><span>The onion family: onions, shallots, leeks, garlic, chives, and green onions.</span></span></span>.</p>
+          <p>Add the beef, break it up, and stir. The fat renders out as the water evaporates, and very little sticks to the pan. If anything does stick, add a splash of water (or wine) and <span class="pop-host"><a class="g-b" href="#g-deglaze" aria-describedby="tip-b1">deglaze</a><span class="pop pop-down is-open" id="tip-b1" role="tooltip"><span class="pop-head">Deglaze</span><span>Pour a liquid into a hot pan and scrape, so the browned bits stuck to the bottom dissolve into it.</span></span></span>.</p>
+        </div>
+        <div class="opt-notes"><ul>
+          <li>1px dotted in <code>--border-strong</code>, a little lower. Nearly gone at reading distance.</li>
+          <li>Harder to spot in dark mode; check it there.</li>
+        </ul></div>
+      </div>
+
+      <div class="opt">
+        <div class="opt-label">C</div>
+        <h3>Nothing until hover</h3>
+        <div class="prose stage">
+          <p>Instead, I use a variant of <a class="wikilink" href="#">water frying</a> that works well with ground meat, and keep the <span class="pop-host"><a class="g-c" href="#g-fond" aria-describedby="tip-c2">fond</a><span class="pop" id="tip-c2" role="tooltip"><span class="pop-head">Fond</span><span>The browned, sticky bits left in a pan after searing. Most of a pan sauce's flavour.</span></span></span> with the softened <span class="pop-host"><a class="g-c" href="#g-allium" aria-describedby="tip-c3">allium</a><span class="pop" id="tip-c3" role="tooltip"><span class="pop-head">Allium</span><span>The onion family: onions, shallots, leeks, garlic, chives, and green onions.</span></span></span>.</p>
+          <p>Add the beef, break it up, and stir. The fat renders out as the water evaporates, and very little sticks to the pan. If anything does stick, add a splash of water (or wine) and <span class="pop-host"><a class="g-c" href="#g-deglaze" aria-describedby="tip-c1">deglaze</a><span class="pop pop-down is-open" id="tip-c1" role="tooltip"><span class="pop-head">Deglaze</span><span>Pour a liquid into a hot pan and scrape, so the browned bits stuck to the bottom dissolve into it.</span></span></span>.</p>
+        </div>
+        <div class="opt-notes"><ul>
+          <li>Invisible at rest: a reader only finds it by chance.</li>
+          <li>Fails on phones, which have no hover. Shown to rule it out.</li>
+        </ul></div>
+      </div>
+    </div>
+
+    <p class="note">The popover holds only the term and its first sentence, no link: the word itself goes to the glossary entry. That keeps it a true tooltip (nothing inside to tab to), which a screen reader reads as the word's description. Escape closes it; moving the pointer onto it keeps it open. New: near the right edge of a narrow window the popover slides left to stay on screen (the site's popovers run off the edge today; a fix for <code>popover.js</code>).</p>
+  </section>
+
+  <!-- 2 -->
+  <section class="block" id="phone">
+    <span class="block-num">02</span>
+    <h2 class="block-title">On a phone</h2>
+    <p class="block-lede">No hover on a phone, so a tap on the word goes to its glossary entry, as a <code>[[Term]]</code> glossary link does today. The entry is highlighted where it lands, and Back returns to the same place in the recipe.</p>
+    <div class="phones">
+      <div class="phone">
+        <div class="phone-cap">Recipe · Pan sauces</div>
+        <div class="prose">
+          <p>A good <a class="g-a" href="#g-fond">fond</a> gives you most of a good sauce, and no amount of butter rescues a pan with none. Pour off all but a tablespoon of fat, add the wine, and scrape as it bubbles: that is the <a class="g-a" href="#g-deglaze">deglaze</a>, and it takes about a minute.</p>
+        </div>
+      </div>
+      <div class="phone">
+        <div class="phone-cap">After the tap · Glossary</div>
+        <dl class="glossary">
+          <dt id="p-deglaze" style="background:var(--accent-soft);border-radius:4px;padding:2px 6px;margin:0 0 4px -6px;"><dfn>Deglaze</dfn> <span class="also">also <i>deglazing</i>, <i>deglazed</i></span></dt>
+          <dd><p>Pour a liquid into a hot pan and scrape, so the browned bits stuck to the bottom dissolve into it. Wine, stock, beer, or water all work; the liquid only has to be cold enough to lift the fond and hot enough to keep bubbling.</p>
+            <div class="used">Used in <a href="#">Pan sauces</a>, <a href="#">Beef stroganoff</a>, <a href="#">Chicken Milanese</a>, and 4 more</div></dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section class="block" id="page">
+    <span class="block-num">03</span>
+    <h2 class="block-title">The glossary page</h2>
+    <p class="block-lede">A to Z, under Reference, one <code>&lt;dl&gt;</code> per letter. Each entry is a <code>&lt;dt&gt;</code> with the term in a <code>&lt;dfn&gt;</code> and an id to link to, then its definition. Hugo adds the other forms and the pages that link to it. A term with its own essay (Win the fridge) is listed too, with its description and a link to the essay, so every concept is findable in one place.</p>
+
+    <div class="gp"><div class="gp-inner">
+      <div class="crumbs"><a href="#">Reference</a> / Glossary</div>
+      <h1>Glossary</h1>
+      <p class="gp-lede">The words this cookbook leans on, in a sentence or two each. A dotted word in a recipe or essay links here.</p>
+
+      <nav class="letters" aria-label="Jump to letter">
+        <a href="#gl-a">A</a><span>B</span><span>C</span><a href="#gl-d">D</a><a href="#gl-e">E</a><a href="#gl-f">F</a><span>G</span><span>H</span><span>I</span><span>J</span><a href="#gl-k">K</a><span>L</span><a href="#gl-m">M</a><span>N</span><span>O</span><span>P</span><span>Q</span><a href="#gl-r">R</a><a href="#gl-s">S</a><span>T</span><span>U</span><span>V</span><a href="#gl-w">W</a><span>X</span><span>Y</span><span>Z</span>
+      </nav>
+
+      <h2 class="gl-letter" id="gl-a">A</h2>
+        <dl class="glossary">
+        <dt id="g-allium"><dfn>Allium</dfn> <span class="also">also <i>alliums</i></span></dt>
+        <dd><p>The onion family: onions, shallots, leeks, garlic, chives, and green onions. Most savoury cooking starts with one of them softened in fat.</p>
+          <div class="used">Used in <a href="#">Condensing recipes for freezer prep</a></div></dd>
+
+        </dl>
+        <h2 class="gl-letter" id="gl-d">D</h2>
+        <dl class="glossary">
+        <dt id="g-deglaze"><dfn>Deglaze</dfn> <span class="also">also <i>deglazing</i>, <i>deglazed</i></span></dt>
+        <dd><p>Pour a liquid into a hot pan and scrape, so the browned bits stuck to the bottom dissolve into it.</p>
+          <div class="used">Used in <a href="#">Pan sauces</a>, <a href="#">How do you fry ground beef without oil?</a>, <a href="#">Beef stroganoff</a>, and 4 more</div></dd>
+
+        </dl>
+        <h2 class="gl-letter" id="gl-e">E</h2>
+        <dl class="glossary">
+        <dt id="g-emulsify"><dfn>Emulsify</dfn> <span class="also">also <i>emulsion</i>, <i>emulsified</i></span></dt>
+        <dd><p>Whisk or blend fat and water into one smooth mixture that holds instead of separating, as in mayonnaise or a pan sauce finished with cold butter.</p>
+          <div class="used">Used in <a href="#">Pan sauces</a>, <a href="#">Meat sauce (AKA American bolognese)</a>, <a href="#">Beef base</a>, and 11 more</div></dd>
+
+        </dl>
+        <h2 class="gl-letter" id="gl-f">F</h2>
+        <dl class="glossary">
+        <dt id="g-fond"><dfn>Fond</dfn></dt>
+        <dd><p>The browned, sticky bits left in a pan after searing. Most of a pan sauce's flavour.</p>
+          <div class="used">Used in <a href="#">Pan sauces</a>, <a href="#">Stock</a>, <a href="#">Chicken Milanese</a>, and 2 more</div></dd>
+
+        </dl>
+        <h2 class="gl-letter" id="gl-k">K</h2>
+        <dl class="glossary">
+        <dt id="g-kewpie"><dfn>Kewpie mayonnaise</dfn> <span class="also">also <i>Kewpie</i></span></dt>
+        <dd><p>Japanese mayonnaise made with only egg yolks and rice or apple vinegar: richer, tangier, and a shade more yellow than most Western mayo.</p>
+          <div class="used">Used in <a href="#">Spicy ahi poke</a>, <a href="#">Sauces and condiments</a>, and 9 more</div></dd>
+
+        </dl>
+        <h2 class="gl-letter" id="gl-m">M</h2>
+        <dl class="glossary">
+        <dt id="g-maillard"><dfn>Maillard reaction</dfn> <span class="also">also <i>Maillard</i></span></dt>
+        <dd><p>Browning of proteins and sugars under dry, high heat. It makes the flavour of seared meat, toast, and roasted coffee.</p>
+          <div class="used">Used in <a href="#">Pan sauces</a></div></dd>
+        <dt id="g-msg"><dfn>MSG</dfn> <span class="also">also <i>monosodium glutamate</i></span></dt>
+        <dd><p>The sodium salt of glutamic acid: savoury seasoning in pure form, used a pinch at a time.</p>
+          <div class="used">Used in 38 pages · <a href="#">see all</a></div></dd>
+
+        </dl>
+        <h2 class="gl-letter" id="gl-r">R</h2>
+        <dl class="glossary">
+        <dt id="g-roux"><dfn>Roux</dfn></dt>
+        <dd><p>Equal weights of fat and flour cooked together to thicken a sauce. The longer it cooks, the darker and nuttier it gets, and the less it thickens.</p>
+          <div class="used">Used in <a href="#">Simple chicken, pork, and beef gravy</a>, <a href="#">Mushroom soup</a>, <a href="#">Baked mac &amp; cheese</a>, and 3 more</div></dd>
+
+        </dl>
+        <h2 class="gl-letter" id="gl-s">S</h2>
+        <dl class="glossary">
+        <dt id="g-slurry"><dfn>Slurry</dfn></dt>
+        <dd><p>Starch stirred into cold liquid, then whisked into a hot one to thicken it in a minute.</p>
+          <div class="used">Used in 8 pages · <a href="#">see all</a></div></dd>
+
+        </dl>
+        <h2 class="gl-letter" id="gl-w">W</h2>
+        <dl class="glossary">
+        <dt id="g-wtf"><dfn>Win the fridge</dfn></dt>
+        <dd><p>The practice of using every scrap of food before it goes to waste: the idea behind the recipes tagged with it across this cookbook.</p>
+          <div class="used"><a class="essay-link" href="#">Read the full essay</a></div></dd>
+      </dl>
+    </div></div>
+    <p class="note">Each letter is a heading, so a screen reader can jump letter to letter. “Used in” comes from the build (pages linking to the entry), so it never needs writing by hand. Past a handful of pages it collapses to a count.</p>
+  </section>
+
+  <!-- 4 -->
+  <section class="block" id="footer">
+    <span class="block-num">04</span>
+    <h2 class="block-title">In the footer</h2>
+    <p class="block-lede">Under Browse, after Reference, where it lives. Marked + here only.</p>
+    <footer class="site-footer"><div class="site-footer-inner">
+      <div class="foot-row">
+        <div class="foot-brand">
+          <div class="name">Bruce <span class="brand-loves">loves</span> to cook.</div>
+          <p>Our family cookbook. Recipes, essays, and reference notes from a home kitchen.</p>
+        </div>
+        <div class="foot-links">
+          <div>
+            <div class="heading">Browse</div>
+            <a href="#">Recipes</a><a href="#">Drinks</a><a href="#">Methods</a><a href="#">Essays</a><a href="#">The food log</a><a href="#">Reference</a><a class="new" href="#page">Glossary</a>
+          </div>
+          <div>
+            <div class="heading">Index</div>
+            <a href="#">Tags</a><a href="#">Cuisines</a>
+          </div>
+          <div>
+            <div class="heading">About</div>
+            <a href="#">About this cookbook</a>
+          </div>
+        </div>
+      </div>
+      <div class="foot-meta"><span>Copyright © Bruce Alderson</span><span>Built in Canada 🇨🇦</span></div>
+    </div></footer>
+  </section>
+
+  <!-- 5 -->
+  <section class="block" id="source">
+    <span class="block-num">05</span>
+    <h2 class="block-title">What Bruce writes, in Obsidian</h2>
+    <p class="block-lede">One file per concept in <code>content/reference/glossary/</code>. The first sentence is the hover; the rest shows only on the glossary page. <code>also:</code> holds the other forms the tool should match (not <code>aliases:</code>, which Hugo turns into redirects).</p>
+    <div class="two">
+      <div class="src">
+        <div class="src-head">content/reference/glossary/deglaze.md</div>
+<pre><span class="k">---
+title: Deglaze
+also: [deglazing, deglazed]
+date: 2026-10-30
+---</span>
+
+Pour a liquid into a hot pan and scrape, so the browned bits stuck to the bottom dissolve into it. Wine, stock, beer, or water all work; the liquid only has to be cold enough to lift the <span class="wl">[[Fond|fond]]</span> and hot enough to keep bubbling.</pre>
+      </div>
+      <div class="src">
+        <div class="src-head">content/essays/technique-essays/frying-ground-beef-without-oil.md, after the tool</div>
+<pre>Instead, I use a variant of <span class="wl">[[Reverse cooking: reverse sear and water frying|water frying]]</span> that works well with ground meat. … If anything does stick, add a splash of water (or wine) and <span class="wl">[[Deglaze|deglaze]]</span>.</pre>
+      </div>
+    </div>
+    <p class="note">The marking is a plain wiki link, so Obsidian shows and follows it too, and the render hook can't tell a tool's link from one typed by hand. When the word matches the title exactly, the link is just <code>[[Fond]]</code>.</p>
+  </section>
+
+  <!-- 6 -->
+  <section class="block" id="tools">
+    <span class="block-num">06</span>
+    <h2 class="block-title">The two tools</h2>
+    <p class="block-lede"><code>glossary.py candidates</code> suggests words to define; <code>glossary.py link</code> marks them, asking first. Neither runs on its own: <code>/lint</code> only reports first mentions not linked yet.</p>
+    <div class="two">
+      <div class="src">
+        <div class="src-head">$ make glossary-candidates</div>
+<pre><span class="dim">Words on 2+ pages, not in the glossary, rare in everyday English or already in italics.
+Added to docs/REVIEW.md › Glossary candidates.</span>
+
+  pages  word
+     33  deglaze
+     27  emulsify  <span class="dim">(emulsion, emulsified)</span>
+     11  dashi
+     11  roux
+      8  gochujang
+      8  slurry
+      6  bloom      <span class="dim">(often the plain word)</span>
+      3  furikake
+      2  mise en place  <span class="dim">(italics)</span>
+      2  sucs           <span class="dim">(italics)</span></pre>
+      </div>
+      <div class="src">
+        <div class="src-head">$ make glossary-link</div>
+<pre><span class="dim">Fond: 5 pages with an unlinked first mention</span>
+
+methods/stock.md:27
+<span class="del">- … and scrape the fond into the pot.</span>
+<span class="add">+ … and scrape the [[Fond|fond]] into the pot.</span>
+<span class="ask">Link? [y]es [n]ever on this page [s]kip for now  y</span>
+
+essays/food-memories/camp-cooking.md:22
+<span class="del">- I also have fond memories of buying groceries …</span>
+<span class="ask">Link? [y]es [n]ever on this page [s]kip for now  n</span>
+<span class="dim">  Saved to tools/glossary-skip.txt; won't ask again.</span>
+
+<span class="dim">4 linked, 1 never, 0 skipped. Review: git diff</span></pre>
+      </div>
+    </div>
+    <p class="note">Camp cooking's “fond memories” is why the tool asks: it matches whole words, but it can't read meaning. A “never” is remembered per page and term.</p>
+  </section>
+
+  <!-- 7 -->
+  <section class="block" id="markup">
+    <span class="block-num">07</span>
+    <h2 class="block-title">The HTML Hugo writes</h2>
+    <p class="block-lede">Standard elements only. The word is a link; the definition is its description; the glossary is a definition list.</p>
+    <div class="two">
+      <div class="src">
+        <div class="src-head">In a page (render-link.html)</div>
+<pre>&lt;span class="pop-host"&gt;
+  &lt;a class="glossary-link" href="/reference/glossary/#deglaze"
+     aria-describedby="g-deglaze-1"&gt;deglaze&lt;/a&gt;
+  &lt;span class="pop pop-up" id="g-deglaze-1" role="tooltip"&gt;
+    &lt;span class="pop-head"&gt;Deglaze&lt;/span&gt;
+    &lt;span&gt;Pour a liquid into a hot pan and scrape, …&lt;/span&gt;
+  &lt;/span&gt;
+&lt;/span&gt;</pre>
+      </div>
+      <div class="src">
+        <div class="src-head">On /reference/glossary/</div>
+<pre>&lt;dl class="glossary"&gt;
+  &lt;dt id="deglaze"&gt;&lt;dfn&gt;Deglaze&lt;/dfn&gt;
+    &lt;span class="also"&gt;also &lt;i&gt;deglazing&lt;/i&gt;, …&lt;/span&gt;&lt;/dt&gt;
+  &lt;dd&gt;&lt;p&gt;Pour a liquid into a hot pan …&lt;/p&gt;
+    &lt;p class="used"&gt;Used in &lt;a href="…"&gt;Pan sauces&lt;/a&gt;, …&lt;/p&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+
+/reference/glossary/index.json
+[{"term":"Deglaze","also":["deglazing","deglazed"],
+  "def":"Pour a liquid into a hot pan and scrape, …",
+  "url":"/reference/glossary/#deglaze"}, …]</pre>
+      </div>
+    </div>
+    <p class="note">Glossary entries don't get pages of their own: each file builds into the list only. The JSON is for other tools and sites (w42, warped.js), not for this page.</p>
+  </section>
+</main>
+
+<script>
+  (function () {
+    var btn = document.getElementById('theme'), root = document.documentElement;
+    function isDark() {
+      var t = root.getAttribute('data-theme');
+      return t ? t === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    function label() { btn.textContent = isDark() ? 'Light' : 'Dark'; }
+    btn.addEventListener('click', function () { root.setAttribute('data-theme', isDark() ? 'light' : 'dark'); label(); });
+    label();
+    // Pointer under the middle of the word, as popover.js does, and (new)
+    // slide the popover left when it would run off the right of the window.
+    function place() {
+      document.querySelectorAll('.pop-host').forEach(function (h) {
+        var a = h.firstElementChild, p = h.querySelector('.pop');
+        p.style.left = '0px';
+        var t = a.getBoundingClientRect(), r = p.getBoundingClientRect();
+        var shift = Math.min(0, window.innerWidth - 8 - r.right);
+        shift = Math.max(shift, 8 - r.left);
+        p.style.left = shift + 'px';
+        var x = t.left + t.width / 2 - (r.left + shift) - 1;
+        p.style.setProperty('--pop-x', Math.max(16, Math.min(r.width - 16, x)) + 'px');
+      });
+    }
+    place();
+    window.addEventListener('resize', place);
+    if (document.fonts) document.fonts.ready.then(place);
+    // Escape closes, by moving focus off the word.
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && document.activeElement.closest('.pop-host')) document.activeElement.blur();
+    });
+  })();
+</script>
+</body>
+</html>
