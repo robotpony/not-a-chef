@@ -8,17 +8,25 @@ Local links need the dev server (`/preview`). Each open section's heading carrie
 
 Not questions for now, kept so they aren't lost: the drafts (`make drafts`). The cornmeal-breaded chicken patty research is now a test kitchen recipe, [[Cornmeal fried chicken]].
 
-## Glossary: definitions to write #todo
+## Glossary: drafts to review #todo
 
-Stub files are in `content/reference/glossary/`, one per term, with `title`, `also:` (other forms the tools match) and `date`, and no body yet. Write the definition as the body: the first sentence is the hover, the rest shows on the glossary page. Edit `also:` if a form is wrong or missing, and delete a file to drop the term. An empty stub stays off the site and out of `make glossary-check` (hugo-warped 4d260ae). Once a term has a definition, `make glossary-link` proposes its links one at a time.
+All entries in `content/reference/glossary/` now have a first-draft definition from Claude (2026-10-30), ingredients first as asked. The first sentence of each is its hover. Tick a group once you've read and fixed it; write a change after any term, or delete its file to drop it. **Don't publish until this is done**: drafted entries show on the glossary page.
 
-Picked from `make glossary-candidates` (641 words) as cooking concepts, techniques and food science:
+When a group is done, `make glossary-link` offers its links; `make glossary-check` counts them (453 first mentions today, MSG 45, Deglaze 33, Brine 32).
 
-- [x] [[Al dente]] · [[Aromatics]] · [[Autolyse]] · [[Blanch]] · [[Braise]] · [[Brine]]
-- [x] [[Crowding the pan]] · [[Deglaze]] · [[Doneness]] · [[Dredge]] · [[Emulsify]] · [[Fond]]
-- [x] [[Hydration]] · [[Maillard reaction]] · [[Mise en place]] · [[Panade]] · [[Proofing]] · [[Roux]]
-- [x] [[Sear]] · [[Slurry]] · [[Soffritto]] · [[Tadka]] · [[Umami]] · [[Velveting]]
+Ingredients, uncommon or specific to a cuisine:
 
-Specialty ingredients that came up, not stubbed. Tick any you want, and I'll add stubs: dashi, kombu, bonito, mirin, shoyu, miso, gochujang, togarashi, furikake, tare, ghee, panko, garam masala, kecap manis, diastatic malt, transglutaminase, citric acid, tamarind, passata, inamona, limu, ogo, tobiko, masago.
+- [ ] Japanese: [[Katsuobushi]] (also *bonito flakes*, *bonito*) · [[Kombu]] · [[Dashi]] · [[Mirin]] · [[Shoyu]] · [[Miso]] · [[Togarashi]] · [[Furikake]] · [[Ponzu]] · [[Tobiko]] · [[Masago]]
+- [ ] Korean: [[Gochujang]] · [[Gochugaru]]
+- [ ] Hawaiian: [[Ahi]] · [[Aku]] · [[Limu]] · [[Inamona]] · [[Pa'akai]]
+- [ ] South Asian: [[Ghee]] · [[Garam masala]] · [[Kasuri methi]] (also *methi*) · [[Panch phoron]] · [[Asafoetida]] (also *hing*) · [[Tamarind]] · [[Paneer]]
+- [ ] Other: [[Passata]] · [[Diastatic malt powder]] · [[Transglutaminase]] (also *meat glue*) · [[Citric acid]] · [[MSG]]
 
-- [ ] Add stubs for: 
+Concepts:
+
+- [ ] [[Al dente]] · [[Aromatics]] · [[Autolyse]] · [[Blanch]] · [[Braise]] · [[Brine]]
+- [ ] [[Crowding the pan]] · [[Deglaze]] · [[Doneness]] · [[Dredge]] · [[Emulsify]] · [[Fond]]
+- [ ] [[Hydration]] · [[Maillard reaction]] · [[Mise en place]] · [[Panade]] · [[Proofing]] · [[Roux]]
+- [ ] [[Sear]] · [[Slurry]] · [[Soffritto]] · [[Tadka]] · [[Umami]] · [[Velveting]]
+
+Left out, ask if you want them: tare, gari, chashu and kecap manis (each already has a recipe page); hoisin, kimchi, tahini and sriracha (common enough here); sofrito (the beef base uses it to mean soffritto, so it may be one entry; which did you mean?).
