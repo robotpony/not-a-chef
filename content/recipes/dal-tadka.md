@@ -34,7 +34,7 @@ The [[Tadka|tadka]] is not garnish. Hot fat with spices poured over at the end i
 - 2 tomatoes, chopped
 - 1 tbsp fresh ginger, grated or minced (or 1 tsp paste as a fallback)
 - 1½ tsp turmeric
-- ¾ tsp garam masala
+- ¾ tsp [[Garam masala|garam masala]]
 - ¼ tsp cinnamon (optional, adds warmth)
 - 3–4 garlic cloves, minced
 - salt, to taste
@@ -61,7 +61,7 @@ Warm basmati rice, plain raita, a crunchy salad (tomatoes, onion, cucumber, lime
 
 ### Onion-first dal
 
-Cook a diced onion in oil until golden, then add the garlic, ginger, ground coriander, and turmeric before the lentils go in, so the lentils absorb a more developed flavour. Use the 1:4 ratio for a thicker result. Finish with lemon juice and the [[Garam masala|garam masala]] off the heat. The tadka is simpler: [[Ghee|ghee]], cumin, hing, and a dried red chili. Adapted from [Vice](https://www.vice.com/en/article/dal-tadka-recipe/).
+Cook a diced onion in oil until golden, then add the garlic, ginger, ground coriander, and turmeric before the lentils go in, so the lentils absorb a more developed flavour. Use the 1:4 ratio for a thicker result. Finish with lemon juice and the garam masala off the heat. The tadka is simpler: [[Ghee|ghee]], cumin, hing, and a dried red chili. Adapted from [Vice](https://www.vice.com/en/article/dal-tadka-recipe/).
 
 ### Coconut cream dal
 

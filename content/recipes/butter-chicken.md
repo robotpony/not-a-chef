@@ -25,7 +25,7 @@ This is a BIR-style (British Indian Restaurant) butter chicken, built on a pre-m
 - 2 tablespoons oil (onion oil preferred)
 - 40 g butter, plus more to finish
 - 1 teaspoon [[Ginger/garlic paste]]
-- 2 teaspoons garam masala
+- 2 teaspoons [[Garam masala|garam masala]]
 - 1 tablespoon tomato paste (optional)
 - Sugar, to taste
 - 2 teaspoons methi (dried fenugreek leaves)
@@ -39,7 +39,7 @@ This is a BIR-style (British Indian Restaurant) butter chicken, built on a pre-m
 
 ## Method
 
-Heat oil and butter in a large pan over medium. Add ginger-garlic paste and stir until fragrant, about 1 minute. Add the [[Garam masala|garam masala]] and stir until fragrant, about 1 minute. Add tomato paste if using and stir in.
+Heat oil and butter in a large pan over medium. Add ginger-garlic paste and stir until fragrant, about 1 minute. Add the garam masala and stir until fragrant, about 1 minute. Add tomato paste if using and stir in.
 
 Add the almond powder and a little sugar, and stir until combined and fragrant, 1–2 minutes.
 

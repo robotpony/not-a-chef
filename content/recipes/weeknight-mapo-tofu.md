@@ -30,7 +30,7 @@ I make this for lunch more than dinner, and it's a tasty and quick meal.
 - 2 cloves garlic, thinly sliced
 - 2 green onions, cut into ½ cm pieces (dark greens reserved for garnish)
 - 30 ml (2 tablespoons) sake
-- 30 ml (2 tablespoons) mirin
+- 30 ml (2 tablespoons) [[Mirin|mirin]]
 - 15 ml (1 tablespoon) light soy sauce
 
 #### Protein
@@ -45,7 +45,7 @@ Toast Sichuan peppercorns in a dry pan until fragrant and slightly darkened, abo
 
 Heat oil in a wok over medium-high. Add ginger, then garlic, then green onion whites. Cook until fragrant, about 2 minutes. Add the spice powder and stir briefly.
 
-Drizzle soy along the wok edge. Add sake and [[Mirin|mirin]]. Add beef and break up; stir to combine.
+Drizzle soy along the wok edge. Add sake and mirin. Add beef and break up; stir to combine.
 
 Add stock until the mixture is slightly soupy. Simmer 3–5 minutes. Pour in cornstarch [[Slurry|slurry]] and let thicken.
 

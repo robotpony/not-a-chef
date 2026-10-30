@@ -19,7 +19,7 @@ Two pork stir fries from one method: lemongrass pork, and sweet ginger and garli
 - 5–6 stalks lemongrass, washed, sliced very thin on the bias
 - ½ head garlic, crushed and sliced
 - 1 shallot, sliced fine
-- 1 tbsp each soy sauce, mirin, and rice wine (or rice wine vinegar, or lime juice)
+- 1 tbsp each soy sauce, [[Mirin|mirin]], and rice wine (or rice wine vinegar, or lime juice)
 - 1 tsp baking soda
 - 1–2 tbsp cornstarch
 - salt and pepper, to taste

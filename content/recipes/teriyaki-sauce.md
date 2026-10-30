@@ -13,7 +13,7 @@ This is a simple teriyaki sauce, with some common add-ins. It's simmered until r
 
 Every ingredient scales as a **percentage of the soy sauce ([[Shoyu|shoyu]]) volume**, the base of the formula, so the sauce scales to any batch size. Liquids are by volume and solids by weight: 40% sugar means 40 g per 100 ml shoyu.
 
-The sauce itself is four ingredients: **[[Mirin|mirin]] at 80–100%, sake at 50%, and brown sugar at 40%** of the shoyu. Everything else is seasoning at 5% or less.
+The sauce itself is four ingredients: **mirin at 80–100%, sake at 50%, and brown sugar at 40%** of the shoyu. Everything else is seasoning at 5% or less.
 
 ```formula
 soy       | Shoyu | 100
@@ -28,7 +28,7 @@ caption: % of shoyu; liquids by volume, sugar by weight
 | Ingredient | % of shoyu | Example: 250 ml shoyu |
 |---|---|---|
 | Shoyu (soy sauce) | 100% | 250 ml |
-| Mirin | 80–100% | 200–250 ml |
+| [[Mirin]] | 80–100% | 200–250 ml |
 | Sake | 50% | 125 ml |
 | Brown sugar | 40% | 100 g |
 | [[MSG]] | 1.5% | 3.8 g |

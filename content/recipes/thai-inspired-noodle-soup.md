@@ -21,7 +21,7 @@ A coconut curry noodle soup built on quick-marinated pork (a shortcut to [[Velve
 - 2–3 cups mushrooms (such as shiitake), sliced
 - 3–4 stalks lemongrass, sliced very fine on the bias
 - garlic and shallots, minced fine
-- 2 tbsp each soy sauce, mirin, and rice wine (or wine vinegar, or lime juice)
+- 2 tbsp each soy sauce, [[Mirin|mirin]], and rice wine (or wine vinegar, or lime juice)
 - 1 tbsp fish sauce
 - 1–2 tbsp cane sugar (or any sugar)
 - 1–2 tbsp cornstarch

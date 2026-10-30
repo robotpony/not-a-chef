@@ -23,7 +23,7 @@ Bhajis are a spiced onion fritter bound with egg and gram flour. The potato adds
 - 1 medium potato, julienned
 - 2 green chilies, finely sliced (or ½ teaspoon hot chili powder)
 - 2 teaspoons kosher salt
-- 1 tablespoon curry powder or garam masala
+- 1 tablespoon curry powder or [[Garam masala|garam masala]]
 - 1 teaspoon turmeric
 - ½ teaspoon cumin
 - 1 teaspoon ground coriander

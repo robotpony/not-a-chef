@@ -22,7 +22,7 @@ Making Indian-style dishes quickly is much easier with a few base ingredients pr
 - 1 tbsp ground cumin
 - 1 tbsp kasuri methi
 - ½ tbsp ground chilies
-- ½ tbsp garam masala
+- ½ tbsp [[Garam masala|garam masala]]
 - 1 tsp turmeric
 
 ## Method

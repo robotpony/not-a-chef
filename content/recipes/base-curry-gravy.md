@@ -27,7 +27,7 @@ This is a BIR (British Indian Restaurant) base gravy: a neutral, lightly spiced 
 - ½ large carrot, roughly chopped
 - 250–750 ml water, plus more to adjust consistency
 - 250 ml cream (or coconut cream)
-- 250 ml garam masala water (see Notes)
+- 250 ml [[Garam masala water|garam masala water]] (see Notes)
 - ¼ cup spiced tomato purée (or tomato paste)
 
 #### Spices
@@ -45,7 +45,7 @@ Heat the oil in a large pot over medium-high. Add the ginger/garlic paste and bl
 
 Add the water and all the vegetables. Bring to a simmer, cover, and cook on medium-low until everything is very soft, about 45 minutes. Alternatively, pressure cook on low for 30 minutes.
 
-Add the [[Garam masala|garam masala]] water. Blend smooth with an immersion blender.
+Add the garam masala water. Blend smooth with an immersion blender.
 
 Temper the cream by whisking in a few ladles of hot gravy, then stir it back into the pot. Add water until the gravy coats the back of a spoon: not thick, not watery.
 

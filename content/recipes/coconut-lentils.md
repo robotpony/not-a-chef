@@ -33,7 +33,7 @@ bar: yes
 - 3 cloves garlic, minced
 - 1 tablespoon ginger, grated
 - 2 tablespoons coconut oil or neutral oil
-- 1 tablespoon curry powder or garam masala
+- 1 tablespoon curry powder or [[Garam masala|garam masala]]
 - 1 teaspoon turmeric
 - 1 teaspoon cumin seeds
 - Salt

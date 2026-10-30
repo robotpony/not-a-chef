@@ -32,7 +32,7 @@ Toast the whole spices in a dry pan over medium-low heat, stirring, until fragra
 - 6 tbsp ground coriander
 - 6 tbsp ground cumin
 - 6 tbsp paprika
-- 2 tbsp garam masala (above)
+- 2 tbsp [[Garam masala|garam masala]] (above)
 - 10 tbsp Supreme Bassar curry masala
 
 Mix everything together. Toast very lightly in a dry pan over low heat, stirring, until just fragrant.
