@@ -20,7 +20,7 @@ This is a vegetarian analogue to [[Beef base]]. The **mushrooms must go through 
 ## Ingredients
 
 - 300–400 g cremini mushrooms, finely diced (3–4 cups)
-- 400–500 g sofrito (1¾–2 cups)
+- 400–500 g soffritto (1¾–2 cups)
 - 300 g green or brown lentils (1½ cups)
 - 500 ml vegetable stock (2 cups)
 - 125 ml dry sherry (½ cup)
@@ -38,7 +38,7 @@ This is a vegetarian analogue to [[Beef base]]. The **mushrooms must go through 
 
 Heat oil in a large heavy pot over medium. Add mushrooms and a pinch of salt. Cook without stirring until the liquid releases and evaporates, then stir occasionally until dry and well-browned, 12–15 minutes.
 
-Add [[Sofrito|sofrito]] and continue cooking, stirring regularly. When the mixture begins sticking, add the tomato paste and stir until the paste darkens, about 3 minutes.
+Add [[Soffritto|soffritto]] and continue cooking, stirring regularly. When the mixture begins sticking, add the tomato paste and stir until the paste darkens, about 3 minutes.
 
 Add lentils and stir to coat. Before the bottom burns, [[Deglaze|deglaze]] with sherry, scraping up the browned bits. Add stock.
 

@@ -14,4 +14,3 @@ The first 54 drafts are approved (2026-10-30). These nine were the "left out" li
 
 - [ ] Recipe pages already exist, so each entry links its recipe: [[Tare]] ([[Chashu pork]]) · [[Gari]] · [[Chashu]] · [[Kecap manis]]
 - [ ] Common, defined anyway: [[Hoisin]] · [[Kimchi]] · [[Tahini]] · [[Sriracha]]
-- [ ] [[Sofrito]]: defined as the Spanish and Latin American base (onion, garlic, peppers, tomato). [[Mushroom and lentil freezer base]] uses "sofrito" as an ingredient. If you meant Italian soffritto there, say so, and I'll change the word in that recipe rather than link it.

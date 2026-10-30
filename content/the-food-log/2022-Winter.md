@@ -286,7 +286,7 @@ For fam day:
 
 → [[Mushroom and lentil freezer base]]
 
-I’m working on a vegetarian version of my beef/mushroom/[[Sofrito|sofrito]] base. The goal is a savoury base for weeknight meals, for pasta sauces, soups, tacos, casseroles, etc.
+I’m working on a vegetarian version of my beef/mushroom/[[Soffritto|sofrito]] base. The goal is a savoury base for weeknight meals, for pasta sauces, soups, tacos, casseroles, etc.
 
 (This is an approximate recipe, needs some testing)
 
