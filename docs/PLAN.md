@@ -59,6 +59,22 @@ From a look at RecipeTin Eats (goulash), Serious Eats (homepage, cream slaw), an
 - [ ] "Surprise me": a random recipe, from the recipe index.
 - [ ] Lighter recipe header: a hairline under the title and one small-caps meta line (servings · time · source), Smitten Kitchen's treatment, mocked against the current stat row.
 
+Visual notes from the same look:
+
+- **RecipeTin Eats** is loud on purpose. The recipe is a colour-blocked card (navy header band, round hero photo breaking its top edge), so you always know where it starts. Coral pill buttons for jump links, print, and servings; an icon on every meta fact. Ingredient names in roman, prep notes in grey italic. Steps are numbered circles with a bold lead phrase. Ads set the real hierarchy.
+- **Serious Eats** is an editorial magazine. The personality is in its heading face (Space Grotesk) over a neutral body (Inter); colour is nearly absent (white, near-black, a teal logo, red list bullets), so photos supply it. Small-caps kickers with a rule between them ("EQUIPMENT | 4 HOURS AGO"), a white card over the homepage hero, one warm cream panel for recipe meta, and wide air between steps.
+- **Smitten Kitchen** is the quietest and closest to ours. One face (Franklin Gothic) for everything, hierarchy from size, weight, and colour alone. Lowercase titles in slate blue, small caps for all metadata, dotted and hairline rules where others use boxes, and a grey inset ingredient box as the only filled shape. Big, dark, overhead photos carry the page.
+- **Across all three**: photos lead, at the top and large (ours sit in the sidebar, the biggest difference in feel); a bold lead phrase on steps (two of three); one typographic signature with restraint everywhere else; small caps for metadata (two of three).
+
+## Design v2
+
+Next week (from 2026-11-02). A visual pass over the site first, then the v2 changes, mocked before they're built and recorded in `mockups/STYLE.md` and `style.html` when they land. Template and CSS that belongs to the theme goes to fugu-agent.
+
+- [ ] Visual pass: walk the built site in Chrome (homepage, recipe, drink, essay, method, blueprint, Food Log, glossary, tag pages; both widths, light and dark) and list what feels heavy, crowded, or off against the notes above.
+- [ ] Soften the colour scheme: lower the contrast and saturation of the accent and chip colours, and keep the five hues (`STYLE.md`, "Where the palette comes from"). Mock against the current tokens side by side.
+- [ ] A thin line of images leading the page, under the header: Bruce's idea, to be worked out (which pages, where the images come from, height, how it sits with the sidebar photos).
+- [ ] Fold in the visual candidates above (lighter recipe header, bold step lead phrases) where they fit v2.
+
 ## Mockups
 
 - [ ] Publish `mockups/` as a static subfolder (which mocks, how linked, kept out of search). Bruce ticked it on 2026-10-21 to bring it forward; not built yet (no `static/mockups/`).
