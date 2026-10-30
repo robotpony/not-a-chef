@@ -18,7 +18,7 @@ description: Soy sauce and mirin steeped with bonito flakes, for dipping sushi.
 We discovered this dipping sauce on our travels recently: it adds a subtle, smoky depth to any sushi, and can be used over rice.
 ## Mechanic
 
-The base is **5 parts soy sauce to 3 parts mirin**. Boil the mirin first to cook off its alcohol, then only warm the soy; a hard boil dulls its flavour. The [[Katsuobushi|bonito]] steeps off the heat, like tea: a short steep gives a light, savoury sauce, and a full day gives a deeper smokiness.
+The base is **5 parts soy sauce to 3 parts mirin**. Boil the mirin first to cook off its alcohol, then only warm the soy; a hard boil dulls its flavour. The bonito steeps off the heat, like tea: a short steep gives a light, savoury sauce, and a full day gives a deeper smokiness.
 
 ```formula
 soy   | Soy   | 5
@@ -31,8 +31,8 @@ bar: yes
 
 - 600 ml (2½ cups) [[Mirin|mirin]]
 - 1 tbsp sake, optional, for extra depth
-- 1 L (4 cups) Japanese soy sauce (shoyu)
-- 10–15 g (a large handful) dried bonito flakes (katsuobushi)
+- 1 L (4 cups) Japanese soy sauce ([[Shoyu|shoyu]])
+- 10–15 g (a large handful) dried [[Katsuobushi|bonito flakes]] (katsuobushi)
 
 ## Method
 
@@ -53,6 +53,6 @@ As a dipping sauce for sushi and sashimi, with [[Pickled ginger (gari)]] on the 
 ## Notes
 
 - Keeps in the fridge for up to 2 weeks.
-- Close to nikiri (the sweetened soy sauce brushed onto sushi) and tosa [[Shoyu|shoyu]] (soy sauce seasoned with bonito).
+- Close to nikiri (the sweetened soy sauce brushed onto sushi) and tosa shoyu (soy sauce seasoned with bonito).
 - Halve the recipe for a smaller bottle; the ratio holds.
 - Adapted from a recipe a sushi chef shared with me.

@@ -15,7 +15,7 @@ I love chicken sandwiches. The ground chicken patties bread nicely, but are also
 
 ## Mechanic
 
-**Two separate formulas.** The [[Brine|brine]] is for whole breast fillets pounded thin: the vinegar tenderizes and the salt firms the texture. The ground chicken follows a percentage formula per kilogram, which scales cleanly for larger batches. **Added water and a little baking soda** raise the pH, so the meat holds more moisture and turns springy and substantial, like Vietnamese or Chinese beef balls.
+**Two separate formulas.** The brine is for whole breast fillets pounded thin: the vinegar tenderizes and the salt firms the texture. The ground chicken follows a percentage formula per kilogram, which scales cleanly for larger batches. **Added water and a little baking soda** raise the pH, so the meat holds more moisture and turns springy and substantial, like Vietnamese or Chinese beef balls.
 
 ## Brined breast fillets
 
@@ -26,7 +26,7 @@ I love chicken sandwiches. The ground chicken patties bread nicely, but are also
 - 50 g sugar
 - Chicken breast fillets, pounded to an even thickness
 
-Stir the water, vinegar, salt, MSG, and sugar until dissolved. Submerge the fillets and brine for 30 minutes in the fridge. Pat dry.
+Stir the water, vinegar, salt, MSG, and sugar until dissolved. Submerge the fillets and [[Brine|brine]] for 30 minutes in the fridge. Pat dry.
 
 Pan-fry in a lightly oiled pan over medium-high until golden on both sides and the centre reads 68°C (155°F), about 4 minutes per side depending on thickness.
 

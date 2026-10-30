@@ -26,7 +26,7 @@ This is a one-pot pasta: the pasta cooks directly in the soup, with starch as th
 - 1 celery stalk, diced or grated
 - 1 tablespoon double-concentrated tomato paste
 - 1–2 cups dried shiitake mushrooms, broken into bite-sized pieces
-- 500ml passata (deseeded tomato sauce)
+- 500ml [[Passata|passata]] (deseeded tomato sauce)
 - 120ml (½ cup) dry white wine, for deglazing
 - 180g dried pasta, something hardy (rigatoncini, fusilli, orecchiette)
 - balsamic vinegar, to taste
@@ -45,7 +45,7 @@ Add the onion, carrot, and celery and fry until softened. Stir in the tomato pas
 
 [[Deglaze]] with the white wine, scraping up the fond.
 
-Add the [[Passata|passata]], the remaining meatballs, the reserved mushroom liquid, and enough water to cover everything generously. Bring to a simmer.
+Add the passata, the remaining meatballs, the reserved mushroom liquid, and enough water to cover everything generously. Bring to a simmer.
 
 Add the pasta and cook, stirring occasionally, until it's about 80% done. The starch it sheds is what thickens the soup. Season with balsamic, thyme, oregano, salt, and pepper.
 

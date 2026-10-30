@@ -13,7 +13,7 @@ The chili I grew up with is not the chili of the American South. It's a beany, t
 
 ## Mechanic
 
-**Layers of browned mushrooms** stand in for most of the beef. Cook them until they give up their water, then keep going until they brown and start to stick; that [[Fond|fond]], [[Deglaze|deglazed]] with stock, is the savoury base. Add ground meat or TVP to the same stage if you want it meatier.
+**Layers of browned mushrooms** stand in for most of the beef. Cook them until they give up their water, then keep going until they brown and start to stick; that [[Fond|fond]], deglazed with stock, is the savoury base. Add ground meat or TVP to the same stage if you want it meatier.
 
 ## Ingredients
 
@@ -47,7 +47,7 @@ The chili I grew up with is not the chili of the American South. It's a beany, t
 
 Heat the oil in a large pot over medium. Add the fresh mushrooms and shiitakes and cook until they release their water. If using ground meat or TVP, add it to the wet mushrooms. Keep cooking until the water evaporates and everything browns; the meat stretches this out, but be patient.
 
-Add the onions and cook until soft and translucent. Add the shallot, crushed garlic, celery, carrot (if using), and tomato paste, and sauté until softened. Let the bottom of the pot brown, but not burn, then deglaze with the stock and the shiitake soaking water, scraping up the browned bits. If the soaking water is gritty, strain it, or leave it out.
+Add the onions and cook until soft and translucent. Add the shallot, crushed garlic, celery, carrot (if using), and tomato paste, and sauté until softened. Let the bottom of the pot brown, but not burn, then [[Deglaze|deglaze]] with the stock and the shiitake soaking water, scraping up the browned bits. If the soaking water is gritty, strain it, or leave it out.
 
 Stir in the spice mix. Add the beans, tomatoes, corn, and roasted garlic, and bring to a simmer. Taste and make small adjustments.
 

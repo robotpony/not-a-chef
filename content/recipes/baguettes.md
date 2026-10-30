@@ -14,7 +14,7 @@ Baguettes are a crusty, airy bread, perfect for snacking, sandwiches, and with s
 
 ## Mechanic
 
-**75% [[Hydration|hydration]], a narrow shape, and steam** make the baguette. The wet dough gives an open crumb; the thin shape and a steamy oven let the crust set crisp and brown before the inside dries out. This is more of a method than a specific recipe: the same dough makes several similar breads by varying the rise and oven time.
+**75% hydration, a narrow shape, and steam** make the baguette. The wet dough gives an open crumb; the thin shape and a steamy oven let the crust set crisp and brown before the inside dries out. This is more of a method than a specific recipe: the same dough makes several similar breads by varying the rise and oven time.
 
 ```formula
 flour   | Flour | 100
@@ -28,16 +28,16 @@ bar: yes
 - 10 g instant yeast
 - 375 g water (~30°C)
 - 490 g all-purpose or bread flour
-- 10 g diastatic malt powder (optional, for browning and texture; replace with 10 g flour if omitting)
+- 10 g [[Diastatic malt powder|diastatic malt powder]] (optional, for browning and texture; replace with 10 g flour if omitting)
 - 10 g non-iodized salt
 
 ## Method
 
-This is a high-hydration dough, sticky and easy to deflate, so handle it gently. A stand mixer with a dough hook makes kneading easier, though it can be done by hand. Start to finish takes 5–6 hours, or overnight with a cold rest in the fridge.
+This is a high-[[Hydration|hydration]] dough, sticky and easy to deflate, so handle it gently. A stand mixer with a dough hook makes kneading easier, though it can be done by hand. Start to finish takes 5–6 hours, or overnight with a cold rest in the fridge.
 
 Optionally, bloom the yeast in the water with 50 g of the flour, about 10 minutes.
 
-Combine the remaining flour, salt, and [[Diastatic malt powder|diastatic malt powder]] (if using) in a large bowl with a fork or whisk. Add the water and yeast mixture and stir with a spatula until combined, scraping down the bowl and folding the dough into itself as you work, 5–10 minutes.
+Combine the remaining flour, salt, and diastatic malt powder (if using) in a large bowl with a fork or whisk. Add the water and yeast mixture and stir with a spatula until combined, scraping down the bowl and folding the dough into itself as you work, 5–10 minutes.
 
 Use the [stretch and fold method](https://www.theclevercarrot.com/2020/05/how-to-stretch-and-fold-sourdough/) every 30 minutes for 2 to 2½ hours, until the dough stretches thin enough to see through. Pull each corner of the dough and fold it over itself, gently; a wetted bowl scraper makes this a bit faster than working by hand.
 

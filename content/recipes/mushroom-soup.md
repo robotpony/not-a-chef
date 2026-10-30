@@ -15,7 +15,7 @@ A great bowl of soup, and our replacement for classic canned mushroom soup.
 
 ## Mechanic
 
-Two methods for different results. **Velouté**: a [[Roux|roux]]-thickened cream soup, rich and smooth. **Potage**: a blended potato-thickened version finished with cashew cream, dairy-free and lighter but equally silky. The mushroom base is the same for both.
+Two methods for different results. **Velouté**: a roux-thickened cream soup, rich and smooth. **Potage**: a blended potato-thickened version finished with cashew cream, dairy-free and lighter but equally silky. The mushroom base is the same for both.
 
 ## Mushroom base
 
@@ -43,7 +43,7 @@ Add the broth and simmer for 15 minutes. Finish as a velouté or a potage.
 - 30 g (¼ cup) flour
 - 120 ml (½ cup) cream
 
-In a separate small pan, melt the butter over medium heat. Whisk in the flour and cook, stirring, for 2 minutes. Whisk this roux into the simmering soup and cook until thickened, about 5 minutes. Stir in the cream. Blend partially (leaving some texture) or fully. Season and serve.
+In a separate small pan, melt the butter over medium heat. Whisk in the flour and cook, stirring, for 2 minutes. Whisk this [[Roux|roux]] into the simmering soup and cook until thickened, about 5 minutes. Stir in the cream. Blend partially (leaving some texture) or fully. Season and serve.
 
 ## Potage (dairy-free)
 

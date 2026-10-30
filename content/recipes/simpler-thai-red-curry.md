@@ -18,7 +18,7 @@ This is a simpler version of my Thai curry recipe that works especially well wit
 - ½ cup sugar (cane, brown, or similar)
 - 2–3 cups colourful veggies, such as carrots and sweet potato (roasted) and frozen peas
 - 3 tbsp [[Ginger/garlic paste]]
-- 2 tbsp savoury sauce (miso, soy, or sake)
+- 2 tbsp savoury sauce ([[Miso|miso]], soy, or sake)
 - 1 tin bamboo shoots, drained
 - 1 tin mini corn cobs, drained
 - 2 limes, juiced

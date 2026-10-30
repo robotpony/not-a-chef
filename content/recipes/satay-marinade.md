@@ -22,7 +22,7 @@ This is a simplified satay marinade, great for chicken, tofu, pork, and beef. It
 - ¼ cup brown sugar
 - ¼ cup rice vinegar
 - 2 tbsp soy sauce
-- 1 tsp tamarind paste
+- 1 tsp [[Tamarind|tamarind]] paste
 - 1 lime, juiced and zested
 - ½ bunch cilantro, packed (optional)
 - 1 tbsp fish sauce or Worcestershire (optional)

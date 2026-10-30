@@ -16,7 +16,7 @@ This is a Hawaiian-style pulled pork that doesn't need a BBQ or fire pit, based 
 - 2–3 kg bone-in pork shoulder
 - 2 tbsp [[Bruce's poultry and pork spice rub]]
 - 2 tbsp Knorr chicken bouillon powder (the large jar, not packets or cubes)
-- 2 tsp Hawaiian alaea salt (or coarse salt)
+- 2 tsp Hawaiian [[Pa'akai|alaea]] salt (or coarse salt)
 - 2 tsp Worcestershire sauce
 - 2 tsp liquid smoke
 - banana, taro, ti, or bamboo leaves, enough to wrap the shoulder (optional)

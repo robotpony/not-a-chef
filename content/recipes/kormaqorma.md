@@ -17,12 +17,12 @@ This is a simple korma paste, which is combined with [[Base curry gravy]] and ot
 - 6 tbsp green sultanas
 - 1 tbsp [[Ginger-garlic paste]]
 - 1 tbsp vegetable oil
-- 1 tbsp ghee
+- 1 tbsp [[Ghee|ghee]]
 - Water
 
 ## Method
 
-Heat the oil and [[Ghee|ghee]] in a wide, heavy pot over medium heat. Add the onions and cook slowly, stirring often, until soft and deep golden, 40–60 minutes. Add a splash of water whenever they start to catch.
+Heat the oil and ghee in a wide, heavy pot over medium heat. Add the onions and cook slowly, stirring often, until soft and deep golden, 40–60 minutes. Add a splash of water whenever they start to catch.
 
 Add the ginger-garlic paste and fry until the raw smell is gone, about 1 minute. Add the sultanas and 250 ml (1 cup) water, and simmer until the sultanas are plump, about 5 minutes.
 

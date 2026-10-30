@@ -18,7 +18,7 @@ White beans are an Old World secret for making thick, hearty soups. Blended, the
 - 1 medium yellow onion, diced
 - 2 tbsp tomato paste
 - 2 tbsp olive oil
-- 1 tbsp miso (or light soy sauce)
+- 1 tbsp [[Miso|miso]] (or light soy sauce)
 - 1 tsp coconut sugar or brown sugar, to taste
 - 1 tsp salt
 - freshly ground black pepper, to taste
@@ -33,4 +33,4 @@ Add the broth and scrape up the browned bits. Add the tomatoes, sugar, pepper, a
 
 Take the pot off the heat and let it cool a little. Blend until smooth in a stand blender, or use an immersion blender.
 
-Season with the [[Miso|miso]] or soy, sugar, and salt to taste. Stir in the vegan butter and basil, if using.
+Season with the miso or soy, sugar, and salt to taste. Stir in the vegan butter and basil, if using.

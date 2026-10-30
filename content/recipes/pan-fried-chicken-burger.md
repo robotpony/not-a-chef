@@ -14,7 +14,7 @@ This is a sort of copy-cat recipe of the BK classic chicken sandwich, which is a
 
 ## Mechanic
 
-**Baking soda** raises the pH of the ground chicken, keeping it tender and juicy through a hot fry, the same trick as [[Velveting|velveting]] in Chinese cooking. The double dip through a flour [[Dredge|dredge]] and a loose cornstarch batter before the breadcrumbs is what builds the layered, extra-crunchy shell the BK original is known for.
+**Baking soda** raises the pH of the ground chicken, keeping it tender and juicy through a hot fry, the same trick as [[Velveting|velveting]] in Chinese cooking. The double dip through a flour dredge and a loose cornstarch batter before the breadcrumbs is what builds the layered, extra-crunchy shell the BK original is known for.
 
 ## Patties
 
@@ -46,7 +46,7 @@ Form into patties about 1–2 cm wider than the buns you plan to use; this batch
 #### Breadcrumbs
 - 100g breadcrumbs
 
-Combine the flour, pepper, onion powder, and garlic powder for the dredge. Separately, combine the water, cornstarch, and salt into a loose batter.
+Combine the flour, pepper, onion powder, and garlic powder for the [[Dredge|dredge]]. Separately, combine the water, cornstarch, and salt into a loose batter.
 
 Dredge each patty in the flour mixture, dip into the batter, let the excess drip off, then roll in breadcrumbs until maximally covered. Let sit for 10–20 minutes.
 

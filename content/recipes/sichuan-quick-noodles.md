@@ -26,7 +26,7 @@ The noodles cook in the sauce. Start them in **just enough water to cover** in a
 - 1 tbsp chili-garlic paste
 - 1 tbsp tomato paste
 - 1–2 tsp Sichuan peppercorns, toasted and ground
-- 2 tsp Korean chili flakes (gochugaru)
+- 2 tsp Korean chili flakes ([[Gochugaru|gochugaru]])
 - 1 tbsp fresh ginger, minced
 - 1–2 g [[MSG]] (a small pinch)
 - 150 g cabbage, shredded (about 2 cups)

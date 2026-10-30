@@ -35,7 +35,7 @@ I make this for lunch more than dinner, and it's a tasty and quick meal.
 
 #### Protein
 - 120 g ground beef (precooked or fresh)
-- 60 ml low-sodium chicken stock, dashi, or water
+- 60 ml low-sodium chicken stock, [[Dashi|dashi]], or water
 - 680 g silken tofu (medium-firm), cut into 1.5 cm cubes
 - 1 teaspoon cornstarch + 1 tablespoon cold water, combined into a slurry
 

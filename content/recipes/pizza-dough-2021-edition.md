@@ -12,7 +12,7 @@ This is an improved dough tuned to work easily with a 6 L stand mixer. It's high
 
 ## Mechanic
 
-This is a **high-hydration dough** (~67%), which trades easy handling for better ferment and lift. The **[[Diastatic malt powder|diastatic malt powder]]** supplies enzymes that break starches down into sugars, giving the yeast more to work with and helping the crust brown. If you can't find it (specialty baking stores and online sell it), replace it with the same weight of flour and give the dough a bit more ferment time.
+This is a **high-hydration dough** (~67%), which trades easy handling for better ferment and lift. The **diastatic malt powder** supplies enzymes that break starches down into sugars, giving the yeast more to work with and helping the crust brown. If you can't find it (specialty baking stores and online sell it), replace it with the same weight of flour and give the dough a bit more ferment time.
 
 ```formula
 flour   | Flour | 100
@@ -28,7 +28,7 @@ I don't suggest 00 flour for this recipe unless you have a pizza steel or an ove
 #### Yeast slurry
 - 400 g water, warmish
 - 20 g olive oil, plus more for the container
-- 10 g diastatic malt powder
+- 10 g [[Diastatic malt powder|diastatic malt powder]]
 - 6 g yeast
 
 #### Dry

@@ -29,7 +29,7 @@ Chill for at least 4 hours, preferably overnight.
 
 - 3 tbsp honey
 - 1 tsp lemon juice
-- 1 tbsp Sriracha
+- 1 tbsp [[Sriracha]]
 - 1 tsp cayenne pepper
 
 Whisk the glaze ingredients together in a small bowl and set aside.

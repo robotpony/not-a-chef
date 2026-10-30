@@ -24,7 +24,7 @@ All the flavour of egg rolls without the wrapper: ground pork with cabbage, carr
 - ½ yellow onion, thinly sliced
 - 110 g shredded carrot
 - 60 ml reduced-sodium soy sauce
-- 1 tablespoon sriracha
+- 1 tablespoon [[Sriracha|sriracha]]
 - Kosher salt
 - 1 green onion, thinly sliced
 - 1 tablespoon toasted sesame seeds
@@ -35,7 +35,7 @@ Heat the vegetable oil in a large skillet over medium heat. Add the garlic and g
 
 Add the pork and cook, breaking it into small pieces with a wooden spoon, until browned and cooked through, 8–10 minutes.
 
-Push the pork to the side and pour in the sesame oil. Add the cabbage, onion, and carrot, and stir them into the meat. Add the soy sauce and [[Sriracha|sriracha]]. Cook, stirring often, until the cabbage is tender, 5–8 minutes. Season with salt.
+Push the pork to the side and pour in the sesame oil. Add the cabbage, onion, and carrot, and stir them into the meat. Add the soy sauce and sriracha. Cook, stirring often, until the cabbage is tender, 5–8 minutes. Season with salt.
 
 Divide among bowls. Top with the green onion and sesame seeds.
 

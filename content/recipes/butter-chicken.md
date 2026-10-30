@@ -28,7 +28,7 @@ This is a BIR-style (British Indian Restaurant) butter chicken, built on a pre-m
 - 2 teaspoons [[Garam masala|garam masala]]
 - 1 tablespoon tomato paste (optional)
 - Sugar, to taste
-- 2 teaspoons methi (dried fenugreek leaves)
+- 2 teaspoons [[Kasuri methi|methi]] (dried fenugreek leaves)
 - 500 g chicken thigh or breast, diced and precooked
 
 #### To finish
@@ -49,7 +49,7 @@ Pour in the base curry gravy and stir to combine. Bring to a bare simmer.
 
 Turn off the heat. Temper the yogurt or cream by stirring a few spoonfuls of the hot sauce into it, then stir it into the pan until smooth. Warm gently over low heat until heated through; don't let it boil, or the yogurt may curdle.
 
-Finish with butter, salt, and [[Kasuri methi|methi]]. Taste and adjust.
+Finish with butter, salt, and methi. Taste and adjust.
 
 ## To serve
 

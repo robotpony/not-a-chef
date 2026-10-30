@@ -19,7 +19,7 @@ This is a quick and effective way to marinate chicken and pork. The mayo ensures
 
 For ~2 butterflied chicken breasts.
 
-- 40g mayonnaise (Hellmann's or Kewpie)
+- 40g mayonnaise (Hellmann's or [[Kewpie mayonnaise|Kewpie]])
 - zest of 1 lemon (or a squeeze of lemon juice)
 - 2 cloves garlic (10g minced)
 - ~1g black pepper (10 cranks)
@@ -48,5 +48,5 @@ Serve chicken or pork with rice, a salad, or on a bun.
 - I was skeptical about this technique until Kenji explained that mayo is oil [[Emulsify|emulsified]] with egg and acid, already seasoned with salt.
 - Tested as a pure marinade (not salted separately first). Worked well; slightly salty, very tasty.
 - Reduce salt if using a thinner cut that will marinate longer.
-- [[Kewpie mayonnaise|Kewpie]] is a thick, savoury, enriched Japanese mayonnaise (packaged in a classic squeeze bottle).
+- Kewpie is a thick, savoury, enriched Japanese mayonnaise (packaged in a classic squeeze bottle).
 - Cook chicken to 74°C (165°F) for vulnerable guests.

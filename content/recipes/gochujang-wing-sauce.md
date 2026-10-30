@@ -14,11 +14,11 @@ Sweet, savoury, and warm. Perfect for wings.
 
 ## Mechanic
 
-This is the standard KFC (Korean Fried Chicken) red sauce ratio. The [[Gochujang|gochujang]] provides the base heat and fermented depth; sesame oil and sugar round it out. Everything combines cold: no cooking required, though it can be warmed.
+This is the standard KFC (Korean Fried Chicken) red sauce ratio. The gochujang provides the base heat and fermented depth; sesame oil and sugar round it out. Everything combines cold: no cooking required, though it can be warmed.
 
 ## Ingredients
 
-- 60 ml gochujang (¼ cup)
+- 60 ml [[Gochujang|gochujang]] (¼ cup)
 - 2 tablespoons soy sauce
 - 1 tablespoon rice wine vinegar (or sake)
 - 45 ml dark brown sugar or maple syrup (3 tablespoons)

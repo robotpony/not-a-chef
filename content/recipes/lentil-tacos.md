@@ -15,7 +15,7 @@ A hearty, frugal filling for tacos. Delicious, too.
 
 ## Mechanic
 
-Lightly roasting the nuts before adding them preserves texture inside the filling. **Cook lentils to just [[Al dente|al dente]]**: they will continue softening in the sauce and mushy lentils lose all structure.
+Lightly roasting the nuts before adding them preserves texture inside the filling. **Cook lentils to just al dente**: they will continue softening in the sauce and mushy lentils lose all structure.
 
 ## Ingredients
 
@@ -37,7 +37,7 @@ Lightly roasting the nuts before adding them preserves texture inside the fillin
 
 Heat the oven to 200°C (400°F). Spread the nuts on a tray and roast until fragrant, about 8 minutes. Set aside.
 
-Boil the lentils in salted water until just al dente, about 15 minutes. Drain and set aside.
+Boil the lentils in salted water until just [[Al dente|al dente]], about 15 minutes. Drain and set aside.
 
 Heat the oil in a wide pan over medium. Add the onion and garlic and cook until softened, about 5 minutes. Add the peppers and cook 2 minutes more. Add the tomato paste and stir until it sticks and darkens.
 

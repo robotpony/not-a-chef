@@ -14,7 +14,7 @@ Pulled pork is a great base for dozens of dishes, including sliders, chilies, ta
 
 ## Mechanic
 
-The pork [[Braise|braises]] in stock and [[Aromatics|aromatics]] only; the barbecue sauce is a separate reduction of vinegar, ketchup, and liquid smoke, not the strained braising liquid. Keeping them apart means the sauce flavour doesn't depend on how much fat and pork juice ends up in the pot.
+The pork braises in stock and [[Aromatics|aromatics]] only; the barbecue sauce is a separate reduction of vinegar, ketchup, and liquid smoke, not the strained braising liquid. Keeping them apart means the sauce flavour doesn't depend on how much fat and pork juice ends up in the pot.
 
 ## Ingredients
 
@@ -38,7 +38,7 @@ Bring to high pressure and cook for 45–60 minutes. Let the pressure release na
 
 While the pork depressurizes, simmer the cider vinegar, ketchup, and liquid smoke in a saucepan until slightly thickened, 10–15 minutes. Season with brown sugar, salt, and pepper to taste.
 
-Shred the pork, discarding the fat. Skim the fat from the braising liquid; stir a little into the sauce for extra flavour and body, or discard it.
+Shred the pork, discarding the fat. Skim the fat from the [[Braise|braising]] liquid; stir a little into the sauce for extra flavour and body, or discard it.
 
 ## To serve
 

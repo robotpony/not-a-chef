@@ -15,7 +15,7 @@ A roasted chicken or turkey is a comforting base for a family meal, or for food 
 
 ## Mechanic
 
-Dark and light meat have different target temperatures. Splitting them into separate pans and **starting dark meat 30–45 minutes earlier** solves this without tenting or shielding. No water in the pan: the char marks are deliberate and [[Deglaze|deglaze]] into stock. Two temperatures: low to build internal temp evenly, high to finish and brown.
+Dark and light meat have different target temperatures. Splitting them into separate pans and **starting dark meat 30–45 minutes earlier** solves this without tenting or shielding. No water in the pan: the char marks are deliberate and deglaze into stock. Two temperatures: low to build internal temp evenly, high to finish and brown.
 
 ## Method
 
@@ -25,7 +25,7 @@ Start dark meat in the oven at **150°C (300°F)** for 50–65% of the total coo
 
 Add breasts to a second pan. Raise oven to **220°C (425°F)**. Finish both until dark meat reaches 79–91°C (174–196°F) and the thickest part of the breasts reads 65°C (149°F).
 
-Rest 10 minutes. For bone-in breasts this rest is the safety hold: they stay above 65°C for the 5 minutes chicken needs at that temperature (see [[Food safety: time and temperature]]). Pull boneless breasts at 68°C (154°F) instead, since they cool faster. Deglaze pans with a little water or stock; use the cooking liquid in stock or gravy.
+Rest 10 minutes. For bone-in breasts this rest is the safety hold: they stay above 65°C for the 5 minutes chicken needs at that temperature (see [[Food safety: time and temperature]]). Pull boneless breasts at 68°C (154°F) instead, since they cool faster. [[Deglaze]] pans with a little water or stock; use the cooking liquid in stock or gravy.
 
 ## Timing examples
 

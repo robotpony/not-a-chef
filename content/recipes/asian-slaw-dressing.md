@@ -15,7 +15,7 @@ This is my approximation of an Asian slaw dressing, based on pantry ingredients.
 
 ## Mechanic
 
-A **weight-based [[Emulsify|emulsified]] dressing** at 2:1 oil to acid. The Dijon acts as both flavour and emulsifier; the sesame oil is for aroma, not bulk.
+A **weight-based emulsified dressing** at 2:1 oil to acid. The Dijon acts as both flavour and emulsifier; the sesame oil is for aroma, not bulk.
 
 ```formula
 oil       | Oil  | 2
@@ -37,7 +37,7 @@ bar: yes
 
 ## Method
 
-Whisk everything together, or blend with an immersion blender, until emulsified. Taste and adjust: rice vinegar for brightness, soy for salt, maple for sweetness.
+Whisk everything together, or blend with an immersion blender, until [[Emulsify|emulsified]]. Taste and adjust: rice vinegar for brightness, soy for salt, maple for sweetness.
 
 ## To serve
 

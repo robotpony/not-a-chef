@@ -15,7 +15,7 @@ This is my original pizza dough recipe, based on my memory of doughs I made in r
 
 ## Mechanic
 
-The **vital wheat gluten** supplements bread flour to push gluten content higher, producing a chewier crumb and stronger structure than all-purpose flour alone. A cold ferment of 24–48 hours develops flavour. The [[Autolyse|autolyse]] (30-minute rest before adding salt) speeds gluten development.
+The **vital wheat gluten** supplements bread flour to push gluten content higher, producing a chewier crumb and stronger structure than all-purpose flour alone. A cold ferment of 24–48 hours develops flavour. The autolyse (30-minute rest before adding salt) speeds gluten development.
 
 ## Ingredients
 
@@ -28,7 +28,7 @@ The **vital wheat gluten** supplements bread flour to push gluten content higher
 
 ## Method
 
-Combine the flour, vital wheat gluten, and yeast. Add the water and mix until just combined. Cover and rest 30 minutes (autolyse).
+Combine the flour, vital wheat gluten, and yeast. Add the water and mix until just combined. Cover and rest 30 minutes ([[Autolyse|autolyse]]).
 
 Add salt and sugar. Mix on medium speed for 7 minutes, or knead by hand until a smooth, slightly tacky ball forms.
 

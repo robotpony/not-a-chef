@@ -12,7 +12,7 @@ Many curries have a chunky onion base (like Balti). We use this when riffing on 
 
 ## Ingredients
 
-- 2–3 tbsp ghee or neutral oil
+- 2–3 tbsp [[Ghee|ghee]] or neutral oil
 - ~8 onions
 - 1 green pepper, roughly chopped
 - ~1 cup [[Base curry gravy]]

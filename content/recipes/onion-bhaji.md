@@ -27,8 +27,8 @@ Bhajis are a spiced onion fritter bound with egg and gram flour. The potato adds
 - 1 teaspoon turmeric
 - ½ teaspoon cumin
 - 1 teaspoon ground coriander
-- 1 teaspoon panch phoron (or ½ teaspoon ground fennel + ½ teaspoon ground fenugreek)
-- 1 teaspoon dried fenugreek leaves (kasuri methi)
+- 1 teaspoon [[Panch phoron|panch phoron]] (or ½ teaspoon ground fennel + ½ teaspoon ground fenugreek)
+- 1 teaspoon [[Kasuri methi|dried fenugreek leaves]] (kasuri methi)
 - handful fresh cilantro leaves, roughly chopped
 - 2 tablespoons [[Ginger/garlic paste]]
 - 3 eggs

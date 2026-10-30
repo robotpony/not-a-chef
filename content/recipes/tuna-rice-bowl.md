@@ -23,7 +23,7 @@ This is a simple way to use frozen tuna, cooking quickly, served with easy sides
 
 #### Tuna sauce (for cubing and tossing)
 - 2 tablespoons mayonnaise
-- 1 tablespoon sriracha
+- 1 tablespoon [[Sriracha|sriracha]]
 - 2 teaspoons soy sauce
 - ½ teaspoon rice wine vinegar
 - ½ teaspoon toasted sesame oil
@@ -42,7 +42,7 @@ This is a simple way to use frozen tuna, cooking quickly, served with easy sides
 - steamed rice or quinoa
 - cucumber, thinly sliced or lightly pickled
 - green onions, for garnish
-- kimchi (optional)
+- [[Kimchi|kimchi]] (optional)
 
 ## Method
 
@@ -56,7 +56,7 @@ Cube the tuna and toss with the tuna sauce.
 
 ## To serve
 
-Spoon rice into bowls. Add cucumber, dressed lightly with some of the bowl dressing. Top with tuna and green onions. Drizzle remaining bowl dressing over everything. Add [[Kimchi|kimchi]] if using.
+Spoon rice into bowls. Add cucumber, dressed lightly with some of the bowl dressing. Top with tuna and green onions. Drizzle remaining bowl dressing over everything. Add kimchi if using.
 
 ## Notes
 

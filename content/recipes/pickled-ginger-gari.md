@@ -19,7 +19,7 @@ draft: false
 
 ## Mechanic
 
-Thin slices and a hot pickle do the work. Shave the ginger **0.5 mm (1/64 in), never more than 1 mm**, so it turns tender instead of fibrous. A one-minute [[Blanch|blanch]] and the hot amazu poured over both soften the ginger's bite. Young ginger has pink tips that tint the whole jar pale pink in the vinegar; mature ginger stays yellow. The amazu is **equal parts konbu [[Dashi|dashi]] and rice vinegar**, sweetened with 5 tbsp sugar per 240 ml (1 cup) of liquid.
+Thin slices and a hot pickle do the work. Shave the ginger **0.5 mm (1/64 in), never more than 1 mm**, so it turns tender instead of fibrous. A one-minute [[Blanch|blanch]] and the hot amazu poured over both soften the ginger's bite. Young ginger has pink tips that tint the whole jar pale pink in the vinegar; mature ginger stays yellow. The amazu is **equal parts konbu dashi and rice vinegar**, sweetened with 5 tbsp sugar per 240 ml (1 cup) of liquid.
 
 ```formula
 water     | Dashi   | 1
@@ -35,7 +35,7 @@ bar: yes
 
 ## Amazu
 
-- 120 ml (½ cup) konbu dashi
+- 120 ml (½ cup) konbu [[Dashi|dashi]]
 - 120 ml (½ cup) rice vinegar
 - 5 tbsp sugar
 - ½ tsp salt

@@ -20,7 +20,7 @@ This is a sweet, barbecued Korean beef dish that is typically made with boneless
 - 2 tbsp sesame oil
 - 1 tbsp toasted sesame seeds
 - 4 tbsp soy sauce
-- 1 tbsp gochugaru
+- 1 tbsp [[Gochugaru|gochugaru]]
 - 2 tbsp brown sugar
 - ½ tsp [[MSG]]
 - Salt and pepper

@@ -19,7 +19,7 @@ Classic takeout garlic broccoli is very simple, and delicious.
 - 5 cloves garlic, thinly sliced
 - 1 tablespoon neutral oil
 - 1 tablespoon Shaoxing wine
-- 250 ml vegetable stock, chicken stock, or dashi
+- 250 ml vegetable stock, chicken stock, or [[Dashi|dashi]]
 - ⅛ teaspoon white pepper
 - ½ teaspoon sesame oil
 - 1 teaspoon cornstarch + 1 tablespoon cold water, combined into a slurry

@@ -20,7 +20,7 @@ This is a mildly spicy, warm, and tangy wing sauce.
 - 2 tablespoons soy sauce
 - 1½ tablespoons [[Vindaloo paste]]
 - 1–2 tablespoons extra-virgin olive oil
-- 2 teaspoons mild chili flakes (Korean gochugaru worked well)
+- 2 teaspoons mild chili flakes (Korean [[Gochugaru|gochugaru]] worked well)
 - 2 teaspoons garlic, minced or grated
 - 2 teaspoons onion, minced or grated
 - 2 teaspoons fresh ginger, minced or grated

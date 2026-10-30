@@ -16,7 +16,7 @@ A scalable, by-weight meatball for spaghetti, [[Braise|braises]], and the freeze
 
 ## Mechanic
 
-A meatball is a protein base, binders, moisteners ([[Panade|panade]]), and flavourings. The panade, breadcrumbs soaked in liquid, keeps the meatball from drying out. Grated onion (not diced) disappears into the mix and adds moisture. The percentages below are by weight, relative to 1 kg of ground meat, so the recipe scales to any quantity.
+A meatball is a protein base, binders, moisteners (panade), and flavourings. The panade, breadcrumbs soaked in liquid, keeps the meatball from drying out. Grated onion (not diced) disappears into the mix and adds moisture. The percentages below are by weight, relative to 1 kg of ground meat, so the recipe scales to any quantity.
 
 ## Ingredients
 
@@ -40,7 +40,7 @@ Based on 1 kg ground meat:
 
 ## Method
 
-Combine breadcrumbs and liquid (water, stock, or a mix with cream, buttermilk, or sour cream). Let soak until absorbed. This is the *panade*.
+Combine breadcrumbs and liquid (water, stock, or a mix with cream, buttermilk, or sour cream). Let soak until absorbed. This is the *[[Panade|panade]]*.
 
 Grind or measure spices and herbs. Add to the panade along with grated onion and garlic. Mix to combine.
 

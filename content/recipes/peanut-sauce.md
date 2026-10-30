@@ -14,7 +14,7 @@ A good peanut sauce is perfect with salad rolls and satay.
 
 ## Ingredients
 
-- 150g (½ cup) hoisin sauce
+- 150g (½ cup) [[Hoisin|hoisin]] sauce
 - 60g (¼ cup) peanut butter
 - 2 tablespoons rice vinegar
 - 2 cloves garlic, grated

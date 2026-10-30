@@ -21,7 +21,7 @@ Ratio: 1 = 60 ml / ¼ cup
 
 - 1 part soy sauce
 - 1 part oyster sauce
-- 1 part sweet soy sauce (or hoisin in a pinch)
+- 1 part sweet soy sauce (or [[Hoisin|hoisin]] in a pinch)
 - 1 part honey (or maple syrup)
 - 2 parts brown sugar
 - ⅓ part five-spice powder

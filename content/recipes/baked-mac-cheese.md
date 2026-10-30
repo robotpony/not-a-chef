@@ -13,7 +13,7 @@ This is a classic baked mac and cheese. You can sub in pretty much any combo of 
 
 ## Mechanic
 
-A **mornay** is a béchamel ([[Roux|roux]] plus milk) with cheese melted into it. A roux is flour and fat, 1:1. The sauce breaks and turns gritty if it overheats, so the cheese goes in off the heat and the bake stops at bubbling.
+A **mornay** is a béchamel (roux plus milk) with cheese melted into it. A roux is flour and fat, 1:1. The sauce breaks and turns gritty if it overheats, so the cheese goes in off the heat and the bake stops at bubbling.
 
 ```formula
 butter flour | Roux   | 1:1
@@ -55,7 +55,7 @@ Cook the noodles until 1–2 minutes short of [[Al dente|al dente]]; they finish
 
 <!-- Private worksheet (to import): https://docs.google.com/spreadsheets/d/1WioIgoLJITdosYp3fU7KlhytJqeXLdIpIVPg8ClIGTM/edit?gid=531465660#gid=531465660 -->
 
-Combine the grated cheeses and weigh them to work out the MSG and sodium citrate. Over low heat, stir the butter and flour into a blonde roux. Slowly whisk in the milk until you have a smooth, lightly thickened béchamel. Whisk in the sodium citrate, if using, until dissolved.
+Combine the grated cheeses and weigh them to work out the MSG and sodium citrate. Over low heat, stir the butter and flour into a blonde [[Roux|roux]]. Slowly whisk in the milk until you have a smooth, lightly thickened béchamel. Whisk in the sodium citrate, if using, until dissolved.
 
 Take the pot off the heat. Add most (not all) of the cheese a handful at a time, stirring until silky. Keep it off the heat so it doesn't break.
 

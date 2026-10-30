@@ -15,7 +15,7 @@ This is our classic-style beef stew. I tend to make it as a base now, skipping t
 
 ## Mechanic
 
-Brown the beef in batches without [[Crowding the pan|crowding]]; you want a [[Sear|sear]], not a steam. The [[Fond|fond]] that builds on the bottom of the pot is the stew's backbone; the wine [[Deglaze|deglaze]] lifts all of it. Making this as a minimal stew, without vegetables in the [[Braise|braise]], means you can cook it longer without anything going mushy and serve it over whatever you have on hand.
+Brown the beef in batches without crowding; you want a sear, not a steam. The [[Fond|fond]] that builds on the bottom of the pot is the stew's backbone; the wine deglaze lifts all of it. Making this as a minimal stew, without vegetables in the [[Braise|braise]], means you can cook it longer without anything going mushy and serve it over whatever you have on hand.
 
 ## Ingredients
 
@@ -43,9 +43,9 @@ Brown the beef in batches without [[Crowding the pan|crowding]]; you want a [[Se
 
 Season the beef generously with salt, pepper, and smoked paprika if using. Toss with the flour until lightly coated.
 
-Heat fat in a large Dutch oven or pressure cooker over medium-high. Sear beef in batches until deeply browned on all sides, 3–4 minutes per side. Don't crowd the pan. Remove and reserve with any drippings.
+Heat fat in a large Dutch oven or pressure cooker over medium-high. [[Sear]] beef in batches until deeply browned on all sides, 3–4 minutes per side. Don't [[Crowding the pan|crowd the pan]]. Remove and reserve with any drippings.
 
-Add mushrooms with a little more fat. Cook until they release their liquid and begin to brown. Add onions and leeks and cook until soft. Stir in tomato paste and cook until fragrant, about 1 minute. Add garlic and cook 30 seconds. Deglaze with the wine, scraping up all the browned bits from the bottom.
+Add mushrooms with a little more fat. Cook until they release their liquid and begin to brown. Add onions and leeks and cook until soft. Stir in tomato paste and cook until fragrant, about 1 minute. Add garlic and cook 30 seconds. [[Deglaze]] with the wine, scraping up all the browned bits from the bottom.
 
 Add the Worcestershire, stock, any flavour enhancers, and the reserved beef with its drippings. Nestle in the herb bundle. Bring to a simmer.
 

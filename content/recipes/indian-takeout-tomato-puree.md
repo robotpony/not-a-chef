@@ -20,7 +20,7 @@ Making Indian-style dishes quickly is much easier with a few base ingredients pr
 - 2 tbsp English-style curry powder
 - 1½ tsp ground coriander
 - 1 tbsp ground cumin
-- 1 tbsp kasuri methi
+- 1 tbsp [[Kasuri methi|kasuri methi]]
 - ½ tbsp ground chilies
 - ½ tbsp [[Garam masala|garam masala]]
 - 1 tsp turmeric

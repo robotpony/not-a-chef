@@ -25,7 +25,7 @@ This is a quick version of ginger beef, great in rice bowls.
 - 1 shallot, minced
 - 60 ml (¼ cup) soy sauce
 - 2 limes, juiced
-- 2 tablespoons sriracha
+- 2 tablespoons [[Sriracha|sriracha]]
 - 1 tablespoon fish sauce
 - 1 tablespoon neutral oil
 - kosher salt
@@ -40,7 +40,7 @@ Fry ginger until fragrant, about 1 minute. Add garlic and shallot; cook until so
 
 Drizzle soy around the edge of the wok. Add lime juice. Add beef and break up, cooking until no pink remains and the edges have some colour.
 
-Add fish sauce and [[Sriracha|sriracha]]. Toss and reduce briefly until the sauce clings and the mixture looks slightly glossy.
+Add fish sauce and sriracha. Toss and reduce briefly until the sauce clings and the mixture looks slightly glossy.
 
 If using carrots, stir-fry them separately until crisp-tender, then toss them in with the beef.
 
