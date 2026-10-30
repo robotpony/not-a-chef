@@ -53,6 +53,9 @@ Project slash commands are in `.claude/commands/`. See docs/DESIGN.md for descri
 - `/publish` — build and deploy
 - `/food-log-summary` — write or refresh a Food Log month's opening summary paragraph (the card intro on the listing page and homepage)
 - `/image-add` — add photos to a recipe, essay, or Food Log page
+- `/glossary-link` — link glossary terms on their first mention, one term per table, reviewed in chat
+- `/glossary-new` — add glossary entries with a first-draft definition for review
+- `/glossary-candidates` — find words worth adding, pruned to uncommon and cuisine-specific ingredients, then techniques
 - `/migrate` — retired; ran `tools/migrate.py` for the old two-vault workflow
 
 ## Commits

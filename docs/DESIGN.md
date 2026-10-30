@@ -220,6 +220,41 @@ Writes or refreshes a Food Log month's opening summary paragraph.
 - This paragraph is what the recipe-card intro fallback picks up, so it's what shows on the Food Log list page and the homepage's "From the food log" band
 - Run on demand, not automatically — the log gets small edits constantly and re-summarizing on every one would be noisy
 
+### `/glossary-link`
+
+Links glossary terms on their first prose mention, reviewed in chat one term at a time. The chat side of `make glossary-link`.
+
+```
+/glossary-link [term | next | status]
+```
+
+- Reads the proposals from `glossary.py link --check --json` (hugo-warped), fresh each time
+- Shows one numbered table per term, flags rows that look wrong (another sense of the word, a bold step label), and waits for `all`, `all but 3`, `never 3`, `only 1 2` or `skip`
+- Writes `[[Title]]` or `[[Title|words]]` on each line, adds never pairs to `tools/glossary-skip.txt`, and commits only those files
+
+### `/glossary-new`
+
+Adds glossary entries to `content/reference/glossary/`, each with a first-draft definition.
+
+```
+/glossary-new "Term" ["Another term" …]
+```
+
+- Refuses a term or form another entry already has; sets `also:` from the forms in use
+- Drafts from how the cookbook already uses the word; the first sentence is the hover
+- Queues the drafts in `docs/REVIEW.md` for Bruce
+
+### `/glossary-candidates`
+
+Finds words worth adding to the glossary.
+
+```
+/glossary-candidates [min pages]
+```
+
+- Runs `glossary.py candidates`, then prunes: uncommon or cuisine-specific ingredients first, then techniques, nothing else
+- Writes the short list to `docs/REVIEW.md`; a ticked group goes to `/glossary-new`
+
 ---
 
 ## Migration tool CLI (retired)
