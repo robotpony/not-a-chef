@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Softer colour, full</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700&family=Lora:ital,wght@0,400;1,400&family=IBM+Plex+Mono:wght@500&display=swap');
+
+  /* Full mock (2026-10-30) of Bruce's first take from soft-colour.html:
+   * real built pages, as built beside the same page with
+   * soft-colour/soft.css injected. Needs mockups/serve.py (same origin as
+   * public/); opened as a file, the frames stay blank. */
+
+  :root { --bg:#E9E9E0; --ink:#23241E; --muted:#63645A; --rule:#CFCFC0; --panel:#F3F3EC; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg:#121310; --ink:#ECEEE2; --muted:#A9AB99; --rule:#383A2C; --panel:#1B1C16; }
+  }
+  :root[data-theme="dark"] { --bg:#121310; --ink:#ECEEE2; --muted:#A9AB99; --rule:#383A2C; --panel:#1B1C16; }
+
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: 'Libre Franklin', sans-serif; display: flex; flex-direction: column; }
+  header { padding: 14px 16px 10px; display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; border-bottom: 1px solid var(--rule); }
+  h1 { font-size: 1.05rem; margin: 0; }
+  .note { font-family: 'Lora', serif; font-size: .82rem; color: var(--muted); margin: 0; flex-basis: 100%; }
+  .group { display: flex; gap: 4px; align-items: center; flex-wrap: wrap; }
+  .group > span { font-size: .62rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin-right: 4px; }
+  .pill { font: inherit; font-size: .76rem; font-weight: 600; padding: 5px 11px; border-radius: 14px; border: 1px solid var(--rule); background: transparent; color: var(--ink); cursor: pointer; }
+  .pill[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  select { font: inherit; font-size: .78rem; padding: 5px 8px; border-radius: 4px; border: 1px solid var(--rule); background: var(--panel); color: var(--ink); max-width: 100%; }
+  .path { font-family: 'IBM Plex Mono', monospace; font-size: .72rem; color: var(--muted); }
+  main { flex: 1; display: grid; gap: 1px; background: var(--rule); min-height: 0; }
+  main.side { grid-template-columns: 1fr 1fr; }
+  main.flip { grid-template-columns: 1fr; }
+  main.flip .pane.hidden { display: none; }
+  .pane { display: flex; flex-direction: column; background: var(--bg); min-width: 0; min-height: 0; }
+  .pane-label { font-size: .62rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); padding: 6px 12px; }
+  iframe { flex: 1; width: 100%; border: 0; background: #fff; min-height: 70vh; }
+  footer { padding: 8px 16px; font-size: .72rem; color: var(--muted); display: flex; gap: 12px; border-top: 1px solid var(--rule); }
+  @media (max-width: 820px) { main.side { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Softer colour, full mock</h1>
+  <div class="group">
+    <span>Page</span>
+    <select id="page">
+      <option value="/">Homepage</option>
+      <option value="/recipes/">Recipes list</option>
+      <option value="/recipes/veg-patties/">Recipe, test kitchen (Veg patties)</option>
+      <option value="/recipes/butter-chicken/">Recipe with cuisine (Butter chicken)</option>
+      <option value="/recipes/baguettes/">Recipe with formula (Baguettes)</option>
+      <option value="/drinks/">Drinks</option>
+      <option value="/methods/">Methods</option>
+      <option value="/methods/burgers/">Blueprint (Burgers)</option>
+      <option value="/methods/burgers/builds/smash/">Build (Smash burger)</option>
+      <option value="/tags/win-the-fridge/">Principle tag (Win the fridge)</option>
+      <option value="/reference/glossary/">Glossary</option>
+      <option value="/the-food-log/2026-october/">Food Log (October)</option>
+      <option value="/essays/">Essays</option>
+    </select>
+    <span class="path" id="path"></span>
+  </div>
+  <div class="group" role="group" aria-label="Layout">
+    <span>View</span>
+    <button class="pill" data-view="side" aria-pressed="true">Side by side</button>
+    <button class="pill" data-view="flip" aria-pressed="false">Flip</button>
+    <button class="pill" id="flip" hidden>Showing softened (press F)</button>
+  </div>
+  <div class="group" role="group" aria-label="Theme">
+    <span>Theme</span>
+    <button class="pill" data-t="light" aria-pressed="true">Light</button>
+    <button class="pill" data-t="dark" aria-pressed="false">Dark</button>
+  </div>
+  <p class="note">Left: the site as built. Right: the same page with <code>soft-colour/soft.css</code>, Bruce's first take from <code>soft-colour.html</code>. Links work in either frame and the other follows. Header and prose colours that come from Blowfish's ramp aren't covered yet.</p>
+</header>
+<main class="side" id="main">
+  <div class="pane" id="pane-a"><div class="pane-label">As built</div><iframe id="a" title="As built"></iframe></div>
+  <div class="pane" id="pane-b"><div class="pane-label">Softened</div><iframe id="b" title="Softened"></iframe></div>
+</main>
+<footer><span>© 2026 Bruce Alderson</span><span>Built in Canada 🇨🇦</span></footer>
+
+<script>
+  const a = document.getElementById('a'), b = document.getElementById('b');
+  const pageSel = document.getElementById('page'), pathEl = document.getElementById('path');
+  const main = document.getElementById('main'), flipBtn = document.getElementById('flip');
+  let theme = 'light', showing = 'b';
+
+  function pathOf(f) { try { const l = f.contentWindow.location; return l.pathname + l.hash; } catch (e) { return null; } }
+  function setTheme(f) {
+    try {
+      const d = f.contentDocument.documentElement;
+      d.classList.toggle('dark', theme === 'dark');
+    } catch (e) {}
+  }
+  function inject(f) {
+    try {
+      const doc = f.contentDocument;
+      if (doc.getElementById('soft-colour-css')) return;
+      const l = doc.createElement('link');
+      l.id = 'soft-colour-css'; l.rel = 'stylesheet'; l.href = '/mockups/soft-colour/soft.css?' + Date.now();
+      doc.head.appendChild(l);
+    } catch (e) {}
+  }
+  function go(path) {
+    if (pathOf(a) !== path) a.src = path;
+    if (pathOf(b) !== path) b.src = path;
+  }
+  a.addEventListener('load', () => {
+    setTheme(a);
+    const p = pathOf(a); pathEl.textContent = p || '';
+    if (p && pathOf(b) !== p) b.src = p;
+  });
+  b.addEventListener('load', () => {
+    inject(b); setTheme(b);
+    const p = pathOf(b);
+    if (p && pathOf(a) !== p) a.src = p;
+  });
+  pageSel.addEventListener('change', () => go(pageSel.value));
+
+  document.querySelectorAll('[data-t]').forEach(btn => btn.addEventListener('click', () => {
+    theme = btn.dataset.t;
+    document.documentElement.setAttribute('data-theme', theme);
+    document.querySelectorAll('[data-t]').forEach(x => x.setAttribute('aria-pressed', String(x === btn)));
+    setTheme(a); setTheme(b);
+  }));
+
+  function applyFlip() {
+    document.getElementById('pane-a').classList.toggle('hidden', main.classList.contains('flip') && showing === 'b');
+    document.getElementById('pane-b').classList.toggle('hidden', main.classList.contains('flip') && showing === 'a');
+    flipBtn.textContent = (showing === 'b' ? 'Showing softened' : 'Showing as built') + ' (press F)';
+  }
+  document.querySelectorAll('[data-view]').forEach(btn => btn.addEventListener('click', () => {
+    main.className = btn.dataset.view;
+    flipBtn.hidden = btn.dataset.view !== 'flip';
+    document.querySelectorAll('[data-view]').forEach(x => x.setAttribute('aria-pressed', String(x === btn)));
+    applyFlip();
+  }));
+  function toggle() { showing = showing === 'b' ? 'a' : 'b'; applyFlip(); }
+  flipBtn.addEventListener('click', toggle);
+  document.addEventListener('keydown', e => { if ((e.key === 'f' || e.key === 'F') && main.classList.contains('flip') && e.target.tagName !== 'SELECT') toggle(); });
+
+  document.documentElement.setAttribute('data-theme', theme);
+  go(pageSel.value);
+</script>
+</body>
+</html>

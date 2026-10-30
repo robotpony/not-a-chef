@@ -1,0 +1,94 @@
+/* Softer colour: Bruce's first take (2026-10-30), as an override on the
+ * built site. mockups/soft-colour-full.html injects it into real pages;
+ * it is also the spec for the build (tokens into custom.css and STYLE.md,
+ * component rules into custom.css or Fugu).
+ *
+ * Kept from mockups/soft-colour.html's mixer:
+ *   softer neutrals, lighter backgrounds, softer hues; cuisine, test
+ *   kitchen, principle and method chips as text; stat numbers in ink;
+ *   test kitchen banner as rules; quantities as accent text.
+ * Left as built: tags (outlined), food colours (--kit-*, --sear).
+ *
+ * html:root and html.dark outrank custom.css's :root and .dark.
+ * Blowfish's own Tailwind ramp (css/schemes/not-a-chef.css) isn't touched,
+ * so prose and header colours that come from it stay as built. */
+
+html:root {
+  --bg: #F8F8F3;
+  --surface: #FDFDFA;
+  --surface-2: #F0F0E8;
+  --ink: #2B2C25;
+  --ink-muted: #6A6B61;
+  --ink-faint: #9A9B90;
+  --border: #E0E0D3;
+  --border-strong: #CDCEBD;
+
+  --accent: #A8865A;
+  --accent-strong: #8A4F37;
+  --accent-soft: #F3ECE2;
+  --focus: #A8865A;
+  --highlight: #8E7C46;
+  --highlight-soft: #F2EFE1;
+  --flag: #56708E;
+  --flag-soft: #E7EBEF;
+  --principle: #4A7D62;
+  --principle-strong: #3D6852;
+  --principle-soft: #E4EEE8;
+}
+
+html.dark {
+  --bg: #22231C;
+  --surface: #282920;
+  --surface-2: #1D1E17;
+  --ink: #E2E4D8;
+  --ink-muted: #A2A493;
+  --ink-faint: #737468;
+  --border: #33352A;
+  --border-strong: #45473A;
+
+  --accent: #BF9D72;
+  --accent-strong: #D6A992;
+  --accent-soft: #2E2620;
+  --focus: #BF9D72;
+  --highlight: #C9BC8A;
+  --highlight-soft: #2B2820;
+  --flag: #93A9C0;
+  --flag-soft: #20252C;
+  --principle: #8DBBA2;
+  --principle-strong: #9FC7B1;
+  --principle-soft: #1F2C25;
+}
+
+/* Chips as text: no fill, no outline, padding only on the tags beside them. */
+html .cuisine-chip,
+html .principle-chip,
+html .method-chip,
+html .dev-chip { background: none; padding-inline: 0; }
+html .rcard-top .dev-chip { border-color: transparent; padding-inline: 0; }
+html .rcard-top .cuisine-chip,
+html .rcard-top .principle-chip,
+html .rcard-top .method-chip { padding-inline: 0; }
+html .rcard-top { gap: 8px; }
+/* Hover: an underline in the chip's own colour, since there's no fill to ring. */
+html a.cuisine-chip:hover, html a.cuisine-chip:focus-visible,
+html a.principle-chip:hover, html a.principle-chip:focus-visible,
+html a.method-chip:hover, html a.method-chip:focus-visible,
+html a.dev-chip:hover, html a.dev-chip:focus-visible { box-shadow: none; text-decoration: underline; text-underline-offset: 3px; }
+
+/* Stat numbers in ink. */
+html .rcard-stat span,
+html .home-row-link em { color: var(--ink); }
+
+/* Test kitchen banner as two rules. */
+html .dev-strip {
+  background: none;
+  border: 0;
+  border-top: 1px solid color-mix(in srgb, var(--flag) 45%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--flag) 45%, transparent);
+  border-radius: 0;
+  padding: 9px 0;
+}
+
+/* Quantities as accent text, no wash. */
+html .qty,
+html .temp { background: none; color: var(--accent-strong); padding: 0; }

@@ -64,6 +64,13 @@ in a browser — no build step.
   the clipboard as requirements text. B's tokens are a first guess and
   untested for contrast.
 
+- **`soft-colour-full.html`**: full mock (2026-10-30) of Bruce's first
+  take from `soft-colour.html`: real built pages, as built beside the same
+  page with `soft-colour/soft.css` injected (side by side, or flip with F;
+  light and dark). Needs `serve.py`, which serves `public/` at `/` and this
+  folder at `/mockups/` on one origin. `soft.css` holds the draft tokens
+  and component rules; the requirements are in PLAN.md's Design v2.
+
 - **`scale-callout.html`**: proposal (2026-10-07) to redraw the recipe
   scale/units menu as a callout with a `^` pointer to the gear, a restyled
   slider with step labels, and units as a drop list (segmented control

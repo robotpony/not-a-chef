@@ -72,6 +72,15 @@ Next week (from 2026-11-02). A visual pass over the site first, then the v2 chan
 
 - [ ] Visual pass: walk the built site in Chrome (homepage, recipe, drink, essay, method, blueprint, Food Log, glossary, tag pages; both widths, light and dark) and list what feels heavy, crowded, or off against the notes above.
 - [ ] Soften the colour scheme: lower the contrast and saturation of the accent and chip colours, and keep the five hues (`STYLE.md`, "Where the palette comes from"). Mock against the current tokens side by side.
+  Bruce's first take (2026-10-30), from the mixer in `mockups/soft-colour.html`; full mock in `mockups/soft-colour-full.html` (run `mockups/serve.py`), override and draft tokens in `mockups/soft-colour/soft.css`:
+  - Tokens: softer neutrals (ink a step lighter, borders nearer the page), lighter backgrounds (page and cards a step lighter; in dark, a step less dark), and all five hues pulled toward the neutrals, in light and dark.
+  - Cuisine, test kitchen, principle, and method chips become coloured text, with no fill or outline. Tags keep their outline.
+  - Card stat numbers (and the homepage essay reading times) go to ink; the accent stays on links, ratios, formula numbers, and quantities.
+  - The test kitchen banner becomes two hairline rules in the draft blue instead of a filled box.
+  - Quantities in recipes become accent text with no wash behind them, matching the formula diagrams.
+  - The principle callout loses its fill, if one is built (the site has none today).
+  - Diagrams stay as built: the food colours (`--kit-*`, `--sear`) don't change. Formula icons, operators, the bun, and the timeline soften with the tokens.
+  - Still open: a WCAG contrast check on the softer tokens (the yellow and `--ink-faint` are most at risk); text-chip hover (the mock underlines); Blowfish's ramp (`css/schemes/not-a-chef.css`) for header and prose colours; then `STYLE.md`, `style.html`, and the Fugu handoff for anything in its CSS.
 - [ ] A thin line of images leading the page, under the header: Bruce's idea, to be worked out (which pages, where the images come from, height, how it sits with the sidebar photos).
 - [ ] Fold in the visual candidates above (lighter recipe header, bold step lead phrases) where they fit v2.
 
