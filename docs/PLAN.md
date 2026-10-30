@@ -44,6 +44,9 @@ Drinks got their own section on 2026-10-27 (`content/drinks/`, Fugu 356fad8). Di
 
 *Idea (2026-10-29).* A page, or a set of pages, explaining the cookbook's concepts (ratios, carryover, fond, winning the fridge), plus a script that finds those keywords in body text and gives them a hover. Today only an explicit `[[Term]]` gets a popover (render-link → `concept/pop.html`, `popover.js`, from the glossary or a reference essay); the script would cover plain mentions with no link.
 
+Mock: `mockups/glossary.html` (2026-10-30); the open questions are in `docs/REVIEW.md`.
+
+- [ ] Fugu bug found while mocking: on a phone, a popover on a word near the right edge runs off screen (`.pop` is `left: 0`, 260px wide, and `popover.js` only flips it up or down). fugu-agent's change: slide it left to stay inside the window, as the mock does.
 - [ ] Decide the home: grow `content/reference/glossary.md` and the reference essays, or a `concepts/` set with one page per concept.
 - [ ] Keyword hover: Hugo emits the term list (title, aliases, one-line definition, URL) as JSON; the script marks the first mention per page, skips headings, links, code and fences, and reuses the existing popover look.
 - [ ] Other sites could use it (w42), so it may belong in warped.js (`~/projects/sites/warped.js`) rather than Fugu. Its agent isn't running: take it there as a proposal (`docs/proposals/`) when it is.
