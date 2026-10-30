@@ -1,0 +1,2 @@
+# Glossary marks never to propose: "path/under/content.md | Term" (hugo-warped tools/glossary.py link).
+essays/food-memories/camp-cooking.md | Fond

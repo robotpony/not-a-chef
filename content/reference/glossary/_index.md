@@ -5,6 +5,11 @@ tags: [reference, glossary]
 source: original
 date: 2026-09-27
 draft: false
+# Entries are one file each in this folder (hugo-warped glossary/README.md);
+# they build into this page's list only, never a page of their own.
+cascade:
+  target: {kind: page}
+  build: {render: never, list: always}
 ---
 
 Short definitions for terms that come up more than once but don't need a page
