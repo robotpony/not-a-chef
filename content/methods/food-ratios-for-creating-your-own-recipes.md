@@ -71,7 +71,7 @@ This chapter is a work in progress, and I still need to develop and test ratios 
 | Salt | 0.04 | 1% | 2.5 g |
 | MSG | 0.02 | 0.5% | 1.25 g |
 
-- Sugar, fat, and additional glutamates (or dashi) can be added to make more of a Kewpie mayonnaise
+- Sugar, fat, and additional glutamates (or dashi) can be added to make more of a [[Kewpie mayonnaise]]
 - Other seasonings can be added, or mixed in afterwards
 - Use a large deli container and immersion blender by adding everything but the oil to the bottom of the container, covering ingredients with the blender head. Pour oil over the blender head, and blend. The oil will get pulled in slowly (much simpler than drizzling it in).
 

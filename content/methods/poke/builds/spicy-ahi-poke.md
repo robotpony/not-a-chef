@@ -15,7 +15,7 @@ Ahi folded through a spicy mayo, usually finished with tobiko or masago. It's ri
 Creamy, rich, and hot.
 
 - **The fish:** Ahi
-- **The seasoning:** Spicy mayo, 3:1 Kewpie to sriracha, with a few drops of lime juice
+- **The seasoning:** Spicy mayo, 3:1 [[Kewpie mayonnaise|Kewpie]] to sriracha, with a few drops of lime juice
 - **Onions, seaweed, and crunch:** Green onion, and tobiko or masago on top
 - **How it's served:** On its own, or over hot rice
 

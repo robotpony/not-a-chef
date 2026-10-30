@@ -14,7 +14,7 @@ A burger sauce adds sweetness, acid, and sharpness, and sometimes fat. There are
 ## The variables
 
 - **Sweet to sharp.** Ketchup brings sweetness; mustard brings sharpness. McDonald's runs about **11:1 ketchup to mustard**, Burger King about **3:1**, and diners land anywhere in between. The [[McDouble]] recipe settles on 5:1.
-- **Fat.** Mayo carries a blended sauce and softens the mustard. Kewpie adds sweetness and acidity. It also provides a protective layer and the glue for toppings like lettuce.
+- **Fat.** Mayo carries a blended sauce and softens the mustard. [[Kewpie mayonnaise|Kewpie]] adds sweetness and acidity. It also provides a protective layer and the glue for toppings like lettuce.
 - **Pickle.** Diced pickle or relish gives a spread its texture and sourness. Many fast-food pickles are double-sour.
 - **Special sauces.** A blended spread with raw onion or pickle tastes better after an hour in the fridge, once the onion mellows.
 
