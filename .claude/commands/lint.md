@@ -17,4 +17,12 @@ Check all .md files in content/recipes/ (and content/essays/ if a path is specif
    It prints `WARN  <type> [<code>]: "<line>" in "<file>:<line>:1"` and exits 0 (`--strict` exits 1 on any warning). It is the source of truth for these fences; don't re-check their rules by hand.
 6. Every page in `content/methods/` has `method` in its `tags` (the folder's `_index.md` cascade only covers a page with no `tags` at all; a page's own `tags` replaces it). In a blueprint folder (`content/methods/<slug>/` with an `_index.md`): every page in `parts/` has a numeric `weight`; every page in `builds/` has a `## Picks` section whose bullets (`- **Part:** pick`) each start with the name of a part, matched loosely against the parts' titles. No page anywhere sets the retired `blueprint`, `part`, `build_name`, `profile`, `origin`, or `picks` fields. Run this check whenever `content/methods/` exists, even without a path. (docs/METHODS.md)
 
+7. Glossary marks (hugo-warped glossary/README.md): list each term's first prose mention on a page that isn't a wiki link yet, and report each as a suggestion (not an error) in its file. It writes nothing; `make glossary-link` is how Bruce applies them, one at a time. Run this check even without a path.
+
+   ```
+   make glossary-check
+   ```
+
+   It prints `path:line  Term  "words"`. Pairs in `tools/glossary-skip.txt` (`path | Term`) are never reported.
+
 Report files with issues, grouped by severity. Files that pass cleanly should be summarized as a count, not listed individually.
