@@ -350,7 +350,8 @@ main > header + section {
  * at rest), hover/focus reveals a short definition. Emitted by the same
  * render hook (render-link.html) when a [[Term]] doesn't match a page
  * title but does match a heading in content/reference/glossary.md. */
-.glossary-link { text-decoration: underline dotted; text-decoration-thickness: 1.5px; text-underline-offset: 3px; text-decoration-color: var(--ink-faint); color: inherit; cursor: help; }
+/* Rule at 65% of --ink-faint, a shade under the full token (mockups/glossary.html, 2026-10-30), so a page of marked terms stays quiet. */
+.glossary-link { text-decoration: underline dotted; text-decoration-thickness: 1.5px; text-underline-offset: 3px; text-decoration-color: color-mix(in srgb, var(--ink-faint) 65%, transparent); color: inherit; cursor: help; }
 .glossary-link:hover, .glossary-link:focus-visible { text-decoration-color: var(--ink); color: var(--ink); }
 
 /* Popover — one component for glossary terms in prose and the concept
