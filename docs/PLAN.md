@@ -40,6 +40,14 @@ Drinks got their own section on 2026-10-27 (`content/drinks/`, Fugu 356fad8). Di
 - [ ] `/mx:content-check` over the docs. (The stale-facts pass over every doc in `docs/`, `mockups/*.md`, README and CLAUDE.md was done 2026-10-28.)
 - [ ] Last: cut CLAUDE.md to what an agent needs to start.
 
+## Concepts
+
+*Idea (2026-10-29).* A page, or a set of pages, explaining the cookbook's concepts (ratios, carryover, fond, winning the fridge), plus a script that finds those keywords in body text and gives them a hover. Today only an explicit `[[Term]]` gets a popover (render-link → `concept/pop.html`, `popover.js`, from the glossary or a reference essay); the script would cover plain mentions with no link.
+
+- [ ] Decide the home: grow `content/reference/glossary.md` and the reference essays, or a `concepts/` set with one page per concept.
+- [ ] Keyword hover: Hugo emits the term list (title, aliases, one-line definition, URL) as JSON; the script marks the first mention per page, skips headings, links, code and fences, and reuses the existing popover look.
+- [ ] Other sites could use it (w42), so it may belong in warped.js (`~/projects/sites/warped.js`) rather than Fugu. Its agent isn't running: take it there as a proposal (`docs/proposals/`) when it is.
+
 ## Mockups
 
 - [ ] Publish `mockups/` as a static subfolder (which mocks, how linked, kept out of search). Bruce ticked it on 2026-10-21 to bring it forward; not built yet (no `static/mockups/`).
