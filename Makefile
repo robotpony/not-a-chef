@@ -1,4 +1,4 @@
-.PHONY: build preview deploy publish drafts glossary-candidates glossary-link glossary-check
+.PHONY: build preview deploy publish drafts glossary-candidates glossary-link glossary-check glossary-apply
 
 build:
 	tools/publish.sh build
@@ -24,8 +24,16 @@ GLOSSARY_ARGS = content --glossary reference/glossary --recipes recipes --recipe
 glossary-candidates:
 	$(GLOSSARY) candidates $(GLOSSARY_ARGS)
 
+# ENTRY="Deglaze" limits a run to one term (not TERM, the shell's terminal type); JSON=1 makes the check machine-readable.
+GLOSSARY_TERM = $(if $(ENTRY),--term "$(ENTRY)")
+GLOSSARY_JSON = $(if $(JSON),--json)
+
 glossary-link:
-	$(GLOSSARY) link $(GLOSSARY_ARGS) --skip tools/glossary-skip.txt
+	$(GLOSSARY) link $(GLOSSARY_ARGS) --skip tools/glossary-skip.txt $(GLOSSARY_TERM)
 
 glossary-check:
-	$(GLOSSARY) link $(GLOSSARY_ARGS) --skip tools/glossary-skip.txt --check
+	$(GLOSSARY) link $(GLOSSARY_ARGS) --skip tools/glossary-skip.txt --check $(GLOSSARY_TERM) $(GLOSSARY_JSON)
+
+# ANSWERS=file.json: a check's items, each with "answer": yes, never or skip (/glossary-link).
+glossary-apply:
+	$(GLOSSARY) link $(GLOSSARY_ARGS) --skip tools/glossary-skip.txt --apply "$(ANSWERS)"

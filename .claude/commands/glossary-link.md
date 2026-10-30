@@ -13,10 +13,10 @@ The spec is hugo-warped's `glossary/README.md` ("Marks" and "link"). Entries are
 1. Get the current proposals, fresh each time, since Bruce may be running `make glossary-link` in a terminal at the same time:
 
    ```
-   python3 themes/hugo-warped/tools/glossary.py link content --glossary reference/glossary --recipes recipes --recipes drinks --not-ingredients "$(sed -n 's/^ *notIngredients *= *\[\(.*\)\]/\1/p' themes/fugu/hugo.toml | tr -d '" ')" --skip tools/glossary-skip.txt --check --json 2>/dev/null
+   make -s glossary-check JSON=1 2>/dev/null
    ```
 
-   Each item is `{path, line, term, words}`: `path` under `content/`, `line` the source line, `words` the exact text to mark. The tool has already left out ingredient lists, headings, links, code, fences, frontmatter, stubs, and the never pairs in `tools/glossary-skip.txt`.
+   Add `ENTRY="Deglaze"` to limit it to one term (title or `also:` form, any case). Each item is `{path, line, term, words}`: `path` under `content/`, `line` the source line, `words` the exact text to mark. The tool has already left out ingredient lists, headings, links, code, fences, frontmatter, stubs, and the never pairs in `tools/glossary-skip.txt`.
 
 2. Count proposals per term. With `status`, print a short table (term, count), the total, and the next term, then stop.
 
@@ -39,11 +39,13 @@ The spec is hugo-warped's `glossary/README.md` ("Marks" and "link"). Entries are
 
    Flag any row that looks wrong before asking: the word used in another sense ("fond memories"), a bold step label (`**Deglaze.**`), a quote, or a title. Suggest `never` for it; Bruce decides.
 
-4. Apply the answer:
+4. Apply the answer with the tool, not by hand: write the term's items from step 1, each with `"answer"` set to `yes`, `never` or `skip`, to a JSON file in the scratchpad, then
 
-   - **Link:** on that line of that file, replace the first occurrence of `words` that isn't already inside a `[[...]]` or `[...](...)` link. Write `[[Title]]` when `words` is exactly the entry's title, and `[[Title|words]]` otherwise, keeping `words` as written (case included). In a Markdown table row, escape the pipe: `[[Title\|words]]`. Change nothing else on the line.
-   - **Never:** append `path | Title` (path under `content/`, the entry's title) to `tools/glossary-skip.txt`.
-   - If a line no longer holds `words` (Bruce's terminal run got there first), skip that row and say so.
+   ```
+   make -s glossary-apply ANSWERS=<that file>
+   ```
+
+   It writes each mark (`[[Title]]`, or `[[Title|words]]`, pipe escaped in tables) and adds each never pair to `tools/glossary-skip.txt`, exactly as `make glossary-link` would. It prints one line per item (`linked`, `never`, `skipped`, or `stale, not changed` when Bruce's terminal run got there first, or the line moved), then a total.
 
 5. Re-run step 1 and confirm the term's linked rows are gone. Report what changed: linked, never, skipped, and anything that didn't apply. Then commit the content files and the skip file, and only those (`git add` each path, never `-a`): "Links <Term> on its first mention in N pages." Bruce's own uncommitted edits stay his.
 
