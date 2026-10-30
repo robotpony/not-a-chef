@@ -2,9 +2,19 @@
 title: October 2026
 date: 2026-10-01
 ---
-A month of travel eating turned into a research list: tabbouleh, a subtly sweet red cabbage, an onion jam on a double smash burger, a German roulade dinner, then Hawaii's poke, cabbage crab salad, Puka Dog's toasted bun, and a tiki dinner. Back home, fresh pickled ginger, a bonito soy dipping sauce, and cornmeal fried chicken made it into recipes, and the burger blueprint's parts and builds were reviewed and settled. A diagrammed pan sauce method and a muesli blueprint followed. Still on the list: Indian curries, a looser dal, and a run of "national dish" candidates.
+A month of travel eating turned into a research list: tabbouleh, a subtly sweet red cabbage, an onion jam on a double smash burger, a German roulade dinner, then Hawaii's poke, cabbage crab salad, Puka Dog's toasted bun, and a tiki dinner. Back home, fresh pickled ginger, a [[Katsuobushi|bonito]] soy dipping sauce, and cornmeal fried chicken made it into recipes, and the burger blueprint's parts and builds were reviewed and settled. A diagrammed pan sauce method and a muesli blueprint followed. Still on the list: Indian curries, a looser dal, and a run of "national dish" candidates.
 
 ## Week of  Sunday,  October 25th
+
+### Random food wishes #ideas 
+
+- [ ] These weird beans suggest a much more interesting dish ([1](https://www.reddit.com/r/Beans/comments/1xhrzw4/i_just_got_here/))
+- [ ] Pot-au-feu (the comfort French national dish) → from that book
+- [ ] Carěme
+- [ ] Frijole soup
+- [ ] Split pea soup, dutch (thick cut bacon)
+- [ ] That weird hardy bread
+- [ ] Grilled, thin-cut carrots and zuchini salad with rocket (yohgurt dressing was fresh)
 
 ### Mexican feast #todo 
 
@@ -26,12 +36,12 @@ Links:
 #### Traditional Ingredients:
 
 - **Fresh raw fish** (most often _ahi tuna_, but sometimes salmon, octopus, shrimp, or others)
-- **Shoyu (soy sauce)** – adds saltiness and umami
+- **[[Shoyu]] (soy sauce)** – adds saltiness and [[Umami|umami]]
 - **Sesame oil** – for a rich, nutty flavor
 - **Hawaiian salt** (or sea salt) – enhances the natural taste of the fish
 - **Sweet Maui onions** (or any sweet onion) – for crunch and sweetness
 - **Green onions (scallions)** – fresh and zesty bite
-- **Limu** (Hawaiian seaweed) – adds ocean flavor and texture
+- **[[Limu]]** (Hawaiian seaweed) – adds ocean flavor and texture
 - **Chili pepper** (optional) – for a spicy kick
 - **Toasted sesame seeds** – nutty topping for flavor and texture
 
@@ -40,34 +50,34 @@ Links:
 - **Avocado** – creamy texture
 - **Cucumber** – crisp and refreshing
 - **Edamame** – little pops of protein
-- **Masago** (fish roe) – tiny bursts of saltiness
-- **Furikake** (seaweed seasoning) – adds umami crunch
+- **[[Masago]]** (fish roe) – tiny bursts of saltiness
+- **[[Furikake]]** (seaweed seasoning) – adds umami crunch
 - **Spicy mayo** – popular in spicy poke versions
-- **Sriracha** – more heat!
+- **[[Sriracha]]** – more heat!
 - **Rice** – if you’re making a bowl
 
  #### Notes and styles:
  - mainland-style poke bowl is roughly 1 part protein to 1 part base to 1 part fresh toppings (a 1:1:1 volumetric ratio)
- - Traditional Hawaiian style emphasizes a pupu (appetizer) ratio where the fish is 80–90% of the dish, seasoned strictly with sea salt, limu (seaweed), and inamona (kukui nut), served alongside rice rather than under a mountain of toppings.
+ - Traditional Hawaiian style emphasizes a pupu (appetizer) ratio where the fish is 80–90% of the dish, seasoned strictly with sea salt, limu (seaweed), and [[Inamona|inamona]] (kukui nut), served alongside rice rather than under a mountain of toppings.
 
 ##### Classic Shoyu (Soy) Marinade — Ratio: 2:1
 
 • 2 parts Soy Sauce (Shoyu): ¼ cup (4 tbsp)
 • 1 part Toasted Sesame Oil: 2 tbsp
-• Aromatics: 1 tbsp rice vinegar, ¾ cup chopped green onions, and 1 tsp grated ginger.
+• [[Aromatics]]: 1 tbsp rice vinegar, ¾ cup chopped green onions, and 1 tsp grated ginger.
 
 ##### Spicy Mayo Sauce — Ratio: 3:1
 
-• 3 parts Kewpie Mayonnaise: 3 tbsp
+• 3 parts [[Kewpie mayonnaise|Kewpie Mayonnaise]]: 3 tbsp
 • 1 part Sriracha: 1 tbsp (adjust for heat)
 • Acid: ½ tsp of fresh lime juice or rice vinegar to cut through the fat
 
 
 ##### Traditional Hawaiian Style (Pa'akai / Limu Poke)
 
-• Core Ingredients: Cubed raw ahi (yellowfin tuna) or he'e (octopus)
+• Core Ingredients: Cubed raw [[Ahi|ahi]] (yellowfin tuna) or he'e (octopus)
 • Flavor Profile: Minimal, natural, and ocean-forward.
-• Traditional Seasonings: Native Hawaiian sea salt (pa'akai), fresh seaweed (limu or ogo), green onions, Maui onions, and crushed roasted kukui nuts (inamona).
+• Traditional Seasonings: Native Hawaiian sea salt ([[Pa'akai|pa'akai]]), fresh seaweed (limu or ogo), green onions, Maui onions, and crushed roasted kukui nuts (inamona).
 
 ##### Shoyu Ahi Poke (Classic Japanese-Hawaiian Fusion)
 
@@ -89,12 +99,12 @@ Links:
 
 ##### Common Classic Island Variations (Evolved Traditions)
 
-• Spicy Ahi Poke: Cubed tuna mixed with a creamy spicy sauce (like sriracha-infused mayo) and often finished with tobiko (fish roe).
+• Spicy Ahi Poke: Cubed tuna mixed with a creamy spicy sauce (like sriracha-infused mayo) and often finished with [[Tobiko|tobiko]] (fish roe).
 • Wasabi Poke: A sharper, sinus-clearing style incorporating wasabi into the shoyu or oil base.
 • Garlic / Onion Shoyu Poke: Marinated with garlic oil, shoyu, and a kick of local chili pepper.
 ## Methods/builds to work on
 
-- [x] Add a note about Transglutaminase #todone
+- [x] Add a note about [[Transglutaminase]] #todone
 - [x] Chicken sandwhiches and burgers (reference patty recipes), then builds for simple, deluxe, etc.
 
 ### Muesli research
