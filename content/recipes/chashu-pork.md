@@ -12,11 +12,11 @@ aliases: [/recipes/basic-ramen-tare/]
 draft: false
 ---
 
-This is one of the best pork recipes I know; tender, savoury, and perfect on soups and with noodles. The braising liquid becomes the [tare](https://en.wikipedia.org/wiki/Tare_sauce) (seasoning base) for simple ramen broths.
+This is one of the best pork recipes I know; tender, savoury, and perfect on soups and with noodles. The [[Braise|braising]] liquid becomes the [tare](https://en.wikipedia.org/wiki/Tare_sauce) (seasoning base) for simple ramen broths.
 
 ## Mechanic
 
-The **1:1:1 braise ratio** (water : soy : mirin) keeps the pork moist and seasoned through. Refrigerating in the liquid overnight firms the meat and deepens the flavour; slicing cold gives cleaner cuts. Pork belly (or shoulder) braises to 85–93°C for a yielding, fatty result; loin braises to 60°C for a leaner, cleaner slice.
+The **1:1:1 braise ratio** (water : soy : [[Mirin|mirin]]) keeps the pork moist and seasoned through. Refrigerating in the liquid overnight firms the meat and deepens the flavour; slicing cold gives cleaner cuts. Pork belly (or shoulder) braises to 85–93°C for a yielding, fatty result; loin braises to 60°C for a leaner, cleaner slice.
 
 ```formula
 water     | Water | 1
@@ -38,7 +38,7 @@ water     | Water | 1
 
 ## Method
 
-Sear pork on all sides in oil over medium-high heat until browned, about 3 minutes per side. Remove and deglaze the pan with a splash of water.
+[[Sear]] pork on all sides in oil over medium-high heat until browned, about 3 minutes per side. Remove and [[Deglaze|deglaze]] the pan with a splash of water.
 
 Return pork. Add soy, mirin, water, sugar, garlic, green onion, and ginger. Bring to a low simmer.
 
@@ -46,7 +46,7 @@ Cover and braise over low heat for 1–2 hours, or in a 110°C (230°F) oven. Ta
 
 Cool slightly, then transfer pork and braising liquid to a container. Refrigerate at least 24 hours.
 
-Lift off the fat once cold (keep it for stock if you like), and strain the liquid to use as tare.
+Lift off the fat once cold (keep it for stock if you like), and strain the liquid to use as [[Tare|tare]].
 
 Slice as needed. Reheat in a dry pan, in a little oil, in stock, or in the oven.
 
@@ -57,7 +57,7 @@ Over ramen, in rice bowls, alongside pickled vegetables. The braising liquid dou
 ## Variations
 
 ### Sake oven braise
-A lighter, less sweet braise inspired by [Ramen_Lord](https://www.goodreads.com/en/book/show/57499458). Season the pork with salt and pepper (or [[Bruce's poultry and pork spice rub]]). Replace the braising liquid with 250 ml water, 125 ml sake, 125 ml soy sauce, 50 ml mirin, 12.5 g brown sugar, and 1–2 smashed garlic cloves, plus a knob of ginger or some togarashi if you like. Braise uncovered in a 110°C (230°F) oven to the same internal temperatures.
+A lighter, less sweet braise inspired by [Ramen_Lord](https://www.goodreads.com/en/book/show/57499458). Season the pork with salt and pepper (or [[Bruce's poultry and pork spice rub]]). Replace the braising liquid with 250 ml water, 125 ml sake, 125 ml soy sauce, 50 ml mirin, 12.5 g brown sugar, and 1–2 smashed garlic cloves, plus a knob of ginger or some [[Togarashi|togarashi]] if you like. Braise uncovered in a 110°C (230°F) oven to the same internal temperatures.
 
 ## Notes
 

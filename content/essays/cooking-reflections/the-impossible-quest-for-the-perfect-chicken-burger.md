@@ -10,7 +10,7 @@ According to r/burgers, most chicken burgers are not burgers:
 
 > A chicken sandwich contains an entire piece of chicken or filet, rather [sic] a ground and blended patty. A pulled chicken sandwich is also not a burger.
 
-On paper, that leaves room for ground chicken. A minced patty is built exactly like a burger: ground meat, salted, formed, seared. In practice, the subreddit rejects those too. I've tried.
+On paper, that leaves room for ground chicken. A minced patty is built exactly like a burger: ground meat, salted, formed, [[Sear|seared]]. In practice, the subreddit rejects those too. I've tried.
 
 I'm going to keep calling it a chicken burger. I've been chasing a good one for most of my life, and I'm not about to lose the argument on a technicality.
 
@@ -18,7 +18,7 @@ I'm going to keep calling it a chicken burger. I've been chasing a good one for 
 
 About forty years ago there was a guy in a mall food court who made the best crunchy chicken burger I've ever had. I don't remember his name or his stall, so he's just Chicken mall guy.
 
-His patty was a chicken breast, medium-brined, in a dark, mealy, crunchy breading. It wasn't a KFC-style flaky coating. It was closer to cornmeal: gritty, fried hard, and deeply browned. I don't remember the condiments at all. Probably lettuce and mayo, maybe tomato. It didn't matter, because the patty carried the whole burger.
+His patty was a chicken breast, medium-[[Brine|brined]], in a dark, mealy, crunchy breading. It wasn't a KFC-style flaky coating. It was closer to cornmeal: gritty, fried hard, and deeply browned. I don't remember the condiments at all. Probably lettuce and mayo, maybe tomato. It didn't matter, because the patty carried the whole burger.
 
 He went out of business, and I've been trying to find that crunch ever since.
 
@@ -50,7 +50,7 @@ It took me years to understand why a homemade chicken breast on a bun never tast
 
 The Broiler's glued-together chunks are a salt trick. Salt draws a protein called myosin out of the muscle, and when you mix or tumble the meat, that protein turns sticky and binds the pieces together. When my recipes say "mix until the meat turns tacky," that's the same glue.
 
-The other common glue is an enzyme, [transglutaminase](https://en.wikipedia.org/wiki/Transglutaminase), sold as "meat glue." It cross-links proteins, so pieces pressed together set into one piece without salt or mixing. Processors use it for restructured meat and fish, and restaurant kitchens use it to bind trim into neat portions. I don't know whether any of these patties used it; salt and tumbling are enough to explain them.
+The other common glue is an enzyme, [transglutaminase](https://en.wikipedia.org/wiki/Transglutaminase), sold as "[[Transglutaminase|meat glue]]." It cross-links proteins, so pieces pressed together set into one piece without salt or mixing. Processors use it for restructured meat and fish, and restaurant kitchens use it to bind trim into neat portions. I don't know whether any of these patties used it; salt and tumbling are enough to explain them.
 
 The juicy, slightly processed bite of the BK patty is a pH trick. Commercial patties use phosphates; at home, a little baking soda and some added water do the same job, raising the pH so the meat holds onto moisture. It's a dial. A little gives a juicy patty that still eats like chicken, which is where the BK classic sat. A lot, worked hard with salt, turns bouncy like a Vietnamese beef ball or a fish ball: good, but closer to sausage than burger.
 
@@ -74,9 +74,9 @@ Three choices move a patty along the scale. The cut is minced breast, whole brea
 
 Thigh works at every step, breaded, bare, or brined, and forgives more overcooking than breast.
 
-The whole cuts are fast. A butterflied breast in the [[Mayo marinade]] is a dry brine with a coat: the salt seasons the meat, and the mayo binds emulsified oil and vinegar to the surface. It takes five minutes to prep and thirty to marinate, so that's my weeknight sandwich. Mince is the most work, so I make it when I find ground chicken on sale.
+The whole cuts are fast. A butterflied breast in the [[Mayo marinade]] is a dry brine with a coat: the salt seasons the meat, and the mayo binds [[Emulsify|emulsified]] oil and vinegar to the surface. It takes five minutes to prep and thirty to marinate, so that's my weeknight sandwich. Mince is the most work, so I make it when I find ground chicken on sale.
 
-The top of the scale is still unfinished. The double coat of flour dredge, loose cornstarch batter, and breadcrumbs is properly crunchy, but it isn't Chicken mall guy's crunch. A cornmeal breading is next on my list.
+The top of the scale is still unfinished. The double coat of flour [[Dredge|dredge]], loose cornstarch batter, and breadcrumbs is properly crunchy, but it isn't Chicken mall guy's crunch. A cornmeal breading is next on my list.
 
 ## Four builds
 

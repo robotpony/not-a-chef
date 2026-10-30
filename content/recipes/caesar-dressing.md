@@ -9,7 +9,7 @@ total_time: 10 min
 draft: false
 ---
 
-This is an emulsified dressing that's commonly used in local Greek restaurants. It may not be authentic, but it hits all of the notes of the classic table-side service.
+This is an [[Emulsify|emulsified]] dressing that's commonly used in local Greek restaurants. It may not be authentic, but it hits all of the notes of the classic table-side service.
 
 ## Mechanic
 

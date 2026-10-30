@@ -15,9 +15,9 @@ The oldest poke, and the plainest. Cubed fish, sea salt, chopped seaweed, and cr
 
 Briny, clean, and crunchy.
 
-- **The fish:** Ahi, or aku in the oldest versions
+- **The fish:** [[Ahi]], or [[Aku|aku]] in the oldest versions
 - **The seasoning:** Hawaiian sea salt
-- **Onions, seaweed, and crunch:** Limu (ogo), inamona, sweet Maui onion, and green onion
+- **Onions, seaweed, and crunch:** [[Limu]] (ogo), [[Inamona|inamona]], sweet Maui onion, and green onion
 - **How it's served:** On its own as a pupu, or with rice beside it
 
 ## Where it comes from

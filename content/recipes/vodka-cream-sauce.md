@@ -37,11 +37,11 @@ If using a protein, cook it in a little oil with salt and pepper until browned a
 
 Heat a large skillet over medium heat. Add oil, butter, garlic, and shallots, and sauté until translucent but not browned, 3–5 minutes.
 
-Add the vodka (step back if cooking over gas) and stir to lift any fond. Reduce by half.
+Add the vodka (step back if cooking over gas) and stir to lift any [[Fond|fond]]. Reduce by half.
 
 Add the stock and tomatoes. Season with salt and pepper. Drop the heat to medium-low and simmer while the pasta cooks.
 
-Cook the pasta in salted water until al dente. Reserve 1 cup of pasta water, then drain.
+Cook the pasta in salted water until [[Al dente|al dente]]. Reserve 1 cup of pasta water, then drain.
 
 Add the pasta to the sauce and stir to combine. Take the pan off the heat. Stir in the cream, the protein, the cheese, ¾ of the basil, and enough pasta water to make it smooth.
 

@@ -46,7 +46,7 @@ Another class of stock ingredients is those that should be used sparingly. These
 
 ## Ingredients that should work, but don't
 
-There are other ingredients that seem to make sense for stock but, based on the cooking method, don't tend to work well with long simmers or under pressure. These include things like miso paste (long simmers flatten the subtle notes) and kombu (which tastes better kept below a simmer). Acids also tend to do poorly: they're for balancing a finished soup, and seem to throw off the extraction when added early. That's unconfirmed, but it follows standard French technique, which adds acid at the end.
+There are other ingredients that seem to make sense for stock but, based on the cooking method, don't tend to work well with long simmers or under pressure. These include things like [[Miso|miso]] paste (long simmers flatten the subtle notes) and [[Kombu|kombu]] (which tastes better kept below a simmer). Acids also tend to do poorly: they're for balancing a finished soup, and seem to throw off the extraction when added early. That's unconfirmed, but it follows standard French technique, which adds acid at the end.
 
 ## The method, not the instinct
 

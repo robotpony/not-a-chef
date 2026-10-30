@@ -43,7 +43,7 @@ Prepare the toppings. If using herbs, steep them in olive oil for 10–15 minute
 
 Drizzle olive oil over the dough and press it toward the corners of the pan with your fingers. If it springs back, let it rest 10 minutes and try again; with enough rest it spreads without resistance. Once it's spread, press deep, generous dimples across the whole surface.
 
-Scatter the toppings evenly over the dough. Press larger items (olives, tomatoes) gently into the dimples so they don't roll off. If using the brine, whisk it together and drizzle it over. Finish with coarse salt.
+Scatter the toppings evenly over the dough. Press larger items (olives, tomatoes) gently into the dimples so they don't roll off. If using the [[Brine|brine]], whisk it together and drizzle it over. Finish with coarse salt.
 
 For thinner focaccia, bake until deep golden brown, about 20 minutes. For thicker focaccia, lower the oven to 190°C (375°F) and bake until deep golden, 35–40 minutes.
 

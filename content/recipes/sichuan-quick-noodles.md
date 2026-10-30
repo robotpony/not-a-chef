@@ -16,7 +16,7 @@ A one-pan work-from-home lunch built on a precooked protein base. Twenty minutes
 
 ## Mechanic
 
-The noodles cook in the sauce. Start them in **just enough water to cover** in a wide pan, and add the aromatics and base halfway through; the starch from the noodles thickens the reducing liquid into a sauce that coats them. Add water a spoonful at a time, not all at once. If it ends up as soup, use less water and more heat next time.
+The noodles cook in the sauce. Start them in **just enough water to cover** in a wide pan, and add the [[Aromatics|aromatics]] and base halfway through; the starch from the noodles thickens the reducing liquid into a sauce that coats them. Add water a spoonful at a time, not all at once. If it ends up as soup, use less water and more heat next time.
 
 ## Ingredients
 
@@ -37,7 +37,7 @@ The noodles cook in the sauce. Start them in **just enough water to cover** in a
 
 Drop the noodles in a wide pan with just enough water to cover and bring to a simmer. Keep a cup of hot water nearby.
 
-When the noodles are halfway cooked by the package time, add the beef base, tofu, chili-garlic paste, tomato paste, Sichuan pepper, chili flakes, ginger, and MSG. Stir and cook until heated through and the liquid is reducing. Ramen and egg noodles cook faster; start them in less water.
+When the noodles are halfway cooked by the package time, add the beef base, tofu, chili-garlic paste, tomato paste, Sichuan pepper, chili flakes, ginger, and [[MSG]]. Stir and cook until heated through and the liquid is reducing. Ramen and egg noodles cook faster; start them in less water.
 
 Taste the liquid. Season with soy sauce, sesame oil, and sake. Test a noodle; if it's still firm and the pan is dry, add 1–2 tbsp water.
 
@@ -45,7 +45,7 @@ Add the cabbage and cook until tender-crisp, 2–3 minutes. Finish with a splash
 
 ## To serve
 
-In the pan or a bowl, topped with sliced green onion, sesame seeds, and togarashi.
+In the pan or a bowl, topped with sliced green onion, sesame seeds, and [[Togarashi|togarashi]].
 
 ## Variations
 
@@ -55,5 +55,5 @@ No beef base on hand? boil and drain the noodles, reserving a splash of water. I
 
 ## Notes
 
-- Use dashi in place of some of the stock in the stock-only version.
+- Use [[Dashi|dashi]] in place of some of the stock in the stock-only version.
 - Edamame works in place of or alongside the tofu.

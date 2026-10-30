@@ -25,7 +25,7 @@ I make this meat sauce a few times a month, from the pantry and my regular freez
 
 Crush the tomatoes by hand in a bowl, cutting out any stem pieces (cheaper brands have them).
 
-Heat the beef base, and the spinach or kale if using, in a large pan until it starts to brown. Add the tomato paste and cook, stirring, until it just starts to stick. Deglaze with the wine (or stock or water), scraping the browned bits off the bottom.
+Heat the beef base, and the spinach or kale if using, in a large pan until it starts to brown. Add the tomato paste and cook, stirring, until it just starts to stick. [[Deglaze]] with the wine (or stock or water), scraping the browned bits off the bottom.
 
 Stir in the herbs, then the tomatoes. Simmer until it's as thick as you like, 20–45 minutes; the beef is already tender.
 

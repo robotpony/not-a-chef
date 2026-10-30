@@ -13,7 +13,7 @@ I like to tell people that I'm proactively lazy. I like to cook when I have the 
 
 I think of condensing meals in terms of capturing the most difficult or time consuming steps into something that freezes well, while also taking up a minimum of space. The parts that are more easily cooked or don't freeze well are added when preparing the meal for service, so that you preserve texture, flavour, and nutrition of the more delicate components.
 
-A good example of this is [[Beef stew|beef stew]]. While it's possible to freeze carrots, peas, and other root vegetables in a stew, they are easy to add at service and keep their texture better when added later. And while it's possible to freeze condensed gravy, it usually changes texture and loosens up a bit after defrosting. So my approach to freezing stew is to capture the base of braising liquid, softened chuck roast, fond, and softened allium (onions, leeks, garlic), as well as the more key spices (rosemary, thyme, bay, and pepper).
+A good example of this is [[Beef stew|beef stew]]. While it's possible to freeze carrots, peas, and other root vegetables in a stew, they are easy to add at service and keep their texture better when added later. And while it's possible to freeze condensed gravy, it usually changes texture and loosens up a bit after defrosting. So my approach to freezing stew is to capture the base of [[Braise|braising]] liquid, softened chuck roast, [[Fond|fond]], and softened allium (onions, leeks, garlic), as well as the more key spices (rosemary, thyme, bay, and pepper).
 
 My condensed stew takes about ½ of the storage space of the stew itself, and about ¼ the space of the stew and accompanying sides like potatoes and dumplings. A 500 ml container can generally be stretched to about 4 meals, if you include sides.
 
@@ -51,7 +51,7 @@ For minced meats and soup stocks a pressure cooker is more than twice as fast as
 
 Any protein that you can braise is also significantly faster to prepare in a pressure cooker. Cuts that braise well also tend to be cheaper, so roasts like chuck roast, pork shoulder/butt, chicken thighs, ribs, and such are easy to prep in under 45 minutes. Typically, a full pork shoulder will feed 4 people 10-15 meals. And don't forget that beans and lentils are braisable, and work well in a pressure cooker.
 
-Pressure cookers are also great for soups and stocks. Both [[French onion soup|French onion]] and [[Mushroom soup|mushroom soup]] bases can be made in under 30 minutes, and most clear stocks can be made in under 45. It's even possible to make longer simmering broths like tonkotsu in around an hour (though you do need to fast-release to emulsify the fats).
+Pressure cookers are also great for soups and stocks. Both [[French onion soup|French onion]] and [[Mushroom soup|mushroom soup]] bases can be made in under 30 minutes, and most clear stocks can be made in under 45. It's even possible to make longer simmering broths like tonkotsu in around an hour (though you do need to fast-release to [[Emulsify|emulsify]] the fats).
 
 Clear stocks work especially well in a pressure cooker, as long as you slow-release the pressure to avoid a full boil. The method is easy too, add stock ingredients (optionally roasted ahead of time), and cover with water. Add a bouquet garni (bag of herbs). I suggest avoiding plants in the brassicaceae family (cabbage, cauliflower, broccoli, etc.) and tender herbs, as they tend to add bitter notes with long (or high pressure) cooks. Also remember that flavours like garlic and celery are intensified by the process.
 
@@ -63,7 +63,7 @@ It can take a few hours to reduce a stock by half, so I suggest using the widest
 
 It may seem counterintuitive that preparing larger batches takes less effort, but most of the overheads are shared. It doesn't matter if you chop 1 onion or 10, you will dirty the same number of dishes. Cooking down those onions only takes incrementally longer and uses a similar amount of energy. Any waste from the process needs to be discarded either way, and both need to be packaged up for freezing.
 
-Working in larger batches also lets you apply better tools and techniques to the process, like using a mandoline to slice onions for French onion soup, a grater for making soffritto base, a blender for smoothing out sauces, or roasting on multiple large sheet pans.
+Working in larger batches also lets you apply better tools and techniques to the process, like using a mandoline to slice onions for French onion soup, a grater for making [[Soffritto|soffritto]] base, a blender for smoothing out sauces, or roasting on multiple large sheet pans.
 
 You will also find that preparing larger batches makes for good practice that would otherwise take a lot longer. Dicing a 5 kg (10 lb) bag of onions will significantly improve your knife skills, as well as cleaning out your tear ducts. I find a strange satisfaction in dicing up a bag of onions, a few heads of garlic, and a head of celery. I find it even more satisfying to eat the soups and stews in the following weeks.
 

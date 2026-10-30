@@ -37,9 +37,9 @@ Heat 1 tablespoon of the vegetable oil in a large wok or high-sided skillet over
 
 In the same wok over medium heat, heat 1 tablespoon vegetable oil. Cook cabbage, stirring frequently, until wilted, tender, and lightly golden at the edges, 5–6 minutes; season with remaining ¼ teaspoon salt. Transfer to the bowl with the pork and shrimp.
 
-Meanwhile, cook noodles in a large pot of boiling water, stirring occasionally, until al dente per package directions. Drain, rinse under cold water, and drain again. Set aside.
+Meanwhile, cook noodles in a large pot of boiling water, stirring occasionally, until [[Al dente|al dente]] per package directions. Drain, rinse under cold water, and drain again. Set aside.
 
-In the same wok over medium heat, heat remaining 1 tablespoon vegetable oil. Add mushrooms and 3 tablespoons Shaoxing rice wine and cook, stirring frequently, until softened, browned, and reduced, 5–7 minutes. Add green onions, garlic, and ginger and cook until aromatic, about 1 minute. Add soy sauce, sesame oil, white pepper (if using), and remaining 2 tablespoons Shaoxing rice wine; toss to combine. Return the cabbage and pork mixture to the wok, then add noodles, and toss well to coat.
+In the same wok over medium heat, heat remaining 1 tablespoon vegetable oil. Add mushrooms and 3 tablespoons Shaoxing rice wine and cook, stirring frequently, until softened, browned, and reduced, 5–7 minutes. Add green onions, garlic, and ginger and cook until [[Aromatics|aromatic]], about 1 minute. Add soy sauce, sesame oil, white pepper (if using), and remaining 2 tablespoons Shaoxing rice wine; toss to combine. Return the cabbage and pork mixture to the wok, then add noodles, and toss well to coat.
 
 ## To serve
 

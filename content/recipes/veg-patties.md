@@ -68,7 +68,7 @@ In toasted buns with burger sauce and pickles (toast the cut sides in a dry non-
 
 ## Variations
 
-**Potato instead of rice.** Use 1 cup cold mashed potato in place of the rice. Softer and creamier inside; dredge the patties in breadcrumbs before frying for a firmer crust.
+**Potato instead of rice.** Use 1 cup cold mashed potato in place of the rice. Softer and creamier inside; [[Dredge|dredge]] the patties in breadcrumbs before frying for a firmer crust.
 
 **Chewy and vegan.** [[Vegan burger]] is a heavier take on this pattern: two kinds of beans, mushrooms and nuts as the vegetables, and vital wheat gluten and oats as the binder. Denser and meatier; it holds together without egg.
 

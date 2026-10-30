@@ -16,7 +16,7 @@ Toasting is where the flavour comes from. Untoasted oats taste raw and a little 
 
 - **Oven.** 160–175°C (325–350°F), on a sheet pan in a thin layer.
 - **Time.** 15–20 minutes for oats and wheat flakes, stirring halfway, until golden and fragrant. Nuts toast faster (8–10 minutes) and go on a separate pan or in for the last part of the time.
-- **Doneness.** Go by colour and smell. They darken a little more as they cool, and they crisp as they cool, too.
+- **[[Doneness]].** Go by colour and smell. They darken a little more as they cool, and they crisp as they cool, too.
 - **Dried fruit.** Never toasted. It goes hard and bitter. Stir it in after the grain is cool.
 - **Salt.** A pinch per batch, tossed through before toasting. It makes the grain taste toasty instead of flat.
 

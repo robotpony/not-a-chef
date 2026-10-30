@@ -98,7 +98,7 @@ I made a [home-pantry version of the al pastor style marinade](https://docs.goog
 
 ### Pickled peppers success
 
-I ended up making a 500ml brine using the _Pickled banana peppers_ recipe (from [Serious Eats](https://www.seriouseats.com/pickled-banana-peppers-recipe)), and bumping up the salt to 3.2% (from 1.6%). The peppers were spiced with fresh thyme, crushed garlic, carrots, and onions (and 1 tablespoon of pickling spice).
+I ended up making a 500ml [[Brine|brine]] using the _Pickled banana peppers_ recipe (from [Serious Eats](https://www.seriouseats.com/pickled-banana-peppers-recipe)), and bumping up the salt to 3.2% (from 1.6%). The peppers were spiced with fresh thyme, crushed garlic, carrots, and onions (and 1 tablespoon of pickling spice).
 
 - 250ml : 250ml : 200g : 16g (vinegar, water, sugar, salt)
 - 3.2% salinity
@@ -116,7 +116,7 @@ One interesting note is that measuring the temperature of the bread seems to pro
 
 #### What I learned:
 
-I baked 3 styles of loaves today. The dough going into it was pliable and wasn’t overly sticky. It was a ~60% hydration dough with a small amount of malted barley for flavouring.
+I baked 3 styles of loaves today. The dough going into it was pliable and wasn’t overly sticky. It was a ~60% [[Hydration|hydration]] dough with a small amount of malted barley for flavouring.
 
 | Loaf | What worked | What didn't |
 | :---- | :---- | :---- |
@@ -163,11 +163,11 @@ _Goal ratio will be 2 - 4% salinity, and up to 40% sugar._
 
 If using kosher salt, add ~20% - 50% more salt (as pickling salt is finer). Pickling salt is 74g/125ml (or .58g/ml volume), making 1 tablespoon (14.78ml) 8.6g.
 
-Boil, combine brine ingredients, add veg until it resumes boiling (blanching), remove from heat.
+Boil, combine brine ingredients, add veg until it resumes boiling ([[Blanch|blanching]]), remove from heat.
 
 From [Fine Cooking](https://www.finecooking.com/article/the-science-of-pickles):
 
-_The brine’s salinity level depends on what you’re pickling and the results you’re going for. Crisp leafy vegetables, such as cabbage, are fermented into sauerkraut or kimchi at 1% to 2% salinity, which allows different bacteria and a variety of flavors to develop as acidity increases. The most typical brine strength for home pickling is between 5% and 6% salinity, which is slightly less than the 7% to 8% full-strength brine used to preserve lemons and olives. Half-sours, a popular Jewish-deli-style cucumber pickle, are brined at around 3.5%._
+_The brine’s salinity level depends on what you’re pickling and the results you’re going for. Crisp leafy vegetables, such as cabbage, are fermented into sauerkraut or [[Kimchi|kimchi]] at 1% to 2% salinity, which allows different bacteria and a variety of flavors to develop as acidity increases. The most typical brine strength for home pickling is between 5% and 6% salinity, which is slightly less than the 7% to 8% full-strength brine used to preserve lemons and olives. Half-sours, a popular Jewish-deli-style cucumber pickle, are brined at around 3.5%._
 
 [Salt mass ratios](https://www.dadcooksdinner.com/salt-by-weight/) suggest a pretty wide difference in mass per volume.
 
@@ -194,7 +194,7 @@ Spread glue on top of salmon fillets, top with crusty crust. Bake at 220C/420F
 
 ### Mirin substitute
 
-This is really a teriyaki sort of sauce, but also can sub in for mirin. Is great on salmon, on veg, etc.
+This is really a teriyaki sort of sauce, but also can sub in for [[Mirin|mirin]]. Is great on salmon, on veg, etc.
 
 - 2 parts saké
 - 2 parts sugar
@@ -206,7 +206,7 @@ Cook down until syrupy. Can add ginger or garlic
 
 → [[Miso salmon]]
 
-- ¼ - ½ cup miso (any works, white can be sweeter)
+- ¼ - ½ cup [[Miso|miso]] (any works, white can be sweeter)
 - ⅓ cup sake
 - 2 tablespoons soy sauce
 - ¼ cup brown sugar
@@ -347,7 +347,7 @@ _(makes about 1 large mason jar’s worth)_
 
 Missing here were some acid and sugar (I used some lemon syrup I had made a few weeks back, and some additional red wine). Acid/sweet balance is fairly variable in canned tomatoes, so taste + adjust!
 
-Sweat down onions in olive oil with some salt in a family pan until they are translucent. Add garlic and gently fry until softened. Deglaze pan with wine, and add tomatoes. Crush with a potato masher or with the spatula and cook until combined. Balance with salt/sugar/acid until a bright sauce emerges. Add oregano (and any other spices).
+Sweat down onions in olive oil with some salt in a family pan until they are translucent. Add garlic and gently fry until softened. [[Deglaze]] pan with wine, and add tomatoes. Crush with a potato masher or with the spatula and cook until combined. Balance with salt/sugar/acid until a bright sauce emerges. Add oregano (and any other spices).
 
 Lasts up to a week in the fridge (and freezes pretty well). Great for pizza, pizza dogs, parm, or simple pastas.
 
@@ -397,8 +397,8 @@ Update: made this with Jay, following the veloté style method (using homemade c
 
 There are 2 fairly standard methods for a simple cream of mushroom soup:
 
-1. With a velouté (stock roux):
-    1. Saute aromatics and mushrooms
+1. With a velouté (stock [[Roux|roux]]):
+    1. Saute [[Aromatics|aromatics]] and mushrooms
     2. Add flour, make a roux
     3. Deglaze with stock (and/or wine)
     4. Finish with cream and herbs

@@ -12,11 +12,11 @@ cuisine: Indian
 draft: false
 ---
 
-Naan is a simple, delicious bread, best covered with garlic and ghee.
+Naan is a simple, delicious bread, best covered with garlic and [[Ghee|ghee]].
 
 ## Mechanic
 
-Yogurt is the key acid and tenderizer: it produces the slight tang and soft interior that sets naan apart from other flatbreads. **Portioning into 100 g balls and cold-proofing overnight** gives the dough time to develop flavour and makes the bread easier to roll and cook.
+Yogurt is the key acid and tenderizer: it produces the slight tang and soft interior that sets naan apart from other flatbreads. **Portioning into 100 g balls and cold-[[Proofing|proofing]] overnight** gives the dough time to develop flavour and makes the bread easier to roll and cook.
 
 ## Ingredients
 

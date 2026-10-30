@@ -22,7 +22,7 @@ caption: A mainland bowl, by volume
 ```
 - **Rice.** Short-grain white rice, warm or at room temperature. Either plain or seasoned works; I usually season it, as sushi rice (with vinegar and sugar).
 - **Toppings.** Avocado for creaminess, cucumber for crispness, edamame, pickled ginger, seaweed salad.
-- **Sauce.** A bowl takes a second sauce over the top (more shoyu dressing, or spicy mayo), since the rice and toppings aren't seasoned.
+- **Sauce.** A bowl takes a second sauce over the top (more [[Shoyu|shoyu]] dressing, or spicy mayo), since the rice and toppings aren't seasoned.
 
 ## Options
 

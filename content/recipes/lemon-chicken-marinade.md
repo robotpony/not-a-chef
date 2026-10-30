@@ -15,7 +15,7 @@ Lemon chicken is great on salad, in wraps, or in rice bowls.
 
 ## Mechanic
 
-A **weight-based Mediterranean marinade** built on a 1.6:1 ratio of fat to acid (80 g oil : 50 g lemon juice). Lemon zest does more flavour work than the juice alone; don't skip it. MSG rounds out the savouriness, so you can use less salt.
+A **weight-based Mediterranean marinade** built on a 1.6:1 ratio of fat to acid (80 g oil : 50 g lemon juice). Lemon zest does more flavour work than the juice alone; don't skip it. [[MSG]] rounds out the savouriness, so you can use less salt.
 
 ```formula
 oil     | Oil   | 1.6

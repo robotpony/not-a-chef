@@ -14,7 +14,7 @@ Scale the ingredients by weight (using the percentages below) if you need more o
 
 ## Mechanic
 
-**Sodium carbonate** (baked baking soda) makes the dough alkaline, which is what gives ramen noodles their characteristic chew, yellow tint, and springiness, as opposed to a soft Italian-style pasta. At **about 36% hydration** this is a stiff, shaggy dough that only comes together with rest and lamination, not extra water.
+**Sodium carbonate** (baked baking soda) makes the dough alkaline, which is what gives ramen noodles their characteristic chew, yellow tint, and springiness, as opposed to a soft Italian-style pasta. At **about 36% [[Hydration|hydration]]** this is a stiff, shaggy dough that only comes together with rest and lamination, not extra water.
 
 ```formula
 flour   | Flour | 100

@@ -55,4 +55,4 @@ Bake until lightly browned, 15–18 minutes. Cool completely, then slice with a 
 
 - Half milk
 - Add soft butter at end
-- Replace half or all with Diastatic Malt Powder (malted barley)
+- Replace half or all with [[Diastatic malt powder|Diastatic Malt Powder]] (malted barley)

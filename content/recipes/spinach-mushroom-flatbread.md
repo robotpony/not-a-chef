@@ -28,7 +28,7 @@ This is a quick flatbread, similar to the Trader Joe's mushroom and truffle flat
 
 ## Method
 
-Melt the butter in a medium pan. Add the mushrooms and a pinch of salt and cook until they release their water, then until browning. Add the spinach and cook until the water is gone. Add the garlic and cook until softened but not browned. Stir in the lemon juice, thyme, coriander, MSG, and salt and pepper to taste. Set aside to cool.
+Melt the butter in a medium pan. Add the mushrooms and a pinch of salt and cook until they release their water, then until browning. Add the spinach and cook until the water is gone. Add the garlic and cook until softened but not browned. Stir in the lemon juice, thyme, coriander, [[MSG]], and salt and pepper to taste. Set aside to cool.
 
 Heat the oven to 200°C (400°F). Warm the flatbreads in the oven until heated through (and thawed, if frozen), so they don't start out soggy. Pull them out before they toast.
 

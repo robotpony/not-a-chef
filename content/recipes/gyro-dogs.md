@@ -15,7 +15,7 @@ This recipe was inspired by a Chef John video. It inspired me to make the gyro m
 
 ## Mechanic
 
-This is sausage-making technique applied to a gyro spice blend; see the [[Gyro base]] Mechanic for how the cold water and panade emulsify the meat. That emulsion is what gives the dogs their snap and lets them hold a hot-dog shape on the grill instead of falling apart like a loose burger. Skipping the chill or under-mixing gives a crumbly result.
+This is sausage-making technique applied to a gyro spice blend; see the [[Gyro base]] Mechanic for how the cold water and [[Panade|panade]] [[Emulsify|emulsify]] the meat. That emulsion is what gives the dogs their snap and lets them hold a hot-dog shape on the grill instead of falling apart like a loose burger. Skipping the chill or under-mixing gives a crumbly result.
 
 ## Dogs
 

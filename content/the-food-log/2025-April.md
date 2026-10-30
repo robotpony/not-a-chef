@@ -20,7 +20,7 @@ _Undated._
 - ½ teaspoon kosher or sea salt (and then to taste)
 - ½ cup loosely packed cilantro finely chopped
 - ¼ teaspoon onion powder, dehydrated onions, or any fresh onion
-- MSG (2-4 mg)
+- [[MSG]] (2-4 mg)
 
 #### Greek chops
 
@@ -45,7 +45,7 @@ alt:
     - [Tsukune](https://www.seriouseats.com/tsukune-japanese-chicken-meatballs-recipe)
     - [Kofte](https://www.seriouseats.com/kofte-kebabs-with-spicy-harissa-yogurt-sauce) (with harissa, hummus, pita, salad)
 - Stews of Earth ← _braise/low-slow_
-    - [Fesenjan](https://www.seriouseats.com/fesenjan-persian-pomegranate-and-walnut-meat-braise-recipe-8425670) (pom/walnut meat braise)
+    - [Fesenjan](https://www.seriouseats.com/fesenjan-persian-pomegranate-and-walnut-meat-braise-recipe-8425670) (pom/walnut meat [[Braise|braise]])
 
 #### Ideas from vacation
 

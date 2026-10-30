@@ -32,7 +32,7 @@ Built on double-strength tomato paste rather than crushed tomatoes. The paste is
 
 Heat the olive oil in a small saucepan over medium. Add the tomato paste and cook, stirring, until it darkens slightly and smells sweeter, 1–2 minutes.
 
-Add the wine and stir to deglaze. Add the water and herbs and simmer for 5 minutes. Taste and add a pinch of sugar if the sauce is sharp.
+Add the wine and stir to [[Deglaze|deglaze]]. Add the water and herbs and simmer for 5 minutes. Taste and add a pinch of sugar if the sauce is sharp.
 
 ## To serve
 

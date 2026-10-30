@@ -15,7 +15,7 @@ Salt only ever touches the outside of a burger patty made with ground beef or po
 ## The variables
 
 - **When.** In the pan as the patty cooks, or as it comes off; either works. For a smash burger, season the top just before you smash.
-- **What.** Salt and black pepper are the base, with MSG optional.
+- **What.** Salt and black pepper are the base, with [[MSG]] optional.
 - **How much.** For a seasoning blend, mix by weight: **4:2:1 salt, MSG, and black pepper**, plus 0.25 parts onion powder if you like (from the [[McDouble]] recipe, replicating the dried onion flavour).
 
 ## Options

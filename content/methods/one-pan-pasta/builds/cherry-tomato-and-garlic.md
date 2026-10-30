@@ -37,7 +37,7 @@ This is one of the few cases I recommend adding oil to the pasta water. The wate
 
 ## Variations
 
-- **Mushroom aglio e olio:** no tomatoes. Dried mushrooms soaked, added with the garlic, and their soaking liquid used as part of the pasta water; olive oil drizzled in at the end to emulsify.
+- **Mushroom aglio e olio:** no tomatoes. Dried mushrooms soaked, added with the garlic, and their soaking liquid used as part of the pasta water; olive oil drizzled in at the end to [[Emulsify|emulsify]].
 - **Win the fridge:** mushrooms, thyme, and lemon alongside the last of the small tomatoes (see [[Win the fridge]]).
 
 ## Recipes

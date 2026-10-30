@@ -8,7 +8,7 @@ tags:
 description: Turning a sale-priced pork loin into breakfast sausage, with rules of thumb for seasoning and texture.
 ---
 
-Pork loin was on sale this week, packaged in half loins (roughly 3.5 kg). I picked one up and split it into four roasts. Loin usually ends up as chops, or brined and smoked as back bacon (Canadian bacon). It's a fairly lean cut, but cut right it has some marbling and a fat cap, and it makes great ground pork if you include the fat cap.
+Pork loin was on sale this week, packaged in half loins (roughly 3.5 kg). I picked one up and split it into four roasts. Loin usually ends up as chops, or [[Brine|brined]] and smoked as back bacon (Canadian bacon). It's a fairly lean cut, but cut right it has some marbling and a fat cap, and it makes great ground pork if you include the fat cap.
 
 I ground a quarter of the loin, then seasoned and brined it overnight. I fried a small test portion and decided to run the rest through the stand mixer with the paddle attachment to soften the texture. Then I formed it into balls and patties and froze them.
 
@@ -16,7 +16,7 @@ Sausage patties and rolled breakfast sausage are easy and cheap if you follow a 
 
 - 1.25–1.5% salt
 - 3–5% water
-- 0.5–0.6% MSG
+- 0.5–0.6% [[MSG]]
 - 0.5–1% sugar
 - 0.5–0.75% spices
 
@@ -24,7 +24,7 @@ You have a few ways to control texture:
 
 - grind: single or double, and grind size
 - mixing: combined, mixed, or whipped
-- hydration and time: more or less water
+- [[Hydration|hydration]] and time: more or less water
 - fat: 90% lean is chewier, 70% lean is juicier
 - additions: bread, milk, butter, cheese
 

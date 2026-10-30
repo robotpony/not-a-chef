@@ -9,7 +9,7 @@ cuisine: Italian
 draft: false
 ---
 
-This is another iteration of my pizza dough recipe, based on some experimentation in late 2021. This is a medium-high hydration dough, optionally reinforced with additional gluten for structure and chew. I skip the autolyse step now, which I’ve replaced with a longer cold rise time. This recipe is based on [Flour Water Salt Yeast](https://www.amazon.ca/Flour-Water-Salt-Yeast-Fundamentals/dp/160774273X), with gluten ratios lifted from recipes at Serious Eats (aiming at ~13–14% protein).
+This is another iteration of my pizza dough recipe, based on some experimentation in late 2021. This is a medium-high [[Hydration|hydration]] dough, optionally reinforced with additional gluten for structure and chew. I skip the [[Autolyse|autolyse]] step now, which I’ve replaced with a longer cold rise time. This recipe is based on [Flour Water Salt Yeast](https://www.amazon.ca/Flour-Water-Salt-Yeast-Fundamentals/dp/160774273X), with gluten ratios lifted from recipes at Serious Eats (aiming at ~13–14% protein).
 
 <!-- Private worksheet (to import): https://docs.google.com/spreadsheets/d/1mGH0Liy4oM1DtfYYihxtBdcbKprFoXHQsPHK2FIZL-8/edit#gid=0 -->
 
@@ -43,7 +43,7 @@ Drizzle in the water and mix until combined. Add the olive oil and mix until com
 
 Knead on medium until the dough is smooth and pulls free of the bowl, 5–10 minutes. You may need to scrape down the hook and bowl a few times with a dough scraper, or raise and lower the bowl. It's ready when it forms a smooth, cohesive ball (or lump).
 
-Oil a proofing bucket and transfer the dough to it. Cover and refrigerate for at least 24 hours; 48–72 hours is ideal, and up to 5–6 days works.
+Oil a [[Proofing|proofing]] bucket and transfer the dough to it. Cover and refrigerate for at least 24 hours; 48–72 hours is ideal, and up to 5–6 days works.
 
 ## Making pizzas
 

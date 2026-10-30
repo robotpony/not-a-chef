@@ -34,7 +34,7 @@ This is a simplified satay marinade, great for chicken, tofu, pork, and beef. It
 
 ## Method
 
-Season the protein with the salt; it dry-brines while you make the marinade.
+Season the protein with the salt; it dry-[[Brine|brines]] while you make the marinade.
 
 Blend everything except the protein and salt in a blender or food processor until fairly smooth.
 

@@ -15,7 +15,7 @@ This is our classic-style beef stew. I tend to make it as a base now, skipping t
 
 ## Mechanic
 
-Brown the beef in batches without crowding; you want a sear, not a steam. The fond that builds on the bottom of the pot is the stew's backbone; the wine deglaze lifts all of it. Making this as a minimal stew, without vegetables in the braise, means you can cook it longer without anything going mushy and serve it over whatever you have on hand.
+Brown the beef in batches without [[Crowding the pan|crowding]]; you want a [[Sear|sear]], not a steam. The [[Fond|fond]] that builds on the bottom of the pot is the stew's backbone; the wine [[Deglaze|deglaze]] lifts all of it. Making this as a minimal stew, without vegetables in the [[Braise|braise]], means you can cook it longer without anything going mushy and serve it over whatever you have on hand.
 
 ## Ingredients
 
@@ -53,7 +53,7 @@ Dutch oven: cook on the lowest possible heat until the beef is spoon-tender, 2â€
 
 Pressure cooker: cook at high pressure for about 35 minutes; cookers vary, so check a cube and add time if it isn't spoon-tender. Let the pressure release naturally.
 
-Taste and season. Thicken with a flour slurry if needed, or reduce uncovered.
+Taste and season. Thicken with a flour [[Slurry|slurry]] if needed, or reduce uncovered.
 
 ## To serve
 

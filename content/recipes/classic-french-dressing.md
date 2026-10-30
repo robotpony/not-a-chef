@@ -10,7 +10,7 @@ cuisine: American
 draft: false
 ---
 
-French dressing is a classic early restaurant memory for us. The emulsified version is a North American twist, but it works just as well as an oil and vinegar dressing.
+French dressing is a classic early restaurant memory for us. The [[Emulsify|emulsified]] version is a North American twist, but it works just as well as an oil and vinegar dressing.
 
 ## Mechanic
 

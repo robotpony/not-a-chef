@@ -24,7 +24,7 @@ caption: 1:4 for a thicker dal, 1:5 looser
 bar: yes
 ```
 
-The tadka is not garnish. Hot fat with spices poured over at the end is the flavour. Don't skip it.
+The [[Tadka|tadka]] is not garnish. Hot fat with spices poured over at the end is the flavour. Don't skip it.
 
 ## Dal
 
@@ -51,7 +51,7 @@ Add the dal ingredients to a pot. Bring to a rolling boil, then lower the heat, 
 - ½ tsp fenugreek seeds (optional)
 - a pinch of hing, or asafoetida (optional)
 
-Melt the fat in a small pan over medium-high heat. Add the cumin seeds, and the cloves and fenugreek, if using. When the cumin sizzles, add the garlic, onion, and hing. Fry until golden and fragrant, about 3–4 minutes. Pour over the dal and cover for a minute to let it infuse.
+Melt the fat in a small pan over medium-high heat. Add the cumin seeds, and the cloves and fenugreek, if using. When the cumin sizzles, add the garlic, onion, and [[Asafoetida|hing]]. Fry until golden and fragrant, about 3–4 minutes. Pour over the dal and cover for a minute to let it infuse.
 
 ## To serve
 
@@ -61,7 +61,7 @@ Warm basmati rice, plain raita, a crunchy salad (tomatoes, onion, cucumber, lime
 
 ### Onion-first dal
 
-Cook a diced onion in oil until golden, then add the garlic, ginger, ground coriander, and turmeric before the lentils go in, so the lentils absorb a more developed flavour. Use the 1:4 ratio for a thicker result. Finish with lemon juice and the garam masala off the heat. The tadka is simpler: ghee, cumin, hing, and a dried red chili. Adapted from [Vice](https://www.vice.com/en/article/dal-tadka-recipe/).
+Cook a diced onion in oil until golden, then add the garlic, ginger, ground coriander, and turmeric before the lentils go in, so the lentils absorb a more developed flavour. Use the 1:4 ratio for a thicker result. Finish with lemon juice and the [[Garam masala|garam masala]] off the heat. The tadka is simpler: [[Ghee|ghee]], cumin, hing, and a dried red chili. Adapted from [Vice](https://www.vice.com/en/article/dal-tadka-recipe/).
 
 ### Coconut cream dal
 

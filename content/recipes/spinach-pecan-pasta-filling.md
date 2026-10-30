@@ -27,7 +27,7 @@ This is a great filling for vegetarian pasta like ravioli, tortellini, or sauced
 
 Toast the pecans in a little butter or oil until fragrant. Add the shallot and garlic and cook until soft and translucent.
 
-Add the spinach, herbs, pepper, and salt, and cook, stirring, until the spinach starts to dry out. Deglaze with a splash of water if needed, scraping up any fond. Let cool.
+Add the spinach, herbs, pepper, and salt, and cook, stirring, until the spinach starts to dry out. [[Deglaze]] with a splash of water if needed, scraping up any [[Fond|fond]]. Let cool.
 
 Mix the cooled spinach mixture thoroughly with the ricotta and Parmesan. Chill before using as a pasta filling.
 

@@ -39,7 +39,7 @@ Optional: 1 cup each large diced celeriac and turnip.
 
 ## Method
 
-Heat fat in a wide, heavy pot over medium-high. Brown the floured meat in batches without crowding, about 4 minutes per side. Set aside.
+Heat fat in a wide, heavy pot over medium-high. Brown the floured meat in batches without [[Crowding the pan|crowding]], about 4 minutes per side. Set aside.
 
 Reduce heat to medium. Add onion and cook until soft and translucent, about 8 minutes. Add garlic and bell pepper; cook 2 more minutes.
 

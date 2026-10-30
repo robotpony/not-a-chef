@@ -14,7 +14,7 @@ This is a restaurant-style base for takeout curries.
 
 ## Mechanic
 
-This is a BIR (British Indian Restaurant) base gravy: a neutral, lightly spiced vegetable purée that acts as the liquid foundation for takeaway-style curries. Most BIR curries start by blooming aromatics and spices in oil, then adding this gravy to build the sauce. The gravy itself is deliberately mild; the individual dish recipes add heat and character on top.
+This is a BIR (British Indian Restaurant) base gravy: a neutral, lightly spiced vegetable purée that acts as the liquid foundation for takeaway-style curries. Most BIR curries start by blooming [[Aromatics|aromatics]] and spices in oil, then adding this gravy to build the sauce. The gravy itself is deliberately mild; the individual dish recipes add heat and character on top.
 
 ## Ingredients
 
@@ -45,7 +45,7 @@ Heat the oil in a large pot over medium-high. Add the ginger/garlic paste and bl
 
 Add the water and all the vegetables. Bring to a simmer, cover, and cook on medium-low until everything is very soft, about 45 minutes. Alternatively, pressure cook on low for 30 minutes.
 
-Add the garam masala water. Blend smooth with an immersion blender.
+Add the [[Garam masala|garam masala]] water. Blend smooth with an immersion blender.
 
 Temper the cream by whisking in a few ladles of hot gravy, then stir it back into the pot. Add water until the gravy coats the back of a spoon: not thick, not watery.
 

@@ -52,13 +52,13 @@ Heat the oven to 200°C (400°F). Thinly slice the veg into one or more roasting
 
 Crush the dried mushrooms (without soaking them) and add them to the trays.
 
-Mix the tomato paste, miso, and vegetable oil together and toss with the vegetables until thoroughly coated.
+Mix the tomato paste, [[Miso|miso]], and vegetable oil together and toss with the vegetables until thoroughly coated.
 
 Roast, stirring occasionally, until deep brown but not burnt, 30–45 minutes.
 
 Transfer to a large pot, add the water, and simmer for 1 hour. In a pressure cooker, cook on low pressure for 20 minutes and let it depressurize naturally for a clearer stock.
 
-Remove the solids and strain. With the heat off, add the kombu to the strained stock and steep for 15–25 minutes, then lift it out. Or soak the kombu in the water before it goes in with the veg.
+Remove the solids and strain. With the heat off, add the [[Kombu|kombu]] to the strained stock and steep for 15–25 minutes, then lift it out. Or soak the kombu in the water before it goes in with the veg.
 
 Taste a little stock in a small bowl with a pinch of salt or soy to judge its strength for whatever you plan to use it for.
 

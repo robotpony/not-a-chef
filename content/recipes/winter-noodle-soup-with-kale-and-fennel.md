@@ -51,7 +51,7 @@ Soak and rinse the chopped kale, drain it, and set it aside in a large bowl. Hal
 
 Heat oil in a Dutch oven and sauté the onion, carrot, and celery until they start to soften. Add the fennel and shallot and keep softening.
 
-Deglaze the pot with a splash of the wine. Add the stock, water, kale, and bouquet garni. Simmer until the kale and carrots are almost tender.
+[[Deglaze]] the pot with a splash of the wine. Add the stock, water, kale, and bouquet garni. Simmer until the kale and carrots are almost tender.
 
 While the soup simmers, remove the skin from the chicken and pull the meat off by hand. Chop it bite-size, checking for bones and cartilage. Stir it into the soup (or add the beans).
 

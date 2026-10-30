@@ -41,12 +41,12 @@ Serve chicken or pork with rice, a salad, or on a bun.
 
 ## Variations
 
-- Teriyaki (sake, mirin, soy, ginger, sesame seeds, and sriracha for some spice)
+- Teriyaki (sake, [[Mirin|mirin]], soy, ginger, sesame seeds, and [[Sriracha|sriracha]] for some spice)
 
 ## Notes
 
-- I was skeptical about this technique until Kenji explained that mayo is oil emulsified with egg and acid, already seasoned with salt.
+- I was skeptical about this technique until Kenji explained that mayo is oil [[Emulsify|emulsified]] with egg and acid, already seasoned with salt.
 - Tested as a pure marinade (not salted separately first). Worked well; slightly salty, very tasty.
 - Reduce salt if using a thinner cut that will marinate longer.
-- Kewpie is a thick, savoury, enriched Japanese mayonnaise (packaged in a classic squeeze bottle).
+- [[Kewpie mayonnaise|Kewpie]] is a thick, savoury, enriched Japanese mayonnaise (packaged in a classic squeeze bottle).
 - Cook chicken to 74°C (165°F) for vulnerable guests.

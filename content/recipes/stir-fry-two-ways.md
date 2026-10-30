@@ -52,7 +52,7 @@ Marinate the pork in the garlic, shallot, ginger, sugar, white pepper, salt and 
 
 Heat some oil in a wide pan on medium. Fry the pork until the edges start to brown. Add the onion and celery and keep cooking. Add the remaining vegetables and flip regularly.
 
-Deglaze the pan with a splash of water and rice wine vinegar. Cook until the liquid reduces to a glaze, adding more if it gets too thick. Toss in the green onion just before serving.
+[[Deglaze]] the pan with a splash of water and rice wine vinegar. Cook until the liquid reduces to a glaze, adding more if it gets too thick. Toss in the green onion just before serving.
 
 ## To serve
 

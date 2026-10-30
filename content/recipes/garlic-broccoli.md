@@ -30,7 +30,7 @@ Heat a wok over high until smoking. Add the oil and garlic; stir-fry until fragr
 
 Add the broccoli and toss to coat. Add the Shaoxing wine and stock; the pan will steam heavily. Cover and steam until the broccoli is bright green and tender-crisp, about 2 minutes.
 
-Add the white pepper. Pour the cornstarch slurry in around the edge; toss until the sauce clings, about 1 minute. Finish with the sesame oil.
+Add the white pepper. Pour the cornstarch [[Slurry|slurry]] in around the edge; toss until the sauce clings, about 1 minute. Finish with the sesame oil.
 
 ## Equipment
 

@@ -38,5 +38,5 @@ As a glaze for grilled or roasted pork, chicken, or tofu. Brush on in the last f
 
 ## Notes
 
-- Authentic kecap manis uses palm sugar and is thicker; this is a fast approximation.
+- Authentic [[Kecap manis|kecap manis]] uses palm sugar and is thicker; this is a fast approximation.
 - A star anise or a sliver of galangal in the warm sauce adds depth.

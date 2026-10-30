@@ -38,7 +38,7 @@ Burger King co-founder James McLamore created the Whopper in 1957, after noticin
 | Constraint | Pick it explains |
 |---|---|
 | Beat a rival on size | A 4 oz patty, wider than most, on a large bun |
-| A flame grill, not a griddle | Char and smoke instead of a seared crust |
+| A flame grill, not a griddle | Char and smoke instead of a [[Sear|seared]] crust |
 | "Have It Your Way" | Simple toppings, each one easy to add or leave off |
 
 ## Why these picks

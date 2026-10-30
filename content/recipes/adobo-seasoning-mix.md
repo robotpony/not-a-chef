@@ -32,5 +32,5 @@ Use as a dry rub on pork, chicken, or beef. Excellent on meatballs. Also good as
 
 ## Notes
 
-- Used for meatballs; very good. A slightly wet panade worked well.
+- Used for meatballs; very good. A slightly wet [[Panade|panade]] worked well.
 - A small amount of smoked paprika in place of some sweet paprika adds depth for grilling.

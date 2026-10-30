@@ -44,11 +44,11 @@ Sunday prep would typically look like:
 
     - Cut each bird into breasts, thighs and drumsticks, and wings
     - Set the wings aside for a wing night; the tips go into [[Chicken or turkey stock]] with the necks and backbones
-    - Dry brine 3–4 hours and season however you like (Indian spices, herbes de Provence, etc.)
+    - Dry [[Brine|brine]] 3–4 hours and season however you like (Indian spices, herbes de Provence, etc.)
     - Roast on sheet pans to 74°C (165°F)
     - For salads, casseroles, and roast veg plates
 
-- Braise the ground beef (cook it in a little liquid until tender, then brown it; see [[Beef base]])
+- [[Braise]] the ground beef (cook it in a little liquid until tender, then brown it; see [[Beef base]])
 
     - Season lightly
     - Let cool and package up in meal-sized portions

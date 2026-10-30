@@ -47,9 +47,9 @@ Fry the mixture in a nonstick pan on medium, stirring or flipping regularly, unt
 - 2-3 tsp grated ginger
 - 1 pack noodles, par-cooked in boiling water if needed
 
-Heat some coconut oil in a large 5–6 L (5–6 qt) saucier on medium. If the coconut milk has separated, use its solids instead. Add the curry paste and stir until aromatic.
+Heat some coconut oil in a large 5–6 L (5–6 qt) saucier on medium. If the coconut milk has separated, use its solids instead. Add the curry paste and stir until [[Aromatics|aromatic]].
 
-Add the onion and celery and cook until they start sticking. Deglaze with the coconut milk, add the stock, and scrape up the browned bits. Add the remaining vegetables and simmer until they're almost tender.
+Add the onion and celery and cook until they start sticking. [[Deglaze]] with the coconut milk, add the stock, and scrape up the browned bits. Add the remaining vegetables and simmer until they're almost tender.
 
 Add the noodles and the pork mixture and simmer until the pork is cooked through. Taste and adjust.
 

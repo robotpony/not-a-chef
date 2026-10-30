@@ -21,7 +21,7 @@ This chapter is a work in progress, and I still need to develop and test ratios 
 - Breading (for deep frying)
 - Gravies
 
-    - roux
+    - [[Roux|roux]]
     - reductions
     - starches
     - bouillon or stock
@@ -55,7 +55,7 @@ This chapter is a work in progress, and I still need to develop and test ratios 
 | Salt | ~0.04 | ~1% | ~2 g |
 
 - Water can be added to balance the strength of the vinegar (especially as most mustard emulsifiers also include vinegar)
-- Salt can (and should) include some glutamate or equivalent (like anchovies, Worcestershire, MSG, etc.)
+- Salt can (and should) include some glutamate or equivalent (like anchovies, Worcestershire, [[MSG]], etc.)
 - If blending or grinding spices, take care as both can cause bitterness
 
 ### Mayonnaise
@@ -71,7 +71,7 @@ This chapter is a work in progress, and I still need to develop and test ratios 
 | Salt | 0.04 | 1% | 2.5 g |
 | MSG | 0.02 | 0.5% | 1.25 g |
 
-- Sugar, fat, and additional glutamates (or dashi) can be added to make more of a [[Kewpie mayonnaise]]
+- Sugar, fat, and additional glutamates (or [[Dashi|dashi]]) can be added to make more of a [[Kewpie mayonnaise]]
 - Other seasonings can be added, or mixed in afterwards
 - Use a large deli container and immersion blender by adding everything but the oil to the bottom of the container, covering ingredients with the blender head. Pour oil over the blender head, and blend. The oil will get pulled in slowly (much simpler than drizzling it in).
 
@@ -90,7 +90,7 @@ This chapter is a work in progress, and I still need to develop and test ratios 
 | MSG | 1% | 10 g |
 | Baking soda | < 1% | < 10 g |
 
-- A wet brine is typically 2.5–7.5% salt to water (5% is a good default), with sugar from none up to about the weight of the salt
+- A wet [[Brine|brine]] is typically 2.5–7.5% salt to water (5% is a good default), with sugar from none up to about the weight of the salt
 - Wet brines can be used on both meats and vegetables (and tubers)
 
     - Tubers like potatoes become softer

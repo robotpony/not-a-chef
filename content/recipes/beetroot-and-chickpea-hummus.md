@@ -31,7 +31,7 @@ A bright red, earthy hummus. Makes about three grocery-store tubs' worth.
 
 Toss the beets in a little oil and roast at 200°C (400°F) until a knife slides through easily, about 40 minutes. While they roast, simmer the chickpeas in water until very soft, 15–20 minutes, then drain.
 
-Put the tahini, garlic, lemon juice, salt, spices, and ice cubes in a high-powered blender. Add the beets and chickpeas once they've cooled. Blend until completely smooth, 1–2 minutes in a Vitamix and longer in other blenders.
+Put the [[Tahini|tahini]], garlic, lemon juice, salt, spices, and ice cubes in a high-powered blender. Add the beets and chickpeas once they've cooled. Blend until completely smooth, 1–2 minutes in a Vitamix and longer in other blenders.
 
 Taste. Add salt and lemon until it tastes like hummus, then blend again. Blend in the olive oil last.
 

@@ -46,7 +46,7 @@ bar: yes
 
 Stir the buttermilk, hot sauce, and salt together in a large bowl. Add the chicken and turn to coat. Cover and refrigerate for at least 4 hours, or overnight.
 
-Mix the cornmeal, flour, baking powder, salt, pepper, sage, paprika, garlic powder, and onion powder in a shallow dish. Lift each piece of chicken from the buttermilk and let the excess drip off. Press it into the dredge until evenly coated, then set it on a baking sheet. Let the coated pieces sit for 10 minutes while the fat heats; the coating turns pasty and grips better.
+Mix the cornmeal, flour, baking powder, salt, pepper, sage, paprika, garlic powder, and onion powder in a shallow dish. Lift each piece of chicken from the buttermilk and let the excess drip off. Press it into the [[Dredge|dredge]] until evenly coated, then set it on a baking sheet. Let the coated pieces sit for 10 minutes while the fat heats; the coating turns pasty and grips better.
 
 Melt the shortening in a large, deep frying pan or Dutch oven over medium-high heat. It should be about 1.5 cm (½ in) deep. Heat to 180°C (360°F). Lay the chicken in skin side down, dark meat in the center and breasts around the edge. The pieces can touch but shouldn't be packed. Turn the heat to medium. Fry until deep golden on the bottom, about 12 minutes.
 

@@ -3,7 +3,7 @@ title: Spring 2023
 date: 2023-06-01
 ---
 
-A methodical pizza dough test (five iterations, landing on 1.5% yeast with a long ferment for a perfect crust), plus a ramen stock and chashu pork build-out, a big pre-vacation prep push that checked off beef stew, cottage pie, and meat sauce, and a running dessert bucket list (crepe cake, crème brûlée) still untouched.
+A methodical pizza dough test (five iterations, landing on 1.5% yeast with a long ferment for a perfect crust), plus a ramen stock and [[Chashu|chashu]] pork build-out, a big pre-vacation prep push that checked off beef stew, cottage pie, and meat sauce, and a running dessert bucket list (crepe cake, crème brûlée) still untouched.
 
 _Undated. About April to June; the original notes grouped these as Spring._
 
@@ -27,7 +27,7 @@ Tests:
 | Heat | 233C + fan | 233C + fan | 233C + fan | 233C + fan | 233C + fan |
 | Time | 12 minutes | 13 minutes | 16 minutes | 14 minutes | 12 minutes |
 | Yeast | .5% | .5% + long ferment | 1.5% + ferment | 1.5% + long ferment | 1.5% + long ferment |
-| Hydration | 70% | 70% | 70% | 70% | 70% |
+| [[Hydration]] | 70% | 70% | 70% | 70% | 70% |
 | Gluten | 14.5% | 14.5% | 12.5% | 12.5% | 12.5% |
 | Dough temp | 20C | 18C | 15C | 18C | 18c |
 | Dough weight | 200g | 215g | 280g | 200g | 200g |
@@ -64,18 +64,18 @@ Tests:
 - [Ramen stock (chicken)](https://docs.google.com/document/d/14HiL_nO3th1FFibQTvN6T7nEmnwYS9VFZjRmzoHRF6M/edit#) → [[Basic chicken ramen stock]]
     - ✔️Chicken/veg roasted
     - ✔️Pressure
-    - ✔️Umami ++
+    - ✔️[[Umami]] ++
     - ✔️Reduce
     - [Pork (for slicing → ramen)](https://docs.google.com/document/d/1M7ZMOZos83Xw8a1Z_tDL4Xfla2aqjHoNR9TBcfoLKkQ/edit#heading=h.3fsk0afek31n) → [[Chashu pork]]
         - ✔️Trim: bones and fat → stock
-        - ✔️Braise
+        - ✔️[[Braise]]
             - Not enough flavour, needs to be more intense or more time?
             - Need to be careful reheating
-        - Tare
+        - [[Tare]]
 - [Green goddess dressing](https://docs.google.com/document/d/14ChyHU9QrXJauLcKEhUkipCAzsR69I9LGYMoj8nzr2s/edit#) → [[Simple green goddess dressing]]
     - Toasted nuts/seeds → bacon (or tempeh?)
     - Quick clean/process herbs
-- Wings → dry brine
+- Wings → dry [[Brine|brine]]
 - Chicken (for week) ← tomorrow?
 
 ### Mother’s day week foods
@@ -87,7 +87,7 @@ Tests:
 
 - Vinaigrettes
     - Goddess dressing ([SE](https://www.seriouseats.com/classic-green-goddess-dressing-recipe), [NYT](https://cooking.nytimes.com/recipes/1014134-green-goddess-dressing), [Alt](https://playswellwithbutter.com/green-goddess-dressing/))
-        - One I had was not super emulsified
+        - One I had was not super [[Emulsify|emulsified]]
         - Common herbs: tarragon, chives & parsley
     - Raspberry vinaigrette ([NYT](https://cooking.nytimes.com/recipes/1017634-raspberry-vinegar), [Vitamix](https://www.vitamix.com/us/en_us/recipes/raspberry-vinaigrette))
     - General ([SE](https://www.seriouseats.com/three-great-vinaigrettes-salad-dressings-recipe))
@@ -119,15 +119,15 @@ Tests:
 - Methods
 - Tare (to freeze, and general ratios)
 - Portioned noodles (~300kcal)
-- Stock (need bonito)
+- Stock (need [[Katsuobushi|bonito]])
     - Seafood
-    - Shoyu
+    - [[Shoyu]]
 
 #### Salads and Dressings
 
 - Raspberry vinaigrette
 - Green goddess dressing ([link](https://www.seriouseats.com/classic-green-goddess-dressing-recipe))
-- Tahini goddess?
+- [[Tahini]] goddess?
 - Chart with ratios
 
 ### Dessert bucket list

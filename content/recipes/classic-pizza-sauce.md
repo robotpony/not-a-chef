@@ -27,7 +27,7 @@ There are a few ways to make pizza sauce, depending on how lazy you are. One of 
 
 Crush the tomatoes by hand, with a pastry cutter, or with a hand blender (optional). For an even smoother sauce, pass them through a food mill or force them through a fine-mesh strainer with a spatula.
 
-Sweat the onion and garlic in the olive oil until aromatic but not browned, 2–3 minutes.
+Sweat the onion and garlic in the olive oil until [[Aromatics|aromatic]] but not browned, 2–3 minutes.
 
 Reduce the heat. Add the tomatoes, tomato paste, oregano, and granulated garlic.
 

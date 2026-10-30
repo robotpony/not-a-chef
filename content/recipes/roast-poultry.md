@@ -15,7 +15,7 @@ A roasted chicken or turkey is a comforting base for a family meal, or for food 
 
 ## Mechanic
 
-Dark and light meat have different target temperatures. Splitting them into separate pans and **starting dark meat 30–45 minutes earlier** solves this without tenting or shielding. No water in the pan: the char marks are deliberate and deglaze into stock. Two temperatures: low to build internal temp evenly, high to finish and brown.
+Dark and light meat have different target temperatures. Splitting them into separate pans and **starting dark meat 30–45 minutes earlier** solves this without tenting or shielding. No water in the pan: the char marks are deliberate and [[Deglaze|deglaze]] into stock. Two temperatures: low to build internal temp evenly, high to finish and brown.
 
 ## Method
 

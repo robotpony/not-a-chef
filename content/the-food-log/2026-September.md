@@ -33,7 +33,7 @@ This week's menu:
 	- tomato paste
 	- beef stock (paste), chicken stock (homemade), mushroom soak water (strained)
 	- browning (1 tablespoon)
-	- salt/msg to taste
+	- salt/[[MSG|msg]] to taste
 
 ![Pork goulash v2 simmering in a stainless pot: oven-browned pork cubes in a thick paprika and tomato sauce with onion and mushroom](/images/food-log/2026-pork-goulash-v2-simmering.jpg)
 
@@ -45,7 +45,7 @@ This week's menu:
 ####  Recipe book review pass 
 
 - Cornmeal-breaded chicken patty → *this needs research*
-	- chase the dark, mealy, crunchy breading from Chicken mall guy (see [[The impossible quest for the perfect chicken burger]]); try it on the [[Pan-fried chicken burger]] patty or a brined breast
+	- chase the dark, mealy, crunchy breading from Chicken mall guy (see [[The impossible quest for the perfect chicken burger]]); try it on the [[Pan-fried chicken burger]] patty or a [[Brine|brined]] breast
 
 ## Friday, September 18th
 
@@ -95,7 +95,7 @@ Season the pork cubes with salt and pepper, and toss in oil. Broil on a pan unti
 
 Add the mushrooms to a large pot with some neutral oil and add 100 ml of water. Cook until the water evaporates and the mushrooms brown. Add the onions and carrot, and cook down. Add the garlic and continue to cook. Add tomato paste, and cook until it starts to stick and the veg continues browning. Add the paprika and fennel or caraway, heating them (but not burning).
 
-Deglaze with sherry and add the stock and Worcestershire. Add the tomatoes and crush if needed. Add the pork and pan drippings. Do not waste the pan drippings.
+[[Deglaze]] with sherry and add the stock and Worcestershire. Add the tomatoes and crush if needed. Add the pork and pan drippings. Do not waste the pan drippings.
 
 Hold a bare simmer, stirring regularly. Cook until pork is fork-tender (2-5 hours).
 

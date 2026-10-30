@@ -40,7 +40,7 @@ Used together: Anderson for the frame and the structure, Wright for the cuts bet
 Cut mid-action so two shots share a kinetic arc. The motion completes across the edit, and the brain supplies the missing frames. Creates momentum without chaos. Requires pre-planned coverage and multiple takes of each gesture so you have a cut point at the right phase of motion.
 
 **Food application**
-Knife lifting from board → cut → knife landing in mise en place bowl. Cracking egg on rim → cut → yolk falling into pan. Whisk lifting from bowl → cut → same motion in a larger vessel. The motion must be genuinely continuous across two set-ups.
+Knife lifting from board → cut → knife landing in [[Mise en place|mise en place]] bowl. Cracking egg on rim → cut → yolk falling into pan. Whisk lifting from bowl → cut → same motion in a larger vessel. The motion must be genuinely continuous across two set-ups.
 
 **Concrete example**
 - Shot A: CU knife leaving board on upswing
@@ -57,7 +57,7 @@ Knife lifting from board → cut → knife landing in mise en place bowl. Cracki
 Stack 4–6 quick cuts of the same class of action, each slightly advanced in state. Used in *Spaced* and *Hot Fuzz* to condense montages. Feels musical: a rhythm, not just a time-lapse.
 
 **Food application**
-Mise en place assembly: each cut lands on the next ingredient hitting the board, already partially chopped. Bread baking: each cut advances the Maillard browning by one stop: raw, pale, golden, amber, dark. Cumulative state change read instantly without narration.
+Mise en place assembly: each cut lands on the next ingredient hitting the board, already partially chopped. Bread baking: each cut advances the [[Maillard reaction|Maillard]] browning by one stop: raw, pale, golden, amber, dark. Cumulative state change read instantly without narration.
 
 **Concrete example**
 - Cut 1: raw onion, whole
@@ -75,7 +75,7 @@ Mise en place assembly: each cut lands on the next ingredient hitting the board,
 Jump from inciting moment directly to aftermath, skipping process. Then optionally cut back to explain. Subverts the "building tension" arc: we see the result before we understand how we got there. Used to comic effect in *Shaun of the Dead*.
 
 **Food application**
-Open on finished plated dish (smash). Then cut back: "here is what I almost destroyed." Non-linear recipe narration. It works especially well for long braises, ferments, or any recipe with catastrophic failure risk. Treats the recipe like a mystery, not a tutorial.
+Open on finished plated dish (smash). Then cut back: "here is what I almost destroyed." Non-linear recipe narration. It works especially well for long [[Braise|braises]], ferments, or any recipe with catastrophic failure risk. Treats the recipe like a mystery, not a tutorial.
 
 **Concrete example**
 - Beat 1: Beautiful ramen in bowl
@@ -332,7 +332,7 @@ Overhead mise en place with ingredients arranged symmetrically around a central 
 The camera tracks left or right to reveal a pre-staged scene as if pulling back a curtain on a diorama. Used throughout *The Grand Budapest Hotel* and *The French Dispatch*. The track doesn't follow a character; it reveals a tableau the character is already part of.
 
 **Food application**
-Camera tracks along a counter to reveal each mise en place station in sequence (spices, then aromatics, then proteins) as if opening a display case. Each station is a held beat before the track resumes. Replaces ingredient introduction narration; the reveal is the introduction.
+Camera tracks along a counter to reveal each mise en place station in sequence (spices, then [[Aromatics|aromatics]], then proteins) as if opening a display case. Each station is a held beat before the track resumes. Replaces ingredient introduction narration; the reveal is the introduction.
 
 **Concrete example**
 - Camera starts tight on empty cutting board

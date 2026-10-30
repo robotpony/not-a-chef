@@ -6,7 +6,7 @@ date: 2026-06-08
 draft: false
 ---
 
-I saw a simpler version of green goddess dressing on a wedge salad in Atlanta. It was bright, garlic-forward, and herbal (but not emulsified). This is my version of it.
+I saw a simpler version of green goddess dressing on a wedge salad in Atlanta. It was bright, garlic-forward, and herbal (but not [[Emulsify|emulsified]]). This is my version of it.
 
 ## Ingredients
 
@@ -30,4 +30,4 @@ Blend until smooth, if you like.
 
 ## Notes
 
-- So far I've made it with flat-leaf parsley as the herb and MSG as the savoury boost; both work well.
+- So far I've made it with flat-leaf parsley as the herb and [[MSG]] as the savoury boost; both work well.

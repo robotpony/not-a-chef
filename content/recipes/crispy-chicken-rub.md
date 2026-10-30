@@ -14,7 +14,7 @@ When we crave shake-and-bake, this is what we make. It hits the same notes with 
 
 ## Mechanic
 
-**Baking powder in a dry rub** raises the surface pH of the skin, which helps it brown and crisp faster. Use it sparingly; too much leaves a chalky flavour. Mushroom powder, if you have it, adds quiet umami that amplifies any pan sauce or gravy.
+**Baking powder in a dry rub** raises the surface pH of the skin, which helps it brown and crisp faster. Use it sparingly; too much leaves a chalky flavour. Mushroom powder, if you have it, adds quiet [[Umami|umami]] that amplifies any pan sauce or gravy.
 
 ## Ingredients
 

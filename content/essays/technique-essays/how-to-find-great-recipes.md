@@ -15,7 +15,7 @@ When a recipe doesn’t include that little bit of context, it forces the reader
 
 Ideally a recipe can give you a tiny bit of background on what sort of thing it is (e.g., this is a creamy, vegan carbonara-style pasta), and then help you as a cook to understand the techniques and tools required to make it. Armed with some knowledge, you can then research and practice the techniques, and understand if it’s the style of dish you had in mind.
 
-A recipe with some context communicates so much more to a cook, and makes their life easier. Knowing that a recipe starts with a dark roux or a soffritto tells me how it will go together. These hints are solid building blocks for learning to understand, execute, and adapt recipes. As shortcuts, these hints make it easier to memorize recipes, which gives you more time to focus on technique (rather than reading and re-reading the instructions).
+A recipe with some context communicates so much more to a cook, and makes their life easier. Knowing that a recipe starts with a dark [[Roux|roux]] or a [[Soffritto|soffritto]] tells me how it will go together. These hints are solid building blocks for learning to understand, execute, and adapt recipes. As shortcuts, these hints make it easier to memorize recipes, which gives you more time to focus on technique (rather than reading and re-reading the instructions).
 
 If you’re making a vegan version of carbonara, for example, you’ll need to know how to stabilize a nut cream, and how to build a savoury base that no longer comes from cured pork.
 

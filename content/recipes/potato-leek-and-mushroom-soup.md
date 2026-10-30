@@ -11,7 +11,7 @@ For the 2021 Christmas season, we made a variety of soups. This one was one of t
 
 ## Mechanic
 
-This soup is an emulsion of potato starch and slowly stewed leeks. The easiest way to get it smooth at home is to blend with an immersion blender, then run the soup through a fine-mesh strainer (or a chinois).
+This soup is an [[Emulsify|emulsion]] of potato starch and slowly stewed leeks. The easiest way to get it smooth at home is to blend with an immersion blender, then run the soup through a fine-mesh strainer (or a chinois).
 
 ## Soup
 
@@ -27,7 +27,7 @@ This soup is an emulsion of potato starch and slowly stewed leeks. The easiest w
 
 Melt the butter in a large pot or Dutch oven over low heat. Add the leeks and cook slowly, stirring often so they don't brown, until very soft, 15–25 minutes. Softer is better.
 
-Deglaze with the sherry. Add the stock, potatoes, bay leaf, salt, and pepper. Simmer gently until the potatoes start to fall apart.
+[[Deglaze]] with the sherry. Add the stock, potatoes, bay leaf, salt, and pepper. Simmer gently until the potatoes start to fall apart.
 
 Discard the bay leaf. Blend until smooth, taking care not to over-blend. Strain through a fine-mesh strainer and return to low heat.
 

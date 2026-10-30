@@ -56,7 +56,7 @@ Divide the dough into pieces using the table below. For each piece, stretch and 
 
 Cover and let proof until visibly puffy and nearly doubled, 45 minutes to 1 hour.
 
-Heat the oven to 190°C (375°F) and line a sheet pan with parchment, if not already proofing on one. Brush each bun with egg wash and top with sesame seeds, or score the top for a plain finish.
+Heat the oven to 190°C (375°F) and line a sheet pan with parchment, if not already [[Proofing|proofing]] on one. Brush each bun with egg wash and top with sesame seeds, or score the top for a plain finish.
 
 Bake until golden brown: 15–20 minutes for burger buns, 12–15 minutes for hot dog buns, 28–32 minutes for dinner buns.
 

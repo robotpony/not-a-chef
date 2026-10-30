@@ -29,7 +29,7 @@ If you don’t have the equipment for a smash burger, a close second is a hand-p
 3. Place ball between two piece of paper and press with a pot or cutting board
 4. Stack and freeze patties in a sealed container
 
-The frozen patties cook well enough, especially if you flip them more than usual (to promote browning). Season the patties after cooking with salt, pepper, and (optionally) MSG.
+The frozen patties cook well enough, especially if you flip them more than usual (to promote browning). Season the patties after cooking with salt, pepper, and (optionally) [[MSG]].
 
 ### Quick relish
 
@@ -86,7 +86,7 @@ Dice, season and bake on sheet pans until browned and fragrant:
 
 Let cool while prepping a bowl with:
 
-- Miso
+- [[Miso]]
 - Seasonings
 - Binders (egg, oat flour, finely diced nuts)
 - Fat (mayo, shredded coconut, and/or cheese)
@@ -158,7 +158,7 @@ A recipe based on a photo I saw this morning:
         - Slice on bias, keep it small
 - Flavours
     - Chilis/rice vinegar/soy/sugar
-    - 1:.5:1:.5 soy, sugar, mirin, sake
+    - 1:.5:1:.5 soy, sugar, [[Mirin|mirin]], sake
     - Garlic
     - Ginger
     - Lemongrass (finely)

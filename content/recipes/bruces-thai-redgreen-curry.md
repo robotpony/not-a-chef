@@ -89,7 +89,7 @@ The goal is a dense, savoury sauce. Soy + mushrooms can be enough, but the follo
 - Wakame
 - Dark soy
 - Garlic
-- Miso
+- [[Miso]]
 - Water
 
 Even miso on its own is a good savoury base.

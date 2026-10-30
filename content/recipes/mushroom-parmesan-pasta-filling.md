@@ -25,11 +25,11 @@ This is a great filling for vegetarian pasta like ravioli, tortellini, or sauced
 
 ## Method
 
-Fry the mushrooms in the butter with a pinch of salt. They'll release their water, the water will evaporate, and then they'll start to brown, 15–20 minutes. Keep frying and scraping the bottom as you go so the fond doesn't burn.
+Fry the mushrooms in the butter with a pinch of salt. They'll release their water, the water will evaporate, and then they'll start to brown, 15–20 minutes. Keep frying and scraping the bottom as you go so the [[Fond|fond]] doesn't burn.
 
 Add the shallots and garlic and cook until soft, still stirring to keep the fond from burning.
 
-Deglaze with the wine or sherry, scraping up all the brown bits. Add the thyme and porcini powder, if using. Stir, taste, and adjust the salt and pepper.
+[[Deglaze]] with the wine or sherry, scraping up all the brown bits. Add the thyme and porcini powder, if using. Stir, taste, and adjust the salt and pepper.
 
 Remove from the heat and let cool partway. Stir in the Parmesan thoroughly. Cool completely before using as a pasta filling.
 

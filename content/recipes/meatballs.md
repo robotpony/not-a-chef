@@ -12,11 +12,11 @@ cuisine: Italian
 draft: false
 ---
 
-A scalable, by-weight meatball for spaghetti, braises, and the freezer.
+A scalable, by-weight meatball for spaghetti, [[Braise|braises]], and the freezer.
 
 ## Mechanic
 
-A meatball is a protein base, binders, moisteners (panade), and flavourings. The panade, breadcrumbs soaked in liquid, keeps the meatball from drying out. Grated onion (not diced) disappears into the mix and adds moisture. The percentages below are by weight, relative to 1 kg of ground meat, so the recipe scales to any quantity.
+A meatball is a protein base, binders, moisteners ([[Panade|panade]]), and flavourings. The panade, breadcrumbs soaked in liquid, keeps the meatball from drying out. Grated onion (not diced) disappears into the mix and adds moisture. The percentages below are by weight, relative to 1 kg of ground meat, so the recipe scales to any quantity.
 
 ## Ingredients
 
@@ -54,7 +54,7 @@ Bake at 190–220°C (375–425°F) until browned and 71°C (160°F) in the cent
 
 ### Asian-style
 
-Replace some of the liquid with hoisin (3%), soy sauce (1.5%), and sesame oil (1%). Add ginger (1%). Reduce salt (soy takes its place). Skip the Parmesan. Scale back liquid slightly. The mixture should be a little firmer than the Italian version.
+Replace some of the liquid with [[Hoisin|hoisin]] (3%), soy sauce (1.5%), and sesame oil (1%). Add ginger (1%). Reduce salt (soy takes its place). Skip the Parmesan. Scale back liquid slightly. The mixture should be a little firmer than the Italian version.
 
 Glaze: 60 ml hoisin, 30 ml ketchup, 15 ml honey or maple syrup, 30 ml rice vinegar, 15 ml soy sauce, 5 ml sesame oil. Brush over meatballs in the last 5 minutes of baking. Finish with sesame seeds and sliced green onions.
 

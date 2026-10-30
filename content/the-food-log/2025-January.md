@@ -11,7 +11,7 @@ _Undated._
 
 - Made pulled chicken ([[Pulled BBQ-style chicken]]) for Ann's redhot chicken dip ([[Hot Buffalo chicken dip]]) and leftovers
     - Will adapt leftovers for chicken taco salad (similar to [[Shredded taco chicken]])
-    - Chicken cottage pie (standard cottage pie assembly, using braising liquid for gravy)
+    - Chicken cottage pie (standard cottage pie assembly, using [[Braise|braising]] liquid for gravy)
 - Roast chicken and quinoa
     - Quinoa was:
         - dried mushrooms
@@ -36,7 +36,7 @@ _Undated._
 - Pho ga (chicken)
 - Wonton soup (use up freezer wontons)
     - Chicken stock (homemade)
-    - Shrimp shells (or bonito?)
+    - Shrimp shells (or [[Katsuobushi|bonito]]?)
 - Missed December recipes
     - [Goulash](https://www.seriouseats.com/hungarian-goulash-beef-paprika-stew-recipe)
     - [Stroganoff](https://www.seriouseats.com/ultimate-beef-stroganof-recipe)

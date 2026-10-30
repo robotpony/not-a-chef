@@ -46,5 +46,5 @@ Cook the noodles according to the package, discarding any seasoning packets. Dra
 
 ## Notes
 
-- The ketchup is not a mistake. It's a tomato-based umami hit that's common in Japanese-style yakisoba sauce.
+- The ketchup is not a mistake. It's a tomato-based [[Umami|umami]] hit that's common in Japanese-style yakisoba sauce.
 - Garlic and fresh ginger (added with the onion and carrot) make a noticeable improvement.

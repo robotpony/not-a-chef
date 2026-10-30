@@ -32,7 +32,7 @@ Heat the oven to 220°C (450°F). Roughly cut the onions, carrot, celery, shallo
 
 Roast the bones until browned, 30–60 minutes. About halfway through, flip the bones and brush them with the tomato paste, so it browns in the fat from the bones. Add the vegetables to the pan.
 
-Transfer everything to a pressure cooker, including any liquid and fond left on the pan. Add the water, peppercorns, bay, and herbs, and bring to a gentle simmer. Cook at high pressure for 45–100 minutes, then let the pressure release slowly for a clearer stock.
+Transfer everything to a pressure cooker, including any liquid and [[Fond|fond]] left on the pan. Add the water, peppercorns, bay, and herbs, and bring to a gentle simmer. Cook at high pressure for 45–100 minutes, then let the pressure release slowly for a clearer stock.
 
 Lift out the solids and strain. Taste a little in a small bowl with a pinch of salt or soy, to judge whether it's strong enough for what you plan to use it for. Reduce by half for freezing, or refrigerate and use within 5 days.
 

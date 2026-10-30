@@ -9,7 +9,7 @@ cuisine: Italian
 draft: false
 ---
 
-Our pizza sauce continues to evolve. This version uses passata and is uncooked.
+Our pizza sauce continues to evolve. This version uses [[Passata|passata]] and is uncooked.
 
 ## Mechanic
 

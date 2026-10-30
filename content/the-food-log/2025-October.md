@@ -21,7 +21,7 @@ Turkey timing dialed in for round two, dark and white meat roasted separately to
     - 20 minutes at boil (max)
     - 10 minutes to finish
 - 20 Gravy
-    - **45** Make roux, set aside (use chicken fat, butter, flour)
+    - **45** Make [[Roux|roux]], set aside (use chicken fat, butter, flour)
     - Finish gravy while potatoes boil
 - 10 Corn
     - Add to pot, start when potatoes finish (or are about to)
@@ -37,7 +37,7 @@ Turkey timing dialed in for round two, dark and white meat roasted separately to
 ### Other burgers and interesting ideas
 
 - Fish burger
-    - tartar (mayo, pickle, dill, parsley, garlic, s&p, msg, mustard, sugar, citric acid)
+    - tartar (mayo, pickle, dill, parsley, garlic, s&p, [[MSG|msg]], mustard, sugar, [[Citric acid|citric acid]])
     - preformed cod filets (breaded)
     - buns + lettuce + ½ slice of cheese per
     - were nostalgic, but got soggy too quickly

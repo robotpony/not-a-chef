@@ -42,7 +42,7 @@ My method:
 
 Add a cup or two of water to a small pan with the egg (in shell) and sausage. Add a lid, set heat to medium-high, and once boiling drop temp to hit a strong simmer.  Set a timer for 5-6 minutes and let frozen sausage and egg heat. The egg should be somewhere around soft at 5 minutes, and the sausage should split at the ends (depending on the casing).
 
-Remove from heat, add egg to a bowl of ice water, and slice sausage. After removing water, add back sausage, and any aromatics and thick veg to pan. Brown sausage and stir veg. Add fresh water and turn to low. Once remainder of ramen dish is ready (broth, noodles, tare), add proteins and veg to the bowl.
+Remove from heat, add egg to a bowl of ice water, and slice sausage. After removing water, add back sausage, and any [[Aromatics|aromatics]] and thick veg to pan. Brown sausage and stir veg. Add fresh water and turn to low. Once remainder of ramen dish is ready (broth, noodles, [[Tare|tare]]), add proteins and veg to the bowl.
 
 ### Cooking links of the week
 
@@ -87,7 +87,7 @@ Steaks (10-15 minutes):
 - Steaks
 - Herbs (thyme or rosemary work well)
 - Salt and pepper to taste
-- MSG (to add some depth)
+- [[MSG]] (to add some depth)
 - ~~Garlic (I didn’t like the aftertaste of garlic on the steaks)~~
 
 Season the steaks and let sit for 30-60 minutes. Add some oil to a medium-hot pan and cook flipping regularly. Once browned, add butter and herbs, spooning butter over until the desired temperature is reached.
@@ -136,7 +136,7 @@ We’re stretching out some turkey casserole and wanted to make some baked mac. 
 - [Make sauce](https://docs.google.com/document/d/1nF2oqFoura6lQMVRS4wUkPPRp907GElqI3yJSTjX3E4/edit) → [[Baked mac & cheese]]
 - Combine + bake
 
-The mushrooms work well in this recipe in place of a protein; they add a bunch of umami and a
+The mushrooms work well in this recipe in place of a protein; they add a bunch of [[Umami|umami]] and a
 
 ### Turkey prep week
 
@@ -147,7 +147,7 @@ The best turkey dinners are easy. With a bit of planning, you can prep a few thi
 - 2 days ahead
     - Buy extra turkey parts as needed (like necks, which are often on sale)
 - 1 day ahead
-    - Break down at least one of your turkeys and dry brine both
+    - Break down at least one of your turkeys and dry [[Brine|brine]] both
         - Don’t brine the stock parts
     - Pre-roast extra turkey parts in hotel pans (to save liquids)
     - Make soup stock, reduce by 50%

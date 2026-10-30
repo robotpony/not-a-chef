@@ -33,7 +33,7 @@ Stir everything together. Taste and adjust.
 - 500 g mushrooms, thinly sliced
 - 200 g carrot, grated
 
-For sliced meat, toss it with half the sauce and marinate in the fridge for 1–12 hours. Sear in a very hot pan in batches, without crowding, until charred at the edges, 1–2 minutes a side. Cook the mushrooms and carrot in the same pan until the mushrooms brown, then return the meat with the rest of the sauce and toss until glossy.
+For sliced meat, toss it with half the sauce and marinate in the fridge for 1–12 hours. [[Sear]] in a very hot pan in batches, without [[Crowding the pan|crowding]], until charred at the edges, 1–2 minutes a side. Cook the mushrooms and carrot in the same pan until the mushrooms brown, then return the meat with the rest of the sauce and toss until glossy.
 
 For ground meat, brown it in a hot pan, breaking it up, until crisp in spots. Add the mushrooms and carrot and cook until their liquid has evaporated. Add the sauce and simmer until it thickens and coats the meat, about 5 minutes.
 

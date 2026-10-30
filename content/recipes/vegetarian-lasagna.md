@@ -30,7 +30,7 @@ Use as much [[Marinara sauce]] as the layers need, about 1.5 L. Make extra; left
 - 1–2 carrots, finely diced or grated
 - 1 zucchini, finely diced
 
-Heat the olive oil over medium-high. Add the mushrooms with a pinch of salt and cook until they release their liquid and begin to brown. Add onion, garlic, and remaining vegetables and cook on medium-low until everything is soft and starting to caramelize. Deglaze the pan if needed. Stir in enough marinara to coat generously. Set aside.
+Heat the olive oil over medium-high. Add the mushrooms with a pinch of salt and cook until they release their liquid and begin to brown. Add onion, garlic, and remaining vegetables and cook on medium-low until everything is soft and starting to caramelize. [[Deglaze]] the pan if needed. Stir in enough marinara to coat generously. Set aside.
 
 ## Cheese filling
 

@@ -9,7 +9,7 @@ tags:
 weight: 1
 description: "A chicken patty is a whole breast, pounded and brined, or ground chicken, salted and formed. The cut and where the salt goes decide where it lands between crunchy and floppy."
 ---
-A chicken patty is a whole breast pounded thin or ground chicken pressed into a round, and either way it needs salt inside before it cooks. Breast is lean and bland, and it dries out fast. Salt gets it seasoned through and holds onto its moisture. Unlike beef, salt in chicken is the point: a brine keeps a whole cut tender, and salt worked into mince binds it into a patty that holds together in the fryer.
+A chicken patty is a whole breast pounded thin or ground chicken pressed into a round, and either way it needs salt inside before it cooks. Breast is lean and bland, and it dries out fast. Salt gets it seasoned through and holds onto its moisture. Unlike beef, salt in chicken is the point: a [[Brine|brine]] keeps a whole cut tender, and salt worked into mince binds it into a patty that holds together in the fryer.
 
 ## The variables
 
@@ -23,9 +23,9 @@ A chicken patty is a whole breast pounded thin or ground chicken pressed into a 
 
 | Option | Pick it when | Changes |
 |---|---|---|
-| Whole breast, buttermilk soak | You want the crunchiest sandwich; the cornmeal crust | Breading: cornmeal dredge |
+| Whole breast, buttermilk soak | You want the crunchiest sandwich; the cornmeal crust | Breading: cornmeal [[Dredge|dredge]] |
 | Ground chicken, lightly mixed | You want a round, even, fast-food-style patty | Breading: light dredge or double coat |
-| Whole breast, [[Mayo marinade]] | A weeknight sandwich, no frying | Breading: none; pan-sear |
+| Whole breast, [[Mayo marinade]] | A weeknight sandwich, no frying | Breading: none; pan-[[Sear|sear]] |
 | Ground chicken, worked until tacky | You want a springy, sausage-like patty | Breading: optional |
 
 The texture scale behind these options, from mega crunch to floppy, is in [[The impossible quest for the perfect chicken burger]].

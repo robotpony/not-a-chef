@@ -24,10 +24,10 @@ The crust is what a chicken sandwich is about. It brings the crunch and most of 
 
 | Option | Pick it when | How |
 |---|---|---|
-| Cornmeal dredge | You want a dark, gritty, mega crunch | Equal parts cornmeal and flour by volume, over the buttermilk soak (see [[Cornmeal fried chicken]]) |
+| Cornmeal [[Dredge|dredge]] | You want a dark, gritty, mega crunch | Equal parts cornmeal and flour by volume, over the buttermilk soak (see [[Cornmeal fried chicken]]) |
 | Double coat | A ground patty; you want layered crunch | Flour dredge, loose cornstarch batter, then breadcrumbs (see [[Pan-fried chicken burger]]) |
 | Standard breading | A lighter, even crust | Flour, beaten egg, panko |
-| None | A soft, floppy sandwich | Pan-sear a brined or mayo-marinated breast in a little oil |
+| None | A soft, floppy sandwich | Pan-[[Sear|sear]] a [[Brine|brined]] or mayo-marinated breast in a little oil |
 
 ## How it fails
 

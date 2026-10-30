@@ -21,7 +21,7 @@ Rich and savoury, tight enough to cling.
 
 ## Why these picks
 
-- **Meat sauce and canned tomatoes from a base.** The long cook happened weeks ago, when the [[Beef base]] braised until tender and became a batch of meat sauce. Tonight it only needs heating through with the pasta.
+- **Meat sauce and canned tomatoes from a base.** The long cook happened weeks ago, when the [[Beef base]] [[Braise|braised]] until tender and became a batch of meat sauce. Tonight it only needs heating through with the pasta.
 - **Spaghetti or linguine.** It's how I make it most often, partly out of nostalgia. A thick sauce is harder on long pasta than short, so it needs stirring in the low water, but the starchy water loosens the sauce enough to coat every strand.
 - **Tight.** A meat sauce left loose pools under long pasta. Cooked down until nothing pools, it clings.
 - **Parmesan off the heat.** It salts the sauce and tightens it a little more, without going grainy.

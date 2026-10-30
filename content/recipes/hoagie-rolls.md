@@ -14,7 +14,7 @@ Soft, chewy hoagie rolls built for serious sandwiches. A hoagie roll is a sort o
 
 ## Mechanic
 
-**Diastatic malt powder** is the key ingredient: its enzymes turn starch into sugar, which feeds the yeast and promotes browning. Steam in the first minutes of the bake gives the rolls a proper crust.
+**[[Diastatic malt powder]]** is the key ingredient: its enzymes turn starch into sugar, which feeds the yeast and promotes browning. Steam in the first minutes of the bake gives the rolls a proper crust.
 
 ## Dough
 

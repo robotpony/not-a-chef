@@ -36,7 +36,7 @@ bar: yes
 
 Combine water, vinegar, and salt in a small saucepan. Heat until salt dissolves; no need to boil. Cool slightly.
 
-Pack cucumbers, garlic, peppercorns, mustard seeds, and dill into a clean jar. Pour brine over to cover.
+Pack cucumbers, garlic, peppercorns, mustard seeds, and dill into a clean jar. Pour [[Brine|brine]] over to cover.
 
 Cool to room temperature, then refrigerate. Ready in 4–6 hours; better after 24.
 

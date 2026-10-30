@@ -15,7 +15,7 @@ A great bowl of soup, and our replacement for classic canned mushroom soup.
 
 ## Mechanic
 
-Two methods for different results. **Velouté**: a roux-thickened cream soup, rich and smooth. **Potage**: a blended potato-thickened version finished with cashew cream, dairy-free and lighter but equally silky. The mushroom base is the same for both.
+Two methods for different results. **Velouté**: a [[Roux|roux]]-thickened cream soup, rich and smooth. **Potage**: a blended potato-thickened version finished with cashew cream, dairy-free and lighter but equally silky. The mushroom base is the same for both.
 
 ## Mushroom base
 

@@ -7,7 +7,7 @@ cuisine: Korean
 draft: false
 ---
 
-A cooked, glossy gochujang glaze for wings, chicken sandwiches, noodles, and tofu. It's savoury, sweet, and mildly spicy (according to our family). For an uncooked version, see [[Gochujang wing sauce]].
+A cooked, glossy [[Gochujang|gochujang]] glaze for wings, chicken sandwiches, noodles, and tofu. It's savoury, sweet, and mildly spicy (according to our family). For an uncooked version, see [[Gochujang wing sauce]].
 
 ## Ingredients
 

@@ -34,7 +34,7 @@ Heat a pan over medium-low and brush lightly with oil.
 
 Just before cooking, stir in the baking powder until just incorporated. Do not overmix.
 
-Ladle batter onto the pan without crowding. Cook until the edges look set and the bottom is golden, then flip. The first batch is almost always a throwaway. Adjust heat as needed.
+Ladle batter onto the pan without [[Crowding the pan|crowding]]. Cook until the edges look set and the bottom is golden, then flip. The first batch is almost always a throwaway. Adjust heat as needed.
 
 Keep finished pancakes warm in a 90°C (200°F) oven until ready to serve.
 

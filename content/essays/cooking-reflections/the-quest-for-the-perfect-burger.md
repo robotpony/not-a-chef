@@ -37,7 +37,7 @@ Patties don't get mixed, and they don't get seasoned until after they're cooked.
 
 Onions should be paper thin, and two forms are better than one. Raw purple onion for sharpness, and onion sautéed in the beef fat for sweetness. Together they do more work than either alone.
 
-Double sour pickles are the hardest ingredient on this list to buy and the easiest to make: sprinkle citric acid on ordinary sandwich-style dill pickles and let them sit. It gets remarkably close to the commercial double-sour pickles that most home cooks can't find.
+Double sour pickles are the hardest ingredient on this list to buy and the easiest to make: sprinkle [[Citric acid|citric acid]] on ordinary sandwich-style dill pickles and let them sit. It gets remarkably close to the commercial double-sour pickles that most home cooks can't find.
 
 Round it out with shredded lettuce, thin-sliced tomato, and a crack of black pepper, and you've got most of what the checklist above is asking for.
 

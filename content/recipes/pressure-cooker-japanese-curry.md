@@ -15,7 +15,7 @@ This is a simple, warm curry, based on widely available Japanese curry cubes. Th
 
 ## Mechanic
 
-The curry roux goes in **on top of the other ingredients, unmixed**, right before sealing the lid. Stirring it in first lets it sink and scorch on the bottom under pressure; left on top, it melts gradually into the stock as the pot comes up to pressure and stays clear of the heating element.
+The curry [[Roux|roux]] goes in **on top of the other ingredients, unmixed**, right before sealing the lid. Stirring it in first lets it sink and scorch on the bottom under pressure; left on top, it melts gradually into the stock as the pot comes up to pressure and stays clear of the heating element.
 
 ## Ingredients
 

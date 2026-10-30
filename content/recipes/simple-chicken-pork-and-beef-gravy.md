@@ -7,7 +7,7 @@ cuisine: world
 draft: false
 ---
 
-Gravy is a simple sauce of meat drippings thickened with a roux.
+Gravy is a simple sauce of meat drippings thickened with a [[Roux|roux]].
 
 ## Mechanic
 
@@ -37,8 +37,8 @@ Scale up at the same ratio for a bigger batch.
 
 ## Notes
 
-- Taste the pan drippings before salting. Some dry brines make the drippings salty, and you don't want to over-season early.
+- Taste the pan drippings before salting. Some dry [[Brine|brines]] make the drippings salty, and you don't want to over-season early.
 - Any stock works. I usually make chicken stock with extra bones from our weekly dinners; see the [[Chicken or turkey stock|poultry stock]] and [[Beef stock|beef stock]] recipes. Boxed or frozen stock also works, as do bouillon cubes and jars (check the salt on those).
 - Any starch or gluten-free flour substitute can replace the flour, though some hold up less well in leftovers.
-- Balance a flat stock with some MSG and salt. White pepper adds depth, and a very small amount of acid can brighten it.
+- Balance a flat stock with some [[MSG]] and salt. White pepper adds depth, and a very small amount of acid can brighten it.
 - Gravy keeps 3–4 days in the fridge and freezes well, in casseroles or on its own.

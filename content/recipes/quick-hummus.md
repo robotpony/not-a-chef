@@ -30,7 +30,7 @@ A great snack or condiment, based on restaurant-style hummus.
 
 Simmer the chickpeas and whole garlic cloves in water until soft. Drain, saving the cooking liquid.
 
-Put the tahini, lemon juice, salt, and seasoning in a powerful blender. Add the chickpeas and garlic once they've cooled enough not to burn you if they splash.
+Put the [[Tahini|tahini]], lemon juice, salt, and seasoning in a powerful blender. Add the chickpeas and garlic once they've cooled enough not to burn you if they splash.
 
 Blend until smooth, 1–2 minutes in a Vitamix, possibly longer in other blenders. Taste and add salt and lemon juice until it tastes like hummus, then blend again.
 

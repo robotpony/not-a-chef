@@ -3,7 +3,7 @@ title: January 2026
 date: 2026-01-01
 ---
 
-A three-course wok meal built out (mapo tofu, ginger beef, garlic broccoli, all in 30 minutes), alongside a chashu pork braise and a pork velveting technique dialed in — the wok lesson of the month being that velveting genuinely works, and scorching the oil matters. Also on the list after a good meal out: dal, paratha, and homemade yogurt.
+A three-course wok meal built out (mapo tofu, ginger beef, garlic broccoli, all in 30 minutes), alongside a [[Chashu|chashu]] pork [[Braise|braise]] and a pork [[Velveting|velveting]] technique dialed in — the wok lesson of the month being that velveting genuinely works, and scorching the oil matters. Also on the list after a good meal out: dal, paratha, and homemade yogurt.
 
 ## Monday, January 19th
 
@@ -37,7 +37,7 @@ We had some Indian food this week that has me wanting to add a few dishes to my 
 
 - 250 ml water
 - 250 ml soy sauce
-- 250 ml mirin
+- 250 ml [[Mirin|mirin]]
 - 2 tablespoons sugar
 - 2 teaspoons oil
 - 500 g pork (belly, or loin towards the rib end)
@@ -45,7 +45,7 @@ We had some Indian food this week that has me wanting to add a few dishes to my 
 - 3 green onions, cut lengthwise into 5 cm (2-inch) pieces
 - 5 cm (2 inches) fresh ginger root, thinly sliced (peeled if desired)
 
-1. Sear pork. Deglaze pan. Add braise ingredients and bring to low simmer.
+1. [[Sear]] pork. [[Deglaze]] pan. Add braise ingredients and bring to low simmer.
     1. cook to 85°C (belly) or 60°C (loin)
     2. 1-2 hours on low/simmer
 2. Refrigerate in braise liquid for 24 hours. Slice as needed, reheat in oil, stock, oven, etc. Freeze leftovers or use within 3 days.
@@ -89,10 +89,10 @@ These pair nicely with pickled veg as well, and things like bean sprouts, bok ch
 - 5 cloves garlic
 - 1 tablespoon oil
 - 1 tablespoon Shaoxing wine
-- 250 ml chicken stock or dashi
+- 250 ml chicken stock or [[Dashi|dashi]]
 - ⅛ teaspoon white pepper
 - ½ teaspoon sesame oil
-- cornstarch slurry to thicken _(1 tsp cornstarch, 1 tbsp cold water)_
+- cornstarch [[Slurry|slurry]] to thicken _(1 tsp cornstarch, 1 tbsp cold water)_
 
 #### Weeknight ginger beef (minced)
 
@@ -103,7 +103,7 @@ These pair nicely with pickled veg as well, and things like bean sprouts, bok ch
 - 1 shallot
 - 2 limes
 - ¼ cup soy sauce
-- 2 tablespoons sriracha
+- 2 tablespoons [[Sriracha|sriracha]]
 - 1 tablespoon fish sauce
 - 1 tablespoon vegetable oil
 - 1½ pounds ground beef chuck (80% lean)
@@ -132,7 +132,7 @@ The OG author cooks this in a skillet, but it can equally be done in a wok:
 - 2 scallions, chopped into ¼-inch pieces (dark greens reserved for garnish)
 - 2 tablespoons (30 ml) sake
 - 2 tablespoons (30 ml) mirin
-- 1 tablespoon (15 ml) shoyu or light soy sauce
+- 1 tablespoon (15 ml) [[Shoyu|shoyu]] or light soy sauce
 - ¼ cup (60 ml) low-sodium chicken stock, dashi, or water
 - 1½ pounds medium to firm silken tofu, cut into ½-inch cubes
 - steamed rice and chili oil, for serving

@@ -15,7 +15,7 @@ A hearty, frugal filling for tacos. Delicious, too.
 
 ## Mechanic
 
-Lightly roasting the nuts before adding them preserves texture inside the filling. **Cook lentils to just al dente**: they will continue softening in the sauce and mushy lentils lose all structure.
+Lightly roasting the nuts before adding them preserves texture inside the filling. **Cook lentils to just [[Al dente|al dente]]**: they will continue softening in the sauce and mushy lentils lose all structure.
 
 ## Ingredients
 
@@ -41,7 +41,7 @@ Boil the lentils in salted water until just al dente, about 15 minutes. Drain an
 
 Heat the oil in a wide pan over medium. Add the onion and garlic and cook until softened, about 5 minutes. Add the peppers and cook 2 minutes more. Add the tomato paste and stir until it sticks and darkens.
 
-Deglaze with half the stock. Add the lentils, nuts, dried chili mix, oregano, and chipotle. Add the rest of the stock to get the consistency you want: thicker for tacos, looser for salad.
+[[Deglaze]] with half the stock. Add the lentils, nuts, dried chili mix, oregano, and chipotle. Add the rest of the stock to get the consistency you want: thicker for tacos, looser for salad.
 
 Simmer for 10 minutes. Season with salt, pepper, and lime juice.
 

@@ -12,7 +12,7 @@ Some days I just want an easy pizza dough. I don’t want it 3 days from now, I 
 
 ## Mechanic
 
-Every ingredient here is scaled as a **baker's percentage** against the flour weight, so the recipe holds up if you scale it up or down. At 70% hydration it's a medium-hydration dough, and the [[Flour protein content comparison|vital wheat gluten]] nudges standard Canadian AP flour (13.5% protein) toward bread-flour territory for more chew.
+Every ingredient here is scaled as a **baker's percentage** against the flour weight, so the recipe holds up if you scale it up or down. At 70% [[Hydration|hydration]] it's a medium-hydration dough, and the [[Flour protein content comparison|vital wheat gluten]] nudges standard Canadian AP flour (13.5% protein) toward bread-flour territory for more chew.
 
 ```formula
 flour   | Flour | 100
@@ -21,7 +21,7 @@ caption: 70% hydration, by weight
 bar: yes
 ```
 
-This recipe uses weight measures as it’s simpler, assuming you have a decent scale. I just tare (reset) it between ingredients.
+This recipe uses weight measures as it’s simpler, assuming you have a decent scale. I just [[Tare|tare]] (reset) it between ingredients.
 
 ## Ingredients
 
@@ -43,7 +43,7 @@ In a large Pyrex measuring jug, stir together the water, most of the oil, and th
 
 In your stand mixer bowl, combine the dry ingredients, including the sugar, and set the mixer to low. Slowly pour in the liquid and mix on low into a shaggy lump.
 
-Turn off the mixer for a few minutes and clean up some of your mess. This is a lazy autolyse-like step and is totally optional, but why not clean up a bit?
+Turn off the mixer for a few minutes and clean up some of your mess. This is a lazy [[Autolyse|autolyse]]-like step and is totally optional, but why not clean up a bit?
 
 Return the mixer to low and mix until a ball starts to form. Speed up to around medium for 4–7 minutes, scraping the bowl down occasionally (or lowering and raising the bowl). On a good day, a ball comes together without much fuss and cleans your bowl. Other days, you need to coax the stubborn thing along.
 
@@ -83,7 +83,7 @@ Cool the pizza on a wire rack. I don’t recommend cutting into molten hot pizza
 
 Pizza in a home oven can be a bit frustrating, but the finish-it-in-a-pan-on-the-hob hack has saved me more than a few times. You can also par-bake the crust for ~10 minutes (until you see a tiny bit of colour), but I’ve always found this much less satisfying for my ego.
 
-The challenge is getting everything cooked to the right doneness without a lot of practice, and there are several ways to do it:
+The challenge is getting everything cooked to the right [[Doneness|doneness]] without a lot of practice, and there are several ways to do it:
 
 - **The easy bake:** 175°C (350°F) for 25–30 minutes, like a Roman pie or focaccia. It may bubble and lose its shape because the crust forms slowly, so docking the stretched dough helps. You won’t see scorch marks. Finding the right rack takes practice.
 - **The par-bake:** 220°C (425°F). Bake the crust until about half done, then dress it and finish baking until browned (at a lower temperature if you load it up like we do).

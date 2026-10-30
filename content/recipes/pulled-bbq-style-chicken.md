@@ -7,7 +7,7 @@ cuisine: American
 draft: false
 ---
 
-This is a simple pulled or shredded BBQ-style chicken that can be made without a smoker or BBQ. It's a braise, so it works on the stovetop, in the oven, in a crock pot, or in a pressure cooker. I prefer making it in the oven, in covered hotel pans.
+This is a simple pulled or shredded BBQ-style chicken that can be made without a smoker or BBQ. It's a [[Braise|braise]], so it works on the stovetop, in the oven, in a crock pot, or in a pressure cooker. I prefer making it in the oven, in covered hotel pans.
 
 See also: [[Shredded taco chicken]]
 
@@ -32,7 +32,7 @@ Rub the liquid smoke, spice rub, bouillon, and salt over the chicken. Refrigerat
 
 Combine the braising liquid in a Dutch oven or large pot and stir over low heat until the sugar dissolves.
 
-If you like, sear the chicken in a separate pan first for extra texture and flavour.
+If you like, [[Sear|sear]] the chicken in a separate pan first for extra texture and flavour.
 
 Add the chicken to the braising liquid and simmer over medium-low. Lift out the breast pieces when they reach 70°C (158°F) inside. Keep cooking the thighs to 80–85°C (176–185°F); they need the extra heat to shred.
 

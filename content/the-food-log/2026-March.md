@@ -24,7 +24,7 @@ Spring cooking: a quick avocado dressing dialed in (a bit too much citrus at 75g
     - salt, pepper
     - thyme (big pinch)
     - garlic powder (½ teaspoon)
-    - 1 g MSG
+    - 1 g [[MSG]]
     - 1 tbsp chicken stock or drippings (or water)
 - Dal/mixed beans [[1](https://eagerforlife.com.au/red-lentil-and-mixed-bean-dahl/)]
 - marinated pre-frozen + pressed tofu → [[Marinated pressed tofu]]

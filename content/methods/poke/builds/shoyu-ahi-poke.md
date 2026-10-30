@@ -9,14 +9,14 @@ tags:
 era: 1970
 description: "The classic: ahi in shoyu and sesame oil with sweet onion, green onion, and sesame seeds, the poke at nearly every Hawaiian fish counter."
 ---
-The poke most people mean. Ahi tossed in soy sauce and toasted sesame oil, with sweet onion, green onion, and toasted sesame seeds. It's savoury, a little nutty, and quick.
+The poke most people mean. [[Ahi]] tossed in soy sauce and toasted sesame oil, with sweet onion, green onion, and toasted sesame seeds. It's savoury, a little nutty, and quick.
 
 ## Picks
 
 Savoury, nutty, and fresh.
 
 - **The fish:** Ahi
-- **The seasoning:** Shoyu and sesame oil, 2:1, with a little rice vinegar and ginger
+- **The seasoning:** [[Shoyu]] and sesame oil, 2:1, with a little rice vinegar and ginger
 - **Onions, seaweed, and crunch:** Sweet Maui onion, green onion, and toasted sesame seeds
 - **How it's served:** On its own, or over hot rice
 
@@ -38,4 +38,4 @@ Chinese and Japanese plantation workers brought soy sauce and sesame oil to Hawa
 
 - **Wasabi poke:** wasabi stirred into the shoyu.
 - **Garlic shoyu poke:** garlic oil in place of some of the sesame oil, with fresh local chili.
-- **With limu:** chopped ogo through it, halfway back to [[Hawaiian limu poke]].
+- **With [[Limu|limu]]:** chopped ogo through it, halfway back to [[Hawaiian limu poke]].

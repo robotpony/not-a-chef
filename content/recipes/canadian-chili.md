@@ -13,7 +13,7 @@ The chili I grew up with is not the chili of the American South. It's a beany, t
 
 ## Mechanic
 
-**Layers of browned mushrooms** stand in for most of the beef. Cook them until they give up their water, then keep going until they brown and start to stick; that fond, deglazed with stock, is the savoury base. Add ground meat or TVP to the same stage if you want it meatier.
+**Layers of browned mushrooms** stand in for most of the beef. Cook them until they give up their water, then keep going until they brown and start to stick; that [[Fond|fond]], [[Deglaze|deglazed]] with stock, is the savoury base. Add ground meat or TVP to the same stage if you want it meatier.
 
 ## Ingredients
 

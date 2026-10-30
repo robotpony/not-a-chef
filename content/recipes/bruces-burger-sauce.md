@@ -14,7 +14,7 @@ This is a simple, classic burger sauce.
 
 ## Mechanic
 
-A **1:1:1 ratio** by volume: mayo, diced burger pickles, mustard. Kewpie in place of or alongside regular mayo adds sweetness and acidity.
+A **1:1:1 ratio** by volume: mayo, diced burger pickles, mustard. [[Kewpie mayonnaise|Kewpie]] in place of or alongside regular mayo adds sweetness and acidity.
 
 ```formula
 jar        | Mayo    | 1
@@ -42,4 +42,4 @@ On Swiss, mozza-style, or deluxe burgers. Good as a spread on both bun halves.
 
 - Developed for A&W-style mozza burger.
 - The ratios are starting points; lean more mayo for a milder sauce, more pickle for brightness.
-- A small squeeze of ketchup or splash of pickle brine can soften the mustard edge.
+- A small squeeze of ketchup or splash of pickle [[Brine|brine]] can soften the mustard edge.

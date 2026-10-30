@@ -37,7 +37,7 @@ Scoop the thick cream from the top of the coconut tin into a wide pan. Heat over
 
 Add curry paste and stir into the cream. Add tomato paste. Cook, stirring, until the paste darkens and sticks to the pan, about 3 minutes.
 
-Add onion or shallot; cook until softening. Let the mixture stick slightly, then deglaze with a splash of water or stock, scraping up all the brown bits.
+Add onion or shallot; cook until softening. Let the mixture stick slightly, then [[Deglaze|deglaze]] with a splash of water or stock, scraping up all the brown bits.
 
 Pour in remaining coconut milk and stock. Stir to combine and bring to a simmer.
 
@@ -45,7 +45,7 @@ Add canned additions and roasted veg. Heat through, 5 minutes.
 
 Add protein near the end; it only needs warming if already cooked.
 
-Balance: taste and add fish sauce for salt/umami, sugar for sweetness, lime juice for brightness. Adjust gradually.
+Balance: taste and add fish sauce for salt/[[Umami|umami]], sugar for sweetness, lime juice for brightness. Adjust gradually.
 
 ## To serve
 

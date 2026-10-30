@@ -19,7 +19,7 @@ It's had three versions, below.
 A dark, crunchy crust against cold crunch, sharp onion, and sour pickles.
 
 - **Chicken sandwich patties:** Whole breast, pounded to 1 cm, buttermilk soak
-- **Breading and frying chicken patties:** Cornmeal dredge, shallow-fried
+- **Breading and frying chicken patties:** Cornmeal [[Dredge|dredge]], shallow-fried
 - **Assembling chicken sandwiches:** Mayo on both buns, shredded lettuce, thin tomato, thin-sliced raw red onion, sour pickles, on a toasted bun
 - **Chicken sandwich sauces:** Mayo and mustard, kept separate
 

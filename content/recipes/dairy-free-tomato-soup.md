@@ -33,4 +33,4 @@ Add the broth and scrape up the browned bits. Add the tomatoes, sugar, pepper, a
 
 Take the pot off the heat and let it cool a little. Blend until smooth in a stand blender, or use an immersion blender.
 
-Season with the miso or soy, sugar, and salt to taste. Stir in the vegan butter and basil, if using.
+Season with the [[Miso|miso]] or soy, sugar, and salt to taste. Stir in the vegan butter and basil, if using.

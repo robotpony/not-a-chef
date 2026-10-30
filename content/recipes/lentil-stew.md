@@ -37,7 +37,7 @@ In a large pot or pressure cooker, sauté the onion in olive oil until transluce
 
 Add the tomato paste and cook, stirring, until it starts to stick to the pan a bit, 1–2 minutes.
 
-Deglaze with the wine, scraping up any browned bits. Add the stock, lentils, spices, a little sugar, and the salt, and bring to a boil.
+[[Deglaze]] with the wine, scraping up any browned bits. Add the stock, lentils, spices, a little sugar, and the salt, and bring to a boil.
 
 If pressure cooking, lock the lid and cook on the low (2) setting for 15–20 minutes. Let the pressure release naturally (10–15 minutes), then remove the lid. Without a pressure cooker, simmer until the lentils are soft, 40–50 minutes.
 

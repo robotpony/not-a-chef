@@ -27,7 +27,7 @@ Sometimes I'm craving a diner-style griddle burger with a classic hamburger sauc
 
 ## Method
 
-Combine the mayonnaise, ketchup, mustard, vinegar, relish, sugar, onion, paprika, and MSG in a mixing bowl. Stir until uniform in colour with no streaks of ketchup or mustard visible.
+Combine the mayonnaise, ketchup, mustard, vinegar, relish, sugar, onion, paprika, and [[MSG]] in a mixing bowl. Stir until uniform in colour with no streaks of ketchup or mustard visible.
 
 Taste and adjust with salt and pepper.
 

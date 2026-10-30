@@ -3,7 +3,7 @@ title: Fall and winter 2022–23
 date: 2022-12-01
 ---
 
-A long stretch of systematic testing: baking soda ratios dialed in across ground beef, chicken velveting, and patties, plus a running ratio-research doc (roux, fake ramen noodles, iced coffee). A mushroom-lentil freezer base and a beef ragu built from leftover gravy both turned out well enough to keep, mushroom aglio e olio and forester gravy joined the regular rotation, and Friendsgiving's detailed hour-by-hour timeline worked as planned.
+A long stretch of systematic testing: baking soda ratios dialed in across ground beef, chicken [[Velveting|velveting]], and patties, plus a running ratio-research doc ([[Roux|roux]], fake ramen noodles, iced coffee). A mushroom-lentil freezer base and a beef ragu built from leftover gravy both turned out well enough to keep, mushroom aglio e olio and forester gravy joined the regular rotation, and Friendsgiving's detailed hour-by-hour timeline worked as planned.
 
 _Undated. About October 2022 to March 2023; the original notes grouped these as Fall/Winter._
 
@@ -54,7 +54,7 @@ The texture and browning properties are good enough that I’m going to try a mo
 
 **Chicken stir fry:** I tested velveting meat with baking soda at 0.5%-1.0% and found the flavour was not as unpleasant, likely due to the different size and surface of strips of chicken. I will continue with 1.0% for velveting.
 
-**Ground chicken:** I tested a bicarb/brined patty from ground chicken. The baking soda added springiness, but the alkalinity shifted the saltiness of it towards mildly tinny.
+**Ground chicken:** I tested a bicarb/[[Brine|brined]] patty from ground chicken. The baking soda added springiness, but the alkalinity shifted the saltiness of it towards mildly tinny.
 
 ### Red Thai curry
 
@@ -69,7 +69,7 @@ A quick Thai style red curry, about 10 minutes of prep and 20 minutes active coo
     - (combine, stirring)
     - Add onion/shallot (not authentic, but adds some body and depth)
     - Cook until sticking
-- “Deglaze” stuck stuff
+- “[[Deglaze]]” stuck stuff
     - Add remaining coconut milk and stir, lifting bottom bits up
     - Add stock
     - Bring to simmer
@@ -85,7 +85,7 @@ A quick Thai style red curry, about 10 minutes of prep and 20 minutes active coo
 - Balance
     - Fish sauce,
     - Sugar/maple syrup/honey
-    - Soy sauce/salt/msg
+    - Soy sauce/salt/[[MSG|msg]]
     - Lime juice
 - We cooked some shrimp separately with S&P and lime
 
@@ -112,7 +112,7 @@ Planning for Sunday:
 I used up some frozen ramen noodles this week. Observations:
 
 - Fresh ramen noodles freeze really well (texture was better?)
-- Shoyu style broth is nice
+- [[Shoyu]] style broth is nice
 - Need to get  a rule/ratio for salinity of ramen broth
 
 ### More Feb ideas
@@ -232,7 +232,7 @@ This worked very well.
     - Noodling
 - [Broth](https://www.seriouseats.com/vegan-ramen-miso-creamy-vegan-vegetarian-food-lab-recipe)
     - Base
-    - Dashi
+    - [[Dashi]]
     - Cream
 - Toppings
     - Chili oil
@@ -286,7 +286,7 @@ For fam day:
 
 → [[Mushroom and lentil freezer base]]
 
-I’m working on a vegetarian version of my beef/mushroom/sofrito base. The goal is a savoury base for weeknight meals, for pasta sauces, soups, tacos, casseroles, etc.
+I’m working on a vegetarian version of my beef/mushroom/[[Sofrito|sofrito]] base. The goal is a savoury base for weeknight meals, for pasta sauces, soups, tacos, casseroles, etc.
 
 (This is an approximate recipe, needs some testing)
 
@@ -554,7 +554,7 @@ For both, I soaked the mushrooms in hot water for ~15 minutes, gave them a rough
 
 I thickened the gravy with some cornstarch, and added some butter near the end. This topped off some plates of potatoes and pork tenderloin.
 
-For the aglio e olio, I added dry noodles to the pan of fried mushrooms and garlic with enough water to cover the noodles with ~.5cm of water. I used the mushroom tea for some of that water, and topped it off a few times with water from the kettle, until the pasta was about 80% cooked. As the water boiled off, I added salt, pepper, and chilli flakes to taste, and drizzled some olive oil in as I stirred to emulsify the oil and starch water.
+For the aglio e olio, I added dry noodles to the pan of fried mushrooms and garlic with enough water to cover the noodles with ~.5cm of water. I used the mushroom tea for some of that water, and topped it off a few times with water from the kettle, until the pasta was about 80% cooked. As the water boiled off, I added salt, pepper, and chilli flakes to taste, and drizzled some olive oil in as I stirred to [[Emulsify|emulsify]] the oil and starch water.
 
 Both of these dishes are now in our regular rotation, though I need to practice the gravy a bit more (my cornstarch game needs some repetition).
 

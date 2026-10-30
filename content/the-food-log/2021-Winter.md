@@ -44,8 +44,8 @@ This is a recipe we’ve wanted to try for a while:
 - 1 teaspoon turmeric
 - ½ teaspoon cumin
 - 1 teaspoon coriander powder
-- 1 teaspoon panch phoron (or some ground fennel and fenugreek)
-- Dried fenugreek leaves
+- 1 teaspoon [[Panch phoron|panch phoron]] (or some ground fennel and fenugreek)
+- [[Kasuri methi|Dried fenugreek leaves]]
 - Handful of fresh cilantro
 - 3 eggs
 - ~1 ½ cups of gram or garbanzo flour
@@ -104,7 +104,7 @@ Pizzeria style pizza sauce: → [[Pizzeria pizza sauce]]
 - 6g granulated garlic (1 tsp)
 - 1g dried oregano (2 tbsp)
 - 1g ground black pepper (1 tsp)
-- 1g msg (optional)
+- 1g [[MSG|msg]] (optional)
 - 15g sugar (to taste)
 - 15g kosher salt (to taste)
 
@@ -135,7 +135,7 @@ I decided to try a recipe from [Flour, Water, Salt, Yeast](https://www.amazon.ca
 |  | 25g sugar |
 | .8g dried yeast | 1g dried yeast |
 
-_Flour, Water, Salt, Yeast version:_ this recipe uses an autolyse method (30 minutes) for some enzymatic magic, then a fairly standard by-hand mix:
+_Flour, Water, Salt, Yeast version:_ this recipe uses an [[Autolyse|autolyse]] method (30 minutes) for some enzymatic magic, then a fairly standard by-hand mix:
 
 1. Hydrate the yeast
 2. Autolyse
@@ -148,7 +148,7 @@ _My adaptation:_
 - Bumped up the gluten level (by about 1 tablespoon per cup), to promote gluten development.
 - Adjusted salt + added sugar (to adjust for home oven temperatures)
 - Autolyse ended up ~5 minutes shorter, and ratios may be slightly off as I was interrupted by a call.
-- I mixed it on medium for ~7 minutes, until a ball started to form, then dumped in a proofing bucket destined for the refrigerator (24-48 hours).
+- I mixed it on medium for ~7 minutes, until a ball started to form, then dumped in a [[Proofing|proofing]] bucket destined for the refrigerator (24-48 hours).
 
 Resulting dough has a nice smooth texture. We will see how the first rise goes, after a stint in the fridge.
 
@@ -158,7 +158,7 @@ Resulting dough has a nice smooth texture. We will see how the first rise goes, 
 
 Revisiting veg soup stock, based on [Glen and Friends Cooking’s take on it](https://www.youtube.com/watch?v=Ox1w_PyKJ6w&t=415s). The guts of the recipe focuses on a specific ratio before roasting of **2 parts vegetables to 3 parts water**.
 
-Glen’s approach maximizes browning by using a long roast and very thin slices, in addition to flavour bombs like dried mushrooms, kombu, and miso. He calls out the importance of the leek to the overall mouthfeel, and based on that I’m tempted to include some vegetable oil in some way (frying the fresh mushrooms?).
+Glen’s approach maximizes browning by using a long roast and very thin slices, in addition to flavour bombs like dried mushrooms, [[Kombu|kombu]], and [[Miso|miso]]. He calls out the importance of the leek to the overall mouthfeel, and based on that I’m tempted to include some vegetable oil in some way (frying the fresh mushrooms?).
 
 Example veg:
 
@@ -262,7 +262,7 @@ Fry in a wok, or large frying pan (in stages) in order, adding sauce last. Heat 
 
 - ⅓ cup soy sauce
 - ⅓ cup honey or maple syrup
-- ⅓ cup hoisin sauce
+- ⅓ cup [[Hoisin|hoisin]] sauce
 - ¼ cup sake or wine vinegar (more to balance)
 - 1 tablespoon sesame oil
 - Grate:
@@ -270,7 +270,7 @@ Fry in a wok, or large frying pan (in stages) in order, adding sauce last. Heat 
     - 2 garlic cloves
     - 1 small shallot
 - Spice with:
-    - 1 tablespoon Togarashi
+    - 1 tablespoon [[Togarashi]]
 - Top with
     - 1 tablespoon sesame seeds (toasted if you have time)
     - 2-3 sprigs of spring onion (finely diced)
@@ -310,7 +310,7 @@ The gist of the first book is that takeaway restaurants make curries with a base
         3. Lasts for weeks in the fridge
 4. Spices
     1. Bassar mix
-    2. Garam Masala
+    2. [[Garam masala|Garam Masala]]
     3. Methi/dried fennu-greek (kasuri, Kasoori, Quasuri methi)
         1. ½ - 1 teaspoon per dish
     4. Fresh coriander  (cilantro)
@@ -351,7 +351,7 @@ What did we learn? Make dinner easier, do more prep earlier, and skip the 1950s 
 
 Ideas for next time:
 
-- Break down and dry brine both turkeys ~1-2 days before
+- Break down and dry [[Brine|brine]] both turkeys ~1-2 days before
     - Make stocks and cook dark meats the day before
     - Cook dark meats together (to ~74C)
     - Cook lighter meats together (to ~60C)
@@ -413,7 +413,7 @@ Turkey thigh: 74C (max tender)
     - Dry bring otherwise intact carcass for tomorrow
 - ✔️ Stock
     - Turkey parts, roasted
-    - Aromatics
+    - [[Aromatics]]
     - Simple spices
     - Reduce by ½
 - ✔️ Stuffing prep / par bake

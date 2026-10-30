@@ -16,7 +16,7 @@ A very cravable burger. This is the closest I've gotten to perfecting it, along 
 
 ## Mechanic
 
-The McDouble is built on two thin patties, a single slice of cheese between them, and a sharp dressing ratio. **Double-grinding** the beef (or triple-grinding, for softer still) is what gives the patty its soft, almost pillowy texture rather than a coarse, chewy one. The seasoning is a **4:2:1 ratio of salt, MSG, and black pepper** by weight, plus 0.25 parts onion powder if you like.
+The McDouble is built on two thin patties, a single slice of cheese between them, and a sharp dressing ratio. **Double-grinding** the beef (or triple-grinding, for softer still) is what gives the patty its soft, almost pillowy texture rather than a coarse, chewy one. The seasoning is a **4:2:1 ratio of salt, [[MSG]], and black pepper** by weight, plus 0.25 parts onion powder if you like.
 
 ```formula
 salt     | Salt   | 4
@@ -68,7 +68,7 @@ Cook 1 slice of bacon until crisp and cut it in half. Lay the two halves on the 
 - A bun pressed to about 11 cm (4⅓ inch) matches the patty diameter after smashing.
 - The restaurant uses 45 g patties for both, but they're a pain to work with at that size at home.
 - Kraft Deluxe cheese is thicker than what the golden king uses, so use half a slice.
-- No extra-sour pickles? Regular non-kosher dills with a little citric acid or vinegar added work.
+- No extra-sour pickles? Regular non-kosher dills with a little [[Citric acid|citric acid]] or vinegar added work.
 
 ## Research
 

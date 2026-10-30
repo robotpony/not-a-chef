@@ -40,7 +40,7 @@ Target internal temperatures for texture, assuming the temperature is held (reac
 | Ground fish (all) | ⛔️ | 63°C | 70°C | ⛔️ |
 | Shrimp | 60°C | 63°C | 68°C | ⛔️ |
 
-- Doneness is a function of time and temperature. This chart aims for the best texture that is still safe, which means holding the stated temperature rather than just touching it. For beef, pork, and lamb, a 3–5 minute hold covers it. For poultry, check the hold time in the [poultry table](#poultry): white meat at 65°C needs about 5 minutes, while dark meat at 68°C and ground chicken at 70°C need only about a minute. These temperatures are lower than USDA and CFIA consumer recommendations, which assume no hold.
+- [[Doneness]] is a function of time and temperature. This chart aims for the best texture that is still safe, which means holding the stated temperature rather than just touching it. For beef, pork, and lamb, a 3–5 minute hold covers it. For poultry, check the hold time in the [poultry table](#poultry): white meat at 65°C needs about 5 minutes, while dark meat at 68°C and ground chicken at 70°C need only about a minute. These temperatures are lower than USDA and CFIA consumer recommendations, which assume no hold.
 - Some cuts suit higher temperatures and longer cooks that soften and dissolve connective tissue (chuck roast, pork shoulder/butt). Others are better at rarer temperatures (bottom round roasts, loins, most steaks).
 - Most meats should rest for about 5% of their cooking time to stay moist: steaks for 5 minutes, roasts for 10–20 minutes. For large cuts, the rest is also part of the hold.
 - Most fish has little connective tissue and is best rare to medium. Fish and seafood don't need a significant rest.
@@ -78,7 +78,7 @@ The source table is in Fahrenheit. If your reading falls between two rows, use t
 
 USDA FSIS guidance for cooked beef (6.5-log reduction of *Salmonella*): 60°C (140°F) held 12 minutes, or 63°C (145°F) held 4 minutes. USDA's consumer guidance for whole cuts of beef, pork, and lamb is 63°C (145°F) with a 3-minute rest. This book rounds up to 5 minutes for margin.
 
-Whole cuts are safe at lower temperatures (a rare steak) because bacteria live on the surface, and searing kills them. Ground meat mixes the surface into the middle, so the centre has to reach the temperature and hold it.
+Whole cuts are safe at lower temperatures (a rare steak) because bacteria live on the surface, and [[Sear|searing]] kills them. Ground meat mixes the surface into the middle, so the centre has to reach the temperature and hold it.
 
 ## What "held" means
 

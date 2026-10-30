@@ -38,13 +38,13 @@ This is a vegetarian analogue to [[Beef base]]. The **mushrooms must go through 
 
 Heat oil in a large heavy pot over medium. Add mushrooms and a pinch of salt. Cook without stirring until the liquid releases and evaporates, then stir occasionally until dry and well-browned, 12–15 minutes.
 
-Add sofrito and continue cooking, stirring regularly. When the mixture begins sticking, add the tomato paste and stir until the paste darkens, about 3 minutes.
+Add [[Sofrito|sofrito]] and continue cooking, stirring regularly. When the mixture begins sticking, add the tomato paste and stir until the paste darkens, about 3 minutes.
 
-Add lentils and stir to coat. Before the bottom burns, deglaze with sherry, scraping up the browned bits. Add stock.
+Add lentils and stir to coat. Before the bottom burns, [[Deglaze|deglaze]] with sherry, scraping up the browned bits. Add stock.
 
-Add bay, rosemary, thyme, paprika, MSG, and granulated garlic. Stir and taste. Simmer until thickened and the lentils are just beginning to soften, about 20 minutes. They finish cooking in whatever dish you use the base in. Season with salt and pepper.
+Add bay, rosemary, thyme, paprika, [[MSG]], and granulated garlic. Stir and taste. Simmer until thickened and the lentils are just beginning to soften, about 20 minutes. They finish cooking in whatever dish you use the base in. Season with salt and pepper.
 
-If too liquid, add a cornstarch slurry. If too dry, add water and adjust.
+If too liquid, add a cornstarch [[Slurry|slurry]]. If too dry, add water and adjust.
 
 ## To serve
 

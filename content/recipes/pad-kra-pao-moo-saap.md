@@ -12,7 +12,7 @@ cuisine: Thai
 draft: false
 ---
 
-Thailand's everyday lunch dish: minced pork stir-fried hard and fast with garlic, chili, and holy basil, served over rice with a fried egg. The dish lives or dies on two things: real holy basil (not sweet Thai basil) and heat high enough to sear the pork rather than steam it.
+Thailand's everyday lunch dish: minced pork stir-fried hard and fast with garlic, chili, and holy basil, served over rice with a fried egg. The dish lives or dies on two things: real holy basil (not sweet Thai basil) and heat high enough to [[Sear|sear]] the pork rather than steam it.
 
 ## Ingredients
 
@@ -47,5 +47,5 @@ Serve the pork over rice, topped with a fried egg.
 ## Notes
 
 - Holy basil (bai kra pao) is not optional for the real flavour: peppery, almost clove-like. Thai sweet basil (horapa) is a common substitute but tastes anise-like and changes the dish.
-- High heat matters more than any single ingredient ratio. If your stove runs cool, cook in two batches rather than crowding the wok.
+- High heat matters more than any single ingredient ratio. If your stove runs cool, cook in two batches rather than [[Crowding the pan|crowding]] the wok.
 - Traditional side: prik nam pla (fish sauce with sliced chili and lime).

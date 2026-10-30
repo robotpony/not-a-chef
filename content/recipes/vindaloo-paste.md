@@ -40,10 +40,10 @@ Blend ginger, garlic, dried chilies, and ground spices with lemon juice until a 
 
 ## To serve
 
-Rub onto pork, lamb, or chicken. Marinate at least 2 hours, overnight preferred. Use the paste as the base of a braise or curry sauce.
+Rub onto pork, lamb, or chicken. Marinate at least 2 hours, overnight preferred. Use the paste as the base of a [[Braise|braise]] or curry sauce.
 
 ## Notes
 
-- Vinegar is traditional (vindaloo comes from the Portuguese *vinha d'alhos*, meat in wine vinegar and garlic); lemon is my swap. Tamarind also works.
+- Vinegar is traditional (vindaloo comes from the Portuguese *vinha d'alhos*, meat in wine vinegar and garlic); lemon is my swap. [[Tamarind]] also works.
 - Don't skip the fenugreek; its bitterness defines this paste.
 - Keeps refrigerated for a week or frozen for a month.

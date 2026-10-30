@@ -29,7 +29,7 @@ We had half a kilo of baby red peppers left over after a social event, so I trie
 
 Heat the oven to 220°C (425°F). Roughly dice the peppers, carrots, onion, and garlic. Toss them in the oil and roast until soft and charred at the edges, 20–30 minutes.
 
-Chop the mushrooms and fry them until golden brown. Add the paprika or other spices. Add the tomato paste and fry until it starts to stick. Deglaze with the wine, scraping up any brown bits in the pan.
+Chop the mushrooms and fry them until golden brown. Add the paprika or other spices. Add the tomato paste and fry until it starts to stick. [[Deglaze]] with the wine, scraping up any brown bits in the pan.
 
 Add the stock and roasted vegetables. Simmer until heated through.
 

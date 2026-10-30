@@ -12,7 +12,7 @@ This is a simplified version of the classic French-cut, slowly caramelized onion
 
 ## Mechanic
 
-The flavour comes from the fond: onions cooked low and slow for an hour or more until deeply browned, with the brown layer scraped off the bottom of the pot again and again before it burns. Traditionally the soup uses a homemade veal or beef stock, but it also works well with a [[Rich veg/mushroom stock]].
+The flavour comes from the [[Fond|fond]]: onions cooked low and slow for an hour or more until deeply browned, with the brown layer scraped off the bottom of the pot again and again before it burns. Traditionally the soup uses a homemade veal or beef stock, but it also works well with a [[Rich veg/mushroom stock]].
 
 ## Soup
 
@@ -32,7 +32,7 @@ The flavour comes from the fond: onions cooked low and slow for an hour or more 
 
 Thinly slice the onions, leeks, and shallots. Put them in a large pot or Dutch oven with the butter and olive oil over medium-low heat. Cook, stirring regularly, until deeply browned, 1–1½ hours. Scrape the fond off the bottom each time you stir so none of it burns, and add more butter or oil if the onions start to stick.
 
-Deglaze with the sherry (or substitute), scraping with a wooden spoon until all of the fond is lifted. Add the stock and herbs, and simmer for 20–30 minutes.
+[[Deglaze]] with the sherry (or substitute), scraping with a wooden spoon until all of the fond is lifted. Add the stock and herbs, and simmer for 20–30 minutes.
 
 Season with salt and pepper. Remove the herb stems and bay leaf, and take the pot off the heat.
 

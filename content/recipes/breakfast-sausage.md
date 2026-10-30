@@ -15,7 +15,7 @@ These make great patties, sausages, or crumble, with no casings needed unless yo
 
 ## Mechanic
 
-A **percentage-based spice formula**: salt runs **1.5–2% of the meat's weight**, and every other ingredient scales against the meat, so it's trivially scalable and easy to dial in. Milk powder improves binding and moisture and adds a subtle dairy richness. Cold water keeps the mix from emulsifying too far. <!-- Private worksheet (to import): https://docs.google.com/spreadsheets/d/1D9Ls2SRHtvSBeVAVhLJZC5CSqrhxuTvu3vb2kW5LvrU/edit?gid=2146379760#gid=2146379760 -->
+A **percentage-based spice formula**: salt runs **1.5–2% of the meat's weight**, and every other ingredient scales against the meat, so it's trivially scalable and easy to dial in. Milk powder improves binding and moisture and adds a subtle dairy richness. Cold water keeps the mix from [[Emulsify|emulsifying]] too far. <!-- Private worksheet (to import): https://docs.google.com/spreadsheets/d/1D9Ls2SRHtvSBeVAVhLJZC5CSqrhxuTvu3vb2kW5LvrU/edit?gid=2146379760#gid=2146379760 -->
 
 ```formula
 patty  | Meat | 100
@@ -62,7 +62,7 @@ Bake unwrapped at 200°C (400°F) until lightly browned, 15–25 minutes, or pan
 ## Variations
 
 ### Sage-forward
-A punchier, less sweet mix. Per 1 kg pork: 20 g salt (2%), 6 g dried sage, 4 g black pepper, 3 g each dried parsley, dried thyme, ground coriander, and minced garlic, 2 g each red pepper flakes, ground fennel, and MSG, 40 g milk powder, and 100 g cold water. No sugar. Stir the dry ingredients into the water, then mix into the pork as above. Marjoram at 0.2–0.3% gives a softer, more floral version.
+A punchier, less sweet mix. Per 1 kg pork: 20 g salt (2%), 6 g dried sage, 4 g black pepper, 3 g each dried parsley, dried thyme, ground coriander, and minced garlic, 2 g each red pepper flakes, ground fennel, and [[MSG]], 40 g milk powder, and 100 g cold water. No sugar. Stir the dry ingredients into the water, then mix into the pork as above. Marjoram at 0.2–0.3% gives a softer, more floral version.
 
 ## Notes
 

@@ -9,7 +9,7 @@ Poke is raw fish, cut into cubes and seasoned. The name is Hawaiian for "to slic
 
 The styles split on two of them. Hawaiian poke is mostly fish, seasoned lightly and eaten as a snack, with rice on the side if there's rice at all. The mainland poke bowl turns it around: rice at the bottom, the fish as one part of three, and a pile of toppings and sauce. Both are good, but they're different dishes.
 
-We ate three pokes in Hawaii that we want to make at home: the Hawaiian style, shoyu, and garlic shoyu. They were great on rice, and with salad.
+We ate three pokes in Hawaii that we want to make at home: the Hawaiian style, [[Shoyu|shoyu]], and garlic shoyu. They were great on rice, and with salad.
 
 Good fish is most of the work. With fish that's fresh and cold, the seasoning only has to stay out of its way.
 
@@ -19,11 +19,11 @@ They look alike: raw fish in small pieces, with onion and chili. The difference 
 
 | | Poke | Ceviche |
 |---|---|---|
-| Fish | Ahi, aku, salmon, octopus | White fish (sea bass, corvina), shrimp |
+| Fish | [[Ahi]], [[Aku|aku]], salmon, octopus | White fish (sea bass, corvina), shrimp |
 | What seasons it | Salt, or shoyu and sesame oil | Lime or lemon juice, salt |
 | What it does to the fish | Seasons it; it stays raw | Turns it opaque and firm |
 | Time | 15 minutes to 1 hour | Minutes (modern) to about 3 hours (traditional) |
-| Mix-ins | Sweet onion, green onion, limu, nuts | Red onion, chili, cilantro |
+| Mix-ins | Sweet onion, green onion, [[Limu|limu]], nuts | Red onion, chili, cilantro |
 | From | Hawaii | Coastal Peru |
 
 Neither one makes fish safe. Acid looks like cooking, but it doesn't kill parasites or bacteria, so ceviche needs the same frozen, eat-it-raw fish as poke.

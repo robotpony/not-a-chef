@@ -16,7 +16,7 @@ A sweet, hot, and crunchy build on the cornmeal-fried breast. Sweet pickles and 
 Sweet and hot over a crunchy crust, with cold slaw.
 
 - **Chicken sandwich patties:** Whole breast, pounded to 1 cm, buttermilk soak
-- **Breading and frying chicken patties:** Cornmeal dredge, shallow-fried
+- **Breading and frying chicken patties:** Cornmeal [[Dredge|dredge]], shallow-fried
 - **Assembling chicken sandwiches:** Sweet pickles and slaw, on a toasted bun
 - **Chicken sandwich sauces:** Spicy maple mustard (mayo, mustard, maple syrup, ground hot chilies), drizzled over the patty
 

@@ -15,7 +15,7 @@ A warm and comforting stew. This is a 3-part stroganoff that covers a few styles
 
 ## Mechanic
 
-This recipe exists in three versions; choose the protein and build accordingly. The method is the same in all three: brown the beef, brown the mushrooms, deglaze, simmer, finish with sour cream. The sour cream must be tempered (hot liquid added gradually) or it will break.
+This recipe exists in three versions; choose the protein and build accordingly. The method is the same in all three: brown the beef, brown the mushrooms, [[Deglaze|deglaze]], simmer, finish with sour cream. The sour cream must be tempered (hot liquid added gradually) or it will break.
 
 ## Ingredients
 
@@ -62,15 +62,15 @@ This recipe exists in three versions; choose the protein and build accordingly. 
 
 Season the beef with the paprika (if using), salt, and pepper. Dust with flour for extra browning if you like.
 
-For the nostalgic and authentic versions, brown the beef in batches in a hot skillet with the butter (or oil). Remove and reserve. For the fancy version, sear the whole tenderloin on all sides in the oil until the centre reads 52°C (125°F) for medium rare, then rest it while you make the sauce.
+For the nostalgic and authentic versions, brown the beef in batches in a hot skillet with the butter (or oil). Remove and reserve. For the fancy version, [[Sear|sear]] the whole tenderloin on all sides in the oil until the centre reads 52°C (125°F) for medium rare, then rest it while you make the sauce.
 
 In the same pan, cook the mushrooms until they release their liquid and begin to brown. Add the onion, shallot, or pearl onions and cook until softened. Add the garlic and Dijon, if using, and stir briefly.
 
 Deglaze with the wine, vinegar and stock, or spirit, scraping up the browned bits. For the versions with stock, add half, reduce slightly, then add the rest.
 
-Simmer until tender: return ground beef for about 30 minutes, or chuck for about 1 hour. For the fancy version, simmer the sauce alone for about 20 minutes, seasoning it with Worcestershire, fish sauce, soy sauce, or MSG.
+Simmer until tender: return ground beef for about 30 minutes, or chuck for about 1 hour. For the fancy version, simmer the sauce alone for about 20 minutes, seasoning it with Worcestershire, fish sauce, soy sauce, or [[MSG]].
 
-Cook the egg noodles to al dente per the package.
+Cook the egg noodles to [[Al dente|al dente]] per the package.
 
 Take the pan off the heat. Temper the sour cream or crème fraîche by whisking a few ladles of hot liquid into it, then stir it back into the pan. Don't let it boil after this, or it will break.
 

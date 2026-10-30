@@ -14,7 +14,7 @@ Pulled pork is a great base for dozens of dishes, including sliders, chilies, ta
 
 ## Mechanic
 
-The pork braises in stock and aromatics only; the barbecue sauce is a separate reduction of vinegar, ketchup, and liquid smoke, not the strained braising liquid. Keeping them apart means the sauce flavour doesn't depend on how much fat and pork juice ends up in the pot.
+The pork [[Braise|braises]] in stock and [[Aromatics|aromatics]] only; the barbecue sauce is a separate reduction of vinegar, ketchup, and liquid smoke, not the strained braising liquid. Keeping them apart means the sauce flavour doesn't depend on how much fat and pork juice ends up in the pot.
 
 ## Ingredients
 

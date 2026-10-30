@@ -14,7 +14,7 @@ Rice bowls are a simple combination of rice, veg, protein, and sauces. You can p
 A bowl is a formula, not a fixed recipe: **rice, 2–3 vegetables, 1–2 proteins (100–250 g), 2 sauces, 1–2 pickles, and garnish.** Use one richer sauce for the proteins and one brighter sauce for the pickles or veg. I like one plant-based protein, like tofu, alongside one of baked fish or chicken.
 
 - Pickles: pickled ginger, or quick [[Simple, sweet pickled veg]] (cucumber, carrot, or onion, sliced fine)
-- Garnishes: finely chopped green onion, chili oil, ponzu sauce, sesame seeds
+- Garnishes: finely chopped green onion, chili oil, [[Ponzu|ponzu]] sauce, sesame seeds
 
 ## Teriyaki chicken, fish, or tofu bowl
 
@@ -29,7 +29,7 @@ Per bowl:
 - 100 g broccoli, steamed
 - Pickles and garnish
 
-Season the protein lightly with salt and MSG. Coat lightly with teriyaki sauce, keeping some back for halfway through and the rest for the bowl. Bake on parchment at 200°C (400°F) until browned at the edges, 15–25 minutes. Chicken is done when the centre reads 68°C (154°F); fish at 60–63°C (140–145°F).
+Season the protein lightly with salt and [[MSG]]. Coat lightly with teriyaki sauce, keeping some back for halfway through and the rest for the bowl. Bake on parchment at 200°C (400°F) until browned at the edges, 15–25 minutes. Chicken is done when the centre reads 68°C (154°F); fish at 60–63°C (140–145°F).
 
 Build the bowl on the rice with the vegetables, protein, reserved sauce, pickles, and garnish.
 

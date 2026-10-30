@@ -3,7 +3,7 @@ title: Summer 2022
 date: 2022-08-01
 ---
 
-A summer built around Indian flavours: butter paneer masala worked well with cashews instead of cream, and a vindaloo wing sauce got drafted from memory. Veggie burger research turned up a black bean smash burger that needed more binding, and this year's cold-brew iced tea recipe (evolving in the house for two decades) got locked in.
+A summer built around Indian flavours: butter [[Paneer|paneer]] masala worked well with cashews instead of cream, and a vindaloo wing sauce got drafted from memory. Veggie burger research turned up a black bean smash burger that needed more binding, and this year's cold-brew iced tea recipe (evolving in the house for two decades) got locked in.
 
 _Undated. The original notes called this “IT’S FUCKING SUMMER AGAIN.”_
 
@@ -14,7 +14,7 @@ _Undated. The original notes called this “IT’S FUCKING SUMMER AGAIN.”_
     - [Recipe](https://www.youtube.com/watch?v=QFEsM8b6ydE)
         - Mushrooms + some whole cauli
         - Some browning
-- Cauliflower miso mac and cheese (from The Savvy Cook)
+- Cauliflower [[Miso|miso]] mac and cheese (from The Savvy Cook)
 - Clam pasta - canned
 
 ### Quick curry
@@ -42,7 +42,7 @@ Sauce (from memory, needs testing):
 - 2 teaspoons ginger minced or grated
 - 1 teaspoon corn starch
 - ½ teaspoon granulated garlic
-- ½ teaspoon MSG
+- ½ teaspoon [[MSG]]
 - Salt
 - Water (for consistency)
 

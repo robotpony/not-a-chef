@@ -15,9 +15,9 @@ The poke bowl that took over North America: a bowl of rice, the fish on top, and
 
 Fresh, filling, and built to order.
 
-- **The fish:** Ahi or salmon
-- **The seasoning:** Shoyu and sesame oil on the fish, and spicy mayo over the bowl
-- **Onions, seaweed, and crunch:** Green onion, sesame seeds, and furikake
+- **The fish:** [[Ahi]] or salmon
+- **The seasoning:** [[Shoyu]] and sesame oil on the fish, and spicy mayo over the bowl
+- **Onions, seaweed, and crunch:** Green onion, sesame seeds, and [[Furikake|furikake]]
 - **How it's served:** A bowl of seasoned rice, about 1:1:1 rice, fish, and toppings: avocado, cucumber, edamame, pickled ginger
 
 ## Where it comes from

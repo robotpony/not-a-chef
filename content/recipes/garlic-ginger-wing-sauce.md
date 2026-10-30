@@ -14,7 +14,7 @@ Garlic and wings are a great combination. These lean sweet and savoury.
 
 ## Mechanic
 
-**Equal parts soy, honey, and hoisin** form the base; sake or rice vinegar cuts the sweetness. Fresh-grated aromatics (not jarred paste) give this its character: the shallot in particular rounds out the garlic and ginger.
+**Equal parts soy, honey, and [[Hoisin|hoisin]]** form the base; sake or rice vinegar cuts the sweetness. Fresh-grated [[Aromatics|aromatics]] (not jarred paste) give this its character: the shallot in particular rounds out the garlic and ginger.
 
 ```formula
 soy     | Soy    | 1
@@ -43,7 +43,7 @@ soy     | Soy    | 1
 
 Combine soy, honey, hoisin, sake, and sesame oil. Stir until the honey is fully dissolved.
 
-Grate in the ginger, garlic, and shallot directly into the sauce. Add togarashi and stir.
+Grate in the ginger, garlic, and shallot directly into the sauce. Add [[Togarashi|togarashi]] and stir.
 
 Toss cooked wings in the sauce while hot, or brush onto wings in the last few minutes of roasting. Simmer any remaining sauce briefly to thicken if using as a glaze.
 

@@ -22,7 +22,7 @@ Late summer wind-down: cottage pie nailed (steamed potatoes, a simple 1:1:1:1 be
 - .3% _garlic (fresh)_
 - .2% red pepper flakes
 - .2% **ground fennel**
-- .2% MSG
+- .2% [[MSG]]
 - 4% milk powder
 - 158 g water @ 10%
 
@@ -65,7 +65,7 @@ _The bolded items differ somewhat from my recipe, so I've adjusted to lean more 
 
 ### Summer is almost done
 
-- Chicken sandwich patties (brined chicken, either for breading or not)
+- Chicken sandwich patties ([[Brine|brined]] chicken, either for breading or not)
 
 ## Friday, September 12th
 

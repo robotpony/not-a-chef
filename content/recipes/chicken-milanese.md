@@ -15,7 +15,7 @@ This is a lighter version of Milanese, with no egg or breadcrumbs. Crispy chicke
 
 ## Mechanic
 
-A quick flour dredge and fry leaves the pan full of fond, ready to become a pan sauce while the chicken rests.
+A quick flour [[Dredge|dredge]] and fry leaves the pan full of [[Fond|fond]], ready to become a pan sauce while the chicken rests.
 
 ## Ingredients
 
@@ -32,7 +32,7 @@ Flatten the chicken, season the cutlets, and dredge them in the flour mixture. L
 
 Heat a frying pan over medium heat and add oil. Add the chicken carefully and fry on both sides, flipping a few times and moving the pieces around the pan so nothing sticks. Remove once cooked through (65°C/150°F internal) and rest.
 
-Deglaze the pan with the wine and/or stock, about 250 ml total, scraping up the fond. Season, reduce until it coats a spoon, and season again. Stir in a splash of cream and balance for acid and salt.
+[[Deglaze]] the pan with the wine and/or stock, about 250 ml total, scraping up the fond. Season, reduce until it coats a spoon, and season again. Stir in a splash of cream and balance for acid and salt.
 
 ## To serve
 

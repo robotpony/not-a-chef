@@ -39,13 +39,13 @@ This is a one-pot pasta: the pasta cooks directly in the soup, with starch as th
 
 Cover the shiitakes with warm water and let soak while you prep everything else.
 
-Bake the meatballs (or shape and bake ground meat into rough meatballs) until browned, reserving the drippings. Add half the meatballs to the pot and mash into a rough crumble. Add  the grated sausage and fry it with the meatballs, dry, and over medium-high heat until they start to stick. That's the point; it's where the fond comes from.
+Bake the meatballs (or shape and bake ground meat into rough meatballs) until browned, reserving the drippings. Add half the meatballs to the pot and mash into a rough crumble. Add  the grated sausage and fry it with the meatballs, dry, and over medium-high heat until they start to stick. That's the point; it's where the [[Fond|fond]] comes from.
 
 Add the onion, carrot, and celery and fry until softened. Stir in the tomato paste and cook until it darkens slightly. Drain the shiitakes, reserving the soaking liquid, and add them to the pot along with any hardy extra vegetables. Set the mushroom soaking liquid aside.
 
-Deglaze with the white wine, scraping up the fond.
+[[Deglaze]] with the white wine, scraping up the fond.
 
-Add the passata, the remaining meatballs, the reserved mushroom liquid, and enough water to cover everything generously. Bring to a simmer.
+Add the [[Passata|passata]], the remaining meatballs, the reserved mushroom liquid, and enough water to cover everything generously. Bring to a simmer.
 
 Add the pasta and cook, stirring occasionally, until it's about 80% done. The starch it sheds is what thickens the soup. Season with balsamic, thyme, oregano, salt, and pepper.
 
@@ -63,6 +63,6 @@ Fresh bread, for mopping. And I won't complain if you add fresh garlic and olive
 ## Notes
 
 - Flexible by design: swap the hardy veg for whatever's about to turn.
-- Grating the aromatics reduces the time to cook and lets them melt into the soup.
+- Grating the [[Aromatics|aromatics]] reduces the time to cook and lets them melt into the soup.
 - This started out as a pasta dish that evolved into a hearty soup, that really deserves some navy beans.
 - A vegetarian version of this can use vegan fritters (to replace the meatballs), and tempeh. The principle is the same, building fond, softening veg, and using a bright wine for balance.

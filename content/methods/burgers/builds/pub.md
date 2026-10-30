@@ -18,7 +18,7 @@ Beefy and juicy; a hearty meal.
 
 - **Forming burger patties:** One thick patty, 170–180 g, hand-formed loosely, with a thumbprint in the middle so it cooks flat
 - **Seasoning burgers:** Salt and pepper on the outside, just before cooking
-- **Cooking patties:** Grilled or griddled over medium-high heat and turned two or three times, or reverse seared; rested a couple of minutes
+- **Cooking patties:** Grilled or griddled over medium-high heat and turned two or three times, or reverse [[Sear|seared]]; rested a couple of minutes
 - **Assembling burgers:** A soft bun, toasted; leaf lettuce, a thick slice of tomato, raw purple onion, pickle; aged cheddar and crisp bacon if you want them
 - **Sauces and condiments:** Mayonnaise on the bun; ketchup and mustard on the table
 

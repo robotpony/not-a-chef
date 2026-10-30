@@ -33,7 +33,7 @@ For a pressed patty, set each ball between two squares of parchment, about 10 cm
 |---|---|---|
 | Thin, pressed (115–140 g, 5–7 mm) | Most of the time; make-ahead | Cooking: hot griddle or pan, from frozen |
 | Paper thin, smashed (3–6 mm) | You want the most crust and lacy edges | Cooking: smash on a hot griddle, flip once |
-| Thick (170 g and up) | You want a pink centre | Cooking: grill or reverse sear |
+| Thick (170 g and up) | You want a pink centre | Cooking: grill or reverse [[Sear|sear]] |
 
 The thick option is the [[Pub burger]]'s patty.
 

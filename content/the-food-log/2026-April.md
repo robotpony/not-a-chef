@@ -13,7 +13,7 @@ A run of quick-dinner formulas locked in: breakfast wraps on the plancha, fast s
 2. Noodle dishes (sauced noodle + toppings) ← this works well + is fast
 3. Rice bowls, v3 → [[Simple rice bowls]]
     1. quick pickled carrots + cukes
-    2. cabbage slaw (kewpie, ponzu)
+    2. cabbage slaw ([[Kewpie mayonnaise|kewpie]], [[Ponzu|ponzu]])
     3. stir fry protein + larger veg
         1. tested: teriyaki, bulgogi, and oyster/soy/sake
     4. rice or quinoa base
@@ -74,7 +74,7 @@ _Can be added without cooking, or can quickly cook down (to thicken to taste)._
 For the teriyaki sauce: ← okay, but weird process + too many ingredients
 
 - 3 tbsp teriyaki sauce ← this isn't really needed (rando internet recipe)
-- 3 tbsp hoisin sauce
+- 3 tbsp [[Hoisin|hoisin]] sauce
 - 3 tbsp soy sauce
 - 1 tbsp white vinegar
 - 1 tbsp sesame oil

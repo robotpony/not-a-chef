@@ -24,13 +24,13 @@ oven          | Roast    | deep brown
 
 **Prep (optional).** Wash the vegetables before peeling, and taste any peels before they go in. Cut roughly, or slice thin (a mandoline helps) for a darker, sweeter roast.
 
-1. **Roast** at 200–230°C (400–450°F), tossed with a couple of tablespoons of oil, until deep brown but not burnt, 30–45 minutes. Flip halfway, and scrape the fond into the pot. *Why:* the roast sets the colour and most of the flavour.
+1. **Roast** at 200–230°C (400–450°F), tossed with a couple of tablespoons of oil, until deep brown but not burnt, 30–45 minutes. Flip halfway, and scrape the [[Fond|fond]] into the pot. *Why:* the roast sets the colour and most of the flavour.
 2. **Extract.** Cover with water (4–5 L in a 6 L pressure cooker), add the peppercorns and herbs, and hold at a gentle simmer for the time in the table below. Let the pressure release naturally. *Why:* a hard boil or a fast release clouds the stock.
 3. **Lift out the solids at the cooktop** with a spider and tongs, then pour the stock through a fine-mesh strainer into a smaller pot. *Why:* strained over the sink, it ends up down the drain.
 4. **Reduce** by half at a gentle simmer, 2–3 hours, in the widest pot that holds it safely. Skim every 30 minutes or so. Bone stock reduced by half sets to jelly when cold.
 5. **Cool fast** in a sink of ice water, or with an ice-filled pot or cooling paddle (see [[Food safety: time and temperature]]). Keep the fat for starting soups, or lift it off once set. Refrigerate up to 5 days, or freeze for 3 months (6 at most).
 
-**Steep kombu or bonito (optional, before reducing).** Off the heat, steep them in the strained stock for 15–25 minutes, then lift them out. Kombu tastes better below a simmer.
+**Steep [[Kombu|kombu]] or [[Katsuobushi|bonito]] (optional, before reducing).** Off the heat, steep them in the strained stock for 15–25 minutes, then lift them out. Kombu tastes better below a simmer.
 
 **Taste (optional, before reducing).** Try a spoonful with a pinch of salt or a splash of soy. Leave the stock itself unsalted, so it can be reduced and used anywhere.
 
@@ -66,7 +66,7 @@ Put in things that taste good and extract well. [[Why ingredients matter in stoc
 
 **Ramen stock.** Chicken carcasses with ginger and a little pork fat or bones, finished with a kombu and bonito steep. Reduce at a rolling boil if you want a richer, cloudier broth.
 
-**Other cuisines.** Ginger, star anise, and cinnamon turn the vegetable or beef base toward phở; miso and kombu toward Japanese.
+**Other cuisines.** Ginger, star anise, and cinnamon turn the vegetable or beef base toward phở; [[Miso|miso]] and kombu toward Japanese.
 
 ## Recipes
 

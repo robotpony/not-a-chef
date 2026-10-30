@@ -11,7 +11,7 @@ cuisine: Indian
 draft: false
 ---
 
-These are delicious fritters, best served with coriander-mint and tangy tamarind date chutney.
+These are delicious fritters, best served with coriander-mint and tangy [[Tamarind|tamarind]] date chutney.
 
 ## Mechanic
 
@@ -44,7 +44,7 @@ Add the ginger/garlic paste and eggs, and mix until the onions are evenly coated
 
 Heat neutral oil to 180°C (350°F) in a wide, heavy pot. Use enough oil to deep-fry.
 
-Form golf-ball-sized fritters with damp hands. Drop in batches without crowding. Fry, turning occasionally, until deep golden brown all over, 4–5 minutes per batch.
+Form golf-ball-sized fritters with damp hands. Drop in batches without [[Crowding the pan|crowding]]. Fry, turning occasionally, until deep golden brown all over, 4–5 minutes per batch.
 
 Drain on a rack or paper towels.
 

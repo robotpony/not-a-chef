@@ -37,4 +37,4 @@ Drain and rinse the beans. Return them to the pot with 2 L (2 qt) of water and t
 
 Lift out the ham hock or bone. Pull the meat off the bone, chop it, and return it to the pot; discard the bone, skin, and fat.
 
-Add the aromatics and the sausage, turkey, or bacon. Simmer for 30 minutes, stirring regularly. Taste and season with salt and pepper.
+Add the [[Aromatics|aromatics]] and the sausage, turkey, or bacon. Simmer for 30 minutes, stirring regularly. Taste and season with salt and pepper.

@@ -34,7 +34,7 @@ Put everything except the egg yolks in a jar and shake for 2 minutes. Taste and 
 
 Shaken, the dressing is close to the restaurant's but thinner. For the creamy version, whisk the egg yolks in a bowl with another pinch of mustard powder, then drizzle in the shaken dressing while whisking until thick.
 
-A blender works too: blend everything except the oil, then drizzle the oil in with the blender running to emulsify it fully.
+A blender works too: blend everything except the oil, then drizzle the oil in with the blender running to [[Emulsify|emulsify]] it fully.
 
 ## Notes
 

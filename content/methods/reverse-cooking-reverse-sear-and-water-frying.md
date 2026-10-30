@@ -7,7 +7,7 @@ date: 2026-09-24
 draft: false
 ---
 
-Most recipes brown first and cook through second. Reverse methods swap the order: cook gently first, then brown at the end. The gentle phase controls doneness; the hot phase is only for crust. Doing them in this order gives more even results and fewer burnt bits.
+Most recipes brown first and cook through second. Reverse methods swap the order: cook gently first, then brown at the end. The gentle phase controls [[Doneness|doneness]]; the hot phase is only for crust. Doing them in this order gives more even results and fewer burnt bits.
 
 ```formula
 oven        | Gentle | doneness
@@ -16,11 +16,11 @@ oven        | Gentle | doneness
 
 ## Reverse sear
 
-Cook a thick cut in a low oven until it's a few degrees below your target, then sear it hard in a very hot pan.
+Cook a thick cut in a low oven until it's a few degrees below your target, then [[Sear|sear]] it hard in a very hot pan.
 
-1. Season the meat, ideally dry-brined on a rack in the fridge overnight so the surface is dry.
+1. Season the meat, ideally dry-[[Brine|brined]] on a rack in the fridge overnight so the surface is dry.
 2. Roast on a rack at 95–120°C (200–250°F) until the centre is 5–8°C below your target. For a 4–5 cm steak this takes 30–60 minutes; roasts take longer. Use a probe thermometer.
-3. Sear in a smoking-hot pan with a little oil, 45–60 seconds a side, plus the edges. Butter and aromatics can go in for the last 30 seconds.
+3. Sear in a smoking-hot pan with a little oil, 45–60 seconds a side, plus the edges. Butter and [[Aromatics|aromatics]] can go in for the last 30 seconds.
 4. Serve right away. The low oven has already done the resting, so there's little carry-over.
 
 **Why it works:** the slow phase heats the meat evenly, so there's almost no grey band under the crust. It also dries the surface, so the sear browns in under a minute instead of steaming first.
@@ -48,4 +48,4 @@ Start fatty meat in a little water instead of oil. The water keeps the pan at ab
 
 - **Mushrooms and onions** are basically water-fried too. Mushrooms release their water, simmer in it, and only brown once it's gone; a splash of water at the start helps them cook evenly and soak up less oil. Onions soften in their own moisture first, and a splash of water when they start to catch lets them cook down and caramelize without scorching.
 - **Potstickers and gyoza** use the same idea the other way round: fry the bottoms, add water and cover to steam them through, then let the water boil off so the bottoms crisp again.
-- **Braise, then brown** works for ground beef in batch cooking: simmer it in a little liquid until tender, then let the liquid cook off and brown it.
+- **[[Braise]], then brown** works for ground beef in batch cooking: simmer it in a little liquid until tender, then let the liquid cook off and brown it.

@@ -9,7 +9,7 @@ cuisine: Hawaiian
 draft: false
 ---
 
-This is a Hawaiian-style pulled pork that doesn't need a BBQ or fire pit, based on various recipes from local Maui residents. The pork itself is simply seasoned, braised, and pulled, paired with a sweet and acidic sauce.
+This is a Hawaiian-style pulled pork that doesn't need a BBQ or fire pit, based on various recipes from local Maui residents. The pork itself is simply seasoned, [[Braise|braised]], and pulled, paired with a sweet and acidic sauce.
 
 ## Pork
 

@@ -76,7 +76,7 @@ _Undated._
     - Pan cooked veg (peppers, onion)
 - Broiled burgers (using all-beef frozen burgs, 170g/6oz)
     - 6 minutes per side on a wire rack, 288C/550F
-        - Salt/pepper/msg
+        - Salt/pepper/[[MSG|msg]]
         - Chez
     - Order (top, down)
         - bun, mayo + tomato + mustard + dots of ketchup + pickle +

@@ -19,13 +19,13 @@ Note: this recipe is missing browning sauce. Will test and add to the book this 
 
 - Tuna sauce
     - 2 tbsp mayonnaise
-    - 1 tbsp sriracha
+    - 1 tbsp [[Sriracha|sriracha]]
     - 2 tsp soy sauce
     - ½ tsp rice wine vinegar
     - ½ tsp toasted sesame oil
 - Tuna steaks
     - Slice (~2 cm steaks)
-    - Dry, kewpie/sriracha? Does this need salt?
+    - Dry, [[Kewpie mayonnaise|kewpie]]/sriracha? Does this need salt?
     - cube steaks after cooking, toss in sauce
     - Sesame crusted?!
     - soy ginger marinade?
@@ -42,7 +42,7 @@ Note: this recipe is missing browning sauce. Will test and add to the book this 
     - cuke (make a salad? dress it lightly?)
     - rice/crispy rice
     - scallions/green onions
-    - kimchi?
+    - [[Kimchi|kimchi]]?
 
 ### Hot pots research for spring/summer
 

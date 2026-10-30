@@ -10,7 +10,7 @@ working_on: "First draft from notes; needs testing against more proteins and a f
 description: "Sear, deglaze, reduce, mount: the browned bits left in the pan after searing become a sauce in the time the meat takes to rest."
 ---
 
-A pan sauce is the flavour you'd otherwise wash down the sink. Searing meat, poultry, fish, or vegetables leaves browned, sticky bits on the bottom of the pan. The French call them *sucs* (from the Latin *succus*, juice), and the layer they form the *fond*, the base. Liquid dissolves them, reduction concentrates them, and cold butter whisked in at the end turns the thin liquid into a glossy sauce.
+A pan sauce is the flavour you'd otherwise wash down the sink. [[Sear|Searing]] meat, poultry, fish, or vegetables leaves browned, sticky bits on the bottom of the pan. The French call them *sucs* (from the Latin *succus*, juice), and the layer they form the *[[Fond|fond]]*, the base. Liquid dissolves them, reduction concentrates them, and cold butter whisked in at the end turns the thin liquid into a glossy sauce.
 
 The searing makes the flavour, and everything after it only collects and concentrates it. A good fond gives you most of a good sauce, and no amount of butter rescues a pan with none.
 
@@ -24,7 +24,7 @@ pan          | Sear    | leave the fond
 
 ## How fond forms
 
-Fond is the Maillard reaction and caramelization stuck to metal. High heat browns the proteins and sugars at the surface of the food, and some of that browning stays behind when the food lifts off. Three things decide how much you get:
+Fond is the [[Maillard reaction]] and caramelization stuck to metal. High heat browns the proteins and sugars at the surface of the food, and some of that browning stays behind when the food lifts off. Three things decide how much you get:
 
 - **The pan.** Stainless steel, cast iron, and enamelled cast iron, which food sticks to. Nonstick is built to leave nothing behind, so it leaves no fond.
 - **The heat.** Hot enough to brown, not so hot the bits go black. Golden to dark brown makes a sauce; black makes it bitter.
@@ -34,9 +34,9 @@ Fond is the Maillard reaction and caramelization stuck to metal. High heat brown
 
 Quantities are for two to four portions in a 25–30 cm (10–12 in) skillet. Start the sauce as soon as the meat comes out; it's done by the time the meat has rested.
 
-1. **Sear and remove.** Cook the protein, then move it to a board to rest. Pour off all but about a tablespoon of fat. *Why:* too much fat won't emulsify later and leaves the sauce greasy.
-2. **Sweat the aromatics.** Over medium heat, add a finely diced shallot (or a little onion or garlic) and cook 1–2 minutes until soft and fragrant, scraping at any loose bits. *Why:* the moisture from the shallot starts lifting the fond, and the shallot gives the sauce a sweet base. Garlic burns fast, so it goes in last.
-3. **Deglaze.** Pour in 125–250 ml (½–1 cup) of liquid while the pan is hot, and scrape the bottom hard with a wooden spoon or flat spatula until the fond dissolves. *Why:* the hot liquid softens the stuck bits so they release; a spoon on a cold pan only smears them.
+1. **Sear and remove.** Cook the protein, then move it to a board to rest. Pour off all but about a tablespoon of fat. *Why:* too much fat won't [[Emulsify|emulsify]] later and leaves the sauce greasy.
+2. **Sweat the [[Aromatics|aromatics]].** Over medium heat, add a finely diced shallot (or a little onion or garlic) and cook 1–2 minutes until soft and fragrant, scraping at any loose bits. *Why:* the moisture from the shallot starts lifting the fond, and the shallot gives the sauce a sweet base. Garlic burns fast, so it goes in last.
+3. **[[Deglaze]].** Pour in 125–250 ml (½–1 cup) of liquid while the pan is hot, and scrape the bottom hard with a wooden spoon or flat spatula until the fond dissolves. *Why:* the hot liquid softens the stuck bits so they release; a spoon on a cold pan only smears them.
 4. **Reduce.** Simmer over medium-high heat until the liquid is down by about half and coats the back of a spoon, a few minutes. Pour in any juices the resting meat has let go. *Why:* reducing concentrates the flavour and cooks off the raw edge of wine or spirits. Stock with gelatin in it thickens as it reduces.
 5. **Mount and balance.** Take the pan off the heat and whisk in 1–2 tablespoons of cold butter, a piece at a time, until glossy. Taste, then add a splash of acid (lemon juice or vinegar), salt, pepper, and fresh herbs. *Why:* cold butter whisked off the heat emulsifies into the sauce; added to a boiling pan it melts into a slick of grease.
 
@@ -76,12 +76,12 @@ Wine or spirits plus stock gives more body than either alone: deglaze with the w
 
 **Mushroom.** Brown sliced mushrooms in the fat after the meat comes out, before the shallot. They add their own fond.
 
-**Gravy.** Stir a tablespoon of flour into the fat and cook it before deglazing, then whisk in more stock. The roux thickens it instead of reduction and butter; see [[Simple chicken, pork, and beef gravy]].
+**Gravy.** Stir a tablespoon of flour into the fat and cook it before deglazing, then whisk in more stock. The [[Roux|roux]] thickens it instead of reduction and butter; see [[Simple chicken, pork, and beef gravy]].
 
 ## Recipes
 
 - [[Chicken Milanese]]: wine and stock, finished with cream
-- [[Beef stroganoff]]: the same deglaze, carried on into a braise with sour cream
+- [[Beef stroganoff]]: the same deglaze, carried on into a [[Braise|braise]] with sour cream
 - [[Roast poultry]]: deglazing roasting pans for stock or gravy
 
 For the stock that goes in, see [[Stock]]. For getting a hard sear on thick cuts, see [[Reverse cooking: reverse sear and water frying]].

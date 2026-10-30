@@ -3,7 +3,7 @@ title: Spring 2024
 date: 2024-06-01
 ---
 
-A big stretch, January through June: Hawaii-trip-inspired kalua pulled pork and poke research, a bulgogi marinade and an Asian slaw dressing that both worked well on the first try, and a char siu marinade. Also dialed in: a broiled "home whopper" method, a family-weekend rotation of pulled pork, chili, and mac and cheese, and two wing sauces (gochujang, chili-lime) for puzzle nights — while a Serious Eats peanut sauce got flatly rejected in favour of trying Weissman's version next time.
+A big stretch, January through June: Hawaii-trip-inspired kalua pulled pork and poke research, a bulgogi marinade and an Asian slaw dressing that both worked well on the first try, and a char siu marinade. Also dialed in: a broiled "home whopper" method, a family-weekend rotation of pulled pork, chili, and mac and cheese, and two wing sauces ([[Gochujang|gochujang]], chili-lime) for puzzle nights — while a Serious Eats peanut sauce got flatly rejected in favour of trying Weissman's version next time.
 
 _Undated. January to June; the original notes grouped these as Spring._
 
@@ -94,7 +94,7 @@ Peanut sauce from Serious eats: DID NOT LIKE THIS ONE (check out Weisman's next 
 - ½ cup hot water
 - 2 tablespoons Thai red curry paste
 - 2 tablespoons palm sugar or light brown sugar
-- 2 tablespoons Sriracha
+- 2 tablespoons [[Sriracha]]
 - 1 tablespoon soy sauce
 - 1 tablespoon rice vinegar
 - 1 tablespoon freshly squeezed lime juice from 1 lime
@@ -103,7 +103,7 @@ Peanut sauce from Serious eats: DID NOT LIKE THIS ONE (check out Weisman's next 
 - 2 scallions, thinly sliced
 - Kosher salt, to taste
 
-Too much thai curry paste, likely needs tamarind or hoisin, and was missing coconut milk (adding that made it better)
+Too much thai curry paste, likely needs [[Tamarind|tamarind]] or [[Hoisin|hoisin]], and was missing coconut milk (adding that made it better)
 
 Indonesian sweet soy sauce (good for glazes) → [[Sweet soy sauce (kecap manis style)]]
 
@@ -132,7 +132,7 @@ Thai cucumber relish → [[Thai cucumber relish]]
     - 2 tablespoons Olive oil
     - 2 tablespoons Cream
     - 1-2 egg yolks
-    - Salt, pepper, MSG
+    - Salt, pepper, [[MSG]]
     - Oregano
     - Thyme
 
@@ -144,7 +144,7 @@ Thai cucumber relish → [[Thai cucumber relish]]
     - \+ big fat spoon of chili/garlic paste
     - \+ 115g tofu
     - Rice vinega → sake
-    - − togarashi
+    - − [[Togarashi|togarashi]]
     - \+ sesame seeds
     - \+ more soy
 - Szechuan quick noodles, single pan
@@ -162,7 +162,7 @@ Thai cucumber relish → [[Thai cucumber relish]]
         - Edamame
         - Tofu
         - More acid
-        - Dashi
+        - [[Dashi]]
         - Was close to amazing
 
 ### Food prep

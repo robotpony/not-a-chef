@@ -3,7 +3,7 @@ title: Winter and spring 2022
 date: 2022-06-01
 ---
 
-A long curry stretch (chana masala, butter paneer masala, a Thai red curry that "worked especially well") alongside a big-batch beef stew and a ravioli filling that held together on the first try. A burger-and-chicken-sandwich cookery week produced real lessons — frozen pre-smashed patties work fine, the buttermilk chicken marinade needed more seasoning — and a char siu marinade and lentil tacos both got written up for the book.
+A long curry stretch (chana masala, butter [[Paneer|paneer]] masala, a Thai red curry that "worked especially well") alongside a big-batch beef stew and a ravioli filling that held together on the first try. A burger-and-chicken-sandwich cookery week produced real lessons — frozen pre-smashed patties work fine, the buttermilk chicken marinade needed more seasoning — and a char siu marinade and lentil tacos both got written up for the book.
 
 _Undated. About January to June 2022; the original notes grouped these as Winter/Spring._
 
@@ -12,11 +12,11 @@ _Undated. About January to June 2022; the original notes grouped these as Winter
 - [Chana masala](https://www.youtube.com/watch?v=mTX3VdXTkVA) (also: [simpler steps](https://www.indianhealthyrecipes.com/chana-masala/))
 - [Butter paneer masala](https://hebbarskitchen.com/paneer-butter-masala-recipe/) (also: [chetna’s](https://www.you.co.uk/chetna-makan-masala-paneer/))
     - Masala paste
-        - 2 tbsp oil/ghee
+        - 2 tbsp oil/[[Ghee|ghee]]
         - 2 bay leaves
         - 3 cardamom
         - ½ stick cinnamon (other half for rice)
-        - 2 tablespoon of whole garam masala
+        - 2 tablespoon of whole [[Garam masala|garam masala]]
         - 4 onions
         - 2 cloves garlic/1 inch ginger paste
         - 15 cashews soaked
@@ -35,7 +35,7 @@ _Undated. About January to June 2022; the original notes grouped these as Winter
         - Water
         - Cream
         - Panneer (soasked)
-        - _Kasuri methi (tiny amount of fennel/celery salt/leaves instead)_
+        - _Kasuri [[Kasuri methi|methi]] (tiny amount of fennel/celery salt/leaves instead)_
         - _Fresh coriander_
             - Add oil and butter to pan, carefully cook new spices.
             - Add onions, spices, salt, paste, and cream. Stir and season.
@@ -60,7 +60,7 @@ _Undated. About January to June 2022; the original notes grouped these as Winter
             - 390g leftover frozen chicken (90% lean)
             - 160g pork fat (5% lean)
             - 560g leftover frozen chuck beef (80% lean)
-        - Panade
+        - [[Panade]]
             - 200g overcooked brown rice
             - 50g panko
             - 400g buttermilk
@@ -172,7 +172,7 @@ Salad dressings
         4. Soft bun
 3. Red sauce is something I should make more of.
     1. Good tomatoes help.
-    2. Soffritto cooks down nicely (smaller dice or grate)
+    2. [[Soffritto]] cooks down nicely (smaller dice or grate)
 
 ### Food prep/practice TODO
 
@@ -238,7 +238,7 @@ Salad dressings
 
 ### Beef tacos
 
-My new favourite way to spice beef tacos is with chipotles that are finely diced (or blended), with onions and garlic. Add cumin, lime juice, and salt/MSG to taste. Half a can usually is enough (for ~1kg of beef), but a whole can will bring a enjoyable amount of heat.
+My new favourite way to spice beef tacos is with chipotles that are finely diced (or blended), with onions and garlic. Add cumin, lime juice, and salt/[[MSG]] to taste. Half a can usually is enough (for ~1kg of beef), but a whole can will bring a enjoyable amount of heat.
 
 ### Lentil tacos
 
@@ -263,13 +263,13 @@ I’ve seen this made a few ways, but I’d like to try to preserve the textures
 
 1. Prep proteins:
     1. Chop and lightly roast nuts in a hot oven (200C-ish)
-    2. Boil lentils and nuts in water (salted if you want), until al dente
+    2. Boil lentils and nuts in water (salted if you want), until [[Al dente|al dente]]
     3. Strain and set aside
 2. Soften onions and garlic:
     1. Add onions/garlic to a hot pan with neutral oil (coconut?)
     2. Add peppers )
     3. Add tomato paste once translucent, and stir until paste starts to stick
-    4. Deglaze with ½ of the stock and reduce to a simmer
+    4. [[Deglaze]] with ½ of the stock and reduce to a simmer
 3. Make a thick stew:
     1. Add drained lentils and nuts
     2. Add spices and chipotle
@@ -301,7 +301,7 @@ Lightly fry, season, add lime, and let cool.
     - Weird chicken from yesterday
     - Onion and broccoli
     - Garlic/ginger
-    - soy/sesame/gochujang/rice wine slurry
+    - soy/sesame/[[Gochujang|gochujang]]/rice wine [[Slurry|slurry]]
     - → second pass turned out much better
 - Thinking about rice puddin’ (John’s)
 
@@ -322,7 +322,7 @@ Marinade:
 
 - 1 soy sauce
 - 1 oyster sauce
-- 1 sweet soy (hoisin in a pinch)
+- 1 sweet soy ([[Hoisin|hoisin]] in a pinch)
 - 1 honey (or maple syrup)
 - 2 brown sugar
 - ⅓ 5-spice

@@ -36,7 +36,7 @@ Burger King's Chicken Specialty Sandwich (now the Original Chicken Sandwich) cam
 
 - **Ground, not whole.** An even, round patty, juicy from the baking soda, that eats like the fast-food original.
 - **Lots of mayo.** The patty is lean; the mayo is the sandwich's fat, and it soaks into the crust as it sits.
-- **Pepper-forward.** Black pepper in the dredge does most of the seasoning.
+- **Pepper-forward.** Black pepper in the [[Dredge|dredge]] does most of the seasoning.
 
 ## How it fails
 

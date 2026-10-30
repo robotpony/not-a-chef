@@ -13,7 +13,7 @@ Twelve pizzas, one theme each night, all built around a Christmas carol pun. A f
 1. We Three Cheeses All Melty and Gooey
 2. Merry Margarita
 3. Frankincense and Myrrh (smoked tofu, paprika, mushrooms, cheesus)
-4. Gifts from Afar (buttered paneer, butter chicken sauce)
+4. Gifts from Afar (buttered [[Paneer|paneer]], butter chicken sauce)
 5. Oh Christmas Tree (basil, pine nuts, cheese chunks)
 6. A Winter Wonderland (Alfredo, mushroom)
 7. Mario, Toad & Luigi (mushroom and spinach)

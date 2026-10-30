@@ -44,7 +44,7 @@ On to the research ...
 
 - Oil/acid ratios vary widely, though 1:1 seems common (least common was .75:1, fairly common was 2:1 … but this tastes very oily)
 - My preference so far is something around 1:1, splitting the acid between a wine vinegar and lemon (and using a mellower oil)
-- Mustard powder to help emulsify (or mustard, though this would push it more acidic)
+- Mustard powder to help [[Emulsify|emulsify]] (or mustard, though this would push it more acidic)
 - Can also cut with 1–2 tbsp mayo to push to creamy (and help emulsify) (this means that you could probably whisk into an egg yolk + mustard powder)
 - Some recipes include water (I don't see the need)
 

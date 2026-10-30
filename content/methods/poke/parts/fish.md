@@ -22,8 +22,8 @@ The fish is the dish. The seasoning is there to bring out its flavour, not cover
 
 | Option | Pick it when | Changes |
 |---|---|---|
-| Ahi (yellowfin or bigeye tuna) | Most of the time | The standard: firm, mild, and deep red |
-| Aku (skipjack tuna) | You can find it | Stronger-tasting; one of the original poke fish |
+| [[Ahi]] (yellowfin or bigeye tuna) | Most of the time | The standard: firm, mild, and deep red |
+| [[Aku]] (skipjack tuna) | You can find it | Stronger-tasting; one of the original poke fish |
 | Salmon | Tuna isn't good that day | Richer and softer |
 | He'e (octopus) | You want it chewy and clean-tasting | Cooked or cured first, then sliced thin rather than cubed |
 | Shrimp | Not everyone eats raw fish | Poached and chilled first |

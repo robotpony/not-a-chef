@@ -26,11 +26,11 @@ This is a quick, refrigerator sweet pickle, perfect for beets, cabbage, and othe
 
 ## Method
 
-Steam or roast the peeled beets until al dente, about 15 minutes steamed or 30 minutes roasted. Halve any larger beets so they cook evenly. Let cool until you can handle them.
+Steam or roast the peeled beets until [[Al dente|al dente]], about 15 minutes steamed or 30 minutes roasted. Halve any larger beets so they cook evenly. Let cool until you can handle them.
 
 Tie the pickling spice in cheesecloth or a reusable tea bag. Combine the water, vinegar, sugar, and salt in a saucepan with the spice bag, the loose peppercorns and cloves, the shallot, and the garlic. Simmer until the sugar and salt dissolve. Let cool enough to handle.
 
-Put the beets and brine in a large glass container. Refrigerate for 2–3 days before eating.
+Put the beets and [[Brine|brine]] in a large glass container. Refrigerate for 2–3 days before eating.
 
 ## Variations
 

@@ -35,13 +35,13 @@ Heat the vegetable oil in a large skillet over medium heat. Add the garlic and g
 
 Add the pork and cook, breaking it into small pieces with a wooden spoon, until browned and cooked through, 8–10 minutes.
 
-Push the pork to the side and pour in the sesame oil. Add the cabbage, onion, and carrot, and stir them into the meat. Add the soy sauce and sriracha. Cook, stirring often, until the cabbage is tender, 5–8 minutes. Season with salt.
+Push the pork to the side and pour in the sesame oil. Add the cabbage, onion, and carrot, and stir them into the meat. Add the soy sauce and [[Sriracha|sriracha]]. Cook, stirring often, until the cabbage is tender, 5–8 minutes. Season with salt.
 
 Divide among bowls. Top with the green onion and sesame seeds.
 
 ## Notes
 
 - A bag of coleslaw mix is a great shortcut in place of the cabbage and carrot.
-- If the pork releases a lot of fat, drain before adding the sesame oil. You'll get a proper stir-fry instead of a braise.
+- If the pork releases a lot of fat, drain before adding the sesame oil. You'll get a proper stir-fry instead of a [[Braise|braise]].
 - Good base for additions: a splash of rice vinegar, fish sauce, or oyster sauce deepens the flavour.
 - Serve as-is for low-carb, or over rice or cauliflower rice.

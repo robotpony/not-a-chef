@@ -38,7 +38,7 @@ Put the base stock ingredients in a large pressure cooker, add water to cover, a
 
 Let the pressure release naturally. Lift the solids into a metal bowl with a spider and tongs. Pour the stock through a fine-mesh strainer into a smaller pot.
 
-With the heat off, add the bonito and kombu to the strained stock and steep for 15–25 minutes. Lift them out with a fine-mesh spider, or strain again.
+With the heat off, add the [[Katsuobushi|bonito]] and [[Kombu|kombu]] to the strained stock and steep for 15–25 minutes. Lift them out with a fine-mesh spider, or strain again.
 
 Reduce the stock at a low simmer until it's down by half, 2–3 hours. A rolling boil emulsifies the fat for a richer, cloudier broth, if you want that. Skim any remaining scum with the fine-mesh spider.
 

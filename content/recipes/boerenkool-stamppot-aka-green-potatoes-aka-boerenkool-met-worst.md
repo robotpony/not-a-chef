@@ -33,7 +33,7 @@ It's commonly served with sausage, often a medium-grind rookworst. We make it in
 
 Heat the oil in a large pot (6–8 L / 6–8 qt) and sauté the onion until soft. Add the whole rookworst, if using, and fry, flipping a few times.
 
-Add the potatoes and cover with cold water. Add the kale with its brine, the salt, and the bay leaves.
+Add the potatoes and cover with cold water. Add the kale with its [[Brine|brine]], the salt, and the bay leaves.
 
 Bring to a boil, then reduce to a simmer. Cook until the potatoes are soft; they'll be about 95°C, and the rookworst will be over 80°C.
 

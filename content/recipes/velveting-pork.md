@@ -48,5 +48,5 @@ In any stir-fry or wok dish.
 
 - Applies equally to chicken or beef; the method is identical.
 - Baking soda is the critical ingredient; cornstarch and flavourings are supporting.
-- Velveted pork keeps well refrigerated for a day before cooking.
+- [[Velveting|Velveted]] pork keeps well refrigerated for a day before cooking.
 - [[Stir fry two ways]] and [[Thai-inspired noodle soup]] use a quicker version: the baking soda and cornstarch go straight into the marinade, with no rinse.

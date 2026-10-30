@@ -33,7 +33,7 @@ This marinade is great for rice, tofu, chicken, shrimp, and fish. It’s a brigh
 
 Grind the rosemary, pepper, and salt together in a mortar and pestle. Add the sage, garlic, and shallot, and grind into a loose paste.
 
-Put the paste in a bowl with the remaining herbs and spices and the MSG. Add the lemon juice and olive oil, and whisk until combined.
+Put the paste in a bowl with the remaining herbs and spices and the [[MSG]]. Add the lemon juice and olive oil, and whisk until combined.
 
 Taste and adjust the pepper, salt, and sugar. It should taste balanced: tart, salty, and sweet, with a good kick of garlic and a hint of onion. The herbs should work together without overpowering, and the flavour should linger in a good way.
 

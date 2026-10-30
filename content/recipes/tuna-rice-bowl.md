@@ -50,13 +50,13 @@ Combine all tuna sauce ingredients and set aside. Combine all bowl dressing ingr
 
 Thaw the tuna overnight in the fridge, then pat it very dry. Season with salt, pepper, and sesame seeds on all sides.
 
-Heat the oil in a pan over high heat until smoking. Sear the tuna until a crust forms but the centre is still red to pink, 60–90 seconds per side. Rest briefly.
+Heat the oil in a pan over high heat until smoking. [[Sear]] the tuna until a crust forms but the centre is still red to pink, 60–90 seconds per side. Rest briefly.
 
 Cube the tuna and toss with the tuna sauce.
 
 ## To serve
 
-Spoon rice into bowls. Add cucumber, dressed lightly with some of the bowl dressing. Top with tuna and green onions. Drizzle remaining bowl dressing over everything. Add kimchi if using.
+Spoon rice into bowls. Add cucumber, dressed lightly with some of the bowl dressing. Top with tuna and green onions. Drizzle remaining bowl dressing over everything. Add [[Kimchi|kimchi]] if using.
 
 ## Notes
 
