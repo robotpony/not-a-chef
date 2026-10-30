@@ -56,8 +56,11 @@ in a browser — no build step.
   Design v2 "Soften the colour scheme", after the cookbook-site notes.
   Cards and a recipe excerpt three times: A as built, B with the five
   hues pulled toward the neutrals, C with B's tokens plus one accent and
-  text-only chips. Light, dark, and auto toggle. A mixer below takes each
-  softening as a checkbox with a note, beside A, and copies the take to
+  text-only chips, over cards, a recipe page, and diagrams (a formula, the
+  smash burger build, drink glasses, copied from the built site). Light,
+  dark, and auto toggle. A mixer below takes each
+  softening as a checkbox with a note (including lighter backgrounds and
+  softer food colours), beside A, and copies the take to
   the clipboard as requirements text. B's tokens are a first guess and
   untested for contrast.
 
