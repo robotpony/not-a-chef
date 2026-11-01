@@ -70,6 +70,8 @@ in a browser — no build step.
   light and dark). Needs `serve.py`, which serves `public/` at `/` and this
   folder at `/mockups/` on one origin. `soft.css` holds the draft tokens
   and component rules; the requirements are in PLAN.md's Design v2.
+  Built 2026-11-01, so both frames now show the softened site; the
+  mock is kept for the record.
 
 - **`scale-callout.html`**: proposal (2026-10-07) to redraw the recipe
   scale/units menu as a callout with a `^` pointer to the gear, a restyled

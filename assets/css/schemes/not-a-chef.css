@@ -1,6 +1,7 @@
 /* Bruce loves to cook colour scheme (file keeps the not-a-chef name for config)
  *
  * Generated 2026-09-17 from mockups/STYLE.md's real light/dark token pairs,
+ * regenerated 2026-11-01 from the softened tokens (mockups/soft-colour.html),
  * not invented from scratch. Each ramp step is either a direct token
  * (see the comment) or a linear HSL interpolation between two token
  * anchors — never a value picked by eye.
@@ -27,39 +28,39 @@
   --color-neutral: 255, 255, 255;
 
   /* Neutral — warm olive-grey, from --bg/--surface/--ink (light + dark) */
-  --color-neutral-50: 247, 247, 241;   /* between --surface and --bg (light) */
-  --color-neutral-100: 235, 237, 224;  /* --ink (dark) / --surface-2 (light) */
-  --color-neutral-200: 219, 220, 206;  /* --border (light) */
-  --color-neutral-300: 184, 186, 166;  /* --border-strong (light) / --ink-muted (dark) */
-  --color-neutral-400: 147, 148, 138;  /* --ink-faint (light) */
-  --color-neutral-500: 108, 109, 98;   /* --ink-faint (dark) / --ink-muted (light) */
-  --color-neutral-600: 65, 67, 51;     /* --border-strong / --border (dark) */
-  --color-neutral-700: 35, 36, 30;     /* --ink (light) */
-  --color-neutral-800: 30, 31, 24;     /* --surface / --bg (dark) */
-  --color-neutral-900: 23, 24, 15;     /* --surface-2 (dark) */
+  --color-neutral-50: 251, 251, 246;   /* between --surface and --bg (light) */
+  --color-neutral-100: 226, 228, 216;  /* --ink (dark); --surface-2 (light) is #F0F0E8 */
+  --color-neutral-200: 224, 224, 211;  /* --border (light) */
+  --color-neutral-300: 184, 186, 167;  /* between --border-strong (light) and --ink-muted (dark) */
+  --color-neutral-400: 130, 131, 119;  /* --ink-faint (light) */
+  --color-neutral-500: 116, 117, 106;   /* between --ink-faint (dark) and --ink-muted (light) */
+  --color-neutral-600: 69, 71, 58;     /* --border-strong (dark) */
+  --color-neutral-700: 43, 44, 37;     /* --ink (light) */
+  --color-neutral-800: 37, 38, 30;     /* between --surface and --bg (dark) */
+  --color-neutral-900: 29, 30, 23;     /* --surface-2 (dark) */
 
   /* Primary — orange→red, from --accent/--accent-strong (light + dark) */
-  --color-primary-50: 246, 234, 218;   /* --accent-soft (light) */
-  --color-primary-100: 237, 207, 183;  /* interpolated */
-  --color-primary-200: 228, 173, 149;  /* --accent-strong (dark) */
-  --color-primary-300: 220, 167, 127;  /* interpolated */
-  --color-primary-400: 211, 165, 105;  /* --accent (dark) */
-  --color-primary-500: 200, 141, 65;   /* interpolated */
-  --color-primary-600: 166, 115, 48;   /* --accent (light) */
-  --color-primary-700: 124, 54, 29;    /* --accent-strong (light) */
-  --color-primary-800: 87, 49, 30;     /* interpolated */
-  --color-primary-900: 55, 38, 27;     /* --accent-soft (dark) */
+  --color-primary-50: 243, 236, 226;   /* --accent-soft (light) */
+  --color-primary-100: 228, 206, 187;  /* interpolated */
+  --color-primary-200: 214, 169, 146;  /* --accent-strong (dark) */
+  --color-primary-300: 203, 162, 129;  /* interpolated */
+  --color-primary-400: 191, 157, 114;  /* --accent (dark) */
+  --color-primary-500: 180, 146, 102;   /* interpolated */
+  --color-primary-600: 168, 134, 90;   /* --accent (light) */
+  --color-primary-700: 138, 79, 55;    /* --accent-strong (light) */
+  --color-primary-800: 88, 62, 47;     /* interpolated */
+  --color-primary-900: 46, 38, 32;     /* --accent-soft (dark) */
 
   /* Secondary — yellow, from --highlight (light + dark). See note above:
      our own components don't use this ramp, kept only for Tailwind. */
-  --color-secondary-50: 246, 241, 213;  /* --highlight-soft (light) */
-  --color-secondary-100: 235, 224, 173; /* interpolated */
-  --color-secondary-200: 221, 204, 136; /* --highlight (dark) */
-  --color-secondary-300: 212, 190, 104; /* interpolated */
-  --color-secondary-400: 204, 175, 71;  /* interpolated */
-  --color-secondary-500: 184, 154, 50;  /* interpolated */
-  --color-secondary-600: 153, 127, 41;  /* --highlight (light) */
-  --color-secondary-700: 116, 98, 39;   /* interpolated */
-  --color-secondary-800: 83, 70, 33;    /* interpolated */
-  --color-secondary-900: 52, 45, 25;    /* --highlight-soft (dark) */
+  --color-secondary-50: 242, 239, 225;  /* --highlight-soft (light) */
+  --color-secondary-100: 222, 214, 181; /* interpolated */
+  --color-secondary-200: 201, 188, 138; /* --highlight (dark) */
+  --color-secondary-300: 189, 172, 111; /* interpolated */
+  --color-secondary-400: 176, 156, 85;  /* interpolated */
+  --color-secondary-500: 152, 133, 70;  /* interpolated */
+  --color-secondary-600: 125, 109, 58;  /* --highlight (light) */
+  --color-secondary-700: 95, 84, 52;   /* interpolated */
+  --color-secondary-800: 68, 61, 43;    /* interpolated */
+  --color-secondary-900: 43, 40, 32;    /* --highlight-soft (dark) */
 }

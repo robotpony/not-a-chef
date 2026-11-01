@@ -8,33 +8,33 @@
   @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
   :root{
-    --bg:#F3F3EC; --surface:#FBFBF6; --surface-2:#EAEBDF;
-    --ink:#23241E; --ink-muted:#63645A; --ink-faint:#93948A;
-    --border:#DCDCCE; --border-strong:#C7C8B4;
-    --accent:#A67330; --accent-strong:#7C361D; --accent-soft:#F6EADA;
-    --highlight:#997F29; --highlight-soft:#F6F1D5;
-    --flag:#3D638F; --flag-soft:#E1EAF4;
-    --focus:#A67330;
+    --bg:#F8F8F3; --surface:#FDFDFA; --surface-2:#F0F0E8;
+    --ink:#2B2C25; --ink-muted:#6A6B61; --ink-faint:#828377;
+    --border:#E0E0D3; --border-strong:#CDCEBD;
+    --accent:#A8865A; --accent-strong:#8A4F37; --accent-soft:#F3ECE2;
+    --highlight:#7D6D3A; --highlight-soft:#F2EFE1;
+    --flag:#56708E; --flag-soft:#E7EBEF;
+    --focus:#A8865A;
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
-      --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
-      --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
-      --border:#383A2C; --border-strong:#4A4C3A;
-      --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
-      --highlight:#DDCC88; --highlight-soft:#342D19;
-      --flag:#97B8D8; --flag-soft:#1D2835;
-      --focus:#D3A569;
+      --bg:#22231C; --surface:#282920; --surface-2:#1D1E17;
+      --ink:#E2E4D8; --ink-muted:#A2A493; --ink-faint:#7F8073;
+      --border:#33352A; --border-strong:#45473A;
+      --accent:#BF9D72; --accent-strong:#D6A992; --accent-soft:#2E2620;
+      --highlight:#C9BC8A; --highlight-soft:#2B2820;
+      --flag:#93A9C0; --flag-soft:#20252C;
+      --focus:#BF9D72;
     }
   }
   :root[data-theme="dark"]{
-    --bg:#1B1C16; --surface:#212219; --surface-2:#17180F;
-    --ink:#ECEEE2; --ink-muted:#A9AB99; --ink-faint:#75766A;
-    --border:#383A2C; --border-strong:#4A4C3A;
-    --accent:#D3A569; --accent-strong:#E4AD95; --accent-soft:#37261B;
-    --highlight:#DDCC88; --highlight-soft:#342D19;
-    --flag:#97B8D8; --flag-soft:#1D2835;
-    --focus:#D3A569;
+    --bg:#22231C; --surface:#282920; --surface-2:#1D1E17;
+    --ink:#E2E4D8; --ink-muted:#A2A493; --ink-faint:#7F8073;
+    --border:#33352A; --border-strong:#45473A;
+    --accent:#BF9D72; --accent-strong:#D6A992; --accent-soft:#2E2620;
+    --highlight:#C9BC8A; --highlight-soft:#2B2820;
+    --flag:#93A9C0; --flag-soft:#20252C;
+    --focus:#BF9D72;
   }
 
   *{box-sizing:border-box;}
@@ -131,7 +131,7 @@
 
   /* ---- real components, full scale ---- */
   .tag{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; border:1px solid var(--border-strong); color:var(--ink-muted); padding:3px 7px; border-radius:3px; display:inline-block; }
-  .cuisine-chip{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; font-weight:600; background:var(--highlight-soft); color:var(--highlight); padding:3px 7px; border-radius:3px; display:inline-block; }
+  .cuisine-chip{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; font-weight:600; color:var(--highlight); padding:3px 0; display:inline-block; }
   /* Flow diagram (custom.css "Flow diagram"), wide and narrow */
   .flow{ margin:0; container-type:inline-size; contain-intrinsic-inline-size:40rem; }
   .flow-grid{ display:grid; grid-template-columns:auto repeat(var(--cols), auto); justify-content:center; gap:16px 10px; }
@@ -182,7 +182,7 @@
   .fstyle .squeeze-in{ fill:none; stroke:var(--accent-soft); stroke-width:2.6; stroke-linecap:round; stroke-linejoin:round; }
   .fstyle .chunk{ fill:var(--surface); stroke:var(--ink); stroke-width:.9; }
   .fstyle .bubble{ fill:var(--accent-soft); stroke:var(--ink); stroke-width:.8; }
-  .method-chip{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; font-weight:600; background:var(--accent-soft); color:var(--accent-strong); padding:3px 7px; border-radius:3px; display:inline-flex; align-items:center; gap:4px; }
+  .method-chip{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; font-weight:600; color:var(--accent-strong); padding:3px 0; display:inline-flex; align-items:center; gap:4px; }
   .blueprint-chip{ font-family:'Libre Franklin',sans-serif; font-size:.7rem; font-weight:600; color:var(--accent-strong); border:1px solid color-mix(in srgb, var(--accent) 55%, transparent); padding:2px 7px; border-radius:3px; display:inline-flex; gap:4px; }
   .blueprint-chip .part{ font-weight:500; color:var(--ink-muted); }
   .method-chip svg{ width:12px; height:12px; flex:none; }
@@ -200,7 +200,7 @@
   .ing input[type="checkbox"]:checked{ background:var(--accent); border-color:var(--accent); }
   .ing input[type="checkbox"]:checked::after{ content:''; position:absolute; left:5.5px; top:3px; width:5px; height:10px; border:solid #fff; border-width:0 2px 2px 0; transform:rotate(45deg); }
   .ing:has(input:checked){ color:var(--ink-faint); text-decoration:line-through; text-decoration-color:var(--border-strong); }
-  .ing .qty{ color:var(--ink-muted); }
+  .ing .qty{ color:var(--accent-strong); }
 
   .mechanic{ background:var(--bg); border-left:3px solid var(--accent); border-radius:0 3px 3px 0; padding:12px 14px; font-family:'Lora',serif; font-size:1rem; }
   .mechanic .ratio{ color:var(--accent-strong); font-weight:600; font-family:'IBM Plex Mono',monospace; }
@@ -209,14 +209,15 @@
   .proc-step{ display:flex; gap:10px; align-items:flex-start; font-family:'Lora',serif; font-size:1rem; }
   .proc-step .n{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; font-weight:600; color:var(--accent-strong); background:var(--accent-soft); width:22px; height:22px; border-radius:3px; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px; }
 
-  .draft-banner{ display:flex; align-items:baseline; gap:8px; font-family:'Libre Franklin',sans-serif; font-size:.78rem; font-weight:600; color:var(--flag); background:var(--flag-soft); border:1px solid var(--flag); border-radius:3px; padding:8px 12px; }
+  .draft-banner{ display:flex; align-items:baseline; gap:8px; font-family:'Libre Franklin',sans-serif; font-size:.78rem; font-weight:600; color:var(--flag); border-top:1px solid color-mix(in srgb, var(--flag) 45%, transparent); border-bottom:1px solid color-mix(in srgb, var(--flag) 45%, transparent); padding:8px 0; }
   .draft-banner .dot{ width:6px; height:6px; border-radius:50%; background:var(--flag); flex-shrink:0; }
   .draft-banner .sub{ font-weight:400; color:var(--ink-muted); }
 
   .rcard{ background:var(--bg); border:1px solid var(--border); border-radius:6px; padding:14px; display:flex; flex-direction:column; gap:9px; max-width:300px; }
   .rcard-top{ display:flex; gap:5px; flex-wrap:wrap; }
   .home-row .rcard-top{ gap:4px; }
-  .home-row .tag, .home-row .cuisine-chip{ font-size:.62rem; padding:2px 5px; }
+  .home-row .tag{ font-size:.62rem; padding:2px 5px; }
+  .home-row .cuisine-chip{ font-size:.62rem; padding:2px 0; }
   .rcard-title{ font-family:'Libre Franklin',sans-serif; font-weight:700; font-size:.95rem; }
   .rcard-meta{ display:flex; gap:16px; }
   .rcard-stat-label{ font-family:'Libre Franklin',sans-serif; font-size:.6rem; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); display:block; }
@@ -334,44 +335,44 @@
 
     <h3 class="sub-title">Neutrals</h3>
     <div class="swatch-grid">
-      <div class="swatch"><div class="swatch-fill" style="background:#F3F3EC"></div><div class="swatch-label"><span class="swatch-name">--bg</span><span class="swatch-hex">#F3F3EC</span><span class="swatch-use">page background</span></div></div>
-      <div class="swatch"><div class="swatch-fill" style="background:#FBFBF6"></div><div class="swatch-label"><span class="swatch-name">--surface</span><span class="swatch-hex">#FBFBF6</span><span class="swatch-use">cards, panels, inputs</span></div></div>
-      <div class="swatch"><div class="swatch-fill" style="background:#EAEBDF"></div><div class="swatch-label"><span class="swatch-name">--surface-2</span><span class="swatch-hex">#EAEBDF</span><span class="swatch-use">hover fills, nested surfaces</span></div></div>
-      <div class="swatch"><div class="swatch-fill" style="background:#23241E"></div><div class="swatch-label"><span class="swatch-name" style="color:#fff">--ink</span><span class="swatch-hex" style="color:#aaa">#23241E</span><span class="swatch-use" style="color:#999">primary text</span></div></div>
-      <div class="swatch"><div class="swatch-fill" style="background:#63645A"></div><div class="swatch-label"><span class="swatch-name" style="color:#fff">--ink-muted</span><span class="swatch-hex" style="color:#ccc">#63645A</span><span class="swatch-use" style="color:#ccc">secondary text, meta, ledes</span></div></div>
-      <div class="swatch"><div class="swatch-fill" style="background:#93948A"></div><div class="swatch-label"><span class="swatch-name">--ink-faint</span><span class="swatch-hex">#93948A</span><span class="swatch-use">placeholders, counts</span></div></div>
-      <div class="swatch"><div class="swatch-fill" style="background:#DCDCCE"></div><div class="swatch-label"><span class="swatch-name">--border</span><span class="swatch-hex">#DCDCCE</span><span class="swatch-use">default dividers</span></div></div>
-      <div class="swatch"><div class="swatch-fill" style="background:#C7C8B4"></div><div class="swatch-label"><span class="swatch-name">--border-strong</span><span class="swatch-hex">#C7C8B4</span><span class="swatch-use">interactive borders</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#F8F8F3"></div><div class="swatch-label"><span class="swatch-name">--bg</span><span class="swatch-hex">#F8F8F3</span><span class="swatch-use">page background</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#FDFDFA"></div><div class="swatch-label"><span class="swatch-name">--surface</span><span class="swatch-hex">#FDFDFA</span><span class="swatch-use">cards, panels, inputs</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#F0F0E8"></div><div class="swatch-label"><span class="swatch-name">--surface-2</span><span class="swatch-hex">#F0F0E8</span><span class="swatch-use">hover fills, nested surfaces</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#2B2C25"></div><div class="swatch-label"><span class="swatch-name" style="color:#fff">--ink</span><span class="swatch-hex" style="color:#aaa">#2B2C25</span><span class="swatch-use" style="color:#999">primary text</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#6A6B61"></div><div class="swatch-label"><span class="swatch-name" style="color:#fff">--ink-muted</span><span class="swatch-hex" style="color:#ccc">#6A6B61</span><span class="swatch-use" style="color:#ccc">secondary text, meta, ledes</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#828377"></div><div class="swatch-label"><span class="swatch-name">--ink-faint</span><span class="swatch-hex">#828377</span><span class="swatch-use">placeholders, counts</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#E0E0D3"></div><div class="swatch-label"><span class="swatch-name">--border</span><span class="swatch-hex">#E0E0D3</span><span class="swatch-use">default dividers</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#CDCEBD"></div><div class="swatch-label"><span class="swatch-name">--border-strong</span><span class="swatch-hex">#CDCEBD</span><span class="swatch-use">interactive borders</span></div></div>
     </div>
 
     <h3 class="sub-title">1 · Primary — orange→red</h3>
     <p class="sub-dek">Means "interactive, or teaches you something." Leads the hierarchy — the one color allowed real prominence.</p>
     <div class="swatch-grid">
-      <div class="swatch"><div class="swatch-fill" style="background:#A67330"></div><div class="swatch-label"><span class="swatch-name" style="color:#fff">--accent</span><span class="swatch-hex" style="color:#f3e2cd">#A67330</span><span class="swatch-use" style="color:#f3e2cd">interactive borders/hovers, active nav</span></div></div>
-      <div class="swatch"><div class="swatch-fill" style="background:#7C361D"></div><div class="swatch-label"><span class="swatch-name" style="color:#fff">--accent-strong</span><span class="swatch-hex" style="color:#eec9b8">#7C361D</span><span class="swatch-use" style="color:#eec9b8">text emphasis — ratios, links, "view all"</span></div></div>
-      <div class="swatch"><div class="swatch-fill" style="background:#F6EADA"></div><div class="swatch-label"><span class="swatch-name">--accent-soft</span><span class="swatch-hex">#F6EADA</span><span class="swatch-use">fill for hovered/selected rows</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#A8865A"></div><div class="swatch-label"><span class="swatch-name" style="color:#fff">--accent</span><span class="swatch-hex" style="color:#f3e2cd">#A8865A</span><span class="swatch-use" style="color:#f3e2cd">interactive borders/hovers, active nav</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#8A4F37"></div><div class="swatch-label"><span class="swatch-name" style="color:#fff">--accent-strong</span><span class="swatch-hex" style="color:#eec9b8">#8A4F37</span><span class="swatch-use" style="color:#eec9b8">text emphasis — ratios, links, "view all"</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#F3ECE2"></div><div class="swatch-label"><span class="swatch-name">--accent-soft</span><span class="swatch-hex">#F3ECE2</span><span class="swatch-use">fill for hovered/selected rows</span></div></div>
     </div>
 
     <h3 class="sub-title">2 · Secondary — yellow</h3>
     <p class="sub-dek">Links to the cuisine's page; hover stays yellow — <strong style="color:var(--ink)">cuisine only</strong>. Never used for anything else, so it never competes with the accent.</p>
     <div class="swatch-grid">
-      <div class="swatch"><div class="swatch-fill" style="background:#997F29"></div><div class="swatch-label"><span class="swatch-name" style="color:#fff">--highlight</span><span class="swatch-hex" style="color:#efe6c4">#997F29</span><span class="swatch-use" style="color:#efe6c4">cuisine chip text</span></div></div>
-      <div class="swatch"><div class="swatch-fill" style="background:#F6F1D5"></div><div class="swatch-label"><span class="swatch-name">--highlight-soft</span><span class="swatch-hex">#F6F1D5</span><span class="swatch-use">cuisine chip fill</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#7D6D3A"></div><div class="swatch-label"><span class="swatch-name" style="color:#fff">--highlight</span><span class="swatch-hex" style="color:#efe6c4">#7D6D3A</span><span class="swatch-use" style="color:#efe6c4">cuisine chip text</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#F2EFE1"></div><div class="swatch-label"><span class="swatch-name">--highlight-soft</span><span class="swatch-hex">#F2EFE1</span><span class="swatch-use">unused since 2026-11-01</span></div></div>
     </div>
 
     <h3 class="sub-title">3 · Utility, reserved — blue</h3>
     <p class="sub-dek">Means "unreviewed," not "error." Cool/pending against the accent's warm/active — deliberately not red. One role only: the draft state.</p>
     <div class="swatch-grid">
-      <div class="swatch"><div class="swatch-fill" style="background:#3D638F"></div><div class="swatch-label"><span class="swatch-name" style="color:#fff">--flag</span><span class="swatch-hex" style="color:#c7d8e8">#3D638F</span><span class="swatch-use" style="color:#c7d8e8">draft/unreviewed banners &amp; badges</span></div></div>
-      <div class="swatch"><div class="swatch-fill" style="background:#E1EAF4"></div><div class="swatch-label"><span class="swatch-name">--flag-soft</span><span class="swatch-hex">#E1EAF4</span><span class="swatch-use">fill for the above</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#56708E"></div><div class="swatch-label"><span class="swatch-name" style="color:#fff">--flag</span><span class="swatch-hex" style="color:#c7d8e8">#56708E</span><span class="swatch-use" style="color:#c7d8e8">draft/unreviewed banners &amp; badges</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#E7EBEF"></div><div class="swatch-label"><span class="swatch-name">--flag-soft</span><span class="swatch-hex">#E7EBEF</span><span class="swatch-use">test kitchen pot lid</span></div></div>
     </div>
 
     <h3 class="sub-title">4 · Principle, reserved — green</h3>
     <p class="sub-dek">The win-the-fridge principle only (2026-09-27): chip, tag page callout. Not a general veg marker; there's no sixth hue.</p>
     <div class="swatch-grid">
-      <div class="swatch"><div class="swatch-fill" style="background:#247B50"></div><div class="swatch-label"><span class="swatch-name" style="color:#fff">--principle</span><span class="swatch-hex" style="color:#ddd">#247B50</span><span class="swatch-use" style="color:#ddd">chip hover ring, callout border</span></div></div>
-      <div class="swatch"><div class="swatch-fill" style="background:#1D6743"></div><div class="swatch-label"><span class="swatch-name" style="color:#fff">--principle-strong</span><span class="swatch-hex" style="color:#ddd">#1D6743</span><span class="swatch-use" style="color:#ddd">chip text, callout label</span></div></div>
-      <div class="swatch"><div class="swatch-fill" style="background:#DBF5E8"></div><div class="swatch-label"><span class="swatch-name">--principle-soft</span><span class="swatch-hex">#DBF5E8</span><span class="swatch-use">chip fill</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#4A7D62"></div><div class="swatch-label"><span class="swatch-name" style="color:#fff">--principle</span><span class="swatch-hex" style="color:#ddd">#4A7D62</span><span class="swatch-use" style="color:#ddd">chip hover ring, callout border</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#3D6852"></div><div class="swatch-label"><span class="swatch-name" style="color:#fff">--principle-strong</span><span class="swatch-hex" style="color:#ddd">#3D6852</span><span class="swatch-use" style="color:#ddd">chip text, callout label</span></div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#E4EEE8"></div><div class="swatch-label"><span class="swatch-name">--principle-soft</span><span class="swatch-hex">#E4EEE8</span><span class="swatch-use">unused since 2026-11-01</span></div></div>
     </div>
 
     <h3 class="sub-title">5 · Layer kit only — sear and food colours</h3>

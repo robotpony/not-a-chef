@@ -33,33 +33,33 @@
  * `prefers-color-scheme` or `[data-theme]` as the standalone mockups do.
  */
 :root {
-  --bg: #F3F3EC;
-  --surface: #FBFBF6;
-  --surface-2: #EAEBDF;
-  --ink: #23241E;
-  --ink-muted: #63645A;
-  --ink-faint: #93948A;
-  --border: #DCDCCE;
-  --border-strong: #C7C8B4;
+  --bg: #F8F8F3;
+  --surface: #FDFDFA;
+  --surface-2: #F0F0E8;
+  --ink: #2B2C25;
+  --ink-muted: #6A6B61;
+  --ink-faint: #828377;
+  --border: #E0E0D3;
+  --border-strong: #CDCEBD;
 
-  --accent: #A67330;
-  --accent-strong: #7C361D;
-  --accent-soft: #F6EADA;
-  --focus: #A67330;
+  --accent: #A8865A;
+  --accent-strong: #8A4F37;
+  --accent-soft: #F3ECE2;
+  --focus: #A8865A;
 
-  --highlight: #997F29;
-  --highlight-soft: #F6F1D5;
+  --highlight: #7D6D3A;
+  --highlight-soft: #F2EFE1;
 
-  --flag: #3D638F;
-  --flag-soft: #E1EAF4;
+  --flag: #56708E;
+  --flag-soft: #E7EBEF;
 
   /* Green (hue 151°, the family's previously-unused 5th hue — STYLE.md's
    * warped-green). Claimed for "principle" (mockups/win-the-fridge.html,
    * 2026-09-27), not a vegetarian/vegan marker — derived with the same
    * S57/L62 base + per-token contrast tuning as --highlight/--flag. */
-  --principle: #247B50;
-  --principle-strong: #1D6743;
-  --principle-soft: #DBF5E8;
+  --principle: #4A7D62;
+  --principle-strong: #3D6852;
+  --principle-soft: #E4EEE8;
 
   /* Sear (STYLE.md §5, mockups/patty-sear.html): a third fill for the
    * exploded build diagrams' seared faces, not a UI colour. */
@@ -88,29 +88,29 @@
 }
 
 .dark {
-  --bg: #1B1C16;
-  --surface: #212219;
-  --surface-2: #17180F;
-  --ink: #ECEEE2;
-  --ink-muted: #A9AB99;
-  --ink-faint: #75766A;
-  --border: #383A2C;
-  --border-strong: #4A4C3A;
+  --bg: #22231C;
+  --surface: #282920;
+  --surface-2: #1D1E17;
+  --ink: #E2E4D8;
+  --ink-muted: #A2A493;
+  --ink-faint: #7F8073;
+  --border: #33352A;
+  --border-strong: #45473A;
 
-  --accent: #D3A569;
-  --accent-strong: #E4AD95;
-  --accent-soft: #37261B;
-  --focus: #D3A569;
+  --accent: #BF9D72;
+  --accent-strong: #D6A992;
+  --accent-soft: #2E2620;
+  --focus: #BF9D72;
 
-  --highlight: #DDCC88;
-  --highlight-soft: #342D19;
+  --highlight: #C9BC8A;
+  --highlight-soft: #2B2820;
 
-  --flag: #97B8D8;
-  --flag-soft: #1D2835;
+  --flag: #93A9C0;
+  --flag-soft: #20252C;
 
-  --principle: #8ED7B4;
-  --principle-strong: #A7E2C4;
-  --principle-soft: #1B3428;
+  --principle: #8DBBA2;
+  --principle-strong: #9FC7B1;
+  --principle-soft: #1F2C25;
 
   --sear: #5C3A26;
   --sear-fleck: #24170F;
@@ -590,17 +590,14 @@ li:has(> input[type="checkbox"]:checked) {
 }
 /* .qty also appears outside .ing rows — themes/fugu/assets/js/ingredients.js wraps
  * unit-bearing quantities and temperatures it finds in Directions/Method
- * prose the same way. The subtle accent wash marks these as the numbers
- * the units toggle actually acts on — same --accent the toggle's active
- * state already uses (.ing-btn.active below), just at 25% opacity rather
- * than the fixed --accent-soft tint, so it reads as a highlight rather
- * than a filled chip. */
+ * prose the same way. Accent text marks these as the numbers the units
+ * toggle actually acts on, matching the formula diagrams' quantities
+ * (2026-11-01, mockups/soft-colour.html; was a 25% --accent wash). */
 .qty,
 .temp {
-  color: var(--ink-muted);
-  background: color-mix(in srgb, var(--accent) 25%, transparent);
-  border-radius: 3px;
-  padding: 0 3px;
+  color: var(--accent-strong);
+  background: none;
+  padding: 0;
 }
 /* Sub-note: a tab-indented sub-item under an ingredient (docs/FORMAT.md's
  * "add split peas for more texture" example) — non-checkable, no checkbox
@@ -975,7 +972,7 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
 .home-list-label + .home-row-link { border-top: 1px solid var(--border); }
 .home-row-link strong { font-family: 'Libre Franklin', sans-serif; font-size: .92rem; font-weight: 700; }
 .home-row-link:hover strong { color: var(--accent-strong); }
-.home-row-link em { font-style: normal; font-family: 'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums; font-size: .7rem; font-weight: 600; color: var(--accent-strong); align-self: baseline; }
+.home-row-link em { font-style: normal; font-family: 'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums; font-size: .7rem; font-weight: 600; color: var(--ink); align-self: baseline; }
 .home-row-link span { grid-column: 1 / -1; font-family: 'Lora', serif; font-size: .84rem; line-height: 1.5; color: var(--ink-muted); display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; overflow: hidden; }
 /* Recipe card v2 (mockups/recipe-card-v2.html): one-line taxonomy row,
  * intro paragraph in the middle, compact stat line pinned to the bottom so
@@ -1030,7 +1027,7 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
 .rcard-stat { display: flex; align-items: baseline; gap: 4px; flex: none; }
 .rcard-stat:last-child { flex: 0 1 auto; min-width: 0; overflow: hidden; }
 .rcard-stat b { font-family: 'Libre Franklin', sans-serif; font-size: .56rem; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-faint); }
-.rcard-stat span { font-family: 'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums; font-size: .72rem; font-weight: 600; color: var(--accent-strong); overflow: hidden; text-overflow: ellipsis; }
+.rcard-stat span { font-family: 'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums; font-size: .72rem; font-weight: 600; color: var(--ink); overflow: hidden; text-overflow: ellipsis; }
 
 /* Listing page header (STYLE.md .ltitle / .listing-count), with the same
  * 1100px column + 20px gutter as .home-section. */
@@ -1057,10 +1054,10 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
 /* The method chip (mockups/STYLE.md Method chip, Fugu method/chip.html):
  * a concept chip like .principle-chip, in the accent, on a method's card
  * and leading its page's tags row. */
-.method-chip { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; font-weight: 600; background: var(--accent-soft); color: var(--accent-strong); padding: 3px 7px; border-radius: 3px; display: inline-flex; align-items: center; gap: 4px; }
+.method-chip { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; font-weight: 600; background: none; color: var(--accent-strong); padding: 3px 0; display: inline-flex; align-items: center; gap: 4px; }
 .method-chip svg { width: 12px; height: 12px; flex: none; }
 a.method-chip { text-decoration: none; }
-a.method-chip:hover, a.method-chip:focus-visible { box-shadow: inset 0 0 0 1px var(--accent); outline: none; }
+a.method-chip:hover, a.method-chip:focus-visible { text-decoration: underline; text-underline-offset: 3px; outline: none; }
 .rcard a.method-chip { position: relative; z-index: 1; }
 /* The blueprint chip (STYLE.md Blueprint chip, Fugu blueprint/chip.html):
  * an accent outline, so it ranks below the filled chips and reads as
@@ -1073,24 +1070,24 @@ a.blueprint-chip:hover, a.blueprint-chip:focus-visible { border-color: var(--acc
 /* Header tags are links (article-meta/basic.html); hover as .filter-pill. */
 a.tag { text-decoration: none; }
 a.tag:hover { border-color: var(--accent); color: var(--ink); }
-.cuisine-chip { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; background: var(--highlight-soft); color: var(--highlight); padding: 3px 7px; border-radius: 3px; display: inline-block; }
-/* Linked chip (cards and recipe pages): same yellow, an inset --highlight
- * ring on hover rather than an accent colour, so it stays cuisine-only. */
+.cuisine-chip { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; background: none; color: var(--highlight); padding: 3px 0; display: inline-block; }
+/* Linked chip (cards and recipe pages): same yellow, underlined on hover
+ * rather than an accent colour, so it stays cuisine-only. */
 a.cuisine-chip { text-decoration: none; }
-a.cuisine-chip:hover, a.cuisine-chip:focus-visible { box-shadow: inset 0 0 0 1px var(--highlight); outline: none; }
+a.cuisine-chip:hover, a.cuisine-chip:focus-visible { text-decoration: underline; text-underline-offset: 3px; outline: none; }
 /* Principle chip (mockups/win-the-fridge.html) — one tag only, win-the-fridge.
  * Same shape as .cuisine-chip so it reads as the same kind of thing ("a fact
  * about this recipe"), but green and sentence case instead of yellow/
  * uppercase. On a recipe card it abbreviates to "WTF" (title attr carries
  * the full name) so it fits the card's existing 2-slot top row without a
  * layout change; everywhere else it spells out "Win the fridge". */
-.principle-chip { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; font-weight: 600; background: var(--principle-soft); color: var(--principle-strong); padding: 3px 7px; border-radius: 3px; display: inline-flex; align-items: center; gap: 4px; }
+.principle-chip { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; font-weight: 600; background: none; color: var(--principle-strong); padding: 3px 0; display: inline-flex; align-items: center; gap: 4px; }
 .principle-chip svg { width: 10px; height: 10px; flex: none; }
 a.principle-chip { text-decoration: none; }
 /* Icon-only principle chip (a tag with card_label: false, e.g. plant-based):
  * a zero-width character gives it the same text line as its labelled
  * siblings, so it's as tall as they are; the icon at the method chip's 12px. */
-.principle-chip.is-icon, .rcard-top .principle-chip.is-icon { padding-inline: 6px; gap: 0; }
+.principle-chip.is-icon, .rcard-top .principle-chip.is-icon { padding-inline: 0; gap: 0; }
 .principle-chip.is-icon::after { content: "\200b"; }
 .principle-chip.is-icon svg { width: 12px; height: 12px; }
 /* Principles are told apart by colour (STYLE.md §4, 2026-10-14): green means
@@ -1102,7 +1099,7 @@ a.principle-chip { text-decoration: none; }
 .principle-page.principle-win-the-fridge :is(.ltitle-kind-principle, .read-essay) {
   --principle: var(--flag); --principle-strong: var(--flag); --principle-soft: var(--flag-soft);
 }
-a.principle-chip:hover, a.principle-chip:focus-visible { box-shadow: inset 0 0 0 1px var(--principle); outline: none; }
+a.principle-chip:hover, a.principle-chip:focus-visible { text-decoration: underline; text-underline-offset: 3px; outline: none; }
 /* Test kitchen: drafts, published while they're still changing (Fugu
  * partials/development/, params.toml [fugu.development],
  * mockups/in-development.html). The flag blue is shared with Win the fridge (see the principle chips above). */
@@ -1113,14 +1110,15 @@ a.principle-chip:hover, a.principle-chip:focus-visible { box-shadow: inset 0 0 0
 .dev-icon .dev-icon-lid { fill: var(--flag-soft); }
 .dev-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--flag); flex: none; }
 /* The strip under a draft's title and tags (the end of #single_header).
- * Its colour takes it out of the flow of the content; the page's
+ * Two blue hairlines take it out of the flow of the content (a filled
+ * box until 2026-11-01, mockups/soft-colour.html); the page's
  * `working_on` note sits under a dotted line.
  * Width: the body column's own measure, 65ch of Lora at 16px (Tailwind's
  * max-w-prose on .article-content), so its right edge lines up with the
  * body text. The header's own max-w-prose is 65ch of 18px Franklin,
  * ~160px wider, which put the strip into the sidebar's lane. The font
  * is set here only to size the ch; the text sets its own below. */
-.dev-strip { display: flex; gap: 10px; align-items: flex-start; max-width: 65ch; font: 16px/1 'Lora', Georgia, serif; background: var(--flag-soft); border: 1px solid var(--flag); border-radius: 4px; padding: 10px 14px; margin: -4px 0 20px; }
+.dev-strip { display: flex; gap: 10px; align-items: flex-start; max-width: 65ch; font: 16px/1 'Lora', Georgia, serif; background: none; border: 0; border-radius: 0; border-top: 1px solid color-mix(in srgb, var(--flag) 45%, transparent); border-bottom: 1px solid color-mix(in srgb, var(--flag) 45%, transparent); padding: 10px 0; margin: -4px 0 20px; }
 /* 20px above (the meta row's 24px bottom margin, less 4) and 20px below,
  * at every width. Below lg the recipe sidebar's "Recipe notes" toggle
  * comes next, inside a flex column, so its own 20px top margin would add
@@ -1140,8 +1138,8 @@ a.principle-chip:hover, a.principle-chip:focus-visible { box-shadow: inset 0 0 0
 .dev-strip-note b { font-family: 'Libre Franklin', sans-serif; font-style: normal; font-weight: 600; font-size: .78rem; margin-right: 2px; }
 /* The card's test kitchen chip: a link to the explainer, lifted above
  * the card's stretched link. */
-.dev-chip { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 4px; font-family: 'Libre Franklin', sans-serif; font-weight: 600; color: var(--flag); background: var(--flag-soft); border-radius: 3px; text-decoration: none; white-space: nowrap; }
-a.dev-chip:hover, a.dev-chip:focus-visible { box-shadow: inset 0 0 0 1px var(--flag); outline: none; }
+.dev-chip { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 4px; font-family: 'Libre Franklin', sans-serif; font-weight: 600; color: var(--flag); background: none; border: 0; padding-inline: 0; text-decoration: none; white-space: nowrap; }
+a.dev-chip:hover, a.dev-chip:focus-visible { text-decoration: underline; text-underline-offset: 3px; outline: none; }
 .dev-chip .dev-icon { width: 12px; height: 12px; }
 .dev-chip .dev-dot { width: 5px; height: 5px; }
 /* Card top row: one box for every chip (test kitchen, cuisine, principle,
@@ -1157,7 +1155,10 @@ a.dev-chip:hover, a.dev-chip:focus-visible { box-shadow: inset 0 0 0 1px var(--f
 .rcard-top .principle-chip, .rcard-top .method-chip, .rcard-top .dev-chip { display: inline-flex; align-items: center; gap: 4px; }
 .rcard-top .tag { border-color: var(--border-strong); }
 .rcard-top .tag-more { border-style: dashed; }
-.rcard-top .dev-chip { border-color: color-mix(in srgb, var(--flag) 45%, transparent); }
+/* The concept chips are coloured text (2026-11-01, mockups/soft-colour.html):
+ * no fill, so no side padding; tags keep theirs inside their outline. */
+.rcard-top .cuisine-chip, .rcard-top .principle-chip, .rcard-top .method-chip, .rcard-top .dev-chip { padding-inline: 0; }
+.rcard-top { gap: 8px; }
 /* The list of drafts at the end of the test kitchen page
  * (partials/development/list.html) takes the Related section's place and
  * its .related-section styles; nothing extra needed. */
