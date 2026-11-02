@@ -7,44 +7,34 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Lora:ital,wght@0,400;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap');
 
-  /* Proposal (2026-11-02): the five-hue palette as a stripe along the top
-   * and above the footer, after warpedvisions.org (warped.js/warped.css:
+  /* Proposal (2026-11-02): a palette stripe along the top and above the
+   * footer, taking its layout from warpedvisions.org (warped.js/warped.css:
    * fixed 15px top and 5px bottom bars, 30px blocks mirrored around a blue
    * field) and Space Command (an 8px band that scrolls away, 18px blocks,
-   * and a 4px band as wide as the content above the footer, hues lifted
-   * 15% toward the page in light mode). Four columns, one per option, each
-   * a small scrolling page so fixed and scrolling bands can be compared. */
+   * and a 4px band as wide as the content above the footer), drawn in this
+   * site's own tokens rather than the five base hues, which are the blog's
+   * colours. Four options as small scrolling pages, so fixed and scrolling
+   * bands can be compared. */
 
   /* Tokens: STYLE.md as built 2026-11-01. */
   :root {
     --bg:#F8F8F3; --surface:#FDFDFA; --surface-2:#F0F0E8; --ink:#2B2C25; --ink-muted:#6A6B61; --ink-faint:#828377;
-    --border:#E0E0D3; --border-strong:#CDCEBD; --accent:#A8865A; --accent-strong:#8A4F37; --highlight:#7D6D3A; --flag:#56708E;
+    --border:#E0E0D3; --border-strong:#CDCEBD; --accent:#A8865A; --accent-strong:#8A4F37; --highlight:#7D6D3A; --flag:#56708E; --principle:#4A7D62;
     --page-bg:#E9E9E0;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --bg:#22231C; --surface:#282920; --surface-2:#1D1E17; --ink:#E2E4D8; --ink-muted:#A2A493; --ink-faint:#7F8073;
-      --border:#33352A; --border-strong:#45473A; --accent:#BF9D72; --accent-strong:#D6A992; --highlight:#C9BC8A; --flag:#93A9C0;
+      --border:#33352A; --border-strong:#45473A; --accent:#BF9D72; --accent-strong:#D6A992; --highlight:#C9BC8A; --flag:#93A9C0; --principle:#8DBBA2;
       --page-bg:#121310;
     }
   }
   :root[data-theme="dark"] {
     --bg:#22231C; --surface:#282920; --surface-2:#1D1E17; --ink:#E2E4D8; --ink-muted:#A2A493; --ink-faint:#7F8073;
-    --border:#33352A; --border-strong:#45473A; --accent:#BF9D72; --accent-strong:#D6A992; --highlight:#C9BC8A; --flag:#93A9C0;
+    --border:#33352A; --border-strong:#45473A; --accent:#BF9D72; --accent-strong:#D6A992; --highlight:#C9BC8A; --flag:#93A9C0; --principle:#8DBBA2;
     --page-bg:#121310;
   }
 
-  /* The five hues (STYLE.md "Where the palette comes from"), and a lift
-   * toward the page: --soft is how much of the hue survives the mix. */
-  .stripe-host {
-    --red:#d68168; --orange:#d6a668; --yellow:#d6cb68; --green:#68d6a1; --blue:#689fd6;
-    --soft:100%;
-    --c-red:color-mix(in srgb, var(--red) var(--soft), var(--bg));
-    --c-orange:color-mix(in srgb, var(--orange) var(--soft), var(--bg));
-    --c-yellow:color-mix(in srgb, var(--yellow) var(--soft), var(--bg));
-    --c-green:color-mix(in srgb, var(--green) var(--soft), var(--bg));
-    --c-blue:color-mix(in srgb, var(--blue) var(--soft), var(--bg));
-  }
 
   /* A stripe: mirrored blocks around a field. --b is a block's width,
    * --field the long middle colour, --o1..--o4 the blocks, outermost first. */
@@ -55,10 +45,14 @@
       var(--field) 0 calc(100% - var(--b) * 4),
       var(--o4) 0 calc(100% - var(--b) * 3), var(--o3) 0 calc(100% - var(--b) * 2), var(--o2) 0 calc(100% - var(--b)), var(--o1) 0);
   }
-  /* Blue field, green outermost (warpedvisions, Space Command's mapping). */
-  .cool { --field:var(--c-blue); --o1:var(--c-green); --o2:var(--c-yellow); --o3:var(--c-orange); --o4:var(--c-red); }
-  /* Orange field, blue outermost: the site's lead hue in the middle. */
-  .warm { --field:var(--c-orange); --o1:var(--c-blue); --o2:var(--c-green); --o3:var(--c-yellow); --o4:var(--c-red); }
+  /* The site's own tokens, not the base hues: --accent field, then
+   * --accent-strong (the rust), --highlight, --principle, --flag outermost.
+   * Already softened and tuned for contrast, so no extra lift; dark mode
+   * follows the tokens. */
+  .site { --field:var(--accent); --o1:var(--flag); --o2:var(--principle); --o3:var(--highlight); --o4:var(--accent-strong); }
+  /* The blog's order in the site's tokens: slate (--flag) field, then
+   * rust, accent, ochre, and green outermost. */
+  .site-cool { --field:var(--flag); --o1:var(--principle); --o2:var(--highlight); --o3:var(--accent); --o4:var(--accent-strong); }
 
   * { box-sizing:border-box; }
   body { margin:0; background:var(--page-bg); color:var(--ink); font-family:'Lora', Georgia, serif; }
@@ -124,7 +118,7 @@
 <body>
 <div class="wrap">
   <h1 class="doc-h">Palette stripe</h1>
-  <p class="doc-p">The five hues as a stripe along the top of the page and above the footer. A and B are how warpedvisions.org and Space Command do it today, drawn here with this site's hues and tokens. C is the proposal; D is C with warpedvisions' blue field, for family resemblance. Scroll inside each frame: A's bars are fixed, the others scroll away with the header.</p>
+  <p class="doc-p">A palette stripe along the top of the page and above the footer. The layouts come from warpedvisions.org (A) and Space Command (B); the colours are this site's own tokens: the accent and its rust, the cuisine ochre, the principle green, and the draft slate. The five base hues in STYLE.md are warpedvisions' colours, so they aren't used here. Scroll inside each frame: A's bars are fixed, the others scroll away with the header.</p>
   <div class="toolbar">
     <div class="group" role="group" aria-label="Theme">
       <span>Theme</span>
@@ -144,12 +138,11 @@
   <section class="notes">
     <h2>The proposal (C)</h2>
     <ul>
-      <li><b>Where:</b> a 6px band as the first thing in the header (<code>.site-nav::before</code>, no new markup), and a 3px band with rounded ends across the footer's content column, above its text (<code>.site-footer-inner::before</code>). Both scroll with the page, as the header already does; nothing sits over the reading column.</li>
-      <li><b>Order:</b> orange, the site's lead hue, as the long field; blocks mirrored at each end, blue outermost, then green, yellow, and red beside the orange. The page reads warm, and the cool hues only show at the edges.</li>
-      <li><b>Size:</b> 24px blocks at the top, 12px in the footer band; at phone width the top band drops to 5px with 16px blocks.</li>
-      <li><b>Softness:</b> the hues mixed 80% with the page in light mode, Space Command's lift pushed a little further to match the softened scheme; 65% in dark, where the full hues glow against the near-black page (warpedvisions keeps them full in both).</li>
-      <li><b>Why not fixed:</b> warpedvisions' 15px fixed bars sit over the page at z-index 999 and need JS. This is a book; a band that stays on screen while you read a recipe is chrome, not a signature.</li>
-      <li><b>Palette rule:</b> only the five hues, in the stripe only. It's decoration, the one place colour carries no role, as on Space Command.</li>
+      <li><b>Colours:</b> the site's tokens, not the base hues: <code>--accent</code> as the long field, then <code>--accent-strong</code> (rust), <code>--highlight</code> (ochre), <code>--principle</code> (green), and <code>--flag</code> (slate) outermost, mirrored at both ends. The stripe is the same colours a reader already sees in links, chips, and the test kitchen strip, and dark mode follows the tokens with no extra rule.</li>
+      <li><b>Where:</b> Space Command's placement: a 6px band as the first thing in the header (<code>.site-nav::before</code>, no new markup), and a 3px band with rounded ends across the footer's content column, above its text (<code>.site-footer-inner::before</code>). Both scroll with the page, as the header already does.</li>
+      <li><b>Size:</b> 24px blocks at the top, 12px in the footer band; at phone width the top band drops to 5px with 16px blocks. Slimmer than both sources, to match the softened scheme.</li>
+      <li><b>Why not fixed:</b> warpedvisions' fixed bars sit over the page at z-index 999 and need JS. This is a book; a band that stays on screen while you read a recipe is chrome, not a signature.</li>
+      <li><b>Palette rule:</b> decoration only, the one place colour carries no role, as on Space Command; no colour outside the tokens.</li>
     </ul>
   </section>
   <footer class="doc"><span>© 2026 Bruce Alderson</span><span>Built in Canada 🇨🇦</span></footer>
@@ -185,14 +178,14 @@
 <script>
   // Each option: how the top and bottom bands are drawn.
   const OPTIONS = [
-    { key: 'a', h: 'A · warpedvisions.org', t: 'Fixed bars, blue field', n: '15px bar fixed at the top and a 5px one at the bottom, 30px blocks, full hues in both themes. Injected by warped.js.',
-      top: { cls: 'cool', h: 15, b: 30, fixed: 'top' }, bottom: { cls: 'cool', h: 5, b: 30, fixed: 'bottom' }, soft: [100, 100] },
-    { key: 'b', h: 'B · Space Command', t: 'Scrolling band, thin footer band', n: '8px band at the top that scrolls away, 18px blocks; a 4px band with rounded ends over the footer, as wide as the content. Hues lifted 15% toward the page in light.',
-      top: { cls: 'cool', h: 8, b: 18, ph: 6, pb: 12 }, foot: { cls: 'cool', h: 4, b: 12 }, soft: [85, 100] },
-    { key: 'c', h: 'C · Proposed', t: 'Warm field, softer', rec: true, n: 'B’s placement with the site’s order: orange field, blue outermost. 6px at the top with 24px blocks, 3px over the footer; hues at 80% in light, 65% in dark.',
-      top: { cls: 'warm', h: 6, b: 24, ph: 5, pb: 16 }, foot: { cls: 'warm', h: 3, b: 12 }, soft: [80, 65] },
-    { key: 'd', h: 'D · Proposed, blue field', t: 'C with warpedvisions’ order', n: 'Same sizes and softness as C, blue field and green outermost, so it reads as the same family as the blog.',
-      top: { cls: 'cool', h: 6, b: 24, ph: 5, pb: 16 }, foot: { cls: 'cool', h: 3, b: 12 }, soft: [80, 65] },
+    { key: 'a', h: 'A · After warpedvisions.org', t: 'Fixed bars, slate field', n: 'The blog’s layout: a 15px bar fixed at the top and a 5px one at the bottom, 30px blocks mirrored around a long field. Its blue field becomes this site’s draft slate.',
+      top: { cls: 'site-cool', h: 15, b: 30, fixed: 'top' }, bottom: { cls: 'site-cool', h: 5, b: 30, fixed: 'bottom' } },
+    { key: 'b', h: 'B · After Space Command', t: 'Scrolling band, thin footer band', n: 'Space Command’s layout: an 8px band that scrolls away, 18px blocks, and a 4px band with rounded ends over the footer, as wide as the content.',
+      top: { cls: 'site-cool', h: 8, b: 18, ph: 6, pb: 12 }, foot: { cls: 'site-cool', h: 4, b: 12 } },
+    { key: 'c', h: 'C · Proposed', t: 'Rust field, slate at the edges', rec: true, n: 'B’s placement, slimmer: 6px at the top with 24px blocks, 3px over the footer. The accent as the long field; rust, ochre, green, and slate mirrored at the ends, slate outermost.',
+      top: { cls: 'site', h: 6, b: 24, ph: 5, pb: 16 }, foot: { cls: 'site', h: 3, b: 12 } },
+    { key: 'd', h: 'D · Proposed, slate field', t: 'C with the blog’s order', n: 'C’s sizes with the blog’s order: slate as the long field, green outermost, then ochre, accent, and rust. Closer to the warpedvisions look in this site’s colours.',
+      top: { cls: 'site-cool', h: 6, b: 24, ph: 5, pb: 16 }, foot: { cls: 'site-cool', h: 3, b: 12 } },
   ];
   let width = 'desk';
   const opts = document.getElementById('opts');
@@ -215,8 +208,7 @@
     const phone = width === 'phone';
     for (const o of OPTIONS) {
       const wrap = document.createElement('div');
-      wrap.className = 'opt stripe-host' + (o.rec ? ' rec' : '');
-      wrap.style.setProperty('--soft', (isDark() ? o.soft[1] : o.soft[0]) + '%');
+      wrap.className = 'opt' + (o.rec ? ' rec' : '');
       wrap.innerHTML = `<p class="opt-h"></p><p class="opt-t"></p><p class="opt-n"></p>`;
       wrap.querySelector('.opt-h').textContent = o.h + (o.rec ? ' (recommended)' : '');
       wrap.querySelector('.opt-t').textContent = o.t;
