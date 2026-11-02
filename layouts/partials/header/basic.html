@@ -17,9 +17,11 @@
 {{ $cuisines := site.Taxonomies.cuisine.ByCount }}
 {{ $tags := site.Taxonomies.tags.ByCount }}
 
-<header class="site-nav">
+<header class="site-nav{{ if .IsHome }} is-home{{ end }}">
   <div class="site-nav-inner">
-    <a class="site-logo" href="{{ "" | relLangURL }}"><img class="site-logo-icon" src="{{ "favicon.svg" | relURL }}" alt="" width="26" height="26"><span>Bruce <span class="brand-loves">loves</span> to cook.</span></a>
+    {{/* On the homepage the hero h1 is the name, so the nav shows only the
+         mark; the name stays for screen readers (.site-logo-name). */}}
+    <a class="site-logo" href="{{ "" | relLangURL }}"><img class="site-logo-icon" src="{{ "favicon.svg" | relURL }}" alt="" width="26" height="26"><span class="site-logo-name">Bruce <span class="brand-loves">loves</span> to cook.</span></a>
 
     <nav class="site-nav-links" aria-label="Primary">
       <details class="nav-drop" name="nav-menu">
