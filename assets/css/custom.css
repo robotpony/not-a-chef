@@ -780,6 +780,22 @@ html { overflow-x: hidden; }
 }
 .site-footer { border-top: 1px solid var(--border); background: var(--surface-2); }
 .site-footer-inner { max-width: 1100px; margin: 0 auto; padding: 28px 20px 36px; }
+/* Palette stripe (mockups/palette-stripe.html F, 2026-11-02): the drink
+ * glasses' fills as a band across the top of the header and a thin one over
+ * the footer's text, after warpedvisions' flourish bars and Space Command's
+ * stripe. Tea as the long field, wine, tomato, cheese, and lettuce mirrored
+ * at each end, lettuce outermost; hard stops, each block --b wide. Both
+ * scroll with the page. Decoration only, so the kit's fills, not tokens. */
+.site-nav::before, .site-footer-inner::before {
+  content: ""; display: block; --b: 24px; height: 6px;
+  background: linear-gradient(to right,
+    var(--kit-green) 0 var(--b), var(--kit-yellow) 0 calc(var(--b) * 2), var(--kit-red) 0 calc(var(--b) * 3), var(--kit-wine) 0 calc(var(--b) * 4),
+    var(--kit-tea) 0 calc(100% - var(--b) * 4),
+    var(--kit-wine) 0 calc(100% - var(--b) * 3), var(--kit-red) 0 calc(100% - var(--b) * 2), var(--kit-yellow) 0 calc(100% - var(--b)), var(--kit-green) 0);
+}
+.site-footer-inner::before { --b: 12px; height: 3px; border-radius: 2px; margin-bottom: 24px; }
+@media (max-width: 520px) { .site-nav::before { --b: 16px; height: 5px; } }
+@media print { .site-nav::before { display: none; } }
 .foot-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; flex-wrap: wrap; margin-bottom: 20px; }
 .foot-brand { font-family: 'Libre Franklin', sans-serif; }
 .foot-brand .name { font-weight: 700; font-size: .95rem; }
