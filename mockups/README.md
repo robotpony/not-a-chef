@@ -77,7 +77,8 @@ in a browser — no build step.
   stripe along the top and above the footer, after warpedvisions.org
   (fixed 15px/5px bars from warped.js, blue field) and Space Command (an
   8px band that scrolls away and a thin band over the footer), drawn in
-  this site's tokens, not the blog's base hues. Four options as small
+  this site's tokens, not the blog's base hues, plus two in the layer
+  kit's sear and food colours (E burger, F drinks). Six options as small
   scrolling pages, light/dark and desktop/phone; C (accent field, slate
   at the edges, 6px and 3px) is the recommendation.
 

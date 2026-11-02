@@ -20,18 +20,21 @@
   :root {
     --bg:#F8F8F3; --surface:#FDFDFA; --surface-2:#F0F0E8; --ink:#2B2C25; --ink-muted:#6A6B61; --ink-faint:#828377;
     --border:#E0E0D3; --border-strong:#CDCEBD; --accent:#A8865A; --accent-strong:#8A4F37; --highlight:#7D6D3A; --flag:#56708E; --principle:#4A7D62;
+    --sear:#8E5E3D; --sear-fleck:#D9B48C; --kit-green:#A3DABD; --kit-red:#E9A994; --kit-yellow:#E3CC6C; --kit-latte:#C49A72; --kit-tea:#D7A45C; --kit-wine:#B4535A;
     --page-bg:#E9E9E0;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --bg:#22231C; --surface:#282920; --surface-2:#1D1E17; --ink:#E2E4D8; --ink-muted:#A2A493; --ink-faint:#7F8073;
       --border:#33352A; --border-strong:#45473A; --accent:#BF9D72; --accent-strong:#D6A992; --highlight:#C9BC8A; --flag:#93A9C0; --principle:#8DBBA2;
+      --sear:#5C3A26; --sear-fleck:#24170F; --kit-green:#25432F; --kit-red:#4A2A21; --kit-yellow:#45391A; --kit-latte:#4B3524; --kit-tea:#4E3618; --kit-wine:#5A2428;
       --page-bg:#121310;
     }
   }
   :root[data-theme="dark"] {
     --bg:#22231C; --surface:#282920; --surface-2:#1D1E17; --ink:#E2E4D8; --ink-muted:#A2A493; --ink-faint:#7F8073;
     --border:#33352A; --border-strong:#45473A; --accent:#BF9D72; --accent-strong:#D6A992; --highlight:#C9BC8A; --flag:#93A9C0; --principle:#8DBBA2;
+      --sear:#5C3A26; --sear-fleck:#24170F; --kit-green:#25432F; --kit-red:#4A2A21; --kit-yellow:#45391A; --kit-latte:#4B3524; --kit-tea:#4E3618; --kit-wine:#5A2428;
     --page-bg:#121310;
   }
 
@@ -52,6 +55,12 @@
   .site { --field:var(--accent); --o1:var(--flag); --o2:var(--principle); --o3:var(--highlight); --o4:var(--accent-strong); }
   /* The blog's order in the site's tokens: slate (--flag) field, then
    * rust, accent, ochre, and green outermost. */
+  /* The layer kit's fills (STYLE.md §5–7: sear, food, and drink colours),
+   * fixed rather than scheme tokens. Burger: the sear as the field, then
+   * latte, tomato, cheese, and lettuce outermost. Drinks: tea as the field,
+   * then wine, tomato, cheese, and lettuce. */
+  .kit-burger { --field:var(--sear); --o1:var(--kit-green); --o2:var(--kit-yellow); --o3:var(--kit-red); --o4:var(--kit-latte); }
+  .kit-drink { --field:var(--kit-tea); --o1:var(--kit-green); --o2:var(--kit-yellow); --o3:var(--kit-red); --o4:var(--kit-wine); }
   .site-cool { --field:var(--flag); --o1:var(--principle); --o2:var(--highlight); --o3:var(--accent); --o4:var(--accent-strong); }
 
   * { box-sizing:border-box; }
@@ -118,7 +127,7 @@
 <body>
 <div class="wrap">
   <h1 class="doc-h">Palette stripe</h1>
-  <p class="doc-p">A palette stripe along the top of the page and above the footer. The layouts come from warpedvisions.org (A) and Space Command (B); the colours are this site's own tokens: the accent and its rust, the cuisine ochre, the principle green, and the draft slate. The five base hues in STYLE.md are warpedvisions' colours, so they aren't used here. Scroll inside each frame: A's bars are fixed, the others scroll away with the header.</p>
+  <p class="doc-p">A palette stripe along the top of the page and above the footer. The layouts come from warpedvisions.org (A) and Space Command (B); the colours are this site's own tokens: the accent and its rust, the cuisine ochre, the principle green, and the draft slate. The five base hues in STYLE.md are warpedvisions' colours, so they aren't used here. E and F use the layer kit's fills instead (the sear and food colours from the build diagrams and drink glasses). Scroll inside each frame: A's bars are fixed, the others scroll away with the header.</p>
   <div class="toolbar">
     <div class="group" role="group" aria-label="Theme">
       <span>Theme</span>
@@ -186,6 +195,10 @@
       top: { cls: 'site', h: 6, b: 24, ph: 5, pb: 16 }, foot: { cls: 'site', h: 3, b: 12 } },
     { key: 'd', h: 'D · Proposed, slate field', t: 'C with the blog’s order', n: 'C’s sizes with the blog’s order: slate as the long field, green outermost, then ochre, accent, and rust. Closer to the warpedvisions look in this site’s colours.',
       top: { cls: 'site-cool', h: 6, b: 24, ph: 5, pb: 16 }, foot: { cls: 'site-cool', h: 3, b: 12 } },
+    { key: 'e', h: 'E · Layer kit, burger', t: 'Sear field, food at the edges', n: 'C’s sizes in the build diagrams’ fills: the patty’s sear as the long field, then latte, tomato, cheese, and lettuce outermost. Dark mode takes the kit’s dark tints.',
+      top: { cls: 'kit-burger', h: 6, b: 24, ph: 5, pb: 16 }, foot: { cls: 'kit-burger', h: 3, b: 12 } },
+    { key: 'f', h: 'F · Layer kit, drinks', t: 'Tea field, wine and food at the edges', n: 'C’s sizes in the drink glasses’ fills: tea as the long field, then wine, tomato, cheese, and lettuce outermost. Brighter and warmer than E.',
+      top: { cls: 'kit-drink', h: 6, b: 24, ph: 5, pb: 16 }, foot: { cls: 'kit-drink', h: 3, b: 12 } },
   ];
   let width = 'desk';
   const opts = document.getElementById('opts');
