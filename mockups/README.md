@@ -73,6 +73,13 @@ in a browser — no build step.
   Built 2026-11-01, so both frames now show the softened site; the
   mock is kept for the record.
 
+- **`palette-stripe.html`**: proposal (2026-11-02) for the five hues as a
+  stripe along the top and above the footer, after warpedvisions.org
+  (fixed 15px/5px bars from warped.js, blue field) and Space Command (an
+  8px band that scrolls away and a thin band over the footer). Four
+  options as small scrolling pages, light/dark and desktop/phone; C (warm
+  orange field, 6px and 3px, softened) is the recommendation.
+
 - **`scale-callout.html`**: proposal (2026-10-07) to redraw the recipe
   scale/units menu as a callout with a `^` pointer to the gear, a restyled
   slider with step labels, and units as a drop list (segmented control

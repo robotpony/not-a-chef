@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Palette stripe</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Lora:ital,wght@0,400;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+  /* Proposal (2026-11-02): the five-hue palette as a stripe along the top
+   * and above the footer, after warpedvisions.org (warped.js/warped.css:
+   * fixed 15px top and 5px bottom bars, 30px blocks mirrored around a blue
+   * field) and Space Command (an 8px band that scrolls away, 18px blocks,
+   * and a 4px band as wide as the content above the footer, hues lifted
+   * 15% toward the page in light mode). Four columns, one per option, each
+   * a small scrolling page so fixed and scrolling bands can be compared. */
+
+  /* Tokens: STYLE.md as built 2026-11-01. */
+  :root {
+    --bg:#F8F8F3; --surface:#FDFDFA; --surface-2:#F0F0E8; --ink:#2B2C25; --ink-muted:#6A6B61; --ink-faint:#828377;
+    --border:#E0E0D3; --border-strong:#CDCEBD; --accent:#A8865A; --accent-strong:#8A4F37; --highlight:#7D6D3A; --flag:#56708E;
+    --page-bg:#E9E9E0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg:#22231C; --surface:#282920; --surface-2:#1D1E17; --ink:#E2E4D8; --ink-muted:#A2A493; --ink-faint:#7F8073;
+      --border:#33352A; --border-strong:#45473A; --accent:#BF9D72; --accent-strong:#D6A992; --highlight:#C9BC8A; --flag:#93A9C0;
+      --page-bg:#121310;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg:#22231C; --surface:#282920; --surface-2:#1D1E17; --ink:#E2E4D8; --ink-muted:#A2A493; --ink-faint:#7F8073;
+    --border:#33352A; --border-strong:#45473A; --accent:#BF9D72; --accent-strong:#D6A992; --highlight:#C9BC8A; --flag:#93A9C0;
+    --page-bg:#121310;
+  }
+
+  /* The five hues (STYLE.md "Where the palette comes from"), and a lift
+   * toward the page: --soft is how much of the hue survives the mix. */
+  .stripe-host {
+    --red:#d68168; --orange:#d6a668; --yellow:#d6cb68; --green:#68d6a1; --blue:#689fd6;
+    --soft:100%;
+    --c-red:color-mix(in srgb, var(--red) var(--soft), var(--bg));
+    --c-orange:color-mix(in srgb, var(--orange) var(--soft), var(--bg));
+    --c-yellow:color-mix(in srgb, var(--yellow) var(--soft), var(--bg));
+    --c-green:color-mix(in srgb, var(--green) var(--soft), var(--bg));
+    --c-blue:color-mix(in srgb, var(--blue) var(--soft), var(--bg));
+  }
+
+  /* A stripe: mirrored blocks around a field. --b is a block's width,
+   * --field the long middle colour, --o1..--o4 the blocks, outermost first. */
+  .stripe {
+    --b:30px; height:15px; display:block;
+    background:linear-gradient(to right,
+      var(--o1) 0 var(--b), var(--o2) 0 calc(var(--b) * 2), var(--o3) 0 calc(var(--b) * 3), var(--o4) 0 calc(var(--b) * 4),
+      var(--field) 0 calc(100% - var(--b) * 4),
+      var(--o4) 0 calc(100% - var(--b) * 3), var(--o3) 0 calc(100% - var(--b) * 2), var(--o2) 0 calc(100% - var(--b)), var(--o1) 0);
+  }
+  /* Blue field, green outermost (warpedvisions, Space Command's mapping). */
+  .cool { --field:var(--c-blue); --o1:var(--c-green); --o2:var(--c-yellow); --o3:var(--c-orange); --o4:var(--c-red); }
+  /* Orange field, blue outermost: the site's lead hue in the middle. */
+  .warm { --field:var(--c-orange); --o1:var(--c-blue); --o2:var(--c-green); --o3:var(--c-yellow); --o4:var(--c-red); }
+
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--page-bg); color:var(--ink); font-family:'Lora', Georgia, serif; }
+  .wrap { max-width:1320px; margin:0 auto; padding:28px 16px 64px; }
+  .doc-h { font-family:'Libre Franklin', sans-serif; font-size:1.5rem; font-weight:700; margin:0 0 6px; }
+  .doc-p { font-size:.92rem; line-height:1.55; color:var(--ink-muted); max-width:76ch; margin:0 0 8px; }
+  .toolbar { display:flex; flex-wrap:wrap; gap:6px 18px; align-items:center; margin:14px 0 22px; font-family:'Libre Franklin', sans-serif; }
+  .group { display:flex; gap:4px; align-items:center; }
+  .group > span { font-size:.62rem; font-weight:700; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-faint); margin-right:4px; }
+  .pill { font:inherit; font-size:.76rem; font-weight:600; padding:5px 11px; border-radius:14px; border:1px solid var(--border-strong); background:transparent; color:var(--ink); cursor:pointer; }
+  .pill[aria-pressed="true"] { background:var(--ink); color:var(--bg); border-color:var(--ink); }
+
+  .opts { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:20px; }
+  @media (max-width:900px) { .opts { grid-template-columns:minmax(0,1fr); } }
+  .opt-h { font-family:'Libre Franklin', sans-serif; font-size:.65rem; font-weight:700; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-faint); margin:0 0 2px; }
+  .opt-t { font-family:'Libre Franklin', sans-serif; font-size:1.05rem; font-weight:700; margin:0 0 4px; }
+  .opt-n { font-size:.84rem; line-height:1.5; color:var(--ink-muted); margin:0 0 10px; }
+  .opt.rec .opt-h { color:var(--accent-strong); }
+
+  /* A small page: scrolls inside its frame, so sticky stands in for fixed. */
+  .frame { height:440px; overflow:auto; border:1px solid var(--border-strong); border-radius:6px; background:var(--bg); position:relative; }
+  .frame.phone { width:340px; max-width:100%; }
+  .frame .stuck { position:sticky; z-index:5; }
+  .frame .stuck.top { top:0; }
+  .frame .stuck.bottom { bottom:0; }
+
+  .nav { background:var(--surface); border-bottom:1px solid var(--border); font-family:'Libre Franklin', sans-serif; }
+  .nav-in { display:flex; align-items:center; gap:14px; padding:12px 18px; }
+  .logo { font-weight:700; font-size:.95rem; margin-right:auto; white-space:nowrap; }
+  .logo b { color:var(--accent-strong); }
+  .links { display:flex; gap:12px; font-size:.78rem; font-weight:600; color:var(--ink-muted); }
+  .phone .links { display:none; }
+  .burger { display:none; width:28px; height:24px; border:1px solid var(--border-strong); border-radius:4px; }
+  .phone .burger { display:block; }
+
+  .main { padding:22px 18px 30px; }
+  .eyebrow { font-family:'Libre Franklin', sans-serif; font-size:.62rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--accent-strong); margin:0 0 6px; }
+  .h1 { font-family:'Libre Franklin', sans-serif; font-size:1.7rem; font-weight:700; line-height:1.1; margin:0 0 8px; letter-spacing:-.01em; }
+  .h1 b { color:var(--accent-strong); }
+  .lede { font-family:'Libre Franklin', sans-serif; font-size:.86rem; color:var(--ink-muted); margin:0 0 18px; }
+  .cards { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; }
+  .phone .cards { grid-template-columns:minmax(0,1fr); }
+  .card { background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:10px 12px; display:flex; flex-direction:column; gap:5px; }
+  .card .top { font-family:'Libre Franklin', sans-serif; font-size:.62rem; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--highlight); }
+  .card .t { font-family:'Libre Franklin', sans-serif; font-weight:700; font-size:.88rem; }
+  .card .i { font-size:.76rem; line-height:1.45; color:var(--ink-muted); }
+  .card .s { font-family:'IBM Plex Mono', monospace; font-size:.64rem; color:var(--ink); border-top:1px solid var(--border); padding-top:6px; }
+
+  .foot { background:var(--surface-2); border-top:1px solid var(--border); font-family:'Libre Franklin', sans-serif; font-size:.72rem; color:var(--ink-muted); }
+  .foot-in { padding:16px 18px 22px; }
+  .foot .name { font-weight:700; color:var(--ink); font-size:.84rem; margin-bottom:4px; }
+  .foot .copy { display:flex; gap:10px; margin-top:12px; color:var(--ink-faint); }
+  .foot-stripe-wrap { padding:0 18px; background:var(--surface-2); }
+
+  .notes { margin-top:30px; max-width:80ch; }
+  .notes h2 { font-family:'Libre Franklin', sans-serif; font-size:1rem; margin:0 0 6px; }
+  .notes ul { margin:0; padding-left:20px; font-size:.9rem; line-height:1.6; color:var(--ink-muted); }
+  .notes li + li { margin-top:4px; }
+  code { font-family:'IBM Plex Mono', monospace; font-size:.85em; }
+  footer.doc { margin-top:36px; font-family:'Libre Franklin', sans-serif; font-size:.75rem; color:var(--ink-muted); display:flex; gap:12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1 class="doc-h">Palette stripe</h1>
+  <p class="doc-p">The five hues as a stripe along the top of the page and above the footer. A and B are how warpedvisions.org and Space Command do it today, drawn here with this site's hues and tokens. C is the proposal; D is C with warpedvisions' blue field, for family resemblance. Scroll inside each frame: A's bars are fixed, the others scroll away with the header.</p>
+  <div class="toolbar">
+    <div class="group" role="group" aria-label="Theme">
+      <span>Theme</span>
+      <button class="pill" data-t="auto" aria-pressed="true">Auto</button>
+      <button class="pill" data-t="light" aria-pressed="false">Light</button>
+      <button class="pill" data-t="dark" aria-pressed="false">Dark</button>
+    </div>
+    <div class="group" role="group" aria-label="Width">
+      <span>Width</span>
+      <button class="pill" data-w="desk" aria-pressed="true">Desktop</button>
+      <button class="pill" data-w="phone" aria-pressed="false">Phone</button>
+    </div>
+  </div>
+
+  <div class="opts" id="opts"></div>
+
+  <section class="notes">
+    <h2>The proposal (C)</h2>
+    <ul>
+      <li><b>Where:</b> a 6px band as the first thing in the header (<code>.site-nav::before</code>, no new markup), and a 3px band with rounded ends across the footer's content column, above its text (<code>.site-footer-inner::before</code>). Both scroll with the page, as the header already does; nothing sits over the reading column.</li>
+      <li><b>Order:</b> orange, the site's lead hue, as the long field; blocks mirrored at each end, blue outermost, then green, yellow, and red beside the orange. The page reads warm, and the cool hues only show at the edges.</li>
+      <li><b>Size:</b> 24px blocks at the top, 12px in the footer band; at phone width the top band drops to 5px with 16px blocks.</li>
+      <li><b>Softness:</b> the hues mixed 80% with the page in light mode, Space Command's lift pushed a little further to match the softened scheme; 65% in dark, where the full hues glow against the near-black page (warpedvisions keeps them full in both).</li>
+      <li><b>Why not fixed:</b> warpedvisions' 15px fixed bars sit over the page at z-index 999 and need JS. This is a book; a band that stays on screen while you read a recipe is chrome, not a signature.</li>
+      <li><b>Palette rule:</b> only the five hues, in the stripe only. It's decoration, the one place colour carries no role, as on Space Command.</li>
+    </ul>
+  </section>
+  <footer class="doc"><span>© 2026 Bruce Alderson</span><span>Built in Canada 🇨🇦</span></footer>
+</div>
+
+<template id="page">
+  <div class="frame">
+    <div data-top></div>
+    <div class="nav"><div class="nav-in"><span class="logo">Bruce <b>loves</b> to cook.</span><span class="links"><span>Recipes</span><span>Drinks</span><span>Methods</span><span>Essays</span><span>Food Log</span></span><span class="burger"></span></div></div>
+    <div class="main">
+      <p class="eyebrow">Our family cookbook</p>
+      <h2 class="h1">Bruce <b>loves</b> to cook.</h2>
+      <p class="lede">Recipes we actually cook, with ratios, timings, and notes.</p>
+      <div class="cards">
+        <div class="card"><span class="top">Japanese</span><span class="t">Pickled ginger (gari)</span><span class="i">Young ginger, shaved thin, blanched, and pickled in hot amazu.</span><span class="s">PREP 10m · COOK 5m</span></div>
+        <div class="card"><span class="top">Thai</span><span class="t">Thai-inspired noodle soup</span><span class="i">A coconut curry noodle soup built on quick-marinated pork.</span><span class="s">PREP 15m</span></div>
+        <div class="card"><span class="top">USA</span><span class="t">Cornmeal fried chicken</span><span class="i">A crunchier version of a classic fried chicken.</span><span class="s">PREP 20m · COOK 35m</span></div>
+        <div class="card"><span class="top">Japanese</span><span class="t">Bonito soy sauce</span><span class="i">Soy sauce and mirin steeped with bonito flakes.</span><span class="s">PREP 5m · COOK 5m</span></div>
+      </div>
+    </div>
+    <div class="foot">
+      <div data-foot-stripe></div>
+      <div class="foot-in">
+        <div class="name">Bruce <b style="color:var(--accent-strong)">loves</b> to cook.</div>
+        <div>Our family cookbook. Recipes, essays, and reference notes from a home kitchen.</div>
+        <div class="copy"><span>© 2026 Bruce Alderson</span><span>Built in Canada 🇨🇦</span></div>
+      </div>
+    </div>
+    <div data-bottom></div>
+  </div>
+</template>
+
+<script>
+  // Each option: how the top and bottom bands are drawn.
+  const OPTIONS = [
+    { key: 'a', h: 'A · warpedvisions.org', t: 'Fixed bars, blue field', n: '15px bar fixed at the top and a 5px one at the bottom, 30px blocks, full hues in both themes. Injected by warped.js.',
+      top: { cls: 'cool', h: 15, b: 30, fixed: 'top' }, bottom: { cls: 'cool', h: 5, b: 30, fixed: 'bottom' }, soft: [100, 100] },
+    { key: 'b', h: 'B · Space Command', t: 'Scrolling band, thin footer band', n: '8px band at the top that scrolls away, 18px blocks; a 4px band with rounded ends over the footer, as wide as the content. Hues lifted 15% toward the page in light.',
+      top: { cls: 'cool', h: 8, b: 18, ph: 6, pb: 12 }, foot: { cls: 'cool', h: 4, b: 12 }, soft: [85, 100] },
+    { key: 'c', h: 'C · Proposed', t: 'Warm field, softer', rec: true, n: 'B’s placement with the site’s order: orange field, blue outermost. 6px at the top with 24px blocks, 3px over the footer; hues at 80% in light, 65% in dark.',
+      top: { cls: 'warm', h: 6, b: 24, ph: 5, pb: 16 }, foot: { cls: 'warm', h: 3, b: 12 }, soft: [80, 65] },
+    { key: 'd', h: 'D · Proposed, blue field', t: 'C with warpedvisions’ order', n: 'Same sizes and softness as C, blue field and green outermost, so it reads as the same family as the blog.',
+      top: { cls: 'cool', h: 6, b: 24, ph: 5, pb: 16 }, foot: { cls: 'cool', h: 3, b: 12 }, soft: [80, 65] },
+  ];
+  let width = 'desk';
+  const opts = document.getElementById('opts');
+  const tpl = document.getElementById('page');
+
+  function isDark() {
+    const t = document.documentElement.getAttribute('data-theme');
+    return t ? t === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+  function band(spec, phone) {
+    const el = document.createElement('div');
+    el.className = 'stripe ' + spec.cls;
+    el.setAttribute('aria-hidden', 'true');
+    const h = phone && spec.ph ? spec.ph : spec.h, b = phone && spec.pb ? spec.pb : spec.b;
+    el.style.height = h + 'px'; el.style.setProperty('--b', b + 'px');
+    return el;
+  }
+  function render() {
+    opts.innerHTML = '';
+    const phone = width === 'phone';
+    for (const o of OPTIONS) {
+      const wrap = document.createElement('div');
+      wrap.className = 'opt stripe-host' + (o.rec ? ' rec' : '');
+      wrap.style.setProperty('--soft', (isDark() ? o.soft[1] : o.soft[0]) + '%');
+      wrap.innerHTML = `<p class="opt-h"></p><p class="opt-t"></p><p class="opt-n"></p>`;
+      wrap.querySelector('.opt-h').textContent = o.h + (o.rec ? ' (recommended)' : '');
+      wrap.querySelector('.opt-t').textContent = o.t;
+      wrap.querySelector('.opt-n').textContent = o.n;
+      const page = tpl.content.firstElementChild.cloneNode(true);
+      if (phone) page.classList.add('phone');
+      const top = band(o.top, phone);
+      if (o.top.fixed) top.classList.add('stuck', 'top');
+      page.querySelector('[data-top]').replaceWith(top);
+      if (o.foot) {
+        const w = document.createElement('div'); w.className = 'foot-stripe-wrap';
+        const f = band(o.foot, phone); f.style.borderRadius = '2px';
+        w.style.paddingTop = '14px'; w.append(f);
+        page.querySelector('[data-foot-stripe]').replaceWith(w);
+      } else page.querySelector('[data-foot-stripe]').remove();
+      if (o.bottom) {
+        const bt = band(o.bottom, phone); bt.classList.add('stuck', 'bottom');
+        page.querySelector('[data-bottom]').replaceWith(bt);
+      } else page.querySelector('[data-bottom]').remove();
+      wrap.append(page);
+      opts.append(wrap);
+    }
+  }
+  document.querySelectorAll('[data-t]').forEach(b => b.addEventListener('click', () => {
+    const t = b.dataset.t;
+    if (t === 'auto') document.documentElement.removeAttribute('data-theme');
+    else document.documentElement.setAttribute('data-theme', t);
+    document.querySelectorAll('[data-t]').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+    render();
+  }));
+  document.querySelectorAll('[data-w]').forEach(b => b.addEventListener('click', () => {
+    width = b.dataset.w;
+    document.querySelectorAll('[data-w]').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+    render();
+  }));
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', render);
+  render();
+</script>
+</body>
+</html>
