@@ -837,11 +837,13 @@ html { overflow-x: hidden; }
  * anything from Blowfish's menu system. Dropdowns are plain <details>/
  * <summary> — no JS needed to open or close beyond the mobile backdrop click. */
 .site-nav { border-bottom: 1px solid var(--border); background: var(--surface); font-family: 'Libre Franklin', sans-serif; }
-.site-nav-inner { max-width: 1100px; margin: 0 auto; padding: 8px 20px; display: flex; align-items: center; gap: 22px; position: relative; }
+.site-nav-inner { max-width: 1100px; margin: 0 auto; padding: 14px 20px 8px; display: flex; align-items: center; gap: 22px; position: relative; }
 .site-logo { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 1.05rem; letter-spacing: -.01em; margin-right: auto; text-decoration: none; white-space: nowrap; color: var(--ink); }
 .site-logo-icon { display: block; flex-shrink: 0; width: 26px; height: 26px; }
-/* Homepage: the hero h1 carries the name, so the nav keeps only the mark
- * (visually hidden, still the link's accessible name). */
+/* Homepage: the hero h1 carries the mark and the name (.hero-mark), so
+ * the nav's logo is hidden there; the name stays as the link's accessible
+ * name, and the link keeps its margin-right: auto so the links stay right. */
+.site-nav.is-home .site-logo-icon { display: none; }
 .site-nav.is-home .site-logo-name { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .site-nav-links { display: flex; align-items: center; gap: 2px; }
 
@@ -936,6 +938,7 @@ html { overflow-x: hidden; }
  * STYLE.md Messaging. */
 .brand-loves { color: var(--accent-strong); }
 .hero-eyebrow { font-family: 'Libre Franklin', sans-serif; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--accent-strong); margin-bottom: 12px; display: block; }
+.hero-mark { display: inline-block; width: .92em; height: .92em; vertical-align: -.1em; margin-right: .22em; }
 .hero h1 { font-size: clamp(2.1rem, 4.2vw, 2.9rem); font-weight: 700; letter-spacing: -.015em; line-height: 1.08; text-wrap: balance; margin-bottom: 16px; max-width: 16ch; }
 .hero p.lede { max-width: 56ch; color: var(--ink-muted); font-size: 1.08rem; line-height: 1.6; margin-bottom: 28px; }
 
