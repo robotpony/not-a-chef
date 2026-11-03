@@ -10,7 +10,7 @@ Open work only. Finished items are cut, not ticked; git history has them (`git l
 
 ## Diagrams
 
-Diagrams are fences, specced in hugo-warped (`~/projects/sites/hugo-warped/fences/`, the hugo-warped agent; its open work is in its `PLAN.md`). Fugu reads every fence through hugo-warped's parse partials (module pinned at 4045b3f, taken here by submodule with the module replacement in `config/_default/hugo.toml`), and `/lint` runs its validator. The shared-spec project (2026-10-26 to 10-27) is in git: `git log -- docs/PLAN.md`.
+Diagrams are fences, specced in hugo-warped (`~/projects/sites/hugo-warped/fences/`, the hugo-warped agent; its open work is in its `PLAN.md`). Fugu reads every fence through hugo-warped's parse partials (taken here by submodule, with the module replacement in `config/_default/hugo.toml`), and `/lint` runs its validator. The shared-spec project (2026-10-26 to 10-27) is in git: `git log -- docs/PLAN.md`.
 
 - [ ] Granola bars formula, once a second recipe needs a nut icon.
 - [ ] Food ratios tables, once that method leaves the test kitchen.
@@ -44,7 +44,7 @@ Drinks got their own section on 2026-10-27 (`content/drinks/`, Fugu 356fad8). Di
 
 A glossary of the cookbook's concepts, with a quiet hover on the words in the text. Mock: `mockups/glossary.html`; decided 2026-10-30. Built 2026-10-30: hugo-warped holds the spec (`glossary/README.md`), partials and tools (4d260ae); Fugu draws the popover, the A to Z page with search, and `index.json` (de1505e); this repo has the entries in `content/reference/glossary/` (`list: local` cascade), the styles in `custom.css`, the footer link, `make glossary-candidates|link|check`, and `/lint` step 7. Empty entries are stubs, left off the site until written.
 
-- [ ] Link the 63 entries: `make glossary-link` (495 first mentions on 2026-10-30). Drafts by Claude, 54 approved by Bruce 2026-10-30; nine more in `docs/REVIEW.md`.
+- [ ] Answer the last offered link: `make glossary-link` has one move left (Aromatics in the October Food Log, line 78 to line 34). Nine entry drafts wait in `docs/REVIEW.md`.
 - [ ] Bold step labels (Pan sauces' "**Deglaze.**") are offered as links; answer "never" per page, or ask hugo-warped to skip bold text at the start of a list item.
 
 ## Candidates from other sites
@@ -68,21 +68,9 @@ Visual notes from the same look:
 
 ## Design v2
 
-Next week (from 2026-11-02). A visual pass over the site first, then the v2 changes, mocked before they're built and recorded in `mockups/STYLE.md` and `style.html` when they land. Template and CSS that belongs to the theme goes to fugu-agent.
+Under way. The softer colour scheme (2026-11-01) and the palette stripe and homepage mark (2026-11-02) are built and recorded in `mockups/STYLE.md`; the two blue labels question is in `docs/REVIEW.md`. Fugu's own `fugu.css` still draws filled chips for other sites; the site overrides them, so changing that is optional. Next changes are mocked before they're built and recorded in `STYLE.md` and `style.html` when they land. Template and CSS that belongs to the theme goes to fugu-agent.
 
 - [ ] Visual pass: walk the built site in Chrome (homepage, recipe, drink, essay, method, blueprint, Food Log, glossary, tag pages; both widths, light and dark) and list what feels heavy, crowded, or off against the notes above.
-- [x] Soften the colour scheme (built 2026-11-01): lower the contrast and saturation of the accent and chip colours, and keep the five hues (`STYLE.md`, "Where the palette comes from"). Mock against the current tokens side by side.
-  Bruce's first take (2026-10-30), from the mixer in `mockups/soft-colour.html`; full mock in `mockups/soft-colour-full.html` (run `mockups/serve.py`), override and draft tokens in `mockups/soft-colour/soft.css`:
-  - Tokens: softer neutrals (ink a step lighter, borders nearer the page), lighter backgrounds (page and cards a step lighter; in dark, a step less dark), and all five hues pulled toward the neutrals, in light and dark.
-  - Cuisine, test kitchen, principle, and method chips become coloured text, with no fill or outline. Tags keep their outline.
-  - Card stat numbers (and the homepage essay reading times) go to ink; the accent stays on links, ratios, formula numbers, and quantities.
-  - The test kitchen banner becomes two hairline rules in the draft blue instead of a filled box.
-  - Quantities in recipes become accent text with no wash behind them, matching the formula diagrams.
-  - The principle callout loses its fill, if one is built (the site has none today).
-  - Diagrams stay as built: the food colours (`--kit-*`, `--sear`) don't change. Formula icons, operators, the bun, and the timeline soften with the tokens.
-  - Still open: a WCAG contrast check on the softer tokens (the yellow and `--ink-faint` are most at risk); text-chip hover (the mock underlines); Blowfish's ramp (`css/schemes/not-a-chef.css`) for header and prose colours; then `STYLE.md`, `style.html`, and the Fugu handoff for anything in its CSS.
-- [x] Softer colour mocks (2026-10-30): `mockups/soft-colour.html` (three schemes and a mixer with a copyable take) and `mockups/soft-colour-full.html` (the take over real built pages; `python3 mockups/serve.py`, then open `http://localhost:8765/mockups/soft-colour-full.html`).
-- [x] Softer colour, built 2026-11-01: tokens and chip, stat, strip, and quantity rules in `assets/css/custom.css`, Blowfish's ramp regenerated, `STYLE.md` and `style.html` updated. Backgrounds kept as mocked (Bruce, 2026-11-01); `--highlight` and `--ink-faint` tuned to pass contrast (5.0:1 and 3.8:1). Fugu's own defaults (`fugu.css`) still draw filled chips for other sites; the site overrides them, so a Fugu change is optional.
 - [ ] A thin line of images leading the page, under the header: Bruce's idea, to be worked out (which pages, where the images come from, height, how it sits with the sidebar photos).
 - [ ] Fold in the visual candidates above (lighter recipe header, bold step lead phrases) where they fit v2.
 
