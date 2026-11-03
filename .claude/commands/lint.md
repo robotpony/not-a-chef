@@ -24,5 +24,10 @@ Check all .md files in content/recipes/ (and content/essays/ if a path is specif
    ```
 
    It prints `path:line  Term  "words"`. Pairs in `tools/glossary-skip.txt` (`path | Term`) are never reported.
+8. No glossary entry sets a top-level `kind`; it goes under `params: {kind: ingredient}`. Hugo draws a top-level one as an ingredient but the glossary tools read it as a concept, and neither reports it, so report each file found as an error. Run this check even without a path.
+
+   ```
+   grep -l '^kind:' content/reference/glossary/*.md
+   ```
 
 Report files with issues, grouped by severity. Files that pass cleanly should be summarized as a count, not listed individually.
