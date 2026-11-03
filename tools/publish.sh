@@ -15,6 +15,12 @@ usage() {
   sed -n '5,9p' "$0" | sed 's/^# \{0,1\}//'
 }
 
+# Called first by anything that builds, so a Hugo that's too old stops the
+# run before the build number moves. Versions are in .hugo-version.
+check_hugo() {
+  themes/hugo-warped/tools/check-hugo.sh
+}
+
 # --cleanDestinationDir: drop anything in public/ this build didn't write
 # (old drafts, deleted pages) so rsync --delete can't ship it.
 # HUGO_PARAMS_BUILDHASH reaches the footer as site.Params.buildhash: the
@@ -87,6 +93,7 @@ cmd="${1:-all}"
 
 case "$cmd" in
   all)
+    check_hugo
     warn_dirty
     bump_build
     build
@@ -95,12 +102,14 @@ case "$cmd" in
     commit_build
     ;;
   build)
+    check_hugo
     build
     ;;
   check)
     check
     ;;
   dry-run)
+    check_hugo
     warn_dirty
     build
     check

@@ -4,6 +4,9 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
+# Before anything else, so a Hugo that's too old doesn't stop a running server.
+themes/hugo-warped/tools/check-hugo.sh
+
 URL="http://localhost:1313/"
 
 # Restart, don't reuse: a hugo server left running from an earlier session

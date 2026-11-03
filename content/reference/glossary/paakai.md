@@ -1,6 +1,6 @@
 ---
 title: Pa'akai
-kind: ingredient
+params: {kind: ingredient}
 also: [alaea]
 date: 2026-10-30
 ---

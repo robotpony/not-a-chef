@@ -1,6 +1,6 @@
 ---
 title: Kecap manis
-kind: ingredient
+params: {kind: ingredient}
 date: 2026-10-30
 ---
 

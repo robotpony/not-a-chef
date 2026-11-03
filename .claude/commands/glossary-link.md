@@ -16,7 +16,7 @@ The spec is hugo-warped's `glossary/README.md` ("Marks" and "link"). Entries are
    make -s glossary-check JSON=1 2>/dev/null
    ```
 
-   Add `ENTRY="Deglaze"` to limit it to one term (title or `also:` form, any case). Each item is `{path, line, term, words, move, from}`: `path` under `content/`, `line` the source line, `words` the exact text to mark. `move: true` means the page already has one mark for the term, on line `from`, and the rules now put it on `line` instead: on a recipe, the main column (Ingredients, Method, components) comes before the sidebar sections, and an entry with `kind: ingredient` may sit in an ingredient list. The tool has already left out headings, links, code, fences, frontmatter, stubs, concept terms in ingredient lists, and the pairs in `tools/glossary-skip.txt`.
+   Add `ENTRY="Deglaze"` to limit it to one term (title or `also:` form, any case). Each item is `{path, line, term, words, move, from}`: `path` under `content/`, `line` the source line, `words` the exact text to mark. `move: true` means the page already has one mark for the term, on line `from`, and the rules now put it on `line` instead: on a recipe, the main column (Ingredients, Method, components) comes before the sidebar sections, and an entry with `params: {kind: ingredient}` may sit in an ingredient list. The tool has already left out headings, links, code, fences, frontmatter, stubs, concept terms in ingredient lists, and the pairs in `tools/glossary-skip.txt`.
 
 2. Count proposals per term. With `status`, print a short table (term, count), the total, and the next term, then stop.
 
