@@ -70,7 +70,29 @@ Visual notes from the same look:
 
 Under way. The softer colour scheme (2026-11-01) and the palette stripe and homepage mark (2026-11-02) are built and recorded in `mockups/STYLE.md`; the two blue labels question is in `docs/REVIEW.md`. Fugu's own `fugu.css` still draws filled chips for other sites; the site overrides them, so changing that is optional. Next changes are mocked before they're built and recorded in `STYLE.md` and `style.html` when they land. Template and CSS that belongs to the theme goes to fugu-agent.
 
-- [ ] Visual pass: walk the built site in Chrome (homepage, recipe, drink, essay, method, blueprint, Food Log, glossary, tag pages; both widths, light and dark) and list what feels heavy, crowded, or off against the notes above.
+- [ ] Finish the visual pass by hand. Walked 2026-11-03 in headless Chrome (17 page types at 1280 and 390 px, light and dark; no page scrolls sideways). Not seen: hover states, the Recipes menu, the phone drawer, glossary popovers, and the opened Recipe notes.
+
+Fixes from the pass:
+
+- [ ] Phone cards in the homepage's two-column band clip tag chips to "c…" and Serves to a lone "s" (`custom.css:1025`, `:1064`).
+- [ ] Article titles and headings missed the softening: h1 is `rgb(29,30,23)`, weight 800, 36px, and h2 `rgb(37,38,30)`, against `--ink` `rgb(43,44,37)`, weight 700, 33.6px on list pages. It shows most in dark mode.
+- [ ] `servings` holds a yield or a note in 21 recipes, so cards read "Serves ~550 ml" and "Serves makes about 200 …". Move yields to `portions`.
+- [ ] Phone methods and builds use Blowfish's "Table of Contents" box (title case, tinted, tight against the text); recipes have the styled "Recipe notes". Fugu's change.
+- [ ] Food Log task items draw a bullet and a checkbox, and vault tags show in headings ("Mexican feast #todo").
+- [ ] Chip wording: builds show Burgers twice ("Burgers · Build", then "Burgers"), essays show "Food-Memory" where cards say "food memories", and page chips are title case where cards are lowercase.
+- [ ] Lineage repeats each close year ('57 on the left, 1957 on the right).
+- [ ] A wiki link's arrow can wrap alone onto the next line (build sidebar, "In-N-Out burger spread →"). Keep it with the last word.
+- [ ] Main column bottoms have three right edges: text at 752px, essay Related at 836px, recipe Related and prev/next at 871px.
+- [ ] Glossary: the search placeholder clips on phones, definitions are about 18px against 16px body text, and the right third is empty on desktop.
+- [ ] Content: a literal `#win-the-fridge` in Lazy tomato soup's ingredient note; em-dashes in the Win the fridge intro and the June 2026 summary.
+
+To mock, from the pass:
+
+- [ ] Recipe mechanic: the site promises ratios, but the Mechanic is small grey italic, third in the sidebar, and collapsed on phones. Mock it above Ingredients, with the rest of the sidebar lighter (Chai's sidebar runs about 260px past its method, leaving the left column empty).
+- [ ] Phone photos: a 112px thumbnail sits alone at the left, above Recipe notes. Decide this with the line of images, below.
+- [ ] Food Log sidebar: 40 month rows, about half reading "undated" in mono. Drop the word, and group or collapse older years.
+- [ ] Uneven cards: a formula row on some cards and not others on the homepage and recipe list, a gap above short stacks on blueprint cards, and about 110px of blank under the homepage's Muesli card.
+- [ ] Phone flow diagrams wrap with an arrow leading the second row (Pan sauces).
 - [ ] A thin line of images leading the page, under the header: Bruce's idea, to be worked out (which pages, where the images come from, height, how it sits with the sidebar photos).
 - [ ] Fold in the visual candidates above (lighter recipe header, bold step lead phrases) where they fit v2.
 
