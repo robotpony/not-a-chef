@@ -384,7 +384,7 @@ A build made of layers (a burger, a sandwich, a lasagne) can be drawn as an expl
 
 ## Reference pages and the Food Log
 
-Shared frontmatter only, no required sections. Reference pages are technique guides, research notes, and appendices, written as reference rather than narrative. Food Log months need only `title` and `date`; the opening paragraph is the month's card summary (`/food-log-summary`). Obsidian's Daily Notes creates new months from `tools/obsidian/food-log-month.md`, set as its template in `.obsidian/daily-notes.json`. `.obsidian/` isn't in git, so each Mac needs that setting.
+Shared frontmatter only, no required sections. Reference pages are technique guides, research notes, and appendices, written as reference rather than narrative. Food Log months need only `title` and `date`; the opening paragraph is the month's card summary (`/food-log-summary`). Obsidian's Daily Notes creates new months from `tools/obsidian/food-log-month.md`, set as its template in `.obsidian/daily-notes.json`.
 
 ## Validation
 
