@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Percent scaling</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  :root{
+    --bg:#F8F8F3; --surface:#FDFDFA; --surface-2:#F0F0E8;
+    --ink:#2B2C25; --ink-muted:#6A6B61; --ink-faint:#828377;
+    --border:#E0E0D3; --border-strong:#CDCEBD;
+    --accent:#A8865A; --accent-strong:#8A4F37; --accent-soft:#F3ECE2; --focus:#A8865A;
+    --flag:#56708E;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#22231C; --surface:#282920; --surface-2:#1D1E17;
+      --ink:#E2E4D8; --ink-muted:#A2A493; --ink-faint:#7F8073;
+      --border:#33352A; --border-strong:#45473A;
+      --accent:#BF9D72; --accent-strong:#D6A992; --accent-soft:#2E2620; --focus:#BF9D72;
+      --flag:#93A9C0;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#22231C; --surface:#282920; --surface-2:#1D1E17;
+    --ink:#E2E4D8; --ink-muted:#A2A493; --ink-faint:#7F8073;
+    --border:#33352A; --border-strong:#45473A;
+    --accent:#BF9D72; --accent-strong:#D6A992; --accent-soft:#2E2620; --focus:#BF9D72;
+    --flag:#93A9C0;
+  }
+
+  *{box-sizing:border-box;}
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:'Lora',Georgia,serif; font-size:16px; line-height:1.5; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3,h4{ font-family:'Libre Franklin',system-ui,sans-serif; margin:0; }
+  p{ margin:0; }
+  code{ font-family:'IBM Plex Mono',monospace; font-size:.85em; background:var(--surface-2); padding:1px 5px; border-radius:3px; }
+  button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; padding:0; }
+  :focus-visible{ outline:2px solid var(--focus); outline-offset:2px; }
+
+  /* ---------- mock chrome ---------- */
+  .topbar{ position:sticky; top:0; z-index:40; background:var(--surface); border-bottom:1px solid var(--border-strong); }
+  .topbar-inner{ max-width:1120px; margin:0 auto; padding:10px 20px; display:flex; align-items:center; gap:10px 18px; flex-wrap:wrap; font-family:'Libre Franklin',sans-serif; }
+  .tb-title{ font-weight:700; font-size:.95rem; margin-right:auto; }
+  .tb-label{ font-size:.66rem; font-weight:700; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-faint); }
+  .theme-toggle{ font-size:.75rem; font-weight:600; padding:6px 10px; border:1px solid var(--border-strong); border-radius:5px; color:var(--ink-muted); }
+  .theme-toggle:hover{ border-color:var(--accent); color:var(--ink); }
+
+  main{ max-width:1120px; margin:0 auto; padding:8px 20px 100px; }
+  .hero{ padding:36px 0 30px; border-bottom:1px solid var(--border); margin-bottom:40px; }
+  .hero-eyebrow{ font-family:'Libre Franklin',sans-serif; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--accent-strong); margin-bottom:10px; display:block; }
+  .hero h1{ font-size:2rem; font-weight:700; letter-spacing:-.01em; margin-bottom:12px; }
+  .hero p{ max-width:68ch; color:var(--ink-muted); font-size:1.02rem; }
+  .hero p + p{ margin-top:10px; }
+
+  section.block{ margin-bottom:60px; }
+  .block-head{ margin-bottom:18px; }
+  .block-num{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--ink-faint); display:block; margin-bottom:4px; }
+  h2.block-title{ font-size:1.4rem; font-weight:700; margin-bottom:8px; }
+  .block-dek{ color:var(--ink-muted); max-width:70ch; font-size:.95rem; }
+  .block-dek + .block-dek{ margin-top:8px; }
+  .frame-cap{ font-family:'IBM Plex Mono',monospace; font-size:.66rem; color:var(--ink-faint); margin-top:8px; }
+  .rec{ font-family:'Libre Franklin',sans-serif; font-size:.68rem; font-weight:700; color:var(--accent-strong); margin-left:8px; vertical-align:middle; white-space:nowrap; }
+
+  .row{ display:flex; gap:24px; flex-wrap:wrap; align-items:flex-start; }
+  .row > div{ min-width:0; max-width:100%; }
+  .stage{ background:var(--bg); border:1px solid var(--border-strong); border-radius:6px; padding:20px; }
+  .stage.desk{ width:688px; max-width:100%; }
+  .stage.phone{ width:343px; max-width:100%; padding:20px 16px; }
+
+  table.spec{ width:100%; border-collapse:collapse; font-size:.86rem; background:var(--surface); border:1px solid var(--border); }
+  .spec th{ font-family:'Libre Franklin',sans-serif; font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-faint); text-align:left; padding:10px 14px; border-bottom:1px solid var(--border); }
+  .spec td{ padding:9px 14px; border-bottom:1px solid var(--border); vertical-align:top; color:var(--ink-muted); }
+  .spec tr:last-child td{ border-bottom:none; }
+  .spec td:first-child{ color:var(--ink); font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:.82rem; }
+  .spec-wrap{ overflow-x:auto; }
+
+  pre.src{ margin:0; background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:14px 16px; overflow-x:auto; font-family:'IBM Plex Mono',monospace; font-size:.76rem; line-height:1.6; color:var(--ink-muted); }
+  pre.src .del{ color:var(--ink-faint); text-decoration:line-through; }
+  pre.src .add{ color:var(--accent-strong); font-weight:500; }
+
+  .qlist{ display:grid; gap:10px; }
+  .note-card{ display:flex; gap:12px; padding:14px 16px; background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--flag); border-radius:0 6px 6px 0; }
+  .note-mark{ font-family:'IBM Plex Mono',monospace; font-size:.75rem; font-weight:700; color:var(--flag); flex-shrink:0; }
+  .note-card p{ font-size:.9rem; color:var(--ink-muted); }
+  .note-card strong{ color:var(--ink); font-weight:600; }
+
+  /* ---------- the recipe excerpt, copied from the built page ---------- */
+  .ing-h{ position:relative; font-size:1.5rem; font-weight:700; line-height:1.2; padding-right:40px; margin-bottom:12px; }
+  .subhead{ font-family:'Libre Franklin',sans-serif; font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); margin:14px 0 6px; }
+  .tscroll{ overflow-x:auto; padding:6px; margin:-6px; }
+  table.ing-t{ border-collapse:collapse; font-size:.875rem; line-height:1.5; }
+  .ing-t th{ font-weight:600; text-align:left; padding:8px 12px 8px 0; border-bottom:1px solid var(--ink-faint); white-space:nowrap; }
+  .ing-t td{ padding:8px 12px 8px 0; border-bottom:1px solid var(--border); vertical-align:top; }
+  .ing-t :is(th,td){ min-width:5em; }
+  .ing-t .chk{ min-width:0; width:1%; padding-right:13px; }
+  .ing-t input[type=checkbox]{ -webkit-appearance:none; appearance:none; display:block; width:19px; height:19px; margin:1px 0 0; border:1px solid var(--border-strong); border-radius:4px; background:var(--surface); cursor:pointer; }
+  .ing-t input[type=checkbox]:checked{ background:var(--accent); border-color:var(--accent); }
+  .ing-t tr:has(input:checked) td{ color:var(--ink-faint); text-decoration:line-through; text-decoration-color:var(--border-strong); }
+  .qty{ font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums; color:var(--accent-strong); white-space:nowrap; }
+  .gl{ text-decoration:underline dotted var(--ink-faint); text-underline-offset:3px; }
+  .after{ font-size:.92rem; margin-top:14px; max-width:60ch; }
+
+  /* the gear (site's .ing-config > summary) */
+  .gear-wrap{ position:absolute; top:0; right:0; font-weight:400; }
+  .gear{ display:flex; align-items:center; justify-content:center; width:28px; height:28px; border:1px solid var(--border-strong); border-radius:5px; background:var(--surface); color:var(--ink-muted); }
+  .gear:hover{ color:var(--ink); border-color:var(--accent); }
+  .gear[aria-expanded="true"]{ color:var(--accent-strong); border-color:var(--accent); }
+  .gear svg{ width:15px; height:15px; }
+  .gear-state{ position:absolute; top:5px; right:36px; font-family:'IBM Plex Mono',monospace; font-size:.76rem; font-weight:600; color:var(--accent-strong); white-space:nowrap; }
+
+  /* the callout (site's .ing-config-panel, unchanged) */
+  .panel{ position:absolute; top:calc(100% + 11px); right:-8px; z-index:20; width:256px; max-width:calc(100vw - 32px); background:var(--surface); border:1px solid var(--border-strong); border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,.14); padding:14px 16px 16px; display:flex; flex-direction:column; gap:14px; font-family:'Libre Franklin',sans-serif; line-height:1.4; }
+  .panel[hidden]{ display:none; }
+  .panel::before,.panel::after{ content:""; position:absolute; right:15px; border:7px solid transparent; border-top:0; }
+  .panel::before{ top:-8px; border-bottom:8px solid var(--border-strong); }
+  .panel::after{ top:-6.6px; border-bottom:8px solid var(--surface); }
+  .p-group{ display:flex; flex-direction:column; gap:8px; }
+  .p-group + .p-group{ padding-top:14px; border-top:1px solid var(--border); }
+  .p-head{ display:flex; align-items:baseline; justify-content:space-between; }
+  .p-label{ font-size:.66rem; font-weight:700; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-faint); }
+  .p-mult{ font-family:'IBM Plex Mono',monospace; font-size:.92rem; font-weight:600; color:var(--accent-strong); }
+  .p-sub{ font-family:'Lora',serif; font-style:italic; font-size:.76rem; color:var(--ink-muted); }
+
+  /* the new part: an amount field and its unit segments */
+  .amt{ display:inline-flex; align-items:stretch; gap:6px; }
+  .amt-in{ width:5.4em; height:30px; font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums; font-size:.88rem; font-weight:600; color:var(--accent-strong); background:var(--surface); border:1px solid var(--border-strong); border-radius:5px; padding:0 8px; text-align:right; }
+  .amt-in:hover{ border-color:var(--accent); }
+  .amt-in[aria-invalid="true"]{ color:var(--ink-faint); }
+  .seg{ display:grid; grid-auto-flow:column; grid-auto-columns:1fr; border:1px solid var(--border-strong); border-radius:5px; overflow:hidden; }
+  .seg button{ font-family:'Libre Franklin',sans-serif; font-size:.74rem; font-weight:600; padding:5px 8px; color:var(--ink-muted); background:var(--surface); border-left:1px solid var(--border-strong); white-space:nowrap; }
+  .seg button:first-child{ border-left:0; }
+  .seg button:hover{ color:var(--ink); }
+  .seg button[aria-pressed="true"]{ background:var(--accent-soft); color:var(--accent-strong); }
+  .seg button:focus-visible{ outline-offset:-3px; }
+  .reset{ font-family:'Libre Franklin',sans-serif; font-size:.74rem; font-weight:500; color:var(--ink-muted); text-decoration:underline; text-decoration-color:var(--border-strong); text-underline-offset:3px; white-space:nowrap; }
+  .reset:hover{ color:var(--accent-strong); text-decoration-color:var(--accent); }
+  .reset{ align-self:flex-start; }
+  .reset[hidden]{ display:none; }
+
+  /* Option B: the bar above the table */
+  .pct-bar{ display:flex; flex-wrap:wrap; align-items:center; gap:8px 10px; padding:10px 12px; margin:6px 0 12px; background:var(--surface); border:1px solid var(--border); border-radius:6px; }
+  .pct-bar .lead{ font-family:'Libre Franklin',sans-serif; font-size:.84rem; font-weight:600; }
+  .pct-bar .name{ font-size:.92rem; }
+  .pct-bar .end{ margin-left:auto; display:flex; align-items:baseline; gap:10px; }
+  .pct-bar .p-mult{ font-size:.84rem; }
+  .hide-mult{ visibility:hidden; }
+
+  /* Round 2: the bar as a row of the table, so each part sits in its column */
+  .ing-t tr.pct-row td{ border-bottom:0; padding:2px 12px 12px 0; vertical-align:middle; white-space:nowrap; }
+  .ing-t tr.pct-row .pct-name{ white-space:normal; font-size:.875rem; font-style:italic; }
+  .ing-t tr.pct-row .lead{ font-weight:inherit; }
+  .ing-t tr.pct-row .p-mult{ font-size:.84rem; }
+  /* The -9px lands the digits on the amounts' left edge below (8px padding, 1px border). */
+  .ing-t tr.pct-row .amt-in{ width:4.8em; margin-left:-9px; text-align:left; }
+  .pct-units{ display:inline-flex; align-items:center; gap:6px; vertical-align:middle; }
+  .pct-units .seg button{ padding:5px 7px; }
+  .pct-stack{ display:flex; flex-direction:column; align-items:flex-start; gap:6px; margin-left:-9px; }
+  .ing-t tr.pct-row .pct-stack .amt-in{ margin-left:0; }
+  .reset-i{ display:inline-flex; align-items:center; justify-content:center; width:26px; height:26px; border-radius:5px; color:var(--ink-muted); flex:none; }
+  .reset-i:hover{ color:var(--accent-strong); background:var(--surface-2); }
+  .reset-i[hidden]{ display:inline-flex; visibility:hidden; }
+  .reset-i svg{ width:15px; height:15px; }
+
+  /* Variant: the field in the 100% row */
+  .amt-cell{ display:flex; flex-direction:column; align-items:flex-start; gap:4px; }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="gear" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1.03 1.56V21a2 2 0 1 1-4 0v-.09A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.56-1.03H3a2 2 0 1 1 0-4h.09A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1.03-1.56V3a2 2 0 1 1 4 0v.09A1.7 1.7 0 0 0 15 4.6a1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9a1.7 1.7 0 0 0 1.56 1.03H21a2 2 0 1 1 0 4h-.09A1.7 1.7 0 0 0 19.4 15z"/></g></symbol>
+</svg>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <span class="tb-title">Percent scaling</span>
+    <span class="tb-label">Recipe</span>
+    <div class="seg" id="recipePick" role="group" aria-label="Recipe shown in every frame"></div>
+    <button class="theme-toggle" id="themeToggle">Theme: <span id="themeLabel">System</span></button>
+  </div>
+</div>
+
+<main>
+  <header class="hero">
+    <span class="hero-eyebrow">Mockup · proposal · 2026-11-04 · B built 2026-11-04, round 2 (§3b) chosen 2026-11-04</span>
+    <h1>Percent scaling</h1>
+    <p>On a percentage recipe, you start from what you have: "I have 1.36 kg of pork, what do I add?" Today's gear only offers multiples from 1× to 5×, so the cook does that division themselves.</p>
+    <p>This mock tries the amount field in the gear callout (A) and above the table (B). I recommend B: the field is on the page where you'll see it, and on a phone nothing covers the amounts while you type. Every frame is live and shares one amount, so type in any of them. The recipe switch at the top swaps in the other two recipes with this kind of table.</p>
+  </header>
+
+  <section class="block" id="today">
+    <div class="block-head">
+      <span class="block-num">§1</span>
+      <h2 class="block-title">What's there today</h2>
+      <p class="block-dek">The site already recognizes these tables and scales their amount column, so this is a new way in, not a new engine. Three things don't fit a percentage recipe:</p>
+    </div>
+    <div class="spec-wrap"><table class="spec">
+      <thead><tr><th>Today</th><th>What goes wrong</th></tr></thead>
+      <tbody>
+        <tr><td>Slider, 1× to 5× in half steps</td><td>1.36 kg of pork is 1.36×, which the slider can't hit. It can't go below 1× either, so half a batch of pizza dough is out of reach.</td></tr>
+        <tr><td><code>1–2 kg ground pork</code> scales as a range</td><td>At 2× the line reads 2–4 kg. The base stops being a number you chose and turns into a wider range.</td></tr>
+        <tr><td>Imperial converts every amount</td><td>Pork in pounds is useful, but 3 g of sage shows as ⅛ oz and 1.3 g of white pepper as 0.05 oz.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="block" id="a">
+    <div class="block-head">
+      <span class="block-num">§2</span>
+      <h2 class="block-title">A: in the gear callout</h2>
+      <p class="block-dek">The amount field replaces the slider, with the ratified callout around it. Every recipe keeps one control in one place, and the page stays exactly as quiet as it is now. The cost is that you have to know to open it. On desktop the callout only covers the Notes column, so the amounts stay readable; on a phone it covers the amounts in the first few rows. Close it and a <code>1.36×</code> stays beside the gear, so a scaled table never looks like the written one.</p>
+    </div>
+    <div class="row">
+      <div><div class="stage desk" data-frame="gear" data-open="1"></div><p class="frame-cap">desktop · body column · callout open</p></div>
+      <div><div class="stage phone" data-frame="gear" data-open="1"></div><p class="frame-cap">phone · 343px · callout open</p></div>
+    </div>
+  </section>
+
+  <section class="block" id="b">
+    <div class="block-head">
+      <span class="block-num">§3</span>
+      <h2 class="block-title">B: above the table <span class="rec">Recommended</span></h2>
+      <p class="block-dek">The field sits directly above the table it drives, so it's the first thing you read in the section and you can see every row change as you type. The gear stays, with Units only. Percentage recipes get a visible control that other recipes don't, which is fair: the amount you start with is the first decision on these recipes. It's hidden in print, where the table prints at the amount shown.</p>
+    </div>
+    <div class="row">
+      <div><div class="stage desk" data-frame="bar"></div><p class="frame-cap">desktop · body column</p></div>
+      <div><div class="stage phone" data-frame="bar"></div><p class="frame-cap">phone · 343px</p></div>
+    </div>
+  </section>
+
+  <section class="block" id="r2">
+    <div class="block-head">
+      <span class="block-num">§3b</span>
+      <h2 class="block-title">B, round 2: lined up with the columns <span class="rec">Chosen 2026-11-04</span></h2>
+      <p class="block-dek">Bruce's notes on the built bar: the amount over the weight column, the name over the name column, and revert as just an icon beside the units, so the controls read along with the table. To line up at any width, the bar becomes a row of the table itself, above the headings. The multiplier sits over the % column. The box goes, since the row now belongs to the table, and the digits line up with the amounts below. The gear goes on these pages, since Units has almost nothing left to do there.</p>
+      <p class="block-dek">Teriyaki has no Notes column, so on desktop its units sit beside the amount, in the same cell. On a phone the units would run off the right edge, so on every recipe they stack under the amount. Try the recipe switch at the top.</p>
+    </div>
+    <div class="row">
+      <div><div class="stage desk" data-frame="aligned"></div><p class="frame-cap">desktop · body column</p></div>
+      <div><div class="stage phone" data-frame="aligned"></div><p class="frame-cap">phone · 343px</p></div>
+    </div>
+  </section>
+
+  <section class="block" id="c">
+    <div class="block-head">
+      <span class="block-num">§4</span>
+      <h2 class="block-title">Also worth a look: B, in the 100% row</h2>
+      <p class="block-dek">You didn't ask for this one. The base's own amount cell becomes the field, so no extra row of controls appears and the number you edit is where the number already was. It's tidier, but harder to spot: a field among 14 rows doesn't announce that it drives the others. It also crowds the cell on a phone. I'd go with the bar unless the bar feels heavy to you.</p>
+    </div>
+    <div class="row">
+      <div><div class="stage desk" data-frame="row"></div><p class="frame-cap">desktop · body column</p></div>
+      <div><div class="stage phone" data-frame="row"></div><p class="frame-cap">phone · 343px</p></div>
+    </div>
+  </section>
+
+  <section class="block" id="compare">
+    <div class="block-head">
+      <span class="block-num">§5</span>
+      <h2 class="block-title">A and B side by side</h2>
+    </div>
+    <div class="spec-wrap"><table class="spec">
+      <thead><tr><th></th><th>A: gear</th><th>B: above the table</th></tr></thead>
+      <tbody>
+        <tr><td>Finding it</td><td>One click, behind an icon that means "settings"</td><td>On the page, in words</td></tr>
+        <tr><td>While typing</td><td id="cmpA">Covers Notes on desktop, which is harmless; covers the first few rows, amounts included, on a phone</td><td>Nothing covered</td></tr>
+        <tr><td>Consistency</td><td>Same gear as every recipe, different contents</td><td>Same gear, plus a control only these recipes have</td></tr>
+        <tr><td>Page weight</td><td>No change until opened</td><td>One more row: 52px on desktop, 82px (two lines) on a phone</td></tr>
+        <tr><td>Build</td><td>Same engine either way; the field mounts in the panel</td><td>Same engine either way; the field mounts before the table</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="block" id="rule">
+    <div class="block-head">
+      <span class="block-num">§6</span>
+      <h2 class="block-title">Which recipes get it, and how the numbers work</h2>
+      <p class="block-dek">The rule has no new syntax: an ingredient table with a <code>%</code> column and a <code>100%</code> row. That row is the base, and its name and unit fill in the field. Lazy pizza dough and Teriyaki sauce already qualify. Breakfast sausage keeps its pork outside the table, so it needs one edit, with the pork moving into the table:</p>
+    </div>
+    <pre class="src"><span class="del">- 1–2 kg ground pork shoulder (80/20 or 70/30); pork belly also works</span>
+
+#### <span class="add">Meat and spice mix</span> (% of meat weight)
+
+| Ingredient | % | Per 1 kg | Notes |
+|---|---|---|---|
+<span class="add">| Ground pork shoulder | 100% | 1 kg | 80/20 or 70/30; pork belly also works |</span>
+| Water, cold | 7.5% | 75 g | |
+| Milk powder | 2% | 20 g | Don't skip it |</pre>
+    <div class="spec-wrap" style="margin-top:16px"><table class="spec">
+      <thead><tr><th>Decision in the mock</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>Amounts scale from the written amount, not the %</td><td>The two disagree slightly: yeast is 1.7% of 600 g, or 10.2 g, and the recipe says 10 g. Scaling the written amount keeps the tested numbers exact at the written batch, and the % column stays as the explanation.</td></tr>
+        <tr><td>Under 20 reads to 0.1; 20 and up to the whole number; 1000 and up as kg or L</td><td>Today's 2 decimals would show 1.77 g of white pepper. Written amounts like 12.5 ml and 7.5 g still read as written.</td></tr>
+        <tr><td>The base has its own g, kg, lb segments (ml, L, cup for shoyu)</td><td>Pork comes labelled in pounds, and the spices still go on a gram scale. The Units setting only picks the field's starting unit here; the amounts stay as written.</td></tr>
+        <tr><td>Any amount, no 1× floor or 5× cap</td><td>Half a batch of dough works. Empty or zero holds the last good amounts instead of blanking the table.</td></tr>
+        <tr><td>Amount is remembered per recipe, with a "Back to" link</td><td>Same idea as today's per-recipe scale. With JS off the table reads as written, as it does now.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="block" id="build">
+    <div class="block-head">
+      <span class="block-num">§7</span>
+      <h2 class="block-title">Build</h2>
+    </div>
+    <div class="spec-wrap"><table class="spec">
+      <thead><tr><th>Where</th><th>Change</th></tr></thead>
+      <tbody>
+        <tr><td>Fugu · <code>ingredients.js</code></td><td>Most of the work. Find the base row in <code>enhanceTable</code>, build the field, and drive the existing scale state from it. Lift the 1× to 5× clamp for these pages and tidy small-amount rounding. Plus a CHANGELOG line and tests against a fixture table.</td></tr>
+        <tr><td>Site · <code>custom.css</code></td><td>Styles for the field and its segments, reusing the Units segment look.</td></tr>
+        <tr><td>Site · content</td><td>Breakfast sausage's edit above. Wording is Bruce's call.</td></tr>
+        <tr><td>Site · docs</td><td><code>FORMAT.md</code> gets the table rule; <code>STYLE.md</code>'s Scaling callout entry gets the chosen placement.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="block" id="open">
+    <div class="block-head">
+      <span class="block-num">§8</span>
+      <h2 class="block-title">Decisions</h2>
+    </div>
+    <div class="qlist">
+      <div class="note-card"><span class="note-mark">1</span><div><p><strong>Placement?</strong> Decided 2026-11-04: B. Then round 2 the same day (§3b): the bar becomes a table row, with no gear on these pages.</p></div></div>
+      <div class="note-card"><span class="note-mark">2</span><div><p><strong>Breakfast sausage's pork?</strong> Decided 2026-11-04: it moves into the table as a 100% row at 1 kg, and "1–2 kg" goes, since the field now does that job.</p></div></div>
+      <div class="note-card"><span class="note-mark">3</span><div><p><strong>Imperial on these tables?</strong> Decided 2026-11-04: table amounts stay as written, and the base can be entered in lb or cups. A saved Units setting still applies to the Method's temperatures and quantities, with no control on these pages (round 2).</p></div></div>
+      <div class="note-card"><span class="note-mark">4</span><div><p><strong>Quantities that shouldn't scale?</strong> Decided 2026-11-04: reword the lines, with no new syntax. So far that's "Fry 1–2 tbsp of the mixture" in Breakfast sausage and "three 250 g pizzas" in Lazy pizza dough. New recipes can hit this again.</p></div></div>
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+  // Data copied from the three recipes. Amounts are in grams or ml, as
+  // written, so 1x reads exactly as the recipe does.
+  var RECIPES = {
+    sausage: {
+      label:'Breakfast sausage', sub:'Meat and spice mix (% of meat weight)',
+      family:'mass', base:1000, written:'kg', name:'ground pork shoulder',
+      pctHead:'%', amountHead:function(b, on){ return (on ? 'For ' : 'Per ') + b; }, notes:true,
+      rows:[
+        ['Ground pork shoulder','100%',1000,null,'g','80/20 or 70/30; pork belly also works',1],
+        ['Water, cold','7.5%',75,null,'g',''],['Milk powder','2%',20,null,'g',"Don't skip it"],
+        ['Salt','1.6%',16,null,'g',''],['Sugar','0.75%',7.5,null,'g',''],['Brown sugar','0.63%',6.3,null,'g',''],
+        ['<span class="gl">MSG</span>','0.5%',5,null,'g',''],['Black pepper','0.4%',4,null,'g','Toast before grinding'],
+        ['Dried sage','0.3%',3,null,'g',''],['Dried thyme','0.3%',3,null,'g',''],
+        ['Garlic','0.3%',3,null,'g','Crushed or minced fine'],['Coriander seed','0.3%',3,null,'g','Toast before grinding'],
+        ['Fennel seed','0.2%',2,null,'g','Toast before grinding'],['White pepper','0.13%',1.3,null,'g','']
+      ]
+    },
+    pizza: {
+      label:'Lazy pizza dough', sub:'', family:'mass', base:600, written:'g', name:'AP flour',
+      pctHead:'%', amountHead:function(){ return 'Weight'; }, notes:true,
+      after:'Makes about 1.1 kg of dough: enough for a 350 g focaccia and three 250 g pizzas.',
+      rows:[
+        ['AP flour','100%',600,null,'g','Canadian AP is 13.5% protein',1],
+        ['Vital wheat gluten','2.5%',15,null,'g','Gets close to a good bread flour, more chew'],
+        ['White sugar','2.5%',15,null,'g','Helps crisp in a home oven'],['Kosher salt','2.5%',15,null,'g','Pushes flavour a bit'],
+        ['Olive oil','5.8%',35,null,'g','25 g added with the liquid, ~10 g for the rise'],
+        ['Instant yeast','1.7%',10,null,'g',''],['Lukewarm water','70%',420,null,'g','Medium hydration']
+      ]
+    },
+    teriyaki: {
+      label:'Teriyaki sauce', sub:'', family:'volume', base:250, written:'ml', name:'shoyu (soy sauce)',
+      pctHead:'% of <span class="gl">shoyu</span>', amountHead:function(b, on){ return (on ? 'For ' : 'Example: ') + b + ' shoyu'; }, notes:false,
+      rows:[
+        ['Shoyu (soy sauce)','100%',250,null,'ml','',1],['<span class="gl">Mirin</span>','80–100%',200,250,'ml',''],
+        ['Sake','50%',125,null,'ml',''],['Brown sugar','40%',100,null,'g',''],['<span class="gl">MSG</span>','1.5%',3.8,null,'g',''],
+        ['Sesame oil','5%',12.5,null,'ml',''],['Ginger (optional)','3%',7.5,null,'g',''],['Garlic (optional)','3%',7.5,null,'g',''],
+        ['Sesame seeds (optional)','2%',5,null,'g','']
+      ]
+    }
+  };
+  var UNITS = { mass:{ g:1, kg:1000, lb:453.6 }, volume:{ ml:1, L:1000, cup:240 } };
+
+  var state = { recipe:'sausage', amount:1000, unit:'kg', units:'original' };
+  var frames = Array.prototype.slice.call(document.querySelectorAll('[data-frame]'));
+  function R(){ return RECIPES[state.recipe]; }
+  function scale(){ return state.amount / R().base; }
+  function trim(n, d){ return String(parseFloat(n.toFixed(d))); }
+
+  // Under 20 to 0.1, then whole numbers, then kg or L. Glued, as built.
+  function num(v){ return v < 20 ? trim(v, 1) : String(Math.round(v)); }
+  function fmt(v, unit){
+    if (v >= 1000) return trim(v / 1000, 2) + (unit === 'g' ? 'kg' : 'L');
+    return num(v) + unit;
+  }
+  function fmtRange(lo, hi, unit){
+    if (hi >= 1000) return trim(lo / 1000, 2) + '–' + trim(hi / 1000, 2) + (unit === 'g' ? 'kg' : 'L');
+    return num(lo) + '–' + num(hi) + unit;
+  }
+  function fieldValue(){ var v = state.amount / UNITS[R().family][state.unit]; return trim(v, state.unit === 'g' || state.unit === 'ml' ? 0 : 2); }
+  function baseLabel(){ return fmt(state.amount, R().family === 'mass' ? 'g' : 'ml'); }
+  function isWritten(){ return Math.abs(state.amount - R().base) < 1e-6; }
+  function mult(){ return trim(scale(), 2) + '×'; }
+
+  function prose(text){
+    return text.replace(/(~?)(\d+(?:\.\d+)?) ?(kg|g|ml)\b/g, function(m, tilde, n, u){
+      var v = parseFloat(n) * (u === 'kg' ? 1000 : 1);
+      return tilde + '<span class="qty" data-v="' + v + '" data-u="' + (u === 'ml' ? 'ml' : 'g') + '">' + m.slice(tilde.length) + '</span>';
+    });
+  }
+  function fieldHtml(){
+    var units = Object.keys(UNITS[R().family]);
+    return '<span class="amt"><input class="amt-in" inputmode="decimal" autocomplete="off" aria-label="Amount of ' + R().name + '">' +
+      '<span class="seg" role="group" aria-label="Unit">' + units.map(function(u){
+        return '<button type="button" data-base-unit="' + u + '">' + u + '</button>';
+      }).join('') + '</span></span>';
+  }
+  function unitsHtml(){
+    return '<div class="p-group"><span class="p-label">Units</span><div class="seg" role="group" aria-label="Units">' +
+      [['original','As written'],['metric','Metric'],['imperial','Imperial']].map(function(p){
+        return '<button type="button" data-units="' + p[0] + '">' + p[1] + '</button>';
+      }).join('') + '</div></div>';
+  }
+  function resetHtml(){ return '<button type="button" class="reset" data-reset></button>'; }
+  function inputHtml(){ return '<input class="amt-in" inputmode="decimal" autocomplete="off" aria-label="Amount of ' + R().name + '">'; }
+  function segHtml(){
+    return '<span class="seg" role="group" aria-label="Unit">' + Object.keys(UNITS[R().family]).map(function(u){
+      return '<button type="button" data-base-unit="' + u + '">' + u + '</button>';
+    }).join('') + '</span>';
+  }
+  function unitsCell(){
+    return '<span class="pct-units">' + segHtml() + '<button type="button" class="reset-i" data-reset data-icon="1">' +
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg></button></span>';
+  }
+  var curPhone = false;
+  function pctRowHtml(){
+    var r = R();
+    return '<tr class="pct-row"><td class="chk"></td><td class="pct-name"><span class="lead">I have</span> ' + r.name + '</td>' +
+      '<td><span class="p-mult" data-mult></span></td>' +
+      (curPhone
+        ? '<td><div class="pct-stack">' + inputHtml() + unitsCell() + '</div></td>' + (r.notes ? '<td></td>' : '')
+        : '<td>' + inputHtml() + (r.notes ? '' : ' ' + unitsCell()) + '</td>' + (r.notes ? '<td>' + unitsCell() + '</td>' : '')) + '</tr>';
+  }
+
+  function tableHtml(kind){
+    var r = R();
+    var h = '<div class="tscroll"><table class="ing-t"><thead>' + (kind === 'aligned' ? pctRowHtml() : '') + '<tr><th class="chk"></th><th>Ingredient</th><th>' + r.pctHead +
+      '</th><th data-amount-head></th>' + (r.notes ? '<th>Notes</th>' : '') + '</tr></thead><tbody>';
+    r.rows.forEach(function(row){
+      var amt = '<span class="qty" data-v="' + row[2] + '"' + (row[3] ? ' data-hi="' + row[3] + '"' : '') + ' data-u="' + row[4] + '"></span>';
+      if (row[6] && kind === 'row') amt = '<div class="amt-cell">' + fieldHtml() + resetHtml() + '</div>';
+      h += '<tr><td class="chk"><input type="checkbox" aria-label="Done"></td><td>' + row[0] + '</td><td>' + row[1] + '</td><td>' + amt + '</td>' +
+        (r.notes ? '<td>' + prose(row[5]) + '</td>' : '') + '</tr>';
+    });
+    return h + '</tbody></table></div>';
+  }
+
+  function frameHtml(kind, open){
+    var r = R();
+    var gearPanel;
+    if (kind === 'gear') {
+      gearPanel = '<div class="p-group"><div class="p-head"><span class="p-label">I have</span><span class="p-mult" data-mult></span></div>' +
+        fieldHtml() + '<span class="p-sub">' + r.name + '</span>' + resetHtml() + '</div>' + unitsHtml();
+    } else {
+      gearPanel = unitsHtml();
+    }
+    var h = kind === 'aligned' ? '<h3 class="ing-h">Ingredients</h3>' : '<h3 class="ing-h">Ingredients<span class="gear-wrap">' +
+      (kind === 'gear' ? '<span class="gear-state" data-gear-state></span>' : '') +
+      '<button type="button" class="gear" aria-label="Ingredient options" aria-expanded="' + (open ? 'true' : 'false') + '"><svg><use href="#gear"/></svg></button>' +
+      '<div class="panel"' + (open ? '' : ' hidden') + '>' + gearPanel + '</div></span></h3>';
+    if (r.sub) h += '<h4 class="subhead">' + r.sub + '</h4>';
+    if (kind === 'bar') {
+      h += '<div class="pct-bar"><span class="lead">I have</span>' + fieldHtml() + '<span class="name">' + r.name + '</span>' +
+        '<span class="end"><span class="p-mult" data-mult></span>' + resetHtml() + '</span></div>';
+    }
+    h += tableHtml(kind);
+    if (r.after) h += '<p class="after">' + prose(r.after) + '</p>';
+    return h;
+  }
+
+  function renderFrames(){
+    frames.forEach(function(f){ curPhone = f.classList.contains('phone'); f.innerHTML = frameHtml(f.dataset.frame, f.dataset.open === '1'); });
+    update();
+  }
+
+  // Touches values only, so the field being typed in keeps its focus and caret.
+  function update(active){
+    var s = scale(), on = !isWritten(), r = R(), writtenText = fmt(r.base, r.family === 'mass' ? 'g' : 'ml');
+    document.querySelectorAll('.qty[data-v]').forEach(function(q){
+      var v = parseFloat(q.dataset.v) * s, u = q.dataset.u;
+      q.textContent = q.dataset.hi ? fmtRange(v, parseFloat(q.dataset.hi) * s, u) : fmt(v, u);
+    });
+    document.querySelectorAll('[data-amount-head]').forEach(function(th){
+      var head = r.amountHead('@', on);
+      th.innerHTML = head.replace('@', '<span class="qty">' + (on ? baseLabel() : writtenText) + '</span>');
+    });
+    document.querySelectorAll('.amt-in').forEach(function(i){
+      if (i !== active) { i.value = fieldValue(); i.removeAttribute('aria-invalid'); }
+    });
+    document.querySelectorAll('[data-base-unit]').forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.baseUnit === state.unit)); });
+    document.querySelectorAll('[data-units]').forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.units === state.units)); });
+    document.querySelectorAll('[data-mult]').forEach(function(m){ m.textContent = mult(); m.classList.toggle('hide-mult', !on); });
+    document.querySelectorAll('[data-gear-state]').forEach(function(m){ m.textContent = on ? mult() : ''; });
+    document.querySelectorAll('[data-reset]').forEach(function(b){ if (b.dataset.icon) { b.setAttribute('aria-label', 'Back to ' + writtenText); b.title = 'Back to ' + writtenText; } else { b.textContent = 'Back to ' + writtenText; } b.hidden = !on; });
+    document.querySelectorAll('#recipePick button').forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.recipe === state.recipe)); });
+  }
+
+  function loadRecipe(key){
+    state.recipe = key;
+    state.amount = RECIPES[key].base;
+    state.unit = RECIPES[key].written;
+    if (state.units === 'imperial') state.unit = RECIPES[key].family === 'mass' ? 'lb' : 'cup';
+    renderFrames();
+  }
+
+  document.addEventListener('input', function(e){
+    if (!e.target.classList.contains('amt-in')) return;
+    var v = parseFloat(e.target.value.replace(',', '.'));
+    if (!(v > 0)) { e.target.setAttribute('aria-invalid', 'true'); return; }
+    e.target.removeAttribute('aria-invalid');
+    state.amount = v * UNITS[R().family][state.unit];
+    update(e.target);
+  });
+  document.addEventListener('focusout', function(e){
+    if (e.target.classList && e.target.classList.contains('amt-in')) update();
+  });
+  document.addEventListener('click', function(e){
+    var t = e.target.closest('button');
+    if (!t) return;
+    if (t.dataset.baseUnit) { state.unit = t.dataset.baseUnit; update(); }
+    else if (t.dataset.units) {
+      state.units = t.dataset.units;
+      state.unit = state.units === 'imperial' ? (R().family === 'mass' ? 'lb' : 'cup') : R().written;
+      update();
+    }
+    else if (t.hasAttribute('data-reset')) { state.amount = R().base; state.unit = state.units === 'imperial' ? (R().family === 'mass' ? 'lb' : 'cup') : R().written; update(); }
+    else if (t.dataset.recipe) { loadRecipe(t.dataset.recipe); }
+    else if (t.classList.contains('gear')) {
+      var panel = t.parentNode.querySelector('.panel');
+      panel.hidden = !panel.hidden;
+      t.setAttribute('aria-expanded', String(!panel.hidden));
+    }
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key !== 'Escape') return;
+    var wrap = e.target.closest && e.target.closest('.gear-wrap');
+    if (!wrap) return;
+    var g = wrap.querySelector('.gear'), p = wrap.querySelector('.panel');
+    p.hidden = true; g.setAttribute('aria-expanded', 'false'); g.focus();
+  });
+
+  var pick = document.getElementById('recipePick');
+  pick.innerHTML = Object.keys(RECIPES).map(function(k){
+    return '<button type="button" data-recipe="' + k + '">' + RECIPES[k].label + '</button>';
+  }).join('');
+
+  loadRecipe('sausage');
+
+  var root = document.documentElement, label = document.getElementById('themeLabel');
+  var order = ['system','light','dark'], current = 'system';
+  try { var saved = localStorage.getItem('nac-style-theme'); if (order.indexOf(saved) !== -1) current = saved; } catch (e) {}
+  function applyTheme(m){
+    if (m === 'system') root.removeAttribute('data-theme'); else root.setAttribute('data-theme', m);
+    label.textContent = m.charAt(0).toUpperCase() + m.slice(1);
+    try { localStorage.setItem('nac-style-theme', m); } catch (e) {}
+  }
+  applyTheme(current);
+  document.getElementById('themeToggle').addEventListener('click', function(){
+    current = order[(order.indexOf(current) + 1) % order.length]; applyTheme(current);
+  });
+})();
+</script>
+</body>
+</html>

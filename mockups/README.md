@@ -88,6 +88,18 @@ in a browser — no build step.
   shown as the alternative). Built 2026-10-07 with the segmented control;
   `STYLE.md`'s Scaling callout entry describes it.
 
+- **`percent-scaling.html`**: proposal (2026-11-04) to scale a percentage
+  table from the amount of its base ingredient ("I have 1.36 kg of pork"),
+  instead of the 1× to 5× slider. Live on all three percentage recipes
+  (Breakfast sausage, Lazy pizza dough, Teriyaki sauce), at desktop and phone
+  widths: A in the gear callout, B above the table (recommended), and B's
+  field in the 100% row. Also covers the rule for which tables qualify,
+  rounding, and the decisions. Decided 2026-11-04: B; the sausage's pork
+  moves into the table at 1 kg; table amounts ignore Imperial; lines that
+  shouldn't scale get reworded. Round 2 (§3b) makes the bar a table row and drops the gear on
+  these pages. Built 2026-11-04 (Fugu `a9fd926`);
+  `STYLE.md`'s Scaling callout entry describes it.
+
 - **`methods-icon.html`**: proposal (2026-10-10) for the methods concept
   mark (`docs/METHODS.md`): five icon candidates at 48/24/16/12px, two
   ways to colour the chip without a sixth hue, the chips on cards, and the

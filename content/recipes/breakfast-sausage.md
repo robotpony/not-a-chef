@@ -24,12 +24,11 @@ caption: By weight; every other ingredient scales to the meat too
 
 ## Ingredients
 
-- 1–2 kg ground pork shoulder (80/20 or 70/30); pork belly also works
-
-#### Spice mix (% of meat weight)
+#### Meat and spice mix (% of meat weight)
 
 | Ingredient | % | Per 1 kg | Notes |
 |---|---|---|---|
+| Ground pork shoulder | 100% | 1 kg | 80/20 or 70/30; pork belly also works |
 | Water, cold | 7.5% | 75 g | |
 | Milk powder | 2% | 20 g | Don't skip it |
 | Salt | 1.6% | 16 g | |
@@ -50,7 +49,7 @@ Toast the fennel, coriander, and black peppercorns in a dry pan until fragrant, 
 
 In a large bowl, combine the pork, spice mix, and half the water. Mix with a pastry blender or a stand mixer with the paddle. Knead by hand 3–4 times, adding the remaining water slowly, until the mix is tacky but still soft. Work it more than just folding in, but don't overmix.
 
-Fry 1–2 tbsp of the mixture and taste for seasoning. Adjust.
+Fry a spoonful of the mixture and taste for seasoning. Adjust.
 
 Refrigerate at least an hour, or up to overnight.
 

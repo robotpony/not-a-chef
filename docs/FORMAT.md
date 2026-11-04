@@ -240,6 +240,22 @@ To group ingredients within one list (dry vs. wet, in a recipe that doesn't othe
 
 This is the one grammar every ingredient feature parses: scaling, unit conversion, quantity styling, and anything later (shopping lists, pantry matching, substitutions). There MUST NOT be a second, slightly different grammar growing in the JS. When a validator exists, it SHOULD emit its parsed output as a JSON fixture the JS tests assert against, so the two parsers can't drift apart.
 
+### Percentage tables
+
+An ingredient table with a `%` column (its header starts with `%`) and a row at exactly `100%` is a percentage table. That row is the base: the site adds an "I have" row above the headings, filled from the row's name and amount, and scales every amount from it. These pages have no scale slider or Units control.
+
+```markdown
+| Ingredient | % | Weight | Notes |
+|---|---|---|---|
+| AP flour | 100% | 600 g | |
+| Lukewarm water | 70% | 420 g | |
+```
+
+- Amounts scale from what's written, not from the `%` column, so the written batch reads exactly as written.
+- A row scales only if its amount has a recognized unit (g, kg, ml, L, cup, and so on). "3 cloves" stays put.
+- Amounts in the table ignore the Imperial setting; the base can be entered in lb or cups.
+- Any unit-bearing number elsewhere on the page scales too. Spell the unit out when a number shouldn't change with the batch, such as a portion size or the oil for a pan: "a pizza takes about 250 grams".
+
 ### Optional sections
 
 **To serve**: one line or a few words. What it goes with.
