@@ -2,9 +2,7 @@
 title: November 2026
 date: 2026-11-01
 ---
-This month builds on our travel and food reflections.  
-
-Two new ideas, a classic Canadian pie and a beef snack wrap that might work with salmon, join October's unfinished research: Indian curries, a Mexican feast, crab salad with cabbage, thin pan-flattened gyro beef, a two-phase pho method, and more "national dish" candidates.
+This month builds on our travel and food reflections. Two new ideas, a classic Canadian pie and a beef snack wrap that might work with salmon, join October's unfinished research: Indian curries, a Mexican feast, crab salad with cabbage, thin pan-flattened gyro beef, a two-phase pho method, and more "national dish" candidates.
 
 ## Week of Wednesday, November 4th
 
