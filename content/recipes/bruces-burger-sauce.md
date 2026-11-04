@@ -3,7 +3,7 @@ title: Bruce's burger sauce
 tags: [sauces, quick, vegetarian, burgers]
 source: original
 date: 2025-05-31
-servings: makes ~4 servings
+servings: ~4
 prep_time: 5 min
 total_time: 5 min
 cuisine: Canadian

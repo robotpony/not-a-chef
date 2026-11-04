@@ -3,7 +3,7 @@ title: Lazy pizza dough (2022)
 tags: [breads]
 source: family
 date: 2026-06-08
-servings: 3 medium pizzas and a focaccia
+portions: ~1.1 kg dough
 cuisine: Italian
 draft: false
 ---

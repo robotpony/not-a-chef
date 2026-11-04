@@ -6,7 +6,7 @@ tags:
   - make-ahead
 source: original
 date: 2026-10-17
-servings: ~550 ml (2¼ cups)
+portions: ~550 ml (2¼ cups)
 draft: false
 ---
 

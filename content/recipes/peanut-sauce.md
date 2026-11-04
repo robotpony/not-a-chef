@@ -3,7 +3,7 @@ title: Peanut sauce
 tags: [sauces, quick, vegan, dairy-free, family]
 source: family
 date: 2026-06-18
-servings: makes ~250 ml
+portions: ~250 ml
 prep_time: 5 min
 total_time: 5 min
 cuisine: Thai

@@ -3,7 +3,7 @@ title: Essence of cola
 tags: [drinks, make-ahead, vegan, dairy-free]
 source: original
 date: 2024-10-01
-servings: about 1.5 L
+portions: ~1.5 L
 prep_time: 30 min
 cook_time: 10 min
 total_time: 50 min (plus steeping)

@@ -3,7 +3,6 @@ title: Breakfast sausage
 tags: [bases, make-ahead]
 source: family
 date: 2025-09-19
-servings: scales to any quantity (percentages by weight)
 prep_time: 15 min (plus 1 hr chill)
 cook_time: 15–25 min
 cuisine: American

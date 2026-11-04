@@ -3,7 +3,7 @@ title: Crisp topping
 tags: [desserts, quick]
 source: original
 date: 2026-05-01
-servings: 1 pan (23×33 cm / 9×13 in)
+portions: 1 pan (23×33 cm / 9×13 in)
 prep_time: 10 min
 cook_time: 35 min
 total_time: 45 min

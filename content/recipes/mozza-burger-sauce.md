@@ -7,7 +7,7 @@ tags:
   - burgers
 source: original
 date: 2026-10-12
-servings: makes about 200 ml (¾ cup)
+portions: ~200 ml (¾ cup)
 prep_time: 5 min
 total_time: 5 min
 cuisine: Canadian

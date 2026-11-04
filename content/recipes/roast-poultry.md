@@ -3,7 +3,6 @@ title: Roast poultry
 tags: [bases, weeknight, make-ahead]
 source: original
 date: 2025-05-31
-servings: scales to bird size
 prep_time: 10 min (plus 40 min resting)
 cook_time: 75–95 min (varies by bird)
 total_time: 2 hr
