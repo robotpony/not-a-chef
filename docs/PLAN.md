@@ -47,7 +47,6 @@ Sites keep their own copies of the deploy script (`~/.claude/rules/site-ports.md
 - [ ] Build from a clean worktree of HEAD: `publish.sh deploy` can ship a `public/` that doesn't match HEAD. Take the lock, `rsync --checksum`, and the live check from the reference too.
 - [ ] Check for a dirty tree before building, not at the deploy step, and fix `warn_dirty`, which says uncommitted content will be published when `deploy.sh` refuses it.
 - [ ] Add `check` and `dry-run` to the Makefile, the shared target names.
-- [ ] Add `favicon.gif` to the rsync excludes if a dry run shows it in the web root. Not checked against the server.
 
 ## Concepts
 
