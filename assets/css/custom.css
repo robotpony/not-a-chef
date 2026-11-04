@@ -767,21 +767,25 @@ h2:has(> .ing-config) {
 .ing-btn.active { background: var(--accent-soft); color: var(--accent-strong); text-decoration: none; } /* Blowfish underlines any .active (its nav) */
 .ing-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
 
-/* The "I have" row above a percentage table's headings (Fugu's
+/* The "Scale based on" row between a percentage table's headings and its body (Fugu's
  * buildPercentRow, mockups/percent-scaling.html round 2, STYLE.md "Scaling
  * callout"): a row of the table, so each part sits in its column. Under
  * 680px Fugu moves the units into the amount cell (.is-stacked). Its unit
  * segments are the Units control's .ing-units and .ing-btn, inline. Fugu's
  * own rules are in fugu.css, which this site doesn't load. */
 .article-content table .ing-pct-row td {
-  padding: 2px .5714em 12px; border-bottom: 0; vertical-align: middle; white-space: nowrap;
+  padding: 8px .5714em; vertical-align: middle; white-space: nowrap;
+  background: var(--flag-soft);
+  border-top: 1px solid var(--ink-faint); border-bottom: 1px solid var(--ink-faint);
 }
 .article-content table .ing-pct-row td:first-child { padding-left: 0; }
 .article-content table .ing-pct-row td:last-child { padding-right: 0; }
 .article-content table .ing-pct-row td.ing-pct-name { white-space: normal; font-style: italic; }
+/* The row's long phrase widens the name column; don't let that wrap "For 900g". */
+.article-content table .ing-pct-head { white-space: nowrap; }
 .ing-pct-mult { font-size: .84rem; font-weight: 600; color: var(--accent-strong); }
 /* The table's own top margin would hold the row away from its section's heading. */
-.article-content table.ing-table--percent { margin-top: 0; }
+.article-content table.ing-table--percent { margin-top: 6px; }
 /* -9px is the input's padding and border, so its digits sit on the amounts' left edge. */
 .ing-pct-stack { display: flex; align-items: center; gap: 12px; margin-left: -9px; }
 .ing-pct-row.is-stacked .ing-pct-stack { flex-direction: column; align-items: flex-start; gap: 6px; }

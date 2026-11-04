@@ -242,7 +242,7 @@ This is the one grammar every ingredient feature parses: scaling, unit conversio
 
 ### Percentage tables
 
-An ingredient table with a `%` column (its header starts with `%`) and a row at exactly `100%` is a percentage table. That row is the base: the site adds an "I have" row above the headings, filled from the row's name and amount, and scales every amount from it. These pages have no scale slider or Units control.
+An ingredient table with a `%` column (its header starts with `%`) and a row at exactly `100%` is a percentage table. That row is the base: the site adds a "Scale based on" row under the headings, filled from the row's name and amount, and scales every amount from it. These pages have no scale slider or Units control.
 
 ```markdown
 | Ingredient | % | Weight | Notes |
