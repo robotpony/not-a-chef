@@ -60,4 +60,4 @@ open_browser &
 # //localhost:1313/index.json, which triggers Chrome's local network
 # access prompt). Keep the server in memory so public/ only ever holds
 # real builds.
-exec hugo server -D --disableFastRender --renderToMemory --bind 0.0.0.0
+exec hugo server -D --disableFastRender --renderToMemory --bind 127.0.0.1

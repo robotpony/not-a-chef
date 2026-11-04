@@ -40,6 +40,15 @@ Drinks got their own section on 2026-10-27 (`content/drinks/`, Fugu 356fad8). Di
 - [ ] `/mx:content-check` over the docs. (The stale-facts pass over every doc in `docs/`, `mockups/*.md`, README and CLAUDE.md was done 2026-10-28.)
 - [ ] Last: cut CLAUDE.md to what an agent needs to start.
 
+## Deploy tooling
+
+Sites keep their own copies of the deploy script (`~/.claude/rules/site-ports.md`, decided 2026-11-04). The reference is brucealderson.ca's `tools/deploy.sh`, once it has survived a real deploy.
+
+- [ ] Build from a clean worktree of HEAD: `publish.sh deploy` can ship a `public/` that doesn't match HEAD. Take the lock, `rsync --checksum`, and the live check from the reference too.
+- [ ] Check for a dirty tree before building, not at the deploy step, and fix `warn_dirty`, which says uncommitted content will be published when `deploy.sh` refuses it.
+- [ ] Add `check` and `dry-run` to the Makefile, the shared target names.
+- [ ] Add `favicon.gif` to the rsync excludes if a dry run shows it in the web root. Not checked against the server.
+
 ## Concepts
 
 A glossary of the cookbook's concepts, with a quiet hover on the words in the text. Mock: `mockups/glossary.html`; decided 2026-10-30. Built 2026-10-30: hugo-warped holds the spec (`glossary/README.md`), partials and tools (4d260ae); Fugu draws the popover, the A to Z page with search, and `index.json` (de1505e); this repo has the entries in `content/reference/glossary/` (`list: local` cascade), the styles in `custom.css`, the footer link, `make glossary-candidates|link|check`, and `/lint` step 7. Empty entries are stubs, left off the site until written.
