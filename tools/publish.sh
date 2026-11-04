@@ -58,6 +58,23 @@ commit_build() {
   git commit --quiet -m "Publishes build $BUILD_NUMBER." -- "$BUILD_FILE"
 }
 
+# Refuse to publish a page with broken frontmatter, such as a new Food Log
+# month with none: Hugo builds those without complaint. Skips what Hugo skips
+# (ALL-CAPS working notes, ignoreFiles in hugo.toml). Warnings don't block.
+check_content() {
+  local files=() f output
+  while IFS= read -r f; do
+    files+=("$f")
+  done < <(find content -name '*.md' | grep -vE '/[A-Z][A-Z0-9_-]*\.md$')
+
+  if ! output=$(python3 themes/fugu/tools/frontmatter.py check "${files[@]}" 2>&1); then
+    echo "error: frontmatter check failed:" >&2
+    echo "$output" | grep -B1 'ERROR' | grep -v '^--$' | sed 's/^/  /' >&2
+    exit 1
+  fi
+  echo "Checked frontmatter: ok."
+}
+
 # Refuse to ship a public/ that came from a dev server or a draft build.
 check() {
   if [[ ! -d public ]]; then
@@ -94,6 +111,7 @@ cmd="${1:-all}"
 case "$cmd" in
   all)
     check_hugo
+    check_content
     warn_dirty
     bump_build
     build
@@ -106,16 +124,19 @@ case "$cmd" in
     build
     ;;
   check)
+    check_content
     check
     ;;
   dry-run)
     check_hugo
+    check_content
     warn_dirty
     build
     check
     tools/deploy.sh --dry-run
     ;;
   deploy)
+    check_content
     check
     tools/deploy.sh
     ;;

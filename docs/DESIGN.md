@@ -189,7 +189,7 @@ Builds the site and deploys to the self-hosted server.
 /publish
 ```
 
-- Runs `tools/publish.sh`: builds with `hugo --minify --cleanDestinationDir`, refuses to ship a `public/` containing dev-server output (localhost URLs, livereload), then runs `tools/deploy.sh` (rsync). A full publish bumps `data/build.toml` first and commits the bump after a successful deploy; the footer shows "Build N · hash" (a `+` after the hash means uncommitted changes went out), and "Build dev" on the local server. Only the full path counts.
+- Runs `tools/publish.sh`: stops on a frontmatter error (`frontmatter.py check`, skipping the ALL-CAPS working notes Hugo ignores; warnings don't block), builds with `hugo --minify --cleanDestinationDir`, refuses to ship a `public/` containing dev-server output (localhost URLs, livereload), then runs `tools/deploy.sh` (rsync). A full publish bumps `data/build.toml` first and commits the bump after a successful deploy; the footer shows "Build N · hash" (a `+` after the hash means uncommitted changes went out), and "Build dev" on the local server. Only the full path counts.
 - Each real deploy refuses uncommitted changes, writes `public/version.txt` (tag and commit), and tags the deployed commit `deploy-YYYY-MM-DD` (`-2` for a second that day). `git log deploy-A..deploy-B` is the changelog; tags stay local until `git push --tags`
 - Reports build output and any errors
 - `tools/publish.sh dry-run` shows what rsync would change without deploying; `build`, `check`, and `deploy` run the steps individually
