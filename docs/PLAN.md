@@ -74,17 +74,13 @@ Under way. The softer colour scheme (2026-11-01) and the palette stripe and home
 
 Fixes from the pass:
 
-- [ ] Phone cards in the homepage's two-column band clip tag chips to "c…" and Serves to a lone "s" (`custom.css:1025`, `:1064`).
-- [ ] Article titles and headings missed the softening: h1 is `rgb(29,30,23)`, weight 800, 36px, and h2 `rgb(37,38,30)`, against `--ink` `rgb(43,44,37)`, weight 700, 33.6px on list pages. It shows most in dark mode.
-- [ ] `servings` holds a yield or a note in 21 recipes, so cards read "Serves ~550 ml" and "Serves makes about 200 …". Move yields to `portions`.
-- [ ] Phone methods and builds use Blowfish's "Table of Contents" box (title case, tinted, tight against the text); recipes have the styled "Recipe notes". Fugu's change.
-- [ ] Food Log task items draw a bullet and a checkbox, and vault tags show in headings ("Mexican feast #todo").
+- [ ] Vault tags show in headings ("Mexican feast #todo"). Hide trailing tags at render and keep them in the source, since the todo tool reads them: with fugu-agent, then bump Fugu. `#todo` on list items stays visible (`FORMAT.md`).
 - [ ] Chip wording: builds show Burgers twice ("Burgers · Build", then "Burgers"), essays show "Food-Memory" where cards say "food memories", and page chips are title case where cards are lowercase.
 - [ ] Lineage repeats each close year ('57 on the left, 1957 on the right).
 - [ ] A wiki link's arrow can wrap alone onto the next line (build sidebar, "In-N-Out burger spread →"). Keep it with the last word.
 - [ ] Main column bottoms have three right edges: text at 752px, essay Related at 836px, recipe Related and prev/next at 871px.
 - [ ] Glossary: the search placeholder clips on phones, definitions are about 18px against 16px body text, and the right third is empty on desktop.
-- [ ] Content: a literal `#win-the-fridge` in Lazy tomato soup's ingredient note; em-dashes in the Win the fridge intro and the June 2026 summary.
+- [ ] Content: em-dashes in the Win the fridge intro and the June 2026 summary.
 
 To mock, from the pass:
 
