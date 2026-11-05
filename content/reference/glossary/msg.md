@@ -1,6 +1,6 @@
 ---
 title: MSG
-kind: ingredient
+params: {kind: ingredient}
 also: [monosodium glutamate]
 date: 2026-10-30
 ---

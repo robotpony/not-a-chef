@@ -3,7 +3,7 @@ title: Hoagie rolls
 tags: [breads]
 source: https://www.cookwell.com/recipe/hoagie-rolls
 date: 2026-04-18
-servings: 4 rolls (double for 8)
+portions: 4 rolls
 total_time: 3 hours
 cuisine: American
 aliases: [/recipes/hoagie-style-french-rolls/]

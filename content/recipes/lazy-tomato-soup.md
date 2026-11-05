@@ -33,7 +33,7 @@ This is a one-pot pasta: the pasta cooks directly in the soup, with starch as th
 - thyme, dried oregano, salt, and pepper, to taste
 - a handful of parsley, chopped, to finish
 - leftover tomatoes, zucchini, kale, or other hardy vegetables, chopped (optional)
-    - #win-the-fridge bonus: whatever needs using up goes in with the mushrooms
+    - Win the fridge bonus: whatever needs using up goes in with the mushrooms
 
 ## Method
 

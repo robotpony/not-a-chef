@@ -4,6 +4,9 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
+# Before anything else, so a Hugo that's too old doesn't stop a running server.
+themes/hugo-warped/tools/check-hugo.sh
+
 URL="http://localhost:1313/"
 
 # Restart, don't reuse: a hugo server left running from an earlier session
@@ -57,4 +60,4 @@ open_browser &
 # //localhost:1313/index.json, which triggers Chrome's local network
 # access prompt). Keep the server in memory so public/ only ever holds
 # real builds.
-exec hugo server -D --disableFastRender --renderToMemory --bind 0.0.0.0
+exec hugo server -D --disableFastRender --renderToMemory --bind 127.0.0.1

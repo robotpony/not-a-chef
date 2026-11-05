@@ -3,7 +3,7 @@ title: Lazy pizza dough (2022)
 tags: [breads]
 source: family
 date: 2026-06-08
-servings: 3 medium pizzas and a focaccia
+portions: ~1.1 kg dough
 cuisine: Italian
 draft: false
 ---
@@ -35,7 +35,7 @@ This recipe uses weight measures as it’s simpler, assuming you have a decent s
 | Instant yeast | 1.7% | 10 g | |
 | Lukewarm water | 70% | 420 g | Medium hydration |
 
-Makes about 1.1 kg of dough: enough for a 350 g focaccia and three 250 g pizzas.
+Makes about 1.1 kg of dough. A focaccia takes about 350 grams and a pizza about 250 grams.
 
 ## Method
 
@@ -57,9 +57,9 @@ I don’t bother with any fancy dough prep while it proofs, though folding can h
 
 We usually make a focaccia snack in the afternoon with part of the dough (because focaccia is awesome).
 
-Pour too much olive oil (about 75 ml) into a medium baking dish or a ½ short steam pan, and add about 350 g of the dough. Stretch it to the size of the pan and let it rest 10–20 minutes. Stretch it again, repeating until it relents to your will.
+Pour too much olive oil (about 75 millilitres) into a medium baking dish or a ½ short steam pan, and add about 350 grams of the dough. Stretch it to the size of the pan and let it rest 10–20 minutes. Stretch it again, repeating until it relents to your will.
 
-Dimple the dough with your fingers as hard and deep as you can, like you’re playing a Ben Folds song on someone else’s piano. Add another 25 ml of oil and your toppings, and press them in with more force than seems necessary.
+Dimple the dough with your fingers as hard and deep as you can, like you’re playing a Ben Folds song on someone else’s piano. Add another 25 millilitres of oil and your toppings, and press them in with more force than seems necessary.
 
 Bake in a 220°C (425°F) convection oven, or 230°C (450°F) standard, until nicely browned, 25–30 minutes.
 
@@ -67,7 +67,7 @@ Cool in the pan on a rack. Once it's cool enough to handle, lift the bread out a
 
 ## Pizza
 
-Divide the remaining dough into 3 portions of about 250 g and roll into balls. Rest them 10–20 minutes if the dough is at room temperature, or a few hours if it’s coming out of the fridge.
+Divide the remaining dough into portions of about 250 grams and roll into balls. Rest them 10–20 minutes if the dough is at room temperature, or a few hours if it’s coming out of the fridge.
 
 Flatten and stretch the dough as thin as you can reasonably get it. Form a crust or not; either way it will be tasty pizza. It really doesn’t matter how you do this: roll it out, flip it in the air, use cutting boards to flatten it, or whatever. Just make sure it’s even and about the size of pie you want to make. If the dough won't stretch, leave it for 10–20 minutes to think about its life choices and try again. This may be inconvenient to your dinner plans, but it’s unlikely you can convince dough that time matters.
 

@@ -2,6 +2,6 @@
 /resources/
 .hugo_build.lock
 tools/config.toml
-.obsidian/
+.obsidian/workspace*.json
 .DS_Store
 

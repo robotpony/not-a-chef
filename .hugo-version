@@ -1,0 +1,4 @@
+# Checked by themes/hugo-warped/tools/check-hugo.sh from tools/preview.sh and tools/publish.sh.
+min = 0.165.0      # refuse anything older
+tested = 0.169.0   # warn on anything else; raise it after checking a build on a newer Hugo
+extended = true    # Blowfish needs the extended build

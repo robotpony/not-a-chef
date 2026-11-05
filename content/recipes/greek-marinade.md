@@ -3,7 +3,7 @@ title: Greek marinade
 tags: [bases, mediterranean, quick, dairy-free]
 source: original
 date: 2025-04-01
-servings: for about 600 g protein
+portions: enough for ~600 g protein
 prep_time: 5 min
 total_time: 5 min (plus marinating)
 cuisine: Greek

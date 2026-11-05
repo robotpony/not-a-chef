@@ -31,7 +31,7 @@ Tonight we ordered a variety of burgers, including an all-veg patty, an impossib
 
 I have a fairly accurate [White Spot burger recipe](https://docs.google.com/document/d/12YebYY6m_wGWr7SaApErUp_ZT-F8YgrfMoshwmsRihg/edit) that gets you close to their basic diner burger. → [[White Spot burger]]
 
-### Quick proteins for #lunchramen
+### Quick proteins for lunch ramen #lunchramen
 
 I try to keep some sort of portion sized sausages in the freezer for quick meals, including adding protein and flavour to quick ramen. And if I have eggs on hand, a boiled egg adds a lot of flavour and texture to a good bowl. This week I tried cooking the two together.
 

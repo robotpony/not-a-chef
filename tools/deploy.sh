@@ -4,8 +4,9 @@
 # Pass --dry-run to list what would change without touching the server.
 set -euo pipefail
 
-# .dh-diag is DreamHost's own file in the web root; --delete would remove it.
-RSYNC_FLAGS=(-avz --delete --exclude .dh-diag)
+# .dh-diag is DreamHost's own file in the web root, and favicon.gif is on the
+# server but not in the repo; --delete would remove them.
+RSYNC_FLAGS=(-avz --delete --exclude .dh-diag --exclude favicon.gif)
 if [[ "${1:-}" == "--dry-run" ]]; then
   RSYNC_FLAGS+=(--dry-run)
 fi

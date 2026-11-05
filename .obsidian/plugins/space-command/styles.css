@@ -1,0 +1,301 @@
+/* Space Command Plugin Styles */
+
+/* Logo styling */
+.space-command-logo {
+  display: inline-block;
+  background-color: #689fd6;
+  color: white;
+  border-radius: 4px;
+  padding: 3px 3px 2px;
+  font-weight: 600;
+  font-size: 0.9em;
+  text-align: center;
+  line-height: 1.2;
+  vertical-align: middle;
+}
+
+/* About Section in Settings */
+.space-command-about-section {
+  background-color: var(--background-secondary);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.space-command-about-section .about-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.space-command-about-section .about-logo {
+  font-size: 1.2em;
+}
+
+.space-command-about-section .about-title {
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.space-command-about-section .about-blurb {
+  color: var(--text-muted);
+  margin: 0 0 12px 0;
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+.space-command-about-section .about-details {
+  font-size: 0.85em;
+  color: var(--text-muted);
+}
+
+.space-command-about-section .about-details a {
+  color: var(--text-accent);
+}
+
+/* Tag styling for editor and reading mode - consistent sizing and alignment */
+/* Reading Mode tags */
+.markdown-preview-view .tag,
+.markdown-rendered .tag {
+  font-family: var(--font-monospace) !important;
+  font-size: 12px !important;
+  vertical-align: middle !important;
+  display: inline-block !important;
+}
+
+/* Editor (Live Preview/Source) tags - CodeMirror elements */
+/* High specificity selectors to override Obsidian defaults */
+.markdown-source-view .cm-hashtag,
+.cm-s-obsidian .cm-hashtag,
+.cm-editor .cm-hashtag,
+.cm-line .cm-hashtag {
+  font-family: var(--font-monospace) !important;
+  font-size: 12px !important;
+  vertical-align: middle !important;
+}
+
+/* Tag colours: Space Command's TagChip.colours (App/Sources/ItemRow.swift),
+   values from its Palette, so the app, its help pages and Obsidian agree.
+   Set through Obsidian's own tag variables, so the theme's chip shape stays. */
+body.theme-dark {
+  --sc-terracotta: #ff645a;
+  --sc-clay: #d0633d;
+  --sc-amber: #f5ae2e;
+  --sc-dim: #a8927c;
+  --sc-faint: #6f6255;
+  --sc-sage: #1398b9;
+  --sc-oak: #509552;
+  --sc-overlay: #3c3731;
+}
+
+body.theme-light {
+  --sc-terracotta: #d63a31;
+  --sc-clay: #b04e2b;
+  --sc-amber: #b57609;
+  --sc-dim: #7a6b5c;
+  --sc-faint: #b3a594;
+  --sc-sage: #0d7895;
+  --sc-oak: #3d7a3f;
+  --sc-overlay: #ebe3d8;
+}
+
+/* Other tags: Dim on Overlay */
+.cm-hashtag,
+.tag {
+  --sc-ink: var(--sc-dim);
+  --tag-color: var(--sc-ink);
+  --tag-color-hover: var(--sc-ink);
+  --tag-background: var(--sc-tint, var(--sc-overlay));
+  --tag-background-hover: var(--sc-tint, var(--sc-overlay));
+  --tag-border-width: 0;
+}
+
+/* Priorities, ideas and triage: ink on a 14% tint */
+.cm-hashtag.cm-tag-p0, .tag[href="#p0"] { --sc-ink: var(--sc-terracotta); }
+.cm-hashtag.cm-tag-p1, .tag[href="#p1"] { --sc-ink: var(--sc-clay); }
+.cm-hashtag.cm-tag-p2, .tag[href="#p2"] { --sc-ink: var(--sc-amber); }
+.cm-hashtag.cm-tag-p3, .tag[href="#p3"] { --sc-ink: var(--sc-dim); }
+.cm-hashtag.cm-tag-p4, .tag[href="#p4"] { --sc-ink: var(--sc-faint); }
+.cm-hashtag.cm-tag-idea, .tag[href="#idea"],
+.cm-hashtag.cm-tag-ideas, .tag[href="#ideas"],
+.cm-hashtag.cm-tag-ideation, .tag[href="#ideation"] { --sc-ink: var(--sc-sage); }
+.cm-hashtag.cm-tag-triage, .tag[href="#triage"] { --sc-ink: var(--sc-oak); }
+
+.cm-hashtag:is(.cm-tag-p0, .cm-tag-p1, .cm-tag-p2, .cm-tag-p3, .cm-tag-p4, .cm-tag-idea, .cm-tag-ideas, .cm-tag-ideation, .cm-tag-triage),
+.tag:is([href="#p0"], [href="#p1"], [href="#p2"], [href="#p3"], [href="#p4"], [href="#idea"], [href="#ideas"], [href="#ideation"], [href="#triage"]) {
+  --sc-tint: color-mix(in srgb, var(--sc-ink) 14%, transparent);
+}
+
+/* Snooze: Dim on a dashed Faint chip, no fill */
+.cm-hashtag:is(.cm-tag-snooze, .cm-tag-snoozed, .cm-tag-future),
+.tag:is([href="#snooze"], [href="#snoozed"], [href="#future"]) {
+  --sc-tint: transparent;
+  --tag-border-width: 1px;
+  --tag-border-color: var(--sc-faint);
+  --tag-border-color-hover: var(--sc-faint);
+  border-style: dashed !important;
+}
+
+/* Done lines: Faint on Overlay */
+.HyperMD-task-line[data-task="x"] .cm-hashtag,
+.HyperMD-task-line[data-task="X"] .cm-hashtag,
+.task-list-item.is-checked .tag {
+  --sc-ink: var(--sc-faint);
+  --sc-tint: var(--sc-overlay);
+}
+
+/* Heading progress ("3/7"), beside the sort button */
+.space-command-heading-progress {
+  margin-left: 8px;
+  padding: 0 6px;
+  border-radius: 5px;
+  font-family: var(--font-monospace);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--sc-dim);
+  background: var(--sc-overlay);
+  vertical-align: middle;
+}
+
+.space-command-heading-progress.is-complete {
+  color: var(--sc-faint);
+}
+
+/* Landed line from Space Command: a brief Amber flash that fades */
+.cm-line.space-command-landed {
+  animation: space-command-landed 1.6s ease-out forwards;
+}
+
+@keyframes space-command-landed {
+  from { background-color: color-mix(in srgb, var(--sc-amber) 28%, transparent); }
+  to { background-color: transparent; }
+}
+
+/* Slash Command & Date Suggest Styles */
+.space-command-suggestion {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+}
+
+.space-command-suggestion .suggestion-icon {
+  font-size: 16px;
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.space-command-suggestion .suggestion-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.space-command-suggestion .suggestion-name {
+  font-weight: 500;
+  color: var(--text-normal);
+}
+
+.space-command-suggestion .suggestion-description {
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Editor inline sort button */
+.todo-sort-btn-editor {
+  opacity: 0.4;
+  background: transparent;
+  border: none;
+  padding: 2px 4px;
+  margin-left: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  color: var(--text-muted);
+  vertical-align: middle;
+}
+
+.todo-sort-btn-editor:hover {
+  opacity: 1;
+  color: var(--text-accent);
+  background: var(--background-modifier-hover);
+}
+
+.todo-sort-btn-editor:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+/* Tab Lock Button Styles */
+.space-command-tab-lock-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.4;
+  padding: 2px;
+  margin-right: 2px;
+  border-radius: 3px;
+  transition: opacity 0.15s, background-color 0.15s;
+  flex-shrink: 0;
+}
+
+.space-command-tab-lock-btn:hover {
+  opacity: 0.8;
+  background-color: var(--background-modifier-hover);
+}
+
+.space-command-tab-lock-btn svg {
+  display: block;
+}
+
+/* When tab is locked: hide lock button and close button, show only Obsidian's pushpin */
+.space-command-tab-locked .space-command-tab-lock-btn {
+  display: none;
+}
+
+.space-command-tab-locked .workspace-tab-header-inner-close-button {
+  display: none;
+}
+
+/* Make the pin icon clickable when locked */
+.space-command-tab-locked .workspace-tab-header-status-container {
+  cursor: pointer;
+}
+
+/* Team list in settings */
+.space-command-team-list {
+  margin-top: 8px;
+}
+
+.space-command-team-entry {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  font-size: 13px;
+}
+
+.space-command-team-handle {
+  font-family: var(--font-monospace);
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.space-command-team-name {
+  color: var(--text-normal);
+}
+
+.space-command-team-me-badge {
+  font-size: 11px;
+  color: var(--interactive-accent);
+  opacity: 0.8;
+}

@@ -3,7 +3,7 @@ title: English muffins
 tags: [breads]
 source: family
 date: 2026-06-08
-servings: about 14 muffins
+portions: ~14 muffins
 cook_time: 12 min
 cuisine: British
 draft: false

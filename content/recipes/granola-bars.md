@@ -3,7 +3,7 @@ title: Granola bars
 tags: [make-ahead, vegetarian]
 source: original
 date: 2026-02-02
-servings: 12–14 bars
+portions: 12–14 bars
 prep_time: 20 min
 cook_time: 10–12 min
 total_time: 20 min (plus 2 hr chilling)

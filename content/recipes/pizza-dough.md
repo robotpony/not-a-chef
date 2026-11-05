@@ -3,7 +3,7 @@ title: Pizza dough
 tags: [breads, make-ahead]
 source: original
 date: 2022-01-01
-servings: 8 individual pizzas (200 g each)
+portions: 8 individual pizzas (200 g each)
 prep_time: 20 min (plus 24–48 hr cold ferment)
 cook_time: 12–16 min per pizza
 total_time: 24–48 hr (mostly hands-off)

@@ -1,6 +1,6 @@
 ---
 title: Paneer
-kind: ingredient
+params: {kind: ingredient}
 date: 2026-10-30
 ---
 
