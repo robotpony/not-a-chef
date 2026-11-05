@@ -6,6 +6,10 @@ This month builds on our travel and food reflections. Two new ideas, a classic C
 
 ## Week of Wednesday, November 4th
 
+### New food wishes #todo 
+
+- [ ] Bibimbap [1](https://www.youtube.com/watch?v=PlfHUMU3z14)
+
 ### Food #ideas 
 
 - [ ] A classic Canadian pie [1](https://www.youtube.com/watch?v=eZ6bDEQJY_s)
