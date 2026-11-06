@@ -1,0 +1,4 @@
+ignore = [
+  "themes/hugo-warped/",
+  "themes/blowfish/",
+]
