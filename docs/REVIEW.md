@@ -10,7 +10,7 @@ Not questions for now, kept so they aren't lost: the drafts (`make drafts`). The
 
 ## Casserole layer drawings #todo
 
-Twelve new slab layers for the casseroles blueprint, in `mockups/exploded-builds.html` §6b (open it with `python3 -m http.server` in `mockups/`, then `/exploded-builds.html#casseroles`; they're also at the end of the §2 kit). Once approved, they're exported into Fugu and fugu-agent commits them. Baked pasta's sauce layer moved from `marinara` (a round spoonful) to `ragu` (a slab) to match the other slabs.
+Twelve new slab layers for the casseroles blueprint, in `mockups/exploded-builds.html` §6b (open it with `python3 -m http.server` in `mockups/`, then `/exploded-builds.html#casseroles`; they're also at the end of the §2 kit). Once approved, they're exported into Fugu and fugu-agent commits them. Baked pasta's sauce layer moved from `marinara` (a round spoonful) to `ragu` (a slab) to match the other slabs. Revised 2026-11-07 from your first review: loose layers are now packed pieces with no slab under them, and the turkey build has gravy under and over the turkey.
 
 - [ ] Approve as drawn, or write changes after a layer: mash · stuffing · gravy · meat-chunks · mince · veg-mixed · veg-roasted · rice · curry · tortilla · beans · salsa
 

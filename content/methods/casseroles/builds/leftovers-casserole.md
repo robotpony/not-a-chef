@@ -25,8 +25,9 @@ Last night's flavours, with a browned top or crisp edges.
 mash        | Mashed potatoes              | lid, browned
 stuffing    | Stuffing                     | savoury, soaks the gravy
 veg-roasted | Roasted vegetables           | sweet
-meat-chunks | Turkey, in bite-sized pieces | savoury
 gravy       | Turkey gravy                 | binds
+meat-chunks | Turkey, in bite-sized pieces | savoury
+gravy       | Turkey gravy                 | keeps it from sticking
 caption: Turkey dinner casserole, top to bottom
 ```
 
@@ -44,7 +45,7 @@ caption: Takeout casserole, top to bottom
 ## Why these picks
 
 - **The dinner's own sauce.** Turkey gets its gravy, takeout keeps its sauces. A new sauce tastes like a second dinner.
-- **Gravy at the bottom of a roast dinner.** It soaks up into the turkey and stuffing as it bakes, so nothing dries out.
+- **Gravy under and over the turkey.** A layer on the dish keeps it from sticking, and a layer over the turkey soaks into it and the vegetables as it bakes, so nothing dries out.
 - **Saucy dishes on top of takeout.** They run down through the rest; drier dishes go in the middle.
 - **One cuisine at a time.** Thai with Thai, Indian with Indian. Mixing them works less often than you'd think.
 
