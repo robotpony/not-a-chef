@@ -43,8 +43,8 @@ Baked ziti is a *pasta al forno* (a baked pasta casserole) from Italian-American
 
 ## Variations
 
-- **Mac and cheese:** a cheese sauce in place of the tomato ([[Baked mac & cheese]]).
-- **Johnny Marzetti:** macaroni with ground beef and tomato sauce, the Ohio cafeteria casserole.
+- **[[Baked macaroni and cheese]]:** a cheese sauce in place of the tomato ([[Baked mac & cheese]]).
+- **[[Johnny Marzetti]]:** macaroni with ground beef and tomato sauce, the Ohio cafeteria casserole.
 - **Baked ziti:** ragù and a little béchamel, with mozzarella on top.
 
 ## Recipes
