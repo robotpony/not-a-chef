@@ -16,9 +16,24 @@ Most of what goes in is already cooked. That's the point. A casserole turns left
 - **They travel.** A casserole freezes, carries, and reheats, so it's what you bring to a potluck, a new neighbour, or a family that's grieving.
 - **They're back, from scratch.** The modern casserole swaps the canned soup for a real sauce and borrows from everywhere: enchiladas, baked ziti, curry over rice.
 
-## Before the casserole
+## A short history
 
-Baking a starch with cheese or meat is much older than the word. The *Liber de Coquina*, from around 1300, has *de lasanis*: sheets of dough, boiled, then layered with cheese and spices ([Wikipedia](https://en.wikipedia.org/wiki/Lasagna)). Cassoulet, the bean and meat bake of southwestern France, is traditionally dated to 1355, though the word itself is from the 19th century ([Wikipedia](https://en.wikipedia.org/wiki/Cassoulet)). The builds start with the first written casserole that fits the four parts, baked macaroni and cheese in 1769.
+Baking a starch with cheese or meat is much older than the word. The *Liber de Coquina*, from around 1300, has *de lasanis*: sheets of dough, boiled, then layered with cheese and spices ([Wikipedia](https://en.wikipedia.org/wiki/Lasagna)). Cassoulet, the bean and meat bake of southwestern France, is traditionally dated to 1355, though the word itself is from the 19th century ([Wikipedia](https://en.wikipedia.org/wiki/Cassoulet)).
+
+The classics that fit all four parts:
+
+| Year | Casserole | What it was |
+|---|---|---|
+| 1769 | [Baked macaroni and cheese](https://en.wikipedia.org/wiki/Macaroni_and_cheese) | Elizabeth Raffald's macaroni in thickened cream under Parmesan; Thomas Jefferson served "a pie called macaroni" in 1802 |
+| 1791 | [Cottage pie](https://en.wikipedia.org/wiki/Shepherd%27s_pie) | Minced leftover roast under mashed potato (see [[Cottage pie casserole]]) |
+| c. 1900 | [Funeral potatoes](https://en.wikipedia.org/wiki/Funeral_potatoes) | Potatoes in a cheesy cream sauce under buttered cornflakes, from Utah's Mormon community |
+| 1905 | [Tetrazzini](https://en.wikipedia.org/wiki/Tetrazzini) | Poultry and mushrooms in a sherry cream sauce over spaghetti, named for the opera singer Luisa Tetrazzini |
+| 1911 | [Tamale pie](https://en.wikipedia.org/wiki/Tamale_pie) | Seasoned meat under a cornmeal crust, from the Southwest |
+| 1934 | [Cream of mushroom soup](https://en.wikipedia.org/wiki/Cream_of_mushroom_soup) | Campbell's condensed soup, the sauce in a can |
+| 1950s | [King Ranch chicken](https://en.wikipedia.org/wiki/King_Ranch_chicken) | Chicken and tortillas layered in canned soup and Ro-Tel, under cheese; Texas women's clubs |
+| 1952 | [Tuna casserole](https://en.wikipedia.org/wiki/Tuna_casserole) | Canned tuna and egg noodles in mushroom soup, in a Campbell's recipe book |
+| 1953 | [Johnny Marzetti](https://en.wikipedia.org/wiki/Johnny_Marzetti) | Macaroni, ground beef, and tomato under cheese; the earliest dated recipe, from Columbus, Ohio |
+| 1955 | [Green bean casserole](https://en.wikipedia.org/wiki/Green_bean_casserole) | Dorcas Reilly's green beans in mushroom soup under fried onions, at Campbell's |
 
 ## What isn't a casserole here
 

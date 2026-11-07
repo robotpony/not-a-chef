@@ -26,7 +26,7 @@ The starch is what makes a casserole a meal, and what makes a little filling go 
 | Stuffing, on top or as a middle layer | It's holiday leftovers | The top: crisps on its own, needs no cheese |
 | Rice or noodles, underneath | It's takeout or curry leftovers | The sauce: add extra, the starch soaks it up |
 | Pasta, mixed through | You want a baked pasta | The sauce: loose, since pasta drinks it; cheese on top |
-| Cornmeal or tortillas | It's a tamale pie or King Ranch chicken | The top: a cornmeal crust, or cheese over the tortillas |
+| Tortillas, layered | It's an enchilada casserole | The sauce: on every layer, so the tortillas soften |
 
 ## How it fails
 

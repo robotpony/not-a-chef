@@ -1,14 +1,14 @@
 ---
-title: Taco lasagne casserole
+title: Enchilada casserole
 date: 2026-11-07
 draft: true
 working_on: "Making it: how many layers a dish holds, and how much sauce keeps the tortillas soft without going soupy."
 tags:
   - method
   - casseroles
-description: "Tortillas layered with taco beef, beans, salsa, and cheese, four or five layers deep: a seven-layer dip you bake, or enchiladas you don't have to roll."
+description: "Enchiladas you don't have to roll: tortillas layered with taco beef, beans, enchilada sauce, and cheese, four or five layers deep."
 ---
-Taco night, stacked and baked. Flour or corn tortillas are layered with seasoned beef, beans, salsa, and cheese, the way a seven- or twelve-layer dip is, and the oven melts it into something you can cut. Four or five layers is plenty; more is a party trick.
+Enchiladas, stacked instead of rolled. Flour or corn tortillas are layered with seasoned beef, beans, enchilada sauce or salsa, and cheese, and the oven melts it into something you can cut. Four or five layers is plenty. Stacked higher, it's a taco lasagne, or a twelve-layer dip you bake.
 
 It's layered like a lasagne, which this blueprint otherwise leaves out, but nothing in it is built for the dish. The beef is [[Beef base]] with taco seasoning, the beans and salsa come from the fridge, and the tortillas are whatever's in the bag.
 
@@ -29,11 +29,12 @@ beans      | Refried or black beans       | creamy
 mince      | Taco beef base               | savoury, spiced
 tortilla   | Tortilla                     | base
 repeat: 2-5 x3
-caption: Taco lasagne casserole, top to bottom
+caption: Enchilada casserole, top to bottom
 ```
 
 ## Why these picks
 
+- **Stacked, not rolled.** The same parts as enchiladas, without rolling a dozen tortillas.
 - **Sauce on every layer.** The tortillas soften by soaking it up. A dry layer stays leathery.
 - **Beans and beef in separate layers.** The beans are the creamy layer, which a lasagne gets from its cheese filling.
 - **Cold toppings after.** Lettuce and sour cream baked are limp and split. Added at the end, they're the seven-layer dip's fresh top.
@@ -46,10 +47,10 @@ caption: Taco lasagne casserole, top to bottom
 
 ## Variations
 
-- **Enchiladas:** roll the filling in the tortillas, lay them side by side, and cover them with enchilada sauce and cheese. Same parts, more work.
-- **Chicken:** [[Shredded taco chicken]] in place of the beef, which is most of the way to [[King Ranch chicken]].
+- **Rolled enchiladas:** roll the filling in the tortillas, lay them side by side, and cover them with enchilada sauce and cheese. Same parts, more work.
+- **Chicken:** [[Shredded taco chicken]] in place of the beef. With cream of chicken soup in the sauce, it's most of the way to King Ranch chicken, the Texas potluck casserole.
 - **Vegetarian:** beans and roasted vegetables, or the lentils from [[Lentil tacos]].
-- **Twelve layers:** a thinner layer of each, and a deeper dish.
+- **Taco lasagne, twelve layers:** a thinner layer of each, and a deeper dish.
 
 ## Recipes
 

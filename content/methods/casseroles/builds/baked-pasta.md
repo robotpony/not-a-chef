@@ -8,7 +8,7 @@ tags:
   - casseroles
 description: "Pasta, sauce, and cheese, mixed and baked until the top browns: a restaurant classic, and the best thing to do with leftover pasta at home."
 ---
-Pasta mixed through sauce, with cheese on top, baked until it bubbles and browns at the edges. It's a restaurant classic (baked ziti, pasta al forno, [[Baked macaroni and cheese|mac and cheese]]), and at home it's what leftover pasta wants to be. The bake turns a bowl of yesterday's spaghetti into something with a crust.
+Pasta mixed through sauce, with cheese on top, baked until it bubbles and browns at the edges. It's a restaurant classic (baked ziti, pasta al forno, mac and cheese), and at home it's what leftover pasta wants to be. The bake turns a bowl of yesterday's spaghetti into something with a crust.
 
 ## Picks
 
@@ -43,10 +43,11 @@ Baked ziti is a *pasta al forno* (a baked pasta casserole) from Italian-American
 
 ## Variations
 
-- **[[Baked macaroni and cheese]]:** a cheese sauce in place of the tomato.
-- **[[Johnny Marzetti]]:** macaroni with ground beef and tomato sauce.
+- **Mac and cheese:** a cheese sauce in place of the tomato ([[Baked mac & cheese]]).
+- **Johnny Marzetti:** macaroni with ground beef and tomato sauce, the Ohio cafeteria casserole.
 - **Baked ziti:** ragù and a little béchamel, with mozzarella on top.
 
 ## Recipes
 
+- [[Baked mac & cheese]]
 - [[Meat sauce (AKA American bolognese)]]
