@@ -10,7 +10,10 @@ This month builds on our travel and food reflections. Two new ideas, a classic C
 
 - [ ] Bibimbap [1](https://www.youtube.com/watch?v=PlfHUMU3z14)
 - [ ] Enchiladas [1](https://www.youtube.com/watch?v=eO70cIlPkxU), [2](https://www.youtube.com/watch?v=RcOAtrUdwmU), [3](https://www.youtube.com/watch?v=Un72M6UQDsI), [4](https://www.youtube.com/watch?v=76bJglYQhqw&t=15s)
-- [ ] Chicken Tinga [1](https://www.youtube.com/watch?v=uRWkUiGI-T4)
+- [ ] Chicken Tinga [1](https://www.youtube.com/watch?v=uRWkUiGI-T4) (Mexican-ish)
+- [ ] Casseroles, 2026 edition [1](https://www.youtube.com/watch?v=ewHhOV4qQ2Q) ← Ethan really gets the simplicity of the casserole + adapts it to more current cooking styles. We make a tonne of these, but his are a good inspiration.
+	- [ ] → turkey dinner casserole
+	- [ ] → taco lasagne casserole (12 layer mexican dip?)
 
 ### Food #ideas 
 
