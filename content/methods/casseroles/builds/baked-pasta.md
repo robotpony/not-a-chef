@@ -8,13 +8,13 @@ tags:
   - casseroles
 description: "Pasta, sauce, and cheese, mixed and baked until the top browns: a restaurant classic, and the best thing to do with leftover pasta at home."
 ---
-Pasta mixed through sauce, with cheese on top, baked until it bubbles and browns at the edges. It's a restaurant classic (baked ziti, pasta al forno, mac and cheese), and at home it's what leftover pasta wants to be. The bake turns a bowl of yesterday's spaghetti into something with a crust.
+Pasta mixed through sauce, with cheese on top, baked until it bubbles and browns at the edges. It's a restaurant classic (baked ziti, pasta al forno, [[Baked macaroni and cheese|mac and cheese]]), and at home it's what leftover pasta wants to be. The bake turns a bowl of yesterday's spaghetti into something with a crust.
 
 ## Picks
 
 Saucy and cheesy, with a browned, chewy top.
 
-- **The starch:** Pasta, mixed through
+- **The starch:** Short or cut pasta (macaroni, penne, ziti, or leftover spaghetti), mixed through
 - **The filling:** Whatever's in the sauce: meat, vegetables, or nothing
 - **The sauce:** Tomato or meat sauce, or a cheese sauce, made loose
 - **The top and the bake:** Grated cheese, or buttered crumbs; bake until bubbling
@@ -33,6 +33,7 @@ Baked ziti is a *pasta al forno* (a baked pasta casserole) from Italian-American
 ## Why these picks
 
 - **Loose sauce.** The pasta drinks it in the oven. Leftover pasta has already drunk most of its own, so add more.
+- **Small pasta, not sheets.** Short shapes and cut-up long pasta mix with the sauce, so every spoonful has both. Sheets are laid in layers, and that's lasagne.
 - **Pasta short of done.** Fresh-cooked pasta goes in a minute or two before [[Al dente|al dente]]; it finishes in the bake.
 
 ## How it fails
@@ -42,10 +43,10 @@ Baked ziti is a *pasta al forno* (a baked pasta casserole) from Italian-American
 
 ## Variations
 
-- **Mac and cheese:** a cheese sauce in place of the tomato.
+- **[[Baked macaroni and cheese]]:** a cheese sauce in place of the tomato.
+- **[[Johnny Marzetti]]:** macaroni with ground beef and tomato sauce.
 - **Baked ziti:** ragù and a little béchamel, with mozzarella on top.
 
 ## Recipes
 
-- [[Baked mac & cheese]]
 - [[Meat sauce (AKA American bolognese)]]

@@ -12,9 +12,13 @@ Most of what goes in is already cooked. That's the point. A casserole turns left
 ## Why casseroles
 
 - **They stretch scarce food.** A little meat, egg, or cheese goes a long way when it's bulked out with cheap starch (pasta, rice, potatoes) and vegetables. Casseroles earned their place in hard times, when that was the only way to feed a family.
-- **They became convenience food.** In the United States the one-dish meal took off in the 20th century, especially the 1950s, alongside new lightweight metal and glass bakeware ([Wikipedia](https://en.wikipedia.org/wiki/Casserole)). Canned soup did the sauce, and the casserole became the standard weeknight dinner, then fell out of fashion.
+- **They became convenience food.** In the United States the one-dish meal took off in the 20th century, especially the 1950s, alongside new lightweight metal and glass bakeware ([Wikipedia](https://en.wikipedia.org/wiki/Casserole)). Campbell's had made condensed cream of mushroom soup since 1934 ([Wikipedia](https://en.wikipedia.org/wiki/Cream_of_mushroom_soup)), and canned soup did the sauce, and the casserole became the standard weeknight dinner, then fell out of fashion.
 - **They travel.** A casserole freezes, carries, and reheats, so it's what you bring to a potluck, a new neighbour, or a family that's grieving.
 - **They're back, from scratch.** The modern casserole swaps the canned soup for a real sauce and borrows from everywhere: enchiladas, baked ziti, curry over rice.
+
+## Before the casserole
+
+Baking a starch with cheese or meat is much older than the word. The *Liber de Coquina*, from around 1300, has *de lasanis*: sheets of dough, boiled, then layered with cheese and spices ([Wikipedia](https://en.wikipedia.org/wiki/Lasagna)). Cassoulet, the bean and meat bake of southwestern France, is traditionally dated to 1355, though the word itself is from the 19th century ([Wikipedia](https://en.wikipedia.org/wiki/Cassoulet)). The builds start with the first written casserole that fits the four parts, baked macaroni and cheese in 1769.
 
 ## What isn't a casserole here
 

@@ -42,6 +42,7 @@ caption: Thanksgiving casserole, top to bottom
 
 - **Cranberry:** a thin layer of cranberry sauce over the turkey.
 - **Stuffing on top:** skip the mash and let the stuffing crisp.
+- **[[Turkey tetrazzini]]:** the turkey in a sherry cream sauce, over spaghetti.
 
 ## Recipes
 
