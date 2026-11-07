@@ -452,7 +452,8 @@ dl.glossary dt { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px
 dl.glossary dt:target { background: var(--accent-soft); border-radius: 4px; padding: 2px 6px; margin-left: -6px; }
 dl.glossary dfn { font-style: normal; }
 dl.glossary .also { font-size: .76rem; font-weight: 500; color: var(--ink-faint); }
-dl.glossary dd { max-width: 62ch; margin: 0; font-family: 'Lora', Georgia, serif; line-height: 1.5; color: var(--ink); }
+/* 1rem like body text elsewhere; it inherited Blowfish's 18px (visual pass, 2026-11-03). */
+dl.glossary dd { max-width: 62ch; margin: 0; font-family: 'Lora', Georgia, serif; font-size: 1rem; line-height: 1.6; color: var(--ink); }
 dl.glossary dd p { margin: 0; }
 dl.glossary dd p + p { margin-top: .6em; }
 dl.glossary .used { margin-top: 6px; font-family: 'Libre Franklin', sans-serif; font-size: .76rem; line-height: 1.6; color: var(--ink-faint); }
@@ -460,6 +461,20 @@ dl.glossary .used a { color: var(--ink-muted); text-decoration: none; border-bot
 dl.glossary .used a:hover { color: var(--accent-strong); border-bottom-color: var(--accent); }
 dl.glossary .used a.essay-link { font-weight: 600; color: var(--accent-strong); border-bottom: 1.5px solid color-mix(in srgb, var(--accent-strong) 35%, transparent); }
 dl.glossary .used a.essay-link::after { content: " \2192"; }
+
+/* Desktop: the letters move to a sticky rail on the right, where the
+ * 62ch entries left a third of the page empty (visual pass, 2026-11-03).
+ * Everything else stays in the first column, in source order. */
+@media (min-width: 1024px) {
+  .glossary-page { display: grid; grid-template-columns: minmax(0, 1fr) 200px; column-gap: 56px; align-items: start; }
+  .glossary-page > * { grid-column: 1; }
+  .glossary-page > .listing-head { grid-column: 1 / -1; }
+  .glossary-page > .gl-letters {
+    grid-column: 2; grid-row: 3 / span 200; position: sticky; top: 28px;
+    display: grid; grid-template-columns: repeat(6, 1fr); gap: 2px; margin: 20px 0 0; padding: 10px 0;
+  }
+  .glossary-page > .gl-letters a, .glossary-page > .gl-letters span { min-width: 0; }
+}
 .used-more, .used-more summary { display: inline; }
 .used-more summary { cursor: pointer; list-style: none; color: var(--ink-muted); }
 .used-more summary::-webkit-details-marker { display: none; }
@@ -1397,6 +1412,12 @@ article > footer {
  * three 240px cards. The card title/intro reset beats custom.css's own
  * .prose h3 rule, which .not-prose doesn't reach. */
 .related-section .rgrid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+/* One right edge under the prose: Related and prev/next stop where the
+ * text does (.article-content, 65ch of 16px Lora, about 40.4rem). They ran
+ * 84px and 119px past it (visual pass, 2026-11-03). Three 200px cards
+ * still fit. */
+.related-section,
+.article-pagination { max-width: 40.4rem; }
 .related-section .rcard-title,
 .related-section .rcard-intro { margin: 0; }
 

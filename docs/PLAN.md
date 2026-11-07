@@ -80,15 +80,15 @@ Under way. The softer colour scheme (2026-11-01) and the palette stripe and home
 
 - [ ] Finish the visual pass by hand. Walked 2026-11-03 in headless Chrome (17 page types at 1280 and 390 px, light and dark; no page scrolls sideways). Not seen: hover states, the Recipes menu, the phone drawer, glossary popovers, and the opened Recipe notes.
 
-Fixes from the pass:
+Fixes from the pass, for fugu-agent (theme templates and JS; site-side fixes from the pass were done 2026-11-07):
 
-- [ ] Vault tags show in headings ("Mexican feast #todo"). Hide trailing tags at render and keep them in the source, since the todo tool reads them: with fugu-agent, then bump Fugu. `#todo` on list items stays visible (`FORMAT.md`).
+- [ ] Vault tags show in headings ("Mexican feast #todo"). Hide trailing tags at render and keep them in the source, since the todo tool reads them. `#todo` on list items stays visible (`FORMAT.md`).
 - [ ] Chip wording: builds show Burgers twice ("Burgers · Build", then "Burgers"), essays show "Food-Memory" where cards say "food memories", and page chips are title case where cards are lowercase.
 - [ ] Lineage repeats each close year ('57 on the left, 1957 on the right).
 - [ ] A wiki link's arrow can wrap alone onto the next line (build sidebar, "In-N-Out burger spread →"). Keep it with the last word.
-- [ ] Main column bottoms have three right edges: text at 752px, essay Related at 836px, recipe Related and prev/next at 871px.
-- [ ] Glossary: the search placeholder clips on phones, definitions are about 18px against 16px body text, and the right third is empty on desktop.
-- [ ] Content: em-dashes in the Win the fridge intro and the June 2026 summary.
+- [ ] Glossary search placeholder ("Search the glossary: a word, or what it does") clips on phones: about 294px of text in a 258px field at 390px. Shorten it (say "Search the glossary") or make it a param.
+
+Then bump Fugu here and check the site renders the same.
 
 To mock, from the pass:
 
