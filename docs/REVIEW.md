@@ -8,6 +8,12 @@ Local links need the dev server (`/preview`). Each open section's heading carrie
 
 Not questions for now, kept so they aren't lost: the drafts (`make drafts`). The cornmeal-breaded chicken patty research is now a test kitchen recipe, [[Cornmeal fried chicken]].
 
+## Casserole layer drawings #todo
+
+Twelve new slab layers for the casseroles blueprint, in `mockups/exploded-builds.html` §6b (open it with `python3 -m http.server` in `mockups/`, then `/exploded-builds.html#casseroles`; they're also at the end of the §2 kit). Once approved, they're exported into Fugu and fugu-agent commits them. Baked pasta's sauce layer moved from `marinara` (a round spoonful) to `ragu` (a slab) to match the other slabs.
+
+- [ ] Approve as drawn, or write changes after a layer: mash · stuffing · gravy · meat-chunks · mince · veg-mixed · veg-roasted · rice · curry · tortilla · beans · salsa
+
 ## Softer colour: two blue labels #todo
 
 The softened chips are text with no fill, so the Testing chip lost the border that set it apart from Win the fridge; both are now blue text, told apart only by icon (the pot, the cycle arrows) and label. A test kitchen recipe tagged Win the fridge shows both on its card.
