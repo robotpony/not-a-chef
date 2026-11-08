@@ -14,6 +14,18 @@ garnish: fruit
 
 The best sangria I’ve ever had was made by my Auntie Diane when Jay and I visited Calgary during a Junior Roller Derby trip and we were staying with the Pattersons. This is the way my Auntie Di made it, and it’s still one of the recipes I like best.
 
+## Mechanic
+
+The drink is **9 : 6 : 1** still red wine, Prosecco, and brandy, in ½-cup (125 ml) parts: a bottle and a half of red, a bottle of Prosecco, and ½ cup brandy. Only the red and brandy go into the pitcher with the fruit; the Prosecco is poured into each glass, so it stays fizzy.
+
+```formula
+wine   | Red      | 9
+: wine | Prosecco | 6
+: bottle | Brandy | 1
+caption: Parts of ½ cup (125 ml)
+bar: yes
+```
+
 ## Ingredients
 
 - 1 bottle red blend wine (I’ve used Chaberton Red Blend)

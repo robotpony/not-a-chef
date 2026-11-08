@@ -40,6 +40,14 @@ Straight. As written it leans tart; add another half-teaspoon of sugar if you li
 
 350 g strong black tea, 40 g 1:1 simple syrup, and 30 g citrus juice (3:1 lime to lemon). Stir over ice in a pitcher rather than shaking. Scales cleanly to any size.
 
+```formula
+mug      | Tea    | 35
+: sugar  | Syrup  | 4
+: lemon  | Citrus | 3
+caption: By weight, 10 g parts
+bar: yes
+```
+
 ### Cold brew batch
 
 Steep tea bags in 1 L cold water overnight in the fridge. Combine the 1 L of cold brew with 90 g white sugar and 65 ml lime juice, and stir until the sugar dissolves. Serve over ice. No shaking needed: cold brew is already smooth and low in bitterness.
