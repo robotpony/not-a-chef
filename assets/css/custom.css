@@ -2362,3 +2362,20 @@ span.vt-name.vt-decade:hover .ln-dot { transform: translateY(-5px); }
 .reading-sidebar .rs-year-fold > summary .n::after { content: " +"; }
 .reading-sidebar .rs-year-fold[open] > summary .n::after { content: " \2013"; }
 .reading-sidebar .rs-year-fold > a { padding-left: 16px; }
+
+/* Homepage bar shelf (mockups/homepage-drinks.html C, approved 2026-11-07):
+   every drink as its glass and name, one line at the foot of Recently
+   added. Scrolls sideways on phones. */
+.bar-shelf { margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--border); display: flex; align-items: center; gap: 6px 18px; }
+.bar-shelf-label { font: 600 .72rem 'Libre Franklin', sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); white-space: nowrap; margin: 0; }
+.bar-shelf-row { display: flex; gap: 4px; flex: 1; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.bar-shelf-row::-webkit-scrollbar { display: none; }
+.bar-glass { display: flex; flex-direction: column; align-items: center; gap: 2px; width: 92px; flex: none; padding: 6px 4px; border-radius: 6px; text-decoration: none; color: var(--ink); }
+.bar-glass:hover { background: var(--accent-soft); color: var(--accent-strong); }
+.bar-glass .rcard-glass { width: 34px; height: 44px; color: var(--ink); }
+.bar-glass span { font: 500 .74rem/1.25 'Libre Franklin', sans-serif; text-align: center; }
+.bar-shelf .mega-viewall { white-space: nowrap; }
+@media (max-width: 640px) {
+  .bar-shelf { flex-wrap: wrap; }
+  .bar-shelf-row { order: 3; flex-basis: 100%; }
+}

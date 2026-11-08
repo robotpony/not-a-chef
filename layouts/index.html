@@ -27,6 +27,10 @@
   band of two lists side by side, which keeps the page about as long as it
   was with four card rows.
 
+  2026-11-07 (mockups/homepage-drinks.html, option C): drinks get a
+  one-line shelf at the foot of Recently added, each as its card's glass
+  (Fugu's drink/glass.html) and name, newest first, rather than a band.
+
   2026-10-27: only the newest blueprint shows, so the band stays about as
   tall as the essay lists below it; it and the techniques beside it run
   newest first, like the essays.
@@ -36,6 +40,8 @@
 {{ $logs := where site.RegularPages "Section" "the-food-log" }}
 {{ $tags := site.Taxonomies.tags.ByCount }}
 {{ $recent := first 4 $recipes.ByDate.Reverse }}
+{{ $drinkSection := site.Params.fugu.drinkSection | default "drinks" }}
+{{ $drinks := where site.RegularPages "Section" $drinkSection }}
 {{ $memories := slice }}
 {{ $otherEssays := slice }}
 {{ range $essays }}
@@ -94,6 +100,17 @@
       {{ partial "recipe-card.html" . }}
     {{ end }}
   </div>
+  {{ with $drinks }}
+    <div class="bar-shelf">
+      <h3 class="bar-shelf-label">From the bar</h3>
+      <div class="bar-shelf-row">
+        {{ range .ByDate.Reverse }}
+          <a class="bar-glass" href="{{ .RelPermalink }}">{{ partial "drink/glass.html" . }}<span>{{ .Title }}</span></a>
+        {{ end }}
+      </div>
+      <a class="mega-viewall" href="{{ (site.GetPage $drinkSection).RelPermalink }}">All {{ len . }} drinks &rarr;</a>
+    </div>
+  {{ end }}
 </section>
 
 {{ if $methods }}
