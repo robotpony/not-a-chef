@@ -8,12 +8,6 @@ Local links need the dev server (`/preview`). Each open section's heading carrie
 
 Not questions for now, kept so they aren't lost: the drafts (`make drafts`). The cornmeal-breaded chicken patty research is now a test kitchen recipe, [[Cornmeal fried chicken]].
 
-## Macaroni layer #todo
-
-A new `macaroni` layer (elbows, as a loose pile) for the baked pasta build, in place of the `pasta` sheet: `mockups/exploded-builds.html` §6b, the Baked pasta panel. Once approved, it's exported to Fugu and the build's stack switches to it.
-
-- [ ] Approve, or write a change
-
 ## Softer colour: two blue labels #todo
 
 The softened chips are text with no fill, so the Testing chip lost the border that set it apart from Win the fridge; both are now blue text, told apart only by icon (the pot, the cycle arrows) and label. A test kitchen recipe tagged Win the fridge shows both on its card.
