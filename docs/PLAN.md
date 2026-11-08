@@ -10,19 +10,17 @@ Spec, partials, and tools in hugo-warped; popover and A to Z page in Fugu; entri
 
 ## Waiting on Fugu
 
-Six visual-pass fixes (chip wording, lineage years, link arrow wrap, glossary placeholder, the example site's old domain, a keep-awake switch) went to fugu-agent on 2026-11-07, in Fugu's `PLAN.md` §10 (4a965e1). It messages here as each lands; then bump Fugu and check the site renders the same.
+Nine visual-pass fixes went to fugu-agent on 2026-11-07 (chip wording, lineage years, link arrow wrap, glossary placeholder, the example site's old domain, a keep-awake switch; then Escape and focus for the menus and phone drawer, a drawer scrim, and the drawer's link colour), in Fugu's `PLAN.md` §10 (4a965e1). It messages here as each lands; then bump Fugu and check the site renders the same.
 
 - [ ] When Fugu's validator lands, run it over all recipes; file each discrepancy as a spec or content bug. When Fugu gets its own CSS (§5), cut `custom.css` to the Not a Chef look; when it renames params (§2), update `params.toml`; when its docs exist (§7), decide if `FORMAT.md` stays as house style.
 
 ## Design v2
 
-Under way; decisions are recorded in `mockups/STYLE.md` and `style.html` when they land. Next changes are mocked before they're built.
-
-- [ ] Finish the visual pass by hand. Headless Chrome covered 17 page types (2026-11-03); not seen: hover states, the Recipes menu, the phone drawer, glossary popovers, and the opened Recipe notes.
+Under way; decisions are recorded in `mockups/STYLE.md` and `style.html` when they land. Next changes are mocked before they're built. The visual pass is finished (headless 2026-11-03, by hand in Chrome 2026-11-07); its theme fixes are with fugu-agent.
 
 To mock:
 
-- [ ] Recipe mechanic: the site promises ratios, but the Mechanic is small grey italic, third in the sidebar, and collapsed on phones. Mock it above Ingredients, with the rest of the sidebar lighter (Chai's sidebar runs about 260px past its method).
+- [ ] Recipe mechanic: the site promises ratios, but the Mechanic is small grey italic, third in the sidebar, and collapsed on phones. Mock it above Ingredients, with the rest of the sidebar lighter (Chai's sidebar runs about 260px past its method). On phones, Recipe notes opens with the search box first, ahead of the facts and the Mechanic; place search in the same mock.
 - [ ] A thin line of images leading the page, under the header: Bruce's idea, to be worked out (which pages, where the images come from, height, how it sits with the sidebar photos). Decide the phone photos with it (a 112px thumbnail sits alone at the left, above Recipe notes).
 - [ ] Food Log sidebar: 40 month rows, about half reading "undated" in mono. Drop the word, and group or collapse older years.
 - [ ] Uneven cards: a formula row on some cards and not others on the homepage and recipe list, a gap above short stacks on blueprint cards, and about 110px of blank under the homepage's Muesli card.
