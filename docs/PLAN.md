@@ -6,8 +6,7 @@ Open work only. Finished items are cut, not ticked; git history has them (`git l
 
 Spec, partials, and tools in hugo-warped; popover and A to Z page in Fugu; entries in `content/reference/glossary/`. Empty entries are stubs, left off the site until written. Nine entry drafts wait in `docs/REVIEW.md`.
 
-- [ ] Answer `make glossary-check`'s four offers (`/glossary-link`): Aromatics in the October Food Log (move line 78 to 34), Braise in the cottage pie casserole build, Doneness in the casseroles' starch and top-and-bake parts.
-- [ ] Bold step labels (Pan sauces' "**Deglaze.**") are offered as links; answer "never" per page, or ask hugo-warped to skip bold text at the start of a list item.
+- [ ] Bold step labels ("**Deglaze.**", "**Doneness.**") are offered as links and answered "never" per page. Recommended: ask hugo-warped to skip bold text at the start of a list item, waiting on Bruce's go-ahead.
 
 ## Waiting on Fugu
 
