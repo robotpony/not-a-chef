@@ -1169,6 +1169,20 @@ Object.assign(L2, {
       return `<path class="s thin meat-top" d="M${f(x-4.4)},${f(yy)}C${f(x-4.4)},${f(yy-3.4)} ${f(x+4.4)},${f(yy-3.4)} ${f(x+4.4)},${f(yy)}C${f(x+4.4)},${f(yy+2.7)} ${f(x+1.4)},${f(yy+2.1)} ${f(x)},${f(yy+1.2)}C${f(x-1.4)},${f(yy+2.1)} ${f(x-4.4)},${f(yy+2.7)} ${f(x-4.4)},${f(yy)}Z" ${T}/><ellipse class="seed" cx="${f(x)}" cy="${f(yy+.4)}" rx="1" ry=".5" ${T}/>`;
     }, 163);
   },
+  // Macaroni (2026-11-07): elbows, the stereotypical baked pasta, as a loose pile. Each elbow is a
+  // curved tube: a banded arc on the pasta's surface fill, with its open end drawn as a small ring.
+  'macaroni'(cx, y, rx){
+    return pile(cx, y, rx, 58, 10, (x, yy, b) => {
+      const k = .85+b.q*.3, Ro = 7.2*k, Ri = 3.9*k, a0 = b.r*Math.PI*2, sw = Math.PI*.6, fl = .6;
+      const ox = x-Math.cos(a0+sw/2)*(Ro+Ri)/2, oy = yy-Math.sin(a0+sw/2)*(Ro+Ri)/2*fl;
+      const P = (r, a) => [ox+Math.cos(a)*r, oy+Math.sin(a)*r*fl], N = 14, out = [], inn = [];
+      for (let i=0;i<=N;i++){ const a = a0+sw*i/N; out.push(P(Ro, a)); inn.push(P(Ri, a)); }
+      // The tube's two open ends: small rings across the band.
+      const ring = (a) => { const e = P((Ro+Ri)/2, a), er = (Ro-Ri)/2; return `<ellipse class="s hair bun" cx="${f(e[0])}" cy="${f(e[1])}" rx="${f(er*.7)}" ry="${f(er*.5)}"/>`; };
+      const mid = []; for (let i=1;i<N;i++){ const a = a0+sw*i/N; mid.push(P((Ro+Ri)/2+((i%2)-.5)*.6, a)); }
+      return `<path class="s thin pasta" d="${pts2d(out.concat(inn.reverse()))}Z"/><path class="tx-hatch" d="${pts2d(mid)}"/>${ring(a0+sw)}`;
+    }, 173);
+  },
   // Salsa: chunky, so a pile of tomato pieces in red, with onion bits.
   'salsa'(cx, y, rx){
     return pile(cx, y, rx, 110, 5, (x, yy, b, i) => {
@@ -1259,7 +1273,7 @@ document.getElementById('ba-icons').innerHTML = [
 ].join('');
 
 function render(){
-const kitKeys = [['bun-top','Bun top'],['lettuce','Lettuce'],['lettuce-shredded','Shredded lettuce'],['lettuce-chunks','Lettuce, torn or chopped'],['tomato','Tomato'],['onion-raw','Raw onion'],['onion-fried','Fried onion'],['onion-minced','Minced onion'],['pickle','Pickles'],['cheese','Cheese slice'],['cheese-american','American cheese'],['bacon','Bacon'],['patty-thin','Thin patty'],['patty-thin-grilled','Thin patty, grilled'],['patty-thick','Thick patty'],['patty-thick-grilled','Thick patty, grilled'],['patty-smash','Smashed patty'],['patty-chicken','Fried chicken patty'],['patty-chicken-breast','Fried chicken breast'],['slaw','Slaw'],['marinara','Marinara'],['ketchup','Ketchup'],['sauce-ketchup-mustard','Ketchup, mustard'],['sauce-burger','Burger sauce'],['mustard','Mustard'],['bun-top+mayo','Bun top + mayo'],['bun-base+mayo','Bun base + mayo'],['bun-top+sauce-burger','Bun top + burger sauce'],['bun-base+sauce-burger','Bun base + burger sauce'],['bun-base','Bun base'],['bread','Bread slice'],['pasta','Pasta sheet'],['ragu','Ragù'],['bechamel','Béchamel'],['cheese-top','Cheese, baked'],['mash','Mashed potatoes'],['stuffing','Stuffing'],['gravy','Gravy'],['meat-chunks','Meat, in pieces'],['mince','Mince'],['veg-mixed','Mixed vegetables'],['veg-roasted','Roasted vegetables'],['rice','Rice'],['curry','Curry'],['tortilla','Tortilla'],['beans','Beans'],['salsa','Salsa']];
+const kitKeys = [['bun-top','Bun top'],['lettuce','Lettuce'],['lettuce-shredded','Shredded lettuce'],['lettuce-chunks','Lettuce, torn or chopped'],['tomato','Tomato'],['onion-raw','Raw onion'],['onion-fried','Fried onion'],['onion-minced','Minced onion'],['pickle','Pickles'],['cheese','Cheese slice'],['cheese-american','American cheese'],['bacon','Bacon'],['patty-thin','Thin patty'],['patty-thin-grilled','Thin patty, grilled'],['patty-thick','Thick patty'],['patty-thick-grilled','Thick patty, grilled'],['patty-smash','Smashed patty'],['patty-chicken','Fried chicken patty'],['patty-chicken-breast','Fried chicken breast'],['slaw','Slaw'],['marinara','Marinara'],['ketchup','Ketchup'],['sauce-ketchup-mustard','Ketchup, mustard'],['sauce-burger','Burger sauce'],['mustard','Mustard'],['bun-top+mayo','Bun top + mayo'],['bun-base+mayo','Bun base + mayo'],['bun-top+sauce-burger','Bun top + burger sauce'],['bun-base+sauce-burger','Bun base + burger sauce'],['bun-base','Bun base'],['bread','Bread slice'],['pasta','Pasta sheet'],['ragu','Ragù'],['bechamel','Béchamel'],['cheese-top','Cheese, baked'],['mash','Mashed potatoes'],['stuffing','Stuffing'],['gravy','Gravy'],['meat-chunks','Meat, in pieces'],['mince','Mince'],['veg-mixed','Mixed vegetables'],['veg-roasted','Roasted vegetables'],['rice','Rice'],['curry','Curry'],['tortilla','Tortilla'],['beans','Beans'],['salsa','Salsa'],['macaroni','Macaroni']];
 document.getElementById('kit-grid').innerHTML = kitKeys.map(([k, n]) => `<div class="kit-cell">${compose([{k}], {rx:52, gap:0, labels:false})}<span class="panel-label" style="font-size:.8rem;margin:0">${n}</span><span class="kit-key">${k}</span></div>`).join('');
 
 document.getElementById('build-grid').innerHTML = Object.values(BUILDS).map(b => `<div class="panel"><div class="panel-label">${b.name}</div><div class="panel-sub">${b.profile}</div>${compose(b.layers, {rx:62, gap:14})}</div>`).join('');
@@ -1315,7 +1329,7 @@ const CASSEROLES = [
     {k:'tortilla', label:'Tortilla', role:'base'} ], {from:1, to:4, n:3}],
   ['Baked pasta', 'Existing layers: ragù (a slab) in place of marinara (a round spoonful).', [
     {k:'cheese-top', label:'Grated cheese', role:'browned, salty'},
-    {k:'pasta', label:'Pasta, mixed with sauce', role:'soft, chewy edges'},
+    {k:'macaroni', label:'Macaroni, mixed with sauce', role:'soft, chewy edges'},
     {k:'ragu', label:'Tomato or meat sauce', role:'binds'} ]],
 ];
 document.getElementById('casserole-grid').innerHTML = CASSEROLES.map(([n, p, ls, rep]) => `<div class="panel"><div class="panel-label">${n}</div><div class="panel-sub">${p}</div>${compose(ls, rep ? {rx:62, gap:12, repeat:rep} : {rx:62, gap:12, padLeft:true})}</div>`).join('') +
