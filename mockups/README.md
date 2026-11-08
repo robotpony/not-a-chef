@@ -343,6 +343,15 @@ in a browser — no build step.
   are up to 77px apart; B sets them all on the rule (0px, recommended);
   C hangs them from the intro. The questions are in `docs/REVIEW.md`.
 
+- **`homepage-drinks.html`**: proposal (2026-11-07) for PLAN.md Design v2
+  "Homepage: a drinks band". The homepage shows no drinks today. On the
+  real homepage: A, a "From the bar" band of the four newest drink cards
+  (+389px desktop, +759px phone); B, drinks mixed into Recently added
+  (one shows today, Knotty Irishman); C, a one-line shelf of every
+  drink's glass and name at the foot of Recently added (all eight, +140px
+  desktop, +176px phone, scrolling sideways on phones; recommended). The
+  question is in `docs/REVIEW.md`.
+
 ## `archived/` — reference only
 
 The four original mockup rounds `style.html`/`COMPONENTS.md` were built

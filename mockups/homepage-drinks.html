@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Homepage drinks</title>
+<!--
+  Mock (2026-11-07) for PLAN.md Design v2 "Homepage: a drinks band, or
+  drinks inside the recipes band". The homepage shows no drinks today:
+  Recently added reads the recipes section only. The real built homepage
+  in a frame, with drinks added three ways and the added height measured.
+
+  Needs mockups/serve.py (public/ at /, this folder at /mockups/):
+      hugo --quiet && python3 mockups/serve.py
+      open http://localhost:8765/mockups/homepage-drinks.html
+-->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+:root {
+  --bg: #F8F8F3; --surface: #FDFDFA; --surface-2: #F0F0E8;
+  --ink: #2B2C25; --ink-muted: #6A6B61; --ink-faint: #828377;
+  --border: #E0E0D3; --border-strong: #CDCEBD;
+  --accent: #A8865A; --accent-strong: #8A4F37; --accent-soft: #F3ECE2;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #22231C; --surface: #282920; --surface-2: #1D1E17;
+    --ink: #E2E4D8; --ink-muted: #A2A493; --ink-faint: #7F8073;
+    --border: #33352A; --border-strong: #45473A;
+    --accent: #BF9D72; --accent-strong: #D6A992; --accent-soft: #2E2620;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #22231C; --surface: #282920; --surface-2: #1D1E17;
+  --ink: #E2E4D8; --ink-muted: #A2A493; --ink-faint: #7F8073;
+  --border: #33352A; --border-strong: #45473A;
+  --accent: #BF9D72; --accent-strong: #D6A992; --accent-soft: #2E2620;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 'Lora', Georgia, serif; }
+.wrap { max-width: 1500px; margin: 0 auto; padding: 28px 16px 60px; }
+h1, h2, h3 { font-family: 'Libre Franklin', system-ui, sans-serif; }
+h1 { font-size: 1.9rem; margin: 0 0 6px; letter-spacing: -.01em; }
+.lede { color: var(--ink-muted); max-width: 72ch; margin: 0 0 18px; }
+.kicker { font: 600 .72rem 'Libre Franklin', sans-serif; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-strong); }
+.bar { position: sticky; top: 0; z-index: 5; background: var(--bg); border-bottom: 1px solid var(--border); padding: 10px 0; display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; font-family: 'Libre Franklin', sans-serif; font-size: .82rem; }
+.seg { display: inline-flex; border: 1px solid var(--border-strong); border-radius: 6px; overflow: hidden; }
+.seg button { font: inherit; border: 0; background: var(--surface); color: var(--ink-muted); padding: 5px 11px; cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--border-strong); }
+.seg button[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent-strong); font-weight: 600; }
+.lbl { color: var(--ink-faint); font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; margin-right: 4px; }
+.opts { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 14px; }
+.opt { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; font-size: .92rem; }
+.opt h3 { margin: 0 0 6px; font-size: .95rem; }
+.opt p { margin: 0; color: var(--ink-muted); }
+.opt.rec { border-color: var(--accent); }
+.rec-tag { font: 600 .66rem 'Libre Franklin', sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-strong); margin-left: 6px; }
+.frame-box { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 10px; margin-top: 16px; }
+.frame-head { font: 600 .75rem 'Libre Franklin', sans-serif; color: var(--ink-muted); display: flex; justify-content: space-between; gap: 12px; margin-bottom: 8px; flex-wrap: wrap; }
+.frame-head .m { font: 500 .75rem 'IBM Plex Mono', monospace; color: var(--ink-faint); }
+.clip { width: 100%; max-width: 1040px; height: 1100px; overflow: hidden; }
+.clip iframe { width: 1280px; height: 1354px; transform: scale(.8125); transform-origin: 0 0; border: 0; }
+.clip.phone { max-width: 392px; }
+.clip.phone iframe { width: 390px; height: 1100px; transform: none; border: 1px solid var(--border); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="kicker">Mock · 2026-11-07</span>
+  <h1>Drinks on the homepage</h1>
+  <p class="lede">The homepage shows no drinks today: Recently added reads the recipes section only, so the eight drinks are reachable only through the menu. Three ways to bring them in, on the real homepage. The frame scrolls; the numbers under it are measured live.</p>
+
+  <div class="bar">
+    <span><span class="lbl">Option</span>
+      <span class="seg" id="opt">
+        <button data-v="none" aria-pressed="true">As built</button>
+        <button data-v="a">A · Own band</button>
+        <button data-v="b">B · Mixed in</button>
+        <button data-v="c">C · Bar shelf</button>
+      </span></span>
+    <span><span class="lbl">Width</span>
+      <span class="seg" id="width">
+        <button data-v="desk" aria-pressed="true">Desktop</button>
+        <button data-v="phone">Phone 390</button>
+      </span></span>
+    <span><span class="lbl">Theme</span>
+      <span class="seg" id="theme">
+        <button data-v="light" aria-pressed="true">Light</button>
+        <button data-v="dark">Dark</button>
+      </span></span>
+  </div>
+
+  <div class="opts">
+    <div class="opt"><h3>A · Own band</h3><p>"From the bar" as a band of its own after Recently added: the four newest drinks as cards, glass drawings and all, with "All 8 drinks →". The bands below renumber.</p></div>
+    <div class="opt"><h3>B · Mixed in</h3><p>Recently added reads recipes and drinks together, newest first. No new band, but a drink shows only while it's among the four newest; today that's one, Knotty Irishman.</p></div>
+    <div class="opt rec"><h3>C · Bar shelf <span class="rec-tag">Recommended</span></h3><p>A one-line shelf at the foot of Recently added: every drink as its small glass and name, with "All drinks →". Shows all eight in about a third of a band's height (140px against A's 389 at desktop width; 176px against 759 on a phone), and the glasses are the drinks' own drawings. On phones it scrolls sideways.</p></div>
+  </div>
+
+  <div class="frame-box">
+    <div class="frame-head"><span id="cap">Homepage, as built</span><span class="m" id="meas">measuring…</span></div>
+    <div class="clip" id="clip"><iframe id="f" src="/" title="Homepage"></iframe></div>
+  </div>
+</div>
+
+<script>
+const f = document.getElementById('f');
+const state = { opt: 'none', width: 'desk', theme: 'light' };
+let drinkCards = null, drinkDates = {}, baseHeight = null;
+
+const CSS = `
+.mk-shelf { margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--border); display: flex; align-items: center; gap: 6px 18px; }
+.mk-shelf-label { font: 600 .72rem 'Libre Franklin', sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); white-space: nowrap; }
+.mk-shelf-row { display: flex; gap: 4px; flex: 1; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.mk-shelf-row::-webkit-scrollbar { display: none; }
+.mk-glass { display: flex; flex-direction: column; align-items: center; gap: 2px; width: 92px; flex: none; padding: 6px 4px; border-radius: 6px; text-decoration: none; color: var(--ink); }
+.mk-glass:hover { background: var(--accent-soft); color: var(--accent-strong); }
+.mk-glass svg { width: 34px; height: 44px; color: var(--ink); }
+.mk-glass span { font: 500 .74rem/1.25 'Libre Franklin', sans-serif; text-align: center; }
+.mk-shelf .mega-viewall { white-space: nowrap; }
+@media (max-width: 640px) {
+  .mk-shelf { flex-wrap: wrap; }
+  .mk-shelf-row { order: 3; flex-basis: 100%; }
+}
+`;
+
+async function loadDrinks() {
+  if (drinkCards) return;
+  const [html, idx] = await Promise.all([
+    fetch('/drinks/').then(r => r.text()),
+    fetch('/recipes/index.json').then(r => r.json()),
+  ]);
+  const list = Array.isArray(idx) ? idx : (idx.recipes || Object.values(idx));
+  list.forEach(x => { drinkDates[x.slug] = x; });
+  const doc = new DOMParser().parseFromString(html, 'text/html');
+  drinkCards = [...doc.querySelectorAll('.rcard')].map(c => {
+    const href = c.querySelector('.rcard-link').getAttribute('href');
+    const slug = href.split('/').filter(Boolean).pop();
+    return { el: c, slug, date: (drinkDates[slug] || {}).date || '0000', title: c.querySelector('.rcard-title').textContent.trim(), href };
+  }).sort((a, b) => b.date.localeCompare(a.date));
+}
+
+function restore(d) {
+  d.querySelectorAll('[data-mk]').forEach(n => n.remove());
+  d.querySelectorAll('[data-mk-hidden]').forEach(n => { n.hidden = false; n.removeAttribute('data-mk-hidden'); });
+  d.querySelectorAll('[data-mk-num]').forEach(n => { n.textContent = n.dataset.mkNum; n.removeAttribute('data-mk-num'); });
+}
+
+function renumber(d, from) {
+  d.querySelectorAll('.home-section .block-num').forEach(n => {
+    const v = parseInt(n.textContent, 10);
+    if (v >= from) { n.dataset.mkNum = n.textContent; n.textContent = String(v + 1).padStart(2, '0'); }
+  });
+}
+
+async function apply() {
+  const d = f.contentDocument;
+  if (!d || !d.querySelector('#recent')) return;
+  await loadDrinks();
+  d.documentElement.setAttribute('data-theme', state.theme);
+  d.documentElement.classList.toggle('dark', state.theme === 'dark');
+  restore(d);
+  if (!d.getElementById('mk-css')) { const s = d.createElement('style'); s.id = 'mk-css'; s.textContent = CSS; d.head.appendChild(s); }
+  if (baseHeight === null) baseHeight = d.documentElement.scrollHeight;
+  const recent = d.getElementById('recent');
+  const before = d.documentElement.scrollHeight;
+  let shown = 0, note = '';
+
+  if (state.opt === 'a') {
+    const sec = d.createElement('section');
+    sec.className = 'home-section'; sec.id = 'drinks'; sec.dataset.mk = '';
+    sec.innerHTML = `<div class="block-head"><div><span class="block-num">02</span><h2 class="block-title">From the bar</h2><p class="block-dek">Teas, coffees, and the odd cocktail.</p></div><a class="mega-viewall" href="/drinks/">All ${drinkCards.length} drinks &rarr;</a></div><div class="rgrid home-row"></div>`;
+    renumber(d, 2);
+    const grid = sec.querySelector('.rgrid');
+    drinkCards.slice(0, 4).forEach(c => grid.appendChild(d.importNode(c.el, true)));
+    recent.after(sec);
+    shown = 4; note = 'a new band';
+  } else if (state.opt === 'b') {
+    const grid = recent.querySelector('.rgrid');
+    const cards = [...grid.querySelectorAll(':scope > .rcard')];
+    const recipeIdx = Object.values(drinkDates);
+    const items = cards.map(c => {
+      const slug = c.querySelector('.rcard-link').getAttribute('href').split('/').filter(Boolean).pop();
+      return { el: c, date: (drinkDates[slug] || {}).date || '0000', drink: false };
+    }).concat(drinkCards.map(c => ({ el: c.el, date: c.date, drink: true })));
+    items.sort((a, b) => b.date.localeCompare(a.date));
+    const top = items.slice(0, 4);
+    cards.forEach(c => { c.hidden = true; c.dataset.mkHidden = ''; });
+    top.forEach(it => {
+      const n = d.importNode(it.el, true); n.dataset.mk = '';
+      if (it.drink) shown++;
+      grid.appendChild(n);
+    });
+    note = 'no new band';
+  } else if (state.opt === 'c') {
+    const shelf = d.createElement('div');
+    shelf.className = 'mk-shelf'; shelf.dataset.mk = '';
+    shelf.innerHTML = `<span class="mk-shelf-label">From the bar</span><div class="mk-shelf-row"></div><a class="mega-viewall" href="/drinks/">All drinks &rarr;</a>`;
+    const row = shelf.querySelector('.mk-shelf-row');
+    drinkCards.forEach(c => {
+      const a = d.createElement('a'); a.className = 'mk-glass'; a.href = c.href; a.title = c.title;
+      const g = c.el.querySelector('svg.rcard-glass');
+      if (g) a.appendChild(d.importNode(g, true));
+      const s = d.createElement('span'); s.textContent = c.title; a.appendChild(s);
+      row.appendChild(a);
+    });
+    recent.appendChild(shelf);
+    shown = drinkCards.length; note = 'inside Recently added';
+  }
+  const added = d.documentElement.scrollHeight - before;
+  const names = { none: 'Homepage, as built', a: 'A · Own band', b: 'B · Mixed in', c: 'C · Bar shelf' };
+  document.getElementById('cap').textContent = names[state.opt] + (state.width === 'phone' ? ' · 390px' : ' · 1280px');
+  document.getElementById('meas').textContent = state.opt === 'none'
+    ? `drinks shown: 0 of ${drinkCards.length} · page ${d.documentElement.scrollHeight}px`
+    : `drinks shown: ${shown} of ${drinkCards.length} · ${note} · page height ${added >= 0 ? '+' : ''}${added}px`;
+  const tgt = d.getElementById(state.opt === 'a' ? 'drinks' : 'recent');
+  if (tgt) f.contentWindow.scrollTo(0, Math.max(0, tgt.offsetTop - 20));
+}
+
+function bind(id, key) {
+  document.getElementById(id).addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    document.querySelectorAll('#' + id + ' button').forEach(x => x.setAttribute('aria-pressed', x === b));
+    state[key] = b.dataset.v;
+    if (key === 'width') {
+      document.getElementById('clip').classList.toggle('phone', state.width === 'phone');
+      f.addEventListener('load', () => setTimeout(apply, 150), { once: true });
+      f.src = '/?w=' + state.width;
+    } else apply();
+  });
+}
+bind('opt', 'opt'); bind('width', 'width'); bind('theme', 'theme');
+f.addEventListener('load', () => setTimeout(apply, 150), { once: true });
+</script>
+</body>
+</html>
