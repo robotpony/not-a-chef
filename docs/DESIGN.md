@@ -8,7 +8,7 @@ Six sections, each with a list view and individual pages. Every listing uses the
 
 **Recipes** (`/recipes/`, `themes/fugu/layouts/recipes/list.html`)
 - Listing: card grid (taxonomy row, title, intro, Prep/Cook/Serves)
-- Individual: ingredients with check-off, scaling and unit conversion (`themes/fugu/assets/js/ingredients.js`), method, and a right sidebar that Mechanic, To serve, Notes and photos are moved into (`themes/fugu/assets/js/automagic-sidebar.js`)
+- Individual: ingredients with check-off, scaling and unit conversion (`themes/fugu/assets/js/ingredients.js`), method, and a right sidebar that the sections in `recipeSidebar` (`config/_default/params.toml`: photos, To serve, Notes, Variations, Equipment) are moved into (`themes/fugu/assets/js/automagic-sidebar.js`); Mechanic stays in the article as a callout
 - Filterable by tag and cuisine (term pages, `themes/fugu/layouts/_default/term.html`)
 - Searchable via Fuse.js (Blowfish built-in, project override in `themes/fugu/assets/js/search.js`)
 
@@ -33,7 +33,7 @@ Six sections, each with a list view and individual pages. Every listing uses the
 
 ### Blowfish layout choices
 
-Superseded by the mockups — see `mockups/STYLE.md`/`mockups/style.html`, `mockups/COMPONENTS.md`/`mockups/components.html`, and `mockups/archived/homepage.html` (built in the old plan's Phase 6, squashed 2026-09-25). None of Blowfish's built-in homepage layouts (`hero`/`profile`/`page`/`card`/`background`) match the settled design: no hero photography anywhere in the system (it's typography- and data-driven), so the homepage needs a custom `layouts/index.html` rather than the `background` layout this section used to specify. Recipe listing and individual pages likewise use custom templates (`themes/fugu/layouts/recipes/list.html`, and `themes/fugu/layouts/_default/single.html` for every single page) — Blowfish's default `list`/`article` layouts don't have the recipe card, ingredient-check, Mechanic callout, or stat-rail components at all.
+Superseded by the mockups — see `mockups/STYLE.md`/`mockups/style.html`, `mockups/COMPONENTS.md`/`mockups/components.html`, and `mockups/archived/homepage.html` (built in the old plan's Phase 6, squashed 2026-09-25). None of Blowfish's built-in homepage layouts (`hero`/`profile`/`page`/`card`/`background`) match the settled design: no hero photography anywhere in the system (it's typography- and data-driven), so the homepage needs a custom `layouts/index.html` rather than the `background` layout this section used to specify. Recipe listing and individual pages likewise use custom templates (`themes/fugu/layouts/recipes/list.html`, and `themes/fugu/layouts/_default/single.html` for every single page) — Blowfish's default `list`/`article` layouts don't have the recipe card, ingredient-check, or Mechanic callout components at all.
 
 **Blowfish settings to enable:**
 - Search (Fuse.js) — on
@@ -57,7 +57,7 @@ Unresolved wiki links fall back to plain text with a `broken-link` CSS class so 
 
 All in `themes/fugu/layouts/_default/_markup/`:
 
-- `render-heading.html` — flags each h2 as an ingredient section or a sidebar section (Mechanic, To serve, Notes, …) for the client-side walks in `ingredients.js` and `automagic-sidebar.js`
+- `render-heading.html` — flags each h2 as an ingredient section or a sidebar section (To serve, Notes, …) for the client-side walks in `ingredients.js` and `automagic-sidebar.js`
 - `render-image.html` — builds thumbnail and display copies for the Photos sidebar module (`FORMAT.md` §Photos)
 - `render-table.html` — wraps tables in a scroll container so wide ones don't push a phone page sideways
 - `render-codeblock-formula.html` — formula diagrams, below
@@ -72,7 +72,7 @@ A ```` ```formula ```` fenced block (`~/projects/sites/hugo-warped/fences/formul
 
 - `render-codeblock-formula.html` takes the parsed block: one slot per line, fields split on `|`, operator at the start of each later line, an optional closing `=` result, optional `caption:` and `bar:` lines. An unknown icon key draws a dashed placeholder; what warns is in the spec, not here. The figure gets an `aria-label` built from the slot text; the icons are `aria-hidden`.
 - `themes/fugu/layouts/partials/formula-slot.html` draws one slot. Icons come from `assets/icons/formula/<key>.svg` via `resources.Get` and are inlined, not `<img>`, so `currentColor` and the theme tokens apply and dark mode works.
-- CSS is in `assets/css/custom.css` (the "Formula diagram" block). The compact size keys off `.recipe-sidebar-section`, so a formula inside Mechanic shrinks to fit the sidebar on its own; nothing for the author to set.
+- CSS is in `assets/css/custom.css` (the "Formula diagram" block). The compact size keys off `.recipe-sidebar-section`, so a formula in a sidebar section (Notes, say) shrinks to fit on its own; nothing for the author to set. Mechanic stays in the article now, so its formulas draw full size.
 - `themes/fugu/layouts/recipes/list.json.json` sets `has_formula` per recipe in `public/recipes/index.json`.
 - Design and the icon kit gallery: `mockups/formula-diagrams.html`; component spec: `mockups/STYLE.md` "Formula diagram". The card strip from that mockup's §5 is `themes/fugu/layouts/partials/formula-strip.html`, drawn on recipe cards.
 

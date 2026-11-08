@@ -17,7 +17,9 @@
 {{ $cuisines := site.Taxonomies.cuisine.ByCount }}
 {{ $tags := site.Taxonomies.tags.ByCount }}
 
-<header class="site-nav{{ if .IsHome }} is-home{{ end }}">
+{{/* A div, not a <header>: Blowfish's baseof already wraps this partial
+     in one, and a header inside a header is invalid. */}}
+<div class="site-nav{{ if .IsHome }} is-home{{ end }}">
   <div class="site-nav-inner">
     {{/* On the homepage the hero h1 carries the mark and the name, so the
          nav hides both; the name stays for screen readers (.site-logo-name). */}}
@@ -129,7 +131,7 @@
       </nav>
     </details>
   </div>
-</header>
+</div>
 <script>
 (function(){
   // <details> alone has no way to close on backdrop/X click — confirmed by

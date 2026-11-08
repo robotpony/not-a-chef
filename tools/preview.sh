@@ -16,7 +16,8 @@ URL="http://localhost:1313/"
 # and their previews aren't ours to stop.
 ROOT="$(pwd -P)"
 for pid in $(lsof -ti tcp:1313 -sTCP:LISTEN 2>/dev/null || true); do
-  if [ "$(ps -o comm= -p "$pid" 2>/dev/null)" != "hugo" ]; then
+  # basename: macOS prints the path it was started by (/opt/homebrew/bin/hugo).
+  if [ "$(basename "$(ps -o comm= -p "$pid" 2>/dev/null)")" != "hugo" ]; then
     continue
   fi
   cwd="$(lsof -a -p "$pid" -d cwd -Fn 2>/dev/null | sed -n 's/^n//p')"
@@ -32,6 +33,10 @@ for _ in $(seq 1 20); do
   lsof -ti tcp:1313 -sTCP:LISTEN >/dev/null 2>&1 || break
   sleep 0.25
 done
+if lsof -ti tcp:1313 -sTCP:LISTEN >/dev/null 2>&1; then
+  echo "Port 1313 is still in use (not this repo's hugo, or it didn't stop); free it and retry." >&2
+  exit 1
+fi
 
 open_browser() {
   # Wait for the server to actually answer before opening a tab on it.
@@ -60,4 +65,6 @@ open_browser &
 # //localhost:1313/index.json, which triggers Chrome's local network
 # access prompt). Keep the server in memory so public/ only ever holds
 # real builds.
-exec hugo server -D --disableFastRender --renderToMemory --bind 127.0.0.1
+# --port 1313: fail loudly if the port is taken rather than pick another,
+# which open_browser wouldn't know about.
+exec hugo server -D --disableFastRender --renderToMemory --bind 127.0.0.1 --port 1313

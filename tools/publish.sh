@@ -11,6 +11,11 @@ set -Eeuo pipefail
 
 cd "$(dirname "$0")/.."
 REPO="$PWD"
+
+if [[ ! -f themes/fugu/hugo.toml || ! -f themes/hugo-warped/tools/check-hugo.sh ]]; then
+  echo "error: the theme submodules are missing; run 'git submodule update --init'." >&2
+  exit 1
+fi
 GIT_DIR_COMMON="$(cd "$(git rev-parse --git-common-dir)" && pwd)"
 LOCK="$GIT_DIR_COMMON/publish.lock"
 # Written after a clean build: the commit public/ was built from. A
@@ -18,12 +23,16 @@ LOCK="$GIT_DIR_COMMON/publish.lock"
 BUILT_MARKER="$GIT_DIR_COMMON/publish-built"
 BUILD_FILE="data/build.toml"
 WORKTREE=""
+BUILD_BUMPED=""
 
 usage() {
   sed -n '5,9p' "$0" | sed 's/^# \{0,1\}//'
 }
 
 cleanup() {
+  if [[ -n "$BUILD_BUMPED" ]]; then
+    restore_build
+  fi
   if [[ -n "$WORKTREE" ]]; then
     git worktree remove --force "$WORKTREE" 2>/dev/null || rm -rf "$WORKTREE"
     git worktree prune
@@ -119,24 +128,30 @@ build_local() {
   hugo_build "$REPO" "$hash"
 }
 
-# Full publishes only: count this one. Undone by restore_build if the
-# publish fails, committed by commit_build once the deploy succeeds.
+# Full publishes only: count this one. Undone by cleanup (the EXIT trap)
+# if the publish stops for any reason, an explicit exit included;
+# committed by commit_build once the deploy succeeds.
 bump_build() {
   local n
   n=$(sed -nE 's/^number = ([0-9]+)$/\1/p' "$BUILD_FILE")
+  if [[ ! "$n" =~ ^[0-9]+$ ]]; then
+    echo "error: can't read 'number = N' from $BUILD_FILE." >&2
+    exit 1
+  fi
   BUILD_NUMBER=$((n + 1))
   sed -i '' -E "s/^number = [0-9]+$/number = $BUILD_NUMBER/" "$BUILD_FILE"
-  trap restore_build ERR
+  BUILD_BUMPED=1
   echo "Build $BUILD_NUMBER."
 }
 
 restore_build() {
+  BUILD_BUMPED=""
   git checkout -- "$BUILD_FILE"
   echo "Publish failed; build number left at its last value." >&2
 }
 
 commit_build() {
-  trap - ERR
+  BUILD_BUMPED=""
   git commit --quiet -m "Publishes build $BUILD_NUMBER." -- "$BUILD_FILE"
 }
 
@@ -152,7 +167,13 @@ check_content() {
 
   if ! output=$(cd "$dir" && python3 themes/fugu/tools/frontmatter.py check "${files[@]}" 2>&1); then
     echo "error: frontmatter check failed:" >&2
-    echo "$output" | grep -B1 'ERROR' | grep -v '^--$' | sed 's/^/  /' >&2
+    # The ERROR lines and the file each belongs to; all of it when there
+    # are none (a traceback, a missing file).
+    if grep -q 'ERROR' <<<"$output"; then
+      grep -B1 'ERROR' <<<"$output" | grep -v '^--$' | sed 's/^/  /' >&2
+    else
+      sed 's/^/  /' <<<"$output" >&2
+    fi
     exit 1
   fi
   echo "Checked frontmatter: ok."
@@ -180,6 +201,16 @@ check() {
   fi
 
   echo "Checked public/: ok."
+}
+
+# Before building anything: a publish or dry run without a deploy
+# target would build the whole site only for deploy.sh to stop.
+require_config() {
+  if [[ ! -f tools/config.toml ]]; then
+    echo "error: tools/config.toml not found." >&2
+    echo "Copy tools/config.toml.example to tools/config.toml and fill in [deploy]." >&2
+    exit 1
+  fi
 }
 
 # 'deploy' ships public/ as it is, so it has to be a clean build of HEAD.
@@ -213,6 +244,7 @@ cmd="${1:-all}"
 
 case "$cmd" in
   all)
+    require_config
     take_lock
     check_hugo
     require_clean
@@ -235,6 +267,7 @@ case "$cmd" in
     check
     ;;
   dry-run)
+    require_config
     take_lock
     check_hugo
     note_dirty
@@ -245,6 +278,7 @@ case "$cmd" in
     tools/deploy.sh --dry-run
     ;;
   deploy)
+    require_config
     take_lock
     require_clean
     require_built_from_head

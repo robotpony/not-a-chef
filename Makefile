@@ -1,3 +1,7 @@
+ifeq ($(wildcard themes/fugu/hugo.toml),)
+$(error the theme submodules are missing; run 'git submodule update --init')
+endif
+
 .PHONY: build check dry-run preview deploy publish drafts glossary-candidates glossary-link glossary-check glossary-apply
 
 build:
@@ -25,10 +29,10 @@ drafts:
 GLOSSARY = python3 themes/hugo-warped/tools/glossary.py
 # Ingredient lists in recipes and drinks are never linked; the heading words
 # that mark a section as not ingredients come from Fugu's params, one source.
-NOT_INGREDIENTS := $(shell sed -n 's/^ *notIngredients *= *\[\(.*\)\]/\1/p' themes/fugu/hugo.toml | tr -d '" ')
+NOT_INGREDIENTS = $(shell sed -n 's/^ *notIngredients *= *\[\(.*\)\]/\1/p' themes/fugu/hugo.toml | tr -d '" ')
 # Sections Fugu moves into the recipe sidebar are read last, so a term's one
 # link lands in the main column when it can (Fugu's [params.fugu.headings]).
-SIDEBAR_HEADINGS := $(shell sed -nE 's/^ *(mechanic|to-serve|variations|notes|equipment) *= *\[(.*)\]/\2/p' themes/fugu/hugo.toml | tr -d '"' | sed 's/, */,/g' | paste -sd, -)
+SIDEBAR_HEADINGS = $(shell sed -nE 's/^ *(mechanic|to-serve|variations|notes|equipment) *= *\[(.*)\]/\2/p' themes/fugu/hugo.toml | tr -d '"' | sed 's/, */,/g' | paste -sd, -)
 GLOSSARY_ARGS = content --glossary reference/glossary --recipes recipes --recipes drinks --not-ingredients $(NOT_INGREDIENTS) --sidebar-headings "$(SIDEBAR_HEADINGS)"
 
 glossary-candidates:
@@ -46,4 +50,5 @@ glossary-check:
 
 # ANSWERS=file.json: a check's items, each with "answer": yes, never or skip (/glossary-link).
 glossary-apply:
+	@test -n "$(ANSWERS)" || { echo "usage: make glossary-apply ANSWERS=file.json" >&2; exit 1; }
 	$(GLOSSARY) link $(GLOSSARY_ARGS) --skip tools/glossary-skip.txt --apply "$(ANSWERS)"

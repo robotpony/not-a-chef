@@ -14,7 +14,7 @@ at `/mockups/`.
 
 ## Current — read these
 
-- **`STYLE.md`** — the settled design system as text/tables: color tokens,
+- **`STYLE.md`** — the settled design system as text/tables: colour tokens,
   type roles, the ratified component list, spacing. Source of truth for how
   the site should look. Read it (or `style.html`, below) before any new
   visual/layout work.
@@ -270,7 +270,7 @@ at `/mockups/`.
   reference-essay format. Built into `assets/css/custom.css`,
   `themes/fugu/layouts/partials/principle-chip.html`, `themes/fugu/layouts/partials/recipe-card.html`,
   `themes/fugu/layouts/partials/article-meta/basic.html`, `themes/fugu/layouts/_default/term.html`,
-  `themes/fugu/layouts/_default/_markup/render-link.html`, `content/reference/glossary.md`,
+  `themes/fugu/layouts/_default/_markup/render-link.html`, `content/reference/glossary/`,
   and `content/reference/essays/win-the-fridge.md`; `STYLE.md`'s
   Principle chip, Glossary link, Definition callout, and Reference list
   entries describe it.

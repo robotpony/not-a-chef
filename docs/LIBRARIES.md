@@ -10,7 +10,7 @@ Static site generator. Builds the site from Markdown content and Go templates.
 
 **Why Hugo:** fast builds, native Markdown and YAML frontmatter, a taxonomy system for tags and cuisines, render hooks for wiki links and diagram blocks, and output formats for `public/recipes/index.json`. No JavaScript build pipeline.
 
-**Version:** the extended build, 0.163.0 or later (Fugu's `min_version`, from Blowfish; Fugu's CI tests 0.166.0). `brew install hugo` installs extended.
+**Version:** the extended build; `.hugo-version` holds the minimum and the tested version, and `tools/preview.sh` and `tools/publish.sh` check them. `brew install hugo` installs extended.
 
 ### Git
 

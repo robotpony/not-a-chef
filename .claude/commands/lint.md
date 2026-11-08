@@ -11,7 +11,7 @@ Check all .md files in content/recipes/ (and content/essays/ if a path is specif
 5. Any ```` ```formula ````, ```` ```stack ```` or ```` ```flow ```` block (specs in ~/projects/sites/hugo-warped/fences/): run hugo-warped's validator over `content/` and `docs/`, with Fugu's icon keys so unknown keys are caught, and report each `WARN` line as an issue in its file. Run this check even without a path.
 
    ```
-   python3 ~/projects/sites/hugo-warped/tools/check-fences.py content docs --keys formula=themes/fugu/assets/icons/formula --keys stack=themes/fugu/assets/icons/layers
+   python3 themes/hugo-warped/tools/check-fences.py content docs --keys formula=themes/fugu/assets/icons/formula --keys stack=themes/fugu/assets/icons/layers
    ```
 
    It prints `WARN  <type> [<code>]: "<line>" in "<file>:<line>:1"` and exits 0 (`--strict` exits 1 on any warning). It is the source of truth for these fences; don't re-check their rules by hand.

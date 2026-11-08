@@ -12,7 +12,7 @@ Obsidian (this repo, edited in place)
           Hugo build (Fugu over Blowfish)
             ├── render hooks: wiki links, headings, images, tables, formula, stack and flow diagrams
             ├── list.json.json → public/recipes/index.json
-            └── assets/js: ingredients.js, automagic-sidebar.js, popover.js, search.js (client-side, no build step)
+            └── assets/js: ingredients.js, automagic-sidebar.js, popover.js, glossary.js, search.js (client-side, no build step)
           │
           public/ (static HTML)
           │
@@ -46,7 +46,7 @@ CLI details are in DESIGN.md.
 Standard Hugo site with two stacked themes, both git submodules: `theme = ["fugu", "blowfish"]`. A third submodule, `themes/hugo-warped/` ([hugo-warped](https://github.com/robotpony/hugo-warped), the shared fence spec), isn't a theme: Fugu imports it as a Hugo module for its fence parse partials, and `config/_default/hugo.toml` maps the module path to that folder. Hugo looks for each layout, partial and asset in this order:
 
 1. This repo (`layouts/`, `assets/`): the Not a Chef design and branding: `custom.css`, the `not-a-chef` colour scheme, the homepage, header, footer, favicons, and fonts (`layouts/partials/fonts.html`).
-2. Fugu (`themes/fugu/`, [hugo-theme-fugu](https://github.com/robotpony/hugo-theme-fugu)): the reusable cookbook theme: page templates, render hooks, recipe cards, sidebars, client JS, the formula icon kit, archetypes, and the content tools. Its own plan is `themes/fugu/PLAN.md`; the site side is PLAN.md "Fugu follow-through".
+2. Fugu (`themes/fugu/`, [hugo-theme-fugu](https://github.com/robotpony/hugo-theme-fugu)): the reusable cookbook theme: page templates, render hooks, recipe cards, sidebars, client JS, the formula icon kit, archetypes, and the content tools. Its own plan is `themes/fugu/PLAN.md`; what waits on it here is under PLAN.md "Later".
 3. Blowfish (`themes/blowfish/`): everything neither of the above overrides.
 
 The settled design (`mockups/STYLE.md`) didn't match any Blowfish layout, so Fugu overrides much of it. Six content sections, all written by hand in this repo:
@@ -69,11 +69,11 @@ Custom layouts:
 - `themes/fugu/layouts/_default/_markup/` — render hooks: `render-link.html` (wiki links, glossary links), `render-heading.html` (flags ingredient and sidebar sections), `render-image.html` (Photos module), `render-table.html` (scroll wrapper), `render-codeblock-formula.html`, `render-codeblock-stack.html` and `render-codeblock-flow.html` (diagram fences, read by hugo-warped's `parse.html` and drawn by Fugu)
 - `assets/css/custom.css` — the design system's CSS; `themes/fugu/assets/icons/formula/` and `themes/fugu/assets/icons/layers/` — the formula and stack diagram kits
 
-Client-side JS (`themes/fugu/assets/js/`) is plain, dependency-free, and progressive: `ingredients.js` (check-off, scaling, unit conversion), `automagic-sidebar.js` (moves Mechanic/To serve/Notes/photos into the sidebar, photo viewer), `popover.js` (places the shared glossary, principle and draft popovers), `search.js` (Fuse.js search, pinned results first). With JS off every page still reads and prints.
+Client-side JS (`themes/fugu/assets/js/`) is plain, dependency-free, and progressive: `ingredients.js` (check-off, scaling, unit conversion), `automagic-sidebar.js` (moves the sections named in `recipeSidebar`, `config/_default/params.toml`, into the sidebar; photo viewer), `popover.js` (places the shared glossary, principle and draft popovers), `glossary.js` (the glossary page's filter), `search.js` (Fuse.js search, pinned results first). With JS off every page still reads and prints.
 
 ### .claude/commands/
 
-Project-specific Claude Code slash commands. These are markdown files in `.claude/commands/` that describe what the agent should do. See DESIGN.md for the full list and their intended behavior.
+Project-specific Claude Code slash commands. These are markdown files in `.claude/commands/` that describe what the agent should do. See DESIGN.md for the full list and their intended behaviour.
 
 ## Content model
 
@@ -105,7 +105,7 @@ The site is a small ontology: a few kinds of page, and a few relations between t
 | Build | A named combination of one pick per part, with a profile (its `description`) | A page in `content/methods/<slug>/builds/`, with `era` and a `## Picks` section |
 | Option | A choice within a part (thick, thin, paper thin) | A row under `## Options` in the part's method |
 | Concept | A named idea with a definition, icon, chip, essay, and list | tag `_index.md` (principle), `[fugu.development]` (status), the `method` tag and blueprint folders (method) |
-| Glossary term | A definition only | `content/reference/glossary.md` |
+| Glossary term | A definition only | `content/reference/glossary/` (one file per term) |
 
 | Relation | Carried by |
 |---|---|

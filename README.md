@@ -33,6 +33,8 @@ Hugo + Obsidian suggest Markdown + clear YAML front-matter.
 
 ## Setup (per machine)
 
+The themes are git submodules: clone with `git clone --recurse-submodules`, or run `git submodule update --init` in an existing clone. Every `make` target and tool stops with that hint until they're there.
+
 Copy `tools/config.toml.example` to `tools/config.toml` (gitignored — holds the machine-specific deploy target) and fill in:
 
 - `[deploy] host` / `remote_path` — where `/publish` sends the built site
