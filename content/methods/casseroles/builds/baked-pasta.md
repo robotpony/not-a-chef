@@ -21,7 +21,7 @@ Saucy and cheesy, with a browned, chewy top.
 
 ```stack
 cheese-top | Grated cheese             | browned, salty
-pasta      | Pasta, mixed with sauce    | soft, chewy edges
+macaroni   | Macaroni, mixed with sauce | soft, chewy edges
 ragu       | Tomato or meat sauce       | binds
 caption: Baked pasta, top to bottom
 ```
