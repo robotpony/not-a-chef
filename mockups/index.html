@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Design mockups</title>
+<!--
+  Index of every mock in this folder, grouped, each group with a short
+  introduction. Published with the site at /mockups/ (hugo.toml mounts this
+  folder into static, leaving out the .md, .py and .mjs files), and kept
+  out of search by robots.txt and this page's noindex. Locally it's the
+  same page under mockups/serve.py: http://localhost:8765/mockups/
+  Add a mock here when you add it to README.md.
+-->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap');
+:root {
+  --bg: #F8F8F3; --surface: #FDFDFA;
+  --ink: #2B2C25; --ink-muted: #6A6B61; --ink-faint: #828377;
+  --border: #E0E0D3; --accent: #A8865A; --accent-strong: #8A4F37; --accent-soft: #F3ECE2;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #22231C; --surface: #282920;
+    --ink: #E2E4D8; --ink-muted: #A2A493; --ink-faint: #7F8073;
+    --border: #33352A; --accent: #BF9D72; --accent-strong: #D6A992; --accent-soft: #2E2620;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #22231C; --surface: #282920;
+  --ink: #E2E4D8; --ink-muted: #A2A493; --ink-faint: #7F8073;
+  --border: #33352A; --accent: #BF9D72; --accent-strong: #D6A992; --accent-soft: #2E2620;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 'Lora', Georgia, serif; }
+.wrap { max-width: 1060px; margin: 0 auto; padding: 40px 16px 64px; }
+.kicker { font: 600 .72rem 'Libre Franklin', sans-serif; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-strong); }
+h1, h2 { font-family: 'Libre Franklin', system-ui, sans-serif; letter-spacing: -.01em; }
+h1 { font-size: 2rem; margin: 4px 0 8px; }
+.lede { color: var(--ink-muted); max-width: 68ch; margin: 0 0 8px; }
+.lede a, .intro a { color: var(--accent-strong); }
+nav.toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 22px 0 8px; }
+nav.toc a { font: 500 .78rem 'Libre Franklin', sans-serif; color: var(--ink-muted); text-decoration: none; border: 1px solid var(--border); border-radius: 999px; padding: 3px 10px; }
+nav.toc a:hover { background: var(--accent-soft); color: var(--accent-strong); border-color: transparent; }
+section { margin-top: 40px; }
+h2 { font-size: 1.2rem; margin: 0 0 4px; display: flex; align-items: baseline; gap: 10px; }
+h2 .n { font: 500 .78rem 'IBM Plex Mono', monospace; color: var(--ink-faint); }
+.intro { color: var(--ink-muted); max-width: 68ch; margin: 0 0 14px; font-size: .95rem; }
+ul.mocks { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 8px; }
+ul.mocks a { display: block; height: 100%; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; text-decoration: none; color: var(--ink); }
+ul.mocks a:hover { border-color: var(--accent); }
+ul.mocks strong { display: block; font: 600 .92rem 'Libre Franklin', sans-serif; }
+ul.mocks span { display: block; font-size: .84rem; line-height: 1.45; color: var(--ink-muted); margin-top: 2px; }
+.note { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--border); font: .8rem/1.5 'Libre Franklin', sans-serif; color: var(--ink-faint); }
+.note a { color: inherit; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="kicker">Bruce loves to cook · design mockups</span>
+  <h1>How the site was designed</h1>
+  <p class="lede">Every visual change to the cookbook was mocked before it was built. These are the mocks, kept as working records: most show two or three options side by side, with the one that was picked marked. Many load the real site's pages in a frame and restyle them, so what you see is live. Back to <a href="/">the cookbook</a>.</p>
+
+  <nav class="toc" aria-label="Groups">
+    <a href="#system">Design system</a>
+    <a href="#recipes">Recipe pages and cards</a>
+    <a href="#diagrams">Ratio and drink diagrams</a>
+    <a href="#stacks">Stack drawings</a>
+    <a href="#methods">Methods and blueprints</a>
+    <a href="#reading">Reading pages</a>
+    <a href="#home">Homepage and Food Log</a>
+    <a href="#archived">The first rounds</a>
+  </nav>
+
+  <section id="system">
+    <h2>Design system <span class="n">9</span></h2>
+    <p class="intro">The settled look: colours, type, and the parts every page is built from. Start with the style sheet; the rest are the decisions that shaped it.</p>
+    <ul class="mocks">
+      <li><a href="style.html"><strong>Cookbook style</strong><span>The design system: colour tokens, the three typefaces, components, spacing.</span></a></li>
+      <li><a href="components.html"><strong>Cookbook components</strong><span>Every component from the early rounds, including the candidates not yet promoted.</span></a></li>
+      <li><a href="palette-stripe.html"><strong>Palette stripe</strong><span>The five hues as a stripe across the top of every page.</span></a></li>
+      <li><a href="soft-colour.html"><strong>Softer colour</strong><span>Thinking through where colour belongs, and how much.</span></a></li>
+      <li><a href="soft-colour-full.html"><strong>Softer colour, full</strong><span>The softer palette applied across whole pages.</span></a></li>
+      <li><a href="icons.html"><strong>Fried egg icons</strong><span>Colourways for the site icon.</span></a></li>
+      <li><a href="favicon-heart-pan.html"><strong>Heart in a pan</strong><span>The favicon round that won.</span></a></li>
+      <li><a href="page-bottom-spacing.html"><strong>Page bottom spacing</strong><span>One consistent gap between the last content and the footer.</span></a></li>
+      <li><a href="site-phase.html"><strong>Site phase</strong><span>Picks for a round of site-wide items.</span></a></li>
+    </ul>
+  </section>
+
+  <section id="recipes">
+    <h2>Recipe pages and cards <span class="n">7</span></h2>
+    <p class="intro">A recipe page is ingredients and method in the main column, with notes, variations and photos beside it. These shaped that page, and the card that stands for a recipe everywhere else.</p>
+    <ul class="mocks">
+      <li><a href="recipe-mechanic.html"><strong>Recipe mechanic</strong><span>Moving the Mechanic out of the sidebar to open the recipe as a callout.</span></a></li>
+      <li><a href="scale-callout.html"><strong>Scaling callout</strong><span>Redrawing the servings slider and units switch.</span></a></li>
+      <li><a href="percent-scaling.html"><strong>Percent scaling</strong><span>Scaling a baker's-percentage table from what you have.</span></a></li>
+      <li><a href="sidebar-images.html"><strong>Sidebar photos</strong><span>Moving photos out of the text into the sidebar, with a viewer.</span></a></li>
+      <li><a href="in-development.html"><strong>Recipes in development</strong><span>The Test kitchen: publishing drafts with a banner saying they're still changing.</span></a></li>
+      <li><a href="recipe-card-v2.html"><strong>Recipe card v2</strong><span>The card redesign: one taxonomy row, title, intro, and a compact stat line.</span></a></li>
+      <li><a href="even-cards.html"><strong>Even cards</strong><span>Lining up formula rows and burger stacks across a row of cards.</span></a></li>
+    </ul>
+  </section>
+
+  <section id="diagrams">
+    <h2>Ratio and drink diagrams <span class="n">4</span></h2>
+    <p class="intro">A ratio stated in a recipe can be drawn as a row of small icons, and a drink as a sketch of its glass. These set the icon style and grew the kit.</p>
+    <ul class="mocks">
+      <li><a href="formula-diagrams.html"><strong>Formula diagrams</strong><span>A one-row icon drawing for a recipe's key ratio.</span></a></li>
+      <li><a href="formula-icons-2.html"><strong>Formula icons, round 2</strong><span>Fifteen more icons for the kit.</span></a></li>
+      <li><a href="formula-icons-3.html"><strong>Formula icons, round 3</strong><span>Three more, for chicken and burgers.</span></a></li>
+      <li><a href="drink-diagrams.html"><strong>Drink diagrams</strong><span>Ways to draw a drink on its card: glass, fill, ice and garnish.</span></a></li>
+    </ul>
+  </section>
+
+  <section id="stacks">
+    <h2>Stack drawings <span class="n">5</span></h2>
+    <p class="intro">A burger, sandwich or casserole drawn as an exploded view, layer by layer. These are the drawing style and the layer kit, one food at a time.</p>
+    <ul class="mocks">
+      <li><a href="exploded-builds.html"><strong>Exploded builds</strong><span>The drawing style, in four rounds, from Bruce's references.</span></a></li>
+      <li><a href="patty-sear.html"><strong>Patty sear</strong><span>A darker seared top on the patties.</span></a></li>
+      <li><a href="shredded-lettuce.html"><strong>Shredded lettuce</strong><span>Redrawing shredded lettuce as a pile of thin ribbons.</span></a></li>
+      <li><a href="spreads-and-colour.html"><strong>Spreads and food colours</strong><span>Knife-marked spreads on the bun, and colour for the vegetables.</span></a></li>
+      <li><a href="top-bun-open.html"><strong>Top bun, opened</strong><span>One shape for every top bun, opened toward you.</span></a></li>
+    </ul>
+  </section>
+
+  <section id="methods">
+    <h2>Methods and blueprints <span class="n">8</span></h2>
+    <p class="intro">Methods explain how a kind of food works, so you can cook what isn't written down. A blueprint breaks a dish type, like burgers, into parts and named builds. These worked out how those pages fit together.</p>
+    <ul class="mocks">
+      <li><a href="methods-pages.html"><strong>Methods pages</strong><span>The methods concept: the list, a blueprint page, its parts.</span></a></li>
+      <li><a href="methods-icon.html"><strong>Methods icon</strong><span>A mark for methods in chips and headings.</span></a></li>
+      <li><a href="methods-top-level.html"><strong>Methods as a top-level section</strong><span>Methods in the menu and on the homepage.</span></a></li>
+      <li><a href="methods-list-builds.html"><strong>Methods list with builds</strong><span>Where builds sit on the methods list.</span></a></li>
+      <li><a href="methods-list-sidebar.html"><strong>Methods list balance</strong><span>The methods list on the reading layout, with a sidebar.</span></a></li>
+      <li><a href="methods-list-and-blueprint.html"><strong>Methods list and blueprint</strong><span>Builds leave the list for the blueprint page.</span></a></li>
+      <li><a href="blueprint-page-parts.html"><strong>Blueprint page parts</strong><span>How a blueprint page shows its parts and their recipes.</span></a></li>
+      <li><a href="blueprint-lineage-sidebar.html"><strong>Blueprint lineage</strong><span>A timeline of the builds, placed in the sidebar.</span></a></li>
+    </ul>
+  </section>
+
+  <section id="reading">
+    <h2>Reading pages <span class="n">4</span></h2>
+    <p class="intro">Essays, reference pages and the glossary share one reading layout. These set its sidebar and the special pages built on it.</p>
+    <ul class="mocks">
+      <li><a href="reading-sidebar.html"><strong>Reading sidebar</strong><span>The sidebar for essays, reference pages and the Food Log.</span></a></li>
+      <li><a href="principle-page-sidebar.html"><strong>Principle page sidebar</strong><span>A principle's tag page on the reading layout.</span></a></li>
+      <li><a href="win-the-fridge.html"><strong>Win the fridge</strong><span>Special treatment for the win-the-fridge principle.</span></a></li>
+      <li><a href="glossary.html"><strong>Concepts glossary</strong><span>A glossary with popovers on first mention, and an A to Z page.</span></a></li>
+    </ul>
+  </section>
+
+  <section id="home">
+    <h2>Homepage and Food Log <span class="n">3</span></h2>
+    <p class="intro">The homepage is a set of bands, newest work first. The Food Log is the monthly record of what got cooked, and how it shows up there and on its own pages.</p>
+    <ul class="mocks">
+      <li><a href="food-log-homepage.html"><strong>Food Log cards</strong><span>Food Log months as cards with real summaries, on the homepage.</span></a></li>
+      <li><a href="food-log-sidebar.html"><strong>Food Log months</strong><span>The months list grouped by year, with older years folded.</span></a></li>
+      <li><a href="homepage-drinks.html"><strong>Homepage drinks</strong><span>Bringing drinks onto the homepage, three ways.</span></a></li>
+    </ul>
+  </section>
+
+  <section id="archived">
+    <h2>The first rounds <span class="n">4</span></h2>
+    <p class="intro">The four original mockups, from before the design system settled. The style sheet above was distilled from them; they're kept for reference and no longer match the site.</p>
+    <ul class="mocks">
+      <li><a href="archived/style-guide.html"><strong>Style guide</strong><span>The first style guide.</span></a></li>
+      <li><a href="archived/recipe-spec-sheet.html"><strong>Recipe spec sheet</strong><span>A recipe page as an engineering spec sheet.</span></a></li>
+      <li><a href="archived/homepage.html"><strong>Homepage</strong><span>The first homepage.</span></a></li>
+      <li><a href="archived/landing-page-alt.html"><strong>Landing page, alternate</strong><span>A second take on the homepage.</span></a></li>
+    </ul>
+  </section>
+
+  <p class="note">Mocks that frame real pages show today's version of those pages underneath, so an older mock can look different from when it was made.</p>
+  <p class="note"><span>© 2026 Bruce Alderson</span> · <span>Built in Canada 🇨🇦</span></p>
+</div>
+</body>
+</html>

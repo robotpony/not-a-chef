@@ -4,6 +4,14 @@ Static HTML/markdown design specs for Bruce loves to cook, saved locally so deci
 made in them don't get lost between sessions. Open any `.html` file directly
 in a browser — no build step.
 
+**Published** with the site at `/mockups/` (since 2026-11-07): `hugo.toml`
+mounts this folder into static, leaving out the `.md`, `.py` and `.mjs`
+files, and `layouts/robots.txt` keeps it out of search. `index.html` lists
+every mock in groups, each with a short introduction; add a new mock there
+as well as here. Mocks that frame real pages work the same on the live
+site as under `serve.py`, since both serve the site at `/` and this folder
+at `/mockups/`.
+
 ## Current — read these
 
 - **`STYLE.md`** — the settled design system as text/tables: color tokens,

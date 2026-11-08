@@ -10,7 +10,6 @@ Each change is mocked before it's built, and recorded in `mockups/STYLE.md` and 
 
 ## Site
 
-- [ ] Publish `mockups/` as a static subfolder (which mocks, how linked, kept out of search). Bruce approved it on 2026-10-21.
 - [ ] Code and docs review (deferred 2026-10-14): `custom.css` (dead classes, duplicates, off-token colours; Fugu's `docs/design/class-inventory.md` already lists 13 dead classes), `tools/*.sh` and the Makefile from a fresh clone, accessibility on the built site (popover ARIA, focus order, landmarks, headings, alt text), a docs inventory (`DESIGN.md` and Fugu's `--help` overlap on tool CLIs), `/mx:content-check` over the docs, and last, CLAUDE.md cut to what an agent needs to start. One area per pass with `/code-review high`; template and CSS fixes get `python3 themes/fugu/tests/check.py --compare` plus Chrome at both widths, light and dark.
 
 ## Later

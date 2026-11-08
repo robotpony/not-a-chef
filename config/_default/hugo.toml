@@ -57,3 +57,13 @@ ignoreFiles = ['/[A-Z][A-Z0-9_-]*\.md$']
   [[module.mounts]]
     source = "static/images"
     target = "assets/images"
+  # The design mockups publish at /mockups/ (mockups/index.html lists them),
+  # without the folder's notes and scripts. Mounting into static replaces
+  # Hugo's default static mount, so it's restated first.
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+  [[module.mounts]]
+    source = "mockups"
+    target = "static/mockups"
+    files = ["! **.md", "! **.py", "! **.mjs"]
