@@ -6,7 +6,7 @@ Every page on the site is standard Markdown with YAML frontmatter, in a `.md` fi
 
 - [`themes/fugu/docs/recipe-format.md`](../themes/fugu/docs/recipe-format.md): a recipe's body. Ingredients and method, ingredient lines, `####` groups, multi-component recipes, the optional sections, `{.article}`, percentage tables, wiki links, photos, and the `formula`, `stack` and `flow` diagrams.
 - [`themes/fugu/docs/frontmatter.md`](../themes/fugu/docs/frontmatter.md): every field. Recipes, drinks (`glass`, `fill`, `ice`, `garnish`), `draft` and `working_on`, `pinned`, taxonomy terms and principle tags, methods and blueprints (`weight`, `era`, `lineage`, history tables, lineage dates), and the recipe index.
-- The fence grammars are hugo-warped's, in `~/projects/sites/hugo-warped/fences/`.
+- The fence grammars are hugo-warped's, in `themes/hugo-warped/fences/` (the pinned copy the build uses; spec changes go to the hugo-warped agent).
 
 This page is Not a Chef's house style on top of that: what this site does that Fugu leaves open. Requirement language (MUST / SHOULD / MAY) follows RFC 2119, used only where a tool or template depends on the rule.
 

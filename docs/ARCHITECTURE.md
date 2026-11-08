@@ -27,16 +27,16 @@ Until 2026-09 recipes were drafted in a separate vault and copied in one-way by 
 
 The content tools ship with Fugu, in `themes/fugu/tools/`:
 
-- `frontmatter.py` — check, get, set, and unset frontmatter across content; stdlib only
-- `drafts.py` — list everything marked `draft: true`
-- `add-image.sh` — strip metadata, fix rotation, and size a photo for `static/images/`
-- `compare-builds.py` — diff two builds of a site, for theme work
+- `frontmatter.py`: check, get, set, and unset frontmatter across content; stdlib only
+- `drafts.py`: list everything marked `draft: true`
+- `add-image.sh`: strip metadata, fix rotation, and size a photo for `static/images/`
+- `compare-builds.py`: diff two builds of a site, for theme work
 
 This site's own, in `tools/`:
 
-- `preview.sh`, `publish.sh`, `deploy.sh` — dev server (restarts any hugo already on :1313); build and check for dev-server output; rsync to the host
-- `social-card.html` — source for `assets/img/social-card.png`, the default Open Graph image; the regenerate command is in its header comment
-- `config.toml` (gitignored, from `config.toml.example`) — machine-specific deploy target
+- `preview.sh`, `publish.sh`, `deploy.sh`: dev server (restarts any hugo already on :1313); build and check for dev-server output; rsync to the host
+- `social-card.html`: source for `assets/img/social-card.png`, the default Open Graph image; the regenerate command is in its header comment
+- `config.toml` (gitignored, from `config.toml.example`): machine-specific deploy target
 
 Each tool explains itself with `--help` (`publish.sh help`); DESIGN.md has the command index.
 
@@ -61,12 +61,12 @@ The settled design (`mockups/STYLE.md`) didn't match any Blowfish layout, so Fug
 
 Custom layouts:
 
-- `layouts/index.html` — the homepage
-- `themes/fugu/layouts/<section>/list.html` — card-grid listings for each section; `themes/fugu/layouts/recipes/list.json.json` builds `public/recipes/index.json`
-- `themes/fugu/layouts/_default/single.html` — every single page (rewrites `[[wiki links]]` in `.RawContent` to standard links before goldmark parses them), with the recipe sidebar or the reading sidebar
-- `themes/fugu/layouts/_default/term.html` — tag and cuisine pages, including principle tags
-- `themes/fugu/layouts/_default/_markup/` — render hooks: `render-link.html` (wiki links, glossary links), `render-heading.html` (flags ingredient and sidebar sections), `render-image.html` (Photos module), `render-table.html` (scroll wrapper), `render-codeblock-formula.html`, `render-codeblock-stack.html` and `render-codeblock-flow.html` (diagram fences, read by hugo-warped's `parse.html` and drawn by Fugu)
-- `assets/css/custom.css` — the design system's CSS; `themes/fugu/assets/icons/formula/` and `themes/fugu/assets/icons/layers/` — the formula and stack diagram kits
+- `layouts/index.html`: the homepage
+- `themes/fugu/layouts/<section>/list.html`: card-grid listings for each section; `themes/fugu/layouts/recipes/list.json.json` builds `public/recipes/index.json`
+- `themes/fugu/layouts/_default/single.html`: every single page (rewrites `[[wiki links]]` in `.RawContent` to standard links before goldmark parses them), with the recipe sidebar or the reading sidebar
+- `themes/fugu/layouts/_default/term.html`: tag and cuisine pages, including principle tags
+- `themes/fugu/layouts/_default/_markup/`: render hooks for wiki and glossary links, headings, images, tables and the diagram fences (DESIGN.md "Other render hooks" has what each does)
+- `assets/css/custom.css`: the design system's CSS; `themes/fugu/assets/icons/formula/` and `themes/fugu/assets/icons/layers/` hold the formula and stack diagram kits
 
 Client-side JS (`themes/fugu/assets/js/`) is plain, dependency-free, and progressive: `ingredients.js` (check-off, scaling, unit conversion), `automagic-sidebar.js` (moves the sections named in `recipeSidebar`, `config/_default/params.toml`, into the sidebar; photo viewer), `popover.js` (places the shared glossary, principle and draft popovers), `glossary.js` (the glossary page's filter), `search.js` (Fuse.js search, pinned results first). With JS off every page still reads and prints.
 
@@ -137,6 +137,6 @@ A live backend (accounts, shared server-side state) was considered for saved rec
 
 **Config over convention for machine paths.** The deploy target is machine-specific. A committed `config.toml.example` plus a gitignored `config.toml` keeps setup explicit without making the tools fragile on a different machine.
 
-**Python and shell for tooling.** The tools are simple file processors (`frontmatter.py` and `drafts.py` are stdlib only) — no need for a build system or Node ecosystem.
+**Python and shell for tooling.** The tools are simple file processors (`frontmatter.py` and `drafts.py` are stdlib only), so there's no need for a build system or Node.
 
 **No CMS.** Obsidian is the authoring environment; there is no web-based editor. Publishing is a deliberate act (`/publish`: build, check, deploy). This keeps the content in plain files and avoids CMS lock-in.

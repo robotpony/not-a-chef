@@ -30,7 +30,7 @@ The base theme under Fugu, a git submodule in `themes/blowfish/` ([docs](https:/
 
 Fuzzy search, vendored by Blowfish (`themes/blowfish/assets/lib/fuse/`, v7.5.0 at the pinned submodule). Fugu's `partials/head.html` loads it, and `themes/fugu/assets/js/search.js` searches the site's index with it, pinned pages first.
 
-The other client JS (`ingredients.js`, `automagic-sidebar.js`, `popover.js`) is plain, dependency-free, and served with no build step.
+The rest of the client JS is plain, dependency-free, and served with no build step (ARCHITECTURE.md lists it).
 
 ### Google Fonts
 

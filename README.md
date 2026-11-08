@@ -14,18 +14,18 @@ Hugo + Obsidian suggest Markdown + clear YAML front-matter.
 
 ## Site features
 
-- **Pinning** — any recipe, essay, method, or reference page can set `pinned: true` in its frontmatter to float to the top of its section's list, its tag/cuisine term pages, and search results (a pinned build also leads its blueprint's builds). Rare by design, not a general-purpose sort override. See docs/DESIGN.md.
-- **Formula diagrams** — a ```` ```formula ```` block in a recipe draws its ratio as a row of icons (beans + starch + veg + binder), at build time. Stack and flow diagrams work the same way; the fence specs live in hugo-warped (`themes/hugo-warped/fences/`). See docs/FORMAT.md §Formula diagrams and docs/DESIGN.md.
-- **Methods and blueprints** — a method (`content/methods/`) explains how a kind of food or a process works in general, so you can cook what isn't written down; methods are listed at `/methods/`. A blueprint is a dish type made of parts, a folder under methods (`content/methods/burgers/`, at `/methods/burgers/`): its parts are in `parts/`, and its builds, named combinations of picks, are in `builds/`. How recipes, stories, methods, blueprints, and concepts relate is in docs/ARCHITECTURE.md §Content model and docs/METHODS.md.
-- **Tag reference pages** — a tag can carry its own `content/tags/<slug>/_index.md` for a description, and, when marked `principle: true`, a definition callout plus a "Reference & further reading" list pulled from anything else tagged with it that isn't a recipe (used today for `win-the-fridge`). See `themes/fugu/layouts/_default/term.html`.
+- **Pinning**: `pinned: true` floats a page to the top of its section, its term pages and search, rarely. Fugu's `docs/frontmatter.md` has the details.
+- **Formula diagrams**: a ```` ```formula ```` block in a recipe draws its ratio as a row of icons (beans + starch + veg + binder), at build time. Stack and flow diagrams work the same way; the fence specs live in hugo-warped (`themes/hugo-warped/fences/`). See docs/FORMAT.md §Formula diagrams and docs/DESIGN.md.
+- **Methods and blueprints**: a method (`content/methods/`) explains how a kind of food or a process works in general, so you can cook what isn't written down; methods are listed at `/methods/`. A blueprint is a dish type made of parts, a folder under methods (`content/methods/burgers/`, at `/methods/burgers/`): its parts are in `parts/`, and its builds, named combinations of picks, are in `builds/`. How recipes, stories, methods, blueprints, and concepts relate is in docs/ARCHITECTURE.md §Content model and docs/METHODS.md.
+- **Tag reference pages**: a tag can carry its own `content/tags/<slug>/_index.md`; marked `principle: true`, it becomes a short reference page (used for `win-the-fridge`). Fugu's `docs/frontmatter.md` "Principle tags" has the details.
 
 ## Setup (per machine)
 
 The themes are git submodules: clone with `git clone --recurse-submodules`, or run `git submodule update --init` in an existing clone. Every `make` target and tool stops with that hint until they're there.
 
-Copy `tools/config.toml.example` to `tools/config.toml` (gitignored — holds the machine-specific deploy target) and fill in:
+Copy `tools/config.toml.example` to `tools/config.toml` (gitignored; it holds the machine-specific deploy target) and fill in:
 
-- `[deploy] host` / `remote_path` — where `/publish` sends the built site
+- `[deploy] host` / `remote_path`: where `/publish` sends the built site
 
 For `[deploy] host`, add an alias to `~/.ssh/config` (with its own `IdentityFile`) rather than putting a username or key path in `config.toml`:
 
@@ -41,21 +41,21 @@ Then use that alias as `host` in `tools/config.toml`.
 
 ## Building and deploying
 
-- `make preview` — run the Hugo dev server locally (`/preview`)
-- `make build` — build the working tree to `public/`, for a local look
-- `make check` — check content frontmatter and the current `public/`
-- `make dry-run` — build HEAD from a clean worktree and show what rsync would change
-- `make deploy` — publish HEAD: refuse uncommitted changes, build it clean, rsync `public/` to the server via `tools/deploy.sh`, check the live site (`/publish`)
-- `make drafts` — list every page in the Test kitchen (`draft: true`)
-- `tools/publish.sh deploy` — ship the `public/` a dry run just built, without rebuilding or counting the build; it refuses if HEAD has moved or anything has written to `public/` since
+- `make preview`: run the Hugo dev server locally (`/preview`)
+- `make build`: build the working tree to `public/`, for a local look
+- `make check`: check content frontmatter and the current `public/`
+- `make dry-run`: build HEAD from a clean worktree and show what rsync would change
+- `make deploy`: publish HEAD (`/publish`). It refuses uncommitted changes, builds clean, rsyncs `public/` to the server via `tools/deploy.sh`, and checks the live site
+- `make drafts`: list every page in the Test kitchen (`draft: true`)
+- `tools/publish.sh deploy`: ship the `public/` a dry run just built, without rebuilding or counting the build; it refuses if HEAD has moved or anything has written to `public/` since
 
 ### Server requirements
 
-The deploy target must be a plain static file host serving `public/` directly — no server-side app, no build step. Two things depend on the server itself, not just the rsynced files:
+The deploy target must be a plain static file host serving `public/` directly, with no server-side app and no build step. Two things depend on the server itself, not just the rsynced files:
 
-- **Custom 404 page.** Hugo builds `public/404.html`, and `static/.htaccess` (copied through as-is) tells Apache to serve it: `ErrorDocument 404 /404.html`. This only takes effect if the server's `AllowOverride` permits `.htaccess` directives (specifically `FileInfo`) for the docroot — if it doesn't, missing URLs will fall through to Apache's own default error page instead of the themed one, with no error at build or deploy time to flag it. On a different host (nginx, Caddy, a CDN/static host like Netlify or Cloudflare Pages), `.htaccess` does nothing — the 404-page rule has to be reconfigured in that host's own way (nginx: `error_page 404 /404.html;`; Netlify/Cloudflare Pages: this just works by convention).
-- **HTTPS/domain config** — out of scope for this repo; set up per host as needed.
+- **Custom 404 page.** Hugo builds `public/404.html`, and `static/.htaccess` (copied through as-is) tells Apache to serve it: `ErrorDocument 404 /404.html`. This only takes effect if the server's `AllowOverride` permits `.htaccess` directives (specifically `FileInfo`) for the docroot. If it doesn't, missing URLs fall through to Apache's own default error page instead of the themed one, with no error at build or deploy time to flag it. On a different host (nginx, Caddy, a CDN/static host like Netlify or Cloudflare Pages), `.htaccess` does nothing, and the 404-page rule has to be set up in that host's own way (nginx: `error_page 404 /404.html;`; Netlify/Cloudflare Pages: this just works by convention).
+- **HTTPS/domain config**: out of scope for this repo; set up per host as needed.
 
 ## License
 
-Content (recipes, essays, reference pages) is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — share and adapt with attribution, same license. The source code (Hugo templates and tools) is MIT. See [LICENSE](LICENSE) for full terms.
+Content (recipes, essays, reference pages) is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/): share and adapt with attribution, under the same licence. The source code (Hugo templates and tools) is MIT. See [LICENSE](LICENSE) for full terms.

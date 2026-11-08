@@ -208,7 +208,7 @@ Documented in full in `docs/ARCHITECTURE.md` ("Content model", with a diagram), 
 
 ## Diagrams
 
-`formula` draws one horizontal row joined by operators: right for ratios, wrong for layers. Methods use it for their ratios too (stock, reverse cooking, pan sauces). For layers they add a sibling block, ` ```stack `, drawn top to bottom (spec: `~/projects/sites/hugo-warped/fences/stack.md`):
+`formula` draws one horizontal row joined by operators: right for ratios, wrong for layers. Methods use it for their ratios too (stock, reverse cooking, pan sauces). For layers they add a sibling block, ` ```stack `, drawn top to bottom (spec: `themes/hugo-warped/fences/stack.md`):
 
 ```stack
 bun-top   | Toasted bun      | soft, toasted

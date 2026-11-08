@@ -8,7 +8,7 @@ Check all .md files in content/recipes/ (and content/essays/ if a path is specif
 2. tags is a list of plain strings (no # prefix)
 3. date is ISO 8601 format (YYYY-MM-DD)
 4. File has at least one ingredients section (unordered list under a heading) and one method section
-5. Any ```` ```formula ````, ```` ```stack ```` or ```` ```flow ```` block (specs in ~/projects/sites/hugo-warped/fences/): run hugo-warped's validator over `content/` and `docs/`, with Fugu's icon keys so unknown keys are caught, and report each `WARN` line as an issue in its file. Run this check even without a path.
+5. Any ```` ```formula ````, ```` ```stack ```` or ```` ```flow ```` block (specs in `themes/hugo-warped/fences/`): run hugo-warped's validator over `content/` and `docs/`, with Fugu's icon keys so unknown keys are caught, and report each `WARN` line as an issue in its file. Run this check even without a path.
 
    ```
    python3 themes/hugo-warped/tools/check-fences.py content docs --keys formula=themes/fugu/assets/icons/formula --keys stack=themes/fugu/assets/icons/layers

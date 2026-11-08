@@ -8,7 +8,7 @@ Six sections, each with a list view and individual pages. Every listing uses the
 
 **Recipes** (`/recipes/`, `themes/fugu/layouts/recipes/list.html`)
 - Listing: card grid (taxonomy row, title, intro, Prep/Cook/Serves)
-- Individual: ingredients with check-off, scaling and unit conversion (`themes/fugu/assets/js/ingredients.js`), method, and a right sidebar that the sections in `recipeSidebar` (`config/_default/params.toml`: photos, To serve, Notes, Variations, Equipment) are moved into (`themes/fugu/assets/js/automagic-sidebar.js`); Mechanic stays in the article as a callout
+- Individual: ingredients with check-off, scaling and unit conversion (ARCHITECTURE.md lists the client JS), method, and a right sidebar that the sections in `recipeSidebar` (`config/_default/params.toml`: photos, To serve, Notes, Variations, Equipment) are moved into; Mechanic stays in the article as a callout
 - Filterable by tag and cuisine (term pages, `themes/fugu/layouts/_default/term.html`)
 - Searchable via Fuse.js (Blowfish built-in, project override in `themes/fugu/assets/js/search.js`)
 
@@ -33,19 +33,19 @@ Six sections, each with a list view and individual pages. Every listing uses the
 
 ### Blowfish layout choices
 
-Superseded by the mockups — see `mockups/STYLE.md`/`mockups/style.html`, `mockups/COMPONENTS.md`/`mockups/components.html`, and `mockups/archived/homepage.html` (built in the old plan's Phase 6, squashed 2026-09-25). None of Blowfish's built-in homepage layouts (`hero`/`profile`/`page`/`card`/`background`) match the settled design: no hero photography anywhere in the system (it's typography- and data-driven), so the homepage needs a custom `layouts/index.html` rather than the `background` layout this section used to specify. Recipe listing and individual pages likewise use custom templates (`themes/fugu/layouts/recipes/list.html`, and `themes/fugu/layouts/_default/single.html` for every single page) — Blowfish's default `list`/`article` layouts don't have the recipe card, ingredient-check, or Mechanic callout components at all.
+Superseded by the mockups: see `mockups/STYLE.md`/`mockups/style.html`, `mockups/COMPONENTS.md`/`mockups/components.html`, and `mockups/archived/homepage.html` (built in the old plan's Phase 6, squashed 2026-09-25). None of Blowfish's built-in homepage layouts (`hero`/`profile`/`page`/`card`/`background`) match the settled design: no hero photography anywhere in the system (it's typography- and data-driven), so the homepage needs a custom `layouts/index.html` rather than the `background` layout this section used to specify. Recipe listing and individual pages likewise use custom templates (`themes/fugu/layouts/recipes/list.html`, and `themes/fugu/layouts/_default/single.html` for every single page); Blowfish's default `list`/`article` layouts don't have the recipe card, ingredient-check, or Mechanic callout components at all.
 
 **Blowfish settings to enable:**
-- Search (Fuse.js) — on
-- Dark mode — follow system preference
-- Taxonomies — `tags`, `cuisine` (cuisine is useful as a browse dimension)
-- Table of contents — on for recipes with multiple components
+- Search (Fuse.js): on
+- Dark mode: follow system preference
+- Taxonomies: `tags`, `cuisine` (cuisine is useful as a browse dimension)
+- Table of contents: on for recipes with multiple components
 
 ### Hugo frontmatter additions
 
 `draft`, `description`, `pinned`, and the rest of the frontmatter are specified in Fugu's `themes/fugu/docs/frontmatter.md`, with this site's house rules in `docs/FORMAT.md`. Test kitchen (`draft`) is below.
 
-(`featured`, pinning a recipe to the homepage card grid, was considered and dropped 2026-09-17: "recently added" is real date-sorted data already. It came back 2026-09-27 as `pinned`, scoped to any page in any section, when the win-the-fridge essay needed to surface first. Pinned pages lead their section's list, term pages, search results, and, for a build, its blueprint's builds; the homepage's "recently added" row stays date-sorted. Fugu's `docs/frontmatter.md` has the details.)
+The homepage's "Recently added" row stays date-sorted; `pinned` doesn't touch it.
 
 ### Wiki link render hook
 
@@ -57,18 +57,18 @@ Unresolved wiki links fall back to plain text with a `broken-link` CSS class so 
 
 All in `themes/fugu/layouts/_default/_markup/`:
 
-- `render-heading.html` — flags each h2 as an ingredient section or a sidebar section (To serve, Notes, …) for the client-side walks in `ingredients.js` and `automagic-sidebar.js`
-- `render-image.html` — builds thumbnail and display copies for the Photos sidebar module (`FORMAT.md` §Photos)
-- `render-table.html` — wraps tables in a scroll container so wide ones don't push a phone page sideways
-- `render-codeblock-formula.html` — formula diagrams, below
-- `render-codeblock-stack.html` — stack diagrams (exploded builds), from the layer kit in `themes/fugu/assets/icons/layers/` (`~/projects/sites/hugo-warped/fences/stack.md`)
-- `render-codeblock-flow.html` — flow diagrams, boxed steps joined by arrows (`~/projects/sites/hugo-warped/fences/flow.md`)
+- `render-heading.html`: flags each h2 as an ingredient section or a sidebar section (To serve, Notes, …) for the client-side walks in `ingredients.js` and `automagic-sidebar.js`
+- `render-image.html`: builds thumbnail and display copies for the Photos sidebar module (`FORMAT.md` §Photos)
+- `render-table.html`: wraps tables in a scroll container so wide ones don't push a phone page sideways
+- `render-codeblock-formula.html`: formula diagrams, below
+- `render-codeblock-stack.html`: stack diagrams (exploded builds), from the layer kit in `themes/fugu/assets/icons/layers/` (`themes/hugo-warped/fences/stack.md`)
+- `render-codeblock-flow.html`: flow diagrams, boxed steps joined by arrows (`themes/hugo-warped/fences/flow.md`)
 
 Every fence hook reads its block with hugo-warped's `partials/hugo-warped/parse.html` and warns with `warn.html` (each warning carries the spec's code, e.g. `formula [unknown-token]:`), then draws what the parse kept. A block with nothing valid to draw shows its source.
 
 ### Formula diagrams
 
-A ```` ```formula ```` fenced block (`~/projects/sites/hugo-warped/fences/formula.md`) is drawn at build time as one row of icons joined by `+`, `:` or `→`, with a label, quantity, and optional swaps under each icon. No client JS.
+A ```` ```formula ```` fenced block (`themes/hugo-warped/fences/formula.md`) is drawn at build time as one row of icons joined by `+`, `:` or `→`, with a label, quantity, and optional swaps under each icon. No client JS.
 
 - `render-codeblock-formula.html` takes the parsed block: one slot per line, fields split on `|`, operator at the start of each later line, an optional closing `=` result, optional `caption:` and `bar:` lines. An unknown icon key draws a dashed placeholder; what warns is in the spec, not here. The figure gets an `aria-label` built from the slot text; the icons are `aria-hidden`.
 - `themes/fugu/layouts/partials/formula-slot.html` draws one slot. Icons come from `assets/icons/formula/<key>.svg` via `resources.Get` and are inlined, not `<img>`, so `currentColor` and the theme tokens apply and dark mode works.
@@ -89,19 +89,19 @@ working_on: Getting them to hold without the egg. Chickpea flour next.   # optio
 
 `working_on` is one line on what's being tried next. It shows under a dotted line in the banner and in `public/recipes/index.json`. Leave it out and nothing is shown.
 
-**Site-wide words** (`config/_default/params.toml`, `[fugu.development]`; Fugu's defaults and comments are in `themes/fugu/hugo.toml`):
+**Site-wide words** are in `config/_default/params.toml` `[fugu.development]`. What each key does is in Fugu's `themes/fugu/docs/configuration.md`; ours:
 
-| Key | Where it shows | Ours |
-|---|---|---|
-| `label` | Bold, at the start of the banner | Test kitchen |
-| `message` | The banner's sentence, after the label | We're still testing this one. Cook it, change it, … |
-| `short` | The card chip only, where "Test kitchen" crowded the top row (the banner keeps `label`) | Testing |
-| `note` | The label before a page's `working_on` line ("Working on: …") | Working on |
-| `page` | The explainer page the banner and card chip link to, which also lists every draft in place of its Related section. A path as `site.GetPage` takes it; `""` drops the link and the list | `reference/essays/test-kitchen` |
-| `more` | The text of that link (an arrow is added) | How the test kitchen works |
-| `heading` | The heading over that list | In the test kitchen now |
-| `empty` | What the explainer page's list says when there are no drafts | Nothing is in the test kitchen right now. |
-| `icon` | An SVG under `assets/`, inlined in the banner and chip; `""` draws a dot instead | `icons/development/pot-steam.svg` |
+| Key | Ours |
+|---|---|
+| `label` | Test kitchen |
+| `message` | We're still testing this one. Cook it, change it, … |
+| `short` | Testing (the card chip, where "Test kitchen" crowded the top row) |
+| `note` | Working on |
+| `page` | `reference/essays/test-kitchen` |
+| `more` | How the test kitchen works |
+| `heading` | In the test kitchen now |
+| `empty` | Nothing is in the test kitchen right now. |
+| `icon` | `icons/development/pot-steam.svg` |
 
 A key left out of `params.toml` falls back to Fugu's default ("In development" and so on).
 
@@ -124,7 +124,7 @@ A key left out of `params.toml` falls back to Fugu's default ("In development" a
 /cuisine/indian/
 ```
 
-Slugs are derived from the filename (kebab-case), under the page's folders (an essay's type, a blueprint's `builds/`). No date prefixes in recipe or essay URLs — recipes don't have publication dates in the way blog posts do.
+Slugs are derived from the filename (kebab-case), under the page's folders (an essay's type, a blueprint's `builds/`). No date prefixes in recipe or essay URLs, since recipes don't have publication dates in the way blog posts do.
 
 ---
 
