@@ -12,7 +12,7 @@ fill: [wine, sparkling]
 garnish: fruit
 ---
 
-The best sangria I’ve ever had was made by my aunt, on a junior roller derby trip to Calgary when we were staying with family friends. This is the way she made it, and it’s still one of the recipes I like best.
+The best sangria my partner ever had was made by her aunt, while she was travelling on a junior roller derby trip. This is the way they made it, and it’s still one of the recipes we like best.
 
 ## Mechanic
 
@@ -28,8 +28,8 @@ bar: yes
 
 ## Ingredients
 
-- 1 bottle red blend wine (I’ve used Chaberton Red Blend)
-- ½ bottle Zinfandel (Barefoot makes one)
+- 1 bottle red blend wine (I’ve used the Chaberton Red)
+- ½ bottle Zinfandel (both Barefoot and Chaberton make one)
 - ½ cup brandy
 - Fresh fruit: strawberries, mango, blueberries, orange; strawberries, mango, and orange cut into small cubes, with as much peel and pith removed from the orange as possible
 - 1 bottle (750 ml) Prosecco, chilled
