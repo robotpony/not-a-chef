@@ -38,7 +38,7 @@ The classics that fit all four parts:
 
 ## What isn't a casserole here
 
-Lasagne is baked in the same dish, but it's composed layer by layer, with a filling built for it, so it's a dish of its own (see [[Vegetarian lasagna]]). The casseroles here are assembled from what you have.
+Lasagne is baked in the same dish, but it's composed layer by layer, with a filling built for it, so it's a dish of its own (see [[Vegetarian lasagna]]). Composed dishes like it are a specific kind of bake, and they get their flavour from a more precise set of components, each one made for the dish. The casseroles here are assembled from what you have.
 
 ## Further reading
 
