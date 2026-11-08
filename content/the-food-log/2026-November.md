@@ -4,6 +4,10 @@ date: 2026-11-01
 ---
 This month builds on our travel and food reflections. Two new ideas, a classic Canadian pie and a beef snack wrap that might work with salmon, join October's unfinished research: Indian curries, a Mexican feast, crab salad with cabbage, thin pan-flattened gyro beef, a two-phase pho method, and more "national dish" candidates.
 
+
+## Saturday, November 7th
+
+We've been sick on and off for a few weeks, so we wanted some comfort food. Tongith we're making Boerenkool, mostly from the pantry and freezer. It's 1.5kg of potatoes, with 1-2 onions diced, 1 large tin of kale, and a smoked sausage if you eat 'em. It's old-school comfort food, relatively fast, and doesn't require fresh ingredients. And, it has nutrition. This is a problem with most fast and prepared foods, as they've evolved. One of the goals of this cookbook is to show how you can get both fast and nutritious, and even comforting. If I can do it, it can't be all that difficult. 
 ## Week of Wednesday, November 4th
 
 ### New food wishes #ideas 

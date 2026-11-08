@@ -1,7 +1,7 @@
 ---
 title: Baked pasta
 date: 2026-11-07
-draft: true
+draft: false
 working_on: "Amounts for leftover pasta: how much sauce to add."
 tags:
   - method
