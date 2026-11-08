@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Even cards</title>
+<!--
+  Mock (2026-11-07) for PLAN.md Design v2 "Uneven cards": formula rows that
+  float at different heights across a row of recipe cards, cards that end
+  without a rule, and gaps above the shorter burger stacks on build cards.
+  Real built pages in a frame, restyled per option, with the gaps measured.
+
+  Needs mockups/serve.py (public/ at /, this folder at /mockups/):
+      hugo --quiet && python3 mockups/serve.py
+      open http://localhost:8765/mockups/even-cards.html
+-->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+:root {
+  --bg: #F8F8F3; --surface: #FDFDFA; --surface-2: #F0F0E8;
+  --ink: #2B2C25; --ink-muted: #6A6B61; --ink-faint: #828377;
+  --border: #E0E0D3; --border-strong: #CDCEBD;
+  --accent: #A8865A; --accent-strong: #8A4F37; --accent-soft: #F3ECE2;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #22231C; --surface: #282920; --surface-2: #1D1E17;
+    --ink: #E2E4D8; --ink-muted: #A2A493; --ink-faint: #7F8073;
+    --border: #33352A; --border-strong: #45473A;
+    --accent: #BF9D72; --accent-strong: #D6A992; --accent-soft: #2E2620;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #22231C; --surface: #282920; --surface-2: #1D1E17;
+  --ink: #E2E4D8; --ink-muted: #A2A493; --ink-faint: #7F8073;
+  --border: #33352A; --border-strong: #45473A;
+  --accent: #BF9D72; --accent-strong: #D6A992; --accent-soft: #2E2620;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 'Lora', Georgia, serif; }
+.wrap { max-width: 1500px; margin: 0 auto; padding: 28px 16px 60px; }
+h1, h2, h3 { font-family: 'Libre Franklin', system-ui, sans-serif; }
+h1 { font-size: 1.9rem; margin: 0 0 6px; letter-spacing: -.01em; }
+h2 { font-size: 1.15rem; margin: 34px 0 8px; }
+.lede { color: var(--ink-muted); max-width: 72ch; margin: 0 0 18px; }
+.kicker { font: 600 .72rem 'Libre Franklin', sans-serif; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-strong); }
+.bar { position: sticky; top: 0; z-index: 5; background: var(--bg); border-bottom: 1px solid var(--border); padding: 10px 0; display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; font-family: 'Libre Franklin', sans-serif; font-size: .85rem; }
+.seg { display: inline-flex; border: 1px solid var(--border-strong); border-radius: 6px; overflow: hidden; }
+.seg button { font: inherit; border: 0; background: var(--surface); color: var(--ink-muted); padding: 5px 11px; cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--border-strong); }
+.seg button[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent-strong); font-weight: 600; }
+.lbl { color: var(--ink-faint); font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; margin-right: 4px; }
+.frame-box { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 10px; margin-top: 16px; }
+.frame-head { font: 600 .75rem 'Libre Franklin', sans-serif; color: var(--ink-muted); display: flex; justify-content: space-between; gap: 12px; margin-bottom: 8px; flex-wrap: wrap; }
+.frame-head .m { font: 500 .75rem 'IBM Plex Mono', monospace; color: var(--ink-faint); }
+.clip { width: 100%; max-width: 1040px; height: 760px; overflow: hidden; }
+.clip iframe { width: 1280px; height: 935px; transform: scale(.8125); transform-origin: 0 0; border: 0; }
+.opts { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-top: 10px; }
+.opt { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; font-size: .92rem; }
+.opt h3 { margin: 0 0 6px; font-size: .95rem; }
+.opt.rec { border-color: var(--accent); }
+.opt .tag { font: 600 .68rem 'Libre Franklin', sans-serif; color: var(--accent-strong); text-transform: uppercase; letter-spacing: .08em; margin-left: 6px; }
+ul.q { padding-left: 1.2em; } ul.q li { margin-bottom: 6px; }
+code { font: .85em 'IBM Plex Mono', monospace; background: var(--surface-2); padding: 1px 4px; border-radius: 3px; }
+footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--border); font: .8rem 'Libre Franklin', sans-serif; color: var(--ink-faint); display: flex; gap: 14px; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker">Design v2 · mock · 2026-11-07</div>
+  <h1>Even cards</h1>
+  <p class="lede">Cards in a row are the same height, but what's inside them lands at different heights. A formula row follows its intro, so it floats up when the intro is short. A card with no times ends without its rule. A short burger stack leaves a gap above it. These are the real recipe list and burgers blueprint, restyled per option.</p>
+
+  <div class="bar" role="toolbar" aria-label="Mock controls">
+    <span><span class="lbl">Page</span><span class="seg" id="page">
+      <button data-v="/recipes/">Recipe list</button>
+      <button data-v="/">Homepage</button>
+      <button data-v="/methods/burgers/">Burgers blueprint</button>
+    </span></span>
+    <span><span class="lbl">Recipe cards</span><span class="seg" id="rc">
+      <button data-v="a">A · As built</button>
+      <button data-v="b">B · Formula on a shared line</button>
+    </span></span>
+    <span><span class="lbl">Build cards</span><span class="seg" id="bc">
+      <button data-v="a">A · As built</button>
+      <button data-v="b">B · Stacks on the base</button>
+      <button data-v="c">C · Stacks under the intro</button>
+    </span></span>
+    <span><span class="lbl">Theme</span><span class="seg" id="theme">
+      <button data-v="light">Light</button>
+      <button data-v="dark">Dark</button>
+    </span></span>
+  </div>
+
+  <div class="frame-box">
+    <div class="frame-head"><span>Desktop · 1280px, shown at 81%, scrolled to the first uneven row</span><span class="m" id="m"></span></div>
+    <div class="clip"><iframe id="f" title="Page frame"></iframe></div>
+  </div>
+
+  <h2>Recipe cards</h2>
+  <div class="opts">
+    <div class="opt"><h3>A · As built</h3>The formula row follows the intro, so it sits wherever the intro ends: 8px above the rule on most cards, 17px on Mozza burger sauce, whose intro is a line short, with the blank under the formula instead of above it. In a row with two formulas and uneven intros, they'd sit at different heights. A card with no times (Quick relish) has no stats line, so its rule is missing and it ends in blank space.</div>
+    <div class="opt rec"><h3>B · Formula on a shared line <span class="tag">Recommended</span></h3>The formula row is pinned just above the stats rule, so every formula in a row sits on one line. The spare height goes between the intro and the formula. A card with no times still draws its rule, as an empty stats line, so every card ends the same way. CSS only: <code>.rcard-formula { margin-top: auto }</code>, and an empty <code>.rcard-stats</code> from the card partial (Fugu).</div>
+  </div>
+
+  <h2>Build cards</h2>
+  <div class="opts">
+    <div class="opt"><h3>A · As built</h3>Each stack is centred in the space left between its intro and the rule (<code>.build-card .stack { margin: auto }</code>), so a short stack, or a two-line intro, leaves gaps above and below it, and neither tops nor bottoms line up across a row. Grilled onion burger's stack sits 57px lower than Big Boy's beside it.</div>
+    <div class="opt rec"><h3>B · Stacks on the base <span class="tag">Recommended</span></h3>Every stack sits on the stats rule, so the bottom buns line up across a row like burgers on a counter, and a short burger looks short beside a tall one, which is the comparison the cards are for. The spare space all goes above. CSS only: <code>margin: auto auto 0</code>.</div>
+    <div class="opt"><h3>C · Stacks under the intro</h3>Each stack hangs from its intro, so the tops line up and the spare space goes below, above the rule. The bottoms don't line up, and a short burger looks like it's floating.</div>
+  </div>
+
+  <h2>Questions</h2>
+  <ul class="q">
+    <li>Recipe cards: B (formulas on a shared line, and a rule on every card)?</li>
+    <li>Build cards: B, with every stack on a shared base?</li>
+  </ul>
+
+  <footer><span>© 2026 Bruce Alderson</span><span>Built in Canada 🇨🇦</span><span>mockups/even-cards.html</span></footer>
+</div>
+
+<script>
+(function(){
+  var state = { page: '/recipes/', rc: 'b', bc: 'b', theme: 'light' };
+  try { var s = JSON.parse(localStorage.getItem('even-cards') || 'null'); if (s) Object.assign(state, s); } catch (e) {}
+
+  var CSS_RC = [
+    '.rcard:not(.build-card) .rcard-formula { margin-top: auto; }',
+    '.rcard:not(.build-card) .rcard-formula + .rcard-stats { margin-top: 0 !important; }',
+    '.mk-empty-stats { min-height: 17px; }'
+  ].join('\n');
+  var CSS_BC = {
+    b: '.build-card .stack { margin: auto auto 0 !important; }',
+    c: '.build-card .stack { margin: 0 auto auto !important; }'
+  };
+
+  // How far each card's last block sits from its stats rule, per row.
+  function measure(doc) {
+    var out = [];
+    var cards = [].slice.call(doc.querySelectorAll('.rcard'));
+    var rows = {};
+    cards.forEach(function(c){ var k = Math.round(c.getBoundingClientRect().top); (rows[k] = rows[k] || []).push(c); });
+    var spread = 0, missing = 0;
+    Object.keys(rows).forEach(function(k){
+      var ys = rows[k].map(function(c){
+        // Formulas by their top; stacks by their bottom (the base they sit on).
+        var f = c.querySelector('.rcard-formula'), k = c.querySelector('.stack');
+        if (f) return Math.round(f.getBoundingClientRect().top - c.getBoundingClientRect().top);
+        if (k) return Math.round(c.getBoundingClientRect().bottom - k.getBoundingClientRect().bottom);
+        return null;
+      }).filter(function(y){ return y !== null; });
+      if (ys.length > 1) spread = Math.max(spread, Math.max.apply(null, ys) - Math.min.apply(null, ys));
+    });
+    cards.forEach(function(c){ var st = c.querySelector('.rcard-stats'); if (!st || !st.getBoundingClientRect().height) missing++; });
+    return 'cards ' + cards.length + ' · worst offset in a row (formula tops, stack bottoms) ' + spread + 'px · cards without a rule ' + missing;
+  }
+
+  function apply(f) {
+    var doc = f.contentDocument; if (!doc || !doc.body) return;
+    if (doc.documentElement.hasAttribute('data-mk')) return;
+    doc.documentElement.setAttribute('data-mk', '1');
+    doc.documentElement.classList.toggle('dark', state.theme === 'dark');
+    var css = (state.rc === 'b' ? CSS_RC : '') + '\n' + (CSS_BC[state.bc] || '');
+    var st = doc.createElement('style'); st.textContent = css; doc.head.appendChild(st);
+    if (state.rc === 'b') {
+      doc.querySelectorAll('.rcard:not(.build-card)').forEach(function(c){
+        if (!c.querySelector('.rcard-stats')) { var e = doc.createElement('div'); e.className = 'rcard-stats mk-empty-stats'; c.appendChild(e); }
+      });
+    }
+    setTimeout(function(){
+      document.getElementById('m').textContent = measure(doc);
+      var target = null;
+      if (state.page === '/methods/burgers/') target = doc.querySelector('.build-card');
+      else target = [].filter.call(doc.querySelectorAll('.rcard'), function(c){ return /Mozza burger sauce|Quick relish/.test(c.textContent); })[0] || doc.querySelector('.rgrid');
+      if (target) f.contentWindow.scrollTo(0, target.getBoundingClientRect().top + f.contentWindow.scrollY - 60);
+    }, 150);
+  }
+
+  function load() {
+    try { localStorage.setItem('even-cards', JSON.stringify(state)); } catch (e) {}
+    document.documentElement.setAttribute('data-theme', state.theme);
+    var f = document.getElementById('f');
+    f.onload = function(){ setTimeout(function(){ apply(f); }, 250); };
+    f.src = state.page + '?mk=' + Date.now();
+    document.querySelectorAll('.seg').forEach(function(seg){
+      seg.querySelectorAll('button').forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.v === state[seg.id])); });
+    });
+  }
+  document.querySelectorAll('.seg').forEach(function(seg){
+    seg.addEventListener('click', function(e){
+      var b = e.target.closest('button'); if (!b) return;
+      state[seg.id] = b.dataset.v; load();
+    });
+  });
+  load();
+})();
+</script>
+</body>
+</html>

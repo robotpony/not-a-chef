@@ -36,6 +36,14 @@ Mock: `mockups/food-log-sidebar.html` (with `python3 mockups/serve.py` running, 
 - [ ] Seasons and multi-month labels keep their full name ("Fall and winter 2022–23"); plain months drop the year
 - [ ] A folded year counts months ("2024 · 4 months"), not days
 
+## Even cards #todo
+
+Mock: `mockups/even-cards.html` (with `python3 mockups/serve.py` running, open http://localhost:8765/mockups/even-cards.html). The homepage's Muesli card that started this has rotated off the homepage; the same gaps show on the recipe list and the burgers blueprint.
+
+- [ ] Recipe cards B: the formula row sits just above the stats rule, and a card with no times still draws its rule (recommended)
+- [ ] Build cards B: every burger stack sits on the rule, so bottoms line up across a row (recommended; as built they're centred, up to 77px apart)
+- [ ] Build cards C: stacks hang from the intro instead
+
 ## Glossary: nine more drafts #todo
 
 The first 54 drafts are approved (2026-10-30). These nine were the "left out" list, now drafted the same way. Tick once you've read them, or write a change after a term.

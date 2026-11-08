@@ -334,6 +334,15 @@ in a browser — no build step.
   2026's page, C is 16 rows and 514px against A's 39 rows and 1175px. The
   questions are in `docs/REVIEW.md`.
 
+- **`even-cards.html`**: proposal (2026-11-07) for PLAN.md Design v2
+  "Uneven cards", on the real recipe list, homepage, and burgers
+  blueprint. Recipe cards: B pins the formula row just above the stats
+  rule and gives a card with no times an empty stats line, so every card
+  ends on its rule (recommended). Build cards: as built, each stack is
+  centred in its spare space (`margin: auto`), so stack bottoms in a row
+  are up to 77px apart; B sets them all on the rule (0px, recommended);
+  C hangs them from the intro. The questions are in `docs/REVIEW.md`.
+
 ## `archived/` — reference only
 
 The four original mockup rounds `style.html`/`COMPONENTS.md` were built
