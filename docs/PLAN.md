@@ -10,8 +10,6 @@ Spec, partials, and tools in hugo-warped; popover and A to Z page in Fugu; entri
 
 ## Waiting on Fugu
 
-The six visual-pass fixes landed (Fugu `4f1e727`, 2026-11-07).
-
 - [ ] When Fugu's validator lands, run it over all recipes; file each discrepancy as a spec or content bug. When Fugu gets its own CSS (§5), cut `custom.css` to the Not a Chef look; when it renames params (§2), update `params.toml`; when its docs exist (§7), decide if `FORMAT.md` stays as house style.
 
 ## Design v2
