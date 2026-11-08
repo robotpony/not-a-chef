@@ -14,7 +14,7 @@ This is a fresh and delicious autumn salad.
 
 > On a women's retreat in 2019, there was a private chef that cooked for the retreat for the entire weekend.  They were a vegan chef who supports local, and they made this dish for one of our lunches.  Everyone at the retreat absolutely loved it and Erika kindly shared the recipe she used with all the attendees. They noted that she added more lemon to the dressing, and also puts a bunch of herbs on the veggies as they're roasting.
 
-![Autumn glow salad with lemon dressing](/images/recipes/autumn-glow-salad-with-lemon-dressing.png)
+![A platter piled with spelt, roast sweet potato and cauliflower, diced apple, dried cranberries and pumpkin and sunflower seeds](/images/recipes/autumn-glow-salad-with-lemon-dressing.png)
 
 ## Lemon dressing
 

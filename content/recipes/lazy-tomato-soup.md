@@ -53,7 +53,7 @@ Stir in the parsley just before serving.
 
 Hold briefly off the heat to let the pasta finish and the soup thicken further, then serve.
 
-![Lazy tomato soup](/images/recipes/lazy-tomato-soup.jpg)
+![A bowl of tomato soup with pasta, meatballs, mushrooms and diced tomato, topped with dried parsley and black pepper](/images/recipes/lazy-tomato-soup.jpg)
 
 
 ## To serve

@@ -11,7 +11,7 @@ Tart and sweet, frosted like snow, with a pop when you bite in. Good on a charcu
 
 > I had attended a roller derby event that had a potluck and someone brought candied cranberries. They were surprisingly really good! A teammate, Lashes, found the recipe on Instagram (@ourbestbites) and forwarded it to me, as we both enjoyed them at the event.
 
-![Candied cranberries (sugared cranberries)](/images/recipes/candied-cranberries-sugared-cranberries.jpg)
+![Six steps: syrup poured over cranberries, the berries drying on a rack, rolled in sugar, then sugared berries on a tray and in a bowl](/images/recipes/candied-cranberries-sugared-cranberries.jpg)
 
 ## Ingredients
 

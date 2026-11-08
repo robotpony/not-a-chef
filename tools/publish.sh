@@ -130,10 +130,22 @@ build_clean() {
   printf '%s\n%s\n' "$(git rev-parse HEAD)" "$(public_fingerprint)" > "$BUILT_MARKER"
 }
 
-# Every file's path, size and modification time. version.txt is left out:
-# deploy.sh writes it into public/ as it ships.
+# Every file's path, size and modification time (Python, as stat's flags
+# differ between macOS and Linux). version.txt is left out: deploy.sh
+# writes it into public/ as it ships.
 public_fingerprint() {
-  find public -type f ! -path public/version.txt -exec stat -f '%N %z %m' {} + | LC_ALL=C sort | shasum | cut -d' ' -f1
+  python3 -c '
+import hashlib, os
+h = hashlib.sha1()
+for root, dirs, files in os.walk("public"):
+    dirs.sort()
+    for name in sorted(files):
+        path = os.path.join(root, name)
+        if path == "public/version.txt":
+            continue
+        st = os.stat(path)
+        h.update(f"{path} {st.st_size} {st.st_mtime_ns}\n".encode())
+print(h.hexdigest())'
 }
 
 build_local() {
@@ -158,7 +170,8 @@ bump_build() {
     exit 1
   fi
   BUILD_NUMBER=$((n + 1))
-  sed -i '' -E "s/^number = [0-9]+$/number = $BUILD_NUMBER/" "$BUILD_FILE"
+  sed -E "s/^number = [0-9]+$/number = $BUILD_NUMBER/" "$BUILD_FILE" > "$BUILD_FILE.tmp"
+  mv "$BUILD_FILE.tmp" "$BUILD_FILE"
   BUILD_BUMPED=1
   echo "Build $BUILD_NUMBER."
 }
@@ -293,6 +306,7 @@ case "$cmd" in
     build_local
     ;;
   check)
+    take_lock
     check_content
     check
     ;;

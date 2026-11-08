@@ -9,8 +9,10 @@ set -euo pipefail
 # .dh-diag is DreamHost's own file in the web root, and favicon.gif is on the
 # server but not in the repo; --delete would remove them.
 RSYNC_FLAGS=(-avz --checksum --delete --exclude .dh-diag --exclude favicon.gif)
+# A dry run leaves out version.txt: only a real deploy writes it, so the
+# dry run would list it as deleted every time.
 if [[ "${1:-}" == "--dry-run" ]]; then
-  RSYNC_FLAGS+=(--dry-run)
+  RSYNC_FLAGS+=(--dry-run --exclude version.txt)
 fi
 
 cd "$(dirname "$0")/.."
@@ -75,9 +77,12 @@ else
     git status --short >&2
     exit 1
   fi
+  # Taken names: local tags, plus origin's when it answers, so a deploy
+  # from another machine the same day doesn't collide on push.
+  taken="$(git tag -l 'deploy-*'; git ls-remote --tags origin 'deploy-*' 2>/dev/null | sed 's|.*refs/tags/||' || true)"
   TAG="deploy-$(date +%F)"
   n=1
-  while git rev-parse -q --verify "refs/tags/$TAG" >/dev/null; do
+  while grep -qxF "$TAG" <<<"$taken"; do
     n=$((n + 1))
     TAG="deploy-$(date +%F)-$n"
   done
