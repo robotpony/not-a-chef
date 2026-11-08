@@ -6,14 +6,14 @@ This month builds on our travel and food reflections. Two new ideas, a classic C
 
 ## Week of Wednesday, November 4th
 
-### New food wishes #todo 
+### New food wishes #ideas 
 
 - [ ] Bibimbap [1](https://www.youtube.com/watch?v=PlfHUMU3z14)
 - [ ] Enchiladas [1](https://www.youtube.com/watch?v=eO70cIlPkxU), [2](https://www.youtube.com/watch?v=RcOAtrUdwmU), [3](https://www.youtube.com/watch?v=Un72M6UQDsI), [4](https://www.youtube.com/watch?v=76bJglYQhqw&t=15s)
 - [ ] Chicken Tinga [1](https://www.youtube.com/watch?v=uRWkUiGI-T4) (Mexican-ish)
-- [ ] Casseroles, 2026 edition [1](https://www.youtube.com/watch?v=ewHhOV4qQ2Q) ← Ethan really gets the simplicity of the casserole + adapts it to more current cooking styles. We make a tonne of these, but his are a good inspiration.
-	- [ ] → turkey dinner casserole
-	- [ ] → taco lasagne casserole (12 layer mexican dip?)
+- [x] Casseroles, 2026 edition [1](https://www.youtube.com/watch?v=ewHhOV4qQ2Q) ← Ethan really gets the simplicity of the casserole + adapts it to more current cooking styles. We make a tonne of these, but his are a good inspiration.
+	- [x] → turkey dinner casserole
+	- [x] → taco lasagne casserole (12 layer mexican dip?)
 
 ### Food #ideas 
 
@@ -35,7 +35,7 @@ This month builds on our travel and food reflections. Two new ideas, a classic C
 
 ### Recipes to research #todo
 
-- [ ] All of the Indian curries: pea and corn, cabbage, and various chicken variations
+- [x] All of the Indian curries: pea and corn, cabbage, and various chicken variations
 - [ ] Crab salad (like salmon salad), but with cabbage and carrot
 - [ ] Gyro beef, pan-flattened on parchment: thin, roasted hot, sliced for pitas, salad, and sandwiches (test against [[Sheet-pan fast-food-style gyros]])
 - [ ] Tabbouleh salad, a pattern worth learning

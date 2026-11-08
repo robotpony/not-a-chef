@@ -15,6 +15,7 @@ Diagrams are fences, specced in hugo-warped (`~/projects/sites/hugo-warped/fence
 - [ ] Granola bars formula, once a second recipe needs a nut icon.
 - [ ] Food ratios tables, once that method leaves the test kitchen.
 - [ ] Stack diagrams for sandwiches and Vegetarian lasagna, once a build page needs one.
+- [ ] Stack layer weight: the dense casserole piles are inlined per use (casseroles page about 800 KB of HTML, mince and macaroni 110–176 KB each). If it matters, inline each layer once per page and reuse it with `<use href>` (Fugu `partials/stack/draw.html`), or convert to PNG at publish.
 - [ ] `timeline` and `tabs` in the cookbook: fugu-agent ports w42's hooks when a page needs one (`.tline-*` classes don't collide with our `.tl-*` lineage).
 
 ## Drinks
@@ -82,7 +83,7 @@ Under way. The softer colour scheme (2026-11-01) and the palette stripe and home
 
 Fixes from the pass, for fugu-agent (theme templates and JS; site-side fixes from the pass were done 2026-11-07):
 
-- [ ] Vault tags show in headings ("Mexican feast #todo"). Hide trailing tags at render and keep them in the source, since the todo tool reads them. `#todo` on list items stays visible (`FORMAT.md`).
+- [ ] Vault tags show in headings ("Mexican feast #todo"). Hide trailing tags at render and keep them in the source, since the todo tool reads them. `#todo` on list items stays visible (`FORMAT.md`). #focus
 - [ ] Chip wording: builds show Burgers twice ("Burgers · Build", then "Burgers"), essays show "Food-Memory" where cards say "food memories", and page chips are title case where cards are lowercase.
 - [ ] Lineage repeats each close year ('57 on the left, 1957 on the right).
 - [ ] A wiki link's arrow can wrap alone onto the next line (build sidebar, "In-N-Out burger spread →"). Keep it with the last word.
