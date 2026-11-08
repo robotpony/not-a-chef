@@ -14,13 +14,6 @@ Twelve new slab layers for the casseroles blueprint, in `mockups/exploded-builds
 
 - [ ] Approve as drawn, or write changes after a layer: mash · stuffing · gravy · meat-chunks · mince · veg-mixed · veg-roasted · rice · curry · tortilla · beans · salsa
 
-## Casserole history #todo
-
-The eight dated classics are back as test kitchen builds, so the timeline shows the history again (each `working_on`: an idea for a future test). The blueprint's [[Casseroles]] "A short history" table now links them.
-
-- [ ] Keep the history table as well as the builds (it has the 1934 soup row and one line each), or drop it now the timeline carries them
-- [ ] Thanksgiving and leftover takeout stay merged as [[Leftovers casserole]] (one build, two stacks), or split back into two builds
-
 ## Softer colour: two blue labels #todo
 
 The softened chips are text with no fill, so the Testing chip lost the border that set it apart from Win the fridge; both are now blue text, told apart only by icon (the pot, the cycle arrows) and label. A test kitchen recipe tagged Win the fridge shows both on its card.

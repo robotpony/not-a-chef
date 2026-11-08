@@ -48,7 +48,7 @@ caption: Enchilada casserole, top to bottom
 ## Variations
 
 - **Rolled enchiladas:** roll the filling in the tortillas, lay them side by side, and cover them with enchilada sauce and cheese. Same parts, more work.
-- **Chicken:** [[Shredded taco chicken]] in place of the beef. With cream of chicken soup in the sauce, it's most of the way to [[King Ranch chicken]], the Texas potluck casserole.
+- **Chicken:** [[Shredded taco chicken]] in place of the beef. With cream of chicken soup in the sauce, it's most of the way to King Ranch chicken, the Texas potluck casserole.
 - **Vegetarian:** beans and roasted vegetables, or the lentils from [[Lentil tacos]].
 - **Taco lasagne, twelve layers:** a thinner layer of each, and a deeper dish.
 
