@@ -17,7 +17,7 @@ A month of travel eating turned into a research list: tabbouleh, a subtly sweet 
 - [ ] Grilled, thin-cut carrots and zuchini salad with rocket (yohgurt dressing was fresh)
 - [ ] Sandwich methods, towards hogie/kaiser.
 
-### Mexican feast #todo 
+### Mexican feast #ideas
 
 - [ ] Enchiladas and green sauce → carne, were fantastic
 - [ ] Chile rellenos
@@ -127,7 +127,7 @@ Links:
 - 
 ## Week of Sunday, October 18th
 
-### Recipes to research #todo 
+### Recipes to research #ideas 
 
 - [ ] All of the Indian curries: pea and corn, cabbage, and various chicken variations. so fantastic!
 - [x] Muesli → better recipe, something like HAL 

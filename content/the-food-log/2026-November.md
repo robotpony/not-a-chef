@@ -38,16 +38,16 @@ We've been sick on and off for a few weeks, so we wanted some comfort food. Toni
 - [ ] A subtly sweet, perfectly seasoned red cabbage from the trip (compare with [[Braised red cabbage]])
 - [ ] Hotel chicken sandwich: chicken breast, tender, nice bread, great flavour → pull from hotel menu
 
-### Recipes to research #todo
+### Recipes to research #ideas
 
-- [x] All of the Indian curries: pea and corn, cabbage, and various chicken variations
+- [ ] All of the Indian curries: pea and corn, cabbage, and various chicken variations
 - [ ] Crab salad (like salmon salad), but with cabbage and carrot
 - [ ] Gyro beef, pan-flattened on parchment: thin, roasted hot, sliced for pitas, salad, and sandwiches (test against [[Sheet-pan fast-food-style gyros]])
 - [ ] Tabbouleh salad, a pattern worth learning
 - [ ] The onion jam from that double smash burger, savoury and sweet
 - [ ] German dinner: roulade, pork tenderloin with apple
 
-### Mexican feast #todo
+### Mexican feast #ideas
 
 - [ ] Enchiladas and green sauce → carne, were fantastic
 - [ ] Chiles rellenos
