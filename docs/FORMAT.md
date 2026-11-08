@@ -4,7 +4,7 @@ Every page on the site is standard Markdown with YAML frontmatter, in a `.md` fi
 
 This is the one format doc for all content: what every page shares, then what recipes, essays, and methods add, then what a validator checks. Requirement language (MUST / SHOULD / MAY) follows RFC 2119 and is used only where a tool or template depends on the rule; everything else is house style.
 
-Format version **0.4.0** (0.2.0 added the formula block; 0.3.0 added methods, blueprints, `era`, and the stack block; 0.4.0 lets `era` be a list of years). Bump minor for an additive change (a new optional field or section; existing pages stay valid), major only when a previously valid page could fail validation.
+Format version **0.5.0** (0.2.0 added the formula block; 0.3.0 added methods, blueprints, `era`, and the stack block; 0.4.0 lets `era` be a list of years; 0.5.0 adds approximate and decade dates to `era`, and a blueprint's `lineage` source and history table). Bump minor for an additive change (a new optional field or section; existing pages stay valid), major only when a previously valid page could fail validation.
 
 ## All pages
 
@@ -22,7 +22,8 @@ Recipes (`content/recipes/`), essays (`content/essays/`), methods (`content/meth
 | `working_on` | MAY | string | For drafts: one line on what's being tried next ("Getting them to hold without the egg"), shown in the banner under the title. |
 | `pinned` | MAY | boolean | Floats the page to the top of its section's list, its term pages, and search. Rare by design, not a general sort override. See DESIGN.md. |
 | `source` | MAY | string | `original`, `family`, a URL, or a book title. SHOULD on recipes. |
-| `era` | MAY | int or int[] | Builds only: a year that places the build on its blueprint's lineage timeline (`1960`), or a list for a build with iterations (`[1991, 2015, 2026]`). See Methods. |
+| `era` | MAY | date or date[] | Builds only: a date that places the build on its blueprint's lineage timeline, or a list for a build with iterations (`[1991, 2015, 2026]`). A date is a year (`1960`), an approximate year (`"c. 1900"`), or a decade (`"1950s"`); see Methods, "Lineage dates". |
+| `lineage` | MAY | string | Blueprints only (`_index.md`): where its lineage timeline gets its entries, `builds`, `table`, or `both`. Overrides the site's `params.fugu.methods.lineage` (default `builds`). See Methods. |
 | `aliases` | MAY | string[] | Old URLs that redirect here (Hugo). Only for a published URL that moved. |
 
 Don't hand-maintain `lastmod`. Last-modified comes from git (`enableGitInfo`): both sidebars show **Date**, plus **Updated** from the file's last commit when that falls on a different day.
@@ -365,8 +366,21 @@ A blueprint is a dish type made of parts, as a folder under methods (`content/me
 - **The blueprint** is the folder's `_index.md`: title, description, and its definition as the body. It MAY end with `## Further reading`.
 - **Parts** are the pages in `parts/`. Each MUST have a `weight` (1, 2, 3...), which orders them. A part's title is also its label on every build's picks.
 - **Options** are a part's choices (thick, thin, paper thin). They aren't pages: they're rows under the part's `## Options`, a table with `Option`, `Pick it when`, and `Changes` columns.
-- **Builds** are the pages in `builds/`. An `era` (a year, or a list of years) places one on the blueprint's lineage timeline; a build with no `era` is left off it.
+- **Builds** are the pages in `builds/`. An `era` (a date, or a list of dates) places one on the blueprint's lineage timeline; a build with no `era` is left off it.
+- **History table** (optional): a table in the blueprint's body whose first column header is `Year`, one row per dish in the type's history, the dish's name in the second column. A blueprint with `lineage: table` or `both` draws its rows on the lineage, so history can be shown without a build page per dish. See "Lineage dates" below for what the Year cell may hold.
 - An `_index.md` in `parts/` or `builds/` is an optional lead line for that list, headless (`build: {render: never, list: never}`).
+
+#### Lineage dates
+
+A lineage date, in a build's `era` or a history table's `Year` cell, is one of:
+
+| Form | Example | Placed at | Drawn as |
+|---|---|---|---|
+| Year | `1769` | that year | a dot |
+| Approximate year | `c. 1900` | that year | a dot, its year labelled `c. 1900` |
+| Decade | `1950s` | the decade's span | a short bar across the decade, labelled `1950s` |
+
+The pattern is `^(c\. )?\d{4}$` or `^\d{3}0s$`. In frontmatter, quote the two text forms (`era: "c. 1900"`). A date that matches none of them is left off the lineage with a build warning. In the table, a row whose name or description links a build in the same blueprint is that build's dot (the build's own `era`, if it has one, wins under `both`); any other row is a history entry, linked to its name cell's link if it has one.
 
 A build's body, in order:
 

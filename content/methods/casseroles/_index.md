@@ -3,6 +3,7 @@ title: Casseroles
 date: 2026-11-07
 draft: true
 working_on: "First draft from our go-to casseroles; the sauce ratios and bake times need a test."
+lineage: table
 description: "A one-pan baked dish of a starch, a filling, and a sauce that binds them, often from leftovers: the way to stretch a little meat into dinner for everyone."
 ---
 A casserole is a one-pan baked dish: a starch, a filling of protein or vegetables, and a sauce that binds them. The word is French for the pan before it was the food, a diminutive of *casse*, from the Provençal for "saucepan," and it took on its current meaning around the 1870s ([Wikipedia](https://en.wikipedia.org/wiki/Casserole)). Every casserole makes the same four choices: the starch, the filling, the sauce, and what goes on top before it bakes.

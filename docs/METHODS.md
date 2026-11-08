@@ -133,14 +133,21 @@ The blueprint metadata:
 | Field | On | Meaning |
 |---|---|---|
 | `weight` | part | Its place in the blueprint's part order |
-| `era` | build | A year (`1960`) that places the build on the blueprint's lineage timeline, or a list (`[1991, 2015, 2026]`) for a build with iterations, one dot each; the later dots link to its `## Iterations` section when it has one. Builds with no `era` are left off it. |
+| `era` | build | A date that places the build on the blueprint's lineage timeline: a year (`1960`), an approximate year (`"c. 1900"`), or a decade (`"1950s"`). Or a list (`[1991, 2015, 2026]`) for a build with iterations, one dot each; the later dots link to its `## Iterations` section when it has one. Builds with no `era` are left off it. |
+| `lineage` | blueprint | Where the lineage gets its entries: `builds` (the builds' `era`), `table` (the blueprint's history table), or `both`. Defaults to the site's `params.fugu.methods.lineage` (`builds`). |
 | `linkTitle` | build | Optional short name for a later iteration's label in the sidebar lineage (`2015 BCS`). |
 
 **Recipes** carry no blueprint fields. A method lists its recipes in `## Recipes`: a part lists the recipes that show it (and the component recipes that make it, like a sauce or a bun), a build lists the recipes that are instances of it. Recipes keep the blueprint's plain tag (`burgers`).
 
 **History.** A build is often a historical style, and its picks are the constraints of the kitchen it came from. A 1960s drive-in cooked fast on a flat-top with ingredients it could buy reliably, so its burger has a thin patty, bottled condiments, a soft bun, and shredded iceberg. That's what `## Where it comes from` teaches: knowing why a pick exists tells you which ones matter when you change something. A source isn't always needed: dates and origin stories can come from Bruce's own knowledge, and a cited source (Wikipedia by default) is for the history that comes from elsewhere. Where accounts disagree the page says so, as [[White Spot burger]] does. A recipe that's a real, specific instance of a build (White Spot burgers, the McDouble) keeps its own specifics, like the Triple O name and its sauces; the build page has the general history of the style.
 
-The blueprint page shows a **lineage timeline**: builds placed by `era`, so the page shows how the dish changed over time. A build nobody has written yet is a test kitchen stub: a build page with its title, `era`, `draft: true`, a `working_on` line, and the section headings, so the timeline has one source.
+The blueprint page shows a **lineage timeline**, so the page shows how the dish changed over time. It has two sources, chosen per blueprint with `lineage` (decided 2026-11-07):
+
+- **Builds** (the default): each build placed by its `era`. A build nobody has written yet can be a test kitchen stub: a build page with its title, `era`, `draft: true`, a `working_on` line, and the section headings.
+- **A history table** in the blueprint's body, first column `Year`: for a type whose history is mostly dishes we don't make. Casseroles use it: the classics (baked macaroni and cheese, funeral potatoes, tuna casserole...) are history and ideas, not builds, so they're rows, not pages. A row that links one of the blueprint's builds is that build's dot.
+- **Both**, merged on one track.
+
+Dates can be approximate (`c. 1900`) or a decade (`1950s`), since history often isn't known to the year (FORMAT.md, "Lineage dates").
 
 Why not nested blueprints ("burgers → deluxe")? Builds share nearly every part and differ only in their picks; a child blueprint would repeat all the parts. Clusters of builds (rich, fresh, sweet) are builds grouped by profile, not a separate level; add one only if a blueprint ever has more builds than its page can show.
 
