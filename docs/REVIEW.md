@@ -8,45 +8,12 @@ Local links need the dev server (`/preview`). Each open section's heading carrie
 
 Not questions for now, kept so they aren't lost: the drafts (`make drafts`). The cornmeal-breaded chicken patty research is now a test kitchen recipe, [[Cornmeal fried chicken]].
 
-## Glossary: skip bold step labels? #todo
+## Approve as recommended #todo
 
-A bold label at the start of a list item ("**Doneness.**") is a heading inside a list, and linking it makes the heading read as navigation. Two of the last four link offers were labels, and bold lead phrases are spreading to more recipes, so answering "never" per page keeps growing. One rule in hugo-warped's glossary tool would stop them everywhere; a term whose first mention is a label gets its next plain mention linked instead.
+One box each: tick to approve the recommendation as described, or write the change after it. The mocks need `python3 mockups/serve.py` running, then http://localhost:8765/mockups/ and the file name.
 
-- [ ] Ask hugo-warped to skip bold text at the start of a list item
-- [ ] Keep answering "never" per page
-
-## Recipe mechanic #todo
-
-Mock: `mockups/recipe-mechanic.html` (run `python3 mockups/serve.py`, then open http://localhost:8765/mockups/recipe-mechanic.html). Real recipe pages, three ways, with lengths measured. On Chai, the sidebar runs 265px past the article as built, 33px with B, and 422px with C.
-
-- [ ] B: the Mechanic as a callout above Ingredients (recommended)
-- [ ] C: the Mechanic first in the sidebar, and above Recipe notes on phones
-- [ ] Keep A, as built
-- [ ] In B, the formula inside the callout (as shown), not under it
-- [ ] Quieter sidebar: the rest of the sidebar in muted, smaller text
-- [ ] Phone search at the end of Recipe notes (as shown), not removed from it
-
-## Food Log months #todo
-
-Mock: `mockups/food-log-sidebar.html` (with `python3 mockups/serve.py` running, open http://localhost:8765/mockups/food-log-sidebar.html). On October 2026's page, C cuts the Months list from 39 rows (1175px) to 16 (514px).
-
-- [ ] C: grouped by year, with older years folded to one row each (recommended)
-- [ ] B: grouped by year, all open
-- [ ] Keep A, as built
-- [ ] Seasons and multi-month labels keep their full name ("Fall and winter 2022–23"); plain months drop the year
-- [ ] A folded year counts months ("2024 · 4 months"), not days
-
-## Even cards #todo
-
-Mock: `mockups/even-cards.html` (with `python3 mockups/serve.py` running, open http://localhost:8765/mockups/even-cards.html). The homepage's Muesli card that started this has rotated off the homepage; the same gaps show on the recipe list and the burgers blueprint.
-
-- [ ] Recipe cards B: the formula row sits just above the stats rule, and a card with no times still draws its rule (recommended)
-- [ ] Build cards B: every burger stack sits on the rule, so bottoms line up across a row (recommended; as built they're centred, up to 77px apart)
-- [ ] Build cards C: stacks hang from the intro instead
-
-## Glossary: nine more drafts #todo
-
-The first 54 drafts are approved (2026-10-30). These nine were the "left out" list, now drafted the same way. Tick once you've read them, or write a change after a term.
-
-- [ ] Recipe pages already exist, so each entry links its recipe: [[Tare]] ([[Chashu pork]]) · [[Gari]] · [[Chashu]] · [[Kecap manis]]
-- [ ] Common, defined anyway: [[Hoisin]] · [[Kimchi]] · [[Tahini]] · [[Sriracha]]
+- [ ] **Glossary bold labels:** ask hugo-warped to skip bold text at the start of a list item ("**Doneness.**"), so labels stop being offered as links and the term's next plain mention gets the link instead.
+- [ ] **Recipe mechanic** (`recipe-mechanic.html`): the Mechanic moves above Ingredients as a callout, with its formula inside. The rest of the sidebar gets quieter (muted, smaller text), and on phones search moves to the end of Recipe notes. On Chai, the sidebar's overhang drops from 265px to 33px.
+- [ ] **Food Log months** (`food-log-sidebar.html`): months grouped under year labels with "undated" dropped. Older years fold to one row ("2024 · 4 months"), except the newest year and the page's own. Seasons keep their full names. On October 2026's page, 39 rows become 16.
+- [ ] **Even cards** (`even-cards.html`): the formula row sits just above the stats rule, and a card with no times still draws its rule. Burger stacks all sit on the rule, so their bottoms line up across a row (now up to 77px apart).
+- [ ] **Glossary drafts:** nine entries, read and approved. Each links its recipe page where one exists: [[Tare]] ([[Chashu pork]]) · [[Gari]] · [[Chashu]] · [[Kecap manis]]. Common, defined anyway: [[Hoisin]] · [[Kimchi]] · [[Tahini]] · [[Sriracha]].
