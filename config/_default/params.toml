@@ -98,13 +98,6 @@ mainSections = ["recipes"]
   # (/methods/) is the methods list (docs/METHODS.md).
   methodSection = "methods"
 
-  # Where a blueprint's lineage timeline gets its entries (docs/METHODS.md,
-  # "Lineage"): "builds" (each build's `era`), "table" (the history table in
-  # the blueprint's body, a table whose first column is `Year`), or "both".
-  # A blueprint can set its own with `lineage:` in its _index.md frontmatter.
-  [fugu.methods]
-    lineage = "builds"
-
   # Drinks are recipes in their own top-level section, content/drinks/:
   # recipe pages, a drinks list, and entries in public/recipes/index.json.
   drinkSection = "drinks"
@@ -114,6 +107,16 @@ mainSections = ["recipes"]
   # principle tag finds its essay there. A subfolder, not "reference" itself,
   # or every reference page would become a popover target.
   referenceEssays = "reference/essays"
+
+  # Tables come after the plain [fugu] keys above: in TOML, every key after
+  # a [table] header belongs to that table until the next header.
+
+  # Where a blueprint's lineage timeline gets its entries (docs/METHODS.md,
+  # "Lineage"): "builds" (each build's `era`), "table" (the history table in
+  # the blueprint's body, a table whose first column is `Year`), or "both".
+  # A blueprint can set its own with `lineage:` in its _index.md frontmatter.
+  [fugu.methods]
+    lineage = "builds"
 
   # Drafts are published as "Test kitchen" recipes: a banner under the
   # title and tags, and a mark on the card. What each key changes, and how
