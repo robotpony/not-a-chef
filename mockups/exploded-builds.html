@@ -316,7 +316,7 @@
 
   <section class="block" id="casseroles">
     <h2 class="block-title">6b · Casseroles (2026-11-07, for review)</h2>
-    <p class="note">Twelve new layers for the casseroles blueprint, on the lasagne layers' square footprint. Solid layers (mash, rice, tortilla, curry, gravy) are slabs; loose ones (stuffing, meat, mince, vegetables, beans, salsa) are the pieces themselves, packed edge to edge with no slab under them (2026-11-07 review). The turkey build has gravy twice, under the turkey and over it. Tortilla is thin with toasted spots; mash is a thick slab with fork ridges and browned peaks; gravy is a thin, glossy layer in the sear brown; mince is fine crumbles where meat chunks are bigger seared pieces. Food colours on peas and roasted greens (green), curry (yellow), and salsa (red). The new layers are also at the end of the kit in §2.</p>
+    <p class="note">Twelve new layers for the casseroles blueprint, on the lasagne layers' square footprint. Solid layers (mash, rice, tortilla, curry, gravy) are slabs; loose ones (stuffing, meat, mince, vegetables, beans, salsa, macaroni) are the pieces themselves, packed edge to edge with no slab under them (2026-11-07 review), at twice the first count so the pile reads as a layer's worth (second review). The turkey build has gravy twice, under the turkey and over it. Tortilla is thin with toasted spots; mash is a thick slab with fork ridges and browned peaks; gravy is a thin, glossy layer in the sear brown; mince is fine crumbles where meat chunks are bigger seared pieces. Food colours on peas and roasted greens (green), curry (yellow), and salsa (red). The new layers are also at the end of the kit in §2.</p>
     <div class="grid2" id="casserole-grid"></div>
   </section>
 
@@ -1104,7 +1104,7 @@ Object.assign(L2, {
   },
   // Stuffing: torn, toasted bread cubes, packed, with herb flecks.
   'stuffing'(cx, y, rx){
-    return pile(cx, y, rx, 54, 8, (x, yy, b) => {
+    return pile(cx, y, rx, 108, 10, (x, yy, b) => {
       const a = 3.6+b.q*1.8, r = rng(Math.floor(b.r*1e6)+1);
       let d = `<path class="s thin bun" d="M${f(x-a)},${f(yy)}l${f(a*1.6)},${f(a*.3)}l${f(a*.4)},${f(-a*.7)}l0,${f(a*.75)}l${f(-a*.4)},${f(a*.7)}l${f(-a*1.6)},${f(-a*.3)}z"/>`;
       d += `<path class="chunk" d="M${f(x-a)},${f(yy)}l${f(a*.6)},${f(-a*.5)}l${f(a*1.4)},${f(a*.1)}l${f(-a*.4)},${f(a*.7)}z"/>`;
@@ -1120,22 +1120,22 @@ Object.assign(L2, {
   // Bite-sized pieces of roast meat or stir-fry, seared, with a grain line, packed edge to edge.
   'meat-chunks'(cx, y, rx){
     const pc = chunkPiece('meat-top', 'meat');
-    return pile(cx, y, rx, 40, 9, (x, yy, b) => pc(x, yy, b, 4.6+b.q*2.4) + `<path class="tx-fine" d="M${f(x-2.6)},${f(yy-.6)}l${f(5)},${f(.9)}"/>`, 113);
+    return pile(cx, y, rx, 80, 11, (x, yy, b) => pc(x, yy, b, 4.6+b.q*2.4) + `<path class="tx-fine" d="M${f(x-2.6)},${f(yy-.6)}l${f(5)},${f(.9)}"/>`, 113);
   },
   // Mince: a packed layer of small browned crumbles, finer than the meat chunks.
   'mince'(cx, y, rx){
-    return pile(cx, y, rx, 190, 6, (x, yy, b) => `<path class="s hair meat-top" d="${pts2d(lump(x, yy, 1.9+b.q*1.4, Math.floor(b.r*1e6)+5, .6, .3))}Z"/>`, 127);
+    return pile(cx, y, rx, 380, 8, (x, yy, b) => `<path class="s hair meat-top" d="${pts2d(lump(x, yy, 1.9+b.q*1.4, Math.floor(b.r*1e6)+5, .6, .3))}Z"/>`, 127);
   },
   // Frozen mixed vegetables: peas (green), with diced carrot and corn, packed.
   'veg-mixed'(cx, y, rx){
-    return pile(cx, y, rx, 150, 6, (x, yy, b, i) => {
+    return pile(cx, y, rx, 300, 8, (x, yy, b, i) => {
       if (i%2 === 0) return `<ellipse class="s thin pick-side" cx="${f(x)}" cy="${f(yy+1)}" rx="2.5" ry="2.2"/><ellipse class="s thin pick" cx="${f(x)}" cy="${f(yy)}" rx="2.5" ry="2.1"/>`;
       const a = 2.1+b.q*.8; return `<path class="s thin bun" d="M${f(x-a)},${f(yy+a*.5)}h${f(a*2)}l${f(a*.4)},${f(-a)}v1.6l${f(-a*.4)},${f(a)}h${f(-a*2)}z"/><path class="chunk" d="M${f(x-a)},${f(yy+a*.5)}h${f(a*2)}l${f(a*.4)},${f(-a)}h${f(-a*2)}z"/>`;
     }, 131);
   },
   // Roasted vegetables: big, irregular wedges with charred spots, some green.
   'veg-roasted'(cx, y, rx){
-    return pile(cx, y, rx, 32, 10, (x, yy, b, i) => {
+    return pile(cx, y, rx, 64, 12, (x, yy, b, i) => {
       const sz = 5+b.q*2.6, top = lump(x, yy, sz, Math.floor(b.r*1e6)+7, .5, .35), g = i%3 === 0, r = rng(Math.floor(b.r*1e6)+9);
       let d = `<path class="s thin ${g ? 'pick-side' : 'bun'}" d="${pts2d(top.map(([a, c]) => [a, c+2.6]))}Z"/><path class="s thin ${g ? 'pick' : 'crumb'}" d="${pts2d(top)}Z"/>`;
       for (let k=0;k<3;k++) d += `<circle class="char-spat" cx="${f(x+(r()-.5)*sz)}" cy="${f(yy+(r()-.5)*sz*.4)}" r="${f(.6+r()*.7)}"/>`;
@@ -1164,7 +1164,7 @@ Object.assign(L2, {
   },
   // Beans: whole kidney-shaped beans, packed, each with a pale eye on the inner curve.
   'beans'(cx, y, rx){
-    return pile(cx, y, rx, 70, 6, (x, yy, b) => {
+    return pile(cx, y, rx, 140, 8, (x, yy, b) => {
       const a = (b.q-.5)*110, T = `transform="rotate(${f(a)} ${f(x)} ${f(yy)})"`;
       return `<path class="s thin meat-top" d="M${f(x-4.4)},${f(yy)}C${f(x-4.4)},${f(yy-3.4)} ${f(x+4.4)},${f(yy-3.4)} ${f(x+4.4)},${f(yy)}C${f(x+4.4)},${f(yy+2.7)} ${f(x+1.4)},${f(yy+2.1)} ${f(x)},${f(yy+1.2)}C${f(x-1.4)},${f(yy+2.1)} ${f(x-4.4)},${f(yy+2.7)} ${f(x-4.4)},${f(yy)}Z" ${T}/><ellipse class="seed" cx="${f(x)}" cy="${f(yy+.4)}" rx="1" ry=".5" ${T}/>`;
     }, 163);
@@ -1172,7 +1172,7 @@ Object.assign(L2, {
   // Macaroni (2026-11-07): elbows, the stereotypical baked pasta, as a loose pile. Each elbow is a
   // curved tube: a banded arc on the pasta's surface fill, with its open end drawn as a small ring.
   'macaroni'(cx, y, rx){
-    return pile(cx, y, rx, 58, 10, (x, yy, b) => {
+    return pile(cx, y, rx, 116, 12, (x, yy, b) => {
       const k = .85+b.q*.3, Ro = 7.2*k, Ri = 3.9*k, a0 = b.r*Math.PI*2, sw = Math.PI*.6, fl = .6;
       const ox = x-Math.cos(a0+sw/2)*(Ro+Ri)/2, oy = yy-Math.sin(a0+sw/2)*(Ro+Ri)/2*fl;
       const P = (r, a) => [ox+Math.cos(a)*r, oy+Math.sin(a)*r*fl], N = 14, out = [], inn = [];
@@ -1185,7 +1185,7 @@ Object.assign(L2, {
   },
   // Salsa: chunky, so a pile of tomato pieces in red, with onion bits.
   'salsa'(cx, y, rx){
-    return pile(cx, y, rx, 110, 5, (x, yy, b, i) => {
+    return pile(cx, y, rx, 220, 7, (x, yy, b, i) => {
       if (i%3 === 0){ const a = 1.7+b.q; return `<path class="chunk" d="M${f(x-a)},${f(yy)}l${f(a)},${f(-a*.5)}l${f(a)},${f(a*.5)}l${f(-a)},${f(a*.5)}z"/>`; }
       const top = lump(x, yy, 2.6+b.q*1.6, Math.floor(b.r*1e6)+13); return `<path class="s thin tom-side" d="${pts2d(top.map(([a, c]) => [a, c+1.4]))}Z"/><path class="s thin tom" d="${pts2d(top)}Z"/>`;
     }, 167);
