@@ -1993,6 +1993,20 @@ article:not(:has(.article-pagination)) .reading-sidebar-wrap { margin-bottom: 0;
 .f-bar span { background: var(--accent-soft); border: 1px solid var(--accent); border-radius: 2px; }
 .f-cap { font-family: 'Libre Franklin', sans-serif; font-size: .74rem; color: var(--ink-faint); margin-top: 12px; text-align: center; }
 
+/* Phones: a full-size slot is 96px, so five slots and four operators need
+   568px and wrap in a ~342px column, and the next row starts on its operator
+   (a flow's second row led with →). Compact sizes fit five on one row. */
+@media (max-width: 640px) {
+  .article-content .formula .f-slot { width: 56px; }
+  .article-content .formula .f-op { width: 14px; font-size: 1rem; line-height: 36px; }
+  .article-content .formula-ratio .f-op { font-size: 1.2rem; }
+  .article-content .formula .ic, .article-content .formula .f-icons { height: 36px; }
+  .article-content .formula .ic { width: 36px; }
+  .article-content .formula .f-pair .ic { width: 30px; height: 30px; }
+  .article-content .formula .f-label { font-size: .7rem; }
+  .article-content .formula .f-qty, .article-content .formula .f-sub, .article-content .formula .f-or { font-size: .68rem; }
+}
+
 /* Compact: the recipe sidebar (~18.6rem) fits five slots */
 .recipe-sidebar-section .formula { margin: .9em 0 .6em; }
 .recipe-sidebar-section .f-slot { width: 50px; }

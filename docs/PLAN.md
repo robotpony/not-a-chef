@@ -27,7 +27,6 @@ Mocked, waiting on Bruce (`docs/REVIEW.md`):
 To mock:
 
 - [ ] A thin line of images leading the page, under the header: Bruce's idea, to be worked out (which pages, where the images come from, height, how it sits with the sidebar photos). Decide the phone photos with it (a 112px thumbnail sits alone at the left, above Recipe notes).
-- [ ] Phone flow diagrams wrap with an arrow leading the second row (Pan sauces).
 - [ ] Lighter recipe header: a hairline under the title and one small-caps meta line (servings · time · source), Smitten Kitchen's treatment, mocked against the current stat row.
 - [ ] Homepage: a drinks band, or drinks inside the recipes band.
 
