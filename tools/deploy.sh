@@ -4,9 +4,11 @@
 # Pass --dry-run to list what would change without touching the server.
 set -euo pipefail
 
+# --checksum: Hugo rewrites every file's mtime on each build, so compare
+# contents, not times, and send only what changed.
 # .dh-diag is DreamHost's own file in the web root, and favicon.gif is on the
 # server but not in the repo; --delete would remove them.
-RSYNC_FLAGS=(-avz --delete --exclude .dh-diag --exclude favicon.gif)
+RSYNC_FLAGS=(-avz --checksum --delete --exclude .dh-diag --exclude favicon.gif)
 if [[ "${1:-}" == "--dry-run" ]]; then
   RSYNC_FLAGS+=(--dry-run)
 fi
@@ -55,7 +57,7 @@ if [[ -z "$HOST" || -z "$REMOTE_PATH" ]]; then
 fi
 
 if [[ ! -d public ]]; then
-  echo "error: public/ not found — run 'hugo --minify' first." >&2
+  echo "error: public/ not found — run 'tools/publish.sh dry-run' first." >&2
   exit 1
 fi
 

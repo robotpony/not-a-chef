@@ -52,8 +52,10 @@ Then use that alias as `host` in `tools/config.toml`.
 ## Building and deploying
 
 - `make preview` — run the Hugo dev server locally (`/preview`)
-- `make build` — build the static site to `public/`
-- `make deploy` — build, then rsync `public/` to the server via `tools/deploy.sh` (`/publish`)
+- `make build` — build the working tree to `public/`, for a local look
+- `make check` — check content frontmatter and the current `public/`
+- `make dry-run` — build HEAD from a clean worktree and show what rsync would change
+- `make deploy` — publish HEAD: refuse uncommitted changes, build it clean, rsync `public/` to the server via `tools/deploy.sh`, check the live site (`/publish`)
 - `make drafts` — list every page in the Test kitchen (`draft: true`)
 
 ### Server requirements

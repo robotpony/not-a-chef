@@ -2,14 +2,6 @@
 
 Open work only. Finished items are cut, not ticked; git history has them (`git log -- docs/PLAN.md`). Theme work lives in `themes/fugu/PLAN.md` and goes to fugu-agent; after each Fugu change, bump the submodule and check the site renders the same. A single draft's work lives in its `working_on` line (`make drafts`). Questions waiting on Bruce live in `docs/REVIEW.md`.
 
-## Deploy tooling
-
-Sites keep their own copies of the deploy script (`~/.claude/rules/site-ports.md`, decided 2026-11-04). The reference is brucealderson.ca's `tools/deploy.sh`, once it has survived a real deploy.
-
-- [ ] Build from a clean worktree of HEAD: `publish.sh deploy` can ship a `public/` that doesn't match HEAD. Take the lock, `rsync --checksum`, and the live check from the reference too.
-- [ ] Check for a dirty tree before building, not at the deploy step, and fix `warn_dirty`, which says uncommitted content will be published when `deploy.sh` refuses it.
-- [ ] Add `check` and `dry-run` to the Makefile, the shared target names.
-
 ## Glossary
 
 Spec, partials, and tools in hugo-warped; popover and A to Z page in Fugu; entries in `content/reference/glossary/`. Empty entries are stubs, left off the site until written. Nine entry drafts wait in `docs/REVIEW.md`.

@@ -1,7 +1,14 @@
-.PHONY: build preview deploy publish drafts glossary-candidates glossary-link glossary-check glossary-apply
+.PHONY: build check dry-run preview deploy publish drafts glossary-candidates glossary-link glossary-check glossary-apply
 
 build:
 	tools/publish.sh build
+
+check:
+	tools/publish.sh check
+
+# Builds HEAD clean and shows what rsync would change; deploys nothing.
+dry-run:
+	tools/publish.sh dry-run
 
 preview:
 	tools/preview.sh
