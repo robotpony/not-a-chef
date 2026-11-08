@@ -14,7 +14,8 @@ Each change is mocked before it's built, and recorded in `mockups/STYLE.md` and 
 
 - [ ] Publish `mockups/` as a static subfolder (which mocks, how linked, kept out of search). Bruce approved it on 2026-10-21.
 - [ ] Stack layer weight: the dense casserole piles are inlined per use (casseroles page about 800 KB of HTML, mince and macaroni 110–176 KB each). Inline each layer once per page and reuse it with `<use href>` (Fugu `partials/stack/draw.html`, so fugu-agent), or convert to PNG at publish.
-- [ ] Code and docs review (deferred 2026-10-14): `custom.css` (dead classes, duplicates, off-token colours), `tools/*.sh` and the Makefile from a fresh clone, accessibility on the built site (popover ARIA, focus order, landmarks, headings, alt text), a docs inventory (`DESIGN.md` and Fugu's `--help` overlap on tool CLIs), `/mx:content-check` over the docs, and last, CLAUDE.md cut to what an agent needs to start. One area per pass with `/code-review high`; template and CSS fixes get `python3 themes/fugu/tests/check.py --compare` plus Chrome at both widths, light and dark.
+- [ ] Decide whether `docs/FORMAT.md` (435 lines) stays as house style now that Fugu documents the format itself (`themes/fugu/docs/recipe-format.md` and `frontmatter.md`, 550 lines): keep only what's Not a Chef's own (voice, tags, the `family` and `blueprint` rules) and point to Fugu's docs for the rest, or keep it whole.
+- [ ] Code and docs review (deferred 2026-10-14): `custom.css` (dead classes, duplicates, off-token colours; Fugu's `docs/design/class-inventory.md` already lists 13 dead classes), `tools/*.sh` and the Makefile from a fresh clone, accessibility on the built site (popover ARIA, focus order, landmarks, headings, alt text), a docs inventory (`DESIGN.md` and Fugu's `--help` overlap on tool CLIs), `/mx:content-check` over the docs, and last, CLAUDE.md cut to what an agent needs to start. One area per pass with `/code-review high`; template and CSS fixes get `python3 themes/fugu/tests/check.py --compare` plus Chrome at both widths, light and dark.
 
 ## Later
 
@@ -38,4 +39,3 @@ When Fugu lands it (`themes/fugu/PLAN.md`):
 
 - The validator: run it over all recipes and file each discrepancy as a spec or content bug.
 - Its default CSS (§5): cut `custom.css` down to the Not a Chef look.
-- Its docs (§7): decide whether `FORMAT.md` stays as house style.
