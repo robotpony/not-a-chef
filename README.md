@@ -2,19 +2,7 @@
 
 Our family cookbook.
 
-This is a cookbook project, collecting recipes from my personal sources: originally a combination of markdown files in an Obsidian vault and a drive of Google docs.
-
-This repo is now the source of truth for recipes, and it is the Obsidian vault: everything is drafted and edited here directly. The Google Docs archive was fully migrated in and its local copy deleted.
-
-## Project goals
-
-1. Organized and clear source for personal recipes (as a simple Hugo site)
-2. Capture simple essays about food, and reference pages (posts + pages, same Hugo site)
-3. Be the source of truth for these recipes (done for the Google Docs archive; other family additions get moved in by hand as they turn up).
-4. Be compatible with PDF generation (based on the Hugo docs, possibly using a separate or custom tool)
-5. Be compatible with Obsidian (which will be the main editor)
-6. Be compatible with Claude (the main LLM, using claude code stand-alone beside Obsidian)
-
+Recipes, drinks, food essays, methods, reference pages and a food log, published as a Hugo site at https://bruce-loves-to-cook.ca. This repo is the source of truth and is also the Obsidian vault, so pages are written and edited here directly; the family's Google Docs archive was migrated in and retired. Claude Code works beside Obsidian on the same files.
 
 ## Tech plan
 
@@ -59,6 +47,7 @@ Then use that alias as `host` in `tools/config.toml`.
 - `make dry-run` — build HEAD from a clean worktree and show what rsync would change
 - `make deploy` — publish HEAD: refuse uncommitted changes, build it clean, rsync `public/` to the server via `tools/deploy.sh`, check the live site (`/publish`)
 - `make drafts` — list every page in the Test kitchen (`draft: true`)
+- `tools/publish.sh deploy` — ship the `public/` a dry run just built, without rebuilding or counting the build; it refuses if HEAD has moved or anything has written to `public/` since
 
 ### Server requirements
 

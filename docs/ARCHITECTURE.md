@@ -19,7 +19,7 @@ Obsidian (this repo, edited in place)
           self-hosted server (tools/publish.sh → tools/deploy.sh, rsync)
 ```
 
-Until 2026-09 recipes were drafted in a separate vault (`~/writing/me/recipes/`) and copied in one-way by `tools/migrate.py` (`/migrate`). That workflow is retired; the tool is still in `tools/` for history.
+Until 2026-09 recipes were drafted in a separate vault and copied in one-way by a migration tool, retired and since deleted (git has it).
 
 ## Components
 
@@ -36,10 +36,9 @@ This site's own, in `tools/`:
 
 - `preview.sh`, `publish.sh`, `deploy.sh` — dev server (restarts any hugo already on :1313); build and check for dev-server output; rsync to the host
 - `social-card.html` — source for `assets/img/social-card.png`, the default Open Graph image; the regenerate command is in its header comment
-- `config.toml` (gitignored, from `config.toml.example`) — machine-specific deploy target (and the retired vault path)
-- `migrate.py` — retired (see Overview)
+- `config.toml` (gitignored, from `config.toml.example`) — machine-specific deploy target
 
-CLI details are in DESIGN.md.
+Each tool explains itself with `--help` (`publish.sh help`); DESIGN.md has the command index.
 
 ### Hugo site
 

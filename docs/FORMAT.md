@@ -61,7 +61,7 @@ Describe what's in the photo: with no title, the alt text is the caption.
 
 ### Language
 
-Canadian English. British spellings (colour, favour, behaviour, flavour, grey) with American -ize endings (realize, organize, optimize), and Canadian centre and litre. Preferred spellings: chili (plural chilies; "chile" only in proper names), yogurt, Sichuan, aluminum, green onion. Metric units with optional imperial in parentheses: "180°C (350°F)", "250 ml (1 cup)".
+Canadian English, with a few US spellings. British spellings (colour, favour, behaviour, flavour, grey) with American -ize endings (realize, organize, optimize), and Canadian centre, litre and metre. This differs from the blog-writing skill, which uses center and liter; on this site the Canadian spelling wins. Preferred spellings: chili (plural chilies; "chile" only in proper names), yogurt, Sichuan, aluminum, green onion. Metric units with optional imperial in parentheses: "180°C (350°F)", "250 ml (1 cup)".
 
 ### Typography
 
@@ -88,7 +88,18 @@ Drinks are recipes in `content/drinks/` (Fugu's `drinkSection`), with the `drink
 
 ## Essays
 
-Essays live in `content/essays/<type>/` and are finished prose, not outlines or notes. Draft them in place, with `draft: true` while they're still changing. The types (one folder each) and the voice are in CLAUDE.md "Food essay types"; for shared language rules see the `blog-writing` skill.
+Essays live in `content/essays/<type>/` and are finished prose, not outlines or notes. Draft them in place, with `draft: true` while they're still changing. For shared language rules see the `blog-writing` skill (this file's Language section wins where they differ).
+
+The types, one folder each:
+
+- **Food memories**: thematic vignettes from childhood or formative food experiences. Each anchors a lesson or insight about cooking; nostalgia alone isn't enough. No names or places: the food is the subject.
+- **Cooking reflections**: lessons from technique, ingredients, or failure. Engineering-minded; ratio-based thinking and post-mortems welcome.
+- **Technique essays**: a deep dive on one method or principle (brining, emulsification, stock-making). Reference material written as prose.
+- **Planning essays**: meal prep, "winning the fridge" thinking, systems for weeknight cooking.
+
+A story that motivates a method isn't a method; it links to one (see Methods below).
+
+The voice for all of them: engineering precision meets home-cook practicality. Personal, honest about mistakes, with a practical takeaway at the end.
 
 Frontmatter is the shared set. `title` and `date` are required; `tags` and `description` are encouraged. Essays don't use the recipe fields (`servings`, `cuisine`, times).
 

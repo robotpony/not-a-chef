@@ -57,4 +57,4 @@ The mocks in `mockups/` are static HTML, opened directly in a browser. One scrip
 ## Not used
 
 - **Node.js in the build.** recipe-book (deprecated) used Node and TypeScript for its parser and CLI. Hugo handles Markdown here, and the client JS ships as written.
-- **Third-party Python packages.** The retired `tools/migrate.py` used `python-frontmatter`, `click`, and `rich`; no current tool does. If the format validator (FORMAT.md §Validation) needs a dependency, it belongs to Fugu.
+- **Third-party Python packages.** No tool uses any (the retired migration tool did). If the format validator (FORMAT.md §Validation) needs a dependency, it belongs to Fugu.

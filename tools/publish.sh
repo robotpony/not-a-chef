@@ -2,11 +2,22 @@
 # Build and publish the site. One entry point for the steps that otherwise
 # live in the Makefile and tools/deploy.sh.
 #
-#   tools/publish.sh            build HEAD clean, check, deploy, count the build
-#   tools/publish.sh build      build public/ from the working tree (local look)
-#   tools/publish.sh check      sanity-check the content and the current public/
-#   tools/publish.sh dry-run    build HEAD clean, check, show what rsync would change
-#   tools/publish.sh deploy     deploy the current public/, if it's a clean build of HEAD
+#   tools/publish.sh            build HEAD clean, check, deploy, count the build (make publish, make deploy)
+#   tools/publish.sh build      build public/ from the working tree, to look at locally; never deployable
+#   tools/publish.sh check      check the content and the current public/; changes nothing
+#   tools/publish.sh dry-run    build HEAD clean, check, show what rsync would change; deploys nothing
+#   tools/publish.sh deploy     ship the public/ a dry-run built, untouched since; no rebuild, build not counted
+#
+# A full publish ships HEAD and nothing else. It takes a lock (one publish
+# at a time), refuses uncommitted changes, and builds a detached worktree of
+# HEAD in a temp folder, each theme submodule filled from the commit HEAD
+# records (git archive, no network). There it stops on a frontmatter error,
+# builds into the repo's public/ (hugo --minify --cleanDestinationDir,
+# sharing the resources/ image cache), refuses dev-server output, runs
+# tools/deploy.sh (rsync --checksum --delete), and fetches the live
+# version.txt to confirm it. The build number in data/build.toml is bumped
+# before the build and committed after the deploy; the footer shows
+# "Build N · hash" ("Build dev" on the local server).
 set -Eeuo pipefail
 
 cd "$(dirname "$0")/.."
@@ -18,8 +29,10 @@ if [[ ! -f themes/fugu/hugo.toml || ! -f themes/hugo-warped/tools/check-hugo.sh 
 fi
 GIT_DIR_COMMON="$(cd "$(git rev-parse --git-common-dir)" && pwd)"
 LOCK="$GIT_DIR_COMMON/publish.lock"
-# Written after a clean build: the commit public/ was built from. A
-# working-tree build removes it, so 'deploy' can't ship a local look.
+# Written after a clean build: the commit public/ was built from, then a
+# fingerprint of public/ itself. A working-tree build removes it, and any
+# other write to public/ (a plain 'hugo', which rewrites it without moving
+# HEAD) changes the fingerprint, so 'deploy' can't ship a local look.
 BUILT_MARKER="$GIT_DIR_COMMON/publish-built"
 BUILD_FILE="data/build.toml"
 WORKTREE=""
@@ -114,7 +127,13 @@ build_clean() {
   echo "Building $(git rev-parse --short HEAD) from a clean worktree..."
   cp "$BUILD_FILE" "$WORKTREE/$BUILD_FILE"
   hugo_build "$WORKTREE" "$(git rev-parse --short HEAD)"
-  git rev-parse HEAD > "$BUILT_MARKER"
+  printf '%s\n%s\n' "$(git rev-parse HEAD)" "$(public_fingerprint)" > "$BUILT_MARKER"
+}
+
+# Every file's path, size and modification time. version.txt is left out:
+# deploy.sh writes it into public/ as it ships.
+public_fingerprint() {
+  find public -type f ! -path public/version.txt -exec stat -f '%N %z %m' {} + | LC_ALL=C sort | shasum | cut -d' ' -f1
 }
 
 build_local() {
@@ -214,9 +233,20 @@ require_config() {
 }
 
 # 'deploy' ships public/ as it is, so it has to be a clean build of HEAD.
+# Two checks, each with its own error: the clean build was of HEAD, and
+# nothing has written to public/ since.
 require_built_from_head() {
-  if [[ ! -f "$BUILT_MARKER" || "$(cat "$BUILT_MARKER")" != "$(git rev-parse HEAD)" ]]; then
+  local built_sha="" built_print=""
+  if [[ -f "$BUILT_MARKER" ]]; then
+    { read -r built_sha; read -r built_print; } < "$BUILT_MARKER" || true
+  fi
+  if [[ "$built_sha" != "$(git rev-parse HEAD)" ]]; then
     echo "error: public/ isn't a clean build of HEAD (a local build, or an older commit)." >&2
+    echo "Run 'tools/publish.sh dry-run' to rebuild it, or 'tools/publish.sh' to publish." >&2
+    exit 1
+  fi
+  if [[ "$built_print" != "$(public_fingerprint)" ]]; then
+    echo "error: public/ has changed since the clean build (a plain 'hugo' run, or a preview writing to it)." >&2
     echo "Run 'tools/publish.sh dry-run' to rebuild it, or 'tools/publish.sh' to publish." >&2
     exit 1
   fi

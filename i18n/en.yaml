@@ -1,2 +1,8 @@
 article:
   table_of_contents: "On this page"
+# Blowfish's appearance.js rewrites the theme toggle's name from these on
+# load and on every click. One name for both states, with aria-pressed
+# (layouts/partials/footer.html) saying whether it's on.
+footer:
+  dark_appearance: "Dark mode"
+  light_appearance: "Dark mode"

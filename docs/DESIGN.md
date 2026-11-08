@@ -130,200 +130,26 @@ Slugs are derived from the filename (kebab-case), under the page's folders (an e
 
 ## Claude Code commands
 
-Project-specific slash commands in `.claude/commands/`. Each is a markdown file that describes what the agent should do when invoked.
+Project slash commands are markdown files in `.claude/commands/`; each file is the full description of what the agent does.
 
-### `/migrate` (retired)
+| Command | What it does |
+|---|---|
+| `/recipe-new` | A recipe stub from Fugu's archetype, in the Test kitchen |
+| `/lint` | Checks content: frontmatter, fences, methods and blueprints, glossary entries; changes nothing |
+| `/preview` | `tools/preview.sh`: the dev server with drafts, opened in Chrome |
+| `/publish` | `tools/publish.sh`: build HEAD clean, deploy, count the build |
+| `/image-add` | Adds photos to a recipe, essay or Food Log page |
+| `/food-log-summary` | Writes or refreshes a Food Log month's opening summary |
+| `/glossary-link` | Links glossary terms on their first mention, reviewed in chat |
+| `/glossary-new` | Adds glossary entries with a first-draft definition |
+| `/glossary-candidates` | Finds words worth adding to the glossary |
 
-Retired with the two-vault workflow: the Obsidian vault is this repo now, so there's nothing to migrate from. Kept for history. It migrated one or more personal recipes from the vault into `content/recipes/`.
+## Publishing
 
-```
-/migrate [filename or "all"]
-```
+`tools/publish.sh help` lists its commands; the comment at the top of the script says how a publish works (the lock, the clean worktree of HEAD, the checks, the build number). Each real deploy tags the commit `deploy-YYYY-MM-DD` (`-2` for a second that day), so `git log deploy-A..deploy-B` is the changelog between two deploys. Tags stay local until `git push --tags`.
 
-- Default (no args): migrates all new or changed files from `~/writing/me/recipes/`
-- With filename: migrates that specific recipe
-- Calls `tools/migrate.py`
-- Reports what was added, updated, or skipped
+## Content tools
 
-### `/recipe-new`
+Fugu's tools explain themselves: run `frontmatter.py`, `drafts.py` (both stdlib Python) or `add-image.sh` from `themes/fugu/tools/` with `--help`.
 
-Creates a new recipe stub in the correct location.
-
-```
-/recipe-new "Recipe Title"
-```
-
-- Generates `content/recipes/{slug}.md` from Fugu's archetype (`themes/fugu/archetypes/recipes.md`), today's date pre-filled
-- Title set in sentence case; at least one tag required
-- Starts in the Test kitchen (`draft: true`, optional `working_on`)
-
-### `/lint`
-
-Validates recipe files in `content/recipes/` (and `content/essays/` given a path) against FORMAT.md rules, and always checks `content/methods/` against docs/METHODS.md (the `method` tag, part weights, build picks, retired fields) and every diagram fence with hugo-warped's `check-fences.py`.
-
-```
-/lint [path]
-```
-
-- Checks required frontmatter fields, tag format, draft status
-- Reports files with missing or malformed fields
-- Does not modify files
-
-### `/preview`
-
-Starts Hugo dev server locally.
-
-```
-/preview
-```
-
-- Stops any hugo server already on port 1313, so a stale one from an earlier session never serves old templates
-- Runs `tools/preview.sh`: `hugo server -D` (includes drafts), opened in Chrome once it answers
-- Reports the local URL
-
-### `/publish`
-
-Builds the site and deploys to the self-hosted server.
-
-```
-/publish
-```
-
-- Runs `tools/publish.sh`, which ships HEAD and nothing else. It takes a lock (`.git/publish.lock`, one publish at a time), refuses uncommitted changes before building or counting anything, and builds from a detached worktree of HEAD in a temp folder, with each theme submodule filled from the commit HEAD records (`git archive`, no network). In that tree it stops on a frontmatter error (`frontmatter.py check`, skipping the ALL-CAPS working notes Hugo ignores; warnings don't block), builds into the repo's `public/` with `hugo --minify --cleanDestinationDir` (sharing the `resources/` image cache), refuses a `public/` containing dev-server output (localhost URLs, livereload), runs `tools/deploy.sh` (`rsync --checksum --delete`, so only changed files go), and finally fetches the live `version.txt` to confirm the server has it. A full publish bumps `data/build.toml` first and commits the bump after a successful deploy; the footer shows "Build N · hash", and "Build dev" on the local server. Only the full path counts.
-- Each real deploy writes `public/version.txt` (tag and commit) and tags the deployed commit `deploy-YYYY-MM-DD` (`-2` for a second that day). `git log deploy-A..deploy-B` is the changelog; tags stay local until `git push --tags`
-- Reports build output and any errors
-- `tools/publish.sh dry-run` (`make dry-run`) builds HEAD clean and shows what rsync would change without deploying; it runs on a dirty tree, with a note that the edits aren't in it. `deploy` ships the current `public/` only if it's a clean build of HEAD (the commit is recorded in `.git/publish-built`). `build` (`make build`) builds the working tree for a local look (its footer hash gets a `+` when the tree is dirty) and can't be deployed; `check` (`make check`) checks content and the current `public/`
-
-### `/image-add`
-
-Adds one or more photos to a recipe, essay, or Food Log page.
-
-```
-/image-add <image path(s)> <post title or file>
-```
-
-- Finds the post by title, slug, or path, and picks the matching `static/images/<section>/` folder
-- Names each file from the post's slug and what the photo shows; never overwrites
-- Processes each one with `themes/fugu/tools/add-image.sh` (bakes in rotation, strips metadata, caps the long edge at 2000 px)
-- Places the markdown image where it belongs in the text, with descriptive alt text (`FORMAT.md` §Photos)
-
-### `/food-log-summary`
-
-Writes or refreshes a Food Log month's opening summary paragraph.
-
-```
-/food-log-summary [month file, e.g. 2026-September]
-```
-
-- Defaults to the most recently modified file in `content/the-food-log/`
-- Reads the month's entries and writes a short prose paragraph (what was cooked, tested, or planned) as the first thing in the body, before the first `## <Day>` heading — replacing one already there rather than stacking
-- This paragraph is what the recipe-card intro fallback picks up, so it's what shows on the Food Log list page and the homepage's "From the food log" band
-- Run on demand, not automatically — the log gets small edits constantly and re-summarizing on every one would be noisy
-
-### `/glossary-link`
-
-Links glossary terms on their first prose mention, reviewed in chat one term at a time. The chat side of `make glossary-link`.
-
-```
-/glossary-link [term | next | status]
-```
-
-- Reads the proposals from `glossary.py link --check --json` (hugo-warped), fresh each time
-- Shows one numbered table per term, flags rows that look wrong (another sense of the word, a bold step label), and waits for `all`, `all but 3`, `never 3`, `only 1 2` or `skip`
-- Writes `[[Title]]` or `[[Title|words]]` on each line, adds never pairs to `tools/glossary-skip.txt`, and commits only those files
-
-### `/glossary-new`
-
-Adds glossary entries to `content/reference/glossary/`, each with a first-draft definition.
-
-```
-/glossary-new "Term" ["Another term" …]
-```
-
-- Refuses a term or form another entry already has; sets `also:` from the forms in use
-- Drafts from how the cookbook already uses the word; the first sentence is the hover
-- Queues the drafts in `docs/REVIEW.md` for Bruce
-
-### `/glossary-candidates`
-
-Finds words worth adding to the glossary.
-
-```
-/glossary-candidates [min pages]
-```
-
-- Runs `glossary.py candidates`, then prunes: uncommon or cuisine-specific ingredients first, then techniques, nothing else
-- Writes the short list to `docs/REVIEW.md`; a ticked group goes to `/glossary-new`
-
----
-
-## Migration tool CLI (retired)
-
-Kept for history; not part of any current workflow (see `/migrate` above).
-
-### config.toml
-
-Copy `tools/config.toml.example` to `tools/config.toml` (gitignored) and set the vault path for your machine:
-
-```toml
-[vault]
-recipes = "~/writing/me/recipes"
-```
-
-Path resolution order: `--source` flag → env var → `config.toml` → error.
-
-### migrate.py
-
-```
-python tools/migrate.py [options] [file]
-
-Options:
-  --source PATH    Override vault recipes path (default: from config.toml or VAULT_RECIPES_PATH)
-  --dest PATH      Override Hugo content/recipes/ path (default: ./content/recipes)
-  --force          Re-migrate all files, ignoring mtime
-  --dry-run        Show what would change, don't write files
-  --verbose        Show per-file details
-
-Arguments:
-  file             Single filename to migrate (default: all)
-```
-
-Output (human-readable):
-```
-✓ new:      dal-tadka.md
-✓ updated:  chai.md  (vault newer)
-  skipped:  pizza-dough.md  (unchanged)
-! error:    broken-recipe.md  (missing required field: title)
-! removed:  old-recipe.md  (not in vault — remove manually if intended)
-
-5 files checked: 1 new, 1 updated, 1 skipped, 1 error, 1 warning
-```
-
----
-
-## Frontmatter tool CLI
-
-`themes/fugu/tools/frontmatter.py` — no third-party dependencies (stdlib only). Reviews frontmatter across `content/recipes/`, `content/drinks/`, `content/essays/`, `content/methods/`, `content/reference/`, and `content/the-food-log/` (section folders come from the site's Fugu params), and provides get/set/unset for scripted edits (e.g. by Claude, across many files at once). It parses the constrained YAML subset this vault actually uses (flat scalars, flow lists, occasional block lists, folded long values) — not general YAML — so it never needs `pyyaml` installed.
-
-```
-python themes/fugu/tools/frontmatter.py check [paths...] [--json]
-python themes/fugu/tools/frontmatter.py get <file> [field] [--json]
-python themes/fugu/tools/frontmatter.py set <file> <field> <value> [--type str|int|bool|list]
-python themes/fugu/tools/frontmatter.py unset <file> <field>
-```
-
-`check` validates required fields (`title`+`tags`+`date` for recipes and drinks, `title`+`date` for everything else), warns on missing recommended fields (`source`/`draft` for recipes and drinks, `tags`/`draft` for essays and methods, `source`/`tags`/`draft` for reference), checks `tags`/`date`/`draft` types, and flags duplicate recipe titles. Exits non-zero only on errors (missing required fields, bad types) — missing recommended fields are warnings and don't fail the run. `_index.md` and dotfiles (scratch notes like `.ideas.md`) are skipped.
-
-`set` preserves the rest of the file untouched (comments, field order, other values) and inserts new fields in `FIELD_ORDER` position when the key doesn't already exist.
-
----
-
-## Drafts tool CLI
-
-`themes/fugu/tools/drafts.py` — lists everything marked `draft: true` across recipes, drinks, essays, methods, reference pages, and the Food Log. Reuses `frontmatter.py`'s parser directly (no separate frontmatter logic).
-
-```
-python themes/fugu/tools/drafts.py [paths...] [--json]
-```
-
-Groups results by content type (recipes, drinks, essays, methods, reference pages, log entries) with title and path. `--json` prints a flat list of `{path, kind, title}` objects instead.
+One thing their help doesn't say yet (it's with fugu-agent): which fields `frontmatter.py check` requires. Recipes and drinks need `title`, `tags` and `date`; everything else needs `title` and `date`. Missing recommended fields are warnings, not errors: `source` and `draft` for recipes and drinks, `tags` and `draft` for essays and methods, `source`, `tags` and `draft` for reference. It exits non-zero only on errors (a missing required field, a bad type), and skips `_index.md` and dotfiles.

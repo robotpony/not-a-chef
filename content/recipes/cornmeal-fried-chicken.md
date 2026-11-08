@@ -48,7 +48,7 @@ Stir the buttermilk, hot sauce, and salt together in a large bowl. Add the chick
 
 Mix the cornmeal, flour, baking powder, salt, pepper, sage, paprika, garlic powder, and onion powder in a shallow dish. Lift each piece of chicken from the buttermilk and let the excess drip off. Press it into the [[Dredge|dredge]] until evenly coated, then set it on a baking sheet. Let the coated pieces sit for 10 minutes while the fat heats; the coating turns pasty and grips better.
 
-Melt the shortening in a large, deep frying pan or Dutch oven over medium-high heat. It should be about 1.5 cm (½ in) deep. Heat to 180°C (360°F). Lay the chicken in skin side down, dark meat in the center and breasts around the edge. The pieces can touch but shouldn't be packed. Turn the heat to medium. Fry until deep golden on the bottom, about 12 minutes.
+Melt the shortening in a large, deep frying pan or Dutch oven over medium-high heat. It should be about 1.5 cm (½ in) deep. Heat to 180°C (360°F). Lay the chicken in skin side down, dark meat in the centre and breasts around the edge. The pieces can touch but shouldn't be packed. Turn the heat to medium. Fry until deep golden on the bottom, about 12 minutes.
 
 Turn the pieces with tongs, cover the pan, and cook 10 minutes. Uncover, turn again, and fry until the crust is crisp and dark golden, about 10 minutes more. Breasts are done at 70°C (160°F), thighs and drumsticks at 80°C (175°F).
 
@@ -72,7 +72,7 @@ Thinner pieces cook faster, take the salt faster, and need less fat. Use 3 bonel
 
 Butterfly each breast, or pound it between two sheets of plastic wrap, to an even 1 cm (⅜ in). Cut each in half, or trim it to about 15% larger than the bread or bun; the patties shrink as they cook. Soak for 30 minutes to 1 hour; thin pieces take on the salt quickly and turn ham-like if left overnight. Dredge and rest as above.
 
-Heat about 5 mm (¼ in) of fat in a large frying pan to 180°C (360°F). Fry uncovered until deep golden underneath, 3 to 4 minutes. Turn and fry until the second side matches and the center reaches 70°C (160°F), 3 to 4 minutes more.
+Heat about 5 mm (¼ in) of fat in a large frying pan to 180°C (360°F). Fry uncovered until deep golden underneath, 3 to 4 minutes. Turn and fry until the second side matches and the centre reaches 70°C (160°F), 3 to 4 minutes more.
 
 ```formula
 breast pounder     | Pound  | 1 cm thick

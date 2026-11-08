@@ -56,12 +56,22 @@
           <a href="{{ "the-food-log/index.xml" | relURL }}" type="application/rss+xml">The food log</a>
         </div>
       </nav>
-      <button id="appearance-switcher" aria-label="Dark mode switcher" type="button" class="theme-toggle">
-        <span class="tt-light">{{ partial "icon.html" "moon" }}</span>
-        <span class="tt-dark">{{ partial "icon.html" "sun" }}</span>
+      <button id="appearance-switcher" aria-label="Dark mode" aria-pressed="false" type="button" class="theme-toggle">
+        <span class="tt-light" aria-hidden="true">{{ partial "icon.html" "moon" }}</span>
+        <span class="tt-dark" aria-hidden="true">{{ partial "icon.html" "sun" }}</span>
         <span class="tt-light">Light</span>
         <span class="tt-dark">Dark</span>
       </button>
+      {{/* aria-pressed follows the .dark class, whoever sets it (Blowfish's
+           appearance.js on load, a click, or the system setting). */}}
+      <script>
+        (function () {
+          var b = document.getElementById("appearance-switcher"), h = document.documentElement;
+          function sync() { b.setAttribute("aria-pressed", h.classList.contains("dark") ? "true" : "false"); }
+          sync();
+          new MutationObserver(sync).observe(h, { attributes: true, attributeFilter: ["class"] });
+        })();
+      </script>
     </div>
     <div class="foot-meta">
       {{ with replace .Site.Params.copyright "{ year }" now.Year }}
