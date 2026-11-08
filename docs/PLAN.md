@@ -4,9 +4,9 @@ Open work only. Finished items are cut, not ticked; git history has them (`git l
 
 ## Glossary
 
-Spec, partials, and tools in hugo-warped; popover and A to Z page in Fugu; entries in `content/reference/glossary/`. Empty entries are stubs, left off the site until written. Nine entry drafts wait in `docs/REVIEW.md`.
+Spec, partials, and tools in hugo-warped; popover and A to Z page in Fugu; entries in `content/reference/glossary/`. Every current link offer is answered (2026-11-07); new pages bring new ones (`/glossary-link`).
 
-- [ ] Bold step labels ("**Deglaze.**", "**Doneness.**") are offered as links and answered "never" per page. Recommended: ask hugo-warped to skip bold text at the start of a list item, waiting on Bruce's go-ahead.
+- [ ] Bold step labels ("**Deglaze.**", "**Doneness.**") are offered as links. Ask hugo-warped to skip bold text at the start of a list item, once Bruce says go (`docs/REVIEW.md`); until then, answer "never" per page.
 
 ## Waiting on Fugu
 
@@ -34,7 +34,7 @@ From the 2026-10-30 look at RecipeTin Eats, Serious Eats, and Smitten Kitchen (f
 
 ## Content and format
 
-- [ ] Bold lead phrase on each method step ("**Brown the beef.** …"), so prose scans mid-cook. A recipe-writing convention, not a template; some recipes do it already.
+- [ ] Bold lead phrase on each method step ("**Brown the beef.** …"), so prose scans mid-cook. A recipe-writing convention, not a template; some recipes do it already. Settle the glossary's bold-label rule first, or each new label gets offered as a link.
 - [ ] Passive time (chill, rest, rise, marinate) as its own frontmatter field beside prep and cook. Needs `FORMAT.md`, Fugu's meta row, and the index.
 - [ ] Make-ahead and storage: an optional `## Make ahead` section in `FORMAT.md`, or a convention inside Notes.
 - [ ] "Previously" on Food Log months: the same month in earlier years.
