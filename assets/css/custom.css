@@ -1046,11 +1046,6 @@ html { overflow-x: hidden; }
 .search-box svg { width: 15px; height: 15px; flex-shrink: 0; }
 .search-box kbd { font-family: 'IBM Plex Mono', monospace; font-size: .7rem; border: 1px solid var(--border-strong); border-radius: 3px; padding: 2px 5px; color: var(--ink-faint); margin-left: auto; }
 
-.stat-rail { display: flex; gap: 26px; flex-wrap: wrap; padding-top: 18px; border-top: 1px solid var(--border); }
-.stat { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
-.stat-label { font-family: 'Libre Franklin', sans-serif; font-size: .66rem; font-weight: 600; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-faint); }
-.stat-value { font-family: 'Libre Franklin', sans-serif; font-size: .85rem; color: var(--ink); max-width: 22ch; }
-
 .home-section { max-width: 1100px; margin: 0 auto; padding: 40px 20px; border-bottom: 1px solid var(--border); }
 .home-section:last-of-type { border-bottom: none; padding-bottom: 0; }
 .block-head { margin-bottom: 20px; display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
@@ -1069,9 +1064,9 @@ h2.block-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.005em; 
  * ~232px: the narrowest that fits a full top row (Testing, a cuisine, +N).
  * Below that, four across squeezed cards to ~200px and clipped the row
  * (2026-10-07; was 820px). */
-.rgrid.home-row, .comp-grid.home-row { grid-template-columns: repeat(4, minmax(0,1fr)); }
-@media (max-width: 1023px) { .rgrid.home-row, .comp-grid.home-row { grid-template-columns: repeat(2, minmax(0,1fr)); } }
-@media (max-width: 820px) { .rgrid.home-row, .comp-grid.home-row { gap: 12px; } }
+.rgrid.home-row { grid-template-columns: repeat(4, minmax(0,1fr)); }
+@media (max-width: 1023px) { .rgrid.home-row { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (max-width: 820px) { .rgrid.home-row { gap: 12px; } }
 /* Homepage Methods and Essays bands (mockups/methods-top-level.html,
  * option C, 2026-10-11). Methods: each blueprint as the methods page's
  * .bp block (Fugu's fugu.css) with its parts run inline instead of
@@ -1310,16 +1305,6 @@ a.dev-chip:hover, a.dev-chip:focus-visible { text-decoration: underline; text-un
 .browse-list a { display: flex; justify-content: space-between; gap: 14px; font-family: 'Libre Franklin', sans-serif; font-size: .88rem; color: var(--ink); text-decoration: none; padding: 6px 8px; border-radius: 4px; }
 .browse-list a:hover { background: var(--accent-soft); color: var(--accent-strong); }
 .browse-list a .n { font-family: 'IBM Plex Mono', monospace; font-size: .72rem; color: var(--ink-faint); flex-shrink: 0; }
-.browse-more { font-weight: 600; color: var(--accent-strong); }
-
-.comp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 16px; margin-top: 4px; }
-.comp-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px 12px; display: flex; flex-direction: column; gap: 8px; }
-.comp-card-label { font-family: 'Libre Franklin', sans-serif; font-size: 1.02rem; font-weight: 700; }
-.comp-card-note { font-family: 'Lora', serif; font-size: .84rem; color: var(--ink-muted); line-height: 1.5; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
-/* Eyebrow above the title when a comp-card grid mixes formats (homepage
- * "Technique & reflections" band, mockups/food-log-homepage.html) — the
- * essay's folder name, same role as .rcard-stat b's faint uppercase label. */
-.comp-card-format { font-family: 'Libre Franklin', sans-serif; font-size: .62rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-faint); }
 
 .section-caveat { font-family: 'Libre Franklin', sans-serif; font-size: .78rem; color: var(--ink-faint); padding: 8px 12px; background: var(--surface-2); border-radius: 4px; }
 .section-caveat strong { color: var(--ink-muted); }
@@ -1634,33 +1619,6 @@ article > footer {
 }
 .recipe-sidebar-section > p + p { margin-top: .6em; }
 
-/* Mechanic: italic, slightly smaller than the sidebar's own body copy —
- * deliberately NOT the accent-bordered callout box mockups/STYLE.md
- * describes (that box reads as a blockquote at this narrow width; plain
- * italic sits better among the sidebar's other compact sections). A
- * narrower-context variant, not yet reconciled back into STYLE.md. */
-.recipe-sidebar-section .mechanic {
-  font-family: 'Lora', serif;
-  font-style: italic;
-  font-size: .82rem;
-  color: var(--ink-muted);
-}
-/* Markdown wraps Mechanic's body in its own <div class="mechanic"><p>...
- * so the `.recipe-sidebar-section > p` margin reset two rules up never
- * matches (it's a > div > p, not a direct child p) — the inner <p> fell
- * back to Tailwind Typography's own paragraph margin, widening the gap
- * under the "Mechanic" heading well past "To serve"'s (a direct-child
- * <p>, correctly zeroed). Zeroed here so both read at the same heading-
- * to-body distance. */
-.recipe-sidebar-section .mechanic p { margin: 0; }
-.recipe-sidebar-section .mechanic p + p { margin-top: .6em; }
-.recipe-sidebar-section .mechanic .ratio {
-  color: var(--accent-strong);
-  font-weight: 600;
-  font-style: normal;
-  font-family: 'IBM Plex Mono', monospace;
-}
-
 /* Notes list (mockups/STYLE.md's "Notes list") — em-dash bullets instead
  * of a native marker, ported verbatim from mockups/style.html. */
 .recipe-sidebar-section .notes-list {
@@ -1721,11 +1679,6 @@ article > footer {
   line-height: 1.4;
 }
 .list-pagination-ellipsis { color: var(--ink-faint); padding: 0 4px; }
-
-/* Food memories band: comp-cards as links. */
-a.comp-card { color: inherit; text-decoration: none; }
-a.comp-card:hover { border-color: var(--accent); }
-a.comp-card:hover .comp-card-label { color: var(--accent-strong); }
 
 /* Reading sidebar (mockups/reading-sidebar.html) — essays, reference,
  * the Food Log, and About (themes/fugu/layouts/partials/reading-sidebar.html, placed
@@ -2347,7 +2300,6 @@ span.vt-name.vt-decade:hover .ln-dot { transform: translateY(-5px); }
 .stack-times { font-family: 'IBM Plex Mono', monospace; fill: var(--accent-strong); }
 .stack-missing { stroke: var(--ink-faint); }
 .stack-cap { font-family: 'Libre Franklin', sans-serif; font-size: .74rem; color: var(--ink-faint); margin-top: 12px; text-align: center; }
-.build-diagram .stack { margin: 0; max-width: none; }
 /* On the base: every stack sits on the stats rule, so bottom buns line up
    across a row and a short burger looks short (mockups/even-cards.html,
    approved 2026-11-07). Was margin: auto, which centred each one. */
@@ -2392,8 +2344,7 @@ span.vt-name.vt-decade:hover .ln-dot { transform: translateY(-5px); }
    Variations) is reference beside the recipe, set back in muted text. */
 .recipe-sidebar-section > p,
 .recipe-sidebar-section > ul,
-.recipe-sidebar-section .notes-list li,
-.recipe-sidebar-section .variation p { color: var(--ink-muted); font-size: .82rem; line-height: 1.5; }
+.recipe-sidebar-section .notes-list li { color: var(--ink-muted); font-size: .82rem; line-height: 1.5; }
 
 /* Phones: Recipe notes opens on the facts; search goes last. */
 @media (max-width: 1023px) {
