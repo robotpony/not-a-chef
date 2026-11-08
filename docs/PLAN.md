@@ -9,21 +9,15 @@ Spec, partials, and tools in hugo-warped; popover and A to Z page in Fugu; entri
 - [ ] Answer `make glossary-check`'s four offers (`/glossary-link`): Aromatics in the October Food Log (move line 78 to 34), Braise in the cottage pie casserole build, Doneness in the casseroles' starch and top-and-bake parts.
 - [ ] Bold step labels (Pan sauces' "**Deglaze.**") are offered as links; answer "never" per page, or ask hugo-warped to skip bold text at the start of a list item.
 
-## For fugu-agent
+## Waiting on Fugu
 
-Not yet in `themes/fugu/PLAN.md`; hand these over, then bump Fugu here and check the site renders the same.
+Six visual-pass fixes (chip wording, lineage years, link arrow wrap, glossary placeholder, the example site's old domain, a keep-awake switch) went to fugu-agent on 2026-11-07, in Fugu's `PLAN.md` §10 (4a965e1). It messages here as each lands; then bump Fugu and check the site renders the same.
 
-- [ ] Chip wording: builds show Burgers twice ("Burgers · Build", then "Burgers"), essays show "Food-Memory" where cards say "food memories", and page chips are title case where cards are lowercase.
-- [ ] Lineage repeats each close year ('57 on the left, 1957 on the right).
-- [ ] A wiki link's arrow can wrap alone onto the next line (build sidebar, "In-N-Out burger spread →"). Keep it with the last word.
-- [ ] Glossary search placeholder ("Search the glossary: a word, or what it does") clips on phones: about 294px of text in a 258px field at 390px. Shorten it or make it a param.
-- [ ] `exampleSite/content/about.md` links the old domain (`bruce-loves-to-cook.warpedvisions.org`).
-- [ ] Keep-screen-awake switch beside the scaling gear (Wake Lock API; RecipeTin and Serious Eats both have it). Fugu's plan has cook mode with Wake Lock; this is the small version.
 - [ ] When Fugu's validator lands, run it over all recipes; file each discrepancy as a spec or content bug. When Fugu gets its own CSS (§5), cut `custom.css` to the Not a Chef look; when it renames params (§2), update `params.toml`; when its docs exist (§7), decide if `FORMAT.md` stays as house style.
 
 ## Design v2
 
-Under way; decisions are recorded in `mockups/STYLE.md` and `style.html` when they land. Next changes are mocked before they're built. The two blue labels question is in `docs/REVIEW.md`.
+Under way; decisions are recorded in `mockups/STYLE.md` and `style.html` when they land. Next changes are mocked before they're built.
 
 - [ ] Finish the visual pass by hand. Headless Chrome covered 17 page types (2026-11-03); not seen: hover states, the Recipes menu, the phone drawer, glossary popovers, and the opened Recipe notes.
 
@@ -51,7 +45,6 @@ From the 2026-10-30 look at RecipeTin Eats, Serious Eats, and Smitten Kitchen (f
 
 Fences are specced in hugo-warped (`~/projects/sites/hugo-warped/fences/`); its open work is in its `PLAN.md`.
 
-- [ ] Formula ratios for sangria and lemon-lime iced tea's weight batch.
 - [ ] Granola bars formula, once a second recipe needs a nut icon.
 - [ ] Food ratios tables, once that method leaves the test kitchen.
 - [ ] Stack diagrams for sandwiches and Vegetarian lasagna, once a build page needs one.
