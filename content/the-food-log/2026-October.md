@@ -31,7 +31,7 @@ Notes from a friend, for a future pho method:
 - Pho is a two-phase process: make the stock, then make the broth.
 - Phase 1, the stock: bones and water only. No charred onion, no spices, nothing else. Simmer as long as you can to pull out the sweetness, usually 6–12 hours (sometimes overnight on a low simmer). A pressure cooker cuts it to 1–2 hours.
 - Parboil the bones first to get rid of the scum, even before the pressure cooker.
-- Phase 2, the broth: add the brisket and the aromatics (charred onion, ginger, shallot, spices) to the stock and cook another 2–3 hours.
+- Phase 2, the broth: add the brisket and the [[Aromatics|aromatics]] (charred onion, ginger, shallot, spices) to the stock and cook another 2–3 hours.
 - Why it works: make the stock when you have time and keep it in the fridge or freezer. When you crave pho, a proper pot is only a couple of hours away.
 
 ## Hawaiian recipe research
@@ -75,7 +75,7 @@ Links:
 
 • 2 parts Soy Sauce (Shoyu): ¼ cup (4 tbsp)
 • 1 part Toasted Sesame Oil: 2 tbsp
-• [[Aromatics]]: 1 tbsp rice vinegar, ¾ cup chopped green onions, and 1 tsp grated ginger.
+• Aromatics: 1 tbsp rice vinegar, ¾ cup chopped green onions, and 1 tsp grated ginger.
 
 ##### Spicy Mayo Sauce — Ratio: 3:1
 

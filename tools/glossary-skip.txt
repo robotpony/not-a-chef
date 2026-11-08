@@ -3,3 +3,5 @@ essays/food-memories/camp-cooking.md | Fond
 recipes/base-curry-gravy.md | Garam masala
 reference/glossary/garam-masala-water.md | Aromatics
 recipes/pressure-cooker-japanese-curry.md | Roux
+methods/casseroles/parts/starch.md | Doneness
+methods/casseroles/parts/top-and-bake.md | Doneness

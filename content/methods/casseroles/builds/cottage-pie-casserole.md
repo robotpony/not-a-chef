@@ -41,7 +41,7 @@ Some say cottage pie is beef and shepherd's pie is lamb, but that distinction ca
 
 ## Why these picks
 
-- **Beef base.** It's already braised and seasoned, so the filling is ready in the time the potatoes take.
+- **Beef base.** It's already [[Braise|braised]] and seasoned, so the filling is ready in the time the potatoes take.
 - **Frozen vegetables.** They go in frozen, cook in the bake, and stretch the beef.
 - **Steamed potatoes.** Drier than boiled, so the mash holds its ridges and browns.
 
