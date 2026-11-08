@@ -10,7 +10,7 @@ Spec, partials, and tools in hugo-warped; popover and A to Z page in Fugu; entri
 
 ## Waiting on Fugu
 
-Six visual-pass fixes went to fugu-agent on 2026-11-07 (chip wording, lineage years, link arrow wrap, glossary placeholder, the example site's old domain, a keep-awake switch), in Fugu's `PLAN.md` §10 (4a965e1). It messages here as each lands; then bump Fugu and check the site renders the same.
+Six visual-pass fixes went to fugu-agent on 2026-11-07 (chip wording, lineage years, link arrow wrap, glossary placeholder, the example site's old domain, a keep-awake switch), in Fugu's `PLAN.md` §10 (4a965e1). It messages here as each lands; then bump Fugu and check the site renders the same. The next publish waits for all six (Bruce, 2026-11-07); today's fixes, including the drinks layout that build 36 broke, ship with them.
 
 - [ ] When Fugu's validator lands, run it over all recipes; file each discrepancy as a spec or content bug. When Fugu gets its own CSS (§5), cut `custom.css` to the Not a Chef look; when it renames params (§2), update `params.toml`; when its docs exist (§7), decide if `FORMAT.md` stays as house style.
 
