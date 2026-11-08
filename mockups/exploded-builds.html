@@ -1172,7 +1172,7 @@ Object.assign(L2, {
   // Macaroni (2026-11-07): elbows, the stereotypical baked pasta, as a loose pile. Each elbow is a
   // curved tube: a banded arc on the pasta's surface fill, with its open end drawn as a small ring.
   'macaroni'(cx, y, rx){
-    return pile(cx, y, rx, 116, 12, (x, yy, b) => {
+    return pile(cx, y, rx, 232, 14, (x, yy, b) => {
       const k = .85+b.q*.3, Ro = 7.2*k, Ri = 3.9*k, a0 = b.r*Math.PI*2, sw = Math.PI*.6, fl = .6;
       const ox = x-Math.cos(a0+sw/2)*(Ro+Ri)/2, oy = yy-Math.sin(a0+sw/2)*(Ro+Ri)/2*fl;
       const P = (r, a) => [ox+Math.cos(a)*r, oy+Math.sin(a)*r*fl], N = 14, out = [], inn = [];
