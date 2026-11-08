@@ -316,6 +316,16 @@ in a browser — no build step.
   footer link, one Obsidian file per concept, and the `candidates` and
   `link` tools. The open questions are in `docs/REVIEW.md`.
 
+- **`recipe-mechanic.html`**: proposal (2026-11-07) for PLAN.md Design v2
+  "Recipe mechanic": real built recipe pages in a desktop and a phone frame
+  (via `serve.py`), restyled three ways. A is as built (third in the
+  sidebar, grey italic, folded on phones), B moves it above Ingredients as
+  STYLE.md's Mechanic callout (recommended), and C leads the sidebar. A
+  "quieter sidebar" switch, phone search moved to the end of Recipe notes,
+  and each option's article and sidebar heights measured live. On Chai, the
+  sidebar runs 265px past the article as built, 33px with B, and 422px
+  with C. The questions are in `docs/REVIEW.md`.
+
 ## `archived/` — reference only
 
 The four original mockup rounds `style.html`/`COMPONENTS.md` were built

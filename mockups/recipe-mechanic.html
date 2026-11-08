@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recipe mechanic</title>
+<!--
+  Mock (2026-11-07) for PLAN.md Design v2 "Recipe mechanic": the site promises
+  ratios, but the Mechanic is small grey italic, third in the sidebar, and
+  collapsed on phones. Real built pages in frames, restyled per option, with
+  the article and sidebar heights measured live.
+
+  Needs mockups/serve.py (public/ at /, this folder at /mockups/):
+      hugo --quiet && python3 mockups/serve.py
+      open http://localhost:8765/mockups/recipe-mechanic.html
+-->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+:root {
+  --bg: #F8F8F3; --surface: #FDFDFA; --surface-2: #F0F0E8;
+  --ink: #2B2C25; --ink-muted: #6A6B61; --ink-faint: #828377;
+  --border: #E0E0D3; --border-strong: #CDCEBD;
+  --accent: #A8865A; --accent-strong: #8A4F37; --accent-soft: #F3ECE2;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #22231C; --surface: #282920; --surface-2: #1D1E17;
+    --ink: #E2E4D8; --ink-muted: #A2A493; --ink-faint: #7F8073;
+    --border: #33352A; --border-strong: #45473A;
+    --accent: #BF9D72; --accent-strong: #D6A992; --accent-soft: #2E2620;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #22231C; --surface: #282920; --surface-2: #1D1E17;
+  --ink: #E2E4D8; --ink-muted: #A2A493; --ink-faint: #7F8073;
+  --border: #33352A; --border-strong: #45473A;
+  --accent: #BF9D72; --accent-strong: #D6A992; --accent-soft: #2E2620;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 'Lora', Georgia, serif; }
+.wrap { max-width: 1500px; margin: 0 auto; padding: 28px 16px 60px; }
+h1, h2, h3, .ui { font-family: 'Libre Franklin', system-ui, sans-serif; }
+h1 { font-size: 1.9rem; margin: 0 0 6px; letter-spacing: -.01em; }
+h2 { font-size: 1.15rem; margin: 34px 0 8px; }
+.lede { color: var(--ink-muted); max-width: 72ch; margin: 0 0 18px; }
+.kicker { font: 600 .72rem 'Libre Franklin', sans-serif; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-strong); }
+.bar { position: sticky; top: 0; z-index: 5; background: var(--bg); border-bottom: 1px solid var(--border); padding: 10px 0; display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; font-family: 'Libre Franklin', sans-serif; font-size: .85rem; }
+.seg { display: inline-flex; border: 1px solid var(--border-strong); border-radius: 6px; overflow: hidden; }
+.seg button { font: inherit; border: 0; background: var(--surface); color: var(--ink-muted); padding: 5px 11px; cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--border-strong); }
+.seg button[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent-strong); font-weight: 600; }
+.lbl { color: var(--ink-faint); font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; margin-right: 4px; }
+label.chk { display: inline-flex; gap: 6px; align-items: center; color: var(--ink-muted); cursor: pointer; }
+.stage { display: flex; gap: 20px; align-items: flex-start; margin-top: 16px; flex-wrap: wrap; }
+.frame-box { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 10px; }
+.frame-head { font: 600 .75rem 'Libre Franklin', sans-serif; color: var(--ink-muted); display: flex; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+.frame-head .m { font: 500 .75rem 'IBM Plex Mono', monospace; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+.desk-clip { width: 832px; height: 640px; overflow: hidden; position: relative; }
+.desk-clip iframe { width: 1280px; height: 985px; transform: scale(.65); transform-origin: 0 0; border: 0; }
+.phone iframe { width: 390px; height: 640px; border: 0; display: block; }
+.opts { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-top: 10px; }
+.opt { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; font-size: .92rem; }
+.opt h3 { margin: 0 0 6px; font-size: .95rem; }
+.opt.rec { border-color: var(--accent); }
+.opt .tag { font: 600 .68rem 'Libre Franklin', sans-serif; color: var(--accent-strong); text-transform: uppercase; letter-spacing: .08em; margin-left: 6px; }
+table.meas { border-collapse: collapse; font-size: .85rem; margin-top: 8px; }
+table.meas th, table.meas td { padding: 5px 12px; border-bottom: 1px solid var(--border); text-align: right; }
+table.meas th:first-child, table.meas td:first-child { text-align: left; }
+table.meas th { font: 600 .72rem 'Libre Franklin', sans-serif; color: var(--ink-faint); text-transform: uppercase; letter-spacing: .06em; }
+table.meas td { font-family: 'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums; }
+table.meas td.neg { color: var(--accent-strong); }
+ul.q { padding-left: 1.2em; }
+ul.q li { margin-bottom: 6px; }
+code { font: .85em 'IBM Plex Mono', monospace; background: var(--surface-2); padding: 1px 4px; border-radius: 3px; }
+footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--border); font: .8rem 'Libre Franklin', sans-serif; color: var(--ink-faint); display: flex; gap: 14px; flex-wrap: wrap; }
+@media (max-width: 900px) { .desk-clip { width: 100%; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker">Design v2 · mock · 2026-11-07</div>
+  <h1>Recipe mechanic</h1>
+  <p class="lede">The site promises ratios, but a recipe's Mechanic is small grey italic, third in the sidebar under search and the facts, and folded away inside Recipe notes on a phone. These are real built pages, restyled per option. The lengths are measured live from the frames.</p>
+
+  <div class="bar" role="toolbar" aria-label="Mock controls">
+    <span><span class="lbl">Option</span><span class="seg" id="opt">
+      <button data-v="a" aria-pressed="false">A · As built</button>
+      <button data-v="b" aria-pressed="true">B · Callout in the method</button>
+      <button data-v="c" aria-pressed="false">C · Sidebar, first</button>
+    </span></span>
+    <span><span class="lbl">Page</span><span class="seg" id="page">
+      <button data-v="/drinks/chai/" aria-pressed="true">Chai</button>
+      <button data-v="/recipes/cornmeal-fried-chicken/" aria-pressed="false">Cornmeal fried chicken</button>
+      <button data-v="/drinks/knotty-irishman/" aria-pressed="false">Knotty Irishman</button>
+      <button data-v="/recipes/beef-stew/" aria-pressed="false">Beef stew</button>
+    </span></span>
+    <span><span class="lbl">Theme</span><span class="seg" id="theme">
+      <button data-v="light" aria-pressed="true">Light</button>
+      <button data-v="dark" aria-pressed="false">Dark</button>
+    </span></span>
+    <label class="chk"><input type="checkbox" id="quiet" checked> Quieter sidebar (B and C)</label>
+  </div>
+
+  <div class="stage">
+    <div class="frame-box">
+      <div class="frame-head"><span>Desktop · 1280px, shown at 65%</span><span class="m" id="m-desk">measuring…</span></div>
+      <div class="desk-clip"><iframe id="desk" title="Desktop frame"></iframe></div>
+    </div>
+    <div class="frame-box phone">
+      <div class="frame-head"><span>Phone · 390px</span><span class="m" id="m-phone">measuring…</span></div>
+      <iframe id="phone" title="Phone frame"></iframe>
+    </div>
+  </div>
+
+  <h2>The options</h2>
+  <div class="opts">
+    <div class="opt"><h3>A · As built</h3>Mechanic is the third block in the sidebar, set in small grey italic (<code>.recipe-sidebar-section .mechanic</code>), below search and the facts. On a phone it's inside Recipe notes, which starts closed and opens with the search box first.</div>
+    <div class="opt rec"><h3>B · Callout in the method <span class="tag">Recommended</span></h3>The Mechanic leaves the sidebar and sits above Ingredients as the ratified <b>Mechanic callout</b> (<code>STYLE.md</code> Components: an <code>--accent</code> left border), in roman body text with the ratio in bold, and its formula under it. It's the first thing you read on desktop and on a phone, and the sidebar gets shorter by its height. On a phone, search moves to the end of Recipe notes, so the notes open on the facts.</div>
+    <div class="opt"><h3>C · Sidebar, first</h3>The Mechanic stays beside the recipe but leads it, above search and the facts, in roman text. On a phone it sits above the Recipe notes toggle, outside the fold. Less change to the article column, but on desktop the sidebar is still as long as it is now, and the eye still starts on the method.</div>
+  </div>
+
+  <h2>Measured</h2>
+  <p class="lede" style="margin-bottom:4px">Desktop, current page and theme. "Overhang" is how far the sidebar runs past the end of the article column (negative when the article is longer). It's the empty left column at the bottom of Chai.</p>
+  <table class="meas" id="meas"><thead><tr><th>Option</th><th>Article</th><th>Sidebar</th><th>Overhang</th><th>Mechanic top</th></tr></thead><tbody></tbody></table>
+
+  <h2>Quieter sidebar</h2>
+  <p class="lede">With the Mechanic gone, or moved to the top, what's left is reference: facts, To serve, Notes, Variations. The "quieter" switch sets that text in <code>--ink-muted</code> at .82rem with tighter section gaps, so it reads as notes beside the recipe, not a second column competing with it. Headings, the meta labels and links stay as they are.</p>
+
+  <h2>Questions</h2>
+  <ul class="q">
+    <li>B, C, or keep A?</li>
+    <li>In B, does the formula sit in the callout (as shown), or under it, outside the box?</li>
+    <li>The quieter sidebar: yes or no, independent of the option.</li>
+    <li>Phone search at the end of Recipe notes, or out of Recipe notes altogether (the header has no search on phones today)?</li>
+  </ul>
+
+  <footer><span>© 2026 Bruce Alderson</span><span>Built in Canada 🇨🇦</span><span>mockups/recipe-mechanic.html</span></footer>
+</div>
+
+<script>
+(function(){
+  var state = { opt: 'b', page: '/drinks/chai/', theme: 'light', quiet: true };
+  try { var s = JSON.parse(localStorage.getItem('recipe-mechanic') || 'null'); if (s) Object.assign(state, s); } catch (e) {}
+
+  // Injected into each frame. B and C restyle the Mechanic; .q-side quiets the
+  // rest of the sidebar. Values are STYLE.md tokens the site already defines.
+  var CSS = [
+    '.mk-callout { border-left: 3px solid var(--accent); background: var(--surface); padding: 14px 18px 12px; margin: 0 0 28px; border-radius: 0 6px 6px 0; }',
+    '.mk-callout > h2 { font: 600 .72rem "Libre Franklin", sans-serif !important; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-strong) !important; margin: 0 0 6px !important; border: 0 !important; padding: 0 !important; }',
+    '.mk-callout .mechanic, .mk-callout .mechanic p, .mk-callout > p { font-style: normal !important; color: var(--ink) !important; font-size: 1rem !important; line-height: 1.6 !important; margin: 0 !important; }',
+    '.mk-callout .mechanic p + p { margin-top: .6em !important; }',
+    '.mk-callout strong, .mk-callout b { color: var(--ink); font-weight: 600; }',
+    '.mk-callout .formula { margin: 14px 0 2px !important; }',
+    '.mk-first { margin-bottom: 18px !important; padding-bottom: 14px; border-bottom: 1px solid var(--border); }',
+    '.mk-first .mechanic, .mk-first .mechanic p { font-style: normal !important; color: var(--ink) !important; font-size: .9rem !important; }',
+    '.q-side .recipe-sidebar-section:not(.mk-first) > p, .q-side .recipe-sidebar-section:not(.mk-first) li, .q-side .recipe-sidebar-section:not(.mk-first) .variation p { color: var(--ink-muted) !important; font-size: .82rem !important; line-height: 1.5 !important; }',
+    '.q-side .recipe-sidebar-section:not(.mk-first) { margin-top: 14px !important; padding-top: 12px !important; }'
+  ].join('\n');
+
+  function mechanicSection(doc) {
+    var secs = doc.querySelectorAll('.recipe-sidebar-section');
+    for (var i = 0; i < secs.length; i++) {
+      var h = secs[i].querySelector('h2');
+      if (h && /mechanic/i.test(h.textContent)) return secs[i];
+    }
+    return null;
+  }
+
+  function apply(frame, phone) {
+    var w = frame.contentWindow, doc = frame.contentDocument;
+    if (!doc || !doc.body) return;
+    var root = doc.documentElement;
+    root.classList.toggle('dark', state.theme === 'dark');
+    root.setAttribute('data-theme', state.theme);
+    var st = doc.getElementById('mk-style');
+    if (!st) { st = doc.createElement('style'); st.id = 'mk-style'; st.textContent = CSS; doc.head.appendChild(st); }
+    root.classList.toggle('q-side', state.quiet && state.opt !== 'a');
+
+    var mech = mechanicSection(doc);
+    if (mech && state.opt === 'b') {
+      var art = doc.querySelector('.article-content');
+      var ing = doc.getElementById('ingredients');
+      var before = ing ? ing.closest('h2') : art.firstElementChild;
+      mech.classList.add('mk-callout');
+      art.insertBefore(mech, before);
+    } else if (mech && state.opt === 'c') {
+      mech.classList.add('mk-first');
+      if (phone) {
+        var wrap = doc.querySelector('.recipe-sidebar-wrap');
+        wrap.insertBefore(mech, wrap.firstElementChild);
+      } else {
+        var side = doc.getElementById('recipe-sidebar');
+        side.insertBefore(mech, side.firstElementChild);
+      }
+    }
+
+    // Phone, B and C: Recipe notes opens on the facts; search goes last.
+    if (phone && state.opt !== 'a') {
+      var side2 = doc.getElementById('recipe-sidebar');
+      var search = side2 && side2.querySelector(':scope > .not-prose');
+      if (search) side2.appendChild(search);
+    }
+    setTimeout(function(){ measure(frame, phone); }, 120);
+  }
+
+  function measure(frame, phone) {
+    var doc = frame.contentDocument; if (!doc) return;
+    var art = doc.querySelector('.article-content');
+    var side = doc.getElementById('recipe-sidebar');
+    var mech = doc.querySelector('.mk-callout, .mk-first') || mechanicSection(doc);
+    var y = function(el){ return el ? Math.round(el.getBoundingClientRect().top + frame.contentWindow.scrollY) : null; };
+    if (phone) {
+      var t = mech ? y(mech) : null;
+      var hidden = mech && mech.offsetParent === null;
+      document.getElementById('m-phone').textContent = !mech ? 'no Mechanic' : hidden ? 'Mechanic folded in Recipe notes' : 'Mechanic at ' + t + 'px';
+      return;
+    }
+    var aH = Math.round(art.getBoundingClientRect().height);
+    var sH = Math.round(side.getBoundingClientRect().height);
+    var over = (y(side) + sH) - (y(art) + aH);
+    var row = { opt: state.opt, aH: aH, sH: sH, over: over, mt: mech ? y(mech) : null };
+    document.getElementById('m-desk').textContent = 'article ' + aH + ' · sidebar ' + sH + ' · overhang ' + over + 'px';
+    results[state.page + '|' + state.theme + '|' + state.quiet] = results[state.page + '|' + state.theme + '|' + state.quiet] || {};
+    results[state.page + '|' + state.theme + '|' + state.quiet][state.opt] = row;
+    drawTable();
+  }
+
+  var results = {};
+  function drawTable() {
+    var r = results[state.page + '|' + state.theme + '|' + state.quiet] || {};
+    var names = { a: 'A · As built', b: 'B · Callout', c: 'C · Sidebar, first' };
+    var tb = document.querySelector('#meas tbody'); tb.innerHTML = '';
+    ['a', 'b', 'c'].forEach(function(k){
+      var x = r[k]; var tr = document.createElement('tr');
+      tr.innerHTML = '<td>' + names[k] + '</td>' + (x
+        ? '<td>' + x.aH + 'px</td><td>' + x.sH + 'px</td><td class="' + (x.over > 0 ? 'neg' : '') + '">' + (x.over > 0 ? '+' : '') + x.over + 'px</td><td>' + (x.mt == null ? '–' : x.mt + 'px') + '</td>'
+        : '<td colspan="4" style="text-align:left;color:var(--ink-faint)">pick it above to measure</td>');
+      tb.appendChild(tr);
+    });
+  }
+
+  function load() {
+    try { localStorage.setItem('recipe-mechanic', JSON.stringify(state)); } catch (e) {}
+    document.documentElement.setAttribute('data-theme', state.theme);
+    [['desk', false], ['phone', true]].forEach(function(p){
+      var f = document.getElementById(p[0]);
+      f.onload = function(){ setTimeout(function(){ apply(f, p[1]); }, 250); };
+      f.src = state.page + '?mk=' + state.opt + '-' + Date.now();
+    });
+    document.querySelectorAll('.seg').forEach(function(seg){
+      var key = seg.id === 'opt' ? 'opt' : seg.id;
+      seg.querySelectorAll('button').forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.v === state[key])); });
+    });
+    document.getElementById('quiet').checked = state.quiet;
+  }
+
+  document.querySelectorAll('.seg').forEach(function(seg){
+    seg.addEventListener('click', function(e){
+      var b = e.target.closest('button'); if (!b) return;
+      state[seg.id === 'opt' ? 'opt' : seg.id] = b.dataset.v; load();
+    });
+  });
+  document.getElementById('quiet').addEventListener('change', function(e){ state.quiet = e.target.checked; load(); });
+  load();
+})();
+</script>
+</body>
+</html>

@@ -16,11 +16,14 @@ Six visual-pass fixes went to fugu-agent on 2026-11-07 (chip wording, lineage ye
 
 ## Design v2
 
-Under way; decisions are recorded in `mockups/STYLE.md` and `style.html` when they land. Next changes are mocked before they're built. The visual pass is finished (headless 2026-11-03, by hand in Chrome 2026-11-07); its theme fixes are with fugu-agent, and the header's (Escape, drawer focus, the drawer's link colour) are done here.
+Each change is mocked before it's built, and recorded in `mockups/STYLE.md` and `style.html` when it lands. The visual pass is finished (2026-11-07).
+
+Mocked, waiting on Bruce (`docs/REVIEW.md`):
+
+- [ ] Recipe mechanic (`mockups/recipe-mechanic.html`): B, the Mechanic as a callout above Ingredients, is recommended. Then build it (Fugu's sidebar template, the site's CSS) and record it in `STYLE.md`.
 
 To mock:
 
-- [ ] Recipe mechanic: the site promises ratios, but the Mechanic is small grey italic, third in the sidebar, and collapsed on phones. Mock it above Ingredients, with the rest of the sidebar lighter (Chai's sidebar runs about 260px past its method). On phones, Recipe notes opens with the search box first, ahead of the facts and the Mechanic; place search in the same mock.
 - [ ] A thin line of images leading the page, under the header: Bruce's idea, to be worked out (which pages, where the images come from, height, how it sits with the sidebar photos). Decide the phone photos with it (a 112px thumbnail sits alone at the left, above Recipe notes).
 - [ ] Food Log sidebar: 40 month rows, about half reading "undated" in mono. Drop the word, and group or collapse older years.
 - [ ] Uneven cards: a formula row on some cards and not others on the homepage and recipe list, a gap above short stacks on blueprint cards, and about 110px of blank under the homepage's Muesli card.

@@ -15,6 +15,17 @@ A bold label at the start of a list item ("**Doneness.**") is a heading inside a
 - [ ] Ask hugo-warped to skip bold text at the start of a list item
 - [ ] Keep answering "never" per page
 
+## Recipe mechanic #todo
+
+Mock: `mockups/recipe-mechanic.html` (run `python3 mockups/serve.py`, then open http://localhost:8765/mockups/recipe-mechanic.html). Real recipe pages, three ways, with lengths measured. On Chai, the sidebar runs 265px past the article as built, 33px with B, and 422px with C.
+
+- [ ] B: the Mechanic as a callout above Ingredients (recommended)
+- [ ] C: the Mechanic first in the sidebar, and above Recipe notes on phones
+- [ ] Keep A, as built
+- [ ] In B, the formula inside the callout (as shown), not under it
+- [ ] Quieter sidebar: the rest of the sidebar in muted, smaller text
+- [ ] Phone search at the end of Recipe notes (as shown), not removed from it
+
 ## Glossary: nine more drafts #todo
 
 The first 54 drafts are approved (2026-10-30). These nine were the "left out" list, now drafted the same way. Tick once you've read them, or write a change after a term.
