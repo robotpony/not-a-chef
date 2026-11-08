@@ -239,7 +239,7 @@ Shapes to cover first: sandwich construction, burger construction, lasagne layer
 | Chicken sandwiches | Blueprint, 4 parts, 5 builds | Drafted 2026-10-27 from Bruce's builds; the patties are Cornmeal fried chicken and Pan-fried chicken burger |
 | Muesli | Blueprint, 4 parts, 4 builds (test kitchen) | Drafted 2026-10-28; Bircher, classic, crunchy, and granola, on the timeline by `era` |
 | Pan sauces | Technique | Written 2026-10-27 from notes; a `working_on` line says what still needs testing |
-| Casseroles | Blueprint, 4 parts, 4 builds (test kitchen) | Drafted 2026-11-07 from the casseroles Bruce makes (leftovers, cottage pie, baked pasta, enchilada); the classics are a dated table on the blueprint page; three stacks wait on new layer icons from Fugu |
+| Casseroles | Blueprint, 4 parts, 4 builds (test kitchen) | Drafted 2026-11-07 from the casseroles Bruce makes (leftovers, cottage pie, baked pasta, enchilada); the classics are a dated history table that the lineage draws (`lineage: table`); twelve slab and pile layers added to the kit |
 | One-pan pasta | Blueprint, 4 parts, 2 builds | Drafted 2026-10-12 from Bruce's description; the parts are stages, and the builds have no `era` or stack |
 
 ## Open questions
