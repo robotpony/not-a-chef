@@ -1001,6 +1001,8 @@ html { overflow-x: hidden; }
 .drawer-sub .mega-col-label:first-child { margin-top: 6px; }
 .drawer-sub a { font-size: .87rem; padding: 7px 4px; color: var(--ink); text-decoration: none; display: flex; justify-content: space-between; }
 .drawer-sub .mega-chip-row { padding: 2px 4px 0; }
+/* .drawer-sub a above would make this ink; keep it the accent, as in the desktop menu. */
+.drawer-sub .mega-viewall { color: var(--accent-strong); margin-top: 12px; }
 
 /* Hero, section shells, filters, cards, browse lists — homepage building
  * blocks, ported from mockups/archived/homepage.html. */

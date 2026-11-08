@@ -10,13 +10,13 @@ Spec, partials, and tools in hugo-warped; popover and A to Z page in Fugu; entri
 
 ## Waiting on Fugu
 
-Nine visual-pass fixes went to fugu-agent on 2026-11-07 (chip wording, lineage years, link arrow wrap, glossary placeholder, the example site's old domain, a keep-awake switch; then Escape and focus for the menus and phone drawer, a drawer scrim, and the drawer's link colour), in Fugu's `PLAN.md` §10 (4a965e1). It messages here as each lands; then bump Fugu and check the site renders the same.
+Six visual-pass fixes went to fugu-agent on 2026-11-07 (chip wording, lineage years, link arrow wrap, glossary placeholder, the example site's old domain, a keep-awake switch), in Fugu's `PLAN.md` §10 (4a965e1). It messages here as each lands; then bump Fugu and check the site renders the same.
 
 - [ ] When Fugu's validator lands, run it over all recipes; file each discrepancy as a spec or content bug. When Fugu gets its own CSS (§5), cut `custom.css` to the Not a Chef look; when it renames params (§2), update `params.toml`; when its docs exist (§7), decide if `FORMAT.md` stays as house style.
 
 ## Design v2
 
-Under way; decisions are recorded in `mockups/STYLE.md` and `style.html` when they land. Next changes are mocked before they're built. The visual pass is finished (headless 2026-11-03, by hand in Chrome 2026-11-07); its theme fixes are with fugu-agent.
+Under way; decisions are recorded in `mockups/STYLE.md` and `style.html` when they land. Next changes are mocked before they're built. The visual pass is finished (headless 2026-11-03, by hand in Chrome 2026-11-07); its theme fixes are with fugu-agent, and the header's (Escape, drawer focus, the drawer's link colour) are done here.
 
 To mock:
 

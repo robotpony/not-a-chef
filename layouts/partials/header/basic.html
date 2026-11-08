@@ -102,7 +102,7 @@
                 <a class="mega-chip" href="{{ .Page.RelPermalink }}">{{ .Name }}</a>
               {{ end }}
             </div>
-            <a class="mega-viewall" href="{{ "recipes" | relURL }}" style="margin-top:12px;">View all {{ len $recipesSection }} recipes &rarr;</a>
+            <a class="mega-viewall" href="{{ "recipes" | relURL }}">View all {{ len $recipesSection }} recipes &rarr;</a>
           </div>
         </details>
 
@@ -150,5 +150,25 @@
       if(!d.contains(e.target)){ d.open = false; }
     });
   });
+
+  // Escape closes whichever menu or drawer is open and puts focus back on
+  // the summary that opened it, so the keyboard isn't left inside a closed panel.
+  document.addEventListener('keydown', function(e){
+    if(e.key !== 'Escape'){ return; }
+    document.querySelectorAll('details.nav-drop[open], details.mobile-drawer-toggle[open]').forEach(function(d){
+      d.open = false;
+      d.querySelector('summary').focus();
+    });
+  });
+
+  // Opening the drawer moves focus into it (the close button), and the
+  // toggle's label follows its state.
+  if(drawerToggle){
+    var drawerSummary = drawerToggle.querySelector('summary');
+    drawerToggle.addEventListener('toggle', function(){
+      drawerSummary.setAttribute('aria-label', drawerToggle.open ? 'Close menu' : 'Open menu');
+      if(drawerToggle.open && drawerClose){ drawerClose.focus(); }
+    });
+  }
 })();
 </script>
