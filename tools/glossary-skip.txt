@@ -5,3 +5,7 @@ reference/glossary/garam-masala-water.md | Aromatics
 recipes/pressure-cooker-japanese-curry.md | Roux
 methods/casseroles/parts/starch.md | Doneness
 methods/casseroles/parts/top-and-bake.md | Doneness
+methods/poke/parts/mix-ins.md | Inamona
+the-food-log/2026-October.md | Limu
+the-food-log/2026-October.md | Shoyu
+the-food-log/2026-October.md | Sriracha

@@ -36,7 +36,7 @@ Quantities are for two to four portions in a 25–30 cm (10–12 in) skillet. St
 
 1. **Sear and remove.** Cook the protein, then move it to a board to rest. Pour off all but about a tablespoon of fat. *Why:* too much fat won't [[Emulsify|emulsify]] later and leaves the sauce greasy.
 2. **Sweat the [[Aromatics|aromatics]].** Over medium heat, add a finely diced shallot (or a little onion or garlic) and cook 1–2 minutes until soft and fragrant, scraping at any loose bits. *Why:* the moisture from the shallot starts lifting the fond, and the shallot gives the sauce a sweet base. Garlic burns fast, so it goes in last.
-3. **[[Deglaze]].** Pour in 125–250 ml (½–1 cup) of liquid while the pan is hot, and scrape the bottom hard with a wooden spoon or flat spatula until the fond dissolves. *Why:* the hot liquid softens the stuck bits so they release; a spoon on a cold pan only smears them.
+3. **Deglaze.** Pour in 125–250 ml (½–1 cup) of liquid while the pan is hot, and scrape the bottom hard with a wooden spoon or flat spatula until the fond dissolves. *Why:* the hot liquid softens the stuck bits so they release; a spoon on a cold pan only smears them.
 4. **Reduce.** Simmer over medium-high heat until the liquid is down by about half and coats the back of a spoon, a few minutes. Pour in any juices the resting meat has let go. *Why:* reducing concentrates the flavour and cooks off the raw edge of wine or spirits. Stock with gelatin in it thickens as it reduces.
 5. **Mount and balance.** Take the pan off the heat and whisk in 1–2 tablespoons of cold butter, a piece at a time, until glossy. Taste, then add a splash of acid (lemon juice or vinegar), salt, pepper, and fresh herbs. *Why:* cold butter whisked off the heat emulsifies into the sauce; added to a boiling pan it melts into a slick of grease.
 
@@ -54,7 +54,7 @@ Pick the liquid to suit the protein, and the finish to suit the mood. Most pan s
 | Fish | White wine, vermouth, a little stock | Butter, lemon, capers, dill |
 | Mushrooms, vegetables | Stock, sherry, soy | Butter, herbs, a little vinegar |
 
-Wine or spirits plus stock gives more body than either alone: deglaze with the wine, reduce it nearly dry, then add the stock and reduce again. Water works when there's nothing else. It lifts the fond as well as anything; the sauce is just lighter.
+Wine or spirits plus stock gives more body than either alone: [[Deglaze|deglaze]] with the wine, reduce it nearly dry, then add the stock and reduce again. Water works when there's nothing else. It lifts the fond as well as anything; the sauce is just lighter.
 
 ## How it fails
 
