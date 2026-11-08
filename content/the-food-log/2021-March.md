@@ -127,7 +127,7 @@ Thinking a 2 pan build:
 
 → [[Jerk chicken]]
 
-I updated my [Jerk marinade](https://docs.google.com/document/d/1YdWwQU0b8QgB20Y0FI6u_dgsKxdP0DssHvNQf6SLXuA/edit#) recipe after some research and a test run today. New changes are clearer method and more balancing of flavours.
+I updated my [[Jerk chicken|Jerk marinade]] recipe after some research and a test run today. New changes are clearer method and more balancing of flavours.
 
 ### Winning the fridge; less wasteful, better eats
 

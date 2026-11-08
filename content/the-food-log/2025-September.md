@@ -9,7 +9,7 @@ Late summer wind-down: cottage pie nailed (steamed potatoes, a simple 1:1:1:1 be
 
 ### Breakfast sausage
 
-3 recipes to use as a base, to update my breakfast sausage recipe ([scaling recipe](https://docs.google.com/spreadsheets/d/1D9Ls2SRHtvSBeVAVhLJZC5CSqrhxuTvu3vb2kW5LvrU/edit?gid=2146379760#gid=2146379760)) → [[Breakfast sausage]]
+3 recipes to use as a base, to update my breakfast sausage recipe (scaling recipe) → [[Breakfast sausage]]
 
 #### BBQ ([1](https://www.youtube.com/watch?v=pO85INS_Q-8))
 

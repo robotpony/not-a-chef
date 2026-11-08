@@ -107,7 +107,7 @@ _Undated. About January to June 2022; the original notes grouped these as Winter
 ### Curried adventures
 
 - [Vindaloo](https://www.seriouseats.com/beyond-curry-pork-vindaloo-recipe)
-- [Veg thai curry, more authentic and simpler](https://docs.google.com/document/d/1C0_6UJBLO_mYSLRP7plckMXGAxO219Nx-1XNialzhLE/edit#) → [[Red Thai curry]]
+- Veg thai curry, more authentic and simpler → [[Red Thai curry]]
     - Paste fried in coconut cream
     - Mushrooms and tofu fried simply in oil and garlic/ginger/chilis
     - Roast veg
@@ -195,7 +195,7 @@ Salad dressings
     - [ ] Bolognese (w/wider pasta)
 - [ ] Burgers
     - [ ] Beef (90g)
-        - [ ] [Costing](https://docs.google.com/spreadsheets/d/1hk8z2tcYMwRE1P4nsWzyqNcUANATTDWN4jn7Qn8c2WE/edit#gid=0) (buns/cheese, surprisingly, are at the top of the list)
+        - [ ] Costing (buns/cheese, surprisingly, are at the top of the list)
         - [x] ~~In&out~~
         - [ ] Simple
         - [ ] Double
@@ -211,7 +211,7 @@ Salad dressings
 ### Spring food goals
 
 - [Cauli-alioli](https://www.youtube.com/watch?v=4lPX3W8kp-g) sauce
-- [Fresh pierogi](https://docs.google.com/document/d/1uZr0Ks2nNdiP3EctFczbk7N9gncfitbDR1wXziO5714/edit#) → [[Perogies]]
+- Fresh pierogi → [[Perogies]]
 - [Salads](https://youtu.be/_LTZBBIq0t4)
 - German foods
     - [Platz](http://www.mennonitegirlscancook.ca/2008/06/platz.html) → [[German platz]]
@@ -295,7 +295,7 @@ Lightly fry, season, add lime, and let cool.
 
 - Tested out a battered chicken, which was a bit wonky (baking did not work well)
 - Quick cottage pie (30 minutes, using pre-cooked beef mix)
-- [Mushroom soup take 2](https://docs.google.com/document/d/153_bbKy2bsUMmgTQHh2jvrh8bGHmmfEl7bwdNigc5lk/edit#heading=h.vc73hd12s528), made without cream and w/some dry sherry (was excellent) → [[Mushroom soup]]
+- Mushroom soup take 2, made without cream and w/some dry sherry (was excellent) → [[Mushroom soup]]
 - 2nd pass of battered chicken, converted to a stir-fry
     - Roast cashews
     - Weird chicken from yesterday

@@ -76,7 +76,7 @@ Combine ingredients with a whisk. Cook over medium heat until thickened, the oil
 - Research
     - [Black bean smash burgers](https://www.ethanchlebowski.com/cooking-techniques-recipes/black-bean-smash-burger)
     - [Planta burgers](https://www.reddit.com/r/veganrecipes/comments/c0rff3/planta_burgers_i_think_i_might_just_test_new/) (and [here](https://veganrecipehub.com/wprm_print/2449), and [here](https://www.saucestache.com/the-secret-recipe-for-plant-based-burgers-that-taste-just-like-a-burger/))
-        - [Nutrition/costing](https://docs.google.com/spreadsheets/d/15noSKX_PT13BzHsndZFp9JWwO27f0JmoZmc4pZtJRKM/edit#gid=62383004)
+        - Nutrition/costing
         - Tomato paste (try)
         - _Worked well, but not enough structure (needed egg, mixing, and possibly more structure ingredients)_
     - [Gluten burger](https://www.youtube.com/watch?v=qyaQ-wfojbM)

@@ -96,10 +96,10 @@ _Undated._
     - Veg
     - Shredded carrot
     - Asian style slaw
-        - [Vaguely Asian dressing](https://docs.google.com/document/d/1G6b2B_rccoU5L_UrPbG7mlq-IA3wvcoy_N-X6cdeAvI/edit#heading=h.3fsk0afek31n)
+        - Vaguely Asian dressing
     - Rice
         - 1 cup basmati rice, 1 inch grated fresh ginger, 1 tablespoon toasted sesame oil, and a pinch of salt.
-- Teriyaki ([ratio recipe](https://docs.google.com/spreadsheets/d/1WioIgoLJITdosYp3fU7KlhytJqeXLdIpIVPg8ClIGTM/edit?gid=867783404#gid=867783404)) → [[Teriyaki sauce]]
+- Teriyaki (ratio recipe) → [[Teriyaki sauce]]
 
 ### Atlanta inspirations
 

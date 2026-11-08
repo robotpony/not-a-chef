@@ -10,7 +10,7 @@ _Undated. About late September to December 2021; the original notes grouped thes
 ### Wintery food goals
 
 - [Soupmas](#christmas-menu-ideas-soupmas)
-- [Breads](https://docs.google.com/document/d/1rdEKxlxnWdnvLAeGs3CJP9OGjf6zAkm-h6P5zBVNkd4/edit)
+- Breads
 - Burritos / bowls
 
 ### Onion bhajis results
@@ -58,15 +58,15 @@ Form golf ball sized fritters and drop in ~180C oil. Flip a few times, and remov
 
 We decided to make soups this year, as they’re easy to make vegetarian, and they’re fancy (but not overly rich). We have made these soups so far:
 
-- [Butternut squash](https://docs.google.com/document/d/1Bdbfc09flyjAyeNtNHUb9Hgse3IBksDwbXUWwqFHAUw/edit#heading=h.3fsk0afek31n) → [[Butternut squash soup]]
+- Butternut squash → [[Butternut squash soup]]
     - Slightly sweet, due (I think) to the soup stock I used from the freezer
     - Browned butter worked very well
     - Sage would have been better than thyme/rosemary
-- [French onion](https://docs.google.com/document/d/1ichm9IbYilBRM7FfsaTgv6uO1WPwOLmb98Idwl3_FtA/edit#heading=h.3fsk0afek31n) → [[French onion soup]]
+- French onion → [[French onion soup]]
     - This was nearly perfect
     - Need way more onions next time, maybe cut them a bit thicker
     - (I used the mandoline on the 2nd setting)
-- [Potato leek and mushroom](https://docs.google.com/document/d/153_bbKy2bsUMmgTQHh2jvrh8bGHmmfEl7bwdNigc5lk/edit#heading=h.3fsk0afek31n) → [[Potato, leek, and mushroom soup]]
+- Potato leek and mushroom → [[Potato, leek, and mushroom soup]]
     - This soup was lovely
 
 ### Pizza party update
@@ -80,11 +80,11 @@ I did notice better performance based on the number and type of toppings, especi
 ### Jazz/Conner/Kids pizza day prep
 
 - ✔️Shopping for final ingredients
-- ✔️ [Pizza sauce](https://docs.google.com/document/d/1S5WIHwjKUhwJk81cAxMp_hggQVWdj2ytANTs367LQxM/edit)
-- ✔️ [Spiced tofu](https://docs.google.com/document/d/1m32upNgODk3iIDza04pH79AOuFiU0Fu1o_E4NISKDUA/edit)
+- ✔️ Pizza sauce
+- ✔️ Spiced tofu
 - ✔️Tempeh?
 - ✔️Cheese grated (4:1:1 mozza, parm, gruyere)
-- ✔️ [Ranchero dip](https://docs.google.com/document/d/1aCswBSPhbjYOMai33agNjets_Tx9RrOaY_xwebu2M4Q/edit#)
+- ✔️ Ranchero dip
 - ✔️ Italian sausage
 - Dice
     - ✔️ Onions
@@ -292,7 +292,7 @@ The gist of the first book is that takeaway restaurants make curries with a base
 
 #### Book 1:
 
-1. [Garlic/ginger paste](https://docs.google.com/document/d/1jfJm36JAj0u1sZ9DL6rZvAkmDSBJq0lgYZTNUx1J_HM/edit) → [[Ginger/garlic paste]]
+1. Garlic/ginger paste → [[Ginger/garlic paste]]
 2. Tomato pure → [[Indian takeout tomato purée]]
     1. Tin of tomato puree
     2. 2 tin-fulls of water
@@ -315,8 +315,8 @@ The gist of the first book is that takeaway restaurants make curries with a base
         1. ½ - 1 teaspoon per dish
     4. Fresh coriander  (cilantro)
 5. Gravies and sauces
-    1. [Onion sauce](https://docs.google.com/document/d/1tWnR1ywt1uEw8ZXtveixpnpbtyFY8IRsoNYG58ZZy44/edit#) (for chunky curries) → [[Onion base for curries]]
-    2. [Bangladeshi style gravy](https://docs.google.com/document/d/1UlIYyJrtahivL7ZMHR66AxTrelks4ptgK9dTug0SCBI/edit#) → [[Base curry gravy]]
+    1. Onion sauce (for chunky curries) → [[Onion base for curries]]
+    2. Bangladeshi style gravy → [[Base curry gravy]]
 6. Sauces
 7. Bhajis
     1. Notes
@@ -379,7 +379,7 @@ Turkey thigh: 74C (max tender)
 - Afternoon
     - ✔️ Prep platters and dishes
     - ✔️ Veg platter
-    - ✔️ [Make salad](https://docs.google.com/document/d/1hId2I3-qYhuPRuuiHXenZSlH4s4WtO0SAMc3eWmSxyk/edit)
+    - ✔️ Make salad
     - ✔️ Wash potatoes
     - ✔️ Roast garlic!
     - Set out chips
@@ -403,7 +403,7 @@ Turkey thigh: 74C (max tender)
 
 ### Day before Thanksgiving prep
 
-- ✔️ [Spice rub](https://docs.google.com/document/d/1HId__nmRdQcgDVy6kMU66-71jsW_a5IVgzPcJeqqHf8/edit)
+- ✔️ Spice rub
 - ✔️ Break down stunt turkey
     - Breasts/legs thighs dry bring until evening
     - Neck/backbone/wings roast for stock
@@ -418,7 +418,7 @@ Turkey thigh: 74C (max tender)
     - Reduce by ½
 - ✔️ Stuffing prep / par bake
     - Slightly overdone, ate the darker bits (yum!)
-- ✔️ [Mac & Cheese](https://docs.google.com/document/d/1nF2oqFoura6lQMVRS4wUkPPRp907GElqI3yJSTjX3E4/edit) → [[Baked mac & cheese]]
+- ✔️ Mac & Cheese → [[Baked mac & cheese]]
 
 ### Hasselback potatoes
 
@@ -438,7 +438,7 @@ Backing time changes depending on the potato size (medium russets assumed).
 
 ### Thanksgiving plan
 
-Focus: comfort food and memories. This year I wrote an [actual plan](https://docs.google.com/document/d/12QayGb-G6Fv9QdmuiG_bQ2TzsURYExgQPPhavNCuAkY/edit#), what a nerd!
+Focus: comfort food and memories. This year I wrote an actual plan, what a nerd!
 
 Ideas:
 

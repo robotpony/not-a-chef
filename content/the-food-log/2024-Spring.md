@@ -17,9 +17,9 @@ _Undated. January to June; the original notes grouped these as Spring._
 ### June celebration planning
 
 - Pulled pork ([1](https://www.foodnetwork.com/recipes/sandra-lee/hawaiian-pulled-pork-sandwiches-recipe-1948464), [2](https://www.thefoodieaffair.com/hawaiian-pulled-pork/), [3](https://www.allrecipes.com/recipe/8346482/slow-cooker-hawaiian-style-pulled-pork/), [4](https://www.youtube.com/watch?v=7y5KVYXKjE8), [**5**](https://www.youtube.com/watch?v=GZy6yFzXANs)/[**5**](https://www.slapyodaddybbq.com/2024/04/bbq-hawaiian-kalua-pork-shoulder/))
-    - [Adapted recipe](https://docs.google.com/document/d/1_xDwUPudy3comeFRfHVdamqxOFbHXF5SKzkryUJt0FQ/edit) → [[Maui/Kalua pulled pork]]
+    - Adapted recipe → [[Maui/Kalua pulled pork]]
     - coconut rice ([1](https://ohsweetbasil.com/brazilian-coconut-rice/))
-- [Pulled chicken](https://docs.google.com/document/d/1D4TNsiR2t58u-sUKcSB50PM4nB71mBJfslNnLUuyrDY/edit?tab=t.0) → [[Pulled BBQ-style chicken]]
+- Pulled chicken → [[Pulled BBQ-style chicken]]
 
 ### June food ideas
 
@@ -140,7 +140,7 @@ Thai cucumber relish → [[Thai cucumber relish]]
 
 → [[Sichuan quick noodles]]
 
-- Second Szechuan attempt: ([draft recipe](https://docs.google.com/document/d/1DrDpX9go8wPZZWeLdP7PDEyBYsF7RzU8uyZDdhy8BKE/edit#heading=h.3fsk0afek31n))
+- Second Szechuan attempt: (draft recipe)
     - \+ big fat spoon of chili/garlic paste
     - \+ 115g tofu
     - Rice vinega → sake
@@ -167,19 +167,19 @@ Thai cucumber relish → [[Thai cucumber relish]]
 
 ### Food prep
 
-- [Chicken patties](https://docs.google.com/spreadsheets/d/1D9Ls2SRHtvSBeVAVhLJZC5CSqrhxuTvu3vb2kW5LvrU/edit#gid=0) (tuned down most add-ins by 25%) → [[Chicken patties]]
+- Chicken patties (tuned down most add-ins by 25%) → [[Chicken patties]]
 - Beef patties 125g (slightly smaller than the usual 140g), no seasoning (added after cooking)
-- [Beef base](https://docs.google.com/document/d/18B_6jJlS8MKhUsXeGs2gdse1qjwkUURhE54Xlw64Nuk/edit) → [[Beef base]]
+- Beef base → [[Beef base]]
 - Chicken stock
 
 ### Appetizers
 
-- [Mushroom flatbread](https://docs.google.com/document/d/1RnXmgF6omm2IPstkQ0RoR8tcLUbqiv3ochQ0opSMhuY/edit#heading=h.3fsk0afek31n) → [[Spinach mushroom flatbread]]
+- Mushroom flatbread → [[Spinach mushroom flatbread]]
 
 ### Learn more asian cooking
 
 - Bulgogi ([basic](https://www.americastestkitchen.com/recipes/11305-korean-marinated-beef-bulgogi), [standard](https://www.maangchi.com/recipe/bulgogi), [SE](https://www.seriouseats.com/korean-barbeuce-beef-bulgogi-short-rib-recipe), [Chef John](https://foodwishes.blogspot.com/2016/09/bulgogi-beef-how-they-barbecue-in-korea.html), [another](https://damndelicious.net/2019/04/21/korean-beef-bulgogi/)) → [[Bulgogi beef]]
-    - [Test recipe](https://docs.google.com/document/d/1SLoGP3pldCX1GLAVBYNKxop_03_NSs3NvvHNbIcjy4A/edit)
+    - Test recipe
     - (this worked really well)
 - Asian slaw → [[Asian slaw dressing]]
     - 90g ½ cup extra-virgin olive oil
@@ -194,7 +194,7 @@ Thai cucumber relish → [[Thai cucumber relish]]
     - [Fried mushrooms](https://www.maangchi.com/recipe/beoseot-tangsu)
 - Other
     - [Broiled zucchini](https://www.americastestkitchen.com/recipes/15867-broiled-smashed-zucchini-with-herbed-sour-cream)
-    - [Turkey burgers](https://docs.google.com/document/d/1FUDdy_tXb4CemE5ZFaRdi9HTkr6ARUjT/edit) → [[Turkey burgers]]
+    - Turkey burgers → [[Turkey burgers]]
 
 ### Food thoughts
 
@@ -235,10 +235,10 @@ Thai cucumber relish → [[Thai cucumber relish]]
     - Coleslaw dressing
 - Recipes
     - Pulled pork → [[Pulled pork]]
-        - [Spice rub](https://docs.google.com/document/d/1HId__nmRdQcgDVy6kMU66-71jsW_a5IVgzPcJeqqHf8/edit)
+        - Spice rub
         - 40 minutes
-    - [Chili](https://docs.google.com/document/d/1xHRbJuTzXwqIKWe-TFUDYUy-VhJvjICxvlrlfgRFOAs/edit#heading=h.3fsk0afek31n) (freezer beef mince precook) → [[Canadian chili]]
-    - Mac&Chez (simple, [unbaked version of this](https://docs.google.com/document/d/1nF2oqFoura6lQMVRS4wUkPPRp907GElqI3yJSTjX3E4/edit#heading=h.3fsk0afek31n)) → [[Baked mac & cheese]]
+    - Chili (freezer beef mince precook) → [[Canadian chili]]
+    - Mac&Chez (simple, unbaked version of this) → [[Baked mac & cheese]]
 
 ### Pasta tests
 
@@ -274,10 +274,10 @@ Thai cucumber relish → [[Thai cucumber relish]]
 ### Wings test (for puzzle night snacks)
 
 - Gochujang → [[Gochujang wing sauce]]
-    - [Dressing/marinade](https://docs.google.com/document/d/19ZCTwleFeCnuSSfSrqmbzvp9RyzUjepE6_UV25HP2sU/edit)
+    - Dressing/marinade
     - Half on the wings to marinade/cook, half to dress
 - Chilli lime
-    - [Dressing/marinade](https://docs.google.com/document/d/1Cr-Lk_LDxhPM0uR1HWflvw5NApArQ_KvHy96FBCB1uc/edit#heading=h.3fsk0afek31n)
+    - Dressing/marinade
     - Half on the wings to marinate/cook, half to dress
 
 ### Roast chicken
@@ -291,4 +291,4 @@ Thai cucumber relish → [[Thai cucumber relish]]
     - [Full recipe](https://carlalallimusic.substack.com/p/nutritional-yeast-vinaigrette-is)
 - Sprouts
     - [Model](https://www.westcoastseeds.com/products/biosta-kitchen-crop-sprouter)
-    - [My growing notes](https://docs.google.com/document/d/12AO9Vl2psGx0JUCj24epPXRAn-0dLYd-F48QNEESCDs/edit)
+    - My growing notes

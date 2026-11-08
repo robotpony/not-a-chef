@@ -21,7 +21,7 @@ Food was good, but service was extra slow (we waited well over an hour). Will re
 
 This weekend we’re making some turkey burgers for salads and proper burgers. They’re based on a recipe we used to make a while back, zhuzhed up a bit with some learnings from [Serious Eats’ research](https://www.seriouseats.com/recipes/2009/11/seriously-meaty-turkey-burgers-recipe.html) on the matter.
 
-Turkey burgers can end up dry and fairly flat without some extra lovin, so our [updated recipe](https://docs.google.com/document/d/1lh5vjfEVI5rYHoCKqRy2AJWms1_wbOqoq0XQVxVVBkA/edit) includes some additional depth and texture. The trick is to make sure you have both enough savoury and enough starches for browning (adding more savoury, crunch, and additional yum). Breast meat tends to get dry quickly, so at least some thigh meat is ideal and grinding your own will usually be better than buying it pre-ground.
+Turkey burgers can end up dry and fairly flat without some extra lovin, so our [[Turkey burgers|updated recipe]] includes some additional depth and texture. The trick is to make sure you have both enough savoury and enough starches for browning (adding more savoury, crunch, and additional yum). Breast meat tends to get dry quickly, so at least some thigh meat is ideal and grinding your own will usually be better than buying it pre-ground.
 
 ### Takeout: Classic BC comfort food
 
@@ -29,7 +29,7 @@ We ordered some White Spot for dinner tonight. [White Spot](https://en.wikipedia
 
 Tonight we ordered a variety of burgers, including an all-veg patty, an impossible patty, and two beef patties. Food was good, though the green salad was disappointing. The fries, despite travelling for takeout, were quite good (waxy potato, double fried, nice and browned).
 
-I have a fairly accurate [White Spot burger recipe](https://docs.google.com/document/d/12YebYY6m_wGWr7SaApErUp_ZT-F8YgrfMoshwmsRihg/edit) that gets you close to their basic diner burger. → [[White Spot burger]]
+I have a fairly accurate White Spot burger recipe that gets you close to their basic diner burger. → [[White Spot burger]]
 
 ### Quick proteins for lunch ramen #lunchramen
 
@@ -133,7 +133,7 @@ We’re stretching out some turkey casserole and wanted to make some baked mac. 
     - Add herbs near the end
     - Mostly olive oil, salt/paprika
 - Cook noodles (1 bag)
-- [Make sauce](https://docs.google.com/document/d/1nF2oqFoura6lQMVRS4wUkPPRp907GElqI3yJSTjX3E4/edit) → [[Baked mac & cheese]]
+- Make sauce → [[Baked mac & cheese]]
 - Combine + bake
 
 The mushrooms work well in this recipe in place of a protein; they add a bunch of [[Umami|umami]] and a

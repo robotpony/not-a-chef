@@ -14,7 +14,7 @@ This is a list of things I want to get better at cooking during Summer 2021.
 - Salsas (make every few weeks)
     - ✅ Verde → [[Salsa verde]]
     - Red enchilada
-    - ✅ [Tomato/Gina’s](https://docs.google.com/document/d/1NtRlgL8FiXBDUcaPAnXE20AxAiikTU3sG4j5zMWULRI/edit#) → [[Gina’s tomato salsa]]
+    - ✅ Tomato/Gina’s → [[Gina’s tomato salsa]]
 - Corn bread
 - ✅ Pastas and pizzas
 - ✅ Roasted peppers
@@ -31,7 +31,7 @@ This is a list of things I want to get better at cooking during Summer 2021.
 - Write about food:
     - Mushroom soup
     - Cashew cream
-    - [How I find and select recipes (or: why the internet is a pile of turds)](https://docs.google.com/document/d/1DwWPtZPPMJKuuAyf9dJUeIhNBYLFtWx83aarCl6Rn-c/edit#)
+    - How I find and select recipes (or: why the internet is a pile of turds)
     - Forcing functions (ways to build better food thinking habits)
     - Rework cheat sheet into web page / doc
 
@@ -94,7 +94,7 @@ I want to try [John’s Al Pastor recipe](https://www.youtube.com/watch?v=Fj0-FE
 
 On second thought, I want to try a [reverse-pastor like they worked on for Serious Eats](https://www.seriouseats.com/food-lab-tacos-al-pastor). I was thinking that breaking it into 2 steps would make it easier to nail at home.
 
-I made a [home-pantry version of the al pastor style marinade](https://docs.google.com/document/d/1GPmAEAEDdVGb-90c3GjLHL0GI1nWVgxlNRKVewx0lx4/edit#), and have ~2kgs of pork marinating. Tomorrow I’ll bake it! → [[Al pastor marinade (pantry hack)]]
+I made a home-pantry version of the al pastor style marinade, and have ~2kgs of pork marinating. Tomorrow I’ll bake it! → [[Al pastor marinade (pantry hack)]]
 
 ### Pickled peppers success
 
@@ -259,7 +259,7 @@ Reading:
 - Sauce:
     - Butter/mushroom/garlic/herb
         - Black pepper, salt to taste
-- [Make pasta dough](https://docs.google.com/document/d/1N3GWj-G2guum1FFOVTlMNa3SaEuEiwmkIScEspTIxPw/edit#)
+- [[Fresh egg pasta|Make pasta dough]]
 
 ### Focaccia
 
@@ -452,14 +452,14 @@ Whisk to combine.
 
 Home prep:
 
-- [Chilli](https://docs.google.com/document/d/1xHRbJuTzXwqIKWe-TFUDYUy-VhJvjICxvlrlfgRFOAs/edit) → [[Canadian chili]]
-    - [Veg stock](https://docs.google.com/document/d/1in6Rd_2AY09AHBUBgT6TPGLSA5yKQUh2UngpQ_PFcBU/edit#heading=h.3fsk0afek31n) - made a quicker version of this
+- Chilli → [[Canadian chili]]
+    - [[Rich veg/mushroom stock|Veg stock]] - made a quicker version of this
     - Consider add-ins
         - More chili powder (other chilis)
         - Masa (thickener)
         - Refried beans (texture, binding)
         - Charred poblano peppers
-- [Salsa Verde](https://docs.google.com/document/d/13pTeiyRBsSRifBanUOgBhq4lek0E28qiHTnhcN2v9yg/edit#) (healthier snacks!) → [[Salsa verde]]
+- Salsa Verde (healthier snacks!) → [[Salsa verde]]
     - Made a red salsa instead (no tomatillos), subbing in canned diced tomatos
 
 ### Ribs
@@ -468,7 +468,7 @@ These ribs smelled strongly of sulphur. Apparently this happens with cryovac thi
 
 Process
 
-- 1 batch of [basic rib rub](https://docs.google.com/document/d/1HId__nmRdQcgDVy6kMU66-71jsW_a5IVgzPcJeqqHf8/edit)
+- 1 batch of basic rib rub
 - Wash, dry, rub, and double foil
 - Let rest for 2+ hours (in fridge)
 - Bake on low on sheet pans (in foil still)

@@ -28,7 +28,7 @@ Some research for another week, homemade lunch meats:
 Today’s prep will replace some freezer items and set up the week:
 
 - Chicken stock (use up the onions/celery/chicken bits)
-- [Ramen noodles](https://docs.google.com/document/d/1oBB-5H5vvDkaiAGg0QdlgO28aU6MiM1hfOjnyH-MIwU/edit#) (for lunches this week) → [[Ramen noodles]]
+- Ramen noodles (for lunches this week) → [[Ramen noodles]]
 
 ### Hacked chicken parm
 
@@ -95,9 +95,9 @@ A quick Thai style red curry, about 10 minutes of prep and 20 minutes active coo
 
 Planning for Sunday:
 
-- [Patty recipe](https://docs.google.com/document/d/1_FNFVNbjRDOEdbD1oU5-5e-PlBo4euAkmzS07YfX2bI/edit#)
+- Patty recipe
     - 450gx2 → 128g per patty ($2 per patty)
-    - [Scaling sheet](https://docs.google.com/spreadsheets/d/1D9Ls2SRHtvSBeVAVhLJZC5CSqrhxuTvu3vb2kW5LvrU/edit#gid=0) (making 900g worth)
+    - Scaling sheet (making 900g worth)
     - ~~Very sticky, may not come off the parchment well (try a warm plate + refreeze?)~~
         - (they came off fine, before 100% frozen)
         - (still weirdly sticky)
@@ -190,7 +190,7 @@ I used up some frozen ramen noodles this week. Observations:
 
 ### Pasta tests
 
-- [Ravioli With Spinach-Pecan Filling](https://docs.google.com/document/d/1ffMae9ToLkOYIeAiBZ--woYETsQ-MsIyI9_8TXY14ng/edit#heading=h.3fsk0afek31n) → [[Spinach pecan pasta filling]]
+- Ravioli With Spinach-Pecan Filling → [[Spinach pecan pasta filling]]
     - Filling was fantab, though might whip the cheese next time
     - Pasta was a bit too wet, but I adapted
     - Also learned how to clean the pasta maker
@@ -203,7 +203,7 @@ I used up some frozen ramen noodles this week. Observations:
 - Research suggests
     - minced, some fat, and brined
     - Water instead of milk, either a batter or just the dippy method with cornstarch instead of egg
-- [Draft recipe](https://docs.google.com/document/d/1_FNFVNbjRDOEdbD1oU5-5e-PlBo4euAkmzS07YfX2bI/edit#) (guessing batter)
+- Draft recipe (guessing batter)
 - These may be good without breading, but assuming pan-fried will work
 
 ### Pasta, pork, and other things this week
@@ -221,7 +221,7 @@ I used up some frozen ramen noodles this week. Observations:
     - Wednesday make dough
     - Make more Thursday
     - Filling?
-        - [Ravioli With Spinach-Pecan Filling](https://docs.google.com/document/d/1ffMae9ToLkOYIeAiBZ--woYETsQ-MsIyI9_8TXY14ng/edit#heading=h.3fsk0afek31n)
+        - [[Spinach pecan pasta filling|Ravioli With Spinach-Pecan Filling]]
 
 ### Fam ramen day
 
@@ -345,8 +345,8 @@ This turned out well enough that I ate some for a snack. We’ll test this in a 
 
 Based on ratio research (1-2% salinity), I’m making pizzas. Weird, but I’ll explain after my notes.
 
-- Added notes for the [simple pizza sauce](https://docs.google.com/document/d/1BX06tDHI3xoXW0kGnJWOaT90hkxVgaz82yimYTNurW0/edit#heading=h.7q2dvt9v9rnx) I make with weights
-- Used the [Lazy pizza dough recipe](https://docs.google.com/document/d/1skcPnaomnvjP6LStlhuo_RN2-rn21xfER1esQ8RX850/edit#), 100g mini pizza → [[Lazy pizza dough (2022)]]
+- Added notes for the simple pizza sauce I make with weights
+- Used the Lazy pizza dough recipe, 100g mini pizza → [[Lazy pizza dough (2022)]]
     - 247C, convection
     - Thin crust (15-16cm or so)
     - Copicola/ham/hot peppers/cheese
@@ -440,7 +440,7 @@ I have a few recipes planned this weekend:
     - 2L tea (black + flavoured)
     - 3-4 scoops of white sugar
     - ¼–½ cup of lime or lemon juice
-    - ([added to recipes](https://docs.google.com/document/d/1mVXGS-BsF70U2SxBAzkYuGH-cjae2Q3SJmdjRGxF2q4/edit#) as I only had my old )
+    - (added to recipes as I only had my old )
 
 ### Salad sandos
 
@@ -629,7 +629,7 @@ We made mushroom stock for Friendsgiving, and the same weekend I had a “forest
 - **< 12:00PM**
     - [x] ~~Roux~~
     - [x] ~~Season Lor’s stocks~~
-    - [x] ~~[Prep mac](https://docs.google.com/document/d/1nF2oqFoura6lQMVRS4wUkPPRp907GElqI3yJSTjX3E4/edit)~~ → [[Baked mac & cheese]]
+    - [x] ~~Prep mac~~ → [[Baked mac & cheese]]
     - [x] ~~Prep stuffing~~
     - [x] ~~Charcuterie~~
 - **1:00 PM**

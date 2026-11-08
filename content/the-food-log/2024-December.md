@@ -40,7 +40,7 @@ _Undated. Winter._
 
 → [[Breakfast sausage]]
 
-[Updated %s](https://docs.google.com/spreadsheets/d/1D9Ls2SRHtvSBeVAVhLJZC5CSqrhxuTvu3vb2kW5LvrU/edit?gid=2146379760#gid=2146379760%20), texture and flavours were spot on (more fennel could work, maybe more brown sugar).
+Updated recipe, texture and flavours were spot on (more fennel could work, maybe more brown sugar).
 
 I bought a half pork loin for $1.20/100g and turned ¼ of it into breakfast sausage (about ½ of premade sausage pricing). To get the right texture:
 

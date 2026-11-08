@@ -13,7 +13,7 @@ Mostly summer produce: a mango green salad, a scalable family meatball recipe, a
 
 ### Fam foods
 
-- [meatballs (scalable recipe)](https://docs.google.com/spreadsheets/u/0/d/1D9Ls2SRHtvSBeVAVhLJZC5CSqrhxuTvu3vb2kW5LvrU/edit) → [[Meatballs]]
+- meatballs (scalable recipe) → [[Meatballs]]
 
 ### Fresh summer foods
 

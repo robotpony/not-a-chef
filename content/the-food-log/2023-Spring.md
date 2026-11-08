@@ -61,18 +61,18 @@ Tests:
 
 ### Prep list (May 14)
 
-- [Ramen stock (chicken)](https://docs.google.com/document/d/14HiL_nO3th1FFibQTvN6T7nEmnwYS9VFZjRmzoHRF6M/edit#) → [[Basic chicken ramen stock]]
+- Ramen stock (chicken) → [[Basic chicken ramen stock]]
     - ✔️Chicken/veg roasted
     - ✔️Pressure
     - ✔️[[Umami]] ++
     - ✔️Reduce
-    - [Pork (for slicing → ramen)](https://docs.google.com/document/d/1M7ZMOZos83Xw8a1Z_tDL4Xfla2aqjHoNR9TBcfoLKkQ/edit#heading=h.3fsk0afek31n) → [[Chashu pork]]
+    - Pork (for slicing → ramen) → [[Chashu pork]]
         - ✔️Trim: bones and fat → stock
         - ✔️[[Braise]]
             - Not enough flavour, needs to be more intense or more time?
             - Need to be careful reheating
         - [[Tare]]
-- [Green goddess dressing](https://docs.google.com/document/d/14ChyHU9QrXJauLcKEhUkipCAzsR69I9LGYMoj8nzr2s/edit#) → [[Simple green goddess dressing]]
+- Green goddess dressing → [[Simple green goddess dressing]]
     - Toasted nuts/seeds → bacon (or tempeh?)
     - Quick clean/process herbs
 - Wings → dry [[Brine|brine]]
@@ -91,9 +91,9 @@ Tests:
         - Common herbs: tarragon, chives & parsley
     - Raspberry vinaigrette ([NYT](https://cooking.nytimes.com/recipes/1017634-raspberry-vinegar), [Vitamix](https://www.vitamix.com/us/en_us/recipes/raspberry-vinaigrette))
     - General ([SE](https://www.seriouseats.com/three-great-vinaigrettes-salad-dressings-recipe))
-- ✔️[Stew](https://docs.google.com/document/d/1ha2nTnRSZP0aCgm4mwFlFKULYaGCevvu6KqnaCsNoSs/edit#heading=h.3fsk0afek31n) → [[Beef stew]]
-- ✔️[Cottage pie](https://docs.google.com/document/d/19N4ACHfW0deD3-Bk9RdhRbySXh7HLaG6-Ay6KP00PyU/edit#) → [[Cottage pie]]
-- ✔️[Meat sauce](https://docs.google.com/document/d/1Guv50ZntWl--OADeEOc4MBiKsQPOsj2eXeyuGngn8Pk/edit#heading=h.3fsk0afek31n) → [[Meat sauce (AKA American bolognese)]]
+- ✔️Stew → [[Beef stew]]
+- ✔️Cottage pie → [[Cottage pie]]
+- ✔️Meat sauce → [[Meat sauce (AKA American bolognese)]]
 - ✔️Steak/mushrooms
     - ✔️Tested new mushroom method, worked well
 
