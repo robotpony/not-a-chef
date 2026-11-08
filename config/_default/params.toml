@@ -92,7 +92,9 @@ mainSections = ["recipes"]
   styles = false
 
   # Recipe sidebar boxes, top to bottom (Fugu's default puts notes last).
-  recipeSidebar = ["photos", "to-serve", "mechanic", "notes", "variations", "equipment"]
+  # No "mechanic": it stays in the article as a callout above Ingredients
+  # (mockups/recipe-mechanic.html, approved 2026-11-07).
+  recipeSidebar = ["photos", "to-serve", "notes", "variations", "equipment"]
 
   # Methods are their own top-level section, content/methods/, whose page
   # (/methods/) is the methods list (docs/METHODS.md).

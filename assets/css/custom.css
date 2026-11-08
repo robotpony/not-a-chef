@@ -2382,3 +2382,15 @@ span.vt-name.vt-decade:hover .ln-dot { transform: translateY(-5px); }
 @media (max-width: 1023px) {
   .recipe-sidebar > .not-prose { order: 99; }
 }
+
+/* Food Log months grouped by year, older years folded (Fugu's
+   reading-sidebar.html; mockups/food-log-sidebar.html, approved 2026-11-07). */
+.reading-sidebar .rs-year { font-family: 'Libre Franklin', sans-serif; font-size: .7rem; font-weight: 600; letter-spacing: .08em; color: var(--ink-faint); margin: 12px 8px 2px; }
+.reading-sidebar .rs-year:first-child { margin-top: 0; }
+.reading-sidebar .rs-year-fold > summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; gap: 14px; font-family: 'Libre Franklin', sans-serif; font-size: .7rem; font-weight: 600; letter-spacing: .08em; color: var(--ink-muted); padding: 7px 8px; border-radius: 4px; }
+.reading-sidebar .rs-year-fold > summary::-webkit-details-marker { display: none; }
+.reading-sidebar .rs-year-fold > summary:hover { background: var(--accent-soft); color: var(--accent-strong); }
+.reading-sidebar .rs-year-fold > summary .n { font-family: 'IBM Plex Mono', monospace; font-size: .72rem; font-weight: 500; letter-spacing: 0; color: var(--ink-faint); }
+.reading-sidebar .rs-year-fold > summary .n::after { content: " +"; }
+.reading-sidebar .rs-year-fold[open] > summary .n::after { content: " \2013"; }
+.reading-sidebar .rs-year-fold > a { padding-left: 16px; }

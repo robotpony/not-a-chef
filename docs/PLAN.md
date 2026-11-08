@@ -18,11 +18,6 @@ Six visual-pass fixes went to fugu-agent on 2026-11-07 (chip wording, lineage ye
 
 Each change is mocked before it's built, and recorded in `mockups/STYLE.md` and `style.html` when it lands. The visual pass is finished (2026-11-07).
 
-Approved 2026-11-07, waiting on Fugu (requests sent):
-
-- [ ] Recipe mechanic (`mockups/recipe-mechanic.html`): the callout's CSS, the quieter sidebar, and phone search last are in `custom.css`. When Fugu wraps the article's Mechanic in `.mechanic-callout`, bump Fugu, drop "mechanic" from `recipeSidebar` in `params.toml`, check, and record it in `STYLE.md` (replacing its sidebar-italic Mechanic note).
-- [ ] Food Log months (`mockups/food-log-sidebar.html`): grouped by year, older years folded. Fugu's `partials/reading-sidebar.html`; bump and check when it lands.
-
 To mock:
 
 - [ ] A thin line of images leading the page, under the header: Bruce's idea, to be worked out (which pages, where the images come from, height, how it sits with the sidebar photos). Decide the phone photos with it (a 112px thumbnail sits alone at the left, above Recipe notes).
