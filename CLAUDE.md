@@ -10,7 +10,7 @@ See docs/ARCHITECTURE.md for the data flow and component overview. See docs/PLAN
 
 ## Recipe format
 
-See `docs/FORMAT.md` for the full content format (shared frontmatter, recipes, essays, methods, validation). Key points for recipes:
+The format is Fugu's (`themes/fugu/docs/recipe-format.md` and `frontmatter.md`); `docs/FORMAT.md` is this site's house style on top (frontmatter and tag rules, comments, language, essays, methods, validation). Key points for recipes:
 
 - YAML frontmatter with `title` (required, sentence case: first word and proper nouns only), `tags` (required, plain strings — no `#` prefix), and `date` (required, `YYYY-MM-DD`)
 - Optional `## Mechanic` section explaining the key ratio or technique
@@ -72,7 +72,7 @@ Two stacked themes, both git submodules: `theme = ["fugu", "blowfish"]`. A third
 
 ## Pinned pages and tag reference pages
 
-- `pinned: true` in frontmatter (recipes, essays, or reference pages alike) floats a page to the top of its section's list, its term pages (tags/cuisine), and search results. Rare by design, not a general-purpose sort override. See docs/DESIGN.md and docs/FORMAT.md.
+- `pinned: true` in frontmatter (recipes, essays, or reference pages alike) floats a page to the top of its section's list, its term pages (tags/cuisine), and search results. Rare by design, not a general-purpose sort override. See docs/DESIGN.md and Fugu's `docs/frontmatter.md`.
 - A tag can carry its own `content/tags/<slug>/_index.md` with a `description`, and, when marked `principle: true`, `themes/fugu/layouts/_default/term.html` renders it on the reading layout: the `_index.md` body as an intro linking the full essay, then only the recipes, with everything else on the tag in the sidebar under "Reference & further reading". Only `win-the-fridge` uses this today (`content/tags/win-the-fridge/_index.md`); every other tag term page renders as before.
 
 ## Visual design

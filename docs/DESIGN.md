@@ -43,7 +43,7 @@ Superseded by the mockups — see `mockups/STYLE.md`/`mockups/style.html`, `mock
 
 ### Hugo frontmatter additions
 
-`draft`, `description`, `pinned`, and the rest of the frontmatter are specified in `docs/FORMAT.md`. Test kitchen (`draft`) is below.
+`draft`, `description`, `pinned`, and the rest of the frontmatter are specified in Fugu's `themes/fugu/docs/frontmatter.md`, with this site's house rules in `docs/FORMAT.md`. Test kitchen (`draft`) is below.
 
 (`featured`, pinning a recipe to the homepage card grid, was considered and dropped 2026-09-17: "recently added" is real date-sorted data already. It came back 2026-09-27 as `pinned`, scoped to any page in any section, when the win-the-fridge essay needed to surface first. Pinned pages lead their section's list, term pages, search results, and, for a build, its blueprint's builds; the homepage's "recently added" row stays date-sorted. Fugu's `docs/frontmatter.md` has the details.)
 

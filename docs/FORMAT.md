@@ -2,66 +2,62 @@
 
 Every page on the site is standard Markdown with YAML frontmatter, in a `.md` file under `content/`. Pages should read naturally as plain text, render in Obsidian and Hugo, and be parseable by tools.
 
-This is the one format doc for all content: what every page shares, then what recipes, essays, and methods add, then what a validator checks. Requirement language (MUST / SHOULD / MAY) follows RFC 2119 and is used only where a tool or template depends on the rule; everything else is house style.
+**The format itself is Fugu's**, documented in the theme:
 
-Format version **0.5.0** (0.2.0 added the formula block; 0.3.0 added methods, blueprints, `era`, and the stack block; 0.4.0 lets `era` be a list of years; 0.5.0 adds approximate and decade dates to `era`, and a blueprint's `lineage` source and history table). Bump minor for an additive change (a new optional field or section; existing pages stay valid), major only when a previously valid page could fail validation.
+- [`themes/fugu/docs/recipe-format.md`](../themes/fugu/docs/recipe-format.md): a recipe's body. Ingredients and method, ingredient lines, `####` groups, multi-component recipes, the optional sections, `{.article}`, percentage tables, wiki links, photos, and the `formula`, `stack` and `flow` diagrams.
+- [`themes/fugu/docs/frontmatter.md`](../themes/fugu/docs/frontmatter.md): every field. Recipes, drinks (`glass`, `fill`, `ice`, `garnish`), `draft` and `working_on`, `pinned`, taxonomy terms and principle tags, methods and blueprints (`weight`, `era`, `lineage`, history tables, lineage dates), and the recipe index.
+- The fence grammars are hugo-warped's, in `~/projects/sites/hugo-warped/fences/`.
+
+This page is Not a Chef's house style on top of that: what this site does that Fugu leaves open. Requirement language (MUST / SHOULD / MAY) follows RFC 2119, used only where a tool or template depends on the rule.
 
 ## All pages
 
-Recipes (`content/recipes/`), essays (`content/essays/`), methods (`content/methods/`), reference pages (`content/reference/`), Food Log months (`content/the-food-log/`), and About.
+Recipes (`content/recipes/`), drinks (`content/drinks/`), essays (`content/essays/`), methods (`content/methods/`), reference pages (`content/reference/`), Food Log months (`content/the-food-log/`), and About.
 
-### Shared frontmatter
+### Frontmatter
 
-| Field | Required | Type | Notes |
-|---|---|---|---|
-| `title` | MUST | string | Sentence case (see Typography). A recipe title MUST be unique in the collection: wiki links resolve by it. |
-| `date` | MUST | string | ISO 8601 (YYYY-MM-DD), the day the page was added. Food Log months use the first of the month; season files use the month the log sorts them by. |
-| `tags` | MUST on recipes, MAY elsewhere | string[] | Plain strings, no `#` prefix. |
-| `description` | MAY | string | 1–2 sentences for SEO and listing cards. Mostly essays and reference pages; recipe cards use the opening text. |
-| `draft` | MAY | boolean | `true` publishes the page in the **Test kitchen**: live, with a banner under the title and a mark on its card saying it's still changing. Remove it when the page is a keeper. See DESIGN.md "Test kitchen (drafts)" and `content/reference/essays/test-kitchen.md`. |
-| `working_on` | MAY | string | For drafts: one line on what's being tried next ("Getting them to hold without the egg"), shown in the banner under the title. |
-| `pinned` | MAY | boolean | Floats the page to the top of its section's list, its term pages, and search. Rare by design, not a general sort override. See DESIGN.md. |
-| `source` | MAY | string | `original`, `family`, a URL, or a book title. SHOULD on recipes. |
-| `era` | MAY | date or date[] | Builds only: a date that places the build on its blueprint's lineage timeline, or a list for a build with iterations (`[1991, 2015, 2026]`). A date is a year (`1960`), an approximate year (`"c. 1900"`), or a decade (`"1950s"`); see Methods, "Lineage dates". |
-| `lineage` | MAY | string | Blueprints only (`_index.md`): where its lineage timeline gets its entries, `builds`, `table`, or `both`. Overrides the site's `params.fugu.methods.lineage` (default `builds`). See Methods. |
-| `aliases` | MAY | string[] | Old URLs that redirect here (Hugo). Only for a published URL that moved. |
+- `title`, `date` on every page; `tags` on recipes and drinks. Tags are plain strings, no `#`.
+- A recipe title MUST be unique: wiki links resolve by it, and with a duplicate, Obsidian and Hugo can pick different pages.
+- `source` SHOULD be set on recipes: `original`, `family`, a URL, or a book title. A private person is credited by role (`source: a sushi chef`), never by name.
+- Approximate values use a leading `~`, not "about", "approx." or "roughly": `portions: ~500 ml`, `cook_time: ~2 hr`. A range (`4–6`, `20–30 min`) needs no `~`.
+- Don't hand-maintain `lastmod`: last-modified comes from git (`enableGitInfo`).
+- `aliases` only for a published URL that moved, and only after asking.
+- There's no `related` field: related recipes come from `tags` and `cuisine`.
+- The schema is open: unknown fields are kept and ignored. Don't add `difficulty`, `diet`, or `license` without a reason.
 
-Don't hand-maintain `lastmod`. Last-modified comes from git (`enableGitInfo`): both sidebars show **Date**, plus **Updated** from the file's last commit when that falls on a different day.
+### Tags
 
-Approximate values MUST use a leading `~`, not "about", "approx." or "roughly": `portions: ~500 ml`, `cook_time: ~2 hr`. Keep the space between number and unit. A range (`4–6`, `20–30 min`) needs no `~`.
+- `family` means the recipe is historically from our family: heritage, not a dish grouping.
+- A dish type with parts is a blueprint (`content/methods/<type>/`), never a tag like "family" or "group".
+- `drinks` on every drink, `method` on every method page (see Methods).
 
-The schema is open. Unknown fields MUST be preserved and MUST NOT fail validation; tools ignore them. Don't add `difficulty`, `diet`, or `license` without a reason.
+### Files
 
-### File naming
-
-Kebab-case, one page per file, matching the title: `dal-tadka.md` for "Dal tadka". Replace special characters with a plain equivalent or drop them. No date prefix: `date` is the record.
+Kebab-case, one page per file, matching the title: `dal-tadka.md` for "Dal tadka". No date prefix: `date` is the record.
 
 ALL-CAPS files under `content/` (`IDEAS.md`, `TODO.md`) are working notes. Hugo ignores them (`ignoreFiles` in `config/_default/hugo.toml`), so they never publish.
 
-A to-do inside a page is a visible list item ending in `#todo` (`- Which sauces? #todo`), never an HTML comment. Obsidian's tag pane collects them, and they render on the page, so an editor has to deal with them rather than skip past. A to-do inside a table cell goes in a list right after the table. HTML comments are only for what stays in the source but off the site, each starting with a label: private links (`<!-- Private worksheet (to import): … -->`) and personal detail held back for now (`<!-- Held back: … -->`), kept until Bruce decides to publish or cut it.
+### To-dos and comments
 
-A comment is off the site, not secret. The minified build (`/publish`, `make dry-run`) strips comments, but a local `make build` or `/preview` keeps them in the page source, and the repo is public on GitHub, so the source and its history are readable by anyone. Anything that must stay private, such as a private person's name (credit by role instead), stays out of the file altogether.
+A to-do inside a page is a visible list item ending in `#todo` (`- Which sauces? #todo`), never an HTML comment. Obsidian's tag pane collects them, and they render on the page, so an editor has to deal with them rather than skip past. A to-do inside a table cell goes in a list right after the table.
 
-### Cross-references
+HTML comments are only for what stays in the source but off the site, each starting with a label: private links (`<!-- Private worksheet (to import): … -->`) and personal detail held back for now (`<!-- Held back: … -->`), kept until Bruce decides to publish or cut it.
 
-Use wiki links to point at other pages, as an ingredient or as related reading:
+A comment is off the site, not secret. The minified build (`/publish`, `make dry-run`) strips comments, but a local `make build` or `/preview` keeps them in the page source, and the repo is public on GitHub, so the source and its history are readable by anyone. Anything that must stay private, such as a private person's name, stays out of the file altogether.
 
-```markdown
-- 1 cup [[Pizzeria pizza sauce]]
-- 1 batch [[Basic pie crust]], blind-baked
-```
+### Wiki links in Obsidian
 
-Wiki links resolve by matching `title`, ignoring case and punctuation (`[[rich veg mushroom stock]]` finds "Rich veg/mushroom stock"). Filenames are kebab-case, so Obsidian can't match a title on its own: the warped-command plugin's "Resolve wiki links by page title" setting (Settings → Posts, on by default in a Hugo vault) does it, with the same rule. In Hugo a render hook resolves them (`themes/fugu/layouts/_default/_markup/render-link.html`), and a `[[Term]]` with no page of its own links to its glossary entry; those glossary-heading links resolve on the site only. Titles MUST be unique: with a duplicate, Obsidian and Hugo can pick different pages. Obsidian's link autocomplete inserts filenames, so type `[[Title]]` by hand.
+Filenames are kebab-case, so Obsidian can't match a `[[Title]]` on its own: the warped-command plugin's "Resolve wiki links by page title" setting (Settings → Posts, on by default in a Hugo vault) does it, with the same rule as Fugu. Obsidian's link autocomplete inserts filenames, so type `[[Title]]` by hand. A `[[Term]]` with no page of its own links to its glossary entry, on the site only.
 
 ### Photos
 
-Put photos in `static/images/<section>/` (`recipes`, `essays`, `food-log`) and embed them with standard Markdown where they belong in the text (`/image-add` does both):
+Photos go in `static/images/<section>/` (`recipes`, `essays`, `food-log`), embedded where they belong in the text (`/image-add` does both):
 
 ```markdown
 ![Lazy tomato soup](/images/recipes/lazy-tomato-soup.jpg)
 ```
 
-The alt text doubles as the caption, so describe what's in the photo. On the site, photos move out of the text into the sidebar as thumbnails that open a viewer, with a small "Photo N" marker left in their place. In Obsidian, and in print, they stay inline.
+Describe what's in the photo: with no title, the alt text is the caption.
 
 ### Language
 
@@ -75,269 +71,26 @@ Avoid em-dashes.
 
 ## Recipes
 
-Instructional voice, not storytelling; the full style guide is the `recipe-writing` skill (`~/.claude/skills/recipe-writing/SKILL.md`).
-
-### Recipe frontmatter
-
-Required: `title`, `tags`, `date`. Everything else is optional but encouraged.
-
-```yaml
----
-title: Dal tadka
-tags: [soups, indian, weeknight, vegetarian]
-source: original
-date: 2026-05-02
-servings: 4
-prep_time: 10 min
-cook_time: 25 min
-total_time: 35 min
-cuisine: Indian
-draft: true                          # in the Test kitchen; remove when it's a keeper
-working_on: Less cumin, more tadka   # optional, shown under the banner
----
-```
-
-On top of the shared fields:
-
-| Field | Required | Type | Notes |
-|---|---|---|---|
-| `servings` | SHOULD | string or number | People it feeds: "4", "4–6", "12+ (people)". Feeds `recipeYield` in schema.org output. |
-| `portions` | MAY | string | What the batch makes, when that isn't people: "2 pans", "1 loaf", "~500 ml". |
-| `prep_time` | MAY | string | Parenthetical notes are fine: "20 min (plus 24–48 hr cold ferment)". |
-| `cook_time` | MAY | string | Active cooking time. |
-| `total_time` | MAY | string | Total elapsed time, if different from prep + cook. |
-| `cuisine` | MAY | string | Region or cuisine ("Indian", "Italian"). |
-| `author` | MAY | string | Only when different from the collection author. |
-| `aka` | MAY | string | Alternative names, comma-separated. |
-| `cost_note` | MAY | string | Free-text note on cost ("expensive because of saffron"). Not a number; a computed estimate would be build-time data. |
-
-There's no `related` field. Related recipes are computed at build time from `tags` and `cuisine` (Hugo related content); add a manual override only if those suggestions prove weak.
-
-### Drinks
-
-Drinks are recipes in their own folder, `content/drinks/` (Fugu's `drinkSection`): same format, same fields, plus the `drinks` tag. Four more fields draw the small glass on the drink's card (`mockups/drink-diagrams.html`, option C):
-
-```yaml
-glass: mug                     # mug, wine, highball, rocks, bottle, pitcher
-fill: [liqueur, coffee, cream] # bottom to top, one to three
-ice: true                      # optional
-garnish: nutmeg                # optional: lemon, fruit, nutmeg
-```
-
-| Field | Required | Type | Notes |
-|---|---|---|---|
-| `glass` | SHOULD | string | The glass's shape, which says what kind of drink it is. |
-| `fill` | SHOULD | list | What's in it, bottom to top, in equal bands: `liqueur`, `coffee`, `cream`, `latte`, `tea`, `wine`, `sparkling`, `cola`. Colours in `mockups/STYLE.md` §7. |
-| `ice` | MAY | boolean | Draws ice cubes in the drink. |
-| `garnish` | MAY | string | One garnish on or over the rim. |
-
-The card drawing is a sketch, not a spec: the amounts live in the ingredients. A drink with a stated ratio can also draw it with a `formula` block (see Formula diagrams).
-
-### Mechanic
-
-Optional. One paragraph explaining the ratio, technique, or principle that drives the dish. Use **bold** for the key ratio or technique.
-
-Use it when:
-- A ratio determines the outcome (lentils to water, hydration percentage)
-- A technique is non-obvious and changes the result (boil-over vs. steep-and-strain, autolyse)
-- A key substitution has real consequences
-
-Skip it when the recipe is just "combine and cook."
-
-```markdown
-## Mechanic
-
-The **vital wheat gluten** supplements bread flour to push gluten content higher,
-producing a chewier crumb and stronger structure. Low yeast (0.1%) and a long cold
-ferment develop flavour.
-```
-
-### Simple recipes
-
-For single-component recipes, use `## Ingredients` and `## Method`.
-
-```markdown
-## Ingredients
-
-- 500–750ml water
-- 3–4 whole cloves
-- 3–4 cardamom pods, lightly crushed
-- 2 tsp loose-leaf black tea
-- 2 tsp sugar
-- 120ml whole milk or 60ml cream
-
-## Method
-
-Combine water, cloves, and cardamom. Bring to a boil. Simmer 2–3 minutes.
-
-Add tea and simmer 5 minutes. Add milk. Bring to a boil. The moment it foams and
-rises, remove from heat and stir back down. Repeat three times.
-
-Strain and serve.
-```
-
-Method is prose, not an ordered list. One action per sentence, imperative and present tense: "Add the lentils", not "You should add the lentils". No passive voice. Sensory cues first, time second: "until golden, about 3 minutes", not "cook 3 minutes".
-
-Ingredients can have tab-indented sub-items for notes:
-
-```markdown
-- 1 cup red lentils (masoor dal), rinsed until water runs clear
-    - add split peas for more texture (+10 min cook time)
-```
-
-### Multi-component recipes
-
-When a recipe has distinct components (dal + tadka, dough + filling), give each component its own `## Heading` containing both its ingredients and its method prose. No `###` subheadings needed.
-
-```markdown
-## Dal
-
-- 1 cup red lentils, rinsed
-- 5 cups water
-- 2 tomatoes, chopped
-- 1½ tsp turmeric
-
-Combine everything in a pot. Bring to a rolling boil, then simmer 20 minutes.
-Stir and lightly mash.
-
-## Tadka
-
-- 2 tbsp ghee
-- 1 small red onion, sliced
-- 4–5 garlic cloves, sliced thin
-- 1 tsp cumin seeds
-
-Melt ghee over medium-high. Add cumin seeds. When they sizzle, add onion and garlic.
-Fry until golden, about 3–4 minutes. Pour over the dal.
-```
-
-### Ingredient groups
-
-To group ingredients within one list (dry vs. wet, in a recipe that doesn't otherwise split into components), put a `####` label directly above each run of list items:
-
-```markdown
-## Ingredients
-
-#### Dry
-- 300g flour
-- 10g baking powder
-
-#### Wet
-- 2 eggs
-- 240ml buttermilk
-```
-
-`####` is reserved for this. It's a label, not a component: it MUST appear only inside an ingredients block, MUST be followed directly by list items, and carries no method of its own.
-
-### Ingredient lines
-
-```
-[quantity] [unit] ingredient name [, preparation note] [(optional)]
-```
-
-- **Quantity**: whole numbers, fractions (`1/2`, `½`), mixed numbers (`1 1/2`), decimals (`.5`), ranges (`2–3`), or descriptive (`a pinch of`).
-- **Unit**: standard cooking units, full or abbreviated. Metric preferred, imperial in parentheses where helpful. A noise "of" between unit and name is fine: "½ teaspoon of salt".
-- **Ingredient name**: free text up to the first comma or the optional marker.
-- **Preparation note**: free text after a comma: "3 apples, peeled and sliced".
-- **Optional marker**: a line MAY end with the literal `(optional)` (any case), after any preparation note: "1 jalapeño, halved (optional)". A parser MUST read a trailing `(optional)` as the marker, not as part of the note.
-
-This is the one grammar every ingredient feature parses: scaling, unit conversion, quantity styling, and anything later (shopping lists, pantry matching, substitutions). There MUST NOT be a second, slightly different grammar growing in the JS. When a validator exists, it SHOULD emit its parsed output as a JSON fixture the JS tests assert against, so the two parsers can't drift apart.
-
-### Percentage tables
-
-An ingredient table with a `%` column (its header starts with `%`) and a row at exactly `100%` is a percentage table. That row is the base: the site adds a "Scale based on" row under the headings, filled from the row's name and amount, and scales every amount from it. These pages have no scale slider or Units control.
-
-```markdown
-| Ingredient | % | Weight | Notes |
-|---|---|---|---|
-| AP flour | 100% | 600 g | |
-| Lukewarm water | 70% | 420 g | |
-```
-
-- Amounts scale from what's written, not from the `%` column, so the written batch reads exactly as written.
-- A row scales only if its amount has a recognized unit (g, kg, ml, L, cup, and so on). "3 cloves" stays put.
-- Amounts in the table ignore the Imperial setting; the base can be entered in lb or cups.
-- Any unit-bearing number elsewhere on the page scales too. Spell the unit out when a number shouldn't change with the batch, such as a portion size or the oil for a pan: "a pizza takes about 250 grams".
-
-### Optional sections
-
-**To serve**: one line or a few words. What it goes with.
-
-```markdown
-## To serve
-
-Warm basmati rice, plain raita, lime pickle.
-```
-
-**Variations**: only for meaningfully different methods or outcomes. Prose, one `###` per variation. Include the source link when adapted.
-
-```markdown
-## Variations
-
-### Coconut cream dal
-Use yellow split peas instead of masoor ...
-```
-
-**Notes**: tips, storage, test results. Bullet list.
-
-```markdown
-## Notes
-
-- Masoor (red lentils) needs no soaking. Toor dal benefits from 30 minutes.
-- Leftovers thicken considerably. Loosen with water when reheating.
-```
-
-**Equipment**: a flat bullet list (no nesting) of anything beyond standard kitchen kit. `## Special equipment` and the legacy `## Hardware` are the same section. On the site it moves into the recipe sidebar, above Notes.
-
-```markdown
-## Equipment
-
-- 6-quart Dutch oven
-- Instant-read thermometer
-```
-
-**Substitutions**: one swap per line, `- <ingredient> → <alternative(s)>[, <note>]`. The arrow (`→`, U+2192) is a required delimiter; it's what lets a swap be handled by code instead of buried in prose. The left side should match a line in the ingredients, though that's a best-effort text match.
-
-```markdown
-## Substitutions
-
-- Butternut squash → sweet potato or pumpkin, same prep
-- Fish sauce → soy sauce, for a vegetarian version
-```
-
-**Tables**: for timing or ratio reference when there are several variables.
-
-```markdown
-## Timing
-
-| Bird | Low phase | High phase |
-|---|---|---|
-| Large turkey (5–7 kg) | 50 min | 45 min |
-| 2 whole chickens | 30 min | 20 min |
-```
-
-### Keeping a section in the article
-
-Mechanic, To serve, Variations, Equipment, and Notes move to the recipe sidebar. To promote one, or any section, into the article where it's written, add `{.article}` to its `##` heading: `## Breading {.article}`. A marked section is never read as ingredients, never moves, and is never hidden, whatever its title. Hugo drops the marker from the page; Obsidian shows it. Use it rarely, for a section the cook needs in the reading flow, like the breading steps on [[Cornmeal fried chicken]].
+Instructional voice, not storytelling; the full style guide is the `recipe-writing` skill (`~/.claude/skills/recipe-writing/SKILL.md`), including the bold lead phrase on each method step.
+
+- **Mechanic**: one paragraph, when a ratio or a non-obvious technique drives the result. Bold the key ratio. It opens the recipe as a callout above Ingredients (`recipeSidebar` leaves it out).
+- **Method** is prose, not an ordered list.
+- **Substitutions**: one swap per line, `- <ingredient> → <alternative(s)>[, <note>]`. The arrow (`→`) is a required delimiter, so a swap can be handled by code; the left side should match an ingredient line.
+- **Equipment** is a flat list (no nesting). `## Special equipment` and the legacy `## Hardware` are the same section.
 
 ### Formula diagrams
 
-A ratio stated in the text can also be drawn: a `formula` fenced block, one slot per line, `icon | label | quantity | swaps`, with an operator (`+`, `:` or `→`) starting every line after the first. It goes in `## Mechanic`, illustrates the sentence, and MUST NOT replace it. The full spec is `~/projects/sites/hugo-warped/fences/formula.md`; every fence type's is in `~/projects/sites/hugo-warped/fences/`, the shared spec in hugo-warped.
+A ratio stated in the Mechanic can also be drawn with a `formula` block. It illustrates the sentence and MUST NOT replace it. Grammar: Fugu's recipe-format.md, and hugo-warped's `fences/formula.md`.
+
+## Drinks
+
+Drinks are recipes in `content/drinks/` (Fugu's `drinkSection`), with the `drinks` tag. They're listed in the recipe index. The card glass fields are in Fugu's frontmatter.md; the fill colours are in `mockups/STYLE.md` §7.
 
 ## Essays
 
-Essays live in `content/essays/<type>/` and are finished prose, not outlines or notes. Draft them in place, with `draft: true` while they're still changing. The types (one folder each) and the voice are described in CLAUDE.md "Food essay types"; for shared language rules see the `blog-writing` skill.
+Essays live in `content/essays/<type>/` and are finished prose, not outlines or notes. Draft them in place, with `draft: true` while they're still changing. The types (one folder each) and the voice are in CLAUDE.md "Food essay types"; for shared language rules see the `blog-writing` skill.
 
 Frontmatter is the shared set. `title` and `date` are required; `tags` and `description` are encouraged. Essays don't use the recipe fields (`servings`, `cuisine`, times).
-
-```yaml
----
-title: Win the fridge
-date: 2026-09-27
-tags: [win-the-fridge]
-description: "Win the fridge is the practice of using every scrap of food before it goes to waste."
----
-```
 
 No required sections. A typical shape, varying by type:
 
@@ -347,89 +100,34 @@ No required sections. A typical shape, varying by type:
 
 Use `##` headings only when sections are long enough that a reader needs navigation. Short pieces (under 1000 words) rarely need them.
 
-A reference essay (`content/reference/essays/`) defines one concept and is tagged with that term, so the term's tag page can link to it. A term that doesn't need a whole essay gets a glossary entry in `content/reference/glossary.md` instead.
+A reference essay (`content/reference/essays/`) defines one concept and is tagged with that term, so the term's tag page can link to it. A term that doesn't need a whole essay gets a glossary entry in `content/reference/glossary/` instead.
 
 ## Methods
 
-A method (`content/methods/`) explains how a kind of food or a cooking process works in general: the principle first, then the variables, the stages, why each one is there, how it fails, and the recipes that use it. The folder decides what's a method. Each page MUST carry the `method` tag: the folder's own `_index.md` cascades it to a method page with no `tags`, but a page that sets its own `tags` replaces the cascade, so list `method` there. What counts as a method, and how methods relate to blueprints, recipes, and stories, is in docs/METHODS.md.
+A method (`content/methods/`) explains how a kind of food or a cooking process works in general: the principle first, then the variables, the stages, why each one is there, how it fails, and the recipes that use it. What counts as a method, and how methods relate to blueprints, recipes, and stories, is in docs/METHODS.md.
 
-```yaml
----
-title: Reverse cooking
-date: 2026-09-24
-tags: [method, technique, temperature]
----
-```
+Each page MUST carry the `method` tag. The folder's `_index.md` cascades it to a page with no `tags`, but a page that sets its own `tags` replaces the cascade, so list `method` there. Recipes carry no blueprint fields; each method lists its recipes under `## Recipes`.
 
-### Blueprints
-
-A blueprint is a dish type made of parts, as a folder under methods (`content/methods/burgers/`). The model and the reasons for it are in docs/METHODS.md, "Inside a blueprint".
-
-- **The blueprint** is the folder's `_index.md`: title, description, and its definition as the body. It MAY end with `## Further reading`.
-- **Parts** are the pages in `parts/`. Each MUST have a `weight` (1, 2, 3...), which orders them. A part's title is also its label on every build's picks.
-- **Options** are a part's choices (thick, thin, paper thin). They aren't pages: they're rows under the part's `## Options`, a table with `Option`, `Pick it when`, and `Changes` columns.
-- **Builds** are the pages in `builds/`. An `era` (a date, or a list of dates) places one on the blueprint's lineage timeline; a build with no `era` is left off it.
-- **History table** (optional): a table in the blueprint's body whose first column header is `Year`, one row per dish in the type's history, the dish's name in the second column. A blueprint with `lineage: table` or `both` draws its rows on the lineage, so history can be shown without a build page per dish. See "Lineage dates" below for what the Year cell may hold.
-- An `_index.md` in `parts/` or `builds/` is an optional lead line for that list, headless (`build: {render: never, list: never}`).
-
-#### Lineage dates
-
-A lineage date, in a build's `era` or a history table's `Year` cell, is one of:
-
-| Form | Example | Placed at | Drawn as |
-|---|---|---|---|
-| Year | `1769` | that year | a dot |
-| Approximate year | `c. 1900` | that year | a dot, its year labelled `c. 1900` |
-| Decade | `1950s` | the decade's span | a short bar across the decade, labelled `1950s` |
-
-The pattern is `^(c\. )?\d{4}$` or `^\d{3}0s$`. In frontmatter, quote the two text forms (`era: "c. 1900"`). A date that matches none of them is left off the lineage with a build warning. In the table, a row whose name or description links a build in the same blueprint is that build's dot (the build's own `era`, if it has one, wins under `both`); any other row is a history entry, linked to its name cell's link if it has one.
-
-A build's body, in order:
+Blueprint fields (`weight`, `era`, `lineage`), history tables and lineage dates are in Fugu's frontmatter.md. On top of that, a part's choices are rows in its `## Options` table (`Option`, `Pick it when`, `Changes`), not pages, and a build's body goes in this order:
 
 1. An opening paragraph: why these picks go together.
-2. `## Picks`: the profile in one line, then `- **Part:** pick` per part, in the parts' order, then its `stack` block. Each bullet MUST start with a part's title.
+2. `## Picks`: the profile in one line, then `- **Part:** pick` per part, in the parts' order, then its `stack` block, whose layers MUST follow the picks. Each bullet MUST start with a part's title.
 3. `## Where it comes from` (optional): its era and kitchen, then a `Constraint` / `Pick it explains` table.
 4. `## Why these picks`, `## How it fails`, `## Variations`.
-5. `## Recipes` (optional): wiki links to the recipes that are this build. A build's picks and stack are often enough to cook from.
-
-Recipes carry no blueprint fields; the method lists them.
-
-### Stack diagrams
-
-A build made of layers (a burger, a sandwich, a lasagne) can be drawn as an exploded view: a `stack` fenced block, one layer per line, top first, `layer | label | role`. On a build page the first `stack` block goes under `## Picks`, and its layers MUST follow the picks. A build that isn't layered (a one-pan pasta) has no `stack` block, and its card goes without a drawing. The full spec is `~/projects/sites/hugo-warped/fences/stack.md`.
+5. `## Recipes` (optional): wiki links to the recipes that are this build.
 
 ## Reference pages and the Food Log
 
-Shared frontmatter only, no required sections. Reference pages are technique guides, research notes, and appendices, written as reference rather than narrative. Food Log months need only `title` and `date`; the opening paragraph is the month's card summary (`/food-log-summary`). Obsidian's Daily Notes creates new months from `tools/obsidian/food-log-month.md`, set as its template in `.obsidian/daily-notes.json`.
+Shared frontmatter only, no required sections. Reference pages are technique guides, research notes, and appendices, written as reference rather than narrative. Food Log months need only `title` and `date` (the first of the month; a season file uses the month the log sorts it by). The opening paragraph is the month's card summary (`/food-log-summary`). Obsidian's Daily Notes creates new months from `tools/obsidian/food-log-month.md`, set as its template in `.obsidian/daily-notes.json`.
 
 ## Validation
 
-What a checker can rely on. `/lint` and `frontmatter.py check` cover the first group today, and the build warns on fence blocks; the rest waits on Fugu's validator (`themes/fugu/PLAN.md`, Features, "Recipe format").
+`/lint` and `frontmatter.py check` cover these today, and the build warns on fence blocks:
 
-**Checked now**
 - Required frontmatter present: `title`, `date` on every page; `tags` on recipes and drinks.
 - `date` is YYYY-MM-DD; `draft` is a boolean if present; `tags` is a list of plain strings, no `#`.
 - A recipe has at least one ingredients list and one method.
-- Fence blocks (`formula`, `stack`, `flow`) pass hugo-warped's checker (`tools/check-fences.py`): known icon keys, and for formula one operator and at most five slots.
+- Fence blocks (`formula`, `stack`, `flow`) pass hugo-warped's checker (`tools/check-fences.py`).
 - Every page in `content/methods/` carries the `method` tag; every part in a blueprint's `parts/` has a `weight`; a build in `builds/` has a `## Picks` section whose bullets each start with a part's name.
 
-**For the validator**
-- Frontmatter types match the tables above.
-- Ingredient-line parse rate: report every line that doesn't parse cleanly. Every ingredient feature depends on it, so a silent failure is worth surfacing before any one feature needs it.
-- `## Substitutions` lines contain the `→` delimiter.
-- `## Equipment` is a flat list.
-- `####` labels appear only inside an ingredients block and are followed directly by list items.
-
-Essays, reference pages, and the Food Log have no structural body checks.
-
-## Why these choices
-
-**Plain text ingredients, not structured syntax.** A recipe should look natural in any text editor. The cost is a more complex parser, but ingredient grammar is well-bounded and handles the vast majority of real recipes.
-
-**Freeform heading names.** Real recipes use wildly different heading names. "Ingredients", "What you need", and "For the sauce" are all valid if they precede an ingredient list. Requiring specific heading names forces authors to restructure their recipes.
-
-**Wiki links for cross-references.** Obsidian compatibility. Wiki links use the title as the reference, so they survive file renames and reorganization. Standard Markdown links require knowing file paths.
-
-**Open frontmatter schema.** Different pages need different metadata. Rejecting unknown fields frustrates authors. Validate known fields; preserve and ignore the rest.
-
-**Tags as plain strings.** Tags match Obsidian's native tag convention without the `#` prefix required in YAML values. Consistent with how tags appear everywhere else in the vault.
+Fugu's validator (`themes/fugu/PLAN.md`), when it lands, adds frontmatter types, the ingredient-line parse rate, the `→` in Substitutions, a flat Equipment list, and `####` placement.

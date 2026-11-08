@@ -147,7 +147,7 @@ The blueprint page shows a **lineage timeline**, so the page shows how the dish 
 - **A history table** in the blueprint's body, first column `Year`: for a type whose history is mostly dishes we don't make. Casseroles use it: the classics (baked macaroni and cheese, funeral potatoes, tuna casserole...) are history and ideas, not builds, so they're rows, not pages. A row that links one of the blueprint's builds is that build's dot.
 - **Both**, merged on one track.
 
-Dates can be approximate (`c. 1900`) or a decade (`1950s`), since history often isn't known to the year (FORMAT.md, "Lineage dates").
+Dates can be approximate (`c. 1900`) or a decade (`1950s`), since history often isn't known to the year (Fugu's `docs/frontmatter.md`, "Lineage dates").
 
 Why not nested blueprints ("burgers → deluxe")? Builds share nearly every part and differ only in their picks; a child blueprint would repeat all the parts. Clusters of builds (rich, fresh, sweet) are builds grouped by profile, not a separate level; add one only if a blueprint ever has more builds than its page can show.
 
