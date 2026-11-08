@@ -4,26 +4,21 @@ Everything waiting on Bruce, in one place. Tick a box to approve it, or write "n
 
 Local links need the dev server (`/preview`). Each open section's heading carries `#todo` for Bruce's todo tool; a section is removed once it's answered.
 
-## Code and docs review: approve as recommended #todo
+## Code and docs review #todo
 
-From the 2026-11-08 review (`docs/PLAN.md` has what's already fixed and what's left). One box each: tick to approve the recommendation, or write the change after it.
+From the 2026-11-08 review (`docs/PLAN.md` has what's already fixed and what's left). Answer by number: a letter, yes or no, or a change.
 
-Accessibility and look (each changes how the site looks a little):
-
-- [ ] **Faint text contrast.** `--ink-faint` (#828377) is 3.4–3.8:1 against the backgrounds; small text needs 4.5:1. It's on card stat labels, the footer headings and build line, menu counts, glossary counts, the scale ticks. Darkening it enough (#6C6D63 light, #929386 dark) lands it almost on `--ink-muted` (#6A6B61), so the two tiers merge. **Recommended:** small text moves to `--ink-muted`; `--ink-faint` stays for borders, icons and large text.
-- [ ] **Ingredient checkbox outline.** The unticked box is drawn in `--border-strong`, 1.5:1 on the page; controls need 3:1, and it nearly vanishes in bright kitchen light. **Recommended:** draw it in `--ink-faint` (3.6:1).
-- [ ] **Focus rings.** Cards, chips, Parts rows and the search results turn the browser's focus outline off and show a faint tint or underline instead, so a keyboard user can lose their place. **Recommended:** a 2px `--accent-strong` outline, 2px out, on `:focus-visible` for all of them (mouse clicks don't show it).
-- [ ] **Theme toggle name.** Screen readers hear "Dark mode switcher" while the button reads "Light" or "Dark". **Recommended:** name it "Dark mode" with `aria-pressed` on or off, so it says its state.
-- [ ] **Photo viewer colours.** The viewer is dark in both themes on purpose, with five hand-picked colours; its hover gold (#D3A569) is in no palette. **Recommended:** use the dark theme's own tokens (ink #E2E4D8, accent #BF9D72) so it matches the dark site.
-
-Docs and tools:
-
-- [ ] **Retire `/migrate` for good.** Delete `tools/migrate.py`, `.claude/commands/migrate.md`, the ~50 lines in `DESIGN.md` about them, and the mentions in CLAUDE.md. Git keeps them; one history line stays in `ARCHITECTURE.md`.
-- [ ] **Cut CLAUDE.md** from 101 lines to about 40: what the site is, a table of where each thing is documented, who owns what (Fugu, hugo-warped), what to read first (the recipe index, STYLE.md, recipe-writing), the commands, commits, language. The restated recipe format, Test kitchen, pinned and principle details go (Fugu's docs and DESIGN.md have them), and the essay types move to `FORMAT.md` §Essays.
-- [ ] **Shrink DESIGN.md's tool and command sections.** The CLI sections become "run it with `--help`" (the one fact `--help` lacks, which fields `frontmatter.py check` requires, goes to fugu-agent for its help text). The ~125 lines on slash commands become a one-line index; the command files are the source.
-- [ ] **Drop `tools/publish.sh deploy`.** It ships whatever `public/` holds if HEAD hasn't moved, but a `hugo --quiet` (which CLAUDE.md tells agents to run for the recipe index) rewrites `public/` as a local build without moving HEAD. It also ships without counting the build, and `make deploy` means something else (a full publish). A full publish rebuilds clean anyway.
-- [ ] **Centre or center.** `FORMAT.md` says Canadian "centre" and "litre"; the blog-writing skill says "center, meter, liter". **Recommended:** keep "centre" and "litre" here (a cookbook measures in litres), and note in `FORMAT.md` that this site differs from the blog.
-- [ ] **README's goals.** They read as the early pitch (PDF output "possibly using a separate tool", a "done for…" status note). **Recommended:** two or three sentences on what the site is now; PDF output moves to PLAN.md Later if you still want it.
+1. Faint text: `--ink-faint` is 3.4–3.8:1 on the page, under the 4.5:1 small text needs (card stat labels, footer headings, menu and glossary counts, scale ticks). Darkening it enough makes it almost `--ink-muted`. Move small text to `--ink-muted` and keep faint for borders, icons and large text (A), or darken `--ink-faint` itself to #6C6D63 light, #929386 dark (B)? I recommend A.
+2. Should the unticked ingredient checkbox be outlined in `--ink-faint` (3.6:1) instead of `--border-strong` (1.5:1, nearly invisible in bright light)? I recommend yes.
+3. Should cards, chips, Parts rows and search results get a 2px `--accent-strong` focus ring on keyboard focus (never on a mouse click), in place of today's faint tint or underline? I recommend yes.
+4. Screen readers call the theme toggle "Dark mode switcher" while it reads "Light" or "Dark". Should it be named "Dark mode" and say whether it's on (`aria-pressed`)? I recommend yes.
+5. Should the photo viewer use the dark theme's own colours (ink #E2E4D8, accent #BF9D72) in place of its five hand-picked ones, including a hover gold that's in no palette? I recommend yes.
+6. Should `/migrate` go for good: `tools/migrate.py`, `.claude/commands/migrate.md`, about 50 lines of DESIGN.md and the CLAUDE.md mentions (git keeps them, one history line stays in ARCHITECTURE.md)? I recommend yes.
+7. Should CLAUDE.md be cut from 101 lines to about 40? It would keep what the site is, where each thing is documented, who owns what, what to read first, the commands, commits and language. The essay types would move to FORMAT.md, and the rest would become pointers. I recommend yes.
+8. Should DESIGN.md's tool sections become "run it with `--help`", and its ~125 lines on slash commands a one-line index pointing at the command files? I recommend yes.
+9. `tools/publish.sh deploy` ships whatever `public/` holds as long as HEAD hasn't moved, even after a local `hugo --quiet`. It also doesn't count the build, and `make deploy` means a full publish. Drop it (A), or keep it with a check that `public/` is still the clean build (B)? I recommend A.
+10. FORMAT.md says "centre" and "litre"; the blog-writing skill says "center" and "liter". Keep centre and litre here and note that the site differs from the blog (A), or follow the skill (B)? I recommend A.
+11. Should README's goals become two or three sentences on what the site is now, with PDF output moved to PLAN.md Later? I recommend yes.
 
 ## Deferred by Bruce
 
