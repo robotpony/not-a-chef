@@ -2331,8 +2331,54 @@ span.vt-name.vt-decade:hover .ln-dot { transform: translateY(-5px); }
 .stack-missing { stroke: var(--ink-faint); }
 .stack-cap { font-family: 'Libre Franklin', sans-serif; font-size: .74rem; color: var(--ink-faint); margin-top: 12px; text-align: center; }
 .build-diagram .stack { margin: 0; max-width: none; }
-.build-card .stack { width: 150px; margin: auto; padding: 4px 0; }
+/* On the base: every stack sits on the stats rule, so bottom buns line up
+   across a row and a short burger looks short (mockups/even-cards.html,
+   approved 2026-11-07). Was margin: auto, which centred each one. */
+.build-card .stack { width: 150px; margin: auto auto 0; padding: 4px 0; }
 /* Centre the diagram in the space between the intro and the stats, since
  * cards in a row stretch to the tallest stack. */
 .build-card .rcard-stats { margin-top: 0; }
 
+
+/* --- Approved 2026-11-07 (docs/REVIEW.md) ------------------------------- */
+
+/* Even cards (mockups/even-cards.html): the formula row sits just above
+   the stats rule, so formulas in a row share a line and the spare height
+   falls between the intro and the formula. A card with no times still ends
+   on its rule, drawn here since there's no stats line to carry it. */
+.rcard:not(.build-card) .rcard-formula { margin-top: auto; }
+.rcard:not(.build-card) .rcard-formula + .rcard-stats { margin-top: 0; }
+.rcard:not(.build-card):not(:has(.rcard-stats))::after {
+  content: ""; margin-top: auto; border-top: 1px solid var(--border); min-height: 26px;
+}
+.rcard:not(.build-card):has(.rcard-formula):not(:has(.rcard-stats))::after { margin-top: 0; }
+
+/* Recipe mechanic (mockups/recipe-mechanic.html): the Mechanic opens the
+   recipe as STYLE.md's Mechanic callout, above Ingredients. Fugu wraps the
+   section in .mechanic-callout when "mechanic" isn't a sidebar slot. */
+.article-content .mechanic-callout {
+  border-left: 3px solid var(--accent); background: var(--surface);
+  padding: 14px 18px 12px; margin: 0 0 28px; border-radius: 0 6px 6px 0;
+}
+.article-content .mechanic-callout > h2 {
+  font-family: 'Libre Franklin', sans-serif; font-size: .72rem; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--accent-strong);
+  margin: 0 0 6px; padding: 0; border: 0;
+}
+.article-content .mechanic-callout > h2 .anchor,
+.article-content .mechanic-callout > h2 a[href^="#"] { display: none; }
+.article-content .mechanic-callout p { font-size: 1rem; line-height: 1.6; color: var(--ink); margin: 0; }
+.article-content .mechanic-callout p + p { margin-top: .6em; }
+.article-content .mechanic-callout .formula { margin: 14px 0 2px; }
+
+/* Quieter sidebar: with the Mechanic out, what's left (To serve, Notes,
+   Variations) is reference beside the recipe, set back in muted text. */
+.recipe-sidebar-section > p,
+.recipe-sidebar-section > ul,
+.recipe-sidebar-section .notes-list li,
+.recipe-sidebar-section .variation p { color: var(--ink-muted); font-size: .82rem; line-height: 1.5; }
+
+/* Phones: Recipe notes opens on the facts; search goes last. */
+@media (max-width: 1023px) {
+  .recipe-sidebar > .not-prose { order: 99; }
+}

@@ -6,7 +6,7 @@ Open work only. Finished items are cut, not ticked; git history has them (`git l
 
 Spec, partials, and tools in hugo-warped; popover and A to Z page in Fugu; entries in `content/reference/glossary/`. Every current link offer is answered (2026-11-07); new pages bring new ones (`/glossary-link`).
 
-- [ ] Bold step labels ("**Deglaze.**", "**Doneness.**") are offered as links. Ask hugo-warped to skip bold text at the start of a list item, once Bruce says go (`docs/REVIEW.md`); until then, answer "never" per page.
+- [ ] Bold step labels: hugo-warped is making the link tool skip bold text at the start of a list item (approved 2026-11-07, request sent). Bump the submodule when it lands.
 
 ## Waiting on Fugu
 
@@ -18,11 +18,10 @@ Six visual-pass fixes went to fugu-agent on 2026-11-07 (chip wording, lineage ye
 
 Each change is mocked before it's built, and recorded in `mockups/STYLE.md` and `style.html` when it lands. The visual pass is finished (2026-11-07).
 
-Mocked, waiting on Bruce (`docs/REVIEW.md`):
+Approved 2026-11-07, waiting on Fugu (requests sent):
 
-- [ ] Recipe mechanic (`mockups/recipe-mechanic.html`): B, the Mechanic as a callout above Ingredients, is recommended. Then build it (Fugu's sidebar template, the site's CSS) and record it in `STYLE.md`.
-- [ ] Food Log months (`mockups/food-log-sidebar.html`): C, grouped by year with older years folded, is recommended. Then fugu-agent builds it (`partials/reading-sidebar.html`).
-- [ ] Even cards (`mockups/even-cards.html`): formula rows on the stats rule, and burger stacks on a shared base, both recommended. Site CSS, plus an empty stats line from Fugu's card partial.
+- [ ] Recipe mechanic (`mockups/recipe-mechanic.html`): the callout's CSS, the quieter sidebar, and phone search last are in `custom.css`. When Fugu wraps the article's Mechanic in `.mechanic-callout`, bump Fugu, drop "mechanic" from `recipeSidebar` in `params.toml`, check, and record it in `STYLE.md` (replacing its sidebar-italic Mechanic note).
+- [ ] Food Log months (`mockups/food-log-sidebar.html`): grouped by year, older years folded. Fugu's `partials/reading-sidebar.html`; bump and check when it lands.
 
 To mock:
 
@@ -34,7 +33,7 @@ From the 2026-10-30 look at RecipeTin Eats, Serious Eats, and Smitten Kitchen (f
 
 ## Content and format
 
-- [ ] Bold lead phrase on each method step ("**Brown the beef.** …"), so prose scans mid-cook. A recipe-writing convention, not a template; some recipes do it already. Settle the glossary's bold-label rule first, or each new label gets offered as a link.
+- [ ] Bold lead phrase on each method step ("**Brown the beef.** …"), so prose scans mid-cook. A recipe-writing convention, not a template; some recipes do it already. The glossary's bold-label rule (above) keeps the labels from being offered as links.
 - [ ] Passive time (chill, rest, rise, marinate) as its own frontmatter field beside prep and cook. Needs `FORMAT.md`, Fugu's meta row, and the index.
 - [ ] Make-ahead and storage: an optional `## Make ahead` section in `FORMAT.md`, or a convention inside Notes.
 - [ ] "Previously" on Food Log months: the same month in earlier years.
