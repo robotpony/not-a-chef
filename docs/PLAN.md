@@ -21,11 +21,11 @@ Each change is mocked before it's built, and recorded in `mockups/STYLE.md` and 
 Mocked, waiting on Bruce (`docs/REVIEW.md`):
 
 - [ ] Recipe mechanic (`mockups/recipe-mechanic.html`): B, the Mechanic as a callout above Ingredients, is recommended. Then build it (Fugu's sidebar template, the site's CSS) and record it in `STYLE.md`.
+- [ ] Food Log months (`mockups/food-log-sidebar.html`): C, grouped by year with older years folded, is recommended. Then fugu-agent builds it (`partials/reading-sidebar.html`).
 
 To mock:
 
 - [ ] A thin line of images leading the page, under the header: Bruce's idea, to be worked out (which pages, where the images come from, height, how it sits with the sidebar photos). Decide the phone photos with it (a 112px thumbnail sits alone at the left, above Recipe notes).
-- [ ] Food Log sidebar: 40 month rows, about half reading "undated" in mono. Drop the word, and group or collapse older years.
 - [ ] Uneven cards: a formula row on some cards and not others on the homepage and recipe list, a gap above short stacks on blueprint cards, and about 110px of blank under the homepage's Muesli card.
 - [ ] Phone flow diagrams wrap with an arrow leading the second row (Pan sauces).
 - [ ] Lighter recipe header: a hairline under the title and one small-caps meta line (servings · time · source), Smitten Kitchen's treatment, mocked against the current stat row.

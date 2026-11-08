@@ -326,6 +326,14 @@ in a browser — no build step.
   sidebar runs 265px past the article as built, 33px with B, and 422px
   with C. The questions are in `docs/REVIEW.md`.
 
+- **`food-log-sidebar.html`**: proposal (2026-11-07) for PLAN.md Design v2
+  "Food Log sidebar": the Months list on real Food Log pages, rebuilt three
+  ways. A is as built (39 rows, 20 reading "undated"), B groups the months
+  under year labels and drops "undated", and C is B with every year but the
+  newest and the page's own folded to one row (recommended). On October
+  2026's page, C is 16 rows and 514px against A's 39 rows and 1175px. The
+  questions are in `docs/REVIEW.md`.
+
 ## `archived/` — reference only
 
 The four original mockup rounds `style.html`/`COMPONENTS.md` were built

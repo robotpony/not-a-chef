@@ -26,6 +26,16 @@ Mock: `mockups/recipe-mechanic.html` (run `python3 mockups/serve.py`, then open 
 - [ ] Quieter sidebar: the rest of the sidebar in muted, smaller text
 - [ ] Phone search at the end of Recipe notes (as shown), not removed from it
 
+## Food Log months #todo
+
+Mock: `mockups/food-log-sidebar.html` (with `python3 mockups/serve.py` running, open http://localhost:8765/mockups/food-log-sidebar.html). On October 2026's page, C cuts the Months list from 39 rows (1175px) to 16 (514px).
+
+- [ ] C: grouped by year, with older years folded to one row each (recommended)
+- [ ] B: grouped by year, all open
+- [ ] Keep A, as built
+- [ ] Seasons and multi-month labels keep their full name ("Fall and winter 2022–23"); plain months drop the year
+- [ ] A folded year counts months ("2024 · 4 months"), not days
+
 ## Glossary: nine more drafts #todo
 
 The first 54 drafts are approved (2026-10-30). These nine were the "left out" list, now drafted the same way. Tick once you've read them, or write a change after a term.
