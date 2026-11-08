@@ -335,11 +335,8 @@ main > header + section {
 .extlink {
   color: inherit;
 }
-.extlink::after {
-  content: ' \2197';
-  font-size: .75em;
-  color: var(--ink-faint);
-}
+/* No ↗ after external links (2026-11-07): the link text already says where
+ * it goes ("Wikipedia"). If they ever need telling apart, change the underline. */
 /* Not in any mockup — this project's own addition for a wiki link that
  * doesn't resolve to a real page (title typo, not-yet-written recipe).
  * Reuses the existing flag tokens (draft-banner/badge-tag) since it's the
