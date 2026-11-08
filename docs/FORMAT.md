@@ -38,7 +38,9 @@ Kebab-case, one page per file, matching the title: `dal-tadka.md` for "Dal tadka
 
 ALL-CAPS files under `content/` (`IDEAS.md`, `TODO.md`) are working notes. Hugo ignores them (`ignoreFiles` in `config/_default/hugo.toml`), so they never publish.
 
-A to-do inside a page is a visible list item ending in `#todo` (`- Which sauces? #todo`), never an HTML comment. Obsidian's tag pane collects them, and they render on the page, so an editor has to deal with them rather than skip past. A to-do inside a table cell goes in a list right after the table. HTML comments are only for private links that mustn't publish (`<!-- Private worksheet (to import): … -->`).
+A to-do inside a page is a visible list item ending in `#todo` (`- Which sauces? #todo`), never an HTML comment. Obsidian's tag pane collects them, and they render on the page, so an editor has to deal with them rather than skip past. A to-do inside a table cell goes in a list right after the table. HTML comments are only for what stays in the source but off the site, each starting with a label: private links (`<!-- Private worksheet (to import): … -->`) and personal detail held back for now (`<!-- Held back: it was on a junior roller derby trip. -->`), kept until Bruce decides to publish or cut it.
+
+A comment is off the site, not secret. The minified build (`/publish`, `make dry-run`) strips comments, but a local `make build` or `/preview` keeps them in the page source, and the repo is public on GitHub, so the source and its history are readable by anyone. Anything that must stay private, such as a private person's name (credit by role instead), stays out of the file altogether.
 
 ### Cross-references
 

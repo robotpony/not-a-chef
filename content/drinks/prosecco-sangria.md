@@ -12,7 +12,9 @@ fill: [wine, sparkling]
 garnish: fruit
 ---
 
-The best sangria I’ve ever had was made by my Auntie Diane when Jay and I visited Calgary during a Junior Roller Derby trip and we were staying with the Pattersons. This is the way my Auntie Di made it, and it’s still one of the recipes I like best.
+The best sangria I’ve ever had was made by my aunt, when we were staying with family friends in Calgary. This is the way she made it, and it’s still one of the recipes I like best.
+
+<!-- Held back: it was on a junior roller derby trip. -->
 
 ## Mechanic
 
