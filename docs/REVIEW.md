@@ -14,6 +14,13 @@ Twelve new slab layers for the casseroles blueprint, in `mockups/exploded-builds
 
 - [ ] Approve as drawn, or write changes after a layer: mash · stuffing · gravy · meat-chunks · mince · veg-mixed · veg-roasted · rice · curry · tortilla · beans · salsa
 
+## Casserole lineage: where the history comes from #todo
+
+The lineage draws only build pages with an `era`, so the casserole classics (now only in the [[Casseroles]] history table) need a Fugu change to appear on it. Two sources:
+
+- [ ] **A `timeline` fence in the blueprint body (recommended).** It's the shared fence spec (hugo-warped `fences/timeline.md`), already parsed and readable in Obsidian. The lineage merges its entries with the builds' `era` dots, and its entries draw faint, marking them as history rather than our builds. The table stays as the prose version, or the fence replaces it.
+- [ ] **Fugu reads the history table's Year column.** No new block, but it ties a layout to a table's column order, and rows like "c. 1900" and "1950s" aren't plain years.
+
 ## Softer colour: two blue labels #todo
 
 The softened chips are text with no fill, so the Testing chip lost the border that set it apart from Win the fridge; both are now blue text, told apart only by icon (the pot, the cycle arrows) and label. A test kitchen recipe tagged Win the fridge shows both on its card.
