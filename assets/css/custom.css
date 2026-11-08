@@ -329,7 +329,7 @@ main > header + section {
   color: var(--accent-strong);
 }
 .wikilink::after {
-  content: ' \2192';
+  content: '\00a0\2192';
   font-size: .85em;
 }
 .extlink {
@@ -397,7 +397,7 @@ main > header + section {
 .pop-note { font-style: italic; }
 .pop-link { justify-self: start; position: relative; z-index: 1; margin-top: 2px; font-family: 'Libre Franklin', sans-serif; font-size: .74rem; font-weight: 600; color: var(--pop-accent); text-decoration: none; border-bottom: 1.5px solid color-mix(in srgb, var(--pop-accent) 35%, transparent); }
 .pop-link:hover, .pop-link:focus-visible { border-bottom-color: var(--pop-accent); }
-.pop-link::after { content: " \2192"; }
+.pop-link::after { content: "\00a0\2192"; }
 /* Pointer: two stacked triangles, border colour then surface. */
 .pop::before, .pop::after { content: ""; position: absolute; left: calc(var(--pop-x, 21px) - 7px); border: 7px solid transparent; }
 .pop::before { top: -8px; border-top: 0; border-bottom: 8px solid var(--border-strong); }
@@ -457,7 +457,7 @@ dl.glossary .used { margin-top: 6px; font-family: 'Libre Franklin', sans-serif; 
 dl.glossary .used a { color: var(--ink-muted); text-decoration: none; border-bottom: 1px solid var(--border-strong); }
 dl.glossary .used a:hover { color: var(--accent-strong); border-bottom-color: var(--accent); }
 dl.glossary .used a.essay-link { font-weight: 600; color: var(--accent-strong); border-bottom: 1.5px solid color-mix(in srgb, var(--accent-strong) 35%, transparent); }
-dl.glossary .used a.essay-link::after { content: " \2192"; }
+dl.glossary .used a.essay-link::after { content: "\00a0\2192"; }
 
 /* Desktop: the letters move to a sticky rail on the right, where the
  * 62ch entries left a third of the page empty (visual pass, 2026-11-03).
@@ -689,6 +689,23 @@ h2:has(> .ing-config) {
 .ing-config > summary:hover { color: var(--ink); border-color: var(--accent); }
 .ing-config[open] > summary { color: var(--accent-strong); border-color: var(--accent); }
 .ing-config > summary svg { width: 15px; height: 15px; }
+/* Keep screen awake (Fugu's ingredients.js): the gear's twin, just left
+ * of it, or in its place on a percentage page. Pressed reads like the
+ * open gear, with the accent-soft fill. */
+h2:has(> .ing-awake) { position: relative; padding-right: 40px; }
+h2:has(> .ing-awake):has(> .ing-config) { padding-right: 76px; }
+.ing-awake {
+  position: absolute; top: 2px; right: 36px;
+  display: flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; padding: 0;
+  border: 1px solid var(--border-strong); border-radius: 5px;
+  background: var(--surface); color: var(--ink-muted); cursor: pointer;
+}
+.ing-awake--alone { right: 0; }
+.ing-awake:hover { color: var(--ink); border-color: var(--accent); }
+.ing-awake[aria-pressed="true"] { color: var(--accent-strong); border-color: var(--accent); background: var(--accent-soft); }
+.ing-awake svg { width: 15px; height: 15px; }
+@media print { .ing-awake { display: none; } }
 
 /* The scale callout (mockups/scale-callout.html, STYLE.md "Scaling
  * callout"): the shared popover look (surface, border-strong, 8px radius)
@@ -1245,7 +1262,7 @@ a.principle-chip:hover, a.principle-chip:focus-visible { text-decoration: underl
 .dev-strip-msg { color: var(--ink-muted); }
 .dev-link { font-family: 'Libre Franklin', sans-serif; font-weight: 600; color: var(--flag); text-decoration: none; white-space: nowrap; border-bottom: 1.5px solid color-mix(in srgb, var(--flag) 35%, transparent); }
 .dev-link:hover, .dev-link:focus-visible { border-bottom-color: var(--flag); }
-.dev-link::after { content: " \2192"; }
+.dev-link::after { content: "\00a0\2192"; }
 .dev-strip .dev-link { margin-left: 4px; }
 .dev-strip-note { display: block; margin-top: 7px; padding-top: 6px; border-top: 1px dashed color-mix(in srgb, var(--flag) 45%, transparent); font-family: 'Lora', Georgia, serif; font-style: italic; color: var(--ink); }
 .dev-strip-note b { font-family: 'Libre Franklin', sans-serif; font-style: normal; font-weight: 600; font-size: .78rem; margin-right: 2px; }
@@ -1778,7 +1795,7 @@ article:not(:has(.article-pagination)) .reading-sidebar-wrap { margin-bottom: 0;
   font-family: 'Libre Franklin', sans-serif; font-size: .8rem; font-weight: 600; color: var(--accent-strong);
 }
 .reading-sidebar .rs-more summary::-webkit-details-marker { display: none; }
-.reading-sidebar .rs-more summary::after { content: " \2192"; }
+.reading-sidebar .rs-more summary::after { content: "\00a0\2192"; }
 .reading-sidebar .rs-more[open] summary { display: none; }
 .reading-sidebar .section-caveat { margin-top: 8px; line-height: 1.45; }
 .reading-sidebar .rs-numbers { display: flex; flex-direction: column; }
