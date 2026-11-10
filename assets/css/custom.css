@@ -670,10 +670,7 @@ h4.ing-subhead {
 .prose :where(.ing-heading + *) { margin-top: 0; }
 .prose :where(.prose > .ing-heading:first-child > h2) { margin-top: 0; }
 .article-content > .ing-heading:first-child > h2 { margin-top: 0; }
-/* Reserves room so a long heading's text can't run under the button.
- * The h2:has() selectors are for a Fugu older than the .ing-heading
- * wrapper, until themes/fugu is bumped past it; then they can go. */
-h2:has(> .ing-config),
+/* Reserves room so a long heading's text can't run under the button. */
 .ing-heading:has(> .ing-config) > h2 {
   padding-right: 40px;
 }
@@ -703,8 +700,6 @@ h2:has(> .ing-config),
 /* Keep screen awake (Fugu's ingredients.js): the gear's twin, just left
  * of it, or in its place on a percentage page. Pressed reads like the
  * open gear, with the accent-soft fill. */
-h2:has(> .ing-awake) { position: relative; padding-right: 40px; }
-h2:has(> .ing-awake):has(> .ing-config) { padding-right: 76px; }
 .ing-heading:has(> .ing-awake) > h2 { padding-right: 40px; }
 .ing-heading:has(> .ing-awake):has(> .ing-config) > h2 { padding-right: 76px; }
 .ing-awake {
