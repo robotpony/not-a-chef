@@ -162,6 +162,16 @@
   --fugu-font-mono: var(--font-mono);
 }
 
+/* Principles are told apart by colour (STYLE.md §4, 2026-10-14): green means
+ * plant-based, and Win the fridge takes the test kitchen's blue. Done by
+ * re-pointing the principle tokens in Win the fridge's chip and its tag
+ * page's own header bits (not the page, whose cards carry green leaves),
+ * through the `principle-<slug>` class Fugu puts on both. */
+.principle-chip.principle-win-the-fridge,
+.principle-page.principle-win-the-fridge :is(.ltitle-kind-principle, .read-essay) {
+  --fugu-principle: var(--fugu-flag); --fugu-principle-strong: var(--fugu-flag); --fugu-principle-soft: var(--fugu-flag-soft);
+}
+
 /* Blowfish's <body> tag (themes/blowfish/layouts/_default/baseof.html) is
  * hardcoded to Tailwind's `bg-neutral` / `dark:bg-neutral-800` — `bg-neutral`
  * (no numeric suffix) resolves to `--color-neutral`, which every scheme file
