@@ -88,8 +88,9 @@ mainSections = ["recipes"]
   name = "Bruce Alderson"
 
 [fugu]
-  # Fugu's basic styles off: custom.css styles every class Fugu emits.
-  styles = false
+  # Fugu's stylesheet styles its components; custom.css sets its --fugu-*
+  # tokens to this site's colours and faces, and adds the site's own pieces.
+  styles = true
 
   # Recipe sidebar boxes, top to bottom (Fugu's default puts notes last).
   # No "mechanic": it stays in the article as a callout above Ingredients
