@@ -7,30 +7,30 @@ A long stretch of systematic testing: baking soda ratios dialed in across ground
 
 _Undated. About October 2022 to March 2023; the original notes grouped these as Fall/Winter._
 
-### Pizza day
+## Pizza day
 
 - Dough made
 - Par bake worked okay for one, but the other not as well
     - Broiling + flipping was cool
 
-### Lunch meats on the cheap
+## Lunch meats on the cheap
 
 Some research for another week, homemade lunch meats:
 
 - [Chef John’s turkey](https://www.allrecipes.com/recipe/284063/deli-style-roast-turkey-for-sandwiches/)
 
-### Beef stew
+## Beef stew
 
 → [[Beef stew]]
 
-### Prep day Sunday, late Winter edition
+## Prep day Sunday, late Winter edition
 
 Today’s prep will replace some freezer items and set up the week:
 
 - Chicken stock (use up the onions/celery/chicken bits)
 - Ramen noodles (for lunches this week) → [[Ramen noodles]]
 
-### Hacked chicken parm
+## Hacked chicken parm
 
 I used one of the chicken patties I made earlier this week and breaded it using cereal crumbs and parm, shallow frying it, and then baking it with cheese on top. I added it to a plate of spaghetti as the protein. The entire meal took about 20 minutes to prepare, including dishes. When I can nail the recipe, this will go into our rotation.
 
@@ -42,7 +42,7 @@ Thoughts:
 
 I enjoyed this meal, but it fell short in brightness and balance. Breast meat and better breading would make a huge difference, and a brighter sauce would compliment it better. Experimentation is learning!
 
-### Sodium bicarb results
+## Sodium bicarb results
 
 **Ground beef:** I tested a recipe floating around the interwebs that pairs baking soda and ground beef to enhance browning and reduce moisture loss. What I found:
 
@@ -56,7 +56,7 @@ The texture and browning properties are good enough that I’m going to try a mo
 
 **Ground chicken:** I tested a bicarb/[[Brine|brined]] patty from ground chicken. The baking soda added springiness, but the alkalinity shifted the saltiness of it towards mildly tinny.
 
-### Red Thai curry
+## Red Thai curry
 
 → [[Red Thai curry]]
 
@@ -89,7 +89,7 @@ A quick Thai style red curry, about 10 minutes of prep and 20 minutes active coo
     - Lime juice
 - We cooked some shrimp separately with S&P and lime
 
-### Chicken patty tests
+## Chicken patty tests
 
 → [[Chicken patties]]
 
@@ -107,7 +107,7 @@ Planning for Sunday:
         - Focus on S&P, MSG, and poultry seasoning
         - (consider onion powder?)
 
-### Ramen tests
+## Ramen tests
 
 I used up some frozen ramen noodles this week. Observations:
 
@@ -115,7 +115,7 @@ I used up some frozen ramen noodles this week. Observations:
 - [[Shoyu]] style broth is nice
 - Need to get  a rule/ratio for salinity of ramen broth
 
-### More Feb ideas
+## More Feb ideas
 
 - TODO: Mushroom pizza/pasta/pan sauce/etc. base
 - Homemade tea blends
@@ -123,17 +123,17 @@ I used up some frozen ramen noodles this week. Observations:
 - Fam chili
     - [SE](https://www.seriouseats.com/best-vegetarian-bean-chile-recipe)
 
-### Feb ideas
+## Feb ideas
 
 - **CHICKEN COCONUT CURRY STEW**
     - This must order creamy chicken coconut curry stew will surely satisfy any palate. Comes with yams, potatoes, carrots, peas, cilantro, mint, spring green onions, and topped with a sprinkle of crushed roasted peanuts. Accompanied with a side of jasmine rice.
 
-### Prep, new approach
+## Prep, new approach
 
 - Browned beef for meat sauce
     - 1% baking soda
 
-### Ramen for lunches
+## Ramen for lunches
 
 - Store bought ramen was sad face
 - Baked baking powder - 100g / 66g
@@ -144,7 +144,7 @@ I used up some frozen ramen noodles this week. Observations:
     - ¾ after 48 (just as good, slightly better?)
     - Froze 2 portions
 
-### Veg dinner
+## Veg dinner
 
 - Green potatoes (baked to heat up)
 - Frittata
@@ -153,7 +153,7 @@ I used up some frozen ramen noodles this week. Observations:
         - ¾ Healthy things
         - CHEESE MOTHER FUCKING CHEz
 
-### More winter ideas and dishes
+## More winter ideas and dishes
 
 - Hasselback veg (beets, carrots, potatoes, radish, etc.)
     - Compound butter (garlic, shallot, herbs like rosemary, parsley)
@@ -163,7 +163,7 @@ I used up some frozen ramen noodles this week. Observations:
     - Remove at 58C (~4C under) for medium
     - Rest 15 minutes
 
-### Late winter prep
+## Late winter prep
 
 - Taco beef
     - 2x chipotles (not too much, it turns out, just a bit spicy)
@@ -178,17 +178,17 @@ I used up some frozen ramen noodles this week. Observations:
     - Black
     - Noodles
 
-### End of January ideas
+## End of January ideas
 
 - Raviolis
 - Ramen noodles
 - Chickpea flour things
 
-### Weekly research
+## Weekly research
 
 - [Old HAL bread pudding](https://boards.cruisecritic.com/topic/2909456-bread-pudding-recipe/)
 
-### Pasta tests
+## Pasta tests
 
 - Ravioli With Spinach-Pecan Filling → [[Spinach pecan pasta filling]]
     - Filling was fantab, though might whip the cheese next time
@@ -196,7 +196,7 @@ I used up some frozen ramen noodles this week. Observations:
     - Also learned how to clean the pasta maker
 - Test
 
-### Recipe dev: chicken patties
+## Recipe dev: chicken patties
 
 → [[Chicken patties]]
 
@@ -206,7 +206,7 @@ I used up some frozen ramen noodles this week. Observations:
 - Draft recipe (guessing batter)
 - These may be good without breading, but assuming pan-fried will work
 
-### Pasta, pork, and other things this week
+## Pasta, pork, and other things this week
 
 - Made a pot of Boerenkool Met Worst → [[Boerenkool stamppot]]
     - Kale/bok choy (left over), and cauliflower
@@ -223,7 +223,7 @@ I used up some frozen ramen noodles this week. Observations:
     - Filling?
         - [[Spinach pecan pasta filling|Ravioli With Spinach-Pecan Filling]]
 
-### Fam ramen day
+## Fam ramen day
 
 This worked very well.
 
@@ -245,7 +245,7 @@ This worked very well.
 - Inspiration
     - [Vegan dashi/tonkotsu/tare](https://www.youtube.com/watch?v=UQUPGGcGM6Q)
 
-### NYD prep
+## NYD prep
 
 - 2 x Chilis (1 x veg, 1 x beef)
     - Brown beef or lentil mince
@@ -254,7 +254,7 @@ This worked very well.
     - Chili sauce?
     - Tomatoes
 
-### NYE/Fam day prep
+## NYE/Fam day prep
 
 For NYE:
 
@@ -270,7 +270,7 @@ For fam day:
 - Coleslaw
 - Chicken stock
 
-### Mushroom raviolis
+## Mushroom raviolis
 
 - [SE’s recipe](https://www.seriouseats.com/mushroom-tortellini-recipe) and [supporting pasta](https://www.seriouseats.com/fresh-egg-pasta)
     - Use setting 6 (or 7) for the best shapes
@@ -282,7 +282,7 @@ For fam day:
         - Flat end down, pull edges together and pinch (pleated edge will fold towards you + innards will dimple a bit
         - Watch a video if you forget or if not working
 
-### Mushroom/lentil base
+## Mushroom/lentil base
 
 → [[Mushroom and lentil freezer base]]
 
@@ -324,7 +324,7 @@ Some sort of thickener will keep this together when used in a sauce.
 
 This turned out well enough that I ate some for a snack. We’ll test this in a week or two once everyone is back home.
 
-### Prep
+## Prep
 
 - ✅beef/mushroom
 - ✅mushroom/onion (with lentils?)
@@ -334,14 +334,14 @@ This turned out well enough that I ate some for a snack. We’ll test this in a 
     - Lightly season
 - ✅Beef patties (120g)
 
-### Potential new recipes
+## Potential new recipes
 
 - [Date squares](https://www.reddit.com/r/Old_Recipes/comments/zp8vcd/i_get_nostalgic_this_time_of_year_this_is_my/)
 - [Nanaimo bars](https://www.reddit.com/r/Old_Recipes/comments/zpfspm/every_christmas_we_make_my_grandmas_nanaimo_bars/)
 - [Spicy chilis](https://www.seriouseats.com/homemade-spicy-chili-crisp)
 - [Chili oil](https://www.seriouseats.com/fuchsia-dunlops-chilli-oil)
 
-### Pizza tests
+## Pizza tests
 
 Based on ratio research (1-2% salinity), I’m making pizzas. Weird, but I’ll explain after my notes.
 
@@ -361,7 +361,7 @@ Based on ratio research (1-2% salinity), I’m making pizzas. Weird, but I’ll 
         - Rise was minimal, may need to pull out of fridge earlier
             - Only 12 hours fridge time so far
 
-### Ratio research
+## Ratio research
 
 Need a one pager of important ratios and terms
 
@@ -392,7 +392,7 @@ Need a one pager of important ratios and terms
         - Measured g: 1512g - 656g == 856g-380g  ==  476g
         - Total 476g
 
-### Weekend prep for December
+## Weekend prep for December
 
 - Chicken stew ([example](https://www.youtube.com/watch?v=oGXq6DA6Kjg))
     - [Beurre Manié](https://en.wikipedia.org/wiki/Beurre_mani%C3%A9) → keep some in fridge
@@ -415,19 +415,19 @@ Need a one pager of important ratios and terms
     - Family week
     - Family Christmas day (Jan 2)
 
-### December ideas
+## December ideas
 
 - Vindaloo
 - Pizza dough practice
 - Noodle practice
 
-### Fall ideas
+## Fall ideas
 
 - From NY: [Cider donuts](https://cooking.nytimes.com/recipes/1019593-baked-apple-cider-doughnuts) (baked), seems like apples would be tasty
 - From Brian L: Enchiladas
     - Idea is to use mushrooms and jackfruit instead for texture (and rice?)
 
-### Weekend prep and fridge winning
+## Weekend prep and fridge winning
 
 I have a few recipes planned this weekend:
 
@@ -442,14 +442,14 @@ I have a few recipes planned this weekend:
     - ¼–½ cup of lime or lemon juice
     - (added to recipes as I only had my old )
 
-### Salad sandos
+## Salad sandos
 
 - John’s [Japanese style egg sandos](https://www.youtube.com/watch?v=cimAbBIZd0g&t=212s)
 - [Kenji’s](https://www.youtube.com/watch?v=2E8UYxFyEJo)
 - [Adam’s salad sando supercut](https://www.youtube.com/watch?v=wSn8Yzz_QbA)
 - [John’s Korean street toast](https://www.youtube.com/watch?v=Og1cdmqs9ko)
 
-### Ann the mixologist
+## Ann the mixologist
 
 This is a play on the Wild Orchid drink (normally uses Strawberry liqueur). You can use limoncello instead of lemonade, and you can use soda/wine is you’re too fucking lazy to buy prosecco.
 
@@ -471,14 +471,14 @@ This is a play on the Wild Orchid drink (normally uses Strawberry liqueur). You 
     - 1 ½ ounce lemonade
     - ½ oz sweet prosecco
 
-### Second pizza practice
+## Second pizza practice
 
 Made two medium pizzas, each with 175g of dough:
 
 - All dressed, v2
 - Greek style
 
-### Quick egg McMuffins, v205895
+## Quick egg McMuffins, v205895
 
 The principles of an egg McMuffin are:
 
@@ -491,7 +491,7 @@ The principles of an egg McMuffin are:
 
 I like Swiss cheese slices as my fat/cheese, skip the butter (it’s messy), and use frozen, store bought English muffins. While the are easy to make, I don’t eat these enough for it to be worth it.
 
-### Weekend pizza
+## Weekend pizza
 
 Craving pizza, too cheap to order out, kinda want to practice.
 
@@ -507,7 +507,7 @@ Last night’s pizza was the all-dressed sort:
 
 It was good, and close enough to perfectly cooked to be enjoyed.
 
-### Beef ragu, a way out of leftover gravy
+## Beef ragu, a way out of leftover gravy
 
 We were going away this weekend and I wanted to use up some leftovers in the fridge. There was about 500ml of mushroom gravy, a bunch of flat leaf parsley, ¾ of a large purple onion, and a mild anaheim pepper from Ann’s Mom’s garden. I decided to make beef [ragu](https://en.wikipedia.org/wiki/Rag%C3%B9):
 
@@ -543,7 +543,7 @@ Reduce the ragu if needed. I like the veg to be soft, but with some texture rema
 
 I had this over fettuccine using the pan-method, and combining the sauce with the starchy water pasta for a smooth sauce.  I plated it with black pepper, the remaining flat leaf parsley, and a bit of parmesan (optional).
 
-### Mushroom pasta, and forester gravy
+## Mushroom pasta, and forester gravy
 
 I made a few pantry meals this week using dried mushrooms:
 
@@ -558,13 +558,13 @@ For the aglio e olio, I added dry noodles to the pan of fried mushrooms and garl
 
 Both of these dishes are now in our regular rotation, though I need to practice the gravy a bit more (my cornstarch game needs some repetition).
 
-### Quick curry
+## Quick curry
 
 - [Video](https://www.youtube.com/watch?v=ZYzBiHYOULs) 15 minute
     - Blitzing the chunkies speeds things up
     - Pre-ground spices FTW
 
-### 5 minute breakfast sandies
+## 5 minute breakfast sandies
 
 - bun
 - 1 egg
@@ -579,7 +579,7 @@ Remove the bun and add the egg (I use a square Tamagoyaki pan) with some oil and
 
 Add egg, mayo, and some pepper to your bun.
 
-### Mushroom gravy thoughts
+## Mushroom gravy thoughts
 
 We made mushroom stock for Friendsgiving, and the same weekend I had a “forester” schnitzel. The mushrooms on that schnitzel are some of the best I’ve ever had. Here are some thoughts on recreating that dish:
 
@@ -587,7 +587,7 @@ We made mushroom stock for Friendsgiving, and the same weekend I had a “forest
 - Try using chicken stock or a vegan gelatin
 - Sweet wine or cherry ←
 
-### Friendsgiving 2022
+## Friendsgiving 2022
 
 - Prep day
     - [x] ~~Stunt turkey prep~~

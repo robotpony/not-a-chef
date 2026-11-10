@@ -7,7 +7,7 @@ A long curry stretch (chana masala, butter [[Paneer|paneer]] masala, a Thai red 
 
 _Undated. About January to June 2022; the original notes grouped these as Winter/Spring._
 
-### Test dishes
+## Test dishes
 
 - [Chana masala](https://www.youtube.com/watch?v=mTX3VdXTkVA) (also: [simpler steps](https://www.indianhealthyrecipes.com/chana-masala/))
 - [Butter paneer masala](https://hebbarskitchen.com/paneer-butter-masala-recipe/) (also: [chetna’s](https://www.you.co.uk/chetna-makan-masala-paneer/))
@@ -41,12 +41,12 @@ _Undated. About January to June 2022; the original notes grouped these as Winter
             - Add onions, spices, salt, paste, and cream. Stir and season.
             - Add paneer.
 
-### End of Spring food prep
+## End of Spring food prep
 
 - Mushroom mix (for soups, salads, and omelets)
     - Need to figure out packaging (250ml + parchment dividers?)
 
-### End of Spring fridge cleanup
+## End of Spring fridge cleanup
 
 - Leftover mapo tofu → ramen!
     - [ ] Cabbage
@@ -82,7 +82,7 @@ _Undated. About January to June 2022; the original notes grouped these as Winter
                     - There may be too much liquid from extra egg or buttermilk as I was using up the last bits
 - Soup stock
 
-### Desserts
+## Desserts
 
 - [Sour cake](https://www.seriouseats.com/chocolate-decadence-cake-triple-chocolate-cake-recipe)
 - Leftover rice → pudding → [[Rice pudding]]
@@ -96,7 +96,7 @@ _Undated. About January to June 2022; the original notes grouped these as Winter
     - _Heat for ~20 minutes on low/med until thickened and heated. Adding beaten egg early lets it temper slowly._
         - _Aim for 60-70C_
 
-### More curry adventures
+## More curry adventures
 
 - Develop a base gravy → [[Base curry gravy]]
     - Research started (there are a lot of processes), need to find some core good technique here
@@ -104,7 +104,7 @@ _Undated. About January to June 2022; the original notes grouped these as Winter
         - [Another example](https://www.youtube.com/watch?v=mrIn_wKRHAs) (potatoes seem weird, less tomato)
 - Garlic ginger paste → [[Ginger/garlic paste]]
 
-### Curried adventures
+## Curried adventures
 
 - [Vindaloo](https://www.seriouseats.com/beyond-curry-pork-vindaloo-recipe)
 - Veg thai curry, more authentic and simpler → [[Red Thai curry]]
@@ -117,7 +117,7 @@ _Undated. About January to June 2022; the original notes grouped these as Winter
     - Serve with jasmine rice
         - FYI: _This recipe worked especially well_
 
-### Skyler break menu
+## Skyler break menu
 
 - Foods
     - ✔️Beef stew → [[Beef stew]]
@@ -141,7 +141,7 @@ _Undated. About January to June 2022; the original notes grouped these as Winter
         - ✔️Taco beef
     - ~~Chicken stock~~
 
-### Pre summer projects
+## Pre summer projects
 
 Fish tacos:
 
@@ -156,7 +156,7 @@ Salad dressings
 - ✔️Ratio is 3:1:.25 (oil: vinegar: mustard)
     - 2:1 wasn’t as good, mistakenly added too much to container
 
-### Cookery week rollup
+## Cookery week rollup
 
 1. Hamburgers are easier than I remember, and they make less mess if you thaw the beef a bit. Flavours this week were good, but I need to find better pickles and better buns. Costs were reasonable, though surprisingly the cheese and bun were ⅔ of the cost. Need to learn to make buns as $.60/bun for a mediocre product is bad.
     1. Pre-smash and frozen works fine, just use high heat and bacon press. Works slightly better unfrozen, though texture tightens up after freezing (in a good way).
@@ -174,7 +174,7 @@ Salad dressings
     1. Good tomatoes help.
     2. [[Soffritto]] cooks down nicely (smaller dice or grate)
 
-### Food prep/practice TODO
+## Food prep/practice TODO
 
 - [x] ~~Marinate chicken (freeze some in marinade)~~
 - [x] ~~Package up red sauce + meatballs~~
@@ -184,7 +184,7 @@ Salad dressings
     - [x] ~~Breaded and par-fried~~
     - [x] ~~Bare (freeze in some liquid)~~
 
-### Food practice: March
+## Food practice: March
 
 - [ ] Noodle and sauce practice
     - [ ] Mushroom lasagne
@@ -208,7 +208,7 @@ Salad dressings
     - [x] ~~Meat base (onion, mushroom, etc.)~~
     - [ ] Ricotta ([a](https://www.youtube.com/watch?v=HqqUA5JD814), [b](https://www.youtube.com/watch?v=4q7EB7YWi1I))
 
-### Spring food goals
+## Spring food goals
 
 - [Cauli-alioli](https://www.youtube.com/watch?v=4lPX3W8kp-g) sauce
 - Fresh pierogi → [[Perogies]]
@@ -222,12 +222,12 @@ Salad dressings
 - Veg foods
     - [Walnut, lentil and chestnut mushroom ragu](https://www.olivemagazine.com/recipes/vegan/vegan-mushroom-ragu/)
 
-### Sunday food, prep, and cleanup
+## Sunday food, prep, and cleanup
 
 - Pre-cooked apple (freeze in 2 portions for crisp or porridge)
 - Bread dough
 
-### Equipment shopping list
+## Equipment shopping list
 
 - Taco press
 - Large sieve
@@ -236,11 +236,11 @@ Salad dressings
 - Wok!
 - Tongs (oxo, with silicone ends)
 
-### Beef tacos
+## Beef tacos
 
 My new favourite way to spice beef tacos is with chipotles that are finely diced (or blended), with onions and garlic. Add cumin, lime juice, and salt/[[MSG]] to taste. Half a can usually is enough (for ~1kg of beef), but a whole can will bring a enjoyable amount of heat.
 
-### Lentil tacos
+## Lentil tacos
 
 → [[Lentil tacos]]
 
@@ -291,7 +291,7 @@ Also making some fresh corn salsa: → [[Corn salsa]]
 
 Lightly fry, season, add lime, and let cool.
 
-### Random dinners this week
+## Random dinners this week
 
 - Tested out a battered chicken, which was a bit wonky (baking did not work well)
 - Quick cottage pie (30 minutes, using pre-cooked beef mix)
@@ -305,16 +305,16 @@ Lightly fry, season, add lime, and let cool.
     - → second pass turned out much better
 - Thinking about rice puddin’ (John’s)
 
-### Burger buns
+## Burger buns
 
 Based on [Josh’s burger buns](https://www.joshuaweissman.com/post/burger-buns) (and [Ethan’s](https://www.ethanchlebowski.com/cooking-techniques-recipes/brioche-burger-buns-by-hand))
 
 - cream instead of whole milk
 - Take out butter (tonight)
 
-### Perfect bite nachos
+## Perfect bite nachos
 
-### Char siew roast chicken
+## Char siew roast chicken
 
 → [[Char siu marinade]]
 
@@ -337,7 +337,7 @@ Marinate chicken pieces for 2-24 hours. Roast until 65C (white meat) or 85C (dar
 
 Simmer remaining marinade and reduce until thick and sticky.
 
-### Grandparents potluck
+## Grandparents potluck
 
 - Veg chili
     - Add crushed tomato and heat up

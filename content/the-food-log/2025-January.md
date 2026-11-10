@@ -7,7 +7,7 @@ Post-holiday month: pulled chicken stretched across three meals, a mushroom-quin
 
 _Undated._
 
-### January meals
+## January meals
 
 - Made pulled chicken ([[Pulled BBQ-style chicken]]) for Ann's redhot chicken dip ([[Hot Buffalo chicken dip]]) and leftovers
     - Will adapt leftovers for chicken taco salad (similar to [[Shredded taco chicken]])
@@ -29,7 +29,7 @@ _Undated._
         - Sweeter
         - 50g →a
 
-### Food ideas, post-holiday
+## Food ideas, post-holiday
 
 - Meat loaf
 - Queso + chips

@@ -7,13 +7,13 @@ Late-winter research mode: a Jamaican jerk chicken recipe card saved for spring 
 
 _Undated. Late winter._
 
-### Jamaican recipe card
+## Jamaican recipe card
 
 Note: this recipe is missing browning sauce. Will test and add to the book this Spring.
 
 ![Printed recipe card from Cooking Jamaica Experience, Unity Hall, Montego Bay: jerk chicken and Jamaican festival](/images/food-log/2025-jamaica-jerk-chicken-festival-card.jpg)
 
-### Tuna rice bowls
+## Tuna rice bowls
 
 → [[Tuna rice bowl]]
 
@@ -44,7 +44,7 @@ Note: this recipe is missing browning sauce. Will test and add to the book this 
     - scallions/green onions
     - [[Kimchi|kimchi]]?
 
-### Hot pots research for spring/summer
+## Hot pots research for spring/summer
 
 _([Weissman](https://www.youtube.com/watch?v=EApkyOBewEw) | [Serious](https://www.seriouseats.com/chinese-style-hot-pot-shrimp-ball-dipping-sauce-recipe) | [Serious 2](https://www.seriouseats.com/traditional-sukiyaki-japanese-hot-pot-recipe))_
 
@@ -70,7 +70,7 @@ _([Weissman](https://www.youtube.com/watch?v=EApkyOBewEw) | [Serious](https://ww
     - Strainer scoops (2-4)
     - portable table (nice?)
 
-### February food ideas
+## February food ideas
 
 - Stroganoff ([simple/1950 style](https://www.youtube.com/watch?v=z9WUEVnG0CA), [recipe](https://www.allrecipes.com/recipe/8526807/ground-beef-stroganoff-noodles/)) → [[Beef stroganoff]]
     - Very simple + slapped
@@ -78,6 +78,6 @@ _([Weissman](https://www.youtube.com/watch?v=EApkyOBewEw) | [Serious](https://ww
     - Also simple + delicious
 - Chicken patties (skipped the garlic) → [[Chicken patties]]
 
-### Dessert ideas
+## Dessert ideas
 
 - Think smol (1-2 person portions so there's no evidence)

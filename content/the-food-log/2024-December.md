@@ -7,11 +7,11 @@ A full winter-break meal plan (two turkey dinners, snacky days, soup days) sketc
 
 _Undated. Winter._
 
-### Pho bo
+## Pho bo
 
 - [based on](https://www.seriouseats.com/traditional-beef-pho-recipe)
 
-### Winter break menu
+## Winter break menu
 
 | Date | Theme | Meal plan |
 | :---- | :---- | :---- |
@@ -29,14 +29,14 @@ _Undated. Winter._
 | Tues 31st 🥂 | _Snacky day_ | Leftovers (duh). Snacky: Hawt Buffalo dip ([[Hot Buffalo chicken dip]]), Welsh cakes ([[Welsh cakes]], leftovers for the Remple's) |
 | Wed 1st 🥂 | _Grandparents leftovers_ |  |
 
-### Sodium citrate and citric acid
+## Sodium citrate and citric acid
 
 - [Queso](https://modernistcuisine.com/recipes/melty-queso-dip/)
 - Sour pickles
 - Mac & Cheese 🍝🧀 ([recipe](https://modernistcuisine.com/recipes/silky-smooth-macaroni-and-cheese/))
     - _2.0% to 3.0% sodium citrate of the total weight of liquid plus cheese_
 
-### Breakfast sausage
+## Breakfast sausage
 
 → [[Breakfast sausage]]
 
@@ -50,7 +50,7 @@ I bought a half pork loin for $1.20/100g and turned ¼ of it into breakfast saus
 - Paddled minced meat the next day from cold
 - Pressed patties and hand-formed links
 
-### Hoagie roll
+## Hoagie roll
 
 → [[Hoagie rolls]]
 

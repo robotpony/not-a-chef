@@ -7,13 +7,13 @@ A season built around "Soupmas" — French onion nearly perfect, butternut squas
 
 _Undated. About late September to December 2021; the original notes grouped these as Fall/Winter._
 
-### Wintery food goals
+## Wintery food goals
 
 - [Soupmas](#christmas-menu-ideas-soupmas)
 - Breads
 - Burritos / bowls
 
-### Onion bhajis results
+## Onion bhajis results
 
 → [[Onion bhaji]]
 
@@ -32,7 +32,7 @@ The bad:
 
 Next time, I’ll size down the recipe a bit and review some more examples of how they’re made.
 
-### Onion bhajis
+## Onion bhajis
 
 This is a recipe we’ve wanted to try for a while:
 
@@ -54,7 +54,7 @@ Slice and dice the veggies and add to a large bowl. Mix in eggs and spices, and 
 
 Form golf ball sized fritters and drop in ~180C oil. Flip a few times, and remove once golden brown.
 
-### Soupmas update
+## Soupmas update
 
 We decided to make soups this year, as they’re easy to make vegetarian, and they’re fancy (but not overly rich). We have made these soups so far:
 
@@ -69,7 +69,7 @@ We decided to make soups this year, as they’re easy to make vegetarian, and th
 - Potato leek and mushroom → [[Potato, leek, and mushroom soup]]
     - This soup was lovely
 
-### Pizza party update
+## Pizza party update
 
 Pizza night was a success:
 
@@ -77,7 +77,7 @@ Bottom crusts were cooked, though not as crispy as I’d like; I think I’ll ne
 
 I did notice better performance based on the number and type of toppings, especially noticeable with the home oven. Also trying to bake 6+ pies showed how poorly the electric stove recharged between bakes. Large pies might be a solution here.
 
-### Jazz/Conner/Kids pizza day prep
+## Jazz/Conner/Kids pizza day prep
 
 - ✔️Shopping for final ingredients
 - ✔️ Pizza sauce
@@ -108,14 +108,14 @@ Pizzeria style pizza sauce: → [[Pizzeria pizza sauce]]
 - 15g sugar (to taste)
 - 15g kosher salt (to taste)
 
-### Pizza practice week
+## Pizza practice week
 
 I’m making pizza a few times this week to test out the new dough, and to tweak the oven temperature and time for the new pans.
 
 1. Started the pizza on the top rack, too much top heat. Recommend not using rapid preheat with pizza on the deck, and use a lower shelf. Fixed underdone bottom with some stove top magic.
 2. Middle rack, oven didn’t get about 260C. Good edge crust, bottom slightly underdone. Recommend not starting on a second pan, and to preheat longer. This one was very close to good+++.
 
-### Pizza dough, 2022 recipe
+## Pizza dough, 2022 recipe
 
 → [[Pizza dough 2022 edition]]
 
@@ -152,7 +152,7 @@ _My adaptation:_
 
 Resulting dough has a nice smooth texture. We will see how the first rise goes, after a stint in the fridge.
 
-### Veg stock, reviewing example recipes
+## Veg stock, reviewing example recipes
 
 → [[Rich veg/mushroom stock]]
 
@@ -194,7 +194,7 @@ Method:
 2. Add veg to a large pot with water and roast in the already heated oven (or stovetop, on low) for an hour. Optionally, use a pressure cooker on low for 30-40 minutes, decompressing slowly to avoid boiling the liquid.
 3. Strain out solids and reduce (optionally). Depending on the miso, you may want to strain through a cheesecloth.
 
-### Christmas menu ideas (soupmas?!)
+## Christmas menu ideas (soupmas?!)
 
 Over coffee this morning we decided that Christmas would both be meat free and based on our favourite soups. Easy to prepare ahead of time, and awesome food too.
 
@@ -214,7 +214,7 @@ And sides/add-ins:
 
 And if you have soups, then you must have breads. We’ll work on some short sourdoughs, focaccias, and maybe even some snacks pizza.
 
-### Fall food goals
+## Fall food goals
 
 Planning ahead for the Fall so I can get some research done beforehand. Things I want to learn / make / try:
 
@@ -228,7 +228,7 @@ Planning ahead for the Fall so I can get some research done beforehand. Things I
     - [Perogies](https://www.youtube.com/watch?v=UhPzSyvz_A8&t=610s)
     - Ravioli-like-things
 
-### Fake’n’bake attempt 1
+## Fake’n’bake attempt 1
 
 I’m baking a whole chicken tonight, but prepping it during lunch.
 
@@ -237,7 +237,7 @@ I’m baking a whole chicken tonight, but prepping it during lunch.
 - Corn starch, flour, and baking powder (dusted on)
 - Fridge for 3-4 hours (on a wire rack)
 
-### Fried rice
+## Fried rice
 
 I had a bag of peppers that needed using, as well as some pork shoulder.
 
@@ -256,7 +256,7 @@ I had a bag of peppers that needed using, as well as some pork shoulder.
 
 Fry in a wok, or large frying pan (in stages) in order, adding sauce last. Heat until thickened, without getting everything else mushy.
 
-### Garlic ginger wing sauce
+## Garlic ginger wing sauce
 
 → [[Garlic ginger wing sauce]]
 
@@ -278,19 +278,19 @@ Fry in a wok, or large frying pan (in stages) in order, adding sauce last. Heat 
 
 Combine and refrigerate for up to 5 days. Toss freshly baked wings in enough to coat. Freeze what remains (or use as a dip).
 
-### Onion bhajis
+## Onion bhajis
 
 This is just a note to self that I want to learn to make these, both for the resulting flavoured oil, and so we have a nice snacky food that serves more of the peeps we know.
 
 We had bhajis last week at Shandahar Hut for science. The onion taste is very mild, even milder than most onion rings (suggesting they’re soaked). They had a nice crisp, and the chutney (or whatever it was served with) was a bit sweet and savoury.
 
-### Indian gravy
+## Indian gravy
 
 These are some notes from a set of ebooks on takeaway curry. The books are tough to follow, so I’m summarizing the important bits here.
 
 The gist of the first book is that takeaway restaurants make curries with a base gravy, and a number of sauces and pastes pre-prepared. This makes sense, and explains why homemade curries often have less depth, as breaking something into components that are each seasoned results in more seasoning overall, managed in a number of different ways. Layering is a great technique.
 
-#### Book 1:
+### Book 1:
 
 1. Garlic/ginger paste → [[Ginger/garlic paste]]
 2. Tomato pure → [[Indian takeout tomato purée]]
@@ -326,7 +326,7 @@ Gravies:
 
 1. Bangladeshi style
 
-### Possible veg meal plan
+## Possible veg meal plan
 
 _Update: we made this, it was delicious. It’s on our monthly rotation now, about 30 minutes from start to finish (and it freezes well)._
 
@@ -343,7 +343,7 @@ Planning a meal in case Jay drops in today:
 
 Logging this as I want to do some research on the lentils, as it’s been a few months and I’m looking for ideas and technique.
 
-### Thanksgiving retro thoughts
+## Thanksgiving retro thoughts
 
 Meal prep was super smooth this time around. Dinner hour was hectic, partly as a few people were late and the final cook was more involved than it should be. We talked about this a bit, and we think that more prep and less classic styles of serving would make for a much better experience. Mostly, people don’t care about the carving of the turkey, so WTF bother?
 
@@ -366,7 +366,7 @@ Ideas for next time:
 - Have containers ready for take-home portions for people!
     - Also: send meals to anyone who needs/wants them
 
-### Thanksgiving day prep
+## Thanksgiving day prep
 
 Turkey breast: [60C](https://www.seriouseats.com/how-to-take-the-temperature-of-your-turkey-video), under 65 ideally
 
@@ -401,7 +401,7 @@ Turkey thigh: 74C (max tender)
         - Season to taste (pepper, salt)
     - Corn on stove
 
-### Day before Thanksgiving prep
+## Day before Thanksgiving prep
 
 - ✔️ Spice rub
 - ✔️ Break down stunt turkey
@@ -420,7 +420,7 @@ Turkey thigh: 74C (max tender)
     - Slightly overdone, ate the darker bits (yum!)
 - ✔️ Mac & Cheese → [[Baked mac & cheese]]
 
-### Hasselback potatoes
+## Hasselback potatoes
 
 I had a leftover potato that I wanted to test out a hassleback bake on. Basics:
 
@@ -436,7 +436,7 @@ Hassel up the potato by:
 
 Backing time changes depending on the potato size (medium russets assumed).
 
-### Thanksgiving plan
+## Thanksgiving plan
 
 Focus: comfort food and memories. This year I wrote an actual plan, what a nerd!
 
@@ -453,7 +453,7 @@ Ideas:
     - Turkey/chicken gravy
     - Stuffing
 
-### Thanksgiving ideas
+## Thanksgiving ideas
 
 A few ideas for side dishes and other eats for Thanksgiving:
 
@@ -470,7 +470,7 @@ A few ideas for side dishes and other eats for Thanksgiving:
     - Rosemary
     - Maple glaze
 
-### Some late September cookery
+## Some late September cookery
 
 Some of the things we’ve cooked in the last week or so of September:
 

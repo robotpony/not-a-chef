@@ -7,7 +7,7 @@ The ongoing burger quest turned up a hand-pressed frozen-patty method as a fallb
 
 _Undated._
 
-### The quest for a perfect burger
+## The quest for a perfect burger
 
 Still searching.
 
@@ -31,7 +31,7 @@ If you don’t have the equipment for a smash burger, a close second is a hand-p
 
 The frozen patties cook well enough, especially if you flip them more than usual (to promote browning). Season the patties after cooking with salt, pepper, and (optionally) [[MSG]].
 
-### Quick relish
+## Quick relish
 
 I like to work the fridge down until it’s almost empty, to both win the fridge, and to make it easier to clean. Today I wanted some relish, but don’t normally stock it in the winter as I use it so rarely. So instead I made some:
 
@@ -46,15 +46,15 @@ I like to work the fridge down until it’s almost empty, to both win the fridge
 
 Combine, adjust seasoning, and rest in the refrigerator for a few hours.
 
-### Local sub shops
+## Local sub shops
 
 I have an idealized version of a sub sandwich in my nostalgia library. It’s on a light, airy roll that can take some sauce, but isn’t too chewy. It has a tonne of shredded iceberg, thin tomatoes, purple onion, pickle, mayo, and mustard. The rest of the sandwich matter a lot less, but cheeses with some chew are nice (like swiss), or with flavour (like cheddar). Meats if you want, but the real gold is that crispy, sharp, crunch.
 
-### A no cookery Saturday
+## A no cookery Saturday
 
 Some days I’m too tired to cook. This weekend I recharge!
 
-### Plant patties planning
+## Plant patties planning
 
 I’m working on a method for making plant based patties that will grill, fry, or bake up nicely. The ideal patty will hold together, not be too dense or mushy, and have some texture and depth of flavour. I’m not aiming to replicate meat in any way, just to make tasty burgers and salad toppings.
 
@@ -71,7 +71,7 @@ Veggie burgers can go a few ways:
     - Crispy bits
     - Dry -> mushy
 
-#### First attempt
+### First attempt
 
 Cook (per package instructions)
 
@@ -93,7 +93,7 @@ Let cool while prepping a bowl with:
 
 Goal will be a patty that holds together and has visible chunks. Initially I’ll side with very simple seasoning and aim for natural flavours.
 
-### Chunky salad dressing
+## Chunky salad dressing
 
 → [[Simple chunky salad dressing]]
 
@@ -110,7 +110,7 @@ This is a hacky fridge-magnet recipe to use up some old herbs and sour cream. We
 
 Combine ingredients in a small bowl and stir or whisk together. Season to taste, but should balance sweet/acid/salt in a pleasing way.
 
-### Win the fridge pasta
+## Win the fridge pasta
 
 - Mushrooms
 - Parm
@@ -123,19 +123,19 @@ Thinking a 2 pan build:
 - cook / season veg and
 - single pan shallow pasta (saving all of the water)
 
-### What a Jerk (Chicken)
+## What a Jerk (Chicken)
 
 → [[Jerk chicken]]
 
 I updated my [[Jerk chicken|Jerk marinade]] recipe after some research and a test run today. New changes are clearer method and more balancing of flavours.
 
-### Winning the fridge; less wasteful, better eats
+## Winning the fridge; less wasteful, better eats
 
 We can always approach the things we do in a number of ways. We make conscious and unconscious tradeoffs, we’re more actively or passively invested. Food is like that, you can combine things in many different ways, with differing qualities on all axes.
 
 One thing that drives my cookery more than most is the concept of winning the fridge. It’s an approach to being both frugal and respecting the resources and effort that goes into growing and producing our ingredients. More on this to come.
 
-### Sunday comfort food—Thai inspired soup
+## Sunday comfort food—Thai inspired soup
 
 A recipe based on a photo I saw this morning:
 
@@ -148,7 +148,7 @@ A recipe based on a photo I saw this morning:
 - Thai red curry paste (and coconut milk if we have any)
 - Noodles!
 
-### Saturday cravings—stir fry
+## Saturday cravings—stir fry
 
 - Basic meat/tofu method:
     - Salt, spices, baking soda, corn starch (single coating for a lighter deal), let marinate ~30

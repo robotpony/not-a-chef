@@ -7,12 +7,12 @@ A methodical pizza dough test (five iterations, landing on 1.5% yeast with a lon
 
 _Undated. About April to June; the original notes grouped these as Spring._
 
-### June food ideas
+## June food ideas
 
 - Rouladen lasagne (rolled, cheese filled)
 - Ginger pork ([inspiration](https://www.reddit.com/r/JapaneseFood/comments/149y75v/1000_yen_butaniku_don_at_butadaigaku_jinbocho/), [SE recipe](https://www.seriouseats.com/pork-ginger-buta-shogayaki-recipe-5208113))
 
-### Birthday pizza
+## Birthday pizza
 
 Prepping some pizza for one of our kids’ birthdays, as they requested it. Some notes:
 
@@ -36,7 +36,7 @@ Tests:
 1. Cooking on aluminium and parchment. High hydration dough, low yeast, and high gluten.
 2. Cooking on aluminium + carbon steel and parchment. High hydration dough, low yeast, and high gluten.
 
-### New food ideas
+## New food ideas
 
 - Scrambled egg grilled cheese
 - Salad rolls
@@ -53,13 +53,13 @@ Tests:
         - [Spanish style](https://spainonafork.com/authentic-spanish-horchata-recipe/)
     - [Affogato](https://en.wikipedia.org/wiki/Affogato)
 
-### Alternative quick soups
+## Alternative quick soups
 
 - [Chewy flour noodles](https://www.seriouseats.com/baking-soda-ramen-noodle-spaghetti-hack)
     - Baking soda: 2 tsp / L (up to 2 tbsp / L)
     - Washing soda: 1 tsp / L (up to 1 tbsp / L) ← untested
 
-### Prep list (May 14)
+## Prep list (May 14)
 
 - Ramen stock (chicken) → [[Basic chicken ramen stock]]
     - ✔️Chicken/veg roasted
@@ -78,12 +78,12 @@ Tests:
 - Wings → dry [[Brine|brine]]
 - Chicken (for week) ← tomorrow?
 
-### Mother’s day week foods
+## Mother’s day week foods
 
 - Salad / dressing
 - Protein (roasted)
 
-### Post vacation foods to make/build recipes for
+## Post vacation foods to make/build recipes for
 
 - Vinaigrettes
     - Goddess dressing ([SE](https://www.seriouseats.com/classic-green-goddess-dressing-recipe), [NYT](https://cooking.nytimes.com/recipes/1014134-green-goddess-dressing), [Alt](https://playswellwithbutter.com/green-goddess-dressing/))
@@ -97,9 +97,9 @@ Tests:
 - ✔️Steak/mushrooms
     - ✔️Tested new mushroom method, worked well
 
-### Vacation food thoughts
+## Vacation food thoughts
 
-#### Pressure cooker prep
+### Pressure cooker prep
 
 - Pork shoulder vindaloo (find method/ratios)
 - (and other similar curries)
@@ -108,7 +108,7 @@ Tests:
 - ~~Beef stew (base)~~
 - French onion soup base
 
-#### Ramen
+### Ramen
 
 - Ramen graphic (ratios, kcals, micros) #MAKEME
 - Protein options
@@ -123,14 +123,14 @@ Tests:
     - Seafood
     - [[Shoyu]]
 
-#### Salads and Dressings
+### Salads and Dressings
 
 - Raspberry vinaigrette
 - Green goddess dressing ([link](https://www.seriouseats.com/classic-green-goddess-dressing-recipe))
 - [[Tahini]] goddess?
 - Chart with ratios
 
-### Dessert bucket list
+## Dessert bucket list
 
 I don’t really want to have more desserts in the house, but there are a few desserts I’d really love to learn to make well:
 
@@ -138,7 +138,7 @@ I don’t really want to have more desserts in the house, but there are a few de
 - Banana crisp
 - Various creme bruleés
 
-### Fish taco salad
+## Fish taco salad
 
 - Halibut
     - ~10 minutes at 220C

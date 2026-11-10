@@ -7,21 +7,21 @@ A big stretch, January through June: Hawaii-trip-inspired kalua pulled pork and 
 
 _Undated. January to June; the original notes grouped these as Spring._
 
-### Rice bowls
+## Rice bowls
 
 - Quinoa
     - Herbs, onions, dried fruit (inspiration: [1](https://www.americastestkitchen.com/recipes/7676-quinoa-pilaf-with-herbs-and-lemon))
     - Mint sauce ([1](https://www.americastestkitchen.com/recipes/9374-mint-persillade))
         - 1:1 mint/parsley, garlic or shallot, ¼
 
-### June celebration planning
+## June celebration planning
 
 - Pulled pork ([1](https://www.foodnetwork.com/recipes/sandra-lee/hawaiian-pulled-pork-sandwiches-recipe-1948464), [2](https://www.thefoodieaffair.com/hawaiian-pulled-pork/), [3](https://www.allrecipes.com/recipe/8346482/slow-cooker-hawaiian-style-pulled-pork/), [4](https://www.youtube.com/watch?v=7y5KVYXKjE8), [**5**](https://www.youtube.com/watch?v=GZy6yFzXANs)/[**5**](https://www.slapyodaddybbq.com/2024/04/bbq-hawaiian-kalua-pork-shoulder/))
     - Adapted recipe → [[Maui/Kalua pulled pork]]
     - coconut rice ([1](https://ohsweetbasil.com/brazilian-coconut-rice/))
 - Pulled chicken → [[Pulled BBQ-style chicken]]
 
-### June food ideas
+## June food ideas
 
 - [Make Piri Piri](https://smittenkitchen.com/2016/09/piri-piri-chicken/)
 - Quinoa salad (curry)
@@ -33,14 +33,14 @@ _Undated. January to June; the original notes grouped these as Spring._
     - stock
     - (pairs great with roasted veg/beast)
 
-### May food prep
+## May food prep
 
 - Chicken meatballs (and/or pork)
     - springy, for soup
 - Soup stock (next week)
 - Beef prep
 
-### Post-Maui
+## Post-Maui
 
 - Hawaii learnings
     - Pork (various)
@@ -62,7 +62,7 @@ _Undated. January to June; the original notes grouped these as Spring._
 - Drinks
     - Chai → [[Chai]]
 
-### Roast beast
+## Roast beast
 
 - Blade roast (shoulder blade → chuck)
     - 230C for 25, then 177C for 45 (ish)
@@ -70,11 +70,11 @@ _Undated. January to June; the original notes grouped these as Spring._
     - In liquid, not covered
     - Carrots, celery, soup stock (~1 inch)
 
-### Next up
+## Next up
 
 - CHAR SIU → [[Char siu marinade]]
 
-#### Snacky Friday
+### Snacky Friday
 
 Pork glaze (was good, though a bit heavy? Something simpler might be better)
 
@@ -123,7 +123,7 @@ Thai cucumber relish → [[Thai cucumber relish]]
 - 1 shallot, minced
 - 1 tablespoon fish sauce
 
-### Flatbread
+## Flatbread
 
 - White sauce (adapted from [ATK](https://natashaskitchen.com/white-pizza-sauce/)) → [[Flatbread white sauce]]
     - ½ container ricotta (whole milk, avoid stabilizers)
@@ -136,7 +136,7 @@ Thai cucumber relish → [[Thai cucumber relish]]
     - Oregano
     - Thyme
 
-### Lunch hacks
+## Lunch hacks
 
 → [[Sichuan quick noodles]]
 
@@ -165,18 +165,18 @@ Thai cucumber relish → [[Thai cucumber relish]]
         - [[Dashi]]
         - Was close to amazing
 
-### Food prep
+## Food prep
 
 - Chicken patties (tuned down most add-ins by 25%) → [[Chicken patties]]
 - Beef patties 125g (slightly smaller than the usual 140g), no seasoning (added after cooking)
 - Beef base → [[Beef base]]
 - Chicken stock
 
-### Appetizers
+## Appetizers
 
 - Mushroom flatbread → [[Spinach mushroom flatbread]]
 
-### Learn more asian cooking
+## Learn more asian cooking
 
 - Bulgogi ([basic](https://www.americastestkitchen.com/recipes/11305-korean-marinated-beef-bulgogi), [standard](https://www.maangchi.com/recipe/bulgogi), [SE](https://www.seriouseats.com/korean-barbeuce-beef-bulgogi-short-rib-recipe), [Chef John](https://foodwishes.blogspot.com/2016/09/bulgogi-beef-how-they-barbecue-in-korea.html), [another](https://damndelicious.net/2019/04/21/korean-beef-bulgogi/)) → [[Bulgogi beef]]
     - Test recipe
@@ -196,12 +196,12 @@ Thai cucumber relish → [[Thai cucumber relish]]
     - [Broiled zucchini](https://www.americastestkitchen.com/recipes/15867-broiled-smashed-zucchini-with-herbed-sour-cream)
     - Turkey burgers → [[Turkey burgers]]
 
-### Food thoughts
+## Food thoughts
 
 - Really enjoying casseroles, especially cottage pie → [[Cottage pie]]
 - Idea for a scallop lasagne (test for lunches?)
 
-### Home whoppers
+## Home whoppers
 
 - Broil 258C + convection
     - On grate
@@ -210,14 +210,14 @@ Thai cucumber relish → [[Thai cucumber relish]]
     - S&P&MSG
     - Medium - medium well
 
-### Pressure cooker parts
+## Pressure cooker parts
 
 - 26cm (I think it's this one: [Fissler sealing ring](https://www.fissler.com/global/en/p/sealing-ring-for-pressure-cookers-from-2010/))
 - 600-700-00-205
 - Or
 - 600-000-26-795/0
 
-### Weekend famjam food
+## Weekend famjam food
 
 - Results
     - Pulled pork:
@@ -240,11 +240,11 @@ Thai cucumber relish → [[Thai cucumber relish]]
     - Chili (freezer beef mince precook) → [[Canadian chili]]
     - Mac&Chez (simple, unbaked version of this) → [[Baked mac & cheese]]
 
-### Pasta tests
+## Pasta tests
 
 - Ravioli style (torts?)
 
-### Research and food thinking
+## Research and food thinking
 
 - [Spinach/artichoke dip](https://www.allrecipes.com/recipe/26819/hot-artichoke-and-spinach-dip-ii/) →
 - Baps are great buns ([SE recipe](https://www.seriouseats.com/traditional-british-baps-recipe))
@@ -271,7 +271,7 @@ Thai cucumber relish → [[Thai cucumber relish]]
     - ½ tsp. onion powder
     - (missing fennel?)
 
-### Wings test (for puzzle night snacks)
+## Wings test (for puzzle night snacks)
 
 - Gochujang → [[Gochujang wing sauce]]
     - Dressing/marinade
@@ -280,12 +280,12 @@ Thai cucumber relish → [[Thai cucumber relish]]
     - Dressing/marinade
     - Half on the wings to marinate/cook, half to dress
 
-### Roast chicken
+## Roast chicken
 
 - 205/218C (400/425F) ([article](https://www.seriouseats.com/perfect-roast-chicken-recipe-8384377))
     - ~40 minutes
 
-### January is different
+## January is different
 
 - [Nutritional yeast dressing](https://www.youtube.com/watch?v=jEZ947brX08) (to use up left over)
     - [Full recipe](https://carlalallimusic.substack.com/p/nutritional-yeast-vinaigrette-is)

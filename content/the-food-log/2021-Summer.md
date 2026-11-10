@@ -7,7 +7,7 @@ A whole summer of stated cooking goals, most of them checked off: salsas, pickle
 
 _Undated._
 
-### Food goals!
+## Food goals!
 
 This is a list of things I want to get better at cooking during Summer 2021.
 
@@ -35,7 +35,7 @@ This is a list of things I want to get better at cooking during Summer 2021.
     - Forcing functions (ways to build better food thinking habits)
     - Rework cheat sheet into web page / doc
 
-### Al pastor nachos
+## Al pastor nachos
 
 We’re going to make al-pastor style nachos this weekend (some notes so I don’t forget what we talked about):
 
@@ -50,7 +50,7 @@ We’re going to make al-pastor style nachos this weekend (some notes so I don�
 
 (Update: these were delicious!)
 
-### Google cookoff!
+## Google cookoff!
 
 I was part of a Google API seminar that included a 2 hour cooking interactive demo. The challenge included 2 chicken dishes:
 
@@ -71,7 +71,7 @@ I was part of a Google API seminar that included a 2 hour cooking interactive de
     - Salt/pepper to taste
     - Top with herbs (parsley, basil, etc.)
 
-### Brutus salad
+## Brutus salad
 
 More of the Chef John inspiration with [a Brutus salad](https://www.youtube.com/watch?v=ftCFD2f4kyE):
 
@@ -88,7 +88,7 @@ More of the Chef John inspiration with [a Brutus salad](https://www.youtube.com/
     - Dill, tarragon (fresh)
     - Cheddar sharp (white)
 
-### Al Pastor
+## Al Pastor
 
 I want to try [John’s Al Pastor recipe](https://www.youtube.com/watch?v=Fj0-FEuLjBY) (for salad and chilli rather than on a bun).
 
@@ -96,7 +96,7 @@ On second thought, I want to try a [reverse-pastor like they worked on for Serio
 
 I made a home-pantry version of the al pastor style marinade, and have ~2kgs of pork marinating. Tomorrow I’ll bake it! → [[Al pastor marinade (pantry hack)]]
 
-### Pickled peppers success
+## Pickled peppers success
 
 I ended up making a 500ml [[Brine|brine]] using the _Pickled banana peppers_ recipe (from [Serious Eats](https://www.seriouseats.com/pickled-banana-peppers-recipe)), and bumping up the salt to 3.2% (from 1.6%). The peppers were spiced with fresh thyme, crushed garlic, carrots, and onions (and 1 tablespoon of pickling spice).
 
@@ -108,13 +108,13 @@ I boiled the brine and spices until combined and poured over a sieve into 2 x 25
 
 Overall cost was about $2.50 / 500ml (commercial pickled jalapenos are $4-5/500ml), so not a huge savings, but a much better product overall. Next time I’ll use more carrots and onions, and treat it like a sandwich mix.
 
-### Post mortem: bread bake problems
+## Post mortem: bread bake problems
 
 I suspect that my oven runs a bit hot. In today’s bake, the loaves took much longer than expected (~2x longer), and even then they were still gummy in the middle. The dough going into it had a great bounce and feel, so it seems like temperature is the culprit. I also have a tendency to aim at a crustier bread and I had the oven set to 190C, which is already on the high side.
 
 One interesting note is that measuring the temperature of the bread seems to produce wildly inconsistent results, at least while a bread is gummy. I need to test this out a bit more, but I think testing temperature can only work if the bake temp/time is closer to ideal (i.e., somewhere after gummy). So perhaps measuring temp works best to prevent a loaf from drying out versus figuring out when it’s minimally done?
 
-#### What I learned:
+### What I learned:
 
 I baked 3 styles of loaves today. The dough going into it was pliable and wasn’t overly sticky. It was a ~60% [[Hydration|hydration]] dough with a small amount of malted barley for flavouring.
 
@@ -131,7 +131,7 @@ If it weren’t for the buns, you might assume a dough issue. A few improvements
 - Lower temperature (176 c, possibly lower)
 - Bring the dough up to temperature (measure this and log it)
 
-### Pickled peppers
+## Pickled peppers
 
 - 2 crushed garlic cloves
 - 1 sliced carrot
@@ -143,7 +143,7 @@ If it weren’t for the buns, you might assume a dough issue. A few improvements
 - 1 tablespoon of oregano
 - 1 ½ spoon of dried onion flakes
 
-#### Examples:
+### Examples:
 
 - Pickled peppers ([Serious Eats](https://www.seriouseats.com/pickled-hot-pepper-rings-recipe)):
     - 500ml : 500ml : 36g (vinegar, water, salt) per 500g of veg
@@ -171,7 +171,7 @@ _The brine’s salinity level depends on what you’re pickling and the results 
 
 [Salt mass ratios](https://www.dadcooksdinner.com/salt-by-weight/) suggest a pretty wide difference in mass per volume.
 
-### Nut crusted fishy fish fish
+## Nut crusted fishy fish fish
 
 → [[Nut-crusted salmon]]
 
@@ -192,7 +192,7 @@ Crust:
 
 Spread glue on top of salmon fillets, top with crusty crust. Bake at 220C/420F
 
-### Mirin substitute
+## Mirin substitute
 
 This is really a teriyaki sort of sauce, but also can sub in for [[Mirin|mirin]]. Is great on salmon, on veg, etc.
 
@@ -202,7 +202,7 @@ This is really a teriyaki sort of sauce, but also can sub in for [[Mirin|mirin]]
 
 Cook down until syrupy. Can add ginger or garlic
 
-### Miso salmon
+## Miso salmon
 
 → [[Miso salmon]]
 
@@ -214,7 +214,7 @@ Cook down until syrupy. Can add ginger or garlic
 
 Whisk into a peanut buttery consistency. Marinate for 30 minutes or up to a few days, but is more of a glaze and brine (so will start to firm up the meat a bit). Bake/broil to 50-53C (medium)
 
-### Ramen noodles
+## Ramen noodles
 
 → [[Ramen noodles]]
 
@@ -231,7 +231,7 @@ Also see: [Homemade ramen noodles](https://www.youtube.com/watch?v=_8rsTkOsI2M)
 
 Or even better, check out [how to make low hydration noodles at SE](https://www.seriouseats.com/how-to-make-low-hydration-ramen-noodles).
 
-### On bread doneness and baking temps
+## On bread doneness and baking temps
 
 - Internal temp of 88C/190F or 94C/200F (enriched)
 - Minimum water temp: 41C (and rise in 43C-54C)
@@ -247,7 +247,7 @@ Reading:
 
 - [Temp is key](https://blog.thermoworks.com/bread/homemade-bread-temperature-is-key/)
 
-### Butternut squash ravioli prep
+## Butternut squash ravioli prep
 
 - Filling:
     - Roast up squash and garlic
@@ -261,7 +261,7 @@ Reading:
         - Black pepper, salt to taste
 - [[Fresh egg pasta|Make pasta dough]]
 
-### Focaccia
+## Focaccia
 
 → [[Focaccia]]
 
@@ -272,7 +272,7 @@ Reading:
 - Salt!
 - 232C/450F for ~ 25 minutes
 
-### Oysters
+## Oysters
 
 - Should smell no more sweet and seafoody and def not strong
     - Closed and washed, they should have very little smell
@@ -282,7 +282,7 @@ Reading:
 
 Consider: [Oyster pasta](https://www.youtube.com/watch?v=j8pPp0zAMm8)
 
-### Pizza reset, pizza day
+## Pizza reset, pizza day
 
 I fucked up the pizza dough the other day, but let it ferment an extra day to see if it recovered. Somehow I added the ingredients out of order, not thinking about it when following a new recipe so that the yeast didn’t hydrate properly. I also added the malted barley a bit late, and I’m not sure if it was still good (funky smell, but I was having a weird smell day).
 
@@ -298,7 +298,7 @@ Today’s plan:
 - Oven at 280C, middle rack
     - Finish on stove top (if needed)
 
-### Pasta research
+## Pasta research
 
 - From SE’s [_best all purpose pasta_ post](https://www.seriouseats.com/best-easy-all-purpose-fresh-pasta-dough-recipe-instructions):
     - one whole egg (1.4 ounces white and 0.6 ounce yolk) and two yolks (1.2 ounces yolk) for every five ounces of flour (plus alt)
@@ -307,13 +307,13 @@ Today’s plan:
         - and two whole eggs (100g), plus four additional yolks (75g)
         - (175/290→60% hydration)
 
-### Revisiting pizza
+## Revisiting pizza
 
 After a few years of decent pizza success, I started to lose interest as my pie quality started to drop. I’m not sure if it was a lack of consistency, the new kitchen, or the 10 different types of pizza everyone likes here. I needed a reset.
 
 Today I’m going to work through [Ethan’s Detroit style pizza](https://www.ethanchlebowski.com/cooking-techniques-recipes/my-favorite-pizza-style-detroit) and cook it in a grill pan with angled sides (if it fits in the oven).
 
-#### Dough (doubled):
+### Dough (doubled):
 
 - 400 grams water (warmish)
 - Added (and adjusted for):
@@ -327,7 +327,7 @@ This is around 67% hydration.
 
 I added the ingredients out of order today (duh!), so remember to add liquids and yeast and let it sit a few minutes (to dissolve the rapid yeast starch shells).
 
-#### Sauce:
+### Sauce:
 
 _(makes about 1 large mason jar’s worth)_
 
@@ -351,9 +351,9 @@ Sweat down onions in olive oil with some salt in a family pan until they are tra
 
 Lasts up to a week in the fridge (and freezes pretty well). Great for pizza, pizza dogs, parm, or simple pastas.
 
-### Food research
+## Food research
 
-#### Misc:
+### Misc:
 
 - [Italian grandmother Bolognese](https://www.youtube.com/watch?v=MJ_WhvmTy6E)
 - Simple vinaigrette
@@ -363,7 +363,7 @@ Lasts up to a week in the fridge (and freezes pretty well). Great for pizza, piz
 - [Crazy syrup method from SE](https://www.seriouseats.com/how-to-make-fresh-lemon-syrup)
     - 200g sugar + 425g lemon or any citrus rinds
 
-#### Pad Thai:
+### Pad Thai:
 
 - Unverified, but recommended:
     - [One pan (from She Simmers)](https://shesimmers.com/2011/05/pad-thai-recipe-part-one-pan-and.html)
@@ -374,7 +374,7 @@ Lasts up to a week in the fridge (and freezes pretty well). Great for pizza, piz
     - Soy sauce
     - Mushroom soy sauce
 
-### Mushroom soup/chowder ideas
+## Mushroom soup/chowder ideas
 
 → [[Mushroom soup]]
 
@@ -382,7 +382,7 @@ Planning for a cookery day in early July.
 
 Update: made this with Jay, following the veloté style method (using homemade cashew cream).
 
-#### Basic ingredients:
+### Basic ingredients:
 
 - Onions/garlic (optionally leek, shallot)
 - Mushrooms (crimini at minimum, mix if possible)
@@ -413,7 +413,7 @@ The potage method uses natural vegetable starches and fibre to thicken, and cash
 
 The classic French method for velouté has separate steps for the roux, the cream base, and the aromatics, which we tend to abbreviate in North America into a one-pot version of the same.
 
-#### Add-ins:
+### Add-ins:
 
 - Parsley
 - Additional black pepper
@@ -423,7 +423,7 @@ The classic French method for velouté has separate steps for the roux, the crea
 - Roasted cauli
 - Corn
 
-#### Cashew milk:
+### Cashew milk:
 
 - Hot water + cashews (untoasted or toasted) - 20 minutes - 1 hour
 - Drain, rinse
@@ -431,14 +431,14 @@ The classic French method for velouté has separate steps for the roux, the crea
 - Salt
 - (optional lemon)
 
-#### Research:
+### Research:
 
 - [Kenji’s standard chef process](https://www.youtube.com/watch?v=vgIplQn92gU) ← this one (with cashews) worked well
 - [Cashew cream style](https://www.youtube.com/watch?v=fIbBCY_cEDU)
 - [Vegan stock](https://www.youtube.com/watch?v=QKgYRtHwJ28&t=90s)
 - [Mushroom velouté](https://www.youtube.com/watch?v=rvxVCKlL2Gs)
 
-### Cream of coconut syrup
+## Cream of coconut syrup
 
 Great for summer rum drinks, especially when the commercial product isn’t available. This version tastes a lot cleaner than the commercial brands, but isn’t stabilized (and you’ll have to shake it before use)
 
@@ -448,7 +448,7 @@ Great for summer rum drinks, especially when the commercial product isn’t avai
 
 Whisk to combine.
 
-### Camping prep
+## Camping prep
 
 Home prep:
 
@@ -462,7 +462,7 @@ Home prep:
 - Salsa Verde (healthier snacks!) → [[Salsa verde]]
     - Made a red salsa instead (no tomatillos), subbing in canned diced tomatos
 
-### Ribs
+## Ribs
 
 These ribs smelled strongly of sulphur. Apparently this happens with cryovac things (possibly worse when bone-in).
 
@@ -482,7 +482,7 @@ Process
 
 These ribs were good, but a bit gamey. The best parts had browned sugars, and a bit more sauce (or sugar) would have probably improved these slightly.
 
-### Lasagne
+## Lasagne
 
 Day 1:
 

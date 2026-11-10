@@ -7,13 +7,13 @@ A grab bag of undated notes: blog post ideas (recipe organization, winning the f
 
 _Undated._
 
-### Post ideas
+## Post ideas
 
 - Using Google docs for recipes
 - The round-the-bend method, or why
 - Winning the fucking fridge
 
-### Weekend meal planning
+## Weekend meal planning
 
 - Craving for lasagna, but we wanted to try something more traditional
 - Trying a new butcher shop, as our local one closed

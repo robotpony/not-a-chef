@@ -18,7 +18,8 @@ working_on: "Trimming the swaps listed in both the Mechanic and the formula, and
 ---
 These vegetable patties are quick to make and delicious. They're perfect when you're looking for a lighter sandwich or salad topping.
 
-### The formula is simple:
+The formula is simple:
+
 ```formula
 can          | Beans   | 1 can         | black, pinto, chickpea
 + bowl       | Starch  | 1 cup         | rice, mash, quinoa

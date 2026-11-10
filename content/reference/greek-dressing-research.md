@@ -19,20 +19,20 @@ On to the research ...
 1:1 oil/vinegar  
         (and can split vinegar 50:50 with lemon juice for a more classic flavour)
 
-#### Per 500ml, flavour with ...
+### Per 500ml, flavour with ...
 
 - 1–2 cloves of garlic (top up with some granulated garlic)
 - 2 tsp of oregano (can include some basil)
 - 1.5 tsp of salt
 - 0.75 tsp of black pepper
 
-#### Many recipes also include (but I have not tested) ...
+### Many recipes also include (but I have not tested) ...
 
 - 1 tsp onion powder
 - Dijon versus yellow mustard (versus just mustard powder)
 - 1:1 basil to oregano (this seems very basil-y for Greek dressing)
 
-#### A few recipes include ...
+### A few recipes include ...
 
 - Mint (1:1 w/oregano)
 - Dill (also 1:1)
@@ -40,7 +40,7 @@ On to the research ...
 - Yogurt (1 tbsp, similar to mayo)
 - Marjoram (.25:1)
 
-#### Extra notes
+### Extra notes
 
 - Oil/acid ratios vary widely, though 1:1 seems common (least common was .75:1, fairly common was 2:1 … but this tastes very oily)
 - My preference so far is something around 1:1, splitting the acid between a wine vinegar and lemon (and using a mellower oil)
@@ -50,7 +50,7 @@ On to the research ...
 
 ## Source recipe samples
 
-#### Restaurant
+### Restaurant
 
 - 1 1/2 quarts olive oil
 - 1/3 cup garlic powder
@@ -62,7 +62,7 @@ On to the research ...
 - 1/4 cup Dijon-style mustard
 - 2 quarts red wine vinegar
 
-#### Smaller version
+### Smaller version
 
 - 3/4 cup oil
 - 1 cup vinegar
@@ -74,7 +74,7 @@ On to the research ...
 - 1.5 tsp onion powder
 - 1.5 tsp mustard
 
-#### Creamy ("Creamy Greek-style dressing")
+### Creamy ("Creamy Greek-style dressing")
 
 - 1/4 cup extra virgin olive oil
 - 1/4 cup fresh lemon juice
@@ -84,7 +84,7 @@ On to the research ...
 - 1-2 tsp of red wine vinegar
 - salt and black pepper to taste
 
-#### Creamy 2
+### Creamy 2
 
 - 1 1/2 quarts olive oil
 - 1/3 cup garlic powder (garlic cloves)
@@ -98,7 +98,7 @@ On to the research ...
 - (I add some sugar or honey)
 - Mix in a blender or food processor
 
-#### A dry-goods style
+### A dry-goods style
 
 - 1 cup light virgin olive oil
 - 1 cup red wine vinegar
@@ -110,7 +110,7 @@ On to the research ...
 - 2 teaspoons pepper
 - 2 teaspoons Dijon mustard
 
-#### A fresher version
+### A fresher version
 
 - 4 TBSP olive oil
 - 3 TBSP lemon juice
@@ -119,7 +119,7 @@ On to the research ...
 - 2 tsp red wine vinegar
 - 1/8 tsp kosher salt
 
-#### A larger ingredient list
+### A larger ingredient list
 
 - 2 large garlic cloves, crushed through a garlic press to get a fine paste
 - 1 tablespoon chopped fresh basil, or two teaspoons dried basil
@@ -135,7 +135,7 @@ On to the research ...
 - 1 teaspoon Dijon mustard
 - 1 cup good quality Greek extra virgin olive oil (use Italian olive oil if you can’t find Greek)
 
-#### A more general recipe
+### A more general recipe
 
 - 1 cup extra virgin olive oil
 - 1/2 cup any vinegar, lemon or lime juice

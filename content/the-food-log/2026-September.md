@@ -42,14 +42,14 @@ This week's menu:
 
 ## Monday, September 28th
 
-####  Recipe book review pass 
+### Recipe book review pass
 
 - Cornmeal-breaded chicken patty → *this needs research*
 	- chase the dark, mealy, crunchy breading from Chicken mall guy (see [[The impossible quest for the perfect chicken burger]]); try it on the [[Pan-fried chicken burger]] patty or a [[Brine|brined]] breast
 
 ## Friday, September 18th
 
-#### Food ideas
+### Food ideas
 
 - [butternut squash curry](https://www.goodhousekeeping.com/food-recipes/a38375880/butternut-squash-curry-recipe/) → [[Butternut squash curry]]
 - [beef thai curry](https://www.goodhousekeeping.com/food-recipes/a38867914/instant-pot-beef-curry-recipe/) → chicken thighs → [[Instant Pot chicken thigh curry]]

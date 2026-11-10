@@ -7,9 +7,9 @@ All research, no cooking: a lime crema and two Greek chop marinades worked out o
 
 _Undated._
 
-### April food TODO
+## April food TODO
 
-#### Lime crema
+### Lime crema
 
 → [[Lime crema]]
 
@@ -22,7 +22,7 @@ _Undated._
 - ¼ teaspoon onion powder, dehydrated onions, or any fresh onion
 - [[MSG]] (2-4 mg)
 
-#### Greek chops
+### Greek chops
 
 - 1:1 olive oil / lemon juice
 - 1:.25 red wine vinegar
@@ -37,7 +37,7 @@ alt:
 - salt/pepper/oregano
 - _Needs more lemon_
 
-#### Misc. research ideas (theme: Mediterranean)
+### Misc. research ideas (theme: Mediterranean)
 
 - Chickpea stew ([1](https://www.seriouseats.com/italian-pressure-cooker-chickpea-pork-rib-stew-8754879)) ← _braises_
 - Salads ([carrot-raisin](https://www.seriouseats.com/carrot-and-raisin-salad-recipe-11696673), [carrot slaw](https://www.seriouseats.com/carrot-slaw-with-cranberries-and-toasted-walnut-recipe), [kerabu](https://www.seriouseats.com/kerabu-malaysian-vegetable-salad-recipe-8547064)) ← _chonker salads_
@@ -47,7 +47,7 @@ alt:
 - Stews of Earth ← _braise/low-slow_
     - [Fesenjan](https://www.seriouseats.com/fesenjan-persian-pomegranate-and-walnut-meat-braise-recipe-8425670) (pom/walnut meat [[Braise|braise]])
 
-#### Ideas from vacation
+### Ideas from vacation
 
 - Tabbouleh salad
 - Homemade hummus ([1](https://www.seriouseats.com/israeli-style-extra-smooth-hummus-recipe))

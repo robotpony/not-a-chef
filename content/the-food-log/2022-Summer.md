@@ -7,7 +7,7 @@ A summer built around Indian flavours: butter [[Paneer|paneer]] masala worked we
 
 _Undated. The original notes called this “IT’S FUCKING SUMMER AGAIN.”_
 
-### New ideas
+## New ideas
 
 - [Biryani](https://www.seriouseats.com/vegetable-biryani-5324853)
 - [Pangrattato](https://www.chefnotrequired.com/pangrattato/) (breadcrumbs and shit) and cauli pasta
@@ -17,7 +17,7 @@ _Undated. The original notes called this “IT’S FUCKING SUMMER AGAIN.”_
 - Cauliflower [[Miso|miso]] mac and cheese (from The Savvy Cook)
 - Clam pasta - canned
 
-### Quick curry
+## Quick curry
 
 - Somewhere between butter chicken and chana masala
 - Ended up making
@@ -25,7 +25,7 @@ _Undated. The original notes called this “IT’S FUCKING SUMMER AGAIN.”_
     - Butter paneer masala (no cream, cashews only, worked well)
     - Too much ginger in both, but that was fine
 
-### Vindaloo wings
+## Vindaloo wings
 
 → [[Vindaloo wing sauce]]
 
@@ -48,12 +48,12 @@ Sauce (from memory, needs testing):
 
 Combine ingredients with a whisk. Cook over medium heat until thickened, the oil will bubble along the edges. Add water to thin to a good consistency. Adjust with salt (and other ingredients) until balanced.
 
-### Salad time
+## Salad time
 
 - California roll salad (Chef John, cut down the carbs)
 - [Chicken Pho](https://www.seriouseats.com/30-minute-pressure-cooker-pho-ga-recipe)
 
-### Cooking challenges
+## Cooking challenges
 
 - Vindaloo
 - Pizza replacements
@@ -70,7 +70,7 @@ Combine ingredients with a whisk. Cook over medium heat until thickened, the oil
         - Steak
         - Roast chicken
 
-### Veggie burgers 2022
+## Veggie burgers 2022
 
 - A few things I would like to try:
 - Research
@@ -87,7 +87,7 @@ Combine ingredients with a whisk. Cook over medium heat until thickened, the oil
         - Oven roasted vegetables, black bean, toasted walnut, baby
         - arugula, tomato, roasted garlic aioli, feta, brioche bun.
 
-### Sweet cold brew tea
+## Sweet cold brew tea
 
 → [[Bruce’s cold-brewed iced tea]]
 

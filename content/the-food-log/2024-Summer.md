@@ -7,7 +7,7 @@ A wide-ranging summer: a quick pizza sauce that turned out great, a vindaloo pas
 
 _Undated._
 
-### Retro dishes
+## Retro dishes
 
 (from a [reddit thread](https://www.reddit.com/r/Cooking/comments/1evq1ma/whats_a_retro_but_low_cost_dish_you_like/?share_id=_hHwyn4p5l8VA-86L_xpe&utm_content=1&utm_medium=ios_app&utm_name=ioscss&utm_source=share&utm_term=4))
 
@@ -23,7 +23,7 @@ _Undated._
 - Chili (Texas Red)
 - Curried sausage
 
-### Pizza dogs
+## Pizza dogs
 
 - Small portion of pizza sauce → [[Quick pizza sauce]]
     - 2 tablespoons tomato paste (tube of 2x paste)
@@ -39,7 +39,7 @@ _Undated._
         - Very deep tomato flavour
         - (I think this recipe could be great)
 
-### Frozo drinks
+## Frozo drinks
 
 - Blended fruit drink
     - 225ml Vodka
@@ -49,12 +49,12 @@ _Undated._
     - 50ml lime juice
     - (too tart, think, decent ratio overall)
 
-### Mexican food ideas
+## Mexican food ideas
 
 - [Pueblan cemitas](https://www.rickbayless.com/recipe/pueblan-cemitas/)
 - [Pickled morita, chipotle, colorado chiles](https://www.rickbayless.com/recipe/pickled-morita-chipotle-colorado-chiles/)
 
-### Vindaloo
+## Vindaloo
 
 - Vindaloo paste (for the meat) → [[Vindaloo paste]]
     - 2" fresh ginger, chopped
@@ -69,7 +69,7 @@ _Undated._
     - 1/4 tsp black peppercorns
     - 3 tbsp lemon juice (see notes)
 
-### End of July food
+## End of July food
 
 - Fajitas + salads
     - Pan cooked chicken
@@ -83,7 +83,7 @@ _Undated._
         - chez + burger +
         - mustard, onion, mayo, bun
 
-### Back home
+## Back home
 
 - [New to me](https://www.justonecookbook.com/fresh-spring-rolls-yakiniku/) (Japanese food site)
 - [Platz](http://www.mennonitegirlscancook.ca/search?q=platz) → [[German platz]]
@@ -101,7 +101,7 @@ _Undated._
         - 1 cup basmati rice, 1 inch grated fresh ginger, 1 tablespoon toasted sesame oil, and a pinch of salt.
 - Teriyaki (ratio recipe) → [[Teriyaki sauce]]
 
-### Atlanta inspirations
+## Atlanta inspirations
 
 - Teriyaki (from Kenji's new series)
 - Pasta and spinach bean red sauce

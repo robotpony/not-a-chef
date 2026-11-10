@@ -7,15 +7,15 @@ A dense month: a reverse-engineered White Spot burger, an upgraded turkey burger
 
 _Undated._
 
-### Random links
+## Random links
 
 - I want to make: [Nihari](https://www.youtube.com/watch?v=vCrx0UxnVCI)
 
-### Takeout: Jamaican smorg
+## Takeout: Jamaican smorg
 
 Food was good, but service was extra slow (we waited well over an hour). Will report back next time we order, if we do.
 
-### Turkey burgers
+## Turkey burgers
 
 → [[Turkey burgers]]
 
@@ -23,7 +23,7 @@ This weekend we’re making some turkey burgers for salads and proper burgers. T
 
 Turkey burgers can end up dry and fairly flat without some extra lovin, so our [[Turkey burgers|updated recipe]] includes some additional depth and texture. The trick is to make sure you have both enough savoury and enough starches for browning (adding more savoury, crunch, and additional yum). Breast meat tends to get dry quickly, so at least some thigh meat is ideal and grinding your own will usually be better than buying it pre-ground.
 
-### Takeout: Classic BC comfort food
+## Takeout: Classic BC comfort food
 
 We ordered some White Spot for dinner tonight. [White Spot](https://en.wikipedia.org/wiki/White_Spot) is one of the few OG west coast Canadian burger joints, founded in the 1920s. They have a classic flat top burger with their own special sauces; a red sauce (red relish and chili sauce) and a sweetened mayonnaise, combined with a thin pan or flat top grilled all-beef patty (lightly seasoned on the grill). It’s commonly dressed with lettuce and tomato, with a pickle draped over the bun.
 
@@ -31,7 +31,7 @@ Tonight we ordered a variety of burgers, including an all-veg patty, an impossib
 
 I have a fairly accurate White Spot burger recipe that gets you close to their basic diner burger. → [[White Spot burger]]
 
-### Quick proteins for lunch ramen #lunchramen
+## Quick proteins for lunch ramen #lunchramen
 
 I try to keep some sort of portion sized sausages in the freezer for quick meals, including adding protein and flavour to quick ramen. And if I have eggs on hand, a boiled egg adds a lot of flavour and texture to a good bowl. This week I tried cooking the two together.
 
@@ -44,13 +44,13 @@ Add a cup or two of water to a small pan with the egg (in shell) and sausage. Ad
 
 Remove from heat, add egg to a bowl of ice water, and slice sausage. After removing water, add back sausage, and any [[Aromatics|aromatics]] and thick veg to pan. Brown sausage and stir veg. Add fresh water and turn to low. Once remainder of ramen dish is ready (broth, noodles, [[Tare|tare]]), add proteins and veg to the bowl.
 
-### Cooking links of the week
+## Cooking links of the week
 
 - [Wikipedia’s list of cooking techniques](https://en.wikipedia.org/wiki/List_of_cooking_techniques)
 - [A Reddit comment with a tested kimchi recipe](https://www.reddit.com/r/Cooking/comments/mu9hu0/i_just_received_one_of_the_best_compliments_a/gv4imr5/?utm_source=share&utm_medium=ios_app&utm_name=iossmf&context=3)
 - [USDA nutrition data sets](https://fdc.nal.usda.gov/download-datasets.html)
 
-### Steak, mushrooms, potatoes, and green beans
+## Steak, mushrooms, potatoes, and green beans
 
 Once every few  months we do up a good old steak dinner. I prefer a strip loin and my partner a tenderloin, paired with whatever greenery is in season. Today it was green beans.
 
@@ -94,7 +94,7 @@ Season the steaks and let sit for 30-60 minutes. Add some oil to a medium-hot pa
 
 Note that, despite common convention, a nonstick pan works quite well for both getting a good crust and not setting off condo fire alarms. You’ll have to move the steaks around the pan and flip more than normal, but the effect is surprisingly good. If you’re using a stainless pan, flip the steaks less, and add some wine at the end to make a quick pan sauce (finishing with some butter).
 
-### My best salmon salad sandwich
+## My best salmon salad sandwich
 
 I make salmon sandies regularly. My fav mix looks something like:
 
@@ -111,7 +111,7 @@ The mix shouldn’t be super goupy, so add the mayo a big spoon or two at a time
 
 Add to some nicely toasted bread (nutty whole wheat), with some more mustard and pickles if you want, and a cup or two of sprouts. Don’t have sprouts? (You should grow them!)
 
-### Oven Wings, ribs, and slaw
+## Oven Wings, ribs, and slaw
 
 We don’t normally double down on animal products, but I had a bunch of leftover poultry rub, which is an easy start to a good dry rib and wing rub. Today I took the flavours in two directions:
 
@@ -124,7 +124,7 @@ For the ribs, coat them thoroughly and rest in the refrigerator for about an hou
 
 The slaw uses our standard mayo/cider vinegar/salt/sugar dressing (cut with some extra sour cream this week). The BBQ sauce will be a lazy one, using the remaining rub, ketchup, and anything else that makes it taste good.
 
-### Mac & cheese w/mushrooms and rosemary
+## Mac & cheese w/mushrooms and rosemary
 
 We’re stretching out some turkey casserole and wanted to make some baked mac. This could equally apply to a gooey stove top mac, but it’s fun to casserole the shit out of it too. And oops, my parsley was bad.
 
@@ -138,7 +138,7 @@ We’re stretching out some turkey casserole and wanted to make some baked mac. 
 
 The mushrooms work well in this recipe in place of a protein; they add a bunch of [[Umami|umami]] and a
 
-### Turkey prep week
+## Turkey prep week
 
 The best turkey dinners are easy. With a bit of planning, you can prep a few things ahead of time to both level up the perfect holiday meal, and save you some time the day of. My general plan is similar to AB’s:
 
