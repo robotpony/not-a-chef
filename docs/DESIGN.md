@@ -150,6 +150,6 @@ Project slash commands are markdown files in `.claude/commands/`; each file is t
 
 ## Content tools
 
-Fugu's tools explain themselves: run `frontmatter.py`, `drafts.py` (both stdlib Python) or `add-image.sh` from `themes/fugu/tools/` with `--help`.
+Fugu's `docs/tools.md` (`themes/fugu/docs/tools.md`) lists every tool: what it does, an example, and what it needs. Each tool's `--help` is the detailed reference: `frontmatter.py`, `drafts.py` (both stdlib Python) and `add-image.sh` in `themes/fugu/tools/`.
 
 `frontmatter.py check --help` lists the required and recommended fields per section.
