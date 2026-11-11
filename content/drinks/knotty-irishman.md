@@ -10,6 +10,7 @@ glass: mug
 fill: [liqueur, coffee, cream]
 garnish: nutmeg
 ---
+We tried this drink on a cruise this year, but over ice. It was a refreshing and decadent afternoon treat.
 
 ## Mechanic
 

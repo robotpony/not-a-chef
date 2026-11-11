@@ -9,6 +9,18 @@ Comfort food so far, with the household sick on and off: boerenkool, mostly from
 
 We've been sick on and off for a few weeks, so we wanted some comfort food. Tonight we're making Boerenkool, mostly from the pantry and freezer. It's 1.5 kg of potatoes, with 1–2 onions diced, 1 large tin of kale, and a smoked sausage if you eat 'em. It's old-school comfort food, relatively fast, and doesn't require fresh ingredients. And it has nutrition. This is a problem with most fast and prepared foods, as they've evolved. One of the goals of this cookbook is to show how food can be fast, nutritious, and even comforting. If I can do it, it can't be all that difficult.
 
+## Week of Monday, November 9th
+
+Made a few things last week:
+
+- beef/pork/mushroom base (without the pressure cooker), in 400 g containers
+- pork sausage (uncooked), in 200 g containers
+- salmon (for the cat) in 100g (50x2) portions
+- pork tenderloin, milanese (with pan sauce) 
+- [boerenkool-stamppot](recipes/boerenkool-stamppot-aka-green-potatoes-aka-boerenkool-met-worst) → smaller pot (1 can kale, 1.5kg potatoes, 1 onion, 2 sausages)
+- salmon salad mix
+- fridge muesli ← overnight was too long for the source oats 
+
 ## Week of Wednesday, November 4th
 
 ### New food wishes #ideas 
