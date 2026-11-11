@@ -4,7 +4,7 @@ Open work only: things that can start now. Finished items are cut, not ticked; g
 
 ## Site
 
-Nothing open. The 2026-11-08 review's theme items and Fugu's default CSS (§5) have landed (Fugu `9db520a`). Fugu's open work, toward `v1.0.0`, is in `themes/fugu/PLAN.md`.
+Nothing open. The 2026-11-08 review's theme items and Fugu's default CSS (§5) have landed (Fugu `9db520a`), and so have scaled yields and ingredient group labels (`c82d16f`). Fugu's open work, toward `v1.0.0`, is in `themes/fugu/PLAN.md`.
 
 ## Later
 
@@ -27,6 +27,4 @@ When a page needs it (fences are specced in hugo-warped, `themes/hugo-warped/fen
 
 When Fugu lands it (`themes/fugu/PLAN.md`; bump and check each):
 
-- Scaled yields keep the singular ("2 loaf" at 2×).
-- Ingredient group labels skip a heading level (`####` under `## Ingredients`, 43 recipes); content needs no change.
 - The validator (a Fugu feature, after 1.0): run it over all recipes and file each discrepancy as a spec or content bug.
