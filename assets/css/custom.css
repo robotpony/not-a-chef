@@ -151,12 +151,9 @@
   --fugu-accent-soft: var(--accent-soft);
   --fugu-focus: var(--focus);
   --fugu-highlight: var(--highlight);
-  --fugu-highlight-soft: var(--highlight-soft);
   --fugu-flag: var(--flag);
   --fugu-flag-soft: var(--flag-soft);
-  --fugu-principle: var(--principle);
   --fugu-principle-strong: var(--principle-strong);
-  --fugu-principle-soft: var(--principle-soft);
   --fugu-font-sans: var(--font-sans);
   --fugu-font-body: var(--font-serif);
   --fugu-font-mono: var(--font-mono);
@@ -169,7 +166,7 @@
  * through the `principle-<slug>` class Fugu puts on both. */
 .principle-chip.principle-win-the-fridge,
 .principle-page.principle-win-the-fridge :is(.ltitle-kind-principle, .read-essay) {
-  --fugu-principle: var(--fugu-flag); --fugu-principle-strong: var(--fugu-flag); --fugu-principle-soft: var(--fugu-flag-soft);
+  --fugu-principle-strong: var(--fugu-flag);
 }
 
 /* Blowfish's <body> tag (themes/blowfish/layouts/_default/baseof.html) is
