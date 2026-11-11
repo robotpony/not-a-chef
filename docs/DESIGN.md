@@ -152,4 +152,4 @@ Project slash commands are markdown files in `.claude/commands/`; each file is t
 
 Fugu's tools explain themselves: run `frontmatter.py`, `drafts.py` (both stdlib Python) or `add-image.sh` from `themes/fugu/tools/` with `--help`.
 
-One thing their help doesn't say yet (it's with fugu-agent): which fields `frontmatter.py check` requires. Recipes and drinks need `title`, `tags` and `date`; everything else needs `title` and `date`. Missing recommended fields are warnings, not errors: `source` and `draft` for recipes and drinks, `tags` and `draft` for essays and methods, `source`, `tags` and `draft` for reference. It exits non-zero only on errors (a missing required field, a bad type), and skips `_index.md` and dotfiles.
+`frontmatter.py check --help` lists the required and recommended fields per section.
