@@ -27,9 +27,10 @@ This breaks English tea rules on purpose. Boiling the tea with spices for 5 minu
 - 500–750 ml water
 - 3–4 whole cloves
 - 3–4 cardamom pods, lightly crushed
+- 4-6 black peppercorns
 - A few slices fresh ginger
-- 2 teaspoons loose-leaf black tea (Scottish breakfast or similar strong black)
-- 2 teaspoons sugar
+- 2-4 heaping teaspoons loose-leaf black tea (Scottish breakfast or similar strong black)
+- 2-3 teaspoons sugar per glass
 - 120 ml whole milk or 60 ml cream
 
 ## Method
@@ -49,13 +50,12 @@ In small cups. Add more sugar at the table.
 ## Variations
 
 ### Allspice and cinnamon
-Keep the cardamom, and swap the cloves and ginger for 3 allspice berries and 1 cm of Ceylon cinnamon stick, broken up. Warmer and rounder, with less bite. Nutmeg or 2–3 black peppercorns also work here; pick two or three spices, not all of them.
+Keep the cardamom, and swap the cloves and ginger for 3 allspice berries and 1 cm of Ceylon cinnamon stick, broken up. Warmer and rounder, with less bite. Nutmeg or 2–3 black peppercorns also work here; pick 2-3 spices, not all of them.
 
 ### Lazy daily cup
 Put the spices, lightly crushed, into a tea ball or filter with the tea. Pour over water at a full boil and steep 6–8 minutes, longer than English tea. Add milk and sugar in the cup. No boil-over, so it's lighter and less caramelized, but it takes one pot and no watching.
 
 ### Iced
-
 Froths without the stove-side boil-overs. Make the spiced tea as above but stop before the milk: simmer the spices, simmer the tea, then strain and chill. For each glass, shake 250 ml of the cold spiced tea with 30 ml cream, 1 tsp sugar, and ice until it foams, then pour over fresh ice.
 
 ## Notes
