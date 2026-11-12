@@ -11,6 +11,10 @@ We've been sick on and off for a few weeks, so we wanted some comfort food. Toni
 
 ## Week of Monday, November 9th
 
+A few ideas from the week:
+
+- Cowboy dip, which fits thinking about casseroles [1](https://www.youtube.com/watch?v=YmsCOjlqx4M), a very 1950s style "canned stuff with cheese" theory of food
+
 Made a few things last week:
 
 - beef/pork/mushroom base (without the pressure cooker), in 400 g containers
