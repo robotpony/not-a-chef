@@ -8,7 +8,7 @@ Local links need the dev server (`/preview`). Each open section's heading carrie
 
 From fugu-agent, 2026-11-11. Nothing here blocks Fugu's work.
 
-- [ ] Tag Fugu `v1.0.0` once §6, §7 and §10 are done (asked again then).
+- [ ] Tag Fugu `v1.0.0`? Every plan item before it is done and pushed (`58950a8`).
 - [ ] Optional: list Fugu on themes.gohugo.io after 1.0.
 
 ## Deferred by Bruce
