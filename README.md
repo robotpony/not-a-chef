@@ -41,6 +41,8 @@ Then use that alias as `host` in `tools/config.toml`.
 
 ## Building and deploying
 
+On this Mac: Hugo (with Go, for Fugu's example-site check), Python 3.11+, and, for photos, ImageMagick 7 and exiftool (`brew install hugo go imagemagick exiftool`). `docs/LIBRARIES.md` lists what each tool needs.
+
 - `make preview`: run the Hugo dev server locally (`/preview`)
 - `make build`: build the working tree to `public/`, for a local look
 - `make check`: check content frontmatter and the current `public/`
