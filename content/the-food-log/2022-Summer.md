@@ -89,7 +89,7 @@ Combine ingredients with a whisk. Cook over medium heat until thickened, the oil
 
 ## Sweet cold brew tea
 
-→ [[Bruce’s cold-brewed iced tea]]
+→ [[Bruce’s lemon-lime iced tea]]
 
 This recipe has evolved over the past 20+ years in our house. This is the one I’m using in 2022:
 

@@ -18,7 +18,7 @@ This is my favourite spring and summer drink.
 
 ## Ingredients
 
-- 400 ml cold brewed tea
+- 400 ml cold brewed tea, unsweetened
 - 3 heaping tsp sugar
 - 15 ml (1 tbsp) fresh lime juice
 - 10 ml (2 tsp) fresh lemon juice
@@ -48,6 +48,6 @@ caption: By weight, 10 g parts
 bar: yes
 ```
 
-### Cold brew batch
+## Notes
 
-Steep tea bags in 1 L cold water overnight in the fridge. Combine the 1 L of cold brew with 90 g white sugar and 65 ml lime juice, and stir until the sugar dissolves. Serve over ice. No shaking needed: cold brew is already smooth and low in bitterness.
+- For a 2 L jug, hot- or cold-brewed, see [[Bruce’s lemon-lime iced tea]].

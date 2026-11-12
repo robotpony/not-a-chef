@@ -436,7 +436,7 @@ I have a few recipes planned this weekend:
 - ✅Chicken sandwiches
 - ✅Turkey soup or pie filling (use up freezer turkey)
     - Turkey was freezer burnt, threw it into the stock
-- ✅Iced tea (it’s been a bit) → [[Bruce’s iced tea]]
+- ✅Iced tea (it’s been a bit) → [[Bruce’s lemon-lime iced tea]]
     - 2L tea (black + flavoured)
     - 3-4 scoops of white sugar
     - ¼–½ cup of lime or lemon juice

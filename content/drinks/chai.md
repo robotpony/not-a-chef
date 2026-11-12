@@ -54,6 +54,10 @@ Keep the cardamom, and swap the cloves and ginger for 3 allspice berries and 1 c
 ### Lazy daily cup
 Put the spices, lightly crushed, into a tea ball or filter with the tea. Pour over water at a full boil and steep 6–8 minutes, longer than English tea. Add milk and sugar in the cup. No boil-over, so it's lighter and less caramelized, but it takes one pot and no watching.
 
+### Iced
+
+Froths without the stove-side boil-overs. Make the spiced tea as above but stop before the milk: simmer the spices, simmer the tea, then strain and chill. For each glass, shake 250 ml of the cold spiced tea with 30 ml cream, 1 tsp sugar, and ice until it foams, then pour over fresh ice.
+
 ## Notes
 
 - Scottish breakfast tea is the go-to; strong enough to stand up to the spice and milk.
