@@ -14,25 +14,36 @@ fill: [tea]
 ice: true
 ---
 
-This is my favourite spring and summer drink.
+This is my favourite spring and summer drink, and how I make iced tea most days now.
+
+## Mechanic
+
+Brew the tea **at least double strength**, because shaking it with ice melts a good share of the ice into the glass. Normal-strength tea comes out thin and watery.
 
 ## Ingredients
 
-- 400 ml cold brewed tea, unsweetened
-- 3 heaping tsp sugar
-- 15 ml (1 tbsp) fresh lime juice
-- 10 ml (2 tsp) fresh lemon juice
+#### Tea, for several glasses
+
+- 6 bags strong black tea, such as Ceylon
+- 1 L boiled water
+
+#### Per glass, 400–700 ml (16–20 oz)
+
+- 1½–2½ tbsp sugar (3–5 heaping teaspoons)
+- 1–2 squirts each fresh lemon and lime juice (10–25 ml in all)
 - ice
 
 ## Method
 
-Put the sugar, lime juice, and lemon juice in a cocktail shaker (or a pint glass, with a second one to cap it) with ice. Add the tea and shake until cold and slightly frothy.
+**Brew it strong.** Pour the boiled water over the tea bags and steep 4–5 minutes, then lift out the bags. Let cool. It keeps in the fridge for a few days.
 
-Strain over fresh ice in a tall glass.
+**Shake each glass.** Put the sugar, lemon juice, and lime juice in a cocktail shaker (or a pint glass, with a second one to cap it) with ice. Fill with tea and shake until cold and slightly frothy.
+
+**Pour.** Strain over fresh ice in a tall glass.
 
 ## To serve
 
-Straight. As written it leans tart; add another half-teaspoon of sugar if you like it sweeter.
+Straight. Start at the low end of the sugar and citrus and adjust the next glass.
 
 ## Variations
 

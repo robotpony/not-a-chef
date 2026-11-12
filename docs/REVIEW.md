@@ -26,7 +26,6 @@ What the automated checks can't see. Run `/preview`, then on a phone and in a de
 
 From the iced tea merge, 2026-11-12.
 
-- [ ] [[Bruce’s lemon-lime iced tea]]: the hot brew uses 1 lime for 2 L (~15 ml/L) and the cold brew 80 ml for 2 L (40 ml/L). Keep both as they are, or settle on one?
 - [ ] [[Chai]] › Iced: I guessed the per-glass amounts (250 ml spiced tea, 30 ml cream, 1 tsp sugar, shaken). Correct them to what you use.
 
 ## Deferred by Bruce
