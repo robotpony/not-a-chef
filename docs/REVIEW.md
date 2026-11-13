@@ -26,7 +26,7 @@ What the automated checks can't see. Run `/preview`, then on a phone and in a de
 
 From the iced tea merge, 2026-11-12.
 
-- [ ] [[Chai]] › Iced: I guessed the per-glass amounts (250 ml spiced tea, 30 ml cream, 1 tsp sugar, shaken). Correct them to what you use.
+- [x] [[Chai]] › Iced: I guessed the per-glass amounts (250 ml spiced tea, 30 ml cream, 1 tsp sugar, shaken). Correct them to what you use.
 
 ## Deferred by Bruce
 
