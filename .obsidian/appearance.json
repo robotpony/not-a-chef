@@ -2,5 +2,6 @@
   "cssTheme": "Typomagical",
   "textFontFamily": "Lora",
   "accentColor": "#f5db32",
-  "monospaceFontFamily": "Fira Code"
+  "monospaceFontFamily": "Fira Code",
+  "showRibbon": true
 }
