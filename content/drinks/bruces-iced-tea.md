@@ -29,17 +29,18 @@ Brew the tea **at least double strength**, because shaking it with ice melts a g
 #### Tea, for several glasses
 
 - 6 bags strong black tea, such as Ceylon
+  *or 3 heaping teaspoons of loose leaf tea (like breakfast tea)*
 - 1 L boiled water
 
 #### Per glass, 400–700 ml (16–20 oz)
 
-- 1½–2½ tbsp sugar (3–5 heaping teaspoons)
+- 1 - 2 tbsp sugar (3–5 heaping teaspoons)
 - 1–2 squirts each fresh lemon and lime juice (10–25 ml in all)
 - ice
 
 ## Method
 
-**Brew it strong.** Pour the boiled water over the tea bags and steep 4–5 minutes, but no longer, then lift out the bags. Let cool. It keeps in the fridge for a few days.
+**Brew it strong.** Pour the boiled water over the tea and steep 4–5 minutes, but no longer, then lift out the bags. Let cool. It keeps in the fridge for a few days.
 
 **Shake each glass.** Put the sugar, lemon juice, and lime juice in a cocktail shaker (or a pint glass, with a second one to cap it) with ice. Fill with tea and shake until cold and slightly frothy.
 
