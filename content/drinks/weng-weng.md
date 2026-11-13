@@ -7,6 +7,7 @@ portions: 1 drink
 prep_time: 3 min
 draft: false
 glass: highball
+fill: [punch]
 ice: true
 ---
 
