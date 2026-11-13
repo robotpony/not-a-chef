@@ -28,13 +28,6 @@ From the iced tea merge, 2026-11-12.
 
 - [x] [[Chai]] › Iced: I guessed the per-glass amounts (250 ml spiced tea, 30 ml cream, 1 tsp sugar, shaken). Correct them to what you use.
 
-## New drinks #todo
-
-From the drink adds, 2026-11-13. Both are in the Test kitchen (`draft: true`) until you've checked them.
-
-- [ ] [[Deja Brew]]: you gave no amounts, so I guessed (30 ml tequila, 15 ml each amaretto, Borghetti, and Irish cream, 30 ml espresso), shaken and strained into a coupe. Correct the amounts, the method, and the glass (it draws as a wine glass, the nearest Fugu has).
-- [ ] [[Adrenal cocktail]]: amounts guessed too (1 tsp ginger, ½ tsp turmeric, 1 lime, 120 ml each coconut water and orange juice). Correct them, and say if it should be published or stay a draft.
-
 ## Deferred by Bruce
 
 Not questions for now, kept so they aren't lost: the drafts (`make drafts`). The cornmeal-breaded chicken patty research is now a test kitchen recipe, [[Cornmeal fried chicken]].

@@ -4,7 +4,7 @@ tags: [drinks]
 date: 2026-11-13
 portions: 1 drink
 prep_time: 5 min
-draft: true
+draft: false
 glass: highball
 fill: [sparkling]
 ice: true
