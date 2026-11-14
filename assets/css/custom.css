@@ -525,10 +525,14 @@ html { overflow-x: hidden; }
 
 /* Homepage bar shelf (mockups/homepage-drinks.html C, approved 2026-11-07):
    every drink as its glass and name, one line at the foot of Recently
-   added. Scrolls sideways on phones. */
-.bar-shelf { margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--border); display: flex; align-items: center; gap: 6px 18px; }
+   added. Nine drinks outgrew the one line (2026-11-13, the ninth's name
+   was clipped), so the label and "All N drinks" now sit above the glasses
+   and the glasses take the full width, wrapping when they run out. On
+   phones they scroll sideways, fading at the edge so a cut name reads as
+   "more this way". */
+.bar-shelf { margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 18px; }
 .bar-shelf-label { font: 600 .72rem 'Libre Franklin', sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-muted); white-space: nowrap; margin: 0; }
-.bar-shelf-row { display: flex; gap: 4px; flex: 1; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.bar-shelf-row { display: flex; flex-wrap: wrap; gap: 4px; order: 3; flex-basis: 100%; min-width: 0; }
 .bar-shelf-row::-webkit-scrollbar { display: none; }
 .bar-glass { display: flex; flex-direction: column; align-items: center; gap: 2px; width: 92px; flex: none; padding: 6px 4px; border-radius: 6px; text-decoration: none; color: var(--ink); }
 .bar-glass:hover { background: var(--accent-soft); color: var(--accent-strong); }
@@ -536,6 +540,7 @@ html { overflow-x: hidden; }
 .bar-glass span { font: 500 .74rem/1.25 'Libre Franklin', sans-serif; text-align: center; }
 .bar-shelf .mega-viewall { white-space: nowrap; }
 @media (max-width: 640px) {
-  .bar-shelf { flex-wrap: wrap; }
-  .bar-shelf-row { order: 3; flex-basis: 100%; }
+  .bar-shelf-row { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-right: 40px;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent);
+            mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); }
 }
