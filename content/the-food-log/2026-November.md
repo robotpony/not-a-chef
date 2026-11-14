@@ -14,6 +14,8 @@ We've been sick on and off for a few weeks, so we wanted some comfort food. Toni
 A few ideas from the week:
 
 - Cowboy dip, which fits thinking about casseroles [1](https://www.youtube.com/watch?v=YmsCOjlqx4M), a very 1950s style "canned stuff with cheese" theory of food
+- Pollo Asado [1](https://www.reddit.com/r/SalsaSnobs/comments/1xvipjz/homemade_pollo_asado/) → sauces here look :fire: 
+- Spaghetti squash [1](https://www.youtube.com/watch?v=lDmHSzj-424)
 
 Made a few things last week:
 
