@@ -5,6 +5,12 @@ date: 2026-11-01
 Comfort food so far, with the household sick on and off: boerenkool, mostly from the pantry and freezer. The casserole ideas became a [[Casseroles]] blueprint and the Indian curries research is done. Bibimbap, enchiladas, and chicken tinga join a long backlog of trip finds (ono ceviche, the Puka Dog's toasted bun, a sweet red cabbage), a Mexican feast to recreate, and October's carry-overs: crab salad, pan-flattened gyro beef, and a two-phase pho.
 
 
+## Tuesday, November 17th
+
+Still recovering from the flu and working down the fridge. Planning a recipe for roasted cauliflower soup to use up a head that we haven't been hungry enough to use yet.
+
+This recipe is untested, but based on other veg soups we make: [[Roasted cauliflower, turmeric and ginger soup]]. Planning on making this tonight or tomorrow.
+
 ## Saturday, November 7th
 
 We've been sick on and off for a few weeks, so we wanted some comfort food. Tonight we're making Boerenkool, mostly from the pantry and freezer. It's 1.5 kg of potatoes, with 1–2 onions diced, 1 large tin of kale, and a smoked sausage if you eat 'em. It's old-school comfort food, relatively fast, and doesn't require fresh ingredients. And it has nutrition. This is a problem with most fast and prepared foods, as they've evolved. One of the goals of this cookbook is to show how food can be fast, nutritious, and even comforting. If I can do it, it can't be all that difficult.
