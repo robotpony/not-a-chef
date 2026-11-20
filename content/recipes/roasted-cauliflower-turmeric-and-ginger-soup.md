@@ -1,5 +1,5 @@
 ---
-title: Roasted cauliflower, turmeric and ginger soup
+title: Roasted cauliflower, turmeric, and ginger soup
 tags:
   - mains
   - soups
@@ -14,13 +14,13 @@ prep_time: 15 min
 cook_time: 50 min
 total_time: 1 hr 35 min
 aka:
-description: Roasted cauliflower soup with turmeric, cumin and fresh ginger, cooked in rendered salt pork and finished with coconut milk.
+description: Roasted cauliflower soup with turmeric, cumin, and fresh ginger, cooked in rendered salt pork and finished with coconut milk.
 ---
 A fall and winter soup, and a good use for the head of cauliflower you meant to eat this week.
 
 ## Mechanic
 
-Roast the cauliflower hard, then hold back a cup of the best florets for the top. The roasted edges give the soup its depth and the spices toast on the pan instead of tasting raw in the pot. Salt pork renders the fat the onion cooks in, and its crisp bits go on top. Ginger goes in after the onion softens and cooks only a minute, so it stays bright rather than turning bitter; weigh it, **15–30 g**, because grated ginger packs unevenly in a spoon.
+Roast the cauliflower hard, then hold back a cup of the best florets for the top. The roasted edges give the soup its depth, and the spices toast on the pan instead of tasting raw in the pot. Salt pork renders the fat the onion cooks in, and its crisp bits go on top. Ginger goes in after the onion softens and cooks only a minute, so it stays bright rather than turning bitter; weigh it, **15–30 g**, because grated ginger packs unevenly in a spoon.
 
 ## Ingredients
 
@@ -42,7 +42,7 @@ Roast the cauliflower hard, then hold back a cup of the best florets for the top
 
 **Soak the salt pork.** Cover the diced salt pork with cold water and soak for 30–60 minutes to draw out some of the salt. Rinse, drain, and pat dry.
 
-**Spice the cauliflower.** Heat the oven to 230°C (450°F). Smash the garlic cloves with the side of a knife. Put the cauliflower and garlic in a large bowl and drizzle with 30 ml (2 tbsp) olive oil. Toss until the florets are evenly coated. Mix the turmeric, cumin, fennel and salt in a small bowl, sprinkle over the cauliflower, and toss again until every floret is yellow.
+**Spice the cauliflower.** Heat the oven to 230°C (450°F). Smash the garlic cloves with the side of a knife. Put the cauliflower and garlic in a large bowl and drizzle with 30 ml (2 tbsp) olive oil. Toss until the florets are evenly coated. Mix the turmeric, cumin, fennel, and salt in a small bowl, sprinkle over the cauliflower, and toss again until every floret is yellow.
 
 **Roast.** Spread the cauliflower on a large rimmed baking sheet in a single layer. Roast in the centre of the oven until browned at the edges and tender to a knife, 25–30 minutes, turning the florets once or twice. Set aside 250 ml (1 cup) of the best-looking florets for the top.
 
@@ -61,6 +61,6 @@ Topped with the reserved florets, the crisp salt pork, the cilantro, and a drizz
 ## Notes
 
 - Vegetarian: skip the salt pork, cook the onion and 500 ml (2 cups) sliced mushrooms with salt in 15 ml (1 tbsp) olive oil, and expect to add more salt at the end.
-- Stock: vegetable, mushroom and chicken all work.
+- Stock: vegetable, mushroom, and chicken all work.
 - Too thick after blending: loosen with stock, a splash at a time.
 - Keeps refrigerated 4 days. Freezes well before the coconut milk goes in; stir it in after reheating.

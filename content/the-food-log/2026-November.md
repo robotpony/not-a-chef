@@ -9,7 +9,7 @@ Comfort food so far, with the household sick on and off: boerenkool, mostly from
 
 Still recovering from the flu and working down the fridge. Planning a recipe for roasted cauliflower soup to use up a head that we haven't been hungry enough to use yet.
 
-This recipe is untested, but based on other veg soups we make: [[Roasted cauliflower, turmeric and ginger soup]]. Planning on making this tonight or tomorrow.
+This recipe is untested, but based on other veg soups we make: [[Roasted cauliflower, turmeric, and ginger soup]]. Planning on making this tonight or tomorrow.
 
 ## Saturday, November 7th
 
