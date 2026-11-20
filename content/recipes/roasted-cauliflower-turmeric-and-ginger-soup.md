@@ -1,6 +1,10 @@
 ---
 title: Roasted cauliflower, turmeric and ginger soup
-tags: [mains, soups, gluten-free, make-ahead]
+tags:
+  - mains
+  - soups
+  - gluten-free
+  - make-ahead
 source: original
 date: 2026-11-17
 cuisine:
@@ -11,21 +15,16 @@ cook_time: 50 min
 total_time: 1 hr 35 min
 aka:
 description: Roasted cauliflower soup with turmeric, cumin and fresh ginger, cooked in rendered salt pork and finished with coconut milk.
-# A new recipe starts in the test kitchen: published, with a banner saying
-# it's still changing. Delete `draft` when it's a keeper.
-draft: true
-# One line on what's being tried next, shown under the banner.
-working_on: Testing the ginger level and the salt pork.
 ---
 A fall and winter soup, and a good use for the head of cauliflower you meant to eat this week.
 
 ## Mechanic
 
-Roast all the cauliflower hard, then hold back a cup of the best florets for the top. The roasted edges give the soup its depth and the spices toast on the pan instead of tasting raw in the pot. Salt pork renders the fat the onion cooks in, and its crisp bits go on top. Ginger goes in after the onion softens and cooks only a minute, so it stays bright rather than turning bitter; weigh it, **15–30 g**, because grated ginger packs unevenly in a spoon.
+Roast the cauliflower hard, then hold back a cup of the best florets for the top. The roasted edges give the soup its depth and the spices toast on the pan instead of tasting raw in the pot. Salt pork renders the fat the onion cooks in, and its crisp bits go on top. Ginger goes in after the onion softens and cooks only a minute, so it stays bright rather than turning bitter; weigh it, **15–30 g**, because grated ginger packs unevenly in a spoon.
 
 ## Ingredients
 
-- 680 g (1½ lb) cauliflower, cut into 2.5 cm (1 inch) florets, about 1.5 L (6 heaping cups)
+- 680 g (1½ lb) cauliflower, cut into 2.5 cm (1 inch) florets, about 1 L (4 heaping cups)
 - 3 cloves garlic
 - 200 g salt pork, diced
 - 30 ml (2 tbsp) olive oil
@@ -35,7 +34,7 @@ Roast all the cauliflower hard, then hold back a cup of the best florets for the
 - ½ tsp kosher salt, plus more to taste
 - 1 medium onion, chopped
 - 15–30 g (1–2 tbsp) fresh ginger, peeled and finely grated
-- 750 ml (3 cups) vegetable stock
+- 750 ml (3 cups) stock
 - 300 ml (1¼ cups) full-fat canned coconut milk, shaken well, 100 ml held back for drizzling
 - 2 tbsp chopped cilantro
 
@@ -61,6 +60,7 @@ Topped with the reserved florets, the crisp salt pork, the cilantro, and a drizz
 
 ## Notes
 
-- Vegetarian: skip the salt pork, cook the onion with salt in 5 ml (1 tsp) olive oil, and expect to add more salt at the end.
+- Vegetarian: skip the salt pork, cook the onion and 500 ml (2 cups) sliced mushrooms with salt in 15 ml (1 tbsp) olive oil, and expect to add more salt at the end.
+- Stock: vegetable, mushroom and chicken all work.
 - Too thick after blending: loosen with stock, a splash at a time.
 - Keeps refrigerated 4 days. Freezes well before the coconut milk goes in; stir it in after reheating.
