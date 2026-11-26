@@ -4,6 +4,9 @@ date: 2026-11-01
 ---
 A sick month, cooked from the pantry and freezer: boerenkool, a round of batch cooking (meat base, sausage, pork tenderloin milanese), and a [[Roasted cauliflower, turmeric, and ginger soup]] written up and made two days later. The soup came out a bit salty and needed all the coconut milk; fennel went in, and next time the pork soaks longer and wine goes in to deglaze. The casserole ideas became a [[Casseroles]] blueprint, and the backlog keeps growing: bibimbap, enchiladas, trip finds like ono ceviche and the Puka Dog's toasted bun, a Mexican feast, and October's carry-overs.
 
+## Monday, November 23rd
+
+- this taco looks interesting [1](https://www.youtube.com/watch?v=DiaPSbrxy68)
 
 ## Thursday, November 19th
 
